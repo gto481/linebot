@@ -57,15 +57,8 @@ if channel_access_token is None:
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
-bot = ChatBot("LineBot",
-    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
-    logic_adapters=[
-        "chatterbot.logic.MathematicalEvaluation",
-        "chatterbot.logic.TimeLogicAdapter",
-        "chatterbot.logic.BestMatch"
-    ],
-    database="./database.json"
-)
+# Create a new chat bot named Charlie
+bot = ChatBot('LineBot')
 
 
 @app.route("/callback", methods=['POST'])
