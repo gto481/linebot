@@ -41,8 +41,8 @@ from linebot.models import (
 # from chatterbot.trainers import ListTrainer
 
 import json
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+# from chatterbot import ChatBot
+# from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 
@@ -59,15 +59,15 @@ if channel_access_token is None:
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
-bot = ChatBot("LineBot",
-    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
-    logic_adapters=[
-        "chatterbot.logic.MathematicalEvaluation",
-        "chatterbot.logic.TimeLogicAdapter",
-        "chatterbot.logic.BestMatch"
-    ],
-    database="./database.json"
-)
+# bot = ChatBot("LineBot",
+#     storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
+#     logic_adapters=[
+#         "chatterbot.logic.MathematicalEvaluation",
+#         "chatterbot.logic.TimeLogicAdapter",
+#         "chatterbot.logic.BestMatch"
+#     ],
+#     database="./database.json"
+# )
 
 
 @app.route("/callback", methods=['POST'])
@@ -88,8 +88,8 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            response = bot.get_response(event.message.text)
-            #response = event.message.text
+            #response = bot.get_response(event.message.text)
+            response = event.message.text
             print response            
 
             line_bot_api.reply_message(
