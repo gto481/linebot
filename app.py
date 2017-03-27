@@ -37,8 +37,8 @@ from linebot.models import (
     ImageMessage, VideoMessage, AudioMessage,
     UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent, ImagemapSendMessage, BaseSize, URIImagemapAction, MessageImagemapAction, ImagemapArea
 )
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+# from chatterbot import ChatBot
+# from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 
@@ -55,19 +55,19 @@ if channel_access_token is None:
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
-bot = ChatBot(
-    'LineBot',
-    storage_adapter='chatterbot.storage.JsonFileStorageAdapter',
-    input_adapter='chatterbot.input.TerminalAdapter',
-    output_adapter='chatterbot.output.TerminalAdapter',
-    logic_adapters=[
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter'
-    ],
-    database='./database.json'
-)
+# bot = ChatBot(
+#     'LineBot',
+#     storage_adapter='chatterbot.storage.JsonFileStorageAdapter',
+#     input_adapter='chatterbot.input.TerminalAdapter',
+#     output_adapter='chatterbot.output.TerminalAdapter',
+#     logic_adapters=[
+#         'chatterbot.logic.MathematicalEvaluation',
+#         'chatterbot.logic.TimeLogicAdapter'
+#     ],
+#     database='./database.json'
+# )
 
-bot.set_trainer(ListTrainer)
+# bot.set_trainer(ListTrainer)
 
 
 @app.route("/callback", methods=['POST'])
@@ -89,8 +89,8 @@ def callback():
         if event.type == 'message':
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(result = bot.get_response(event.message.text))
-                #TextSendMessage(text=event.message.text)
+                #TextSendMessage(result = bot.get_response(event.message.text))
+                TextSendMessage(text=event.message.text)
             )
 
     return 'OK'
