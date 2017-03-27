@@ -56,18 +56,18 @@ line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
 bot = ChatBot(
-    'LineBot',
-    storage_adapter='chatterbot.storage.JsonFileStorageAdapter',
-    input_adapter='chatterbot.input.TerminalAdapter',
-    output_adapter='chatterbot.output.TerminalAdapter',
-    logic_adapters=[
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter'
-    ],
-    database='./database.json'
-)
+#     'LineBot',
+#     storage_adapter='chatterbot.storage.JsonFileStorageAdapter',
+#     input_adapter='chatterbot.input.TerminalAdapter',
+#     output_adapter='chatterbot.output.TerminalAdapter',
+#     logic_adapters=[
+#         'chatterbot.logic.MathematicalEvaluation',
+#         'chatterbot.logic.TimeLogicAdapter'
+#     ],
+#     database='./database.json'
+# )
 
-bot.set_trainer(ListTrainer)    
+# bot.set_trainer(ListTrainer)    
 
 
 @app.route("/callback", methods=['POST'])
