@@ -40,7 +40,7 @@ from linebot.models import (
 
 import json
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+#from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 
