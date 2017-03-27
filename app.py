@@ -39,11 +39,11 @@ from linebot.models import (
 )
 
 import json
-import nltk.corpus
-import nltk.tokenize.punkt
-import nltk.stem.snowball
-from nltk.corpus import wordnet
-from chatterbot import ChatBot
+# import nltk.corpus
+# import nltk.tokenize.punkt
+# import nltk.stem.snowball
+# from nltk.corpus import wordnet
+# from chatterbot import ChatBot
 #from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
@@ -83,9 +83,9 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            msg = event.message.text
-            response = bot.get_response(msg)
-            #response = event.message.text
+            #msg = event.message.text
+            #response = bot.get_response(msg)
+            response = event.message.text
             #print response            
 
             line_bot_api.reply_message(
