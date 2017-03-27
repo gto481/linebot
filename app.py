@@ -79,8 +79,8 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            #response = bot.get_response(event.message.text)
-            response = event.message.text
+            response = bot.get_response(event.message.text)
+            #response = event.message.text
             #print response            
 
             line_bot_api.reply_message(
