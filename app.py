@@ -89,7 +89,8 @@ def callback():
         if event.type == 'message':
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(result = bot.get_response(event.message.text))
+                #TextSendMessage(result = bot.get_response(event.message.text))
+                TextSendMessage(result=event.message.text)
             )
 
     return 'OK'
