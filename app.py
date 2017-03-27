@@ -55,25 +55,19 @@ if channel_access_token is None:
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
-BOT_NAME = "linebot"
-
-chatbot = ChatBot(
-    BOT_NAME,
-    storage_adapter='chatterbot.adapters.storage.MongoDatabaseAdapter',
-    database="chatterbot-database",
+bot = ChatBot(
+    'LineBot',
+    storage_adapter='chatterbot.storage.JsonFileStorageAdapter',
+    input_adapter='chatterbot.input.TerminalAdapter',
+    output_adapter='chatterbot.output.TerminalAdapter',
     logic_adapters=[
-      "chatterbot.adapters.logic.MathematicalEvaluation",
-      "chatterbot.adapters.logic.TimeLogicAdapter",
-      "chatterbot.adapters.logic.ClosestMatchAdapter"
-    ],
-    filters=[
-      'chatterbot.filters.RepetitiveResponseFilter'
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter'
     ],
     database='./database.json'
 )
 
-chatbot.set_trainer(ListTrainer)
-chatbot.train(['สาด', 'ควย', 'ไง', 'ก็เรื่อยๆ'])
+bot.set_trainer(ListTrainer)    
 
 
 @app.route("/callback", methods=['POST'])
