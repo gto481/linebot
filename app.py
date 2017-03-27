@@ -37,8 +37,8 @@ from linebot.models import (
     ImageMessage, VideoMessage, AudioMessage,
     UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent, ImagemapSendMessage, BaseSize, URIImagemapAction, MessageImagemapAction, ImagemapArea
 )
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+# from chatterbot import ChatBot
+# from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 
@@ -90,7 +90,7 @@ def callback():
             line_bot_api.reply_message(
                 event.reply_token,
                 #TextSendMessage(result = bot.get_response(event.message.text))
-                TextSendMessage(result=event.message.text)
+                TextSendMessage(text=event.message.text)
             )
 
     return 'OK'
