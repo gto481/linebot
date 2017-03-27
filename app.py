@@ -40,6 +40,10 @@ from linebot.models import (
 # from chatterbot import ChatBot
 # from chatterbot.trainers import ListTrainer
 
+import json
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+
 app = Flask(__name__)
 
 # get channel_secret and channel_access_token from your environment variable
@@ -55,19 +59,17 @@ if channel_access_token is None:
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
-# bot = ChatBot(
-#     'LineBot',
-#     storage_adapter='chatterbot.storage.JsonFileStorageAdapter',
-#     input_adapter='chatterbot.input.TerminalAdapter',
-#     output_adapter='chatterbot.output.TerminalAdapter',
-#     logic_adapters=[
-#         'chatterbot.logic.MathematicalEvaluation',
-#         'chatterbot.logic.TimeLogicAdapter'
-#     ],
-#     database='./database.json'
-# )
-
-# bot.set_trainer(ListTrainer)
+bot = ChatBot("LineBot",
+    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
+    logic_adapters=[
+        "chatterbot.logic.MathematicalEvaluation",
+        "chatterbot.logic.TimeLogicAdapter",
+        "chatterbot.logic.BestMatch"
+    ],
+    input_adapter="chatterbot.input.TerminalAdapter",
+    output_adapter="chatterbot.output.TerminalAdapter",
+    database="./database.json"
+)
 
 
 @app.route("/callback", methods=['POST'])
@@ -90,7 +92,7 @@ def callback():
             line_bot_api.reply_message(
                 event.reply_token,
                 #TextSendMessage(result = bot.get_response(event.message.text))
-                TextSendMessage(text=event.message.text)
+                TextSendMessage(text=bot.get_response(event.message.text))
             )
 
     return 'OK'
