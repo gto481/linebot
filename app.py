@@ -37,6 +37,8 @@ from linebot.models import (
     ImageMessage, VideoMessage, AudioMessage,
     UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent, ImagemapSendMessage, BaseSize, URIImagemapAction, MessageImagemapAction, ImagemapArea
 )
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 
@@ -52,6 +54,26 @@ if channel_access_token is None:
 
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
+
+BOT_NAME = "linebot"
+
+chatbot = ChatBot(
+    BOT_NAME,
+    storage_adapter='chatterbot.adapters.storage.MongoDatabaseAdapter',
+    database="chatterbot-database",
+    logic_adapters=[
+      "chatterbot.adapters.logic.MathematicalEvaluation",
+      "chatterbot.adapters.logic.TimeLogicAdapter",
+      "chatterbot.adapters.logic.ClosestMatchAdapter"
+    ],
+    filters=[
+      'chatterbot.filters.RepetitiveResponseFilter'
+    ],
+    database='./database.json'
+)
+
+chatbot.set_trainer(ListTrainer)
+chatbot.train(['สาด', 'ควย', 'ไง', 'ก็เรื่อยๆ'])
 
 
 @app.route("/callback", methods=['POST'])
@@ -73,7 +95,7 @@ def callback():
         if event.type == 'message':
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text=event.message.text)
+                TextSendMessage(result = chatbot.get_response(event.message.text))
             )
 
     return 'OK'
