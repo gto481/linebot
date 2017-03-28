@@ -62,8 +62,7 @@ line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
 # Create a new chat bot named Charlie
-bot = ChatBot('LineBot')
-
+#bot = ChatBot('LineBot')
 
 @app.route("/callback", methods=['POST'])
 def callback():
