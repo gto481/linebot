@@ -96,7 +96,7 @@ def callback():
 
             msg = event.message.text
             response = bot.get_response(msg)
-            #response = event.message.text
+            #response = event.message.text 
             #print response            
 
             line_bot_api.reply_message(
