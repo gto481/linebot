@@ -1,5 +1,5 @@
 line-bot-sdk
 flask
 gunicorn
--e file:/app/pipsw/ChatterBot#egg=chatterbot
+chatterbot
 nltk
