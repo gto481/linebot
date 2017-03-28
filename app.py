@@ -43,7 +43,7 @@ import json
 # import nltk.tokenize.punkt
 # import nltk.stem.snowball
 # from nltk.corpus import wordnet
-# from chatterbot import ChatBot
+from chatterbot import ChatBot
 #from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
@@ -62,7 +62,19 @@ line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
 
 # Create a new chat bot named Charlie
-#bot = ChatBot('LineBot')
+bot = ChatBot('LineBot',
+    storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
+    logic_adapters=[
+        'chatterbot.logic.BestMatch'
+    ],
+    filters=[
+        'chatterbot.filters.RepetitiveResponseFilter'
+    ],
+    input_adapter='chatterbot.input.TerminalAdapter',
+    output_adapter='chatterbot.output.TerminalAdapter',
+    database='heroku_h80dpwn6',
+    database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
+)
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -82,9 +94,9 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            #msg = event.message.text
-            #response = bot.get_response(msg)
-            response = event.message.text
+            msg = event.message.text
+            response = bot.get_response(msg)
+            #response = event.message.text
             #print response            
 
             line_bot_api.reply_message(
