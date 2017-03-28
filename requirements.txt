@@ -1,5 +1,15 @@
 line-bot-sdk
 flask
 gunicorn
-chatterbot
-nltk
+
+./pipsw/ChatterBot-0.6.0-py2.py3-none-any.whl
+./pipsw/chatterbot_corpus-0.0.1-py2.py3-none-any.whl
+./pipsw/future-0.16.0.tar.gz
+./pipsw/jsondatabase-0.1.7-py2.py3-none-any.whl
+./pipsw/nltk-3.2.2.tar.gz
+./pipsw/oauthlib-2.0.2.tar.gz
+./pipsw/pymongo-3.4.0-cp27-cp27mu-manylinux1_x86_64.whl
+./pipsw/python_twitter-3.2.1-py2-none-any.whl
+./pipsw/requests-2.13.0-py2.py3-none-any.whl
+./pipsw/requests_oauthlib-0.8.0-py2.py3-none-any.whl
+./pipsw/six-1.10.0-py2.py3-none-any.whl
