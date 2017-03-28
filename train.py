@@ -20,7 +20,8 @@ bot = ChatBot('LineBot',
     ],
     input_adapter='chatterbot.input.TerminalAdapter',
     output_adapter='chatterbot.output.TerminalAdapter',
-    database='chatterbot-database'
+    database='heroku_h80dpwn6',
+    database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
 print('Type something to begin...')
