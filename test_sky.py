@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 import json
 from skyscanner.skyscanner import Flights
+from signal import signal, SIGPIPE, SIG_DFL
+signal(SIGPIPE,SIG_DFL) 
 
-flights_service = Flights('prtl6749387986743898559646983194')
+flights_service = Flights('li366941824595940128156908455687')
 data = flights_service.get_result(
     cabinclass='Economy',
     country='TH',
@@ -48,4 +50,4 @@ for c in data['Itineraries']:
 																				if (si['OperatingCarrier'] == ci['Id']):
 																					for co in data['Carriers']:
 																						if (so['OperatingCarrier'] == co['Id']):
-																							print(so['DepartureDateTime']),(so['ArrivalDateTime']),(poo['Code']),(pod['Code']),(co['DisplayCode']),(so['Duration']),(lo['Stops']),(si['DepartureDateTime']),(si['ArrivalDateTime']),(pio['Code']),(pid['Code']),(ci['DisplayCode']),(si['Duration']),(li['Stops']),(c['PricingOptions'][0]['Price']),data['Currencies'][0]['Code'],(a['Name']),(c['PricingOptions'][0]['DeeplinkUrl'])
+																							print(so['DepartureDateTime']),(so['ArrivalDateTime']),(poo['Code']),(pod['Code']),(co['Name']).encode('utf-8'),(so['Duration']),(lo['Stops']),(si['DepartureDateTime']),(si['ArrivalDateTime']),(pio['Code']),(pid['Code']),(ci['Name']).encode('utf-8'),(si['Duration']),(li['Stops']),(c['PricingOptions'][0]['Price']),data['Currencies'][0]['Code'],(a['Name']),(c['PricingOptions'][0]['DeeplinkUrl'])
