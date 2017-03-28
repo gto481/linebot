@@ -1,0 +1,96 @@
+2007-03-01T06:48:00.000Z	agliv5		and here it is : /usr/bin/ld: common/mc.o: relocation R_X86_64_32S against `a local symbol' can not be used when making a shared object; recompile with -fPIC
+2007-03-01T06:48:00.000Z	agliv5		common/mc.o: could not read symbols: Bad value
+2007-03-01T06:48:00.000Z	agliv5		  Anyone have any ideas?
+2007-03-01T06:49:00.000Z	ikonia_	agliv5	incompatible
+2007-03-01T06:49:00.000Z	ikonia_	agliv5	the .o file you're using
+2007-03-01T06:49:00.000Z	ikonia_	agliv5	it has symbols in ther are unexpected
+2007-03-01T06:52:00.000Z	ikonia_	agliv5	o is an object file - what are you trying to do and I'll see if I can figure a soltuoin
+2007-03-01T06:55:00.000Z	ikonia_	agliv5	is that a kernel driver ?
+2007-03-01T06:55:00.000Z	ikonia_	agliv5	wht you are trying to build
+2007-03-01T06:56:00.000Z	ikonia_	agliv5	ok
+2007-03-01T07:07:00.000Z	ikonia_	agliv5	be with you in a sec - just doing two other problems first
+2007-03-01T07:13:00.000Z	ikonia_	agliv5	you stil there
+2007-03-01T07:13:00.000Z	ikonia_	agliv5	it "looks" like you are trying to build the package on x86_^4 but one of the codecs it wants to link against is i386 - therefore the module is unusale
+2007-03-01T07:14:00.000Z	ikonia_	agliv5	well - inveistage your codecs or what it wants to linkx against, am I right that your using x86_^4
+2007-03-01T07:15:00.000Z	ikonia_	agliv5	bare with me lets see if we can work this through
+2007-03-01T07:15:00.000Z	ikonia_	agliv5	 I doubt it but lets see
+2007-03-01T07:16:00.000Z	ikonia_	agliv5	ok just so I'm clear your using edgy 6.10 onx 86_64
+2007-03-01T07:17:00.000Z	ikonia_	agliv5	show me uname -a please
+2007-03-01T07:19:00.000Z	ikonia_	agliv5	ok thanks
+2007-03-01T07:19:00.000Z	ikonia_	agliv5	2 minutes
+2007-03-01T07:22:00.000Z	ikonia_	agliv5	the problem looks like this - you're uxing x86_64 but its trying to use a c++ objects (example common/i386/mc-c.o common/i386/predict-c.o ) which as you can see are i386
+2007-03-01T07:23:00.000Z	ikonia_	agliv5	so the symbols from the i386 modules will be incompatible with x86_^4
+2007-03-01T07:24:00.000Z	ikonia_	agliv5	well it looks like this package is not ready for 64 bit use (at a glance) so you can either contact the developers and find out if there are any 64bit patches/source - or try building ina 32bit chroot but that in my opinion is more hassle than its worth
+2007-03-01T07:25:00.000Z	ikonia_	agliv5	well it may be, however the package you're using looks for i386 modules -
+2007-03-01T07:27:00.000Z	ikonia_	agliv5	to you want to share the make output ?
+2007-03-01T07:31:00.000Z	ikonia_	agliv5	this is VERY interesting -O4 NET
+2007-03-01T07:31:00.000Z	ikonia_	agliv5	-04 -march=nocona -mtune=nocona
+2007-03-01T07:32:00.000Z	ikonia_	agliv5	 it also looks like it still wants X264 (look -D__X264__ )
+2007-03-01T07:33:00.000Z	ikonia_	agliv5	common/amd64/mc-a2.o thats looking better though
+2007-03-01T07:34:00.000Z	ikonia_	agliv5	I have a request - thats not going to be popular with you
+2007-03-01T07:35:00.000Z	ikonia_	agliv5	can you remove the maplayer source dir - and re-untar it and check again as I think you have some caching from your previous attempts to make
+2007-03-01T07:35:00.000Z	ikonia_	agliv5	I didn't say they wheren't suport
+2007-03-01T07:35:00.000Z	ikonia_	agliv5	try removing the source and trying again as it loks like there is some caching
+2007-03-01T07:40:00.000Z	ikonia_	agliv5	be back in 3 minutes
+2007-03-01T07:50:00.000Z	ikonia_	agliv5	back
+2007-03-01T07:55:00.000Z	ikonia_	agliv5	arn't the win32 codecs not available on x86_64
+2007-03-01T07:55:00.000Z	ikonia_	agliv5	looks like they are not abailable agliv5
+2007-03-01T07:56:00.000Z	ikonia_	agliv5	re-install grub
+2007-03-01T07:57:00.000Z	ikonia_	agliv5	well defoo remove them as you've not got them installed according to the configure
+2007-03-01T07:58:00.000Z	ikonia_	agliv5	shojldn't be a problem
+2007-03-01T08:00:00.000Z	ikonia_	agliv5	well you're configure can't see it
+2007-03-01T08:02:00.000Z	ikonia_	agliv5	looking at the output from the make - it looks like the codecs installed on ubuntu are too old to be used to build against the newer version of mplayer
+2007-03-01T08:02:00.000Z	ikonia_	agliv5	thats what it looks like without me trying it myself
+2007-03-02T06:39:00.000Z	ikonia_	agliv5	thats the wrong command
+2007-03-02T06:39:00.000Z	ikonia_	agliv5	sudo mount /dev/sda1 /media/GRUB is correct
+2007-03-02T06:44:00.000Z	agliv5	ikonia_	 I've only been trying to get this to work for the past 3 hours.... and then you come along and solve my problem in 30sec...
+2007-03-02T06:44:00.000Z	ikonia_	agliv5	not a problem. Happy to help
+2007-03-02T06:44:00.000Z	ikonia_	agliv5	soundray had it right too
+2007-03-02T06:46:00.000Z	agliv5	ikonia_	I need to edit grub so that it no longer tries to boot from the wrong partition... I've got the .lst open but what do I change without killing everything?
+2007-03-02T06:46:00.000Z	ikonia_	agliv5	put your grub config in a pastebin - then I'l query your config and give you the correct values
+2007-03-02T06:48:00.000Z	agliv5	ikonia_	http://paste.ubuntu-nl.org/8214/ remember trying to help me out installing x264 and mplayer yesterday?
+2007-03-02T06:49:00.000Z	ikonia_	agliv5	yes I remember it will
+2007-03-02T06:50:00.000Z	agliv5	ikonia_	well I decided that I missed 6.06 so I formated everything and installed 6.06 but now Grub is trying to mount the wrong partition... how stupid!
+2007-03-02T06:51:00.000Z	ikonia_	agliv5	get the config into a pastebin and lets take a look
+2007-03-02T06:51:00.000Z	agliv5	ikonia_	 I already sent you the link.... http://paste.ubuntu-nl.org/8214/
+2007-03-02T06:51:00.000Z	ikonia_	agliv5	sorry I missed the link
+2007-03-02T06:52:00.000Z	agliv5	ikonia_	no need to appoligize.... I'm overgreatfull that I'm finally getting some good quality assistance ;)
+2007-03-02T06:53:00.000Z	ikonia_	agliv5	okey dokey - are you running 6.0.6 amd64 ?
+2007-03-02T06:54:00.000Z	agliv5	ikonia_	I'm trying to ;)
+2007-03-02T06:54:00.000Z	ikonia_	agliv5	ok  - just wwanted to make sure I was looking at the right part
+2007-03-02T06:55:00.000Z	ikonia_	agliv5	can you tell me which hard disk and partition your install is on ?
+2007-03-02T06:55:00.000Z	ikonia_	agliv5	is the /dev/sda8 correct ?
+2007-03-02T06:57:00.000Z	agliv5	ikonia_	sda8 = / "root" yes
+2007-03-02T06:57:00.000Z	ikonia_	agliv5	ok - thats great
+2007-03-02T06:58:00.000Z	ikonia_	agliv5	try changing the (hd1,0) line to (hd0,7)
+2007-03-02T06:58:00.000Z	agliv5	ikonia_	 I don't know yet what's so great about that.... FYI hda1 is only NTFS Data and has a faulty boot-sector.... but since it's only DATA, wo cares?
+2007-03-02T06:58:00.000Z	ikonia_	agliv5	I can only take an educated guess at the correct option as I don't know your system
+2007-03-02T06:58:00.000Z	ikonia_	agliv5	ahhh you have a hda1
+2007-03-02T06:59:00.000Z	ikonia_	agliv5	my mistake
+2007-03-02T06:59:00.000Z	ikonia_	agliv5	change (hd1,0) to (hd1,7)
+2007-03-02T06:59:00.000Z	ikonia_	agliv5	all instances
+2007-03-02T06:59:00.000Z	ikonia_	agliv5	I'm %90 certain that will work
+2007-03-02T07:00:00.000Z	agliv5	ikonia_	 hda1 is NTFS data no boot, sda1 is /boot, sda5 is /swap, sda7 is /home, sda8 is / "root" -- that's it...
+2007-03-02T07:01:00.000Z	ikonia_	agliv5	poooh you have /boot
+2007-03-02T07:01:00.000Z	agliv5	ikonia_	yes
+2007-03-02T07:01:00.000Z	ikonia_	agliv5	ok - so root should be either (hd1,0) or (hd1,7) - I can't be certain - but its one of those too
+2007-03-02T07:02:00.000Z	agliv5	ikonia_	why hda? my root is sda8? is it supposed to mount sda8 to hda?
+2007-03-02T07:02:00.000Z	ikonia_	agliv5	didn't say hda  - I said hd
+2007-03-02T07:03:00.000Z	agliv5	ikonia_	I see, what's the difference?
+2007-03-02T07:03:00.000Z	ikonia_	agliv5	(hd1,0) or (hd1,7)
+2007-03-02T07:03:00.000Z	ikonia_	agliv5	grub doesn't reference hard disks the same
+2007-03-02T07:03:00.000Z	ikonia_	agliv5	all disks are "hd"
+2007-03-02T07:03:00.000Z	agliv5	ikonia_	I meant between hda and hd?
+2007-03-02T07:04:00.000Z	ikonia_	agliv5	there is no difference, hda is how linux shows the first ide disk - hd is how grub references any hard disk
+2007-03-02T07:04:00.000Z	ikonia_	agliv5	they are two different methods of accessing the hard disk - onefor the OS one for the grub boot loader
+2007-03-02T07:05:00.000Z	agliv5	ikonia_	I don't think what you are suggesting is going to work... hang on a sec whist I check something...
+2007-03-02T07:05:00.000Z	ikonia_	agliv5	explain why you don't think its going to work
+2007-03-02T07:08:00.000Z	agliv5	ikonia_	http://paste.ubuntu-nl.org/8193  that's why...
+2007-03-02T07:09:00.000Z	ikonia_	agliv5	did you try (hd1,7)
+2007-03-02T07:09:00.000Z	ikonia_	agliv5	I said it could be either but I can't be sure as I do'nt know your system
+2007-03-02T07:09:00.000Z	ikonia_	agliv5	root (hda1,0)
+2007-03-02T07:11:00.000Z	agliv5	ikonia_	 I have not tried anything yet and am recluctant to because I'm currently running from the liveCD and what to get it RIGHT for the next boot ;)
+2007-03-02T07:11:00.000Z	ikonia_	agliv5	look at the root(hda1,0) line - it should be root(hd1,0) or root (hd1,7)
+2007-03-02T07:12:00.000Z	ikonia_	agliv5	I think its (hd1,7) - but I can't be certain
+2007-03-02T07:12:00.000Z	agliv5	ikonia_	 (hd1,7) sounds logical wish me luck ;)
+2007-03-02T07:12:00.000Z	ikonia_	agliv5	 back in 1minute

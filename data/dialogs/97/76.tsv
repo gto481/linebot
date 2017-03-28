@@ -1,0 +1,97 @@
+2005-09-15T12:13:00.000Z	pedrobest		hello all. i am a newish user of linux and irc and i need some help gaining root privileges in kubuntu. i think that in irc you can talk individually - could someone start an individual session with me or shall i talk to the group?
+2005-09-15T12:15:00.000Z	pedrobest		apparently the kubuntu install disables the root account and gives the first created account sudo / su privalige
+2005-09-15T12:16:00.000Z	pedrobest		yeah i kown but i need root and it wont work
+2005-09-15T12:17:00.000Z	pedrobest		i need root to set up wlan and user account for a family pc. but sudo -s
+2005-09-15T12:17:00.000Z	pedrobest		doesnt work
+2005-09-15T12:17:00.000Z	pedrobest		it cant find the /public/something dir
+2005-09-15T12:18:00.000Z	pedrobest		my install seem to not have a /public dir - is that not odd
+2005-09-15T12:18:00.000Z	HappyFool	pedrobest	i don't have a /public dir and sudo -s works fine
+2005-09-15T12:18:00.000Z	HappyFool	pedrobest	how did you install ubuntu? normal, server, expert ?
+2005-09-15T12:19:00.000Z	HappyFool	pedrobest	are you on kubuntu now ?
+2005-09-15T12:20:00.000Z	HappyFool	pedrobest	can the other machine access the internet?
+2005-09-15T12:20:00.000Z	HappyFool	pedrobest	hmm. ok, can you tell us the exact error of 'sudo ls' ?
+2005-09-15T12:21:00.000Z	HappyFool	pedrobest	and does it ask you for a password before it fails, or not?
+2005-09-15T12:27:00.000Z	HappyFool	pedrobest	hrm
+2005-09-15T12:28:00.000Z	HappyFool	pedrobest	sounds like networking is screwed-up, but i'm not sure how, or why sudo is involved
+2005-09-15T12:29:00.000Z	HappyFool	pedrobest	that gethostbyname() call
+2005-09-15T12:29:00.000Z	HappyFool	pedrobest	i need some more info; are you next to the other computer?
+2005-09-15T12:31:00.000Z	HappyFool	pedrobest	hmm. ok, i'll try to give you a list of commands to run
+2005-09-15T12:31:00.000Z	HappyFool	pedrobest	1. 'hostname' (should show 'family1'); 2. 'grep family1 /etc/hosts' (should, but probably won't, show '127.0.0.1   localhost family1')
+2005-09-15T12:32:00.000Z	HappyFool	pedrobest	try also 'ping family1' -- that should fail
+2005-09-15T12:32:00.000Z	HappyFool	pedrobest	the failure should be 'ping: unknown host family1'
+2005-09-15T12:32:00.000Z	HappyFool	pedrobest	can you try those, please?
+2005-09-15T12:37:00.000Z	HappyFool	pedrobest	1 failed ? what did 'hostname' say ?
+2005-09-15T12:38:00.000Z	HappyFool	pedrobest	did you type 'grep family1 etc/hosts' or 'grep family1 /etc/hosts' ?
+2005-09-15T12:39:00.000Z	HappyFool	pedrobest	the second one is correct
+2005-09-15T12:39:00.000Z	HappyFool	pedrobest	if you have no /etc/hosts file, something is (very?) wrong
+2005-09-15T12:41:00.000Z	HappyFool	pedrobest	ok, for some reason your hostname is not in the /etc/hosts file
+2005-09-15T12:41:00.000Z	HappyFool	pedrobest	this is *probably* the problem, but i'm not completely sure
+2005-09-15T12:41:00.000Z	HappyFool	pedrobest	to fix this you'll need to boot the machine into rescue mode -- do you know how to do that?
+2005-09-15T12:43:00.000Z	HappyFool	pedrobest	ok, it's not too hard. you need to press ESC just before ubuntu boots -- this is after your bios is finished. I *think* there's a prompt telling you to press ESC for a boot menu
+2005-09-15T12:43:00.000Z	HappyFool	pedrobest	choose the 'recovery mode' or 'rescue' mode option, and press enter
+2005-09-15T12:43:00.000Z	pedrobest	HappyFool	ok then ill give it a go
+2005-09-15T12:43:00.000Z	HappyFool	pedrobest	you have an idea of what i'm taking about?
+2005-09-15T12:43:00.000Z	HappyFool	pedrobest	hang on ;)
+2005-09-15T12:44:00.000Z	pedrobest	HappyFool	only thing is im using grub - do you wnat be to go into the grub options?
+2005-09-15T12:44:00.000Z	HappyFool	pedrobest	yes
+2005-09-15T12:45:00.000Z	HappyFool	pedrobest	choose the rescue mode in the grub menu
+2005-09-15T12:45:00.000Z	HappyFool	pedrobest	that will put you into a shell, as root
+2005-09-15T12:46:00.000Z	HappyFool	pedrobest	you need to edit the /etc/hosts file; you can use the editor 'nano'. Just type 'nano /etc/hosts'
+2005-09-15T12:47:00.000Z	HappyFool	pedrobest	one of the lines should start with '127.0.0.1' and be followed by 'localhost.localdomain' and 'localhost'; you need to add 'family1' to that line
+2005-09-15T12:47:00.000Z	HappyFool	pedrobest	there must be a space between 'localhost' and 'family1'
+2005-09-15T12:47:00.000Z	HappyFool	pedrobest	then save the file, and try 'ping family1' again; it should now work
+2005-09-15T12:47:00.000Z	HappyFool	pedrobest	if it does, reboot and try sudo -s again
+2005-09-15T12:47:00.000Z	HappyFool	pedrobest	i hope that's clear
+2005-09-15T12:48:00.000Z	pedrobest	HappyFool	please could you write out what the lin in nano needs to say
+2005-09-15T12:48:00.000Z	HappyFool	pedrobest	ok
+2005-09-15T12:48:00.000Z	HappyFool	pedrobest	127.0.0.1 localhost.localdomain localhost family1
+2005-09-15T12:48:00.000Z	pedrobest	HappyFool	thanks
+2005-09-15T12:51:00.000Z	pedrobest	HappyFool	the line only contained 127.0.0.1 localhost . i added family1 to the end and pinged it but i didnt work. shall i add localhost.localdomain to the file.
+2005-09-15T12:51:00.000Z	HappyFool	pedrobest	localhost.localdomain is not too important
+2005-09-15T12:51:00.000Z	HappyFool	pedrobest	hmm. that is strange
+2005-09-15T12:51:00.000Z	pedrobest	HappyFool	that line was the only thing the file contained
+2005-09-15T12:52:00.000Z	HappyFool	pedrobest	that's fine
+2005-09-15T12:52:00.000Z	pedrobest	HappyFool	what responce i needed
+2005-09-15T12:52:00.000Z	HappyFool	pedrobest	you're sure you saved the file? Also, could you try 'ping localhost'
+2005-09-15T12:52:00.000Z	pedrobest	HappyFool	ill have another look
+2005-09-15T12:52:00.000Z	HappyFool	pedrobest	one more thing
+2005-09-15T12:53:00.000Z	HappyFool	pedrobest	type 'ifconfig lo' -- the fourth line should start with UP
+2005-09-15T12:53:00.000Z	HappyFool	pedrobest	if it starts with DOWN something (different) is wrong
+2005-09-15T12:55:00.000Z	pedrobest	HappyFool	umm - the forth line of ifconfig lo starts with TX
+2005-09-15T12:56:00.000Z	HappyFool	pedrobest	hmm. ok, sorry, that means it's down
+2005-09-15T12:57:00.000Z	HappyFool	pedrobest	i'm not sure that that is that important for sudo
+2005-09-15T12:57:00.000Z	pedrobest	HappyFool	sorry to be ignorant but could you explain why networking and the like has anything to do with sudo
+2005-09-15T12:58:00.000Z	HappyFool	pedrobest	i don't know; i am trying to apply a sort of treating the symptoms approach. if sudo needs to find the 'family1' host, let's try to make that happen
+2005-09-15T12:58:00.000Z	pedrobest	HappyFool	ok
+2005-09-15T12:59:00.000Z	HappyFool	pedrobest	what error did the ping fail with ?
+2005-09-15T12:59:00.000Z	HappyFool	pedrobest	after you changed /etc/hosts
+2005-09-15T12:59:00.000Z	pedrobest	HappyFool	connect: Network is unreachable
+2005-09-15T13:00:00.000Z	HappyFool	pedrobest	ok, so it resolved
+2005-09-15T13:00:00.000Z	HappyFool	pedrobest	i think you can try sudo again
+2005-09-15T13:00:00.000Z	HappyFool	pedrobest	you can try 'telinit 2' in the root shell
+2005-09-15T13:00:00.000Z	pedrobest	HappyFool	ok then back to kde. just for refernece what command reboots in the console?
+2005-09-15T13:01:00.000Z	HappyFool	pedrobest	um. you need to choose rescue mode in the grub menu
+2005-09-15T13:03:00.000Z	pedrobest	HappyFool	do you mean i need to try sudo in the console im in now?
+2005-09-15T13:03:00.000Z	HappyFool	pedrobest	no, i want you to try it as a 'normal' user
+2005-09-15T13:04:00.000Z	pedrobest	HappyFool	sorry - could you elaborate?
+2005-09-15T13:05:00.000Z	HappyFool	pedrobest	i mean, i want you to go to a normal runlevel with 'telinit 2' -- that should get you to a normal KDE login screen; login, and try 'sudo ls' and see if it now works
+2005-09-15T13:15:00.000Z	pedrobest	HappyFool	thanks very much - i now seem to be able to set up my kwifi but im not sure about some other things - when i go into the k control center and click on administor mode it claims it loading but doesnt. also su - then my password doesnt seem to work
+2005-09-15T13:15:00.000Z	HappyFool	pedrobest	su - won't work until you set a root password
+2005-09-15T13:16:00.000Z	HappyFool	pedrobest	i recommend just using 'sudo -s' for now; effectively the same thing
+2005-09-15T13:16:00.000Z	pedrobest	HappyFool	so when i use that kubuntu will think i am root for 15 mins?
+2005-09-15T13:16:00.000Z	HappyFool	pedrobest	i'm not very familiar with kde, so i'm not too sure what the problem is there. however, it seems like something went a bit funny in your install
+2005-09-15T13:17:00.000Z	HappyFool	pedrobest	um, no, you need to use something else for kde to know about that
+2005-09-15T13:17:00.000Z	HappyFool	pedrobest	i think it might be kdesu ? (let me check...)
+2005-09-15T13:17:00.000Z	pedrobest	HappyFool	yes that what worked when i wanted to set up kwifi
+2005-09-15T13:18:00.000Z	pedrobest	HappyFool	and sudo ls also worked
+2005-09-15T13:18:00.000Z	HappyFool	pedrobest	ok, good. something is still a bit screwy -- i think you need to get at least 'ping 127.0.0.1' working, but maybe that has something to do with you other (wifi) network setup
+2005-09-15T13:21:00.000Z	pedrobest	HappyFool	althought i now have connected to this wifi signal i cannot connect to the net
+2005-09-15T13:22:00.000Z	pedrobest	HappyFool	any ideas how to - it should not be a router problem becasue knoppix can gain a ip address when on my wired lan pc
+2005-09-15T13:22:00.000Z	HappyFool	pedrobest	um. i'm not a wifi or routing expert, i'm afraid
+2005-09-15T13:23:00.000Z	HappyFool	pedrobest	all i can do is recommend this:
+2005-09-15T13:23:00.000Z	pedrobest	HappyFool	thanks very much for this then - im sure ill be back!
+2005-09-15T14:02:00.000Z	HappyFool	pedrobest	it's probable that you can't login as root in 'graphical' mode
+2005-09-15T14:02:00.000Z	HappyFool	pedrobest	you should be able to login on the console (Ctl-Alt-F1 to get to console; Alt-F7 to get back to graphical mode)
+2005-09-15T14:03:00.000Z	HappyFool	pedrobest	finally, you can somehow make kdm (or gdm) let you login as root, but i'm not sure how
+2005-09-15T14:05:00.000Z	HappyFool	pedrobest	there is one; i should have mentioned it before
+2005-09-15T14:05:00.000Z	HappyFool	pedrobest	#kubuntu

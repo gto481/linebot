@@ -1,0 +1,98 @@
+2009-02-06T19:31:00.000Z	dijinn		Hello there?
+2009-02-06T19:32:00.000Z	dijinn		can someone help me with problems with X-Server?
+2009-02-06T19:32:00.000Z	dijinn		I updated, restarted and then, my 8.10 locked up on a terminal...
+2009-02-06T19:33:00.000Z	dijinn		Someone?
+2009-02-06T19:33:00.000Z	dijinn		Please?
+2009-02-06T19:33:00.000Z	r3dux	dijinn	start in recovery mode and do a file system check
+2009-02-06T19:34:00.000Z	dijinn	r3dux	I did that, it fixed everything and still on terminal only
+2009-02-06T19:35:00.000Z	r3dux	dijinn	you could downgrade your xorg...
+2009-02-06T19:35:00.000Z	dijinn	r3dux	if I knew wth happened...lol
+2009-02-06T19:35:00.000Z	dijinn	r3dux	I think it's something to do with a custom module I inputted for the acer aspire one
+2009-02-06T19:36:00.000Z	r3dux	dijinn	- hmm... what custom module? Try removing?
+2009-02-06T19:36:00.000Z	dijinn	r3dux	pciehp loading on boot...
+2009-02-06T19:37:00.000Z	dijinn	r3dux	it keeps saying for a while that there is no device to add and keep calling it
+2009-02-06T19:37:00.000Z	r3dux	dijinn	disable it - it's obv not a happy bunny.
+2009-02-06T19:37:00.000Z	dijinn	r3dux	yeah, but how am I supposed to do so in the terminal?
+2009-02-06T20:13:00.000Z	dijinn	r3dux	and we are back to the terminal ¬¬
+2009-02-06T19:39:00.000Z	r3dux	dijinn	could add it to /etc/modprobe.d/blacklist-___________ (framebuffer?) so it doesn't get loaded
+2009-02-06T19:39:00.000Z	dijinn	r3dux	that's my msg after the fsck
+2009-02-06T19:40:00.000Z	dijinn	r3dux	how do I actually edit a file in the terminal?
+2009-02-06T19:41:00.000Z	r3dux	dijinn	grab a vi cheat sheet and vi it :)
+2009-02-06T19:41:00.000Z	r3dux	dijinn	i to insert, e to edit, !q to quit and save?
+2009-02-06T19:41:00.000Z	dijinn	r3dux	and how do I save it after edit?
+2009-02-06T19:41:00.000Z	r3dux	dijinn	ijkl are cursor keys, I think
+2009-02-06T19:41:00.000Z	dijinn	r3dux	I'm totally noob with terminals...xD
+2009-02-06T19:42:00.000Z	r3dux	dijinn	http://www.linux.com/feature/44366
+2009-02-06T19:43:00.000Z	dijinn	r3dux	so, I should vi /etc/modules to take it out, right? sudo thing for it
+2009-02-06T19:43:00.000Z	r3dux	dijinn	zed sounds acceptaptle, so sudo apt-get install it and have a go :)
+2009-02-06T19:44:00.000Z	r3dux	dijinn	I think it's worth a go - yes
+2009-02-06T19:45:00.000Z	dijinn	r3dux	I'm with the thing open on vi....the only problem now is....HOW TO SAVE IT?!?!?!
+2009-02-06T19:47:00.000Z	dijinn	r3dux	rebooting to see if it works
+2009-02-06T19:48:00.000Z	r3dux	dijinn	good stuff - fingers crossed.
+2009-02-06T19:48:00.000Z	dijinn	r3dux	back to the bloody kernel ¬¬
+2009-02-06T19:48:00.000Z	dijinn	r3dux	at least its not running the pciehp anymore
+2009-02-06T19:49:00.000Z	r3dux	dijinn	have you tried adding vga=773 to your grub boot (assuming you're using grub =/ )
+2009-02-06T19:50:00.000Z	dijinn	r3dux	what is that? in a new line? i did not change any option on it...i guess vga=773 is not an option in it
+2009-02-06T19:50:00.000Z	r3dux	dijinn	there's a whole table of 7xx numbers which mean diff res's at diff colour depths.. a lower rez might work to just get you into X
+2009-02-06T19:51:00.000Z	dijinn	r3dux	even with it saying that the x server is down?
+2009-02-06T19:51:00.000Z	r3dux	dijinn	possibly not then =/ Downgrade, man! Downgrade!
+2009-02-06T19:51:00.000Z	r3dux	dijinn	or purge and reinstall
+2009-02-06T19:52:00.000Z	dijinn	r3dux	how do I downgrade it?
+2009-02-06T19:52:00.000Z	r3dux	dijinn	tried "X -configure"?
+2009-02-06T19:52:00.000Z	dijinn	r3dux	I'm getting a /usr/bin/X11/X not found error...and I don't have a clue on why it doesnt see something that IS there
+2009-02-06T19:53:00.000Z	r3dux	dijinn	to downgrade sudo apt-get purge xorg<possibly numbers and stuff here>, then reinstall with apt-get install xorg or xserver or whatever it's called
+2009-02-06T19:54:00.000Z	r3dux	dijinn	if you don't have a lot on the system already you might just be better off reinstalling.
+2009-02-06T19:54:00.000Z	dijinn	r3dux	I DO have a lot on the system already...lol
+2009-02-06T19:54:00.000Z	r3dux	dijinn	there will be ways to configure X and tweak around with it, but if you don't know what'll work it could be a long job
+2009-02-06T19:55:00.000Z	dijinn	r3dux	I can't start configure..... "X -configure", "xstart -configure" or "x -configure" wont work
+2009-02-06T19:55:00.000Z	r3dux	dijinn	try this: sudo dpkg-reconfigure xserver-xorg
+2009-02-06T19:56:00.000Z	dijinn	r3dux	I'm in the config utility now
+2009-02-06T19:58:00.000Z	dijinn	r3dux	in the end, it said ln: creating symbolic link /etc/X11/X File exists
+2009-02-06T19:59:00.000Z	dijinn	r3dux	runnung startx again turned the same errors we had before
+2009-02-06T19:59:00.000Z	r3dux	dijinn	could try nenaming /etc/X11/X to X.backup?
+2009-02-06T19:59:00.000Z	r3dux	dijinn	and reconfiging again..
+2009-02-06T20:00:00.000Z	r3dux	dijinn	could also try updating your graphic drivers while your in the console (if you have nvid or ati - god knows for onboard..)
+2009-02-06T20:00:00.000Z	dijinn	r3dux	I'm on an acer aspire one....god knows what is my real hardware
+2009-02-06T20:02:00.000Z	r3dux	dijinn	https://help.ubuntu.com/community/AspireOne
+2009-02-06T20:02:00.000Z	dijinn	r3dux	I read that thing a thousand times....lol
+2009-02-06T20:03:00.000Z	r3dux	dijinn	lol - sorry, man
+2009-02-06T20:03:00.000Z	r3dux	dijinn	I'm close to out of ideas... but that doesn't mean there isn't a fix.
+2009-02-06T20:03:00.000Z	dijinn	r3dux	no prob at all...lol....I'm used to be shown to that thing
+2009-02-06T20:04:00.000Z	dijinn	r3dux	I'm because I runned out of ideas....lol....i'm such a noob
+2009-02-06T20:04:00.000Z	r3dux	dijinn	look up downgrading packages if this has only happened since x upgrade. If since new module insert google blacklisting modules :)
+2009-02-06T20:05:00.000Z	dijinn	r3dux	i dunno what made it panic like this. I was on GNOME as usual, restarted cuz I got a problem with the Package Manager and it turned out to this
+2009-02-06T20:06:00.000Z	r3dux	dijinn	tried KDE? ;)
+2009-02-06T20:07:00.000Z	dijinn	r3dux	if this helps, I tried to ls the directory that it says that doesnt exist and it REALLY doesnt exist
+2009-02-06T20:07:00.000Z	r3dux	dijinn	actually try "tail /var/log/dmesg" or "cat /var/log/dmesg | grep error"
+2009-02-06T20:08:00.000Z	r3dux	dijinn	see if anything looks frackd
+2009-02-06T20:10:00.000Z	dijinn	r3dux	I'm running a fsck now to try to fix it
+2009-02-06T20:11:00.000Z	dijinn	r3dux	rebooting
+2009-02-06T20:11:00.000Z	r3dux	dijinn	I'm getting close to flying from australia to wherever you are to bang that lappy w/ a wrench :)
+2009-02-06T20:11:00.000Z	dijinn	r3dux	i'd be glad to see that happening, and I'd get you the biggest wrench around for it...xD
+2009-02-06T20:13:00.000Z	dijinn	r3dux	it rebooted and fsck'ed it again...now it's rebooting again
+2009-02-06T20:17:00.000Z	r3dux	dijinn	reading... brb
+2009-02-06T20:17:00.000Z	dijinn	r3dux	sudo r3dux come-back/now
+2009-02-06T20:17:00.000Z	dijinn	r3dux	xD
+2009-02-06T20:18:00.000Z	r3dux	dijinn	GMA 950 video chipset - have you tweaked your xorg.conf?
+2009-02-06T20:19:00.000Z	dijinn	r3dux	what you want me to check?
+2009-02-06T20:20:00.000Z	dijinn	r3dux	maybe I did that without knowing xD
+2009-02-06T20:20:00.000Z	r3dux	dijinn	I want to know if you've tweaked your /etc/X11/xorg.conf file
+2009-02-06T20:20:00.000Z	dijinn	r3dux	lemme check...I guess I did that
+2009-02-06T20:21:00.000Z	r3dux	dijinn	before you tweaked it I hope you made a backup...
+2009-02-06T20:21:00.000Z	dijinn	r3dux	yes, I tweaked that...
+2009-02-06T20:21:00.000Z	dijinn	r3dux	i didn't do a backup, but I know what I put in there xD
+2009-02-06T20:23:00.000Z	r3dux	dijinn	that would do it - yeah.
+2009-02-06T20:24:00.000Z	dijinn	r3dux	crossing fingers again? time to reboot....I untweaked it xD
+2009-02-06T20:25:00.000Z	dijinn	r3dux	back to terminal
+2009-02-06T20:26:00.000Z	r3dux	dijinn	F*ck =(
+2009-02-06T20:26:00.000Z	r3dux	dijinn	I dunno mate... I'm empty. Other people might, but... can't think of much else to try apart from researching it more
+2009-02-06T20:27:00.000Z	dijinn	r3dux	still the same error (error in locking authority file and then /usr/bin/X11/X not found)
+2009-02-06T20:27:00.000Z	dijinn	r3dux	of course that after it, xinit returns that was unable to connect to xserver and a server error
+2009-02-06T20:30:00.000Z	dijinn	r3dux	i solved the problem with the locing authority file xD but I keep the usr bin problem xD
+2009-02-06T20:31:00.000Z	r3dux	dijinn	you what what with the what-what? It's now booting into X?
+2009-02-06T20:31:00.000Z	dijinn	r3dux	I solved half of the problem....but still cant boot into x
+2009-02-06T20:32:00.000Z	r3dux	dijinn	you have the priveledge, nay HONOUR of striking out into unknown Acer One cluster-f*ck territory - I wish you well =P
+2009-02-06T20:34:00.000Z	dijinn	r3dux	I guess I'm dead...I don't want to reinstall everything AGAIN in this sh1t!!!
+2009-02-06T20:35:00.000Z	r3dux	dijinn	I dunno what else to say mate... boot from a live distro (on usb if you have to) and get your stuff... your sys seems a touch broken =/
+2009-02-06T20:35:00.000Z	r3dux	dijinn	if it's important keep researching tho... there'll be a way. I just cant help any further - it's out of scope :)
+2009-02-06T20:36:00.000Z	dijinn	r3dux	thanks a lot for your time, man....I'm gona keep researching....I'm in the RunningX how to page now...lol

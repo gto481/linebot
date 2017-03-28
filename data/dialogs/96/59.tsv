@@ -1,0 +1,96 @@
+2006-09-11T07:21:00.000Z	hadi		i want program like captivate on windoz: this program take moveable screen shot and export .gif and .swf
+2006-09-11T07:22:00.000Z	hadi		:(
+2006-09-11T07:22:00.000Z	jrib	hadi	byzanz
+2006-09-11T08:11:00.000Z	jrib	hadi	install build-essential
+2009-09-26T16:45:00.000Z	jrib	hadi	well how far does it get?
+2009-09-26T16:46:00.000Z	hadi	jrib	: i disabled graphic login
+2009-09-26T16:47:00.000Z	jrib	hadi	ok, but that doesn't answer my question
+2009-09-26T16:47:00.000Z	hadi	jrib	: and it gets stuck on Loading hardware drivers
+2009-09-26T16:47:00.000Z	hadi	jrib	: last line is > [    9.838223]  ath_pci 0000:05:00.0 PCI INT A -> Link[Z00J] -> GSI 22 (level , low) -> IRQ 22
+2009-09-26T16:47:00.000Z	jrib	hadi	what else did you do?
+2009-09-26T16:48:00.000Z	jrib	hadi	does recovery mode work?
+2009-09-26T16:49:00.000Z	hadi	jrib	*
+2009-09-26T16:49:00.000Z	jrib	hadi	what do you mean exactly?
+2009-09-26T16:51:00.000Z	jrib	hadi	try loading a live cd, chroot, and disabling the module you enabled
+2009-09-26T17:03:00.000Z	hadi	jrib	im on Live Cd now !
+2009-09-26T17:03:00.000Z	jrib	hadi	mount your ubuntu partition
+2009-09-26T17:03:00.000Z	hadi	jrib	: how
+2009-09-26T17:07:00.000Z	hadi	jrib	: i can't get it
+2009-09-26T17:08:00.000Z	hadi	jrib	: i went to computer > and choosen the volume and mounted it
+2009-09-26T17:08:00.000Z	jrib	hadi	ok, open a terminal and do "sudo chroot /path/to/ubuntu/that/you/mounted
+2009-09-26T17:09:00.000Z	hadi	jrib	how i know its name
+2009-09-26T17:27:00.000Z	jrib	hadi	dpkg -l | grep madwifi
+2009-09-26T17:09:00.000Z	jrib	hadi	eiter type "mount" and check or guess based on the names of things in /media
+2009-09-26T17:10:00.000Z	hadi	jrib	:  /dev/sda5 on /media/disk type ext3 (rw,nosuid,nodev,uhelper=hal)
+2009-09-26T17:11:00.000Z	jrib	hadi	ok then
+2009-09-26T17:11:00.000Z	hadi	jrib	: ubuntu@ubuntu:~$ sudo chroot /media/disk
+2009-09-26T17:12:00.000Z	jrib	hadi	now pretend you have a terminal on your ubuntu install and uninstall those drivers
+2009-09-26T17:15:00.000Z	hadi	jrib	: and how i list all my packges
+2009-09-26T17:15:00.000Z	jrib	hadi	that link tells you
+2009-09-26T17:18:00.000Z	hadi	jrib	: sorry but my english is not that good
+2009-09-26T17:18:00.000Z	jrib	hadi	take your time
+2009-09-26T17:19:00.000Z	jrib	hadi	you're looking to remove a package, so search for "remove" or "uninstall" on that page I guess
+2009-09-26T17:20:00.000Z	hadi	jrib	; i want to list the packages to know which one to remove
+2009-09-26T17:20:00.000Z	jrib	hadi	dpkg -l
+2009-09-26T17:28:00.000Z	hadi	jrib	: ok ?
+2009-09-26T17:29:00.000Z	jrib	hadi	what version of ubuntu are you using by the way?
+2009-09-26T17:29:00.000Z	hadi	jrib	: 9.04
+2009-09-26T17:30:00.000Z	jrib	hadi	did the grep command from before not turn anything up?
+2009-09-26T17:30:00.000Z	hadi	jrib	the command didn't do anything for me
+2009-09-26T17:32:00.000Z	jrib	hadi	ok well since you are on a live cd, save the output of dpkg -l (from a Live Cd terminal, NOT your chroot) somewhere (dpkg -l > somewhere), then install madwifi on the livecd, then save the new dpkg -l output somewhere else (dpkg -l > somewhereelse).  Finally, diff the two files
+2009-09-26T17:32:00.000Z	hadi	jrib	: ugh , i give up :)
+2009-09-26T17:35:00.000Z	hadi	jrib	, ITS all about the hardware
+2009-09-26T17:35:00.000Z	jrib	hadi	ok?
+2009-09-26T17:36:00.000Z	hadi	jrib	: the hardware i installed from Hardware drivers
+2009-09-26T17:36:00.000Z	jrib	hadi	yeah, did you see my last suggestion?
+2009-09-26T17:37:00.000Z	hadi	jrib	: i saw it but i didn't understand it
+2009-09-26T17:37:00.000Z	jrib	hadi	what's the first thing you don't understand so I can explain it?
+2009-09-26T17:38:00.000Z	hadi	jrib	:  i can understand nothing of it im newbie to linux
+2009-09-26T17:38:00.000Z	jrib	hadi	so tell me the first thing you don't understand.
+2009-09-26T17:39:00.000Z	hadi	jrib	: save the output of dpkg -l . then save it somewhere ele .
+2009-09-26T17:39:00.000Z	jrib	hadi	did you see what I wrote in parentheses after that?
+2009-09-26T17:40:00.000Z	jrib	hadi	open a new terminal on the live cd and type the first command in parentheses (dpkg -l > somewhere)
+2009-09-26T17:41:00.000Z	hadi	jrib	: you mean to find the diffrence between those ?
+2009-09-26T17:41:00.000Z	jrib	hadi	yes
+2009-09-26T17:53:00.000Z	hadi	jrib	: i didn't find it but i found another way , its to get into /usr/src/ and search for the driver there and make uninstall
+2009-09-26T17:54:00.000Z	jrib	hadi	but that shouldn't work since you didn't use make to install it right?
+2009-09-26T17:54:00.000Z	hadi	jrib	: i installed it from System > administration > hardware drivers
+2009-09-26T17:56:00.000Z	jrib	hadi	ok proceed with what I said...
+2009-09-26T17:57:00.000Z	hadi	jrib	long long list :) 12 pages
+2009-09-26T17:58:00.000Z	jrib	hadi	you aren't doing this manually.  Just do: diff somewhere somewhereelse
+2009-09-26T18:03:00.000Z	hadi	jrib	,: diff on terminal ?
+2009-09-26T18:04:00.000Z	jrib	hadi	yes
+2009-09-26T18:33:00.000Z	hadi	jrib	: i can't find it
+2009-09-26T18:33:00.000Z	jrib	hadi	what have you done so far?
+2009-09-26T18:36:00.000Z	hadi	jrib	: diff file1 file2 :) and didn't find anything
+2009-09-26T18:36:00.000Z	jrib	hadi	you were supposed to 1) create file 1 2) install madwifi 3) create file2 4) diff
+2009-09-26T18:38:00.000Z	hadi	jrib	: i guess madwifi is installed from on my local ubuntu
+2009-09-26T18:38:00.000Z	jrib	hadi	yes, you are doing all this on the live cd
+2009-09-26T18:39:00.000Z	hadi	jrib	: http://paste.ubuntu.com/278747/
+2009-09-26T18:39:00.000Z	hadi	jrib	: you wanna see differences or similarities ?
+2009-09-26T18:39:00.000Z	jrib	hadi	differences, this can't be all the differences after installing just madwifi...
+2009-09-26T18:40:00.000Z	hadi	jrib	: i didn't install the madwifi here
+2009-09-26T18:40:00.000Z	jrib	hadi	ok, but that's what I said to do
+2009-09-26T18:40:00.000Z	hadi	jrib	: i will install it :)
+2009-09-26T18:41:00.000Z	jrib	hadi	remember you want to diff the output of the command before and after installing madwifi
+2009-09-26T18:46:00.000Z	hadi	jrib	: http://paste.ubuntu.com/278754/
+2009-09-26T18:46:00.000Z	jrib	hadi	what did you diff?
+2009-09-26T18:47:00.000Z	hadi	jrib	: i did diff between Live Cd and madwifi+livecd
+2009-09-26T18:48:00.000Z	hadi	jrib	: but i didnt install anything i just pressed active there's nothing to install here
+2009-09-26T18:48:00.000Z	jrib	hadi	that's all you installed?  And it pulled in 500 packages?
+2009-09-26T18:49:00.000Z	jrib	hadi	maybe you can just blacklist the module and get ubuntu to boot that way, then uninstall it
+2009-09-26T18:55:00.000Z	hadi	jrib	: i got something wrong with blacklist : http://paste.ubuntu.com/278759/
+2009-09-26T18:55:00.000Z	jrib	hadi	you can create your own file there
+2009-09-26T18:56:00.000Z	hadi	jrib	: how to ?
+2009-09-26T18:56:00.000Z	jrib	hadi	nano /path/to/file
+2009-09-26T18:56:00.000Z	jrib	hadi	I don't know what the name of the module is though, so you'll have to figure that out
+2009-09-26T18:57:00.000Z	hadi	jrib	:\
+2009-09-26T18:58:00.000Z	hadi	jrib	: i can go to the system there without my wireless card
+2009-09-26T18:58:00.000Z	jrib	hadi	that's an idea
+2009-09-26T18:59:00.000Z	hadi	jrib	: but i will not have internet cause no wireless
+2009-09-26T18:59:00.000Z	jrib	hadi	you should still be able to deactivate it.  As MenZa pointed out, you should be using ath5k I believe
+2009-09-26T18:59:00.000Z	hadi	jrib	:) ok then cya bro ill update you with what happens
+2009-09-26T18:59:00.000Z	jrib	hadi	good luck
+2009-09-30T06:45:00.000Z	jrib	hadi	when the kernel thinks it's a good idea
+2009-09-30T06:45:00.000Z	hadi	jrib	: i have 2 gb ram and 3 gb swap so i got 5 gb virtual memory ?
+2009-09-30T06:46:00.000Z	jrib	hadi	I think virtual memory is used to refer to swap but I could be wrong..

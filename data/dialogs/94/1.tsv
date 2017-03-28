@@ -1,0 +1,94 @@
+2012-04-29T06:07:00.000Z	imacinto		so I'm trying to reinstall video card drivers and keep getting this message: "sh: 0: getcwd() failed: No such file or directory"
+2012-04-29T06:07:00.000Z	imacinto		is that common?
+2012-04-29T06:07:00.000Z	InferiorHumanOrg	imacinto	what drivers, and how are you trying to install ?
+2012-04-29T06:08:00.000Z	imacinto	InferiorHumanOrg	I'm following the commands in this thread (third post down, "hasen j")
+2012-04-29T06:09:00.000Z	imacinto	InferiorHumanOrg	when I tried to do sudo dpkg-reconfigure xserver-xorg, I got that message five times
+2012-04-29T06:10:00.000Z	InferiorHumanOrg	imacinto	why don't you want to use the binary driver, it will perform better
+2012-04-29T06:10:00.000Z	imacinto	InferiorHumanOrg	when I tried to install the binary driver, something went wrong. all I can get to now is the command line
+2012-04-29T06:11:00.000Z	InferiorHumanOrg	imacinto	how did you try to install it, with the GUI app ?
+2012-04-29T06:12:00.000Z	imacinto	InferiorHumanOrg	yes, from the "Drivers" dialog
+2012-04-29T06:12:00.000Z	InferiorHumanOrg	imacinto	which card?
+2012-04-29T06:12:00.000Z	imacinto	InferiorHumanOrg	ATI Radeon
+2012-04-29T06:13:00.000Z	InferiorHumanOrg	imacinto	can you be more specific ? lspci | grep VGA
+2012-04-29T06:14:00.000Z	imacinto	InferiorHumanOrg	yes -- "VGA compatible controller: Advanced Micro Devices [AMD] nee ATI Wrestler [Radeon HD 6290]"
+2012-04-29T06:14:00.000Z	InferiorHumanOrg	imacinto	ok -- hold please
+2012-04-29T06:15:00.000Z	InferiorHumanOrg	imacinto	desktop or laptop ?
+2012-04-29T06:15:00.000Z	imacinto	InferiorHumanOrg	it's a netbook; Acer Aspire One 722
+2012-04-29T06:15:00.000Z	InferiorHumanOrg	imacinto	ok
+2012-04-29T06:17:00.000Z	InferiorHumanOrg	imacinto	which ubuntu version 11.10, 12.04 ?
+2012-04-29T06:18:00.000Z	imacinto	InferiorHumanOrg	12.04
+2012-04-29T06:18:00.000Z	InferiorHumanOrg	imacinto	ok, is it 32-bit or 64bit procesor ?
+2012-04-29T06:18:00.000Z	imacinto	InferiorHumanOrg	I'm not sure
+2012-04-29T06:21:00.000Z	imacinto	InferiorHumanOrg	I believe it is a 64-bit processor
+2012-04-29T06:21:00.000Z	InferiorHumanOrg	imacinto	you can run uname -m
+2012-04-29T06:21:00.000Z	imacinto	InferiorHumanOrg	oh, cool. thanks. it returns i686
+2012-04-29T06:22:00.000Z	InferiorHumanOrg	imacinto	ok one minute
+2012-04-29T06:26:00.000Z	InferiorHumanOrg	imacinto	run this, mkdir ~/ati && cd ~/ati && wget http://www2.ati.com/drivers/linux/amd-driver-installer-12-4-x86.x86_64.run  (I believe that is the correct file, don't know why it says x86_64 also lets give it a try
+2012-04-29T06:26:00.000Z	imacinto	InferiorHumanOrg	ok
+2012-04-29T06:28:00.000Z	imacinto	InferiorHumanOrg	it's running now, downloading
+2012-04-29T06:28:00.000Z	InferiorHumanOrg	imacinto	ok
+2012-04-29T06:29:00.000Z	imacinto	InferiorHumanOrg	it finished saving, do I need to run it somehow now?
+2012-04-29T06:29:00.000Z	InferiorHumanOrg	imacinto	yes, now run this first.. sudo apt-get install dh-make dh-modaliases execstack
+2012-04-29T06:30:00.000Z	imacinto	InferiorHumanOrg	ok
+2012-04-29T06:31:00.000Z	imacinto	InferiorHumanOrg	dh-make, dh-modaliases, and execstack are already the newest version. it also said that dkms was automatically installed and no longer required
+2012-04-29T06:31:00.000Z	InferiorHumanOrg	imacinto	ok thats fine.
+2012-04-29T06:32:00.000Z	InferiorHumanOrg	imacinto	run this, sudo sh amd-driver-installer-12-4-x86.x86_64.run --buildpkg Ubuntu/precise
+2012-04-29T06:57:00.000Z	InferiorHumanOrg	imacinto	what does fglrx show you bud ?
+2012-04-29T06:32:00.000Z	imacinto	InferiorHumanOrg	ok
+2012-04-29T06:33:00.000Z	imacinto	InferiorHumanOrg	Uncompressing... and now it's going into an installer
+2012-04-29T06:34:00.000Z	imacinto	InferiorHumanOrg	So it's asking me to pick a product to install. I'm assuming "Driver 8.961 on X.Org 6.9 or later" is what I want, and not "Generate distro specific driver package"?
+2012-04-29T06:35:00.000Z	InferiorHumanOrg	imacinto	you do what distro specific package I believe
+2012-04-29T06:35:00.000Z	InferiorHumanOrg	imacinto	/want
+2012-04-29T06:36:00.000Z	InferiorHumanOrg	imacinto	just go with whatever the default options are and it should create some .deb files
+2012-04-29T06:36:00.000Z	imacinto	InferiorHumanOrg	hmm... ok
+2012-04-29T06:37:00.000Z	imacinto	InferiorHumanOrg	installation path? /?
+2012-04-29T06:39:00.000Z	InferiorHumanOrg	imacinto	try exiting that and just running this again, use whatever options it wants. it should create some .deb files. not ask for an installation path I believe according to the guide... sudo sh amd-driver-installer-12-4-x86.x86_64.run --buildpkg Ubuntu/precise
+2012-04-29T06:39:00.000Z	InferiorHumanOrg	imacinto	note the --buildpkg Ubuntu/precise
+2012-04-29T06:40:00.000Z	imacinto	InferiorHumanOrg	oh I see. I forgot to set the --buildpkg flag, so I was getting a whole different experience
+2012-04-29T06:40:00.000Z	InferiorHumanOrg	imacinto	yea you need the --buildpkg part
+2012-04-29T06:40:00.000Z	InferiorHumanOrg	imacinto	yes, you are close!
+2012-04-29T06:41:00.000Z	InferiorHumanOrg	imacinto	after pkgs are generated you can run. sudo dpkg -i *.deb
+2012-04-29T06:42:00.000Z	InferiorHumanOrg	imacinto	usually the gui program works pretty good to just install binary/proprietary drivers for you
+2012-04-29T06:42:00.000Z	InferiorHumanOrg	imacinto	correct.
+2012-04-29T06:43:00.000Z	InferiorHumanOrg	imacinto	yea. it might take awhile especially on a netboot
+2012-04-29T06:43:00.000Z	InferiorHumanOrg	imacinto	yea. it might take awhile especially on a netbook
+2012-04-29T06:45:00.000Z	imacinto	InferiorHumanOrg	ok, the package generating is now finished!
+2012-04-29T06:46:00.000Z	InferiorHumanOrg	imacinto	ok, sudo dpkg -i *.deb
+2012-04-29T06:47:00.000Z	imacinto	InferiorHumanOrg	ok, cool. I got a few warnings about skipping creation of certain files because associated files don't exist
+2012-04-29T06:48:00.000Z	InferiorHumanOrg	imacinto	but it worked ?
+2012-04-29T06:48:00.000Z	imacinto	InferiorHumanOrg	and now it's finished. the last thing it reported is "ldconfig deferred processing now taking place"
+2012-04-29T06:48:00.000Z	InferiorHumanOrg	imacinto	ok run this to make a config for xserver sudo aticonfig --initial
+2012-04-29T06:49:00.000Z	InferiorHumanOrg	imacinto	sudo aticonfig --initial is the command
+2012-04-29T06:53:00.000Z	InferiorHumanOrg	imacinto	what does "fglrx" no quotes return ?
+2012-04-29T06:53:00.000Z	InferiorHumanOrg	imacinto	ok reboot
+2012-04-29T06:54:00.000Z	InferiorHumanOrg	imacinto	it should boot you to a gui
+2012-04-29T06:54:00.000Z	InferiorHumanOrg	imacinto	if not run sudo /etc/init.d/gdm start I think from terminal, or startx
+2012-04-29T06:55:00.000Z	InferiorHumanOrg	imacinto	what does fglrx show in terminal ?
+2012-04-29T06:55:00.000Z	imacinto	InferiorHumanOrg	ok, so I have a kind of crappy gui, and it's not picking up on my trackpad, but it's asking me what I'd like to do: run in low-graphics mode for just one session, reconfigure graphics, troubleshoot the error, or exit to console login
+2012-04-29T06:57:00.000Z	imacinto	InferiorHumanOrg	I rebooted and I have this dialog asking me what I want to do. I should exit to console login then?
+2012-04-29T06:58:00.000Z	imacinto	InferiorHumanOrg	my options are running in low-graphics mode for just one session, reconfigure graphics, troubleshoot the error, or exit to console login
+2012-04-29T06:58:00.000Z	InferiorHumanOrg	imacinto	what happens if you reconfigure graphics option ?
+2012-04-29T06:59:00.000Z	InferiorHumanOrg	imacinto	it would be good to know what fglrx says, you can hit ctrl+alt+F5 to change to a different tty and run it
+2012-04-29T06:59:00.000Z	imacinto	InferiorHumanOrg	oh well this is a huge tease, I don't have a mouse so I can't even pick anything
+2012-04-29T06:59:00.000Z	InferiorHumanOrg	imacinto	hrm weird, can you hit tab ?
+2012-04-29T07:00:00.000Z	imacinto	InferiorHumanOrg	fglrx: command not found
+2012-04-29T07:00:00.000Z	InferiorHumanOrg	imacinto	-.-
+2012-04-29T07:00:00.000Z	InferiorHumanOrg	imacinto	thats discouraging considering I thought the drivers installed no problem
+2012-04-29T07:01:00.000Z	imacinto	InferiorHumanOrg	yeah, total bummer
+2012-04-29T07:02:00.000Z	InferiorHumanOrg	imacinto	what happens if you type, sudo apt-get install fglrx
+2012-04-29T07:02:00.000Z	imacinto	InferiorHumanOrg	"fglrx is already the newest version"
+2012-04-29T07:03:00.000Z	InferiorHumanOrg	imacinto	yeah dude, well I wish I knew what to do from here but I don't it should be installed,
+2012-04-29T07:04:00.000Z	imacinto	InferiorHumanOrg	hmm. do you know where I might find the binary for it? maybe it's installed but it's missing the path or something
+2012-04-29T07:04:00.000Z	InferiorHumanOrg	imacinto	do a sudo updatedb && locate fglr
+2012-04-29T07:05:00.000Z	InferiorHumanOrg	imacinto	wait sorry, Im stupid, run fglrxinfo
+2012-04-29T07:05:00.000Z	InferiorHumanOrg	imacinto	my bad haha
+2012-04-29T07:06:00.000Z	InferiorHumanOrg	imacinto	ok, so idk why its not working, you can try running sudo dpkg -i *.deb from ~/ati again
+2012-04-29T07:08:00.000Z	imacinto	InferiorHumanOrg	ok, doing that. Building initial module for 3.2.0-24-generic-pae "Error! Bad return status for module build on kernel: 3.2.0-24-generic-pae (i686)"
+2012-04-29T07:08:00.000Z	InferiorHumanOrg	imacinto	yea idk what that means im afraid we are above my expertise here.
+2012-04-29T07:09:00.000Z	imacinto	InferiorHumanOrg	ah, bummer. so we've found the end of the road
+2012-04-29T07:09:00.000Z	InferiorHumanOrg	imacinto	you can try reposting your question with what we have done before, or start a forum topic about it to get additional help.
+2012-04-29T07:09:00.000Z	imacinto	InferiorHumanOrg	I'll probably just reinstall Ubuntu. thankfully my install is less than 12 hours old
+2012-04-29T07:09:00.000Z	InferiorHumanOrg	imacinto	sort of, I just don't know what else to do since it seemed like it worked before
+2012-04-29T07:10:00.000Z	InferiorHumanOrg	imacinto	well if it failed to install with hardware drivers (and we just tried manually) I guess you could reinstall
+2012-04-29T07:11:00.000Z	InferiorHumanOrg	imacinto	sorry I couldn't help you.
+2012-04-29T07:11:00.000Z	imacinto	InferiorHumanOrg	no worries at all, thank you for trying to help

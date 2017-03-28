@@ -1,0 +1,95 @@
+2008-07-04T22:14:00.000Z	Xavura		I keep getting "desktop effects could not be enabled"
+2008-07-04T22:14:00.000Z	Xavura		It was working fine before I installed some updates earlier today.
+2008-07-04T22:14:00.000Z	Xavura		My window manager is compiz fusion if that matters
+2008-07-04T22:15:00.000Z	Xavura		Anyone have any ideas? I can't live without my desktop effects...
+2008-07-04T22:16:00.000Z	FelixTheCat	Xavura	What video card do you have?
+2008-07-04T22:17:00.000Z	Xavura	FelixTheCat	ATI
+2008-07-04T22:17:00.000Z	Xavura	FelixTheCat	It was working fine for about 2 weeks until today so I doubt it is my graphics card
+2008-07-04T22:18:00.000Z	FelixTheCat	Xavura	what is the output of uname -r
+2008-07-04T22:18:00.000Z	Xavura	FelixTheCat	2.6.24-19-generic
+2008-07-04T22:20:00.000Z	FelixTheCat	Xavura	now try 'grep fglrx /etc/X11/xorg.conf' and tell me if you see 'Driver     "fglrx"'
+2008-07-04T22:21:00.000Z	Xavura	FelixTheCat	It gives no output
+2008-07-04T22:22:00.000Z	FelixTheCat	Xavura	Let's see what video driver it is using ...
+2008-07-04T22:23:00.000Z	FelixTheCat	Xavura	try 'less /etc/X11/xorg.conf' and look for 'Section "Device"'.
+2008-07-04T22:24:00.000Z	FelixTheCat	Xavura	that's it. It doesn't look like you have fglrx installed as the ATI driver.
+2008-07-04T22:25:00.000Z	Xavura	FelixTheCat	ok, but err it was working fine for 2 weeks~ until today so
+2008-07-04T22:25:00.000Z	FelixTheCat	Xavura	I'd almost say you don't have a driver set, but then you wouldn't have any X-window.
+2008-07-04T22:25:00.000Z	Xavura	FelixTheCat	do you have any ideas or are you lost
+2008-07-04T22:25:00.000Z	FelixTheCat	Xavura	No. Just some preliminary explanation.
+2008-07-04T22:26:00.000Z	Xavura	FelixTheCat	anything that can help me fix whatever decided to randomly break is good
+2008-07-04T22:27:00.000Z	FelixTheCat	Xavura	You are using Radeon?
+2008-07-04T22:28:00.000Z	Xavura	FelixTheCat	If you can tell me what I need to do to find out what my graphics card is, I can tell you what it is
+2008-07-04T22:29:00.000Z	FelixTheCat	Xavura	try 'lspci | grep ATI' and look for 'VGA compatible controller'
+2008-07-04T22:30:00.000Z	Xavura	FelixTheCat	01:00.0 VGA compatible controller: ATI Technologies Inc Radeon RV100 QY [Radeon 7000/VE]
+2008-07-04T22:32:00.000Z	FelixTheCat	Xavura	You should add 'Driver    "radeon"' to the Device section, the one you pasted above.
+2008-07-04T22:33:00.000Z	FelixTheCat	Xavura	It still baffles me how your driver argument got deleted.
+2008-07-04T22:33:00.000Z	Xavura	FelixTheCat	It was one of the 30-ish updates that I downloaded
+2008-07-04T22:33:00.000Z	Xavura	FelixTheCat	that must have done this
+2008-07-04T22:34:00.000Z	FelixTheCat	Xavura	Aye. You can also run the GUI if you don't want to hand-modify the xorg.conf file.
+2008-07-04T22:34:00.000Z	Xavura	FelixTheCat	I don't want to hand modify anything important, I will just break it
+2008-07-04T22:35:00.000Z	Xavura	FelixTheCat	Can you walk me through it, I've already broke my system beyond repair once in 2 weeks and had to reinstall
+2008-07-04T22:35:00.000Z	FelixTheCat	Xavura	Let me find the GUI. I seldom mess with the GUI when working with xorg.
+2008-07-04T22:36:00.000Z	Xavura	FelixTheCat	Ok, thanks a lot
+2008-07-04T22:36:00.000Z	Xavura	FelixTheCat	Is the missing driver thing my problem then?
+2008-07-04T22:36:00.000Z	Xavura	FelixTheCat	and are you 100% sure?
+2008-07-04T22:37:00.000Z	FelixTheCat	Xavura	it seems to be. You are missing the proper driver argument. Paste your entire xorg.conf text and lets look through it first.
+2008-07-04T22:37:00.000Z	Xavura	FelixTheCat	One second
+2008-07-04T22:37:00.000Z	Xavura	FelixTheCat	What do I do to copy and paste the entire contents of the file
+2008-07-04T22:38:00.000Z	FelixTheCat	Xavura	You can also see if System > Administration > Hardware Drivers prompts you to install a restricted driver.
+2008-07-04T22:38:00.000Z	Xavura	FelixTheCat	It was working fine without the restricted driver so why would I install it, if it's "restricted" then I don't like the sound of that
+2008-07-04T22:38:00.000Z	FelixTheCat	Xavura	you can try opening xorg.conf in Gedit, then select all, copy.
+2008-07-04T22:39:00.000Z	FelixTheCat	Xavura	no worries, don't install the binary blob if you aren't cool with it.
+2008-07-04T22:39:00.000Z	Xavura	FelixTheCat	I'd install it if I knew what restricted means, or if it will fix my problem for sure
+2008-07-04T22:39:00.000Z	Xavura	FelixTheCat	How do I get select all?
+2008-07-04T22:40:00.000Z	Xavura	FelixTheCat	I think compiz is working, just not effects
+2008-07-04T22:41:00.000Z	Xavura	FelixTheCat	Thanks for the help, I'll be back in a minute though
+2008-07-04T22:41:00.000Z	FelixTheCat	Xavura	restricted drivers mainly mean these are closed-source drivers, unavailable to anyone outside of the manufacturer for correcting.
+2008-07-04T22:42:00.000Z	FelixTheCat	Xavura	For most folks, they work fine but some folks do not want any binary blobs in their installation.
+2008-07-04T22:46:00.000Z	Xavura	FelixTheCat	I'm back
+2008-07-04T22:47:00.000Z	FelixTheCat	Xavura	wb
+2008-07-04T22:48:00.000Z	Xavura	FelixTheCat	I do get some weird display issues, from time to time, white/black overlays on top of windows when activating menus etc. they can be fixed by moving the mouse or dragging the window though, would the restricted drivers fix that?
+2008-07-04T22:48:00.000Z	FelixTheCat	Xavura	very possible. I would put that in the radeon IRC channel and see if they have an option to fix it.
+2008-07-04T22:49:00.000Z	Xavura	FelixTheCat	Ok I'll leave it for now, but do you think you know how to get this other problem working? How do I copy/paste my xorg.conf I don't know how to do select all
+2008-07-04T22:49:00.000Z	FelixTheCat	Xavura	Run the Hardware Drivers tool and see what it offers.
+2008-07-04T22:49:00.000Z	Xavura	FelixTheCat	When I run it it says no restricted drivers are in use and it doesnt' have anything to click to find updates or install things or wahtever
+2008-07-04T22:50:00.000Z	FelixTheCat	Xavura	In gedit, use either Edit > Select all or simply use CTRL-A to select all.
+2008-07-04T22:52:00.000Z	Xavura	FelixTheCat	Ctrl+A is on Windows.... it doesn't work
+2008-07-04T22:53:00.000Z	FelixTheCat	Xavura	as long as you have your input cursor in the text file, it should select all text in that text file.
+2008-07-04T22:53:00.000Z	Xavura	FelixTheCat	nope but I did something else http://pastebin.mozilla.org/477567
+2008-07-04T22:55:00.000Z	FelixTheCat	Xavura	Aye, something has really messed with xorg.conf file. Wow!
+2008-07-04T22:56:00.000Z	FelixTheCat	Xavura	I'd run the command given to you in the file, "sudo dpkg-reconfigure -phigh xserver-xorg" AFTER you have made a copy of the current file.
+2008-07-04T22:57:00.000Z	Xavura	FelixTheCat	err I just pastebinned it so that's my backup there
+2008-07-04T22:57:00.000Z	FelixTheCat	Xavura	be sure to first run 'cp /etc/X11/xorg.conf /etc/X11/xorg.conf.bak'
+2008-07-04T22:58:00.000Z	Xavura	FelixTheCat	You mean exit the file then run the command, so I'm sure
+2008-07-04T22:59:00.000Z	FelixTheCat	Xavura	if you don't get x-windows to start up after running the configuration, you are going to be stuck since you won't have a convenient way to get back to the online copy
+2008-07-04T22:59:00.000Z	Xavura	FelixTheCat	I will make the backup as you suggested but err I need to exit the file in nano before running the command right
+2008-07-04T22:59:00.000Z	FelixTheCat	Xavura	Yes.
+2008-07-04T23:00:00.000Z	Xavura	FelixTheCat	You said something really has messed with my xorg.conf, that's a bad thing right? How bad is it messed up? What could have done this to it?
+2008-07-04T23:01:00.000Z	Xavura	FelixTheCat	xserver-xorg postinst warning: overwriting possibly-customised configuration
+2008-07-04T23:01:00.000Z	FelixTheCat	Xavura	there were quite a few xorg updates the past couple of days. Any one of them could have done this.
+2008-07-04T23:01:00.000Z	FelixTheCat	Xavura	BINGO!!
+2008-07-04T23:01:00.000Z	Xavura	FelixTheCat	What now?
+2008-07-04T23:02:00.000Z	FelixTheCat	Xavura	try copying the current file into a backup. Then, copy the xorg.conf.20080704190048 file to xorg.conf.
+2008-07-04T23:02:00.000Z	FelixTheCat	Xavura	THAT backup file should be the one that worked for you previously.
+2008-07-04T23:02:00.000Z	FelixTheCat	Xavura	good find!
+2008-07-04T23:02:00.000Z	Xavura	FelixTheCat	well that was just the output of the command you gave me
+2008-07-04T23:03:00.000Z	FelixTheCat	Xavura	nevermind, thought you were looking at some log file.
+2008-07-04T23:03:00.000Z	FelixTheCat	Xavura	you may also see if there are any other backup files in that same directory made earlier today.
+2008-07-04T23:05:00.000Z	Xavura	FelixTheCat	here is what is in the xorg.conf.20080704190048 file http://pastebin.mozilla.org/477592
+2008-07-04T23:05:00.000Z	Xavura	FelixTheCat	It looks exactly the same as it was before
+2008-07-04T23:05:00.000Z	Xavura	FelixTheCat	xorg.conf, xorg.conf.bak and xorg.conf.20080704190048 are all the same
+2008-07-04T23:05:00.000Z	FelixTheCat	Xavura	If I understand correctly, you just ran the sudo dpkg-reconfigure -phigh xserver-xorg command, and you got that file as backup.
+2008-07-04T23:06:00.000Z	Xavura	FelixTheCat	I ran the command you gave me and it gave me the output that I pasted to you
+2008-07-04T23:06:00.000Z	FelixTheCat	Xavura	All of that is correct. Are there any other xorg.conf backup files in that directory?
+2008-07-04T23:06:00.000Z	Xavura	FelixTheCat	I'll check
+2008-07-04T23:07:00.000Z	Xavura	FelixTheCat	No there are none
+2008-07-04T23:07:00.000Z	FelixTheCat	Xavura	OK, strange that the latest xorg updates didn't make any backup files. Yuck! Anyway, you know have a new xorg.conf file different than the old ones?
+2008-07-04T23:07:00.000Z	Xavura	FelixTheCat	Except xorg.conf.new but that is a copy of xorg.conf before I was going to paste xorg.conf.20080704190048 into it, before I realized they are both exactly the same
+2008-07-04T23:08:00.000Z	Xavura	FelixTheCat	ALL xorg.* are exactly the same, even after running the command you gave me the new xorg.conf is the same as it was before
+2008-07-04T23:10:00.000Z	FelixTheCat	Xavura	Try 'sudo dpkg-reconfigure  xserver-xorg' instead without the options. It should give you a chance to pick a driver.
+2008-07-04T23:14:00.000Z	Xavura	FelixTheCat	sorry about the PM but the pastebin won't work
+2008-07-04T23:17:00.000Z	Xavura	FelixTheCat	I finished reconfiguring xserver
+2008-07-04T23:56:00.000Z	Xavura	FelixTheCat	It's working now, nice one
+2008-07-04T23:56:00.000Z	FelixTheCat	Xavura	Excellent!
+2008-07-04T23:57:00.000Z	FelixTheCat	Xavura	Let me give you a site to reference for later: https://help.ubuntu.com/community/RadeonDriver
+2008-07-04T23:57:00.000Z	Xavura	FelixTheCat	thanks

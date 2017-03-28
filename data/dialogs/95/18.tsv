@@ -1,0 +1,95 @@
+2010-11-23T23:14:00.000Z	Roasted_	dajhorn	aren't the "driver" releases part of the linux kernel tho?
+2010-11-23T23:15:00.000Z	dajhorn	Roasted_	Yes, drivers are part of the kernel package.
+2010-11-23T23:16:00.000Z	dajhorn	Roasted_	I said that.   People asking about drivers is a hint that they're coming from Windows.
+2011-03-07T20:30:00.000Z	dajhorn	Roasted_	 Use the 'login script=' option in the smb.conf file.
+2011-03-07T20:30:00.000Z	Roasted_	dajhorn	where's that at? I did a search for "login" in smb.conf and it said not found.
+2011-03-07T20:30:00.000Z	Roasted_	dajhorn	wait, LOGON script?
+2011-03-07T20:33:00.000Z	dajhorn	Roasted_	Yes, that was a typo.  If your users will spend most of their time in the gnome desktop, then an alternative is to do it with gvfs.
+2011-03-07T20:34:00.000Z	Roasted_	dajhorn	we will only be using the gnome desktop. KDE has proven to still be far from sustainable in a business environment.
+2011-03-07T20:34:00.000Z	Roasted_	dajhorn	but I am not sure how I would utilize gvfs either.
+2011-03-07T20:34:00.000Z	Roasted_	dajhorn	how would gvfs help me?
+2011-03-07T20:35:00.000Z	dajhorn	Roasted_	The domain share would appear with a nice icon in the left-pane of most file dialogs.  Look at the gvfs-mount command.
+2011-03-07T20:37:00.000Z	dajhorn	Roasted_	In my experience, people understand "always put your files in that icon", but will forgot to use a regular mount point in their home directory.
+2011-03-07T20:37:00.000Z	Roasted_	dajhorn	well the other curve ball is I want it to auto mount for any user that logs in. If Bob logs in, I want a link to his share. If Fred logs in, I want him to have a link ot his share, etc.
+2011-03-07T20:37:00.000Z	Roasted_	dajhorn	so I guess I need this to work based on wildcards, almost, to probe whos logged in and seek that user share on our windwos file server and link up accordingly.
+2011-03-07T20:37:00.000Z	dajhorn	Roasted_	That is why you use the %u substitution.  Details are in the smb.conf man page.
+2011-03-07T20:38:00.000Z	Roasted_	dajhorn	sounds good. Just wanted to make sure your suggestion was on page with what I was looking for. :)
+2011-03-07T20:38:00.000Z	dajhorn	Roasted_	np.
+2011-03-07T20:38:00.000Z	Roasted_	dajhorn	my only concern is some reading has suggested I need samba to act as a DC to make this work. I'm not sure how I feel about adding samba DC's to the mix of things.
+2011-03-07T20:39:00.000Z	dajhorn	Roasted_	You can do share mapping on the AD side too.
+2011-03-07T20:39:00.000Z	Roasted_	dajhorn	still through gvfs?
+2011-03-07T20:39:00.000Z	dajhorn	Roasted_	Your choice as the administrator.  This is a common problem, so there is more than one solution.
+2011-03-07T20:40:00.000Z	Roasted_	dajhorn	I want simplicity, yet reliability. Do you have an opinion as to which the beast route is?
+2011-03-07T20:41:00.000Z	dajhorn	Roasted_	Don't mixmatch domain controllers.  Stay 100% Samba, or 100% Windows.
+2011-03-07T20:41:00.000Z	Roasted_	dajhorn	that's my fear. I'd rather stay 100% windows for now.
+2011-03-07T20:42:00.000Z	dajhorn	Roasted_	You got a suggestion earlier that will work.  Add something like `mount -t cifs //myserver/$(whoami) ${HOME}/mystuff` to the local login skel.
+2011-03-07T20:43:00.000Z	Roasted_	dajhorn	what, add that to fstab or create a script?
+2011-03-07T20:43:00.000Z	dajhorn	Roasted_	Don't change the fstab for this job.
+2011-03-07T20:44:00.000Z	Roasted_	dajhorn	all right. fstab came up in some google searches so I wasn't sure if that's what you were referring to or not.
+2011-03-07T20:44:00.000Z	Roasted_	dajhorn	would I just add that command to a bin/bash script?
+2011-03-07T20:44:00.000Z	dajhorn	Roasted_	Do you know about the bashrc and other login scripts?   Do you know about gnome session scripts?
+2011-03-07T20:44:00.000Z	Roasted_	dajhorn	do I know about their existence? yes. Have I ever written any? no.
+2011-03-07T20:45:00.000Z	dajhorn	Roasted_	Try this:  Create a script that can be run by any user that looks like this:  gvfs-mount smb://MyServer/$(whoami)
+2011-03-07T20:46:00.000Z	dajhorn	Roasted_	  Add this script to the gnome session such that every Ubuntu user runs it when they login.
+2011-03-07T20:46:00.000Z	Roasted_	dajhorn	by any user you're talkin 755 +x perms right?
+2011-03-07T20:47:00.000Z	Roasted_	dajhorn	I'm doing bin bash right?
+2011-03-07T20:47:00.000Z	dajhorn	Roasted_	Yes, you need the whack-bang.
+2011-03-07T20:48:00.000Z	dajhorn	Roasted_	  #!/bin/bash as the first line in the script.
+2011-03-07T20:48:00.000Z	Roasted_	dajhorn	and just $ or is the (whoamI) relevant?
+2011-03-07T20:48:00.000Z	dajhorn	Roasted_	  $() is relavant.  It means "substitute the value of this command".
+2011-03-07T20:48:00.000Z	Roasted_	dajhorn	parathesis included?
+2011-03-07T20:49:00.000Z	dajhorn	Roasted_	 Yes.  Try it at the command prompt.
+2011-03-07T20:49:00.000Z	Roasted_	dajhorn	firing up my ubuntu test box on the domain now
+2011-03-07T20:49:00.000Z	dajhorn	Roasted_	 Remember that your Ubuntu usernames need to match your Windows user names.  If not, then you have a bunch more work.
+2011-03-07T20:49:00.000Z	Roasted_	dajhorn	and its failing to authenticate. oh boy... what did I do on friday....
+2011-03-07T20:50:00.000Z	Roasted_	dajhorn	this box is on the domain.
+2011-03-07T20:50:00.000Z	Roasted_	dajhorn	it uses windows domain logins. I added it to the domain with likewise-open 6.
+2011-03-07T20:52:00.000Z	Roasted_	dajhorn	have you ever used ubuntu on a windows domain?
+2011-03-07T20:52:00.000Z	dajhorn	Roasted_	Yes, but through winbind.
+2011-03-07T20:52:00.000Z	Roasted_	dajhorn	have you ever heard of likewise?
+2011-03-07T20:53:00.000Z	dajhorn	Roasted_	Yes.
+2011-03-07T20:53:00.000Z	Roasted_	dajhorn	any opinion of it by chance?
+2011-03-07T20:54:00.000Z	dajhorn	Roasted_	No, but Canonical support is currently recommending the likewise product.
+2011-03-07T20:54:00.000Z	Roasted_	dajhorn	well that's comforting.
+2011-03-07T20:55:00.000Z	dajhorn	Roasted_	Run the `getent` command.  This is a good place to begin troubleshooting domain integration.
+2011-03-07T20:55:00.000Z	Roasted_	dajhorn	I just forgot this box I did a fresh install on, so Im re-adding it quick
+2011-03-07T20:55:00.000Z	dajhorn	Roasted_	 `getent passwd` must return your domain account.
+2011-03-07T20:56:00.000Z	Roasted_	dajhorn	so just to recap, you suggest the gvfs-mount smb://etc etc command in usr/local/bin with 755 +x permissions, then link that script to the gnome session login. right?
+2011-03-07T20:57:00.000Z	dajhorn	Roasted_	Yes, that is one way to get a good result.
+2011-03-07T20:57:00.000Z	Roasted_	dajhorn	just to make sure, am I using gvfs-mount or .gvfs-mount
+2011-03-07T20:57:00.000Z	dajhorn	Roasted_	 .gvfs is where the remote filesystem will actually be mounted.  `gvfs-mount` is the utility that puts the mount there.
+2011-03-07T20:58:00.000Z	Roasted_	dajhorn	sounds good
+2011-03-07T21:04:00.000Z	Roasted_	dajhorn	I ran that command, but now my terminal is stuck at $
+2011-03-07T21:06:00.000Z	dajhorn	Roasted_	`getent`?   Dunno how to troubleshoot it with Likewise.  You pretty much need a working NSS configuration to get sane domain membership.
+2011-03-07T21:06:00.000Z	Roasted_	dajhorn	not sure what likewise has to do with it. I'm just using the gvfs-mount command in terminal manually.
+2011-03-07T21:07:00.000Z	dajhorn	Roasted_	gvfs-mount?   It won't necessarily print anything if it is successful. Check nautilus for the share.
+2011-03-07T21:07:00.000Z	Roasted_	dajhorn	it didn't mount the way I wanted. I have \\server\users\me and it only gave me a link to "users". which is nice, but not optimal. So I wanted to go back to terminal to add a backslash in the command thinking if I had \\server\users\me\ it may trigger to link to MY account, but terminal is stuck at $ only. I cant CTRL Z or C it to exit.
+2011-03-07T21:07:00.000Z	dajhorn	Roasted_	 \\server\users\me is not a valid SMB share name.
+2011-03-07T21:07:00.000Z	Roasted_	dajhorn	how so
+2011-03-07T21:08:00.000Z	dajhorn	Roasted_	 It just isn't.  It is typical for \\server\me\ to get mapped automatically on the server side.
+2011-03-07T21:09:00.000Z	Roasted_	dajhorn	I'm not sure what I'm doing wrong. I did what you said. my command was smb://server/users/me. was my typing of it just throwing you off or did I do something wrong?
+2011-03-07T21:10:00.000Z	dajhorn	Roasted_	 Basic SMB shares don't have path components.  You usually can't call /server/foo/bar/baz/bork without some magic.
+2011-03-07T21:10:00.000Z	dajhorn	Roasted_	 The mount point is limited to /server/foo.   (Rather, SMB is not NFS.)
+2011-03-07T21:10:00.000Z	Roasted_	dajhorn	then you totally lost me. I was using the command you suggested...
+2011-03-07T21:11:00.000Z	dajhorn	Roasted_	First,  just try /server/user and check whether the Windows host automatically remaps you.
+2011-03-07T21:12:00.000Z	Roasted_	dajhorn	wow. this thing isnt letting me back on the domain now.
+2011-03-07T21:12:00.000Z	dajhorn	Roasted_	You're probably getting locked for hitting a non-existent share.
+2011-03-07T21:12:00.000Z	Roasted_	dajhorn	locked? I didnt add the script yet.
+2011-03-07T21:12:00.000Z	Roasted_	dajhorn	I was manually running that command
+2011-03-07T21:13:00.000Z	dajhorn	Roasted_	But you just told me that you were trying //server/users/me.   'users/me' is not a valid export in regular SMB.
+2011-03-07T21:13:00.000Z	Roasted_	dajhorn	I'm not sure how it's not right. if I go to nautilus and type smb://server/users/me, I get to my folder just fine.
+2011-03-07T21:14:00.000Z	dajhorn	Roasted_	That is because Nautilus is doing what you want, not what is legal under the hood.
+2011-03-07T21:14:00.000Z	Roasted_	dajhorn	let's rewind, because I'm not sure what I did wrong as I followed your suggested command. What should I do? What command should I use for manually testing gvfs?
+2011-03-07T21:15:00.000Z	dajhorn	Roasted_	You need to read an SMB tutorial.  I'm going for coffee.  (Sorry.)
+2011-03-07T21:15:00.000Z	Roasted_	dajhorn	also, I rebooted and the terminal is still stuck in $ mode......
+2011-03-07T21:15:00.000Z	Roasted_	dajhorn	thanks anyway
+2011-03-07T21:22:00.000Z	dajhorn	Roasted_	I'm back.  smb://server/users/me works through Nautilus because it is doing three distinct things automatically:  1. Connecting to 'server'.  2.  Mounting the 'users' share.  3.  cd'ing into the 'me' directory.
+2011-03-07T22:15:00.000Z	Roasted_	dajhorn	you still out there
+2011-03-07T23:02:00.000Z	Roasted_	dajhorn	what did that command do :(
+2011-03-07T23:02:00.000Z	dajhorn	Roasted_	 What did what command do?  I haven't been watching your thread.
+2011-03-07T23:02:00.000Z	Roasted_	dajhorn	the gvfs-mount command.
+2011-03-07T23:03:00.000Z	Roasted_	dajhorn	it perma-changed my prompt to $. Even on other ubuntu computers when I log in my term prompt is $.
+2011-03-07T23:03:00.000Z	dajhorn	Roasted_	 Go back to your thread with ikonia.   I don't have any other advice.  Maybe you trashed your .profile or your .bashrc files where the PS1 variable is set.
+2011-03-07T23:04:00.000Z	dajhorn	Roasted_	And if you eventually got likewise working, then your domain users could be getting the profile (with the PS1) from the domain server.
+2011-03-07T23:04:00.000Z	Roasted_	dajhorn	ikonia was thinking it was local on the machine. But the key is, I logged into an entirely different Ubuntu computer on the domain, and it was like that. That's where I'm kind of confused.
+2011-03-07T23:04:00.000Z	Roasted_	dajhorn	oh yes, likewise is working.

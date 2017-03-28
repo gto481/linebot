@@ -1,0 +1,99 @@
+2005-01-06T17:57:00.000Z	techn9ne		do i have to manually delte the files it created?
+2005-01-06T17:58:00.000Z	techn9ne		yea that didnt work...
+2005-01-06T17:59:00.000Z	housetier	techn9ne	when you installed the deb were there any error messages?
+2005-01-06T17:59:00.000Z	techn9ne		yes it was complaining i didnt have lpd
+2005-01-06T06:00:00.000Z	techn9ne		/var/lib/dpkg/info/mfc4800lpr.postrm: line 3: /etc/init.d/lpd: No such file or directory
+2005-01-06T06:00:00.000Z	techn9ne		dpkg: warning - old post-removal script returned error exit status 127
+2005-01-06T06:00:00.000Z	techn9ne		dpkg - trying script from the new package instead ...
+2005-01-06T06:00:00.000Z	techn9ne		/var/lib/dpkg/tmp.ci/postrm: line 3: /etc/init.d/lpd: No such file or directory
+2005-01-06T06:00:00.000Z	techn9ne		dpkg: error processing mfc4800lpr-1.1.2-1.i386.deb (--install):
+2005-01-06T06:00:00.000Z	techn9ne		 subprocess new post-removal script returned error exit status 127
+2005-01-06T06:00:00.000Z	techn9ne		/var/lib/dpkg/tmp.ci/postrm: line 3: /etc/init.d/lpd: No such file or directory
+2005-01-06T06:00:00.000Z	techn9ne		dpkg: error while cleaning up:
+2005-01-06T06:00:00.000Z	techn9ne		 subprocess post-removal script returned error exit status 127
+2005-01-06T06:00:00.000Z	housetier	techn9ne	and when you installed it?
+2005-01-06T06:00:00.000Z	techn9ne		thats what it said...
+2005-01-06T06:00:00.000Z	housetier		did you get error messages then too?
+2005-01-06T06:01:00.000Z	techn9ne		yes i just pasted it
+2005-01-06T06:01:00.000Z	housetier		postrm hints at removal attempt though
+2005-01-06T06:02:00.000Z	techn9ne		can i open up the .deb file in archiver view the config files find out what it installed remove manually and force to rebuild deb db?
+2005-01-06T06:03:00.000Z	housetier	techn9ne	what you can do is edit that postrm script so it will exit successfully
+2005-01-06T06:04:00.000Z	housetier		leave the !#/bin/whatever stuff on the first line and insert "exit 0" on the second line
+2005-01-06T06:04:00.000Z	techn9ne		it wants lpd is that a alternative to cups?
+2005-01-06T06:04:00.000Z	housetier		you will have to remove the files by hand then
+2005-01-06T06:04:00.000Z	techn9ne		thats sure a pain
+2005-01-06T06:05:00.000Z	housetier		not really
+2005-01-06T06:05:00.000Z	housetier		you can find out which files belong to the .deb and remove them
+2005-01-06T06:05:00.000Z	techn9ne		what format is .deb in tar gz?
+2005-01-06T06:06:00.000Z	housetier		its .ar
+2005-01-06T06:06:00.000Z	techn9ne		do i have to get osmething to open it?
+2005-01-06T06:06:00.000Z	housetier		if you have midnight commander installed, you can browse it
+2005-01-06T06:06:00.000Z	techn9ne		whats midnight commander?
+2005-01-06T06:07:00.000Z	housetier		a very good console based file manager
+2005-01-06T06:07:00.000Z	housetier		looks like the old norton commander for dos
+2005-01-06T06:07:00.000Z	techn9ne		where can i get it?
+2005-01-06T06:08:00.000Z	housetier		first you edit the script, so apt-get et al can work again
+2005-01-06T06:08:00.000Z	techn9ne		... i cant open the deb
+2005-01-06T06:08:00.000Z	housetier		then you install it so you can remove those files
+2005-01-06T06:08:00.000Z	housetier	techn9ne	/var/lib/dpkg/info/mfc4800lpr.postrm
+2005-01-06T06:11:00.000Z	housetier		have /usr/bin/firefox as login shell or so?
+2005-01-06T06:11:00.000Z	techn9ne		k i edied the file... ran /var/lib/dpkg/info/mfc4800lpr.postrm
+2005-01-06T06:11:00.000Z	techn9ne		i tried uninstalling again didnt work
+2005-01-06T06:12:00.000Z	housetier	techn9ne	ok whats the error message?
+2005-01-06T06:12:00.000Z	techn9ne		same
+2005-01-06T06:12:00.000Z	techn9ne		inconsistent state
+2005-01-06T06:12:00.000Z	techn9ne		reinstall
+2005-01-06T06:12:00.000Z	housetier	techn9ne	btw I hope this will teach you to blindly install .deb packages from "untrusted" sources ;)
+2005-01-06T06:13:00.000Z	techn9ne		well it came from brother.com
+2005-01-06T06:13:00.000Z	techn9ne		http://solutions.brother.com/Library/sol/printer/linux/lpr_drivers.html
+2005-01-06T06:13:00.000Z	housetier	techn9ne	well have you tried to reinstall it as suggested?
+2005-01-06T06:13:00.000Z	techn9ne		yes
+2005-01-06T06:14:00.000Z	techn9ne		its just complainintg because i dont have lpd
+2005-01-06T06:14:00.000Z	techn9ne		does ubuntu have lpd?
+2005-01-06T06:15:00.000Z	housetier		it should depend on lpd which it doesn't
+2005-01-06T06:15:00.000Z	housetier		it doesn't depend on anything
+2005-01-06T06:18:00.000Z	housetier	techn9ne	if you are willing we could try to fix the package database by hand
+2005-01-06T06:18:00.000Z	techn9ne		sure
+2005-01-06T06:18:00.000Z	housetier		but we might not be successful as I haven't done it before
+2005-01-06T06:18:00.000Z	techn9ne		if we break it we break it i have no option left after this but a clean install of ubuntu
+2005-01-06T06:18:00.000Z	housetier		nah we won't break it
+2005-01-06T06:19:00.000Z	housetier		we will make backups :D
+2005-01-06T06:19:00.000Z	techn9ne		ok
+2005-01-06T06:19:00.000Z	housetier		you downloaded this deb here: http://solutions.brother.com/Library/sol/printer/linux/rpmfiles/lpr_debian/mfc4800lpr-1.1.2-1.i386.deb ?
+2005-01-06T06:19:00.000Z	techn9ne		yes
+2005-01-06T06:20:00.000Z	housetier		ok lets start with the easy part: removing the files
+2005-01-06T06:21:00.000Z	housetier		/usr/bin/brprintconf, /usr/lib/libbrcomplpr.so, /usr/local/Brother/*
+2005-01-06T06:22:00.000Z	techn9ne		k done
+2005-01-06T06:23:00.000Z	housetier	techn9ne	ok next one is easy too then it will become more delicat quickly, "cd /var/lib/dpkg"
+2005-01-06T06:24:00.000Z	techn9ne		k
+2005-01-06T06:25:00.000Z	housetier		there are four files which we might need to touch so we will make backups now: available, available-old, status, status-old
+2005-01-06T06:25:00.000Z	housetier		just cp them to your home dir or so
+2005-01-06T06:26:00.000Z	techn9ne		k
+2005-01-06T06:27:00.000Z	housetier		well here comes the experiment...
+2005-01-06T06:27:00.000Z	housetier		available is a very large file, open it in your favorite text editor
+2005-01-06T06:28:00.000Z	housetier		then search for mfc4800lpr
+2005-01-06T06:28:00.000Z	techn9ne		open which file?
+2005-01-06T06:29:00.000Z	housetier		"available"
+2005-01-06T06:30:00.000Z	techn9ne		k i delete that block of text?
+2005-01-06T06:30:00.000Z	housetier		only the mfc4800 part, yes :)
+2005-01-06T06:31:00.000Z	techn9ne		k done
+2005-01-06T06:31:00.000Z	housetier		save and repeat for "available-old", "status", and "status-old"
+2005-01-06T06:33:00.000Z	techn9ne		k
+2005-01-06T06:33:00.000Z	housetier		no check the status with "dpkg -l mfc4800lpr"
+2005-01-06T06:34:00.000Z	techn9ne		no packages found. cool thanks.
+2005-01-06T06:34:00.000Z	housetier		ok yet another check: "dpkg --audit"
+2005-01-06T06:35:00.000Z	housetier		moin
+2005-01-06T06:36:00.000Z	techn9ne		returned nothing
+2005-01-06T06:36:00.000Z	housetier	techn9ne	it seems the package database is fixed now :)
+2005-01-06T06:36:00.000Z	techn9ne	housetier	: thanks you rock
+2005-01-06T06:36:00.000Z	techn9ne		nowq i just gotta figure out how to get the printer working w/o those drivers
+2005-01-06T06:37:00.000Z	housetier		my dpkg-fu is strong
+2005-01-06T06:37:00.000Z	housetier		;)
+2005-01-06T06:38:00.000Z	techn9ne		thats pretty easy compared to fixing windowws registry problems
+2005-01-06T06:38:00.000Z	techn9ne		you can never giure out what the installer did
+2005-01-06T06:40:00.000Z	techn9ne		free?
+2005-01-06T06:41:00.000Z	techn9ne		not w/ the MPAA and RIAA shutting down bit torrent
+2005-01-06T06:42:00.000Z	techn9ne		i think they want to shut down the technology
+2005-01-06T06:44:00.000Z	housetier		xlib-dev?
+2005-01-06T06:46:00.000Z	housetier	techn9ne	you could try and see if CUPS has support for your printer
+2005-01-06T06:48:00.000Z	techn9ne	housetier	: i got it using a similar modeled printer

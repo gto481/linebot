@@ -1,0 +1,96 @@
+2011-03-14T06:27:00.000Z	Mxzklc		hello everyone, I'd need some help with dual booting windows 7 and ubuntu 10.10 on a pc with aptio bios (supposed to be an uefi), i'm fairly new to dualbooting (only ever used linux on my pc since 2007 lol) only thing i know is that since 9.10 it's a pain to do due to grub2 and id like to avoid having to "bootrec /fixboot" everytime i need windows, would grub-legacy work on aptio bios?
+2011-03-14T06:29:00.000Z	Auriga	Mxzklc	What about it is supposed to be more difficult?
+2011-03-14T06:30:00.000Z	Mxzklc	Auriga	what you mean?
+2011-03-14T06:31:00.000Z	Auriga	Mxzklc	You said that it is supposed to be a pain in the ass to dual boot now.
+2011-03-14T06:31:00.000Z	Auriga	Mxzklc	I dual boot with no hassle, unless I am missing something specific to do with the bios you mentioned...
+2011-03-14T06:31:00.000Z	Mxzklc	Auriga	i didnt say ass tho =P, but yes, my last attempts failed, windows wouldnt boot, would go to windows logo and restart my pc
+2011-03-14T06:33:00.000Z	Auriga	Mxzklc	What did you install fist?
+2011-03-14T06:33:00.000Z	Mxzklc	Auriga	windows then ubuntu, ubuntu boots flawlessly, but if i use it (update and do what i have to) and then restart and switch to windows it wont boot unless i run windows dvd and "chkdsk && bootrec /fixboo"
+2011-03-14T06:34:00.000Z	Auriga	Mxzklc	Wow... Okay... This might be a bit beyond me, as I have not had that kind of issues at all...
+2011-03-14T06:34:00.000Z	Mxzklc	Auriga	bios doesn't matter, it would have if i had to use grub legacy, did you use grub2?
+2011-03-14T06:35:00.000Z	Auriga	Mxzklc	I'm guess I did as that is the fefault no?
+2011-03-14T06:36:00.000Z	Mxzklc	Auriga	would i be too invasive if i asked you what bios and pc brand you re using?
+2011-03-14T06:36:00.000Z	Auriga	Mxzklc	I think your knowledge surpasses mine too lol. Not sure where to start with hellping you.
+2011-03-14T06:46:00.000Z	Auriga	Mxzklc	Oh gosh we're talking about i7's... Nice...
+2011-03-14T06:36:00.000Z	Mxzklc	Auriga	if you did it with no pains it may be my crappy pc (i havent even touched the aptio one yet)
+2011-03-14T06:36:00.000Z	Auriga	Mxzklc	Rude & intrusive I think would be better words to fit... & no it wouldn't lol.
+2011-03-14T06:36:00.000Z	Auriga	Mxzklc	It's an EVGA 680i.
+2011-03-14T06:37:00.000Z	Auriga	Mxzklc	How old is your machine?
+2011-03-14T06:37:00.000Z	Mxzklc	Auriga	what the hell? i never heard of those lol, and its a '10 dell laptop
+2011-03-14T06:38:00.000Z	Auriga	Mxzklc	EVGA 680i is a 2007 board I think... It's good. Does everything I need.
+2011-03-14T06:38:00.000Z	Auriga	Mxzklc	As to your 10" Dell... What is the HD size?
+2011-03-14T06:39:00.000Z	Auriga	Mxzklc	Could you be having partition issues?
+2011-03-14T06:39:00.000Z	Mxzklc	Auriga	yes no doubt it does everything i was just pointing out my ignorance lol
+2011-03-14T06:39:00.000Z	Auriga	Mxzklc	No I know, I was just explaining lol.
+2011-03-14T06:39:00.000Z	Mxzklc	Auriga	I'm not sure, as i said i havent touched it yet, but on a compaq presario cq60 it wouldn't dualboot and it uses phoenix bios which (its not relevant ) is compatible with grub-legacy, while im not sure aptio is
+2011-03-14T06:40:00.000Z	Auriga	Mxzklc	Windows isn't happy if there isn't enough extra space around the install.
+2011-03-14T06:40:00.000Z	Mxzklc	Auriga	it has like 100GB (vista) or 97GB (7)
+2011-03-14T06:40:00.000Z	Mxzklc	Auriga	xp doesnt boot either, same problem, win logo a lil smile then forced reboot (from os)
+2011-03-14T06:40:00.000Z	Auriga	Mxzklc	If you have an XP disc around try that, to test it with [As it is a quicker install time] Then
+2011-03-14T06:41:00.000Z	Auriga	Mxzklc	Have you tried installing the other way around, Linux then Windows...?
+2011-03-14T06:41:00.000Z	Auriga	Mxzklc	Seems like an unlikely long shot I know, but it might work...
+2011-03-14T06:42:00.000Z	Mxzklc	Auriga	only time i dual booted (not even on my pc) was with win xp and ubuntu 8.10 but on my computers i only used linux since i quit xp lol. And yes i tried doing it,  i had to reinstall grub2 both on mbr and on boot partition
+2011-03-14T06:42:00.000Z	Auriga	Mxzklc	That sounds long...
+2011-03-14T06:43:00.000Z	Auriga	Mxzklc	Sorry what is the model you are playing with? So I can google it.
+2011-03-14T06:43:00.000Z	Mxzklc	Auriga	i actually found out that i could use grub legacy to stop all this linux hate from windows but im not sure it would work on ami aptio, model of what? i actually have 2 laptops lol (if you refer to it)
+2011-03-14T06:43:00.000Z	Auriga	Mxzklc	The machine you are trying to dual on right now.
+2011-03-14T06:45:00.000Z	Mxzklc	Auriga	i dont think i need to give you my dell customization (as details) since its supposed to be 1 bios for all but if so just ask
+2011-03-14T06:45:00.000Z	Auriga	Mxzklc	Okay give me a second...
+2011-03-14T06:45:00.000Z	Mxzklc	Auriga	sure thanks btw
+2011-03-14T06:45:00.000Z	Auriga	Mxzklc	I haven't helped you as yet lol...
+2011-03-14T06:45:00.000Z	Mxzklc	Auriga	you just lost around 10 minutes of your life, its enough to say thanks
+2011-03-14T06:46:00.000Z	Auriga	Mxzklc	Lol.
+2011-03-14T06:48:00.000Z	Auriga	Mxzklc	You said that you haven't tried to dual boot on the Vostro?
+2011-03-14T07:33:00.000Z	Mxzklc	Auriga	last message i got was "such a shame what happened to it"
+2011-03-14T07:33:00.000Z	Auriga	Mxzklc	Yeah that was the last.
+2011-03-14T07:34:00.000Z	Mxzklc	Auriga	ye its bad but for all i do on it its more than enough, what one you use?
+2011-03-14T07:34:00.000Z	Auriga	Mxzklc	I play around with DSL from time to time, right now Slitaz is the one I am playing wiht.
+2011-03-14T07:35:00.000Z	Auriga	Mxzklc	So far it is awesome.
+2011-03-14T07:36:00.000Z	Auriga	Mxzklc	That is where I have it now.
+2011-03-14T07:36:00.000Z	Mxzklc	Auriga	as i said i use it only to fix other ppl's computer so no need for mine lol
+2011-03-14T07:36:00.000Z	Auriga	Mxzklc	I have a netbook on it's way hence my looking at other distros again.
+2011-03-14T07:36:00.000Z	Auriga	Mxzklc	Also looking at Arch which so far is a head ache.
+2011-03-14T07:37:00.000Z	Mxzklc	Auriga	if you say please its not lol
+2011-03-14T07:37:00.000Z	Auriga	Mxzklc	Lol I'll try that next time... Please pacman get-update.
+2011-03-14T07:38:00.000Z	Mxzklc	Auriga	lol
+2011-03-14T07:38:00.000Z	Mxzklc	Auriga	you know what netbook you re going to buy?
+2011-03-14T07:38:00.000Z	Auriga	Mxzklc	That is my second tech joke, I think I am now officially a geek...
+2011-03-14T07:38:00.000Z	Auriga	Mxzklc	It's an Asus something, already on it's way.
+2011-03-14T07:39:00.000Z	Mxzklc	Auriga	already on its way == tomorrow some dude may come to your house and say "your netbook is ready"? (sounds much like suse ads lol)
+2011-03-14T07:39:00.000Z	Auriga	Mxzklc	Lol.
+2011-03-14T07:40:00.000Z	Mxzklc	Auriga	i think im sticking with dell, business support is good, if i throw my pc outa the window i can call them say "my pc grown legs and jumped, fix it!" and they will do it
+2011-03-14T07:40:00.000Z	Auriga	Mxzklc	Yeah but that means you have people poking around your machine too... That's not cool.
+2011-03-14T07:41:00.000Z	Mxzklc	Auriga	what you mean? business is tech at home, he cant do nasty stuff lol
+2011-03-14T07:41:00.000Z	Mxzklc	Auriga	1 reason why im limiting my macs to 1, i have no apple stores close to me and support wont let me see what they do, hence no trust lol
+2011-03-14T07:42:00.000Z	Auriga	Mxzklc	I wouldn't want to pay for an apple...
+2011-03-14T07:43:00.000Z	Mxzklc	Auriga	i have 1, its there sitting lol
+2011-03-14T07:43:00.000Z	Auriga	Mxzklc	This is the one. http://www.newegg.com/Product/Product.aspx?Item=N82E16834220850
+2011-03-14T07:44:00.000Z	Auriga	Mxzklc	Apple is way to heavily priced, plus they are releasing things more quickly than anyone else too meaning you are always buying old products almost.
+2011-03-14T07:46:00.000Z	Mxzklc	Auriga	that netbooks is great, i see support is way cheaper than dell lol (they charge alot for accidental damage) but, i hope im wrong im not sure video card is going to be fine
+2011-03-14T07:46:00.000Z	Mxzklc	Auriga	and about apple, yes alot overpriced, but rather cool operating system (a well dressed freebsd lol)
+2011-03-14T07:47:00.000Z	Auriga	Mxzklc	I haven't seen a mac since the mid 90's So I can't say what it's like but still I'm not driven to save for one lol.
+2011-03-14T07:48:00.000Z	Mxzklc	Auriga	i am, just for the sake of seeing cats names in my install cd lol, have you checked if your graphic card is supported by nouveau?
+2011-03-14T07:49:00.000Z	Auriga	Mxzklc	No I haven't actually...
+2011-03-14T07:49:00.000Z	Auriga	Mxzklc	Though from some reviews I am seeing, Things are installing by default pretty well.
+2011-03-14T07:49:00.000Z	Mxzklc	Auriga	lol bluetooth 3 and wifi N is awesome
+2011-03-14T07:49:00.000Z	Mxzklc	Auriga	you may have problems with nvidia card, being forced to use integrated one
+2011-03-14T07:49:00.000Z	Auriga	Mxzklc	If it had USB 3. It would have been the complete package.
+2011-03-14T07:50:00.000Z	Auriga	Mxzklc	I will find a way around it when it arrives.
+2011-03-14T07:51:00.000Z	Mxzklc	Auriga	you can either "not install nvidia drivers" (which is supposed to leave u with intel card) or "install nouveau drivers for it" (which is supposed to work as much as nouveau would)
+2011-03-14T07:51:00.000Z	Mxzklc	Auriga	thats all i know since my laptop was supposed to have a nvidia optimus card too and i gone with intel gma hd lol
+2011-03-14T07:51:00.000Z	Auriga	Mxzklc	So wait, you said earlier about saying please to Arch as a joke...  Does that mean you have installed a gui on Arch before?
+2011-03-14T07:51:00.000Z	Auriga	Mxzklc	Thanks for the heads up on that. That will save me some time when I get it.
+2011-03-14T07:51:00.000Z	Mxzklc	Auriga	pretty much a waste of money since nehalem gma isnt that great but whatever lol
+2011-03-14T07:52:00.000Z	Mxzklc	Auriga	you can also google optimus linux  and find out all you need, mainly they ll say its not supported and you'll need to do something (not install drivers or try nouveau, all i found before deciding to go intel lol)
+2011-03-14T07:52:00.000Z	Mxzklc	Auriga	about the gui, there is alot of documentation, or at least there was when i tried
+2011-03-14T07:53:00.000Z	Auriga	Mxzklc	I just hit circles, I got things downloaded obviously, but I can't configure anything.
+2011-03-14T07:53:00.000Z	Auriga	Mxzklc	I was trying to get my uncle online earlier to help me, but he got to busy.
+2011-03-14T07:54:00.000Z	Mxzklc	Auriga	have you checked their documentation? it was long ago but i remember it wasnt that hard, not harder than kde on freebsd -.- (cloning processes lol)
+2011-03-14T07:54:00.000Z	Auriga	Mxzklc	I was going with Awesome WM...
+2011-03-14T07:55:00.000Z	Auriga	Mxzklc	I have some documentation on it for A Vbox VM, as I'm not smart enough to do it without, but my issues was mounting Guest Additions.
+2011-03-14T07:55:00.000Z	Mxzklc	Auriga	actually when i used arch i copyNpasted everything from documentation lol
+2011-03-14T07:55:00.000Z	Auriga	Mxzklc	It's good to know it's not just me.
+2011-03-14T07:56:00.000Z	Mxzklc	Auriga	well if you do it for the first time you re supposed to have troubles
+2011-03-14T07:56:00.000Z	Auriga	Mxzklc	Yeah this is my first time, but I have never managed to install Guess Additions in any Linux host before either.
+2011-03-14T07:56:00.000Z	Auriga	Mxzklc	Which is adding to the pains.
+2011-03-14T07:59:00.000Z	Auriga	Mxzklc	Yeah this is my first time, but I have never managed to install Guess Additions in any Linux host before either. [Was my last]

@@ -1,0 +1,98 @@
+2005-11-22T13:34:00.000Z	dvius		yo
+2005-11-22T13:35:00.000Z	dvius		welcome :P
+2005-11-22T13:35:00.000Z	dvius		hehe
+2005-11-22T13:35:00.000Z	dvius		i got some issues... could I pls ask for some help?
+2005-11-22T13:36:00.000Z	dvius		I really like ubuntu, but I find that even though it's based on debian alot of debian stuff dont work... i'm a total noob, so maybe I'm just not understanding, but here goes...
+2005-11-22T13:37:00.000Z	aftertaf	dvius	 1) dont use debian based apt packages
+2005-11-22T13:39:00.000Z	aftertaf	dvius	 it does work, you have all the same things you find in debian... just dont use debian repositories in ubuntu....
+2005-11-22T13:39:00.000Z	aftertaf	dvius	 you sure dpkg dont work on your system? did you do a minuimum install or bork something?
+2005-11-22T13:41:00.000Z	aftertaf	dvius	 my guess is that was supposed to represent the prompt ;)
+2005-11-22T13:42:00.000Z	aftertaf	dvius	 you're in the right place then ;)
+2005-11-22T13:45:00.000Z	aftertaf	dvius	 try running mplayer from console, see if it chucks an error message in the output
+2005-11-22T14:00:00.000Z	aftertaf	dvius	 word of advice, remove those drivers and use the ubuntu packaged ones, its a lot simpler :)
+2005-11-22T14:00:00.000Z	aftertaf	dvius	 you have the exact same card as me and i dont use legacy
+2005-11-22T14:01:00.000Z	aftertaf	dvius	 use the --uninstall flag on the nvidia .run package then follow the nvidia link from ubotu
+2005-11-22T14:01:00.000Z	aftertaf	dvius	 and dop you have the right kernel package in stalled? whats your processor?
+2005-11-22T14:03:00.000Z	dvius	aftertaf	I reinstalled my system again and haven't tried any nvidia packages since... should I follow "binarydriverHowto" advice a
+2005-11-22T14:03:00.000Z	aftertaf	dvius	 type sudo apt-get install linux-k7 and let it download away... then reboot with the k7 kernel :] 
+2005-11-22T14:04:00.000Z	aftertaf	dvius	 and then follow the howto for the restricted packages containing nvidia drivers, yeah :)
+2005-11-22T14:05:00.000Z	aftertaf	dvius	 for your kernel? cos linux does what you ask it to ;)
+2005-11-22T14:08:00.000Z	dvius	aftertaf	Im sorry...."restricted packages"??
+2005-11-22T14:12:00.000Z	dvius	aftertaf	THANKS HEAPS DUDE!! your a lifesaver. rebooting y maching be back in 5
+2005-11-22T14:24:00.000Z	aftertaf	dvius	 if it all goes horrible, you boot to console and edit the file /etc/X11/xorg.conf   change driver from "nvidia" to "nv"
+2005-11-22T14:28:00.000Z	aftertaf	dvius	 and write this down too: if it all goes pearshaped, you can : sudo dpkg-reconfigure -phigh xserver-xorg
+2005-11-22T15:42:00.000Z	aftertaf	dvius	 howd it go?
+2005-11-22T15:42:00.000Z	dvius	aftertaf	not good!
+2005-11-22T15:42:00.000Z	aftertaf	dvius	 ah, whats the error?
+2005-11-22T15:42:00.000Z	aftertaf	dvius	 cant you choose it, is that it?
+2005-11-22T15:43:00.000Z	aftertaf	dvius	 edit /boot/grub/menu.lst
+2005-11-22T16:13:00.000Z	aftertaf	dvius	 2 secs... can we PV?
+2005-11-22T16:16:00.000Z	aftertaf	dvius	 you get those messages?
+2005-11-22T16:18:00.000Z	aftertaf	dvius	 did you receive my private messages?
+2005-11-22T16:18:00.000Z	dvius	aftertaf	justchecking dependancies
+2005-11-22T16:20:00.000Z	dvius	aftertaf	i checkd dependancies...no what?
+2005-11-22T16:20:00.000Z	dvius	aftertaf	*now
+2005-11-22T16:24:00.000Z	aftertaf	dvius	 if you got all that, then i can guide you for grub and being able to choose your kernel at boot time
+2005-11-22T16:25:00.000Z	dvius	aftertaf	so i add them from synaptic? (package plus dependancies?)
+2005-11-22T16:25:00.000Z	aftertaf	dvius	 yep add then (the dependencies will add by themselves)
+2005-11-22T16:25:00.000Z	dvius	aftertaf	ok...then?
+2005-11-22T16:27:00.000Z	dvius	aftertaf	done! removed 686. added k7, 386...
+2005-11-22T16:28:00.000Z	aftertaf	dvius	 can you choose kernel on boot?
+2005-11-22T16:28:00.000Z	dvius	aftertaf	yeah, just press esc and it takes me to grub...
+2005-11-22T16:28:00.000Z	dvius	aftertaf	reboot?
+2005-11-22T16:29:00.000Z	dvius	aftertaf	so now that the packages are installed what happens?? does the kernel install itself or..??
+2005-11-22T16:29:00.000Z	dvius	aftertaf	ok....doing it
+2005-11-22T16:29:00.000Z	aftertaf	dvius	 the kernel has installed itself... take a look in /boot
+2005-11-22T16:29:00.000Z	dvius	aftertaf	ok...looking in boot
+2005-11-22T16:30:00.000Z	dvius	aftertaf	mmm, yeah, i reboot now and try k7...c u soon
+2005-11-22T16:37:00.000Z	dvius	aftertaf	my computer hates me :(
+2005-11-22T16:37:00.000Z	aftertaf	dvius	 nah, you just dont understand its needs and worries mate ;P
+2005-11-22T16:37:00.000Z	dvius	aftertaf	hehehehe
+2005-11-22T16:38:00.000Z	aftertaf	dvius	 dont rush it.... what went wrong?
+2005-11-22T16:39:00.000Z	dvius	aftertaf	i tried loading k7 from grub. it shat its pants... L kernel panic - not syncing:VFS:Unable to mount root fs on unkown-block(0,0)
+2005-11-22T16:39:00.000Z	aftertaf	dvius	 ok. remove it and all its dependencies, purge it and reinstall. something not right there at all.
+2005-11-22T16:39:00.000Z	aftertaf	dvius	 can you paste to pastebin?
+2005-11-22T16:39:00.000Z	dvius	aftertaf	SORRY...purge??
+2005-11-22T16:40:00.000Z	aftertaf	dvius	 with synaptic, choose the completely remove option.
+2005-11-22T16:40:00.000Z	aftertaf	dvius	 but first try this!!!!!!
+2005-11-22T16:40:00.000Z	dvius	aftertaf	ok..purgin in progress...
+2005-11-22T16:41:00.000Z	aftertaf	dvius	 type: dpkg -l | grep linux-
+2005-11-22T16:41:00.000Z	dvius	aftertaf	...i try
+2005-11-22T16:42:00.000Z	dvius	aftertaf	SORRY!!! im such a nooob!! pls be more specific,,
+2005-11-22T16:42:00.000Z	aftertaf	dvius	 see what ubotu just posted ;)
+2005-11-22T16:43:00.000Z	dvius	aftertaf	thx!
+2005-11-22T16:52:00.000Z	dvius	aftertaf	done...
+2005-11-22T16:52:00.000Z	aftertaf	dvius	 cool;
+2005-11-22T16:53:00.000Z	aftertaf	dvius	 and edread and edit the file to let you choose and have more time with your kernles at boot.
+2005-11-22T16:56:00.000Z	aftertaf	dvius	 edit away then ;)
+2005-11-22T16:56:00.000Z	dvius	aftertaf	so what am I editing??
+2005-11-22T16:56:00.000Z	aftertaf	dvius	 the grub options file ;)
+2005-11-22T16:57:00.000Z	aftertaf	dvius	 nope dont touch them at all......
+2005-11-22T16:57:00.000Z	dvius	aftertaf	yeah...ok. should I just delete the 686 and 386??
+2005-11-22T16:58:00.000Z	dvius	aftertaf	I dont understand then...what am i changin in the grub??
+2005-11-22T16:58:00.000Z	aftertaf	dvius	 the fact its hidden or not, and autoboot after 3 secs ;)
+2005-11-22T16:59:00.000Z	dvius	aftertaf	pasted under name dvius2
+2005-11-22T17:02:00.000Z	dvius	aftertaf	ok...doing it now
+2005-11-22T17:02:00.000Z	aftertaf	dvius	 ok. which kernels boot OK on your system? which give you a graphical environment?
+2005-11-22T17:03:00.000Z	dvius	aftertaf	2.6.12-9-386
+2005-11-22T17:05:00.000Z	aftertaf	dvius	 so 12-9-386 works ok and you have X running, right?
+2005-11-22T17:05:00.000Z	dvius	aftertaf	yeah, as ew speak
+2005-11-22T17:06:00.000Z	aftertaf	dvius	 type this: sudo apt-get remove --purge linux-image-2.6.10-5-k7
+2005-11-22T17:07:00.000Z	aftertaf	dvius	 athis'll completely get rid of the k7 kernel and its dependencies.   which is step 1
+2005-11-22T17:07:00.000Z	dvius	aftertaf	E: Could not get lock /var/lib/dpkg/lock - open (11 Resource temporarily unavailable)
+2005-11-22T17:08:00.000Z	aftertaf	dvius	 now......... your nvidia works on the 386 kernel... did you use the nvidia website drivers to get it working, or the ubuntu packagee?
+2005-11-22T17:08:00.000Z	aftertaf	dvius	 close synaptic...
+2005-11-22T17:09:00.000Z	dvius	aftertaf	hehehe... DONE
+2005-11-22T17:09:00.000Z	dvius	aftertaf	nvidia...never got it working...
+2005-11-22T17:09:00.000Z	aftertaf	dvius	 ok. did you use the NVIDIAXX-XX-XX.run  package to install your drivers at any point?
+2005-11-22T17:10:00.000Z	aftertaf	dvius	 tried == they're still installed probably. do you still have the downloaded file?
+2005-11-22T17:11:00.000Z	dvius	aftertaf	i havefile yes
+2005-11-22T17:11:00.000Z	aftertaf	dvius	 ok, but this is a clean install so youve never used it yet on this installation, right?
+2005-11-22T17:11:00.000Z	dvius	aftertaf	right
+2005-11-22T17:12:00.000Z	aftertaf	dvius	 ok;
+2005-11-22T17:12:00.000Z	aftertaf	dvius	 rerun and repaste the dpkg-l command...     dpkg -l | grep linux-
+2005-11-22T17:13:00.000Z	dvius	aftertaf	hang on....just noticed something...
+2005-11-22T17:13:00.000Z	aftertaf	dvius	 rightclick my username and choose open dialog window. and paste me the results there
+2005-11-22T17:13:00.000Z	dvius	aftertaf	rmdir: `/lib/modules/2.6.10-5-k7': Directory not empty
+2005-11-22T17:16:00.000Z	dvius	aftertaf	I thin kim going crazy!!! nevermind... i scrolled up without realising and that was from before... i ran ""sudo apt-get remove --purge linux-image-2.6.10-5-k7"" and its fine
+2005-11-22T17:16:00.000Z	dvius	aftertaf	so what now??

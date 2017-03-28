@@ -1,0 +1,98 @@
+2008-03-31T05:28:00.000Z	brambo	LjL	did u think u can help me?
+2008-03-31T05:28:00.000Z	LjL	brambo	not yet
+2008-03-31T05:29:00.000Z	LjL	brambo	type « sudo apt-get -f install » in a terminal and pastebin the output
+2008-03-31T05:31:00.000Z	brambo	LjL	E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem.
+2008-03-31T05:31:00.000Z	LjL	brambo	« sudo dpkg --configure -a »
+2008-03-31T05:32:00.000Z	brambo	LjL	/usr/sbin/mkinitramfs: 13: getopt: not found
+2008-03-31T05:33:00.000Z	LjL	brambo	uhm, ouch. i think i need the whole output though, not just that line - use the pastebin
+2008-03-31T05:33:00.000Z	brambo	LjL	do u have msn or ne thing? its hard to catch all u say on here
+2008-03-31T05:34:00.000Z	LjL	brambo	your IRC client should highlight lines that i say mentioning your nickname in a different color. doesn't it?
+2008-03-31T05:34:00.000Z	brambo	LjL	yea but the room scrolls so fast
+2008-03-31T05:39:00.000Z	brambo	LjL	I had a registered nick here but i forgot my password...can i just make a new one? n how?
+2008-03-31T05:46:00.000Z	brambo	LjL	what does i need to paste on pastebin again? or are u busy my friend?
+2008-03-31T05:47:00.000Z	LjL	brambo	the output of « sudo dpkg --configure -a »
+2008-03-31T05:48:00.000Z	brambo	LjL	http://paste.ubuntu.com/6242/
+2008-03-31T05:50:00.000Z	LjL	brambo	you seem to have somehow managed to mess up your system in an original way :) try « sudo apt-get install util-linux »
+2008-03-31T05:51:00.000Z	brambo	LjL	that don't do anything
+2008-03-31T05:51:00.000Z	LjL	brambo	how, won't do anything? it definitely should say something - anything at all
+2008-03-31T05:52:00.000Z	brambo	LjL	E: dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem.
+2008-03-31T05:53:00.000Z	LjL	brambo	try this: « sudo apt-get --download-only util-linux ; sudo dpkg -i /var/cache/apt/archives/util-linux*.deb »
+2008-03-31T05:54:00.000Z	brambo	LjL	http://paste.ubuntu.com/6243/
+2008-03-31T05:55:00.000Z	LjL	brambo	my bad, the command should have been « sudo apt-get --download-only install util-linux ; sudo dpkg -i /var/cache/apt/archives/util-linux*.deb »
+2008-03-31T05:56:00.000Z	brambo	LjL	ok it asked me to hit Y to continue, now I gotta get my  Unbuntu disc, gimme a few mins
+2008-03-31T05:56:00.000Z	brambo	LjL	my DVD drive isn't opening! wow this is a bit odd!
+2008-03-31T05:57:00.000Z	brambo	LjL	is there anyway I can get it to get the files it needs from the internet?
+2008-03-31T05:57:00.000Z	LjL	brambo	of course - it should get them from the internet.
+2008-03-31T05:59:00.000Z	brambo	LjL	It is not letting me let it get them from the internet, I am trying to remove cdrom from my sources list
+2008-03-31T06:01:00.000Z	brambo	LjL	ok i have my Ubuntu disc but I gotta get my DVD drive to open which means shutting down my pc etc...will u be here in a bit to help me still? do i just close out the terminal while its asking for the disc?
+2008-03-31T06:01:00.000Z	LjL	brambo	hit ctrl+c.
+2008-03-31T06:01:00.000Z	LjL	brambo	then « gksudo gedit /etc/apt/sources.list », and remove the line that mentions the CD.
+2008-03-31T06:02:00.000Z	brambo	LjL	there is 2 lines at the top that mention cdrom
+2008-03-31T06:02:00.000Z	LjL	brambo	well remove both
+2008-03-31T06:02:00.000Z	LjL	brambo	or, comment them out by adding a # in front of them
+2008-03-31T06:03:00.000Z	LjL	brambo	did you include the "gksudo"?
+2008-03-31T06:04:00.000Z	brambo	LjL	that is what I get when i try to close the sources list after # out anything to do with cdrom
+2008-03-31T06:04:00.000Z	LjL	brambo	yes, but did you include the "gksudo" in the command i gave you to edit the file in the first place?
+2008-03-31T06:04:00.000Z	LjL	brambo	or in other words, were you asked for a password?
+2008-03-31T06:05:00.000Z	brambo	LjL	i had already typed my password in the terminal before that command
+2008-03-31T06:05:00.000Z	LjL	brambo	that doesn't matter
+2008-03-31T06:06:00.000Z	LjL	brambo	ok look, nevermind, close the editor, and do « sudo nano /etc/apt/sources.list », and remove the CD lines from that editor. use ctrl+x to save and exit. do include the "sudo".
+2008-03-31T06:10:00.000Z	brambo	LjL	okay once i delete those two lines?
+2008-03-31T06:13:00.000Z	brambo	LjL	how do I save this now?
+2008-03-31T06:13:00.000Z	LjL	brambo	ctrl+x
+2008-03-31T06:15:00.000Z	brambo	LjL	ok i pressed enter again and now it cleared the screen i am back to to regular terminal, I see.....   brambo@brambo-desktop:~$ sudo nano /etc/apt/sources.list
+2008-03-31T06:18:00.000Z	brambo	LjL	ok i did  sudo apt-get --download-only install util-linux ; sudo dpkg -i /var/cache/apt/archives/util-linux*.deb its doing stuff now
+2008-03-31T06:18:00.000Z	brambo	LjL	http://paste.ubuntu.com/6244/
+2008-03-31T06:20:00.000Z	brambo	LjL	you still here?
+2008-03-31T06:20:00.000Z	LjL	brambo	yes. now « sudo dpkg --configure -a »
+2008-03-31T06:21:00.000Z	brambo	LjL	ok back to brambo@brambo-desktop:~$
+2008-03-31T06:22:00.000Z	LjL	brambo	now « sudo apt-get install ubuntu-minimal », then hopefully you should be all set
+2008-03-31T06:22:00.000Z	LjL	brambo	actually, perhaps you'll need a « sudo apt-get -f install » too
+2008-03-31T06:22:00.000Z	brambo	LjL	will this format my drive at all?
+2008-03-31T06:24:00.000Z	brambo	LjL	http://paste.ubuntu.com/6245/
+2008-03-31T06:24:00.000Z	LjL	brambo	it's all fixed
+2008-03-31T06:26:00.000Z	brambo	LjL	do i need to restart? cause .deb and such still do not open
+2008-03-31T06:27:00.000Z	LjL	brambo	do they say anything peculiar? errors?
+2008-03-31T06:27:00.000Z	brambo	LjL	no they just don't do nothing...nothing opens
+2008-03-31T06:27:00.000Z	LjL	brambo	try doing, from a terminal, « gdebi path-and-name-of-the-package.deb »
+2008-03-31T06:27:00.000Z	LjL	brambo	actually, with a gksudo in front
+2008-03-31T06:31:00.000Z	brambo	LjL	maybe the   .deb files I am getting just don't work cause I am trying ones I already have and they come up, asking if I want to reinstall the package..
+2008-03-31T06:32:00.000Z	LjL	brambo	err... yeah, asking to reinstall would be some kind of meaningful output
+2008-03-31T06:32:00.000Z	brambo	LjL	maybe you can help me fix my update manager?
+2008-03-31T06:32:00.000Z	LjL	brambo	i think your update manager will work now, have you tried?
+2008-03-31T06:33:00.000Z	brambo	LjL	yes I've tryed I get the same message as before we did this..
+2008-03-31T06:33:00.000Z	LjL	brambo	which is?
+2008-03-31T06:34:00.000Z	brambo	LjL	Not all updates can be installed.  Run a partial upgrade, to install as many updates as possible.  This can be caused by:
+2008-03-31T06:34:00.000Z	LjL	brambo	type « sudo apt-get dist-upgrade » in a console, pastebin the output
+2008-03-31T06:34:00.000Z	LjL	brambo	also, pastebin the contents of /etc/apt/sources.list
+2008-03-31T06:35:00.000Z	brambo	LjL	http://paste.ubuntu.com/6246/
+2008-03-31T06:37:00.000Z	brambo	LjL	sources list  http://paste.ubuntu.com/6247/
+2008-03-31T06:38:00.000Z	LjL	brambo	bah, the update seems fine to me. perhaps, but i'm just guessing, the update manager refuses to update because of the KDE4 repositories. anyway, i'd hit "Y" on the dist-upgrade and let it work, and then test again
+2008-03-31T06:40:00.000Z	brambo	LjL	aha wait a minute, maybe you can understand this...this is after I pressed Y      http://paste.ubuntu.com/6248/
+2008-03-31T06:40:00.000Z	brambo	LjL	I believe it has to do with KDE 4
+2008-03-31T06:41:00.000Z	LjL	brambo	yes, that's why i'm suspecting that, although on my system, the update manager couldn't care less about the fact that the KDE4 repository is not authenticated... (i'm using the KDE 3 update manager)
+2008-03-31T06:41:00.000Z	brambo	LjL	should I just continue from where you see, anyway?
+2008-03-31T06:41:00.000Z	LjL	brambo	if you want the latest kde 4 packages installed, yup
+2008-03-31T06:44:00.000Z	brambo	LjL	I've gotta do something, while I let this work, I will see what happens when I return...I just hope I have enough hard drive space
+2008-03-31T06:56:00.000Z	brambo	LjL	ok im gonna let this finish while I do something quick, back in a little bit...thank u for all you've  helped my friend
+2008-03-31T06:51:00.000Z	brambo	LjL	would it have told me by now if I did not have enough disc space for this?
+2008-03-31T06:51:00.000Z	LjL	brambo	no, that's something it's not eager to tell you... check with « df »
+2008-03-31T06:52:00.000Z	brambo	LjL	My file system has  8.9gb used and  6.0gb free
+2008-03-31T06:54:00.000Z	brambo	LjL	http://paste.ubuntu.com/6249/
+2008-03-31T06:55:00.000Z	LjL	brambo	yeah, you've plenty disk space
+2008-03-31T07:01:00.000Z	brambo	LjL	this is basically doing like a reinstall of the operating system?
+2008-03-31T07:01:00.000Z	LjL	brambo	... no?
+2008-03-31T07:01:00.000Z	LjL	brambo	it's updating your KDE4.
+2008-03-31T07:02:00.000Z	brambo	LjL	in turn should reconize in update manager therefore let me update?
+2008-03-31T07:03:00.000Z	LjL	brambo	*shrug*, that i cannot say. you can always try disabling the kde4 repository in sources.list and seeing
+2008-03-31T07:18:00.000Z	brambo	LjL	will you be here in a little bit once this is finished so we can try to get my update manager working if this doesn't help it at all?
+2008-03-31T07:19:00.000Z	LjL	brambo	i'm afraid the fact that it's 4:20am won't help with my being around
+2008-03-31T07:19:00.000Z	brambo	LjL	ok well if you are here, i'll message u in a few minutes, cause the update has finished
+2008-03-31T07:20:00.000Z	brambo	LjL	http://paste.ubuntu.com/6250/
+2008-03-31T07:20:00.000Z	LjL	brambo	looks good
+2008-03-31T07:21:00.000Z	brambo	LjL	what is it to get my sources list? I gotta write this stuff down, my memory isn't the greatest lol
+2008-03-31T07:21:00.000Z	LjL	brambo	gksudo gedit /etc/apt/sources.list
+2008-03-31T07:22:00.000Z	brambo	LjL	I am going to add  deb cdrom back to my sources list for now
+2008-03-31T07:24:00.000Z	brambo	LjL	http://paste.ubuntu-nl.org/61702/  does everything seem ok, spaced properly and all, enough to save again? I've added back the CDROM part
+2008-03-31T07:26:00.000Z	brambo	LjL	I can't seem to open or do anything, I think I must restart,  BRB
+2008-03-31T07:33:00.000Z	brambo	LjL	It's saying my system is up to date now.....yay! ! :-)

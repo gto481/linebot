@@ -1,0 +1,97 @@
+2007-03-11T13:48:00.000Z	lisapc		to my surprised, i installed Ubuntu as ext3. but ubuntu is able to read my MS Vista partitions NTFS.  THats amazing.  I didnt know it could do that.  Is this a new feature in Edgy because Dapper wasnt able to
+2007-03-11T13:48:00.000Z	PriceChild	lisapc	dapper could do it... probably not automatic or something though :)
+2007-03-11T13:48:00.000Z	lisapc	PriceChild	 ok
+2007-03-11T14:17:00.000Z	PriceChild	lisapc	/etc/X11/xorg.conf
+2007-03-11T14:17:00.000Z	lisapc	PriceChild	ty :)
+2007-03-11T14:19:00.000Z	PriceChild	lisapc	ubuntu only installs the open source "nv" drivers
+2007-03-11T14:21:00.000Z	lisapc	PriceChild	so i need to install the proper Nvidia drivers also?
+2007-03-11T14:21:00.000Z	PriceChild	lisapc	don't "need" to :)
+2007-03-11T14:22:00.000Z	lisapc	PriceChild	 so I follow the instructions on https://help.ubuntu.com/community/BinaryDriverHowto ?
+2007-03-11T14:22:00.000Z	lisapc	PriceChild	 dont need to what?
+2007-03-11T14:22:00.000Z	PriceChild	lisapc	if you want acceleration, you need to isntall it... but you don't "need" to, you just want to :)
+2007-03-11T14:22:00.000Z	PriceChild	lisapc	yeah that guide's good
+2007-03-11T14:24:00.000Z	lisapc	PriceChild	how can I safeguard myself in case ubuntu X doesnt load after I install the nvida drivers?
+2007-03-11T14:24:00.000Z	PriceChild	lisapc	write that second command down
+2007-03-11T14:24:00.000Z	PriceChild	lisapc	the one with -phigh
+2007-03-11T14:24:00.000Z	PriceChild	lisapc	It will redo your xorg.conf if you mess it up  :)
+2007-03-11T14:25:00.000Z	lisapc	PriceChild	so if it messes up, ubuntu will still load?
+2007-03-11T14:25:00.000Z	PriceChild	lisapc	ubuntu will always load...
+2007-03-11T14:25:00.000Z	PriceChild	lisapc	that second command will redo your xorg.conf if you mess that up
+2007-03-11T14:25:00.000Z	PriceChild	lisapc	ctrl+alt+f1 gets you to a terminal
+2007-03-11T14:25:00.000Z	lisapc	PriceChild	so i type sudo dpkg-reconfigure xserver-xorg -phigh ?
+2007-03-11T14:25:00.000Z	PriceChild	lisapc	log in... type that command then "sudo /etc/init.d/gdm restart" and you have your gui back :)
+2007-03-11T14:26:00.000Z	lisapc	PriceChild	so it messes up and ubuntu doeant load anymore. I run Ubuntu and press ctr+alt+f1 and type sudo dpkg-reconfigure xserver-xorg -phigh in a terminal;?
+2007-03-11T14:26:00.000Z	PriceChild	lisapc	yes, then "sudo /etc/init.d/gdm restart" to get X to restart
+2007-03-11T14:26:00.000Z	lisapc	PriceChild	when do I hit ctr+alt+f1 as ubuntu loads?
+2007-03-11T14:27:00.000Z	PriceChild	lisapc	no... if it breaks it will give you a blue screen with errors, do it then.
+2007-03-11T14:27:00.000Z	lisapc	PriceChild	ok
+2007-03-11T14:31:00.000Z	PriceChild	lisapc	Don't you love answering your own questions :)
+2007-03-11T14:32:00.000Z	lisapc	PriceChild	last request pls, can u quickly look at my sources.list and tell me if thats ok?
+2007-03-11T14:32:00.000Z	lisapc	PriceChild	 http://paste.ubuntu-nl.org/9905/
+2007-03-11T14:32:00.000Z	lisapc	PriceChild	 yes :)
+2007-03-11T14:32:00.000Z	PriceChild	lisapc	uuu an aussie
+2007-03-11T14:32:00.000Z	lisapc	PriceChild	from Sydney AU :)
+2007-03-11T14:32:00.000Z	lisapc	PriceChild	 is that sourcses list ok to use for edgy?
+2007-03-11T14:33:00.000Z	lisapc	PriceChild	 does it include all security updates etc?
+2007-03-11T14:33:00.000Z	PriceChild	lisapc	that looks perfect :) Even if it is all over the place :P
+2007-03-11T14:33:00.000Z	lisapc	PriceChild	 ok thanks :)
+2007-03-11T14:33:00.000Z	PriceChild	lisapc	if something isn't right it'll shout at you
+2007-03-11T14:36:00.000Z	lisapc	PriceChild	it shouted at me :(  it says 4 lines of W: Duplicate sources.list entry http://security.ubuntu.com edgy-security/restricted Packages (/var/lib/apt/lists/security.ubuntu.com_ubunu_dists_edgy-security_restricted_binary-i386_Packages)
+2007-03-11T14:36:00.000Z	PriceChild	lisapc	don't worry... that's just a grumble. Carry on and we'll fix that later
+2007-03-11T14:37:00.000Z	lisapc	PriceChild	 can u pls tell me what lines need fixing?  besides you said it was perfect :P heh
+2007-03-11T14:39:00.000Z	PriceChild	lisapc	you could just replace it with a "clean" sources.list ?
+2007-03-11T14:39:00.000Z	lisapc	PriceChild	 where can I get a clean sources for Edgy?
+2007-03-11T14:39:00.000Z	lisapc	PriceChild	 does that include universe etc?
+2007-03-11T14:40:00.000Z	PriceChild	lisapc	everything :)
+2007-03-11T14:40:00.000Z	PriceChild	lisapc	as i said earlier, that's just a grumble. It can carry on with the duplicates.
+2007-03-11T14:40:00.000Z	lisapc	PriceChild	im a percectionist :)
+2007-03-12T16:56:00.000Z	PriceChild	lisapc	it should tell you the range it suggests
+2007-03-12T16:57:00.000Z	PriceChild	lisapc	if you're that worried... don't torrent. This is the internet, your isp can find out everything
+2007-03-12T16:57:00.000Z	lisapc	PriceChild	no worried, just trying to set it best i can
+2007-03-12T14:33:00.000Z	PriceChild	lisapc	sounds good
+2007-03-12T14:28:00.000Z	lisapc	PriceChild	 can u tell me pls?
+2007-03-12T14:29:00.000Z	PriceChild	lisapc	what does it suggest?
+2007-03-12T14:29:00.000Z	lisapc	PriceChild	 doesnt suggest anything
+2007-03-12T14:30:00.000Z	lisapc	PriceChild	 Rather than communicating directly with the video hardware, the X server may be configured to perform some operations, such as video mode switching,   
+2007-03-12T14:30:00.000Z	PriceChild	lisapc	nothing else?
+2007-03-12T14:31:00.000Z	lisapc	PriceChild	it says use it or not
+2007-03-12T14:31:00.000Z	lisapc	PriceChild	In theory, either approach should work, but in practice, sometimes one does and the other does not.  Enabling this option is the safe bet, but feel    
+2007-03-12T14:31:00.000Z	PriceChild	lisapc	I think we've found our answer :)
+2007-03-12T14:32:00.000Z	lisapc	PriceChild	what is it? :)
+2007-03-12T14:32:00.000Z	lisapc	PriceChild	Use kernel framebuffer device interface?    Yes or No? :)
+2007-03-12T14:32:00.000Z	PriceChild	lisapc	oh come on.... read it and tell me which you think you should do :)
+2007-03-12T14:32:00.000Z	lisapc	PriceChild	 YES
+2007-03-12T14:32:00.000Z	PriceChild	lisapc	why? :)
+2007-03-12T14:32:00.000Z	lisapc	PriceChild	it says in theory safest
+2007-03-12T14:34:00.000Z	lisapc	PriceChild	X.Org server modules that should be loaded by default.  Shall  chose them all?
+2007-03-12T14:34:00.000Z	PriceChild	lisapc	leave it as it is...
+2007-03-12T14:34:00.000Z	lisapc	PriceChild	its chosing them all, but not dbe   : enables the double-buffering extension in the server.                                               
+2007-03-12T14:34:00.000Z	lisapc	PriceChild	should I chose dbe?
+2007-03-12T14:35:00.000Z	PriceChild	lisapc	enable it
+2007-03-12T14:35:00.000Z	lisapc	PriceChild	done
+2007-03-12T14:36:00.000Z	lisapc	PriceChild	Attempt monitor autodetection?
+2007-03-12T14:36:00.000Z	PriceChild	lisapc	yup
+2007-03-12T14:36:00.000Z	PriceChild	lisapc	I'm wondering why you're getting all these questions?
+2007-03-12T14:36:00.000Z	lisapc	PriceChild	no idea.  but its asking me
+2007-03-12T14:38:00.000Z	lisapc	PriceChild	im about to reboot.  if X doesnt start, can I just restore the backup xorg.conf that I copied?
+2007-03-12T14:38:00.000Z	PriceChild	lisapc	yes
+2007-03-12T14:38:00.000Z	lisapc	PriceChild	brb i hope
+2007-03-12T14:42:00.000Z	lisapc	PriceChild	it worked :)  but resolution is only 1024x768. How can I make it 1280x800?
+2007-03-12T14:42:00.000Z	PriceChild	lisapc	I'm not sure sorry
+2007-03-12T14:47:00.000Z	lisapc	PriceChild	ty :)  it works now!  wow, screen looks amazing
+2007-03-12T14:48:00.000Z	lisapc	PriceChild	i followed your instructions :)
+2007-03-12T14:48:00.000Z	lisapc	PriceChild	 And I had to sudo apt-get install linux-restricted-modules-generic
+2007-03-13T14:29:00.000Z	lisapc	PriceChild	 http://ping.windowsdream.com/  <-- any good?
+2007-03-13T14:32:00.000Z	lisapc	PriceChild	lol ok :)
+2007-03-13T15:20:00.000Z	lisapc	PriceChild	if my cuurent grub goes bad.  how do I reinstall it?  can I do that from the Kbuntu alternative CD?
+2007-03-13T15:20:00.000Z	PriceChild	lisapc	definitely
+2007-03-13T15:20:00.000Z	lisapc	PriceChild	do I chose rescue?
+2007-03-13T15:20:00.000Z	lisapc	PriceChild	I think the Kbutunu CD has rescue. does it?
+2007-03-13T15:21:00.000Z	PriceChild	lisapc	yes, and skip to the grub part
+2007-03-13T15:21:00.000Z	lisapc	PriceChild	and it will reinstall grub and boot as before?
+2007-03-13T15:21:00.000Z	PriceChild	lisapc	"should" :)
+2007-03-13T15:21:00.000Z	lisapc	PriceChild	is grub always the same?
+2007-03-13T15:22:00.000Z	PriceChild	lisapc	it works it out and should reinstall... easiest to do with a live cd really.
+2007-03-13T15:27:00.000Z	PriceChild	lisapc	install tvtime to see if that automatically works with you tvtuner
+2007-03-13T15:27:00.000Z	lisapc	PriceChild	tvtime, ok ty brb
+2007-03-14T16:48:00.000Z	lisapc	PriceChild	ok :)

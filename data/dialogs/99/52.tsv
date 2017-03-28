@@ -1,0 +1,99 @@
+2007-02-15T12:49:00.000Z	padge		I have a directory which belongs to a particular group, and I'm a member of that group.  Shouldn't I have the permissions that are set for group?
+2007-02-15T12:49:00.000Z	sigger_	padge	unless you're alse the user of the dir
+2007-02-15T12:50:00.000Z	padge	sigger_	Well, it's not working as I had hoped
+2007-02-15T12:50:00.000Z	sigger_	padge	what's wrong?
+2007-02-15T12:51:00.000Z	padge	sigger_	I have a directory called 'sl', the owner and group are both 'secondlife'
+2007-02-15T12:51:00.000Z	padge	sigger_	I am 'padge' and I belong to the group 'secondlife'
+2007-02-15T12:51:00.000Z	padge	sigger_	group permissions for the folder are rwx
+2007-02-15T12:51:00.000Z	padge	sigger_	but that just doesn't seem to work
+2007-02-15T12:52:00.000Z	padge	sigger_	I cannot write to it
+2007-02-15T12:52:00.000Z	sigger_	padge	by any chance is this dir a symlink or a samba or nfs mounted drive?
+2007-02-15T12:52:00.000Z	padge	sigger_	Any ideas?
+2007-02-15T12:53:00.000Z	padge	sigger_	no, it's real and local.
+2007-02-15T12:53:00.000Z	sigger_	padge	ok, is it a mounted drive at all?
+2007-02-15T12:54:00.000Z	padge	sigger_	it is a subdirectory of /
+2007-02-15T12:54:00.000Z	sigger_	padge	 ok, knocks out first thing I thought of.  thinking.
+2007-02-15T12:55:00.000Z	sigger_	padge	how are you trying to write to it?  what specifically are you foing?
+2007-02-15T12:55:00.000Z	padge	sigger_	I am trying to write to it using nautilus.  From the console, I cannot change to that directory
+2007-02-15T12:56:00.000Z	sigger_	padge	whoa. from console you can't even enter the dir?  (i.e. it doesn't think you have +x)?
+2007-02-15T12:56:00.000Z	sigger_	padge	from command line, "who" tells you that you are padge, right?
+2007-02-15T12:56:00.000Z	padge	sigger_	whoa, you have to have x to change to?
+2007-02-15T12:57:00.000Z	sigger_	padge	well to enter a dir, I believe you have to have +x in the dir
+2007-02-15T12:57:00.000Z	padge	sigger_	checking
+2007-02-15T12:58:00.000Z	padge	sigger_	That fixed that
+2007-02-15T12:58:00.000Z	padge	sigger_	but the larger problem remains
+2007-02-15T12:58:00.000Z	padge	sigger_	Correct me if I'm wrong, but users can belong to multiple groups, right?
+2007-02-15T12:58:00.000Z	sigger_	padge	just for kicks, cd / and ls -l sl to check perms
+2007-02-15T12:59:00.000Z	sigger_	padge	yes, users can belong to many groups.  e.g. try groups padge
+2007-02-15T13:00:00.000Z	padge	sigger_	wow, I'm in more groups than I thought I was.  But that confirms that I'm in the group 'secondlife'
+2007-02-15T13:00:00.000Z	sigger_	padge	how about the ls?
+2007-02-15T13:00:00.000Z	padge	sigger_	Yes, I can change to the dir from the console and get a list
+2007-02-15T13:00:00.000Z	padge	sigger_	However, I'm being treated as though I'm not a part of that group... as in my permissions are that of o instead of g
+2007-02-15T13:01:00.000Z	padge	sigger_	g has rwx on that directory
+2007-02-15T13:01:00.000Z	padge	sigger_	of course, I haven't tried to write with the console, but nautilus did experience a change...
+2007-02-15T13:02:00.000Z	sigger_	padge	(1) please double check the perms of the dir.  (cd /; ls -l sl) (2) try to create a file in sl (cd /sl; touch afile)
+2007-02-15T13:02:00.000Z	padge	sigger_	at first, nautilus somehow got the names of the contents, but nothing else about them.  Now it gets the fact that they are folders
+2007-02-15T13:04:00.000Z	padge	sigger_	There are no non-directory files in the directory.  Should that work the same with a directory?  Also, I might have misled you about the placement of sl
+2007-02-15T13:04:00.000Z	padge	sigger_	sl's whole path is /home/ftp/sl
+2007-02-15T13:05:00.000Z	padge	sigger_	will (copy con > bla.txt) work to see if I can write?
+2007-02-15T13:06:00.000Z	sigger_	padge	no matter re full path.  touch should work.  also when I asked about the perms, I was asking about it from above.  e.g. cd /home/ftp; ls -l sl
+2007-02-15T13:07:00.000Z	padge	sigger_	drwxrwxr-x
+2007-02-15T13:08:00.000Z	sigger_	padge	cat > testfile
+2007-02-15T13:08:00.000Z	padge	sigger_	permission denied
+2007-02-15T13:09:00.000Z	sigger_	padge	"who" says you're padge, right?
+2007-02-15T13:09:00.000Z	padge	sigger_	who gives me four lines, they all start with padge
+2007-02-15T13:10:00.000Z	sigger_	padge	then you are indeed padge.  jeez.  It hasn't hit me yet, but it will
+2007-02-15T13:11:00.000Z	padge	sigger_	I used the GUI admin utility to add myself to the group... could this have anything to do with the umask?
+2007-02-15T13:11:00.000Z	sigger_	padge	/home/ftp is kind of an odd place for it.  Unless you're setting the stuff up to be accessed by ftp.
+2007-02-15T13:11:00.000Z	padge	sigger_	That is, in fact, exactly what it is
+2007-02-15T13:11:00.000Z	padge	sigger_	however, I do want to be able to access it locally as well
+2007-02-15T13:12:00.000Z	sigger_	padge	dunno about the gui stuff.  I do almost everything via command line.
+2007-02-15T13:12:00.000Z	padge	sigger_	How do I add a user to a group with a command line?
+2007-02-15T13:13:00.000Z	sigger_	padge	sorry thats usermod
+2007-02-15T13:13:00.000Z	padge	sigger_	What is usermod?  adduser?
+2007-02-15T13:14:00.000Z	sigger_	padge	what LjL said
+2007-02-15T13:14:00.000Z	padge	sigger_	It says that I am already a member of that group.
+2007-02-15T13:16:00.000Z	padge	sigger_	okay, I might have found something
+2007-02-15T13:16:00.000Z	sigger_	padge	you can write elsewhere, right?
+2007-02-15T13:16:00.000Z	padge	sigger_	Yes, I can write in my home folder and anyplace else that has rwx for o
+2007-02-15T13:16:00.000Z	padge	sigger_	but get this...
+2007-02-15T13:17:00.000Z	padge	sigger_	/home/ftp is owned by 'ftp' and belongs to the group 'nogroup'
+2007-02-15T13:17:00.000Z	padge	sigger_	I am not in nogoup, nor am I ftp
+2007-02-15T13:17:00.000Z	padge	sigger_	Would child directories inherit restrictions like this?
+2007-02-15T13:18:00.000Z	sigger_	padge	mmm, don't think so.  e.g. my /mnt is root.root  however /mnt/stor/1 is writeable by many non-root people
+2007-02-15T13:18:00.000Z	sigger_	padge	your /home may even be root.root
+2007-02-15T13:19:00.000Z	padge	sigger_	You are correct, and the permissions are drwxr-xr-x
+2007-02-15T13:19:00.000Z	sigger_	padge	so, how'd you get the sl dir there?
+2007-02-15T13:19:00.000Z	padge	sigger_	I created it as root
+2007-02-15T13:19:00.000Z	sigger_	padge	and how'd you get the files there?
+2007-02-15T13:20:00.000Z	padge	sigger_	I put them there before I used chgrp and chown
+2007-02-15T13:21:00.000Z	padge	sigger_	more correctly, I put them there before I changed the permissions
+2007-02-15T13:22:00.000Z	sigger_	padge	I'm running out of stuff.
+2007-02-15T13:23:00.000Z	sigger_	padge	what are perms of /home/ftp
+2007-02-15T13:23:00.000Z	padge	sigger_	drwxr-xr-x
+2007-02-15T13:24:00.000Z	sigger_	padge	perhaps try making /home/ftp go+x - even if just temporarily to see if thats it?
+2007-02-15T13:24:00.000Z	sigger_	padge	perhaps try making /home/ftp go+w - even if just temporarily to see if thats it? (typo)
+2007-02-15T13:24:00.000Z	padge	sigger_	I will try that, but I will break it into two steps to be more conclusive
+2007-02-15T13:24:00.000Z	sigger_	padge	sure
+2007-02-15T13:32:00.000Z	sigger_	padge	sorry, but I'm out of ideas.  I'm around for a bit if you have ideas or questions (or results!)
+2007-02-15T13:28:00.000Z	padge	sigger_	That did not allow me to write a file in sl, however I am able to write a file in ftp
+2007-02-15T13:28:00.000Z	padge	sigger_	that being change o+w
+2007-02-15T13:28:00.000Z	padge	sigger_	Now that I'm putting data into cat, how do I write an EOF? :)
+2007-02-15T13:29:00.000Z	sigger_	padge	ergh. was hoping that changing /home/ftp would do it.  ctrl+D
+2007-02-15T13:30:00.000Z	padge	sigger_	That would have been convenient for the time being, however it would have left me in confusion as the circumstances are identical to that of /home and /home/padge
+2007-02-15T13:31:00.000Z	sigger_	padge	I hear you.  step 1 get it working right (i.e not by just forcing /sl with o+w). step 2 figure out why.
+2007-02-15T13:33:00.000Z	padge	sigger_	I have changed ownership of sl to padge, and that fixes it.  Everything works exactly as I would expect, except group permissions are being ignored
+2007-02-15T13:33:00.000Z	sigger_	padge	ok, sorry I couldn't nail it down for ya
+2007-02-15T13:34:00.000Z	padge	sigger_	I appreciate your going through the steps with me anyway.  It's somehow comforting that the problem is genuine and I'm not just a tool :)
+2007-02-15T13:35:00.000Z	sigger_	padge	doesn
+2007-02-15T13:35:00.000Z	sigger_	padge	doesn't mean you're not ;)  happy to try to help.
+2007-02-15T13:36:00.000Z	padge	sigger_	Haha, I hadn't considered that possiblility(watch, the solution to this will involve similar thinking).  If I think of it, I'll let you know what the problem is as soon as I get it worked out
+2007-02-15T13:37:00.000Z	sigger_	padge	thanks.  Look forward to hearing what (likely silly) thing I missed too.
+2007-02-15T14:33:00.000Z	padge	sigger_	I got it worked out
+2007-02-15T14:33:00.000Z	sigger_	padge	what'd you do?
+2007-02-15T14:34:00.000Z	padge	sigger_	As it turns out, group membership doesn't permeate until you log into the session, which means all instances of programs you run within that session, terminals, nautilus, etc.  I had to log out and log back in.
+2007-02-15T14:34:00.000Z	sigger_	padge	that sounds weird and counterintuitive, but glad it worked out
+2007-02-15T14:35:00.000Z	padge	sigger_	I checked it first with a real terminal.  I logged in there and it worked as expected, so I restarted X and everything was go.
+2007-02-15T14:36:00.000Z	padge	sigger_	Anyway, there's a bit of trivia for ya to help yourself of others with.  Thanks for going through it with me.  It saved the other guy all that time.
+2007-02-15T14:37:00.000Z	sigger_	padge	I learned something new.  Thanks.
+2007-02-15T14:38:00.000Z	padge	sigger_	:)

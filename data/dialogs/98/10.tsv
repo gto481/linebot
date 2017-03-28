@@ -1,0 +1,98 @@
+2010-05-11T02:16:00.000Z	MisterEx		I have my mount points screwed up from some script, I need to be mounting an NTFS drive to a certain label. The "new" mounts don't work, and are auto mounted on boot, and the "old" mount point (that I used forever), is now broken. Someone please help?
+2010-05-11T02:18:00.000Z	distress	MisterEx	you want to mount an windowz partition ?
+2010-05-11T02:19:00.000Z	MisterEx	distress	It's a data partition formated in NTFS, and I want to eliminate all current automatic mount points of my drives, and create one for this one, yes.
+2010-05-11T02:20:00.000Z	distress	MisterEx	then you have to edit /etc/fstab
+2010-05-11T02:21:00.000Z	MisterEx	distress	Can you help me?
+2010-05-11T02:21:00.000Z	distress	MisterEx	sure
+2010-05-11T02:22:00.000Z	distress	MisterEx	add noauto to the devices you dont want mounted at boot
+2010-05-11T02:22:00.000Z	MisterEx	distress	The issue is I ran this script on two of my computers, and I did edit /etc/fstab on the other, BUT, conky still reported another partition in it's script, implying that a record of the automatic mount the script made still exists somewhere.
+2010-05-11T02:23:00.000Z	distress	MisterEx	i doubt its good ubuntu policy to ignore the settings in /etc/fstab
+2010-05-11T02:24:00.000Z	MisterEx	distress	I do want it mounted on boot to the name "DATA", it is /dev/sda5   and I comment about the conky still seeing them because it's WEIRD, I did edit /etc/fstab on that PC, and it still "sees" the mount.
+2010-05-11T02:25:00.000Z	distress	MisterEx	are you using fsb drives
+2010-05-11T02:25:00.000Z	distress	MisterEx	usb*
+2010-05-11T02:25:00.000Z	MisterEx	distress	fsb?
+2010-05-11T02:25:00.000Z	MisterEx	distress	No, there are just partitions of my HD
+2010-05-11T02:26:00.000Z	distress	MisterEx	shouldnt they be like /dev/hda or something ?
+2010-05-11T02:26:00.000Z	distress	MisterEx	or are u using some expensive drives
+2010-05-11T02:27:00.000Z	MisterEx	distress	it is the drive /dev/sda2, then indented is /dev/sda5 which is the specific partition of my drive. I am reading this information from gparted. They are not that expensive, no?
+2010-05-11T02:27:00.000Z	MisterEx	distress	It's one HD partitioned.
+2010-05-11T02:30:00.000Z	distress	MisterEx	yeah but you probably have some special type of hd there
+2010-05-11T02:31:00.000Z	distress	MisterEx	then add 'noauto' to the lines in fstab for those you dont want booted and type=ntfs for that windowz partition
+2010-05-11T02:32:00.000Z	distress	MisterEx	and if you think its conky thats doing that then you might try a boot without conky
+2010-05-11T02:32:00.000Z	MisterEx	distress	lol.. a conky script wouldn't change anything. I am only saying it shows evidence that the partition is still listed somewhere (on my other laptop I already fixed it listed each partition TWICE because of this script)
+2010-05-11T02:33:00.000Z	MisterEx	distress	also, I need a line to put in here please. is that ALL that matters?
+2010-05-11T02:33:00.000Z	distress	MisterEx	conky is a hardware monitor its task is to find devices and in your case probably mount em
+2010-05-11T02:33:00.000Z	MisterEx	distress	No
+2010-05-11T02:33:00.000Z	MisterEx	distress	You aren't understanding me
+2010-05-11T02:34:00.000Z	MisterEx	distress	Two computers, okay?
+2010-05-11T02:34:00.000Z	distress	MisterEx	yeah :P
+2010-05-11T02:34:00.000Z	MisterEx	distress	This one, issue with mounting. Need help with editing my /etc/fstab
+2010-05-11T02:34:00.000Z	MisterEx	distress	Other computer, laptop, ran some script (it was a script to easily install multiple programs/repos/etc), and it created "automatic" mounts of NTFS drives on both, ok?
+2010-05-11T02:35:00.000Z	distress	MisterEx	so to mount an ntfs volume you copy paste on line of your fstab and change the type to 'ntfs'
+2010-05-11T02:35:00.000Z	MisterEx	distress	... I have no "line" to copy, and you didn't let me finish
+2010-05-11T02:36:00.000Z	MisterEx	distress	The issue with conky is on the laptop it shows TWO mounts. The script uses ntfs-3g, and obviously there is still a record in there somewhere because it is listing the partitions twice on my laptop
+2010-05-11T02:37:00.000Z	MisterEx	distress	so I need from someone the following : 1) a line to mount an NTFS partition with data in it automatically into fstab 2) info on what the heck conky is still seeing to display my mounts twice on both of these comptuers, even after editing /etc/fstab.
+2010-05-11T02:37:00.000Z	distress	MisterEx	ive never used conky so i dont know about that except the most general stuff
+2010-05-11T02:38:00.000Z	MisterEx	distress	I can look at the script if it will help
+2010-05-11T02:38:00.000Z	MisterEx	distress	Obviously there is still a record of the mounts
+2010-05-11T02:38:00.000Z	distress	MisterEx	yeah
+2010-05-11T02:38:00.000Z	MisterEx	distress	Wherever conky is looking for them
+2010-05-11T02:38:00.000Z	MisterEx	distress	Left by this script
+2010-05-11T02:39:00.000Z	distress	MisterEx	but to add a line on your fstab is just a matter of copy paste for linux devices
+2010-05-11T02:40:00.000Z	MisterEx	distress	http://pastebin.org/219061  there is the part of the conky script that displays HD temperature and partition information
+2010-05-11T02:40:00.000Z	distress	MisterEx	and you did check the settings of conky ?
+2010-05-11T02:40:00.000Z	MisterEx	distress	See pastebin
+2010-05-11T02:41:00.000Z	distress	MisterEx	whats all the garbage ?
+2010-05-11T02:42:00.000Z	distress	MisterEx	id say you could safely delete that entry
+2010-05-11T02:42:00.000Z	MisterEx	distress	It's a default script, there's nothing it DOES to the system, it's only reading information, and it's seeing SOME record of an sda1 partition on my laptop, that was the NEW name of the mount the script made, and i DELETED that line from /etc/fstab
+2010-05-11T02:43:00.000Z	distress	MisterEx	didyou also do a reboot
+2010-05-11T02:43:00.000Z	MisterEx	distress	so with conky it lists /media/DATA and sda1, (laptop), both IDENTICAL and one NO LONGER set in fstab, clearly implying - the HD mount and partition information is old (it never used to do this)
+2010-05-11T02:43:00.000Z	MisterEx	distress	yes
+2010-05-11T02:43:00.000Z	MisterEx	distress	So it's literally like "oldmountname" (display hd info) "currentmountname" (display hd info) IDENTICAL.
+2010-05-11T02:45:00.000Z	MisterEx	distress	conky-colors uses a binary for this harddrive stuff I think, but it's obviouisly STILL seeing a record of the old mount. ideas?
+2010-05-11T02:46:00.000Z	distress	MisterEx	the first thing id try is to purge and reinstall conky
+2010-05-11T02:47:00.000Z	distress	MisterEx	i doubt it
+2010-05-11T02:47:00.000Z	distress	MisterEx	you only need a reboot after installing a new kernel and so on
+2010-05-11T02:51:00.000Z	distress	MisterEx	yeah but that maybe due the windowz
+2010-05-11T02:52:00.000Z	MisterEx	distress	and conky effects cd ?
+2010-05-11T02:52:00.000Z	MisterEx	distress	...
+2010-05-11T02:53:00.000Z	MisterEx	distress	It's not even running
+2010-05-11T02:53:00.000Z	MisterEx	distress	and /media has DATA and Data
+2010-05-11T02:53:00.000Z	MisterEx	distress	One of which is root privalleged.
+2010-05-11T02:53:00.000Z	distress	MisterEx	what does the output of mount tell you about hte devices you want removed
+2010-05-11T02:57:00.000Z	distress	MisterEx	umount /media/DATA
+2010-05-11T02:57:00.000Z	MisterEx	distress	That one works. It's /media/Data that is "stuck" in my list (cannot access it but it's there)
+2010-05-11T02:58:00.000Z	distress	MisterEx	no its not there
+2010-05-11T02:58:00.000Z	MisterEx	distress	Yes, it is.
+2010-05-11T02:58:00.000Z	MisterEx	distress	hold on
+2010-05-11T02:58:00.000Z	distress	MisterEx	only if its listed in /etc/mtab
+2010-05-11T03:00:00.000Z	distress	MisterEx	yeah its your whatever application but it aint mounted
+2010-05-11T03:01:00.000Z	MisterEx	distress	My "whatever" application? Excuse me?
+2010-05-11T03:02:00.000Z	distress	MisterEx	check your /etc/mtab for a listing of that device
+2010-05-11T03:04:00.000Z	distress	MisterEx	you probably have some surplus directories in your media directory
+2010-05-11T03:04:00.000Z	MisterEx	distress	Looks like not, only the /media/DATA one is. See: http://pastebin.org/219127
+2010-05-11T03:04:00.000Z	distress	MisterEx	so your drive is not mounted
+2010-05-11T03:05:00.000Z	distress	MisterEx	you have just a directory you cannot access
+2010-05-11T03:05:00.000Z	distress	MisterEx	but it is not repeat not mounted
+2010-05-11T03:05:00.000Z	MisterEx	distress	For the 4th time, it IS mounted to /media/DATA. It works. It is ALSO trying to mount to /media/Data, and is completely inaccessible from that location.
+2010-05-11T03:05:00.000Z	distress	MisterEx	no its not mounted
+2010-05-11T03:05:00.000Z	MisterEx	distress	Then why does bash and nautilus see it?
+2010-05-11T03:06:00.000Z	distress	MisterEx	they actually dont have it mounted
+2010-05-11T03:06:00.000Z	distress	MisterEx	you should right click that icon and get its mount status
+2010-05-11T03:08:00.000Z	distress	MisterEx	to umount your device ....
+2010-05-11T03:18:00.000Z	distress	MisterEx	haha
+2010-05-11T03:18:00.000Z	distress	MisterEx	get your boot cd out
+2010-05-11T03:18:00.000Z	MisterEx	distress	Yes, it's funny. Keep telling other people things that give them no OS.
+2010-05-11T03:19:00.000Z	distress	MisterEx	what did you do ?
+2010-05-11T03:19:00.000Z	MisterEx	distress	(not implying it was malicious or intentional, but stay out of things you are not knowledgeable enough about)
+2010-05-11T03:19:00.000Z	distress	MisterEx	id say thats a reinstall there
+2010-05-11T03:19:00.000Z	MisterEx	distress	Only what you told me too, plus a reboot.
+2010-05-11T03:19:00.000Z	MisterEx	distress	So, thanks.
+2010-05-11T03:19:00.000Z	distress	MisterEx	did i tell you to reboot ?
+2010-05-11T03:20:00.000Z	distress	MisterEx	i told you only reboot after a new kernel and so on
+2010-05-11T03:20:00.000Z	MisterEx	distress	We didn't touch the kernel, and you said no such thing. Stop talking to me before I say things that are not good on an age-appropriate irc.
+2010-05-11T03:20:00.000Z	distress	MisterEx	then reinstall
+2010-05-11T03:21:00.000Z	MisterEx	distress	Fuck you.
+2010-05-11T03:21:00.000Z	distress	MisterEx	you fucked up whats not broken and incapable of the slitghest and most easy tasks so : reinstall
+2010-05-11T03:22:00.000Z	distress	MisterEx	you may learn something
+2010-05-11T03:22:00.000Z	MisterEx	distress	Sit down and shut up before I get banned.

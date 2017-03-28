@@ -1,0 +1,99 @@
+2007-03-04T11:54:00.000Z	brandon2	crimsun	I'm back
+2007-03-04T11:56:00.000Z	crimsun	brandon2	ok, and DebuggingSoundProblems output?
+2007-03-04T11:57:00.000Z	brandon2	crimsun	should I do all of the commands again and post the outputs?
+2007-03-04T11:57:00.000Z	crimsun	brandon2	only if audio remains inaudible.
+2007-03-04T11:57:00.000Z	brandon2	crimsun	yes still inaduble, I will post commands
+2007-03-04T11:57:00.000Z	brandon2		inaudible*
+2007-03-04T12:01:00.000Z	brandon2	crimsun	http://pastebin.ca/380657
+2007-03-04T12:03:00.000Z	crimsun	brandon2	ok, checking
+2007-03-04T12:13:00.000Z	crimsun	brandon2	ok, so you likely need a quirk.
+2007-03-04T12:13:00.000Z	crimsun	brandon2	please do the following:
+2007-03-04T12:13:00.000Z	crimsun	brandon2	sudo modprobe -r snd-hda-intel && sudo modprobe snd-hda-intel model=ref
+2007-03-04T12:14:00.000Z	brandon2	crimsun	for the first command, I get this: FATAL: Module snd_hda_intel is in use.
+2007-03-04T12:15:00.000Z	crimsun	brandon2	kill $(lsof -t /dev/dsp* /dev/snd/*)
+2007-03-04T12:17:00.000Z	brandon2	crimsun	 terminal gives me a kill usage message
+2007-03-04T12:17:00.000Z	crimsun	brandon2	lsmod |grep ^snd
+2007-03-04T12:18:00.000Z	brandon2	crimsun	http://pastebin.ca/380671
+2007-03-04T12:19:00.000Z	crimsun	brandon2	lsof /dev/dsp* /dev/snd/*
+2007-03-04T12:19:00.000Z	brandon2	crimsun	done
+2007-03-04T12:19:00.000Z	crimsun	brandon2	url?
+2007-03-04T12:20:00.000Z	brandon2	crimsun	no output
+2007-03-04T12:20:00.000Z	crimsun	brandon2	hmm, then we need a different approach. Try this:  echo "options snd-hda-intel model=ref" |sudo tee -a /etc/modprobe.d/alsa-base
+2007-03-04T12:21:00.000Z	brandon2	crimsun	http://pastebin.ca/380675
+2007-03-04T12:22:00.000Z	crimsun	brandon2	good, now: sync
+2007-03-04T12:22:00.000Z	crimsun	brandon2	then reboot
+2007-03-04T12:22:00.000Z	brandon2	crimsun	"sync" in terminal?
+2007-03-04T12:23:00.000Z	crimsun	brandon2	yes
+2007-03-04T12:23:00.000Z	brandon2	crimsun	ok brb
+2007-03-04T12:29:00.000Z	brandon2	crimsun	back
+2007-03-04T12:29:00.000Z	crimsun	brandon2	ok, any luck?
+2007-03-04T12:29:00.000Z	brandon2	crimsun	no :(
+2007-03-04T12:29:00.000Z	crimsun	brandon2	you know the drill...
+2007-03-04T12:29:00.000Z	brandon2	crimsun	on it
+2007-03-04T12:33:00.000Z	brandon2	crimsun	http://pastebin.ca/380681
+2007-03-04T12:33:00.000Z	brandon2	crimsun	this is taking a long time, I will give more if we can get it working
+2007-03-04T12:36:00.000Z	brandon2	crimsun	did you get the last url?
+2007-03-04T12:38:00.000Z	crimsun	brandon2	busy atm, will look asap
+2007-03-04T12:38:00.000Z	brandon2	crimsun	no problem
+2007-03-04T12:40:00.000Z	crimsun	brandon2	can you set the levels for Master and PCM to both 100%, and also unmute LFE (and set it to 100%)?
+2007-03-04T12:42:00.000Z	brandon2	crimsun	no luck
+2007-03-04T12:42:00.000Z	brandon2	crimsun	what about iec958?
+2007-03-04T12:43:00.000Z	crimsun	brandon2	you can try it, but it won't help (unless you have a _weird_ quirk)
+2007-03-04T12:43:00.000Z	brandon2	crimsun	no luck
+2007-03-04T12:44:00.000Z	crimsun	brandon2	ok, then likely you'll need to try hg alsa-driver and back out one patch
+2007-03-04T12:45:00.000Z	crimsun	brandon2	sudo aptitude install mercurial autoconf automake1.7
+2007-03-04T12:46:00.000Z	brandon2	crimsun	done
+2007-03-04T12:46:00.000Z	crimsun	brandon2	hg clone http://hg-mirror.alsa-project.org/alsa-driver alsa-driver && hg clone http://hg-mirror.alsa-project.org/alsa-kernel alsa-kernel
+2007-03-04T12:49:00.000Z	brandon2	crimsun	done
+2007-03-04T12:49:00.000Z	crimsun	brandon2	now you'll need to use hgcompile. Remember the configure options.
+2007-03-04T12:50:00.000Z	brandon2	crimsun	I do not
+2007-03-04T12:51:00.000Z	crimsun	brandon2	well, first you'll need to back out http://hg.alsa-project.org/alsa-kernel/raw-rev/02d568a3f440
+2007-03-04T12:51:00.000Z	brandon2	crimsun	sorry I don't understand
+2007-03-04T12:52:00.000Z	crimsun	brandon2	download it, then back it out using patch -p1 -R </path/to/patch
+2007-03-04T12:54:00.000Z	brandon2	crimsun	do I save the contents as a .txt?  then do I run patch -p1 -R </home/patch.txt    ?
+2007-03-04T12:54:00.000Z	crimsun	brandon2	sure, but your location is probably different
+2007-03-04T12:56:00.000Z	brandon2	crimsun	file to patch?
+2007-03-04T12:57:00.000Z	crimsun	brandon2	yes, use the location where you placed it
+2007-03-04T12:57:00.000Z	brandon2	crimsun	http://pastebin.ca/380707
+2007-03-04T12:58:00.000Z	crimsun	brandon2	make sure you're inside the directory of alsa-kernel
+2007-03-04T12:59:00.000Z	brandon2	crimsun	done
+2007-03-04T12:59:00.000Z	crimsun	brandon2	now use the hgcompile script
+2007-03-04T13:00:00.000Z	brandon2	crimsun	from the alsa-kernel directory .... sudo ./hgcompile?
+2007-03-04T13:00:00.000Z	crimsun	brandon2	no, from alsa-driver
+2007-03-04T13:00:00.000Z	crimsun	brandon2	and don't use sudo
+2007-03-04T13:06:00.000Z	brandon2	crimsun	done
+2007-03-04T13:07:00.000Z	crimsun	brandon2	installed, too? (sudo make install-modules && sudo depmod -e)
+2007-03-04T13:08:00.000Z	brandon2	crimsun	reboot?
+2007-03-04T13:09:00.000Z	crimsun	brandon2	yes
+2007-03-04T13:13:00.000Z	brandon2	crimsun	no luck
+2007-03-04T13:13:00.000Z	crimsun	brandon2	amixer output?
+2007-03-04T13:15:00.000Z	brandon2	crimsun	pastebin not responding
+2007-03-04T13:15:00.000Z	crimsun	brandon2	use paste.ubuntu-nl.org
+2007-03-04T13:16:00.000Z	brandon2	crimsun	http://paste.ubuntu-nl.org/8502/
+2007-03-04T13:17:00.000Z	crimsun	brandon2	amixer set 'IEC958' mute
+2007-03-04T13:17:00.000Z	brandon2	crimsun	done, no sound
+2007-03-04T13:18:00.000Z	crimsun	brandon2	ok, we'll need to modify something. Sec.
+2007-03-04T13:19:00.000Z	crimsun	brandon2	which gateway model did you say yours is?
+2007-03-04T13:19:00.000Z	brandon2		mx3414
+2007-03-04T13:19:00.000Z	brandon2	crimsun	Mx3414
+2007-03-04T13:20:00.000Z	crimsun	brandon2	please pastebin the contents of /proc/asound/card0/codec*
+2007-03-04T13:21:00.000Z	brandon2	crimsun	empty?
+2007-03-04T13:22:00.000Z	crimsun	brandon2	err, it can't be empty. cat it
+2007-03-04T13:22:00.000Z	brandon2	crimsun	brandon@brandon-laptop:~$ gedit /proc/asound/card0/codec*
+2007-03-04T13:22:00.000Z	crimsun	brandon2	no, use cat from the Terminal
+2007-03-04T13:23:00.000Z	brandon2	crimsun	http://paste.ubuntu-nl.org/8503/
+2007-03-04T13:29:00.000Z	crimsun	brandon2	is this with headphones or...?
+2007-03-04T13:29:00.000Z	brandon2	crimsun	headphones and speakers both don't work
+2007-03-04T13:30:00.000Z	brandon2	crimsun	I have been trying both with each change
+2007-03-04T13:31:00.000Z	brandon2	crimsun	people with mx3410 and mx3416 have same problem I believe
+2007-03-04T13:33:00.000Z	crimsun	brandon2	ok, there's no straightforward way to get your sound working. I'll forward this bug, and we'll need to work on it. It requires code changes to patch_
+2007-03-04T13:33:00.000Z	crimsun		sound/pci/hda/patch_sigmatel.c, even.
+2007-03-04T13:33:00.000Z	brandon2	crimsun	ok, sounds good.  Is there anything else you need from me?
+2007-03-04T13:34:00.000Z	crimsun	brandon2	not atm
+2007-03-04T13:34:00.000Z	brandon2	crimsun	have paypal?
+2007-03-04T13:34:00.000Z	crimsun	brandon2	no need to pay. I'm ubuntu's alsa maintainer.
+2007-03-04T13:34:00.000Z	brandon2	crimsun	I noticed that.  I appreciate all of your help.
+2007-03-04T13:35:00.000Z	brandon2	crimsun	if you need to get in touch about this (brandoncolorado gmail) or brandoncolorado in forums.
+2007-03-04T13:35:00.000Z	crimsun	brandon2	ok, I'll note the gmail for CCs
+2007-03-04T13:35:00.000Z	brandon2	crimsun	sounds great, thanks again
+2007-03-04T13:37:00.000Z	brandon2	crimsun	have a good night, shoot me an email if you need any more outputs

@@ -1,0 +1,97 @@
+2007-11-22T21:51:00.000Z	yereth		hi guys
+2007-11-22T21:51:00.000Z	yereth		suddenly today I have some problems with samba
+2007-11-22T21:52:00.000Z	yereth		Connection to localhost failed (Error NT_STATUS_CONNECTION_REFUSED)
+2007-11-22T21:52:00.000Z	yereth		I get this error
+2007-11-22T21:52:00.000Z	ikonia	yereth	when did you start, what has changed, what are you trying to do
+2007-11-22T21:53:00.000Z	yereth	ikonia	I have samba set up for a while running for my workgroup and all computers connected with user logins, while suddenly I got errors that I cannot access the samba server on the windows machines
+2007-11-22T21:53:00.000Z	ikonia	yereth	what have you done to debug
+2007-11-22T21:53:00.000Z	yereth	ikonia	also, I ran an dist-upgrade today, but the problems started before that
+2007-11-22T21:54:00.000Z	ikonia	yereth	thats not debugging, thats just random commands
+2007-11-22T21:54:00.000Z	yereth	ikonia	I checked the samba logs, system logs, but all didn't show anything interesting
+2007-11-22T21:54:00.000Z	ikonia	yereth	ok, so what samba processes are currently running
+2007-11-22T21:54:00.000Z	ikonia	yereth	can you manage to mount it locally
+2007-11-22T21:54:00.000Z	yereth	ikonia	only smbd
+2007-11-22T21:54:00.000Z	ikonia	yereth	not nmbd
+2007-11-22T21:55:00.000Z	yereth	ikonia	is also running
+2007-11-22T21:55:00.000Z	ikonia	yereth	so can you mount it locally
+2007-11-22T21:55:00.000Z	yereth	ikonia	look at this:
+2007-11-22T21:55:00.000Z	ikonia	yereth	thats almost like samba isn't running
+2007-11-22T21:55:00.000Z	ikonia	yereth	have you stopped and started samba, does it put up any warnings on start up
+2007-11-22T21:55:00.000Z	yereth	ikonia	I know, strange, isn't it?
+2007-11-22T21:56:00.000Z	yereth	ikonia	no errors
+2007-11-22T21:56:00.000Z	ikonia	yereth	what does the log show ?
+2007-11-22T21:56:00.000Z	ikonia	yereth	no the client log
+2007-11-22T21:56:00.000Z	ikonia	yereth	in /var/log/samba
+2007-11-22T21:57:00.000Z	yereth	ikonia	which log file is that? there's so many
+2007-11-22T21:57:00.000Z	ikonia	yereth	it should be the hostname or ip address of your client you want to check
+2007-11-22T21:58:00.000Z	yereth	ikonia	there's log.server, which is the samba server itself (where I tried to connect to localhost), but it's empty
+2007-11-22T21:58:00.000Z	ikonia	yereth	nah, you want the log file contianing your hostname or ip address of your client in the name
+2007-11-22T21:58:00.000Z	ikonia	yereth	eg: 10.11.216.1.log
+2007-11-22T21:59:00.000Z	yereth	ikonia	the IP of the server machine is not in there.. only the hostname (which is SERVER)
+2007-11-22T21:59:00.000Z	ikonia	yereth	nothing on 127.0.0.1 ?
+2007-11-22T21:59:00.000Z	yereth	ikonia	no
+2007-11-22T21:59:00.000Z	ikonia	yereth	ok, so its not getting to the samba daemon by the looks of things
+2007-11-22T22:00:00.000Z	yereth	ikonia	I know
+2007-11-22T22:00:00.000Z	ikonia	yereth	can you paste your smb.conf file into a pastebin please.
+2007-11-22T22:02:00.000Z	yereth	ikonia	http://pastie.caboo.se/120936
+2007-11-22T22:04:00.000Z	ikonia	yereth	very interesting
+2007-11-22T22:06:00.000Z	yereth	ikonia	any thoughts?
+2007-11-22T22:06:00.000Z	ikonia	yereth	well its bound to lo and eth0 so connecting on localhost should be fine
+2007-11-22T22:06:00.000Z	yereth	ikonia	thought so.. something weird is going on.. it worked for a long time
+2007-11-22T22:07:00.000Z	yereth	ikonia	anything else that might go wrong?
+2007-11-22T22:07:00.000Z	ikonia	yereth	just querying
+2007-11-22T22:07:00.000Z	ikonia	yereth	nothing like iptables or firestarter running
+2007-11-22T22:08:00.000Z	yereth	ikonia	iptables is running, but didn't change a thing
+2007-11-22T22:08:00.000Z	yereth	ikonia	I can restart it
+2007-11-22T22:08:00.000Z	ikonia	yereth	just drop the tables for a test
+2007-11-22T22:10:00.000Z	yereth	ikonia	dropping iptables doesn't work
+2007-11-22T22:10:00.000Z	ikonia	yereth	worth a go
+2007-11-22T22:10:00.000Z	yereth	ikonia	the strangest thing is; everything worked fine this morning
+2007-11-22T22:10:00.000Z	ikonia	yereth	something must have changed
+2007-11-22T22:10:00.000Z	yereth	ikonia	that's what I thought
+2007-11-22T22:10:00.000Z	yereth	ikonia	don't know where to look though
+2007-11-22T22:11:00.000Z	ikonia	yereth	syslog say nothing ?
+2007-11-22T22:11:00.000Z	ikonia	yereth	is your password file there, and your user map ?
+2007-11-22T22:11:00.000Z	yereth	ikonia	sorry, where to find those exaclty again?
+2007-11-22T22:11:00.000Z	ikonia	yereth	/var/log
+2007-11-22T22:11:00.000Z	ikonia	yereth	for the log
+2007-11-22T22:11:00.000Z	ikonia	yereth	your password and username maps are listed in your samba config file
+2007-11-22T22:11:00.000Z	yereth	ikonia	yeah, but the password file and all
+2007-11-22T22:12:00.000Z	ikonia	yereth	they are listed in your samba config file
+2007-11-22T22:13:00.000Z	yereth	ikonia	I don't see the passwd file in the conf
+2007-11-22T22:14:00.000Z	yereth	ikonia	only see a map of root = Administrator in smbusers
+2007-11-22T22:14:00.000Z	ikonia	yereth	give me the pastebin again
+2007-11-22T22:15:00.000Z	yereth	ikonia	http://pastie.caboo.se/120936
+2007-11-22T22:16:00.000Z	yereth	ikonia	what should be in smbusers
+2007-11-22T22:16:00.000Z	ikonia	yereth	username map = /etc/samba/smbusers
+2007-11-22T22:17:00.000Z	yereth	ikonia	in that file is only one entry, root = Administrator
+2007-11-22T22:17:00.000Z	ikonia	yereth	how can this only have one name, you said "this has been working for ages" and "all my computers"
+2007-11-22T22:17:00.000Z	yereth	ikonia	what's the password file
+2007-11-22T22:17:00.000Z	ikonia	yereth	this doesn't look like its been setup for multiple users
+2007-11-22T22:17:00.000Z	yereth	ikonia	when I do smbpasswd -a yereth nothing happens to that file
+2007-11-22T22:17:00.000Z	ikonia	yereth	its tdbsam which is /var/lib/samba
+2007-11-22T22:18:00.000Z	yereth	ikonia	what?
+2007-11-22T22:18:00.000Z	ikonia	yereth	thats where the password file is normally kept
+2007-11-22T22:19:00.000Z	yereth	ikonia	what should I see in that folder?
+2007-11-22T22:19:00.000Z	ikonia	yereth	your going to have to use google for the correct file names, I don't have an ubuntu box to hand to verify the file names
+2007-11-22T22:19:00.000Z	yereth	ikonia	looks like the password files and all are in there
+2007-11-27T20:55:00.000Z	ikonia	yereth	no, but I find installing ubuntu studio as a product better than installing ubuntu and trying to mix it in
+2007-11-27T20:55:00.000Z	yereth	ikonia	of course, but I didn't really feel for a reinstall
+2007-11-27T20:56:00.000Z	yereth	ikonia	perhaps he messed up my nvidia drivers..?
+2007-11-27T20:56:00.000Z	ikonia	yereth	apologies, I thought i was you who where asking
+2007-11-27T20:57:00.000Z	yereth	ikonia	I guess you have no experience with this.. or?
+2007-11-27T20:57:00.000Z	ikonia	yereth	I've never seen it no, but I have used ubuntu studio a good few times
+2007-11-27T20:57:00.000Z	yereth	ikonia	never installed it this way, did you?
+2008-11-16T02:58:00.000Z	ikonia	yereth	install the package kubuntu-desktop if you want it to be like kubuntu
+2008-11-16T02:58:00.000Z	yereth	ikonia	no.. I'm just having trouble with my graphics
+2008-11-16T03:02:00.000Z	ikonia	yereth	what do you want ?
+2008-11-16T03:02:00.000Z	ikonia	yereth	your using a closed source 4rd party driver
+2008-11-16T03:02:00.000Z	yereth	ikonia	my graphics are extremely shaky on a quake 3 game, while I have nvidia drivers installed that came packaged with 8.10 and I do have a steady 60fps
+2008-11-16T03:03:00.000Z	yereth	ikonia	I don't understand why it's still shaky :(
+2008-11-16T03:03:00.000Z	ikonia	yereth	as I said your using a 3rd party closed sourced driver....
+2008-11-16T03:03:00.000Z	yereth	ikonia	yes, but yesterday it worked perfectly when I was still running kubuntu 8.10
+2008-11-16T03:03:00.000Z	ikonia	yereth	your using a different destop now
+2008-11-16T03:04:00.000Z	yereth	ikonia	so I should just accept performance getting a downgrade?
+2008-11-16T03:04:00.000Z	yereth	ikonia	or you suggest if I'd use KDE4 it could be different?
+2008-11-16T03:04:00.000Z	ikonia	yereth	no, I didn't say that, but go back to kubuntu and see if the desktop makes a difference
+2008-11-16T03:04:00.000Z	yereth	ikonia	can try

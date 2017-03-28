@@ -1,0 +1,96 @@
+2008-09-24T03:18:00.000Z	panserbjorn		 heys guys i am having a real issue with havp for some reason, i cant update or download anything via synaptic or cli. here is the error i get: http://paste.ubuntu.com/49854/
+2008-09-24T03:20:00.000Z	unop	panserbjorn	please post the *complete* error message including command used.
+2008-09-24T03:21:00.000Z	panserbjorn	unop	there is no cmd, i get it at synaptic, sudo apt-get update, and even when booting up
+2008-09-24T03:21:00.000Z	panserbjorn	unop	that is the complete message i get though :(
+2008-09-24T03:22:00.000Z	unop	panserbjorn	can i assume that you get the same error when you run  sudo apt-get update?
+2008-09-24T03:22:00.000Z	panserbjorn	unop	yes
+2008-09-24T03:34:00.000Z	panserbjorn	unop	kk, duh, srry
+2008-09-24T03:23:00.000Z	unop	panserbjorn	can you paste to a !pastebin the contents of this file.   /var/lib/dpkg/info/havp.postinst
+2008-09-24T03:24:00.000Z	panserbjorn	unop	ok, it will take me a moment, i will brb
+2008-09-24T03:28:00.000Z	panserbjorn	unop	here is the contents of that file: http://paste.ubuntu.com/49861/
+2008-09-24T03:30:00.000Z	unop	panserbjorn	what does this command give you?  getent passwd havp
+2008-09-24T03:30:00.000Z	panserbjorn	unop	just a second
+2008-09-24T03:31:00.000Z	panserbjorn	unop	havp:x:115:128::/var/run/havp:/bin/false
+2008-09-24T03:32:00.000Z	unop	panserbjorn	ok. try this command. let me know how it goes.   sudo mkdir /var/run/havp && sudo aptitude install
+2008-09-24T03:32:00.000Z	panserbjorn	unop	kk
+2008-09-24T03:34:00.000Z	panserbjorn	unop	it wants to uninstall quite a bit?
+2008-09-24T03:34:00.000Z	unop	panserbjorn	pastebin please.
+2008-09-24T03:35:00.000Z	panserbjorn	unop	this is where its at: http://paste.ubuntu.com/49862/
+2008-09-24T03:36:00.000Z	unop	panserbjorn	ok, go ahead and type Yes there - we can install these packages when the command has finished.
+2008-09-24T03:36:00.000Z	panserbjorn	unop	ok, and ty
+2008-09-24T03:37:00.000Z	panserbjorn	unop	what does this mean? http://paste.ubuntu.com/49863/
+2008-09-24T03:38:00.000Z	unop	panserbjorn	it's asking you to choose the languages you want to keep by default - if you do not want to set this at this time, press TAB then ENTER
+2008-09-24T03:38:00.000Z	panserbjorn	unop	how do i set it for english?
+2008-09-24T03:40:00.000Z	unop	panserbjorn	you have to scroll down until you find en_cc, en_cc.ISO-9660, en_cc.utf-8, etc (where cc is your country code) .. to select something press SPACEBAR
+2008-09-24T03:41:00.000Z	unop	panserbjorn	en_us.UTF-8  is the default. it should already be selected there
+2008-09-24T03:41:00.000Z	panserbjorn	unop	kk
+2008-09-24T03:42:00.000Z	panserbjorn	unop	its uninstalling everything now :(
+2008-09-24T03:42:00.000Z	unop	panserbjorn	yea, don't worry - i told you you can put it all back with this command.  http://paste.ubuntu.com/49864/
+2008-09-24T03:43:00.000Z	panserbjorn	unop	it gave me the same error, i will pastebin it
+2008-09-24T03:44:00.000Z	panserbjorn	unop	here is the pastebin for it: http://paste.ubuntu.com/49866/
+2008-09-24T03:44:00.000Z	unop	panserbjorn	gimme a sec.
+2008-09-24T03:44:00.000Z	panserbjorn	unop	kk
+2008-09-24T03:45:00.000Z	unop	panserbjorn	ok first, run this command, i'll think of what to do in the meanwhile - http://paste.ubuntu.com/49864/
+2008-09-24T03:46:00.000Z	panserbjorn	unop	ok, brb
+2008-09-24T03:47:00.000Z	panserbjorn	unop	installing now
+2008-09-24T03:47:00.000Z	unop	panserbjorn	ok, when that finishes, run this command.   sudo aptitude reinstall havp
+2008-09-24T03:48:00.000Z	panserbjorn	unop	i just got a crash report that says the package "havp 0.86-1build1" failed to install or upgrade
+2008-09-24T03:49:00.000Z	panserbjorn	unop	i have not ran the last cmd you said
+2008-09-24T03:49:00.000Z	unop	panserbjorn	ok, try the last command then
+2008-09-24T03:49:00.000Z	panserbjorn	unop	ok, even with a 15mb connection it is taking a few minutes
+2008-09-24T03:53:00.000Z	panserbjorn	unop	after running that command i get this: http://paste.ubuntu.com/49867/
+2008-09-24T03:56:00.000Z	unop	panserbjorn	do you really want to keep this havp antivirus thing? as - it's not behaving properly
+2008-09-24T03:56:00.000Z	panserbjorn	unop	i didnt know what it was, to be honest, no lets scrap it if we can
+2008-09-24T03:57:00.000Z	panserbjorn	unop	i just started getting the error msg and could not update
+2008-09-24T03:57:00.000Z	unop	panserbjorn	ok, run this then.    sudo dpkg --force-all -P havp
+2008-09-24T03:59:00.000Z	panserbjorn	unop	it will not let me apparently. here is the output: http://paste.ubuntu.com/49868/
+2008-09-24T04:00:00.000Z	unop	panserbjorn	hmm, run the command again - let's see what you get then too
+2008-09-24T04:00:00.000Z	panserbjorn	unop	ok
+2008-09-24T04:01:00.000Z	panserbjorn	unop	http://paste.ubuntu.com/49869/
+2008-09-24T04:01:00.000Z	unop	panserbjorn	ok, can you paste the contents of the /var/lib/dpkg/info/havp.prerm file
+2008-09-24T04:02:00.000Z	panserbjorn	unop	kk
+2008-09-24T04:02:00.000Z	unop	panserbjorn	i'll be back in a couple of minutes - i have something to do quick.
+2008-09-24T04:05:00.000Z	unop	panserbjorn	i'm back
+2008-09-24T04:05:00.000Z	panserbjorn	unop	ok, just a sec
+2008-09-24T04:05:00.000Z	panserbjorn	unop	here is the contents of that file: http://paste.ubuntu.com/49873/
+2008-09-24T04:06:00.000Z	unop	panserbjorn	ok, edit the file with  gksudo gedit /var/lib/dpkg/info/havp.prerm # and put this on line #2   exit 0
+2008-09-24T04:07:00.000Z	panserbjorn	unop	kk, just a sec
+2008-09-24T04:07:00.000Z	unop	panserbjorn	then save the file and run this.  sudo dpkg -P --force-all havp
+2008-09-24T04:08:00.000Z	panserbjorn	unop	i'm not sure where to edit it
+2008-09-24T04:08:00.000Z	panserbjorn	unop	after the $?  ?
+2008-09-24T04:09:00.000Z	unop	panserbjorn	you could just move everything down and create a new line at line #2
+2008-09-24T04:10:00.000Z	panserbjorn	unop	plz dont shoot the newb, lol, but which one is line 2? how do you determine it?
+2008-09-24T04:10:00.000Z	unop	panserbjorn	ohh lord .. move right to the beginning of the file, the very first character of the first line, press the down arrow key once, then press RETURN - now you magically have an empty line #2
+2008-09-24T04:11:00.000Z	unop	panserbjorn	type  exit 0  in the empty space on line #2 -- easy :)
+2008-09-24T04:21:00.000Z	panserbjorn	unop	it made the system crash
+2008-09-24T04:22:00.000Z	panserbjorn	unop	i keep getting a message about a logicblock on my sdga1 device?
+2008-09-24T04:22:00.000Z	unop	panserbjorn	hmm, not good - can you paste the output of this.  dmesg | tail -n 30
+2008-09-24T04:23:00.000Z	panserbjorn	unop	ok, just a sec
+2008-09-24T04:24:00.000Z	panserbjorn	unop	http://paste.ubuntu.com/49877/
+2008-09-24T04:29:00.000Z	unop	panserbjorn	hmm, well, does   sudo aptitude install  #still complain?
+2008-09-24T04:29:00.000Z	panserbjorn	unop	i dont believe that we tried that one. lemme try, brb
+2008-09-24T04:30:00.000Z	panserbjorn	unop	 [19:29] <unop> panserbjorn, hmm, well, does   sudo aptitude install  #still complain?<------ i dont understand
+2008-09-24T04:31:00.000Z	unop	panserbjorn	run that command, see if you get any error messages?
+2008-09-24T04:32:00.000Z	panserbjorn	unop	oh, just sudo aptitude install? i have never seen that without something on the end, lol
+2008-09-24T04:33:00.000Z	unop	panserbjorn	if no package is mentioned - aptitude tries to verify that there are no broken packages, if there are any, it tries to repair the condition.
+2008-09-24T04:33:00.000Z	panserbjorn	unop	http://paste.ubuntu.com/49878/
+2008-09-24T04:35:00.000Z	unop	panserbjorn	ok,  run this command.  echo 'exit 0' | sudo tee /var/lib/dpkg/info/havp.postrm;  sudo aptitude install
+2008-09-24T04:35:00.000Z	panserbjorn	unop	kk, brb
+2008-09-24T04:37:00.000Z	panserbjorn	unop	http://paste.ubuntu.com/49881/
+2008-09-24T04:38:00.000Z	unop	panserbjorn	finally, i believe you are sorted now
+2008-09-24T04:39:00.000Z	panserbjorn	unop	ok, i have a nasty apache2 server error as well, care to take a crack at that one? :)
+2008-09-24T04:40:00.000Z	unop	panserbjorn	i can try - though i am not an expert at apache
+2008-09-24T04:41:00.000Z	panserbjorn	unop	i will paste this error in just a sec
+2008-09-24T04:45:00.000Z	panserbjorn	unop	here is the error i get, sorry it toook awhil;e to find it. http://paste.ubuntu.com/49886/
+2008-09-24T04:46:00.000Z	unop	panserbjorn	ok, run this command, a URL will be given when it completes, paste that here    sudo aptitude install pastebinit; { ls -l /etc/apache2 ; cat /etc/apache2/apache2.conf } | pastebinit
+2008-09-24T04:47:00.000Z	panserbjorn	unop	kk
+2008-09-24T04:47:00.000Z	unop	panserbjorn	errm, sorry.  sudo aptitude install pastebinit; { ls -l /etc/apache2 ; cat /etc/apache2/apache2.conf;} | pastebinit
+2008-09-24T04:47:00.000Z	panserbjorn	unop	kk
+2008-09-24T04:54:00.000Z	panserbjorn	unop	a lil prob: http://paste.ubuntu.com/49888/
+2008-09-24T04:56:00.000Z	unop	panserbjorn	errm ok - leave it be - basically your apache.conf is complaining about the fact that you are missing a clutch.conf file (i dunno what clutch is, maybe you do) - so you have two options now, edit your apache2.conf to remove mention of clutch.conf or configure clutch properly?  what do you want to do?
+2008-09-24T04:57:00.000Z	panserbjorn	unop	i have NO idea what it means, but it causes random crashes when i am browsing the web :(
+2008-09-24T04:57:00.000Z	unop	panserbjorn	paste /etc/apache2/conf.d/clutch.conf
+2008-09-24T04:58:00.000Z	panserbjorn	unop	kk, brb
+2008-09-24T05:02:00.000Z	panserbjorn	unop	will you be around later?
+2008-09-24T05:03:00.000Z	unop	panserbjorn	i'm off to bed in a bit - it's 01:03 am here
+2008-09-24T05:03:00.000Z	panserbjorn	unop	kk, i gotta jet myself, thanks for all your help, i will see you around

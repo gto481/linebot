@@ -1,0 +1,98 @@
+2009-07-06T05:12:00.000Z	mralexandro		no one know how to enable shmconfig? i thought it was a simple procedure, i have tried to enter it like it said in the ubuntu forum, but obviously i cant do it.
+2009-07-06T05:12:00.000Z	Dr_Willis	mralexandro	 i recall researching that once befor.. its some hal/fdi config file you edit.
+2009-07-06T05:14:00.000Z	mralexandro	Dr_Willis	i have tried that.  can you direct me to the correct guide, or the one you read?
+2009-07-06T05:15:00.000Z	Dr_Willis	mralexandro	 not really - i researched it for someone ages ago.. I might have it tagged on my delicious links.
+2009-07-06T05:15:00.000Z	mralexandro	Dr_Willis	alright:) please let me know if you find it again:)
+2009-07-06T05:16:00.000Z	Dr_Willis	mralexandro	 it may be one of the many links i got tagged at --> http://delicious.com/dr_willis
+2009-07-06T05:17:00.000Z	mralexandro	Dr_Willis	i will check it then:)
+2009-07-06T05:18:00.000Z	Dr_Willis	mralexandro	 i think i found it -->> https://help.ubuntu.com/community/SynapticsTouchpad#shmconfig
+2009-07-06T05:20:00.000Z	mralexandro	Dr_Willis	thanks, that is the same guide i tried. it is not the hal file guide, it is a link to that on the bottom of that page, but that guide should work, allthough it didnt
+2009-07-06T05:21:00.000Z	Dr_Willis	mralexandro	 no idea. thats all ive tried and it worked.. i recall.
+2009-07-06T05:22:00.000Z	mralexandro	Dr_Willis	do you recal what you did after you had added the content to the file. or if there was any other content in the file. like could i ask you what you have on that file now, cause mine was blank beofre i added the stuff from this guide
+2009-07-06T05:23:00.000Z	Dr_Willis	mralexandro	 that was a few installs ago.. I dont even thinki have that laptop any more.
+2009-07-06T05:23:00.000Z	mralexandro	Dr_Willis	 thank anyways
+2009-07-06T05:32:00.000Z	mralexandro	Dr_Willis	how do i install the synpatics touchpad driver?
+2009-07-06T05:32:00.000Z	Dr_Willis	mralexandro	 from what i recall.. its allready installed. its part of the X stuff
+2009-07-06T05:33:00.000Z	Dr_Willis	mralexandro	 that gsynapics tool can help configure it - or at least it used to work...
+2009-07-06T05:33:00.000Z	mralexandro	Dr_Willis	alright thanks. then i will just add it to my xorg folllowin  guide
+2009-07-06T05:33:00.000Z	Dr_Willis	mralexandro	 some Upodates to X, have broken/changed some things with the synaptics drivers..  not sure how stable they have became lately
+2009-07-06T05:34:00.000Z	mralexandro	Dr_Willis	ok does that mean i should not add it'?
+2009-07-06T05:34:00.000Z	Dr_Willis	mralexandro	 try gsynaptics - see if it works for you.
+2009-07-06T05:34:00.000Z	Dr_Willis	mralexandro	 ive not had to tweak the touchpads on my new laptops.
+2009-08-16T11:31:00.000Z	Dr_Willis	mralexandro	 gnome-do has a dock like theme+shelf feature.
+2009-08-16T11:32:00.000Z	mralexandro	Dr_Willis	i am sorry i do not understand, is gnome do a software of some kind then?
+2009-08-16T11:36:00.000Z	mralexandro	Dr_Willis	i installed gnome do, but how do i start it:D <embarrased>
+2009-08-16T11:36:00.000Z	Dr_Willis	mralexandro	 windowkey-space
+2009-08-16T11:36:00.000Z	Dr_Willis	mralexandro	 time to check the gnome-do homepage/docs :) and  enable the shelf plugin also.
+2009-08-16T11:40:00.000Z	mralexandro	Dr_Willis	you are probably to busy now, but is it posible to get a walk trough. i could not find that document page on their website
+2009-08-16T11:50:00.000Z	mralexandro	Dr_Willis	how do i access gnome do settings?
+2009-08-16T11:51:00.000Z	Dr_Willis	mralexandro	 when ya window-space theres a button /menu
+2009-08-16T11:51:00.000Z	Dr_Willis	mralexandro	 top right corner.. a little arrow..
+2009-08-16T11:51:00.000Z	mralexandro	Dr_Willis	yes i saw it, but gnome closed when i started moving in applications, i found the switch to set it as a dock even, but know it is gone
+2009-08-16T11:51:00.000Z	Dr_Willis	mralexandro	 theres also a setting to have it always show up a systray icon
+2009-08-16T11:52:00.000Z	mralexandro	Dr_Willis	yes but i can not access the settings know cause i can not find it:(
+2009-08-16T11:52:00.000Z	Dr_Willis	mralexandro	 i enabled that.  the win-space arrow works here if i just win-space then use the mouse
+2009-08-16T11:52:00.000Z	Dr_Willis	mralexandro	 so you are saying win-space dont work any more?
+2009-08-16T11:52:00.000Z	mralexandro	Dr_Willis	yes that is correct
+2009-08-16T11:52:00.000Z	Dr_Willis	mralexandro	 perhaps gnome-do crashed... rerun the app
+2009-08-16T11:53:00.000Z	mralexandro	Dr_Willis	 any other way of re launching it?
+2009-08-16T11:53:00.000Z	Dr_Willis	mralexandro	 PROPER way to close the terminal.. 'gnome-do &' then use the 'exit' command.. NOT the close button at the top right.
+2009-08-16T11:53:00.000Z	Dr_Willis	mralexandro	 or alt-f2  -> gnome-do
+2009-08-16T11:53:00.000Z	Dr_Willis	mralexandro	 or use gnome-do icon in the menus
+2009-08-16T11:54:00.000Z	Dr_Willis	mralexandro	 accessories -> gnome do
+2009-08-16T11:54:00.000Z	mralexandro	Dr_Willis	ah ok thanks i have it there now, but the settings arrow is not thre
+2009-08-16T11:54:00.000Z	Dr_Willis	mralexandro	 you changed themes then.. look  about i guess..
+2009-08-16T11:54:00.000Z	mralexandro	Dr_Willis	 i will reinstall it i think
+2009-08-16T11:55:00.000Z	Dr_Willis	mralexandro	 that is 'windows' thinking. and proberly wont change anything
+2009-08-16T11:55:00.000Z	Dr_Willis	mralexandro	 reinstalling an app will NOT reset the users settings
+2009-08-16T11:55:00.000Z	mralexandro	Dr_Willis	oh ok, yeah i am usualy a windows user:/
+2009-08-16T11:56:00.000Z	mralexandro	Dr_Willis	is there any other way for me to acces the gnome-do settings?
+2009-08-16T11:56:00.000Z	Dr_Willis	mralexandro	 proberly is.. but i would have to read up at the gnome-do homepage to figure it out
+2009-08-16T11:57:00.000Z	mralexandro	Dr_Willis	oh ok i see
+2009-08-16T11:57:00.000Z	Dr_Willis	mralexandro	 when ya win-space do you see a systry icon for gnome-do? a purple square with a snowflake in it.
+2009-08-16T11:57:00.000Z	mralexandro	Dr_Willis	i have already changed theme to docked, so nope it is already there, i can search in it when i press windows space
+2009-08-16T11:58:00.000Z	Dr_Willis	mralexandro	 if using'docked'  i though there was an ICOn in the dock to get to the settings.
+2009-08-16T11:58:00.000Z	Dr_Willis	mralexandro	 you may needed to enable the shelf plugin also
+2009-08-16T11:59:00.000Z	mralexandro	Dr_Willis	hmm i can not seem to find that one, and the shelf plugin i have a hard time enabling without prefrenses or settings
+2009-08-16T12:04:00.000Z	mralexandro	Dr_Willis	i found the do preferences, now i activated the shelf plugin, what exactly will it do
+2009-08-16T12:06:00.000Z	Dr_Willis	mralexandro	 dosent seem to do what i thought it did. i though it controlled what was on teh doc.. You found the purple icon on the  docky bar Im guessing?
+2009-08-16T12:06:00.000Z	Dr_Willis	mralexandro	 thers also some way to type 'do-perferances' or somthingto get to the settings but i cant figure that out
+2009-08-16T12:07:00.000Z	mralexandro	Dr_Willis	no i had to space windows then type preferences, the only way i can access the preferenses, the dock will have a lot of random icons on it, to bad the shelf plugin does not let you put what you want in it
+2009-08-16T12:08:00.000Z	Dr_Willis	mralexandro	 not sure what it does  really - the doc for shelf are a little vague
+2009-08-16T12:08:00.000Z	Dr_Willis	mralexandro	 http://do.davebsd.com/wiki/Docky
+2009-08-16T12:08:00.000Z	mralexandro	Dr_Willis	thanks
+2009-08-16T12:09:00.000Z	Dr_Willis	mralexandro	 it also rembers/learns what you launch so it puts them first in the list
+2009-08-16T12:13:00.000Z	mralexandro	Dr_Willis	that is quite interesting, so it actually lets you place icons there and it also detects most used in some sort of way?
+2009-08-16T12:14:00.000Z	Dr_Willis	mralexandro	 top 5 get added.. and you an drag/drop  to/from it..
+2009-08-16T12:14:00.000Z	Dr_Willis	mralexandro	 it seems tobe a better 'dock' then many others ive tried
+2009-08-16T12:15:00.000Z	mralexandro	Dr_Willis	you can have more than five, just resize docky and it will oopen for many many more
+2009-08-16T12:16:00.000Z	Dr_Willis	mralexandro	 i got a wide desktop.. i can have lots.. :P
+2009-08-16T12:18:00.000Z	mralexandro	Dr_Willis	i think this gnome do will be very very useful and that you gave me a more complete solutin than just a dock, hope it does not steel to much performance
+2009-08-16T12:19:00.000Z	Dr_Willis	mralexandro	 compared to the total Poopoo i see in other 'docks' its at least useable. :)
+2009-08-16T12:20:00.000Z	mralexandro	Dr_Willis	agreed, problem solved, thousand thanks, times to move on to my next one, thanks alot!:D
+2009-08-16T12:20:00.000Z	Dr_Willis	mralexandro	 somehow the gnomedo perferances ion got added to the dock now. :)
+2009-08-16T12:20:00.000Z	mralexandro	Dr_Willis	i have it there because it is my most used one:D
+2009-08-16T12:21:00.000Z	Dr_Willis	mralexandro	 becuase its the most used recently i guess. :)
+2009-08-16T12:21:00.000Z	mralexandro	Dr_Willis	and i found that you can right click the gnome-do icon and see prefrenses for the gnome do program, pluss some quick settings
+2009-08-16T12:22:00.000Z	Dr_Willis	mralexandro	 yes. :) i was goingto mention that.. but you said you found the perferances allready
+2009-08-16T12:22:00.000Z	mralexandro	Dr_Willis	 i think i figured the shelf function: right click an app there, and you will see it says add to shelf!
+2009-08-16T12:23:00.000Z	Dr_Willis	mralexandro	 yes.. but what is a shelf then?
+2009-08-16T12:23:00.000Z	Dr_Willis	mralexandro	 thats what i never noticed in the docs
+2009-08-16T12:24:00.000Z	mralexandro	Dr_Willis	i think it is a function that let you bypass most used value and let the app stay untouched in its possition, disregarding the fact that it is used less than top apps
+2009-08-16T12:26:00.000Z	Dr_Willis	mralexandro	 the thing abotu that dock (and docks) ya either clutter up the whole bottom of the screen with lots of icons.. or ya get some desktop space wasted at the sides. :)
+2009-08-16T12:26:00.000Z	Dr_Willis	mralexandro	 guess i could put a gnome pannel to one side. :)
+2009-08-16T12:27:00.000Z	mralexandro	Dr_Willis	 yes and you can take away the function casuing it to stay on top
+2009-08-16T12:28:00.000Z	Dr_Willis	mralexandro	 well i have tried most all the docks.. and i will say - this oneis the most useable..
+2009-08-16T12:28:00.000Z	Dr_Willis	mralexandro	 all the rest never work well.. or are lacking features
+2009-08-16T12:28:00.000Z	Dr_Willis	mralexandro	 and the win-space feature   is the main use.. the dock is a bonus.
+2009-08-16T12:29:00.000Z	mralexandro	Dr_Willis	 the win space is the winning over ALL :)
+2009-08-16T12:29:00.000Z	Dr_Willis	mralexandro	 if you can rember the special words for the plugins...
+2009-08-16T12:29:00.000Z	mralexandro	Dr_Willis	and i have never seen anything smarter than this lancher/dock, it is my new fav
+2009-08-16T12:41:00.000Z	Dr_Willis	mralexandro	 er.. mounting a partition on the machines hard drive? thats just editing fstab..
+2009-08-16T12:41:00.000Z	mralexandro	Dr_Willis	which is what i am trying to do(but i am windows user) :)
+2009-08-16T12:43:00.000Z	mralexandro	Dr_Willis	hmm alright well, let me know if you find a good way of doing it:)
+2009-08-16T12:44:00.000Z	Dr_Willis	mralexandro	 i always pit my ntfs drives in /etc/fstab now a days.. i dont trust gnomes automounting of stuff.. too many issues
+2009-08-16T12:45:00.000Z	mralexandro	Dr_Willis	then i will as well, problem solved:D
+2009-08-29T09:55:00.000Z	Dr_Willis	mralexandro	 err... thats normal.
+2009-08-29T09:55:00.000Z	Dr_Willis	mralexandro	 run what one you want. :) 3.0 or 3.5
+2009-08-29T09:55:00.000Z	mralexandro	Dr_Willis	oh ok:)

@@ -1,0 +1,96 @@
+2006-01-23T12:09:00.000Z	mzinz_165		I just installed Opera but it isn't showing up in my Applications... How can I make a shortcut appear?
+2006-01-23T12:10:00.000Z	tonyyarusso	mzinz_165	Open the menu editor, and add an item.
+2006-01-23T12:10:00.000Z	mzinz_165	tonyyarusso	where is the menu editor
+2006-01-23T12:11:00.000Z	tonyyarusso	mzinz_165	Urm, either right click in the panel by Applications, or it might be over in System > somewhere.
+2006-01-23T12:11:00.000Z	mzinz_165	tonyyarusso	thanks
+2006-01-23T12:17:00.000Z	mzinz_165	tonyyarusso	another problem i have is that I don't even know where i can find an opera icon.  To exec it I have to type opera in terminal
+2006-01-23T12:18:00.000Z	tonyyarusso	mzinz_165	/usr/share/pixmaps I believe.
+2006-01-23T12:18:00.000Z	tonyyarusso	mzinz_165	Let me get into Gnome and check that and the menu editor location.
+2006-01-23T12:18:00.000Z	mzinz_165	tonyyarusso	and since i exec it through terminal, whenever i close the terminal it quits opera, is that normal?
+2006-01-23T12:19:00.000Z	tonyyarusso	mzinz_165	Yes.
+2006-01-23T12:19:00.000Z	mzinz_165	tonyyarusso	i type opera, and it gives me a couple errors saying how my plugins don't work right, and it won't let me type anything else without killing the command/opera
+2006-01-23T12:21:00.000Z	tonyyarusso	mzinz_165	Not sure about the plugins.  I primarily use Firefox.
+2006-01-23T12:21:00.000Z	mzinz_165	tonyyarusso	i want to use FF, but i was trying to upgrade to 1.5 and something went wrong
+2006-01-23T12:21:00.000Z	tonyyarusso	mzinz_165	Also not finding the menu editor where I thought it was, only through right-clicking the Ubuntu icon.
+2006-01-23T12:21:00.000Z	mzinz_165	tonyyarusso	now when i try to run it it says it can't execute child process.... any idea how to revert or fix?
+2006-01-23T12:21:00.000Z	tonyyarusso	mzinz_165	Do you know what?
+2006-01-23T12:21:00.000Z	mzinz_165	tonyyarusso	?
+2006-01-23T12:22:00.000Z	mzinz_165	tonyyarusso	that will work fine, thanks for that :)
+2006-01-23T12:22:00.000Z	tonyyarusso	mzinz_165	I'd suggest reinstalling 1.07 through apt, which will fix relevant changes to links, remove the 1.5 directory, and start over.
+2006-01-23T12:22:00.000Z	mzinz_165	tonyyarusso	how do i add opera if i don't know where an icon is? :/
+2006-01-23T12:22:00.000Z	mzinz_165	tonyyarusso	ok, how do i do it through apt?  Thanks so much for all this help.  This is exactly how i like learning ubuntu :)
+2006-01-23T12:24:00.000Z	mzinz_165	tonyyarusso	the icon isn't in pixmaps
+2006-01-23T12:24:00.000Z	tonyyarusso	mzinz_165	You can add a menu item without an icon, you'll just need to path to the executable.
+2006-01-23T12:24:00.000Z	tonyyarusso	mzinz_165	Yeah, I'm not finding an icon either.
+2006-01-23T12:24:00.000Z	mzinz_165	tonyyarusso	maybe i could DL one and toss it in therE?
+2006-01-23T12:24:00.000Z	tonyyarusso	mzinz_165	That would work fine.
+2006-01-23T12:24:00.000Z	mzinz_165	tonyyarusso	So.  apt-get remove firefox?
+2006-01-23T12:25:00.000Z	tonyyarusso	mzinz_165	No, that'll break stuff.
+2006-01-23T12:25:00.000Z	tonyyarusso	mzinz_165	sudo apt-get install --reinstall firefox is better.
+2006-01-23T12:27:00.000Z	tonyyarusso	mzinz_165	Let me know if you find a good icon.
+2006-01-23T12:27:00.000Z	mzinz_165	tonyyarusso	i do
+2006-01-23T12:27:00.000Z	mzinz_165	tonyyarusso	well
+2006-01-23T12:27:00.000Z	mzinz_165	tonyyarusso	could i just use the one from the exe?
+2006-01-23T12:28:00.000Z	tonyyarusso	mzinz_165	Which?
+2006-01-23T12:30:00.000Z	tonyyarusso	mzinz_165	http://www.psypress.co.uk/common/images/psypress/rss/opera.gif
+2006-01-23T12:31:00.000Z	mzinz_165	tonyyarusso	i reinstalled firefox and it still gives me the same error: cannot execute child process
+2006-01-23T12:31:00.000Z	mzinz_165	tonyyarusso	cannot execute child process, no such entry or directory
+2006-01-23T12:32:00.000Z	tonyyarusso	mzinz_165	Does it say which process it's looking for?
+2006-01-23T12:32:00.000Z	mzinz_165	tonyyarusso	but for some reason, when i clicked on that link you gave me firefox opened
+2006-01-23T12:32:00.000Z	mzinz_165	tonyyarusso	i think the link in my menu may be looking for 1.5
+2006-01-23T12:32:00.000Z	mzinz_165	tonyyarusso	actually im pretty sure that the problem
+2006-01-23T12:32:00.000Z	tonyyarusso	mzinz_165	That could very well be.  Check what the launcher points to.
+2006-01-23T12:37:00.000Z	mzinz_165	tonyyarusso	how do i tell? through menu editor and look at command?
+2006-01-23T12:37:00.000Z	tonyyarusso	mzinz_165	Yeah.
+2006-01-23T12:38:00.000Z	mzinz_165	tonyyarusso	firefox %u
+2006-01-23T12:39:00.000Z	tonyyarusso	mzinz_165	which firefox
+2006-01-23T12:39:00.000Z	mzinz_165	tonyyarusso	i only had one link to begin with
+2006-01-23T12:39:00.000Z	tonyyarusso	mzinz_165	(Tell me the output of that.)
+2006-01-23T12:39:00.000Z	mzinz_165	tonyyarusso	then someone was going to try and help me switch what the link pointed at i think with some commands i didn't recognize
+2006-01-23T12:39:00.000Z	mzinz_165	tonyyarusso	then when it didn't work
+2006-01-23T12:39:00.000Z	mzinz_165	tonyyarusso	i had no way to make either one work, and now im here
+2006-01-23T12:40:00.000Z	mzinz_165	tonyyarusso	whats the %u mean?
+2006-01-23T12:40:00.000Z	tonyyarusso	mzinz_165	Refers to the current user.
+2006-01-23T12:43:00.000Z	tonyyarusso	mzinz_165	Have you tried 'which firefox' yet?
+2006-01-23T12:44:00.000Z	mzinz_165	tonyyarusso	what do you mean 'which firefox'
+2006-01-23T12:45:00.000Z	mzinz_165	tonyyarusso	it just goes to next line in term
+2006-01-23T12:45:00.000Z	mzinz_165	tonyyarusso	no output
+2006-01-23T12:45:00.000Z	tonyyarusso	mzinz_165	Well isn't that interesting...
+2006-01-23T12:46:00.000Z	mzinz_165	tonyyarusso	indeed
+2006-01-23T12:46:00.000Z	tonyyarusso	mzinz_165	You do have something that works for starting firefox right now, right?  Can you figure out what it's running?
+2006-01-23T12:47:00.000Z	tonyyarusso	mzinz_165	(Just in case that was a simple error, that should have gone into the terminal without the quotes.)
+2006-01-23T12:47:00.000Z	mzinz_165	tonyyarusso	i know :)
+2006-01-23T12:47:00.000Z	tonyyarusso	mzinz_165	Figured.  Thought I'd check though.
+2006-01-23T12:48:00.000Z	mzinz_165	tonyyarusso	right there i right clicked>open in web browser, and FF1.07 came
+2006-01-23T12:50:00.000Z	tonyyarusso	mzinz_165	But do you know the path to the executable?
+2006-01-23T12:50:00.000Z	mzinz_165	tonyyarusso	oh
+2006-01-23T12:51:00.000Z	mzinz_165	tonyyarusso	is there any way to find that through FF?
+2006-01-23T12:53:00.000Z	tonyyarusso	mzinz_165	Not that I'm aware of.
+2006-01-23T12:54:00.000Z	mzinz_165	tonyyarusso	hmm
+2006-01-23T13:26:00.000Z	mzinz_165	tonyyarusso	any other ideas?
+2006-01-23T13:27:00.000Z	tonyyarusso	mzinz_165	Try making some launchers and seeing if any of them work.
+2006-01-23T13:30:00.000Z	tonyyarusso	mzinz_165	You can go ahead and try getting it again, but it would be better if you understood what it was doing now first.
+2006-01-23T13:30:00.000Z	mzinz_165	tonyyarusso	thought so
+2006-01-23T13:35:00.000Z	mzinz_165	tonyyarusso	/usr/lib/mozlila-firefox/firefox
+2006-01-23T13:36:00.000Z	tonyyarusso	mzinz_165	As they said.
+2006-01-23T13:36:00.000Z	tonyyarusso	mzinz_165	Sort of.  It's even more so than a shortcut, but a similar idea.
+2006-01-23T13:37:00.000Z	mzinz_165	tonyyarusso	whats the difference? and how?
+2006-01-23T13:37:00.000Z	mzinz_165	tonyyarusso	and is that where most 'symbolic links' are stored?
+2006-01-23T13:37:00.000Z	mzinz_165	tonyyarusso	sort of like program files? or am i way off
+2006-01-23T13:38:00.000Z	tonyyarusso	mzinz_165	I have symbolic links all over the place, for various purposes.  Essentially with them, anything that point to that spot acts exactly as if it were referencing the file they point to.
+2006-01-23T13:39:00.000Z	mzinz_165	tonyyarusso	so it is a shortcut, but can be used just like the regular executable?
+2006-01-23T13:39:00.000Z	tonyyarusso	mzinz_165	Yeah.
+2006-01-23T13:40:00.000Z	tonyyarusso	mzinz_165	You can do it for non-executables too.  If something's looking for a config file in the wrong spot, throw in a symlink there and it will be happy.
+2006-01-23T13:40:00.000Z	mzinz_165	tonyyarusso	thats cool
+2006-01-23T13:41:00.000Z	mzinz_165	tonyyarusso	one of the things i dont get about unix is that i never know where my programs are.. is that just how it is? in windows everything is in program files (mostly), and on this it seems like they're all over
+2006-01-23T13:42:00.000Z	tonyyarusso	mzinz_165	You can usually 'which programname' to find the executable in the normal paths.
+2006-01-23T13:43:00.000Z	mzinz_165	tonyyarusso	which saves time compared to 'locate' ?
+2006-01-23T13:43:00.000Z	tonyyarusso	mzinz_165	/usr/bin, /usr/sbin, /bin, /sbin for most.
+2006-01-23T13:43:00.000Z	mzinz_165	tonyyarusso	oh, good to know
+2006-01-23T13:43:00.000Z	tonyyarusso	mzinz_165	If it's in one of those, yes.
+2006-01-23T13:43:00.000Z	mzinz_165	tonyyarusso	whats bin stand for, binary?
+2006-01-23T13:43:00.000Z	tonyyarusso	mzinz_165	Yeah.
+2006-01-23T13:44:00.000Z	tonyyarusso	mzinz_165	Which is a little silly, because it's a computer, and everything's binary, but that's what they call it.
+2006-01-23T13:44:00.000Z	mzinz_165	tonyyarusso	this isn't a problem at all, but when i start opera it says 'couldn't start plug-in executable "operamotifwrapper". please install motif'
+2006-01-23T13:45:00.000Z	mzinz_165	tonyyarusso	i searched for motif in the package manager and thought i installed it (or something that said it helped install motif apps), but i still get it, any idea?
+2006-01-23T13:45:00.000Z	tonyyarusso	mzinz_165	Plugin link, perhaps?

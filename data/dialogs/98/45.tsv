@@ -1,0 +1,98 @@
+2009-07-24T02:10:00.000Z	artillerytx		Hey guys im trying to install 9.04 server on a dell power edge 1750 and it says there is no NIC on the system and there clearly is and its working any idea on how to fix this ?
+2009-07-24T02:10:00.000Z	ikonia	artillerytx	what make/model nic is in it ?
+2009-07-24T02:11:00.000Z	artillerytx	ikonia	im not sure how can i look that up
+2009-07-24T02:11:00.000Z	ikonia	artillerytx	lspci
+2009-07-24T02:11:00.000Z	ikonia	artillerytx	you may want to consider using the desktop version
+2009-07-24T02:11:00.000Z	artillerytx	ikonia	you can't add support for other nic cards?
+2009-07-24T02:12:00.000Z	ikonia	artillerytx	yes, but if you're not confident with managing a server the desktop can be more helpful
+2009-07-24T02:12:00.000Z	artillerytx	ikonia	alright well lets see what NIC is it just a second
+2009-07-24T02:15:00.000Z	artillerytx	ikonia	alright i did lspci looks like broadcom ciob-e
+2009-07-24T02:15:00.000Z	ikonia	artillerytx	you need restricted modeules for some broadcom cards
+2009-07-24T02:15:00.000Z	artillerytx	ikonia	what is the best way to get that to a computer with no internet
+2009-07-24T02:16:00.000Z	ikonia	artillerytx	download the debs manually
+2009-07-24T02:16:00.000Z	ikonia	artillerytx	if you use the desktop install - you can use the restricted driver manager
+2009-07-24T02:17:00.000Z	artillerytx	ikonia	to download the drivers than go back to the server?
+2009-07-24T02:17:00.000Z	artillerytx	ikonia	i have ubuntu desktop
+2009-07-24T02:17:00.000Z	ikonia	artillerytx	no - use the desktop version, it has a tool called "hardware driver manager" it may do it all for you
+2009-07-24T02:17:00.000Z	ikonia	artillerytx	ooh, I thought you said you where running a server install
+2009-07-24T02:17:00.000Z	artillerytx	ikonia	yeah i am
+2009-07-24T02:17:00.000Z	artillerytx	ikonia	9.04 server
+2009-07-24T02:17:00.000Z	ikonia	artillerytx	so your not using ubuntu desktop then
+2009-07-24T02:17:00.000Z	ikonia	artillerytx	use ubuntu desktop
+2009-07-24T02:18:00.000Z	artillerytx	ikonia	what is the difference between the desktop and the server other than a GUI
+2009-07-24T02:18:00.000Z	ikonia	artillerytx	there are packages under it, such as the restricted driver manager, and packages that depend on a non-server kernel
+2009-07-24T02:19:00.000Z	artillerytx	ikonia	haha alright i already have server installed so i install the desktop version as well or just use the desktop version all together
+2009-07-24T02:20:00.000Z	ikonia	artillerytx	just use the desktop version - it's an excellent server
+2009-07-24T02:20:00.000Z	artillerytx	ikonia	alright
+2009-07-24T02:21:00.000Z	artillerytx	ikonia	do you know of a tutorial on how to use the desktop version as a server on all the required packages etc..
+2009-07-24T02:22:00.000Z	ikonia	artillerytx	exactly the same as the server version
+2009-07-24T02:22:00.000Z	ikonia	artillerytx	install whatever server daemons you want, ubuntu server comes with none-by default so you'd have to do that yourself anyway
+2009-07-24T02:23:00.000Z	artillerytx	ikonia	oh okay like the open ssh server and mysql and stuff
+2009-07-24T02:23:00.000Z	ikonia	artillerytx	exactlyn
+2009-07-24T02:23:00.000Z	artillerytx	ikonia	so ubuntu server is just desktop version without a GUI
+2009-07-24T02:24:00.000Z	ikonia	artillerytx	not quite, but for all basic discussion, yes
+2009-07-24T02:25:00.000Z	ikonia	artillerytx	you don't need to keep the server version
+2009-07-24T02:25:00.000Z	ikonia	artillerytx	the desktop kernel will work excellent for you
+2009-07-24T03:05:00.000Z	artillerytx	ikonia	hey i installed desktop and i don't think it sees the NIC still
+2009-07-24T03:19:00.000Z	ikonia	artillerytx	you use the driver manager application, if possible
+2009-07-24T03:19:00.000Z	artillerytx	ikonia	well the desktop version didn't find my NIC either
+2009-07-24T03:20:00.000Z	ikonia	artillerytx	please show me the output of uname -a
+2009-07-24T03:21:00.000Z	artillerytx	ikonia	linux lpcr-server 2.6.28-11-generic #42-Ubuntu SMP Fri Apr 17 01:57:59 UTC 2009 i686 GNU/Linux
+2009-07-24T03:21:00.000Z	ikonia	artillerytx	rats, I thought a generic device would have allowed you to see it
+2009-07-24T03:22:00.000Z	ikonia	artillerytx	enought to atlease use driver manager to get the proper ones
+2009-07-24T03:22:00.000Z	ikonia	artillerytx	does driver manager offer anything ?
+2009-07-24T03:22:00.000Z	artillerytx	ikonia	um let me check
+2009-07-24T03:22:00.000Z	artillerytx	ikonia	where is driver manager
+2009-07-24T03:23:00.000Z	ikonia	artillerytx	did you install the desktop CD - or just the desktop kernel
+2009-07-24T03:23:00.000Z	ikonia	artillerytx	should be "system->administration->hardware drivers"
+2009-07-24T03:24:00.000Z	artillerytx	ikonia	oh okay yeah is says " no proprietary drivers are in use on this system "
+2009-07-24T03:24:00.000Z	ikonia	artillerytx	doesn't offer it though
+2009-07-24T03:24:00.000Z	artillerytx	ikonia	yeah there is nothing
+2009-07-24T03:24:00.000Z	ikonia	artillerytx	that's dissapointing
+2009-07-24T03:25:00.000Z	artillerytx	ikonia	so can i download the driver from somewhere
+2009-07-24T03:25:00.000Z	ikonia	artillerytx	looks like your going to have to
+2009-07-24T03:25:00.000Z	ikonia	artillerytx	dissapointing
+2009-07-24T03:25:00.000Z	artillerytx	ikonia	hmm well the dell website has redhat drivers but i don't think those work for ubuntu
+2009-07-24T03:25:00.000Z	ikonia	artillerytx	check out that info
+2009-07-24T03:27:00.000Z	artillerytx	ikonia	apt on cd arlight
+2009-07-24T03:27:00.000Z	ikonia	artillerytx	perfect
+2009-07-24T03:27:00.000Z	artillerytx	ikonia	haha but what package do i download
+2009-07-24T03:27:00.000Z	ikonia	artillerytx	ubuntu-restricted-extras
+2009-07-24T03:27:00.000Z	artillerytx	ikonia	alright let me try that
+2009-07-24T03:28:00.000Z	artillerytx	ikonia	do i have to have ubuntu to use aptoncd?
+2009-07-24T03:28:00.000Z	ikonia	artillerytx	no, but it's a good way to get all the deps
+2009-07-24T03:28:00.000Z	artillerytx	ikonia	i only have os x and windows
+2009-07-24T03:29:00.000Z	ikonia	artillerytx	you can do it manually
+2009-07-24T03:29:00.000Z	artillerytx	ikonia	okay go to packages.ubuntu.com ?
+2009-07-24T03:30:00.000Z	artillerytx	ikonia	okay i downloaded it
+2009-07-24T03:31:00.000Z	ikonia	artillerytx	install it with dpkg -i
+2009-07-24T03:32:00.000Z	artillerytx	ikonia	how do i locate the file
+2009-07-24T03:32:00.000Z	ikonia	artillerytx	you know where you put it
+2009-07-24T03:33:00.000Z	ikonia	artillerytx	ok - so go to the desktop
+2009-07-24T03:33:00.000Z	ikonia	artillerytx	ahh you mean in the termianl it's cd ~/Desktop
+2009-07-24T03:34:00.000Z	artillerytx	ikonia	yeah but the package install pretty much the same thing right
+2009-07-24T03:34:00.000Z	ikonia	artillerytx	dpkg will give you more info on what's going on
+2009-07-24T03:35:00.000Z	artillerytx	ikonia	alright did ... says setting up ubuntu -resstricted extras
+2009-07-24T03:36:00.000Z	ikonia	artillerytx	sounds good, well done
+2009-07-24T03:36:00.000Z	artillerytx	ikonia	haha no what
+2009-07-24T03:36:00.000Z	ikonia	artillerytx	open restricted driver manager - you may have to reboot first
+2009-07-24T03:37:00.000Z	ikonia	artillerytx	reboot first
+2009-07-24T03:37:00.000Z	ikonia	artillerytx	hope I've told you the right package
+2009-07-24T03:37:00.000Z	artillerytx	ikonia	if not no big deal
+2009-07-24T03:37:00.000Z	artillerytx	ikonia	 but thank you for your help either way
+2009-07-24T03:37:00.000Z	ikonia	artillerytx	no problem
+2009-07-24T03:38:00.000Z	artillerytx	ikonia	i just don't understand why the port is showing green and a orange activity but ubuntu can't see it
+2009-07-24T03:38:00.000Z	ikonia	artillerytx	it just means there is a link on it, that is nothing to do with the OS
+2009-07-24T03:38:00.000Z	ikonia	artillerytx	what does ifconfig -a show ?
+2009-07-24T03:39:00.000Z	ikonia	artillerytx	raths
+2009-07-24T03:40:00.000Z	ikonia	artillerytx	you need someone with an ubuntu desktop to open synaptic and search for broadcom to get the package name then
+2009-07-24T03:40:00.000Z	ikonia	artillerytx	I've not got an ubuntu box running here at the moment
+2009-07-24T03:41:00.000Z	ikonia	artillerytx	no - as you won't have a network card on that
+2009-07-24T03:41:00.000Z	artillerytx	ikonia	no i mean on another machine
+2009-07-24T03:41:00.000Z	ikonia	artillerytx	sure
+2009-07-24T03:41:00.000Z	artillerytx	ikonia	alright let me try that
+2009-07-24T03:41:00.000Z	artillerytx	ikonia	what do i do once i find the driver
+2009-07-24T03:42:00.000Z	ikonia	artillerytx	download the package as you did ubuntu-restricted-extras
+2009-07-24T03:49:00.000Z	artillerytx	ikonia	i don't really see anything ... there is braodcom firmware thing - http://packages.ubuntu.com/search?keywords=b43&searchon=names&suite=jaunty&section=all
+2009-07-24T03:51:00.000Z	artillerytx	ikonia	man i don't know what to do
+2009-07-24T03:54:00.000Z	artillerytx	ikonia	i found linux drivers on broadcoms website

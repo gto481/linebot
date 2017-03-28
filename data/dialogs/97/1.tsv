@@ -1,0 +1,97 @@
+2012-03-19T02:20:00.000Z	haz3lnut	vit_o	try reinstalling your video driver
+2012-03-19T02:21:00.000Z	haz3lnut	vit_o	is it nvidia?
+2012-03-19T02:22:00.000Z	vit_o	haz3lnut	 no, it is ATI
+2012-03-19T02:22:00.000Z	haz3lnut	vit_o	reinstall fglrx (i think) :-)
+2012-03-19T02:32:00.000Z	haz3lnut	vit_o	is libGL.so on your computer?
+2012-03-19T02:33:00.000Z	vit_o	haz3lnut	is this way ok?:  'whereis  libGL.so'
+2012-03-19T02:34:00.000Z	haz3lnut	vit_o	try  sudo updatedb; locate -i libGL.so
+2012-03-19T02:34:00.000Z	haz3lnut	vit_o	updatedb will take a little while
+2012-03-19T02:34:00.000Z	vit_o	haz3lnut	what about this https://wiki.ubuntu.com/X/Troubleshooting/FglrxInteferesWithRadeonDriver  'the purge problem'
+2012-03-19T02:35:00.000Z	vit_o	haz3lnut	ok, I try that.
+2012-03-19T02:36:00.000Z	vit_o	haz3lnut	do i have to post the answer?
+2012-03-19T02:37:00.000Z	haz3lnut	vit_o	is it there?
+2012-03-19T02:37:00.000Z	vit_o	haz3lnut	yes. many
+2012-03-19T02:38:00.000Z	haz3lnut	vit_o	type "sudo ldconf /usr/lib"
+2012-03-19T02:39:00.000Z	haz3lnut	vit_o	then see if it still can;t find the library
+2012-03-19T02:39:00.000Z	vit_o	haz3lnut	sure it is spell right?
+2012-03-19T02:39:00.000Z	haz3lnut	vit_o	sorry, that's type "sudo ldconfig /usr/lib"
+2012-03-19T02:39:00.000Z	vit_o	haz3lnut	ah, ok :)
+2012-03-19T02:40:00.000Z	vit_o	haz3lnut	yes it can. exactly the same answer.
+2012-03-19T02:41:00.000Z	haz3lnut	vit_o	no, I mean does compiz still fail to see the library
+2012-03-19T02:41:00.000Z	vit_o	haz3lnut	sorry, should i type sudo updatedb first?
+2012-03-19T02:41:00.000Z	haz3lnut	vit_o	the updatedb was for locate
+2012-03-19T02:42:00.000Z	vit_o	haz3lnut	so have to  type sudo apt-get install mesa-utils right? sorry i don't remeber
+2012-03-19T02:43:00.000Z	haz3lnut	vit_o	you already installed the mesa-utils
+2012-03-19T02:43:00.000Z	haz3lnut	vit_o	can you run glxgears?
+2012-03-19T02:44:00.000Z	vit_o	haz3lnut	ok. same answer. no such file or directory
+2012-03-19T02:44:00.000Z	haz3lnut	vit_o	then yes, sudo apt-get install mesa-utils
+2012-03-19T02:46:00.000Z	vit_o	haz3lnut	i don't know why it says 0 update 0 install and 5 not updated (sorry for bad translation)
+2012-03-19T02:47:00.000Z	haz3lnut	vit_o	and you got no glxgears?
+2012-03-19T02:47:00.000Z	haz3lnut	vit_o	or glxinfo?
+2012-03-19T02:48:00.000Z	vit_o	haz3lnut	No such file or directory. :(
+2012-03-19T02:48:00.000Z	vit_o	haz3lnut	same problem as before with libGL.so.1
+2012-03-19T02:52:00.000Z	haz3lnut	vit_o	I'm lost, and wife pulling my ear.
+2012-03-19T02:53:00.000Z	vit_o	haz3lnut	:) ... well, we had a problem with libGL.so.1 we tried to fix it but nothing change. we have this problem because of glxinfo can't run.
+2012-03-19T02:54:00.000Z	vit_o	haz3lnut	was that understandable?
+2012-03-19T02:58:00.000Z	haz3lnut	vit_o	what does "which glxinfo" tell you?
+2012-03-19T02:59:00.000Z	vit_o	haz3lnut	/usr/bin/glxinfo
+2012-03-19T03:00:00.000Z	haz3lnut	vit_o	now type /usr/bin/glxinfo
+2012-03-19T03:01:00.000Z	vit_o	haz3lnut	here you are: error while loading shared libraries: libGL.so.1: cannot open shared object file: No such file or directory
+2012-03-19T03:01:00.000Z	haz3lnut	vit_o	locate libGL.so.1
+2012-03-19T03:03:00.000Z	vit_o	haz3lnut	quebre, i can't do it
+2012-03-19T03:04:00.000Z	haz3lnut	vit_o	?
+2012-03-19T03:04:00.000Z	vit_o	haz3lnut	it says like: you can open a temporary file or something like that.
+2012-03-19T03:05:00.000Z	haz3lnut	vit_o	don;t update db, just locate
+2012-03-19T03:05:00.000Z	vit_o	haz3lnut	updatedb: impossibile aprire un file temporaneo per `/var/lib/mlocate/mlocate.db'  (not possible to open temporary file ...)
+2012-03-19T03:05:00.000Z	haz3lnut	vit_o	you gotta sudo to updatedb, but you already did that.
+2012-03-19T03:05:00.000Z	vit_o	haz3lnut	6 lines, i post it here or not?
+2012-03-19T03:06:00.000Z	haz3lnut	vit_o	pastebin
+2012-03-19T03:06:00.000Z	vit_o	haz3lnut	http://pastebin.ubuntu.com/889958/
+2012-03-19T03:07:00.000Z	haz3lnut	vit_o	strange it can't find lib
+2012-03-19T03:08:00.000Z	haz3lnut	vit_o	you try dlentz suggestion
+2012-03-19T03:08:00.000Z	vit_o	haz3lnut	what about dlentz  sug?
+2012-03-19T03:08:00.000Z	vit_o	haz3lnut	dlentz ok, i try
+2012-03-19T03:09:00.000Z	vit_o	haz3lnut	E: Internal Error, No file name for libgl1-mesa-glx     ???
+2012-03-19T03:10:00.000Z	haz3lnut	vit_o	type only "sudo apt-get install --reinstall libgl1-mesa-glx"
+2012-03-19T03:12:00.000Z	vit_o	haz3lnut	dlentz that what i did guys :) and it answer: http://pastebin.ubuntu.com/889967/
+2012-03-19T03:14:00.000Z	haz3lnut	vit_o	it's apparently a bug: https://bugs.launchpad.net/ubuntu/+source/apt/+bug/859188
+2012-03-19T03:16:00.000Z	haz3lnut	vit_o	so it apparetnly needs specific:  sudo apt-get install --reinstall libgl1-mesa-glx:amd64 libgl1-mesa-glx:i386
+2012-03-19T03:17:00.000Z	vit_o	haz3lnut	it is just one line, isn't it?
+2012-03-19T03:17:00.000Z	haz3lnut	vit_o	yes
+2012-03-19T03:17:00.000Z	vit_o	haz3lnut	done!
+2012-03-19T03:18:00.000Z	haz3lnut	vit_o	now glxinfo?
+2012-03-19T03:21:00.000Z	vit_o	haz3lnut	a lot of strange stuff. pastebin?
+2012-03-19T03:21:00.000Z	haz3lnut	vit_o	sure why not
+2012-03-19T03:22:00.000Z	vit_o	haz3lnut	you are the boss : http://pastebin.ubuntu.com/889974/
+2012-03-19T03:23:00.000Z	haz3lnut	vit_o	looks like it works now :-)
+2012-03-19T03:24:00.000Z	vit_o	haz3lnut	so, next step? :)
+2012-03-19T03:24:00.000Z	haz3lnut	vit_o	logout login, done
+2012-03-19T03:25:00.000Z	vit_o	haz3lnut	seriously?! xD
+2012-03-19T03:26:00.000Z	haz3lnut	vit_o	do it! :-)
+2012-03-19T03:26:00.000Z	vit_o	haz3lnut	logout or reboot?
+2012-03-19T03:30:00.000Z	vit_o	haz3lnut	well, now i'm with unity 2d.
+2012-03-19T03:30:00.000Z	haz3lnut	vit_o	no 3d?
+2012-03-19T03:31:00.000Z	vit_o	haz3lnut	maybe just a reset with ubuntu tweak is enough, or not?
+2012-03-19T03:31:00.000Z	vit_o	haz3lnut	no. do i have to try again to logout/in?
+2012-03-19T03:31:00.000Z	haz3lnut	vit_o	I had no compiz 3d for a week, finally discovered compiz configuration corrupt, so deleted all compiz files in my home dir, reboot fixed.
+2012-03-19T03:32:00.000Z	vit_o	haz3lnut	several guys told me this. But for me it doesn't work. :(
+2012-03-19T03:34:00.000Z	haz3lnut	vit_o	cd to home dir and type: "find . | grep compiz | xargs rm"
+2012-03-19T03:34:00.000Z	haz3lnut	vit_o	wait that won;t work
+2012-03-19T03:35:00.000Z	vit_o	haz3lnut	ok. i'm waiting :)
+2012-03-19T03:35:00.000Z	haz3lnut	vit_o	"find . | grep compiz | xargs rm -Rf"
+2012-03-19T03:36:00.000Z	vit_o	haz3lnut	done
+2012-03-19T03:36:00.000Z	haz3lnut	vit_o	logout, login
+2012-03-19T03:39:00.000Z	vit_o	haz3lnut	well, i put ubuntu(3d) but it log in with unity2d anyway
+2012-03-19T03:39:00.000Z	haz3lnut	vit_o	be very careful if you change things with ccsm, it can break unity badly.  Some settings are just not supported.
+2012-03-19T03:40:00.000Z	haz3lnut	vit_o	well I'm stumped. anyone else wanna jump in :-)
+2012-03-19T03:42:00.000Z	haz3lnut	vit_o	but we just wiped all your compiz settings. so it should have started clean
+2012-03-19T03:50:00.000Z	haz3lnut	vit_o	you don;t wanna hear this, but I suggest an nvidia card.
+2012-03-19T03:51:00.000Z	vit_o	haz3lnut	exactly, i do not want! xD
+2012-03-19T03:51:00.000Z	haz3lnut	vit_o	lol :D
+2012-03-19T03:51:00.000Z	vit_o	haz3lnut	less than 1 year almost 1000 euro notebook man!
+2012-03-19T03:52:00.000Z	haz3lnut	vit_o	ouch
+2012-03-19T03:52:00.000Z	haz3lnut	vit_o	gotta make it work then
+2012-03-19T03:52:00.000Z	haz3lnut	vit_o	buy from system 76 next time. great support.
+2012-03-19T03:53:00.000Z	vit_o	haz3lnut	well i will. This was a gift
+2012-03-19T03:54:00.000Z	haz3lnut	vit_o	I'll let the ati experts help you out from here. good luck.
+2012-03-19T03:54:00.000Z	vit_o	haz3lnut	thank you!

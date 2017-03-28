@@ -1,0 +1,95 @@
+2010-05-03T14:41:00.000Z	Stormcr0w		Hi everyone, just moved to Lucid Lynx, 10.04, fresh install on an external HD. Grub is chainloaded into from the windows bootloader. After pressing "enter" to get Ubuntu booting, there is a pause of about 30 seconds when the computer does absolutely nothing. Then, with quiet splash disabled, the text starts rolling on screen and the computer boots up within a few seconds. Any ideas?
+2010-05-03T14:42:00.000Z	pepee	Stormcr0w	tried reisntalling grub?
+2010-05-03T14:43:00.000Z	Stormcr0w	pepee	through Synaptic? It's a fresh install of the OS, why would it require a reinstall? I can give it a try now...
+2010-05-03T14:43:00.000Z	pepee	Stormcr0w	sudo update-grub2
+2010-05-03T14:44:00.000Z	pepee	Stormcr0w	oh, sorry, run that command from the live-cd
+2010-05-03T14:44:00.000Z	Stormcr0w	pepee	Done that a couple of times, as I thought that my issue was related to the blank screen/nvidia issue
+2010-05-03T14:46:00.000Z	Stormcr0w	pepee	have a look here for my /etc/default/grub : www.copypaste.at/1142
+2010-05-03T14:47:00.000Z	pepee	Stormcr0w	does " vga=799" works for you?
+2010-05-03T14:48:00.000Z	pepee	Stormcr0w	IIRC, with new linux releases, it shouldn't
+2010-05-03T14:48:00.000Z	Stormcr0w	pepee	I've tried with it both commented in and out
+2010-05-03T14:49:00.000Z	pepee	Stormcr0w	grub is loaded after the windows bootloader??
+2010-05-03T14:49:00.000Z	Stormcr0w	pepee	correct
+2010-05-03T14:50:00.000Z	Stormcr0w	pepee	www.copypaste.at/1143 for my grub.cfg
+2010-05-03T14:50:00.000Z	pepee	Stormcr0w	 hmm how did you install ubuntu? wubi? from the live cd?
+2010-05-03T14:50:00.000Z	Stormcr0w	pepee	live cd. I customised the partitions
+2010-05-03T14:51:00.000Z	pepee	Stormcr0w	ok, don't know why but that's happening to some people
+2010-05-03T14:51:00.000Z	Stormcr0w	pepee	File a bug, shall I?
+2010-05-03T14:53:00.000Z	pepee	Stormcr0w	are you sure you tried reisntalling grub? do your system have and EFI BIOS?
+2010-05-03T14:56:00.000Z	Stormcr0w	pepee	I think I'm on a regular BIOS. I did re-install grub, I can give it another try, just for kicks. It's a bit of a pain from the live cd, because you have to make sure it does not install itself on the MBR
+2010-05-03T14:57:00.000Z	pepee	Stormcr0w	reinstall grub from your ubuntu partition, not from the live cd
+2010-05-03T14:59:00.000Z	Stormcr0w	pepee	that's not a problem, but I am not sure "sudo update-grub2" reinstalls it. It just rebuilds grub.cfg, doesn't it?
+2010-05-03T14:59:00.000Z	pepee	Stormcr0w	ohh, yeah, that's correct
+2010-05-03T15:00:00.000Z	pepee	Stormcr0w	you have to run grub-install
+2010-05-03T15:01:00.000Z	Stormcr0w	pepee	ok, I'll give it a try
+2010-05-03T15:02:00.000Z	pepee	Stormcr0w	 read the man page, it¡s very simple to use it
+2010-05-03T15:02:00.000Z	Stormcr0w	pepee	would you know, by the way, how to remove all mentions of splash from my kernel parametres?
+2010-05-03T15:03:00.000Z	pepee	Stormcr0w	you have to edit /etc/default/grub
+2010-05-03T15:03:00.000Z	pepee	Stormcr0w	in GRUB_CMDLINE_LINUX_DEFAULT  delete splash
+2010-05-03T15:04:00.000Z	Stormcr0w	pepee	thanks!
+2010-05-03T15:04:00.000Z	pepee	Stormcr0w	np
+2010-05-03T15:05:00.000Z	pepee	Stormcr0w	for grub-install, something like: grub-install --no-floppy --recheck --root-directory=/dev/sda3 /dev/sda
+2010-05-03T15:06:00.000Z	Stormcr0w	pepee	is that according to my current setup?
+2010-05-03T15:06:00.000Z	pepee	Stormcr0w	nope, it's an example
+2010-05-03T15:06:00.000Z	Stormcr0w	pepee	Ah ok.
+2010-05-03T15:07:00.000Z	Stormcr0w	pepee	goo thing I didn't copy-paste :)
+2010-05-03T15:07:00.000Z	pepee	Stormcr0w	/dev/sda is the disk in which to install the bootloader, and /dev/sda3 is your ubuntu partition
+2010-05-03T15:07:00.000Z	pepee	Stormcr0w	btw, you have to run it with sudo: sudo grub-install ......
+2010-05-03T15:21:00.000Z	pepee	Stormcr0w	are you running the live cd?
+2010-05-03T15:08:00.000Z	Stormcr0w	pepee	Wouldn't do it any other way :)
+2010-05-03T15:12:00.000Z	Stormcr0w	pepee	just to make sure, is it grub-install or grub2-install?
+2010-05-03T15:12:00.000Z	pepee	Stormcr0w	try pressing tab: grub<tab>
+2010-05-03T15:13:00.000Z	Stormcr0w	pepee	grub-install
+2010-05-03T15:13:00.000Z	pepee	Stormcr0w	yep
+2010-05-03T15:14:00.000Z	pepee	Stormcr0w	the tab trick works on some IRC clients, too
+2010-05-03T15:17:00.000Z	Stormcr0w	pepee	not working, it tells me that it cannot create directory and that /dev/sdc2/boot is not a directory
+2010-05-03T15:17:00.000Z	Stormcr0w	pepee	I've checked on Gparted, sdc2 is where Ubuntu is installed
+2010-05-03T15:18:00.000Z	pepee	Stormcr0w	sorry...
+2010-05-03T15:18:00.000Z	pepee	Stormcr0w	for grub-install, something like: grub-install --no-floppy --recheck --root-directory=/ /dev/sda
+2010-05-03T15:18:00.000Z	pepee	Stormcr0w	root = /
+2010-05-03T15:20:00.000Z	Stormcr0w	pepee	same error
+2010-05-03T15:21:00.000Z	Stormcr0w	pepee	No, I am in my Ubuntu session on a terminal window
+2010-05-03T15:22:00.000Z	pepee	Stormcr0w	for grub-install, something like: grub-install --no-floppy --recheck /dev/sdc  ??
+2010-05-03T15:22:00.000Z	pepee	Stormcr0w	b careful
+2010-05-03T15:22:00.000Z	pepee	Stormcr0w	wait
+2010-05-03T15:23:00.000Z	Stormcr0w	pepee	ok
+2010-05-03T15:23:00.000Z	pepee	Stormcr0w	run: fdisk -l | pastebinit
+2010-05-03T15:24:00.000Z	pepee	Stormcr0w	how many HDD's do you have? and where is ubuntu installed?
+2010-05-03T15:24:00.000Z	Stormcr0w	pepee	"You are trying to send an empty document, exiting" :)
+2010-05-03T15:25:00.000Z	pepee	Stormcr0w	? that's strange
+2010-05-03T15:25:00.000Z	Stormcr0w	pepee	OK, here I go. I have two internal HDs, one IDE, where windows is installed and one SATA, where nothing is installed. I have three external HDs, one where Linux and OS X is installed and another two where nothing is installed (just storage)
+2010-05-03T15:27:00.000Z	pepee	Stormcr0w	and how do you run ubuntu? do you select it from the BIOS boot options?
+2010-05-03T15:27:00.000Z	pepee	Stormcr0w	this is getting difficult :/
+2010-05-03T15:28:00.000Z	Stormcr0w	pepee	I have Easy BCD installed on Windows 7. I have an entry for Ubuntu there. When the pc boots, it takes me to the windows bootloader. If I select Linux, then it chainloads on to GRUB 2
+2010-05-03T15:28:00.000Z	pepee	Stormcr0w	oh, I see...
+2010-05-03T15:29:00.000Z	Stormcr0w	pepee	Used to work just fine up to 9.04
+2010-05-03T15:30:00.000Z	pepee	Stormcr0w	and what do you wanna do? install grub and edit the boot options?
+2010-05-03T15:31:00.000Z	Stormcr0w	pepee	I want to stop having to wait 30-40 seconds for the pc to start loading after I select Ubuntu from GRUB.
+2010-05-03T15:32:00.000Z	Stormcr0w	pepee	I am not sure if reinstalling Grub will achieve that. It was your recommendation :)
+2010-05-03T15:32:00.000Z	pepee	Stormcr0w	well, best is to not touch grub, your system configs are too complicated
+2010-05-03T15:32:00.000Z	pepee	Stormcr0w	I hope you didn't break your bootloader :S
+2010-05-03T15:33:00.000Z	Stormcr0w	pepee	Break it? how?
+2010-05-03T15:34:00.000Z	pepee	Stormcr0w	if you reinstall grub, it will remove your old configs and it will not load if you don't mount your external hdd
+2010-05-03T15:35:00.000Z	Stormcr0w	pepee	no, I didn't get as far as reinstalling. It threw an error message, remember?
+2010-05-03T15:35:00.000Z	pepee	Stormcr0w	yeah
+2010-05-03T15:36:00.000Z	pepee	Stormcr0w	but if that's the case you should try and repair the windows boot manager/loader
+2010-05-03T15:37:00.000Z	pepee	Stormcr0w	I feel guilty about it :S
+2010-05-03T15:37:00.000Z	Stormcr0w	pepee	But the windows bootloader works fine. It chainloads into Grub in a matter of split seconds. The problem is between Grub and Ubuntu boot-up
+2010-05-03T15:38:00.000Z	pepee	Stormcr0w	yeah, but if you reinstall grub, it may delete the windows bootloader
+2010-05-03T15:38:00.000Z	Stormcr0w	pepee	I don't think we've actually reinstalled anything
+2010-05-03T15:39:00.000Z	Stormcr0w	pepee	and if we did, I would have selected the external drive where linux is installed as the target
+2010-05-03T15:39:00.000Z	pepee	Stormcr0w	the problem is: grub files will be in the ubuntu partition
+2010-05-03T15:40:00.000Z	pepee	Stormcr0w	yeah, restart and see what happens
+2010-05-03T15:40:00.000Z	Stormcr0w	pepee	well, if the error message didn't stop it altogether and it actually overwrote itself
+2010-05-03T15:41:00.000Z	Stormcr0w	pepee	then I'll just repair everything from the windows cd and then from the livecd
+2010-05-03T15:41:00.000Z	pepee	Stormcr0w	that's what I say
+2010-05-03T15:44:00.000Z	Stormcr0w	pepee	no difference than before
+2010-05-03T15:45:00.000Z	pepee	Stormcr0w	oh, ok
+2010-05-03T15:46:00.000Z	pepee	Stormcr0w	well, as I said, better is not to touch grub...
+2010-05-03T15:47:00.000Z	Stormcr0w	pepee	there has to be a way to tackle this issue. The computer just stands there doing nothing for about 40 seconds after I select Ubuntu on Grub. And then it begins to load.
+2010-05-03T15:48:00.000Z	pepee	Stormcr0w	USB external drives?
+2010-05-03T15:48:00.000Z	Stormcr0w	pepee	yes
+2010-05-03T15:48:00.000Z	pepee	Stormcr0w	mine used to do that, and the problem was some settings in BIOS
+2010-05-03T15:49:00.000Z	pepee	Stormcr0w	"boot another devices" or something like that
+2010-05-03T15:52:00.000Z	Stormcr0w	pepee	I'll give the BIOS a try then
+2010-05-03T16:14:00.000Z	Stormcr0w	pepee	tinkering with the BIOS did not help

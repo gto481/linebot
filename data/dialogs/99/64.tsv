@@ -1,0 +1,99 @@
+2006-07-05T14:06:00.000Z	TeacherTodd813		Can anybody help with an X configuration problem?
+2006-07-05T14:07:00.000Z	TeacherTodd813		I've got an IBM 8143. The video chipset is "82915G/GV/910GL Express Chipset Family Graphics Controller". I still can't get X to start up correctly.
+2006-07-05T14:08:00.000Z	POVaddct	TeacherTodd813	set Xorg driver to i810
+2006-07-05T14:08:00.000Z	TeacherTodd813	POVaddct	Yeah. That's what it got set to when I installed. It just doesn't work.
+2006-07-05T14:09:00.000Z	POVaddct	TeacherTodd813	any hints in /var/log/Xorg.0.log ?
+2006-07-05T14:09:00.000Z	TeacherTodd813		Let me look...
+2006-07-05T14:12:00.000Z	TeacherTodd813	POVaddct	It says "BIOS call 0x5f05 not supported, setting refresh with VBE 3 method."
+2006-07-05T14:13:00.000Z	POVaddct	TeacherTodd813	seems to be a broken bios. there not much you can do. the i810 needs the bios to change video mode.
+2006-07-05T14:14:00.000Z	TeacherTodd813	POVaddct	Well, there are lots of BIOS settings. Any ideas what I should be using?
+2006-07-05T14:15:00.000Z	POVaddct	TeacherTodd813	i didn't mean the bios settings, rather the bios itself. it is faulty. broken. many bioses are.
+2006-07-05T14:15:00.000Z	TeacherTodd813	POVaddct	So I'm hosed? This is a standard IBM build and it can't run Ubuntu?
+2006-07-05T14:16:00.000Z	POVaddct	TeacherTodd813	even ibm machines have fucked up bioses, yes
+2006-07-05T14:16:00.000Z	POVaddct	TeacherTodd813	does kernel framebuffer work at least?
+2006-07-05T14:17:00.000Z	TeacherTodd813	POVaddct	How would I check that?
+2006-07-05T14:17:00.000Z	POVaddct	TeacherTodd813	cat /proc/fb
+2006-07-05T14:18:00.000Z	TeacherTodd813	POVaddct	This one machine is a different model than the rest in my lab. At first, those wouldn't work, but I went into the BIOS and added video memory and they're working like champs, now.
+2006-07-05T14:18:00.000Z	TeacherTodd813	POVaddct	Unfortunately, the one I can't get working is the fastest and has the only burner.
+2006-07-05T14:18:00.000Z	TeacherTodd813	POVaddct	Checking /proc/fb now...
+2006-07-05T14:19:00.000Z	TeacherTodd813	POVaddct	0 VGA16 VGA
+2006-07-05T14:19:00.000Z	POVaddct	TeacherTodd813	yeah, for shared memory gfx cards, the amount of memory is important. luckily you could set the amount in the bios. many dell bioses offer no setting for that.
+2006-07-05T14:19:00.000Z	POVaddct	TeacherTodd813	VGA16 VGA is not the right frame buffer type
+2006-07-05T14:20:00.000Z	POVaddct	TeacherTodd813	try rebooting with kernel parameter vga=791
+2006-07-05T14:20:00.000Z	TeacherTodd813	POVaddct	If you don't mind, let me pull up the BIOS and see what the settings are...
+2006-07-05T14:20:00.000Z	POVaddct	TeacherTodd813	okay
+2006-07-05T14:20:00.000Z	POVaddct	TeacherTodd813	but i cannot help you much with the bios. each bios is different.
+2006-07-05T14:21:00.000Z	POVaddct	TeacherTodd813	each bios manufacturer has his own terminology for things
+2006-07-05T14:22:00.000Z	TeacherTodd813	POVaddct	You'll definitely have a better idea than I do...
+2006-07-05T14:22:00.000Z	POVaddct	TeacherTodd813	btw, is this ibm machine a desktop/tower or a notebook?
+2006-07-05T14:23:00.000Z	TeacherTodd813	POVaddct	Lists the chip as Intel 915G/GV, DVMT Graphics Memory: 56MB (It's a tower, model 8143.)
+2006-07-05T14:23:00.000Z	POVaddct	TeacherTodd813	i only know ibm notebooks (thinkpad)
+2006-07-05T14:23:00.000Z	TeacherTodd813	POVaddct	Three choices for Active Video: IGD, PCI, or PEG.
+2006-07-05T14:24:00.000Z	POVaddct	TeacherTodd813	never heard of IGD and PEG
+2006-07-05T14:24:00.000Z	TeacherTodd813	POVaddct	No problem.
+2006-07-05T14:24:00.000Z	POVaddct	TeacherTodd813	maybe IGD stands for integrated graphics device
+2006-07-05T14:25:00.000Z	POVaddct	TeacherTodd813	so IGD is probably the i915 card
+2006-07-05T14:26:00.000Z	TeacherTodd813	POVaddct	Sounds good. I'll try that. PCI just failed. :-(
+2006-07-05T14:28:00.000Z	TeacherTodd813	POVaddct	Any idea what DVMT 3.0 Mode should be set to? I have Fixed, DVMT, and Combo.
+2006-07-05T14:29:00.000Z	POVaddct	TeacherTodd813	dunno. if i remember correctly, DVMT is ibm's marketing speak for shared memory gfx card
+2006-07-05T14:31:00.000Z	POVaddct	TeacherTodd813	i just googled and found the "BIOS call 0x5f05..." message in the i810 driver source. it's only for setting a higher refresh rate, so failure of this shouldn't be critical
+2006-07-05T14:32:00.000Z	POVaddct	TeacherTodd813	there must be another reason for Xorg to abort
+2006-07-05T14:32:00.000Z	TeacherTodd813	POVaddct	You were saying something about starting up with a kernel option?
+2006-07-05T14:32:00.000Z	POVaddct	TeacherTodd813	yes, option is vga=791  (that is 1024x768 in 16bpp)
+2006-07-05T14:32:00.000Z	TeacherTodd813	POVaddct	I don't think it's aborting. It's happily sending signals that my monitor has no idea what to do with.
+2006-07-05T14:32:00.000Z	TeacherTodd813	POVaddct	How do I do that?
+2006-07-05T14:34:00.000Z	POVaddct	TeacherTodd813	in the grub boot screen, press 'e' on the boot entry for ubuntu, go to the kernel parameters line, press 'e' again and insert vga=791 after root=...  then press return and then 'b' for boot
+2006-07-05T14:34:00.000Z	TeacherTodd813	POVaddct	OK. Trying that now....
+2006-07-05T14:35:00.000Z	POVaddct	TeacherTodd813	do you have net access on the machine?
+2006-07-05T14:37:00.000Z	TeacherTodd813	POVaddct	The boot-up splash screen was in 1024x768, but it crapped out at the same point.
+2006-07-05T14:37:00.000Z	TeacherTodd813	POVaddct	Yeah, it's on the network.
+2006-07-05T14:37:00.000Z	POVaddct	TeacherTodd813	define "crap out"
+2006-07-05T14:38:00.000Z	TeacherTodd813	POVaddct	When GNOME was supposed to start, the screen goes blank and the monitor power light starts blinking.
+2006-07-05T14:38:00.000Z	POVaddct	TeacherTodd813	okay, that's just the X server. the kernel frame buffer seems okay.
+2006-07-05T14:38:00.000Z	POVaddct	TeacherTodd813	now we force the X server to use the kernel frame buffer.
+2006-07-05T14:38:00.000Z	TeacherTodd813	POVaddct	Oh, that sounds positive.
+2006-07-05T14:39:00.000Z	POVaddct	TeacherTodd813	do you know how to edit a text file?
+2006-07-05T14:39:00.000Z	TeacherTodd813		Yeah. I'm nano proficient.
+2006-07-05T14:39:00.000Z	POVaddct	TeacherTodd813	go edit /etc/X11/xorg.conf
+2006-07-05T14:39:00.000Z	POVaddct	TeacherTodd813	search for Section "Device"
+2006-07-05T14:40:00.000Z	POVaddct	TeacherTodd813	the must be a line  Driver "i810"   -- change this into   Driver "fbdev"
+2006-07-05T14:41:00.000Z	TeacherTodd813	POVaddct	Done. Anything else?
+2006-07-05T14:41:00.000Z	POVaddct	TeacherTodd813	restart gdm
+2006-07-05T14:42:00.000Z	POVaddct	TeacherTodd813	fbdev has some limitations: only 60 hz vertical refresh, no 2d acceleration. but you should at least have a visible gfx display.
+2006-07-05T14:44:00.000Z	TeacherTodd813	POVaddct	How do I restart gdm?
+2006-07-05T14:44:00.000Z	POVaddct	TeacherTodd813	/etc/init.d/gdm restart
+2006-07-05T14:45:00.000Z	TeacherTodd813	POVaddct	It *is* graphical...
+2006-07-05T14:45:00.000Z	POVaddct	TeacherTodd813	cool
+2006-07-05T14:46:00.000Z	TeacherTodd813	POVaddct	Unfortunately, it's pretty psychedelic, off-center, and clearly not what it should be.
+2006-07-05T14:46:00.000Z	POVaddct	TeacherTodd813	can't you fix that with the monitor settings?
+2006-07-05T14:46:00.000Z	TeacherTodd813	POVaddct	Which monitor settings?
+2006-07-05T14:46:00.000Z	POVaddct	TeacherTodd813	the monitor should handle 1024x768 @ 60hz, it's a standard mode
+2006-07-05T14:47:00.000Z	POVaddct	TeacherTodd813	at the monitor itself
+2006-07-05T14:47:00.000Z	TeacherTodd813	POVaddct	Yeah. It looks great until X starts. The boot up splash screen is perfect. Something's wrong here, though.
+2006-07-05T14:47:00.000Z	POVaddct	TeacherTodd813	vertical/horizontal position, v/h size, ...
+2006-07-05T14:48:00.000Z	TeacherTodd813	POVaddct	Oh. No, it's not that. Some of the right side of the screen is on the left side. And the pretty shades of brown around the Ubuntu login are violent shades of neon pink.
+2006-07-05T14:48:00.000Z	POVaddct	TeacherTodd813	does the monitor have a "Info" function to tell you which mode is currently active?
+2006-07-05T14:50:00.000Z	POVaddct	TeacherTodd813	hmm, very strange. fbdev usually works everywhere. except on *very* broken vesa bioses, which do not even have vesa extensions.
+2006-07-05T14:50:00.000Z	TeacherTodd813	POVaddct	The info thing says 59.4 Hz NN.
+2006-07-05T14:51:00.000Z	TeacherTodd813	POVaddct	And there are other things in there that look like actual settings, but I can't choose one.
+2006-07-05T14:51:00.000Z	POVaddct	TeacherTodd813	okay, that counts as 60hz
+2006-07-05T14:52:00.000Z	POVaddct	TeacherTodd813	can you look again at /var/log/Xorg.0.log, just to make sure the X server is using fbdev driver and the 1024x768 mode
+2006-07-05T14:53:00.000Z	TeacherTodd813	POVaddct	Sure. Let me check.
+2006-07-05T14:56:00.000Z	TeacherTodd813	POVaddct	What line(s) should I look at to know for sure?
+2006-07-05T14:56:00.000Z	POVaddct	TeacherTodd813	many lines beginning with FBDEV
+2006-07-05T14:57:00.000Z	TeacherTodd813	POVaddct	Oh yeah. Tons.
+2006-07-05T14:57:00.000Z	POVaddct	TeacherTodd813	okay
+2006-07-05T14:59:00.000Z	TeacherTodd813	POVaddct	Have we reached the point where I should start looking for a local X guru?
+2006-07-05T15:00:00.000Z	POVaddct	TeacherTodd813	maybe. if you don't mind giving me a temporary account i can have a closer look. of course i would run screen(1), so you can see what i do.
+2006-07-05T15:01:00.000Z	TeacherTodd813	POVaddct	I'm behind a firewall.
+2006-07-05T15:01:00.000Z	POVaddct	TeacherTodd813	no problem. we can use ssh remote port forwarding.
+2006-07-05T15:02:00.000Z	TeacherTodd813	POVaddct	OK. How?
+2006-07-05T15:02:00.000Z	POVaddct	TeacherTodd813	do you see my query?
+2006-07-05T15:03:00.000Z	TeacherTodd813	POVaddct	I responded. Did you get it?
+2006-07-05T15:03:00.000Z	POVaddct	TeacherTodd813	no. seems you are not registered with nickserv.
+2006-07-05T15:03:00.000Z	TeacherTodd813	POVaddct	No, I'm not.
+2006-07-05T15:03:00.000Z	POVaddct	TeacherTodd813	anyway, if you can read my messages it should be enougth
+2006-07-05T15:04:00.000Z	TeacherTodd813	POVaddct	OK>
+2006-07-05T15:04:00.000Z	POVaddct	TeacherTodd813	do you have sshd running on the machine?
+2006-07-05T15:05:00.000Z	TeacherTodd813	POVaddct	I'll check, first...give me a sec.
+2006-07-05T15:26:00.000Z	TeacherTodd813	POVaddct	IS AN AWESOME, WONDERFUL HUMAN BEING!!!

@@ -1,0 +1,96 @@
+2006-03-16T08:56:00.000Z	cedriczg		Hi, I'd need some help on the synaptic pakage manager
+2006-03-16T08:57:00.000Z	cedriczg		Does someone now why my files from /var/lib/apt/lists disapear?
+2006-03-16T08:57:00.000Z	cedriczg		And thus my Synaptic doesn't work...
+2006-03-16T08:57:00.000Z	cedriczg		Can someone help me?
+2006-03-16T08:58:00.000Z	Managu	cedriczg	sounds really odd, not really much to go on there
+2006-03-16T08:58:00.000Z	cedriczg	Managu	I thought that my problem was the sources.list file, but I think it's other thing
+2006-03-16T08:59:00.000Z	Managu	cedriczg	first thought is, is /var or some subdirectory mounted in a wierd way?
+2006-03-16T08:59:00.000Z	cedriczg	Managu	What other thing may cause the Synaptic not to start ok?
+2006-03-16T08:59:00.000Z	cedriczg	Managu	I don't think so?
+2006-03-16T09:00:00.000Z	cedriczg	Managu	What do you mean?
+2006-03-16T09:00:00.000Z	cedriczg	Managu	It's in my linux partition...
+2006-03-16T09:00:00.000Z	Managu	cedriczg	why you run Synaptic, i.e. from system->administration->synaptic..., a busy-wait cursor comes up.  What happens next?
+2006-03-16T09:01:00.000Z	cedriczg	Managu	I have a strange file called "lock" in the /var/lib/apt/list that has 0bytes !?
+2006-03-16T09:01:00.000Z	Managu	cedriczg	oh, that's important.  Running any versions of synaptic right now?
+2006-03-16T09:01:00.000Z	cedriczg	Managu	W: No se puede leer la lista de paquetes fuente http://archive.ubuntu.com breezy/main Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_breezy_main_binary-i386_Packages) - stat (2 No existe el fichero o el directorio) .....
+2006-03-16T09:02:00.000Z	cedriczg	Managu	You mean what version am I running?
+2006-03-16T09:02:00.000Z	Managu	cedriczg	ugh, never learned that language.
+2006-03-16T09:02:00.000Z	cedriczg	Managu	(my linux is in spanish :P)
+2006-03-16T09:03:00.000Z	Managu	cedriczg	as nickrud suggests, delete the "lock" file, and try running synaptic again
+2006-03-16T09:03:00.000Z	cedriczg	Managu	it means that the pakages from the source .... can't be read. And that /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_breezy_main_binary-i386_Packages doesn't exist
+2006-03-16T09:03:00.000Z	cedriczg	Managu	i'll try that
+2006-03-16T09:04:00.000Z	cedriczg	Managu	thank you
+2006-03-16T09:04:00.000Z	Managu	cedriczg	np, hope it works
+2006-03-16T09:06:00.000Z	cedriczg	Managu	That didn't work
+2006-03-16T09:07:00.000Z	Managu	cedriczg	how 'bout "sudo apt-cache update"
+2006-03-16T09:07:00.000Z	cedriczg	Managu	I can manage Synaptic to work if I do a "refresh", but that means to download many files
+2006-03-16T09:07:00.000Z	cedriczg	Managu	I tried that
+2006-03-16T09:08:00.000Z	cedriczg	Managu	It worked, but then again when I reboot I have the same problem
+2006-03-16T09:08:00.000Z	Managu	cedriczg	wow.  Where is /var mounted?
+2006-03-16T09:08:00.000Z	cedriczg	Managu	What do you mean about where?
+2006-03-16T09:08:00.000Z	cedriczg	Managu	 It is mounted in the partition where I have ubunntu installed
+2006-03-16T09:09:00.000Z	Managu	cedriczg	on the hard drive?
+2006-03-16T09:09:00.000Z	cedriczg	Managu	yes
+2006-03-16T09:09:00.000Z	cedriczg	Managu	Sorry the sudo apt-cache update doesn't work
+2006-03-16T09:10:00.000Z	Managu	cedriczg	ok, lemme go look at a man page, sec
+2006-03-16T09:10:00.000Z	cedriczg	Managu	I manage to repair Synaptic doing sudo aptitude update;
+2006-03-16T09:11:00.000Z	Managu	cedriczg	careful, "apt-get" and "apt-cache" are different commands
+2006-03-16T09:11:00.000Z	Managu	cedriczg	try "apt-get update"?
+2006-03-16T09:12:00.000Z	Managu	cedriczg	whoops, guess that was my mistake ^_^
+2006-03-16T09:12:00.000Z	cedriczg	Managu	Well that command is the same as doing refrersh on the Synaptic
+2006-03-16T09:13:00.000Z	cedriczg	Managu	But as I told you it take some time and I have a conection that has a limit of !Gb per month :(
+2006-03-16T09:13:00.000Z	Managu	cedriczg	ok.  So once you do that, Synaptic works properly?
+2006-03-16T09:13:00.000Z	cedriczg	Managu	 1Gb per month
+2006-03-16T09:13:00.000Z	cedriczg	Managu	yes
+2006-03-16T09:13:00.000Z	Managu	cedriczg	I understand.  One thing at a time :-)
+2006-03-16T09:13:00.000Z	cedriczg	Managu	but then again after rebooting the same problem
+2006-03-16T09:14:00.000Z	Managu	cedriczg	trying to think what would possibly zap the lists there
+2006-03-16T09:15:00.000Z	Managu	cedriczg	could you run "mount" and post the output on http://paste.ubuntu-nl.org/ ?
+2006-03-16T09:16:00.000Z	cedriczg	Managu	ok
+2006-03-16T09:20:00.000Z	cedriczg	Managu	Well I can only manage that after every refresh wich takes ages :P
+2006-03-16T09:22:00.000Z	cedriczg	Managu	I pasted the mount result on http://paste.ubuntu-nl.org/9989
+2006-03-16T09:23:00.000Z	Managu	cedriczg	ok, nothing too funky there.  Next thought... one second =)
+2006-03-16T09:26:00.000Z	Managu	cedriczg	I'm out of good ideas.  If what you say is true, you're somehow losing some part of your apt cache on every bootup.  I'd look through the bootup files for suspicious stuff, but that'll take a while
+2006-03-16T09:28:00.000Z	cedriczg	Managu	maybe I can backup the new files I have now on /var/lib/apt/lists, reboot now and see what happens
+2006-03-16T09:28:00.000Z	Managu	cedriczg	that's likely to work -- at least until packages change
+2006-03-16T09:28:00.000Z	cedriczg	Managu	yes :P
+2006-03-16T09:29:00.000Z	cedriczg	Managu	I'll try it now and tell you the result
+2006-03-16T09:29:00.000Z	cedriczg	Managu	thank you very much, and see ya
+2006-03-16T09:29:00.000Z	Managu	cedriczg	g'luck
+2006-03-16T09:36:00.000Z	cedriczg	Managu	Well it seems it still works
+2006-03-16T09:36:00.000Z	cedriczg	Managu	the files are still there
+2006-03-16T09:37:00.000Z	Managu	cedriczg	cool =)
+2006-03-16T09:37:00.000Z	cedriczg	Managu	but I'm not confident it will work for long
+2006-03-16T09:37:00.000Z	cedriczg	Managu	Because I had once the Synaptic working this way for some rebootings and then the same thing
+2006-03-16T09:38:00.000Z	cedriczg	Managu	but it is a little conquest
+2006-03-16T09:39:00.000Z	cedriczg	Managu	Can some ot the upgrades that suggests the ubuntu (when I start an internet conection) do some collateral efect of this matter?
+2006-03-16T09:40:00.000Z	Managu	cedriczg	I doubt it.  I don't really know what the problem is for you.  The only real thing you'd need to worry about is a large change to the package list, which probably won't happen very often
+2006-03-16T09:40:00.000Z	cedriczg	Managu	For example now it suggests me to upgrade the libvte-common and the libvte4, which I don't know what are
+2006-03-16T09:40:00.000Z	Managu	cedriczg	why update them if you don't need to?  Just put them on hold
+2006-03-16T09:41:00.000Z	cedriczg	Managu	I once updated the kernel for ex.
+2006-03-16T09:41:00.000Z	Managu	cedriczg	that shouldn't matter
+2006-03-16T09:42:00.000Z	cedriczg	Managu	ok. Than you a lot. Here as I said once I find real help :)
+2006-03-17T09:13:00.000Z	cedriczg	Managu	Hi, how are you doing?
+2006-03-17T09:13:00.000Z	cedriczg	Managu	I have some news about my Synaptic
+2006-03-17T09:15:00.000Z	cedriczg	Managu	Are you there?
+2006-03-17T09:17:00.000Z	Managu	cedriczg	what's up?
+2006-03-17T09:17:00.000Z	cedriczg	Managu	well this boot was not succesful for the synaptic
+2006-03-17T09:18:00.000Z	Managu	cedriczg	doh.  Not a clue what your problem is =(
+2006-03-17T09:18:00.000Z	cedriczg	Managu	all the needed files in /var/lib/apt disapeared
+2006-03-17T09:18:00.000Z	cedriczg	Managu	And the empty "lock" file I told you appeared!!!
+2006-03-17T09:19:00.000Z	cedriczg	Managu	Then I copied the files I buchuped
+2006-03-17T09:19:00.000Z	cedriczg	Managu	And voila, the Synaptic worked
+2006-03-17T09:19:00.000Z	Managu	cedriczg	well, that's good at least
+2006-03-17T09:19:00.000Z	cedriczg	Managu	This way at least I don't have to download all
+2006-03-17T09:19:00.000Z	cedriczg	Managu	One more thing
+2006-03-17T09:20:00.000Z	cedriczg	Managu	When executin the synaptic before in the command line
+2006-03-17T09:21:00.000Z	cedriczg	Managu	I had this output : (synaptic:7908): Gtk-CRITICAL **: gtk_accel_label_set_accel_closure: assertion `gtk_accel_group_from_accel_closure (accel_closure) != NULL' failed
+2006-03-17T09:21:00.000Z	Managu	cedriczg	I wouldn't worry about it.  It doesn't look relivant
+2006-03-17T09:21:00.000Z	cedriczg	Managu	It seems that I have this output also now... But now it works as I tod you
+2006-03-17T09:21:00.000Z	cedriczg	Managu	So none of us have a clue what may be happening
+2006-03-17T09:22:00.000Z	Managu	cedriczg	you could try digging through your startup files (in /etc/init.d) to see if any of them are doing something fishy.  That's the only thing I can think of
+2006-03-17T09:23:00.000Z	cedriczg	Managu	Thnaxs, I'll try to look that
+2006-03-17T09:25:00.000Z	cedriczg	Managu	I have only a file called /etc/initab, you mean that one?
+2006-03-17T09:25:00.000Z	cedriczg	Managu	I mean inittab
+2006-03-17T09:26:00.000Z	Managu	cedriczg	no.  There should be a number of files in the /etc/init.d directory
+2006-03-17T09:26:00.000Z	cedriczg	Managu	oh the directory

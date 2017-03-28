@@ -1,0 +1,99 @@
+2010-07-27T22:30:00.000Z	milen8204		How i can change my mac address ?
+2010-07-27T22:30:00.000Z	ActionParsnip	milen8204	I know how in /etc/network/interfaces
+2010-07-27T22:31:00.000Z	milen8204	ActionParsnip	i tried but i couldn`t wria any word there
+2010-07-27T22:31:00.000Z	ActionParsnip	milen8204	not sure if it will stop network manager being able to manage the interface thoough
+2010-07-27T22:32:00.000Z	milen8204	ActionParsnip	I must cut out all connections
+2010-07-27T22:32:00.000Z	ActionParsnip	milen8204	http://www.youritronics.com/how-to-set-the-mac-address-from-etcnetworkinterfaces-in-debian/
+2010-07-27T22:32:00.000Z	milen8204	ActionParsnip	thanks
+2010-07-27T22:34:00.000Z	ActionParsnip	milen8204	you can use the interfaces to set a static ip. If you want to change your internet ip (ie. You don't use a router) then you will need to contact your provider
+2010-07-27T22:36:00.000Z	ActionParsnip	milen8204	you can change what ip you have on your own lan very freely as long as it falls into the subnet of your router (you can even change that if you want to change all of the address) but the ip you get from your provider is given to you and is out of your control
+2010-07-27T22:37:00.000Z	milen8204	ActionParsnip	I have changed my PC and my old PC had had a difren IP and MAC than new one :D
+2010-07-27T22:38:00.000Z	ActionParsnip	milen8204	that's normal. Here is how you can define ip in the interfaces file too. If you use it then network manager will NOT be able to manage the interface http://www.cyberciti.biz/faq/setting-up-an-network-interfaces-file/
+2010-07-27T22:38:00.000Z	milen8204	ActionParsnip	thanks a lot
+2011-01-08T22:43:00.000Z	ActionParsnip	milen8204	try:  dpkg -S math.h
+2011-01-08T22:43:00.000Z	milen8204	ActionParsnip	thanks
+2011-02-17T00:02:00.000Z	ActionParsnip	milen8204	what is the filename and where is it located?
+2011-02-17T00:03:00.000Z	milen8204	ActionParsnip	/home/milen/Azureus Downloads/Swat 4 The Stetchkov Syndicate - RELOADED/rld-sw4x.bin
+2011-02-17T00:05:00.000Z	ActionParsnip	milen8204	isn't that a paid for software?
+2011-02-17T00:14:00.000Z	milen8204	ActionParsnip	you mean that is pirate copy ?
+2011-02-17T00:14:00.000Z	ActionParsnip	milen8204	yes, its clear you used Azeurus to pull it down. Piracy is not condoned or supported here
+2011-05-02T17:44:00.000Z	ActionParsnip	milen8204	UUID=43beb8fe-c819-4ec4-9909-c0cc658d7a9b /home           ext4    defaults,user_xattr        0       2
+2011-05-02T17:44:00.000Z	ActionParsnip	milen8204	the UUID will be different
+2011-05-02T17:48:00.000Z	milen8204	ActionParsnip	I dont understand much
+2011-05-02T17:51:00.000Z	milen8204	ActionParsnip	it is UUID unique for every device ?
+2011-05-02T17:51:00.000Z	ActionParsnip	milen8204	yes
+2011-05-02T17:51:00.000Z	ActionParsnip	milen8204	sudo blkid   will show you yours
+2011-05-02T17:52:00.000Z	milen8204	ActionParsnip	It is the same for sta1, sta2 and others ?
+2011-05-02T17:52:00.000Z	ActionParsnip	milen8204	any storage device, yes
+2011-05-02T17:53:00.000Z	milen8204	ActionParsnip	I see it is the same for different partition :D thanks
+2011-05-02T18:01:00.000Z	milen8204	ActionParsnip	what-for  I should write in fstab :  defaults,user_xattr, I just want to know\
+2011-05-02T22:07:00.000Z	milen8204	ActionParsnip	 UUID=71ec6a02-10f0-4ee7-85bd-dea3aa9fbb2d /home ext4 defaults,(what have to type here ) 0 0
+2011-05-02T22:08:00.000Z	ActionParsnip	milen8204	UUID=43beb8fe-c819-4ec4-9909-c0cc658d7a9b /home           ext4    defaults,user_xattr        0       2
+2011-05-02T22:08:00.000Z	ActionParsnip	milen8204	that's mine
+2011-05-02T22:09:00.000Z	milen8204	ActionParsnip	thanks alot :D
+2011-05-02T22:14:00.000Z	milen8204	ActionParsnip	how I can see type of the mounting volume ?
+2011-05-02T22:14:00.000Z	ActionParsnip	milen8204	sudo parted -l
+2011-05-02T22:16:00.000Z	milen8204	ActionParsnip	thanks
+2011-05-02T22:18:00.000Z	milen8204	ActionParsnip	what does reiserfs means ? :D
+2011-07-20T21:15:00.000Z	ActionParsnip	milen8204	there is no single best app for any single situation
+2011-07-20T21:15:00.000Z	ActionParsnip	milen8204	so the answer is: none and all
+2011-07-20T21:15:00.000Z	ActionParsnip	milen8204	it's as intelligent as asking "what is the best colour?"
+2011-07-20T21:16:00.000Z	milen8204	ActionParsnip	ok which is most popular then others :D
+2011-07-20T21:16:00.000Z	ActionParsnip	milen8204	qemu, virtualbox, vmware
+2011-07-20T21:17:00.000Z	milen8204	ActionParsnip	thanks :)
+2011-11-11T01:33:00.000Z	ActionParsnip	milen8204	sure you can use a dock if you wish
+2011-11-11T01:33:00.000Z	milen8204	ActionParsnip	jtr__  thanks
+2011-12-03T15:51:00.000Z	ActionParsnip	milen8204	I'd ask in #vbox too ;)
+2011-12-03T15:51:00.000Z	milen8204	ActionParsnip	I will ask there too
+2011-12-03T16:01:00.000Z	milen8204	ActionParsnip	i didn`t get any answer
+2012-01-17T01:23:00.000Z	ActionParsnip	milen8204	from what OS are you trying to see the share?
+2012-01-17T01:23:00.000Z	milen8204	ActionParsnip	 Ubuntu - Ubuntu
+2012-01-17T01:24:00.000Z	milen8204	ActionParsnip	 bough are 11.10
+2012-01-17T01:24:00.000Z	ActionParsnip	milen8204	on the client, you can run:  smbtree   and the LAN will be scanned for shares in CLI
+2012-01-17T01:24:00.000Z	milen8204	ActionParsnip	thanks I will try
+2012-01-17T01:26:00.000Z	milen8204	ActionParsnip	I am connected trough rooter
+2012-01-17T01:27:00.000Z	ActionParsnip	milen8204	the interconnection is irrelevant, if there is a logical link, it will show
+2012-01-17T01:28:00.000Z	milen8204	ActionParsnip	but I `ve tried smbtree but nothing happen
+2012-01-17T01:29:00.000Z	milen8204	ActionParsnip	should I have Samba ? :D
+2012-01-17T01:29:00.000Z	ActionParsnip	milen8204	on the cserver, yes
+2012-01-17T01:31:00.000Z	milen8204	ActionParsnip	no I just have a laptop and PC connected in internet trough rooter, and I want transfer some files, could you help me to do that ?
+2012-01-19T01:30:00.000Z	milen8204	ActionParsnip	hello my virtual friend
+2012-02-20T23:26:00.000Z	ActionParsnip	milen8204	http://askubuntu.com/questions/10223/display-current-layout-language-code-country-flag-in-keyboard-indicator
+2012-02-20T23:26:00.000Z	milen8204	ActionParsnip	thanks
+2012-02-20T23:27:00.000Z	milen8204	ActionParsnip	is that work for 11.10
+2012-02-20T23:27:00.000Z	ActionParsnip	milen8204	possibly
+2012-02-20T23:28:00.000Z	milen8204	ActionParsnip	:D thanks
+2012-02-20T23:33:00.000Z	milen8204	ActionParsnip	my gconf-editor have no /desktop/peripherals/keyboard/indicator that is only for 11.10
+2012-02-20T23:34:00.000Z	ActionParsnip	milen8204	maybe org/gnome/libgnomekbd/indicator/show-flags   in dconf...
+2012-02-20T23:36:00.000Z	ActionParsnip	milen8204	http://www.onlinehowto.net/gnome-keyboard-indicator-with-country-flags/1468
+2012-02-20T23:37:00.000Z	milen8204	ActionParsnip	ok thanks will try
+2012-02-20T23:52:00.000Z	milen8204	ActionParsnip	didn`t work
+2012-04-17T21:36:00.000Z	ActionParsnip	milen8204	Could try xfburn :)
+2012-04-17T22:05:00.000Z	milen8204	ActionParsnip	xfburn works well :Д
+2012-04-17T22:06:00.000Z	ActionParsnip	milen8204	i've never had a success with brasero. To me xfburn rocks hard :)
+2012-04-17T22:07:00.000Z	milen8204	ActionParsnip	I thought that my DVD is broken :Д
+2012-08-19T22:19:00.000Z	ActionParsnip	milen8204	what is the output of:  lsb_release -sc
+2012-08-19T22:22:00.000Z	milen8204	ActionParsnip	\oneiric
+2012-08-19T22:23:00.000Z	ActionParsnip	milen8204	With nautilus as the active window, move the mouse to the global menu
+2012-08-19T22:24:00.000Z	milen8204	ActionParsnip	and then ? :Д
+2012-08-19T22:24:00.000Z	ActionParsnip	milen8204	or you should be able to drag to the left panel
+2012-08-19T22:25:00.000Z	milen8204	ActionParsnip	ok I will try thanks
+2012-09-09T16:56:00.000Z	ActionParsnip	milen8204	how do you mean?
+2012-09-09T16:57:00.000Z	ActionParsnip	milen8204	do you mean a launcher for an applicatin?
+2012-09-09T16:57:00.000Z	milen8204	ActionParsnip	yes launcher for a script
+2012-09-09T17:01:00.000Z	ActionParsnip	milen8204	is it a single command line or is it a few?
+2012-09-09T17:02:00.000Z	milen8204	ActionParsnip	 i think 45 rows :D
+2012-09-09T17:02:00.000Z	ActionParsnip	milen8204	yowser
+2012-09-09T17:02:00.000Z	milen8204	ActionParsnip	 it is a bash script
+2012-09-09T17:03:00.000Z	ActionParsnip	milen8204	I can sugest you make a .desktop file on the desktop to run:  gnome-terminal -x /path/to/script    and it will run in a terminal
+2012-09-09T17:04:00.000Z	milen8204	ActionParsnip	no I made bash script whit several commands, and want to execute that commands whit launcher
+2012-09-09T17:04:00.000Z	ActionParsnip	milen8204	the .desktop file will do that for you, I suggest you copy one from ~/.config/autostart    then modify it
+2012-09-09T17:05:00.000Z	ActionParsnip	milen8204	when you dounble click the icon, it will launch a terminal and run the script in it
+2012-09-09T17:05:00.000Z	milen8204	ActionParsnip	I am a newby in the .desctop files
+2012-09-09T17:06:00.000Z	ActionParsnip	milen8204	I can make you it if you want...
+2012-09-09T17:08:00.000Z	milen8204	ActionParsnip	I will try alone, but you can help if you want ;D
+2012-09-09T17:08:00.000Z	ActionParsnip	milen8204	what is the full path to your script please
+2012-09-09T17:09:00.000Z	ActionParsnip	milen8204	what is the full path to your script please?
+2012-09-09T17:12:00.000Z	ActionParsnip	milen8204	wget -O ~/Desktop/nostra.desktop https://dl.dropbox.com/u/8850924/nostra.desktop
+2012-09-09T17:17:00.000Z	milen8204	ActionParsnip	tahnks  a lot, after your file i made another alone :D
+2012-09-09T17:28:00.000Z	milen8204	ActionParsnip	how to edit .desktop file ?

@@ -1,0 +1,95 @@
+2009-12-13T03:10:00.000Z	Diverdude		hmm is there a way to get all emerald themes in 1 fetch?
+2009-12-13T03:11:00.000Z	ActionParsnip	Diverdude	there are thosands of themes, it will easily fill your drives
+2009-12-13T03:12:00.000Z	Diverdude	ActionParsnip	hmm ok....where do i find them and how do i download them?
+2009-12-13T03:13:00.000Z	ActionParsnip	Diverdude	http://compiz-themes.org/index.php?xcontentmode=103
+2009-12-13T03:14:00.000Z	Diverdude	ActionParsnip	yes i found this b4 also...but its a .tar.gz file which i cannot import into emerald
+2009-12-13T03:16:00.000Z	Diverdude	ActionParsnip	how do i import a tar.gz file into emerald?
+2009-12-13T05:31:00.000Z	ActionParsnip	Diverdude	if its shared, yes
+2009-12-13T05:31:00.000Z	Diverdude	ActionParsnip	I can ssh it...so can i then also mount it?
+2009-12-13T05:32:00.000Z	ActionParsnip	Diverdude	sure you can use sshfs
+2009-12-13T05:33:00.000Z	Diverdude	ActionParsnip	is it preinstalled?
+2009-12-14T20:23:00.000Z	ActionParsnip	Diverdude	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.2/enu/AdbeRdr9.2-1_i386linux_enu.deb
+2009-12-14T20:23:00.000Z	ActionParsnip	Diverdude	if you use 32bit install ia32bit-libs and then force install the app
+2009-12-14T20:25:00.000Z	ActionParsnip	Diverdude	sorry if you use 64bit
+2009-12-14T20:25:00.000Z	Diverdude	ActionParsnip	thanx :)
+2009-12-14T20:25:00.000Z	Diverdude	ActionParsnip	i dont
+2009-12-14T20:25:00.000Z	ActionParsnip	Diverdude	then you can striaght instll the deb and you will have adobe's reader
+2009-12-14T20:26:00.000Z	Diverdude	ActionParsnip	yep already did it :) thx
+2010-01-21T14:06:00.000Z	Diverdude	ActionParsnip	So what do i write in fstab file?
+2010-01-21T14:14:00.000Z	Diverdude	ActionParsnip	ok...does this look about right: UUID="1C66D87A66D855DC" /media/TrayData auto defaults 0 2     ?
+2010-01-21T14:26:00.000Z	Diverdude	ActionParsnip	ok...does this look about right: UUID="1C66D87A66D855DC" /media/TrayData auto defaults 0 2     ?
+2010-02-09T01:42:00.000Z	Diverdude	ActionParsnip	hmm okay...so just to be sure...when it writes: Candidate: 1:3.5.0-2ubuntu2, then its 3.5.0-2 and not 1.3.5.0-2 or something like that right?
+2010-02-19T12:46:00.000Z	ActionParsnip	Diverdude	could create an export in .bashrc
+2010-02-19T12:46:00.000Z	ActionParsnip	Diverdude	you can then use: cd $arb
+2010-02-19T12:47:00.000Z	Diverdude	ActionParsnip	well what if i am then in location a and i want to do a cp $arb/something to $arb/somethingElse  will that be possible?
+2010-02-19T12:47:00.000Z	ActionParsnip	Diverdude	absolutely
+2010-02-19T12:48:00.000Z	ActionParsnip	Diverdude	there are a few already setup like $HOME
+2010-02-19T12:48:00.000Z	Diverdude	ActionParsnip	okay...how do i make such an export?
+2010-02-19T12:49:00.000Z	ActionParsnip	Diverdude	export arb="/media/Traydata/arbejde"
+2010-02-19T12:50:00.000Z	ActionParsnip	Diverdude	put that in $HOME/.bashrc then run: source $HOME/.bashrc
+2010-02-19T12:51:00.000Z	Diverdude	ActionParsnip	just append it in the bottom of the file?
+2010-02-19T12:51:00.000Z	ActionParsnip	Diverdude	sure
+2010-02-19T12:52:00.000Z	Diverdude	ActionParsnip	nice :) thx m8
+2010-02-19T12:53:00.000Z	ActionParsnip	Diverdude	you can do tonnes of mad stuff in bash like that
+2010-02-19T12:56:00.000Z	Diverdude	ActionParsnip	what else can you do of cool stuff?
+2010-02-19T12:57:00.000Z	ActionParsnip	Diverdude	make aliases to long strings of commands you use a lot
+2010-02-22T02:44:00.000Z	ActionParsnip	Diverdude	i think its awesome and plays nice with my phone. try a few see which you like
+2010-02-22T02:45:00.000Z	Diverdude	ActionParsnip	i just dont understand why transmission keeps disconnecting me when wuze works just fine
+2010-08-06T23:43:00.000Z	ActionParsnip	Diverdude	cat /proc/cpu
+2010-08-26T07:15:00.000Z	ActionParsnip	Diverdude	if its on a remote system it wont be ext4
+2010-10-13T11:02:00.000Z	ActionParsnip	Diverdude	#ubuntu-offtopic  may know
+2010-10-26T17:09:00.000Z	ActionParsnip	Diverdude	if you are compiling then the release is moot
+2010-10-30T22:41:00.000Z	ActionParsnip	Diverdude	you could script it easily
+2010-11-11T17:02:00.000Z	ActionParsnip	Diverdude	if you connect to the VPN then run:  ifconfig   look at the address, are both on the same subnet (look at the first 3 numbers in the IP addresses)
+2010-11-11T17:04:00.000Z	Diverdude	ActionParsnip	most likely not. So if they are not, what do i do?
+2010-11-11T17:05:00.000Z	ActionParsnip	Diverdude	they NEED to be different, if the VPN address (for example) is 192.168.0.x and your LAN IP also uses 192.168.0.x then there is zero differentiation between the networks and youwill need to change the address network of YOUR network to something else (like 192.168.1.x)
+2010-11-11T17:06:00.000Z	Diverdude	ActionParsnip	ahhhh i see...
+2010-11-11T17:06:00.000Z	Diverdude	ActionParsnip	and that has to be done in my router yes?
+2010-11-11T17:07:00.000Z	Diverdude	ActionParsnip	hmm actually they are different
+2010-11-11T17:08:00.000Z	Diverdude	ActionParsnip	lan ip is 192.168.1.33 and vpn is 192.168.0.25
+2010-11-11T17:08:00.000Z	ActionParsnip	Diverdude	ok thats good, and necessary
+2010-11-11T17:09:00.000Z	ActionParsnip	Diverdude	can you ping the vpn ip?
+2010-11-11T17:10:00.000Z	Diverdude	ActionParsnip	i can ping a server in my (company) when on vpn (i cannot go on vpn now because i will get disconnected to from irc)
+2010-11-11T17:10:00.000Z	ActionParsnip	Diverdude	hmm
+2010-11-11T17:10:00.000Z	Diverdude	ActionParsnip	moment ill jut go on vpn
+2010-11-11T17:11:00.000Z	ActionParsnip	Diverdude	http://askubuntu.com/questions/3518/connecting-to-vpn-prevents-access-to-normal-web-sites
+2010-11-11T17:15:00.000Z	Diverdude	ActionParsnip	hmm so have to set up routing?
+2010-11-11T17:16:00.000Z	Diverdude	ActionParsnip	what should then be set as ip address in routes?
+2010-11-11T17:18:00.000Z	Diverdude	ActionParsnip	?
+2010-11-11T17:18:00.000Z	ActionParsnip	Diverdude	you need to route 192.168.1.0/24 down your adapter and 192.168.0.0/24 down the VPN adapter
+2010-11-11T17:19:00.000Z	Diverdude	ActionParsnip	what is the /24 ?
+2010-11-11T17:20:00.000Z	ActionParsnip	Diverdude	means the first 24 bits of the address are for the network and the last 8 are for hosts
+2010-11-11T17:21:00.000Z	Diverdude	ActionParsnip	sorry about the stupid question, but what do i write in the 'routes' window in order to route 192.168.1.0/24 down my adapter and 192.168.0.0/24 down the VPN adapter?
+2010-11-11T17:26:00.000Z	Diverdude	ActionParsnip	sorry about the stupid question, but what do i write in the 'routes' window in order to route 192.168.1.0/24 down my adapter and 192.168.0.0/24 down the VPN adapter?
+2010-11-11T17:28:00.000Z	ActionParsnip	Diverdude	look at examples of route online, there will be lots, something like: route add net 192.168.0.1 netmask 255.255.255.0 interface pptp0    i just made that up so its most likely very wrong.
+2010-11-11T17:29:00.000Z	Diverdude	ActionParsnip	hmm but the problem is that both networks uses dhcp, so i cannot hardcode my ip in routes, because it might change next time
+2010-11-11T17:32:00.000Z	ActionParsnip	Diverdude	you can make a script to run to setup the routes
+2010-11-11T17:33:00.000Z	Diverdude	ActionParsnip	hmm that sounds like a good idea. So using route add net command?
+2010-11-11T17:34:00.000Z	Diverdude	ActionParsnip	like: route add -net 12.34.0.0 netmask 255.255.0.0 gw 12.34.56.1    ?
+2010-11-11T17:35:00.000Z	ActionParsnip	Diverdude	you'll find samples online, just tweak the addresses and interface names as you reequire
+2010-11-22T11:46:00.000Z	ActionParsnip	Diverdude	alsamixer
+2010-11-22T11:46:00.000Z	Diverdude	ActionParsnip	is that preinstalled?
+2010-11-22T11:47:00.000Z	ActionParsnip	Diverdude	yep, part of alsa-utils if memory serves
+2010-11-22T11:47:00.000Z	Diverdude	ActionParsnip	 yes i can see i have it installed. Nice. Sohow do i use it to adjust volume?
+2010-11-22T11:49:00.000Z	ActionParsnip	Diverdude	run the app, m to. Mute, cursors to change channel/level, q to quit
+2010-11-22T11:49:00.000Z	Diverdude	ActionParsnip	its because i need to make a bash-script that turns the volume to 0% at startup so that i am sure that the introductury sound never plays
+2010-11-22T11:49:00.000Z	ActionParsnip	Diverdude	ahhhh then look into: man amixer
+2010-11-22T11:50:00.000Z	Diverdude	ActionParsnip	or is it possible somewhere to disable the welcome music feature?
+2010-11-22T11:51:00.000Z	ActionParsnip	Diverdude	sure in sound properties, change the soundscheme to none, or just uninstall the ubuntu-sounds package
+2010-11-22T11:52:00.000Z	Diverdude	ActionParsnip	well i dont ind the rest of the sounds...the problem is just of i open the laptop in a lecture and the music goes crazy because i did not put speakers on mute last time i closed down.....Its kinda bad
+2010-11-22T11:52:00.000Z	Diverdude	ActionParsnip	ind = mind
+2010-11-22T11:52:00.000Z	Diverdude	ActionParsnip	so if i could just disable login it would be good
+2010-11-22T11:53:00.000Z	Diverdude	ActionParsnip	login sound that is
+2010-11-22T11:53:00.000Z	ActionParsnip	Diverdude	I think you'd have to just edit the single file that does the sound, to be an empty file
+2011-01-09T01:55:00.000Z	ActionParsnip	Diverdude	perhaps: pdftotext YOUR_PDF.pdf YOUR_PDF.txt; wc YOUR_PDF.txt -w
+2011-01-09T01:55:00.000Z	ActionParsnip	Diverdude	or: pdftotext YOUR_PDF.pdf - | wc -w
+2011-01-09T01:56:00.000Z	Diverdude	ActionParsnip	ahhh the '-' was missing. What does that do?
+2011-01-09T01:56:00.000Z	ActionParsnip	Diverdude	no idea. source: http://ubuntuforums.org/showthread.php?t=566407
+2011-01-09T03:33:00.000Z	ActionParsnip	Diverdude	yes I believe so
+2011-01-17T02:29:00.000Z	ActionParsnip	Diverdude	it will cause an error, and you may have to force the install. You should also log a bug
+2011-06-30T11:50:00.000Z	ActionParsnip	Diverdude	play with your OS and see what it can do rather than just logging on to Facebook and you'll learn
+2011-06-30T11:47:00.000Z	Diverdude	ActionParsnip	where do you gain all your linux knowledge from?
+2011-06-30T11:47:00.000Z	ActionParsnip	Diverdude	experience, google and bing :-)
+2011-06-30T11:48:00.000Z	Diverdude	ActionParsnip	hehe nice :) ou work as admin?
+2011-06-30T11:49:00.000Z	ActionParsnip	Diverdude	no but working on exams to ;-)
+2011-06-30T11:49:00.000Z	Diverdude	ActionParsnip	exams?

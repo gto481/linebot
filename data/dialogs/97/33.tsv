@@ -1,0 +1,97 @@
+2007-07-23T09:47:00.000Z	daedra		Xlib: connection to "localhost:11.0" refused by server
+2007-07-23T09:47:00.000Z	daedra		Xlib: Invalid MIT-MAGIC-COOKIE-1 key
+2007-07-23T09:47:00.000Z	daedra		Error: Can't open display: localhost:11.0
+2007-07-23T09:47:00.000Z	daedra		to post LARGE textxs
+2007-07-23T09:48:00.000Z	CardinalBiggles	daedra	What are you trying to do?
+2007-07-23T09:48:00.000Z	daedra	CardinalBiggles	tunnel X over ssh
+2007-07-23T09:49:00.000Z	CardinalBiggles	daedra	Ah.  Does the place from which you're running SSH have access to the X server?  Can you run "xeyes" from where you are?
+2007-07-23T09:50:00.000Z	daedra	CardinalBiggles	no
+2007-07-23T09:51:00.000Z	CardinalBiggles	daedra	That's the problem.  Your client isn't allowed to connect to the server.  From inside the server trust zone, you can connect to it with SSH and then let ssh tunnel it out, but you can't start from the outside.
+2007-07-23T09:52:00.000Z	CardinalBiggles	daedra	Am I making sense?
+2007-07-23T09:52:00.000Z	daedra	CardinalBiggles	so what should I do?
+2007-07-23T09:52:00.000Z	daedra	CardinalBiggles	no that made no sense
+2007-07-23T09:52:00.000Z	CardinalBiggles	daedra	^
+2007-07-23T09:53:00.000Z	CardinalBiggles	daedra	From the X server trust zone,  $ xhost +localhost
+2007-07-23T09:53:00.000Z	daedra	CardinalBiggles	but I _am_ allowed to log in - I can tunnel non X apps over ssh just fine
+2007-07-23T09:55:00.000Z	daedra	CardinalBiggles	ok I'll try that
+2007-07-23T09:55:00.000Z	CardinalBiggles	daedra	A better way is to SSH the other way.  From within a process spawned inside X, there, run SSH and connect out.
+2007-07-23T09:56:00.000Z	daedra	CardinalBiggles	no that doesn't work either
+2007-07-23T09:57:00.000Z	CardinalBiggles	daedra	What doesmn't work?
+2007-07-23T09:57:00.000Z	daedra	CardinalBiggles	(from within X tunneling out)
+2007-07-23T09:57:00.000Z	daedra	CardinalBiggles	i'm still trying the first
+2007-07-23T09:58:00.000Z	CardinalBiggles	daedra	I assure you that tunneling out (not in) does work.  Perhaps you have some other restriction preventing it, that I don't know about?
+2007-07-23T09:59:00.000Z	daedra	CardinalBiggles	/usr/bin/X11/xauth:  error in locking authority file /home/simon/.Xauthority
+2007-07-23T09:59:00.000Z	CardinalBiggles	daedra	"xeyes"?
+2007-07-23T10:00:00.000Z	daedra	CardinalBiggles	that happens when merely doing ssh 127.0.0.1 -X from within X
+2007-07-23T10:01:00.000Z	CardinalBiggles	daedra	"xeyes"?
+2007-07-23T10:01:00.000Z	daedra	CardinalBiggles	^
+2007-07-23T10:01:00.000Z	CardinalBiggles	daedra	that's from the local machine?
+2007-07-23T10:02:00.000Z	CardinalBiggles	daedra	alright, then it's not an ssh problem.  If you can't run '
+2007-07-23T10:03:00.000Z	CardinalBiggles	daedra	alright, then it's not an ssh problem.  If you can't run 'xeyes' then you can't also connect ssh to that port.
+2007-07-23T10:03:00.000Z	CardinalBiggles	daedra	are you at that X server right now?
+2007-07-23T10:03:00.000Z	daedra	CardinalBiggles	strange. I can run nano through ssh
+2007-07-23T10:03:00.000Z	daedra	CardinalBiggles	yep
+2007-07-23T10:03:00.000Z	CardinalBiggles	daedra	"nano" doesn't connect to X, does it?
+2007-07-23T10:03:00.000Z	daedra	CardinalBiggles	no
+2007-07-23T10:04:00.000Z	daedra	CardinalBiggles	but I'm just saying that ssh localhost nano works
+2007-07-23T10:04:00.000Z	CardinalBiggles	daedra	You lack a fundamental understanding of how X works.  :\  You may learn something in the next few minutes...
+2007-07-23T10:05:00.000Z	CardinalBiggles	daedra	You're sitting at an X server, yes?  You have a terminal open.  What kind of terminal?  "xterm"?  "gnome-terminal"? what?
+2007-07-23T10:06:00.000Z	daedra	CardinalBiggles	echo $TERM gives xterm
+2007-07-23T10:06:00.000Z	CardinalBiggles	daedra	okay.  Now, type "xterm" at the prompt.  What happens?
+2007-07-23T10:07:00.000Z	daedra	CardinalBiggles	at the prompt _within_ ssh or normally
+2007-07-23T10:07:00.000Z	CardinalBiggles	daedra	No ssh.  Forget ssh.
+2007-07-23T10:07:00.000Z	daedra	CardinalBiggles	it spawns another xterm
+2007-07-23T10:07:00.000Z	CardinalBiggles	daedra	Good.
+2007-07-23T10:07:00.000Z	CardinalBiggles	daedra	So, $ echo $DISPLAY
+2007-07-23T10:08:00.000Z	daedra	CardinalBiggles	Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+2007-07-23T10:08:00.000Z	daedra	CardinalBiggles	echo $DISPLAY gives :1.0
+2007-07-23T10:09:00.000Z	CardinalBiggles	daedra	excellent.  Now, "xeyes".
+2007-07-23T10:09:00.000Z	daedra	CardinalBiggles	yep it works
+2007-07-23T10:09:00.000Z	CardinalBiggles	daedra	Ah.  So, local clients can connect to the X server.
+2007-07-23T10:10:00.000Z	CardinalBiggles	daedra	Now, $ ssh -v -X remotehost
+2007-07-23T10:11:00.000Z	daedra	CardinalBiggles	I'll pastebin it as its verbose
+2007-07-23T10:14:00.000Z	daedra	CardinalBiggles	do you happen to know what the "copy" keystroke is by the way
+2007-07-23T10:14:00.000Z	daedra	CardinalBiggles	(in Windows this is CTRL+C)
+2007-07-23T10:14:00.000Z	CardinalBiggles	daedra	select with mouse.  middle-click to paste.
+2007-07-23T10:14:00.000Z	daedra	CardinalBiggles	its not copying
+2007-07-23T10:15:00.000Z	daedra	CardinalBiggles	oh its working sorry
+2007-07-23T10:17:00.000Z	CardinalBiggles	daedra	What is working?  Copy/paste, or tunneling.  Curse you, English, and your fuzzy antecedents!
+2007-07-23T10:19:00.000Z	daedra	CardinalBiggles	http://pastebin.ubuntu-nl.org/30929
+2007-07-23T10:22:00.000Z	daedra	CardinalBiggles	hello?
+2007-07-23T10:23:00.000Z	CardinalBiggles	daedra	I see three attempts to ssh there, yes?
+2007-07-23T10:23:00.000Z	daedra	CardinalBiggles	yeah, sorry - I can paste a cleaner dump if you wish
+2007-07-23T10:23:00.000Z	CardinalBiggles	daedra	The last one is what we care about, I'll assume.
+2007-07-23T10:24:00.000Z	daedra	CardinalBiggles	yes, its the one I logged into
+2007-07-23T10:27:00.000Z	CardinalBiggles	daedra	drop back to your native shell.  What happens when you type "xauth"?
+2007-07-23T10:31:00.000Z	daedra	CardinalBiggles	I get xauth: /home/simon/.Xauthority not writable, changes will be ignored
+2007-07-23T10:31:00.000Z	CardinalBiggles	daedra	Ah!  Figure out what that means.
+2007-07-23T10:32:00.000Z	daedra	CardinalBiggles	durrrr I think I need to chmod it to be writable
+2007-07-23T10:35:00.000Z	daedra	CardinalBiggles	even when I chmod it it doesn't work
+2007-07-23T10:36:00.000Z	CardinalBiggles	daedra	Who owns it?
+2007-07-23T10:37:00.000Z	daedra	CardinalBiggles	me now (simon)
+2007-07-23T10:37:00.000Z	daedra	CardinalBiggles	I've done chown/chmod 655
+2007-07-23T10:37:00.000Z	CardinalBiggles	daedra	"chown 555" is like two kinds of broken.
+2007-07-23T10:39:00.000Z	CardinalBiggles	daedra	Just "rm ThatFile" and start over.  "xauth"
+2007-07-23T10:39:00.000Z	daedra	CardinalBiggles	ok
+2007-07-23T10:39:00.000Z	CardinalBiggles	daedra	xauth should give some output, I think.
+2007-07-23T10:40:00.000Z	daedra	CardinalBiggles	yep - "creating new authority file..."
+2007-07-23T10:40:00.000Z	daedra	CardinalBiggles	and a prompt xauth>
+2007-07-23T10:41:00.000Z	CardinalBiggles	daedra	Okay.  I'm not certain about this part.  control-d.  Then, try "xeyes" to make sure it still works.
+2007-07-23T10:42:00.000Z	CardinalBiggles	daedra	now, "ssh -X localhost xeyes"
+2007-07-23T10:44:00.000Z	daedra	CardinalBiggles	WHAT!? xauth _says_ its created a new .Xauthority but when I ls -la for it nothings there
+2007-07-23T10:47:00.000Z	daedra	CardinalBiggles	you there?
+2007-07-23T10:49:00.000Z	CardinalBiggles	daedra	I'm here.
+2007-07-23T10:49:00.000Z	CardinalBiggles	daedra	Are you switching users, or sudo'ing or something?
+2007-07-23T10:50:00.000Z	CardinalBiggles	daedra	$ ls -la $HOME |grep Xaut
+2007-07-23T10:50:00.000Z	daedra	CardinalBiggles	no - but this might help - typing help at the "xauth>" prompt says that CTRL+D'ing out aborts changes and deletes .Xauthority
+2007-07-23T10:50:00.000Z	CardinalBiggles	daedra	Huh.
+2007-07-23T10:54:00.000Z	CardinalBiggles	daedra	I'm not at my linux box, or I could help more with xauth.  Try logging out and loggint back in.  That should generate a new one.  Or, read the man page.
+2007-07-23T10:55:00.000Z	daedra	CardinalBiggles	ok - thanks for the help by the way :)
+2007-07-23T10:57:00.000Z	daedra	CardinalBiggles	YES! logging out and back in worked
+2007-07-23T10:57:00.000Z	daedra	CardinalBiggles	have a toffee
+2007-07-23T10:57:00.000Z	CardinalBiggles	daedra	It was your Xauth file.  I bet you didn't own it or something.
+2007-07-23T10:58:00.000Z	CardinalBiggles	daedra	It could happen if you sudo or something and mess with X from a different user (like root).
+2007-07-23T10:58:00.000Z	daedra	CardinalBiggles	yeah I do that a lot
+2007-07-23T10:58:00.000Z	daedra	CardinalBiggles	thanks anyway
+2007-07-23T10:58:00.000Z	CardinalBiggles	daedra	Well, be careful with xauth in the future.
+2007-07-23T10:58:00.000Z	CardinalBiggles	daedra	Cheers, and good luck.

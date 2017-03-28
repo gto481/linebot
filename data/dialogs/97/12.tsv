@@ -1,0 +1,97 @@
+2009-04-02T17:27:00.000Z	Jimi_Neutral		I have 2 network cards in my box. One is the connected to the outside and one is for drbl only for clonezilla. The internet one is quite happily connected as eth2....eth0 is the one i want to use for drbl...how should i set it up
+2009-04-02T17:29:00.000Z	n8tuser	Jimi_Neutral	-> whats a drbl ? is that another host?
+2009-04-02T17:30:00.000Z	Jimi_Neutral	n8tuser	It is for Clonezilla so i can take and image and clone it using multicasting to about 40 laptops Diskless Remote Boot Linux
+2009-04-02T17:31:00.000Z	Jimi_Neutral	n8tuser	ut for some reason this morning when i turned on my box and got an update, my eth0 was suddenly unmanaged and now i cant set it right
+2009-04-02T17:31:00.000Z	n8tuser	Jimi_Neutral	-> do you have the previous settings of /etc/network/interfaces?
+2009-04-02T17:32:00.000Z	n8tuser	Jimi_Neutral	-> can you post your /etc/network/interfaces file?
+2009-04-02T17:33:00.000Z	n8tuser	Jimi_Neutral	-> this is your job? have you been trained in linux at all?
+2009-04-02T17:38:00.000Z	Jimi_Neutral	n8tuser	Ok I have put a little explanation in there as well, sorry it took so long http://paste.ubuntu.com/142763/
+2009-04-02T17:41:00.000Z	n8tuser	Jimi_Neutral	-> ummm one side of your server eth2 (WAN) is okay right? so now you only need to concentrate on eth0 for local lan distro of drbl
+2009-04-02T17:41:00.000Z	Jimi_Neutral	n8tuser	did you get that bud?
+2009-04-02T17:42:00.000Z	Jimi_Neutral	n8tuser	yup thats exactly right
+2009-04-02T17:42:00.000Z	n8tuser	Jimi_Neutral	-> do you still have like network manager enabled? i thought you supposed to disable nm ?
+2009-04-02T17:43:00.000Z	Jimi_Neutral	n8tuser	im a newb man, never used linux before a few days ago
+2009-04-02T17:43:00.000Z	Jimi_Neutral	n8tuser	im winging all of this so far and just reading tuts and coming in here
+2009-04-02T17:44:00.000Z	Jimi_Neutral	n8tuser	yeah would be if my boss wernt on my back to get this done
+2009-04-02T17:44:00.000Z	n8tuser	Jimi_Neutral	-> newbieness in linux is not that much relevant here, more of you have to know your networking stuff
+2009-04-02T17:44:00.000Z	Jimi_Neutral	n8tuser	but u need to know how to do that linux stuff and i dont
+2009-04-02T17:45:00.000Z	Jimi_Neutral	n8tuser	sorry i mean do that networking stuff in linux
+2009-04-02T17:45:00.000Z	n8tuser	Jimi_Neutral	-> basically from my quick glance of drbl and clonezilla, one nic is dedicated for serving into a local lan, and you set up a DHCP server
+2009-04-02T17:45:00.000Z	Jimi_Neutral	n8tuser	all that bit is done
+2009-04-02T17:46:00.000Z	Jimi_Neutral	n8tuser	its just this morning my eth0 reverted to unmanaged
+2009-04-02T17:46:00.000Z	Jimi_Neutral	n8tuser	i had some problems with clonezilla but thats another story
+2009-04-02T17:46:00.000Z	n8tuser	Jimi_Neutral	-> am not sure what you meant by unmanaged? which app do you expect it to manage?
+2009-04-02T17:47:00.000Z	Jimi_Neutral	n8tuser	i dont expect it to manage anything.....yesterday when i hovered on network connections it said eth0 now when i do the same it says unmanaged
+2009-04-02T17:48:00.000Z	n8tuser	Jimi_Neutral	-> thats what i meant, what tools are you using to see this manage vs unmanage?
+2009-04-02T17:49:00.000Z	Jimi_Neutral	n8tuser	oh i just left click on the network monitor at the top of the screen, next to the sound icon
+2009-04-02T17:50:00.000Z	n8tuser	Jimi_Neutral	-> per this http://drbl.sourceforge.net/  step 5   it says do not use network manager (gui icons)
+2009-04-02T17:50:00.000Z	n8tuser	Jimi_Neutral	-> ie do not rely on network manager when using dbrl,
+2009-04-02T17:52:00.000Z	Jimi_Neutral	n8tuser	I know bud, thats what i am saying.....i used gedit /etc/network/interfaces to manually set it but now when i reboot and i look at eth0 again it says unmanaged and all this has been happening since i updated this mroning
+2009-04-02T17:52:00.000Z	n8tuser	Jimi_Neutral	-> did you remove or purge network manager per that instruction on step 5 ?
+2009-04-02T17:53:00.000Z	n8tuser	Jimi_Neutral	-> well do remove or purge it,
+2009-04-02T17:53:00.000Z	Jimi_Neutral	n8tuser	will i lose this connection to WAN?
+2009-04-02T17:54:00.000Z	n8tuser	Jimi_Neutral	-> you should not but if you do, you can always bring up eth2
+2009-04-02T18:20:00.000Z	Jimi_Neutral	n8tuser	are you still there?
+2009-04-02T18:34:00.000Z	Jimi_Neutral	n8tuser	Hey bud are you there?
+2009-04-02T18:35:00.000Z	n8tuser	Jimi_Neutral	-> not really, be back in 15 minutes
+2009-04-02T18:51:00.000Z	n8tuser	Jimi_Neutral	-> ok, just in time, you have dhcp server installed and serving on your eth2 yet but not on eth0 ?
+2009-04-02T18:54:00.000Z	Jimi_Neutral	n8tuser	yes that was the case but now since removing the nm i can do whatever.....so it makes sense to have eth0 using dhcp, connecting to the netowrk and going to the internet and eth1 as the private one
+2009-04-02T18:55:00.000Z	Jimi_Neutral	n8tuser	eth1 being static
+2009-04-02T18:55:00.000Z	n8tuser	Jimi_Neutral	-> okay, they go ahead, have your eth0 towards the wan and eth1 towards the lan to serve clonezilla
+2009-04-02T18:56:00.000Z	Jimi_Neutral	n8tuser	yeah thats what i want, would you happen to know what i would have to type into /etc/network/interfaces to actually achieve this lol
+2009-04-02T18:57:00.000Z	n8tuser	Jimi_Neutral	-> you have it okay i believe as earlier,  iface eth0 inet dhcp;  iface eth1 inet static  something like this
+2009-04-02T18:57:00.000Z	n8tuser	Jimi_Neutral	-> man interfaces for a bit more detail
+2009-04-02T18:58:00.000Z	Jimi_Neutral	n8tuser	man interfaces?
+2009-04-02T18:58:00.000Z	n8tuser	Jimi_Neutral	-> yes to get the manual
+2009-04-02T18:58:00.000Z	Jimi_Neutral	n8tuser	tpye man interfaces into a terminal?
+2009-04-02T18:59:00.000Z	Jimi_Neutral	n8tuser	ok i did that and its not working
+2009-04-02T19:01:00.000Z	n8tuser	Jimi_Neutral	-> can you post the /etc/network/interfaces file now? and results of  ifconfig
+2009-04-02T19:02:00.000Z	Jimi_Neutral	n8tuser	ok, will take me a bit cause i will have to tpye em out
+2009-04-02T19:02:00.000Z	n8tuser	Jimi_Neutral	-> no sweat, i have things to do too, so be patient, and awaken me once you;re ready
+2009-04-02T19:08:00.000Z	Jimi_Neutral	n8tuser	here you go mate wake up! ;) http://paste.ubuntu.com/142814/
+2009-04-02T19:09:00.000Z	n8tuser	Jimi_Neutral	-> be back in 10 min again..
+2009-04-02T19:10:00.000Z	Jimi_Neutral	n8tuser	ok
+2009-04-02T19:14:00.000Z	n8tuser	Jimi_Neutral	-> ok, you have to figure out which nic is eth0, you can do simple test, ping your dhcp server
+2009-04-02T19:14:00.000Z	Jimi_Neutral	n8tuser	how do i do that on my ubuntu box
+2009-04-02T19:15:00.000Z	n8tuser	Jimi_Neutral	-> work with one interface at a time, sudo ifdown eth0;  move the ethernet cable and see if you get an ip address and ping the router
+2009-04-02T19:19:00.000Z	Jimi_Neutral	n8tuser	ok i tpyed in 'sudo ifdown eth0' into the terminal and it came back with 'etc/network/intrfaces:14: option with empty value on the next line and then ifdown: couldnt read interfaces file "/etc/network/interfaces/" on the next line after that
+2009-04-02T19:20:00.000Z	n8tuser	Jimi_Neutral	-> you have a mistake on your interfaces file, you did get a chance to read man interfaces to see a sample interfaces file?
+2009-04-02T19:21:00.000Z	Jimi_Neutral	n8tuser	yes but  not all of it
+2009-04-02T19:21:00.000Z	n8tuser	Jimi_Neutral	-> well if you dont read all of it, you'd miss important details
+2009-04-02T19:22:00.000Z	n8tuser	Jimi_Neutral	-> here is a sample interfaces file ... http://www.cyberciti.biz/faq/setting-up-an-network-interfaces-file/
+2009-04-02T19:25:00.000Z	Jimi_Neutral	n8tuser	i cant see any errors apart from forgetting to put the work netmask in front of the mask, but that shouldnt affect the dhcp card
+2009-04-02T19:25:00.000Z	Jimi_Neutral	n8tuser	word*
+2009-04-02T19:27:00.000Z	n8tuser	Jimi_Neutral	->  see those samples so you get an idea how it should be like
+2009-04-02T19:28:00.000Z	Jimi_Neutral	n8tuser	i just had a look at it and changed it and now when i type sudo ifdown eth0 i get ifown: interface eth 0 not configured
+2009-04-02T19:28:00.000Z	n8tuser	Jimi_Neutral	-> post your interfaces file again please
+2009-04-02T19:30:00.000Z	Jimi_Neutral	n8tuser	http://paste.ubuntu.com/142834/
+2009-04-02T19:32:00.000Z	Jimi_Neutral	n8tuser	do i have to reboot when i change them settings?
+2009-04-02T19:32:00.000Z	n8tuser	Jimi_Neutral	-> you just do a  sudo /etc/init.d/networking restart
+2009-04-02T19:32:00.000Z	n8tuser	Jimi_Neutral	-> btw, you have figured out which nic is which?
+2009-04-02T19:33:00.000Z	Jimi_Neutral	n8tuser	no thats what iw as trying to do when it was coming up with the errors
+2009-04-02T19:34:00.000Z	n8tuser	Jimi_Neutral	-> first thing i guess is figure out which is which, then well work from there..
+2009-04-02T19:35:00.000Z	Jimi_Neutral	n8tuser	i think doing that restart (which is prolly why i had probs in the first place) has just let me figure it out.....it was doing loads of DISCOVER's on eth0 and was gettign no where until i moved the ethernet cable to the next one, then it found it...so now i need to swap them over lol
+2009-04-02T19:36:00.000Z	Jimi_Neutral	n8tuser	that restart commmand was what iw as missing all along lol now i need to swap them over
+2009-04-02T19:36:00.000Z	n8tuser	Jimi_Neutral	-> well you are a paid tech doing this, am not..so hopefully you'll share the know how you learn from us :)
+2009-04-02T19:39:00.000Z	Jimi_Neutral	n8tuser	ok i have just tried to swap them over and  it has failed to being up eth1....didnt think it would be as easy as swapping the numbers round on the text
+2009-04-02T19:39:00.000Z	n8tuser	Jimi_Neutral	-> well, you have it figured out which is which?
+2009-04-02T19:39:00.000Z	Jimi_Neutral	n8tuser	i thought i did
+2009-04-02T19:40:00.000Z	Jimi_Neutral	n8tuser	it seemed the added pci card was eth0 but now im not so sure
+2009-04-02T19:40:00.000Z	n8tuser	Jimi_Neutral	-> well stick with one nic  just the one going to your router ,, is it getting an ip address? can you get to the internet?
+2009-04-02T19:41:00.000Z	n8tuser	Jimi_Neutral	-> you switch those cables and possibly modify your interfaces file accordingly
+2009-04-02T19:41:00.000Z	Jimi_Neutral	n8tuser	they are both getting connection which is impossible!?
+2009-04-02T19:42:00.000Z	n8tuser	Jimi_Neutral	-> you may be reading what is in cache, always do that /etc/init.d/networking restart to make sure
+2009-04-02T19:44:00.000Z	Jimi_Neutral	n8tuser	ok well i wanted the WAN on the onboard card....apparently the onboard card didnt like being called eth1 lol so i changed it to eth2 and it works
+2009-04-02T19:45:00.000Z	Jimi_Neutral	n8tuser	prollt cause i have 3 cards in there to begin with
+2009-04-02T19:46:00.000Z	Jimi_Neutral	n8tuser	now the only worrying thing is that the gigabit card which is set at a private address is connecting to the net, which it really shoudlnt should it, with no gateway set or anything lol
+2009-04-02T19:46:00.000Z	n8tuser	Jimi_Neutral	-> are you sure? well do what ever it takes to get it going, just try to keep it straight
+2009-04-02T19:47:00.000Z	n8tuser	Jimi_Neutral	-> another way to figure out is via   sudo lshw -C network
+2009-04-02T19:48:00.000Z	Jimi_Neutral	n8tuser	its all working! ty so much for your help mate....im halfway there.....now i just gotta get clonezilla working! :s
+2009-04-02T19:49:00.000Z	n8tuser	Jimi_Neutral	-> you're welcome, usually i only nudge to get them in the right directions
+2009-04-02T19:51:00.000Z	Jimi_Neutral	n8tuser	Now i dont mind that, if i was at home and it was cause i want to learn it in my own time, but this was my boss hammering me to get it down when he knows i dont even know linux
+2009-04-02T19:51:00.000Z	Jimi_Neutral	n8tuser	so ty again for the indepth help :)
+2009-04-02T19:52:00.000Z	n8tuser	Jimi_Neutral	-> get your boss some doughnuts  and coffee -- he'll be quiet for a while.. lol
+2009-04-02T19:53:00.000Z	Jimi_Neutral	n8tuser	hahah, i would if my place of work was not in the middle of an industrial estate in the middle of no where with all the shope 40 mins walk away there an back! lol
+2009-04-02T19:54:00.000Z	n8tuser	Jimi_Neutral	-> be on the look out of the canteen truck, and get your boss all the sweets you can and fed him that..lol
+2009-04-02T19:55:00.000Z	Jimi_Neutral	n8tuser	heheh.....while i got u for a minute tho, (dont worry this is nothign major) someone said to me yesterday to make 3 partitions for ubuntu....this is for my own personal use cause i wanna get away from windows....i cant remeber what the reaosn was tho for 3 partitions...any idea whay 3?
+2009-04-02T19:55:00.000Z	n8tuser	Jimi_Neutral	-> minimum   ..per sebsebseb

@@ -1,0 +1,97 @@
+2008-03-07T20:57:00.000Z	overlow		how can i get my wacom tablet working?
+2008-03-07T20:57:00.000Z	Odd-rationale	overlow	You have a tablet?
+2008-03-07T20:58:00.000Z	overlow	Odd-rationale	yes
+2008-03-07T20:58:00.000Z	Odd-rationale	overlow	And are you running gutsy?
+2008-03-07T20:58:00.000Z	Odd-rationale	overlow	What video card?
+2008-03-07T20:59:00.000Z	overlow	Odd-rationale	nvidia geforce 4 mx 420
+2008-03-07T21:00:00.000Z	Odd-rationale	overlow	first. install wacom-tools from the repos
+2008-03-07T21:01:00.000Z	Odd-rationale	overlow	Now let's edit your xorg/conf file.
+2008-03-07T21:02:00.000Z	Odd-rationale	overlow	You have your xorg.conf file open?
+2008-03-07T21:02:00.000Z	overlow	Odd-rationale	ok
+2008-03-07T21:02:00.000Z	overlow	Odd-rationale	yes
+2008-03-07T21:02:00.000Z	Odd-rationale	overlow	Near the bottom do you see three lines simialr to this:
+2008-03-07T21:03:00.000Z	overlow	Odd-rationale	yes i see
+2008-03-07T21:03:00.000Z	Odd-rationale	overlow	Uncomment them: stylus, cursor, and earaser
+2008-03-07T21:03:00.000Z	overlow	Odd-rationale	done now
+2008-03-07T21:03:00.000Z	Odd-rationale	overlow	note do not uncomment this line:
+2008-03-07T21:04:00.000Z	overlow	Odd-rationale	no i did't
+2008-03-07T21:04:00.000Z	Odd-rationale	overlow	:)
+2008-03-07T21:04:00.000Z	Odd-rationale	overlow	Do you have three InputDevice Sections: stylus, cursor, and eraeser ?
+2008-03-07T21:05:00.000Z	Odd-rationale	overlow	And does your stylus have a right-click button?
+2008-03-07T21:05:00.000Z	overlow	Odd-rationale	yes
+2008-03-07T21:06:00.000Z	Odd-rationale	overlow	Ok. Then add this option to the stylus and eraser section only:
+2008-03-07T21:08:00.000Z	Odd-rationale	overlow	Do you want to be able to rotate your display when in tablet mode? or just leave it?
+2008-03-07T21:09:00.000Z	overlow	Odd-rationale	just leave it
+2008-03-07T21:09:00.000Z	Odd-rationale	overlow	Are you sure? Autorotation is nice...
+2008-03-07T21:09:00.000Z	Odd-rationale	overlow	It only takes one more line in you xorg.conf....
+2008-03-07T21:09:00.000Z	overlow	Odd-rationale	how it exatly wotks?
+2008-03-07T21:11:00.000Z	Odd-rationale	overlow	When you go into tablet mode, the display will rotate 90 degrees or 180 degrees if you like. when you put the lid back up, it roates back to laptop mode. As I siad, you will only need one line in your xorg file and a script, which I'll provide you
+2008-03-07T21:11:00.000Z	overlow	Odd-rationale	hmm let's try it :) if i don't like it i can allways disable it
+2008-03-07T21:11:00.000Z	Odd-rationale	overlow	Sounds good! Now in your Section "Screen" add this line:
+2008-03-07T21:13:00.000Z	overlow	Odd-rationale	done
+2008-03-07T21:14:00.000Z	Odd-rationale	overlow	Save and close your xorg file
+2008-03-07T21:14:00.000Z	overlow	Odd-rationale	done
+2008-03-07T21:14:00.000Z	overlow	Odd-rationale	next?
+2008-03-07T21:15:00.000Z	Odd-rationale	overlow	Open a text editor and copy and paste the following into a new file. Save it as ~/.auto-rotate http://paste.ubuntu-nl.org/58747/
+2008-03-07T21:16:00.000Z	Odd-rationale	overlow	Note. you do not need the line numbering (i'm sure you knew that. just like to make sure)
+2008-03-07T21:16:00.000Z	overlow	Odd-rationale	ok
+2008-03-07T21:17:00.000Z	Odd-rationale	overlow	Make it executable: chmod +x ~/.auto-rotate
+2008-03-07T21:17:00.000Z	overlow	Odd-rationale	next
+2008-03-07T21:18:00.000Z	Odd-rationale	overlow	Using gnome, kde, or xfce, or other?
+2008-03-07T21:18:00.000Z	overlow	Odd-rationale	gnome
+2008-03-07T21:20:00.000Z	Odd-rationale	overlow	Add the script to start up: System --> Pref --> Sessions. In the start up programs tab. select new. Name: Auto-rotate Command: Browse to the auto-rorate script
+2008-03-07T21:22:00.000Z	Odd-rationale	overlow	Oh, i forgot to add. Did you see line 51-53 in the script. Uncomment the display you would like to use in tablet mode, right, left, or inverted. But only use one at a time.
+2008-03-07T21:23:00.000Z	overlow	Odd-rationale	ok
+2008-03-07T21:25:00.000Z	Odd-rationale	overlow	Now restart X and hope that every things works. try the stylus, try rightclicking and try rotateing the display. Report back.
+2008-03-07T21:32:00.000Z	Odd-rationale	overlow	How did it go?
+2008-03-07T21:33:00.000Z	overlow	Odd-rationale	 it doesn't still work
+2008-03-07T21:33:00.000Z	Odd-rationale	overlow	Your stylus?
+2008-03-07T21:34:00.000Z	overlow	Odd-rationale	yea, corsors doesn't move anywhere with stylus
+2008-03-07T21:34:00.000Z	Odd-rationale	overlow	pastebin your xorg.conf file
+2008-03-07T21:36:00.000Z	overlow	Odd-rationale	 here
+2008-03-07T21:36:00.000Z	Odd-rationale	overlow	I told you to use the pastebin... :)
+2008-03-07T21:39:00.000Z	Odd-rationale	overlow	Use the pastebin!!!
+2008-03-07T21:39:00.000Z	Odd-rationale	overlow	Restart your irc client too.
+2008-03-07T21:40:00.000Z	Odd-rationale	overlow	did you restart you irc client?
+2008-03-07T21:40:00.000Z	Odd-rationale	overlow	OK. dont do that again. :P use the pastebin
+2008-03-07T21:40:00.000Z	overlow	Odd-rationale	here trhe xorg.conf http://paste.ubuntu-nl.org/58749/
+2008-03-07T21:40:00.000Z	Odd-rationale	overlow	OK got it. let me take a look.
+2008-03-07T21:43:00.000Z	Odd-rationale	overlow	So the mouse doesnt move when you move the stylus?
+2008-03-07T21:43:00.000Z	overlow	Odd-rationale	no
+2008-03-07T21:51:00.000Z	Odd-rationale	overlow	Take a look at your /var/log/Xorg.0.log. Do you see any thing like "Cannot open device /dev/input/wacom" ?
+2008-03-07T21:56:00.000Z	overlow	Odd-rationale	yes i see that
+2008-03-07T21:57:00.000Z	Odd-rationale	overlow	Do: "cat /proc/bus/input/devices" in terminal. Pastebin the output.
+2008-03-07T21:59:00.000Z	overlow	Odd-rationale	here http://paste.ubuntu-nl.org/58755/
+2008-03-07T22:05:00.000Z	Odd-rationale	overlow	Do you have a file called "wacom" in /dev/input ?
+2008-03-07T22:07:00.000Z	overlow	Odd-rationale	no i don't have
+2008-03-07T22:09:00.000Z	Odd-rationale	overlow	do you have /dev/ttyS0 (capital S) ?
+2008-03-07T22:09:00.000Z	overlow	Odd-rationale	no
+2008-03-07T22:11:00.000Z	Odd-rationale	overlow	Is this a tablet pc, or a usb tablet device?
+2008-03-07T22:12:00.000Z	overlow	Odd-rationale	usb tablet device
+2008-03-07T22:13:00.000Z	Odd-rationale	overlow	can you pastebin the output of lsusb
+2008-03-07T22:15:00.000Z	overlow	Odd-rationale	http://paste.ubuntu-nl.org/58758/
+2008-03-07T22:23:00.000Z	Odd-rationale	overlow	do you have the file /etc/udev/rules.d/50-xserver-xorg-input-wacom.rules or something similar?
+2008-03-07T22:24:00.000Z	overlow	Odd-rationale	yes i have
+2008-03-07T22:24:00.000Z	Odd-rationale	overlow	open it. Do you have a line similar to "KERNEL=="event[0-9]*", SYSFS{idVendor}=="056a", SYMLINK="input/wacom"" ? Is it comment out ?
+2008-03-07T22:27:00.000Z	Odd-rationale	overlow	Do this in terminal and paste result: /etc/udev/rules.d$ cat 50-xserver-xorg-input-wacom.rules | grep input/wacom
+2008-03-07T22:27:00.000Z	Odd-rationale	overlow	Sorry don't do that. Let me fix that up
+2008-03-07T22:28:00.000Z	overlow	Odd-rationale	here is whole file http://paste.ubuntu-nl.org/58763/
+2008-03-07T22:31:00.000Z	Odd-rationale	overlow	OK. let's try something. Edit your xorg.conf again...
+2008-03-07T22:32:00.000Z	overlow	Odd-rationale	OK, will it help that tablet is wacom bomboo fun?
+2008-03-07T22:34:00.000Z	Odd-rationale	overlow	OK now add the following lines to the stylus, earaser, and cursor inputdevice sections: http://paste.ubuntu-nl.org/58766/
+2008-03-07T22:35:00.000Z	Odd-rationale	overlow	Sorry. Do not put the threshhold line for the cursor section
+2008-03-07T22:36:00.000Z	overlow	Odd-rationale	done
+2008-03-07T22:36:00.000Z	Odd-rationale	overlow	Try restarting X again.
+2008-03-07T22:38:00.000Z	Odd-rationale	overlow	Working now?
+2008-03-07T22:39:00.000Z	overlow	Odd-rationale	didn't restart yet
+2008-03-07T22:42:00.000Z	overlow	Odd-rationale	nor working
+2008-03-07T22:48:00.000Z	Odd-rationale	overlow	OK. I did a little search. try this: http://paste.ubuntu-nl.org/58767/
+2008-03-07T22:50:00.000Z	overlow	Odd-rationale	ok
+2008-03-07T22:51:00.000Z	Odd-rationale	overlow	Restart X (again)
+2008-03-07T22:52:00.000Z	overlow	Odd-rationale	still not working
+2008-03-07T22:53:00.000Z	Odd-rationale	overlow	Looks like I found something: http://ubuntuforums.org/showpost.php?p=4253232&postcount=133
+2008-03-07T22:54:00.000Z	overlow	Odd-rationale	let's see if that helps
+2008-03-07T22:55:00.000Z	Odd-rationale	overlow	Sorry I couldn't help more. A usb tablet device is more different than a tablet pc than I thought....
+2008-03-07T22:55:00.000Z	overlow	Odd-rationale	oh that's ok
+2008-03-07T22:55:00.000Z	Odd-rationale	overlow	You might want to uninstall wacom-tools before starting the guide.
+2008-03-07T22:56:00.000Z	Odd-rationale	overlow	As the guide requires you to compile the newest wacom-tools from source.

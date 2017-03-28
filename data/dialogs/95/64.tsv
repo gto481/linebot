@@ -1,0 +1,95 @@
+2006-05-18T10:21:00.000Z	ferronica		hi room
+2006-05-18T10:21:00.000Z	ferronica		HELP ME!
+2006-05-18T10:21:00.000Z	amphi	ferronica	'channel'
+2006-05-18T10:24:00.000Z	amphi	ferronica	tzconfig perhaps
+2006-05-18T10:24:00.000Z	amphi	ferronica	please don't shout
+2006-05-18T10:24:00.000Z	amphi	ferronica	is your bios clock set to UTC?
+2006-05-18T10:25:00.000Z	ferronica	amphi	what is UTC
+2006-05-18T10:25:00.000Z	amphi	ferronica	AKA GMT
+2006-05-18T10:26:00.000Z	ferronica	amphi	before logging i pressed F2 and sets my country time, again same thing ubuntu showing me wrong time
+2006-05-18T10:26:00.000Z	amphi	ferronica	if your bios clock is set to local time, your suffering will increase; it should be set to GMT/UTC and then your TZ should be configured correctly
+2006-05-18T10:27:00.000Z	ferronica	amphi	everytime same problem
+2006-05-18T10:27:00.000Z	ferronica	amphi	how to set it to GMT/UTC
+2006-05-18T10:28:00.000Z	ferronica	amphi	how to set it???
+2006-05-18T10:28:00.000Z	ferronica	amphi	everytime bios time get changed automatically
+2006-05-18T10:29:00.000Z	ferronica	amphi	will u tell me from where to set
+2006-05-18T10:29:00.000Z	amphi	ferronica	every what time?
+2006-05-18T10:29:00.000Z	ferronica	amphi	yes penguin-1
+2006-05-18T10:30:00.000Z	amphi	ferronica	have you set your TZ correctly?
+2006-05-18T10:30:00.000Z	amphi	ferronica	you can use ntp to set the system clock
+2006-05-18T10:31:00.000Z	ferronica	amphi	i what is TZ
+2006-05-18T10:31:00.000Z	amphi	ferronica	sorry, timezone
+2006-05-18T10:32:00.000Z	ferronica	amphi	If i boot again and RESET my bios time correctly, and again if i see my BIOS time incorrect
+2006-05-18T10:32:00.000Z	ferronica	amphi	my timezone is correct, no problem
+2006-05-18T10:33:00.000Z	amphi	ferronica	do you have ntpdate installed? if not, do 'sudo apt-get install ntpdate'
+2006-05-18T10:35:00.000Z	ferronica	amphi	ntpdate is already the newest version.
+2006-05-18T10:36:00.000Z	amphi	ferronica	so do sudo /etc/init.d/ntpdate restart
+2006-05-18T10:36:00.000Z	ferronica	amphi	but what abot my BIOS time
+2006-05-18T10:37:00.000Z	ferronica	amphi	Ok
+2006-05-18T10:37:00.000Z	ferronica	amphi	 * Synchronizing clock to ntp.ubuntulinux.org...                         [ ok ] 
+2006-05-18T10:38:00.000Z	amphi	ferronica	the time should now be correct - is it? type date in a term
+2006-05-18T10:38:00.000Z	ferronica	amphi	 my time
+2006-05-18T10:38:00.000Z	amphi	ferronica	?
+2006-05-18T10:39:00.000Z	ferronica	amphi	 what i type???
+2006-05-18T10:39:00.000Z	amphi	ferronica	you mean date shows you localtime?
+2006-05-18T10:39:00.000Z	amphi	ferronica	type 'date' in a term, and see if the time is correct (your local time)
+2006-05-18T10:39:00.000Z	ferronica	amphi	right now it showing correct
+2006-05-18T10:39:00.000Z	amphi	ferronica	ok; no do 'sudo hwclock --systohc --utc'
+2006-05-18T10:40:00.000Z	amphi	ferronica	now do
+2006-05-18T10:41:00.000Z	ferronica	amphi	done
+2006-05-18T10:41:00.000Z	amphi	ferronica	that sets your bios clock to UTC/GMT, based on the system (kernel) time
+2006-05-18T10:42:00.000Z	ferronica	amphi	ok stay in channel let me boot my computer and check my bios time okay
+2006-05-18T10:42:00.000Z	amphi	ferronica	I hear and obey
+2006-05-18T10:42:00.000Z	ferronica	amphi	in clock preference what to check
+2006-05-18T10:42:00.000Z	amphi	ferronica	clock preference?
+2006-05-18T10:42:00.000Z	ferronica	amphi	yes
+2006-05-18T10:43:00.000Z	ferronica	amphi	i use clock type 12 hours
+2006-05-18T10:43:00.000Z	amphi	ferronica	I have no idea what you're talking about
+2006-05-18T10:43:00.000Z	amphi	ferronica	makes no difference
+2006-05-18T10:43:00.000Z	ferronica	amphi	show date
+2006-05-18T10:43:00.000Z	ferronica	amphi	but USE UTC un checked
+2006-05-18T10:44:00.000Z	amphi	ferronica	check use UTC
+2006-05-18T10:44:00.000Z	ferronica	amphi	what is USE UTC
+2006-05-18T10:44:00.000Z	ferronica	amphi	ok done
+2006-05-18T10:44:00.000Z	amphi	ferronica	I assume that's for the bios clock
+2006-05-18T10:44:00.000Z	amphi	ferronica	I don't know what you are doing
+2006-05-18T10:45:00.000Z	ferronica	amphi	oh my god, as i checked it my ubuntu time get changed
+2006-05-18T10:45:00.000Z	ferronica	amphi	what it dose
+2006-05-18T10:45:00.000Z	amphi	ferronica	you dual boot windows?
+2006-05-18T10:45:00.000Z	ferronica	amphi	again showing wrong time
+2006-05-18T10:46:00.000Z	ferronica	amphi	but both windows r in different HDD
+2006-05-18T10:46:00.000Z	amphi	ferronica	I hadn't realised that windows was still as broken as win95
+2006-05-18T10:46:00.000Z	amphi	ferronica	makes no difference, windows will fsck it up
+2006-05-18T10:47:00.000Z	ferronica	amphi	So, uncheck UTC
+2006-05-18T10:47:00.000Z	amphi	ferronica	you must set your TZ to GMT/UTC and have the bios clock in local time - kill bill, that's what I say ;)
+2006-05-18T10:47:00.000Z	amphi	ferronica	so, because of windows, you have to have incorrect TZ in linux
+2006-05-18T10:52:00.000Z	ferronica	amphi	ok i rebooted
+2006-05-18T10:53:00.000Z	ferronica	amphi	BIOS time is incorrect
+2006-05-18T10:53:00.000Z	amphi	ferronica	don't listen to me, I had misjudged, yet again, the evil that comes from Redmond
+2006-05-18T10:53:00.000Z	ferronica	amphi	but this time ubuntu time is correct
+2006-05-18T10:53:00.000Z	ferronica	amphi	what???
+2006-05-18T10:54:00.000Z	amphi	ferronica	the Land of Redmond, where the shadows lie
+2006-05-18T10:54:00.000Z	ferronica	amphi	ok u mean u wont help me
+2006-05-18T10:54:00.000Z	ferronica	amphi	ok as u wish
+2006-05-18T10:55:00.000Z	amphi	ferronica	ffs, stop blathering; because you have a damn fool legacy os installed, which is broken, your bios clock must be set to local time, linux must not use UTC, and your time zone in linux must be set to UTC/GMT
+2006-05-18T10:57:00.000Z	amphi	ferronica	if you have your correct time zone set in linux, with the bios clock set to local time, your time zone offset from UTC will be applied twice, which will be incorrect
+2006-05-18T10:58:00.000Z	ferronica	amphi	so what is the conclusion
+2006-05-18T10:58:00.000Z	amphi	ferronica	I've told you twice already
+2006-05-18T10:58:00.000Z	ferronica	amphi	BIOS WILL SHOW ME INCORRECT
+2006-05-18T10:59:00.000Z	amphi	ferronica	1) set your bios clock to local time; 2) set your TZ to UTC/GMT
+2006-05-18T10:59:00.000Z	amphi	ferronica	2) is in linux
+2006-05-18T10:59:00.000Z	amphi	ferronica	or don't dual boot with windows, so you don't have to break your linux system
+2006-05-18T11:00:00.000Z	ferronica	amphi	i am really confused
+2006-05-18T11:00:00.000Z	amphi	ferronica	I am wrong, apparently
+2006-05-23T12:54:00.000Z	amphi	ferronica	sudo apt-get update
+2006-05-23T13:06:00.000Z	ferronica	amphi	thanx after update it works no ERROR WINDOW
+2006-05-23T13:07:00.000Z	amphi	ferronica	cool
+2006-05-23T13:10:00.000Z	ferronica	amphi	hav u ever used LaunchPad,
+2006-05-23T13:11:00.000Z	amphi	ferronica	indeed not
+2006-05-23T13:11:00.000Z	amphi	ferronica	unless grun counts ;)
+2006-05-23T13:11:00.000Z	ferronica	amphi	what???
+2006-05-23T13:12:00.000Z	amphi	ferronica	I don't know what launchpad is
+2006-05-23T13:12:00.000Z	ferronica	amphi	to order ubuntu DAPPER 6.06
+2006-05-23T13:12:00.000Z	amphi	ferronica	huh?
+2006-05-23T14:45:00.000Z	amphi	ferronica	bah
+2006-05-23T15:06:00.000Z	amphi	ferronica	do sudo apt-get update

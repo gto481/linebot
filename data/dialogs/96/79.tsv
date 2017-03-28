@@ -1,0 +1,96 @@
+2005-10-24T05:30:00.000Z	lorenzod	bigfoot1	I don't think you can ATPIT
+2005-10-24T05:30:00.000Z	bigfoot1	lorenzod	what's atpit+
+2005-10-24T05:31:00.000Z	bigfoot1	lorenzod	but x-chat can open links inside it to a new tab in the same instance of opera.
+2005-10-24T05:32:00.000Z	lorenzod	bigfoot1	maybe you should file and enhancement request on it?
+2005-10-24T05:33:00.000Z	bigfoot1	lorenzod	file to whom? and if xchat can do it, cannot the other gnome programs?
+2005-10-24T05:33:00.000Z	lorenzod	bigfoot1	you'd post it on bugzilla.
+2005-10-24T05:33:00.000Z	bigfoot1	lorenzod	why do you say so?
+2005-10-24T05:34:00.000Z	bigfoot1	lorenzod	don't i have just have to find the special syntax/argument/line to insert into the "preferred applications" blank for browser?
+2005-10-24T05:35:00.000Z	lorenzod	bigfoot1	you mean a command-line option that opens in a new tab.
+2005-10-24T05:36:00.000Z	lorenzod	bigfoot1	if you type opera -h in a terminal, does that give you a list of options?
+2005-10-24T05:37:00.000Z	bigfoot1	lorenzod	well, in xchat/url-handlers, the command for same-window-new-tab is !opera -remote 'openURL(%s,new-page)'
+2005-10-24T05:38:00.000Z	lorenzod	bigfoot1	okay, what happens if you use that as your default web browser?
+2005-10-24T05:39:00.000Z	bigfoot1	lorenzod	nothing happens. i guess it works in xchat but not in opera
+2005-10-24T05:40:00.000Z	bigfoot1	lorenzod	output of opera -h is at http://paste.ubuntulinux.nl/3339. I'm a newbie and can't really make sense of it all. Could you take a look and decipher it?
+2005-10-24T05:40:00.000Z	lorenzod	bigfoot1	I guess you used option custom?
+2005-10-24T05:40:00.000Z	lorenzod	bigfoot1	checking..
+2005-10-24T05:42:00.000Z	lorenzod	bigfoot1	yes I do.
+2005-10-24T05:42:00.000Z	bigfoot1	lorenzod	you use gnome art? great.
+2005-10-24T05:42:00.000Z	lorenzod	bigfoot1	according to opera -h output, the command seems okay.
+2005-10-24T05:43:00.000Z	bigfoot1	lorenzod	okay, back to opera command. So which command shoudl i use in "preferred applications/browsers"?
+2005-10-24T05:45:00.000Z	lorenzod	bigfoot1	can you try opera -newpage http://archive.ubuntu.com from a terminal?
+2005-10-24T05:45:00.000Z	bigfoot1	lorenzod	I'm so sorry for putting you to work. But thanks for confirming. I just checked the text I put into preferred apps, and I saw that I forgot the last quotation mark in      'openURL(%s,new-page)'     . I had 'openURL(%s,new-page)
+2005-10-24T05:45:00.000Z	lorenzod	bigfoot1	that's ok.
+2005-10-24T05:45:00.000Z	bigfoot1	lorenzod	now how do we use gnome art! It looks so pretty, but I can't seem to install a theme.
+2005-10-24T05:46:00.000Z	bigfoot1	lorenzod	for example, I'd like to install the tux N tosh icon theme
+2005-10-24T05:46:00.000Z	lorenzod	bigfoot1	I have probs with backgrounds, the rest works fine.
+2005-10-24T05:46:00.000Z	lorenzod	bigfoot1	Ah yeah, Icon themes download, but don't install IIRC
+2005-10-24T05:47:00.000Z	lorenzod	bigfoot1	download the theme, then extract it to ~/.icons
+2005-10-24T05:47:00.000Z	bigfoot1	lorenzod	when i click install, i get the "Theme Preferences" app that pops up. You mean that Gnome Art can't do it all within itself?
+2005-10-24T05:48:00.000Z	lorenzod	bigfoot1	Gnome art downloads/installs, then open theme prefs for you to select the theme
+2005-10-24T05:48:00.000Z	bigfoot1	lorenzod	we are talking about icon themes, yes?
+2005-10-24T05:49:00.000Z	lorenzod	bigfoot1	yes
+2005-10-24T05:50:00.000Z	bigfoot1	lorenzod	i cilcked download, and i had it save the bz2 file to my home directory, but when i go to home, it's not there!
+2005-10-24T05:50:00.000Z	lorenzod	bigfoot1	yes check where the download went to.
+2005-10-24T05:51:00.000Z	lorenzod	bigfoot1	btw, can you confirm that you have a directory called ~/.icons
+2005-10-24T05:53:00.000Z	bigfoot1	lorenzod	I'm at the most UPpest directory (the one with bin, boot, cdrom, dev, etc home, ) and there's no .icons. I have already chosen to select hidden files/folders.
+2005-10-24T05:54:00.000Z	lorenzod	bigfoot1	I just confirmed, install does work with icon themes.
+2005-10-24T05:55:00.000Z	bigfoot1	lorenzod	i have the tux n Tosh folder
+2005-10-24T05:58:00.000Z	lorenzod	bigfoot1	some do, in a way.
+2005-10-24T05:59:00.000Z	bigfoot1	lorenzod	is gnome art application automatically updated?
+2005-10-24T05:59:00.000Z	lorenzod	bigfoot1	no
+2005-10-24T06:00:00.000Z	bigfoot1	lorenzod	so how do i get to "refresh" or "reload" gnome art, if you know what i mean?
+2005-10-24T06:00:00.000Z	lorenzod	bigfoot1	Gnome art currently only connects to art.gnome.org
+2005-10-24T06:00:00.000Z	lorenzod	bigfoot1	when you select something, it will begin downloading.
+2005-10-24T06:01:00.000Z	bigfoot1	lorenzod	but what if someone at this moment adds their files to art.gnome.org? Will I instantly see it in gnome art program?
+2005-10-24T06:01:00.000Z	bigfoot1	lorenzod	so you mean the "download" button is useless?
+2005-10-24T06:01:00.000Z	lorenzod	bigfoot1	no I'm just expressing myself very poorly
+2005-10-24T06:02:00.000Z	bigfoot1	lorenzod	and that list will be the most current one?
+2005-10-24T06:02:00.000Z	lorenzod	bigfoot1	yes.
+2005-10-24T06:03:00.000Z	bigfoot1	lorenzod	what does file/delete_cached_files do?
+2005-10-24T06:03:00.000Z	lorenzod	bigfoot1	gnome-look.org is similar in purpose to art.gnome.org
+2005-10-24T06:04:00.000Z	bigfoot1	lorenzod	so i guess it's not good to just use gnome_art program, because we may be missing out on other nice stuff found only at gnome-look.org
+2005-10-24T06:04:00.000Z	lorenzod	bigfoot1	I guess it deletes the .tar.bz2 archives
+2005-10-24T06:04:00.000Z	lorenzod	bigfoot1	after the themes have been installed
+2005-10-24T06:06:00.000Z	bigfoot1	lorenzod	i would think that gnome-art would be smart enough to get rid of the bz2 files. Why isn't it automatic? And when should I use that feature+?
+2005-10-24T06:07:00.000Z	lorenzod	bigfoot1	current Gnome Art is 0.2
+2005-10-24T06:07:00.000Z	lorenzod	bigfoot1	but you're right it should be able to remove the .bz2 files automatically.
+2005-10-24T06:08:00.000Z	bigfoot1	lorenzod	so when should i do "delete cached files"? for which of the categories?
+2005-10-24T06:08:00.000Z	lorenzod	bigfoot1	I think it deletes for all categories...
+2005-10-24T06:10:00.000Z	bigfoot1	lorenzod	okay. Looks like fun with gnome_art. thanks for your time on opera and this.
+2005-10-24T06:10:00.000Z	lorenzod	bigfoot1	don't mention it..
+2005-10-24T06:12:00.000Z	bigfoot1	lorenzod	um, i'm trying out LoginManagerThemes. I downloaded a theme. How do i use it?
+2005-10-24T06:12:00.000Z	lorenzod	bigfoot1	you need to open the login screen setup
+2005-10-24T06:13:00.000Z	bigfoot1	lorenzod	ok. found it
+2005-10-24T06:13:00.000Z	lorenzod	bigfoot1	there should be a "install new theme" button somewhere
+2005-10-24T06:14:00.000Z	bigfoot1	lorenzod	oh, i see it!
+2005-10-24T06:14:00.000Z	bigfoot1	lorenzod	after i install it, can i delete the downloaded file?
+2005-10-24T06:15:00.000Z	lorenzod	bigfoot1	yes you can.
+2005-10-24T06:16:00.000Z	bigfoot1	lorenzod	in gnome_art, the description_text of the stuff are cut event though the window is much bigger.
+2005-10-24T06:17:00.000Z	lorenzod	bigfoot1	I guess it's clipping the string for the default window size.
+2005-10-24T06:18:00.000Z	bigfoot1	lorenzod	what do you mean? doesn't the full text get downloaded?
+2005-10-24T06:18:00.000Z	lorenzod	bigfoot1	It might get downloaded, but maybe the program then clips it.
+2005-10-24T06:19:00.000Z	bigfoot1	lorenzod	i think it's not a good idea for the program to clip it, if it indeed clips it.
+2005-10-24T06:19:00.000Z	lorenzod	bigfoot1	I'm really not sure why the programmer chose to do it that way..
+2005-10-24T06:20:00.000Z	bigfoot1	lorenzod	maybe we can ask him to change it
+2005-10-24T06:20:00.000Z	lorenzod	bigfoot1	actually, gnome art is written in the wonderful Ruby language.
+2005-10-24T06:20:00.000Z	bigfoot1	lorenzod	i see.
+2005-10-24T06:20:00.000Z	bigfoot1	lorenzod	ruby seems to be the language of today
+2005-10-24T06:21:00.000Z	bigfoot1	lorenzod	though i  can't speak it.
+2005-10-24T06:21:00.000Z	lorenzod	bigfoot1	ruby is definitely a nice language..
+2005-10-24T06:22:00.000Z	lorenzod	bigfoot1	but suggesting your ideas to the author is always a good thing.
+2005-10-24T06:23:00.000Z	lorenzod	bigfoot1	it's true. there's alot of talk about ruby and python these days
+2005-10-24T06:27:00.000Z	bigfoot1	lorenzod	: i just downloaded a gtk engine theme. how to install please?
+2005-10-24T06:28:00.000Z	lorenzod	bigfoot1	which engine? Are you sure it's not in the repos?
+2005-10-24T06:28:00.000Z	bigfoot1	lorenzod	i got the engine through gnome_art.
+2005-10-24T06:29:00.000Z	lorenzod	bigfoot1	I've never downloaded an engine from there.
+2005-10-24T06:29:00.000Z	bigfoot1	lorenzod	i see.
+2005-10-24T06:31:00.000Z	bigfoot1	lorenzod	maybe i should stay away from installing theme engines for now.
+2005-10-24T06:32:00.000Z	lorenzod	bigfoot1	if it's the source for a theme engine, you'll have to compile it.
+2005-10-24T06:33:00.000Z	bigfoot1	lorenzod	the package i got thru gnome_art had an "install" file within.
+2005-10-24T06:35:00.000Z	lorenzod	bigfoot1	which theme engine did you download?
+2005-10-24T06:37:00.000Z	bigfoot1	lorenzod	gtk smooth engine
+2005-10-24T06:37:00.000Z	lorenzod	bigfoot1	I'm not sure, but isn't smooth in the Ubuntu repos?
+2005-10-24T06:38:00.000Z	bigfoot1	lorenzod	sorry i didn't check.
+2005-10-24T06:39:00.000Z	bigfoot1	lorenzod	would it be better to get it from repos?
+2005-10-24T06:39:00.000Z	lorenzod	bigfoot1	I'd check there first.

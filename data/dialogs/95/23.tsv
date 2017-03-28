@@ -1,0 +1,95 @@
+2009-07-06T15:13:00.000Z	richardcavell		thanks, actionparsnip
+2009-07-06T15:14:00.000Z	richardcavell		I use mail.com webmail as my primary email. The text entry box is wider than the screen on FF3.5
+2009-07-06T15:15:00.000Z	richardcavell		And no scrollbar appears at the bottom so it's impossible to display some of the text.
+2009-07-06T15:15:00.000Z	richardcavell		It's a bug because when typing an email, I can type text into areas that cannot be displayed. In fact I don't have any other option
+2009-07-06T15:15:00.000Z	richardcavell		FF3.0.11 doesn't have any issue
+2009-07-06T15:16:00.000Z	richardcavell		I want to keep all my email in the cloud because I trust an external provider more than my internal hard disk
+2009-07-06T15:17:00.000Z	ActionParsnip	richardcavell	good call, they will have better backups too ;)
+2009-07-06T15:20:00.000Z	ActionParsnip	richardcavell	use nano then :)
+2009-07-06T15:25:00.000Z	ActionParsnip	richardcavell	works awesome here
+2009-07-06T15:25:00.000Z	richardcavell	ActionParsnip	I have trouble with youtube
+2009-07-06T15:26:00.000Z	ActionParsnip	richardcavell	i dont use the repo one as its never worked in 64bit for me
+2009-07-06T15:27:00.000Z	richardcavell	ActionParsnip	until you said that I didn't know there was a repo one!
+2009-07-06T15:29:00.000Z	ActionParsnip	richardcavell	its !info <package>
+2009-07-06T15:30:00.000Z	ActionParsnip	richardcavell	not te 64bit ine as far as ive seen. it uses a wrapper
+2009-07-08T19:56:00.000Z	ActionParsnip	richardcavell	thats because its intel, not a g4 cpu et al
+2009-07-09T15:02:00.000Z	ActionParsnip	richardcavell	anything in dmesg when it hangs?
+2009-07-09T15:02:00.000Z	richardcavell	ActionParsnip	um... what is that and how do I tell?
+2009-07-09T15:03:00.000Z	ActionParsnip	richardcavell	its the kernel messages, when whatever it is hangs, load a terminal and run: dmesg | tail
+2009-07-09T15:04:00.000Z	richardcavell	ActionParsnip	thanks for the info, I'll remember that but for now I'm going to download xchat proper
+2009-07-09T15:04:00.000Z	ActionParsnip	richardcavell	try a few clients, see which you like
+2009-07-09T15:04:00.000Z	richardcavell	ActionParsnip	I quite like Chatzilla
+2009-07-09T15:05:00.000Z	ActionParsnip	richardcavell	then use that :) i use pidgin
+2009-07-14T18:50:00.000Z	ActionParsnip	richardcavell	depends on his needs. My / is only using 3Gb
+2009-07-14T18:56:00.000Z	ActionParsnip	richardcavell	sounds right for win7 ;)
+2009-07-14T18:56:00.000Z	richardcavell	ActionParsnip	My advice is increase the size of the root partition. Like I say, you're not short on hard disk space.  I have a 60 Gig internal hard disk in my laptop and I have to ration disk space
+2009-07-14T18:57:00.000Z	richardcavell	ActionParsnip	Mind you I was downloading games on Steam when it froze!
+2009-07-15T18:54:00.000Z	richardcavell	ActionParsnip	Do you mean the bottom option on the menu.lst screen?
+2009-07-15T18:55:00.000Z	ActionParsnip	richardcavell	whatever line recovery mode is on, then select root
+2009-07-16T11:38:00.000Z	richardcavell	ActionParsnip	I type "sudo /usr/sbin/pm-hibernate" and my screen goes completely black, then turns on in text mode and I get a cursor at the top-left of the screen, blinking. Presently I get three error messages that look like: [328.685635] btusb_intr_complete:hci0 urb fff8800a078d80 failed to resubmit(1). Then a cursor below that blinks. The CPU fan turns on. I have to do a hard reboot to get out of it.
+2009-07-16T11:40:00.000Z	ActionParsnip	richardcavell	try sudo rmmod btusb   then hibernate
+2009-07-16T11:40:00.000Z	richardcavell	ActionParsnip	Okay I'll be back
+2009-07-16T11:40:00.000Z	richardcavell	ActionParsnip	I can't, rmmod is in use
+2009-07-16T11:41:00.000Z	richardcavell	ActionParsnip	Scratch that. ERROR: Module btusb is in use
+2009-07-16T11:41:00.000Z	ActionParsnip	richardcavell	lsof | grep btusb | less
+2009-07-16T11:42:00.000Z	richardcavell	ActionParsnip	I get nothing
+2009-07-16T11:43:00.000Z	ActionParsnip	richardcavell	from your error it appears that the btusb module is making it weird
+2009-07-16T11:43:00.000Z	ActionParsnip	richardcavell	and it says its in use but isnt which is a concern
+2009-07-16T11:43:00.000Z	richardcavell	ActionParsnip	Yeah. I don't even know what that module does. "Bluetooth USB"?
+2009-07-16T11:43:00.000Z	ActionParsnip	richardcavell	try:   lsmod | grep usb
+2009-07-16T11:43:00.000Z	ActionParsnip	richardcavell	you got it :D
+2009-07-16T11:44:00.000Z	richardcavell	ActionParsnip	btsub 21784 2    and    usbhid   47040 0
+2009-07-16T11:45:00.000Z	ActionParsnip	richardcavell	or lets try:  sudo rmmod usbhid; sudo rmmod; btusb; sleep 10; sudo modprobe usbhid
+2009-07-16T11:46:00.000Z	richardcavell	ActionParsnip	First, I think you put an extra semicolon in that. Secondly, ERROR: Module btusb is in use
+2009-07-16T11:47:00.000Z	ActionParsnip	richardcavell	if your keyboard or mouse stop working in all of this, just reboot
+2009-07-16T11:47:00.000Z	richardcavell	ActionParsnip	sudo rmmod usbhid makes my keyboard stop but sudo modprobe usbhid gets it back
+2009-07-16T11:47:00.000Z	richardcavell	ActionParsnip	I had to copy and paste the modprobe to get my keyboard back
+2009-07-16T11:48:00.000Z	ActionParsnip	richardcavell	thats because they are attatched to the usb bus
+2009-07-16T11:49:00.000Z	ActionParsnip	richardcavell	i was hoping taking the usb module out would somehow free the btusb
+2009-07-16T11:49:00.000Z	richardcavell	ActionParsnip	Maybe it does but I can't rmmod it
+2009-07-16T11:49:00.000Z	richardcavell	ActionParsnip	I don't actually use Bluetooth. But remember I'm writing the n00b instructions so I want to make the instructions general
+2009-07-16T11:50:00.000Z	ActionParsnip	richardcavell	there may be a bug with mac and ubuntu with hibernate stuff. I dont personally use it as its a massive PITA to get nice
+2009-07-16T11:51:00.000Z	ActionParsnip	richardcavell	may have some clues
+2009-07-16T11:51:00.000Z	richardcavell	ActionParsnip	Thanks for the ideas. I'll go to the Ubuntu Forums.
+2009-07-16T11:53:00.000Z	ActionParsnip	richardcavell	try asking about 5 hours later
+2009-07-16T11:53:00.000Z	richardcavell	ActionParsnip	Huh?
+2009-07-16T11:53:00.000Z	ActionParsnip	richardcavell	later in the day, different users in the channel
+2009-07-16T11:54:00.000Z	richardcavell	ActionParsnip	I'm putting it on the forums.
+2009-07-16T11:54:00.000Z	ActionParsnip	richardcavell	good move, i'd ask in here later too :)
+2009-07-16T11:55:00.000Z	richardcavell	ActionParsnip	I seem to be the Mac expert round here
+2009-07-16T11:55:00.000Z	richardcavell	ActionParsnip	Ubuntu doesn't play well with Mac
+2009-07-16T11:56:00.000Z	ActionParsnip	richardcavell	why buy an overpriced mac to put ubuntu on it?
+2009-07-16T11:57:00.000Z	richardcavell	ActionParsnip	I bought the overpriced mac to get the mac. I only started using Linux properly this year.
+2009-07-16T11:57:00.000Z	ActionParsnip	richardcavell	fair point
+2009-07-16T12:02:00.000Z	richardcavell	ActionParsnip	http://ubuntuforums.org/showthread.php?p=7624374#post7624374
+2009-07-16T12:16:00.000Z	ActionParsnip	richardcavell	if you can fix your own bugs and dont mind logging bugs for the new version then go for it
+2009-07-16T12:17:00.000Z	ActionParsnip	richardcavell	they are being pieced together in a new OS, bits they havent got to will be missing and can produce weird behaviour
+2009-07-26T06:22:00.000Z	richardcavell	ActionParsnip	or DVD
+2009-07-26T06:23:00.000Z	ActionParsnip	richardcavell	i use cd to mean any optical media ;)
+2009-07-26T06:24:00.000Z	richardcavell	ActionParsnip	ok
+2009-07-26T08:27:00.000Z	richardcavell	ActionParsnip	Yeah, I was thinking that you want a filesystem that writes a minimum
+2009-07-26T17:35:00.000Z	richardcavell	ActionParsnip	!ubottu not here
+2009-07-26T17:45:00.000Z	richardcavell	ActionParsnip	I concede that, but I'm on Karmic.  And in any case, my fps is about 30
+2009-07-26T17:45:00.000Z	ActionParsnip	richardcavell	me too, i think its fine
+2009-07-26T17:46:00.000Z	richardcavell	ActionParsnip	I'm not complaining about frame rate, I'm complaining about lag
+2009-07-26T17:47:00.000Z	richardcavell	ActionParsnip	they should include updated video drivers for Jaunty
+2009-07-26T17:47:00.000Z	ActionParsnip	richardcavell	maybe theres a tweak you can do in winecfg to make the network faster
+2009-07-26T17:48:00.000Z	richardcavell	ActionParsnip	it took me 3 weeks to get Half-Life working, so I'm expecting to play a game of counter-strike around mid-august
+2009-07-26T17:48:00.000Z	ActionParsnip	richardcavell	i only use nvidia due to fantastic support, no issues here
+2009-07-26T17:49:00.000Z	richardcavell	ActionParsnip	Yeah I know.  I'm thinking of buying a desktop and I'll only choose nvidia
+2009-07-26T17:49:00.000Z	richardcavell	ActionParsnip	their software support has been top dog for years
+2009-07-26T17:49:00.000Z	richardcavell	ActionParsnip	Do you know nvidia employs more software engineers than hardware engineers?
+2009-07-26T17:49:00.000Z	ActionParsnip	richardcavell	its all ive bought since the tnt2 ultra 32mb ruled the roost
+2009-07-26T17:50:00.000Z	richardcavell	ActionParsnip	It used to be Matrox that was on top when 2D support was the key
+2009-07-26T17:51:00.000Z	richardcavell	ActionParsnip	I'm looking at the nvidia website right now.  You know they still have an up to date driver for your tnt 2 ultra
+2009-07-26T17:51:00.000Z	richardcavell	ActionParsnip	for linux, freebsd, solar, 64 and 32 bit
+2009-08-13T15:18:00.000Z	ActionParsnip	richardcavell	no
+2009-08-13T15:18:00.000Z	ActionParsnip	richardcavell	its used in ubuntu
+2009-08-13T15:18:00.000Z	richardcavell	ActionParsnip	I know it is
+2009-08-13T15:19:00.000Z	richardcavell	ActionParsnip	What's wrong with it?
+2009-08-13T15:19:00.000Z	richardcavell	ActionParsnip	[rhetorical question]
+2009-08-13T15:20:00.000Z	ActionParsnip	richardcavell	its awesome [ironic answer]
+2010-10-21T10:48:00.000Z	ActionParsnip	richardcavell	depends on your needs. If you only chat and web browse, 4Gb is far more than you'll ever need
+2010-10-21T10:48:00.000Z	ActionParsnip	richardcavell	for a simple fileserver you will need about 256mb
+2010-10-21T10:50:00.000Z	ActionParsnip	richardcavell	some 3rdparties only support 32bit
+2011-02-21T08:14:00.000Z	ActionParsnip	richardcavell	as far as I am aware, 64bit wil not run in 32bit. You can however do the other ways around

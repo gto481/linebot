@@ -1,0 +1,96 @@
+2008-10-13T15:46:00.000Z	ActionParsnip	ljsoftnet	you can download the source of any package from its website or from the repos
+2008-10-13T15:50:00.000Z	ljsoftnet	ActionParsnip	what IDE should i use?
+2008-10-13T15:50:00.000Z	ActionParsnip	ljsoftnet	i dont code
+2008-10-13T15:50:00.000Z	ljsoftnet	ActionParsnip	ah ok thanks
+2008-10-20T15:58:00.000Z	ActionParsnip	ljsoftnet	sudo apt-get install nautilus will upgrade it (and only nautilus) if there is a newer version on the repos
+2009-12-05T22:03:00.000Z	ActionParsnip	ljsoftnet	you cant install ubuntu on ntfs, you can use wubi which will install to a file on an ntfs partition
+2009-12-05T22:05:00.000Z	ljsoftnet	ActionParsnip	i plan to install it through booting from the CD, and install it on my storage hard drive
+2009-12-05T22:05:00.000Z	ActionParsnip	ljsoftnet	you'd have to format the partition to ntfs (and lose the data on it)
+2009-12-05T22:07:00.000Z	ljsoftnet	ActionParsnip	is there another way to format, just the size of the partition to NTFS? i was just wondering
+2009-12-05T22:07:00.000Z	ActionParsnip	ljsoftnet	you can resize partitions
+2009-12-05T22:08:00.000Z	ljsoftnet	ActionParsnip	i mean just to format the xubuntu partition, not the whole hard disk
+2009-12-05T22:08:00.000Z	ActionParsnip	ljsoftnet	sure, you will format the partition you want
+2009-12-05T22:10:00.000Z	ljsoftnet	ActionParsnip	no i mean just to delete the total size on which i install xubuntu in
+2009-12-05T22:11:00.000Z	ActionParsnip	ljsoftnet	you can delete the Xubuntu partitions then rerun the installer. It will see the free space and you can reset up the install
+2009-12-05T22:16:00.000Z	ljsoftnet	ActionParsnip	ah, if i install xubuntu on an NTFS file system, and then set the size for ubuntu to be install in, the installer will create a new partition for xubuntu?
+2009-12-05T22:17:00.000Z	ljsoftnet	ActionParsnip	ah, if i install xubuntu on an NTFS file system, and then set the size for xubuntu to be install in, the installer will create a new partition for xubuntu?
+2009-12-05T22:19:00.000Z	ljsoftnet	ActionParsnip	if i install xubuntu on an NTFS file system, and then set the size for xubuntu to be install in, the installer will create a new partition for xubuntu?
+2009-12-05T22:20:00.000Z	ActionParsnip	ljsoftnet	you dont install xubuntu on an ntfs partition, you will need to resize the ntfs so you have unpartitioned space which the installer can then use
+2009-12-05T22:21:00.000Z	ljsoftnet	ActionParsnip	ah ok thanks
+2009-12-05T22:21:00.000Z	ActionParsnip	ljsoftnet	you can make life easier by making the ntfs not take up 100% of the space and you wont have to resize
+2009-12-05T22:22:00.000Z	ActionParsnip	ljsoftnet	this involves planning the partitioning when you install the windows system and using custom sizing rather than using the windows default 100% size
+2010-05-30T22:22:00.000Z	ActionParsnip	ljsoftnet	http://x4.6times7.org/dokuwiki/doku.php/devlog/blog/use_powernowd_with_own_defaultoptions_in_ubuntu_7.10
+2010-07-12T13:04:00.000Z	ActionParsnip	ljsoftnet	sure, extract it and see what you have downloaded
+2010-07-12T13:05:00.000Z	ljsoftnet	ActionParsnip	what do i do next?
+2010-07-12T13:06:00.000Z	ActionParsnip	ljsoftnet	i dont know, i dont have the file or kde, look in the files you have and find a readme or install file
+2010-07-12T13:08:00.000Z	ljsoftnet	ActionParsnip	it says it needs KDE 4.0
+2010-07-12T13:08:00.000Z	ActionParsnip	ljsoftnet	you need to read the instructions, there may be some on the website you downloaded from
+2010-07-12T13:09:00.000Z	ljsoftnet	ActionParsnip	i already did but its not there, the website said KDE/Gnome
+2010-07-12T13:11:00.000Z	ActionParsnip	ljsoftnet	ok i extracted the file, there are executables in the folder, you can launch the app using those
+2010-07-12T13:14:00.000Z	ljsoftnet	ActionParsnip	i already extracted the file, just dont know the command to launch the app and what file
+2010-07-12T13:14:00.000Z	ActionParsnip	ljsoftnet	i'm guessing kbrun, you have 3 executable files, try them
+2010-07-12T13:15:00.000Z	ljsoftnet	ActionParsnip	just kbrun in terminal or with a command?
+2010-07-12T13:15:00.000Z	ActionParsnip	ljsoftnet	you can double click it in dolphin or whatever file manager you use
+2010-07-12T13:15:00.000Z	ljsoftnet	ActionParsnip	ok
+2010-07-12T13:16:00.000Z	ActionParsnip	ljsoftnet	you will need to satisfy deps as the app hasnt been installed via apt-get so if you are missing stuff it needs it wont run
+2010-07-12T13:16:00.000Z	ljsoftnet	ActionParsnip	i just opened the IDE, gonna explore now
+2010-07-12T13:17:00.000Z	ljsoftnet	ActionParsnip	i double clicked on kbide
+2010-09-12T23:01:00.000Z	ActionParsnip	ljsoftnet	run it from terminal: gksudo synaptic
+2010-09-12T23:03:00.000Z	ljsoftnet	ActionParsnip	i already did that but, it displays nothing, and goes back to terminal
+2010-09-12T23:04:00.000Z	ActionParsnip	ljsoftnet	do you get any error from: sudo apt-get update
+2010-10-16T11:31:00.000Z	ActionParsnip	ljsoftnet	you can right click the menu and select edit menu also, or just run alacarte
+2010-10-18T17:40:00.000Z	ActionParsnip	ljsoftnet	by default, yes
+2010-10-18T17:41:00.000Z	ActionParsnip	ljsoftnet	btrfs is available in maverick
+2010-10-30T23:09:00.000Z	ActionParsnip	ljsoftnet	I use that guide :)
+2010-10-30T23:10:00.000Z	ActionParsnip	ljsoftnet	unedit the files you edditted
+2010-10-30T23:15:00.000Z	ActionParsnip	ljsoftnet	just empty the file. You can use: echo "" | sudo tee /etc/initramfs-tools/blah...
+2010-10-31T11:13:00.000Z	ActionParsnip	ljsoftnet	http://ubuntuforums.org/showthread.php?t=1413295
+2010-10-31T11:18:00.000Z	ljsoftnet	ActionParsnip	should i go for the ppa?
+2011-02-11T15:10:00.000Z	ljsoftnet	ActionParsnip	brokendatapoint ah
+2011-03-09T08:42:00.000Z	ActionParsnip	ljsoftnet	remove it from the filename and add a space
+2011-03-22T12:09:00.000Z	ActionParsnip	ljsoftnet	http://www.ivankristianto.com/os/ubuntu/install-intel-latest-driver-to-your-ubuntu-10-04/1278/
+2011-03-22T12:09:00.000Z	ActionParsnip	ljsoftnet	its already included, you may just need an xorg.conf file to get it going
+2011-03-30T18:46:00.000Z	ljsoftnet	ActionParsnip	i always see you here, giving support others, you should write down what you learn
+2011-03-30T18:47:00.000Z	ActionParsnip	ljsoftnet	it's all online
+2011-03-30T18:47:00.000Z	ljsoftnet	ActionParsnip	ow ok
+2011-03-30T18:48:00.000Z	ActionParsnip	ljsoftnet	sorry to disapoint
+2011-03-30T18:48:00.000Z	ljsoftnet	ActionParsnip	i think you can write a book
+2011-04-09T16:57:00.000Z	ActionParsnip	ljsoftnet	does sudo transcend the pipe?
+2011-04-09T16:58:00.000Z	ljsoftnet	ActionParsnip	i didn't get what you said
+2011-04-09T16:58:00.000Z	ActionParsnip	ljsoftnet	could cover all by running: sudo -i    then run your command
+2011-04-09T16:59:00.000Z	ActionParsnip	ljsoftnet	for example:  cat "text" > /usr/bin/file   will NOT work, sudo does not transcend the > character, the correct way is:  cat "text" | sudo tess /usr/bin/file
+2011-04-09T16:59:00.000Z	ActionParsnip	ljsoftnet	this puts sudo on the left side of the operator, do you know if pipes need similar treatment??
+2011-04-09T17:05:00.000Z	ljsoftnet	ActionParsnip	it worked it deleted dockbarx
+2011-09-15T22:15:00.000Z	ActionParsnip	ljsoftnet	sure, log into ubuntu classic session at logon
+2011-09-15T22:18:00.000Z	ljsoftnet	ActionParsnip	i would like to use unity but without the effects
+2011-09-15T22:19:00.000Z	ActionParsnip	ljsoftnet	unity needs compiz to run. You can install compizconfig-settings-ma
+2011-09-15T22:22:00.000Z	ActionParsnip	ljsoftnet	i run lxde with unity2d. I have a startup command to kill off lxpanel. Works well
+2011-09-22T13:01:00.000Z	ActionParsnip	ljsoftnet	open your windows binaries with the crossover app. You should check the compatibility pages to see what wil run with crossover
+2011-09-30T17:45:00.000Z	ActionParsnip	ljsoftnet	what happens when you try? Do other apps maximized?
+2011-09-30T17:46:00.000Z	ljsoftnet	ActionParsnip	its stuck at its own window, other windows maximize well
+2011-09-30T17:46:00.000Z	ActionParsnip	ljsoftnet	is it a known issue?
+2011-09-30T17:47:00.000Z	ljsoftnet	ActionParsnip	i dont know this is my first install
+2011-09-30T17:47:00.000Z	ActionParsnip	ljsoftnet	I'd check that first, may also want to log into Ubuntu Classic, see if its ok there...
+2011-09-30T17:48:00.000Z	ljsoftnet	ActionParsnip	il give it a try
+2011-10-12T21:46:00.000Z	ljsoftnet	ActionParsnip	are usb modems supported by ubuntu?
+2011-10-12T21:47:00.000Z	ActionParsnip	ljsoftnet	sure, usb_modeswitch makes them stop being USB storage and become modems
+2011-10-16T17:38:00.000Z	ActionParsnip	ljsoftnet	log off, then select the session when you log in, it will be remembered for next time
+2011-10-16T17:38:00.000Z	ljsoftnet	ActionParsnip	i cant save the session, its just openbox on the combo box
+2011-10-16T17:43:00.000Z	ljsoftnet	ActionParsnip	how do i make a openbox session?
+2011-10-16T19:22:00.000Z	ActionParsnip	ljsoftnet	install openbox, log off and select openbox at the login, or you can replace the default xfce WM with openbox by pressing ALT+F2 and running: openbox --replace
+2012-01-21T10:07:00.000Z	ActionParsnip	ljsoftnet	what GPU?
+2012-01-21T10:10:00.000Z	ljsoftnet	ActionParsnip	AMD Ati
+2012-01-21T10:10:00.000Z	ActionParsnip	ljsoftnet	don't the ati drivers have a GUI app to set resolution..?
+2012-01-21T10:11:00.000Z	ljsoftnet	ActionParsnip	its not opening
+2012-01-21T10:14:00.000Z	ljsoftnet	ActionParsnip	how do i run the amd software as root in the terminal, the gui doesn't open
+2012-01-21T10:15:00.000Z	ActionParsnip	ljsoftnet	use gksudo
+2012-01-21T10:15:00.000Z	ActionParsnip	ljsoftnet	e.g.    gksudo command
+2012-01-21T10:17:00.000Z	ljsoftnet	ActionParsnip	you know the command for the AMD Catalyst software?
+2012-01-21T10:18:00.000Z	ActionParsnip	ljsoftnet	no idea, I don't buy ATi GPUs, Nvidia al the way here
+2012-01-21T10:18:00.000Z	ljsoftnet	ActionParsnip	ok thanks
+2012-06-13T04:11:00.000Z	ActionParsnip	ljsoftnet	run:  alsamixer  and you can use Q and E to increase the left or right channels individually :)
+2012-06-13T04:15:00.000Z	ljsoftnet	ActionParsnip	it doesnt change left or rigth
+2012-06-13T04:16:00.000Z	ActionParsnip	ljsoftnet	if you drop one all the way down on the master, keep one side up, is it different?
+2012-06-13T04:17:00.000Z	ljsoftnet	ActionParsnip	both the left and rigth move the same i cant change left or rigth, even with Q E or Z C
+2012-06-13T04:24:00.000Z	ActionParsnip	ljsoftnet	is the plug for the speakers pushed all the way into the hole?
+2012-06-13T04:24:00.000Z	ljsoftnet	ActionParsnip	yes, the left and the subwoofer has sound but the rigth doesn't

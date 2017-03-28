@@ -1,0 +1,96 @@
+2006-12-05T17:21:00.000Z	oem		can someone help me with changing permissions to a partition from terminal?
+2006-12-05T17:22:00.000Z	oem		or at least how to change permissions on it using the file browser
+2006-12-05T17:24:00.000Z	oem		and the wiki is useless
+2006-12-05T17:25:00.000Z	oem		can someone help me with something?
+2006-12-05T17:26:00.000Z	oem		or do I need to just keep asking?
+2006-12-05T17:27:00.000Z	oem		or do I need to just keep asking?
+2006-12-05T17:27:00.000Z	BackPacker	oem	try asking your question
+2006-12-05T17:28:00.000Z	BackPacker	oem	maybe everybody missed it
+2006-12-05T17:28:00.000Z	BackPacker	oem	what do you mean by "permissions to a partition"?
+2006-12-05T17:31:00.000Z	BackPacker	oem	and there's an entry for the partition in /etc/fstab?
+2006-12-05T17:32:00.000Z	BackPacker	oem	and is there an entry for it in /etc/fstab?
+2006-12-05T17:33:00.000Z	BackPacker	oem	fstab is empty????
+2006-12-05T17:34:00.000Z	BackPacker	oem	do 'cat /etc/fstab'
+2006-12-05T17:35:00.000Z	BackPacker	oem	look for a line referring to /media/scsidisk
+2006-12-05T17:36:00.000Z	BackPacker	oem	so the volume is probably being mounted automatically by hal or automount or something
+2006-12-05T17:36:00.000Z	BackPacker	oem	Is this the disk you tried upgrading to Dapper on?
+2006-12-05T17:37:00.000Z	BackPacker	oem	and it's the one that's mounted on /media/scsidisk?
+2006-12-05T17:37:00.000Z	BackPacker	oem	and just to get it clear, it's one of the partitions on this disk that you can't access?
+2006-12-05T17:39:00.000Z	BackPacker	oem	so you installed dapper on the 25g partition?
+2006-12-05T17:40:00.000Z	BackPacker	oem	and it's the breezy partition that you can't access?
+2006-12-05T17:40:00.000Z	BackPacker	oem	do you know the partition name?
+2006-12-05T17:40:00.000Z	BackPacker	oem	have you tried manually mounting /dev/sda1?
+2006-12-05T17:41:00.000Z	BackPacker	oem	ok, try the following. First, open a terminal and enter "mkdir /mnt/breezy" (without the quotes)
+2006-12-05T17:42:00.000Z	BackPacker	oem	sorry, that should be "sudo mkdir /mnt/breezy"
+2006-12-05T17:43:00.000Z	BackPacker	oem	now do this: "mount /dev/sda1 /mnt/breezy"
+2006-12-05T17:43:00.000Z	BackPacker	oem	Ooops! should be "sudo mount /dev/sda1 /mnt/breezy"
+2006-12-05T17:44:00.000Z	BackPacker	oem	I'll remember that 'sudo' one of these days...
+2006-12-05T17:44:00.000Z	BackPacker	oem	now do "ls -l /mnt/breezy"
+2006-12-05T17:44:00.000Z	BackPacker	oem	do you get a directory listing?
+2006-12-05T17:45:00.000Z	BackPacker	oem	then the partition is probably ok. You could mount it the way I said, but really you'd want it to mount automatically
+2006-12-05T17:46:00.000Z	BackPacker	oem	when you say "sometimes" do you know what is is that makes the difference?
+2006-12-05T17:48:00.000Z	BackPacker	oem	with disks that are mounted from /etc/fstab, you can specify the perms there. With automounted SCSI disks, I just don't know
+2006-12-05T17:48:00.000Z	BackPacker	oem	that's because it's automounted
+2006-12-05T17:49:00.000Z	BackPacker	oem	I've just about reached the end of my knowledge on this. I know how linux handles IDE but not SCSI
+2006-12-05T17:49:00.000Z	BackPacker	oem	but you just told me that you got a directory listing from "cat /etc/fstab"!
+2006-12-05T17:50:00.000Z	BackPacker	oem	 let me guess: it's back, right?
+2006-12-05T17:51:00.000Z	BackPacker	oem	 it's the file that specifies what gets mounted where
+2006-12-05T17:52:00.000Z	BackPacker	oem	what is?
+2006-12-05T17:53:00.000Z	BackPacker	oem	if it's being automounted by pmount then there will be a configuration file for it somewhere else, I think
+2006-12-05T17:53:00.000Z	BackPacker	oem	but I don't know how linux handles automounted SCSI disks...
+2006-12-05T17:53:00.000Z	BackPacker	oem	and I dont know how pmount works, either
+2006-12-05T17:54:00.000Z	BackPacker	oem	maybe someone else here does...
+2006-12-05T17:54:00.000Z	BackPacker	oem	:-)
+2006-12-05T17:54:00.000Z	BackPacker	oem	I wish you'd said that earlier...
+2006-12-05T17:56:00.000Z	BackPacker	oem	what makes you think pmount is automounting sda1?
+2006-12-05T17:59:00.000Z	BackPacker	oem	that could be your problem, if it's in pmount.allow but not in fstab. Especially if the other partitions are in fstab
+2006-12-05T06:00:00.000Z	BackPacker	oem	you mean in /etc/fstab?
+2006-12-05T06:00:00.000Z	BackPacker	oem	not exactly. Can you show me what one of the lines says?
+2006-12-05T06:01:00.000Z	BackPacker	oem	that was fast!
+2006-12-05T06:01:00.000Z	BackPacker	oem	copy the line, change the sda3 to sda1, change the / to wherever you want it mounted
+2006-12-05T06:01:00.000Z	BackPacker	oem	if you don't change the / it won't work. It will try to mount it on top of the root filesystem
+2006-12-05T06:02:00.000Z	BackPacker	oem	you'll also want to put a # at the start of the line in pmount.allow so that pmount doesn't handle it
+2006-12-05T06:02:00.000Z	BackPacker	oem	not just like that it won't. you need to create a directory where you want to mount it
+2006-12-05T06:03:00.000Z	BackPacker	oem	you already created the /mnt/breezy directory earlier. You could mount it there
+2006-12-05T06:03:00.000Z	BackPacker	oem	/home/oem/desktop is not a good place to mount anything!
+2006-12-05T06:04:00.000Z	BackPacker	oem	edit pmount.allow and add a # at the start of the line for sda1
+2006-12-05T06:04:00.000Z	BackPacker	oem	/mnt/sda isn't a good name but /mnt/sda1 could be
+2006-12-05T06:04:00.000Z	BackPacker	oem	of course, you'd have to create the /mnt/sda1 directory
+2006-12-05T06:05:00.000Z	BackPacker	oem	with "mkdir /mnt/sda1"
+2006-12-05T06:05:00.000Z	BackPacker	oem	but I'd suggest giving it a better name than that, like /mnt/breezy. Which you've already created
+2006-12-05T06:06:00.000Z	BackPacker	oem	so the line in /etc/fstab would look like this: /dev/sda1       /mnt/breezy               ext3    defaults,errors=remount-ro 0       1
+2006-12-05T06:07:00.000Z	BackPacker	oem	have you edited pmount.allow?
+2006-12-05T06:07:00.000Z	BackPacker	oem	you don't have to reboot yet. Remember, it's already mounted in /mnt/breezy. You did that earlier.
+2006-12-05T06:07:00.000Z	BackPacker	oem	next time you boot it should work
+2006-12-05T06:08:00.000Z	BackPacker	oem	you need to be root to edit those files
+2006-12-05T06:08:00.000Z	BackPacker	oem	what did you edit them in? Which program?
+2006-12-05T06:08:00.000Z	BackPacker	oem	you're running Gnome desktop?
+2006-12-05T06:09:00.000Z	BackPacker	oem	I use KDE. Do you have a terminal open?
+2006-12-05T06:09:00.000Z	BackPacker	oem	enter "sudo gedit /etc/fstab" and edit that one
+2006-12-05T06:09:00.000Z	BackPacker	oem	and do "sudo gedit /etc/pmount.allow"
+2006-12-05T06:10:00.000Z	BackPacker	oem	make the changes and save, then close the other gedit window(s)
+2006-12-05T06:11:00.000Z	BackPacker	oem	better to do "sudo gedit /etc/fstab" and copy and paste the line from the original gedit window
+2006-12-05T06:11:00.000Z	BackPacker	oem	then do "sudo gedit pmount.allow" and put the # at the start of the sda1 line
+2006-12-05T06:12:00.000Z	BackPacker	oem	great
+2006-12-05T06:18:00.000Z	BackPacker	oem	do this in a terminal: ls -ld /mnt/breezy
+2006-12-05T06:19:00.000Z	BackPacker	oem	wait one, please. I need a nature break...
+2006-12-05T06:22:00.000Z	BackPacker	oem	how are you trying to access it?
+2006-12-05T06:22:00.000Z	BackPacker	oem	what I mean is, how are you trying to modify it?
+2006-12-05T06:22:00.000Z	BackPacker	oem	and what error message do you get?
+2006-12-05T06:23:00.000Z	BackPacker	oem	 and how are you trying to modify it?
+2006-12-05T06:23:00.000Z	BackPacker	oem	so the perms on that file are wrong.
+2006-12-05T06:23:00.000Z	BackPacker	oem	I notice that /mnt/breezy is owned by root
+2006-12-05T06:24:00.000Z	BackPacker	oem	we need to find out the perms and ownership of that file
+2006-12-05T06:25:00.000Z	BackPacker	oem	I recognise the problem. your user name and id don't match the ones you had in Breezy
+2006-12-05T06:25:00.000Z	BackPacker	oem	doesn't matter. zachary might have been root on Breezy, but on Dapper he's plain old zachary
+2006-12-05T06:26:00.000Z	BackPacker	oem	yes. That should do it
+2006-12-05T06:26:00.000Z	BackPacker	oem	a more permanent solution should also be possible
+2006-12-05T06:28:00.000Z	BackPacker	oem	it worked then?
+2006-12-05T06:29:00.000Z	BackPacker	oem	you can add zachary to the admin group. Check out "Users and Groups" in the System menu
+2006-12-05T06:29:00.000Z	BackPacker	oem	but that doesn't give zachary full root privileges
+2006-12-05T06:29:00.000Z	BackPacker	oem	yes
+2006-12-05T06:30:00.000Z	BackPacker	oem	you can do that anyway with "sudo apt-get install packagename" at the command line if you want to go all geeky
+2006-12-05T06:31:00.000Z	BackPacker	oem	and that's not the last of your troubles, I bet... :-)
+2006-12-05T06:31:00.000Z	BackPacker	oem	good
+2006-12-05T06:31:00.000Z	BackPacker	oem	you're welcome. Glad to be of help
+2006-12-05T06:32:00.000Z	BackPacker	oem	see you around

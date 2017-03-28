@@ -1,0 +1,96 @@
+2007-11-23T21:42:00.000Z	Naelr	genii	nvidia controller... or so it says
+2007-11-23T21:43:00.000Z	genii	Naelr	I would suspect that you need to manually insert whichever is the proper driver for your chipsets. Keep in mind all is speculation on my part at this point.
+2007-11-23T21:43:00.000Z	Naelr	genii	when i am back in the live cd I can see the hd and mount it just fine
+2007-11-23T21:44:00.000Z	Naelr	genii	i have tried moutnting the cd and puting modules to load in /ect/modules that my desktop has running and are running according to lsmod on the laptop during the live boot.. but still a busybox
+2007-11-23T21:44:00.000Z	genii	Naelr	When you are in livecd do a lsmod     to see loaded modules and try to deduce which is the hd controller one. then you can modprobe it after to insert it
+2007-11-23T21:45:00.000Z	genii	Naelr	Yes, lsmod on livecd, modprobe on busybox
+2007-11-23T21:46:00.000Z	genii	Naelr	See if sata_nv is loaded and if it uses some sub-modules now by using again lsmod
+2007-11-23T21:46:00.000Z	Naelr	genii	where would lsmod be it isn't foundi n /bin/sh
+2007-11-23T21:47:00.000Z	Naelr	genii	yea...
+2007-11-23T21:47:00.000Z	Naelr	genii	also loaded scsi_mod
+2007-11-23T21:47:00.000Z	genii	Naelr	try: /bin/lsmod
+2007-11-23T21:47:00.000Z	genii	Naelr	Good, that it loaded a sub-module is hopeful
+2007-11-23T21:48:00.000Z	genii	Naelr	does fsisk -l       produce a list of hd ?
+2007-11-23T21:49:00.000Z	genii	Naelr	/sbin/fdisk -l
+2007-11-23T21:49:00.000Z	Naelr	genii	nor under /bin/
+2007-11-23T21:50:00.000Z	genii	Naelr	Does mount    show anything mounted?
+2007-11-23T21:51:00.000Z	Naelr	genii	yea a few ... onlything that looks important is fusectl on /sys/fs/fuse/connections
+2007-11-23T21:51:00.000Z	genii	Naelr	work is calling me away i'll return in maybe 10 minutes .... the mount I was looking for was some/dev/sdX or something indicating a hd type dev
+2007-11-23T22:01:00.000Z	Naelr	genii	don't suppose we can pm this convo. .this is getting nuts in here
+2007-11-23T22:02:00.000Z	genii	Naelr	I avoid pm whenever possible
+2007-11-23T22:02:00.000Z	Naelr	genii	ok
+2007-11-23T22:03:00.000Z	Naelr	genii	in the live cd as well as my desktop I have /dev/disk/by-uuid... but in the busybox the uuid direcotrty doesn not exist.. so the bootup is the problem
+2007-11-23T22:07:00.000Z	Naelr	genii	you mean pastbin as where I am typing? that is alot of text
+2007-11-23T22:08:00.000Z	genii	Naelr	Anyhow, by all rights since you need kubuntu support and not ubuntu support this convo should be in #kubuntu and not here (strictly speaking) But i will continiue giving assistance here unless we are asked by an op to move it
+2007-11-23T22:11:00.000Z	Naelr	genii	I wondered how they did that hahaha
+2007-11-23T22:15:00.000Z	Naelr	genii	so mount the drive and put that in /etc/modules
+2007-11-23T22:15:00.000Z	genii	Naelr	Yes
+2007-11-23T22:16:00.000Z	genii	Naelr	Also possibly libata
+2007-11-23T22:20:00.000Z	genii	Naelr	I'm eating lunch while at computer now, so expect some lag :)
+2007-11-23T22:21:00.000Z	Naelr	genii	hahah ok I just go off the phone... anwyay in /etc/modules I see fuse lp sbp2 sata_nv libata and I added amd74xx
+2007-11-23T22:22:00.000Z	genii	Naelr	Remove in there sata_nv    and then make sure libata is underneath of amd74xx
+2007-11-23T22:22:00.000Z	Naelr	genii	ok done.. saving and rebooting
+2007-11-23T22:24:00.000Z	Naelr	genii	how does it get to the /ect/modules file if it can't see the harddrive?
+2007-11-23T22:25:00.000Z	Naelr	genii	it doesn't look like it worked
+2007-11-23T22:25:00.000Z	genii	Naelr	If it begins booting anything at all it is seeing the drive to that extent. as to know what the device is that it's attached to, thats what modules/device drivers are for
+2007-11-23T22:26:00.000Z	genii	Naelr	In your bios do you have options like: pnp settings   or operating system type   etc. if so then set pnp type to off or os type to "other" or win2000 if it is there
+2007-11-23T22:27:00.000Z	Naelr	genii	no this bios sucks.. I can't change anything and acer gives me no help and I am at the busy box again .. it cannot find /dev/disk/by-uuid/drives hex
+2007-11-23T22:27:00.000Z	genii	Naelr	Bah, crappy then. I need to eat. Back in about 5-10 minutes
+2007-11-23T22:28:00.000Z	Naelr	genii	ok I am almost done downloading the daily as per DaSkreech's instructions
+2007-11-23T22:43:00.000Z	genii	Naelr	OK i'm almost ready to tackle Round 3 or so now :)
+2007-11-23T22:44:00.000Z	Naelr	genii	do you think there is hope?
+2007-11-23T22:45:00.000Z	genii	Naelr	Theres always hope :) When you installed the os, what hd designation was it? sda1 sdd4    etc
+2007-11-23T22:45:00.000Z	Naelr	genii	I have downloaded the ubuntu daily should I install int...
+2007-11-23T22:45:00.000Z	Naelr	genii	sda4 is the partition
+2007-11-23T22:47:00.000Z	genii	Naelr	Well, to be fair i think it is more a case of unusual hardware
+2007-11-23T22:47:00.000Z	genii	Naelr	Anyhow, in busybox is there a device of /dev/sda4 ?
+2007-11-23T22:47:00.000Z	Naelr	genii	me as well.. I did research on this laptop.. the aspire 5520 appearly has several versions.. and mine is the one with the problems.. most just have wifi and video
+2007-11-23T22:47:00.000Z	Naelr	genii	there is no sdanything in busybox
+2007-11-23T22:48:00.000Z	genii	Naelr	Hmm. I was hoping it might have detected it but then maybe the fstab or grub line got confused. but it seems to see no hd devs then
+2007-11-23T22:48:00.000Z	Naelr	genii	there is an hda
+2007-11-23T22:49:00.000Z	genii	Naelr	Hopeful :)
+2007-11-23T22:49:00.000Z	Naelr	genii	I read reports of opensuse working on this pig... but want a deb based system
+2007-11-23T22:50:00.000Z	genii	Naelr	mkdir tmp; mount /dev/hda4 tmp
+2007-11-23T22:50:00.000Z	genii	Naelr	I need coffee, AFK 1-2 mins
+2007-11-23T22:50:00.000Z	Naelr	genii	not hda1 or 2 just hda
+2007-11-23T22:53:00.000Z	genii	Naelr	Very very weird that. Tho it could be that is your cdrom and not hd in this scenario
+2007-11-23T22:53:00.000Z	Naelr	genii	tjat is what i was thnking
+2007-11-23T22:54:00.000Z	Naelr	genii	put in a cd and it mounted cd drive to tmp
+2007-11-23T22:54:00.000Z	genii	Naelr	Re-examining your lsmod output from livecd. AFK
+2007-11-23T22:57:00.000Z	Naelr	genii	I really apprecate the help and time you have spent trying to get me up and running ...
+2007-11-23T22:58:00.000Z	genii	Naelr	The (remotely) applicable modules listed there which might have something to do with it: scsi_mod sd_mod ata_generic (other than the two we already put in the /etc/modules)
+2007-11-23T22:59:00.000Z	genii	Naelr	I figure why not LOL
+2007-11-23T22:59:00.000Z	Naelr	genii	hahah
+2007-11-23T23:00:00.000Z	Naelr	genii	should I maybe try with the daily install of ubuntu like DaSkreech suggested?
+2007-11-23T23:00:00.000Z	genii	Naelr	you don't have some weird hd like a SATA drive in a wireless bluetooth right? then sdhci shouldn't be applicable (conceivably)
+2007-11-23T23:01:00.000Z	Naelr	genii	I have an SATA drive but the laptop doens't have bluetooh ahhaah
+2007-11-23T23:01:00.000Z	genii	Naelr	Well, try first the /etc/modules    then perhaps if still no joy a reinstall from daily build
+2007-11-23T23:02:00.000Z	Naelr	genii	so add these in addiution to the ones we already added..  scsi_mod sd_mod ata_generic  any particualr order?
+2007-11-23T23:02:00.000Z	genii	Naelr	No particular order other than libata should be underneath of the amd7whatever one
+2007-11-23T23:04:00.000Z	Naelr	genii	ok saving and rebooting .. wish me luck
+2007-11-23T23:04:00.000Z	genii	Naelr	<crosses fingers and toes>
+2007-11-23T23:04:00.000Z	Naelr	genii	I really apprecate the help and time you have spent trying to get me up and running ...
+2007-11-23T23:05:00.000Z	genii	Naelr	Well, it is also an interesting puzzle. but sometimes extremely frustrating. i don't mind helping usually
+2007-11-23T23:05:00.000Z	Naelr	genii	it isn't looking good.. should maybe I be trying to boot with the noacip and apic=off in grub
+2007-11-23T23:06:00.000Z	genii	Naelr	Perhaps try usb-handoff
+2007-11-23T23:06:00.000Z	Naelr	genii	as per this post http://ubuntuforums.org/showthread.php?t=565213&highlight=aspire+5520
+2007-11-23T23:07:00.000Z	genii	Naelr	reading
+2007-11-23T23:08:00.000Z	Naelr	genii	I also get a PCI: Failed to allocate mem resource #6:200000@e00000 for somemore gibberish numbers
+2007-11-23T23:08:00.000Z	Naelr	genii	right as it boots
+2007-11-23T23:09:00.000Z	genii	Naelr	Ah, so getting a bit further then
+2007-11-23T23:09:00.000Z	Naelr	genii	no that has alwasy been there
+2007-11-23T23:10:00.000Z	Naelr	genii	but I thought i saw it on another machine and so it didn't seem to matter to me it is right after the Starting up...
+2007-11-23T23:10:00.000Z	genii	Naelr	I suspect acpi but then i always suspect acpi ...
+2007-11-23T23:11:00.000Z	Naelr	genii	so try the daily?
+2007-11-23T23:11:00.000Z	genii	Naelr	Have you tried something like:  pci=routeirq usb-handoff acpi=force
+2007-11-23T23:11:00.000Z	Naelr	genii	nope but I can
+2007-11-23T23:12:00.000Z	genii	Naelr	A dump of dmesg off the boot which goes to busybox would be nice but i know it's not possible :(
+2007-11-23T23:16:00.000Z	Naelr	genii	nope no go with those either
+2007-11-23T23:16:00.000Z	Naelr	genii	I do see something like ata1: sata linu up 1.5 Gbps
+2007-11-23T23:17:00.000Z	Naelr	genii	I do see something like ata1: sata link up 1.5 Gbps
+2007-11-23T23:17:00.000Z	Naelr	genii	can busybox mount usb ...
+2007-11-23T23:19:00.000Z	Naelr	genii	where would I find this log in busybox there is no /var/logs
+2007-11-23T23:23:00.000Z	genii	Naelr	any joy in mudville yet?
+2007-11-23T23:24:00.000Z	Naelr	genii	no joy it still does not work.
+2007-11-23T23:25:00.000Z	genii	Naelr	:(
+2007-11-23T23:25:00.000Z	Naelr	genii	I cann;'t  mess wit this anymore.. I gotta get stuff done... I apprecaite the help and will try the daily later... maybe i will go with opensuse.. hell at least it isn't vista

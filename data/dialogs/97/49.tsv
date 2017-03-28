@@ -1,0 +1,97 @@
+2006-12-03T10:35:00.000Z	sain		i tried to play Call of Duty on the ubuntu but it didn't work or whatever
+2006-12-03T10:35:00.000Z	sain		linux suxors
+2006-12-03T10:35:00.000Z	J4kch	sain	Tried Wine or Cedega?
+2006-12-03T10:36:00.000Z	sain	J4kch	i don't want to install all programs and that
+2006-12-03T10:36:00.000Z	J4kch	sain	well, you need either Wine or Cedega for that...
+2006-12-03T10:36:00.000Z	J4kch	sain	Cedega is best, but you gotta pay
+2006-12-03T10:38:00.000Z	J4kch	sain	Good thinking
+2006-12-03T10:50:00.000Z	sain	J4kch	you are using a proxy?
+2006-12-03T10:50:00.000Z	J4kch	sain	I might be
+2006-12-03T10:51:00.000Z	sain	J4kch	well you must be, because it's trying to retrieve from localhost :)
+2006-12-03T10:51:00.000Z	J4kch	sain	foxy proxy is off (and that's firefox stuff)
+2006-12-03T10:51:00.000Z	sain	J4kch	if you did "wget http://uk.archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.13.11ubuntu7_i386.deb" what happens?
+2006-12-03T10:52:00.000Z	J4kch	sain	bad port number
+2006-12-03T10:54:00.000Z	sain	J4kch	well you have a proxy setting somwhere, trying to connect to you own machine on port 4001
+2006-12-03T10:55:00.000Z	J4kch	sain	Sigh
+2006-12-03T10:55:00.000Z	sain	J4kch	look in synaptic or whatever it's called
+2006-12-03T10:57:00.000Z	J4kch	sain	I have a proxy, gona try to kill it now =)
+2006-12-03T10:57:00.000Z	sain	J4kch	and change the settings that apt is looking for ... it's looking to connect to the proxy for some reason
+2006-12-03T11:01:00.000Z	J4kch	sain	problem remains -_-
+2006-12-03T11:01:00.000Z	sain	J4kch	are you using synaptic?
+2006-12-03T11:02:00.000Z	J4kch	sain	using the software updates thing
+2006-12-03T11:02:00.000Z	sain	J4kch	i'm not running ubuntu atm, or else i would help you track down where the proxy is set
+2006-12-03T11:03:00.000Z	sain	J4kch	there has to be someone else who knows around
+2006-12-03T11:03:00.000Z	J4kch	sain	alright, thanks for helping
+2006-12-03T11:04:00.000Z	J4kch	sain	why is jesse__ calling you sian?
+2006-12-03T11:05:00.000Z	sain	J4kch	for the same reason he doesn't know ubotu is a bot
+2006-12-03T11:05:00.000Z	J4kch	sain	shouldn't the BOT part in it's name give it away?
+2006-12-03T11:05:00.000Z	sain	J4kch	for you and me maybe
+2006-12-03T11:10:00.000Z	J4kch	sain	Is there a fast way to download the all the updates rather than manually?
+2006-12-03T11:11:00.000Z	sain	J4kch	i would help but i don't run ubuntu
+2006-12-03T11:12:00.000Z	sain	J4kch	try that system>preferences for the proxy as jrib said
+2006-12-03T11:17:00.000Z	sain	J4kch	have you set up iptables with some frontend?
+2006-12-03T11:17:00.000Z	sain	J4kch	i'm thinking maybe you set up a transparent proxy in iptables
+2006-12-03T11:18:00.000Z	J4kch	sain	not to my knowledge but I do a lot of stuff without my knowledge =P
+2006-12-03T11:19:00.000Z	sain	J4kch	heh theres' your problem, it is connecting to your machine port 4001
+2006-12-03T11:19:00.000Z	J4kch	sain	so now what?
+2006-12-03T11:20:00.000Z	sain	J4kch	yeah, do that (assuming you are running bash, which you probably are)
+2006-12-03T11:20:00.000Z	sain	J4kch	what jrib said
+2006-12-03T11:21:00.000Z	sain	J4kch	and all your problems should dissappear :)
+2006-12-03T11:22:00.000Z	J4kch	sain	jrib: Problem remains
+2006-12-03T11:23:00.000Z	sain	J4kch	what is the $http_proxy now?
+2006-12-03T11:23:00.000Z	J4kch	sain	still localhost
+2006-12-03T11:25:00.000Z	sain	J4kch	so you did; export $http_proxy=""
+2006-12-03T11:25:00.000Z	J4kch	sain	Whoops, forgot the $
+2006-12-03T11:26:00.000Z	J4kch	sain	Now I get a bunch of invalid identifier stuff
+2006-12-03T11:27:00.000Z	sain	J4kch	ok one sec ... i don't use bash
+2006-12-03T11:27:00.000Z	sain	J4kch	yeah
+2006-12-03T11:29:00.000Z	sain	J4kch	now try
+2006-12-03T11:33:00.000Z	sain	J4kch	also until you find out what's setting up the proxy, you should put the export http_proxy="" in your $HOME/.bashrc
+2006-12-03T11:38:00.000Z	sain	J4kch	from a quick google the most popular proxy using port 4001 is Java Anonymous Proxy ... you aren't using that , are you?
+2006-12-03T11:38:00.000Z	J4kch	sain	was, uninstalled it
+2006-12-03T11:38:00.000Z	sain	J4kch	ah we get closer :)
+2006-12-03T11:44:00.000Z	sain	J4kch	so you've done "apt-get --purge remove anon-proxy"
+2006-12-03T11:45:00.000Z	J4kch	sain	It's uninstalled
+2006-12-03T11:47:00.000Z	sain	J4kch	yeah, it may be that when you removed it you didn't use the 'purge' argument, so didn't remove all the files
+2006-12-03T11:47:00.000Z	J4kch	sain	so I'd have to reinstall and purge?
+2006-12-03T11:53:00.000Z	sain	J4kch	doh, i assumed you rebooted :)
+2006-12-03T11:53:00.000Z	sain	J4kch	lol it's still running
+2006-12-03T11:56:00.000Z	sain	J4kch	you sure anon-proxy is stopped?
+2006-12-03T11:56:00.000Z	J4kch	sain	it said it wasn't running when I used killall
+2006-12-03T11:57:00.000Z	sain	J4kch	get progam "bum" installed and use it to turn off that proxy item simple gui for daemon management
+2006-12-03T11:57:00.000Z	sain	J4kch	from ompaul
+2006-12-03T11:57:00.000Z	sain	J4kch	one sec
+2006-12-03T11:57:00.000Z	J4kch	sain	aight
+2006-12-03T11:58:00.000Z	sain	J4kch	is there a anon-proxy.pid or similar in /var/run?
+2006-12-03T11:58:00.000Z	J4kch	sain	how do I check again? I forget
+2006-12-03T11:58:00.000Z	sain	J4kch	ls /var/run in terminal
+2006-12-03T11:59:00.000Z	J4kch	sain	right, well there is no .pid but there is anon-proxy
+2006-12-03T11:59:00.000Z	sain	J4kch	well reboot and see if it is still there
+2006-12-03T11:59:00.000Z	sain	J4kch	you should be ok
+2006-12-03T11:59:00.000Z	J4kch	sain	aight
+2006-12-03T12:08:00.000Z	sain	J4kch	so?
+2006-12-03T12:08:00.000Z	J4kch	sain	Don't rush me! =P
+2006-12-03T12:08:00.000Z	sain	J4kch	lol
+2006-12-03T12:08:00.000Z	J4kch	sain	Echo looks fine
+2006-12-03T12:09:00.000Z	J4kch	sain	anon-proxy is gone from /var/run
+2006-12-03T12:09:00.000Z	sain	J4kch	cool, how about the ole update?
+2006-12-03T12:10:00.000Z	J4kch	sain	It's working!
+2006-12-03T12:10:00.000Z	J4kch	sain	I love you man, you and jrib and ompaul...
+2006-12-03T12:10:00.000Z	sain	J4kch	hot diggity dawg
+2006-12-03T12:10:00.000Z	sain	J4kch	lol, if i had sussed out it was still running, we could have save many minutes :)
+2006-12-03T12:10:00.000Z	J4kch	sain	I want to have your child
+2006-12-03T12:11:00.000Z	sain	J4kch	so does the gf ... neither of you is getting it
+2006-12-03T12:11:00.000Z	J4kch	sain	Damn
+2006-12-03T12:11:00.000Z	sain	J4kch	so what's the next problem?
+2006-12-03T12:12:00.000Z	J4kch	sain	there isn't one, I just like hanging around here
+2006-12-03T12:12:00.000Z	J4kch	sain	unless not finding anyone to play Catan with is a problem
+2006-12-03T12:12:00.000Z	sain	J4kch	heh same
+2006-12-03T12:38:00.000Z	J4kch	sain	I just downloaded this .mov file, it doesn't show properly on VLC, any suggestions?
+2006-12-03T12:38:00.000Z	sain	J4kch	mplayer?
+2006-12-03T12:41:00.000Z	J4kch	sain	lol
+2006-12-03T12:42:00.000Z	J4kch	sain	how do I get mplayer?
+2006-12-03T12:42:00.000Z	sain	J4kch	um apt-get install mplayer ?
+2006-12-03T12:44:00.000Z	sain	J4kch	you've got to add all the fun repositories to your sources.list
+2006-12-03T12:44:00.000Z	sain	J4kch	i'm sure there's an easy 'ubuntu way' to do it
+2006-12-03T12:46:00.000Z	sain	J4kch	you can also add repositories through synaptic ... like settings->repositories or similar
+2006-12-03T12:47:00.000Z	J4kch	sain	I'd have to know which ones to add

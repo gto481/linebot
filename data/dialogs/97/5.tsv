@@ -1,0 +1,97 @@
+2010-12-31T10:36:00.000Z	plc90210		I tried to install dkms using the terminal and got an error saying its not a debian format archive
+2010-12-31T10:37:00.000Z	plc90210		I used the command "sudo dpkg -i", do i need to use some other command to install different kinds of files?
+2010-12-31T10:39:00.000Z	plc90210		anyone know where i can download dkms in deb format?
+2010-12-31T10:39:00.000Z	KM0201	plc90210	it's in the repos isnt it?.. i'm almost positive it is
+2010-12-31T11:16:00.000Z	KM0201	plc90210	is the machine connected to the internet.
+2010-12-31T11:17:00.000Z	KM0201	plc90210	look here under "no internet access" it looks like it's ont he CD, if you have it handy.. https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx
+2010-12-31T11:19:00.000Z	plc90210	KM0201	but if it's on the cd, shouldn't it have installed when I installed ubuntu?
+2010-12-31T11:19:00.000Z	KM0201	plc90210	not necessarily.
+2010-12-31T11:20:00.000Z	KM0201	plc90210	it's an optional package...
+2010-12-31T11:21:00.000Z	KM0201	plc90210	it's a lot easier if you can cable it to a router for about 2min
+2010-12-31T11:21:00.000Z	plc90210	KM0201	I did, still no internet...
+2010-12-31T11:21:00.000Z	KM0201	plc90210	really?..thats interesting
+2010-12-31T11:22:00.000Z	KM0201	plc90210	what broadcom device do you have, if you don't mind me asking?
+2010-12-31T11:23:00.000Z	KM0201	plc90210	why don't you just use b43?
+2010-12-31T11:23:00.000Z	KM0201	plc90210	i actually set that device up the other day w/ the b43 driver, and it worked fine
+2010-12-31T11:24:00.000Z	KM0201	plc90210	it's on that same page i gave you the link to.. just scroll down the the "b43" driver.. it's listed to support the 4311.. but if you've already started w/ the STA, might as well finish w/ it
+2010-12-31T11:25:00.000Z	KM0201	plc90210	did you install from cd?
+2010-12-31T11:26:00.000Z	plc90210	KM0201	when it says "something is located on the ubuntu install media under /pool/main/..." what is it referring to?
+2010-12-31T11:26:00.000Z	KM0201	plc90210	do you have an ubuntu live CD, or did you install from USB, or what?
+2010-12-31T11:27:00.000Z	KM0201	plc90210	ok, "used the cd".. did you use wubi, or did you boot the cd and install?
+2010-12-31T11:28:00.000Z	KM0201	plc90210	ok, do you see an icon on your desktop that say s"ubuntu 10.xx " or something like that?
+2010-12-31T11:28:00.000Z	KM0201	plc90210	ok, double click it
+2010-12-31T11:28:00.000Z	KM0201	plc90210	before you go much further, did you install the bmcwl-kernel-source ?
+2010-12-31T11:29:00.000Z	KM0201	plc90210	ok.. do this.
+2010-12-31T11:30:00.000Z	KM0201	plc90210	go to system/admin/synaptic package manager
+2010-12-31T11:30:00.000Z	KM0201	plc90210	ok... now click settings/repositories
+2010-12-31T11:30:00.000Z	KM0201	plc90210	on the first tab under settings/repositories.. make sure at the bottom the "Use CD" box is checked.
+2010-12-31T11:31:00.000Z	KM0201	plc90210	after you've checked that box... click close, make sure the cd is in the drive, and click "reload"
+2010-12-31T11:31:00.000Z	KM0201	plc90210	you'll get errors because it can't et on the internet, but i'm not concerned about that just yet
+2010-12-31T11:32:00.000Z	KM0201	plc90210	thats fine.. thats because you're not oonline
+2010-12-31T11:32:00.000Z	KM0201	plc90210	now, make sure the cd is in the drive
+2010-12-31T11:33:00.000Z	KM0201	plc90210	does it show installed?(green dot beside it?)
+2010-12-31T11:33:00.000Z	KM0201	plc90210	right click that package and choose "mark for installation"
+2010-12-31T11:33:00.000Z	KM0201	plc90210	you might get a message that it wants to "mark" some other dependencies...
+2010-12-31T11:34:00.000Z	KM0201	plc90210	if its "mark for upgrade or removal"... then it's already installed
+2010-12-31T11:36:00.000Z	KM0201	plc90210	did you try to install it from that package you downloaded?
+2010-12-31T11:37:00.000Z	KM0201	plc90210	ok.. right click that, and choose "mark for removal
+2010-12-31T11:37:00.000Z	KM0201	plc90210	now click Apply if you didn't already, and let it uninstall
+2010-12-31T11:39:00.000Z	plc90210	KM0201	ok, it's uninstalled
+2010-12-31T11:39:00.000Z	KM0201	plc90210	ok... now.. .again, make sure cd is in the drive
+2010-12-31T11:40:00.000Z	KM0201	plc90210	the cd icon?.. where'd you get that... right click bcmwl-kernel-source
+2010-12-31T11:41:00.000Z	KM0201	plc90210	basically what we did was remove that broke ass package you installed, and now that we've added the cd repository.. you'll reinstall it, and it should pull everything off the cd for you.
+2010-12-31T11:41:00.000Z	KM0201	plc90210	after you click mark for installation, click apply..
+2010-12-31T11:42:00.000Z	KM0201	plc90210	ok, now just to make sure it went ok
+2010-12-31T11:43:00.000Z	KM0201	plc90210	same way we did before, remove it, mark for installation, and rreinstall
+2010-12-31T11:43:00.000Z	KM0201	plc90210	yes
+2010-12-31T11:44:00.000Z	KM0201	plc90210	patch, fakeroot and dkms
+2010-12-31T11:45:00.000Z	KM0201	plc90210	ok...
+2010-12-31T11:45:00.000Z	KM0201	plc90210	ok go ahead adn close synaptic
+2010-12-31T11:45:00.000Z	KM0201	plc90210	then go to system/admin/additional drivers
+2010-12-31T11:46:00.000Z	KM0201	plc90210	highlight it.. and click activate
+2010-12-31T11:47:00.000Z	KM0201	plc90210	then you'll probably have to restart
+2010-12-31T11:47:00.000Z	plc90210	KM0201	there is no activate button
+2010-12-31T11:47:00.000Z	KM0201	plc90210	at the bottom.. you don't see "acctivate"
+2010-12-31T11:48:00.000Z	KM0201	plc90210	do you have the STA driver highlighted?
+2010-12-31T11:48:00.000Z	KM0201	plc90210	try restarting... see if when you come back, you can activate that driver
+2010-12-31T11:53:00.000Z	KM0201	plc90210	any luck?
+2010-12-31T11:54:00.000Z	KM0201	plc90210	lol
+2010-12-31T11:55:00.000Z	KM0201	plc90210	it's not code red critical.. no need to go crazy..
+2010-12-31T11:59:00.000Z	KM0201	plc90210	any joy?
+2010-12-31T12:00:00.000Z	plc90210	KM0201	yeah, the driver's now activated
+2010-12-31T12:00:00.000Z	KM0201	plc90210	well, thas good
+2010-12-31T12:00:00.000Z	KM0201	plc90210	well sing the hallelujah chorus
+2010-12-31T12:01:00.000Z	KM0201	plc90210	that should be fairly simple.
+2010-12-31T12:01:00.000Z	KM0201	plc90210	why do you think that would be difficult?
+2010-12-31T12:02:00.000Z	plc90210	KM0201	it's a really old laptop that's had issues with this in the past
+2010-12-31T12:02:00.000Z	KM0201	plc90210	uh.. ok
+2010-12-31T12:06:00.000Z	KM0201	plc90210	so what problem are you having connecting to networks?
+2010-12-31T12:07:00.000Z	KM0201	plc90210	can you log into your router, and set it to broadcast for a few minutes?
+2010-12-31T12:08:00.000Z	KM0201	plc90210	when you say it "can't connect to your network".. what exactly do you mean?
+2010-12-31T12:09:00.000Z	KM0201	plc90210	ok....
+2010-12-31T12:09:00.000Z	KM0201	plc90210	can you log into your router?
+2011-01-01T01:11:00.000Z	KM0201	plc90210	which one?
+2011-01-01T00:58:00.000Z	KM0201	plc90210	the "homepage".. is likely locally hosted.. is the URL something like file://
+2011-01-01T00:58:00.000Z	plc90210	KM0201	the url is 'about:home'
+2011-01-01T00:59:00.000Z	KM0201	plc90210	there you go.. it's locally hosted... your connection is not working.. are you still working on the wireless
+2011-01-01T01:00:00.000Z	plc90210	KM0201	yeah i'm still working on the wireless, it was working fine when i had the wired connection
+2011-01-01T01:00:00.000Z	KM0201	plc90210	i thought you said your wired connection didn't work?
+2011-01-01T01:00:00.000Z	KM0201	plc90210	ok...
+2011-01-01T01:00:00.000Z	KM0201	plc90210	can you ping another PC on your network.
+2011-01-01T01:01:00.000Z	KM0201	plc90210	in other words.. whats the IP of the pc you're on now... try to ping it from your laptop
+2011-01-01T01:02:00.000Z	KM0201	plc90210	then it's *very* likely you're not hooked up to the router.
+2011-01-01T01:05:00.000Z	KM0201	plc90210	you don't see wlan0 ?
+2011-01-01T01:05:00.000Z	KM0201	plc90210	then your wireless definitely isn't working.... do you see yur IP in any of those paragraphs?
+2011-01-01T01:10:00.000Z	KM0201	plc90210	did you get that info GeekSquid asked for?
+2011-01-01T01:11:00.000Z	KM0201	plc90210	just need the numbers.. if you have them.
+2011-01-01T01:11:00.000Z	KM0201	plc90210	do any of them show a number ike 192.168.x.x ?
+2011-01-01T01:13:00.000Z	KM0201	plc90210	i guess it's possible.. link?
+2011-01-01T01:13:00.000Z	KM0201	plc90210	and just to be clear, is your device still seeing networks, or is it now not working?
+2011-01-01T01:14:00.000Z	plc90210	KM0201	it's still seeing networks, it's actually connected to the same network that this network is connected to; link: http://ubuntuforums.org/showthread.php?t=1592619
+2011-01-01T01:16:00.000Z	KM0201	plc90210	and again(cuz i left last night after you got the STA driver installed and were seeing networks)... did you get it to successfully connect last night, and were able to surf the internet?
+2011-01-01T01:19:00.000Z	KM0201	plc90210	hmm, that makes me think there migh have been some mac filtering going on, if you could connect after resetting the router, but thats irrelevant
+2011-01-01T01:19:00.000Z	KM0201	plc90210	what is the security protocol of your network?
+2011-01-01T01:20:00.000Z	KM0201	plc90210	ok.. what *I* would do.. is go into the router, set it to "no security".... and see if you can get on your wireless network.
+2011-01-01T01:20:00.000Z	KM0201	plc90210	if you can, change it to wep, and put a pssword on it, see if you can get on to it.
+2011-01-01T01:21:00.000Z	KM0201	plc90210	*usually*... by going to 192.168.1.1 on your web browser
+2011-01-01T01:21:00.000Z	KM0201	plc90210	if you want to PM me.. go ahead, cuz we're gonna have to discuss logging into your router, etc..

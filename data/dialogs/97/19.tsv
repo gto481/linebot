@@ -1,0 +1,97 @@
+2008-09-10T15:13:00.000Z	bob1	outbackwifi	Open
+2008-09-10T15:06:00.000Z	outbackwifi	bob1	how are you connecting to the 'net
+2008-09-10T15:07:00.000Z	outbackwifi	bob1	does your pc get an ip address from the cable modem?
+2008-09-10T15:08:00.000Z	bob1	outbackwifi	It dosent seem to. I click the network icon, top right corner and it shows all zeros
+2008-09-10T15:08:00.000Z	outbackwifi	bob1	when you plug out and in the ethernet cable, does it spin and then stop with a steady icon?
+2008-09-10T15:09:00.000Z	bob1	outbackwifi	nope
+2008-09-10T15:10:00.000Z	outbackwifi	bob1	have you got it working with any other machine/OS
+2008-09-10T15:11:00.000Z	outbackwifi	bob1	are you familiar with command-line?
+2008-09-10T15:12:00.000Z	bob1	outbackwifi	Alittle. I used to be pretty good at DOS.
+2008-09-10T15:13:00.000Z	outbackwifi	bob1	great; can you open up a terminal window?
+2008-09-10T15:17:00.000Z	bob1	outbackwifi	Terminal window is open
+2008-09-10T15:18:00.000Z	outbackwifi	bob1	type ethtool eth0
+2008-09-10T15:19:00.000Z	bob1	outbackwifi	Operation not permited
+2008-09-10T15:19:00.000Z	outbackwifi	bob1	sudo
+2008-09-10T15:19:00.000Z	outbackwifi	bob1	sudo ethtool eth0
+2008-09-10T15:21:00.000Z	bob1	outbackwifi	no data available
+2008-09-10T15:24:00.000Z	outbackwifi	bob1	how many ethernet ports does your pc have?
+2008-09-10T15:25:00.000Z	bob1	outbackwifi	just one. a LNE 100tx add on card
+2008-09-10T15:29:00.000Z	bob1	outbackwifi	01:0b.0 Ethernet controiller: Lite-On Communications Inc LNE100TX [Linksys Etherfast 10/100] (rev25)
+2008-09-10T15:31:00.000Z	outbackwifi	bob1	starn: youve got it
+2008-09-10T15:38:00.000Z	outbackwifi	bob1	what does sudo ifconfig eth0 show you
+2008-09-10T15:40:00.000Z	bob1	outbackwifi	It says lots of stuff........
+2008-09-10T15:40:00.000Z	outbackwifi	bob1	can you tell me the first line only?
+2008-09-10T15:43:00.000Z	bob1	outbackwifi	eth0 Link encap:Ethernet HWaddr 00:A0:cc:34:DC:fd
+2008-09-10T15:44:00.000Z	outbackwifi	bob1	second line with inet addr ?
+2008-09-10T15:45:00.000Z	bob1	outbackwifi	inet6 addr: fe80::2a0:ccff:fe34:dcfd/64 Scope"Link
+2008-09-10T15:47:00.000Z	outbackwifi	bob1	do you have dhcp enabled on your calbe modem/ router or do you assign ip addresses manually?
+2008-09-10T15:47:00.000Z	bob1	outbackwifi	I don't know
+2008-09-10T15:47:00.000Z	outbackwifi	bob1	ok the pc that you are using right now, what are the settings; manual or automatic?
+2008-09-10T15:48:00.000Z	bob1	outbackwifi	How can I tell?
+2008-09-10T15:53:00.000Z	outbackwifi	bob1	right click on network manager and check the entry for wired
+2008-09-10T15:54:00.000Z	bob1	outbackwifi	Is that the Icon top right?
+2008-09-10T15:55:00.000Z	outbackwifi	bob1	yes
+2008-09-10T15:57:00.000Z	bob1	outbackwifi	I dont see what you mean. I have connection info and edit wireless networks
+2008-09-10T15:57:00.000Z	outbackwifi	bob1	are you connected via wifi?
+2008-09-10T15:59:00.000Z	bob1	outbackwifi	No although I do have a wifi card in this PC
+2008-09-10T16:07:00.000Z	bob1	outbackwifi	The one I am using now has both wired and a wifi card (not in use) the one I am working on is wired
+2008-09-10T16:07:00.000Z	outbackwifi	bob1	can you try this on the machine that doesnt work ->> sudo dhclient eth0
+2008-09-10T16:09:00.000Z	bob1	outbackwifi	No DHCOFFERS recieved. No working leases in persistent database - sleeping
+2008-09-10T16:09:00.000Z	outbackwifi	bob1	what is the ip of the pc that connects to the internet?
+2008-09-10T16:10:00.000Z	bob1	outbackwifi	192.168.10.4
+2008-09-10T16:11:00.000Z	outbackwifi	bob1	can you type this in the other pc --> sudo ifconfig eth0 192.168.10.5 up
+2008-09-10T16:11:00.000Z	bob1	outbackwifi	OK
+2008-09-10T16:12:00.000Z	bob1	outbackwifi	It didn't do anything
+2008-09-10T16:12:00.000Z	bob1	outbackwifi	Did you mean ifconfig or ipconfig?
+2008-09-10T16:12:00.000Z	outbackwifi	bob1	now tell me what the 3rd line of sudo ifconfig eth0 says
+2008-09-10T16:12:00.000Z	outbackwifi	bob1	ifconfig
+2008-09-10T16:14:00.000Z	bob1	outbackwifi	inet addr:192.168.10.5 Bcast:192.168.10.255 Mask:255.255.255.0
+2008-09-10T16:14:00.000Z	outbackwifi	bob1	now youve got an ip address
+2008-09-10T16:15:00.000Z	outbackwifi	bob1	type this command --> echo "nameserver 192.168.10.1" > /etc/resolv.conf
+2008-09-10T16:16:00.000Z	bob1	outbackwifi	Permission denied
+2008-09-10T16:16:00.000Z	outbackwifi	bob1	sorry you need to be su
+2008-09-10T16:17:00.000Z	outbackwifi	bob1	have you used vi or nano before?
+2008-09-10T16:17:00.000Z	bob1	outbackwifi	No
+2008-09-10T16:17:00.000Z	outbackwifi	bob1	or just do a sudo su -
+2008-09-10T16:17:00.000Z	outbackwifi	bob1	it should drop you to a root prompt
+2008-09-10T16:17:00.000Z	outbackwifi	bob1	give that command again
+2008-09-10T16:18:00.000Z	outbackwifi	bob1	press ctl+d to exit root shell
+2008-09-10T16:20:00.000Z	bob1	outbackwifi	OK I did it. nothing happining just back to command line. Then you want me to ctl+d?
+2008-09-10T16:21:00.000Z	bob1	outbackwifi	Got it
+2008-09-10T16:21:00.000Z	outbackwifi	bob1	now can you do ping 192.168.10.1
+2008-09-10T16:21:00.000Z	outbackwifi	bob1	assuming that your ethernet cable is connected
+2008-09-10T16:23:00.000Z	bob1	outbackwifi	It is connected. I went to "System", "Network tools", Ping but it wont let me enter numbers. It just beeps
+2008-09-10T16:24:00.000Z	bob1	outbackwifi	Sorry I figured it out. Pinging now. Destination unreachable
+2008-09-10T16:25:00.000Z	outbackwifi	bob1	sudo ethtool eth0
+2008-09-10T16:26:00.000Z	bob1	outbackwifi	it's still pinging. how do i stop it?
+2008-09-10T16:26:00.000Z	outbackwifi	bob1	ctl+c
+2008-09-10T16:26:00.000Z	outbackwifi	bob1	is that computer connected to a switch?
+2008-09-10T16:27:00.000Z	bob1	outbackwifi	I don't think so...... cox come in to modem then to the wireless then to PC
+2008-09-10T16:28:00.000Z	bob1	outbackwifi	Sudo ethtool eth0 answered No Data available
+2008-09-10T16:28:00.000Z	outbackwifi	bob1	does the wireless have 4 ports, and is your computer connected to one of these?
+2008-09-10T16:29:00.000Z	bob1	outbackwifi	Yes and Yes
+2008-09-10T16:29:00.000Z	outbackwifi	bob1	is there a light glowing for the port to which this is connected?
+2008-09-10T16:30:00.000Z	bob1	outbackwifi	there are 4 lights. the one marked "100" is blinking
+2008-09-10T16:41:00.000Z	bob1	outbackwifi	Did I loose you?
+2008-09-10T16:43:00.000Z	outbackwifi	bob1	sorry was on a call
+2008-09-10T16:44:00.000Z	outbackwifi	bob1	as i was asking, is there a light glowing on the port that the computer is connected?
+2008-09-10T16:44:00.000Z	outbackwifi	bob1	or is there a light on the pc too?
+2008-09-10T16:44:00.000Z	bob1	outbackwifi	I have 4 lights, the one labeled "100" is blinking
+2008-09-10T16:45:00.000Z	outbackwifi	bob1	what make router is this?
+2008-09-10T16:45:00.000Z	bob1	outbackwifi	The wifi router?
+2008-09-10T16:45:00.000Z	outbackwifi	bob1	when you plug out the patch cord does the light go off?
+2008-09-10T16:45:00.000Z	outbackwifi	bob1	yes
+2008-09-10T16:46:00.000Z	bob1	outbackwifi	Light goes out, Router is a motorola, a couple a years old.
+2008-09-10T16:47:00.000Z	outbackwifi	bob1	is the other pc also connected to the same router?
+2008-09-10T16:48:00.000Z	bob1	outbackwifi	Yes same router. I even exchanged cables. I rtechecked the blinking lights and now the one labels "ACT" is also blinking
+2008-09-10T16:49:00.000Z	bob1	outbackwifi	the blinking ones are on the PC. On the nic.
+2008-09-10T16:50:00.000Z	outbackwifi	bob1	on the pc that we're trying to fix right?
+2008-09-10T16:51:00.000Z	bob1	outbackwifi	Yes on the borken PC there are blinking lights
+2008-09-10T16:52:00.000Z	outbackwifi	bob1	what does sudo ethtool eth1 say?
+2008-09-10T16:52:00.000Z	bob1	outbackwifi	No such device
+2008-09-10T16:53:00.000Z	outbackwifi	bob1	i think your network card is broken
+2008-09-10T16:53:00.000Z	bob1	outbackwifi	maybe I need a new nic?
+2008-09-10T16:53:00.000Z	outbackwifi	bob1	yes
+2008-09-10T16:54:00.000Z	bob1	outbackwifi	OK I will get another and try again. Maybe I will see you again tommorow. Thanks for your help
+2008-09-10T16:54:00.000Z	outbackwifi	bob1	yw, sorry we couldnt crack it todat
+2008-09-10T16:54:00.000Z	bob1	outbackwifi	No problem I am glad you took the time.

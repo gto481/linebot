@@ -1,0 +1,98 @@
+2007-03-25T16:00:00.000Z	McQueen		hi, how can i mount ntfs partition?
+2007-03-25T16:02:00.000Z	teenbeat2007	McQueen	do you know your partitions
+2007-03-25T16:02:00.000Z	McQueen	teenbeat2007	yeap
+2007-03-25T16:02:00.000Z	teenbeat2007	McQueen	ok start a temilnal
+2007-03-25T16:02:00.000Z	teenbeat2007	McQueen	and type next
+2007-03-25T16:03:00.000Z	teenbeat2007	McQueen	sudo mkdir /mnt/name of first map like example /mnt/win
+2007-03-25T16:06:00.000Z	teenbeat2007	McQueen	so for everey partition you do the line sudo mkdir /mnt/win, win1, win2 or any name you want
+2007-03-25T16:06:00.000Z	teenbeat2007	McQueen	tell me if your done
+2007-03-25T16:06:00.000Z	McQueen	teenbeat2007	i create win directory
+2007-03-25T16:07:00.000Z	teenbeat2007	McQueen	ok only one partition then
+2007-03-25T16:07:00.000Z	teenbeat2007	McQueen	ok fill in next line
+2007-03-25T16:08:00.000Z	teenbeat2007	McQueen	tell me if your ready
+2007-03-25T16:09:00.000Z	McQueen	teenbeat2007	i am ready
+2007-03-25T16:10:00.000Z	teenbeat2007	McQueen	and if you can get in
+2007-03-25T16:11:00.000Z	McQueen	teenbeat2007	bash: cd: win: Permission denied
+2007-03-25T16:12:00.000Z	McQueen	teenbeat2007	i  created link to  wrong partitions?
+2007-03-25T16:12:00.000Z	McQueen	teenbeat2007	how can i change the link?
+2007-03-25T16:14:00.000Z	teenbeat2007	McQueen	tell when ready
+2007-03-25T16:14:00.000Z	McQueen	teenbeat2007	bash: cd: win: Permission denied
+2007-03-25T16:16:00.000Z	McQueen	teenbeat2007	r u there?
+2007-03-25T16:16:00.000Z	teenbeat2007	McQueen	try this line
+2007-03-25T16:18:00.000Z	McQueen	teenbeat2007	i dont want to do wrong. first i want to be sure partition. sorry wait pls
+2007-03-25T16:19:00.000Z	teenbeat2007	McQueen	come to channel #ubuntu-nl please
+2007-03-25T16:32:00.000Z	McQueen	teenbeat2007	i am here
+2007-03-25T16:33:00.000Z	teenbeat2007	McQueen	ok
+2007-03-25T16:33:00.000Z	teenbeat2007	McQueen	sorry there where a few complening about inglisch on a dutch channel, there are allways a few....
+2007-03-25T16:34:00.000Z	teenbeat2007	McQueen	ok listen, check all your partitions and see wich parts you have
+2007-03-25T16:35:00.000Z	McQueen	teenbeat2007	  hda  hda1  hda2  hda3  hda5  hda6  hdc
+2007-03-25T16:35:00.000Z	teenbeat2007	McQueen	ok what i need to know exactly is wich one is the ntfs
+2007-03-25T16:36:00.000Z	McQueen	teenbeat2007	i am not sure.... i have got two partition on windows. and they are ntfs
+2007-03-25T16:37:00.000Z	teenbeat2007	McQueen	ok when you installed ubuntu wich hdd did you took
+2007-03-25T16:38:00.000Z	McQueen	teenbeat2007	i have got only one hdd. i deleted a partition from windows before i ubuntu installation. then i choose the "install to free space" option
+2007-03-25T16:40:00.000Z	teenbeat2007	McQueen	in my case i have two hdd 1=hda 2=hdb 2 dvds floppy so i had hda 1 and 5 and hdb 1 and 5
+2007-03-25T16:41:00.000Z	McQueen	teenbeat2007	this a laptop. so i have got only 1 hdd and 1 dvd-rom
+2007-03-25T16:41:00.000Z	teenbeat2007	McQueen	try this then sudo mount /dev/hda5 uid=0 umask=022 /mnt/win
+2007-03-25T16:42:00.000Z	McQueen	teenbeat2007	the same log. http://paste.ubuntu-nl.org/11983/
+2007-03-25T16:43:00.000Z	teenbeat2007	McQueen	if it doesnt work now, ill be later on back to you with full support
+2007-03-25T16:43:00.000Z	teenbeat2007	McQueen	i had this problem also a few days ago and i did have total of 5 ntfs partitions
+2007-03-25T16:43:00.000Z	McQueen	teenbeat2007	ok so can i contect with you by e-mail way....?
+2007-03-25T16:45:00.000Z	McQueen	teenbeat2007	or by msn messenger?
+2007-03-25T16:45:00.000Z	teenbeat2007	McQueen	live messenger
+2007-03-25T16:45:00.000Z	McQueen	teenbeat2007	ok thanks .... so can you give your address?
+2007-03-25T16:48:00.000Z	teenbeat2007	McQueen	they are online now
+2007-03-25T16:49:00.000Z	McQueen	teenbeat2007	ok i am trying to be online...
+2007-03-25T16:51:00.000Z	McQueen	teenbeat2007	i added you did you got message
+2007-03-25T16:52:00.000Z	teenbeat2007	McQueen	yes i did
+2007-03-25T16:53:00.000Z	McQueen	teenbeat2007	ok... this is my other live messenger address. i will add you to mcqueen@freekevin.net address. ok?
+2007-03-25T16:56:00.000Z	teenbeat2007	McQueen	i added the second one
+2007-03-25T16:57:00.000Z	McQueen	teenbeat2007	ok thanks i have a password problem with second one. i will fix it when i run windows xp.
+2007-03-25T15:17:00.000Z	McQueen	teenbeat2007	hi
+2007-03-27T14:26:00.000Z	McQueen	teenbeat2007	hello
+2007-03-27T14:27:00.000Z	teenbeat2007	McQueen	hi did it worked
+2007-03-27T14:27:00.000Z	McQueen	teenbeat2007	i use some scripts... i can mount my win c... i read files but cloud not write and auto mount it.
+2007-03-27T14:27:00.000Z	McQueen	teenbeat2007	please wait
+2007-03-27T14:28:00.000Z	teenbeat2007	McQueen	ok
+2007-03-27T14:28:00.000Z	McQueen	teenbeat2007	i am searching the site about it which i used the commands
+2007-03-27T14:29:00.000Z	McQueen	teenbeat2007	how long are you online?
+2007-03-27T14:30:00.000Z	teenbeat2007	McQueen	did you got my email
+2007-03-27T14:31:00.000Z	McQueen	teenbeat2007	sorry. i didnt look at my mails  yet
+2007-03-27T14:31:00.000Z	McQueen	teenbeat2007	how long will you be online?
+2007-03-27T14:32:00.000Z	McQueen	teenbeat2007	ok
+2007-03-27T14:33:00.000Z	McQueen	teenbeat2007	pls write my nickname before your messages... its hard to follow your messages.
+2007-03-27T14:34:00.000Z	teenbeat2007	McQueen	ok
+2007-03-27T14:34:00.000Z	McQueen	teenbeat2007	where did you send the mail. mcqueen@desteknet.com or mcqueen@freekevin.net ?
+2007-03-27T14:34:00.000Z	teenbeat2007	McQueen	they are busy with a probgram wich allowes you to write on ntfs, but is in test fase and very unstable
+2007-03-27T14:35:00.000Z	teenbeat2007	McQueen	i thought both
+2007-03-27T14:35:00.000Z	teenbeat2007	McQueen	i check
+2007-03-27T14:36:00.000Z	McQueen	teenbeat2007	i found it. dont look for it...
+2007-03-27T14:37:00.000Z	McQueen	teenbeat2007	ok. i am trying the commands then i will tell you okay or not
+2007-03-27T14:39:00.000Z	McQueen	teenbeat2007	are you going offline?
+2007-03-27T14:40:00.000Z	McQueen	teenbeat2007	can you wait me 5 minutes pls?
+2007-03-27T14:41:00.000Z	McQueen	teenbeat2007	the error
+2007-03-27T14:41:00.000Z	McQueen	teenbeat2007	kim@kim-laptop:/home/xkim$ gksu edit /etc/fstab
+2007-03-27T14:56:00.000Z	McQueen	teenbeat2007	http://paste.ubuntu-nl.org/12390/
+2007-03-27T14:43:00.000Z	McQueen	teenbeat2007	did you saw the error log?
+2007-03-27T14:50:00.000Z	McQueen	teenbeat2007	kim@kim-laptop:/home/xkim$ gksu edit /etc/fstab
+2007-03-27T14:52:00.000Z	McQueen	teenbeat2007	did you see the error log?
+2007-03-27T14:52:00.000Z	teenbeat2007	McQueen	use gedit instead
+2007-03-27T14:52:00.000Z	teenbeat2007	McQueen	correct
+2007-03-27T14:52:00.000Z	McQueen	teenbeat2007	sidny4 : ok... i am trying...
+2007-03-27T14:53:00.000Z	teenbeat2007	McQueen	some systems uses sudo gedit and some the other
+2007-03-27T14:53:00.000Z	McQueen	teenbeat2007	i c. it ran well
+2007-03-27T14:53:00.000Z	teenbeat2007	McQueen	i used also gedit, my mistake sorry about that
+2007-03-27T14:54:00.000Z	McQueen	teenbeat2007	i will paste the text.
+2007-03-27T14:54:00.000Z	teenbeat2007	McQueen	after doing this you dont have to restart only restart to check if it still is mounted automaticly
+2007-03-27T14:55:00.000Z	McQueen	teenbeat2007	i c
+2007-03-27T14:55:00.000Z	teenbeat2007	McQueen	yes and change wath is necesary
+2007-03-27T14:56:00.000Z	teenbeat2007	McQueen	im gone for few minutes i be back to see if it worked
+2007-03-27T14:57:00.000Z	teenbeat2007	McQueen	ok butt make sure umask is there
+2007-03-27T14:57:00.000Z	teenbeat2007	McQueen	those to lines i put in : /dev/hda1    /mnt/win    ntfs    nls=utf8,umask=0222    0    0
+2007-03-27T14:58:00.000Z	McQueen	teenbeat2007	ok
+2007-03-27T14:58:00.000Z	teenbeat2007	McQueen	it must be that line with altering hda? and the target dir
+2007-03-27T14:58:00.000Z	McQueen	teenbeat2007	ok
+2007-03-27T14:58:00.000Z	teenbeat2007	McQueen	and remmember  1 line for each partition
+2007-03-27T14:59:00.000Z	teenbeat2007	McQueen	ok be back in few minutes
+2007-03-27T14:59:00.000Z	McQueen	teenbeat2007	ok thanks
+2007-03-27T15:07:00.000Z	McQueen	teenbeat2007	r u there?
+2007-03-27T15:18:00.000Z	teenbeat2007	McQueen	are u there

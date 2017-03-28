@@ -1,0 +1,95 @@
+2006-05-27T13:01:00.000Z	Some_Person		I can't resize my NTFS partition with GParted (on live cd)!
+2006-05-27T13:03:00.000Z	Some_Person		yes
+2006-05-27T13:03:00.000Z	Some_Person		i have backup
+2006-05-27T13:03:00.000Z	Some_Person		i understand
+2006-05-27T13:03:00.000Z	willmc	Some_Person	download and use hirens boot cd....MUCH safer!
+2006-05-27T13:03:00.000Z	Some_Person		gparted fails
+2006-05-27T13:04:00.000Z	willmc		64mb download
+2006-05-27T13:04:00.000Z	Some_Person		what is it?
+2006-05-27T13:04:00.000Z	Some_Person		same here
+2006-05-27T13:04:00.000Z	Some_Person		i want to resize my ntfs, create a fat16, and an extended with a linux-swap and ext3
+2006-05-27T13:04:00.000Z	willmc	Some_Person	echobinary: its a great collection of tools.....it has among others acronis disk director and partitionmagic, aswell as many GNU progs
+2006-05-27T13:05:00.000Z	Some_Person		i also already have a fat32 (came with computer)
+2006-05-27T13:05:00.000Z	willmc	Some_Person	it will do all of that (acronis in hirens boot cd
+2006-05-27T13:05:00.000Z	Some_Person		ok
+2006-05-27T13:06:00.000Z	willmc	Some_Person	i http://www.torrentz.com/will get a link for you...one second
+2006-05-27T13:06:00.000Z	Some_Person		where do i get hiren?
+2006-05-27T13:07:00.000Z	Some_Person		i can't use torrents!
+2006-05-27T13:07:00.000Z	willmc	Some_Person	sorry not that!
+2006-05-27T13:07:00.000Z	willmc	Some_Person	one second
+2006-05-27T13:08:00.000Z	willmc	Some_Person	http://www.9down.com/downloads.php?fileid=336
+2006-05-27T13:08:00.000Z	Some_Person		aha! http://rapidshare.de/files/20759405/HBCD81.rar.html
+2006-05-27T13:09:00.000Z	Some_Person		no
+2006-05-27T13:09:00.000Z	willmc	Some_Person	no, use the download button
+2006-05-27T13:09:00.000Z	Some_Person		where is it?
+2006-05-27T13:11:00.000Z	willmc	Some_Person	on that page, it says download now! http://www.9down.com/downloads.php?fileid=336
+2006-05-27T13:14:00.000Z	willmc	Some_Person	did you find it?
+2006-05-27T13:18:00.000Z	Some_Person		How come it fails to resize my NTFS drive GParted on the ubuntu live cd?
+2006-05-27T13:19:00.000Z	Some_Person		no
+2006-05-27T13:19:00.000Z	Some_Person		should i?
+2006-05-27T13:19:00.000Z	willmc	Some_Person	NTFS is a really unsuppported file system in linux, and you will lose data, on the otherhand VFAT/FAT is fine in linux
+2006-05-27T13:19:00.000Z	Some_Person		will the windows one be ok?
+2006-05-27T13:20:00.000Z	Some_Person		i have a friggin backup
+2006-05-27T13:20:00.000Z	Some_Person		if things go wrong its ok
+2006-05-27T13:20:00.000Z	Some_Person		as long as my drive is usable
+2006-05-27T13:21:00.000Z	willmc	Some_Person	what size and version of NTFS ? and is it primary or extended?
+2006-05-27T13:21:00.000Z	Some_Person		can i use the defragger in windows?
+2006-05-27T13:21:00.000Z	Some_Person		primary
+2006-05-27T13:21:00.000Z	Some_Person		90000 something
+2006-05-27T13:21:00.000Z	willmc	Some_Person	O&O have a free defragger for linux, I think it supports NTFS
+2006-05-27T13:22:00.000Z	Some_Person		can't i just use the windows one?
+2006-05-27T13:22:00.000Z	willmc	Some_Person	yes
+2006-05-27T13:22:00.000Z	Some_Person		ok
+2006-05-27T13:23:00.000Z	Some_Person		ok, its doing it
+2006-05-27T13:23:00.000Z	Some_Person		if it fails, i restore my backup
+2006-05-27T13:23:00.000Z	willmc	Some_Person	is your MFT fragmented?
+2006-05-27T13:23:00.000Z	Some_Person		i have a winxp restore cd
+2006-05-27T13:23:00.000Z	Some_Person		and i have no programs (except mirc) on my computer
+2006-05-27T13:24:00.000Z	Some_Person		so i have nothing to lose
+2006-05-27T13:24:00.000Z	Some_Person		oh, and can ubuntu write to fat32?
+2006-05-27T13:24:00.000Z	willmc	Some_Person	oh yes!
+2006-05-27T13:25:00.000Z	Some_Person		cool
+2006-05-27T13:26:00.000Z	Some_Person	ubuntu	seems like the easytouse linux
+2006-05-27T13:31:00.000Z	Some_Person		ok, NTFS partition is 100% defragmented
+2006-05-27T13:31:00.000Z	Some_Person		do i need to do the same with my fat32 drive?
+2006-05-27T13:31:00.000Z	Some_Person		i mean partition
+2006-05-27T13:44:00.000Z	Some_Person		breezy badger
+2006-05-27T13:44:00.000Z	Some_Person		now, that failed
+2006-05-27T13:44:00.000Z	Some_Person		defragmenting did nothing
+2006-05-27T13:45:00.000Z	Some_Person		i'm not downloading files that big
+2006-05-27T13:45:00.000Z	Some_Person		i'd rather not
+2006-05-27T13:46:00.000Z	Some_Person		why does the one on the ubuntu cd not work?
+2006-05-27T13:46:00.000Z	Some_Person		lol
+2006-05-27T13:47:00.000Z	Some_Person		i have the breezy live cd
+2006-05-27T13:47:00.000Z	willmc	Some_Person	did you not dload the Hiren's boot cd?
+2006-05-27T13:47:00.000Z	Some_Person		too big
+2006-05-27T13:47:00.000Z	willmc	Some_Person	no broadband?
+2006-05-27T13:47:00.000Z	willmc		well, its borderline!
+2006-05-27T13:48:00.000Z	Some_Person		right
+2006-05-27T13:48:00.000Z	Some_Person		i have dialup
+2006-05-27T13:51:00.000Z	willmc	Some_Person	have you run chkdsk in windows on the drive in question?
+2006-05-27T13:52:00.000Z	Some_Person		no
+2006-05-27T13:52:00.000Z	willmc	Some_Person	might be a good idea!
+2006-05-27T13:53:00.000Z	Some_Person		with or without the /F?
+2006-05-27T13:53:00.000Z	willmc	Some_Person	run without first
+2006-05-27T13:53:00.000Z	willmc	Some_Person	to see if there is an issue
+2006-05-27T13:55:00.000Z	Some_Person		C:\Documents and Settings\Samuel>chkdsk
+2006-05-27T13:55:00.000Z	Some_Person		The type of the file system is NTFS.
+2006-05-27T13:55:00.000Z	Some_Person		WARNING!  F parameter not specified.
+2006-05-27T13:55:00.000Z	Some_Person		Running CHKDSK in read-only mode.
+2006-05-27T13:55:00.000Z	Some_Person		CHKDSK is verifying files (stage 1 of 3)...
+2006-05-27T13:55:00.000Z	Some_Person		File verification completed.
+2006-05-27T13:55:00.000Z	Some_Person		CHKDSK is verifying indexes (stage 2 of 3)...
+2006-05-27T13:55:00.000Z	Some_Person		Deleting index entry permdata.box in index $I30 of file 25026.
+2006-05-27T13:55:00.000Z	Some_Person		Index verification completed.
+2006-05-27T13:55:00.000Z	Some_Person		Errors found.  CHKDSK cannot continue in read-only mode.
+2006-05-27T13:55:00.000Z	Some_Person		sorry
+2006-05-27T13:56:00.000Z	Some_Person		what do i do?
+2006-05-27T13:56:00.000Z	willmc	Some_Person	dont post here like that!!!
+2006-05-27T13:56:00.000Z	willmc	Some_Person	run with /f and pray my friend!!!!
+2006-05-27T13:56:00.000Z	Some_Person		pray? why?
+2006-05-27T13:56:00.000Z	willmc		you have to reboot for it if the drive is in use
+2006-05-27T13:56:00.000Z	Some_Person		can chkdsk screw up my computer?
+2006-05-27T13:56:00.000Z	willmc	Some_Person	no!
+2006-05-27T13:57:00.000Z	Some_Person		rebooting
+2006-05-27T13:57:00.000Z	willmc	Some_Person	it will probably create a load of files in your root drive (in windows) with chk extensions, check through them

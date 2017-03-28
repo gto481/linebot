@@ -1,0 +1,95 @@
+2006-02-27T15:50:00.000Z	apt514		hey, i booted 5.10 live how do i install to a empty hd?
+2006-02-27T15:50:00.000Z	LjL	apt514	you need the install CD instead of the live CD
+2006-02-27T15:51:00.000Z	apt514	LjL	i have 5.4 install
+2006-02-27T15:51:00.000Z	LjL	apt514	you mean 5.04?
+2006-02-27T15:51:00.000Z	apt514	LjL	from shipit.ubuntu
+2006-02-27T15:52:00.000Z	LjL	apt514	well, the current ubuntu version is 5.10. you can surely install 5.04, but if i were you, i would burn a 5.10 cd
+2006-02-27T15:52:00.000Z	LjL	apt514	(by the way, 5.04 is also known as "hoary", and 5.10 as "breezy". next version is "dapper")
+2006-02-27T15:53:00.000Z	apt514	LjL	Thanks does 5.04 install have wine?
+2006-02-27T15:53:00.000Z	LjL	apt514	not on the CD as far as i know, but it's easy to install it from the 'net
+2006-02-27T15:53:00.000Z	apt514	LjL	i a have 33.6k
+2006-02-27T15:54:00.000Z	LjL	apt514	that's not good =) i guess you're best off installing your Hoary then, even though most people here in the channel are more familiar with breezy
+2006-02-27T15:54:00.000Z	apt514	LjL	how big is wine ?
+2006-02-27T15:54:00.000Z	LjL	apt514	i don't think it's terribly big... let me check
+2006-02-27T15:55:00.000Z	LjL	apt514	14 megs. would take a while for you, but not so awfully long
+2006-02-27T15:56:00.000Z	LjL	apt514	is it a free program? if it is i could test it for you if it works in wine, before you start downloading
+2006-02-27T15:56:00.000Z	LjL	apt514	hm? i'm not sure i'm getting you here
+2006-02-27T15:57:00.000Z	LjL	apt514	what you do mean by loading everything into ram?
+2006-02-27T15:57:00.000Z	apt514	LjL	to a ramdisk
+2006-02-27T15:57:00.000Z	LjL	apt514	the live CD will let you install new programs, if that's what you mean (not sure how it does it though, but it does)
+2006-02-27T15:57:00.000Z	LjL	apt514	i guess it does use a ram disk for that
+2006-02-27T15:59:00.000Z	LjL	apt514	are you aware that there are programs installed by default in Ubuntu (namely, Gaim) which let you chat on the Yahoo! network, as well as on many others?
+2006-02-27T16:00:00.000Z	apt514	LjL	Sure :) I need the voice to work
+2006-02-27T16:00:00.000Z	LjL	apt514	let me try installing it
+2006-02-27T16:00:00.000Z	apt514	LjL	the url is http://messenger.yahoo.com win32
+2006-02-27T16:01:00.000Z	LjL	apt514	thanks, but... that page, on my browser, shows me *linux* downloads! there's one for Red Hat and one for Debian, which could possibly work on Ubuntu
+2006-02-27T16:02:00.000Z	LjL	apt514	(i guess my browser might tell the yahoo site that it's running on Linux, while yours probably doesn't, so you see Windows downloads instead...?)
+2006-02-27T16:02:00.000Z	apt514	LjL	Thanks i just want the mic like gnomemeeting
+2006-02-27T16:03:00.000Z	LjL	apt514	this is the link to the Debian download: http://download.yahoo.com/dl/unix/ymessenger_1.0.4_1_i386.deb
+2006-02-27T16:03:00.000Z	LjL	apt514	i'm sure it's got audio support
+2006-02-27T16:04:00.000Z	apt514	LjL	Can you try it? :)
+2006-02-27T16:04:00.000Z	LjL	apt514	i can see if it runs. i can't actually try it "live" as i don't have a yahoo account
+2006-02-27T16:05:00.000Z	LjL	apt514	it's just 600kb by the way
+2006-02-27T16:05:00.000Z	apt514	LjL	how do i set a new passwd?
+2006-02-27T16:05:00.000Z	LjL	apt514	"passwd"
+2006-02-27T16:06:00.000Z	LjL	apt514	don't do that in the live cd though, i guess
+2006-02-27T16:06:00.000Z	LjL	apt514	there's no firewall installed by default
+2006-02-27T16:06:00.000Z	LjL	apt514	people usually recomment "firestarter" if you want a firewall
+2006-02-27T16:07:00.000Z	LjL	apt514	there's iptables, sure, but there are no default GUI tools installed to use iptables as a firewall
+2006-02-27T16:07:00.000Z	LjL	apt514	messenger seems to run anyway
+2006-02-27T16:07:00.000Z	LjL	apt514	it's ugly, but it runs :)
+2006-02-27T16:07:00.000Z	apt514	LjL	with voice?
+2006-02-27T16:08:00.000Z	LjL	apt514	not sure, i don't see any audio-related stuff in the menu right now, but then i'm not logged in
+2006-02-27T16:08:00.000Z	LjL	apt514	uh... not sure in gnome, apps / accessories / terminal i guess
+2006-02-27T16:09:00.000Z	apt514	LjL	terminal?
+2006-02-27T16:09:00.000Z	LjL	apt514	yeah, a terminal is a shell
+2006-02-27T16:10:00.000Z	LjL	apt514	read the link Ubotu gave you --- there is no root password
+2006-02-27T16:11:00.000Z	LjL	apt514	and you can't use su. you should use "sudo" instead before any command that you want to run as root
+2006-02-27T16:11:00.000Z	LjL	apt514	that will ask for a password, which is you *own* user password
+2006-02-27T16:11:00.000Z	apt514	LjL	Thanks i was used to 5.04 menu for root shell
+2006-02-27T16:13:00.000Z	LjL	apt514	yes, that's the expected behavior when installing in expert mode
+2006-02-27T16:13:00.000Z	LjL	apt514	however, most people i've met in this channel who did that run into problems
+2006-02-27T16:14:00.000Z	LjL	apt514	i don't consider myself an expert, and so i just installed normally ;) and it's all working fine here
+2006-02-27T16:15:00.000Z	LjL	apt514	to be honest, i can't find a voice chat feature in yahoo messenger. perhaps i'm just looking at the wrong place
+2006-02-27T16:16:00.000Z	apt514	LjL	it's only for win32 users i guess :)
+2006-02-27T16:17:00.000Z	LjL	apt514	"open"? you don't open a deb, you type "sudo dpkg -i filename.deb" ;)
+2006-02-27T16:17:00.000Z	apt514	LjL	652.9k?
+2006-02-27T16:17:00.000Z	LjL	apt514	yes
+2006-02-27T16:20:00.000Z	apt514	LjL	depends and errors?! ;(
+2006-02-27T16:20:00.000Z	LjL	apt514	yeah, it fails on libssl0.9.6 for me
+2006-02-27T16:20:00.000Z	LjL	apt514	just "sudo aptitude install libssl0.9.6", and same for any other packages it complains about
+2006-02-27T16:22:00.000Z	apt514	LjL	aptitude gui ?
+2006-02-27T16:24:00.000Z	apt514	LjL	Thanks for the sudo info
+2006-02-27T16:24:00.000Z	LjL	apt514	no i advice against using aptitude's gui
+2006-02-27T16:25:00.000Z	LjL	apt514	they say it has some bad bugs (didn't check them myself), and i don't like it anyway ;)
+2006-02-27T16:28:00.000Z	apt514	LjL	Yeah so gaim works but needs voice :)
+2006-02-27T16:28:00.000Z	LjL	apt514	gaim? that one you installed is not gaim, it's yahoo messenger :)
+2006-02-27T16:29:00.000Z	apt514	LjL	i mean in /apps/internet/gaim
+2006-02-27T16:33:00.000Z	apt514	LjL	does hoary install use gparted to partition?
+2006-02-27T16:33:00.000Z	LjL	apt514	no, the installer is completely text-mode, so it definitely doesn't use gparted. it might (and probably does) use parted though
+2006-02-27T16:35:00.000Z	LjL	apt514	but it's still not used by the installer
+2006-02-27T16:36:00.000Z	apt514	LjL	sure, i'd like to see it at boot:
+2006-02-27T16:37:00.000Z	LjL	apt514	but you don't. perhaps we'll see it in dapper, who knows
+2006-02-27T16:37:00.000Z	LjL	apt514	you can always use a livecd when you need to run gparted on your boot partition, in any case
+2006-02-27T16:39:00.000Z	apt514	LjL	i'm tempted to install the xp on a 3g hd if i can not get wine to go
+2006-02-27T16:39:00.000Z	LjL	apt514	i can still try the win32 version. can you give me a direct link to the download, as the main page only shows me linux versions?
+2006-02-27T16:43:00.000Z	apt514	LjL	excellent!!
+2006-02-27T16:51:00.000Z	LjL	apt514	"sudo aptitude install firestarter". if it's not found, then you need to enable universe
+2006-02-27T16:53:00.000Z	apt514	LjL	How do enable universe?
+2006-02-27T16:59:00.000Z	apt514	LjL	Thanks for the info
+2006-02-28T17:05:00.000Z	apt514	LjL	How do i connect 2 pc with 1 crossover cat5 cable 1-3-2-6?
+2006-02-28T17:06:00.000Z	LjL	apt514	ah, don't ask me, rather, the day i'll start knowing by heart what the correct crossover cable connections are, kill me :)
+2006-02-28T17:27:00.000Z	apt514	LjL	Thanks for firestarter it's working
+2006-02-28T17:28:00.000Z	LjL	apt514	but i'm not sure i'm with you... are you still doing everything from the live cd?
+2006-02-28T17:31:00.000Z	apt514	LjL	Live CD is spinning :)
+2006-02-28T17:32:00.000Z	LjL	apt514	hm but then why are you installing all this stuff while you're on the live cd? you'll lose everything as soon as you reboot =)
+2006-02-28T17:33:00.000Z	apt514	LjL	I'll save to floppy the deb
+2006-02-28T17:34:00.000Z	LjL	apt514	but if you're installing stuff with "sudo aptitude install", you won't *have* the .deb
+2006-02-28T17:34:00.000Z	LjL	apt514	(also, most of that stuff will be bigger than a floppy =)
+2006-02-28T17:36:00.000Z	apt514	LjL	about 2mb uncompressed
+2006-02-28T17:36:00.000Z	LjL	apt514	well it's the compressed size that matters
+2006-02-28T17:37:00.000Z	apt514	LjL	on port 445 the firestarter blocked MS-ds?
+2006-02-28T17:38:00.000Z	apt514	LjL	from my isp too
+2006-02-28T17:38:00.000Z	LjL	apt514	hm, don't really know. perhaps that's samba or something
+2006-02-28T06:14:00.000Z	apt514	LjL	is samba enabled is breezy live?
+2006-02-28T06:15:00.000Z	LjL	apt514	i wouldn't know

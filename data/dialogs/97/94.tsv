@@ -1,0 +1,97 @@
+2005-04-26T09:21:00.000Z	nomasteryoda	Fazer	ok
+2005-04-26T08:17:00.000Z	Fazer	nomasteryoda	Shouldn't it be wlan0 ?
+2005-04-26T08:18:00.000Z	Fazer	nomasteryoda	really? just today I was going through the sae thing as GnuKemist
+2005-04-26T09:19:00.000Z	nomasteryoda	Fazer	 so back to the bootable huh
+2005-04-26T09:19:00.000Z	Fazer	nomasteryoda	yeah =)
+2005-04-26T09:20:00.000Z	nomasteryoda	Fazer	if you can copy the cfg files from /etc/sysconfig/network  to a drive
+2005-04-26T09:21:00.000Z	Fazer	nomasteryoda	hmmm I have a dilemna here...I can only be connected to one thin gat a time.  Ethernet or the wlan card.  So when I remove the ethernet card, I can't tlak to you guys unless i plug itback in.
+2005-04-26T09:22:00.000Z	Fazer	nomasteryoda	/etc/sysconfig doesn't exist
+2005-04-26T09:23:00.000Z	Fazer	nomasteryoda	sure
+2005-04-26T09:25:00.000Z	Fazer	nomasteryoda	no, you press ALT + TAB and you click click instead of pressing TAB all the way to the icon you want to use.
+2005-04-26T09:25:00.000Z	nomasteryoda	Fazer	when you change it on the install
+2005-04-26T09:25:00.000Z	Fazer	nomasteryoda	change what in the install?
+2005-04-26T09:28:00.000Z	nomasteryoda	Fazer	 you don't have /etc/sysconfig/network-scripts/
+2005-04-26T09:28:00.000Z	Fazer	nomasteryoda	no this is the Haory live cd.
+2005-04-26T09:28:00.000Z	Fazer	nomasteryoda	Hmm, damn, I don't have it.
+2005-04-26T09:28:00.000Z	Fazer	nomasteryoda	sure.
+2005-04-26T09:34:00.000Z	nomasteryoda	Fazer	ok now well see
+2005-04-26T09:36:00.000Z	Fazer	nomasteryoda	okay sure.
+2005-04-26T09:36:00.000Z	Fazer	nomasteryoda	btw, what is this for?
+2005-04-26T09:38:00.000Z	nomasteryoda	Fazer	wow, i am getting sound too
+2005-04-26T09:39:00.000Z	Fazer	nomasteryoda	damn, I am not =[
+2005-04-26T09:47:00.000Z	nomasteryoda	Fazer	if the drivers are there
+2005-04-26T09:49:00.000Z	Fazer	nomasteryoda	for my wlan card.  I do
+2005-04-26T09:49:00.000Z	nomasteryoda	Fazer	did you look at the kknoppix
+2005-04-26T09:49:00.000Z	Fazer	nomasteryoda	no, I don't have knoppix, nor I can get it =(
+2005-04-26T09:50:00.000Z	Fazer	nomasteryoda	alright, do I need to sed after wards?
+2005-04-26T09:50:00.000Z	nomasteryoda	Fazer	i think you can kill X, then restart it...even on bootable
+2005-04-26T09:51:00.000Z	nomasteryoda	Fazer	only after installing it
+2005-04-26T09:51:00.000Z	Fazer	nomasteryoda	okay, let me go ahead and install it ten.
+2005-04-26T09:51:00.000Z	Fazer	nomasteryoda	yeah =)
+2005-04-26T09:52:00.000Z	nomasteryoda	Fazer	yes you can restart X
+2005-04-26T09:52:00.000Z	Fazer	nomasteryoda	that will fix the hostname error problem?
+2005-04-26T09:52:00.000Z	Fazer	nomasteryoda	alright, sounds good.  tell me how?
+2005-04-26T09:54:00.000Z	Fazer	nomasteryoda	sure.
+2005-04-26T09:55:00.000Z	nomasteryoda	Fazer	not sure on pwd
+2005-04-26T09:57:00.000Z	nomasteryoda	Fazer	lets see
+2005-04-26T10:00:00.000Z	nomasteryoda	Fazer	just sec
+2005-04-26T10:01:00.000Z	nomasteryoda	Fazer	 tried something i found on google ... did not work
+2005-04-26T10:01:00.000Z	Fazer	nomasteryoda	oh, heh, so there IS a password?
+2005-04-26T10:02:00.000Z	nomasteryoda	Fazer	no password
+2005-04-26T10:03:00.000Z	Fazer	nomasteryoda	haha okay. time for a log out/log in thing
+2005-04-26T10:09:00.000Z	nomasteryoda	Fazer	the hostname?
+2005-04-26T10:09:00.000Z	Fazer	nomasteryoda	CPE000d88403cc5-CM0012c90fe42a was the old hostname I guess so I changed the /etc/hosts file back to it.
+2005-04-26T10:10:00.000Z	nomasteryoda	Fazer	looks like you will have to be brave
+2005-04-26T10:10:00.000Z	Fazer	nomasteryoda	Alright
+2005-04-26T10:10:00.000Z	Fazer	nomasteryoda	So, install that driver now?
+2005-04-26T10:11:00.000Z	Fazer	nomasteryoda	wait, I have do that hole make and ./compile stuff?
+2005-04-26T10:11:00.000Z	nomasteryoda	Fazer	change ./compile to ./configure
+2005-04-26T10:11:00.000Z	nomasteryoda	Fazer	 let me get you a link
+2005-04-26T10:11:00.000Z	Fazer	nomasteryoda	where exactly?
+2005-04-26T10:12:00.000Z	nomasteryoda	Fazer	is wget in there
+2005-04-26T10:12:00.000Z	Fazer	nomasteryoda	oh yes, it is
+2005-04-26T10:13:00.000Z	Fazer	nomasteryoda	yes, I am talking to you directly from it.
+2005-04-26T10:14:00.000Z	nomasteryoda	Fazer	the issue is kernel source requirements
+2005-04-26T10:14:00.000Z	Fazer	nomasteryoda	but, what are we compiling.
+2005-04-26T10:14:00.000Z	Fazer	nomasteryoda	I already have it =/
+2005-04-26T10:15:00.000Z	nomasteryoda	Fazer	ok
+2005-04-26T10:15:00.000Z	Fazer	nomasteryoda	ndiswrapper-utils_0.12+1.0rc2-1_i386.deb is the file that I dpkg -i 'ed
+2005-04-26T10:16:00.000Z	Fazer	nomasteryoda	really? it seems to be workign fine though..
+2005-04-26T10:16:00.000Z	nomasteryoda	Fazer	lsmod | grep ndiswrapper
+2005-04-26T10:17:00.000Z	Fazer	nomasteryoda	hold on.
+2005-04-26T10:17:00.000Z	Fazer	nomasteryoda	hmm, didn't return anything.
+2005-04-26T10:17:00.000Z	Fazer	nomasteryoda	strange, i ran this command in the afternoon and it worked out fine then.
+2005-04-26T10:17:00.000Z	nomasteryoda	Fazer	but that was before rebooting right?
+2005-04-26T10:18:00.000Z	Fazer	nomasteryoda	heh yeah
+2005-04-26T10:22:00.000Z	Fazer	nomasteryoda	i will brb, bathroom =/
+2005-04-26T10:22:00.000Z	nomasteryoda	Fazer	TMI
+2005-04-26T10:27:00.000Z	Fazer	nomasteryoda	what's TMI?
+2005-04-26T10:27:00.000Z	Fazer	nomasteryoda	oh haha
+2005-04-26T10:27:00.000Z	Fazer	nomasteryoda	so, you were going to send me a link or something?
+2005-04-26T10:27:00.000Z	Fazer	nomasteryoda	sure.
+2005-04-26T10:33:00.000Z	nomasteryoda	Fazer	i pasted in another tab
+2005-04-26T10:33:00.000Z	Fazer	nomasteryoda	I am using irssi righ tnow.
+2005-04-26T10:35:00.000Z	Fazer	nomasteryoda	alright, let me load up firefox then, give me a few =/
+2005-04-26T10:57:00.000Z	Fazer	nomasteryoda	So...you there?
+2005-04-26T10:58:00.000Z	Fazer	nomasteryoda	alrightly, so, I am going to install ndiswrapper from the .deb file.
+2005-04-26T11:00:00.000Z	Fazer	nomasteryoda	Soo, I am installing that .deb now
+2005-04-26T11:01:00.000Z	Fazer	nomasteryoda	Done...
+2005-04-26T11:02:00.000Z	Fazer	nomasteryoda	Now what shall I do?
+2005-04-26T11:02:00.000Z	nomasteryoda	Fazer	do you have the bcmwl5a.inf file?.... aka driver
+2005-04-26T11:02:00.000Z	Fazer	nomasteryoda	oh and `lsmod | grep ndiswrapper` still doens't show anything.  And yes, I have the .inf file
+2005-04-26T11:03:00.000Z	nomasteryoda	Fazer	you need to load it
+2005-04-26T11:03:00.000Z	Fazer	nomasteryoda	doing so now
+2005-04-26T11:03:00.000Z	Fazer	nomasteryoda	wait wait wait, I have bcmwl5.inf not bcmw5a.inf
+2005-04-26T11:04:00.000Z	Fazer	nomasteryoda	can you give me the .inf and .sys files?
+2005-04-26T11:04:00.000Z	Fazer	nomasteryoda	thanks, just point me to the .zip
+2005-04-26T11:05:00.000Z	nomasteryoda	Fazer	let me go to my laptop where they are installed
+2005-04-26T11:05:00.000Z	Fazer	nomasteryoda	alright, you use the same card as well?
+2005-04-26T11:05:00.000Z	Fazer	nomasteryoda	Alrighty
+2005-04-26T11:12:00.000Z	Fazer	nomasteryoda	wait, where are you?
+2005-04-26T11:25:00.000Z	nomasteryoda	Fazer	my laptop died
+2005-04-26T11:25:00.000Z	Fazer	nomasteryoda	ouch haha
+2005-04-26T11:25:00.000Z	Fazer	nomasteryoda	how long was it up?
+2005-04-26T11:29:00.000Z	Fazer	nomasteryoda	heh, its alright. how hard/easy was it to install them ?  btw, where diid you get those drivers?
+2005-04-26T11:35:00.000Z	nomasteryoda	Fazer	you still there
+2005-04-26T11:35:00.000Z	Fazer	nomasteryoda	hi
+2005-04-26T11:38:00.000Z	Fazer	nomasteryoda	still isn't working, let me pm you the upload info then.

@@ -1,0 +1,96 @@
+2008-12-13T11:19:00.000Z	Firefishe		How do I determine if the system is using dma?  Also, how do I set the system to use dma?
+2008-12-13T11:20:00.000Z	onetinsoldier	Firefishe	howdy!
+2008-12-13T11:21:00.000Z	Firefishe	onetinsoldier	 :)
+2008-12-13T11:22:00.000Z	Firefishe	onetinsoldier	 I'm using kubuntu, kde 4.1.x now.  I just couldn't get debian working.
+2008-12-13T11:23:00.000Z	onetinsoldier	Firefishe	roger that. what exactly couldn't you get working in debian tho?
+2008-12-13T11:25:00.000Z	Firefishe	onetinsoldier	Wifi, sound (got that taken care of, but alsa appears to be working fine in 8.10 here, and I don't have the dns problems I did.  Don't know what's different.  Although kde 4.1 is laggy on the desktop.  I have to wait an average of five to ten seconds to be able to work within gadgets, like the desktop gadget.  It's not right, not when I'm using the nvidia proprietary driver and have
+2008-12-13T11:27:00.000Z	onetinsoldier	Firefishe	roger. glad to hear the things that are pretty important are working good for you now :-)
+2008-12-13T11:28:00.000Z	Firefishe	onetinsoldier	They are, but I want to install kde 3.x, alongside kde 4.1.x.  4.1 is still buggy, and I want a bloody Nvidia driver that doesn't slow up my system.  This system is flawless on Vista 64 HP, and there's no reason it shouldn't be fast on the screen eye candy, just no reason.
+2008-12-13T11:29:00.000Z	Firefishe	onetinsoldier	Incidentally, do you know what the hdparm command is for turning on dma?  I suppose it's being used already, but I just want to be sure.  Also, do you--or anyone else for that matter--know if 2.6.27 kernels can use E-SATA settings on the hard drive to speed up things?
+2008-12-13T11:31:00.000Z	onetinsoldier	Firefishe	well, you can expect linux to perhaps lag a little behind ms when it comes to eye candy stuff. there is definitely eye candy to be had and high powered desktop environments are getting better in linux, but it's never been linux's strong point, at least not yet
+2008-12-13T11:32:00.000Z	Firefishe	onetinsoldier	Yeah, I'm finding that out.  I'm actually thinking about doing something compleatly different ;) when it comes in the mail.
+2008-12-13T11:32:00.000Z	onetinsoldier	Firefishe	oh?
+2008-12-13T11:32:00.000Z	Firefishe	onetinsoldier	I sent away for a current copy of Open Solaris 2008.11
+2008-12-13T11:33:00.000Z	onetinsoldier	Firefishe	oh, interesting. i knew you were thinking about getting that as you mentioned before
+2008-12-13T11:34:00.000Z	Firefishe	onetinsoldier	Well, I have an old copy of Solaris 10 I got in 2006.  It wasn't 'open Solaris' then, although it was free.  It's a different way of doing *nix, and the partitioning is a bit different, too.  I don't know if it will win me over or not.  It's probably a bit like BSD.
+2008-12-13T11:35:00.000Z	onetinsoldier	Firefishe	roger.. gl with it! hope you like it too.
+2008-12-13T12:44:00.000Z	Firefishe	onetinsoldier	 Back.  Had to do a recovery, and now I'm on the old nvidia driver.  Works much faster now ;)
+2008-12-13T12:46:00.000Z	onetinsoldier	Firefishe	oh, roger that. a recovery? a full recovery of your install?
+2008-12-13T12:46:00.000Z	onetinsoldier	Firefishe	anyway, glad to hear it's much faster now!
+2008-12-13T12:47:00.000Z	Firefishe	onetinsoldier	 no, just booted via kubuntu recovery mode.  Very nice setup.  Got a nice ncurses menu that let me to an fsck, attempt repair at x server, and repair packages.  Nice setup.  I'm sticking with the x driver for this thing.  Proprietary is nice, but is slow.  I may need a commercial x solution (or Wayland if it ever gets off the ground) to be able to use this system completely.
+2008-12-13T12:48:00.000Z	Firefishe	onetinsoldier	 I'm not doing 3D work anyway, so whatevah works.
+2008-12-13T12:48:00.000Z	onetinsoldier	Firefishe	roger that my man
+2008-12-19T06:40:00.000Z	onetinsoldier	Firefishe	hello! how you doing buddy? ever get Solaris going?
+2008-12-19T06:41:00.000Z	Firefishe	onetinsoldier	 Hey bud! :) Well, I've gotten 2008.11 in the mail, and it boots nicely.  Doesn't recognize my wifi apparatus, though.  It's a staunch learning curve, and will take some time.
+2008-12-19T06:41:00.000Z	Firefishe	onetinsoldier	 Let's take this to ubuntu-offtopic
+2008-12-19T06:42:00.000Z	onetinsoldier	Firefishe	roger that.. i wasn't necessarily wanting detail about it, but i will go there in case you are wanting to talk about it
+2008-12-19T06:43:00.000Z	Firefishe	onetinsoldier	 I'm also helping someone with a sound issue.  I should be here for a bit, but will be available for some time to come ;)  Wifey's out and about with 'er mom, so I'm free.
+2008-12-19T06:43:00.000Z	onetinsoldier	Firefishe	roger
+2008-12-20T07:16:00.000Z	Firefishe	onetinsoldier	 Heya bud! :)
+2008-12-20T07:16:00.000Z	onetinsoldier	Firefishe	hi man
+2008-12-20T07:17:00.000Z	Firefishe	onetinsoldier	 When you get a sec, I'd like to run a question by ya.
+2008-12-20T07:17:00.000Z	onetinsoldier	Firefishe	ok, what is it?
+2008-12-20T07:18:00.000Z	Firefishe	onetinsoldier	 I've had to recent problems happen to me, both identical in the end result, but involving the same thing:  I try to copy an audio cd, then burn it to another cd.   When I put in the second cd, close the drawer, the system suddenly won't recognize the drive.  I can't eject, and no software I use can see the dvd drive anymore.
+2008-12-20T07:19:00.000Z	Firefishe	onetinsoldier	 I have to reboot to get control of the dvd drive back
+2008-12-20T07:22:00.000Z	Firefishe	onetinsoldier	 Get this just now!  I put a cd-rw in my drive, go to bring up k3b, and the entire K-Menu, Applications menu is blank.
+2008-12-20T07:22:00.000Z	Firefishe	onetinsoldier	 nm, it was scrolled down too far
+2008-12-20T07:23:00.000Z	Firefishe	onetinsoldier	 I'm going to reboot and try something...I'll brb
+2008-12-20T07:24:00.000Z	onetinsoldier	Firefishe	i don't know that i can help with that. kernel 2.6.27? have you checked in /var/log/messages about this? i had problems with kernel 2.6.27 myself when it comes to my dvd drive. when trying to install from burned lived cd .iso, i would get kernel error message --> end_request: Buffer I/O in sector xxxx. i checked the md5sum, it was ok. re-downloaded the .iso anyway. re-burned several times, low speed the last few times, 
+2008-12-22T04:35:00.000Z	Firefishe	onetinsoldier	 Heya :)
+2008-12-22T04:36:00.000Z	onetinsoldier	Firefishe	howdy! how ya doing?
+2008-12-22T06:38:00.000Z	onetinsoldier	Firefishe	roger... hehe. live and let learn
+2008-12-22T12:37:00.000Z	onetinsoldier	Firefishe	wb, why are you so quiet? :-)
+2008-12-22T12:38:00.000Z	Firefishe	onetinsoldier	 chatting with people in kde-cafe, and working on learning about documents in kde
+2008-12-22T12:38:00.000Z	onetinsoldier	Firefishe	roger that
+2010-05-19T08:26:00.000Z	Firefishe	onetinsoldier	 heya, long time no see
+2010-05-19T08:26:00.000Z	onetinsoldier	Firefishe	howdy~! roger... long time
+2010-05-19T08:27:00.000Z	Firefishe	onetinsoldier	 I'm downloading 10.04 64 bit.  Anything exceptionally different from Karmic?
+2010-05-19T08:28:00.000Z	onetinsoldier	Firefishe	i didn't run Karmic... been gone a long time. don't know
+2010-05-19T08:29:00.000Z	Firefishe	onetinsoldier	 Ah, I see.
+2010-05-19T08:33:00.000Z	onetinsoldier	Firefishe	so you're running Karmic right now?
+2010-05-19T08:34:00.000Z	onetinsoldier	Firefishe	you using gnome or kde? let me guess.. kde! :-)
+2010-05-19T08:50:00.000Z	Firefishe	onetinsoldier	 Ah, the joy of 'net drop
+2010-05-19T08:50:00.000Z	Firefishe	onetinsoldier	 And yes, I *am* using kde ;) hee
+2010-05-19T08:50:00.000Z	onetinsoldier	Firefishe	ahh, i was wondering why you weren't responding
+2010-05-19T08:50:00.000Z	Firefishe	onetinsoldier	 local restaurant connection...likes to hiccup now and again
+2010-05-19T08:51:00.000Z	onetinsoldier	Firefishe	i see
+2010-05-19T08:55:00.000Z	Firefishe	onetinsoldier	 So what've you been up to?
+2010-05-19T08:57:00.000Z	onetinsoldier	Firefishe	working.. taking care of my rental houses. but this is offtopic. we should really talk in ubuntu-offtopic or via pm
+2010-05-19T08:57:00.000Z	Firefishe	onetinsoldier	 ah, you're right of course.  Soryr.
+2010-06-02T06:19:00.000Z	Firefishe	onetinsoldier	 Greetings, good friend :-).  How are you today?
+2010-06-02T06:19:00.000Z	onetinsoldier	Firefishe	good thanks. how are you doing?
+2010-06-02T06:19:00.000Z	Firefishe	onetinsoldier	 I am contemplating upgrading Karmic to Lucid, and I am fielding questions.
+2010-06-02T06:19:00.000Z	onetinsoldier	Firefishe	ahh, roger
+2010-06-02T06:20:00.000Z	Firefishe	onetinsoldier	 Otherwise, in need of work.    (We can also take other talk to offtopic if you desire.)
+2010-06-03T22:05:00.000Z	Firefishe	onetinsoldier	 Heya.
+2010-06-03T22:08:00.000Z	onetinsoldier	Firefishe	hello
+2010-06-03T23:26:00.000Z	onetinsoldier	Firefishe	how are you trying to start kde now that you have the kde-4.4.4 ppa installed?
+2010-06-03T23:26:00.000Z	Firefishe	onetinsoldier	 from gdm's login screen
+2010-06-03T23:27:00.000Z	onetinsoldier	Firefishe	have you tried using kdm?
+2010-06-03T23:27:00.000Z	Firefishe	onetinsoldier	 how do I switch from gdm to kdm?
+2010-06-03T23:27:00.000Z	onetinsoldier	Firefishe	not sure if this is correct...  sudo update-alternatives --config x-session-manager
+2010-06-03T23:29:00.000Z	onetinsoldier	Firefishe	just checking, but when using gdm, are you selecting kde as the session? it should be an option down at the bottom of the gdm screen
+2010-06-03T23:30:00.000Z	Firefishe	onetinsoldier	 That's what I was originally doing, but I remembered what to do:  sudo dpkg-reconfigure kdm
+2010-06-03T23:30:00.000Z	onetinsoldier	Firefishe	ahh, cool
+2010-06-03T23:30:00.000Z	Firefishe	onetinsoldier	 Same for if you want to use gdm.  A screen comes up that allows you to select which display manager you want.
+2010-06-03T23:31:00.000Z	onetinsoldier	Firefishe	roger. sounds good
+2010-06-03T23:37:00.000Z	onetinsoldier	Firefishe	roger
+2010-06-03T23:31:00.000Z	Firefishe	onetinsoldier	 Nice to do this once a while, if only to remember what tools to use.  I need to take more notes.  Sheesh! ;)
+2010-06-03T23:31:00.000Z	onetinsoldier	Firefishe	i have a 'commands' file and 'Notes' file i keep :)
+2010-06-03T23:35:00.000Z	Firefishe	onetinsoldier	 I tried to start kde via the xterm selection in kdm.  It's a mismatch with the nvidia drivers.
+2010-06-03T23:38:00.000Z	onetinsoldier	Firefishe	i'm not real sure what to make of that. what's the exact error message
+2010-06-03T23:38:00.000Z	Firefishe	onetinsoldier	 I'll have to get it again...brb
+2010-06-03T23:38:00.000Z	onetinsoldier	Firefishe	you might need to purge the nvidia driver, then install it fresh. not sure
+2010-06-03T23:45:00.000Z	Firefishe	onetinsoldier	 back
+2010-06-03T23:45:00.000Z	Firefishe	onetinsoldier	 I'll use pastebin
+2010-06-03T23:46:00.000Z	onetinsoldier	Firefishe	roger that. sounds good
+2010-06-03T23:46:00.000Z	onetinsoldier	Firefishe	you might need to purge the nvidia driver, then install it fresh. not sure
+2010-06-03T23:48:00.000Z	Firefishe	onetinsoldier	 Got your last lines.  Here's the output error: http://paste.ubuntu.com/444209/
+2010-06-03T23:50:00.000Z	onetinsoldier	Firefishe	yeah. try, puring the nvidia driver. reboot. install it fresh, then reboot again
+2010-06-03T23:50:00.000Z	Firefishe	onetinsoldier	 I'm rebooting so much the soles of my shoes will need replacing ;)
+2010-06-03T23:51:00.000Z	onetinsoldier	Firefishe	i hear ya. been there done that. i know how it is
+2010-06-03T23:51:00.000Z	onetinsoldier	Firefishe	i have to go for about one hour. i'll be back. i wish you luck!
+2010-06-04T00:08:00.000Z	Firefishe	onetinsoldier	 I'm back, and having a bit of a problem.
+2010-06-04T00:09:00.000Z	Firefishe	onetinsoldier	 I'm not able to even get a command prompt to come up now. I try to boot normally, or in recovery mode, and nothing comes up.  I"m in live cd now
+2010-06-04T00:22:00.000Z	Firefishe	onetinsoldier	 I'm going to save to another disk and reinstall.  I want the 64bit version anyway
+2010-06-04T01:18:00.000Z	Firefishe	onetinsoldier	 Greetings...back, and with a plan.

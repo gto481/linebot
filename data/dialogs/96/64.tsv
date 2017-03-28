@@ -1,0 +1,96 @@
+2006-06-11T06:13:00.000Z	harry		does running sudo apt-get dist-upgrade will able to upgrade to ubuntu dapper drake 6.06???
+2006-06-11T06:14:00.000Z	Sivik	harry	yes
+2006-06-11T06:14:00.000Z	Sivik	harry	as long as your change all the places it says breezy to dapper in the source.list file
+2006-06-11T06:15:00.000Z	harry	Sivik	yeah i did that. i copied somewhat like that i pasted on the sources.list. then i run the sudo apt-get dist-upgrade.
+2006-06-11T06:15:00.000Z	Sivik	harry	then you should be right, what does your man /proc/version say the kernel version is
+2006-06-11T06:16:00.000Z	harry	Sivik	2.6.12-9-386: am i right.
+2006-06-11T06:16:00.000Z	Sivik	harry	not right, thats the brezzy
+2006-06-11T06:16:00.000Z	Sivik	harry	run "man /proc/version"
+2006-06-11T06:17:00.000Z	Sivik	harry	thats cool
+2006-06-11T06:17:00.000Z	Sivik	harry	pastebin your sources.list and then give the url and i can check it
+2006-06-11T06:18:00.000Z	Sivik	harry	www.pastebin.com and the /etc/apt/sources.list
+2006-06-11T06:18:00.000Z	harry	Sivik	Linux  version  2.6.129386  (buildd@rothera) (gcc version 3.4.5
+2006-06-11T06:20:00.000Z	Sivik	harry	are you doing both of those?
+2006-06-11T06:20:00.000Z	harry	Sivik	i need the exact command for the sources.list. my permission was denied
+2006-06-11T06:20:00.000Z	harry	Sivik	what those???
+2006-06-11T06:20:00.000Z	Sivik	harry	sudo vi /etc/apt/sources.list
+2006-06-11T06:20:00.000Z	Sivik	harry	run "sudo vi /etc/apt/sources.list
+2006-06-11T06:21:00.000Z	Sivik	harry	without the "
+2006-06-11T06:21:00.000Z	harry	Sivik	vi command not found
+2006-06-11T06:22:00.000Z	Sivik	harry	sudo gedit /etc/apt/sources.list
+2006-06-11T06:23:00.000Z	Sivik	harry	did that work?
+2006-06-11T06:23:00.000Z	harry	Sivik	wait
+2006-06-11T06:23:00.000Z	Sivik	harry	ok
+2006-06-11T06:24:00.000Z	harry	Sivik	give me another location for paste bin
+2006-06-11T06:24:00.000Z	harry	Sivik	the url u gave me doesnt work
+2006-06-11T06:25:00.000Z	Sivik	harry	try that one
+2006-06-11T06:26:00.000Z	Sivik	harry	did that one work
+2006-06-11T06:26:00.000Z	harry	Sivik	i think i'm already using the dapper drake but its still not complete
+2006-06-11T06:26:00.000Z	Sivik	harry	there is no way, cause its kernel would be at least 2.6.15-
+2006-06-11T06:26:00.000Z	harry	Sivik	ive just noticed now that my desktop background just changed like the one i see on the dapper
+2006-06-11T06:26:00.000Z	Sivik	harry	just give me the sources.list in pastebin
+2006-06-11T06:27:00.000Z	harry	Sivik	http://paste.ubuntu-nl.org/15501
+2006-06-11T06:28:00.000Z	Sivik	harry	then run apt-get update
+2006-06-11T06:28:00.000Z	harry	Sivik	is the sources.list right????
+2006-06-11T06:29:00.000Z	Sivik	harry	it looks like it
+2006-06-11T06:29:00.000Z	harry	Sivik	i've run the apt-get update yesterday. i just continued it today
+2006-06-11T06:30:00.000Z	harry	Sivik	now i'm still running the dist-upgrade. while it's going, i'm noticing changes of my icons on the menu and new programs and the desktop
+2006-06-11T06:30:00.000Z	Sivik	harry	ok
+2006-06-11T06:30:00.000Z	Sivik	harry	then it may be working now
+2006-06-11T06:30:00.000Z	harry	Sivik	so am i right for what am i doin???
+2006-06-11T06:30:00.000Z	Sivik	harry	yes
+2006-06-11T06:31:00.000Z	harry	Sivik	are you familiar with PSP
+2006-06-11T06:31:00.000Z	Sivik	harry	like the handheld?
+2006-06-11T06:31:00.000Z	harry	Sivik	Sivik: yeah
+2006-06-11T06:31:00.000Z	Sivik	harry	no
+2006-06-11T06:31:00.000Z	Sivik	harry	i have friends that have one, but i have never played with one much
+2006-06-11T06:32:00.000Z	harry	Sivik	i was thinking how they are able to use it as a universal remote control
+2006-06-11T06:33:00.000Z	Sivik	harry	i wouldn't know, try googling it
+2006-06-11T06:33:00.000Z	harry	Sivik	can u giv me an url for nvidia drivers???
+2006-06-11T06:34:00.000Z	Sivik	harry	what kind of card
+2006-06-11T06:34:00.000Z	Sivik	harry	you can use the apt-get to do it
+2006-06-11T06:34:00.000Z	Sivik	harry	"apt-cache search nvidia"
+2006-06-11T06:46:00.000Z	harry	Sivik	is this the version of dapper drake already?? 2.6.15-23-386
+2006-06-11T06:47:00.000Z	Sivik	harry	yes
+2006-06-11T06:47:00.000Z	Sivik	harry	thats what i have
+2006-06-11T06:47:00.000Z	harry	Sivik	do i still have to change the sources.list????
+2006-06-11T06:47:00.000Z	Sivik	harry	no, its fine
+2006-06-11T06:48:00.000Z	harry	Sivik	i mean to change the sources.list to download some applications. because when using the breezy i'm having a hard time???
+2006-06-11T06:48:00.000Z	Sivik	harry	you don't need breezy anymore
+2006-06-11T06:49:00.000Z	Sivik	harry	it should be find
+2006-06-11T06:49:00.000Z	harry	Sivik	is it normal that i dont hear anyome the drum sound everytime i click an folder or application???
+2006-06-11T06:50:00.000Z	Sivik	harry	i don't know
+2006-06-11T06:50:00.000Z	Sivik	harry	i'm not in gnome or kde
+2006-06-11T06:51:00.000Z	Sivik	harry	i'm in enlightenment
+2006-06-11T06:51:00.000Z	harry	Sivik	so using dapperdrake. i dont need to download some codecs or multimedia format like the one i did in breezy???
+2006-06-11T06:51:00.000Z	Sivik	harry	just install vlc, it already has most of the codecs in it
+2006-06-11T06:52:00.000Z	harry	Sivik	which is better. mplayer or VLC???
+2006-06-11T07:01:00.000Z	harry	Sivik	is it normal for dapper drake to not have the open office after installing it???
+2006-06-11T07:01:00.000Z	Sivik	harry	yes
+2006-06-11T07:01:00.000Z	Sivik	harry	just install it via sudo apt-get install openoffice.org2
+2006-06-11T07:03:00.000Z	harry	Sivik	another ? again for the video drivers. even if i'm using dapperdrake already, i still have to install the nvidia drivers???
+2006-06-11T07:03:00.000Z	Sivik	harry	yes
+2006-06-11T07:03:00.000Z	Sivik	harry	i had to
+2006-06-11T07:07:00.000Z	harry	Sivik	every time i browse the net. is there also a folder here that also stores like the temporary files of the internet like the windows had??
+2006-06-11T07:07:00.000Z	Sivik	harry	not sure
+2006-06-11T07:07:00.000Z	Sivik	harry	i have never cared
+2006-06-11T07:08:00.000Z	Sivik	harry	it shouldn't be a problem with linux
+2006-06-11T07:25:00.000Z	harry	Sivik	every time i install some applications. where does the package go???
+2006-06-11T11:14:00.000Z	harry	Sivik	do you know how to install turbogears. ???
+2006-06-11T11:14:00.000Z	harry	Sivik	www.turbogears.org
+2006-06-11T11:15:00.000Z	Sivik	harry	what langs is that for?
+2006-06-11T11:15:00.000Z	harry	Sivik	python
+2006-06-11T11:16:00.000Z	Sivik	harry	did you follow the instructions on the website?
+2006-06-11T11:16:00.000Z	harry	Sivik	i exactly did
+2006-06-11T11:18:00.000Z	Sivik	harry	you have python 2.4 right
+2006-06-11T11:18:00.000Z	harry	Sivik	yeah i have. even the latest version
+2006-06-11T11:18:00.000Z	harry	Sivik	i have python 2.4.3
+2006-06-11T11:18:00.000Z	Sivik	harry	ok, whats the error you are getting
+2006-06-11T11:19:00.000Z	harry	Sivik	what's the address of the pastebin at ubuntu. i'll paste it there
+2006-06-11T11:21:00.000Z	harry	Sivik	whats nvidia kernel for???
+2006-06-11T11:21:00.000Z	Sivik	harry	don't worry about it
+2006-06-11T11:22:00.000Z	harry	Sivik	the url for the pastebin at ubuntu???
+2006-06-11T11:24:00.000Z	harry	Sivik	this what showed up
+2006-06-11T11:24:00.000Z	harry	Sivik	http://paste.ubuntu-nl.org/15509
+2006-06-11T11:28:00.000Z	Sivik	harry	it looks like a server on their end issue
+2006-06-11T11:31:00.000Z	Sivik	harry	thats normally a problem with their webiste, and not your end

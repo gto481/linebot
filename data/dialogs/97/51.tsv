@@ -1,0 +1,97 @@
+2009-04-02T23:42:00.000Z	sebsebseb		!ppa |  lakeoftea
+2009-04-02T23:43:00.000Z	scunizi	sebsebseb	maybe by 9.04.1
+2009-04-02T23:44:00.000Z	sebsebseb	scunizi	hummmmmm  I am hoping  9.04  can do a Ext4 that is all good, and then can be upgraded untill the computer dies, or Ext5
+2009-04-02T23:44:00.000Z	scunizi	sebsebseb	it might.. I'
+2009-04-02T23:44:00.000Z	sebsebseb	scunizi	I mean the Ubuntu partition that is installed on that partition
+2009-04-02T23:44:00.000Z	scunizi	sebsebseb	I'll wait until 9.04.1 to upgrade. but I'll play with 9.04 in a vm
+2009-04-07T18:14:00.000Z	scunizi	sebsebseb	probably
+2009-04-24T00:59:00.000Z	scunizi	sebsebseb	the difference being some remember the beta testing and don't know anything about the fixes that have been done
+2009-04-24T01:00:00.000Z	sebsebseb	scunizi	what are you trying to say?  and yeah their is a lot of ignorance when it comes to Ext4 in 9.04,  if it's stable enough or not etc
+2009-04-24T01:01:00.000Z	scunizi	sebsebseb	just saying that those saying ext4 is buggy don't always have personal experience.. they're just parroting previous reports b4 the fixes
+2009-04-24T01:01:00.000Z	sebsebseb	scunizi	apprnatlly  the file system is pretty good now really, but the kernel still needs some changes for Ext4 really?
+2009-04-26T09:34:00.000Z	sebsebseb	scunizi	what are you talking about?
+2009-04-26T09:34:00.000Z	scunizi	sebsebseb	on the dev list they've been talking about the possibility of useing the colinux kernel with wubi and ubuntu
+2009-04-26T09:35:00.000Z	sebsebseb	scunizi	damn  noob distro ideas hum.   Ubuntu should really be about getting people away from Windows more, not the other way round
+2009-04-26T09:36:00.000Z	scunizi	sebsebseb	yea.. but if it makes them easier to try then you might be able to capture more totol converts
+2009-04-26T09:36:00.000Z	sebsebseb	scunizi	yeah maybe
+2009-04-26T09:36:00.000Z	sebsebseb	scunizi	and there's already   something else,   that  runs most Ubuntu apps in Windows,  except the desktop stuff and that
+2009-04-26T09:37:00.000Z	sebsebseb	scunizi	based on hardy though
+2009-04-26T09:37:00.000Z	scunizi	sebsebseb	after trying it most will either install as a dual boot, take the whole drive for an install, keep it in wubi for a toy .
+2009-04-26T09:37:00.000Z	sebsebseb	scunizi	something else, more like two something else's
+2009-04-26T09:38:00.000Z	scunizi	sebsebseb	it'll be really interesting when kde will run as a desktop replacemnet on windows .. allowing all it's apps to run as well.
+2009-04-26T09:38:00.000Z	sebsebseb	scunizi	I don't think that's a good idea
+2009-04-26T09:38:00.000Z	sebsebseb	scunizi	and already quite a lot of the KDE4 apps run natively on Windows and OS X
+2009-04-26T09:39:00.000Z	scunizi	sebsebseb	didn't know that.
+2009-04-26T09:39:00.000Z	sebsebseb	scunizi	give people a good desktop environment on Windows, and they will just continue using Windows with it, those that know about it
+2009-04-26T09:40:00.000Z	sebsebseb	scunizi	cross platform stops vender lock in, and most opensource stuff is, but guess what?   most commercial apps aren't cross platform.  that's what we want.  cross platform  EA games and what not, but no
+2009-04-26T09:40:00.000Z	sebsebseb	scunizi	cross platform,  Sim City etc,   cross platform Grand Theft Auto etc.   Windows,  Desktop Linux, Mac OS X,  and a few games consoles, but no
+2009-04-26T09:40:00.000Z	scunizi	sebsebseb	there's points on both sides.. but we digress... we're getting ot
+2009-04-26T10:05:00.000Z	scunizi	sebsebseb	bacon1989 what does grub have to do with the filesystem?
+2009-04-26T10:05:00.000Z	sebsebseb	scunizi	apparantly older versions of Grub won't detect  Ext4, according  to that guy
+2009-04-26T10:07:00.000Z	scunizi	sebsebseb	ok.. not sure I really understand why it wouldn't.. one more thing to research before installing the 64 bit version
+2009-04-26T10:07:00.000Z	sebsebseb	scunizi	ok
+2009-07-05T10:52:00.000Z	sebsebseb	scunizi	:) :D
+2009-07-06T09:31:00.000Z	scunizi	sebsebseb	ext4 is the default file system in 9.10? I didn't realize that..
+2009-07-06T09:31:00.000Z	sebsebseb	scunizi	yep it is :)
+2009-07-06T09:32:00.000Z	sebsebseb	scunizi	 mbse   http://www.ubuntu.com/testing/karmic/alpha2   and average end users, don't  get  that, it's the development version, so bugs
+2009-07-06T09:34:00.000Z	scunizi	sebsebseb	AH HA.. karmac is going to be ext4 by default. that's cool.. that would mean a full backup, clean install, restore to use it properly.
+2009-07-06T09:34:00.000Z	sebsebseb	scunizi	yes  exactly as I was saying basicalley
+2009-07-06T09:34:00.000Z	scunizi	sebsebseb	got it.
+2009-07-06T09:36:00.000Z	sebsebseb	scunizi	a little off topic here, but Fedora 11 already uses it by default :)  and the   2.6.30 kernel  or  now  a slighty later one
+2009-07-06T09:37:00.000Z	scunizi	sebsebseb	they've always been a little more cutting edge.. sometimes you pay for that :)
+2009-07-06T09:38:00.000Z	sebsebseb	scunizi	yeah I want to put it on as host OS,  but  i'll still help here when I do that
+2009-07-06T09:38:00.000Z	scunizi	sebsebseb	why? as host?
+2009-07-06T09:38:00.000Z	sebsebseb	scunizi	then maybe 9.10 will become my host
+2009-07-06T09:38:00.000Z	sebsebseb	scunizi	now we go pm :)
+2009-07-06T09:39:00.000Z	scunizi	sebsebseb	I'm still on hardy on the laptop and intrepid on the desktop.. I like to watch what the problems are for new releases before installing or upgrading.. they are both production machines..
+2009-07-06T09:41:00.000Z	sebsebseb	scunizi	ah ok
+2009-07-06T09:41:00.000Z	scunizi	sebsebseb	I like to play but not too hard. :)
+2009-09-15T04:52:00.000Z	sebsebseb	scunizi	IRSSI can do ICQ I guess not
+2009-09-15T04:53:00.000Z	scunizi	sebsebseb	didn't catch that.. I was thinking irc.. acrynoms acrynoms acrynoms.. I'm going nuts lately learning new one for various disaplines
+2009-09-15T04:53:00.000Z	sebsebseb	scunizi	heh ok
+2009-09-24T08:36:00.000Z	sebsebseb	scunizi	frybe  wants to use some kind of 2000 backup image  with gparted
+2009-09-24T08:36:00.000Z	scunizi	sebsebseb	ah.. that's one of those things you say "good luck" too.
+2009-09-24T08:36:00.000Z	sebsebseb	scunizi	yes that's what I thought can't be done with gparted
+2009-11-05T07:31:00.000Z	scunizi	sebsebseb	I'm running kubuntu in a vm and it seems pretty good.. however that's not really "real world"
+2009-11-05T07:32:00.000Z	sebsebseb	scunizi	What do you mean not real world?
+2009-11-05T07:33:00.000Z	scunizi	sebsebseb	all the emulation is pretty generic.. at least in vbox.. you don't have to worry about the latest vid card setup, motherboard etc..
+2009-11-05T07:33:00.000Z	sebsebseb	scunizi	ah right yeah, since  it can use the host for stuff, which host?
+2009-11-05T07:34:00.000Z	scunizi	sebsebseb	8.04 :)
+2009-11-05T07:34:00.000Z	sebsebseb	scunizi	yeah vm'ing  other versions of the same OS can  be useful  or well just fun
+2009-11-05T07:36:00.000Z	scunizi	sebsebseb	kubuntu is actually looking "pretty" .. moves quick.. nice design.. good looking etc.. I just have to learn a whole new set of acronyms and program names *and* ways of doing things..
+2009-11-05T07:37:00.000Z	sebsebseb	scunizi	yeah  using  KDE 4 as a GUI  does have a learning curve,  it's not  like KDE 3 also
+2009-11-05T07:37:00.000Z	scunizi	sebsebseb	smooth though.
+2009-11-05T07:38:00.000Z	scunizi	sebsebseb	it'll be nice when the port of koffice to windows is pretty easy to implement
+2009-11-05T07:38:00.000Z	scunizi	sebsebseb	actually ment.. kontact, kmail, etc.. whatever the wrapper for them all is called.
+2009-11-05T07:38:00.000Z	sebsebseb	scunizi	Why do you want KOffice on Windows?
+2009-11-05T07:39:00.000Z	sebsebseb	scunizi	  OzFalcon   yeah  ping and  I think of networking
+2009-11-05T07:39:00.000Z	scunizi	sebsebseb	there are machines at work I have to use.. I like the kmail kcontact client combo..
+2009-11-05T07:40:00.000Z	sebsebseb	scunizi	shame your wrok place doesn't go Desktop Linux.   Also Linux apps being ported to Windows is a bit hmm
+2009-11-05T07:41:00.000Z	scunizi	sebsebseb	just more oss, gpl exposure.. makes converting easier.. I actually use ubuntu in a vm most of the time..
+2009-11-05T07:42:00.000Z	sebsebseb	scunizi	hmm with Windows as host as well?
+2009-11-05T07:42:00.000Z	scunizi	sebsebseb	yep
+2009-11-05T07:42:00.000Z	sebsebseb	scunizi	oh dear
+2009-11-05T07:42:00.000Z	scunizi	sebsebseb	only at work
+2009-11-05T07:42:00.000Z	sebsebseb	scunizi	ok :)
+2009-11-05T07:42:00.000Z	scunizi	sebsebseb	so I'm forgiven?
+2009-11-05T07:43:00.000Z	sebsebseb	scunizi	heh  I guess, and I guess so :)
+2009-11-08T07:32:00.000Z	scunizi	sebsebseb	Ruge there's a couple of different ones.. you mileage may vary but I've never had an issue
+2009-11-28T23:47:00.000Z	scunizi	sebsebseb	he's been trolling for a while..
+2009-11-28T23:48:00.000Z	sebsebseb	scunizi	Now I saw some of that when looking at things that were just put
+2009-12-13T09:19:00.000Z	sebsebseb	scunizi	don't upgrade untill 10.04.1  if doing 8.04 LTS, why?
+2009-12-13T09:20:00.000Z	scunizi	sebsebseb	on an lts release the .1 is like a large service pack.. they've ironed out the upgrade bugs and other things.
+2009-12-13T09:20:00.000Z	sebsebseb	scunizi	are you sure about that?
+2009-12-13T09:21:00.000Z	scunizi	sebsebseb	that's what's happened to me in the last upgrade.. things just get more stable after .1
+2009-12-13T09:24:00.000Z	scunizi	sebsebseb	and you doughted me.. :)
+2009-12-13T09:25:00.000Z	sebsebseb	scunizi	well I already knew that your an LTS fan,  and I am not sure if it's the best advice to tell people not to get the latest LTS untill a point release.  Surely an LTS is good when it comes out?  or well meant to be
+2009-12-13T09:26:00.000Z	sebsebseb	scunizi	and maco  seems to know about that kind of stuff, hence why I asked her
+2009-12-13T09:26:00.000Z	scunizi	sebsebseb	no.. I run lts, 8.10 and 9.10
+2009-12-13T09:27:00.000Z	scunizi	sebsebseb	9.10 I run ubuntu and kubuntu.. I rather like kubuntu now.. very slick
+2009-12-13T09:28:00.000Z	scunizi	sebsebseb	no matter what release.. try running your everyday stuff from a TTY sometime.. without the gui.. now that can be a learning experience :)
+2010-01-24T21:38:00.000Z	scunizi	sebsebseb	macman_ when I got my Vostro 1400 I had a choice of sticking with the basics or changing video and wireless card .. I changed them.. I put nvidia in and Intel Pro/wireless 3945abg card.
+2010-01-24T21:42:00.000Z	sebsebseb	scunizi	that sounds like a little trick,  and  I guess that varys by countrey
+2010-05-23T11:19:00.000Z	scunizi	sebsebseb	sudo apt-get update is what you're looking for.. aptitude is the same .. sudo aptitude update
+2010-05-23T11:19:00.000Z	sebsebseb	scunizi	yep I know that apt-get and aptitude are nearly the same thing
+2010-06-14T07:54:00.000Z	scunizi	sebsebseb	Nitrus^1 10.04 is LTS ..
+2010-06-14T07:54:00.000Z	sebsebseb	scunizi	I know
+2010-06-14T07:54:00.000Z	scunizi	sebsebseb	I figured that :)

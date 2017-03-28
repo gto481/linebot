@@ -1,0 +1,96 @@
+2006-10-27T13:41:00.000Z	kodat		pelo how does the emulator run resource wise, does it make games laggy and such
+2006-10-27T13:41:00.000Z	kodat		alright sweet
+2006-10-27T13:42:00.000Z	kodat		haha
+2006-10-27T13:42:00.000Z	kodat		well ive been usin windows for god knows how long..and im bored of it
+2006-10-27T13:42:00.000Z	kodat		cuz i like to tweak
+2006-10-27T13:43:00.000Z	kodat		i would have put linux on a partition but i accidentaly had gnome delete my original windows partition haha
+2006-10-27T13:43:00.000Z	kodat		heh
+2006-10-27T13:43:00.000Z	kodat		well right now there is no game i feel like playing, im waiting for warhammer
+2006-10-27T13:44:00.000Z	kodat		i like this irc, when u type my name it highlights so i dont have to scroll to find stuff
+2006-10-27T13:44:00.000Z	kodat		haha
+2006-10-27T13:44:00.000Z	Pelo	kodat	 and you can'T return the favor ?
+2006-10-27T13:37:00.000Z	Pelo	kodat	 you'll probably find a proceedure to do it in the forum
+2006-10-27T13:39:00.000Z	Pelo	kodat	 ubuntu is suppose to recognise most if not all of your hardware
+2006-10-27T13:39:00.000Z	Pelo	kodat	 which doesn't mean you might not have a little configurating to do
+2006-10-27T13:40:00.000Z	Pelo	kodat	 best place to check is the forum
+2006-10-27T13:40:00.000Z	Pelo	kodat	 as far as emulating wiindows for certain apps,  use  wine, it works quite well  ,   www,.winehq.org/download/
+2006-10-27T13:42:00.000Z	Pelo	kodat	 technicaly wine isn'T an emulator but it's not realy resource hungry,  but it is in develeopment and some apps have little annoyance in them
+2006-10-27T13:43:00.000Z	Pelo	kodat	,  have you tried partition magic ?  I think you can recover butnot sure
+2006-10-27T13:46:00.000Z	kodat	Pelo	is there like..any interface that sorta has similar mac type..like the bubble buttons stuff like that
+2006-10-27T13:47:00.000Z	kodat	Pelo	any recommended interfaces
+2006-10-27T13:47:00.000Z	Pelo	kodat	 I think you mean themes,   check the system menu for the theme manager
+2006-10-27T13:47:00.000Z	kodat	Pelo	 yeah themes thanks
+2006-10-27T13:47:00.000Z	kodat	Pelo	im gona work on that after i get my wireless to work haha..i had hard lines they are troublesome
+2006-10-27T13:48:00.000Z	Pelo	kodat	 there is also an artmanager somewhere my have some more themes in there to dl
+2006-10-27T13:48:00.000Z	kodat	Pelo	sweet yeah, right now thats not priority..just need my wireless to work..i dont even know how to got what im on working cuz the network name is completely different to what i should be
+2006-10-27T13:49:00.000Z	kodat	Pelo	the eth0 which i have no idea what it means
+2006-10-27T13:49:00.000Z	Pelo	kodat	I am realy not the one to help you with wireless stuff,  my setup is pretty simple ,  computer > modem
+2006-10-27T13:49:00.000Z	Pelo	kodat	 eth0 would be your ethernet card ( ie your network card)
+2006-10-27T13:50:00.000Z	kodat	Pelo	ahh..i didnt know eth was the card
+2006-10-27T13:50:00.000Z	kodat	Pelo	i wonder what my wireless card name is..maybe its the lo
+2006-10-27T13:51:00.000Z	Pelo	kodat	 I have one of those lo card to but I don't have a wireless one so that's probably not it ,  have you checked the forum for instructions ?
+2006-10-27T13:52:00.000Z	kodat	Pelo	im workin on forums as we speak..goin through lots of threads that have nothing to do with my problem
+2006-10-27T13:52:00.000Z	kodat	Pelo	 whats !wireless mean
+2006-10-27T13:53:00.000Z	Pelo	kodat	 way to get some info from the bot
+2006-10-27T13:53:00.000Z	kodat	Pelo	ah i see
+2006-10-27T13:54:00.000Z	kodat	Pelo	crap i dont remember any of the name so the hardware i have on this comp, i guess i shoulda wrote it down
+2006-10-27T13:55:00.000Z	Pelo	kodat	try looking in the hardware monitor
+2006-10-27T13:55:00.000Z	kodat	Pelo	wheres that
+2006-10-27T13:56:00.000Z	Pelo	kodat	 in the system menu , under admin,  not sure what it is called in english
+2006-10-27T13:56:00.000Z	kodat	Pelo	what language to u speak
+2006-10-27T13:56:00.000Z	Pelo	kodat	 french , english,  a little spanish
+2006-10-27T13:56:00.000Z	Pelo	kodat	 but my setup is in french
+2006-10-27T13:56:00.000Z	kodat	Pelo	ah alright, nevermind then haha
+2006-10-27T13:56:00.000Z	kodat	Pelo	thought u were english
+2006-10-27T13:56:00.000Z	kodat	Pelo	err spanish
+2006-10-27T13:58:00.000Z	Pelo	kodat	 might be called peripheral manaer
+2006-10-27T13:59:00.000Z	kodat	Pelo	haha nice all my hardware is unknown..looks like i got lots of driver installations to go
+2006-10-27T14:00:00.000Z	Pelo	kodat	 you donT' need to install all your drivers,  the fact that they are unknown just means that ubu is just working off some more generic drivers, which are usualy fine
+2006-10-27T14:01:00.000Z	kodat	Pelo	so in which cases would i need to install the drivers
+2006-10-27T14:02:00.000Z	Pelo	kodat	 application > accessories  > terminal
+2006-10-27T14:02:00.000Z	kodat	Pelo	thans
+2006-10-27T14:10:00.000Z	kodat	Pelo	hey heres a stupid question..how to i launch this .exe
+2006-10-27T14:11:00.000Z	Pelo	kodat	 what .exe ?
+2006-10-27T14:11:00.000Z	kodat	Pelo	this drive for my wireless card
+2006-10-27T14:11:00.000Z	kodat	Pelo	driveR*
+2006-10-27T14:11:00.000Z	Pelo	kodat	 you need to find linux drivers for you card
+2006-10-27T14:11:00.000Z	kodat	Pelo	blah i got it off the linux wireless page
+2006-10-27T14:11:00.000Z	kodat	Pelo	lemme look again
+2006-10-27T14:12:00.000Z	Pelo	kodat	 and it won'T run by itself ?
+2006-10-27T14:12:00.000Z	kodat	Pelo	well now that i look at it..its not off a linux website..it mighta just been a windows driver
+2006-10-27T14:13:00.000Z	Pelo	kodat	 , chch the ste again for info on installing the driver
+2006-10-28T07:16:00.000Z	Pelo	kodat	 still haven'T solved that problem ????
+2006-10-28T07:16:00.000Z	kodat	Pelo	nope >.<
+2006-10-28T07:17:00.000Z	kodat	Pelo	ive been here all freekin day..wireless giving me problems..ive tryin ndis now..i just need one more driver...even though ndis says that my hardware isnt present
+2006-10-28T07:18:00.000Z	kodat	Pelo	well its just i think my stupid driver..once i get it going i think ill be ok
+2006-10-28T07:19:00.000Z	kodat	Pelo	http://www.benwired.com/2006/03/15/my-new-laptop-dell-e1505/
+2006-10-28T07:21:00.000Z	Pelo	kodat	 what am I looking at on that link ?
+2006-10-28T07:22:00.000Z	kodat	Pelo	that guy had the same problem as me, i got the same model as him and he used ndis to fix it..but i cant get it workin well haha
+2006-10-28T07:24:00.000Z	Pelo	kodat	 the screen resolution stuff is easy enough it's just a xorg.conf  editing ( but I can't help you there because I realy donT' know the specs for your screen) and I can'T help you with teh wireless stuff,  best of luck
+2006-10-28T07:24:00.000Z	kodat	Pelo	well i havent gotten to the resolution, i was talkin about the wireless hehe
+2006-10-29T09:57:00.000Z	Pelo	kodat	 rm
+2006-10-29T09:59:00.000Z	kodat	Pelo	so to remove this file i would do sudo rm usr/lib/firefox/plugins/"name"?
+2006-10-29T09:59:00.000Z	Pelo	kodat	 for   files requirering  root access : yes
+2006-10-29T09:59:00.000Z	kodat	Pelo	alrighty
+2006-10-29T10:00:00.000Z	kodat	Pelo	is there a command to see what the contents in the plugins folder are in terminal
+2006-10-29T10:00:00.000Z	kodat	Pelo	instead of having to open my file browser
+2006-10-29T10:00:00.000Z	Pelo	kodat	 ls
+2006-10-29T10:00:00.000Z	Pelo	kodat	  did you get that link ?
+2006-10-29T10:00:00.000Z	kodat	Pelo	ah yeah i didnt open it cuz my firefox is broken heh
+2006-10-29T10:00:00.000Z	Pelo	kodat	 ok , for future use then
+2006-10-29T10:01:00.000Z	kodat	Pelo	yar
+2006-10-29T10:08:00.000Z	kodat	Pelo	hmm how do i get ls to work..i did ls usr/lib/firefox
+2006-11-23T10:44:00.000Z	kodat	Pelo	ill give it a whirl
+2006-11-23T10:43:00.000Z	Pelo	kodat	  utorrent on wine
+2006-11-23T10:44:00.000Z	kodat	Pelo	i use to use bitcomet when i was with windows..was so much b etter than azureus..never used utorrent though
+2006-11-23T10:44:00.000Z	Pelo	kodat	 ut is so much better then bc
+2006-11-23T10:45:00.000Z	kodat	Pelo	wish i could get beryl to work..i reinstalled linux today after all the messed up stuff i did to it..works so much better. not to mention i got my wireless up within 5 minutes this time haha
+2006-11-23T10:45:00.000Z	Pelo	kodat	 I don't know anything about beryl
+2006-11-23T10:45:00.000Z	kodat	Pelo	no biggie, beryl was just good fun
+2006-11-23T10:46:00.000Z	Pelo	kodat	 http://www.securenet.net/members/jeanpelo/linux_guide.html
+2006-11-23T10:46:00.000Z	kodat	Pelo	how would i get the 0.9.24..i hope theres an option
+2006-11-23T10:46:00.000Z	Pelo	kodat	 hold on
+2006-11-23T10:47:00.000Z	Pelo	kodat	 http://wine.budgetdedicated.com/archive/index.html
+2006-11-23T10:59:00.000Z	kodat	Pelo	hey dude, when i create that utorrent icon everytime i click it it opens re-installation..how do i get it to open the program regular
+2006-11-23T11:00:00.000Z	Pelo	kodat	 get the stand alone not the installer
+2006-11-23T11:00:00.000Z	kodat	Pelo	ah whoops

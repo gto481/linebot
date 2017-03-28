@@ -1,0 +1,98 @@
+2005-05-29T13:30:00.000Z	caonex		HEY'
+2005-05-29T13:30:00.000Z	caonex		HEY
+2005-05-29T13:30:00.000Z	caonex		OYE
+2005-05-29T13:30:00.000Z	caonex		QUE VAUNA ES ESTA?
+2005-05-29T13:30:00.000Z	Seveas	caonex	please don't shout and please stick to english
+2005-05-31T10:27:00.000Z	Seveas	caonex	One-line upgrade: sudo sed -e 's/warty/hoary/' -i /etc/apt/sources.list && sudo apt-get update && sudo apt-get dist-upgrade
+2005-05-31T10:29:00.000Z	caonex	Seveas	thanks i was just going to do apt-get upgrade...what is the difference anywyas?
+2005-05-31T10:33:00.000Z	caonex	Seveas	do i have to close X ?
+2005-05-31T10:33:00.000Z	caonex	Seveas	you know while doing the dist-upg
+2005-05-31T10:33:00.000Z	Seveas	caonex	you will have to reboot at a certain point
+2005-05-31T10:47:00.000Z	caonex	Seveas	hoary uses lilo?
+2005-05-31T10:47:00.000Z	Seveas	caonex	by default ubuntu uses grub
+2005-05-31T10:48:00.000Z	caonex	Seveas	right now i have grub, and is asking me something about initrd, it says that i need to make sure it accepts initrd, this is already active since i am using an initrd, so just do continue?
+2005-05-31T10:48:00.000Z	Seveas	caonex	what do you mean?
+2005-05-31T10:50:00.000Z	caonex	Seveas	could i private message you so you can see the message? i do not want to flood
+2005-05-31T10:50:00.000Z	Seveas	caonex	paste it on a ubuntu.pastebin.com
+2005-05-31T10:50:00.000Z	caonex	Seveas	i can do it line by line too.
+2005-05-31T10:52:00.000Z	caonex	Seveas	http://ubuntu.pastebin.com/289127
+2005-05-31T10:53:00.000Z	Seveas	caonex	i have no experience with module-init-tools, sorry
+2005-05-31T10:54:00.000Z	caonex	Seveas	but right now i am using initrd in grub so is configure so there should not be a problem..
+2005-05-31T10:54:00.000Z	Seveas	caonex	i think you are right
+2005-05-31T10:56:00.000Z	caonex	Seveas	thanks i chose to continue. i have alredy that image installed so i do not know why install it again...hehe thank again
+2005-06-01T11:47:00.000Z	Seveas	caonex	you need YOUR password for that
+2005-06-01T11:47:00.000Z	Seveas	caonex	http://www.ubuntulinux.org/wiki/RootSudo
+2005-06-01T11:48:00.000Z	caonex	Seveas	but I need to be in sudoers file?
+2005-06-01T11:49:00.000Z	Seveas	caonex	yes
+2005-06-01T11:49:00.000Z	caonex	Seveas	but sudoers is better security wise, or not?
+2005-06-02T09:35:00.000Z	caonex	Seveas	that is right, i had forgotten, but trying to find ways to get Jormundgand cd-rw to write, it freezes up.
+2005-06-17T14:53:00.000Z	Seveas	caonex	us.archive server is bugging, use another mirror
+2005-06-17T14:53:00.000Z	caonex	Seveas	i see thanks
+2005-06-19T10:02:00.000Z	caonex	Seveas	it seems that my initrd that is preinstalled with ubuntu is gone, probably due to the conflict that i have been getting lately with apt-get trying to modify my initrd. Well the image seems to work, but how do i recreate the initrd, mkinitrd 2.6.10-5 should do it?
+2005-06-19T10:43:00.000Z	Seveas	caonex	it's menu.lst
+2005-06-19T10:44:00.000Z	caonex	Seveas	that is what i thought...shoot...thanks
+2005-06-19T10:44:00.000Z	Seveas	caonex	grub.conf is a redhatist
+2005-06-19T10:44:00.000Z	Seveas	caonex	grub.conf is a redhatism
+2005-06-19T10:44:00.000Z	caonex	Seveas	oh i see
+2005-06-20T16:27:00.000Z	Seveas	caonex	md5sum mismatch?
+2005-06-20T16:29:00.000Z	caonex	Seveas	i do not think so, it just says that oculd not create initrd image.
+2005-06-20T16:30:00.000Z	Seveas	caonex	ehw...
+2005-06-20T16:30:00.000Z	Seveas	caonex	DO NOT reboot
+2005-06-20T16:30:00.000Z	caonex	Seveas	the same thing happened to my dad and he rebooted but luckly i had another image compiled.
+2005-06-20T16:31:00.000Z	caonex	Seveas	how can i fix that?
+2005-06-20T16:31:00.000Z	Seveas	caonex	ENOIDEA
+2005-06-20T16:32:00.000Z	caonex	Seveas	i am compiling 11.11 now. Look i am using the image for my dad but his realtek card does not seem to respond but can be configured and read using network-admin. I compiled its driver built-in, however, it does not seem to work, anything i might have missed?
+2005-06-20T16:32:00.000Z	caonex	Seveas	i did not install anything for ppp since his connection is broadband (cable)
+2005-06-20T16:32:00.000Z	caonex	Seveas	should i have?
+2005-06-21T10:24:00.000Z	Seveas	caonex	yes
+2005-06-21T10:25:00.000Z	caonex	Seveas	great, thanks.
+2005-07-02T16:10:00.000Z	Seveas	caonex	hmm, segfault in X... Have you run memtest yet?
+2005-07-02T16:10:00.000Z	caonex	Seveas	yeah i have run it, it looks like it was doing ok, though, paulproteus
+2005-07-02T16:11:00.000Z	Seveas	caonex	anda  place where it will tell you whether it has found an error :)
+2005-07-02T16:11:00.000Z	caonex	Seveas	that is just not for memory errors, then?
+2005-07-02T16:11:00.000Z	Seveas	caonex	well, X segfaults are so rare, that they are usually caused by bad memory
+2005-07-02T16:12:00.000Z	caonex	Seveas	let me go right to it then...
+2005-07-02T16:12:00.000Z	caonex	Seveas	paulproteus, so it will run n tests and tell me if there is an error?
+2005-07-02T16:12:00.000Z	Seveas	caonex	yes
+2005-07-02T16:13:00.000Z	caonex	Seveas	cool, be back later and I appreciate your help
+2005-07-02T16:13:00.000Z	Seveas	caonex	but you will want to interrupt after an hour or so, the complete test suite will take VERY long
+2005-07-02T16:13:00.000Z	caonex	Seveas	so it will tell me, up to the time if it has seen any errors
+2005-07-02T16:13:00.000Z	caonex	Seveas	so how long should i wait?
+2005-07-02T16:13:00.000Z	caonex	Seveas	never mind you just said an hour
+2005-07-02T16:13:00.000Z	caonex	Seveas	;)
+2005-07-02T16:14:00.000Z	caonex	Seveas	my bad for not reading, hehe well i will see you later then
+2005-07-02T06:52:00.000Z	caonex	Seveas	99% pass, and no errors, so it is not the memory
+2005-07-02T15:24:00.000Z	caonex	Seveas	are you there?
+2005-07-02T15:24:00.000Z	Seveas	caonex	what a timing
+2005-07-02T15:25:00.000Z	caonex	Seveas	hehe, i see that, i just want to ask you something real quick, remember me from yesterday?
+2005-07-02T15:25:00.000Z	Seveas	caonex	ask away :)
+2005-07-02T15:28:00.000Z	caonex	Seveas	well my gdm was crashing and my computer freezing. You told me that this usually happens with bad memory and commanded me to run memtest, and cut it after an hour. I did that and turns out memory is fine. Also, I told you about a little warning voltage report regarding the +5.0 that was turning out to be around 4.5. So I suspected that that was the problem and you told me it may be the PS. Well, right now i am logged in in another acc
+2005-07-02T15:30:00.000Z	Seveas	caonex	it would be very weird for personal settings to crash GDM...
+2005-07-02T15:31:00.000Z	caonex	Seveas	well i do not see any toher explanation for this user to be fine and mine, to crash.
+2005-07-02T15:32:00.000Z	Seveas	caonex	indeed, very odd... I suspect it's somewhere in .gnome / .gconf
+2005-07-02T15:34:00.000Z	caonex	Seveas	should i delete .gnome dir and let settings to create themselves again?
+2005-07-02T15:35:00.000Z	Seveas	caonex	you will loose a lot of settings if you do that...
+2005-07-02T15:38:00.000Z	caonex	Seveas	I know but I am willing to do that because i can get them again...
+2005-07-02T15:38:00.000Z	caonex	Seveas	and it crashes anyways
+2005-07-02T15:38:00.000Z	Seveas	caonex	well, by all means, try it :)
+2005-07-02T15:40:00.000Z	caonex	Seveas	ok
+2005-07-03T05:24:00.000Z	caonex	Seveas	http://ubuntu.pastebin.com/304946, can you look at that?
+2005-07-06T06:04:00.000Z	Seveas	caonex	DO NOT paste in here
+2005-07-06T06:04:00.000Z	caonex	Seveas	i am sorry i did not think it was going to be that long.
+2005-07-06T06:04:00.000Z	caonex	Seveas	i meant to paste one line
+2005-07-06T06:12:00.000Z	caonex	Seveas	I use su in ubuntu, what do you mean by that?
+2005-07-06T06:13:00.000Z	Seveas	caonex	using su is not the Ubuntu way of doing things :)
+2005-07-06T06:13:00.000Z	caonex	Seveas	but isnt it more secure to have only one admin access?
+2005-07-06T06:14:00.000Z	Seveas	caonex	absolutely not
+2005-07-06T06:14:00.000Z	Seveas	caonex	read that wikipage for a discussion about it
+2005-07-06T06:17:00.000Z	caonex	Seveas	well to me using root, su is the same a sudo, is just that the users in the sudoers file basically belong to the root group.
+2005-07-06T06:17:00.000Z	Seveas	caonex	sudo can do much more fine-grained access control...
+2005-07-06T06:18:00.000Z	caonex	Seveas	I just have that debian mind in me ;)
+2005-07-06T06:19:00.000Z	Seveas	caonex	surgically remove that ;)
+2005-07-06T06:19:00.000Z	caonex	Seveas	so what do you mean by fine-grained
+2005-07-06T06:19:00.000Z	Seveas	caonex	read man sudo or man sudoers
+2005-07-06T06:21:00.000Z	caonex	Seveas	he means: why is the clock time not responding?, whatever that means.
+2005-07-06T06:22:00.000Z	caonex	Seveas	wrong time
+2005-07-06T06:22:00.000Z	caonex	Seveas	if you need me to translate, hehe
+2005-07-06T06:22:00.000Z	caonex	Seveas	he is writing as he pronounces..
+2005-07-06T07:09:00.000Z	caonex	Seveas	what is the tool to like fsck to check reiserfs?

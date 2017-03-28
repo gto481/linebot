@@ -1,0 +1,96 @@
+2011-05-16T05:11:00.000Z	devnull_		hello
+2011-05-16T05:11:00.000Z	devnull_		anyone want to help me figure out why my logitech webcam c260 isn't being autorecognized for me
+2011-05-16T05:11:00.000Z	devnull_		hi mahir
+2011-05-16T05:13:00.000Z	devnull_		my other webcam is recognized immediately and placed at /dev/video0 ... but this logitech webcam c260 isn't recognized though i know other people on linux have it working
+2011-05-16T05:14:00.000Z	devnull_		just running out of ideas ... i always seem to have usb fun
+2011-05-16T05:15:00.000Z	devnull_		the other webcam seemed to be using V4L2
+2011-05-16T05:15:00.000Z	devnull_		yes it is connected properly
+2011-05-16T05:15:00.000Z	r0fs3ck5	devnull_	I have one of those.  What verision USB are you connecting it to?
+2011-05-16T05:15:00.000Z	devnull_		i am not sure if it is my usb2 port or not
+2011-05-16T05:15:00.000Z	devnull_		either way it should be recognized
+2011-05-16T05:16:00.000Z	r0fs3ck5	devnull_	have you updated recently?
+2011-05-16T05:16:00.000Z	devnull_		my system is up to date as far as running 10.04 is concerned
+2011-05-16T05:17:00.000Z	devnull_		well they don't have linux drivers for this webcam
+2011-05-16T05:17:00.000Z	r0fs3ck5	devnull_	I'm also running 10.04 and mine works.  What kind of motherboard etc do you have?
+2011-05-16T05:17:00.000Z	devnull_		hp pavillion dv5000z laptop
+2011-05-16T05:18:00.000Z	devnull_		couldn't tell you what the motherboard is
+2011-05-16T05:18:00.000Z	r0fs3ck5	devnull_	are there any video devices listed in /dev?
+2011-05-16T05:18:00.000Z	devnull_		nope
+2011-05-16T05:18:00.000Z	devnull_		that is what i mean ... it isn't recognizing it
+2011-05-16T05:18:00.000Z	r0fs3ck5	devnull_	does your laptop have a built in webcam?
+2011-05-16T05:18:00.000Z	devnull_		no
+2011-05-16T05:19:00.000Z	r0fs3ck5		:/
+2011-05-16T05:19:00.000Z	devnull_		no
+2011-05-16T05:20:00.000Z	devnull_		though i have been having odd usb issues for awhile ... though they haven't stopped anything from working
+2011-05-16T05:20:00.000Z	devnull_		ever since ... udev i think ...things have been going south
+2011-05-16T05:20:00.000Z	devnull_		sure
+2011-05-16T05:23:00.000Z	devnull_		grr
+2011-05-16T05:23:00.000Z	devnull_		http://pastebin.com/h1p5uQTP
+2011-05-16T05:25:00.000Z	devnull_		and now my trackball isnt working
+2011-05-16T05:26:00.000Z	devnull_		i hate the new dev system
+2011-05-16T05:26:00.000Z	devnull_	pfifo	did you see the pastebin link ?
+2011-05-16T05:27:00.000Z	devnull_		http://pastebin.com/h1p5uQTP
+2011-05-16T05:27:00.000Z	r0fs3ck5	devnull_	thanks, so are you using a logitech mouse as well?
+2011-05-16T05:27:00.000Z	devnull_		yes ... wireless trackman marble
+2011-05-16T05:28:00.000Z	devnull_		yea its not recognizing that anything is even plugged in to it ... that is a cam
+2011-05-16T05:28:00.000Z	r0fs3ck5	devnull_	yes, i can see
+2011-05-16T05:28:00.000Z	devnull_		my trackball is working again ... between that and my droid i had enough usb problems
+2011-05-16T05:28:00.000Z	devnull_		it says it will work with usb 1.1
+2011-05-16T05:29:00.000Z	r0fs3ck5	devnull_	can you unplug the mouse and use your pad?
+2011-05-16T05:29:00.000Z	devnull_		sure
+2011-05-16T05:29:00.000Z	devnull_		ill unplug everything else
+2011-05-16T05:29:00.000Z	r0fs3ck5	devnull_	and do what pfifo said
+2011-05-16T05:30:00.000Z	devnull_		well all of my ports put out power
+2011-05-16T05:30:00.000Z	devnull_		i probably should get a usb hub though
+2011-05-16T05:31:00.000Z	devnull_		http://pastebin.com/h1p5uQTP
+2011-05-16T05:32:00.000Z	devnull_		well i have put it in every usb port
+2011-05-16T05:32:00.000Z	devnull_		[441989.352065] usb 1-1: device descriptor read/64, error -110
+2011-05-16T05:33:00.000Z	devnull_		nope
+2011-05-16T05:33:00.000Z	devnull_		i can plug it into a usb wall adapter but i don't know if that is wise or not
+2011-05-16T05:34:00.000Z	r0fs3ck5	devnull_	Bus 003 Device 002: ID 046d:c501 Logitech, Inc. Cordless Mouse Receiver  I thought you unplugged that.
+2011-05-16T05:34:00.000Z	devnull_		i haven't ls'ed since i removed it
+2011-05-16T05:35:00.000Z	devnull_		http://pastebin.com/h1p5uQTP ... new one
+2011-05-16T05:35:00.000Z	devnull_		it does say logitech though now
+2011-05-16T05:35:00.000Z	devnull_		should i plug it into a usb adapter and see if the light comes on ?
+2011-05-16T05:36:00.000Z	devnull_	pfifo	that is it http://pastebin.com/h1p5uQTP
+2011-05-16T05:36:00.000Z	devnull_		okay
+2011-05-16T05:36:00.000Z	devnull_		hold on
+2011-05-16T05:37:00.000Z	devnull_		http://pastebin.com/cJa9qWsD
+2011-05-16T05:37:00.000Z	r0fs3ck5	devnull_	hard reboot and repeat.
+2011-05-16T05:37:00.000Z	devnull_		good idea
+2011-05-16T05:38:00.000Z	devnull_		brb
+2011-05-16T05:38:00.000Z	devnull_		nope
+2011-05-16T05:39:00.000Z	devnull_		nope
+2011-05-16T05:39:00.000Z	devnull_		if i plug it into a usb adapter should the light come on ?
+2011-05-16T05:39:00.000Z	devnull_		ok
+2011-05-16T05:40:00.000Z	devnull_		i see  okay rebooting
+2011-05-16T05:40:00.000Z	devnull_		and thanks
+2011-05-16T05:47:00.000Z	devnull_		back
+2011-05-16T05:47:00.000Z	devnull_		no light ... no /dev/video*
+2011-05-16T05:48:00.000Z	devnull_		me and usb are not friends ... everything i have connected has always been a problem to get working ... except for that other webcam that was all automatic
+2011-05-16T05:48:00.000Z	devnull_		and that webcam was so old i am surprised it didn't have a a serial connection
+2011-05-16T05:50:00.000Z	devnull_		if its a driver issue i wouldn't know where to get it
+2011-05-16T05:50:00.000Z	devnull_		or maybe udev is thinking it is something else
+2011-05-16T05:52:00.000Z	devnull_		im gonna throw this laptop out of a window soon
+2011-05-16T05:53:00.000Z	devnull_		if i could afford a new one i would
+2011-05-16T05:53:00.000Z	devnull_		well after i took out the hard drive
+2011-05-16T05:57:00.000Z	r0fs3ck5	devnull_	Have a search through here and try to find your device: http://www.linux-drivers.org/
+2011-05-16T05:59:00.000Z	devnull_		no match for c250
+2011-05-16T06:00:00.000Z	devnull_		man im striking out here
+2011-05-16T06:03:00.000Z	devnull_		alright i am giving up ... this doesn't make sense
+2011-05-16T06:03:00.000Z	devnull_		just have to know .. will i damage the cam if i plug it into a 5volt usb adapter ?
+2011-05-16T06:05:00.000Z	r0fs3ck5	devnull_	http://www.ideasonboard.org/uvc/
+2011-05-16T06:06:00.000Z	devnull_		it is in the list of supported devices
+2011-05-16T06:06:00.000Z	r0fs3ck5	devnull_	yours is there.
+2011-05-16T06:07:00.000Z	devnull_		no it isn't
+2011-05-16T06:07:00.000Z	devnull_		sorry
+2011-05-16T06:08:00.000Z	devnull_		no 260 listed only 250 300
+2011-05-16T06:08:00.000Z	devnull_		i guess uvc won't work for it ... damn i only bought it because people said it works out of the box with ubuntu
+2011-05-16T06:08:00.000Z	devnull_		but nothing works that way for me that is why i don't by accessories
+2011-05-16T06:10:00.000Z	devnull_		why would the 250 be supported and 300 but not 260
+2011-05-16T06:11:00.000Z	devnull_		i guess i could try building the uvc stuff from source even though it is a kernel module already
+2011-05-16T06:14:00.000Z	devnull_		yea not getting anywhere .... device not in the uvc compatible list and not in the non-uvc list either
+2011-05-16T06:15:00.000Z	devnull_		yet people have it working
+2011-05-16T06:15:00.000Z	devnull_		im gonna plug it into a wall adapter and see if the light comes on
+2011-05-16T06:16:00.000Z	devnull_		hope i don't fry it
+2011-05-16T06:16:00.000Z	r0fs3ck5	devnull_	danger

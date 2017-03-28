@@ -1,0 +1,95 @@
+2005-05-16T08:02:00.000Z	Razor-X		again, does anyone have any info on NTFSResize?
+2005-05-16T08:02:00.000Z	tritium	Razor-X	other than that your mileage may vary, and that it's somewhat risky?
+2005-05-16T08:02:00.000Z	Razor-X	tritium	well, the page says that the newer versions can resize fragmented partitions
+2005-05-16T08:09:00.000Z	tritium	Razor-X	?
+2005-05-16T08:12:00.000Z	Razor-X	tritium	NTFSResize claims they can resize even fragmented partitions, I defragmented mine, but just because the free space wasn't consolidated, it would'nt find all the free-space on the drive
+2005-05-16T08:12:00.000Z	tritium	Razor-X	yes, I recall
+2005-05-26T10:25:00.000Z	tritium	Razor-X	countable or uncountable?
+2005-05-26T10:25:00.000Z	Razor-X	tritium	both
+2005-05-26T10:27:00.000Z	tritium	Razor-X	that's standard measure theory
+2005-05-26T10:28:00.000Z	Razor-X	tritium	yeah, the meat is in the 3rd poin
+2005-05-26T10:32:00.000Z	tritium	Razor-X	take any set dense in the original set, and you can approximate arbitrarily closely.
+2005-05-26T10:32:00.000Z	Razor-X	tritium	but, i'm talking about minute differences
+2005-05-26T10:32:00.000Z	tritium	Razor-X	they can be as minute as you choose
+2005-05-26T10:33:00.000Z	Razor-X	tritium	but, I don't understand?
+2005-05-26T10:33:00.000Z	tritium	Razor-X	offtopic
+2005-05-26T10:34:00.000Z	Razor-X	tritium	ok, I was just taking the cue from the sex chat up there ;)
+2005-05-27T10:35:00.000Z	tritium	Razor-X	what are you downloading?
+2005-06-03T06:31:00.000Z	Razor-X	tritium	fine fine
+2005-06-03T06:39:00.000Z	Razor-X	tritium	I was about to say that too
+2005-06-20T14:53:00.000Z	tritium	Razor-X	what's the trouble?
+2005-06-20T14:53:00.000Z	tritium	Razor-X	use dvipdfm
+2005-06-20T14:54:00.000Z	Razor-X	tritium	thanks ;)
+2005-06-20T14:54:00.000Z	Razor-X	tritium	what are the differences?
+2005-06-20T14:54:00.000Z	tritium	Razor-X	do you have figures in .eps format?
+2005-06-20T14:54:00.000Z	Razor-X	tritium	nothing fancy yet, just learning for the moment
+2005-06-20T14:55:00.000Z	tritium	Razor-X	okay.  The main difference you'll notice at first is the differnence in which image formats you can use with each approach.
+2005-06-20T14:55:00.000Z	Razor-X	tritium	lemme google up the docs
+2005-06-20T14:56:00.000Z	tritium	Razor-X	texdoctk is a very nice tool...
+2005-06-21T06:13:00.000Z	Razor-X	tritium	hmmm, you shouldn't promote aptitude, you can "fork" n00bs ;)
+2005-06-21T06:13:00.000Z	tritium	Razor-X	it has some advantages over apt-get
+2005-06-21T06:14:00.000Z	Razor-X	tritium	understood, but, most of the people here offer advice with apt-get, and so, some people may get confused
+2005-06-21T06:15:00.000Z	tritium	Razor-X	I typically do offer up both alternatives...
+2005-06-21T06:24:00.000Z	Razor-X	tritium	I thought they added a jre package to the repos?
+2005-06-21T06:26:00.000Z	tritium	Razor-X	no, they can't do that, due to Sun's licensing restrictions
+2005-06-21T06:26:00.000Z	Razor-X	tritium	so, is it a java reverse-engineer?
+2005-06-21T06:26:00.000Z	tritium	Razor-X	what?
+2005-06-21T06:26:00.000Z	Razor-X	tritium	like BlackDown(IIRC)'s Java
+2005-06-21T06:27:00.000Z	tritium	Razor-X	those are not in ubuntu repositories
+2005-06-21T06:28:00.000Z	Razor-X	tritium	nevermind
+2005-06-21T14:46:00.000Z	tritium	Razor-X	only at dinner
+2005-07-23T12:30:00.000Z	Razor-X	tritium	am reading Spivak's book on Calculus
+2005-07-23T12:31:00.000Z	tritium	Razor-X	cool
+2005-07-23T12:31:00.000Z	Razor-X	tritium	i've also learned LaTeX
+2005-07-23T12:31:00.000Z	tritium	Razor-X	ah, brilliant!
+2005-07-24T10:57:00.000Z	tritium	Razor-X	is bloody wealth similar to blood money?
+2005-07-24T10:58:00.000Z	Razor-X	tritium	no, basically `lots of stuff in here'
+2005-07-24T10:58:00.000Z	tritium	Razor-X	I know, just joking ;)
+2005-07-24T11:32:00.000Z	Razor-X	tritium	there's no-one really asking questions here ;)
+2005-07-24T11:51:00.000Z	tritium	Razor-X	depends on the person's needs
+2005-07-25T06:52:00.000Z	tritium	Razor-X	I am here.
+2005-07-25T06:53:00.000Z	Razor-X	tritium	here
+2005-07-25T06:53:00.000Z	tritium	Razor-X	one sec.
+2005-07-25T06:54:00.000Z	Razor-X	tritium	mmmkay
+2005-07-25T06:56:00.000Z	Razor-X	tritium	and I've included amsmath and amsfonts into my document
+2005-07-25T06:57:00.000Z	tritium	Razor-X	try \usepackage{amssymb} then
+2005-07-25T06:57:00.000Z	Razor-X	tritium	what's the difference?
+2005-07-25T06:59:00.000Z	tritium	Razor-X	I haven't looked at the differences that closely to tell you
+2005-07-25T07:00:00.000Z	Razor-X	tritium	didn't change much
+2005-07-25T07:00:00.000Z	tritium	Razor-X	ok, give me a second.  I'll pull out Helmut and Kopka
+2005-07-25T07:00:00.000Z	Razor-X	tritium	heh, ok
+2005-07-25T07:01:00.000Z	tritium	Razor-X	you know about texdoctk, right?
+2005-07-25T07:01:00.000Z	Razor-X	tritium	nopes
+2005-07-25T07:02:00.000Z	tritium	Razor-X	you should look into it.
+2005-07-25T07:02:00.000Z	Razor-X	tritium	what is it?
+2005-07-25T07:03:00.000Z	tritium	Razor-X	documentation for tex in the tetex-bin package.
+2005-07-25T07:04:00.000Z	tritium	Razor-X	oh, I missed that.  \noteq is not defined.  You should use \neq or !=
+2005-07-25T07:14:00.000Z	tritium	Razor-X	\circ
+2005-07-25T07:14:00.000Z	Razor-X	tritium	thanks
+2005-07-25T07:19:00.000Z	tritium	Razor-X	so did you try out texdoctk yet?  You'll lilke it.
+2005-07-25T07:19:00.000Z	Razor-X	tritium	yeah, I did
+2005-07-25T07:20:00.000Z	tritium	Razor-X	you might find this useful: Mathematics/math fonts -> LaTeX symbol table
+2005-07-25T07:20:00.000Z	Razor-X	tritium	most of it isn't there, though ;(
+2005-09-10T13:46:00.000Z	tritium	Razor-X	actually LaTeX 3 should be a huge improvement over 2e
+2005-09-10T13:47:00.000Z	Razor-X	tritium	so i've heard
+2005-09-10T13:47:00.000Z	Razor-X	tritium	is it going to change the syntax too dramatically, especially for math?
+2005-09-10T13:47:00.000Z	tritium	Razor-X	no
+2005-09-10T13:49:00.000Z	Razor-X	tritium	awesome
+2005-10-30T08:50:00.000Z	tritium	Razor-X	please don't conduct polls here
+2005-10-30T08:50:00.000Z	Razor-X	tritium	no polls here?
+2005-10-30T08:50:00.000Z	Razor-X	tritium	mmmkay
+2005-10-30T09:42:00.000Z	tritium	Razor-X	Discipulus please take it to #ubuntu-offtopic
+2005-12-10T11:19:00.000Z	tritium	Razor-X	I hope you're referring to texdoctk whenever you have questions like that...
+2005-12-10T11:20:00.000Z	Razor-X	tritium	*that's* the name
+2005-12-10T11:20:00.000Z	tritium	Razor-X	were you trying to remember it earlier, or what?
+2005-12-10T11:22:00.000Z	Razor-X	tritium	yeah, I was
+2005-12-10T11:26:00.000Z	Razor-X	tritium	I still can't find anything
+2005-12-10T11:26:00.000Z	Razor-X	tritium	at best, I see something that spans multiple rows, but nothing with fixed width
+2005-12-10T11:26:00.000Z	tritium	Razor-X	what are you trying to do?
+2005-12-10T11:27:00.000Z	Razor-X	tritium	create a tabular environment with a fixed row height and width
+2005-12-10T11:27:00.000Z	tritium	Razor-X	you probably want to \usepackage{tabularx}
+2005-12-10T11:27:00.000Z	Razor-X	tritium	can tabularx do that?
+2005-12-10T11:28:00.000Z	tritium	Razor-X	yes.  Search in texdoctk for it
+2005-12-10T11:28:00.000Z	Razor-X	tritium	I have, it shows me a total tabular width, so that it can resize certain columns to acheive said width, but nothing about height
+2005-12-10T11:29:00.000Z	tritium	Razor-X	I don't recall the details
+2005-12-18T10:30:00.000Z	Razor-X	tritium	:P

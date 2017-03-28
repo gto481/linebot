@@ -1,0 +1,98 @@
+2010-12-18T23:32:00.000Z	ActionParsnip	bencahill	ususb  was designed in 96. so a 2000 system wl have usb although it may not be able to boot it
+2010-12-18T23:36:00.000Z	ActionParsnip	bencahill	use ext2 if the storage is flash based. makes it last longer
+2010-12-20T07:12:00.000Z	bencahill	ActionParsnip	or cli :)
+2011-01-09T04:36:00.000Z	ActionParsnip	bencahill	gvfs-fuse as far as I know
+2011-01-09T04:37:00.000Z	ActionParsnip	bencahill	oh, you can use smbmount or mount -t cifs
+2011-01-09T04:38:00.000Z	bencahill	ActionParsnip	^^ "is optional" :-/
+2011-01-09T04:39:00.000Z	bencahill	ActionParsnip	so I could add them to /etc/fstab?
+2011-01-09T04:39:00.000Z	ActionParsnip	bencahill	absolutely
+2011-01-09T04:40:00.000Z	bencahill	ActionParsnip	it's quite powerful :)
+2011-01-09T04:42:00.000Z	bencahill	ActionParsnip	erUSUL: Is there any downside to mounting shares automatically (using /etc/fstab) with computers that are on 24/7?
+2011-01-09T04:42:00.000Z	ActionParsnip	bencahill	none at all :)
+2011-01-09T04:42:00.000Z	bencahill	ActionParsnip	ok thx, just curious :)
+2011-01-12T22:37:00.000Z	ActionParsnip	bencahill	right click a file and select open with, then select the app you want to open that sort of file with
+2011-01-12T22:38:00.000Z	bencahill	ActionParsnip	yes of course :), but can I trim down the associations with a particular filetype (mimetype?) so they show in the first-level menu? they used to do this, before I added more associations to them :)
+2011-01-12T22:39:00.000Z	bencahill	ActionParsnip	I've looked in /etc/gnome/defaults.list, but it's kind of confusing :)
+2011-01-12T22:39:00.000Z	ActionParsnip	bencahill	could edit ~/.local/share/applications/mimeapps.list
+2011-01-12T22:40:00.000Z	ActionParsnip	bencahill	as far as I know it gets added but i've not used gnome for a time now
+2011-01-12T22:42:00.000Z	bencahill	ActionParsnip	thanks, that helped me with some of it, but there's still (e.g. for png) firefox, gimp, and shotwell...I think if it's down below a certain number (2 or 3?) then it will show in the main menu...
+2011-01-15T23:00:00.000Z	ActionParsnip	bencahill	that's enough ram for ubuntu
+2011-01-15T23:00:00.000Z	bencahill	ActionParsnip	yes, I know
+2011-01-17T02:11:00.000Z	bencahill	ActionParsnip	true :)
+2011-01-17T02:24:00.000Z	bencahill	ActionParsnip	I basically want to have capslock do rightarrow, and shift + capslock do leftarrow...let me check that...
+2011-01-17T02:32:00.000Z	bencahill	ActionParsnip	will keytouch remap other keys as well?
+2011-01-17T02:32:00.000Z	ActionParsnip	bencahill	maybe, not sure
+2011-01-17T02:32:00.000Z	bencahill	ActionParsnip	actually, the real question is, would it be able to send leftarrow when I press shift + caps
+2011-01-17T02:33:00.000Z	ActionParsnip	bencahill	not sure, ive not used it
+2011-01-17T02:49:00.000Z	bencahill	ActionParsnip	?
+2011-01-17T03:07:00.000Z	ActionParsnip	bencahill	midori is pretty light too
+2011-01-19T00:35:00.000Z	ActionParsnip	bencahill	I'm on my Android phone so technically yes
+2011-01-19T04:24:00.000Z	ActionParsnip	bencahill	sup?
+2011-01-19T04:24:00.000Z	bencahill	ActionParsnip	you said "hi gzz", and there's no such user, so I figured you're probably not using the tab key ;)
+2011-01-19T04:25:00.000Z	ActionParsnip	bencahill	gah
+2011-01-19T04:26:00.000Z	bencahill	ActionParsnip	;)
+2011-01-20T07:57:00.000Z	bencahill	ActionParsnip	;)
+2011-01-20T08:04:00.000Z	ActionParsnip	bencahill	when you see plymouth, press ESC and it will get out of the way and let you see whats actually happening
+2011-01-20T08:04:00.000Z	bencahill	ActionParsnip	plymouth?
+2011-01-20T08:05:00.000Z	ActionParsnip	bencahill	plymouth is the pointless boot splash Ubuntu uses
+2011-01-20T08:05:00.000Z	bencahill	ActionParsnip	needlez, sandyd: I never get there, it only sits at a blinking cursor if I boot normally, i'm booting into the 'recovery mode' grub entry
+2011-01-20T08:06:00.000Z	ActionParsnip	bencahill	www.ubuntugeek.com/how-to-fix-ubuntu-10-04-lts-lucid-blank-screen-at-startup.html - Cached
+2011-01-20T08:06:00.000Z	bencahill	ActionParsnip	will check, brb
+2011-01-20T08:11:00.000Z	bencahill	ActionParsnip	nope, none of those worked, it doesn't seem to be something with the graphics
+2011-01-20T08:13:00.000Z	bencahill	ActionParsnip	what does it usually do after /scripts/init-bottom ?
+2011-01-20T08:25:00.000Z	ActionParsnip	bencahill	what is?
+2011-01-20T08:27:00.000Z	bencahill	ActionParsnip	mellin (gone now) referenced ayecee where he should have referenced Propel, so ayecee tried to ask him if he meant that, but he made the same error due to autocomplete ;)
+2011-01-20T08:27:00.000Z	ActionParsnip	bencahill	thats not ironic
+2011-01-20T08:29:00.000Z	bencahill	ActionParsnip	uk english?
+2011-01-20T08:29:00.000Z	ActionParsnip	bencahill	Uk, Leeds, West Yorkshire
+2011-01-20T08:29:00.000Z	bencahill	ActionParsnip	US here, probably a difference in terms :)
+2011-01-20T08:30:00.000Z	ActionParsnip	bencahill	it'd have been ironic if the nick was 'accuracy' or something like that, Yeah the US 'ironic' is the UK 'coincidence', makes us all laugh over here
+2011-01-20T08:31:00.000Z	bencahill	ActionParsnip	oh yes, not a coincidence, but ironic because in trying to correct he made the same error as the one being corrected :)
+2011-01-20T08:33:00.000Z	ActionParsnip	bencahill	i guess, makes sense :D
+2011-01-20T08:33:00.000Z	bencahill	ActionParsnip	;)
+2011-01-21T08:02:00.000Z	ActionParsnip	bencahill	blame the manufacturers of the hardware
+2011-01-21T08:02:00.000Z	ActionParsnip	bencahill	or try Lubuntu
+2011-01-21T08:03:00.000Z	bencahill	ActionParsnip	that's the last thing i put on it, it doesn't boot either, hangs at /scripts/init-bottom, same as ubuntu
+2011-01-21T08:03:00.000Z	ActionParsnip	bencahill	did you MD5 test the ISO you downloaded?
+2011-01-21T08:03:00.000Z	bencahill	ActionParsnip	yes, has nothing to do with that :)
+2011-01-21T08:04:00.000Z	ActionParsnip	bencahill	try some boot options then is all I can suggest
+2011-01-21T08:04:00.000Z	bencahill	ActionParsnip	the machine never ran the ubuntu livecd, although the lubuntu livecd did work (i used the alt when installing ubuntu)
+2011-01-21T08:04:00.000Z	bencahill	ActionParsnip	i've tried rw /bin/bash, rw /init/sbin, noapic, vga=791, irqpoll, noacpi, and nolapic, to no avail :(
+2011-01-21T08:05:00.000Z	ActionParsnip	bencahill	hmm, got latest BIOS?
+2011-01-21T08:05:00.000Z	ActionParsnip	bencahill	tested RAM health?
+2011-01-21T08:05:00.000Z	bencahill	ActionParsnip	haven't checked...grub2 works fine, as does the start of the boot process
+2011-01-21T08:06:00.000Z	ActionParsnip	bencahill	worth a check, also disable as much of the BIOS functionality as you can to make the hardware limited nd basic
+2011-01-21T08:07:00.000Z	bencahill	ActionParsnip	it doesn't have anything like that, only boot order, hdd test, and showing what you've got :)
+2011-01-21T08:07:00.000Z	ActionParsnip	bencahill	well it has to be something so simply dismissing suggestions like that is ridficulous
+2011-01-21T08:07:00.000Z	bencahill	ActionParsnip	ridficulous? :D
+2011-01-21T08:07:00.000Z	bencahill	ActionParsnip	what did i dismiss?
+2011-01-21T08:08:00.000Z	ActionParsnip	bencahill	you know what I mean. I'm on my 4 day so I'm flagging a bit
+2011-01-21T08:08:00.000Z	bencahill	ActionParsnip	i was saying that the bios doesn't have anything for turning off features, it's quite old :)
+2011-01-21T08:09:00.000Z	ActionParsnip	bencahill	sure it does, you can disable USB and onboard audio etc. I have a P200 backup server where you can turn hardware off and on
+2011-01-21T08:10:00.000Z	ActionParsnip	bencahill	its probably older than you
+2011-01-21T08:15:00.000Z	bencahill	ActionParsnip	not this, the only things you can change are: time/date, a few passwords, boot order and floppy/cd enable/disable, f10 delay, parallel port mode, and hdd self-test (that is from looking at every single page and option right now) :)
+2011-01-21T08:16:00.000Z	ActionParsnip	bencahill	wow thats pretty poor
+2011-01-21T08:16:00.000Z	bencahill	ActionParsnip	you should see the laptop i made into a picture frame, it had nothing but boot order :D
+2011-02-16T04:09:00.000Z	ActionParsnip	bencahill	you could pin a LOT of apps and get the desired result
+2011-02-16T04:09:00.000Z	bencahill	ActionParsnip	this is an 8.10, but I don't think I can upgrade the packages...
+2011-02-16T04:10:00.000Z	ActionParsnip	bencahill	8.10 is long dead dude, I'd clea install Lucid, Maverick or Natty (Natty is released in April this year)
+2011-02-16T04:12:00.000Z	bencahill	ActionParsnip	don't really want to set up again :( all it's really running is squid, dansguardian, and iptables filtering...
+2011-02-16T04:14:00.000Z	ActionParsnip	bencahill	you can get the alternate ISO of Jaunty and upgrade to that, keep going like that til you get to a supported release
+2011-02-16T04:15:00.000Z	bencahill	ActionParsnip	may do that
+2011-02-16T04:20:00.000Z	bencahill	ActionParsnip	how is upgrading from a cd different than from dist-upgrade, or would the latter not be possible due to being out of support?
+2011-02-16T04:21:00.000Z	ActionParsnip	bencahill	dist-upgrade is similar to upgrade, you will stay on the same release
+2011-02-16T04:21:00.000Z	bencahill	ActionParsnip	ah
+2011-02-16T04:22:00.000Z	ActionParsnip	bencahill	you can use the alternate CD of the next release to get the next release (or LTS -> LTS upgrade etc)
+2011-02-16T04:22:00.000Z	bencahill	ActionParsnip	right
+2011-02-16T04:22:00.000Z	bencahill	ActionParsnip	does the cd (booting) have an option to upgrade, or do you do it from the os?
+2011-02-16T04:23:00.000Z	ActionParsnip	bencahill	do it from within the OS, there is basically a script in the root of the CD (Or ISO, both are equal (saves having to burn a CD)) to run and update
+2011-02-16T04:25:00.000Z	bencahill	ActionParsnip	ok sweet :) I can't find any info on google about it though, lemme pull out a cd
+2011-02-16T04:25:00.000Z	ActionParsnip	bencahill	it must be the alternate CD to do it
+2011-02-16T04:26:00.000Z	bencahill	ActionParsnip	not server cd?
+2011-02-16T04:29:00.000Z	ActionParsnip	bencahill	no, only alternate
+2011-02-16T04:29:00.000Z	bencahill	ActionParsnip	but alternate will update a server install? (sorry for all the ques :P)
+2011-02-16T04:30:00.000Z	ActionParsnip	bencahill	yes it will upgrade any
+2011-02-16T04:30:00.000Z	bencahill	ActionParsnip	ok
+2011-02-16T04:35:00.000Z	bencahill	ActionParsnip	so I guess /cdromupgrade (from http://old-releases.ubuntu.com/releases/jaunty/ubuntu-9.04-alternate-i386.list)...
+2011-02-16T04:52:00.000Z	bencahill	ActionParsnip	good luck :)
+2011-09-18T02:36:00.000Z	ActionParsnip	bencahill	kinda like vnc you mean?

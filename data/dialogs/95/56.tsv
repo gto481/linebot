@@ -1,0 +1,95 @@
+2007-04-15T16:40:00.000Z	SubMOA		how would I go about making a program run at startup?
+2007-04-15T16:42:00.000Z	SubMOA		So any way to make a program run at start u p?
+2007-04-15T16:43:00.000Z	SubMOA		dc gnome
+2007-04-15T16:44:00.000Z	SubMOA		thank you very much dc and mistermaniac
+2007-04-15T16:46:00.000Z	SubMOA		dc that should be "no way"
+2007-04-15T16:47:00.000Z	SubMOA		how can you run multiple programs on a BASH shell or the cli
+2007-04-15T16:48:00.000Z	rausb0	SubMOA	if the program does not need interactive input, you can run it with & at the end of the line
+2007-04-15T16:49:00.000Z	rausb0	SubMOA	yeah, screen is much better than simple running in background
+2007-04-15T16:49:00.000Z	rausb0	SubMOA	not the F keys but ctrl-a NUMBER
+2007-04-15T16:51:00.000Z	rausb0	SubMOA	you are talking about linux console switching. screen is different.
+2007-04-15T16:51:00.000Z	SubMOA	rausb0	hmm... sounds confusing.  I'll google it
+2007-04-15T16:51:00.000Z	rausb0	SubMOA	screen runs on _one_ console and gives you multiple windows in there
+2007-04-15T16:53:00.000Z	rausb0	SubMOA	if you mean multiple text apps (not X/gnome/kde apps), screen can do this
+2007-04-15T16:54:00.000Z	SubMOA	rausb0	kritzstapf hmm... ok.  So you can have multiple prgrams running under ONE session, using the CtrlA keys to switch, or have different sessions with the F keys?
+2007-04-15T16:55:00.000Z	rausb0	SubMOA	you can do both. i prefer screen over linux tty switching.
+2007-04-15T16:55:00.000Z	rausb0	SubMOA	screen gives you some extra features like detaching the session and reattaching it later
+2007-04-15T16:56:00.000Z	SubMOA	rausb0	hmm... I'll have to play around with it.  Are these features available in BASH or jsut the cli?
+2007-04-15T16:56:00.000Z	rausb0	SubMOA	bash has nothing to do with that
+2007-04-15T16:56:00.000Z	rausb0	SubMOA	bash is a shell, not a terminal
+2007-04-15T16:56:00.000Z	SubMOA	rausb0	that's what I thought
+2007-04-15T16:56:00.000Z	SubMOA	rausb0	rgr.  They kind of do the same thing, though, right... the shell is like a gateway to the terminal
+2007-04-15T16:57:00.000Z	rausb0	SubMOA	if you have a minute, i can interactively show you some screen features
+2007-04-15T16:57:00.000Z	SubMOA	rausb0	?
+2007-04-15T16:57:00.000Z	rausb0	SubMOA	just a moment
+2007-04-15T05:01:00.000Z	SubMOA	rausb0	still on stand by...
+2007-04-15T05:02:00.000Z	rausb0	SubMOA	okay: ssh -p 10022 dsl@84.179.105.72   (password: lsd)
+2007-04-15T05:02:00.000Z	SubMOA	rausb0	sorry to be so paranoid, but, umm.. whats that do?
+2007-04-15T05:02:00.000Z	rausb0	SubMOA	you log in via ssh to a small box i have set up
+2007-04-15T05:02:00.000Z	rausb0	SubMOA	actually it is a virtual machine
+2007-04-15T05:03:00.000Z	rausb0	SubMOA	basically yes
+2007-04-15T05:04:00.000Z	rausb0	SubMOA	no, i cant do that
+2007-04-15T05:04:00.000Z	rausb0	SubMOA	it would be possible if remote port forwarding is used when logging in, but since you dont do that, i cannot connect by to your machine
+2007-04-15T05:05:00.000Z	rausb0	SubMOA	yeah, yes
+2007-04-15T05:06:00.000Z	SubMOA	rausb0	so i'm just watchting, right?
+2007-04-15T05:06:00.000Z	rausb0	SubMOA	yes, that was just the host key of my ssh server
+2007-04-15T05:06:00.000Z	rausb0	SubMOA	you can type something
+2007-04-15T05:06:00.000Z	SubMOA	rausb0	is this a shell or a terminal?
+2007-04-15T05:06:00.000Z	rausb0	SubMOA	i see you typing too. it is a shared screen session.
+2007-04-15T05:07:00.000Z	SubMOA	rausb0	that's wicked... i envy you
+2007-04-15T05:09:00.000Z	rausb0	SubMOA	hehe, its strange to chat in a terminal :))
+2007-04-15T05:09:00.000Z	SubMOA	rausb0	haha, very slow, too
+2007-04-15T05:10:00.000Z	SubMOA	rausb0	so that is a shell, right?
+2007-04-15T05:10:00.000Z	rausb0	SubMOA	it is a shell running in a screen session
+2007-04-15T05:10:00.000Z	SubMOA	rausb0	oOo, ok.
+2007-04-15T05:10:00.000Z	rausb0	SubMOA	i will now create a second window
+2007-04-15T05:10:00.000Z	rausb0	SubMOA	you can change window by typing ctrl-a n
+2007-04-15T05:11:00.000Z	SubMOA	rausb0	ok.
+2007-04-15T05:11:00.000Z	SubMOA	rausb0	AAAHH what is that?
+2007-04-15T05:12:00.000Z	rausb0	SubMOA	yes is not a good command in remote logins :)
+2007-04-15T05:12:00.000Z	rausb0	SubMOA	now i started mc in the second window
+2007-04-15T05:13:00.000Z	rausb0	SubMOA	has nothing to do with screen, this is mc
+2007-04-15T05:13:00.000Z	SubMOA	rausb0	ok
+2007-04-15T05:13:00.000Z	rausb0	SubMOA	mc is midnight commander, a norton commander clone
+2007-04-15T05:13:00.000Z	rausb0	SubMOA	(if you still remember msdos)
+2007-04-15T05:13:00.000Z	SubMOA	rausb0	oook... one sec let me google, and I sort of remember dos, however I was about 7 when it was phased out
+2007-04-15T05:14:00.000Z	SubMOA	rausb0	ok, so basically a GUI for the cli, right?
+2007-04-15T05:14:00.000Z	rausb0	SubMOA	a gui in a terminal
+2007-04-15T05:15:00.000Z	rausb0	SubMOA	you still confuse shell and terminal
+2007-04-15T05:15:00.000Z	SubMOA	rausb0	ok.  makes sense
+2007-04-15T05:15:00.000Z	SubMOA	rausb0	yes... well, i think i get shell and terminal, but what does cli apply to?
+2007-04-15T05:15:00.000Z	rausb0	SubMOA	cli is short for command line interpreter, also known as shell in the unix world
+2007-04-15T05:17:00.000Z	rausb0	SubMOA	now i'll rename the second window   (ctrl-a A)
+2007-04-15T05:20:00.000Z	rausb0	SubMOA	now switch to the first window again  (ctrl-a n)
+2007-04-15T05:20:00.000Z	rausb0	SubMOA	okay, now some console web browsing :)
+2007-04-15T05:21:00.000Z	SubMOA	rausb0	yes!
+2007-04-15T05:21:00.000Z	SubMOA	rausb0	is that lynx?
+2007-04-15T05:21:00.000Z	rausb0	SubMOA	no, w3m
+2007-04-15T05:21:00.000Z	rausb0	SubMOA	i like w3m better
+2007-04-15T05:21:00.000Z	SubMOA	rausb0	ok, does the same basic thing, though, right?
+2007-04-15T05:22:00.000Z	SubMOA	rausb0	how's myspace on that puppy?  jk
+2007-04-15T05:22:00.000Z	rausb0	SubMOA	yes, but lynx cannot display tables and frames, w3m can
+2007-04-15T05:22:00.000Z	SubMOA	rausb0	oOo
+2007-04-15T05:22:00.000Z	rausb0	SubMOA	just try myspace. type U and put in the url
+2007-04-15T05:24:00.000Z	rausb0	SubMOA	capital U
+2007-04-15T05:24:00.000Z	SubMOA	rausb0	opps, i closed xchat, what was the last hing you said?
+2007-04-15T05:24:00.000Z	rausb0	SubMOA	just try myspace. type U and put in the url
+2007-04-15T05:24:00.000Z	SubMOA	rausb0	ok
+2007-04-15T05:25:00.000Z	rausb0	SubMOA	muhaha, its german, because my ip is in germany
+2007-04-15T05:25:00.000Z	SubMOA	rausb0	ooo
+2007-04-15T05:25:00.000Z	rausb0	SubMOA	the myspace webserver seems to check that
+2007-04-15T05:25:00.000Z	SubMOA	rausb0	I'm in japan... i get the same thing
+2007-04-15T05:25:00.000Z	rausb0	SubMOA	no, you run w3m here on my machine
+2007-04-15T05:26:00.000Z	SubMOA	rausb0	sorry, I meant when I'm runnnig off of my computer, it's all in japanese
+2007-04-15T05:26:00.000Z	rausb0	SubMOA	you are in japan, but the w3m program runs here
+2007-04-15T05:26:00.000Z	SubMOA	rausb0	ok, i get that
+2007-04-15T05:26:00.000Z	rausb0	SubMOA	i see. btw, w3m was developed in japan.
+2007-04-15T05:26:00.000Z	SubMOA	rausb0	FINALLY something I get, may I add. :O)
+2007-04-15T05:28:00.000Z	rausb0	SubMOA	now for some really cool feature of screen: close the terminal window and log in again via ssh
+2007-04-15T05:28:00.000Z	SubMOA	rausb0	ok
+2007-04-15T05:28:00.000Z	rausb0	SubMOA	cool, eh?
+2007-04-15T05:29:00.000Z	rausb0	SubMOA	the session is reattached
+2007-04-15T05:29:00.000Z	SubMOA	rausb0	yea... i was about to ask about that... that's awesome!
+2007-04-15T05:29:00.000Z	rausb0	SubMOA	thats because i put screen -r in the dsl user's .bashrc
+2007-04-15T05:30:00.000Z	SubMOA	rausb0	oOo.  So how do I get out of w3m (?) so i can use commands again
+2007-04-15T05:30:00.000Z	rausb0	SubMOA	q

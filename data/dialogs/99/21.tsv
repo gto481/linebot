@@ -1,0 +1,99 @@
+2009-11-16T02:25:00.000Z	Irakirashia		I really need help, I have problems with the upgrade, it went wrong
+2009-11-16T02:26:00.000Z	jrib	Irakirashia	best to just ask the channel your actual question (on a single line)
+2009-11-16T02:27:00.000Z	Irakirashia	jrib	I already did it 5 times
+2009-11-16T02:27:00.000Z	jrib	Irakirashia	new people join.  They don't know what your issue is.  So they can't help you.  Just ask your real question please :)
+2009-11-16T02:30:00.000Z	Irakirashia	jrib	The upgrade from jaunty to karmic damaged lot of things, my main problem is that there are some packages that we're not able to remove/install. And dpkg was like 0% cpu usage. http://pastie.org/700133
+2009-11-16T02:32:00.000Z	jrib	Irakirashia	pastebin your sources.list*
+2009-11-16T02:34:00.000Z	Irakirashia	jrib	http://pastie.org/700142.txt
+2009-11-16T02:37:00.000Z	jrib	Irakirashia	apt-cache policy openoffice.org-base ure openoffice.org-core
+2009-11-16T02:38:00.000Z	Irakirashia	jrib	http://pastie.org/700152.txt
+2009-11-16T02:39:00.000Z	Irakirashia	jrib	I have this issue http://ubuntuforums.org/showthread.php?t=1305459
+2009-11-16T02:40:00.000Z	jrib	Irakirashia	what are you typing to get this apt-get output?
+2009-11-16T02:41:00.000Z	Irakirashia	jrib	aptitude upgrade -f
+2009-11-16T02:41:00.000Z	jrib	Irakirashia	run "aptitude update" first
+2009-11-16T02:44:00.000Z	jrib	Irakirashia	wait, so how did you get http://pastie.org/700133 before?
+2009-11-16T02:45:00.000Z	Irakirashia	jrib	trying to remove alsa drivers, they got fucked up too :(
+2009-11-16T02:45:00.000Z	jrib	Irakirashia	give aptitude some time
+2009-11-16T02:46:00.000Z	Irakirashia	jrib	it's 00% cpu usage... it won't, I already gave it 2 hours.
+2009-11-16T02:46:00.000Z	jrib	Irakirashia	have you checked bugs.ubuntu.com?
+2009-11-16T02:47:00.000Z	jrib	Irakirashia	read the associated removal scripts for the package in /var/lib/dpkg/info/ to try to figure out why it would halt like that
+2009-11-16T02:49:00.000Z	jrib	Irakirashia	i said where, /var/lib/dpkg/info/, but check bugs.ubuntu.com first.  Also, try removing another package yourself and make sure that works
+2009-11-16T04:28:00.000Z	Irakirashia	jrib	http://ubuntuforums.org/showthread.php?p=8324225
+2009-11-17T19:09:00.000Z	jrib	Irakirashia	really?  I remember asking you to do several things...
+2009-11-17T19:10:00.000Z	Irakirashia	jrib	none of that did work. The bug it's been reported 4 or 3 times on launchpad
+2009-11-17T19:10:00.000Z	jrib	Irakirashia	you never did it.
+2009-11-17T19:10:00.000Z	Irakirashia	jrib	Of course I did it. I did more. You did not even check the link. If I come here to ask for help it's because I did all I can do.
+2009-11-17T19:11:00.000Z	jrib	Irakirashia	I asked you to do something and tell me what happened and you never responded.  It was kind of annoying to spend time reading logs and then not get a response in the end.  Now you claim no one one helped you :)  But let's just drop it
+2009-11-17T19:12:00.000Z	jrib	Irakirashia	what did you do with the rpm exactly?
+2009-11-17T19:12:00.000Z	Irakirashia	jrib	I'm sorry about that. I was fixing things, and what you told me to do did nothing at all. I was really on a bad mood, don't want to format.
+2009-11-17T19:13:00.000Z	Irakirashia	jrib	don't pay attention to that, I tried installing it with a deb later, and same thing happens, it hangs out. I already found 7 people on the forum with the same issue and no response yet. Also found new threads on launchpad with same issue, and no response too. So I'm not the only one.
+2009-11-17T19:15:00.000Z	jrib	Irakirashia	I think the last thing I suggested was for you to remove "open-office.org-filter-bin", but that hangs, correct?  Then I asked you to check if another package hangs (that doesn't depend on -filter-bin) also hangs
+2009-11-17T19:15:00.000Z	jrib	Irakirashia	actually, now your forum post shows an error, that's because you hit ctrl-c, or did it do that on its own?
+2009-11-17T19:16:00.000Z	Irakirashia	jrib	I hit control+c because it was stuck. The cpu usage of dpkg process was 0.
+2009-11-17T19:16:00.000Z	jrib	Irakirashia	ok.
+2009-11-17T19:17:00.000Z	Irakirashia	jrib	I already uninstalled all java packages, and re-installed the entire openoffice
+2009-11-17T19:17:00.000Z	Irakirashia	jrib	and did not make it work :(
+2009-11-17T19:17:00.000Z	jrib	Irakirashia	can you try what I just suggested?
+2009-11-17T19:17:00.000Z	Irakirashia	jrib	Sure, but I don't really understand what do you want me to do.
+2009-11-17T19:18:00.000Z	jrib	Irakirashia	I want you to pick another package and remove it to make sure the problem is limited to openoffice.org-filter-binfilter
+2009-11-17T19:18:00.000Z	Irakirashia	jrib	another package like what? Do you want me to uninstall the entire openoffice again? Remember it hangs out. But doing the trick I discovered commenting the unopkg maybe I'll make it work.
+2009-11-17T19:19:00.000Z	jrib	Irakirashia	another package that does not involvie -binfilter
+2009-11-17T19:21:00.000Z	jrib	Irakirashia	use dpkg
+2009-11-17T19:22:00.000Z	jrib	Irakirashia	while you are doing that, pastebin /var/lib/dpkg/info/openoffice.org-filter-binfilter*
+2009-11-17T19:23:00.000Z	Irakirashia	jrib	I already did all this, but I'm going to shut up and listen to you. Do you want me to uninstall a random package with dpkg? You want me to purge?
+2009-11-17T19:24:00.000Z	jrib	Irakirashia	just uninstall it or tell me that you are sure dpkg is not the issue but just openoffice.org-filter-binfilter is
+2009-11-17T19:27:00.000Z	jrib	Irakirashia	pastebin /var/lib/dpkg/info/openoffice.org-filter-binfilter*
+2009-11-17T19:30:00.000Z	Irakirashia	jrib	http://pastie.org/702555.txt
+2009-11-17T19:31:00.000Z	jrib	Irakirashia	I need to know which file is which
+2009-11-17T19:31:00.000Z	jrib	Irakirashia	never mind, they seem to be commented well
+2009-11-17T19:32:00.000Z	Irakirashia	jrib	Oh, I'm sorry. Want me to do it? Or you handle that
+2009-11-17T19:33:00.000Z	jrib	Irakirashia	i got it.  Change "set -e" to "set -x -e" in the postinst script and let aptitude try to finish installing -binfilter again
+2009-11-17T19:36:00.000Z	jrib	Irakirashia	yeah
+2009-11-17T19:36:00.000Z	Irakirashia	jrib	becuase there are a lot of set -e in the paste, ok :)
+2009-11-17T19:36:00.000Z	jrib	Irakirashia	/var/lib/dpkg/info/openoffice.org-filter-binfilter.postinst
+2009-11-17T19:38:00.000Z	jrib	Irakirashia	it won't change anything, just give more info
+2009-11-17T19:39:00.000Z	Irakirashia	jrib	http://pastie.org/702565.txt
+2009-11-17T19:40:00.000Z	jrib	Irakirashia	so now we know it hangs on the /usr/lib/ure/bin/regcomp call.  I don't know anything about it, so let's google...
+2009-11-17T19:42:00.000Z	jrib	Irakirashia	try running that last line yourself and see if you get anything useful
+2009-11-17T19:43:00.000Z	Irakirashia	jrib	we're not the only ones with that issue lol, ok, let me do it
+2009-11-17T19:44:00.000Z	jrib	Irakirashia	back to learning wth it is... pastebin the strace for it
+2009-11-17T19:45:00.000Z	jrib	Irakirashia	strace COMMAND
+2009-11-17T19:47:00.000Z	Irakirashia	jrib	it hangs out too http://pastie.org/702577
+2009-11-17T19:47:00.000Z	jrib	Irakirashia	weird place to hang
+2009-11-17T19:48:00.000Z	Irakirashia	jrib	yeah...
+2009-11-17T19:49:00.000Z	jrib	Irakirashia	do you care about having OOo?
+2009-11-17T19:50:00.000Z	jrib	Irakirashia	what java implementation are you using?
+2009-11-17T19:50:00.000Z	Irakirashia	jrib	Uhm, I don't really care at all. I mean, I use it, it would be nice having it, but...
+2009-11-17T19:51:00.000Z	Irakirashia	jrib	java? let me check, I installed all the necessary to make eclipse work
+2009-11-17T19:51:00.000Z	jrib	Irakirashia	I don't really know anything about this regcomp thing to help you fix the actual issue.  But if you comment the line in that .postinst file, dpkg should be happy with the package and let you do other stuff as far as package management goes
+2009-11-17T19:53:00.000Z	jrib	Irakirashia	found a thread that claims a stale ~/.ure could cause javaldx to hang.  Do you have a ~/.ure or /root/.ure?
+2009-11-17T19:53:00.000Z	Irakirashia	jrib	On my post I talked about having issues with ure too
+2009-11-17T19:54:00.000Z	jrib	Irakirashia	ah, let's debug that instead then.  What happens when you try to reinstall ure?
+2009-11-17T19:55:00.000Z	Irakirashia	jrib	^
+2009-11-17T19:55:00.000Z	jrib	Irakirashia	let's try now
+2009-11-17T19:55:00.000Z	jrib	Irakirashia	for now
+2009-11-17T19:55:00.000Z	jrib	Irakirashia	ure seems to be the root cause
+2009-11-17T19:56:00.000Z	jrib	Irakirashia	sudo aptitude reinstall ure
+2009-11-17T19:58:00.000Z	Irakirashia	jrib	Did it. And then when ure finished it tried to install the pending package of binfilter (gotta stop saying this because it's obvious ahha)
+2009-11-17T19:58:00.000Z	jrib	Irakirashia	did ure install successfully now?
+2009-11-17T20:00:00.000Z	jrib	Irakirashia	hrmm, so that part of the error regarding ure in your forum post is now gone?  Are there any other errors taht don't involve -binfilter?
+2009-11-17T20:05:00.000Z	jrib	Irakirashia	alright, see if changing the java implementation makes any difference.  If not, I would just comment that line, purge all of OOo and try to reinstall from a clean slate.  If it still fails, then I'd try to ask the OOo guys for more info about that command that is failing (providing the weird strace)
+2009-11-17T20:06:00.000Z	jrib	Irakirashia	remember, if you comment that line to make dpkg happy, you should remove your comment afterwards (since we don't understand what it does and you'll forget about the comment later and not know why things aren't working :))
+2009-11-17T20:08:00.000Z	jrib	Irakirashia	try switching to sun java and see if it persists, then switch back to whatever free implementation you are using and see if it persists I guess
+2009-11-17T20:10:00.000Z	Irakirashia	jrib	sun-java6 jre, bin or jdk?
+2009-11-17T20:10:00.000Z	jrib	Irakirashia	jre
+2009-11-17T20:13:00.000Z	Irakirashia	jrib	I think I'm doign something wrong http://pastie.org/702609
+2009-11-17T20:13:00.000Z	jrib	Irakirashia	that's fine, it's just because you don't have the java plugin
+2009-11-17T20:14:00.000Z	jrib	Irakirashia	well just -binfilter should be enough, but sure
+2009-11-17T20:16:00.000Z	Irakirashia	jrib	using aptitude it gets stuck on the same place
+2009-11-17T20:17:00.000Z	jrib	Irakirashia	k, check with the free one, then check for that ~/.ure and /root/.ure
+2009-11-17T20:19:00.000Z	jrib	Irakirashia	googleing "javaldx hangs" may give more suggestions
+2009-11-17T20:22:00.000Z	Irakirashia	jrib	I just found something interesting http://old.nabble.com/regcomp-fails-with-DocumentLoader-example-td23025370.html
+2009-11-17T20:22:00.000Z	Irakirashia	jrib	irakirashia@mfsec:~/.ure$ ls >> javasettings_Linux_X86_64.xml
+2009-11-17T20:23:00.000Z	jrib	Irakirashia	try renaming the .ure directories you find (did you have /root/.ure?)
+2009-11-17T20:31:00.000Z	jrib	Irakirashia	any luck?
+2009-11-17T20:32:00.000Z	Irakirashia	jrib	am I suppposed to del that folders and reinstall everything?
+2009-11-17T20:32:00.000Z	jrib	Irakirashia	well I usually just rename instead of delete
+2009-11-17T20:52:00.000Z	Irakirashia	jrib	Nothing happened, going to reinstall entire OOo & ure
+2009-11-17T21:04:00.000Z	Irakirashia	jrib	Ok, reinstalled OOo and the first package on hang out is emailmerge, then binfilter, and ure was installed successfully
+2009-11-17T21:48:00.000Z	Irakirashia	jrib	you still there?

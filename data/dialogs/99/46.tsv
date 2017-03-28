@@ -1,0 +1,99 @@
+2007-08-02T05:44:00.000Z	greywhind		i'm trying to install Ubuntu Feisty on a Dell Latitude D630, and the Live CD shows no ethernet or wireless devices in ifconfig. lspci shows an unidentified wireless device, but no ethernet device. any suggestions?
+2007-08-02T05:46:00.000Z	tupa	greywhind	is any interface listed in ifconfig -a ?
+2007-08-02T05:46:00.000Z	greywhind	tupa	only lo
+2007-08-02T05:47:00.000Z	tupa	greywhind	did you used -a argument?
+2007-08-02T05:47:00.000Z	greywhind	tupa	yes.
+2007-08-02T05:47:00.000Z	tupa	greywhind	ok, probably you don't have the appropriate drivers
+2007-08-02T05:48:00.000Z	greywhind	tupa	well, it's a Live CD, so would it have to be installed to get the correct drivers?
+2007-08-02T05:48:00.000Z	tupa	greywhind	do you see your ethernet card listed in lspci|grep net
+2007-08-02T05:50:00.000Z	greywhind	tupa	it has what seems to be the wireless card listed as "Intel corporation unknown device 4229 (rev 61)", but i don't see anything that could be the ethernet card
+2007-08-02T05:50:00.000Z	tupa	greywhind	you sure the ethernet is integrated? (eg, not a PCMCIA card)
+2007-08-02T05:52:00.000Z	greywhind	tupa	there seems to be a switch, but i believe it's for wireless, not ethernet. (note: this isn't my computer, and it's only a week old or so) the switch was on at boot.
+2007-08-02T05:53:00.000Z	greywhind	tupa	actually, that looks like a bluetooth switch...
+2007-08-02T05:56:00.000Z	tupa	greywhind	if it's new probably you have the motherboard manual at hand, in the specifications list you can find what ethernet device you are using
+2007-08-02T05:57:00.000Z	greywhind	tupa	anything i can do?
+2007-08-02T05:58:00.000Z	tupa	greywhind	try: hwinfo|grep thernet
+2007-08-02T05:59:00.000Z	tupa	greywhind	if that doesn't help, hwinfo|grep net
+2007-08-02T05:59:00.000Z	greywhind	tupa	hwinfo: command not found
+2007-08-02T06:00:00.000Z	tupa	greywhind	mmmm, you need the deb package
+2007-08-02T06:00:00.000Z	greywhind	tupa	i can't get it without any internet access though, can I?
+2007-08-02T06:01:00.000Z	tupa	greywhind	no CD, flash USB neither?
+2007-08-02T06:01:00.000Z	greywhind	tupa	well, if i have all the dependencies, i can use a flash drive to get it.
+2007-08-02T06:02:00.000Z	tupa	greywhind	libc6 (>= 2.5-0ubuntu1), libhd13 libdbus-1-3 (>= 0.94), libhal1 (>= 0.5)
+2007-08-02T06:02:00.000Z	greywhind	tupa	can you remind me how to check if i have those?
+2007-08-02T06:03:00.000Z	tupa	greywhind	you can use synaptic, will be faster
+2007-08-02T06:03:00.000Z	greywhind	tupa	ah - of course.
+2007-08-02T06:15:00.000Z	greywhind	tupa	hwinfo shows only lo.
+2007-08-02T06:18:00.000Z	tupa	greywhind	hwinfo fetches all your hardware info, if it is not listed there, net card is not installed, try grepping with different lines, unless you want to create a file and view it with gedit: hwinfo > log
+2007-08-02T06:22:00.000Z	greywhind	tupa	that's what i found
+2007-08-02T06:29:00.000Z	greywhind	tupa	did you look at my pasted info?
+2007-08-02T06:30:00.000Z	tupa	greywhind	no, this channel is very crowded, type name to get someone's attention
+2007-08-02T06:30:00.000Z	greywhind	tupa	http://rafb.net/p/WJhniP82.html
+2007-08-02T06:31:00.000Z	tupa	greywhind	can you save the full log and send it to me?
+2007-08-02T06:32:00.000Z	greywhind	tupa	i have the full log. how do you want it?
+2007-08-02T06:32:00.000Z	tupa	greywhind	send it through here
+2007-08-02T06:32:00.000Z	greywhind	tupa	trying, but i think my firewall will block it.
+2007-08-02T06:33:00.000Z	greywhind	tupa	i can upload it to my personal webspace...
+2007-08-02T06:33:00.000Z	tupa	greywhind	ok, chuy_max@hotmail.com send it as an attached file
+2007-08-02T06:33:00.000Z	tupa	greywhind	terrific
+2007-08-02T06:34:00.000Z	greywhind	tupa	http://thor.prohosting.com/whind/stuff/hwinfo.txt
+2007-08-02T06:35:00.000Z	tupa	greywhind	back in a moment, I hope the log doesn't freezes my PC (10000+ lines)
+2007-08-02T06:35:00.000Z	greywhind	tupa	heh. thanks.
+2007-08-02T06:42:00.000Z	tupa	greywhind	it looks like the only network interface recognized is a wireless card, do you have any Intel wireless card?
+2007-08-02T06:42:00.000Z	greywhind	tupa	i believe it's an Intel 3945
+2007-08-02T06:43:00.000Z	tupa	greywhind	isn't it a Intel PRO/Wireless 4965AGN ?
+2007-08-02T06:43:00.000Z	greywhind	tupa	hold on a moment
+2007-08-02T06:45:00.000Z	greywhind	tupa	you're right - it's a 4965
+2007-08-02T06:48:00.000Z	tupa	greywhind	is your hosting server linux-based?
+2007-08-02T06:48:00.000Z	greywhind	tupa	not sure...
+2007-08-02T06:48:00.000Z	tupa	greywhind	http://intellinuxwireless.org/?p=iwlwifi
+2007-08-02T06:48:00.000Z	greywhind	tupa	probably
+2007-08-02T06:49:00.000Z	tupa	greywhind	there is the driver for your card
+2007-08-02T06:50:00.000Z	greywhind	tupa	thanks... let me try that for a minute
+2007-08-02T07:21:00.000Z	greywhind	tupa	still around? i installed the firmware, i think... but i can't build iwlwifi because it says i'm missing the kernel makefile. however, i can modprobe iwlwifi without errors (the preinstalled one), but it doesn't create any new devices in ifconfig
+2007-08-02T07:22:00.000Z	tupa	greywhind	ifconfig -a, see if your interface is listed
+2007-08-02T07:22:00.000Z	greywhind	tupa	nope
+2007-08-02T07:23:00.000Z	tupa	greywhind	dmes| tail       to see if kernel complains about something
+2007-08-02T07:23:00.000Z	tupa	greywhind	dmesg|tail
+2007-08-02T07:24:00.000Z	greywhind	tupa	doesn't seem to
+2007-08-02T07:24:00.000Z	tupa	greywhind	some error?
+2007-08-02T07:24:00.000Z	greywhind	tupa	perhaps i didn't do it right... i tried to follow this: http://intellinuxwireless.org/?p=iwlwifi&n=howto-iwlwifi
+2007-08-02T07:25:00.000Z	tupa	greywhind	be more specific, didn't module loaded correctly, you failed to compile, dmesg complains .. ?
+2007-08-02T07:27:00.000Z	greywhind	tupa	alright. i copied the iwlwifi-4965-ucode to /lib/firmware, then did a modprobe iwlwifi
+2007-08-02T07:27:00.000Z	greywhind	tupa	nothing gave any errors
+2007-08-02T07:28:00.000Z	tupa	greywhind	what does dmesg say about the modules you loaded?, paste dmesg|tail -n 50
+2007-08-02T07:33:00.000Z	greywhind	tupa	about to pasted
+2007-08-02T07:33:00.000Z	greywhind	tupa	*paste
+2007-08-02T07:33:00.000Z	greywhind	tupa	http://rafb.net/p/aSFWsj41.html
+2007-08-02T07:35:00.000Z	tupa	greywhind	didn't help, tail more lines with -n 50
+2007-08-02T07:35:00.000Z	tupa	greywhind	it appears you connected a usb storage devie
+2007-08-02T07:36:00.000Z	greywhind	tupa	that's all dmesg shows.
+2007-08-02T07:36:00.000Z	tupa	greywhind	what?
+2007-08-02T07:37:00.000Z	greywhind	tupa	if i type dmesg alone, that's all i get.
+2007-08-02T07:38:00.000Z	greywhind	tupa	ah i figured it out
+2007-08-02T07:38:00.000Z	greywhind	tupa	notice in "testing the build", on this site: http://intellinuxwireless.org/?p=iwlwifi&n=howto-iwlwifi
+2007-08-02T07:39:00.000Z	greywhind	tupa	i did what it told me, which was dmesg -c > /dev/null... which i assume clears it to /dev/null
+2007-08-02T07:40:00.000Z	tupa	greywhind	remove the modules and reload them
+2007-08-02T07:41:00.000Z	greywhind	tupa	roger that.
+2007-08-02T07:43:00.000Z	greywhind	tupa	all it did was add the two iwlwifi lines again to the end of dmesg, and still no new device.
+2007-08-02T07:44:00.000Z	greywhind	tupa	any way I can do the "./load" line in the tutorial with the preinstalled iwlwifi? or would I have to build from source for that?
+2007-08-02T07:48:00.000Z	tupa	greywhind	mmm, dunno, if your card chipset is ok then it should work -
+2007-08-02T07:48:00.000Z	greywhind	tupa	all i did was put the .ucode file in /lib/firmware and modprobe... should that have been enough/
+2007-08-02T07:51:00.000Z	greywhind	tupa	this tutorial seems to indicate that you need the gutsy kernel: http://ubuntuforums.org/showthread.php?t=493095&highlight=4965
+2007-08-02T07:52:00.000Z	tupa	greywhind	ok, let's see if it works :P
+2007-08-02T07:53:00.000Z	greywhind	tupa	... from a live CD with no internet, we're going to install the Gutsy kernel???
+2007-08-02T07:53:00.000Z	greywhind	tupa	isn't that impossible?
+2007-08-02T07:53:00.000Z	tupa	greywhind	well, first install the base system, then the drivers
+2007-08-02T07:54:00.000Z	greywhind	tupa	can't reboot the live CD into the new kernel...
+2007-08-02T07:54:00.000Z	tupa	greywhind	no, install the system to the hard disk
+2007-08-02T07:54:00.000Z	greywhind	tupa	i'm sorry, but i can't install the system until i've convinced its owner that everything will work correctly.
+2007-08-02T07:55:00.000Z	greywhind	tupa	i may have to just tell him to wait for Gutsy.
+2007-08-02T07:55:00.000Z	tupa	greywhind	then that would be though
+2007-08-02T07:57:00.000Z	tupa	greywhind	can you do me a favor?
+2007-08-02T07:57:00.000Z	greywhind	tupa	sure
+2007-08-02T07:57:00.000Z	tupa	greywhind	do you happen to have a linux PC with a public IP?
+2007-08-02T07:58:00.000Z	greywhind	tupa	yes, but i'm booted into OS X right now
+2007-08-02T07:59:00.000Z	tupa	greywhind	sweet, I need to show a friend an application that runs over internet, but both we are blocked by our ISPs, can you host it for me?
+2007-08-02T08:00:00.000Z	greywhind	tupa	i'd be willing to bet that the firewall i'm behind will block it (no, i can't turn it off)
+2007-08-02T08:01:00.000Z	tupa	greywhind	ok, no problem :)
+2007-08-02T08:03:00.000Z	greywhind	tupa	sorry for the waste of time. i'm going to go - see you around

@@ -1,0 +1,97 @@
+2010-05-09T22:54:00.000Z	wweasel		I just upgraded to Ubuntu 10.04 - it added a keyboard layout switching button to the top panel. I think it's useless clutter, but I can't figure out how to remove it?
+2010-05-09T22:55:00.000Z	sebsebseb	wweasel	right click on it, unlock it
+2010-05-09T22:55:00.000Z	sebsebseb	wweasel	and remove
+2010-05-09T22:55:00.000Z	sebsebseb	wweasel	and that should do it
+2010-05-09T22:55:00.000Z	wweasel	sebsebseb	it's not its own dedicated button, it's part of the Notification Area. Sorry, I should have been more specific.
+2010-05-09T22:56:00.000Z	sebsebseb	wweasel	you sure?
+2010-05-09T22:56:00.000Z	wweasel	sebsebseb	yes.
+2010-05-09T22:57:00.000Z	sebsebseb	wweasel	not on Ubuntu right  now :) another distro instead :)   plus not got a vm of Lucid open.  However when I upgraded the other computer, something similar
+2010-05-09T22:57:00.000Z	sebsebseb	wweasel	you can probably remove it. some of the stuff on the top right there though, I mean most of it, is linked to something else as well
+2010-05-09T22:57:00.000Z	wweasel	sebsebseb	i can assure you it's in the notification area. it's hanging out with Network-Manager and Checkgmail
+2010-05-09T22:58:00.000Z	sebsebseb	wweasel	a bit off topic, but they are actsaully going to get rid of the notification area in Ubuntu, and have menu's for most stuff on the panel instead.
+2010-05-09T22:58:00.000Z	sebsebseb	wweasel	it might be linked to something else,  and so you can't just remove it, without taking something else with it for example
+2010-05-09T22:59:00.000Z	wweasel	sebsebseb	Ah, that's good. What gets me annoyed, and I think this is on topic, is when they disable customization in order to "improve user experience". and i spend 30 minutes trying to figure out how to remove some piece of junk the folks at Canonical thought is hould want.
+2010-05-09T22:59:00.000Z	sebsebseb	wweasel	indeed @ that
+2010-05-09T22:59:00.000Z	sebsebseb	wweasel	for example now with the me menu, and their edited fast user account switcher, which are now also linked together.  with that enabled no more.  automatic shut down feature after a minute
+2010-05-09T23:00:00.000Z	sebsebseb	wweasel	instead the do you really want to shut down or do you really want to re start messages.
+2010-05-09T23:00:00.000Z	wweasel	sebsebseb	indeed. anyway, we should probably stop chatting about support-unrelated issues.
+2010-05-09T23:01:00.000Z	sebsebseb	wweasel	also what annoys me is the sound applet nice idea and all,  but it's linked to the envelope.   If you want to get your say though, take part in Ubuntu Developer Summit remoetly next week (assuming your not actsauly going)  since useauly it's to late to complain about something once they have decided what will go in the next release.
+2010-05-09T23:02:00.000Z	wweasel	sebsebseb	oh crap, you're right. i had removed the envelope in 9.10, and now i just realized my sound applet is gone after the upgrade :/
+2010-05-09T23:02:00.000Z	sebsebseb	wweasel	yes now it's linked together the new sound applet and the envelope in 10.04
+2010-05-09T23:02:00.000Z	sebsebseb	wweasel	can probably just add it back, or just re set the panels, that will do it, if you want it
+2010-05-09T23:03:00.000Z	wweasel	sebsebseb	thanks. yeah, i just looked in the "Add panel" menu, and it's not there. I swear, these are the sorts of things that make me consider Debian.
+2010-05-09T23:04:00.000Z	sebsebseb	wweasel	Debian, Mandriva :) , loads of other great distros out there
+2010-05-09T23:07:00.000Z	sebsebseb	wweasel	surely you can rmeove the langauge indicator though?
+2010-05-09T23:07:00.000Z	sebsebseb	wweasel	the indicator applet is the envelope
+2010-05-09T23:07:00.000Z	wweasel	sebsebseb	nope, it's firmly planted in the notification Area :( there has to be a way, but it will likely involve gconf or something similar.
+2010-05-09T23:09:00.000Z	wweasel	sebsebseb	yeah. now i have my sound panel back, but i'd like to disable the Language Indicator, Envelope, and Messaging Menu. blargh. this'll be fun...
+2010-05-09T23:09:00.000Z	sebsebseb	wweasel	that's the thing
+2010-05-09T23:09:00.000Z	sebsebseb	wweasel	envelope and sound applet are linked
+2010-05-09T23:09:00.000Z	sebsebseb	wweasel	just like other things are
+2010-05-09T23:10:00.000Z	sebsebseb	wweasel	If you find out how to unlink stuff, make sure to tell me :)
+2010-05-09T23:10:00.000Z	wweasel	sebsebseb	to remove the envelope but keep sound: "go into synaptic and uninstall indicator-messages but keep indicator-sound, then restart the indicator applet" - from ubuntu forums
+2010-05-09T23:11:00.000Z	sebsebseb	wweasel	right, but what if don't want to do it, for all user accounts?
+2010-05-09T23:11:00.000Z	wweasel	sebsebseb	mark shuttleworth says too bad for you?
+2010-05-09T23:11:00.000Z	sebsebseb	wweasel	heh in a way
+2010-05-09T23:12:00.000Z	wweasel	sebsebseb	i'm not quite sure what you mean though by not wanting to do it "for all user accounts". presumably if you uninstall the package, the envelope will be removed for all users.
+2010-05-09T23:13:00.000Z	sebsebseb	wweasel	shame really, that a lot of us more expereinced users, have to customize quite a lot of stuff now,  before we are happy enough or reasoanbly happy enough with Ubuntu
+2010-05-09T23:14:00.000Z	sebsebseb	wweasel	exactly if the package goes, it will go for all users
+2010-05-09T23:14:00.000Z	wweasel	sebsebseb	oh, i see what you mean. yeah, that is a problem
+2010-05-09T23:14:00.000Z	wweasel	sebsebseb	i like the gnome philosophy of sane defaults, but i am also a fan of easy customization. the perfect example is the switched side for window buttons. fine if you want to do it, but there should be easy customization in the Appearance menu to move it back.
+2010-05-09T23:15:00.000Z	sebsebseb	wweasel	I am letting my older brother have the defaults well nearly this time.  Huamn clearlooks theme though :)   as for my own account and my little brother's I get to remove the junk on top panel :)
+2010-05-09T23:16:00.000Z	sebsebseb	wweasel	there uses to be a apperance > interface ,but then upstream Gnome decided to remove it,  just like they decided to remove most of the icons for the system menu, but easy to get those back with gconf
+2010-05-09T23:18:00.000Z	wweasel	sebsebseb	uninstalling "indicator-messages" and "indicator-me" accomplished 2/3 of the goals. now i just need to get rid of that damn Keyboard Indicator
+2010-05-09T23:20:00.000Z	sebsebseb	wweasel	on the subject of the buttons going to the left,  since I hadn't finnished setting up,  my older brother actsaully was using like that with the human clearlooks theme,  and he isn't that technical, only used Windows and Ubuntu.  So I got asked yesterday if I had done it, and I was like no,  they did after I upgraded, and he told me how he found it annoying and asked me to change it :)  I wonder about 10.10 if he will complain again, when
+2010-05-09T23:20:00.000Z	sebsebseb	wweasel	what about other things like, Ubuntu One, going to remove that as well?
+2010-05-09T23:22:00.000Z	sebsebseb	wweasel	if you remove evolution and Ubuntu One,  it won't mention about setting those up, by the way, it as in evenlope/memenu/both
+2010-05-09T23:22:00.000Z	wweasel	sebsebseb	I need to think about whether I have any use for Dropbox or Ubuntu One. I've never used an online storage service. If it is useful in my life and i am just missing out, i'll choose one. Otherwise I'll uninstall.
+2010-05-09T23:22:00.000Z	sebsebseb	wweasel	2GB free space, but these things can also have security and privacy issues
+2010-05-09T23:23:00.000Z	sebsebseb	wweasel	and I got a nice 1TB external hard disk, so personally, Ubuntu One, no thanks!
+2010-05-09T23:24:00.000Z	wweasel	sebsebseb	yeah, i'll need to think about it.
+2010-05-09T23:24:00.000Z	sebsebseb	wweasel	maybe that wasn't clear,  2GB free space, pay if you want more.   Also the Ubuntu Music Store can use Ubuntu One
+2010-05-09T23:24:00.000Z	sebsebseb	wweasel	can?  I guess I mean it does
+2010-05-09T23:25:00.000Z	wweasel	sebsebseb	i have little need for a music *store* :)
+2010-05-09T23:25:00.000Z	sebsebseb	wweasel	in a way heh heh, at removing loads of the default install
+2010-05-09T23:25:00.000Z	sebsebseb	wweasel	same here, that's something else i don't want to use personally, but I can see how it will be useful for other people, same thing for the me menu.
+2010-05-09T23:26:00.000Z	wweasel	sebsebseb	Exactly. I think there should be a configuration menu where all these things can be checked or unchecked on a per-user basis though.
+2010-05-09T23:26:00.000Z	sebsebseb	wweasel	yes would be a good idea
+2010-05-09T23:27:00.000Z	sebsebseb	wweasel	and you can take part remotely, on IRC, and listen to them, and suggest stuff like that
+2010-05-09T23:27:00.000Z	wweasel	sebsebseb	In general, Ubuntu's configuration menus could use an overhaul. There are 26 buttons in my "Preferences" menu and 16 in my "System" menu. It could undoubtedly be simpler
+2010-05-09T23:28:00.000Z	sebsebseb	wweasel	sure, but you can also remove unwanted stuff from the menu, that's rather easy to do
+2010-05-09T23:28:00.000Z	sebsebseb	wweasel	by not having to remove the program as well
+2010-05-09T23:29:00.000Z	wweasel	sebsebseb	of course. I don't mean that they are unwanted. I mean that they could probably be better organized and integrated.
+2010-05-09T23:29:00.000Z	wweasel	sebsebseb	from a UI perspective, so many separate ones is probably less than ideal.
+2010-05-09T23:29:00.000Z	sebsebseb	wweasel	I think they are going to end up with menu's for most stuff, on the top panel.  plus  this windicators thing
+2010-05-09T23:30:00.000Z	wweasel	sebsebseb	yep! i found the solution to the keyboard thing btw.
+2010-05-09T23:30:00.000Z	sebsebseb	wweasel	which is?
+2010-05-09T23:30:00.000Z	wweasel	sebsebseb	it was in gconf as i expected (also, not Ubuntu's fault - it was upstream)
+2010-05-09T23:31:00.000Z	wweasel	sebsebseb	gconftool-2 -s /desktop/gnome/peripherals/keyboard/general/disable_indicator -t bool true
+2010-05-09T23:31:00.000Z	sebsebseb	wweasel	ah ok
+2010-05-09T23:31:00.000Z	wweasel	sebsebseb	and then log out and back in
+2010-05-09T23:31:00.000Z	sebsebseb	wweasel	well personally it's a good idea for us to have the keyboard indicator on other computer, since the keyboard we have
+2010-05-09T23:31:00.000Z	sebsebseb	wweasel	,but even so I wanted to know how you did it
+2010-05-09T23:33:00.000Z	wweasel	sebsebseb	yep! anyway, i'll be off (now that i have half of ubuntu's default new features disabled)
+2010-05-09T23:34:00.000Z	sebsebseb	wweasel	ok :)
+2010-05-09T23:35:00.000Z	sebsebseb	wweasel	oh one last thing if your here
+2010-05-09T23:35:00.000Z	sebsebseb	wweasel	still
+2010-05-09T23:35:00.000Z	wweasel	sebsebseb	yeah, shoot!
+2010-05-09T23:35:00.000Z	sebsebseb	wweasel	and if your not you might see this later anyway.  KDM is so much nicer than GDM 2 :)
+2010-05-09T23:37:00.000Z	sebsebseb	wweasel	well have fun with the half Ubuntu experience, or whatever it is now :D
+2010-05-09T23:37:00.000Z	wweasel	sebsebseb	ah, you're a KDE fan? i first tried kde in the KDE 3 era, preferred gnome. I tried KDE again at the beginning of KDE 4, when it was unstable and unfinished (albeit stable-released).
+2010-05-09T23:37:00.000Z	sebsebseb	wweasel	half Ubuntu 10.04 experience I mean
+2010-05-09T23:37:00.000Z	sebsebseb	wweasel	I am not a KDE fan well not exactly
+2010-05-09T23:37:00.000Z	wweasel	sebsebseb	I've been meaning to try KDE once more, but for now i'm quite happy with Gnome.
+2010-05-09T23:38:00.000Z	sebsebseb	wweasel	I just mix Gnome and KDE apps since like 2004/5
+2010-05-09T23:38:00.000Z	sebsebseb	wweasel	here and there
+2010-05-09T23:38:00.000Z	wweasel	sebsebseb	oh yes, same. I've always used amarok, for instance.
+2010-05-09T23:38:00.000Z	sebsebseb	wweasel	as for KDE 4.3 I can actasully use it, since  it's alright now
+2010-05-09T23:38:00.000Z	sebsebseb	wweasel	as of
+2010-05-09T23:38:00.000Z	sebsebseb	wweasel	before that I didn't like KDE 4 much at all except some of the apps,  and  KDE 3 :)  however I would still mainly use Gnome,  just like now I mainly use Gnome, but my IRC client is a KDE app for example, and sometimes i'll run other KDE apps inside Gnome
+2010-05-09T23:39:00.000Z	wweasel	sebsebseb	yep, same here.
+2010-05-09T23:39:00.000Z	wweasel	sebsebseb	anyway, nice chatting. see you around
+2010-05-09T23:39:00.000Z	sebsebseb	wweasel	and if on KDE,  i'll use some Gnome apps in it sometimes.  like FIrefox for example (which isn't really a Gnome app, but you know what I mean I guess)
+2010-05-09T23:40:00.000Z	wweasel	sebsebseb	yeah, you mean Gtk apps vs. qt apps
+2010-05-09T23:40:00.000Z	sebsebseb	wweasel	yeah i'll mix stuff,  i'll use what I think is best, neither Gnome or KDE on it's own is anywhere near perfect
+2010-05-09T23:40:00.000Z	wweasel	sebsebseb	agreed.
+2010-05-09T23:40:00.000Z	wweasel	sebsebseb	i'm off. take it easy man
+2010-05-09T23:40:00.000Z	sebsebseb	wweasel	ok bye then

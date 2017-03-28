@@ -1,0 +1,96 @@
+2007-01-25T08:54:00.000Z	aryan	xtknight	can you help me out dude
+2007-01-25T08:54:00.000Z	xtknight	aryan	probably
+2007-01-25T08:54:00.000Z	xtknight	aryan	one sec
+2007-01-25T08:54:00.000Z	aryan	xtknight	ok
+2007-01-25T08:54:00.000Z	aryan	xtknight	let me know as soon as you can help me out =D ill wait
+2007-01-25T08:55:00.000Z	xtknight	aryan	how did you add XP to grub?
+2007-01-25T08:55:00.000Z	aryan	xtknight	do you want to talk here or privatley?
+2007-01-25T08:55:00.000Z	xtknight	aryan	here
+2007-01-25T08:56:00.000Z	xtknight	aryan	yes, gotcha...so how did you go about adding XP to grub?
+2007-01-25T08:56:00.000Z	aryan	xtknight	basically xp was already on my hard drive, i got an empty hard drive, formatted it using linux, have a 600mb swap partition and then installed ubuntu on there
+2007-01-25T08:57:00.000Z	aryan	xtknight	i did nothing on xp, in order to add xp to the list i edited the menu.lst file on grub, do you want me to tell you exactly how i edited it?
+2007-01-25T08:57:00.000Z	xtknight	aryan	correct, menu.lst on pastebin please
+2007-01-25T08:57:00.000Z	aryan	xtknight	i hope that you can help me out because in a real doozy lol
+2007-01-25T08:58:00.000Z	aryan	xtknight	one sec i will past on here what i added ther
+2007-01-25T08:58:00.000Z	xtknight	aryan	the question is not whether or not i can, but whether i have enough energy too ;)
+2007-01-25T08:58:00.000Z	aryan	xtknight	how do i access pastebin?
+2007-01-25T09:01:00.000Z	aryan	xtknight	http://paste.ubuntu-nl.org/2827/
+2007-01-25T09:01:00.000Z	aryan	xtknight	let me know if i did it right lol, ive been an ms user for 10 years and decided to give linux a try, i love everything about it but i also need access to ms for some things =D
+2007-01-25T09:02:00.000Z	xtknight	aryan	looking at it
+2007-01-25T09:03:00.000Z	aryan	xtknight	ok man thanks alot, do you want me to post the whole file or is that section enough?
+2007-01-25T09:03:00.000Z	xtknight	aryan	so XP boot sector is on first HD , first partition i assume?
+2007-01-25T09:03:00.000Z	xtknight	aryan	post 'sudo fdisk -l'  please also
+2007-01-25T09:03:00.000Z	aryan	xtknight	ok one sec
+2007-01-25T09:06:00.000Z	aryan	xtknight	the xp partition is called sdb1 on that paste that i just sent you
+2007-01-25T09:06:00.000Z	aryan	xtknight	did you get it ok? do you want me to paste you that link again?
+2007-01-25T09:06:00.000Z	xtknight	aryan	oh then it needs to be (hd1,1) not Hd0,0 on the chainloader thing
+2007-01-25T09:06:00.000Z	aryan	xtknight	ok then i will give that a try and see if it works
+2007-01-25T09:06:00.000Z	aryan	xtknight	thanks alot dude
+2007-01-25T09:06:00.000Z	xtknight	aryan	no problem
+2007-01-25T09:06:00.000Z	aryan	xtknight	ill go give that a try now
+2007-01-25T09:08:00.000Z	aryan	xtknight	so the root setting should be 1.1 and not 0.0?
+2007-01-25T09:09:00.000Z	aryan	xtknight	so i seet the root setting to 1.1 rather than 0.0?
+2007-01-25T09:09:00.000Z	xtknight	aryan	for the XP entry yes
+2007-01-25T09:09:00.000Z	xtknight	aryan	that would be One comma One
+2007-01-25T09:09:00.000Z	aryan	xtknight	ok thanks going to give it a while now lol
+2007-01-25T09:09:00.000Z	xtknight	aryan	ok, good luck
+2007-01-25T09:12:00.000Z	aryan	xtknight	hey man i tried it and i get "error invalid device requested"
+2007-01-25T09:12:00.000Z	xtknight	aryan	hmm.  im afraid i meant (hd1,0)
+2007-01-25T09:12:00.000Z	xtknight	aryan	hd1,0 would be /dev/sdb1, sorry
+2007-01-25T09:13:00.000Z	aryan	xtknight	no worries ill go give that a whirl
+2007-01-25T09:19:00.000Z	aryan	xtknight	dude it just says "starting up ..." and thats it
+2007-01-25T09:19:00.000Z	aryan	xtknight	i waited and waited yet there was nothing there
+2007-01-25T09:19:00.000Z	xtknight	aryan	thats odd
+2007-01-25T09:20:00.000Z	aryan	xtknight	you bet, i havent touched my windows partition so surely i could not have stuffed any of that up
+2007-01-25T09:20:00.000Z	aryan	xtknight	when i try and boot of this other hard drive first it just says failed disk, you know when i try and use only my windows hard drive as a primary boot device
+2007-01-25T09:21:00.000Z	aryan	xtknight	which is why its so weird, maybe the bios settings are stuffed? i doubt it is that but what can i do to fix all of this up?
+2007-01-25T09:22:00.000Z	aryan	xtknight	any idea on my prob????????
+2007-01-25T09:22:00.000Z	xtknight	aryan	certain windows is on /dev/sdb1?
+2007-01-25T09:22:00.000Z	xtknight	aryan	and you put hd1,0 for the root in the chainloader xp entry right?
+2007-01-25T09:22:00.000Z	aryan	xtknight	let me double check
+2007-01-25T09:23:00.000Z	xtknight	aryan	might need to do fixboot from xp recovery disc.  somehow boot sector for xp got damaged, more than liekly
+2007-01-25T09:23:00.000Z	xtknight	aryan	NOT fixmbr though, just fixboot
+2007-01-25T09:23:00.000Z	aryan	xtknight	the location of sdb 1 is /media
+2007-01-25T09:24:00.000Z	aryan	xtknight	yes i did have it as 1,0 under the root menu in the xp section of menu.lst at the grub directory
+2007-01-25T09:25:00.000Z	aryan	xtknight	so what do you think it is? i can see all my windows files fine under linux
+2007-01-25T09:25:00.000Z	xtknight	aryan	hm.  so system32 exists on sdb1?
+2007-01-25T09:25:00.000Z	aryan	xtknight	let me check
+2007-01-25T09:26:00.000Z	aryan	xtknight	yep system32 exists
+2007-01-25T09:26:00.000Z	aryan	xtknight	i am in the system32  directory right now
+2007-01-25T09:27:00.000Z	xtknight	aryan	and a NTLDR file exists on sdb1?
+2007-01-25T09:27:00.000Z	aryan	xtknight	let me find ntldr, which directory should i look under?
+2007-01-25T09:27:00.000Z	xtknight	aryan	just root of sdb1
+2007-01-25T09:28:00.000Z	aryan	xtknight	no NTLDR, they all show up as sqm files with a couple of folders up top such as windows, documents and settings, programme files etc...
+2007-01-25T09:29:00.000Z	xtknight	aryan	may need to do fixboot then from the xp recovery console (remember, not fixmbr, but fixboot)
+2007-01-25T09:29:00.000Z	aryan	xtknight	is there anyway to do that without the windows xp cd?
+2007-01-25T09:30:00.000Z	aryan	xtknight	because i am pretty sure mines torn into shredds thanks to my god lol
+2007-01-25T09:30:00.000Z	xtknight	aryan	lol sorry, i dont know
+2007-01-25T09:30:00.000Z	aryan	xtknight	ok i will try and do a fixboot
+2007-01-25T09:30:00.000Z	xtknight	aryan	somehow the XP boot loader is missing, hopefully that gives you some pointers
+2007-01-25T09:31:00.000Z	aryan	xtknight	wait i was supposed to set up a boot loader for xp too?
+2007-01-25T09:31:00.000Z	aryan	xtknight	i didnt touch xp at all, did i need to edit anything on xp?
+2007-01-25T09:31:00.000Z	aryan	xtknight	did i install it all wrong then if i needed to edit files under xp like ntdlr because i didnt touch xp what so ever
+2007-01-25T09:31:00.000Z	xtknight	aryan	well technically theres all sorts of boot this boot that, blah its all so complicated...look, grub is a boot loader on the MBR now which redirects to a stage2 on linux's boot sector or something lik ethat, but XP's boot SECTOR is missing, i hope you understand ;)
+2007-01-25T09:32:00.000Z	aryan	xtknight	also grub didnt give me any options to select xp as another os
+2007-01-25T09:32:00.000Z	xtknight	aryan	i dont know.  xp should be fine, but that's not always the case i guess.  somehow the boot sector on that partiion was damaged.  did you install grub normally (like to the mbr not the boot sector)?
+2007-01-25T09:33:00.000Z	aryan	xtknight	i think i get what you mean, i never installed grub, well i never realiised i did. I just followed the ubuntu 6.10 prompts
+2007-01-25T09:34:00.000Z	xtknight	aryan	wll its prolly on the MBR, meaning the boot sector should not have been touched.  somehow it was and fixboot is needed to fix that
+2007-01-25T09:35:00.000Z	xtknight	aryan	i THINK so.  ive got to go soon, maybe you can catch me later but i wont be here after about 10 mins or so
+2007-01-25T09:35:00.000Z	aryan	xtknight	ill give it a try tomorrow or something, one more q, how do i get my tv tuner working on ubuntu?
+2007-01-25T09:35:00.000Z	xtknight	aryan	not sure.  not all tv tuners are supported.  what model
+2007-01-25T09:35:00.000Z	aryan	xtknight	i really want to be able to use my pixelview play tv pro card to watch tv on my monitor, but how do i get it working?
+2007-01-25T09:36:00.000Z	xtknight	aryan	not sure if that card is supported.  youll have to look that up
+2007-01-25T09:36:00.000Z	aryan	xtknight	ok thanks for now
+2007-01-25T09:36:00.000Z	xtknight	aryan	getting the chipset of it would be the first step, maybe i can help you with that later
+2007-01-25T09:36:00.000Z	aryan	xtknight	sure thing
+2007-01-25T09:36:00.000Z	aryan	xtknight	ill see you later i guess, tomorrow maybe
+2007-01-25T09:36:00.000Z	xtknight	aryan	i usually hang around here, i dunno ill see if i can be on tomorrow.  ive got finals though
+2007-01-25T09:37:00.000Z	aryan	xtknight	ill catch you whenever, do you have an email addy i can reach you on?
+2007-01-25T09:37:00.000Z	xtknight	aryan	AIM xtknight is that ok?
+2007-01-25T09:37:00.000Z	xtknight	aryan	im on aim 24/7 anyway
+2007-01-25T09:37:00.000Z	xtknight	aryan	and im all over the web, hell just google my name youll find me
+2007-01-25T09:37:00.000Z	aryan	xtknight	i never use aim, i have no idea what it is lol, im from new zealand man we dont use that down here lmfao
+2007-01-25T09:37:00.000Z	xtknight	aryan	xt.knight@gmail.com
+2007-01-25T09:37:00.000Z	aryan	xtknight	thanks dude
+2007-01-25T09:38:00.000Z	xtknight	aryan	no problem
+2007-01-25T09:38:00.000Z	aryan	xtknight	ill send you an email just to confirm, later for now

@@ -1,0 +1,98 @@
+2009-12-13T04:32:00.000Z	rCX	HamptonSam	Right click on the drive and go to properties?  What does it have for "filesystem type"?
+2009-12-13T04:33:00.000Z	HamptonSam	rCX	Type folder (inode/directory)
+2009-12-13T04:35:00.000Z	rCX	HamptonSam	Can you copy files to any other location on the drive? Or is the entire drive read only?
+2009-12-13T04:35:00.000Z	HamptonSam	rCX	The entire drive :(
+2009-12-13T04:36:00.000Z	rCX	HamptonSam	You may have to install the storage device manager... "sudo apt-get install pysdm"
+2009-12-13T04:38:00.000Z	HamptonSam	rCX	I'm on a Live CD.
+2009-12-13T04:38:00.000Z	rCX	HamptonSam	ok that makes it more difficult...
+2009-12-13T04:39:00.000Z	HamptonSam	rCX	Yeah my sisters computed crashed, so I'm trying my best to get the files off of it.
+2009-12-13T04:39:00.000Z	rCX	HamptonSam	Oh i see...
+2009-12-13T04:40:00.000Z	rCX	HamptonSam	You could still install pysdm from the live cd.
+2009-12-13T04:41:00.000Z	rCX	HamptonSam	Just go to applications -> acessories -> terminal
+2009-12-13T04:41:00.000Z	rCX	HamptonSam	...and type "sudo apt-get install pysdm"  it's worth a try
+2009-12-13T04:41:00.000Z	HamptonSam	rCX	E: Couldn't find package pysdm.
+2009-12-13T04:43:00.000Z	rCX	HamptonSam	As aperson suggested try system -> adiminstration -> update manager
+2009-12-13T04:45:00.000Z	HamptonSam	rCX	Okay, I gotta download the 235.8 megs so might be a while :S
+2009-12-13T04:46:00.000Z	rCX	HamptonSam	Ok now were getting somewhere, hopefully
+2009-12-13T04:46:00.000Z	HamptonSam	rCX	Yeah, it's just kinda annoying you just can't chown && chmod it.
+2009-12-13T04:47:00.000Z	rCX	HamptonSam	yeah drives are different...
+2009-12-13T04:55:00.000Z	rCX	HamptonSam	Everything Ok?
+2009-12-13T04:56:00.000Z	HamptonSam	rCX	Yeah still downloading.
+2009-12-13T05:03:00.000Z	rCX	HamptonSam	Still downloading ?
+2009-12-13T05:03:00.000Z	HamptonSam	rCX	Almost done :)
+2009-12-13T05:03:00.000Z	rCX	HamptonSam	And then it has to install :) shouldn't take as long though
+2009-12-13T05:08:00.000Z	rCX	HamptonSam	By the way, don't restart the computer.  Even if it asks you to.
+2009-12-13T05:10:00.000Z	rCX	HamptonSam	I'll assume it's still installing ...
+2009-12-13T05:10:00.000Z	HamptonSam	rCX	44 seconds :)
+2009-12-13T05:11:00.000Z	HamptonSam	rCX	Now installing it.
+2009-12-13T05:13:00.000Z	rCX	HamptonSam	Ok tell me when it's done
+2009-12-13T05:18:00.000Z	HamptonSam	rCX	all done
+2009-12-13T05:19:00.000Z	rCX	HamptonSam	Go to system -> Administration -> Synaptic Package Manager.
+2009-12-13T05:19:00.000Z	HamptonSam	rCX	I'm there.
+2009-12-13T05:19:00.000Z	rCX	HamptonSam	Go to Settings -> Repositories
+2009-12-13T05:20:00.000Z	HamptonSam	rCX	I'm getting erros when launching Synaptic, then it crashes.
+2009-12-13T05:21:00.000Z	rCX	HamptonSam	What do the errors say
+2009-12-13T05:23:00.000Z	HamptonSam	rCX	dpkg: failed to write status record about 'jfsutils' to '/var/lib/dpkg/status': NO space left on device
+2009-12-13T05:25:00.000Z	HamptonSam	rCX	E: dpkg was interruped, you must manually run 'sudo dpkg --configure -a" to correct the problem.
+2009-12-13T05:26:00.000Z	rCX	HamptonSam	Are you using ubuntu 9.10 Or 9.04
+2009-12-13T05:28:00.000Z	rCX	HamptonSam	try downloading pysdm from http://packages.ubuntu.com/jaunty/pysdm just click the link that says "all" at the bottom
+2009-12-13T05:28:00.000Z	rCX	HamptonSam	Just save it to your desktop...
+2009-12-13T05:30:00.000Z	rCX	HamptonSam	Is it downloading?
+2009-12-13T05:33:00.000Z	HamptonSam	rCX	this is quite annnyoing...
+2009-12-13T05:35:00.000Z	rCX	HamptonSam	Your sister really owes you alot for trying this. Is it done yet?
+2009-12-13T05:36:00.000Z	HamptonSam	rCX	it's done installing.
+2009-12-13T05:37:00.000Z	rCX	HamptonSam	So it's done installing pysdm.  Use System -> Administration -> Storage Device Manager
+2009-12-13T05:38:00.000Z	HamptonSam	rCX	I'm there
+2009-12-13T05:38:00.000Z	rCX	HamptonSam	Under the "partition list" on the left what do you see?
+2009-12-13T05:40:00.000Z	rCX	HamptonSam	How many external drives are plugged into the computer?
+2009-12-13T05:40:00.000Z	HamptonSam	rCX	I removed the flash drive now there is only 2.
+2009-12-13T05:41:00.000Z	rCX	HamptonSam	Good! when you click sdb's down arrow (if it has one) how many partitions does it have?
+2009-12-13T05:42:00.000Z	rCX	HamptonSam	yeah it should be sdb
+2009-12-13T05:42:00.000Z	HamptonSam	rCX	i see one sdb1
+2009-12-13T05:43:00.000Z	rCX	HamptonSam	click on sdb1 and then click assistant on the right
+2009-12-13T05:44:00.000Z	HamptonSam	rCX	/dev/sdb1 hasn't been configured. Do you want to configure it now?
+2009-12-13T05:44:00.000Z	rCX	HamptonSam	Press yes
+2009-12-13T05:44:00.000Z	HamptonSam	rCX	I'm at the assistant.
+2009-12-13T05:45:00.000Z	rCX	HamptonSam	Make sure "mount file system in read-only mode" is unchecked and press ok
+2009-12-13T05:46:00.000Z	rCX	HamptonSam	That's good.  Ok then press apply
+2009-12-13T05:46:00.000Z	HamptonSam	rCX	Done.
+2009-12-13T05:47:00.000Z	rCX	HamptonSam	Try copying a file to the disk
+2009-12-13T05:48:00.000Z	HamptonSam	rCX	nope. The destination is read-only.
+2009-12-13T05:48:00.000Z	rCX	HamptonSam	Eject/unplug the disk and plug it in again
+2009-12-13T05:49:00.000Z	HamptonSam	rCX	You are not privileged to mount the volume 'ExHD'.
+2009-12-13T05:50:00.000Z	rCX	HamptonSam	Go to the terminal and enter "sudo gedit  /etc/fstab"
+2009-12-13T05:51:00.000Z	HamptonSam	rCX	I'm there.
+2009-12-13T05:51:00.000Z	rCX	HamptonSam	You should see a line that says "/dev/sdb1"
+2009-12-13T05:52:00.000Z	HamptonSam	rCX	Yup, i see it.
+2009-12-13T05:52:00.000Z	rCX	HamptonSam	Delete that line!
+2009-12-13T05:52:00.000Z	rCX	HamptonSam	and save the file
+2009-12-13T05:52:00.000Z	HamptonSam	rCX	deleted and saved
+2009-12-13T05:52:00.000Z	rCX	HamptonSam	Unplug and replug in the disk
+2009-12-13T05:52:00.000Z	HamptonSam	rCX	done.
+2009-12-13T05:53:00.000Z	rCX	HamptonSam	Try copying some files
+2009-12-13T05:53:00.000Z	HamptonSam	rCX	nope.
+2009-12-13T05:53:00.000Z	rCX	HamptonSam	What does it say?
+2009-12-13T05:54:00.000Z	rCX	HamptonSam	What type of disk is it? Does it have a read/write swith?
+2009-12-13T05:54:00.000Z	HamptonSam	rCX	it's a western digital, no it doesn't have one
+2009-12-13T05:57:00.000Z	rCX	HamptonSam	Go back to System -> Administration -> Storage Device Manager
+2009-12-13T05:57:00.000Z	rCX	HamptonSam	Choose sdb1 and click assistant again
+2009-12-13T05:57:00.000Z	HamptonSam	rCX	i'm there
+2009-12-13T05:58:00.000Z	rCX	HamptonSam	Mount as read-only is still unchecked right?
+2009-12-13T05:58:00.000Z	HamptonSam	rCX	yes.
+2009-12-13T05:59:00.000Z	rCX	HamptonSam	Check "Allow any user to mount the file system"
+2009-12-13T05:59:00.000Z	HamptonSam	rCX	then apply and try?
+2009-12-13T06:00:00.000Z	rCX	HamptonSam	Yeah.  You may have to unplug and replug the drive... and then try copying files.
+2009-12-13T06:00:00.000Z	HamptonSam	rCX	sure.
+2009-12-13T06:01:00.000Z	HamptonSam	rCX	i try to unmount it but it says it's not mounted?
+2009-12-13T06:01:00.000Z	rCX	HamptonSam	Just unplug it then and plug it back in.
+2009-12-13T06:02:00.000Z	HamptonSam	rCX	the destination is read-only..
+2009-12-13T06:03:00.000Z	rCX	HamptonSam	 Hmm that should have worked and I think we're stuck...
+2009-12-13T06:04:00.000Z	HamptonSam	rCX	how do you suggest moving 40gbs off the hard drive? :)
+2009-12-13T06:05:00.000Z	rCX	HamptonSam	Does she have any specific folders that she wants to keep.  You don't need copy all the programs and Windows
+2009-12-13T06:06:00.000Z	HamptonSam	rCX	that's exactly what im doing
+2009-12-13T06:06:00.000Z	rCX	HamptonSam	How big is your flash drive?
+2009-12-13T06:07:00.000Z	HamptonSam	rCX	4 gigs.
+2009-12-13T06:07:00.000Z	rCX	HamptonSam	Okay you may have to copy 1/10th of her files at a time to another computer then.
+2009-12-13T06:08:00.000Z	HamptonSam	rCX	sigh.. okay.
+2009-12-13T06:08:00.000Z	HamptonSam	rCX	i really appreciate your help.
+2009-12-13T06:08:00.000Z	rCX	HamptonSam	Thanks.  Hope everything works out.

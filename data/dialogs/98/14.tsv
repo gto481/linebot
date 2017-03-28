@@ -1,0 +1,98 @@
+2010-01-29T17:00:00.000Z	tobiasz		why is ubuntu such a resource hog? Drag n dropping is lagged, and sometimes I need to try few times until I succed using it, when no apps are running still about 400mb of memory is used wth?
+2010-01-29T17:00:00.000Z	tobiasz		can someone explain it to me?
+2010-01-29T17:00:00.000Z	tobiasz		it is
+2010-01-29T17:01:00.000Z	indus	tobiasz	yeah thats how ubuntu is
+2010-01-29T17:01:00.000Z	indus	tobiasz	you could try other distros like arch
+2010-01-29T17:01:00.000Z	indus	tobiasz	but they aint easy to use or administer like ubuntu
+2010-01-29T17:01:00.000Z	tobiasz	indus	arch would take too much time to do simple things
+2010-01-29T17:01:00.000Z	indus	tobiasz	yes
+2010-01-29T17:02:00.000Z	tobiasz	indus	ubuntu is just slow, xp is thousand times faster
+2010-01-29T17:02:00.000Z	indus	tobiasz	you could try removing some apps runing in background
+2010-01-29T17:02:00.000Z	indus	tobiasz	thats not correct, how much ram you ahve?
+2010-01-29T17:03:00.000Z	tobiasz	indus	not true in my case
+2010-01-29T17:03:00.000Z	indus	tobiasz	windows xp will slow down over time you will have noticed, ubuntu stays same
+2010-01-29T17:03:00.000Z	indus	tobiasz	tell us your system specs
+2010-01-29T17:03:00.000Z	indus	tobiasz	turn off desktop effects to get more speed
+2010-01-29T17:04:00.000Z	tobiasz	indus	I had perfectly solid xp for few years with no performance drop, just ned to clean things from time to time
+2010-01-29T17:04:00.000Z	indus	tobiasz	well,in xp the file system gets fragmented over time, so it surely gets slower from the  time you install it
+2010-01-29T17:04:00.000Z	indus	tobiasz	ubuntu doesnt need defrags
+2010-01-29T17:05:00.000Z	indus	tobiasz	i repeat, tell us your system specs
+2010-01-29T17:05:00.000Z	tobiasz	indus	so I tell once again
+2010-01-29T17:05:00.000Z	indus	tobiasz	and which version of ubuntu
+2010-01-29T17:06:00.000Z	indus	tobiasz	is compix on?
+2010-01-29T17:06:00.000Z	tobiasz	indus	I disable it for gaming or flash movies
+2010-01-29T17:06:00.000Z	indus	tobiasz	compiz is a resource hog
+2010-01-29T17:06:00.000Z	indus	tobiasz	i never use it
+2010-01-29T17:06:00.000Z	tobiasz	indus	compiz is worthless and unefficient
+2010-01-29T17:07:00.000Z	indus	tobiasz	yes
+2010-01-29T17:07:00.000Z	tobiasz	indus	so is gnome
+2010-01-29T17:07:00.000Z	indus	tobiasz	then try kde
+2010-01-29T17:07:00.000Z	tobiasz	indus	I didn't like kde, it seemed like even more unefficient
+2010-01-29T17:08:00.000Z	tobiasz	indus	xfce is kinda cool but I would need a clean install to get it going perfectly, cuz it's just a mess
+2010-01-29T17:08:00.000Z	indus	tobiasz	do you have an intel graphics chip?
+2010-01-29T17:08:00.000Z	tobiasz	indus	no NVIDIA 7800GT GF
+2010-01-29T17:09:00.000Z	indus	tobiasz	aah sorry yes
+2010-01-29T17:09:00.000Z	indus	tobiasz	so i see no reason why you should have a slow system, i have 1 gb ram only
+2010-01-29T17:09:00.000Z	indus	tobiasz	although firefox on linux is slower than windows version
+2010-01-29T17:09:00.000Z	tobiasz	indus	not that it boots slow or something, because it's decent
+2010-01-29T17:09:00.000Z	tobiasz	indus	I do not use ff cuz I hate it :P
+2010-01-29T17:10:00.000Z	indus	tobiasz	yes i have moved to chrome
+2010-01-29T17:10:00.000Z	indus	tobiasz	so if you could go step by step and remove some things from startup apps, maybe you could speed up
+2010-01-29T17:11:00.000Z	indus	tobiasz	but yes ubuntu is slower than other distros like arch or maybe gentoo
+2010-01-29T17:11:00.000Z	tobiasz	indus	I already did
+2010-01-29T17:11:00.000Z	indus	tobiasz	then i guess its as fast as it can be
+2010-01-29T17:11:00.000Z	tobiasz	indus	I think maybe 64 bit is not supported well
+2010-01-29T17:11:00.000Z	indus	tobiasz	dont worry about the ram, its a little diff from windows
+2010-01-29T17:11:00.000Z	indus	tobiasz	no, iam on 64 bit, its same
+2010-01-29T17:11:00.000Z	tobiasz	indus	on xp cpu usage is perfectly 0-1%
+2010-01-29T17:12:00.000Z	tobiasz	indus	in ubuntu it oscilates around 15%
+2010-01-29T17:12:00.000Z	indus	tobiasz	yes cpu should be used, thats why we have it isnt it
+2010-01-29T17:13:00.000Z	tobiasz	indus	hmm, you're right :P
+2010-01-29T17:14:00.000Z	indus	tobiasz	a browser will stress the cpu upto 30 percent i have seen on startup,then flash etc push to 100
+2010-01-29T17:15:00.000Z	indus	tobiasz	so just open system monitoer and tell me usage now
+2010-01-29T17:15:00.000Z	tobiasz	indus	flash is worthless, nothing much to do with it, decent enough to watch windowed, fullscreen is choppy
+2010-01-29T17:15:00.000Z	indus	tobiasz	if you can find flash 9 , install that, its awesome
+2010-01-29T17:16:00.000Z	indus	tobiasz	i searched but cant find the older one
+2010-01-29T17:16:00.000Z	tobiasz	indus	then upload it for me :)
+2010-01-29T17:16:00.000Z	tobiasz	indus	both cores usage oscilates arround 30-50%
+2010-01-29T17:17:00.000Z	indus	tobiasz	firefox running? what is running and using it ?check in processes
+2010-01-29T17:17:00.000Z	tobiasz	indus	Opera, XChat, and Evolution opened
+2010-01-29T17:18:00.000Z	indus	tobiasz	the cpu should oscillate at 50
+2010-01-29T17:18:00.000Z	tobiasz	indus	Opera uses from 6 to 16% cpu
+2010-01-29T17:19:00.000Z	tobiasz	indus	evolution 20mbs Opera about 200mbs :P
+2010-01-29T17:19:00.000Z	indus	tobiasz	heh opera is using the flash and the tabs you have opened is a lot i feel
+2010-01-29T17:19:00.000Z	tobiasz	indus	indeed youtube is open
+2010-01-29T17:20:00.000Z	tobiasz	indus	friend of mine has averange memory usage of 1gb on lone firefox
+2010-01-29T17:21:00.000Z	indus	tobiasz	lol thats some bug then
+2010-01-29T17:21:00.000Z	tobiasz	indus	but he has lots, and I mean LOTS of tabs :P
+2010-01-29T17:22:00.000Z	indus	tobiasz	yes the tabs can take up mem ,
+2010-01-29T17:22:00.000Z	indus	tobiasz	but i dont think firefox can handle it
+2010-01-29T17:23:00.000Z	tobiasz	indus	2 tabs 222 mbs no flash atm
+2010-01-29T17:23:00.000Z	indus	tobiasz	222 is normal, remember, linux uses ram in a diff way and reports it so
+2010-01-29T17:24:00.000Z	indus	tobiasz	its not all what you think
+2010-01-29T17:24:00.000Z	tobiasz	indus	it's just when I want to play ET: Quake Wars I want possibly full resources put into running the game
+2010-01-29T17:25:00.000Z	indus	tobiasz	i play quAKE 4
+2010-01-29T17:25:00.000Z	tobiasz	indus	not some other tasks which are pointless when I am playing
+2010-01-29T17:25:00.000Z	indus	tobiasz	works like a char,
+2010-01-29T17:25:00.000Z	tobiasz	indus	QW also works awesome, but I am just a frames per second maniac
+2010-01-29T17:25:00.000Z	indus	tobiasz	if you dont need evolution i suggest you remove that stupid evo data server from processes
+2010-01-29T17:25:00.000Z	tobiasz	indus	I play it in high details
+2010-01-29T17:25:00.000Z	tobiasz	indus	1650x1050
+2010-01-29T17:27:00.000Z	tobiasz	indus	I like evolution, there are 2 processes some data-server thingy and some exchange-storage thingy
+2010-01-29T17:28:00.000Z	tobiasz	indus	they both eat about 6mb ram so it's not a problem
+2010-01-29T17:28:00.000Z	tobiasz	indus	but dunno if I need them
+2010-01-29T17:39:00.000Z	tobiasz	indus	where do I put flashplugin for firefox to find it
+2010-01-29T17:40:00.000Z	indus	tobiasz	you said you had flash already
+2010-01-29T17:41:00.000Z	tobiasz	indus	just want to do a benchmark with new alpha version of 10.1 and firefox which I don't use
+2010-01-29T17:43:00.000Z	tobiasz	indus	firefox is a retarded browser
+2010-01-29T17:43:00.000Z	indus	tobiasz	do not say that
+2010-01-29T17:43:00.000Z	tobiasz	indus	I tried to put it in so many locations and ff still doesn't use flashplugin
+2010-01-29T17:44:00.000Z	indus	tobiasz	install if from the package manager dude
+2010-01-29T17:44:00.000Z	tobiasz	indus	as I said I am testing a beta release of 10.1
+2010-01-29T17:44:00.000Z	indus	tobiasz	alpha2 support in #ubuntu+1
+2010-01-29T17:45:00.000Z	indus	tobiasz	try not to use such language for projects like firefox
+2010-01-29T17:47:00.000Z	indus	tobiasz	sure
+2010-01-29T17:50:00.000Z	tobiasz	indus	can I uninstall compiz just like that without making amess?
+2010-01-29T17:51:00.000Z	indus	tobiasz	yes of course
+2010-01-29T17:54:00.000Z	tobiasz	indus	any hint what repository I need to add for enlightment?
+2010-01-29T17:55:00.000Z	tobiasz	indus	k nvm

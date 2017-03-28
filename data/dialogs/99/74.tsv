@@ -1,0 +1,99 @@
+2007-01-08T12:18:00.000Z	rredd4		using dapper, i am trying to uninstall xmms, it locks up on me.  I can see it in my menu, when i go to synaptic or add/remove, it does not show it installed.  yet it is in my sound & vid menu.  how can i remove it
+2007-01-08T12:19:00.000Z	thoreauputic	rredd4	try   sudo dpkg --purge xmms  in a terminal
+2007-01-08T12:20:00.000Z	rredd4	thoreauputic	dpkg - warning: while removing xmms, directory `/usr/share/applications' not empty so not removed.
+2007-01-08T12:22:00.000Z	thoreauputic	rredd4	did you try  sudo dpkg --purge xmms ?
+2007-01-08T12:23:00.000Z	thoreauputic	rredd4	and what happened ?
+2007-01-08T12:23:00.000Z	rredd4	thoreauputic	got this message   dpkg - warning: while removing xmms, directory `/usr/share/applications' not empty so not removed.
+2007-01-08T12:23:00.000Z	thoreauputic	rredd4	that's OK - is xmms still in the menu?
+2007-01-08T12:24:00.000Z	rredd4	thoreauputic	 ohh no
+2007-01-08T12:24:00.000Z	thoreauputic	rredd4	/usr/share/applications has a *lot* of stuff in it :)
+2007-01-08T12:24:00.000Z	thoreauputic	rredd4	reinstall what?
+2007-01-08T12:24:00.000Z	rredd4	thoreauputic	 xmms
+2007-01-08T12:25:00.000Z	rredd4	thoreauputic	 using streamtuner
+2007-01-08T12:25:00.000Z	thoreauputic	rredd4	do you know about beep-media-player ? Like xmms only prettier....
+2007-01-08T12:25:00.000Z	rredd4	thoreauputic	 it likes xmms... will beep media player work with streamtuner?
+2007-01-08T12:25:00.000Z	thoreauputic	rredd4	you can substitute beep for xmms in streamtuner
+2007-01-08T12:25:00.000Z	rredd4	thoreauputic	 ok  ty!!
+2007-01-08T12:26:00.000Z	thoreauputic	rredd4	in streamtuner, edit -> preferences -> put beep-media-player in place of xmms
+2007-01-08T12:27:00.000Z	rredd4	thoreauputic	 great   !!
+2007-01-08T12:27:00.000Z	thoreauputic	rredd4	beep also can use xmms skins, or even winamp skins
+2007-01-08T12:28:00.000Z	rredd4	thoreauputic	 cool
+2007-01-08T12:29:00.000Z	rredd4	thoreauputic	 its almost done installing!
+2007-01-08T12:29:00.000Z	thoreauputic	rredd4	nice change from dialup to adsl2+ "_
+2007-01-08T12:29:00.000Z	rredd4	thoreauputic	 using cable
+2007-01-08T12:29:00.000Z	rredd4	thoreauputic	lol
+2007-01-08T12:33:00.000Z	thoreauputic	rredd4	no, you don't need to reboot
+2007-01-08T12:33:00.000Z	thoreauputic	rredd4	beep should start from the menu - if not, try typing beep-media-player in a terminal
+2007-01-08T12:34:00.000Z	thoreauputic	rredd4	any luck?
+2007-01-08T12:34:00.000Z	rredd4	thoreauputic	 no
+2007-01-08T12:34:00.000Z	thoreauputic	rredd4	how did you install it? From synaptic?
+2007-01-08T12:35:00.000Z	rredd4	thoreauputic	apt-get
+2007-01-08T12:35:00.000Z	rredd4	thoreauputic	 terminal is not doing anything
+2007-01-08T12:35:00.000Z	thoreauputic	rredd4	what does dpkg -l beep-media-player  say ?
+2007-01-08T12:36:00.000Z	thoreauputic	rredd4	if it installed the line shold start with ii
+2007-01-08T12:36:00.000Z	rredd4	thoreauputic	it does start with ii
+2007-01-08T12:37:00.000Z	rredd4	thoreauputic	0.9.7.1
+2007-01-08T12:37:00.000Z	thoreauputic	rredd4	ok what happens if you type  /usr/bin/beep-<tab> <enter> ?
+2007-01-08T12:37:00.000Z	rredd4	thoreauputic	nothing
+2007-01-08T12:38:00.000Z	thoreauputic	rredd4	erm, that's impossible
+2007-01-08T12:38:00.000Z	thoreauputic	rredd4	did it tab complet?
+2007-01-08T12:38:00.000Z	rredd4	thoreauputic	  typed this  /usr/bin/beep-media-player
+2007-01-08T12:39:00.000Z	thoreauputic	rredd4	it should either say "command not found" or start ...
+2007-01-08T12:39:00.000Z	rredd4	thoreauputic	i have to do a contrl z
+2007-01-08T12:39:00.000Z	thoreauputic	rredd4	why?
+2007-01-08T12:40:00.000Z	thoreauputic	rredd4	that just stops it in its trcks..
+2007-01-08T12:40:00.000Z	rredd4	thoreauputic	because the program is not opening... and the cursor is hung
+2007-01-08T12:40:00.000Z	thoreauputic	rredd4	what does  pidof beep-media-player  say ?
+2007-01-08T12:41:00.000Z	rredd4	thoreauputic	7564 7513 7432 7394 7322 7314 7306 7298
+2007-01-08T12:41:00.000Z	thoreauputic	rredd4	 killall beep-media-player
+2007-01-08T12:41:00.000Z	thoreauputic	rredd4	then try again
+2007-01-08T12:42:00.000Z	rredd4	thoreauputic	did killall... got this   7564 7513 7432
+2007-01-08T12:42:00.000Z	thoreauputic	rredd4	erm, try  sudo killall beep-media-player
+2007-01-08T12:43:00.000Z	thoreauputic	rredd4	you must have done something creative to get to this point...
+2007-01-08T12:43:00.000Z	rredd4	thoreauputic	lol  ??
+2007-01-08T12:44:00.000Z	thoreauputic	rredd4	there's no normal way to end up with 8 instances of beep, 3 unkillable
+2007-01-08T12:44:00.000Z	rredd4	thoreauputic	what should i see with the pidof cmd?
+2007-01-08T12:44:00.000Z	thoreauputic	rredd4	nothing - after the killall
+2007-01-08T12:44:00.000Z	thoreauputic	rredd4	pidof tells you the process number
+2007-01-08T12:45:00.000Z	rredd4	thoreauputic	brb rebooting..
+2007-01-08T12:45:00.000Z	thoreauputic	rredd4	why?
+2007-01-08T12:46:00.000Z	rredd4	thoreauputic	still shows 3 different numbers with pidof
+2007-01-08T12:46:00.000Z	thoreauputic	rredd4	rebooting is pointless - you need to kill the processes
+2007-01-08T12:46:00.000Z	thoreauputic	rredd4	*sigh*  kill -9 <process numbers>
+2007-01-08T12:47:00.000Z	thoreauputic	rredd4	use sudo if that doesn't work either
+2007-01-08T12:47:00.000Z	thoreauputic	rredd4	although it should blast them out of exitence really...
+2007-01-08T12:47:00.000Z	rredd4	thoreauputic	all killed!
+2007-01-08T12:47:00.000Z	thoreauputic	rredd4	OK try starting it again now
+2007-01-08T12:48:00.000Z	rredd4	thoreauputic	sos
+2007-01-08T12:48:00.000Z	thoreauputic	rredd4	and don't ctrl-z it
+2007-01-08T12:48:00.000Z	thoreauputic	rredd4	?
+2007-01-08T12:48:00.000Z	rredd4	thoreauputic	no cntrl z
+2007-01-08T12:48:00.000Z	thoreauputic	rredd4	so does it start or not?
+2007-01-08T12:48:00.000Z	rredd4	thoreauputic	not working
+2007-01-08T12:49:00.000Z	thoreauputic	rredd4	weird
+2007-01-08T12:49:00.000Z	rredd4	thoreauputic	yeah
+2007-01-08T12:49:00.000Z	thoreauputic	rredd4	was xmms working?
+2007-01-08T12:49:00.000Z	rredd4	thoreauputic	was locking up
+2007-01-08T12:49:00.000Z	thoreauputic	rredd4	does any other sound app work?
+2007-01-08T12:49:00.000Z	thoreauputic	rredd4	what does  pidof esd say ?
+2007-01-08T12:50:00.000Z	rredd4	thoreauputic	kaffeine dies
+2007-01-08T12:50:00.000Z	thoreauputic	rredd4	^^^
+2007-01-08T12:50:00.000Z	rredd4	thoreauputic	show one set of #'s
+2007-01-08T12:50:00.000Z	thoreauputic	rredd4	killall esd
+2007-01-08T12:50:00.000Z	thoreauputic	rredd4	that is likely to be the problem
+2007-01-08T12:51:00.000Z	rredd4	thoreauputic	did killall esd... try again?
+2007-01-08T12:51:00.000Z	thoreauputic	rredd4	make sure esd is no longer running first
+2007-01-08T12:51:00.000Z	thoreauputic	rredd4	pidof
+2007-01-08T12:51:00.000Z	thoreauputic	rredd4	then try again I guess
+2007-01-08T12:52:00.000Z	thoreauputic	rredd4	?
+2007-01-08T12:53:00.000Z	rredd4	thoreauputic	same.. same
+2007-01-08T12:53:00.000Z	rredd4	thoreauputic	not sure what is going on.
+2007-01-08T12:53:00.000Z	thoreauputic	rredd4	so let me get this straight - you can't play music at all, right?
+2007-01-08T12:54:00.000Z	rredd4	thoreauputic	i can use kafeine
+2007-01-08T12:54:00.000Z	rredd4	thoreauputic	i need to go... ty for your help..
+2007-01-08T12:54:00.000Z	thoreauputic	rredd4	what are you trying to play ? mp3 ?
+2007-01-08T12:55:00.000Z	rredd4	thoreauputic	i need to go... have to go to work
+2007-01-08T12:55:00.000Z	rredd4	thoreauputic	thank you
+2007-01-08T12:55:00.000Z	thoreauputic	rredd4	OK - good luck :)
+2007-01-08T12:59:00.000Z	rredd4	thoreauputic	 i rebooted and it works now!!   ty  gotta go
+2007-01-08T13:00:00.000Z	thoreauputic	rredd4	and you never diagnosed the problem - oh well :)

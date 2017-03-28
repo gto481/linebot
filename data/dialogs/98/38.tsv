@@ -1,0 +1,98 @@
+2008-04-13T05:02:00.000Z	Joeseph		hello, once upon a time my speakers worked, now they do not. they work on my xp.  I have gone through the list at  http://ubuntuforums.org/showthread.php?t=205449 with no avail.  anyone have any advice?
+2008-04-13T05:04:00.000Z	Joeseph		anyone want to help with my sound problem?
+2008-04-13T05:06:00.000Z	Joeseph		anyone want to help me with my sound card, I followed the complete guide- no avail
+2008-04-13T05:07:00.000Z	Pelo	Joeseph	look in menu > system > admin > users , make sure your user has permission to use the audio device
+2008-04-13T05:07:00.000Z	Joeseph	Pelo	it shows me on there
+2008-04-13T05:08:00.000Z	Pelo	Joeseph	you need to select your username and click properties,  make sure audio devices is checked
+2008-04-13T05:09:00.000Z	Joeseph	Pelo	Audio is checked
+2008-04-13T05:09:00.000Z	Pelo	Joeseph	you have the volume icon in the top pannel ?
+2008-04-13T05:09:00.000Z	Joeseph	Pelo	... hm no I don't
+2008-04-13T05:10:00.000Z	Pelo	Joeseph	ok , there is an issue right there
+2008-04-13T05:10:00.000Z	Pelo	Joeseph	open a terminal type lspci , check if you see your soundcard
+2008-04-13T05:10:00.000Z	Joeseph	Pelo	I have- I do
+2008-04-13T05:11:00.000Z	Pelo	Joeseph	sudo apt-get install gnome-alsamixer
+2008-04-13T05:12:00.000Z	Joeseph	Pelo	done
+2008-04-13T05:12:00.000Z	Pelo	Joeseph	any icon T?
+2008-04-13T05:12:00.000Z	Joeseph	Pelo	I still see no icon
+2008-04-13T05:12:00.000Z	Joeseph	Pelo	I'm using xfce
+2008-04-13T05:13:00.000Z	Pelo	Joeseph	try asking in #xubuntu then , they probably know better,  I don't know how t navigate you around in it
+2008-04-13T05:13:00.000Z	Joeseph	Pelo	But then again, it doesn't work in the gnome desktop enviroment either, I'll switch really quick...
+2008-04-13T05:14:00.000Z	Pelo	Joeseph	open a terminal and type alsamixer , is a sound device specified ( top part) , are the sliders up and unmuted ?
+2008-04-13T05:30:00.000Z	Pelo	Joeseph	check in menu > system > prefs > sound , see if all  theevents have alsa or automatic listed
+2008-04-13T05:31:00.000Z	Pelo	Joeseph	it's not a question of me not wanting to helP , I have very limited knowledge of hardware issues,
+2008-04-13T05:31:00.000Z	Joeseph	Pelo	okay: everything is auto-detect except sound capture, which is ALSA
+2008-04-13T05:37:00.000Z	Pelo	Joeseph	did it work ?
+2008-04-17T01:24:00.000Z	Pelo	Joeseph	  sudo rm -rf  /path/
+2008-04-17T01:25:00.000Z	Joeseph	Pelo	AndrewB:  "sudo rm -rf /media/network" yields "rm: cannot lstat `/media/network': Permission denied"
+2008-04-17T01:25:00.000Z	Pelo	Joeseph	are you the owner of that computer ?
+2008-04-17T01:25:00.000Z	Joeseph	Pelo	yes
+2008-04-17T01:25:00.000Z	Pelo	Joeseph	is this a mount point for a cd or someting ?
+2008-04-17T01:26:00.000Z	Joeseph	Pelo	it's a directory I was going to use for browsing my windows network in xfce
+2008-04-17T01:27:00.000Z	Pelo	Joeseph	 use nautilus or what ever the gui filebrowser you have to go to the /media folder,    right click on the network folder and see what permissions it has
+2008-04-17T01:28:00.000Z	Joeseph	Pelo	for owner it is read and write, for everything else, it is read
+2008-04-17T01:29:00.000Z	Pelo	Joeseph	ok sudo chmod 777 /media/netowrk && sudo chmow username:username   then try rm -rf again
+2008-04-17T01:30:00.000Z	Joeseph	Pelo	one question first: how can I tell what group my username is in? it says group 'timothy' just has read access
+2008-04-17T01:30:00.000Z	Pelo	Joeseph	doesnT' matter at this point
+2008-04-17T01:30:00.000Z	Joeseph	Pelo	 "sudo chmod 777 /media/network" yields 'chmod: cannot access `/media/network': Permission denied'
+2008-04-17T01:31:00.000Z	Pelo	Joeseph	are you in gutsy or in hardy ?
+2008-04-17T01:32:00.000Z	Pelo	Joeseph	try this, alt+f2,  gksu nautilus /media ,  try deleting it from there
+2008-04-17T01:32:00.000Z	Joeseph	Pelo	I guess I don't know.... what's the easiest way to tell?
+2008-04-17T01:32:00.000Z	Pelo	Joeseph	did yo upgrade to the latest beta , if you did you will know, it doesnT' jsut happen
+2008-04-17T01:33:00.000Z	Joeseph	Pelo	i did not upgrade to the beta (but I am awaiting the Hardy release!)
+2008-04-17T01:34:00.000Z	Joeseph	Pelo	move to trash does nothing, permissions 'cannot be determined', and it's shown as a file.....  and double clicking it says "the attempt to log in failed"
+2008-04-17T01:34:00.000Z	Pelo	Joeseph	i'm stumped
+2008-04-17T01:34:00.000Z	Pelo	Joeseph	 is this folder a symlink to a network share ?
+2008-04-17T01:35:00.000Z	Joeseph	Pelo	yes it is- it should be to my windows network
+2008-04-17T01:35:00.000Z	Pelo	Joeseph	 is it listed in fstab ?
+2008-04-17T01:36:00.000Z	Pelo	Joeseph	nvm then,  did you set it up with samba or somesuch ? maybe you need to remove it from samba first and then try to delete it ,  I'm guessing it's locked or something
+2008-04-17T01:37:00.000Z	Joeseph	Pelo	that's a good idea: I'll just purge the program I used and see what happens from there.... how do I purge a program again?
+2008-04-17T01:37:00.000Z	Pelo	Joeseph	don'T purge the prog, open it , remove the folder from it , then purge it
+2008-04-17T01:37:00.000Z	Pelo	Joeseph	and the eaiest way to purge it to use complete uniisntall from synaptic
+2008-04-17T01:38:00.000Z	Joeseph	Pelo	what is the prog: I'll use synaptic though
+2008-04-17T01:38:00.000Z	Pelo	Joeseph	I don'T know what prog you used to setup the network , usualy it is samba
+2008-04-19T08:02:00.000Z	Joeseph	Pelo	http://ubuntuforums.org/showthread.php?t=753584   and does root need access to my audio devices, or just me?
+2008-04-19T08:00:00.000Z	Pelo	Joeseph	didyou check your user permission ?
+2008-04-19T08:00:00.000Z	Joeseph	Pelo	yes, I'll check again now too
+2008-04-19T08:01:00.000Z	Joeseph	Pelo	did you read my thread at the ubuntu forums?
+2008-04-19T08:01:00.000Z	Pelo	Joeseph	no I didn't
+2008-04-19T08:02:00.000Z	Pelo	Joeseph	just you but root can access it to,
+2008-04-19T08:02:00.000Z	Joeseph	Pelo	root cannot access it now, does it matter?
+2008-04-19T08:03:00.000Z	Pelo	Joeseph	doesn'T matter realy but check it anyway
+2008-04-19T08:03:00.000Z	Pelo	Joeseph	type lspci in the terminal , make sure your audio card is listed
+2008-04-19T08:05:00.000Z	Joeseph	Pelo	yup see it...
+2008-04-19T08:06:00.000Z	Joeseph	Pelo	I've been trhough a lot of this same stuff before: one thing I thought was odd is that ALSA Mixer has a "Chip analog device' that I don't know what is, does that mean anything?
+2008-04-19T08:06:00.000Z	Pelo	Joeseph	ok make note of the device id or whatever, card model as listed in the lspic output,  goto menu > system >prefs> sound ,  for each sound event ,  ( each drop down box)  find the alsa  device taht constains someting that looks like the lable in lspic for you audio device, you get what I mean ?
+2008-04-19T08:07:00.000Z	Pelo	Joeseph	I couldn'T saywaht analog device for alsa means
+2008-04-19T08:09:00.000Z	Joeseph	Pelo	I changed them all to the Intel I had, and pressed test, and it didn't work, I 'm going to test each card now
+2008-04-19T08:09:00.000Z	Pelo	Joeseph	nice and metodical
+2008-04-19T08:11:00.000Z	Joeseph	Pelo	I Can now hear when its turned up really loud.....   now I need to test a program...
+2008-04-19T08:11:00.000Z	Pelo	Joeseph	;-)
+2008-04-19T08:14:00.000Z	Pelo	Joeseph	congrats
+2008-04-19T08:14:00.000Z	Joeseph	Pelo	I can never thank you enough: I've been working on that for a long while, you're the first person to really help me with it
+2008-04-19T08:15:00.000Z	Pelo	Joeseph	I usualy stay away from hardware issues but you seemed desperate
+2008-04-19T08:16:00.000Z	Pelo	Joeseph	 no prob my bill is in the mail
+2008-04-19T08:19:00.000Z	Pelo	Joeseph	try beep-music-player or xmms
+2008-04-19T08:28:00.000Z	Pelo	Joeseph	you'll be on your own
+2008-04-19T08:28:00.000Z	Pelo	Joeseph	here are cli music players ...
+2008-04-19T08:35:00.000Z	Pelo	Joeseph	I'll expect you didnT' have the no popup thing enabled in FF
+2008-04-19T08:36:00.000Z	Joeseph	Pelo	ah,  the simple things that'll get you once again....   although, I have never had a popup before, it seems odd....
+2008-04-19T08:37:00.000Z	Pelo	Joeseph	it does seem odd to me as well usualy FF has popups blocked by default,  maybe your mouse went weird nd you ended up opening a bunch of links to  new windows, who knows
+2008-04-19T08:39:00.000Z	Joeseph	Pelo	oh well, I've had other troubles with xfce and firefox anyway, I'll stick with gnome and epiphany
+2008-04-19T08:39:00.000Z	Pelo	Joeseph	you can have Firefox in gnome
+2008-04-19T08:40:00.000Z	Joeseph	Pelo	oh? I seem to have used it in gnome before......    either I'm confused about something or you are,  my guess is me....
+2008-04-19T08:42:00.000Z	Pelo	Joeseph	Firefoxis the default browser in ubuntu , even tho vanilla gnome uses epiphany
+2008-04-19T08:43:00.000Z	Pelo	Joeseph	nvm , I got confused,  too many problems, too few solutions,
+2008-04-24T08:18:00.000Z	Pelo	Joeseph	no,  sudo apt-get remove xserver-xorg --purge && sudo apt-get install xserver-xorg will
+2008-04-24T08:18:00.000Z	Pelo	Joeseph	no,  sudo apt-get remove xserver-xorg --purge && sudo apt-get install xserver-xorg will
+2008-04-24T08:22:00.000Z	Pelo	Joeseph	no,  sudo apt-get remove xserver-xorg --purge && sudo apt-get install xserver-xorg will
+2008-04-24T08:22:00.000Z	Pelo	Joeseph	isnT' that what you wanted ?
+2008-04-24T08:22:00.000Z	Pelo	Joeseph	wht is y our issue ?
+2008-04-24T08:23:00.000Z	Joeseph	Pelo	Xorg eats up the cpu
+2008-04-24T08:23:00.000Z	Pelo	Joeseph	turn off compiz
+2008-04-24T08:24:00.000Z	Pelo	Joeseph	  sudo dpkg-reconfigure xserver-xorg , let it pick the video driver and donT' change any of the default answer provided unless you absolutely know better
+2008-04-24T08:25:00.000Z	Joeseph	Pelo	alrighty, just for your info, I have a 1.3 gighz procesor, and 512 meg of ram, an intel graphics card which I have not seen very much trouble with when searching online.
+2008-04-24T08:26:00.000Z	Pelo	Joeseph	you just got a badly configure X probably
+2008-04-24T08:26:00.000Z	Joeseph	Pelo	thank you,  I will run that command and see what happens... its odd though, it only happens sometimes, when my computer acts slow
+2010-01-09T06:36:00.000Z	Pelo	Joeseph	not all the pannel applets can handle their own transparant background, you just have to live iwth it
+2010-01-09T06:36:00.000Z	Pelo	Joeseph	sometimes it fixes itself when you restart x
+2010-01-09T06:37:00.000Z	Joeseph	Pelo	I'll give restarting x a shot.

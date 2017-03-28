@@ -1,0 +1,98 @@
+2005-10-09T05:44:00.000Z	Nvidiot		where would I start to get hibernate/suspend working on my laptop?
+2005-10-09T05:45:00.000Z	crimsun	Nvidiot	Hoary or Breezy?
+2005-10-09T05:46:00.000Z	Nvidiot	crimsun	5.04, not the upcoming release
+2005-10-09T05:46:00.000Z	Nvidiot	crimsun	if I should update to the upcoming one because it's much better, I don't have a problem with doing that if you'd tell me how :)
+2005-10-09T05:47:00.000Z	crimsun	Nvidiot	you'd have to dump in a lot of infrastructure to get it working with Hoary, more than likely. It's better to try dist-upgrading to Breezy.
+2005-10-09T05:47:00.000Z	Nvidiot	crimsun	allright, no problem. Link? :)
+2005-10-09T05:50:00.000Z	crimsun	Nvidiot	wiki.ubuntu.com/BreezyUpgradeNotes
+2005-10-09T05:50:00.000Z	Nvidiot	crimsun	thanks
+2005-10-09T05:51:00.000Z	Nvidiot	crimsun	/BreezyUpgrade seems to have info too :)
+2005-10-09T06:13:00.000Z	Nvidiot	crimsun	installing packages now :)
+2005-10-09T08:01:00.000Z	crimsun	Nvidiot	it starts once.
+2005-10-09T08:01:00.000Z	Nvidiot	crimsun	it *should* start once you mean... when I reboot my laptop, it's running more than once, thus screwing up my wlan0 connection
+2005-10-09T08:01:00.000Z	crimsun	Nvidiot	it runs once on my computer.
+2005-10-09T08:21:00.000Z	crimsun	Nvidiot	does wpasupplicant work at all?
+2005-10-09T08:21:00.000Z	Nvidiot	crimsun	yes, if I kill things, turn off the wlan0 then run ifup wlan0 it magically works again
+2005-10-09T08:22:00.000Z	Nvidiot	crimsun	but I'd like it to work on boot instead of having to do that every time I boot my laptop
+2005-10-09T08:22:00.000Z	crimsun	Nvidiot	hmm? What do you have to kill?
+2005-10-09T08:23:00.000Z	Nvidiot	crimsun	let's say you don't have any routes on boot, what would you do to get it working?
+2005-10-09T08:23:00.000Z	crimsun	Nvidiot	no, I need to know the order in which those processes are being executed.
+2005-10-09T08:24:00.000Z	crimsun	Nvidiot	e.g., networking> ndiswrapper> wpasupplicant> nothing works
+2005-10-09T08:24:00.000Z	Nvidiot	crimsun	I don't fully know what I'm doing, but usually messing with ifdown wlan0 / killing wpa_supplicant / dhcp and then an ifup wlan0 does the trick
+2005-10-09T08:24:00.000Z	Nvidiot	crimsun	how do I check what order it does stuff on boot?
+2005-10-09T08:24:00.000Z	crimsun	Nvidiot	if you kill wpa_supplicant, then you're not using it at all
+2005-10-09T08:24:00.000Z	Nvidiot	crimsun	it gets started again by ifup
+2005-10-09T08:25:00.000Z	crimsun	Nvidiot	are you using my 0.4.5?
+2005-10-09T08:26:00.000Z	Nvidiot	crimsun	I modified my /etc/network/interfaces to run wpa_supplicant before initing the interface, and to kill dhcp before shutting down the if
+2005-10-09T08:26:00.000Z	Nvidiot	crimsun	wpa_supplicant is version 0.4.5
+2005-10-09T08:26:00.000Z	crimsun	Nvidiot	if you're using pre hooks in interfaces(5), you should know why it's starting multiple times
+2005-10-09T08:28:00.000Z	crimsun	Nvidiot	my suggestion would be to simply remove the script in /etc/rc2.d/ to start it
+2005-10-09T08:28:00.000Z	Nvidiot	crimsun	eh?
+2005-10-09T08:29:00.000Z	crimsun	Nvidiot	if you're already hooking it from interfaces(5), there's no need for it to run via sysvinit
+2005-10-09T08:29:00.000Z	Nvidiot	crimsun	okay, I just rm S20wpasupplicant from there?
+2005-10-09T08:29:00.000Z	crimsun	Nvidiot	yes
+2005-10-09T08:31:00.000Z	Nvidiot	crimsun	'restoring resolver state' gives a [fail] , subsequently the ntp thing a little later gives a [fail]  too
+2005-10-09T08:31:00.000Z	crimsun	Nvidiot	but your interface?
+2005-10-09T08:31:00.000Z	Nvidiot	crimsun	loading desktop, hang on
+2005-10-09T08:32:00.000Z	Nvidiot	crimsun	interface is up, but no routes in netstat -rn, thus no working networking
+2005-10-09T08:33:00.000Z	crimsun	Nvidiot	so basically to get it working, you _have_ to down it and up it again?
+2005-10-09T08:33:00.000Z	Nvidiot	crimsun	ifdown wlan0 says that the iface isn't configured
+2005-10-09T08:33:00.000Z	crimsun	Nvidiot	(ifconfig iface down)
+2005-10-09T08:34:00.000Z	crimsun	Nvidiot	paste your wpa_supplicant conffile onto paste.ubuntulinux.nl. Sanitise it if necessary (if you have psks or wep keys, etc.).
+2005-10-09T08:34:00.000Z	crimsun	Nvidiot	also paste your /etc/default/wpasupplicant
+2005-10-09T08:37:00.000Z	Nvidiot	crimsun	http://paste.ubuntulinux.nl/2754
+2005-10-09T08:37:00.000Z	Nvidiot	crimsun	let me know if you need any other info
+2005-10-09T08:38:00.000Z	crimsun	Nvidiot	so describe again the procedure you have to use.
+2005-10-09T08:38:00.000Z	Nvidiot	crimsun	let me see if I can get it working. I tried the ifconfig wlan0 down followed by ifup wlan0, which did not work
+2005-10-09T08:39:00.000Z	Nvidiot	crimsun	hey... due to forgetting to type sudo, I saw wpa_supplicant was running TWICE
+2005-10-09T08:39:00.000Z	Nvidiot	crimsun	that could cause an issue I'd say
+2005-10-09T08:40:00.000Z	Nvidiot	crimsun	killing both of them, then running ifup wlan0 works... but why two of them spawn I don't understand
+2005-10-09T08:41:00.000Z	crimsun	Nvidiot	which ifaces are up?
+2005-10-09T08:41:00.000Z	Nvidiot	crimsun	lo and now, wlan0
+2005-10-09T08:41:00.000Z	crimsun	Nvidiot	(hence why it's best to use -i in /etc/default/wpasupplicant)
+2005-10-09T08:42:00.000Z	Nvidiot	crimsun	let me paste my network/interfaces file
+2005-10-09T08:44:00.000Z	Nvidiot	crimsun	http://paste.ubuntulinux.nl/2755
+2005-10-09T08:46:00.000Z	Nvidiot	crimsun	I'm thinking the extra auto wlan0 at the bottom there is the problem ?
+2005-10-09T08:46:00.000Z	crimsun	Nvidiot	no, that's necessary to have the script bring up wlan0 automatically.
+2005-10-09T08:47:00.000Z	crimsun	Nvidiot	which chipset are you using?
+2005-10-09T08:47:00.000Z	Nvidiot	crimsun	hmm, so why is wpa_supplicant running twice then?
+2005-10-09T08:47:00.000Z	Nvidiot	crimsun	the wireless card chipset? Dell truemobile 1350, I believe that's a broadcom chip
+2005-10-09T08:47:00.000Z	crimsun	Nvidiot	let it run & fail, and look at the output of ps -ef
+2005-10-09T08:48:00.000Z	Nvidiot	crimsun	as in, I should reboot, then look at ps -ef ?
+2005-10-09T08:48:00.000Z	crimsun	Nvidiot	that will tell you which two processes invoked wpa_supplicant
+2005-10-09T08:48:00.000Z	Nvidiot	crimsun	allright, give me a minute
+2005-10-09T08:48:00.000Z	crimsun	Nvidiot	sure, if that's most efficient for you
+2005-10-09T08:49:00.000Z	Nvidiot	crimsun	it can probably be done otherwise, but I'll do it this way :)
+2005-10-09T08:50:00.000Z	Nvidiot	crimsun	the resolver and NTP still fail on boot, now logging in to desktop
+2005-10-09T08:52:00.000Z	Nvidiot	crimsun	only one wpa_supplicant now, but, wireless doesn't work
+2005-10-09T08:52:00.000Z	Nvidiot	crimsun	still no route. wpa_supplicant was started by pid 1, init
+2005-10-09T08:57:00.000Z	crimsun	Nvidiot	so it's the wpa_supplicant that's being started from pre-up
+2005-10-09T08:57:00.000Z	Nvidiot	crimsun	yes, looks like it. That begs the question, why does it not work at that stage ?
+2005-10-09T08:58:00.000Z	crimsun	Nvidiot	timing issue; you probably need to experiment with sleep values
+2005-10-09T08:59:00.000Z	Nvidiot	crimsun	the pre-up causes it to start too soon? How would I fix that?
+2005-10-09T08:59:00.000Z	crimsun	Nvidiot	no, there's not enough time following the pre-up.
+2005-10-09T08:59:00.000Z	crimsun	Nvidiot	you probably need && sleep someval
+2005-10-09T09:00:00.000Z	Nvidiot	crimsun	okay... any suggestion for some sensible starting point ?
+2005-10-09T09:00:00.000Z	crimsun	Nvidiot	5 seconds?
+2005-10-09T09:01:00.000Z	Nvidiot	crimsun	so the thing becomes pre-up wpa_supplicant_stuff && sleep 5  ?
+2005-10-09T09:01:00.000Z	crimsun	Nvidiot	ye
+2005-10-09T09:01:00.000Z	Nvidiot	crimsun	okay, retrying (reboot again)
+2005-10-09T09:04:00.000Z	Nvidiot	crimsun	thank you! That did the trick :D
+2005-10-09T09:04:00.000Z	crimsun	Nvidiot	thought so.
+2005-10-09T09:05:00.000Z	Nvidiot	crimsun	now I thought the resolver gave the error, but it was 'mounting local filesystems' what's that about?
+2005-10-09T09:06:00.000Z	crimsun	Nvidiot	hmm, perhaps malformed line in /etc/fstab?
+2005-10-09T10:11:00.000Z	Nvidiot	crimsun	hang on
+2005-10-09T10:11:00.000Z	Nvidiot	crimsun	http://paste.ubuntulinux.nl/2757 that's my /etc/fstab
+2005-10-09T10:13:00.000Z	Nvidiot	crimsun	he's got an usb drive
+2005-10-09T10:17:00.000Z	crimsun	Nvidiot	is that a default /etc/fstab ?
+2005-10-09T10:17:00.000Z	Nvidiot	crimsun	no, that's one I created manually (due to my slightly funky way of installing from a knoppix-std cd)
+2005-10-09T10:17:00.000Z	Nvidiot	crimsun	I don't see anything wrong with it though
+2005-10-09T10:17:00.000Z	crimsun	Nvidiot	sysfs is mounted automatically, you shouldn't have to explicitly specify it.
+2005-10-09T10:18:00.000Z	crimsun	Nvidiot	in fact, by that point it will have been mounted already.
+2005-10-09T10:18:00.000Z	Nvidiot	crimsun	so I should remove the /sys line ? :)
+2005-10-09T10:18:00.000Z	crimsun	Nvidiot	comment it out at leasnt
+2005-10-09T10:20:00.000Z	Nvidiot	crimsun	mounting local filesystems... [fail] 
+2005-10-09T10:25:00.000Z	Nvidiot	crimsun	any idea ?
+2005-10-09T10:25:00.000Z	crimsun	Nvidiot	not off the top of my head
+2005-10-09T10:26:00.000Z	crimsun	Nvidiot	sorry, I'm preoccupied with ALSA atm
+2005-10-09T10:26:00.000Z	Nvidiot	crimsun	any idea which logfile would have more details? I don't mind poking around manuals & stuff

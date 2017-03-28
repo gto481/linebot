@@ -1,0 +1,97 @@
+2006-01-02T11:23:00.000Z	trappist	spikeh	"not working" is a little tough to troubleshoot.
+2006-01-02T11:25:00.000Z	spikeh	trappist	do you know how to edit xorg.conf to detect a presumably new graphics card?
+2006-01-02T11:25:00.000Z	trappist	spikeh	it's not xorg.conf's job to detect hardware
+2006-01-02T11:26:00.000Z	spikeh	trappist	I was told to edit that file; if it does not handle hardware detection then what should I be doing?
+2006-01-02T11:27:00.000Z	trappist	spikeh	you need to make sure xorg.conf is correctly configured for your video card, but it won't detect it.  dpkg-reconfigure xserver-xorg is supposed to help wit that.
+2006-01-02T11:27:00.000Z	spikeh	trappist	how would I edit xorg.conf to check that it is set up correctly?
+2006-01-02T11:28:00.000Z	trappist	spikeh	if X isn't starting it's safe to assume it's set up incorrectly.  let's start with: what video card do you have.
+2006-01-02T11:29:00.000Z	spikeh	trappist	sorry but I'm very new to the OS but I'm willing to learn. My card is a Sapphire X800GTO2 based on X850's R480 chipset
+2006-01-02T11:29:00.000Z	trappist	spikeh	I'm completely unfamiliar with sapphire.  did dpkg-reconfigure correctly recognize it when you ran it?
+2006-01-02T11:29:00.000Z	spikeh	trappist	yes,
+2006-01-02T11:30:00.000Z	spikeh	trappist	although it is picking it up as a X850 instead of a X800 because of the R480 chipset
+2006-01-02T11:30:00.000Z	trappist	spikeh	I have no idea if that's correct.  what's on the 'driver' line in the 'device' section of xorg.conf?
+2006-01-02T11:31:00.000Z	trappist	spikeh	and come to think of it, a more important question - what exactly happens when you try to start X?
+2006-01-02T11:31:00.000Z	spikeh	trappist	when I start X using "startx" it gives me an error "(EE) No device detected; Fatal server error: no screen found".
+2006-01-02T11:32:00.000Z	spikeh	trappist	I don't know where xorg.conf is located; I'm unfamiliar with Linux's file structure
+2006-01-02T11:32:00.000Z	trappist	spikeh	/etc/X11/xorg.conf
+2006-01-02T11:33:00.000Z	spikeh	trappist	what would I use to view the file, I only have the basic terminal
+2006-01-02T11:33:00.000Z	trappist	spikeh	I use vim in a terminal, as in sudo vim /etc/X11/xorg.conf
+2006-01-02T11:33:00.000Z	trappist	spikeh	:q! to get out of it
+2006-01-02T11:34:00.000Z	spikeh	trappist	the "driver" line under "section device" reads "ati"
+2006-01-02T11:37:00.000Z	trappist	spikeh	that sure doesn't sound right, but I'm not sure what should go there.  maybe google has an idea.
+2006-01-02T11:38:00.000Z	spikeh	trappist	what would I search for in Google?
+2006-01-02T11:38:00.000Z	trappist	spikeh	oh, it IS an ati card?
+2006-01-02T11:39:00.000Z	spikeh	trappist	yes it's an ATI card
+2006-01-02T11:39:00.000Z	trappist	spikeh	try adding this to the device section of your xorg.conf: option "ChipID" "4e48"
+2006-01-02T11:39:00.000Z	trappist	spikeh	run scrollkeeper-update again and read where it complains about the empty file.  that's where it goes.
+2006-01-02T11:40:00.000Z	trappist	spikeh	google has suggested to me that you might try installing ati's proprietary drivers, which should provide at least partial support for your card
+2006-01-02T11:41:00.000Z	spikeh	trappist	I've never used "vim" before; how do I add a line to the file I'm editing?
+2006-01-02T11:42:00.000Z	trappist	spikeh	put your cursor above where you want to insert the line and press 'o'.  this will put you in edit mode on the new line.  when you're done hit esc and do :wq<enter> to save and quit.
+2006-01-02T11:43:00.000Z	spikeh	trappist	I'm getting an error "xorg.conf" E212: Can't open file for writing
+2006-01-02T11:43:00.000Z	trappist	spikeh	actually... I think I found the answer.  install ati's proprietary drivers and borrow the device section from this file: http://www.linuxhardware.org/images/articles/connect3d-x800-072705/xorg.conf.ati-noaa     or use the whole file.  or run fglrxconfig to make your own.
+2006-01-02T11:43:00.000Z	trappist	spikeh	you need to edit it as root (using sudo)
+2006-01-02T11:43:00.000Z	trappist	spikeh	but skip that and sudo apt-get install xorg-driver-fglrx
+2006-01-02T11:44:00.000Z	spikeh	trappist	how do I configure my ethernet card in terminal?
+2006-01-02T11:44:00.000Z	trappist	spikeh	static or dhcp
+2006-01-02T11:45:00.000Z	trappist	spikeh	sudo ifup eth0 if eth0 is your network device
+2006-01-02T11:46:00.000Z	spikeh	trappist	it's giving an error "Ignoring unknown interface eth0=eth0"; trying eth1/2/3/4 does not work either
+2006-01-02T11:46:00.000Z	trappist	spikeh	run 'ifconfig -a' to see what devices you do have available
+2006-01-02T11:47:00.000Z	spikeh	trappist	eth0 is available as it says it's "UP BROADCAST RUNNING MULTICAST.."
+2006-01-02T11:47:00.000Z	trappist	spikeh	sudo dhclient
+2006-01-02T11:49:00.000Z	spikeh	trappist	hold on, I think it's static, not DHCP..
+2006-01-02T11:49:00.000Z	trappist	spikeh	then I hope you know the ip addresses of things like the default gateway and your dns servers :)
+2006-01-02T11:49:00.000Z	spikeh	trappist	I'm confusing DHCP with dynamic IP addresses
+2006-01-02T11:49:00.000Z	trappist	spikeh	dhcp is how you handle dynamic ip addresses
+2006-01-02T11:50:00.000Z	spikeh	trappist	okay presuming it's static, how do I configure it?
+2006-01-02T11:51:00.000Z	spikeh	trappist	I know full details of my router and DNS addresses
+2006-01-02T11:51:00.000Z	trappist	spikeh	ifconfig eth0 ip.ad.re.ss; route add default gw <ip of the router>; edit /etc/resolv.conf and add your dns server(s)
+2006-01-02T11:51:00.000Z	spikeh	trappist	"ip.ad.re.ss" is the LAN IP of the PC, correct?
+2006-01-02T11:52:00.000Z	trappist	spikeh	yes
+2006-01-02T11:55:00.000Z	spikeh	trappist	I tried to execute "sudo ifconfig eth0 route add default gw 192.168.254.254" yet it's saying "route: Host name lookup failure"; but when I ping the address it's replying
+2006-01-02T11:56:00.000Z	trappist	spikeh	those were supposed to be separate commands... hit enter before typing route
+2006-01-02T11:56:00.000Z	spikeh	trappist	I see, thank you
+2006-01-02T11:57:00.000Z	trappist	spikeh	don't forget to use sudo with route
+2006-01-02T11:58:00.000Z	spikeh	trappist	"/etc/resolv.conf" does not exist
+2006-01-02T11:58:00.000Z	trappist	spikeh	that's highly unlikely, but if it's true, create a new one and add a line like 'nameserver 1.2.3.4'
+2006-01-02T11:59:00.000Z	spikeh	trappist	how do I make directory listing scroll one page at a time?
+2006-01-02T11:59:00.000Z	trappist	spikeh	ls
+2006-01-02T11:59:00.000Z	trappist	spikeh	ls | more
+2006-01-02T12:00:00.000Z	spikeh	trappist	how do I scroll with ls | more
+2006-01-02T12:00:00.000Z	trappist	spikeh	arrow keys for a line at a time, space bar for a page at a time
+2006-01-02T12:02:00.000Z	spikeh	trappist	there is a "resolvconf" but not "resolv.conf"
+2006-01-02T12:02:00.000Z	trappist	spikeh	resolvconf is not what you want
+2006-01-02T12:03:00.000Z	spikeh	trappist	should I then create the new file "resolv.conf"?
+2006-01-02T12:03:00.000Z	trappist	spikeh	sudo echo "nameserver 1.2.3.4" >> /etc/resolv.conf  <-- replacing the ip of course
+2006-01-02T12:04:00.000Z	spikeh	trappist	I'm getting permission denied even with sudo
+2006-01-02T12:05:00.000Z	trappist	spikeh	bleh.  ok sudo vim /etc/resolv.conf, press i to get into insert mode, add the line, save and quit (:wq)
+2006-01-02T12:07:00.000Z	spikeh	trappist	how do I get out of insert mode in vim?
+2006-01-02T12:07:00.000Z	trappist	spikeh	hit esc
+2006-01-02T12:07:00.000Z	spikeh	trappist	wait I figured it out :D
+2006-01-02T12:08:00.000Z	spikeh	trappist	okay, it's been created; would the Internet be working now?
+2006-01-02T12:09:00.000Z	spikeh	trappist	thanks, the drivers are now being downloaded and unpacked :)
+2006-01-02T12:09:00.000Z	trappist	spikeh	excellent
+2006-01-02T12:11:00.000Z	spikeh	trappist	it's been done; where do I go from here?
+2006-01-02T12:12:00.000Z	trappist	spikeh	sudo fglrxconfig
+2006-01-02T12:14:00.000Z	spikeh	trappist	the configuration asks for "the full device name that the mouse is connected to"; it's connected via USB so what would I type?
+2006-01-02T12:14:00.000Z	spikeh	trappist	/dev/usb ?
+2006-01-02T12:14:00.000Z	trappist	spikeh	mine is usb and I leave almost everything in that wizard as the defaults
+2006-01-02T12:15:00.000Z	trappist	spikeh	including mouse device
+2006-01-02T12:17:00.000Z	spikeh	trappist	YES! X server has initiated! thank you VERY MUCH trappist for helping me!
+2006-01-02T12:18:00.000Z	trappist	spikeh	rockin :)
+2006-01-02T12:18:00.000Z	spikeh	trappist	I'll have to save this chat log so I can refer back to it when I'm installing Ubuntu for real :)
+2006-01-02T12:20:00.000Z	spikeh	trappist	another thing; the LiveCD I'm using at the moment is Kubuntu because the Ubuntu LiveCD freezes (presumably X server fails) but it does not give you terminal
+2006-01-02T12:21:00.000Z	trappist	spikeh	yeah I've had that happen here (x fails and you get no terminal)
+2006-01-02T12:22:00.000Z	spikeh	trappist	then how do I enable terminal so I can get a preview of Ubuntu with GNOME? (I've yet to decide which desktop to use)
+2006-01-02T12:23:00.000Z	trappist	spikeh	boot into rescue mode (if the livecd has such a thing) so it won't try to start x.  install fglrx drivers etc. to make x work, then sudo /etc/init.d/gdm start
+2006-01-02T12:24:00.000Z	spikeh	trappist	okay, thank you for all your help
+2006-01-02T12:27:00.000Z	trappist	spikeh	thank YOU for asking clear and answerable questions and paying attention to spelling and grammar.  it was refreshing :)
+2006-01-02T12:27:00.000Z	spikeh	trappist	I've lost the apt-get install command because X-Chat won't scroll up anymore :'(
+2006-01-02T12:27:00.000Z	trappist	spikeh	sudo apt-get install xorg-driver-fglrx
+2006-01-02T12:27:00.000Z	spikeh	trappist	thank you one last time :)
+2006-01-02T12:30:00.000Z	spikeh	trappist	what were the three network commands that configured eth0? (I feel silly asking it again, it's all X-Chat's fault :(
+2006-01-02T12:31:00.000Z	trappist	spikeh	ifconfig <device> <ip>; route add default gw <gateway ip>; add 'nameserver <dns server>' to /etc/resolv.conf
+2006-01-02T13:13:00.000Z	spikeh	trappist	which X desktop are you using; KDE or GNOME?
+2006-01-02T13:41:00.000Z	spikeh	trappist	there doesn't seem to be a "safe mode" for Ubuntu's live CD; how did you get around the no terminal problem?
+2006-01-02T13:41:00.000Z	trappist	spikeh	I've never used the livecd.  maybe there's a console-only boot option?
+2006-01-02T13:43:00.000Z	spikeh	trappist	so the real install CD does give you a "safe mode" option? if so I can test GNOME with 5.04's live CD
+2006-01-02T13:43:00.000Z	trappist	spikeh	I dunno about the installer itself, but once it's installed, yes.

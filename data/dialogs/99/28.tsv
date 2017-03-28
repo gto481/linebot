@@ -1,0 +1,99 @@
+2009-01-21T17:33:00.000Z	hmw		what is a simple gui tool to make a ntfs partition automount on boot?
+2009-01-21T17:35:00.000Z	ActionParsnip	hmw	you can add a line to /etc/fstab to make the partition mount at boot
+2009-01-21T17:35:00.000Z	ActionParsnip	hmw	or create a script to run the mount command when you log in
+2009-01-21T17:35:00.000Z	hmw	ActionParsnip	- thanks, but i am looking for a SIMPLE tool, i already had, and forgot the package name
+2009-01-21T17:36:00.000Z	ActionParsnip	hmw	apt-cache search ntfs
+2009-01-21T17:36:00.000Z	ActionParsnip	hmw	i'd just use fstab, it will then be mounted even if you dro pto osafe mode root console
+2009-01-21T17:36:00.000Z	hmw	ActionParsnip	- already doing this... for over 40 minutes now, also google of course. that package had some cryptic name - i lost my ubuntu-notes.txt file due to my stupidity
+2009-01-21T17:36:00.000Z	hmw	ActionParsnip	- i had problems making it manually
+2009-01-21T17:37:00.000Z	hmw	ActionParsnip	- the tool writes all the stuff to fstab
+2009-01-21T17:38:00.000Z	ActionParsnip	hmw	ive not come across it but you can use apt-search to see whats on the repos if you search intelligently, you can even grep the output
+2009-01-21T17:38:00.000Z	ActionParsnip	hmw	try: apt-cache search disk | grep -i tool
+2009-01-21T17:38:00.000Z	hmw	ActionParsnip	- thanks for your attention. i give up and will try tweaking fstab manually. it is a new computer, maybe it will work here...
+2009-01-21T17:39:00.000Z	ActionParsnip	hmw	backup the original first so you can easily roll back
+2009-01-21T17:39:00.000Z	hmw	ActionParsnip	- okok... luckily, i am just lazy and not a total newbie
+2009-01-21T17:40:00.000Z	ActionParsnip	hmw	i assume nothing in here, no offence meant
+2009-01-21T17:40:00.000Z	hmw	ActionParsnip	- misunderstanding! i just would like the easy-click-and-go version
+2009-01-21T17:41:00.000Z	ActionParsnip	hmw	i dont know of such an app, i always manually update fstab
+2009-01-21T17:41:00.000Z	ActionParsnip	hmw	if you know the command to mount it at command line, the fstab entry is very little different
+2009-02-06T15:08:00.000Z	hmw	ActionParsnip	he is using 192.168.1.108/24
+2009-02-06T15:08:00.000Z	hmw	ActionParsnip	but his route says: link-local      *               255.255.0.0     U     1000   0        0 eth2
+2009-03-02T14:50:00.000Z	hmw	ActionParsnip	I know, what modem it is, but I did not find anything on google so far. Just a general question: Do I need some sort of pppd stuff?
+2009-03-02T14:50:00.000Z	hmw	ActionParsnip	what am I looking for??
+2009-03-02T14:52:00.000Z	hmw	ActionParsnip	what program would I tell about the hardware?
+2009-03-02T14:54:00.000Z	hmw	ActionParsnip	ah, that sounds reasonable. Reading the linked page. Thx.
+2009-03-02T15:07:00.000Z	hmw	ActionParsnip	sorry for being in "noob" mode, I am in a hurry (should be departing by now) - I read the article, and I have /dev/ttyUSB{0,1}. Which program would create the interface? pppconfig seems to expect a device being up already.
+2009-03-02T15:08:00.000Z	hmw	ActionParsnip	With NetworkManager (also under Fedora, where it works perfectly), I always get a ppp0 device.
+2009-03-02T15:11:00.000Z	hmw	ActionParsnip	yes-
+2009-03-02T15:28:00.000Z	hmw	ActionParsnip	I remembered, that my old Ubuntu notebook is configured to manually dial in, but I cant remember, how I started the connection. It was something like: <program> <what chat script>
+2009-03-02T15:39:00.000Z	hmw	ActionParsnip	n838901: it was "pon ppp" thanks
+2009-03-10T15:22:00.000Z	ActionParsnip	hmw	nice
+2009-03-10T15:23:00.000Z	hmw	ActionParsnip	Would make a good factoid, somtehing like !welcome
+2009-03-10T15:24:00.000Z	ActionParsnip	hmw	its better than that
+2009-03-10T15:24:00.000Z	hmw	ActionParsnip	PM?
+2009-05-05T03:18:00.000Z	hmw	ActionParsnip	what I never understood: I usually download/dont check/burn/install successfully, never had problems with isos. Guess I was lucky. But my question is: how can a http-download get corrupted, when we have failure correction in TCP?
+2010-03-14T19:49:00.000Z	ActionParsnip	hmw	i set that in xorg.conf personally
+2010-03-14T19:50:00.000Z	hmw	ActionParsnip	actually, I just want to get rid of it
+2010-03-14T19:50:00.000Z	ActionParsnip	hmw	there are server flags in xorg.conf you can set to disable sleep etc tect
+2010-03-14T19:51:00.000Z	hmw	ActionParsnip	i see. Thanks!
+2010-03-14T19:51:00.000Z	ActionParsnip	hmw	http://pastebin.com/sBqw8Kg5
+2010-03-14T19:51:00.000Z	ActionParsnip	hmw	thats mine from my desktop
+2010-03-14T19:51:00.000Z	ActionParsnip	hmw	note the server flags ;)
+2010-03-14T19:52:00.000Z	hmw	ActionParsnip	oh, nice. thanks. vivid: thanks, too. Both: Is it a bug of the GUI? I mean, i set "never"
+2010-03-14T19:54:00.000Z	ActionParsnip	hmw	ive always used xorg.conf I guess I'm too old skool
+2010-03-14T19:54:00.000Z	hmw	ActionParsnip	*grin* I miss old xorg.conf
+2010-03-14T19:54:00.000Z	ActionParsnip	hmw	if you make one, it will be obeyed
+2010-03-14T19:54:00.000Z	hmw	ActionParsnip	too much magic goin on today
+2010-03-14T19:55:00.000Z	ActionParsnip	hmw	exactly :)
+2010-03-14T20:38:00.000Z	ActionParsnip	hmw	sudo find / -iname dropline
+2010-03-14T20:38:00.000Z	ActionParsnip	hmw	takes a while but will find it
+2010-03-14T20:39:00.000Z	hmw	ActionParsnip	alright.
+2010-03-14T20:40:00.000Z	hmw	ActionParsnip	updatedb & locate dont "see" all file systems, right?
+2010-03-31T00:09:00.000Z	hmw	ActionParsnip	alright... i'll check it out... Docteh I was thinking on DPI settings or something
+2010-05-06T05:13:00.000Z	hmw	ActionParsnip	yea. i'll try memorize that phrase of yours
+2010-05-06T05:11:00.000Z	ActionParsnip	hmw	or any other search engine ;)
+2010-05-06T05:12:00.000Z	hmw	ActionParsnip	oh, i almost forgot, that there are some. my bad.
+2010-05-06T05:12:00.000Z	ActionParsnip	hmw	thats why i ALWAYS say websearch. I think the phrase "google it" and suchlike is constrictive and immature
+2010-05-06T19:17:00.000Z	ActionParsnip	hmw	what, you mean xpud?
+2010-05-06T19:19:00.000Z	hmw	ActionParsnip	i am trying to get a better CRT up. It worked, when I just replugged while Karmic was running. After rebooting it wouldnt even use a custom xorg.conf. I now tried fedora, live cd did boot one time in 1600x1200, installed it,. 800x600 max. Reboot to live cd: still 800x600! [...]
+2010-05-06T19:22:00.000Z	ActionParsnip	hmw	xor.conf is obeyed if it exists, just copy the file in and restart the x server, should be ok
+2010-05-06T19:22:00.000Z	hmw	ActionParsnip	the one from the live cd?
+2010-05-06T19:22:00.000Z	ActionParsnip	hmw	if you are using the livecd you can copy over an archived xorg.conf and restart x, it will be used :)
+2010-05-06T19:23:00.000Z	hmw	ActionParsnip	rebooting. thanks meanwhile.
+2010-05-06T19:23:00.000Z	hmw	ActionParsnip	but it does no longer work from the live cd... !!!
+2010-05-06T19:24:00.000Z	ActionParsnip	hmw	then the xorg.conf file isnt right, check /var/log/Xorg.0.log for clues
+2010-05-06T19:27:00.000Z	hmw	ActionParsnip	how can the xorg.cong be not right, when it worked the first time i booted the live cd and after installing (and enabling desktop effects) and rebooting to live cd, it is not broken. There must be something stored in the GPU. They do that, i am 100.0% sure. i tested it with my radeon. they remember stuff. Argh!
+2010-05-06T19:29:00.000Z	ActionParsnip	hmw	try: sudo dpkg-reconfigure xserver-xorg     then restart x
+2010-05-06T19:29:00.000Z	hmw	ActionParsnip	i will do that after examining the log. thx. sorry for my being strange. trying to get it working for hours now
+2010-05-06T19:30:00.000Z	ActionParsnip	hmw	i feel you dude, had the same in the early days. Kinda why I still use xorg.conf rather than all this automagic stuff
+2010-05-06T19:45:00.000Z	ActionParsnip	hmw	i'd check your xorg.conf dude, you wil probably be able to get away with leaving resolutions out of the screen section if you define the driver and monitor refresh rates etc
+2010-05-06T19:47:00.000Z	hmw	ActionParsnip	we already tried that without success. It worked without that in the beginning. I remain puzzled. Thanks for your help though.
+2010-05-06T19:47:00.000Z	ActionParsnip	hmw	strange stuff dude
+2010-05-06T20:19:00.000Z	hmw	ActionParsnip	I used the kernel parameter "nomodeset" and now xorg.conf takes effect. (Fedora 12, Ubuntu did something with it too, but is still a little bitchy, at least i got 1152xwhaterer)
+2010-05-06T20:20:00.000Z	ActionParsnip	hmw	wtg dude, glas you got the gold :D:D
+2010-06-30T00:23:00.000Z	ActionParsnip	hmw	find . -iname "*.mp3" -exec mv {} /path/to/desk \;
+2010-06-30T00:23:00.000Z	hmw	ActionParsnip	thanks :(
+2010-06-30T00:24:00.000Z	ActionParsnip	hmw	not used it as I understand the find command
+2010-06-30T00:25:00.000Z	hmw	ActionParsnip	i am not _always_ working in the shell. especially not, when i use my computer for mutlimedia stuff
+2010-06-30T00:25:00.000Z	ActionParsnip	hmw	still doesnt stop you using terminal
+2010-06-30T00:26:00.000Z	ActionParsnip	hmw	your "multimedia stuff" doesn't mean the terminal is not to be used in any way
+2010-06-30T00:26:00.000Z	hmw	ActionParsnip	it means opening a new terminal, cding into the folder, etc etc etc
+2010-06-30T00:26:00.000Z	ActionParsnip	hmw	so, if it does the job well then who cares
+2010-06-30T00:27:00.000Z	hmw	ActionParsnip	"well" is a question of definition and mood, right?
+2010-06-30T00:27:00.000Z	ActionParsnip	hmw	for repeated tasks and such, the terminal is very powerful and should be used
+2010-06-30T00:28:00.000Z	hmw	ActionParsnip	 you do not WANT to understand, do you
+2010-06-30T00:28:00.000Z	ActionParsnip	hmw	maybe you arent explaining it well, so far all you have said is you dont want to cd to directories etc.
+2010-06-30T00:29:00.000Z	ActionParsnip	hmw	just use what I said but tweak it
+2010-06-30T00:31:00.000Z	hmw	ActionParsnip	i am indeed using find often, just had a typo. my synergy is killing my clipboard. argh
+2010-06-30T00:31:00.000Z	ActionParsnip	hmw	hehe, make scripts dude, makes life easier
+2012-03-10T07:53:00.000Z	ActionParsnip	hmw	is there a file ~/.aspell.en.pws
+2012-03-10T07:53:00.000Z	hmw	ActionParsnip	no
+2012-03-10T07:54:00.000Z	ActionParsnip	hmw	or similar?
+2012-03-10T07:55:00.000Z	ActionParsnip	hmw	in the gedit plugins there is the spellchecker there. If you click configure are the additional words there?
+2012-03-10T07:57:00.000Z	hmw	ActionParsnip	I can only disable that plugin. Does not look like there was a dictionary in ~ and the word is not in ~/.config/enchant/en_US.dic
+2012-03-10T08:08:00.000Z	ActionParsnip	hmw	retrieve   is the right spelling in british english (Native englishman here)
+2012-03-10T08:10:00.000Z	hmw	ActionParsnip	thank you. It's weird, the other PC has the same version of gedit and can see it as wrong spelling. The "bad" gedit does not mark "retreixyve" as wrong, either, but it marks other words. Any idea what could be going on?
+2012-03-10T08:11:00.000Z	ActionParsnip	hmw	not sure, very weird
+2012-03-10T08:13:00.000Z	hmw	ActionParsnip	oh. Turning off syntax hilighting works, it is a PHP file.
+2012-03-10T08:16:00.000Z	hmw	ActionParsnip	it does only check strings that are actually strings in PHP, but not in the HTML part.
+2012-03-10T08:18:00.000Z	hmw	ActionParsnip	fyi: Switching to HTML solves the problem

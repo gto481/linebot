@@ -1,0 +1,99 @@
+2010-08-02T22:46:00.000Z	batshwa		hi, everybody
+2010-08-02T22:46:00.000Z	batshwa		i've got an annoying problem with my xubuntu
+2010-08-02T22:47:00.000Z	batshwa		after an upgrade to 10.04 from 9.10 my system freezes from time to time -- i've noticed this happens whenever man-db or mandb run
+2010-08-02T22:48:00.000Z	aeon-ltd	batshwa	sounds like a bug, you should report it, does cpu spike or does it just feeze?
+2010-08-02T22:49:00.000Z	aeon-ltd	batshwa	when the cpu suddenly reaches 100%
+2010-08-02T22:49:00.000Z	aeon-ltd	batshwa	or near 100%
+2010-08-02T22:51:00.000Z	batshwa	aeon-ltd	do you think i should report it as a bug?
+2010-08-02T22:51:00.000Z	aeon-ltd	batshwa	try updating again, if it doesn't work report a bug
+2010-08-02T22:51:00.000Z	batshwa	aeon-ltd	update what?
+2010-08-02T22:52:00.000Z	aeon-ltd	batshwa	packages (sudo apt-get update)
+2010-08-02T22:52:00.000Z	batshwa	aeon-ltd	apt-get returns a "Bus eror"
+2010-08-02T22:55:00.000Z	batshwa	aeon-ltd	if it helps i can show you a post containing more etails on ubuntuforums -- unfortunately i did not get any answer so far
+2010-08-02T22:55:00.000Z	aeon-ltd	batshwa	ok
+2010-08-02T22:55:00.000Z	batshwa	aeon-ltd	here you are: http://ubuntuforums.org/showthread.php?t=1524124
+2010-08-02T22:59:00.000Z	aeon-ltd	batshwa	 according to this guy http://ubuntuforums.org/showthread.php?p=2070840 you should delete the cached packages then run apt-get update/upgrade again
+2010-08-02T23:00:00.000Z	batshwa	aeon-ltd	thanks a lot, i will try this now
+2010-08-02T23:03:00.000Z	batshwa	aeon-ltd	will try to run apt-get now -- if I don't answer in two minutes then my system has freezed ;) i will come back to you in a moment
+2010-08-02T23:03:00.000Z	aeon-ltd	batshwa	ok
+2010-08-02T23:07:00.000Z	batshwa	aeon-ltd	apt-get now works, thank you a lot!  i have not done apt-get update/upgrade yet, since i want to try first update-manager
+2010-08-02T23:07:00.000Z	aeon-ltd	batshwa	ok your welcome :)
+2010-08-02T23:20:00.000Z	batshwa	aeon-ltd	i ran update-manager and marked the distribution upgrade packages, libavahi_core and autoconf, after which the system froze for a few minutes while "processing man triggers" -- something seems to be wrong with the man(-)db processes, what do you think?
+2010-08-02T23:21:00.000Z	aeon-ltd	batshwa	try reinstalling mandb and its dependencies it may help
+2010-08-02T23:22:00.000Z	batshwa	aeon-ltd	i will do that now, thanks
+2010-08-02T23:28:00.000Z	batshwa	aeon-ltd	it says "/usr/bin/mandb: can't read from /var/cache/man/index.db: Input/output error" -- dmesg also said numerous times there were i/o errors
+2010-08-02T23:29:00.000Z	batshwa	aeon-ltd	and it took him pretty much time again
+2010-08-02T23:30:00.000Z	aeon-ltd	batshwa	try and rebuild the db via 'sudo mandb'
+2010-08-02T23:31:00.000Z	batshwa	aeon-ltd	will do this now
+2010-08-02T23:35:00.000Z	batshwa	aeon-ltd	now it says "gdbm fatal: read error"
+2010-08-02T23:37:00.000Z	aeon-ltd	batshwa	what applications did you install prior to this problem?
+2010-08-02T23:37:00.000Z	batshwa	aeon-ltd	i can't recall, nothing of importance as far as i remember...
+2010-08-02T23:38:00.000Z	batshwa	aeon-ltd	it was the upgrade process from 9.10 to 10.04 i think
+2010-08-02T23:51:00.000Z	aeon-ltd	batshwa	running dry of ideas, try reinstalling autopackage if you have it installed
+2010-08-02T23:38:00.000Z	aeon-ltd	batshwa	so far i've found that autopackage causes problems like this
+2010-08-02T23:38:00.000Z	batshwa	aeon-ltd	should i remove this package?
+2010-08-02T23:39:00.000Z	aeon-ltd	batshwa	no apparantly its fixed with just the command "export MANPATH="
+2010-08-02T23:39:00.000Z	batshwa	aeon-ltd	is "autopackage" a package?
+2010-08-02T23:39:00.000Z	batshwa	aeon-ltd	should i give it a try?
+2010-08-02T23:39:00.000Z	aeon-ltd	batshwa	yes
+2010-08-02T23:39:00.000Z	aeon-ltd	batshwa	the command? yes
+2010-08-02T23:40:00.000Z	batshwa	aeon-ltd	all right, will do it now
+2010-08-02T23:40:00.000Z	batshwa	aeon-ltd	done, will try to install now a new package and see whether the "processing man triggers"-phase produces an error
+2010-08-02T23:41:00.000Z	aeon-ltd	batshwa	ok
+2010-08-02T23:46:00.000Z	batshwa	aeon-ltd	same error as before: /usr/bin/mandb: can't read from /var/cache/man/index.db: Input/output error
+2010-08-02T23:47:00.000Z	batshwa	aeon-ltd	this seems to be a pretty hard case
+2010-08-02T23:52:00.000Z	batshwa	aeon-ltd	i could not find it in synaptic before, when you first mentioned it
+2010-08-02T23:52:00.000Z	batshwa	aeon-ltd	let me try again
+2010-08-02T23:52:00.000Z	batshwa	aeon-ltd	no, i can't find it using synaptic
+2010-08-02T23:53:00.000Z	batshwa	aeon-ltd	does that imply i do not have that package installed on my system?
+2010-08-02T23:53:00.000Z	aeon-ltd	batshwa	yes it does,
+2010-08-02T23:54:00.000Z	batshwa	aeon-ltd	sounds bad...
+2010-08-02T23:55:00.000Z	batshwa	aeon-ltd	well that means i am going to format the whole disc and reinstall ubuntu, maybe install a minimal system as described on help.ubuntu.com
+2010-08-02T23:56:00.000Z	aeon-ltd	batshwa	wait, remind me what happens when you try to reinstall mandb?
+2010-08-02T23:57:00.000Z	batshwa	aeon-ltd	nothing, it just hangs when processing some triggers, as far as i remember
+2010-08-02T23:57:00.000Z	batshwa	aeon-ltd	the usual procedure
+2010-08-02T23:57:00.000Z	batshwa	aeon-ltd	as with any package i have installed so far
+2010-08-02T23:59:00.000Z	aeon-ltd	batshwa	before you reinstall completely, do you know how to build packages?
+2010-08-02T23:59:00.000Z	batshwa	aeon-ltd	from source? i don't think so.  i just know how to use make...
+2010-08-03T00:00:00.000Z	aeon-ltd	batshwa	good, does ./configure make make install sound familiar?
+2010-08-03T00:00:00.000Z	batshwa	aeon-ltd	yes it does
+2010-08-03T00:00:00.000Z	aeon-ltd	batshwa	you could try building mandb(rather than reinstall through apt) and see if it helps
+2010-08-03T00:01:00.000Z	batshwa	aeon-ltd	i will give it a try later. unfortunately i have to go this instant.  are you frequently in this chat room?  because we could make some arrangement as to when you're there
+2010-08-03T00:02:00.000Z	aeon-ltd	batshwa	i'm here usually around the day (in gmt)
+2010-08-03T00:03:00.000Z	batshwa	aeon-ltd	all right, i will come back later today. if you're not there, we'll talk again tomorrow, all right?
+2010-08-03T00:03:00.000Z	aeon-ltd	batshwa	ok
+2010-08-03T00:03:00.000Z	batshwa	aeon-ltd	thanks a lot for your help!
+2010-08-03T00:03:00.000Z	aeon-ltd	batshwa	bye
+2010-08-03T03:03:00.000Z	batshwa	aeon-ltd	hi, just came back
+2010-08-03T03:04:00.000Z	batshwa	aeon-ltd	can you tell me where i can find the source files of mandb?
+2010-08-03T03:05:00.000Z	aeon-ltd	batshwa	what ubuntu version are you using?
+2010-08-03T03:06:00.000Z	batshwa	aeon-ltd	i am using xubuntu 10.04, but with fluxbox as window manager
+2010-08-03T03:06:00.000Z	aeon-ltd	batshwa	http://packages.ubuntu.com/lucid/man-db
+2010-08-03T03:06:00.000Z	aeon-ltd	batshwa	wait a better one http://packages.ubuntu.com/source/lucid/man-db
+2010-08-03T03:08:00.000Z	batshwa	aeon-ltd	is there anything that can go wrong when i try to compile mandb?  (meaning, i won't lose any data during a routine job like this one, will i?)
+2010-08-03T03:09:00.000Z	aeon-ltd	batshwa	no, 99% sure/hopefully something won't go wrong
+2010-08-03T03:10:00.000Z	batshwa	aeon-ltd	do i need the .dsc and both .tar.gz files?
+2010-08-03T03:10:00.000Z	aeon-ltd	batshwa	no just the tar.gz
+2010-08-03T03:11:00.000Z	batshwa	aeon-ltd	but both tar.gz's, right?
+2010-08-03T03:15:00.000Z	aeon-ltd	batshwa	no just one of them
+2010-08-03T03:19:00.000Z	batshwa	aeon-ltd	all right, i'm onto the readme file now
+2010-08-03T03:20:00.000Z	batshwa	aeon-ltd	i do not have to touch the existing installation of mandb before proceeding with ./configure and make, do i?
+2010-08-03T03:21:00.000Z	aeon-ltd	batshwa	no, just cd into the package and build and install it will replace mandb
+2010-08-03T03:27:00.000Z	batshwa	aeon-ltd	there's a lot of reading to be done if i want every step to be absolutely correct -- i think i will skip this reading, what do you think?
+2010-08-03T03:30:00.000Z	batshwa	aeon-ltd	the first error has just occurred: "configure: error: Fatal: no supported database library/header found"
+2010-08-03T03:42:00.000Z	aeon-ltd	batshwa	damn, ok mandb is seriously screwed
+2010-08-03T03:43:00.000Z	batshwa	aeon-ltd	is there any way to fix it?
+2010-08-03T03:45:00.000Z	aeon-ltd	batshwa	i'm not really sure, since apt won't work or compiling as they both require a working mandb this is kinda a infinite loop
+2010-08-03T03:46:00.000Z	batshwa	aeon-ltd	can't i tell them to skip the part where they require the man database?
+2010-08-03T03:46:00.000Z	batshwa	aeon-ltd	i mean, can't i uninstall the whole man system?
+2010-08-03T03:48:00.000Z	aeon-ltd	batshwa	i'm not sure i've never encountered a problem that involves the core of the system like mandb
+2010-08-03T03:48:00.000Z	batshwa	aeon-ltd	do you think i shouzld format and reinstall the whole system?
+2010-08-03T03:49:00.000Z	aeon-ltd	batshwa	not just yet i'd wait until tomorrow unless you want a working system now and have backed up everything you need
+2010-08-03T03:50:00.000Z	batshwa	aeon-ltd	that's not the case with me
+2010-08-03T03:52:00.000Z	batshwa	aeon-ltd	i wonder, can i set the system the way it does not run man(-)db regularly?
+2010-08-03T03:53:00.000Z	aeon-ltd	batshwa	it references it for almost every package related process, i think or at least it seems that way
+2010-08-03T03:54:00.000Z	batshwa	aeon-ltd	all right
+2010-08-03T03:54:00.000Z	aeon-ltd	batshwa	i'd google anyway just to be sure
+2010-08-03T03:55:00.000Z	batshwa	aeon-ltd	it seems not as easy as to be solved by a complete novice like me
+2010-08-03T03:55:00.000Z	batshwa	aeon-ltd	i will do so tomorrow
+2010-08-03T04:03:00.000Z	batshwa	aeon-ltd	thanks a lot for your help today! i will "attack" mandb tomorrow again

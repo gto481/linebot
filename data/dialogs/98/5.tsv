@@ -1,0 +1,98 @@
+2011-01-20T15:02:00.000Z	sidd_mak		<NotTooDumb3> ext4
+2011-01-20T15:02:00.000Z	sidd_mak		<NotTooDumb3> at least 10 GB req
+2011-01-20T15:03:00.000Z	sidd_mak		<NotTooDumb3> filesystem
+2011-01-20T15:04:00.000Z	sidd_mak		<NotTooDumb3> installation is quite simple
+2011-01-20T15:04:00.000Z	sidd_mak		<NotTooDumb3> ya
+2011-01-20T15:04:00.000Z	sidd_mak		<NotTooDumb3> just pop in the disk n start installing
+2011-01-20T15:05:00.000Z	sidd_mak		<NotTooDumb3> there is nothing to think much
+2011-01-20T15:05:00.000Z	sidd_mak		<NotTooDumb3> is ur windows working
+2011-01-20T15:06:00.000Z	sidd_mak		<NotTooDumb3> or do u have any empty drive
+2011-01-20T15:06:00.000Z	sidd_mak		<NotTooDumb3> i mean partition
+2011-01-20T15:07:00.000Z	mtt	sidd_mak	i'm ready for partitioning, but i'm unaware how to do it before install
+2011-01-20T15:09:00.000Z	sidd_mak	mtt	did u booted the cd
+2011-01-20T15:10:00.000Z	sidd_mak	mtt	u don;t need to
+2011-01-20T15:10:00.000Z	sidd_mak	mtt	do u have any empty partition
+2011-01-20T15:13:00.000Z	sidd_mak	mtt	see u need at least 10 GB for ubuntu
+2011-01-20T15:15:00.000Z	sidd_mak	mtt	which ver. do u have
+2011-01-20T15:16:00.000Z	sidd_mak	mtt	:http://www.youtube.com/watch?v=iZ4EnE4XikM
+2011-01-20T15:32:00.000Z	sidd_mak	mtt	: ??
+2011-01-20T15:37:00.000Z	sidd_mak	mtt	: ya
+2011-01-20T15:40:00.000Z	sidd_mak	mtt	it can be any partition
+2011-01-20T15:40:00.000Z	sidd_mak	mtt	how many partition do u have
+2011-01-20T15:44:00.000Z	sidd_mak	mtt	seee in linux setup u will able to see those part. by the label sda1,sda2,sda3,sda4 etc
+2011-01-20T15:45:00.000Z	sidd_mak	mtt	most probably c will be sda1
+2011-01-20T15:46:00.000Z	sidd_mak	mtt	: is there any important data in C:
+2011-01-20T15:47:00.000Z	sidd_mak	mtt	: there must be try ubuntu option when u booted the disc
+2011-01-20T15:48:00.000Z	sidd_mak	mtt	: ok so go to place at the top
+2011-01-20T15:48:00.000Z	sidd_mak	mtt	: n you will see your partition
+2011-01-20T15:49:00.000Z	sidd_mak	mtt	: copy the data on the partition on which u r not installing ubuntu
+2011-01-20T15:50:00.000Z	sidd_mak	mtt	: explore it from file explorer
+2011-01-20T15:50:00.000Z	mtt	sidd_mak	i'm not sure i can do this. the other partitions are system ones
+2011-01-20T15:51:00.000Z	sidd_mak	mtt	go to Places in the menu at the top ,where u will file your all disk partitions
+2011-01-20T15:53:00.000Z	mtt	sidd_mak	ok
+2011-01-20T15:53:00.000Z	sidd_mak	mtt	transfer the data that is imp.
+2011-01-20T15:55:00.000Z	sidd_mak	mtt	: no man to any other partition
+2011-01-20T15:55:00.000Z	sidd_mak	mtt	: no man to any other partition of your drive
+2011-01-20T15:56:00.000Z	sidd_mak	mtt	: or transfer it to flash drive
+2011-01-20T15:59:00.000Z	sidd_mak	mtt	: ok now i got u
+2011-01-20T16:00:00.000Z	sidd_mak	mtt	: u r saying that u want to install windows 7 n ubuntu on the space that u have given to C: drive
+2011-01-20T16:00:00.000Z	sidd_mak	mtt	: right
+2011-01-20T16:01:00.000Z	sidd_mak	mtt	: ok
+2011-01-20T16:01:00.000Z	sidd_mak	mtt	: wait a min let me install gparted n guide u
+2011-01-20T16:04:00.000Z	sidd_mak	mtt	: ya
+2011-01-20T16:04:00.000Z	sidd_mak	mtt	: but before installing linux u need to install win 7
+2011-01-20T16:05:00.000Z	sidd_mak	mtt	: ya but once u create space for ubuntu on C: it will be wiped out
+2011-01-20T16:07:00.000Z	sidd_mak	mtt	: it's quite obvious
+2011-01-20T16:10:00.000Z	sidd_mak	mtt	: is win7 in working condition
+2011-01-20T16:10:00.000Z	sidd_mak	mtt	: how much empty is your c:
+2011-01-20T16:11:00.000Z	sidd_mak	mtt	: open gparted
+2011-01-20T16:12:00.000Z	sidd_mak	mtt	: select ur c: drive
+2011-01-20T16:12:00.000Z	mtt	sidd_mak	i'll be back soon
+2011-01-20T16:37:00.000Z	mtt	sidd_mak	i'm back
+2011-01-20T16:38:00.000Z	sidd_mak	mtt	hi
+2011-01-20T16:39:00.000Z	sidd_mak	mtt	: ya
+2011-01-20T16:39:00.000Z	sidd_mak	mtt	: open gparted
+2011-01-20T16:40:00.000Z	sidd_mak	mtt	: select sda2
+2011-01-20T16:40:00.000Z	sidd_mak	mtt	: press resize
+2011-01-20T17:35:00.000Z	sidd_mak	mtt	: open gparted man
+2011-01-20T17:36:00.000Z	sidd_mak	mtt	: select sda2
+2011-01-20T17:36:00.000Z	sidd_mak	mtt	: right click n select resize
+2011-01-20T17:37:00.000Z	sidd_mak	mtt	: enter the amount of space u req. in free space preceding
+2011-01-20T17:40:00.000Z	sidd_mak	mtt	: after resizing u will see unallocated space
+2011-01-20T17:40:00.000Z	sidd_mak	mtt	: rigth click press new
+2011-01-20T17:41:00.000Z	sidd_mak	mtt	: n also create partition for swap
+2011-01-20T17:41:00.000Z	sidd_mak	mtt	: go 4 logical
+2011-01-20T17:41:00.000Z	sidd_mak	mtt	: how much is the unallocated space?
+2011-01-20T17:42:00.000Z	sidd_mak	mtt	: first u extend the parti.
+2011-01-20T17:43:00.000Z	sidd_mak	mtt	 : all of it 64 g
+2011-01-20T17:44:00.000Z	sidd_mak	mtt	 : u will again get 64gb space under extended parti.
+2011-01-20T17:44:00.000Z	sidd_mak	mtt	 : right click to unallocated space , press  new
+2011-01-20T17:45:00.000Z	sidd_mak	mtt	 : so did u got extended parti
+2011-01-20T17:47:00.000Z	sidd_mak	mtt	 : right click to unallocated space , press  new and then in that select Extended  Partition in "Create As" option
+2011-01-20T17:47:00.000Z	sidd_mak	mtt	 : got it
+2011-01-20T17:48:00.000Z	sidd_mak	mtt	: http://www.dedoimedo.com/images/computers_new_2/dual-ubuntu-partitioning-gparted-create-extended.jpg
+2011-01-20T17:51:00.000Z	sidd_mak	mtt	 : did u resize sda2
+2011-01-20T17:51:00.000Z	sidd_mak	mtt	 : did u got unallocated space of 64 g
+2011-01-20T17:52:00.000Z	sidd_mak	mtt	 : no no
+2011-01-20T17:53:00.000Z	sidd_mak	mtt	 : if u don't get me then go through this page http://www.dedoimedo.com/computers/dual-boot-windows-7-ubuntu.html
+2011-01-20T18:18:00.000Z	sidd_mak	mtt	: see hp driver n tools can be downloaded from Hp's site
+2011-01-20T18:18:00.000Z	sidd_mak	mtt	: even i m using hp notebook
+2011-01-20T18:21:00.000Z	mtt	sidd_mak	so no problem if i delete this partition? i've already burned my recovery dvds...
+2011-01-20T18:24:00.000Z	sidd_mak	mtt	: ya
+2011-01-20T18:29:00.000Z	sidd_mak	mtt	: ya
+2011-01-20T21:46:00.000Z	sidd_mak	mtt	done with shrinking ??
+2011-01-20T21:49:00.000Z	sidd_mak	mtt	??
+2011-01-20T21:51:00.000Z	mtt	sidd_mak	i think it's impossible to stop these operations without problem, right?
+2011-01-20T21:52:00.000Z	sidd_mak	mtt	: what r u doing right now
+2011-01-20T21:52:00.000Z	sidd_mak	mtt	: installing ubuntu
+2011-01-20T21:52:00.000Z	sidd_mak	mtt	: or backing up files
+2011-01-20T21:54:00.000Z	sidd_mak	mtt	: 388 gb is too big
+2011-01-20T21:55:00.000Z	sidd_mak	mtt	: interruption may corrupt windows
+2011-01-20T21:55:00.000Z	mtt	sidd_mak	ok, i'll have to wait
+2011-01-20T21:57:00.000Z	sidd_mak	mtt	: no
+2011-01-20T22:00:00.000Z	mtt	sidd_mak	how long will it take to complete? consider that after this operation there's another operation called "move sda2 to the right", then there'll be the deletion of the previous partition (hp_tools) then it'll create my extended partition...
+2011-01-20T22:02:00.000Z	sidd_mak	mtt	never done resizing on such a big partition
+2011-01-20T22:04:00.000Z	mtt	sidd_mak	well, ok. let's hope it's not too much, tomorrow i have to get up quite early...
+2011-01-20T22:05:00.000Z	sidd_mak	mtt	: by the way what r u doing ... i mean what u do to live...
+2011-01-20T22:06:00.000Z	mtt	sidd_mak	i'm studying at university, i'm 22. you?
+2011-01-20T22:07:00.000Z	sidd_mak	mtt	: 23 done with engineering

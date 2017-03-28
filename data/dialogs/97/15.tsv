@@ -1,0 +1,97 @@
+2009-07-11T21:24:00.000Z	ggg		is there any other tool to compress file except gzip,bzip2 ?
+2009-07-11T21:24:00.000Z	kevdog	ggg	7zip
+2009-07-11T21:24:00.000Z	kevdog	ggg	What format do you want?
+2009-07-11T21:25:00.000Z	ggg	kevdog	got nothing with man 7zip
+2009-07-11T21:27:00.000Z	kevdog	ggg	the linux command line app is p7zip
+2009-07-11T21:28:00.000Z	ggg	kevdog	man p7zip got nothing
+2009-07-11T21:29:00.000Z	kevdog	ggg	You need to install the program
+2009-07-11T21:33:00.000Z	kevdog	ggg	 Good work :)
+2009-07-11T21:33:00.000Z	ggg	kevdog	unixcruiser but man 7zip and 7zip --help don't work
+2009-07-11T21:33:00.000Z	ggg	kevdog	unixcruiser i think there is nothing like 7zip ,
+2009-07-11T21:36:00.000Z	ggg	kevdog	unixcruiser they are 7z , 7zr ,7za
+2009-07-11T21:36:00.000Z	kevdog	ggg	http://www.linux.com/archive/feature/59888  -- this gives you some background
+2009-07-11T21:38:00.000Z	ggg	kevdog	thanks
+2009-07-11T21:41:00.000Z	kevdog	ggg	dont use pidgin for irc -- well you can -- but its painful.  At the least use chatzilla
+2009-07-11T21:42:00.000Z	kevdog	ggg	 Purple plugin pack!
+2009-07-11T21:42:00.000Z	kevdog	ggg	 There is also a notification plugin from the purple plugin pack website!
+2009-07-11T21:43:00.000Z	ggg	kevdog	what is purple plugin pack ? how can i enable it in pidgin ?
+2009-07-11T21:44:00.000Z	kevdog	ggg	 Let me find the web site -- hold old
+2009-07-11T21:46:00.000Z	kevdog	ggg	http://plugins.guifications.org/trac/wiki/PluginPack
+2009-07-11T21:47:00.000Z	ggg	kevdog	checking this thanks
+2009-07-11T21:48:00.000Z	kevdog	ggg	 Do this at the command line  sudo apt-cache search purple
+2009-07-11T21:48:00.000Z	kevdog	ggg	Does anything come up
+2009-07-11T21:48:00.000Z	ggg	kevdog	sudo apt-get install purple  ??
+2009-07-11T21:49:00.000Z	kevdog	ggg	 sudo apt-cache search purple
+2009-07-11T21:50:00.000Z	ggg	kevdog	i got some list of packages
+2009-07-11T21:50:00.000Z	ggg	kevdog	which should i install ? i am confused
+2009-07-11T21:51:00.000Z	kevdog	ggg	 Your output should be a bunch of packages -- do you see purple plugin pack listed
+2009-07-11T21:52:00.000Z	ggg	kevdog	yes purple plugin is there
+2009-07-11T21:52:00.000Z	ggg	kevdog	so i am running sudo apt-get install purple-plugin
+2009-07-11T21:53:00.000Z	kevdog	ggg	 do you see the specific name of the package??  If you do then its sudo apt-get (or aptitude) install <name of package>
+2009-07-11T21:53:00.000Z	ggg	kevdog	sorry there is nothing like purple
+2009-07-11T21:53:00.000Z	ggg	kevdog	it is pidgin-plugin-pack - 30 useful plugins for pidgin
+2009-07-11T21:54:00.000Z	ggg	kevdog	are you using pidgin ? I think yes
+2009-07-11T21:54:00.000Z	kevdog	ggg	sudo aptitude install pidgin-plugin-pack
+2009-07-11T21:55:00.000Z	ggg	kevdog	are you using pidgin now ?
+2009-07-11T21:55:00.000Z	kevdog	ggg	No!!!
+2009-07-11T21:55:00.000Z	ggg	kevdog	which software ?
+2009-07-11T21:56:00.000Z	kevdog	ggg	Chatzilla right now!
+2009-07-11T21:56:00.000Z	ggg	kevdog	i did this " sudo aptitude install pidgin-plugin-pack "
+2009-07-11T21:57:00.000Z	kevdog	ggg	Ok and what be happenin?
+2009-07-11T21:58:00.000Z	ggg	kevdog	i am restarting pidgin and will let you know later
+2009-07-11T21:59:00.000Z	ggg	kevdog	seems nothing happens
+2009-07-11T21:59:00.000Z	ggg	kevdog	have a reply !
+2009-07-11T21:59:00.000Z	ggg	kevdog	what is finch ?
+2009-07-11T22:00:00.000Z	ggg	kevdog	i'm not getting any notification in pidgin when you reply
+2009-07-11T22:01:00.000Z	kevdog	ggg	Did you activate the plugin?
+2009-07-11T22:01:00.000Z	kevdog	ggg	I think there are checkboxes and stuff
+2009-07-11T22:02:00.000Z	ggg	kevdog	how would i activate it ?
+2009-07-11T22:02:00.000Z	ggg	kevdog	tools >plugin
+2009-07-11T22:02:00.000Z	ggg	kevdog	then which to check ?
+2009-07-11T22:04:00.000Z	kevdog	ggg	 Pidgin guifications is not part of the plugin pack:  http://plugins.guifications.org/trac/wiki/Guifications
+2009-07-11T22:07:00.000Z	kevdog	ggg	is pidgin guifications contained in the repository?
+2009-07-11T22:08:00.000Z	ggg	kevdog	how can i use finch , i typed finch in terminal
+2009-07-11T22:08:00.000Z	kevdog	ggg	Ive never used finch.  If you want CLI chat -- what not irssi?
+2009-07-11T22:08:00.000Z	ggg	kevdog	ok
+2009-07-11T22:09:00.000Z	kevdog	ggg	Nothing is wrong with the GUI pidgin BTW
+2009-07-11T22:09:00.000Z	ggg	kevdog	i'm getting notification in pidgin now
+2009-07-11T22:09:00.000Z	kevdog	ggg	 Ok -- wonder what plugin it was!
+2009-07-11T22:10:00.000Z	ggg	kevdog	i'm not sure exactly, the notification is nothing but a smile icon at the top righe corner
+2009-07-11T22:10:00.000Z	kevdog	ggg	 Look at the pidgin guifications plugin
+2009-07-11T22:10:00.000Z	kevdog	ggg	I gave you the website
+2009-07-11T22:11:00.000Z	ggg	kevdog	i get the notification as a "smile icon" at the top right corner where the pidgin icon is
+2009-07-11T22:12:00.000Z	ggg	kevdog	i get the notification when i open and work in another window or in another program/application
+2009-07-11T22:13:00.000Z	ggg	kevdog	did you mean "sudo aptitude install pidgin-guifications
+2009-07-11T22:14:00.000Z	kevdog	ggg	 Yes try that but then get back to me -- you will need a theme file in addition to the plugin
+2009-07-11T22:15:00.000Z	kevdog	ggg	http://plugins.guifications.org/trac/wiki/Guifications#HowdoIinstallatheme
+2009-07-11T22:16:00.000Z	ggg	kevdog	i install pidgin-guifications
+2009-07-11T22:17:00.000Z	kevdog	ggg	Now you need to install a theme and you'll be good to go!
+2009-07-11T22:18:00.000Z	ggg	kevdog	which theme ?
+2009-07-11T22:18:00.000Z	kevdog	ggg	 The theme tar.gz files are located here: http://sourceforge.net/tracker/?func=browse&group_id=92888&atid=676821   Download one of the files..  Then read the wiki instruction page on how to install the theme
+2009-07-11T22:18:00.000Z	kevdog	ggg	 Whatever them you want!!!
+2009-07-11T22:18:00.000Z	kevdog	ggg	Ubuntu Human?
+2009-07-11T22:19:00.000Z	kevdog	ggg	MSN Messenger?
+2009-07-11T22:19:00.000Z	ggg	kevdog	what do you mean by ubuntu human ?
+2009-07-11T22:19:00.000Z	kevdog	ggg	Pidgin Guification Human Theme?
+2009-07-11T22:19:00.000Z	kevdog	ggg	Go to the website and download one of the theme files!!!
+2009-07-11T22:20:00.000Z	ggg	kevdog	hundreds of theme here http://sourceforge.net/tracker/?limit=100&func=&group_id=92888&atid=676821&assignee=&status=&category=&artgroup=&keyword=&submitter=&artifact_id=&assignee=&status=&category=&artgroup=&submitter=&keyword=&artifact_id=&submit=Filter
+2009-07-11T22:21:00.000Z	ggg	kevdog	cofused which should i install and how to install one ?
+2009-07-11T22:21:00.000Z	ggg	kevdog	how to install a theme ?
+2009-07-11T22:22:00.000Z	kevdog	ggg	what?  I lost connection for a minute
+2009-07-11T22:23:00.000Z	kevdog	ggg	You there -- You drag and drop the theme.tar.gz file
+2009-07-11T22:23:00.000Z	ggg	kevdog	which should i download from http://sourceforge.net/tracker/?limit=100&func=&group_id=92888&atid=676821&assignee=&status=&category=&artgroup=&keyword=&submitter=&artifact_id=&assignee=&status=&category=&artgroup=&submitter=&keyword=&artifact_id=&submit=Filter
+2009-07-11T22:24:00.000Z	kevdog	ggg	Download whatever tar.gz file you want
+2009-07-11T22:25:00.000Z	kevdog	ggg	I think I use Pidgin Guification Human Theme -- I think -- I don't remember
+2009-07-11T22:25:00.000Z	ggg	kevdog	vista light can't download from http://sourceforge.net/tracker/?func=detail&aid=2803627&group_id=92888&atid=676821
+2009-07-11T22:25:00.000Z	kevdog	ggg	Try another theme then
+2009-07-11T22:26:00.000Z	kevdog	ggg	http://sourceforge.net/tracker/download.php?group_id=92888&atid=676821&file_id=263816&aid=1880191
+2009-07-11T22:28:00.000Z	ggg	kevdog	downloaded it now how to install it ?
+2009-07-11T22:29:00.000Z	kevdog	ggg	 Do the first bullet point -- its the easiest.  Bullet Point #2 also works however its a little bit more advanced method
+2009-07-11T22:31:00.000Z	ggg	kevdog	thanks
+2009-07-11T22:31:00.000Z	kevdog	ggg	 Does it work now!
+2009-07-11T22:32:00.000Z	kevdog	ggg	 Results?
+2009-07-11T22:33:00.000Z	ggg	kevdog	yes it works,but the problem is the guification notifies too much, if someone replies me or if someone asks something to everybody the notification pops up
+2009-07-11T22:34:00.000Z	ggg	kevdog	is it possible to restict those notification when someone does not reply me
+2009-07-11T22:35:00.000Z	kevdog	ggg	 I have no idea on that one -- that is why I don't use pidgin with irc.
+2009-07-11T22:36:00.000Z	kevdog	ggg	chatzilla!!
+2009-07-11T22:37:00.000Z	ggg	kevdog	i'm testing the guification configuration ,can you just say some word with me ? just for testing

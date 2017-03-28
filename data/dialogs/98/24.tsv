@@ -1,0 +1,98 @@
+2009-01-04T04:37:00.000Z	pozic		How can I test whether or not the wlan is working? Shouldn't all wireless accesspoints be listed, even if they are secured in some way?
+2009-01-04T04:37:00.000Z	ActionParsnip	pozic	sudo iwlist scan
+2009-01-04T04:38:00.000Z	ActionParsnip	pozic	wil show all APs in range
+2009-01-04T04:38:00.000Z	pozic	ActionParsnip	there is no GUI application? Thanks
+2009-01-04T04:38:00.000Z	ActionParsnip	pozic	its a standard way to test for now, there are gui apps, but use this for now
+2009-01-04T04:41:00.000Z	pozic	ActionParsnip	I get interface does not support scanning.
+2009-01-04T04:41:00.000Z	ActionParsnip	pozic	then its not setup right
+2009-01-04T04:41:00.000Z	pozic	ActionParsnip	I have an ar242x
+2009-01-04T04:42:00.000Z	pozic	ActionParsnip	I didn really set it up yet, nor do I know how I should do it.
+2009-01-04T04:42:00.000Z	pozic	ActionParsnip	whatś the easiest way to enable it?
+2009-01-04T04:44:00.000Z	ActionParsnip	pozic	you need to run lspci and it will show you what it is. You can websearch from there
+2009-01-04T04:45:00.000Z	pozic	ActionParsnip	I already told you which one it is.
+2009-01-04T04:51:00.000Z	pozic	ActionParsnip	according to System -> Administration -> Hardware drivers the Atheros driver is enabled. What else do I need to do?
+2009-01-21T17:09:00.000Z	ActionParsnip	pozic	try typing hello really fast
+2009-07-27T15:22:00.000Z	ActionParsnip	pozic	or any search engine at all
+2009-07-27T15:23:00.000Z	pozic	ActionParsnip	yes, you are right. I do not know a better search engine than google, though.
+2009-07-27T15:23:00.000Z	ActionParsnip	pozic	there is no better, they are all equal
+2009-07-27T15:23:00.000Z	ActionParsnip	pozic	different search algorithms different results
+2009-07-27T15:24:00.000Z	pozic	ActionParsnip	search is a part of information retrieval. For some queries you can measure which one is better.
+2009-07-27T15:24:00.000Z	ActionParsnip	pozic	depends on the search criteria. Ive found ask.com to yield more accurately than google in many cases
+2009-07-27T15:24:00.000Z	pozic	ActionParsnip	but I agree that searching for Britney Spears could return either the official webpage first and then the wikipedia entry or in the other order.
+2009-07-27T15:25:00.000Z	pozic	ActionParsnip	ok, I will test ask.com with some of my test queries.
+2009-07-27T15:25:00.000Z	ActionParsnip	pozic	which is why i say "websearch" rather than "google"
+2009-07-27T15:25:00.000Z	ActionParsnip	pozic	all i'm saying is that there is more than goole
+2009-07-27T15:27:00.000Z	pozic	ActionParsnip	ask.com has a smaller index, but for the queries I entered that did have a result, the result was good enough.
+2009-07-27T15:27:00.000Z	ActionParsnip	pozic	theres also msn.com and yahoo.com too, all are equally good
+2009-07-27T15:28:00.000Z	pozic	ActionParsnip	msn.com is not very good, imho. Yahoo is quite good, indeed, but slightly slower I think.
+2009-07-27T15:28:00.000Z	ActionParsnip	pozic	true, it is slower
+2009-07-27T15:28:00.000Z	ActionParsnip	pozic	true but it isnt the one and only
+2009-07-27T15:29:00.000Z	ActionParsnip	pozic	and sometimes it throws up some real garbage
+2009-09-08T15:45:00.000Z	ActionParsnip	pozic	uninstall gnash + swfdec + adobe flash then close firefox, then reinstall only adobe flash
+2009-09-08T15:45:00.000Z	pozic	ActionParsnip	does this mean it is a known problem?
+2009-09-08T15:46:00.000Z	pozic	ActionParsnip	because I am pretty sure I don't have gnash.
+2009-09-08T15:46:00.000Z	pozic	ActionParsnip	and I also don't have swfdec
+2009-09-08T15:46:00.000Z	ActionParsnip	pozic	no, you just need to remove all flashes then reinstall the single plugin
+2009-09-08T15:47:00.000Z	pozic	ActionParsnip	I only have one plugin installed.
+2009-09-08T15:47:00.000Z	pozic	ActionParsnip	and I reinstalled it a month ago or so already.
+2009-09-08T15:47:00.000Z	ActionParsnip	pozic	then run: dpkg -l | grep flash
+2009-09-08T15:48:00.000Z	ActionParsnip	pozic	sudo apt-get --purge remove flashplugin-installer flashplugin-nonfree; sudo apt-get --purge autoremove
+2009-09-08T15:48:00.000Z	ActionParsnip	pozic	can you also run: dpkg -l | grep gnash; dpkg -l | grep swf
+2009-09-08T15:49:00.000Z	pozic	ActionParsnip	returns nothing
+2009-09-08T15:49:00.000Z	ActionParsnip	pozic	ok thats good
+2009-09-08T15:49:00.000Z	ActionParsnip	pozic	ok now run: sudo apt-get clean; sudo apt-get update; sudo apt-get install flashplugin-nonfree
+2009-09-08T15:52:00.000Z	ActionParsnip	pozic	sudo fdisk -l
+2009-09-08T15:52:00.000Z	ActionParsnip	pozic	is flash better now?
+2009-09-08T15:52:00.000Z	pozic	ActionParsnip	I meant make and model. 2) Didn't check yet.
+2009-09-08T15:53:00.000Z	ActionParsnip	pozic	sudo lshw -C disk | less
+2009-09-08T15:54:00.000Z	pozic	ActionParsnip	hdparm -i /dev/sda
+2009-09-08T15:54:00.000Z	pozic	ActionParsnip	oh, I didn't see your response yet, but this worked at least.
+2009-09-08T15:55:00.000Z	ActionParsnip	pozic	mine shows for all disks, even cd drives ;)
+2009-09-08T16:00:00.000Z	pozic	ActionParsnip	it appears that Flash is working now. Probably they fixed it in the last version?
+2009-09-08T16:01:00.000Z	ActionParsnip	pozic	i'm going with a combo of having the 2 packages install and the fact that flash sucks
+2009-09-08T16:01:00.000Z	pozic	ActionParsnip	I agree that Flash sucks. Corporations want control; Flash gives them the illusion of this control.
+2009-09-08T16:02:00.000Z	ActionParsnip	pozic	thing is it could be a billion times better if it was open
+2009-09-08T16:02:00.000Z	pozic	ActionParsnip	The Flash specification is open.
+2009-09-08T16:02:00.000Z	pozic	ActionParsnip	everything could be better with people cooperating, but that's not how the world is run today.
+2009-09-08T16:03:00.000Z	pozic	ActionParsnip	the existence of Linux is a miracle to begin with.
+2009-09-08T16:03:00.000Z	ActionParsnip	pozic	true, bit offtopic here though ;)
+2011-06-06T22:03:00.000Z	ActionParsnip	pozic	in google type:  java natty     and hit'i'm feeling lucky'
+2011-06-06T22:03:00.000Z	pozic	ActionParsnip	it is a bug, imho, that the software center doesn't find it.
+2011-06-06T22:04:00.000Z	ActionParsnip	pozic	it's in the partner repo
+2011-06-06T22:04:00.000Z	ActionParsnip	pozic	I just use that PPA as it gets updated more frequently
+2011-06-06T22:04:00.000Z	pozic	ActionParsnip	how do I know that is not a trojan?
+2011-06-06T22:05:00.000Z	ActionParsnip	pozic	technically you  don't but 99.999999% of PPAs are fine
+2011-06-06T22:05:00.000Z	pozic	ActionParsnip	I don't need the latest and greatest. What is the latest in the partner repo for 11.04?
+2011-06-06T22:06:00.000Z	ActionParsnip	pozic	not sure, enable the partner repo and see, or just use that ppa. Your call
+2011-06-06T22:06:00.000Z	pozic	ActionParsnip	ok, thanks.
+2011-12-19T13:55:00.000Z	ActionParsnip	pozic	what is the output of:  tail -n 1 /etc/update-manager/release-upgrades
+2011-12-19T13:56:00.000Z	pozic	ActionParsnip	Prompt=normal
+2011-12-19T13:56:00.000Z	ActionParsnip	pozic	ad who is this "you" you are referencing?
+2011-12-19T13:57:00.000Z	pozic	ActionParsnip	'you' = whoever implemented this non working system.
+2011-12-19T13:57:00.000Z	ActionParsnip	pozic	run:   sudo apt-get install update-manager-core; sudo do-release-upgrade
+2011-12-19T13:57:00.000Z	ActionParsnip	pozic	pastebin the result if there are any issues
+2011-12-19T14:01:00.000Z	ActionParsnip	pozic	is it running?
+2011-12-19T14:01:00.000Z	pozic	ActionParsnip	not yet
+2011-12-19T14:01:00.000Z	ActionParsnip	pozic	np
+2011-12-19T14:03:00.000Z	pozic	ActionParsnip	I only don't really get why it bothers me with so many questions.
+2011-12-19T14:03:00.000Z	ActionParsnip	pozic	its if you added any 3rd party sources and such
+2011-12-19T14:03:00.000Z	pozic	ActionParsnip	like 'some sources have been disabled, press ENTER to continue'.
+2011-12-19T14:04:00.000Z	ActionParsnip	pozic	quite normal
+2011-12-19T14:04:00.000Z	pozic	ActionParsnip	and it doesn't work.
+2011-12-19T14:04:00.000Z	ActionParsnip	pozic	can you pastebin the output please
+2011-12-19T14:04:00.000Z	pozic	ActionParsnip	http://paste.debian.net/149589/
+2011-12-19T14:05:00.000Z	ActionParsnip	pozic	ok can you pastebin the output of:   sudo apt-get upate; sudo apt-get upgrade
+2011-12-19T14:07:00.000Z	ActionParsnip	pozic	why do you have the proposed repo enabled?
+2011-12-19T14:07:00.000Z	pozic	ActionParsnip	do you mean the held back packages?
+2011-12-19T14:07:00.000Z	ActionParsnip	pozic	the whole output of the command I gave please
+2011-12-19T14:07:00.000Z	pozic	ActionParsnip	do you want me to run the command too?
+2011-12-19T14:07:00.000Z	pozic	ActionParsnip	it needs to download about 1GB.\
+2011-12-19T14:08:00.000Z	ActionParsnip	pozic	those are the updates, it may square off the system and make things better
+2011-12-19T14:09:00.000Z	ActionParsnip	pozic	you can create an Oneiric install media, part of the CD is to upgrade an established install
+2011-12-19T14:10:00.000Z	pozic	ActionParsnip	http://paste.debian.net/149592/
+2011-12-19T14:11:00.000Z	ActionParsnip	pozic	wow, you have a lot of packages, have you ever upgraded the install?
+2011-12-19T14:12:00.000Z	pozic	ActionParsnip	I have +-4500 packages installed.
+2011-12-19T14:12:00.000Z	pozic	ActionParsnip	yes, I have.
+2011-12-19T14:12:00.000Z	pozic	ActionParsnip	although, why would I want to update every single day>
+2011-12-19T14:12:00.000Z	pozic	ActionParsnip	I have better things to do.
+2011-12-19T14:13:00.000Z	pozic	ActionParsnip	also, all this system administration is not what I want to do.

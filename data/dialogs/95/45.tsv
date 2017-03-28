@@ -1,0 +1,95 @@
+2008-07-05T20:56:00.000Z	amenado		munk_-> has it ever work? ie you can connect and ping www.yahoo.com?
+2008-07-05T20:56:00.000Z	munk_	amenado	it works i can connect im on it right now but if i have no activity for 10 seconds or so it dies and nothing loads until i reconnect...
+2008-07-05T20:58:00.000Z	amenado		munk_-> hmmm....how do you determine that it is not connected?  do you have a session to a remote site that is kept alive?
+2008-07-05T20:58:00.000Z	amenado		sidewalk-> state the problem clearly
+2008-07-05T20:58:00.000Z	munk_	amenado	it shows that it is connected but it just wont load anything...
+2008-07-05T20:59:00.000Z	amenado		munk_-> when it is not loading, can you check this  ip a   and see if you still have an ip address, also check your route -n  if your gateway is still there?
+2008-07-05T21:00:00.000Z	munk_	amenado	how do i check that(the gateway for ip check i just do ifconfig right?
+2008-07-05T21:08:00.000Z	amenado		munk_-> route -n to check your gateway
+2008-07-05T21:11:00.000Z	munk_	amenado	ROUTE -N GIVES ME 192.168.2.1
+2008-07-05T21:11:00.000Z	amenado		munk_-> thats is your gateway?
+2008-07-05T21:11:00.000Z	munk_		yes
+2008-07-05T21:12:00.000Z	munk_	amenado	yes
+2008-07-05T21:12:00.000Z	amenado		munk_-> okay, are you still getting disconnected?
+2008-07-05T21:12:00.000Z	munk_		yes i just did thats why i wasnt saying anything for 1 min or so...
+2008-07-05T21:13:00.000Z	amenado		Roey-> before you su to the new user, try  xhost +localhost
+2008-07-05T21:14:00.000Z	munk_	amenado	it happened again sorry i missed everything you said after you askd if im stillgetting disconnected
+2008-07-05T21:15:00.000Z	amenado		munk_-> and you are using which client for chatting?  curious if your app has a keep alive settings
+2008-07-05T21:15:00.000Z	munk_	amenado	xchat
+2008-07-05T21:15:00.000Z	amenado		munk_-> you are connected wireless? i forgot what your set up is
+2008-07-05T21:15:00.000Z	munk_	amenado	yes it is wireless
+2008-07-05T21:16:00.000Z	amenado		munk_->  and you own the AP that connects you to the internet?
+2008-07-05T21:16:00.000Z	munk_	amenado	yes
+2008-07-05T21:18:00.000Z	amenado		munk thats pretty odd,, anyhow can you try and paste in pastebin the results of   iwconfig, ifconfig, and route -n when you are connected and when disconnected? to compare if there is something amiss ?
+2008-07-05T21:18:00.000Z	munk_		dead?
+2008-07-05T21:18:00.000Z	munk_		died again
+2008-07-05T21:18:00.000Z	amenado		munk thats pretty odd,, anyhow can you try and paste in pastebin the results of   iwconfig, ifconfig, and route -n when you are connected and when disconnected? to compare if there is something amiss ?
+2008-07-05T21:19:00.000Z	munk_	amenado	any ideea? it seems like it doesnt stay synchronized with the connection but im too much of a newb to know exactly
+2008-07-05T21:19:00.000Z	munk_	amenado	ill try
+2008-07-05T21:19:00.000Z	amenado		munk_-> i dont know your setup, perhaps you can elaborate, what devices, brand, what chips does your wifi nic card is?
+2008-07-05T21:20:00.000Z	amenado		munk_-> furthermore, type  sudo iwpriv and lets see what parameter you may be able to set or modify
+2008-07-05T21:21:00.000Z	munk_	amenado	ill pastebin what that gives me
+2008-07-05T21:22:00.000Z	munk_	amenado	this is what i get http://pastebin.com/m32f6f3c
+2008-07-05T21:22:00.000Z	amenado		pr3d4t0r-> not sure, could the repository for edgy may have been removed?
+2008-07-05T21:22:00.000Z	munk_		how do i see my chipset? wireless?
+2008-07-05T21:23:00.000Z	amenado		pr3d4t0r-> just to check i did a  w3m http://us.archive.ubuntu.com/ubuntu/dists/edgy/main/source/Sources.gz  and i was getting a url not found on the server
+2008-07-05T21:23:00.000Z	amenado		munk_-> sudo lspci -C network
+2008-07-05T21:23:00.000Z	munk_		thanks
+2008-07-05T21:24:00.000Z	munk_	amenado	i have a 945gm intel chipset and im connecting through a smc barricade wireless router...
+2008-07-05T21:25:00.000Z	amenado		munk_-> your wifi driver doesnt seem have much parameters you can set or unset..just two lines eh?
+2008-07-05T21:26:00.000Z	amenado		sidewalk-> you can not see a network interface?  or you can not ping?  you can not ping inside virtualbox guest, but you can use http
+2008-07-05T21:26:00.000Z	munk_		sorry i got disconnected again
+2008-07-05T21:26:00.000Z	munk_	amenado	yeah i know...
+2008-07-05T21:27:00.000Z	amenado		munk_-> you didnt paste those info i requested..
+2008-07-05T21:27:00.000Z	amenado		munk thats pretty odd,, anyhow can you try and paste in pastebin the results of   iwconfig, ifconfig, and route -n when you are connected and when disconnected? to compare if there is something amiss ?
+2008-07-05T21:27:00.000Z	munk_	amenado	iwconfig and if config?
+2008-07-05T21:28:00.000Z	amenado		munk_-> no spaces on ifconfig
+2008-07-05T21:28:00.000Z	munk_	amenado	i will as soon as it disconnects again, and yeah i know sorry for the typo
+2008-07-05T21:29:00.000Z	amenado		Bill_MI-> can you not cut and paste the url?
+2008-07-05T21:30:00.000Z	munk_	amenado	i can paste bin the ifconfig iwconfig and route -n when everything works and wait until it doesnt to get the other ones..
+2008-07-05T21:31:00.000Z	amenado		Bill_MI-> i dont know, i can quickly highlight and then just paste..not even cut..i think by default it copies the highlighted url
+2008-07-05T21:32:00.000Z	amenado		munk_-> also can you add to that paste, your   sudo lshw -C network  results
+2008-07-05T21:33:00.000Z	munk_	amenado	yes i can and im working on it..
+2008-07-05T21:34:00.000Z	amenado		JuJuBee-> if you do  a  iwconfig wlan0  does it show you are associated with your AP at home?
+2008-07-05T21:35:00.000Z	amenado		JuJuBee-> try  sudo  iwconfig wlan0 essid youressidhere
+2008-07-05T21:35:00.000Z	amenado		JuJuBee-> then do a sudo dhclient wlan0
+2008-07-05T21:36:00.000Z	amenado		Linuxkeitaro-> can you try  ctrl+alt+F1 to f6 and see if you can log on?
+2008-07-05T21:36:00.000Z	amenado		JuJuBee-> i would try no encryption first to see if it works, then enable the wep after verification
+2008-07-05T21:36:00.000Z	munk_	amenado	this is what i have when its all working http://pastebin.com/m38ff6611
+2008-07-05T21:37:00.000Z	amenado		Bill_MI-> not totally useless.. you can look at the properties of those links yes?
+2008-07-05T21:37:00.000Z	amenado		Linuxkeitaro-> it freezes when you try ctrl+alt+f1  ?
+2008-07-05T21:38:00.000Z	amenado		Linuxkeitaro->a new install you say?
+2008-07-05T21:39:00.000Z	amenado		JuJuBee-> check if you are associated first before issuing the dhclient wlan0
+2008-07-05T21:40:00.000Z	munk_	amenado	it doesnt do it now so i can take those numbers down...:(
+2008-07-05T21:40:00.000Z	amenado		munk_-> steadier connections? thats good neww
+2008-07-05T21:41:00.000Z	amenado		daYZman-w-> its sudo  iwlist wlan0 scan
+2008-07-05T21:41:00.000Z	munk_	amenado	no not really cuz that means i cant troubleshoot to see what the problem is when it doesnt work:( i prefer it to not work and fix it rather than having it work now and in 5 minutes pissing me off
+2008-07-05T21:42:00.000Z	amenado		munk_-> well just hang around, perhaps the sun spot that was affecting your signal is in more favorable position now :P
+2008-07-05T21:42:00.000Z	munk_	amenado	dmesg gives me something abotu my wireless im just not sure how to interpret it..
+2008-07-05T21:42:00.000Z	munk_	amenado	all the time im sitting in the same room with my router..
+2008-07-05T21:43:00.000Z	amenado		munk_-> try to paste it in pastebin, will give it a shot
+2008-07-05T21:43:00.000Z	amenado		Bill_MI-> not sure, i was merely giving you a different suggestion to get around it, not really getting rid of the bug.
+2008-07-05T21:45:00.000Z	munk_	amenado	this is the last page of my dmesg which is extremely long: http://pastebin.com/m5c4c3ea0
+2008-07-05T21:45:00.000Z	amenado		Bill_MI-> probably they do..
+2008-07-05T21:46:00.000Z	amenado		daYZman-w-> its sudo  iwlist wlan0 scan  <-- i used wlan0, replaced it with your correct interface name maybe eth0? ath0? eth1 ?
+2008-07-05T21:47:00.000Z	amenado		munk_-> from your paste line 5 iwl3945: Microcode SW error detected.  Restarting 0x82000008.  <-- seems like iwl3945 driver is faulty with your nic card
+2008-07-05T21:48:00.000Z	amenado		daYZman-w-> try  sudo iwconfig  and it should list which wireless interfaces you have
+2008-07-05T21:48:00.000Z	munk_	amenado	and what can i do?
+2008-07-05T21:49:00.000Z	amenado		munk_-> look around for a good driver, google for it, iwl3945   see what others have as problem and solutions
+2008-07-05T21:49:00.000Z	munk_	amenado	yeah im doing that now and im trying to find a solution, at least now i know where the problem is...thanks
+2008-07-05T21:50:00.000Z	amenado		daYZman-w-> then you dont have your wireless activated, get a working driver for it..if it is bcm43xx type of chips, i cant help you on that, i lost far too many hair troubleshooting that
+2008-07-05T21:50:00.000Z	amenado		munk_-> you're welcome, i wish i could be more of help..
+2008-07-05T21:51:00.000Z	amenado		LSD|Ninja-> perhaps you can assist munk_ he's having difficulty with it
+2008-07-05T21:52:00.000Z	amenado		daYZman-w-> good luck, there are some here that are able to make that bcm43xx work though
+2008-07-05T21:53:00.000Z	amenado		LSD|Ninja-> oh well, i did direct munk to look aroung google for solutions...
+2008-07-05T21:54:00.000Z	amenado		tim_-> open up your  /etc/apt/sources.list and remove the duplicates?
+2008-07-05T21:55:00.000Z	amenado		tim_-> yeah, do not mix the repository sources..just pick one that matchers yours
+2008-07-05T21:56:00.000Z	amenado		Beererde-> remove the write perms for other than root?
+2008-07-05T21:59:00.000Z	amenado		tc111-> thats a risk with encryption, you have to make sure you have a backup before doing any upgrades or else..you'd get a deadweight..
+2008-07-05T22:01:00.000Z	amenado		JuJuBee-> add to the paste the result of   sudo lshw -C network   to see if driver is okay..
+2008-07-05T22:02:00.000Z	amenado		tc111-> well , you have to go back to the old kernel(s) and recover,  and then troubleshoot why the upgrades causes the inability to decrypt
+2008-07-05T22:05:00.000Z	amenado		JuJuBee-> that looks okay, now compare what you have in /lib/firmware/  and /lib/modules/`uname -r`/kernel/wireless  to see if they are the same drivers.
+2008-07-05T22:06:00.000Z	amenado	ikonia	i suspect the drivers is causing it not to associate..thats why i asked if he can compare..
+2008-07-05T22:07:00.000Z	amenado		JuJuBee-> maybe it is /lib/modules/`uname -r`/ubuntu  or some kind of variations to hold your ipw220 driver
+2008-07-05T22:08:00.000Z	amenado	ikonia	ah okay..didnt know that
+2008-07-05T22:09:00.000Z	munk_	amenado	its been working now...i dunno i hope it keeps it up...thanks again

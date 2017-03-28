@@ -1,0 +1,95 @@
+2011-04-08T13:45:00.000Z	opticx		well before i got phpmyadmin running but couldnt get in because i didnt set a passwork
+2011-04-08T13:45:00.000Z	opticx		password*
+2011-04-08T13:45:00.000Z	opticx		this time i get a 404
+2011-04-08T13:46:00.000Z	opticx		no its not running
+2011-04-08T13:46:00.000Z	opticx		php is working
+2011-04-08T13:46:00.000Z	opticx		everything is installed
+2011-04-08T13:47:00.000Z	opticx		i get error 1045 access denied when i try to start it using sudo
+2011-04-08T13:48:00.000Z	opticx		can you point me to a guide that is best? there are a ton of them that are all different
+2011-04-08T13:48:00.000Z	opticx		im a wordpress developer
+2011-04-08T13:48:00.000Z	opticx		all i need is php5 and mysql
+2011-04-08T13:48:00.000Z	ikonia	opticx	are you familier with mysql ?
+2011-04-08T13:48:00.000Z	ikonia	opticx	ok - so what's the problem ?
+2011-04-08T13:49:00.000Z	ikonia	opticx	just type it
+2011-04-08T13:49:00.000Z	ikonia	opticx	what is the EXACT command you are using
+2011-04-08T13:50:00.000Z	ikonia	opticx	ok, how did you install mysql ?
+2011-04-08T13:51:00.000Z	ikonia	opticx	ok, bit of an old guide, but not to worry
+2011-04-08T13:51:00.000Z	ikonia	opticx	please run the following commmands
+2011-04-08T13:52:00.000Z	ikonia	opticx	ok, please pastebin the output of "ps -ef | grep mysql"
+2011-04-08T13:52:00.000Z	ikonia	opticx	run the commands I'm telling you to run please.
+2011-04-08T13:55:00.000Z	ikonia	opticx	mysql is running
+2011-04-08T13:56:00.000Z	ikonia	opticx	no it's not
+2011-04-08T13:56:00.000Z	ikonia	opticx	you have a problem with mysql
+2011-04-08T13:56:00.000Z	ikonia	opticx	can I suggest you reboot your box so we get a clean state of where we are
+2011-04-08T13:56:00.000Z	ikonia	opticx	is that possible ?
+2011-04-08T13:57:00.000Z	ikonia	opticx	I don't know, hence why I'm asking you to reboot, then we can see what the real status of your install is
+2011-04-08T14:01:00.000Z	ikonia	opticx	ok, please patebin the output of "ps -ef | grep mysql" again
+2011-04-08T14:04:00.000Z	ikonia	opticx	ok, so we know the system started mysql fine
+2011-04-08T14:04:00.000Z	ikonia	opticx	can you please show me the output of "id" from your current user
+2011-04-08T14:06:00.000Z	ikonia	opticx	nothing secret
+2011-04-08T14:08:00.000Z	ikonia	opticx	any chance you can give me the information I'm asking for
+2011-04-08T14:08:00.000Z	ikonia	opticx	ah, I see it
+2011-04-08T14:09:00.000Z	ikonia	opticx	so now from the command line do "sudo mysql stop" what does it say exactly
+2011-04-08T14:10:00.000Z	ikonia	opticx	ok, how did you set the root password on your mysql database ?
+2011-04-08T14:10:00.000Z	ikonia	opticx	how can you set the root password for your mysql database before you install it
+2011-04-08T14:11:00.000Z	ikonia	opticx	ok, this sounds a total mes
+2011-04-08T14:11:00.000Z	ikonia	opticx	remove the data files,and purge mysql, and lets re-apply them
+2011-04-08T14:12:00.000Z	ikonia	opticx	well, no
+2011-04-08T14:12:00.000Z	ikonia	opticx	as you've re-installed 4 times and not done it cleanly
+2011-04-08T14:12:00.000Z	ikonia	opticx	I appreciate that
+2011-04-08T14:12:00.000Z	ikonia	opticx	ok, lets step back
+2011-04-08T14:12:00.000Z	ikonia	opticx	where is your data files kept ?
+2011-04-08T14:13:00.000Z	ikonia	opticx	they are not
+2011-04-08T14:13:00.000Z	ikonia	opticx	can you pastebin your my.cnf for me please
+2011-04-08T14:14:00.000Z	ikonia	opticx	get the info I asked for
+2011-04-08T14:17:00.000Z	ikonia	opticx	please pastebin the file
+2011-04-08T14:20:00.000Z	ikonia	opticx	can you please do "ls -la /var/run/mysqld/mysqld.sock"
+2011-04-08T14:22:00.000Z	ikonia	opticx	what did it say ?
+2011-04-08T14:22:00.000Z	ikonia	opticx	that's good
+2011-04-08T14:22:00.000Z	ikonia	opticx	ok, now it's going to get a little messy, but have faith
+2011-04-08T14:23:00.000Z	ikonia	opticx	don't worry, we'll come back to that
+2011-04-08T14:24:00.000Z	ikonia	opticx	"sudo apt-get remove --purge mysql-server"
+2011-04-08T14:35:00.000Z	ikonia	opticx	sorry, had to step away for a minute
+2011-04-08T14:35:00.000Z	ikonia	opticx	give me 2 minutes I'll be back with you
+2011-04-08T14:41:00.000Z	ikonia	opticx	apologies back now
+2011-04-08T14:41:00.000Z	ikonia	opticx	have you purged and removed mysql-server as instructed
+2011-04-08T14:42:00.000Z	ikonia	opticx	now please do "sudo apt-get clean"
+2011-04-08T14:42:00.000Z	ikonia	opticx	have a look if your my.cnf file still exists
+2011-04-08T14:43:00.000Z	ikonia	opticx	locked ?
+2011-04-08T14:44:00.000Z	ikonia	opticx	please remove it
+2011-04-08T14:47:00.000Z	ikonia	opticx	ok, now check out /var/lib/mysql is there anything in that
+2011-04-08T14:52:00.000Z	ikonia	opticx	remove them
+2011-04-08T14:55:00.000Z	ikonia	opticx	ok, so "sudo apt-get install mysql-server"
+2011-04-08T14:55:00.000Z	ikonia	opticx	root terminal ?
+2011-04-08T14:55:00.000Z	ikonia	opticx	what are you talking about, you shouldn't be root
+2011-04-08T14:56:00.000Z	ikonia	opticx	then what is the root terminal
+2011-04-08T14:56:00.000Z	ikonia	opticx	what are you talkiong about
+2011-04-08T14:56:00.000Z	ikonia	opticx	as your current user, issue the command I gave you
+2011-04-08T14:56:00.000Z	ikonia	opticx	use sudo
+2011-04-08T14:57:00.000Z	ikonia	opticx	half the problems will be you trying to get around things like sudo, use the correct tools,
+2011-04-08T14:58:00.000Z	ikonia	opticx	that menu item should not exist
+2011-04-08T14:58:00.000Z	ikonia	opticx	there is no ubuntu install that creates a root terminal menu item
+2011-04-08T14:59:00.000Z	ikonia	opticx	then you are possibly not using an offiical ubuntu release
+2011-04-08T15:00:00.000Z	ikonia	opticx	why are you using an audio studio distro for web development ?
+2011-04-08T15:01:00.000Z	ikonia	opticx	"sudo apt-get install mysql-server"
+2011-04-08T15:01:00.000Z	ikonia	opticx	clearly not just addons if there is an item called "root shell"
+2011-04-08T15:01:00.000Z	ikonia	opticx	ok, "sudo service mysql start"
+2011-04-08T15:02:00.000Z	ikonia	opticx	mysql -u root -p
+2011-04-08T15:08:00.000Z	ikonia	opticx	did you do the command I told you to do
+2011-04-08T15:08:00.000Z	ikonia	opticx	what happened
+2011-04-08T15:08:00.000Z	ikonia	opticx	are you at a mysql command prompt ?
+2011-04-08T15:08:00.000Z	ikonia	opticx	you are not using oracle
+2011-04-08T15:08:00.000Z	ikonia	opticx	what ?
+2011-04-08T15:08:00.000Z	ikonia	opticx	are you at the mysql command prompt
+2011-04-08T15:08:00.000Z	ikonia	opticx	so if you do "show databases
+2011-04-08T15:09:00.000Z	ikonia	opticx	so if you do "show databases;"
+2011-04-08T15:09:00.000Z	ikonia	opticx	I thought you said you knew mysql ?
+2011-04-08T15:10:00.000Z	ikonia	opticx	showing a database is basic
+2011-04-08T15:10:00.000Z	ikonia	opticx	did it work
+2011-04-08T15:10:00.000Z	ikonia	opticx	ok, so you now have a working mysql database based on the ubuntu packages
+2011-04-08T15:11:00.000Z	ikonia	opticx	that's a different issue,
+2011-04-08T15:12:00.000Z	ikonia	opticx	I advise you to join #mysql and learn the basics of managing a basic database
+2011-04-08T15:12:00.000Z	ikonia	opticx	I'm not interested in doing that, sorry
+2011-04-08T15:28:00.000Z	opticx	ikonia	I have phpmyadmin running now, thank you for all your valuable time and knowledge
+2011-04-08T15:29:00.000Z	ikonia	opticx	I have two
+2011-04-08T15:30:00.000Z	ikonia	opticx	ahh, don't worry, just pleased your working

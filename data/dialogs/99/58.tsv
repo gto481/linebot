@@ -1,0 +1,99 @@
+2006-11-28T16:11:00.000Z	rasman		<odat>, are the drivers not available under Ubuntu?
+2006-11-28T16:13:00.000Z	rasman		<odat>, There is an easy way to use apt-src to install from Ubuntu sources.  'sudo apt-get install apt-src'
+2006-11-28T16:13:00.000Z	odat	rasman	yea?  cuz i installed what said was a sources file of 3dfx drivers
+2006-11-28T16:14:00.000Z	odat	rasman	ubuntu sources?
+2006-11-28T16:14:00.000Z	odat	rasman	should i uninstall the regular package first
+2006-11-28T16:18:00.000Z	odat	rasman	ok
+2006-11-28T16:18:00.000Z	odat	rasman	the source code for everything?
+2006-11-28T16:20:00.000Z	odat	rasman	still there?
+2006-11-28T16:20:00.000Z	odat	rasman	i know but it doesn't work correctly
+2006-11-28T16:21:00.000Z	rasman	odat	apt-src install xserver-xorg-video-tdfx will download all the packages you need
+2006-11-28T16:21:00.000Z	rasman	odat	I created a new directory called test 'mkdir test'
+2006-11-28T16:21:00.000Z	rasman	odat	then the apt-src command listed above.
+2006-11-28T16:22:00.000Z	rasman	odat	after all the packages download I have the source code seperated in original and patched files
+2006-11-28T16:22:00.000Z	rasman	odat	cd to the new folder and ignore the other files
+2006-11-28T16:23:00.000Z	rasman	odat	apply your modifications/ patch and then run './debian/rules'
+2006-11-28T16:24:00.000Z	odat	rasman	i'm in the new folder but now i'm lost
+2006-11-28T16:25:00.000Z	rasman	odat	what's the link to the forum article?
+2006-11-28T16:25:00.000Z	odat	rasman	http://www.ubuntuforums.org/showthread.php?t=292580&page=2
+2006-11-28T16:26:00.000Z	rasman	odat	this is where I slow down
+2006-11-28T16:27:00.000Z	odat	rasman	?
+2006-11-28T16:27:00.000Z	rasman	odat	There is a quick way to use the patch command to take the output of the patch and apply it automatically to the source files
+2006-11-28T16:27:00.000Z	rasman	odat	I don't know that.
+2006-11-28T16:28:00.000Z	rasman	odat	instead, just modify the src/tdfx_priv.c file
+2006-11-28T16:29:00.000Z	odat	rasman	well if you look at what is said about that patch it says it has already been included since june
+2006-11-28T16:29:00.000Z	odat	rasman	so my guess is it was the build from source that fixed it
+2006-11-28T16:30:00.000Z	rasman	odat	and add the couple of lines
+2006-11-28T16:30:00.000Z	odat	rasman	how do you mean?
+2006-11-28T16:31:00.000Z	rasman	odat	probably upstream it obviously doesn't have it or the file would show the lines
+2006-11-28T16:31:00.000Z	odat	rasman	so what is my next step?
+2006-11-28T16:31:00.000Z	rasman	odat	I ran 'vi src/tdfx_priv.c' and added the 2 lines from the email
+2006-11-28T16:32:00.000Z	odat	rasman	eeee i'm not good in vi at all
+2006-11-28T16:32:00.000Z	odat	rasman	can i use something else
+2006-11-28T16:32:00.000Z	rasman	odat	the only lines that need to be added start with the + sign.  the rest is for placement
+2006-11-28T16:32:00.000Z	rasman	odat	no problem but someday you will like vi/ vim  It took me 3 years :)
+2006-11-28T16:33:00.000Z	odat	rasman	i must not have that file or i must not be in the right directory because there is nothing in that file
+2006-11-28T16:33:00.000Z	rasman	odat	have you tried nano or gedit?
+2006-11-28T16:34:00.000Z	rasman	odat	you are in the xserver-xorg-video-tdfx-1.2.1/ directory, right?
+2006-11-28T16:35:00.000Z	odat	rasman	where is that located?
+2006-11-28T16:35:00.000Z	odat	rasman	nevermind i got it
+2006-11-28T16:35:00.000Z	rasman	odat	good
+2006-11-28T16:35:00.000Z	rasman	odat	inside of that directory you will find the src directory and then the file we want
+2006-11-28T16:35:00.000Z	odat	rasman	ok what do i add
+2006-11-28T16:36:00.000Z	rasman	odat	everything can be done as a regular user, cool huh?
+2006-11-28T16:36:00.000Z	odat	rasman	yup
+2006-11-28T16:36:00.000Z	odat	rasman	what lines am i adding and where
+2006-11-28T16:37:00.000Z	rasman	odat	run gedit src/tdfx_priv.c
+2006-11-28T16:37:00.000Z	rasman	odat	do you see the last 2 #include lines at the beginning?
+2006-11-28T16:37:00.000Z	odat	rasman	yes
+2006-11-28T16:38:00.000Z	rasman	odat	add a new line and those lines with + signs
+2006-11-28T16:39:00.000Z	odat	rasman	what lines with the +signs?
+2006-11-28T16:39:00.000Z	rasman	odat	+extern void xf86getsecs(long *, long *);
+2006-11-28T16:39:00.000Z	rasman	odat	and +#define getsecs(a, b)           xf86getsecs(a, b)
+2006-11-28T16:40:00.000Z	odat	rasman	ok  no # in front of them    right?
+2006-11-28T16:40:00.000Z	rasman	odat	yep
+2006-11-28T16:40:00.000Z	rasman	odat	yes
+2006-11-28T16:41:00.000Z	odat	rasman	done
+2006-11-28T16:41:00.000Z	odat	rasman	now what are we doing?
+2006-11-28T16:42:00.000Z	rasman	odat	then go to the main directory for the source code and run debbuild -- if you don't have it you need to install devscripts
+2006-11-28T16:43:00.000Z	odat	rasman	i believe i do have it but i have no idea what commands to run
+2006-11-28T16:43:00.000Z	rasman	odat	I ran 'debbuild' from the source code root directory and saw a bunch of output
+2006-11-28T16:44:00.000Z	rasman	odat	mine failed because I didn't have someone else's gpg key
+2006-11-28T16:45:00.000Z	odat	rasman	i get command not found
+2006-11-28T16:46:00.000Z	rasman	odat	okay I was able to build the package.
+2006-11-28T16:46:00.000Z	rasman	odat	forget about debbuild -- you need to run 'fakeroot ./debian/rules install'
+2006-11-28T16:47:00.000Z	odat	rasman	so what do you want me to do?
+2006-11-28T16:47:00.000Z	rasman	odat	did you finish the fakeroot command above?
+2006-11-28T16:48:00.000Z	odat	rasman	no hold on
+2006-11-28T16:48:00.000Z	rasman	odat	fakeroot allows you to create the package as a normal user.  running the command as root is unecessary and dangerous
+2006-11-28T16:49:00.000Z	odat	rasman	won't let me do it
+2006-11-28T16:50:00.000Z	rasman	odat	fakeroot may be not installed or you may have to run ./configure from the root directory.  I wasn't sure if that was necessary
+2006-11-28T16:51:00.000Z	odat	rasman	could not open fakeroot
+2006-11-28T16:51:00.000Z	rasman	odat	'sudo aptitude install fakeroot'
+2006-11-28T16:52:00.000Z	rasman	odat	did you see a bug report on this issue?
+2006-11-28T16:52:00.000Z	odat	rasman	i have fake root installed
+2006-11-28T16:52:00.000Z	odat	rasman	i just did the configure everything went fine
+2006-11-28T16:52:00.000Z	odat	rasman	now what am i doing?
+2006-11-28T16:53:00.000Z	rasman	odat	now run the fakeroot command 'fakeroot ./debian/rules install' from the source code root directory
+2006-11-28T16:53:00.000Z	rasman	odat	you are almost there
+2006-11-28T16:54:00.000Z	odat	rasman	the terminal is stuck right here
+2006-11-28T16:54:00.000Z	odat	rasman	rm: cannot remove `fakeroot*.diff.gz': No such file or directory
+2006-11-28T16:55:00.000Z	odat	rasman	nevermind there is goes
+2006-11-28T16:55:00.000Z	rasman	odat	I have a deb package that I want to post somewhere
+2006-11-28T16:55:00.000Z	odat	rasman	why didn't you just send me the deb package?
+2006-11-28T16:56:00.000Z	rasman	odat	I just created it 5 minutes ago and I didn't know how
+2006-11-28T16:59:00.000Z	odat	rasman	so this will create a deb file then?
+2006-11-28T16:59:00.000Z	rasman	odat	in the directory above your own ../
+2006-11-28T17:00:00.000Z	odat	rasman	what do you mean?
+2006-11-28T17:00:00.000Z	rasman	odat	you can now run 'sudo dpkg -i ../xserver-xorg-video-tdfx_1.2.1-0ubuntu1_i386.deb
+2006-11-29T17:01:00.000Z	rasman	odat	did that work?
+2006-11-29T17:02:00.000Z	odat	rasman	i can't find the deb file
+2006-11-29T17:02:00.000Z	rasman	odat	I've got mine here but I don't know where to post it.
+2006-11-29T17:03:00.000Z	rasman	odat	the deb is located in the directory above the source code root
+2006-11-29T17:04:00.000Z	rasman	odat	I am trying to send you a file but I have never done this before.
+2006-11-29T17:04:00.000Z	odat	rasman	can you send it email?
+2006-11-29T17:05:00.000Z	rasman	odat	sure, I think these irc chats are logged so obviscate your email address
+2006-11-29T17:05:00.000Z	odat	rasman	mrwislr (at) gmail (dot) com
+2006-11-29T17:10:00.000Z	odat	rasman	give me a couple minutes to try the new driver
+2006-11-29T17:19:00.000Z	odat	rasman	 ?
+2006-11-29T17:23:00.000Z	odat	rasman	 you here?

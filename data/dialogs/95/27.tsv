@@ -1,0 +1,95 @@
+2009-07-23T22:12:00.000Z	diddy	grawity	Thx
+2009-07-10T18:55:00.000Z	grawity	diddy	I think it's Xorg
+2009-07-10T18:55:00.000Z	grawity	diddy	it has xorg.conf, so it uses Xorg :)
+2009-07-10T19:15:00.000Z	grawity	diddy	Ubuntu uses Upstart, which doesn't really care about runlevels that much.
+2009-07-10T19:16:00.000Z	grawity	diddy	"Usually" was on SysV init, which Ubuntu does not use, AFAIK.
+2009-07-10T19:17:00.000Z	grawity	diddy	http://en.wikipedia.org/wiki/Runlevel#Debian_Linux might be helpful. BVy default, they are all the same.
+2009-07-10T19:17:00.000Z	grawity	diddy	All distros are different ...
+2009-07-19T21:42:00.000Z	grawity	diddy	It's in gconf, /desktop/gnome/session/required_components
+2009-07-19T21:42:00.000Z	diddy	grawity	Thx but it can not be done in the Gnome GUI?
+2009-07-19T21:42:00.000Z	grawity	diddy	Install gconf-editor.
+2009-07-19T21:44:00.000Z	diddy	grawity	Thx.
+2009-07-23T21:27:00.000Z	grawity	diddy	What standard?
+2009-07-23T21:31:00.000Z	grawity	diddy	inputrc is for readline, not bash
+2009-07-23T21:31:00.000Z	grawity	diddy	history is not a config file
+2009-07-23T21:35:00.000Z	grawity	diddy	This is set by gdm, when it starts GNOME after login.
+2009-07-23T21:36:00.000Z	diddy	grawity	yes but isn't it stored anywhere in a file?
+2009-07-23T21:36:00.000Z	grawity	diddy	No.
+2009-07-23T21:37:00.000Z	diddy	grawity	where you you personally store shell vars?
+2009-07-23T21:37:00.000Z	diddy	grawity	permanent ones.
+2009-07-23T21:37:00.000Z	grawity	diddy	mostly ~/.bashrc, but some (like $TZ) in ~/.profile
+2009-07-23T21:39:00.000Z	diddy	grawity	you are on Ubuntu?
+2009-07-23T21:39:00.000Z	grawity	diddy	At the moment, yes.
+2009-07-23T21:39:00.000Z	diddy	grawity	at other moments where? :)
+2009-07-23T21:40:00.000Z	grawity	diddy	Sometimes - Windows XP, when I get bored.
+2009-07-23T21:40:00.000Z	diddy	grawity	brrr
+2009-07-23T21:41:00.000Z	grawity	diddy	WinXP is ugly, yes - but this laptop is too slow for Win7.
+2009-07-23T21:41:00.000Z	diddy	grawity	so why it the .bash_profile then used for if I can put anything into the .bashrc ?
+2009-07-23T21:42:00.000Z	grawity	diddy	.bash_login/.bash_profile/.profile (in that order) are sourced when bash is started as a login shell (when you login from SSH, or on a virtual console).
+2009-07-23T21:42:00.000Z	grawity	diddy	.bashrc is for non-login shells (such as Terminal or xterm).
+2009-07-23T21:42:00.000Z	grawity	diddy	But .bashrc is often sourced from .bash_profile too.
+2009-07-23T21:44:00.000Z	diddy	grawity	how about a login via gdm. What is shell config script is executed there first?
+2009-07-23T21:45:00.000Z	grawity	diddy	Well, gdm doesn't start a shell at all... (it still seems to source .bash_profile for some reason)
+2009-07-23T21:46:00.000Z	diddy	grawity	Thx.
+2009-07-23T21:46:00.000Z	grawity	diddy	Actually, gdm loads a whole lot of other scripts from deep inside /etc/X11 and /etc/xdg
+2009-07-23T21:49:00.000Z	grawity	diddy	Just add the export to .bashrc or whatever.
+2009-07-23T21:52:00.000Z	grawity	diddy	you don't need to export HISTFILESIZE, as it's just used internally by bash
+2009-07-23T21:52:00.000Z	grawity	diddy	just add the line   HISTFILESIZE=12345   to .bashrc
+2009-07-23T21:52:00.000Z	diddy	grawity	yes it is already in there.
+2009-07-23T21:52:00.000Z	diddy	grawity	it was just an example
+2009-07-23T22:07:00.000Z	diddy	grawity	what is the difference between ~/.bash_profile and  ~/.profile ?
+2009-07-23T22:08:00.000Z	grawity	diddy	If bash doesn't find ~/.bash_login, it looks for ~/.bash_profile. If that doesn't exist either, bash looks for ~/.profile
+2009-07-23T22:09:00.000Z	diddy	grawity	so you are saying if there is a ~/.bash_profile then we don't need a ~/.profile but not the other way around?
+2009-07-23T22:09:00.000Z	grawity	diddy	bash only uses one of them anyway.
+2009-07-23T22:10:00.000Z	grawity	diddy	Use the one you prefer.
+2009-07-23T22:11:00.000Z	diddy	grawity	so if we wouldn't source the .bashrc file in the .bash_profile file then the .bashrc wouldn't have any effect on users that log in via SSH, right?
+2009-07-23T22:12:00.000Z	grawity	diddy	yep
+2009-08-01T13:52:00.000Z	grawity	diddy	I see nothing wrong.
+2009-08-01T13:52:00.000Z	diddy	grawity	the account is locked.
+2009-08-01T13:52:00.000Z	grawity	diddy	Did you check the matching line in /etc/shadow?
+2009-08-01T13:55:00.000Z	diddy	grawity	Can there be a start in that line?
+2009-08-01T13:55:00.000Z	grawity	diddy	A what?
+2009-08-01T13:55:00.000Z	diddy	grawity	 User1:*:51:501:John Doe:/home/user1:/bin/bash ???
+2009-08-01T13:55:00.000Z	diddy	grawity	Are asterisks allowed there
+2009-08-01T13:55:00.000Z	grawity	diddy	Yes, they mean that the password is stored in '/etc/shadow'.
+2009-08-01T13:56:00.000Z	diddy	grawity	that would be an x wouldn't it and not a *
+2009-08-01T13:56:00.000Z	grawity	diddy	Ah, hmm
+2009-08-01T13:57:00.000Z	grawity	diddy	Have you read the manpage of passwd(5)? man 5 passwd
+2009-08-04T17:12:00.000Z	grawity	diddy	You probably need 'dhclient'
+2009-08-04T17:12:00.000Z	diddy	grawity	you mean just by installing it it will use it?
+2009-08-04T17:13:00.000Z	grawity	diddy	No.
+2009-08-04T17:13:00.000Z	diddy	grawity	but how to I tell Linux not to use a static IP address anymore but a DHCP address?
+2009-08-04T17:14:00.000Z	grawity	diddy	dhclient eth0
+2009-08-04T17:14:00.000Z	diddy	grawity	Thx
+2009-08-04T23:45:00.000Z	grawity	diddy	It comes with access to Google, and I'm sure you don't need a HOWTO for that one.
+2009-08-12T19:34:00.000Z	grawity	diddy	"In component multiverse"
+2009-08-12T19:43:00.000Z	grawity	diddy	except they're too often outdated :\
+2009-08-12T19:44:00.000Z	diddy	grawity	yes but Ubuntu is very user friendly to people that havn't used Unix/Linux for 30 years and the community is superb.
+2009-08-15T15:30:00.000Z	grawity	diddy	If it's a package, dpkg will take care of removing it.
+2009-08-15T15:30:00.000Z	grawity	diddy	dpkg -i package.deb to install, dpkg -r package to remove.
+2009-08-15T15:31:00.000Z	diddy	grawity	kbp it could be malware.
+2009-08-15T15:32:00.000Z	grawity	diddy	And?
+2009-08-15T15:32:00.000Z	diddy	grawity	will dpkg keep track of where all files go?
+2009-08-15T15:32:00.000Z	grawity	diddy	It always does.
+2009-08-15T15:32:00.000Z	grawity	diddy	Just out of curiosity, what program is in that pacakge?
+2009-08-15T15:33:00.000Z	diddy	grawity	I am not talking about a particular package. I mean in general.
+2009-08-15T15:33:00.000Z	diddy	grawity	for many programs there are no ubuntu packages. How risky is it to install it into the system?
+2009-08-15T15:34:00.000Z	grawity	diddy	Depends on whether you trust the author. Usually it isn't risky.
+2009-08-15T15:34:00.000Z	diddy	grawity	on Windows it is extremely difficult to remove the program 100% as it is installed all over the place (registry, folders everywhere, autostart, etc).
+2009-08-15T15:34:00.000Z	grawity	diddy	Also, it depends on whether it's available in source form or not, etc.
+2009-08-15T15:35:00.000Z	grawity	diddy	Windows is a completely different OS. It has no way of package management - except Windows Installer, which was a great idea but didn't really work...
+2009-08-15T15:35:00.000Z	grawity	diddy	So in Windows, programs _themselves_ (or rather, specialized installer programs) take care of both installing AND removing.
+2009-08-15T15:35:00.000Z	diddy	grawity	so packages that are installed with dpkg -i will be removed with dpkg -r without leaving junk anywhere?
+2009-08-15T15:36:00.000Z	grawity	diddy	dpkg -r will remove what dpkg -i installed.
+2009-08-15T15:36:00.000Z	grawity	diddy	Not more.
+2009-09-27T18:54:00.000Z	grawity	diddy	If the kernel supports PAE - about 64 GB. If it doesn't - 4 GB.
+2009-09-27T18:55:00.000Z	grawity	diddy	If Ubuntu is 32-bit, but both CPU and Ubuntu support PAE, then 64 GB is the limit.
+2009-09-27T18:56:00.000Z	diddy	grawity	, stefg , jrib nilMe : I am not sure. I have this motherboard. http://www.newegg.com/product/product.aspx?Item=N82E16813131045
+2009-09-27T18:57:00.000Z	grawity	diddy	And CPU?
+2009-09-27T18:57:00.000Z	diddy	grawity	core 2 duo
+2009-09-27T18:57:00.000Z	grawity	diddy	Anyway, the motherboard has a limit of 8 GB.
+2009-09-27T18:58:00.000Z	diddy	grawity	but how can I find out whether I can install the 64bit version of Ubuntu 9.04?
+2009-09-27T18:59:00.000Z	grawity	diddy	If the CPU supports 64-bit, you can. (Intel Core 2 Duo does have 64-bit.) But it will be mostly useless for you.
+2009-09-27T19:03:00.000Z	grawity	diddy	"model name"
+2009-09-27T19:04:00.000Z	grawity	diddy	And then - google.
+2009-09-27T19:04:00.000Z	diddy	grawity	model name : Intel(R) Core(TM)2 CPU          6600  @ 2.40GHz

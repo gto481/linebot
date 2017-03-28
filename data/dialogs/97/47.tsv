@@ -1,0 +1,97 @@
+2007-08-13T06:20:00.000Z	SliMM		ok, let's put it this way: does ubuntu 7.04 have support for msi us54se wireless usb stick?
+2007-08-13T06:21:00.000Z	SliMM		sorry, epressed enter too soon
+2007-08-13T06:21:00.000Z	SliMM		zydas driver is needed i think
+2007-08-13T06:21:00.000Z	Jack_Sparrow	SliMM	THe 54 in the middle of that what I assume is Micro Star International model might imply the broadcom chipset
+2007-08-13T06:21:00.000Z	SliMM	Jack_Sparrow	and is it supported?
+2007-08-13T06:22:00.000Z	Jack_Sparrow	SliMM	Yes
+2007-08-13T06:22:00.000Z	SliMM	Jack_Sparrow	the live cd didn't detect it
+2007-08-13T06:22:00.000Z	Jack_Sparrow	SliMM	Do you have access to a hardwire lan connection
+2007-08-13T06:23:00.000Z	Jack_Sparrow	SliMM	How are you on here?
+2007-08-13T06:25:00.000Z	Jack_Sparrow	SliMM	What version of Ubuntu are you using?
+2007-08-13T06:26:00.000Z	Jack_Sparrow	SliMM	 http://www.murrayc.com/blog/permalink/2007/02/17/linux-compatible-wireless-usb-adaptor-results/
+2007-08-13T06:26:00.000Z	Jack_Sparrow	SliMM	That should work out of the box..
+2007-08-13T06:26:00.000Z	Jack_Sparrow	SliMM	It will not work out of the box on Dapper
+2007-08-13T06:28:00.000Z	Jack_Sparrow	SliMM	The Networking control panel does not show a list of access points, so you must type in the access point name manually.  per that article
+2007-08-13T06:30:00.000Z	SliMM	Jack_Sparrow	that's fine for me, i used ubuntu/kubuntu 5.10 and it didn't work
+2007-08-13T06:30:00.000Z	Jack_Sparrow	SliMM	You should be good to go...
+2007-08-13T06:31:00.000Z	Jack_Sparrow	SliMM	Reading is fine  You will need to enable ntfs-e6 to write
+2007-08-13T06:32:00.000Z	SliMM	Jack_Sparrow	how do i do that?
+2007-08-13T06:33:00.000Z	Jack_Sparrow	SliMM	Easy to do, when you have feisty installed we can go through the one click process
+2007-08-13T06:34:00.000Z	SliMM	Jack_Sparrow	do i have to type the acces point name for any wireless stick/card or just for us54se?
+2007-08-13T06:35:00.000Z	Jack_Sparrow	SliMM	I didnt got the broadcom.. so it may just be something in that one
+2007-08-13T06:37:00.000Z	SliMM	Jack_Sparrow	ok
+2007-08-13T06:37:00.000Z	SliMM	Jack_Sparrow	does ubuntu run on macintosh computers? (intel-based)
+2007-08-13T06:37:00.000Z	Jack_Sparrow	SliMM	Are you downloading now or ?
+2007-08-13T06:38:00.000Z	Jack_Sparrow	SliMM	There is a ppc version but I know nothing about it or even if it is still a project
+2007-08-13T06:38:00.000Z	SliMM	Jack_Sparrow	if you are talking about ubuntu 7.04, nu, i am installing it now, allmost done
+2007-08-13T06:38:00.000Z	Jack_Sparrow	SliMM	cool... let me know when you are done
+2007-08-13T06:38:00.000Z	SliMM	Jack_Sparrow	ok
+2007-08-13T07:18:00.000Z	SliMM	Jack_Sparrow	it's great, though i have to get used to using gaim instead of y! messenger
+2007-08-13T07:19:00.000Z	Jack_Sparrow	SliMM	It detected the usb without any problems..
+2007-08-13T07:20:00.000Z	Jack_Sparrow	SliMM	Good...
+2007-08-13T07:21:00.000Z	Jack_Sparrow	SliMM	That page talked about feisty beat so that was fixed
+2007-08-13T07:22:00.000Z	Jack_Sparrow	SliMM	Glad to have you with us, if you have any questions, just ask.  Be patient as this place gets busy and someone that knows the answer will help
+2007-08-13T07:53:00.000Z	SliMM	Jack_Sparrow	a little bit more help pls, how can i download extra applications for ubuntu?
+2008-03-14T00:35:00.000Z	Jack_Sparrow	SliMM	yes
+2008-03-14T00:29:00.000Z	Jack_Sparrow	SliMM	Ask away
+2008-03-14T00:30:00.000Z	SliMM	Jack_Sparrow	"sudo gparted /dev/sda" works but i cannot edit the partitions
+2008-03-14T00:31:00.000Z	Jack_Sparrow	SliMM	dont you have gui desktop etc.. I would suggest gparted livecd for work at that level..
+2008-03-14T00:33:00.000Z	SliMM	Jack_Sparrow	how can i make the installation process skip the "starting partition editor" part and go directly to complete formatting?
+2008-03-14T00:33:00.000Z	SliMM	Jack_Sparrow	i have more than 700 files in my /dev folder, and the installer gets stuck
+2008-03-14T00:33:00.000Z	Jack_Sparrow	SliMM	starting parted should give you the option for formatting..
+2008-03-14T00:34:00.000Z	SliMM	Jack_Sparrow	so, just parted?
+2008-03-14T00:34:00.000Z	Jack_Sparrow	SliMM	Perhaps you should provide more detail on what you are trying to do .. are you trying to edit a mounted partition. are you running livecd etc?
+2008-03-14T00:35:00.000Z	SliMM	Jack_Sparrow	oh, so the partition should be unmounted, right
+2008-03-14T00:35:00.000Z	SliMM	Jack_Sparrow	i'm trying to install ubuntu, but the installer gets stuck at loading the partition editor
+2008-03-14T00:36:00.000Z	Jack_Sparrow	SliMM	livecd sometimes takes quite awhile to figure out your partitions...   You can run partition editor from the livecd desktop menus and avboid the installer too
+2008-03-14T00:37:00.000Z	SliMM	Jack_Sparrow	partition editor gets stuck too
+2008-03-14T00:38:00.000Z	Jack_Sparrow	SliMM	download gparted livecd  would be my suggestion
+2008-03-14T00:40:00.000Z	SliMM	Jack_Sparrow	it doesn't freeze or something, but i think there are too many devices; i can't really boot from a cd unless wubi is for all bootable CDs; even if i format and partition my hdd with gparted, i still need to get past the "starting partition manager" screen in the installer, which doesn't work that well -- i would be glad if i could just skip that screen and pass /dev/sda directly to the installer
+2008-03-14T00:40:00.000Z	Jack_Sparrow	SliMM	Sorry.. you never mentioned wubi...  I personally hate that program and would never recommend or support it
+2008-03-14T00:41:00.000Z	SliMM	Jack_Sparrow	i don't know what that is, but it helped me boot from the live cd, since my bios is somehow broken
+2008-03-14T00:42:00.000Z	Jack_Sparrow	SliMM	Starting from the beginning, what cd do you have
+2008-03-14T00:43:00.000Z	SliMM	Jack_Sparrow	7.10 live & install cd, up and running
+2008-03-14T00:53:00.000Z	Jack_Sparrow	SliMM	Sorry.. cant help you
+2008-03-14T00:43:00.000Z	Jack_Sparrow	SliMM	How did you boot it?
+2008-03-14T00:44:00.000Z	SliMM	Jack_Sparrow	installed wubi on windows and used that boot-time menu, or however you like to call it
+2008-03-14T00:45:00.000Z	Jack_Sparrow	SliMM	Exactly my point...  I hate wasting my time on things like that
+2008-03-14T00:46:00.000Z	SliMM	Jack_Sparrow	sorry?
+2008-03-14T00:47:00.000Z	Jack_Sparrow	SliMM	np.. I would be happy to help you actuall install it.. just no wubi or vm anything
+2008-03-14T00:47:00.000Z	SliMM	Jack_Sparrow	"sorry?" as in "i didn't understaind what you have said", but what is wubi anyway?
+2008-03-14T00:48:00.000Z	Jack_Sparrow	SliMM	read up where you got it.. it is not a real installation
+2008-03-14T00:48:00.000Z	Jack_Sparrow	SliMM	it vreates a simulated partition /installation insde a folder
+2008-03-14T00:49:00.000Z	Jack_Sparrow	SliMM	only if it is booted and not simulated under windows
+2008-03-14T00:50:00.000Z	SliMM	Jack_Sparrow	i'm not under windows
+2008-03-14T00:50:00.000Z	Jack_Sparrow	SliMM	Power up with the cd in the drive  and tell me the first menu you see
+2008-03-14T00:53:00.000Z	SliMM	Jack_Sparrow	before installing wubi on windows: nothing, it boots from the hard disk, i can't change that since my bios is somehow broken; after installing wubi on windows and *rebooting*, i get a simple bootloader-like menu where i can choose  "windows xp pro" or "ubuntu-linux"
+2008-03-14T00:54:00.000Z	SliMM	Jack_Sparrow	ok, what's my problem?
+2008-03-14T00:56:00.000Z	SliMM	Jack_Sparrow	how many "files" (or whatever the names represent) has an average linux user in /dev?
+2008-03-14T00:56:00.000Z	Jack_Sparrow	SliMM	There are many ways to actually install ubuntu...
+2008-05-30T23:40:00.000Z	Jack_Sparrow	SliMM	At start or install press F6 and remove Quiet and Splash from the command line. If it still fails.. Repeat and after removing quiet and splash add noapic acpi=off before the "--"
+2008-05-30T23:41:00.000Z	SliMM	Jack_Sparrow	the problem is with the bios, it doesn't boot from CD
+2008-05-30T23:41:00.000Z	SliMM	Jack_Sparrow	i have just bought a new hdd and installed it
+2008-05-30T23:42:00.000Z	Jack_Sparrow	SliMM	you need some sort of bootable media or put the hd in a different box
+2008-05-30T23:43:00.000Z	SliMM	Jack_Sparrow	it's a hardy cd, it's bootable
+2008-05-30T23:43:00.000Z	Jack_Sparrow	SliMM	Does it work in another machine?
+2008-05-30T23:43:00.000Z	SliMM	Jack_Sparrow	it does, it's an ordered CD
+2008-06-03T22:19:00.000Z	Jack_Sparrow	SliMM	the installer gives you those options
+2008-06-03T22:19:00.000Z	Jack_Sparrow	SliMM	the HARDY installer..
+2008-06-03T22:20:00.000Z	SliMM	Jack_Sparrow	will setting "/dev/sda6" to have the mount point in "/home" be enogh?
+2008-06-03T22:21:00.000Z	Jack_Sparrow	SliMM	YEs, it should let you set the /home and not require you to format it
+2008-06-03T22:26:00.000Z	SliMM	Jack_Sparrow	Would you like to share your thoughts? Will my settings files get overwritten?
+2008-06-03T22:28:00.000Z	Jack_Sparrow	SliMM	I cant say specifically but it seemed to leave eveything in good order.. do a system backup with tar if you have concerns
+2008-06-03T22:29:00.000Z	SliMM	Jack_Sparrow	many thanks :) some quick snippet for tar-ing ".*" files and folders?
+2008-06-03T22:30:00.000Z	Jack_Sparrow	SliMM	here is one of mine   tar cvpzf backupdell.tgz --exclude=/backupdell.tgz --exclude=/proc --exclude=/lost+found  --exclude=/mnt --exclude=/sys --exclude=/media --exclude=/root/.Trash -- /
+2008-06-03T22:31:00.000Z	SliMM	Jack_Sparrow	does tar have some sort of regexpr or wildcart (I belive this is how it's called) pattern matching for filenames?
+2008-06-03T22:32:00.000Z	SliMM	Jack_Sparrow	or could I use „ls“ together with tar?
+2008-06-03T22:32:00.000Z	Jack_Sparrow	SliMM	man tar to find other options  but ls I dont think is one of them
+2008-06-03T22:33:00.000Z	SliMM	Jack_Sparrow	that's not what I meant
+2008-06-03T22:37:00.000Z	SliMM	Jack_Sparrow	i was thinking of something like "ls -al | grep *.jpg", but the other way round
+2008-07-04T19:22:00.000Z	Jack_Sparrow	SliMM	Please stop  C++ has a channel
+2008-07-04T19:22:00.000Z	Jack_Sparrow	SliMM	you need build essentials and possibly kernel headers
+2008-07-04T19:23:00.000Z	SliMM	Jack_Sparrow	what's the kernel headers package
+2008-07-04T19:23:00.000Z	Jack_Sparrow	SliMM	sudo apt-get install build-essential linux-headers-`uname -r`
+2008-07-04T19:24:00.000Z	SliMM	Jack_Sparrow	﻿`uname -r`?
+2008-07-04T19:24:00.000Z	Jack_Sparrow	SliMM	feel free to replace it with the results of uname -r from terminal session
+2008-07-04T19:25:00.000Z	Jack_Sparrow	SliMM	just saves you the trouble
+2009-01-08T22:41:00.000Z	Jack_Sparrow	SliMM	what package

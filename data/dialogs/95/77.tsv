@@ -1,0 +1,95 @@
+2005-05-20T12:02:00.000Z	kestas		seriously: in the time I have been here about 30% of the questions have been about how to get Windows like behaviour in linux
+2005-05-20T12:02:00.000Z	kestas		does that not bother anyone?
+2005-05-20T12:03:00.000Z	kestas		does that not seem silly?
+2005-05-20T12:03:00.000Z	Seveas	kestas	you bother more people...
+2005-05-20T12:03:00.000Z	Seveas	kestas	people are used to some behaviour, what's bad for wanting to keep that behaviour?
+2005-05-20T12:54:00.000Z	Seveas	kestas	there wil be OOo base, no idea on how good it is :)
+2005-05-20T12:55:00.000Z	Seveas	kestas	just as people can ignore you, you can ignore the CTCP;s
+2005-05-21T15:12:00.000Z	Seveas	kestas	that you make an error and it won't boot :)
+2005-05-21T15:12:00.000Z	Seveas	kestas	i mean that the new kernel won't boot
+2005-05-21T15:13:00.000Z	Seveas	kestas	my point was: not too much can go wrong
+2005-05-21T15:43:00.000Z	Seveas	kestas	possible: might be, advisable: no
+2005-05-21T15:48:00.000Z	Seveas	kestas	with make menuconfig scroll through the net section
+2005-05-21T15:48:00.000Z	Seveas	kestas	make it builtin :)
+2005-05-25T16:18:00.000Z	Seveas	kestas	there are no mirrors for security afaik
+2005-05-25T16:19:00.000Z	kestas	Seveas	my isp mirrors security
+2005-05-25T16:19:00.000Z	Seveas	kestas	ah :)
+2005-05-25T16:19:00.000Z	kestas	Seveas	probably a bad idea getting security from my isp
+2005-05-25T16:19:00.000Z	kestas	Seveas	but meh :)
+2005-05-25T06:51:00.000Z	Seveas	kestas	because that costs more and we do not guarantee things
+2005-05-25T09:50:00.000Z	Seveas	kestas	for java: download the .bin file from java.sun.com, apt-get install java-package, chmod +x [the .bin file] , make-jpkg [the bin file] , dpkg -i [the generated .deb file] 
+2005-05-26T07:19:00.000Z	kestas	Seveas	told me the other day, but I didnt get it down
+2005-05-26T10:53:00.000Z	Seveas	kestas	apt-key is for adding keys, not for handling the .gpg files...
+2005-05-26T10:53:00.000Z	kestas	Seveas	how do you add keys?
+2005-05-26T10:54:00.000Z	Seveas	kestas	once you know the id you do: gpg --keyserver subkeys.pgp.net --recv_keys THE_KEY_ID && gpg --export --armor THE_KEY_ID | sudo apt-key add /proc/self/fd/0
+2005-05-27T14:40:00.000Z	Seveas	kestas	same goes for backports
+2005-05-27T14:41:00.000Z	kestas	Seveas	well postgre 8 aint in ubuntu sources
+2005-05-27T14:41:00.000Z	Seveas	kestas	maybe it'll be in breezy
+2005-05-27T14:42:00.000Z	Seveas	kestas	some machines need it
+2005-06-01T16:19:00.000Z	Seveas	kestas	www.kubuntu.org has a few
+2005-06-02T16:47:00.000Z	Seveas	kestas	you can change that :)
+2005-06-02T16:47:00.000Z	kestas	Seveas	where? I checked gconf and man totem, but found nothing
+2005-06-02T16:47:00.000Z	kestas	Seveas	and its not in preferences
+2005-06-02T16:49:00.000Z	Seveas	kestas	you need to change preferences for gstreamer or xine, the backends of totem
+2005-06-26T09:29:00.000Z	Seveas	kestas	who says it's a mysql problem?
+2005-06-26T09:30:00.000Z	kestas	Seveas	sure looks that way to me, does mysql work without setting any configuration options?
+2005-06-26T09:30:00.000Z	kestas	Seveas	on freebsd you had to configure it first
+2005-06-26T09:30:00.000Z	Seveas	kestas	on ubuntu not, you can login as root without password right after install...
+2005-06-26T09:31:00.000Z	kestas	Seveas	what does that have to do with mysqld not starting though?
+2005-06-26T09:31:00.000Z	Seveas	kestas	maybe something went wrong during install...
+2005-06-26T09:32:00.000Z	Seveas	kestas	well, there was no error in syslog...
+2005-06-29T12:54:00.000Z	Seveas	kestas	i've aliases ssh to if [[ -z `ssh-add -l | grep identities` ] ] ; then ssh-add; fi; /usr/bin/ssh
+2005-06-29T12:59:00.000Z	kestas	Seveas	ah thats a nice one :) thanks
+2005-07-05T11:17:00.000Z	Seveas	kestas	i486 is the abbreviated name for the intel 486 CPU architecture
+2005-08-07T15:12:00.000Z	Seveas	kestas	waaay off topic dude :)
+2005-08-07T15:12:00.000Z	kestas	Seveas	#asm arent biting :(
+2005-08-07T15:13:00.000Z	Seveas	kestas	too bad, I hope for you someone in here knows...
+2005-10-30T07:09:00.000Z	kestas	Seveas	can you please help me out? no-one understands what's going wrong
+2005-10-30T07:09:00.000Z	kestas	Seveas	they all just start prattling on about KDEvsGNOME
+2005-10-30T07:09:00.000Z	Seveas	kestas	what's the prob?
+2005-10-30T07:10:00.000Z	Seveas	kestas	are you using network-manager?
+2005-10-30T07:10:00.000Z	kestas	Seveas	no I've installed the server system
+2005-10-30T07:10:00.000Z	Seveas	kestas	paste your interfaces file on the bin
+2005-10-30T07:10:00.000Z	kestas	Seveas	also I can do ifconfig eth0 1.2.3.4 fine
+2005-10-30T07:11:00.000Z	kestas	Seveas	that's a bit of a prob because I cant set up dns with ifconfig
+2005-10-30T07:11:00.000Z	Seveas	kestas	if you have a static IP, dns server addresses go in /etc/resolv.conf
+2005-10-30T07:12:00.000Z	kestas	Seveas	hmm k
+2005-10-30T07:14:00.000Z	kestas	Seveas	I could get the interfaces file for you but I would have to install smbfs and copy it over to this machine, and upload it from here
+2005-10-30T07:14:00.000Z	Seveas	kestas	does it have an 'auto eth0' line?
+2005-10-30T07:14:00.000Z	kestas	Seveas	1 sec Ill check
+2005-10-30T07:15:00.000Z	kestas	Seveas	nope, I added it, I think you may have cracked it :)
+2005-10-30T07:16:00.000Z	kestas	Seveas	any idea why it didn't add it itself though?
+2005-10-30T07:16:00.000Z	kestas	Seveas	rebooting now btw
+2005-10-30T07:18:00.000Z	kestas	Seveas	thanks you nailed it
+2005-10-30T07:18:00.000Z	kestas	Seveas	I owe you one
+2005-10-30T07:18:00.000Z	kestas	Seveas	I wish this chan had more people like you and hyphenated who dont just talk about KDEvsGNOME and how to mount ntfs volumes
+2005-11-20T15:46:00.000Z	Seveas	kestas	marillat and cipherfunk are good
+2005-11-20T15:48:00.000Z	kestas	Seveas	hmm how handy :) but which repo is w32 in?
+2005-11-20T15:56:00.000Z	Seveas	kestas	sdk includes re
+2005-11-20T15:57:00.000Z	kestas	Seveas	k thanks, nice repo
+2005-12-12T08:17:00.000Z	Seveas	kestas	yes
+2005-12-12T08:18:00.000Z	kestas	Seveas	Ng thanks
+2005-12-12T08:19:00.000Z	Seveas	kestas	man trap
+2005-12-12T08:19:00.000Z	kestas	Seveas	its the oth-- ah k
+2005-12-12T08:49:00.000Z	kestas	Seveas	on a similar note as last time, if I have a bash function which I've forked, is there any way to send a signal to that forked function (sigint would be good) from the parent script?
+2005-12-12T08:49:00.000Z	kestas	Seveas	like a way of killing all child processes
+2005-12-12T08:49:00.000Z	kestas	Seveas	how? :p
+2005-12-12T08:52:00.000Z	Seveas	kestas	you're looking for $!
+2005-12-12T08:52:00.000Z	kestas	Seveas	lmao
+2006-01-03T17:02:00.000Z	Seveas	kestas	([^/] )*$
+2006-01-03T17:02:00.000Z	kestas	Seveas	thanks :)
+2006-01-03T17:25:00.000Z	Seveas	kestas	export puts it in the envoronment
+2006-01-03T17:25:00.000Z	kestas	Seveas	if I don't use export will child processes like functions and forks still inherit the variable?
+2006-01-03T17:26:00.000Z	kestas	Seveas	they become seperate child processes if you fork them
+2006-01-03T17:27:00.000Z	kestas	Seveas	looks like they are inheriting non exported variables though, so that's fine
+2006-01-04T08:54:00.000Z	Seveas	kestas	you read my mind :)
+2006-01-04T08:54:00.000Z	kestas	Seveas	:)
+2006-01-05T09:43:00.000Z	Seveas	kestas	there's most likely a gdesklet for that
+2006-01-18T15:30:00.000Z	kestas	Seveas	Im looking at you ;p
+2006-01-18T15:42:00.000Z	Seveas	kestas	dos2unix
+2006-01-20T16:12:00.000Z	Seveas	kestas	xhost +
+2006-01-20T16:12:00.000Z	kestas	Seveas	thanks
+2006-02-26T08:05:00.000Z	Seveas	kestas	Ubuntu and gnome go hand in hand
+2006-02-26T08:05:00.000Z	kestas	Seveas	ohh right I memember now
+2006-06-01T06:04:00.000Z	Seveas	kestas	the live cd installer copies the filesystem, no debs involved
+2006-06-01T06:04:00.000Z	kestas	Seveas	hmm I see, less elegant but faster

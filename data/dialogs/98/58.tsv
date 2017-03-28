@@ -1,0 +1,98 @@
+2006-11-03T11:31:00.000Z	ty		All: I am having a problem getting my Wireless working with a broadcom chipset of bcm43xx 4306
+2006-11-03T11:31:00.000Z	ty		http://www.ubuntuforums.org/showthread.php?t=185174&highlight=fwcutter+4306+edgy
+2006-11-03T11:31:00.000Z	ty		tried that
+2006-11-03T11:32:00.000Z	ty		BCM43xx wirless: Any suggestions?
+2006-11-03T11:32:00.000Z	ty		tried fwcutter to no avail
+2006-11-03T11:32:00.000Z	ty		ndiswrapper is not working well either
+2006-11-03T11:33:00.000Z	ty		any really good guides/wiki's?
+2006-11-03T11:33:00.000Z	Lilandra	ty	what did it say when you tried it?
+2006-11-03T11:33:00.000Z	ty		nothing
+2006-11-03T11:33:00.000Z	ty	Lilandra	 What guide do you use for ndiswrapper?
+2006-11-03T11:33:00.000Z	Lilandra	ty	i have bcm4306 on my powerbook and got it working
+2006-11-03T11:33:00.000Z	ty	Lilandra	 With what?
+2006-11-03T11:33:00.000Z	Lilandra	ty	i didn't use ndiswrapper, i extracted from an apple file on osx
+2006-11-03T11:34:00.000Z	ty		lilandra:  How did you install it?
+2006-11-03T11:34:00.000Z	ty	Lilandra	 My wireless light isn't even turning on
+2006-11-03T11:34:00.000Z	Lilandra	ty	well there's a file on OSX, AppleAirport2 which has the firmware and i used fwcutter to extract the firmware and store it in /lib/firmware and then did a modprobe
+2006-11-03T11:35:00.000Z	ty	Lilandra	 Do you have a guide to that at all?
+2006-11-03T11:35:00.000Z	Lilandra	ty	it's kinda sketchy...hold on
+2006-11-03T11:35:00.000Z	Lilandra	ty	but i had the firmware in a file...not sure abot in windows
+2006-11-03T11:35:00.000Z	ty	Lilandra	 I'm pretty sure I know where to find driver in windows
+2006-11-03T11:36:00.000Z	Lilandra	ty	http://lilandra.com/blog/archives/2006/08/02/wireless-on-powerbook-g4-with-airport-extreme-with-linux-instructions/
+2006-11-03T11:36:00.000Z	Lilandra	ty	i also link to http://www.lanterntorch.com/free-software/149/airport-extreme-lives-in-linux/
+2006-11-03T11:36:00.000Z	Lilandra	ty	and on gentoo: http://forums.gentoo.org/viewtopic-t-409194.html
+2006-11-03T11:38:00.000Z	Lilandra		but ty, somebody once said it works well for the 4306 and iffy on other 43xx
+2006-11-03T11:38:00.000Z	ty	Lilandra	 I have a 4306 bcm43xx
+2006-11-03T11:38:00.000Z	ty		so it might work
+2006-11-03T11:39:00.000Z	Lilandra	ty	okay! i hope so! instructions are a tad sketchy but i used the lanterntorch and gentoo to help me
+2006-11-03T11:46:00.000Z	ty		doesn't seem to be working lilandra
+2006-11-03T11:46:00.000Z	Lilandra	ty	what happens? :-(
+2006-11-03T11:47:00.000Z	ty		lilandra: don't know where to get those drivers
+2006-11-03T11:47:00.000Z	ty		Tried copying them from my windows files to no avail
+2006-11-03T11:47:00.000Z	Lilandra	ty	when i installed edgy and reinstalled osx, i couldn't use the driver anymore and had to use the old version i saved
+2006-11-03T11:47:00.000Z	Lilandra	ty	would my driver work? from apple?
+2006-11-03T11:47:00.000Z	ty		Lilandra; you have a copy?
+2006-11-03T11:47:00.000Z	ty		Maybe?
+2006-11-03T11:47:00.000Z	ty		Worth a shot
+2006-11-03T11:47:00.000Z	Lilandra		hold on
+2006-11-03T11:48:00.000Z	ty		lilandra: sudo bcm43xx-fwcutter -w /lib/firmware ~/Desktop/BCMWL5.INF
+2006-11-03T11:48:00.000Z	ty		Extracting firmware from this file is IMPOSSIBLE. (e.g. too old/new)
+2006-11-03T11:48:00.000Z	ty		there is the error
+2006-11-03T11:49:00.000Z	ty		blake6489:  How is ak these days?
+2006-11-03T11:49:00.000Z	Lilandra	ty	i got that alot too. and in fact the file i have gets some that is too old but some that is good
+2006-11-03T11:49:00.000Z	Lilandra		did u get my pm?
+2006-11-03T11:50:00.000Z	ty		lilandra:  so which one do I use and where do I get it?
+2006-11-03T11:50:00.000Z	Lilandra	ty	i used this: http://lilandra.com/wireless/AppleAirPort2
+2006-11-03T11:52:00.000Z	Lilandra	ty	does it work?
+2006-11-03T11:52:00.000Z	ty		doesnt look like it
+2006-11-03T11:52:00.000Z	Lilandra	ty	does it not extract anything?
+2006-11-03T11:53:00.000Z	Lilandra	ty	rebooting
+2006-11-03T12:00:00.000Z	Lilandra		ty?
+2006-11-03T12:07:00.000Z	Lilandra		when i installed ubuntu i said my hardware clock was set to local time and not UTC but i think it is set to UTC so how do i make ubuntu know that it is set to UTC now?
+2006-11-03T12:11:00.000Z	ty		lilandra:  You still here?
+2006-11-03T12:11:00.000Z	Lilandra		yes
+2006-11-03T12:11:00.000Z	ty		Lilandar: Sorry had a disconnect of brain
+2006-11-03T12:11:00.000Z	Lilandra	ty	if i zipped up the stuff i extracted, would that work?
+2006-11-03T12:11:00.000Z	Lilandra	ty	i had to reboot into xubuntu
+2006-11-03T12:12:00.000Z	ty	Lilandra	Thats fine can you read me in pm's?
+2006-11-03T12:12:00.000Z	Lilandra	ty	i don't think you get my pm's or i don't get yours...not sure how that works on freenode
+2006-11-03T12:13:00.000Z	ty	Lilandra	 I get yours
+2006-11-03T12:13:00.000Z	Lilandra	ty	i'm not getting yours bu tok
+2006-11-03T12:13:00.000Z	Lilandra	ty	got it?
+2006-11-03T12:14:00.000Z	ty	Lilandra	Weird how should I run this?
+2006-11-03T12:14:00.000Z	Lilandra	ty	oooo...do you have bzip2 and tar?
+2006-11-03T12:15:00.000Z	ty	Lilandra	Yes these all extracted with when I ran those airports
+2006-11-03T12:15:00.000Z	ty		lilandra: when I run sudo iwlist eth0 (My wireless) scan it does nothing
+2006-11-03T12:15:00.000Z	Lilandra	ty	did u do the modprobe?
+2006-11-03T12:16:00.000Z	ty	Lilandra	 Sudo modprobe bcm43xx?
+2006-11-03T12:16:00.000Z	Lilandra	ty	and did u get any error messages?
+2006-11-03T12:16:00.000Z	Lilandra	ty	yes i think so
+2006-11-03T12:16:00.000Z	ty	Lilandra	 No error messages and I did run modprobe
+2006-11-03T12:16:00.000Z	Lilandra	ty	dmesg?
+2006-11-03T12:17:00.000Z	Lilandra	ty	were you able to bring eth0 up?
+2006-11-03T12:17:00.000Z	ty		[ 4874.557136]  ADDRCONF(NETDEV_UP): eth0: link is not ready
+2006-11-03T12:17:00.000Z	Lilandra		yikes
+2006-11-03T12:18:00.000Z	Lilandra	ty	now i think i'm lost :-(
+2006-11-03T12:18:00.000Z	ty		haha ya
+2006-11-03T12:18:00.000Z	Lilandra	ty	is this edgy?
+2006-11-03T12:18:00.000Z	ty		lilandra:  My least favorite thing about linux
+2006-11-03T12:18:00.000Z	ty		yes
+2006-11-03T12:18:00.000Z	Lilandra	ty	i remember struggling a bit more with edgy but i cant remember why
+2006-11-03T12:18:00.000Z	Lilandra		hmm...
+2006-11-03T12:19:00.000Z	ty		lilandra: you use ndiswrapper to any luck?
+2006-11-03T12:19:00.000Z	Lilandra	ty	i didn't use ndiswrapper...not sure what to do with it
+2006-11-03T12:19:00.000Z	Lilandra	ty	i'm beginning to think i was lucky
+2006-11-03T12:20:00.000Z	Lilandra	ty	but the modprobe worked, so what does that mean
+2006-11-03T12:20:00.000Z	ty	Lilandra	 Sometimes it does just seem to be luck that gets these working:  Got skype working first time installed linux on my 64 bit processer...never got it to work again...
+2006-11-03T12:20:00.000Z	Lilandra		yikes!
+2006-11-03T12:21:00.000Z	ty	Lilandra	 any other suggestions?  I'm sick of trolling the forums...might be time to hook back up the usb dongle wireless
+2006-11-03T12:21:00.000Z	ty	Lilandra	 Just had high hopes that I wouldn't have to use it...its kinda inconvient
+2006-11-03T12:22:00.000Z	Lilandra	ty	right now no, i can...err...boot into a live cd and work from scratch and see if i forgot anything...tomorrow...:-(
+2006-11-03T12:22:00.000Z	ty		that is fine
+2006-11-03T12:22:00.000Z	ty	Lilandra	 I should go to be as well
+2006-11-03T12:22:00.000Z	ty		bed
+2006-11-03T12:22:00.000Z	Lilandra	ty	ok...my email is on my site. i will come back on tomorrow
+2006-11-03T12:22:00.000Z	Lilandra		'night
+2006-11-03T12:23:00.000Z	ty		lilandra:  thanks for the help!
+2006-11-03T12:23:00.000Z	Lilandra		bye all
+2006-11-03T12:23:00.000Z	Lilandra	ty	i wish it worked! :-(

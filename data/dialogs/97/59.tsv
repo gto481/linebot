@@ -1,0 +1,97 @@
+2006-06-01T08:53:00.000Z	Warbo		np
+2006-06-01T08:54:00.000Z	Warbo		Has anyone tried Gnash? Did they have problems with Macromedia/Adobe Flash since?
+2006-06-01T08:56:00.000Z	SurfnKid	Warbo	is that how you start the gdm lets say if you dont go directly to the logon screen?
+2006-06-01T08:56:00.000Z	Warbo	SurfnKid	Yes, it makes any temporary files it needs to (better than typing "sudo gdm")
+2006-06-01T08:57:00.000Z	Warbo	SurfnKid	You cannot do that in a GUI though, as it will stop but not start again because the GUI telling it what to do is gone (use stop and start for that)
+2006-06-01T08:58:00.000Z	Warbo	SurfnKid	Use start instead of restart if it is not already running
+2006-06-01T08:58:00.000Z	SurfnKid	Warbo	I gotcha
+2006-06-02T13:02:00.000Z	SurfnKid	Warbo	same question here for Mplayer
+2006-06-02T13:03:00.000Z	SurfnKid	Warbo	what did you enable to get the Mplayer?
+2006-06-02T13:03:00.000Z	Warbo	SurfnKid	I use that repo line I posted above
+2006-06-02T13:03:00.000Z	SurfnKid	Warbo	on the repo section i mean
+2006-06-02T13:04:00.000Z	Warbo	SurfnKid	In synaptic enter it (without quotes) in "custom"
+2006-06-02T13:04:00.000Z	SurfnKid	Warbo	ok
+2006-06-02T13:06:00.000Z	SurfnKid	Warbo	run that line you said one more time for the mplayer, I searched mplayer in custom. found nothing
+2006-06-02T13:07:00.000Z	Warbo	SurfnKid	In synaptic go on Repositories, add, custom then use the line "deb ftp://ftp.nerim.net/debian-marillat/ sarge main" to add this repository, then reload (WARNING: This is a Debian repo, not a Ubuntu one. NEVER do an upgrade with this enabled)
+2006-06-02T13:08:00.000Z	SurfnKid	Warbo	oh ok that line, gotcha
+2006-06-02T13:08:00.000Z	Warbo	SurfnKid	Add it, reload, download wanted packages then diable it (untick the box in repositories)
+2006-06-02T13:09:00.000Z	SurfnKid	Warbo	ok I'll try that gime a min :)
+2006-06-02T13:24:00.000Z	SurfnKid	Warbo	so there should only be two packages to install xvid and realplayer or something like that.. or more?
+2006-06-02T13:24:00.000Z	Warbo	SurfnKid	Hmm? Hang on, I'll check what my setup is
+2006-06-02T13:27:00.000Z	Warbo	SurfnKid	realplayer package gives realplayer, Xvid is a matter of opinion. If you use Gstreamer then install it's plugins, Xine is different and so is mplayer and VLC
+2006-06-02T13:28:00.000Z	SurfnKid	Warbo	so mplayer isnt in that site,  I got vlc already xvid and upg-realplayer to ver.10
+2006-06-02T13:29:00.000Z	SurfnKid	Warbo	 it said couldnt get correct key for authentication but i ignored that, it shouldnt affect anything
+2006-06-02T13:29:00.000Z	Warbo	SurfnKid	I have packages available for mplayer, mplaye-386, 586, 686, amd64, and custom
+2006-06-02T13:30:00.000Z	SurfnKid	Warbo	let me look again, did you have to authenticate
+2006-06-02T13:30:00.000Z	Warbo	SurfnKid	Nope, just got the warning
+2006-06-02T13:30:00.000Z	Warbo	SurfnKid	I upgraded from Breezy, so Dapper may be a little more paranoid and not let you use non-verified repos
+2006-06-02T13:31:00.000Z	SurfnKid	Warbo	oh ok, Well im gonna stay in Breezy for now, till I get the hang a bit more of upgrading and stuff like that. and till all bugs are out hehe
+2006-06-02T13:32:00.000Z	Warbo	SurfnKid	All bugs are gone (mostly), it's not Beta anymore
+2006-06-02T13:33:00.000Z	SurfnKid	Warbo	so comingg from a Microsoft environment, whats Breezy diff than Dapper
+2006-06-02T13:33:00.000Z	SurfnKid	Warbo	 I got that mplayer list finally with a few other things too
+2006-06-02T13:35:00.000Z	SurfnKid	Warbo	whoa
+2006-06-02T13:36:00.000Z	Warbo	SurfnKid	You pay for commercial support, but community support is free (you are in it!)
+2006-06-02T13:38:00.000Z	SurfnKid	Warbo	thanks for the help earlier, im gonna disable this thing now
+2006-06-03T10:49:00.000Z	Warbo	SurfnKid	I'm waiting for a charger for my 200MHz laptop to arrive
+2006-06-03T10:49:00.000Z	SurfnKid	Warbo	what kind of lappy
+2006-06-03T10:49:00.000Z	Warbo	SurfnKid	Compaq Armada 7400
+2006-06-03T10:50:00.000Z	SurfnKid	Warbo	with Ubutu on it wow
+2006-06-03T10:50:00.000Z	Warbo	SurfnKid	I will when I get a charger for it
+2006-06-03T10:53:00.000Z	SurfnKid	Warbo	 Just replaced mine on this Inspiron. It had a 3.13 volt adapter shipped in from Dell completely wrong. Battery wasnt charging and MB was really hurting... Googled information on this issue and most laptops dont last a year or more. This one is 2yrs with that adapter. Bought the corret 4.62amp I mean, not 3.13volts um wrong. and Its running smooth. INCREDIBle it didnt FRY :|
+2006-06-03T10:53:00.000Z	Warbo	SurfnKid	Yeah? I was given a 66MHz laptop with DOS6 on it, and the charger I used electrolyses the batteries and sulphur started coming out of it :)
+2006-06-03T10:54:00.000Z	SurfnKid	Warbo	ouch
+2006-06-03T10:54:00.000Z	SurfnKid	Warbo	wow it must be an oldie :)
+2006-06-03T10:55:00.000Z	Warbo	SurfnKid	Well it's a dismantled mess now
+2006-06-03T10:55:00.000Z	SurfnKid	Warbo	hope you can get that fixed
+2006-06-03T10:56:00.000Z	Warbo	SurfnKid	No point. I got it for free anyway, so it doesn't matter
+2006-06-03T10:56:00.000Z	SurfnKid	Warbo	yeah as long as u can get on, guts everywhere it works
+2006-06-03T11:00:00.000Z	SurfnKid	Warbo	this laptop is worht 1500+ but the guy who i got it from got it from an unknown source brand new. He needed to sell it but was afraidd ebay would get him in trouble so said 500 I was like ohhh ok sure... HERE!!
+2006-06-03T11:00:00.000Z	Warbo	SurfnKid	lol
+2006-06-03T11:01:00.000Z	SurfnKid	Warbo	Got a SonyVaio still my first lappy. Dam thing was 3000 new :( PIII500 It was bloody expensive, but Im gonna get that witch going I know it can be worth something
+2006-06-04T16:27:00.000Z	Warbo	SurfnKid	That is a backup file
+2006-06-04T16:28:00.000Z	Warbo	SurfnKid	You do not see them in Nautilus (just like ones beginning in ".") but they are usually made by text editors
+2006-06-04T16:29:00.000Z	SurfnKid	Warbo	so i can get to it as well. is this a safety feature
+2006-06-04T16:30:00.000Z	Warbo	SurfnKid	The directory "~" is shorthand for your home (like capgadget said) but files ending in ~ are backups made by text editors and things, not system backups.
+2006-06-04T16:32:00.000Z	SurfnKid	Warbo	yea ending in ~ is backup thats what im wondering,
+2006-06-04T16:33:00.000Z	Warbo	SurfnKid	They are not system backups, so you can delete them. They are just incase you edit a file and want the original back. If you know you don't then just delete them
+2006-06-04T16:35:00.000Z	SurfnKid	Warbo	oh ok, nice to have that feature
+2006-06-04T16:40:00.000Z	Warbo	SurfnKid	Yes
+2006-06-04T11:10:00.000Z	Warbo	SurfnKid	The internet is down? Dammit I was going to send an email...
+2006-06-04T11:11:00.000Z	SurfnKid	Warbo	hehe man i was doing something! and kaputz, whyy now, alwys happens sat nigts
+2006-06-10T08:11:00.000Z	SurfnKid	Warbo	hehe I knew it was something like that
+2006-06-10T08:12:00.000Z	Warbo	SurfnKid	It is implemented by using an advanced AI system. It's correct name is HAL9000 (it was developed by IBM who keep the sister project, SAL9000 to themselves)
+2006-06-10T08:12:00.000Z	SurfnKid	Warbo	wicked
+2006-06-10T08:12:00.000Z	Warbo	SurfnKid	(I hope you realise that is not true and is just a reference to 2001:A Space Odyssey)
+2006-06-10T08:14:00.000Z	SurfnKid	Warbo	I was beginning to believve that
+2006-06-12T05:16:00.000Z	Warbo	SurfnKid	I think it depends on the driver (mine hasn't worked since I rebooted since installing it :()
+2006-06-12T05:16:00.000Z	SurfnKid	Warbo	oh ok, I thought so
+2006-06-12T05:18:00.000Z	SurfnKid	Warbo	I can finally get sudo apt-get update to run but my download rate is 10K 12K max. and its cable modem. Im linked Ad-Hoc style and the Laptop router can get up to 100KB/s so im trying to change that :/
+2006-06-12T05:18:00.000Z	SurfnKid	Warbo	whats the command tho
+2006-06-12T05:18:00.000Z	SurfnKid	Warbo	wireless-rate ?
+2006-06-12T05:19:00.000Z	Warbo	SurfnKid	Well I have removed all of the stuff from my config files (in an attempt to start from scratch. No such luck, it just screws the boot process when it is plugged in)
+2006-06-12T05:20:00.000Z	SurfnKid	Warbo	ah, aint no good. what wifi card u using
+2006-06-12T05:20:00.000Z	Warbo	SurfnKid	Ermm. I forget the name now (it is a little generic)
+2006-06-12T05:20:00.000Z	SurfnKid	Warbo	 i see
+2006-06-12T05:21:00.000Z	SurfnKid	Warbo	where can I look for arguments to put on that interfaces file
+2006-06-12T05:21:00.000Z	Warbo	SurfnKid	Funny thing was that I downloaded the driver (because the eBay page for it gave a link to Linux drivers [the main reason I bought that card] ) and after struggling to compile them I found out that they are already in the kernel and the network-admin tool had detected the card fine. It all worked until I rebooted
+2006-06-12T05:23:00.000Z	SurfnKid	Warbo	hah! same thing here, I was looking to compile. then someone here helped me, just to look for the wlan-ng package in Synaptic, and the usbcore had it already too. that was easy. The big problem next was the apt-get update. Which i can do now but at 10KB heh.
+2006-06-12T05:23:00.000Z	SurfnKid	Warbo	i know im being picky cuz i can connect, but its slow
+2006-06-12T05:25:00.000Z	SurfnKid	Warbo	can you use xmms to stream asx?
+2006-06-12T05:26:00.000Z	Warbo	SurfnKid	No idea
+2006-06-12T05:26:00.000Z	SurfnKid	Warbo	doesnt work for me
+2006-07-08T15:05:00.000Z	Warbo	SurfnKid	As always, try it from a terminal
+2006-07-08T15:08:00.000Z	SurfnKid	Warbo	try starting firestarter?
+2006-07-08T15:08:00.000Z	Warbo	SurfnKid	If something doesn't work for no apparent reason then running it in a terminal will usually show you what the error is
+2006-07-09T05:42:00.000Z	Warbo	SurfnKid	Maybe because they are both unstable? :)
+2006-07-09T05:42:00.000Z	Warbo	SurfnKid	Is it amarok 1.4.1?
+2006-07-09T05:42:00.000Z	SurfnKid	Warbo	but amaroK was super stable on Breezy
+2006-07-09T05:43:00.000Z	Warbo	SurfnKid	OK, just that Amarok 1.4.1 is VERY new
+2006-07-09T05:49:00.000Z	Warbo	SurfnKid	I know it works on 32MB TNT2 cards
+2006-07-09T05:50:00.000Z	SurfnKid	Warbo	yeah so i keep hearing
+2006-07-16T11:11:00.000Z	Warbo	SurfnKid	System>Preferences>Removable Drives And Media
+2006-07-16T11:11:00.000Z	SurfnKid	Warbo	sweet, ty
+2006-07-28T07:05:00.000Z	SurfnKid	Warbo	how can i list directories  with 'ls'  only
+2006-07-28T07:05:00.000Z	SurfnKid	Warbo	or anotherr way to do it thru CLI
+2006-07-28T07:06:00.000Z	Warbo	SurfnKid	I don't really know, unless you used ls -l | grep "something"
+2006-08-05T13:10:00.000Z	Warbo	SurfnKid	OpenOffice
+2006-08-05T13:53:00.000Z	SurfnKid	Warbo	do ya think i have to install a FireFox plugin for PDF printing

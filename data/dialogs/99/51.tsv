@@ -1,0 +1,99 @@
+2007-03-12T12:09:00.000Z	mneptok		do NOT try EasyUbuntu
+2007-03-12T12:09:00.000Z	mneptok		please
+2007-03-12T12:09:00.000Z	lisapc	mneptok	i did
+2007-03-12T12:09:00.000Z	lisapc	mneptok	no need to beg ;)
+2007-03-12T12:09:00.000Z	mneptok	lisapc	please do not recommend it to others.
+2007-03-12T12:10:00.000Z	lisapc	mneptok	easyubuntu is relative. I can recommend it as I wish!  you are not my boss
+2007-03-12T12:11:00.000Z	mneptok	lisapc	please, stop recommending EasyUbuntu. i am asking nicely. EasyUbuntu causes many problems, and we do not recommend it here.
+2007-03-12T12:11:00.000Z	lisapc	mneptok	i can recommend something as much as I want.  you are in no position to tell me what to do
+2007-03-12T14:49:00.000Z	lisapc	mneptok	u here?
+2007-03-12T15:04:00.000Z	mneptok	lisapc	the X11 compositors are a PITA
+2007-03-12T15:03:00.000Z	mneptok	lisapc	don't do it.
+2007-03-12T15:04:00.000Z	lisapc	mneptok	how come?
+2007-03-12T15:04:00.000Z	lisapc	mneptok	 when I tried to lessen the brightness of my screen using notebook kb, X rebooted.  What causes that?
+2007-03-12T15:04:00.000Z	mneptok	lisapc	not to mention anything but stable
+2007-03-12T15:05:00.000Z	lisapc	mneptok	i trust your words and wont use beryl
+2007-03-12T15:06:00.000Z	lisapc	mneptok	 whats the X11 compositors are a PITA mean?
+2007-03-12T15:06:00.000Z	mneptok	lisapc	it means "instead of installing Beryl or Compiz, go make some cocoa or read a book." ;)
+2007-03-12T15:06:00.000Z	lisapc	mneptok	 so you advice me not to install beryl due to it being unstable?
+2007-03-12T15:06:00.000Z	lisapc	mneptok	 hehe ok :-)
+2007-03-14T11:01:00.000Z	mneptok	lisapc	is sg0 actually your CD?
+2007-03-14T11:01:00.000Z	lisapc	mneptok	not sure
+2007-03-14T11:02:00.000Z	lisapc	mneptok	thats my dvd burner
+2007-03-14T11:04:00.000Z	mneptok	lisapc	no. are you *sure* the DVD is sg0. i have my doubts
+2007-03-14T11:25:00.000Z	lisapc	mneptok	all i had to do was run k3b setup and click on apply.  Dont know why, but that was it :P
+2007-03-14T14:41:00.000Z	lisapc	mneptok	hello, u here?
+2007-03-14T14:48:00.000Z	lisapc	mneptok	yes :)
+2007-03-14T14:48:00.000Z	lisapc	mneptok	I typd that command u gave me to get sound working. modprobe -r snd-hda-intel ; sleep 10 && modprobe snd-hda-intel.  bit it says:  FATAL: Module snd_hda_intel is in use.
+2007-03-14T14:48:00.000Z	lisapc	mneptok	any solution please?
+2007-03-14T14:49:00.000Z	mneptok	lisapc	i don't recall that conversation
+2007-03-14T14:49:00.000Z	lisapc	mneptok	yes! we talkeds about this 2 days ago.  U said instead of having to reboot, u gave me that command
+2007-03-14T14:49:00.000Z	lisapc	mneptok	you said its due to speed of lading modules, maybe fixed in next version
+2007-03-14T14:50:00.000Z	lisapc	mneptok	but when I type that command you gave me, it says:  FATAL: Module snd_hda_intel is in use.
+2007-03-14T14:50:00.000Z	mneptok	lisapc	could be. what isn't making sound?
+2007-03-14T14:50:00.000Z	lisapc	mneptok	nothing is making sound
+2007-03-14T14:50:00.000Z	lisapc	mneptok	dead silence
+2007-03-14T14:51:00.000Z	lisapc	mneptok	will killall esd help?
+2007-03-14T14:51:00.000Z	lisapc	mneptok	or do I always need to keep rebooting to get sound back?
+2007-03-14T14:52:00.000Z	mneptok	lisapc	what are you using that uses ESD?
+2007-03-14T14:53:00.000Z	lisapc	mneptok	using nothing atm
+2007-03-14T14:54:00.000Z	mneptok	lisapc	any ESD or OSS app is going to exclusively lock the sound for its own use. ALSA does not.
+2007-03-14T14:54:00.000Z	lisapc	mneptok	but why does sound work 90% of the time I boot?
+2007-03-14T14:54:00.000Z	mneptok	lisapc	because you haven't used an ESD/OSS app at that point
+2007-03-14T14:56:00.000Z	lisapc	mneptok	so whats my solution?  I just keep rebooting Edgy until sound works again?
+2007-03-14T14:56:00.000Z	mneptok	lisapc	don't use ESD/OSS apps
+2007-03-14T14:56:00.000Z	mneptok	lisapc	or accept that once you do, no more sound until a reboot.
+2007-03-14T14:57:00.000Z	lisapc	mneptok	what ESD/OSS apps would I be using?
+2007-03-14T14:57:00.000Z	lisapc	mneptok	90% of the time I hear the sound at login screen
+2007-03-14T14:57:00.000Z	mneptok	lisapc	sorry, just sent the crystal ball out for a wak and polish ;)
+2007-03-14T14:58:00.000Z	lisapc	mneptok	and 10% nothing
+2007-03-14T14:58:00.000Z	lisapc	mneptok	so whats my solution?  just reboot everytime I dont have sound?
+2007-03-14T14:58:00.000Z	mneptok	lisapc	start looking in the BIOS. what happens on a cold boot? from a Windows restart?
+2007-03-14T14:59:00.000Z	lisapc	mneptok	cold boot, straight into Ubuntu
+2007-03-14T15:02:00.000Z	lisapc	mneptok	ok i rebooted and now sound is working! it seems whenever I do a cold boot sound doesnt work
+2007-03-14T15:03:00.000Z	mneptok	lisapc	you just did a cold boot. and sound is working.
+2007-03-14T15:03:00.000Z	lisapc	mneptok	no
+2007-03-14T15:03:00.000Z	lisapc	mneptok	cold boot is the first boot from powering on PC.  warm boot is second or more reboots after inital boot :)
+2007-03-14T15:04:00.000Z	lisapc	mneptok	all I know is that when I first turn on my PC sound never works!, but then I reboot and it works :P
+2007-03-14T15:04:00.000Z	mneptok	lisapc	05:59 < lisapc> mneptok, cold boot, straight into Ubuntu
+2007-03-14T15:04:00.000Z	mneptok	lisapc	so that was a lie, or .... ;)
+2007-03-14T15:05:00.000Z	lisapc	mneptok	no, its just your listening skills need polishing ;) heh
+2007-03-14T15:05:00.000Z	lisapc	mneptok	my very FIRST boot
+2007-03-14T15:06:00.000Z	mneptok	lisapc	your BIOS is the problem
+2007-03-14T15:06:00.000Z	lisapc	mneptok	LOL! no. its ubuntu problem
+2007-03-14T15:06:00.000Z	lisapc	mneptok	never have this problem with other OS on my PC
+2007-03-14T15:06:00.000Z	lisapc	mneptok	 knoppix has sound, Vista has sound.  but Edgy doesnt
+2007-03-14T15:06:00.000Z	lisapc	mneptok	i doubt its BIOS problem ;)
+2007-03-14T15:07:00.000Z	mneptok	lisapc	OK, you know better than i do.
+2007-03-14T15:07:00.000Z	lisapc	mneptok	yes I do :) hehe ;)
+2007-03-14T15:07:00.000Z	lisapc	mneptok	but seriously, u cant blame this on my BIOS when sound works in other OS
+2007-03-14T15:09:00.000Z	mneptok	lisapc	using your logic, since i can breathe on a mountain, and i can breathe in a valley, the fact i cannot breathe underwater is because water is broken, and it has nothing to do with my lungs.
+2007-03-14T15:10:00.000Z	lisapc	mneptok	so why does it always work when I first boot into other OS?
+2007-03-14T15:11:00.000Z	mneptok	lisapc	because tho other OSes anticipate a broken BIOS or have crufty workarounds?
+2007-03-14T15:12:00.000Z	lisapc	mneptok	wow, they are indeed clever to have that anticipation.
+2007-03-14T15:12:00.000Z	lisapc	mneptok	but thanks for your help. its ok. Ill just keep rebooting to get sound.
+2007-03-14T15:12:00.000Z	lisapc	mneptok	its only 1 reboot
+2007-03-14T15:15:00.000Z	lisapc	mneptok	I appeciate your help though. thanks
+2007-03-16T15:05:00.000Z	mneptok	lisapc	it's in the repos
+2007-03-16T15:06:00.000Z	lisapc	mneptok	ah great :)
+2007-03-16T15:07:00.000Z	lisapc	mneptok	any ideas why my mouse pointer goes crazy and flies around the screen sometimes?
+2007-03-16T15:07:00.000Z	mneptok	lisapc	bad USB port?
+2007-03-16T15:07:00.000Z	lisapc	mneptok	it does it on usb port #1 and #2
+2007-03-16T15:08:00.000Z	mneptok	lisapc	poor BIOS?
+2007-03-16T15:08:00.000Z	lisapc	mneptok	poor bios?  really?
+2007-03-16T15:08:00.000Z	lisapc	mneptok	whats the fix?  new mb?
+2007-03-16T15:09:00.000Z	lisapc	mneptok	No candidate version found for opera
+2007-03-16T15:09:00.000Z	mneptok	lisapc	did you update?
+2007-03-16T15:09:00.000Z	lisapc	mneptok	does that mean i need to replace the mb?
+2007-03-16T15:09:00.000Z	lisapc	mneptok	sudo aptitude update
+2007-03-16T15:10:00.000Z	lisapc	mneptok	No! its a new laptop
+2007-03-16T15:12:00.000Z	mneptok	lisapc	what does "new" have to do with it?
+2007-03-16T15:12:00.000Z	lisapc	mneptok	ok
+2007-03-16T15:12:00.000Z	lisapc	mneptok	maybe a BIOS update will fix it
+2007-03-20T15:08:00.000Z	mneptok	lisapc	BIOS
+2007-03-20T15:08:00.000Z	lisapc	mneptok	I prefer sudo aptitude install :)
+2007-03-20T15:08:00.000Z	mneptok	lisapc	BIOS
+2007-03-20T15:08:00.000Z	lisapc	mneptok	ah ok
+2007-03-20T15:08:00.000Z	lisapc	mneptok	I didnt know that
+2007-03-20T15:08:00.000Z	lisapc	mneptok	thanks a lot :)
+2007-03-20T15:09:00.000Z	lisapc	mneptok	just turn on nvidia turbocache in my BIOS?

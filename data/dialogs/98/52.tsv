@@ -1,0 +1,98 @@
+2007-11-07T19:39:00.000Z	neil_d	LjL	I am trying to do this from a script.
+2007-11-07T19:37:00.000Z	LjL	neil_d	it's just 'dialog', an ncurses thingie, called by debconf
+2007-11-07T19:38:00.000Z	neil_d	LjL	so can I affect the time zone from the command line ?
+2007-11-07T19:39:00.000Z	LjL	neil_d	well, yes. but i'm not sure i'm getting it, cannot you use that text-mode interface that dpkg-reconfigure uses?
+2007-11-07T19:39:00.000Z	LjL	neil_d	keep in mind i just joined so i may have missed something
+2007-11-07T19:40:00.000Z	LjL	neil_d	ah, uhm... you see, i was thinking that « dpkg-reconfigure debconf » allows you to use readline instead of dialog to change debconf options - but that will affect the entire system, so it's definitely not the right thing to do if you just want a script
+2007-11-07T19:41:00.000Z	neil_d	LjL	no I want to affect the whole system.
+2007-11-07T19:41:00.000Z	LjL	neil_d	you can use « dpkg-reconfigure --frontend=readline tzdata » to only avoid the dialog frontend from within the script, i suppose
+2007-11-07T19:42:00.000Z	LjL	neil_d	by "affect the whole system" i mean that the dialog frontend would *never* be used again by APT
+2009-09-27T18:25:00.000Z	LjL	neil_d	does it work locally?
+2009-09-27T18:25:00.000Z	neil_d	LjL	yes
+2009-09-27T18:26:00.000Z	LjL	neil_d	is "net" uncommented in /etc/san/dll.conf ?
+2009-09-27T18:26:00.000Z	neil_d	LjL	on which computer?
+2009-09-27T18:26:00.000Z	LjL	neil_d	the server
+2009-09-27T18:27:00.000Z	neil_d	LjL	yes
+2009-09-27T18:28:00.000Z	LjL	neil_d	clueless question - have you checked firewall rules? recent versions of ubuntu may (or may not) come with some of those. i don't really know because i'm still on hardy.
+2009-09-27T18:29:00.000Z	neil_d	LjL	I don't have any ufw setup.. and syslog on the server seems to indicate that saned is receive the connect and accepting it.
+2009-09-27T18:30:00.000Z	LjL	neil_d	and, while you seem to know what you're doing well enough to not be caught by this... i assume that instead of the "192.168.1.0/24" that the howto mentions, you have put in whatever mask actually applies for your network?
+2009-09-27T18:42:00.000Z	LjL	neil_d	i think so, yes
+2009-09-27T18:31:00.000Z	neil_d	LjL	well as matter of fact 192.168.1.0/24 is correct for my network.
+2009-09-27T18:31:00.000Z	LjL	neil_d	can you pastebin exacty what syslog has to say when a client connects?
+2009-09-27T18:32:00.000Z	neil_d	LjL	is this it "linux saned[2102]: init: access granted to saned-user@192.168.1.
+2009-09-27T18:32:00.000Z	LjL	neil_d	and that's it? no "disconnected" later?
+2009-09-27T18:34:00.000Z	neil_d	LjL	here is everything http://paste.ubuntu.com/279616/
+2009-09-27T18:36:00.000Z	neil_d	LjL	just double checked the scanner locally it is going.
+2009-09-27T18:36:00.000Z	LjL	neil_d	and what does the client say?
+2009-09-27T18:37:00.000Z	neil_d	LjL	xsane puts up a dialog saying "no devices available"
+2009-09-27T18:38:00.000Z	LjL	neil_d	wait, do you have "net" enabled on the *clients* in /etc/sane.d/dll.conf? i know i said server earlier, but, i'm having a sudden doubt.
+2009-09-27T18:38:00.000Z	neil_d	LjL	the server is a i386 kernel and the client is a amd64 kernel.
+2009-09-27T18:38:00.000Z	neil_d	LjL	I checked it seems it was enable by default on both machines.
+2009-09-27T18:40:00.000Z	LjL	neil_d	i'm slightly out of ideas. one thing, since ubuntu seems to come with virtually all backends enabled in dll.conf, perhaps try disabling all but the one you actually need... they might be confusing each other. although that'd be unlikely since it works locally.
+2009-09-27T18:41:00.000Z	neil_d	LjL	I will try on the client.
+2009-09-27T18:41:00.000Z	neil_d	LjL	on the client I would only need the 'net' backend corrent?
+2009-09-27T18:44:00.000Z	neil_d	LjL	I commented out all but 'net' and tried xsane again no difference :( is there and thing in /etc/init.d I should restart?
+2009-09-27T18:45:00.000Z	LjL	neil_d	well, usually saned gets started all by itself *at every connection*, so no. but since the tutorial shows that may have been changed in 9.04... perhaps
+2009-09-27T18:48:00.000Z	neil_d	LjL	any more ideas?
+2009-09-27T18:49:00.000Z	LjL	neil_d	by the way, i did get your subtle hint about arch mismatch. but i haven't found any bug report that would confirm anything like that
+2009-09-27T18:51:00.000Z	LjL	neil_d	on the server, can you scan as user or only as root?
+2009-09-27T18:51:00.000Z	neil_d	LjL	ok.  I wasn't trying to be subtle .. but I thought it might be something you might need to know.
+2009-09-27T18:51:00.000Z	neil_d	LjL	I can scan as a user.
+2009-09-27T18:52:00.000Z	neil_d	LjL	thou that user has admin rights.
+2009-09-27T18:52:00.000Z	LjL	neil_d	well, it's perfectly possible that there's some bug in SANE's networking protocol which makes things not be sent the same from a 64bit machine as from a 32bit one... but there's no way i can confirm that (only 32 bit machines here)
+2009-09-27T18:52:00.000Z	LjL	neil_d	by admin rights you mean access to sudo?
+2009-09-27T18:55:00.000Z	neil_d	LjL	yes I do.. just tried via a normal user, and I can still scan so that appear all ok.
+2009-09-27T18:55:00.000Z	LjL	neil_d	yeah, i was wondering if maybe saned was running under a user not privileged enough, but in that case it seems unlikel
+2009-09-27T18:56:00.000Z	LjL	neil_d	by the way, it'll be no use in all likelihood, but disable "net" on the server. it's really only needed on the client, where net.conf will list the address of the server
+2009-09-27T18:56:00.000Z	neil_d	LjL	could it be that the user that saned uses isn't privilaged enough?
+2009-09-27T18:57:00.000Z	LjL	neil_d	i wouldn't think so. but... can you find out which user it's running under? (it's probably "scanner" or "saned")
+2009-09-27T19:00:00.000Z	neil_d	LjL	there is a user and group called saned.. which group has scanner priviliges?
+2009-09-27T19:00:00.000Z	LjL	neil_d	i don't know, that will change depending on versions. but probably "scanner". perhaps try creating a user not in that group, and scanning. also, see if saned is a member
+2009-09-27T19:01:00.000Z	neil_d	LjL	saned isn't in any group (other than its own). still looking.
+2009-09-27T19:01:00.000Z	LjL	neil_d	still, honestly, i'd expect to see something in syslog if it were a matter of denied permissions
+2009-09-27T19:02:00.000Z	LjL	neil_d	is your normal user in scanner?
+2009-09-27T19:03:00.000Z	neil_d	LjL	there doesn't appear to be a group called 'scanner' or anything similar.
+2009-09-27T19:03:00.000Z	LjL	neil_d	see, there's the differences between my Hardy (or my Debian) and your Jaunty.
+2009-09-27T19:04:00.000Z	LjL	neil_d	i'd suggest you disable saned temporarily (from whatever config file you used to enable it, /etc/default/whatitscalled), and manually run saned with "saned -d 128" to see what the heck it's thinking
+2009-09-27T19:04:00.000Z	neil_d	LjL	yes.. some consistence would be nice.
+2009-09-27T19:05:00.000Z	neil_d	LjL	ok
+2009-09-27T19:06:00.000Z	neil_d	LjL	what the heck... now it goes.
+2009-09-27T19:06:00.000Z	LjL	neil_d	really?
+2009-09-27T19:06:00.000Z	LjL	neil_d	then it'll be a matter of user privileges, despite all appearances
+2009-09-27T19:07:00.000Z	LjL	neil_d	what groups is your current user amember of?
+2009-09-27T19:07:00.000Z	neil_d	LjL	I ran saned as root then.. I will try again as a user.
+2009-09-27T19:09:00.000Z	neil_d	LjL	it works if I start it as a user as well... but not when I start via the /etc/init.d/saned script.
+2009-09-27T19:10:00.000Z	LjL	neil_d	well what are that user's groups (see it with "groups", guess you know that)
+2009-09-27T19:13:00.000Z	neil_d	LjL	saned belong to no groups
+2009-09-27T19:13:00.000Z	LjL	neil_d	you mentioned that, but i wanted to know the groups that *your* user (the one you now used to start saned) belongs to
+2009-09-27T19:13:00.000Z	LjL	neil_d	to get an idea which groups might be the ones needed for saned to work
+2009-09-27T19:14:00.000Z	LjL	neil_d	you could also login to the "saned" user yourself and run saned from there, to double-check (with, uhm, "sudo -l saned" if i'm not too mistaken)
+2009-09-27T19:14:00.000Z	neil_d	LjL	adm,dialout,cdrom,sudo,plugdev,lpadmin,admin,sambashare
+2009-09-27T19:15:00.000Z	LjL	neil_d	i'd give saned "plugdev" and perhaps "lpadmin", if i had to guess. which i do.
+2009-09-27T19:15:00.000Z	neil_d	LjL	tried that.. wasn't allowed to login the passwd has the '/bin/false' in it.  maybe I should change that.
+2009-09-27T19:16:00.000Z	LjL	neil_d	oh uhm, i thought sudo would allow you to get in anyway
+2009-09-27T19:16:00.000Z	neil_d	LjL	it might be because the listed 'home' directory doesn't exist
+2009-09-27T19:16:00.000Z	LjL	neil_d	try with "sudo su - saned" instead
+2009-09-27T19:16:00.000Z	LjL	neil_d	nah it's just me not knowing the right sudo syntax for that
+2009-09-27T19:19:00.000Z	neil_d	LjL	my other user is called 'test' when I do 'sudo su test' it does work..  when I do 'sudo su saned' it doesn't so I think I will edit /etc/passwd
+2009-09-27T19:20:00.000Z	LjL	neil_d	you just need to convince it to use bash
+2009-09-27T19:23:00.000Z	neil_d	LjL	'saned -d 128' as the user saned... make the client hang.
+2009-09-27T19:25:00.000Z	LjL	neil_d	if i were an engineer, i'd say "that's interesting"
+2009-09-27T19:27:00.000Z	neil_d	LjL	there where two saned instances running as user saned.. I killed them.. then saned ran ok as saned. but it didn't allow the client to connect properly.
+2009-09-27T19:28:00.000Z	LjL	neil_d	i'm quite clueless. does the debug output from -d 128 at least say anything vaguely interesting?
+2009-09-27T19:29:00.000Z	neil_d	LjL	no error reported.  something curious every time it run I get "do_bindings: [1] bind failed: Address already in use"  even when it work properly allowing me to scan.
+2009-09-27T19:30:00.000Z	LjL	neil_d	that would usually mean that another instance of it is already running
+2009-09-27T19:30:00.000Z	LjL	neil_d	are you sure you've actually disabled the automatically-starting one?
+2009-09-27T19:33:00.000Z	neil_d	LjL	fairly sure.. the line in /etc/inet.conf is commented out.  and when I don't start anything nothing appears in the syslog.
+2009-09-27T19:36:00.000Z	neil_d	LjL	when I run 'saned -d 128' two instances start.
+2009-09-27T19:37:00.000Z	LjL	neil_d	i hav no clue why. might be just threading, but the "cannot bind" thing leads one to think the address is already taken by another instance
+2009-09-27T19:37:00.000Z	LjL	neil_d	anyway, have you tried giving the saned user the plugdev group?
+2009-09-27T19:38:00.000Z	neil_d	LjL	can i just edit the /etc/group file to do that?
+2009-09-27T19:38:00.000Z	LjL	neil_d	if you feel like - but you can also just do "adduser saned plugdev"
+2009-09-27T19:39:00.000Z	neil_d	LjL	done
+2009-09-27T19:39:00.000Z	LjL	neil_d	well, retry, but first log out and back into the saned user, or the new group won't be recognized
+2009-09-27T19:42:00.000Z	neil_d	LjL	that doesn't seem to have helped..
+2009-09-27T19:44:00.000Z	LjL	neil_d	oh look you could always just ignore the whole /etc/init.d and ../default thing completely, and do it the old way by editing inetd stuff and making it run under a user you make
+2009-09-27T19:47:00.000Z	neil_d	LjL	trying something similar.  hang on a minute.
+2009-09-27T20:41:00.000Z	neil_d	LjL	at least I got something working now.
+2009-09-27T20:56:00.000Z	neil_d	LjL	I got it to go..  there seems to be a permissions problem somewhere, but I am not worried about that atm

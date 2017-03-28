@@ -1,0 +1,96 @@
+2006-11-15T13:18:00.000Z	martyyyr		can I install the grub bootloader from the live cd?
+2006-11-15T13:19:00.000Z	lullabud	martyyyr	 grub-install /dev/hda
+2006-11-15T13:19:00.000Z	lullabud	martyyyr	 you may need to replace hda with sda, or whatever your hdd is.
+2006-11-15T13:19:00.000Z	martyyyr	lullabud	will that work if there is a wdinows partition too?
+2006-11-15T13:19:00.000Z	lullabud	martyyyr	 yeah, it installs to the MBR, which is outside of the partitions.
+2006-11-15T13:21:00.000Z	lullabud	martyyyr	 mount your hard disk
+2006-11-15T13:22:00.000Z	lullabud	martyyyr	 anywhere.  `mkdir hda1 ; mount /dev/hda ./hdaa`
+2006-11-15T13:22:00.000Z	lullabud	martyyyr	 holy hell that was an awful typo...
+2006-11-15T13:22:00.000Z	lullabud	martyyyr	 `mount /dev/hda1 ./hda1`  the idea is to get your hard disk mounted somewhere that grub-install can read the boot files.
+2006-11-15T13:22:00.000Z	lullabud	martyyyr	 then do `grub-install /dev/hda --root-directory="./hda1"`
+2006-11-15T13:24:00.000Z	lullabud	martyyyr	 can you rephrase that?
+2006-11-15T13:24:00.000Z	martyyyr	lullabud	 I have 4 partitions:  windows, /boot, /, and /home
+2006-11-15T13:25:00.000Z	lullabud	martyyyr	 oooh, well do it like this then... `mkdir boot ; mount /dev/hda# ./boot`
+2006-11-15T13:25:00.000Z	lullabud	martyyyr	 then do `grub-install /dev/hda --root-directory="./"`
+2006-11-15T13:28:00.000Z	lullabud	martyyyr	 the idea is to mount your boot partition as boot, then give --root-directory to the place where that boot partition is mounted.
+2006-11-15T13:28:00.000Z	lullabud	martyyyr	 that way grub-install finds the right files and doesn't complain.
+2006-11-15T13:31:00.000Z	lullabud	martyyyr	 no, --root-directory="/mnt"
+2006-11-15T13:31:00.000Z	lullabud	martyyyr	 what this is going to do is install grub.  you'll have to edit the /boot/grub/menu.lst to boot up windows.
+2006-11-15T13:31:00.000Z	lullabud	martyyyr	 ubuntu comes with some example configs for windows.
+2006-11-15T13:32:00.000Z	lullabud	martyyyr	 the main thing is that "hd(0,0)" needs to be changed to hd(harddisk#,partition#)
+2006-11-15T13:32:00.000Z	lullabud	martyyyr	 so hd(0,0) is first hard disk, first partition.
+2006-11-15T13:33:00.000Z	lullabud	martyyyr	 that's right
+2006-11-15T13:34:00.000Z	lullabud	martyyyr	 could you type to me?  i'm trying to follow this convo from across the room and it helps when messages to me are highlighted
+2006-11-15T13:34:00.000Z	lullabud	martyyyr	 just put my name somewhere in the line...
+2006-11-15T13:35:00.000Z	lullabud	martyyyr	 lullabUd :P
+2006-11-15T13:35:00.000Z	lullabud	martyyyr	 no, you don't have to let it know you updated the file.  once you install it pointing to that location you can change the file
+2006-11-15T13:35:00.000Z	martyyyr	lullabud	ok, thanks.. I'm gonna give this a go
+2006-11-15T13:37:00.000Z	martyyyr	lullabud	the installer seemed to have automatically detected my windows installation
+2006-11-15T13:38:00.000Z	lullabud	martyyyr	 nice :)
+2006-11-15T13:39:00.000Z	martyyyr	lullabud	yeah.. unfortunately  grub still doesn't load after I reboot :S
+2006-11-15T13:39:00.000Z	lullabud	martyyyr	 that's weird.  error message?
+2006-11-15T13:40:00.000Z	martyyyr	lullabud	 "Reboot and Select proper Boot device"
+2006-11-15T13:40:00.000Z	martyyyr	lullabud	"or Insert Boot Media in selected Boot device and press a key"
+2006-11-15T13:40:00.000Z	lullabud	martyyyr	 do you have more than one hard disk?
+2006-11-15T13:40:00.000Z	martyyyr	lullabud	nope, just 1
+2006-11-15T13:40:00.000Z	lullabud	martyyyr	 or do you have any other disks in the system, like a floppy?
+2006-11-15T13:41:00.000Z	martyyyr	lullabud	a cdrom and a floppy, but my BIOS is set to boot from the hd.. as it always has
+2006-11-15T13:41:00.000Z	martyyyr	lullabud	the problem started after I installed ubuntu
+2006-11-15T13:41:00.000Z	lullabud	martyyyr	 huh... windows xp?
+2006-11-15T13:42:00.000Z	martyyyr	lullabud	what do you mean?
+2006-11-15T13:42:00.000Z	lullabud	martyyyr	 what windows OS are you running?
+2006-11-15T13:42:00.000Z	martyyyr	lullabud	XP
+2006-11-15T13:42:00.000Z	lullabud	martyyyr	 also, what's the layout of your partition table?  can you print it out and put it in a pastebin?
+2006-11-15T13:43:00.000Z	martyyyr	lullabud	 I used to have a gentoo installation and a windows xp installation, seperated by GRUB
+2006-11-15T13:43:00.000Z	lullabud	martyyyr	 are you sure your partition table is valid?
+2006-11-15T13:43:00.000Z	martyyyr	lullabud	I installed ubuntu over the gentoo one, and now everything is messed up
+2006-11-15T13:44:00.000Z	lullabud	martyyyr	 print it out and put it in a pastebin and i'll look at it.  or just verify that you don't have more than 3 primary partitions
+2006-11-15T13:44:00.000Z	martyyyr	lullabud	I have 3 primary partitions, and 1 extened to give me the 2 logical partitions
+2006-11-15T13:45:00.000Z	lullabud	martyyyr	 man, that's weird.  it sounds like it should be working.
+2006-11-15T13:45:00.000Z	lullabud	martyyyr	 i wonder if it's a corruption issue with the partition table...
+2006-11-15T13:46:00.000Z	martyyyr	lullabud	do you think it would help if I'd format all the partitions except for the windows 1?
+2006-11-15T13:47:00.000Z	lullabud	martyyyr	 likely not.  if there's a problem it's probably with the partition table itself.
+2006-11-15T13:47:00.000Z	lullabud	martyyyr	 you might be able to fix it by imaging all of your partitions, repartitionining, then restoring.
+2006-11-15T13:47:00.000Z	martyyyr	lullabud	great....:/ :)
+2006-11-15T13:48:00.000Z	martyyyr	lullabud	how do I print out my partition table?
+2006-11-15T13:48:00.000Z	lullabud	martyyyr	 yeah. =/  that's the worst kind of problem, partition problems.  but it may be something else.
+2006-11-15T13:48:00.000Z	lullabud	martyyyr	 cfdisk -P s /dev/hda
+2006-11-15T13:49:00.000Z	martyyyr	lullabud	k, I'm gonna throw it on a pastebin
+2006-11-15T13:49:00.000Z	lullabud	martyyyr	 LOL, i'm trying this out on this system i have at home, and now i'm scared looking at my own partition table... windows vista has torn this thing to pieces twice.
+2006-11-15T13:51:00.000Z	martyyyr	lullabud	http://pastebin.com/825173
+2006-11-15T13:52:00.000Z	lullabud	martyyyr	 ah, you might need to toggle the bootable flag on one of those partitions.
+2006-11-15T13:52:00.000Z	lullabud	martyyyr	 on my system, only the NTFS is set to be bootable.
+2006-11-15T13:52:00.000Z	martyyyr	lullabud	it was like this (2 boot flags) when I had gentoo running, and it worked
+2006-11-15T13:52:00.000Z	martyyyr	lullabud	look at the 4th partition tho,  the type says Primary... is that right?
+2006-11-15T13:52:00.000Z	lullabud	martyyyr	 really?  you were using grub with it?
+2006-11-15T13:52:00.000Z	martyyyr	lullabud	yeah, grub
+2006-11-15T13:53:00.000Z	lullabud	martyyyr	 yeah, i think that's ok.
+2006-11-15T13:54:00.000Z	martyyyr	lullabud	k..  btw, if there is no bootloader, what would normally happen?
+2006-11-15T13:54:00.000Z	lullabud	martyyyr	 that should be fine since it's the extended, not a data partition in itself.
+2006-11-15T13:54:00.000Z	lullabud	martyyyr	 what do you mean?
+2006-11-15T13:54:00.000Z	martyyyr	lullabud	say there are 2 operating systems, but ..... nvm, nolimitsoya answered the question :)
+2006-11-15T13:56:00.000Z	lullabud	martyyyr	 hah, i had read the question wrong anyways.
+2006-11-15T13:56:00.000Z	martyyyr	lullabud	 :)   anyway, any suggestions left?
+2006-11-15T13:57:00.000Z	lullabud	martyyyr	 you could install grub onto a floppy disk and boot that way.
+2006-11-15T13:57:00.000Z	martyyyr	lullabud	 I don't think I even have floppy disks anymore :)
+2006-11-15T13:58:00.000Z	martyyyr	lullabud	lol
+2006-11-15T13:58:00.000Z	martyyyr	lullabud	I think I'm gonna try reinstalling ubuntu, and look at the partition thing during the install... I'm out of ideas
+2006-11-15T13:58:00.000Z	lullabud	martyyyr	 can you boot off a usb key?
+2006-11-15T13:59:00.000Z	martyyyr	lullabud	I'm not sure, but I can find out
+2006-11-15T13:59:00.000Z	lullabud	martyyyr	 i've had better luck doing the default partition, letting the ubuntu installer do its thing.
+2006-11-15T13:59:00.000Z	martyyyr	lullabud	if I would have done that, my windows partition would have been lost
+2006-11-15T14:00:00.000Z	lullabud	martyyyr	 well, it lets you resize partitions to make empty space.
+2006-11-15T14:00:00.000Z	lullabud	martyyyr	 that's true though, with that complex scheme it might do something funky.
+2006-11-15T14:02:00.000Z	martyyyr	lullabud	I'm reinstalling ubuntu and got rid of a few partitions (only primary partitions left now)... I hope it works
+2006-11-15T15:24:00.000Z	martyyyr	lullabud	guess what it was?
+2006-11-15T15:24:00.000Z	lullabud	martyyyr	 what was it?
+2006-11-15T15:24:00.000Z	martyyyr	lullabud	a stupid BIOS problem! GRRR
+2006-11-15T15:24:00.000Z	lullabud	martyyyr	 wtf?  what bios problem?
+2006-11-15T15:25:00.000Z	martyyyr	lullabud	my bios didn't recognize my sata disk anymore.. so it never got the chance to get to the bootloader
+2006-11-15T15:26:00.000Z	lullabud	martyyyr	 but you said it worked with that other distro....
+2006-11-15T15:26:00.000Z	martyyyr	lullabud	yeah it did... it really did...
+2006-11-15T15:27:00.000Z	martyyyr	lullabud	I have no idea why it changed
+2006-11-15T15:27:00.000Z	lullabud	martyyyr	 cosmic rays from outer space flipping your bits.
+2006-11-15T15:27:00.000Z	martyyyr	lullabud	lol, I bet that's it
+2006-11-15T15:27:00.000Z	martyyyr	lullabud	anyway,  thanks a lot for your help.. I appreciate it :)
+2006-11-15T15:28:00.000Z	lullabud	martyyyr	 you're welcome

@@ -1,0 +1,99 @@
+2007-08-25T11:17:00.000Z	effie_jayx		hey guys... anyone here with a IXP SB400 AC'97 Audio Controller
+2007-08-25T11:17:00.000Z	effie_jayx		??
+2007-08-25T11:17:00.000Z	Ashfire908	effie_jayx	i don't have one but what's the problem you are having
+2007-08-25T11:18:00.000Z	effie_jayx	Ashfire908	 my mic is not working properly
+2007-08-25T11:18:00.000Z	effie_jayx	Ashfire908	 I try cranking up the mic voule and the sound becomes garbled
+2007-08-25T11:19:00.000Z	effie_jayx	Ashfire908	 any clue?
+2007-08-25T11:19:00.000Z	Ashfire908	effie_jayx	hmm
+2007-08-25T11:20:00.000Z	effie_jayx	Ashfire908	 this little glitch is no very common
+2007-08-25T11:20:00.000Z	Ashfire908	effie_jayx	anything that could be causeing noise like a power cable near the mic cable
+2007-08-25T11:21:00.000Z	Ashfire908	effie_jayx	(I doubt it's you sound card)
+2007-08-25T11:21:00.000Z	effie_jayx	Ashfire908	 not quite... it is a head set.. brand new,,
+2007-08-25T11:22:00.000Z	effie_jayx	Ashfire908	 could it be the sound capture device?
+2007-08-25T11:22:00.000Z	effie_jayx	Ashfire908	 there are many options if I click the drop down box
+2007-08-25T11:23:00.000Z	Ashfire908	effie_jayx	i'd rather start with the simple options.
+2007-08-25T11:23:00.000Z	Ashfire908	effie_jayx	actually thats a good idea
+2007-08-25T11:23:00.000Z	effie_jayx	Ashfire908	 well... I shall fiddle and see
+2007-08-25T11:23:00.000Z	Ashfire908	effie_jayx	what's in the box right now?
+2007-08-25T11:24:00.000Z	Ashfire908	effie_jayx	what's in the box right now?
+2007-08-25T11:26:00.000Z	effie_jayx	Ashfire908	 ALSA - Advanced Linux Sound Arquitecture
+2007-08-25T11:27:00.000Z	effie_jayx	Ashfire908	 trying diferent stuff didn't work
+2007-08-25T11:28:00.000Z	Ashfire908	effie_jayx	is the mic jack in the mic port and not the line in?
+2007-08-25T11:29:00.000Z	effie_jayx	Ashfire908	 it is pretty hard to miss it ... it is a laptop ;)
+2007-08-25T11:30:00.000Z	Ashfire908	effie_jayx	is the headset wireless or wired
+2007-08-25T11:30:00.000Z	effie_jayx	Ashfire908	 wired
+2007-08-25T11:31:00.000Z	Ashfire908	effie_jayx	describe again what happens if you turn the sound all the way up
+2007-08-25T11:32:00.000Z	effie_jayx	Ashfire908	 well ... the audio of any song or movie becomes garbled .. with lot's of static... and
+2007-08-25T11:32:00.000Z	effie_jayx	Ashfire908	 it doesn't get any input from the mic
+2007-08-25T11:34:00.000Z	effie_jayx	Ashfire908	 i'm guessing there is something wrong with alsa
+2007-08-25T11:34:00.000Z	Ashfire908	effie_jayx	 ...it's not the mic?
+2007-08-25T11:34:00.000Z	effie_jayx	Ashfire908	 bough it brand new... it is a headset
+2007-08-25T11:34:00.000Z	Ashfire908	effie_jayx	is it the mic?
+2007-08-25T11:34:00.000Z	effie_jayx	Ashfire908	 I tested it on a stereo and it works
+2007-08-25T11:35:00.000Z	Ashfire908	effie_jayx	is it the mic?
+2007-08-25T11:35:00.000Z	effie_jayx	Ashfire908	 not the mic... no
+2007-08-25T11:35:00.000Z	Ashfire908	effie_jayx	mute the mic.
+2007-08-25T11:35:00.000Z	Ashfire908	effie_jayx	oh
+2007-08-25T11:35:00.000Z	effie_jayx	Ashfire908	 the mic generates static
+2007-08-25T11:36:00.000Z	Ashfire908	effie_jayx	???
+2007-08-25T11:36:00.000Z	effie_jayx	Ashfire908	 the computer won't capture any sound from the mic
+2007-08-25T11:36:00.000Z	Ashfire908	effie_jayx	is it a cheap headset?
+2007-08-25T11:37:00.000Z	effie_jayx	Ashfire908	I would say... Not "el cheapo" brand but... it is a nice set
+2007-08-25T11:37:00.000Z	Ashfire908	effie_jayx	waht exactly is your problem?
+2007-08-25T11:37:00.000Z	effie_jayx	Ashfire908	 it is best described here http://ubuntuforums.org/showthread.php?t=512849&highlight=00%3A14.5+Multimedia+audio+controller%3A+ATI+Technologies+Inc+IXP+SB400+AC%2797+Audio+Controller+%28rev+02%29+mic
+2007-08-25T11:39:00.000Z	Ashfire908	effie_jayx	is the problem that the mic doesn't work or that it works but not so well
+2007-08-25T11:39:00.000Z	effie_jayx	Ashfire908	 it doesn't work...
+2007-08-25T11:40:00.000Z	Ashfire908	effie_jayx	do you get sound from the mic at all
+2007-08-25T11:40:00.000Z	effie_jayx	Ashfire908	 no
+2007-08-25T11:40:00.000Z	Ashfire908	effie_jayx	if the mic muted? (in the volume control)
+2007-08-25T11:41:00.000Z	effie_jayx	Ashfire908	 well if I mute it no sound comes on...
+2007-08-25T11:41:00.000Z	Ashfire908	effie_jayx	the mic
+2007-08-25T11:41:00.000Z	Ashfire908	effie_jayx	not the main
+2007-08-25T11:42:00.000Z	effie_jayx	Ashfire908	 I have done that ...
+2007-08-25T11:43:00.000Z	effie_jayx	Ashfire908	 what If I mute it?
+2007-08-25T11:43:00.000Z	effie_jayx	Ashfire908	 all sounds are ok.. still no mic input
+2007-08-25T11:43:00.000Z	Ashfire908	effie_jayx	you have volume control open and not the icon on the top bar
+2007-08-25T11:44:00.000Z	effie_jayx	Ashfire908	 yes
+2007-08-25T11:45:00.000Z	Ashfire908	effie_jayx	edit -> preferences
+2007-08-25T11:45:00.000Z	Ashfire908	effie_jayx	select everything
+2007-08-25T11:46:00.000Z	effie_jayx	Ashfire908	 select everything where in sounds?
+2007-08-25T11:46:00.000Z	Ashfire908	effie_jayx	???
+2007-08-25T11:47:00.000Z	Ashfire908	effie_jayx	in volume control click "edit" in the menu of the volume control window, and click on "Preferences"
+2007-08-25T11:47:00.000Z	effie_jayx	Ashfire908	 you told me <Ashfire908> effie_jayx, edit -> preferences  then <Ashfire908> effie_jayx, select everything... where .. in sound?
+2007-08-25T11:47:00.000Z	Ashfire908	effie_jayx	a window should appear
+2007-08-25T11:48:00.000Z	Ashfire908	effie_jayx	in volume control click "edit" in the menu of the volume control window, and click on "Preferences"
+2007-08-25T11:48:00.000Z	Ashfire908	effie_jayx	a window should appear
+2007-08-25T11:48:00.000Z	Ashfire908	effie_jayx	select all the options by putting a checkmark in the boxes
+2007-08-25T11:48:00.000Z	effie_jayx	Ashfire908	 done
+2007-08-25T11:48:00.000Z	Ashfire908	effie_jayx	click close
+2007-08-25T11:49:00.000Z	Ashfire908	effie_jayx	any new options/tabs?
+2007-08-25T11:49:00.000Z	effie_jayx	Ashfire908	 yes...
+2007-08-25T11:49:00.000Z	effie_jayx	Ashfire908	 same tabs
+2007-08-25T11:49:00.000Z	Ashfire908	effie_jayx	what's new?
+2007-08-25T11:49:00.000Z	effie_jayx	Ashfire908	 mores volume
+2007-08-25T11:50:00.000Z	Ashfire908	effie_jayx	what switchs are there
+2007-08-25T11:50:00.000Z	effie_jayx	Ashfire908	 line in is muted
+2007-08-25T11:51:00.000Z	Ashfire908	effie_jayx	what switchs are there
+2007-08-25T11:52:00.000Z	effie_jayx	Ashfire908	 headphone, PCM , Line in (muted) , CD, mic (muted) if I unmute it static.., IEC958, PC speaker
+2007-08-25T11:53:00.000Z	Ashfire908	effie_jayx	 turn the mic volume all the way down, unplug the mic jack from the mic port, and unmute the mic
+2007-08-25T11:54:00.000Z	effie_jayx	Ashfire908	 done
+2007-08-25T11:54:00.000Z	Ashfire908	effie_jayx	and?
+2007-08-25T11:55:00.000Z	effie_jayx	Ashfire908	 sound is fine...
+2007-08-25T11:55:00.000Z	Ashfire908	effie_jayx	turn the mic up  some
+2007-08-25T11:55:00.000Z	effie_jayx	Ashfire908	 no sound
+2007-08-25T11:57:00.000Z	Ashfire908	effie_jayx	what options are there in the switchs tab?
+2007-08-25T11:57:00.000Z	effie_jayx	Ashfire908	 options?
+2007-08-25T11:58:00.000Z	Ashfire908	effie_jayx	what's in switches
+2007-08-25T11:59:00.000Z	effie_jayx	Ashfire908	 line in, cd capture, mic capture (ticked), Mic boost (+20dB), video, Phoen. IEC958, Aux, Mix , Mix mono
+2007-08-25T12:00:00.000Z	Ashfire908	effie_jayx	what's in options
+2007-08-25T12:01:00.000Z	effie_jayx	Ashfire908	 options?... where is that?
+2007-08-25T12:01:00.000Z	Ashfire908	effie_jayx	the tab
+2007-08-25T12:02:00.000Z	effie_jayx	Ashfire908	 there is no option's tab
+2007-08-25T12:02:00.000Z	effie_jayx	Ashfire908	playback, record,
+2007-08-25T12:03:00.000Z	effie_jayx	Ashfire908	 sorry... I have.. this in options
+2007-08-25T12:03:00.000Z	effie_jayx	Ashfire908	 line in, cd capture, mic capture (ticked), Mic boost (+20dB), video, Phoen. IEC958, Aux, Mix , Mix mono
+2007-08-25T12:04:00.000Z	effie_jayx	Ashfire908	 bad gnome translation
+2007-08-25T12:06:00.000Z	Ashfire908	effie_jayx	sorry, i don't think i can help you. i'm really tired and i'm beingging to think your sound card might not work with ubuntu. search the fourms to see if it is supported by ubuntu
+2007-08-25T12:06:00.000Z	effie_jayx	Ashfire908	 thanks for the great effort...
+2007-08-25T12:07:00.000Z	effie_jayx	Ashfire908	 I will try to fix it... ;)... thanks for all
+2007-08-25T12:07:00.000Z	Ashfire908	effie_jayx	ok, good luck

@@ -1,0 +1,99 @@
+2005-09-12T07:33:00.000Z	dabaR		run unstable on one hard disk, and stable on the other, and you will have no down days...
+2005-09-12T07:34:00.000Z	dooglus	dabaR	I run XP on the other for the rare occasion that breezy is broken
+2005-09-28T09:23:00.000Z	dabaR	dooglus	what windows? all of them?
+2005-09-28T09:24:00.000Z	dooglus	dabaR	here's what happens:  press and hold ALT, then tap and release TAB to switch to the next window.  if I then hold ALT, the window I've switched to is all black.  I can't see its content until I let go of ALT.  this makes it hard to identify whether I'm switching to the right window or not.
+2005-09-28T09:25:00.000Z	dooglus	dabaR	I'm not sure when this started happening, but it's quite recent I think.
+2005-09-28T09:25:00.000Z	dabaR	dooglus	isnt there a list of apps in the middle of your screen when you do that?
+2005-09-28T09:26:00.000Z	dooglus	dabaR	do you see the same behaviour?
+2005-09-28T09:26:00.000Z	dooglus	dabaR	there is, yes, but I'm used to looking at the window contents, not the names.
+2005-09-28T09:27:00.000Z	dabaR	dooglus	I ue openbox, so I dont know.
+2005-09-28T09:27:00.000Z	dooglus	dabaR	oh, ok
+2005-10-05T09:44:00.000Z	dooglus	dabaR	yes.  you can telnet using any internet connection.  I think P229 has his terminology mixed up
+2005-10-13T16:47:00.000Z	dabaR	dooglus	^
+2005-10-14T05:17:00.000Z	dooglus	dabaR	/etc/fstab ?
+2005-10-14T05:22:00.000Z	dooglus	dabaR	why is your load average so high?
+2005-10-14T05:24:00.000Z	dooglus	dabaR	3 means there are 3 jobs fighting for the CPU.  what are you running that's keeping the CPU so busy?  (check with 'top')
+2005-10-14T05:24:00.000Z	dooglus	dabaR	maybe gam_server is naughty?  I've seen it happen before
+2005-10-14T05:25:00.000Z	dooglus	dabaR	none of those use the CPU much.  do you see any 'Id'le time in top?
+2005-10-14T05:25:00.000Z	dooglus	dabaR	what does the 3rd line of 'top' show?  the line that begins 'cpu(s)'?
+2005-10-14T05:26:00.000Z	dooglus	dabaR	that's the number *before* "id", right?
+2005-10-14T05:28:00.000Z	dooglus	dabaR	this explains it - I'm about to read it... http://www.luv.asn.au/overheads/NJG_LUV_2002/luvSlides.html :)
+2005-10-14T05:29:00.000Z	dooglus	dabaR	I thought it was the average number of processes in the queue to get on the CPU at any particular time.  but I'll see...
+2005-10-14T05:29:00.000Z	dabaR	dooglus	something like that, yaya.
+2005-10-14T05:33:00.000Z	dooglus	dabaR	what does 'lshal' show you?
+2005-10-14T05:37:00.000Z	dabaR	dooglus	brb.
+2005-10-14T05:39:00.000Z	dabaR	dooglus	http://paste.ubuntulinux.nl/2894
+2005-10-14T05:39:00.000Z	dooglus	dabaR	does "pgrep hald" show anything
+2005-10-14T05:40:00.000Z	dabaR	dooglus	ya, it does, I have started it by sudo hald, and by sudo hald --daemon=yes.
+2005-10-14T05:40:00.000Z	dooglus	dabaR	did that show you anything useful?
+2005-10-14T05:41:00.000Z	dooglus	dabaR	if not, try   sudo /usr/sbin/hald --daemon=no --verbose=yes
+2005-10-14T05:41:00.000Z	dooglus	dabaR	that'll show you lots of output probably - maybe some of it telling you what's wrong?
+2005-10-14T05:41:00.000Z	dooglus	dabaR	I said "--daemon=no" in my line...
+2005-10-14T05:42:00.000Z	dooglus	dabaR	otherwise you won't see the verbose output
+2005-10-14T05:43:00.000Z	dabaR	dooglus	I did get an error with this no, no error with yes for daemon. http://paste.ubuntulinux.nl/2896
+2005-10-14T05:44:00.000Z	dabaR	dooglus	verbose is the long output, daemon is daemon, or not.
+2005-10-14T05:44:00.000Z	dooglus	dabaR	I think you'll need to kill the running hald before starting another one.  "sudo pkill hald"
+2005-10-14T05:46:00.000Z	dabaR	dooglus	off course, I did.
+2005-10-14T05:46:00.000Z	dabaR	dooglus	I bet a reboot will fix it. Too bad to kill such a long uptime.
+2005-10-14T05:47:00.000Z	dooglus	dabaR	this is hoary, right?
+2005-10-14T05:48:00.000Z	dabaR	dooglus	ya, it is.
+2005-10-14T05:48:00.000Z	dooglus	dabaR	so you'll be rebooting for breezy soon anyway?
+2005-10-14T05:49:00.000Z	dabaR	dooglus	you really have to reboot to get breezy? meek:)), anyhow, no, I think I will wait a week, so that bugs get polished out.
+2005-10-14T05:50:00.000Z	dooglus	dabaR	breezy runs a different kernel...  you don't have to reboot to run breezy, but you do if you want to run breezy's kernel...
+2005-10-22T12:40:00.000Z	dooglus	dabaR	how about this:  "du -kx / | sort -n | tail -100" - that will show you the 100 biggest dirs...
+2005-10-22T12:44:00.000Z	dooglus	dabaR	to see the files in a package, run "dpkg -L ubuntu-base"
+2005-10-22T12:44:00.000Z	dooglus	dabaR	you'll see that ubuntu-base is pretty much emtpy
+2005-10-22T12:45:00.000Z	dooglus	dabaR	then run "apt-cache show ubuntu-base | grep Depends" to see what it depends on.
+2005-10-22T12:45:00.000Z	dooglus	dabaR	you'll see it depends on 2 more meta-packages!
+2005-10-24T08:00:00.000Z	dooglus	dabaR	breezy's 'services' list is partial at best
+2005-10-24T08:00:00.000Z	dabaR	dooglus	I find it ridiculous almost:) I mean, maybe to become a useful thing...
+2005-10-24T08:01:00.000Z	dabaR	dooglus	for new sysadmins:)
+2005-10-24T09:08:00.000Z	dabaR	dooglus	its a .iso type thing? image? tried mounting it?
+2005-10-24T09:08:00.000Z	dooglus	dabaR	it's two files: .bin and .cue.  neither is a .iso
+2005-10-24T09:09:00.000Z	dabaR	dooglus	I mean, is it a disk image type of thing?
+2005-11-05T07:20:00.000Z	dabaR	dooglus	Ha! crazy question... "is it just the tentacles?"
+2005-11-22T09:58:00.000Z	dabaR	dooglus	ipmasq perhaps
+2005-11-22T10:17:00.000Z	dabaR	dooglus	I wanna play a guitar.
+2005-11-22T10:18:00.000Z	dabaR	dooglus	nice
+2005-11-22T10:18:00.000Z	dabaR	dooglus	lol
+2005-11-22T13:01:00.000Z	dabaR	dooglus	man ifconfig: interface - The name of the interface.  This is usually a driver  name  followed  by a unit number, for example eth0 for the first Ethernet interface. If your kernel supports  alias  interfaces,  you  can specify  them  with  eth0:0 for the first alias of eth0. You can use them to assign a second address. To delete an  alias  interface use ifconfig eth0:0 down aliases are deleted, if you delete the first (primary).
+2006-03-04T14:19:00.000Z	dooglus	dabaR	what makes you think that unrar-nonfree is binary only?
+2006-03-04T14:19:00.000Z	dabaR	dooglus	it is in multiverse?
+2006-03-04T14:20:00.000Z	dooglus	dabaR	the source is here: http://archive.ubuntu.com/ubuntu/pool/multiverse/u/unrar-nonfree/unrar-nonfree_3.4.3.orig.tar.gz
+2006-03-04T14:20:00.000Z	dooglus	dabaR	it's nonfree because it uses patented algorithms, but the source is available
+2006-03-04T14:20:00.000Z	dabaR	dooglus	:-/ Isn't multiverse binary only? *goes to read the components page again*
+2006-03-04T14:21:00.000Z	dooglus	dabaR	I just built it from source to check...  it's not binary only.
+2006-03-04T14:22:00.000Z	dabaR	dooglus	ya, nothing about the software being binary only on the components page. Oh well..
+2006-03-04T14:22:00.000Z	dooglus	dabaR	where is that page?
+2006-03-04T14:27:00.000Z	dabaR	dooglus	ask ubotu about components
+2006-06-01T05:10:00.000Z	dabaR	dooglus	right click burn to disc
+2006-06-01T05:11:00.000Z	dooglus	dabaR	right click where?
+2006-06-01T05:11:00.000Z	dabaR	dooglus	on the file
+2006-06-01T05:11:00.000Z	dooglus	dabaR	how do you mean?
+2006-06-01T05:11:00.000Z	dabaR	dooglus	right click on the .iso file, and the menu will appear. then click the burn to disc option, and watch it work its magic.
+2006-06-01T05:12:00.000Z	dooglus	dabaR	I downloaded the file in azureus, and now it's on my disk.  I can 'ls' in the directory.  if I right-click on it, it gives a menu "open terminal; open tab; copy; paste; menubar; and a few others.  nothing about burning
+2006-06-01T05:12:00.000Z	dabaR	dooglus	do you use gnome?
+2006-06-01T05:13:00.000Z	dooglus	dabaR	no, xubuntu
+2006-06-01T05:13:00.000Z	dabaR	dooglus	do you use nautilus?
+2006-06-01T05:13:00.000Z	dooglus	dabaR	no
+2006-06-01T05:13:00.000Z	dooglus	dabaR	I think that's part of GNOME
+2006-06-01T05:13:00.000Z	dabaR	dooglus	it is.
+2006-06-01T05:13:00.000Z	dabaR	dooglus	I am not sure of another method.
+2006-06-01T05:14:00.000Z	dabaR	dooglus	but, ask: How do I burn isos to a CD without nautilus?
+2006-06-01T05:19:00.000Z	dabaR	dooglus	did you read that?
+2006-10-26T07:56:00.000Z	dabaR	dooglus	sudo dpkg --configure -a
+2006-11-20T10:15:00.000Z	dabaR	dooglus	maybe the .dmrc file has wrong permissions:-/
+2006-11-20T10:16:00.000Z	dooglus	dabaR	adding execute permissions won't help - it's not a binary
+2006-11-20T10:16:00.000Z	dabaR	dooglus	well, we're not talking about the home directory permissions any more...
+2006-11-20T10:33:00.000Z	dooglus	dabaR	what was the fix with that .dmrc file in the end?
+2006-11-20T10:34:00.000Z	dabaR	dooglus	we changed its perms to 644. it was 660
+2006-11-20T10:35:00.000Z	dooglus	dabaR	strange.  mine is at 600 and works for me
+2006-11-20T10:35:00.000Z	dabaR	dooglus	make it 620 and try
+2006-11-20T10:36:00.000Z	dabaR	dooglus	I think it did not like having write permissions for anyone but owner. I guess the rest is not important.
+2006-11-20T10:36:00.000Z	dooglus	dabaR	he had '660' when it wasn't working, didn't he?
+2006-11-20T10:36:00.000Z	dabaR	dooglus	yes.
+2006-11-20T10:36:00.000Z	dooglus	dabaR	ok, I see.  that makes sense.  it defines which session to run, and you wouldn't want anyone else to be able to change that.
+2006-11-20T10:38:00.000Z	dabaR	dooglus	OK. Thanks for the help with that.
+2007-02-13T10:57:00.000Z	dabaR	dooglus	oh, come on, that is such a bad excuse...you should learn.
+2007-02-13T10:57:00.000Z	dooglus	dabaR	I've got a copy of the menu on my 'live' partition, but it's never used.  how do I tell grub to use a different partition?
+2007-02-13T11:00:00.000Z	dabaR	dooglus	well, I would have to read a little bit from the recovering grub wiki page to know exactly, but it is not hard. Or something similar on the help.ubuntu.com site.

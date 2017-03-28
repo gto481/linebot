@@ -1,0 +1,95 @@
+2008-10-01T23:54:00.000Z	tomco	airtonix	it's -R isnt it? and why would u want to do that? some things are best ran by root, or by user..etc
+2008-10-01T23:55:00.000Z	airtonix	tomco	yes you are right
+2008-10-01T23:55:00.000Z	airtonix	tomco	but in some instances for example the webserver files found at : /var/www you may have a setup there that requires you to allow write access to other users in your development enviroment
+2008-10-01T23:56:00.000Z	airtonix	tomco	this is ofcourse just an example
+2008-10-01T23:57:00.000Z	airtonix	tomco	have you tried using hte magic sysreq combo?
+2008-10-01T23:58:00.000Z	airtonix	tomco	hold alt + print screen and type r
+2008-10-01T23:59:00.000Z	airtonix	tomco	mmm actually thats not right...one sec
+2008-10-02T00:00:00.000Z	airtonix	tomco	if you can use a browser at this point: http://www.arsgeek.com/2006/12/12/how-to-gracefully-reboot-your-ubuntudebian-system-if-all-else-fails/
+2008-10-02T00:01:00.000Z	airtonix	tomco	ALT + SysReq + r : This stands for Raw keyboard mode.
+2008-10-02T00:01:00.000Z	airtonix	tomco	ALT + SysReq + s : This syncs the disk.
+2008-10-02T00:01:00.000Z	airtonix	tomco	    ALT + SysReq + e : terminates all processes
+2008-10-02T00:01:00.000Z	airtonix	tomco	 yeah bit hard...but good thing is you cant accidentally press them
+2008-10-02T00:02:00.000Z	airtonix	tomco	ALT + SysReq + b : reboots
+2008-10-02T00:02:00.000Z	airtonix	tomco	ALT + SysReq + i : Kill’s all processes that weren’t terminated nicely.
+2008-10-02T00:02:00.000Z	airtonix	tomco	 ALT + SysReq + u : Remounts all filesystems as read only.
+2008-10-02T00:03:00.000Z	airtonix	tomco	ah right...no this is local keyboard only
+2008-10-02T00:04:00.000Z	airtonix	tomco	can you issue terminal commands on the remote machine?
+2008-10-02T00:04:00.000Z	tomco	airtonix	nope.. terminal locked up when i launched it.. after that the application menu locked up
+2008-10-02T00:05:00.000Z	airtonix	tomco	ah well...one more reason not to use vnc when you have ssh -x and freenx
+2008-10-02T00:05:00.000Z	tomco	airtonix	i dont get why it's so unstable.. i have AMD64 and i switched to 32 bit version because of too many problems... i just setup virtualbox and that all went well.. i was only browsing when it crashed
+2008-10-02T00:05:00.000Z	airtonix	tomco	vnc you mean? i very much dislike it
+2008-10-02T00:06:00.000Z	tomco	airtonix	i've never had problems with vnc..
+2008-10-02T00:06:00.000Z	tomco	airtonix	ubuntu has been good overall but lately unstable
+2008-10-02T00:07:00.000Z	airtonix	tomco	vnc is a pain in the rear no matter which os it runs on
+2008-10-02T00:08:00.000Z	airtonix	tomco	looks like your left with the powerbutton then.
+2008-10-02T00:08:00.000Z	airtonix	tomco	which is less than desirable
+2008-10-02T00:09:00.000Z	tomco	airtonix	well i'd try ctr-alt-f1 first at the console
+2008-10-02T00:09:00.000Z	airtonix	tomco	have youtried running xterm instead of the standard gnome-terminal?
+2008-10-02T00:09:00.000Z	tomco	airtonix	the menu system is completely gone
+2008-10-02T00:09:00.000Z	airtonix	tomco	does alt+f2 produce a run dialouge box?
+2008-10-02T00:09:00.000Z	tomco	airtonix	nope
+2008-10-02T00:10:00.000Z	airtonix	tomco	out of ideas here apart from nuclear power button detonation
+2008-10-02T00:10:00.000Z	airtonix	tomco	when your system comes back up setup ssh and enable x-forwarding
+2008-10-02T00:11:00.000Z	airtonix	tomco	can you edit a text file on the desktop ?
+2008-10-02T00:12:00.000Z	tomco	airtonix	right click has no effect ont he desktop.. i have no other way of launching a text editor
+2008-10-02T00:12:00.000Z	airtonix	tomco	can you transfer files to the remote computer from the one your on now?
+2008-10-02T00:13:00.000Z	tomco	airtonix	is that possible via VNC? I really doubt it... the ONLY port the firewall lets through is VNC
+2008-10-02T00:13:00.000Z	airtonix	tomco	i was thinking either network file transfer ...seperatly from vnc
+2008-10-02T00:13:00.000Z	tomco	airtonix	 nope but tonite SSH will be open! lol
+2008-10-02T00:14:00.000Z	airtonix	tomco	ah ok no transfers...when you open the trashcan are you able to change the location ?
+2008-10-02T00:14:00.000Z	airtonix	tomco	or does firefox open up?
+2008-10-02T00:14:00.000Z	airtonix	tomco	i forgot you cant launch....doh
+2008-10-02T00:14:00.000Z	tomco	airtonix	cant start firefox...  right click menu works on trash but not open
+2008-10-02T00:15:00.000Z	airtonix	tomco	ok i was thinking that maybe you could create a script on your current machine and download it somehow by manipualting a program on the remote via vnc...
+2008-10-02T00:16:00.000Z	airtonix	tomco	what sessions are available in the session chooser?
+2008-10-02T00:17:00.000Z	tomco	airtonix	session chooser logged in is gone.   i CAN use cube rotate (compiz) to rotate to another screen.. but that doesnt help
+2008-10-02T00:17:00.000Z	airtonix	tomco	very interesting...so you cant run apps, you cant use the desktop menu, you cant access a terminal...
+2008-10-02T00:18:00.000Z	airtonix	tomco	but you can logout and in...whatelse can you do?
+2008-10-02T00:18:00.000Z	tomco	airtonix	you got it..
+2008-10-02T00:18:00.000Z	airtonix	tomco	power buttin time i think
+2008-10-02T00:18:00.000Z	airtonix	tomco	oh wait...
+2008-10-02T00:18:00.000Z	tomco	airtonix	i can work the network icon.. see the right click menu of trash.. and click my name on the menu bar to switch user
+2008-10-02T00:18:00.000Z	tomco	airtonix	i cant LOG OUT
+2008-10-02T00:19:00.000Z	airtonix	tomco	can you right click the space wher the panel would be and have the menu for that?
+2008-10-02T00:19:00.000Z	tomco	airtonix	but i can just drop VNC
+2008-10-02T00:19:00.000Z	tomco	airtonix	come back and it asks for password
+2008-10-02T00:21:00.000Z	tomco	airtonix	well i think it's really dead now.. when i reconnect via vnc it just gives a black screen.. can connect/disconnect as often as i wish tho
+2008-10-02T00:22:00.000Z	airtonix	tomco	time to power down and investigate freenx or pure ssh x forwarding
+2008-10-02T00:22:00.000Z	airtonix	tomco	if you use ssh x forwarding...you can still provide windows users access with the windows software : xming
+2008-10-02T00:24:00.000Z	tomco	airtonix	well i think vnc over ssh would probably work too.. cuz then i cud at least SSH in when this happens and type "sudo reboot"!
+2008-10-02T00:25:00.000Z	airtonix	tomco	when you run ssh x forwarding you wont need vnc
+2008-10-02T00:25:00.000Z	airtonix	tomco	it becomes pointless
+2008-10-02T00:25:00.000Z	tomco	airtonix	yeah but what kind of client do i need?
+2008-10-02T00:25:00.000Z	airtonix	tomco	thats the beauty...you wont need one
+2008-10-02T00:25:00.000Z	airtonix	tomco	you already have it : its called the X11 display server
+2008-10-02T00:26:00.000Z	tomco	airtonix	link on this?
+2008-10-02T00:26:00.000Z	airtonix	tomco	ok one sec
+2008-10-02T00:26:00.000Z	tomco	airtonix	nah i'm at work... Vista
+2008-10-02T00:26:00.000Z	airtonix	tomco	then you want to download and install xming and get putty
+2008-10-02T00:27:00.000Z	tomco	airtonix	login screen woke up! lol
+2008-10-02T00:27:00.000Z	airtonix	tomco	xming is a x11 server for windows...and you use putty to create the ssh x forwarding connection which provides you with a ssh tunnel
+2008-10-02T00:28:00.000Z	airtonix	tomco	once you have your ssh tunnel, you run xming which sits in the system tray...then you connect to the remote terminal in putty and run any gui command you want...for example...just run nautilus which will boot up the desktop
+2008-10-02T00:29:00.000Z	airtonix	tomco	i will get some pages for you to read on the topic
+2008-10-02T00:30:00.000Z	airtonix	tomco	http://blandname.com/2006/10/19/manage-linux-workstations-using-xming/
+2008-10-02T00:30:00.000Z	airtonix	tomco	http://www.tjansson.dk/?p=163
+2008-10-02T00:31:00.000Z	airtonix	tomco	http://www.ax697.org/xming-with-windows-xp-and-ubuntu-200749.html
+2008-10-02T00:32:00.000Z	airtonix	tomco	this page shows xming being used on vista : http://www.tjansson.dk/?p=163
+2008-10-02T00:32:00.000Z	tomco	airtonix	thanks!    so right click doesnt work at all on bar, background or taskbar anymore... i think trash is dead now too.. but network and switch user still up
+2008-10-02T00:33:00.000Z	airtonix	tomco	yeah i ran a web development training group for about three years, and i had some of the machines running ubuntu feisty...
+2008-10-02T00:33:00.000Z	airtonix	tomco	i wanted the windows users to use gedit so i used xming to serve it up to them....it was great
+2008-10-02T00:34:00.000Z	airtonix	tomco	apparently though freenx is a compressed version of ssh x-forwarding and has even better peformancs...people report great results even over dial up
+2008-10-02T00:36:00.000Z	tomco	airtonix	oh well maybe next time.. anyone know of any Public DNS servers?
+2008-10-02T00:36:00.000Z	airtonix	tomco	dyndns
+2008-10-02T00:37:00.000Z	tomco	airtonix	(next time on fixing this)
+2008-10-02T00:37:00.000Z	airtonix	tomco	ubuntu has ddclient in the repos for updating the ip
+2008-10-02T00:37:00.000Z	tomco	airtonix	oh no not that..
+2008-10-02T00:37:00.000Z	tomco	airtonix	our site is setup on opendns and i need to get to a site that is blocked
+2008-10-02T00:37:00.000Z	airtonix	tomco	oh you men like opendns?
+2008-10-02T00:37:00.000Z	airtonix	tomco	have you tried using tor and privoxy?
+2008-10-02T00:38:00.000Z	tomco	airtonix	no does that require signup
+2008-10-02T00:38:00.000Z	airtonix	tomco	not from memory
+2008-10-02T00:38:00.000Z	tomco	airtonix	i shud just be able to hardcode dns.. but dont know what to set it to
+2008-10-02T00:38:00.000Z	airtonix	tomco	https://help.ubuntu.com/community/Privoxy
+2008-10-02T00:39:00.000Z	airtonix	tomco	I gotta go afk for while...
+2008-10-02T00:39:00.000Z	tomco	airtonix	k thx for all your help!

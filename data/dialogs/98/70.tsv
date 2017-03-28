@@ -1,0 +1,98 @@
+2006-10-29T09:23:00.000Z	eternale1		i've ran into an issue while upgrading to edgy. The system begins to boot up, but never gets to the login screen , it becomes frozen on the cross hair mouse right before xwindow loads up, anyone seen this on upgrading?
+2006-10-29T09:24:00.000Z	skel	eternale1	have you checked the xorg logs in /var/log ?
+2006-10-29T09:26:00.000Z	eternale1	skel	i have, not much in the way of any error reporting that i can tell will help, am i looking for something specific. the last few lines are complaining about "could not init font path element /usr/share/...."
+2006-10-29T09:26:00.000Z	skel	eternale1	could you post it on Pastebin? all the (EE) lines?
+2006-10-29T09:28:00.000Z	eternale1	skel	no error lines (EE), anywhere in x.org.log ... also i'm stuck in console mode for the moment it could be tough to get something on pastebin.
+2006-10-29T09:29:00.000Z	skel	eternale1	oh yeah, dur.. ok hmm no errors though huh?
+2006-10-29T09:30:00.000Z	skel	eternale1	grep -i EE ?
+2006-10-29T09:31:00.000Z	eternale1	skel	ya no EE's or ee's
+2006-10-29T09:31:00.000Z	skel	eternale1	ok so its not X then.. anything in /var/log/messages .. whats the symptom again?
+2006-10-29T09:32:00.000Z	eternale1	skel	after upgrade, reboot system, stuck on the mouse with the crosshairs.. frozen after that, can't even move the mouse... ill check /var/log/messages now
+2006-10-29T09:33:00.000Z	skel	eternale1	is it the generic X gray screen with the x cursor?
+2006-10-29T09:33:00.000Z	skel	eternale1	could be a problem with your window manager
+2006-10-29T09:34:00.000Z	skel	eternale1	hmm thats weird
+2006-10-29T09:34:00.000Z	eternale1	skel	yes very...
+2006-10-29T09:35:00.000Z	skel	eternale1	what video card?
+2006-10-29T09:36:00.000Z	skel	eternale1	that use the mesa drivers?
+2006-10-29T09:37:00.000Z	skel	eternale1	gnome right?
+2006-10-29T09:37:00.000Z	skel	eternale1	try this.. mv your .gnome* .gconf* dirs to .blah.bak and restart gdm
+2006-10-29T09:43:00.000Z	eternale1	skel	alright did that. removed the .gnome* .gconf* and rebooted gdm... takes me right to the issue spot. with the generic cursor and frozen after that.  One thing it does it like refresh the screen a few times but then becomes frozen after it refreshes itsself like3 times
+2006-10-29T09:43:00.000Z	eternale1	skel	looks to be something with gdm apparently
+2006-10-29T09:43:00.000Z	skel	eternale1	and still no errors in the X log :( ?
+2006-10-29T09:43:00.000Z	eternale1	skel	let me check again
+2006-10-29T09:44:00.000Z	eternale1	skel	still no EE's in Xorg.log :\
+2006-10-29T09:45:00.000Z	skel	eternale1	do you have any custom themes or anything with gdm?
+2006-10-29T09:45:00.000Z	skel	eternale1	I would try just running gnome-session
+2006-10-29T09:45:00.000Z	skel	eternale1	to isolate if its X, gdm, or gnome
+2006-10-29T09:48:00.000Z	eternale1	skel	gnome-session currently on the bash prompt causes gtk-Warning  cannot open display
+2006-10-29T09:48:00.000Z	skel	eternale1	are you su'd or sudo'd to another user?
+2006-10-29T09:49:00.000Z	eternale1	skel	i was su'd to my usual user to get onto irrsi, but i detached my screen to get back to the original login of root from the recovery mode
+2006-10-29T09:50:00.000Z	skel	eternale1	if you login as a normal user and do a gnome-session does it start?
+2006-10-29T09:51:00.000Z	eternale1	skel	is there a way to get to the regular login screen via a reboot instead of the forced root login screen via recovery mode?  I've only been able to get to the root login
+2006-10-29T09:51:00.000Z	skel	eternale1	I've never used recovery mode =/
+2006-10-29T09:52:00.000Z	eternale1	skel	it was just the recovery mode from GRUB, which boots i guess a safe version of the kernel
+2006-10-29T09:52:00.000Z	skel	eternale1	I just let whatever component fail then ctrl-alt-F2 etc
+2006-10-29T09:52:00.000Z	skel	eternale1	oohh just boot your normal kernel
+2006-10-29T09:53:00.000Z	skel	eternale1	or do ctrl-alt-f2-f6
+2006-10-29T09:53:00.000Z	skel	eternale1	to get another console
+2006-10-29T09:53:00.000Z	eternale1	skel	ya, when i do that it sits on the console iwht a blinking cursor line but no login
+2006-10-29T09:53:00.000Z	skel	eternale1	hmm.. you may have to reboot then =/
+2006-10-29T09:53:00.000Z	eternale1	skel	ok
+2006-10-29T09:53:00.000Z	skel	eternale1	kk
+2006-10-29T10:14:00.000Z	eternale1	skel	:\ i can't get gnome-session to load up, but i also can't get the normal kernel to load and allow me to login as a normal user. it won't let me jump to another consoel using the F's
+2006-10-29T10:15:00.000Z	eternale1	skel	the only way i can even get to a login is using the recovery mode from GRUB, which allows me to get here
+2006-10-29T10:15:00.000Z	skel	eternale1	what messages do you get on the standard kernel?
+2006-10-29T10:18:00.000Z	eternale1	skel	i can't remember the correct config file to say load up this x session instead of gnome, like point it to fluxbox instead or etc
+2006-10-29T10:20:00.000Z	skel	eternale1	hmm
+2006-10-29T10:21:00.000Z	skel	eternale1	so if you login right as root in the recovery.. can you just do startx or gnome-session?
+2006-10-29T10:21:00.000Z	eternale1	skel	when i attempt startx it just takes me to the same spot where the problem is
+2006-10-29T10:22:00.000Z	skel	eternale1	so then its not gdm
+2006-10-29T10:23:00.000Z	skel	eternale1	it would seem to be X or gnome
+2006-10-29T10:23:00.000Z	eternale1	skel	hmm how can we narrow it down even more?
+2006-10-29T10:23:00.000Z	skel	eternale1	well if X isn't giving you any logs =/ I'm not sure where gnome logs stuff
+2006-10-29T10:25:00.000Z	skel	eternale1	what did you do to upgrade?  changed /etc/apt/sources.list to edgy, then apt-get update && apt-get dist-upgrade ?
+2006-10-29T10:25:00.000Z	eternale1	skel	i did gksu "update-manager -c"
+2006-10-29T10:26:00.000Z	eternale1	skel	something along those lines
+2006-10-29T10:26:00.000Z	skel	eternale1	thats it? to upgrade to edgy ?
+2006-10-29T10:26:00.000Z	eternale1	skel	using the upgrade to ubuntu 6.1 update manager
+2006-10-29T10:27:00.000Z	skel	eternale1	never used that, and I don't know that I trust it =/
+2006-10-29T10:27:00.000Z	eternale1	skel	eek :\
+2006-10-29T10:29:00.000Z	skel	eternale1	if you want to try the old-fashioned way, vi /etc/apt/sources.list (:%s/<old-release/edgy/g) then apt-get update && apt-get dist-upgrade
+2006-10-29T10:29:00.000Z	eternale1	skel	when i check out apt-get update, it shows all the urls , they all point to edgy versions of the url... then when i do dist-upgrade its just got some random packages that were held back..
+2006-10-29T10:30:00.000Z	eternale1	skel	nothing that seems to important, gkrellm :\ , proftpd :\ , mplayer, libggi2
+2006-10-29T10:31:00.000Z	skel	eternale1	hmm yeah double check to make sure you don't have any other release lines in your sources.list
+2006-10-29T10:31:00.000Z	skel	eternale1	otherwise, I personally would just move forward
+2006-10-29T10:31:00.000Z	skel	eternale1	do you have all your personal stuff on a seperate partition?
+2006-10-29T10:32:00.000Z	skel	eternale1	I make /home and /opt seperate partitions so if something gets fubar'd I can always do a fresh install and not format those mount-points
+2006-10-29T10:33:00.000Z	eternale1	skel	ya sources.list show all edgy urls, i have no seperate partitions for home but really if need be i could just tar up what i want and ftp it to a remote machine elsewhere.... i'm just really hoping it doesn't come down to a complete reinstall
+2006-10-29T10:33:00.000Z	eternale1	skel	there just has to be something thats causing this
+2006-10-29T10:34:00.000Z	eternale1	skel	i'm hoping someone else has come up with the same situation on the boards somewhere... or elsewhere
+2006-10-29T10:35:00.000Z	eternale1	skel	is there a way to bypass the gdm login and take me directly to a console login , then have fluxbox load up instead of gnome?
+2006-10-29T10:36:00.000Z	skel	eternale1	hmm you could go to /etc/rc3.d and unlink S13gdm
+2006-10-29T10:46:00.000Z	eternale1	skel	i removed the link to gdm from /etc/rc4.d .... same results :\ arrrgggggghhhh!
+2006-10-29T10:46:00.000Z	skel	eternale1	why rc4.d ?
+2006-10-29T10:47:00.000Z	eternale1	skel	3 i mean.
+2006-10-29T10:47:00.000Z	skel	eternale1	ok
+2006-10-29T10:47:00.000Z	skel	eternale1	so it still tries to start gdm then? hmm thats odd
+2006-10-29T10:48:00.000Z	eternale1	skel	ya... it shows the ubuntu logo and the progress bar then flashes to the generic looking mouse crosshairs, then refreshes a few times then freezes... i'm wondering if its even getting to starting gdm
+2006-10-29T10:49:00.000Z	skel	eternale1	oh yeah.. I forgot it uses upstart now
+2006-10-29T10:49:00.000Z	skel	eternale1	no more of the init system
+2006-10-29T10:49:00.000Z	skel	eternale1	well shit..
+2006-10-29T10:49:00.000Z	skel	eternale1	hang on
+2006-10-29T10:49:00.000Z	eternale1	skel	ok cool
+2006-10-29T10:53:00.000Z	eternale1	skel	it seems like there are people having issues that somewhat relate to mine i think... unclear if its exactly related
+2006-10-29T10:54:00.000Z	skel	eternale1	I saw a couple of submitted bugs in relation to the update manager for edgy.. but I wasn't clear if they were resolved
+2006-10-29T10:55:00.000Z	eternale1	skel	 i have event.d/  not much in there but small runlevel scripts calling the other runlevels
+2006-10-29T10:56:00.000Z	skel	eternale1	supposedly thats where gdm will get called from
+2006-10-29T10:56:00.000Z	eternale1	skel	hmm
+2006-10-29T11:00:00.000Z	skel	eternale1	I'm going to restart quick.. brb
+2006-10-29T11:00:00.000Z	eternale1	skel	alright no problem
+2006-10-29T11:07:00.000Z	skel	eternale1	anything in events.d ?
+2006-10-29T11:07:00.000Z	eternale1	skel	nope not much
+2006-10-29T11:07:00.000Z	eternale1	skel	there are some files but nothing like a config
+2006-10-29T11:08:00.000Z	skel	eternale1	well not config but anything that would execute gdm that you can disable?
+2006-10-29T11:09:00.000Z	eternale1	skel	it seems to be all broken down by runlevels not specific processes for each level
+2006-10-29T11:10:00.000Z	skel	eternale1	hmm ok
+2006-10-29T11:47:00.000Z	eternale1	skel	boot using "Linux single" so gdm is not started... whats that exactly saying to do?
+2006-10-29T11:47:00.000Z	eternale1	skel	something i found on a post about a differnet bug for ubuntu 6.06
+2006-10-29T11:47:00.000Z	skel	eternale1	ah in the boot config you can put a parameter on the kernel line at the end "single" that boots it into single user mode, ie runlevel 1

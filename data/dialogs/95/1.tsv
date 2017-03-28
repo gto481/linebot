@@ -1,0 +1,95 @@
+2012-06-01T14:47:00.000Z	m_fulder		hello!
+2012-06-01T14:49:00.000Z	m_fulder		I would need a bit of help with ubuntus access control+VSFTPD .. I would like ftp users to have read acess to all files in a folder but be able to change only a few.. so I thought of chmoding all files to 700 and then the ones that the user should have acess to I sat to 707...now the problem is, the FTP user can still rename and delete all files in that dir .. why is that? :O
+2012-06-01T14:50:00.000Z	wawowe	m_fulder	4 is read-only
+2012-06-01T14:51:00.000Z	wawowe	m_fulder	chmod 444 and chmod 744
+2012-06-01T14:52:00.000Z	wawowe	m_fulder	yes
+2012-06-01T14:53:00.000Z	m_fulder	wawowe	then how come the ftp user still can delete a file when its in 700 mode?
+2012-06-01T14:54:00.000Z	wawowe	m_fulder	is it in their home directory? and are you sure they don't own it
+2012-06-01T14:54:00.000Z	m_fulder	wawowe	yeah I have sat it as their home dir, but can it be more then one owner to same dir?
+2012-06-01T14:55:00.000Z	wawowe	m_fulder	make a new group and add everyone you want to have access to that group
+2012-06-01T14:56:00.000Z	wawowe	m_fulder	then chown -R root:yournewgroup folder
+2012-06-01T14:56:00.000Z	wawowe	m_fulder	and chmod -R 770 folder
+2012-06-01T14:56:00.000Z	m_fulder	wawowe	ah yeah smart will try it on thanks! :)
+2012-06-01T15:01:00.000Z	wawowe	m_fulder	make mynewgroup the default group for ftp users
+2012-06-01T15:01:00.000Z	wawowe	m_fulder	then every file they upload will be in the same group no matter who uploaded it
+2012-06-01T15:05:00.000Z	wawowe	m_fulder	also vsftp can auto chown uploaded files
+2012-06-01T15:06:00.000Z	m_fulder	wawowe	yeah will come to that later, my first problem was that a user could delete a file which I didn't want him to delete, but will adding the user to the group really help if he still got the directory as his home dir?
+2012-06-01T15:08:00.000Z	m_fulder	wawowe	I've now tried to have a user with a group and he still can delete files chmoded 700 while having the same dir as his home dir :P
+2012-06-01T15:09:00.000Z	wawowe	m_fulder	create a folder owned by root and put the files you don't want deleted in it
+2012-06-01T15:09:00.000Z	wawowe	m_fulder	also owned by root
+2012-06-01T15:10:00.000Z	m_fulder	wawowe	but I need the same files for the root and for the FTP users to be in the same dir (it is a game server files)
+2012-06-01T15:11:00.000Z	m_fulder	wawowe	i.e. I need a folder with different access for root, owner and for a group
+2012-06-01T15:11:00.000Z	wawowe	m_fulder	don't use someones home directory as server root
+2012-06-01T15:12:00.000Z	wawowe	m_fulder	put something like local_root=/home/ftp in your vsftpd.conf
+2012-06-01T15:13:00.000Z	wawowe	m_fulder	make sure that is ftp's home directory and not someone who will be accessing the server
+2012-06-01T15:16:00.000Z	m_fulder	wawowe	ok I did but now the ftp user got connection refused while trying to access his home dir
+2012-06-01T15:17:00.000Z	m_fulder	wawowe	while the dir have full access (777)
+2012-06-01T15:17:00.000Z	wawowe	m_fulder	don't chroot to home directory
+2012-06-01T15:18:00.000Z	wawowe	m_fulder	move the stuff in their home to /home/ftp/user
+2012-06-01T15:18:00.000Z	wawowe	m_fulder	or just /home/ftp/
+2012-06-01T15:19:00.000Z	m_fulder	wawowe	but then my server structure will be broken, I need it to be the same folder for both FTP and normal users
+2012-06-01T15:19:00.000Z	wawowe	m_fulder	then put the stuff in /home/ftp/
+2012-06-01T15:20:00.000Z	m_fulder	wawowe	how will it be different then putting them in /home/randomUser ?
+2012-06-01T15:20:00.000Z	wawowe	m_fulder	randomUser won't be able to delete things they don't own
+2012-06-01T15:23:00.000Z	m_fulder	wawowe	oh hold on, I think I understood the ftp-home dir wrong, I've always done "useradd myUser -d hisHomeDir" and thought it wouldn't make the user itself to own that dir but only set the vsftpd dir, can I somehow have a user with a /home/ftp as his home dir but still "cd him" to /home/another user while connected via FTP?
+2012-06-01T15:25:00.000Z	wawowe	m_fulder	usermod -d /home/ftp myuser
+2012-06-01T15:26:00.000Z	wawowe	m_fulder	they won't own the directory assuming it was created by root or someone else
+2012-06-01T15:27:00.000Z	m_fulder	wawowe	hm they won't? it seems like they do caouse they can delete 700 files
+2012-06-01T15:27:00.000Z	wawowe	m_fulder	normally you would want a user to own their home and would use useradd -m to create their home and give them rights over it
+2012-06-01T15:27:00.000Z	wawowe	m_fulder	if they don't own the directory, they can't delete stuff in it
+2012-06-01T15:29:00.000Z	m_fulder	wawowe	yeah but still how can I point him in FTP to another folder that he doesn't own?
+2012-06-01T15:30:00.000Z	wawowe	m_fulder	by setting local_root="anotherfolderthathedoesn'town"
+2012-06-01T15:31:00.000Z	m_fulder	wawowe	won't that affect all FTP users? what do I do if I want different dirs for different users
+2012-06-01T15:31:00.000Z	wawowe	m_fulder	chroot_list_enable=YES chroot_list_file=/etc/vsftpd.chroot_list
+2012-06-01T15:39:00.000Z	m_fulder	wawowe	what's the syntacs for the vsftpd.chroot_list file can't find it anywhere
+2012-06-01T15:40:00.000Z	wawowe	m_fulder	user1 (newline) user2 (newline) user3
+2012-06-01T15:40:00.000Z	m_fulder	wawowe	but don't I put their startup dirs there aswell?
+2012-06-01T15:41:00.000Z	wawowe	m_fulder	no, it will chroot them to their home
+2012-06-01T15:42:00.000Z	wawowe	m_fulder	and they won't be able to leave home
+2012-06-01T15:42:00.000Z	m_fulder	wawowe	oh so I can't set their home dir to something else without them actually owning that dir?
+2012-06-01T15:42:00.000Z	wawowe	m_fulder	you can
+2012-06-01T15:43:00.000Z	wawowe	m_fulder	in fact you should
+2012-06-01T15:43:00.000Z	wawowe	m_fulder	can create a folder in it that they own
+2012-06-01T15:43:00.000Z	wawowe	m_fulder	and*
+2012-06-01T15:43:00.000Z	m_fulder	wawowe	yeah haha , but while creating a new user like : useradd myUser -d myDir .. won't that make the user own myDir automaticly?
+2012-06-01T15:44:00.000Z	wawowe	m_fulder	no
+2012-06-01T15:44:00.000Z	m_fulder	wawowe	ok, but then if I have a user and put his home dir as the root-home dir and put only 700 access on all files .. how come the user still can erase all root's files?
+2012-06-01T15:45:00.000Z	wawowe	m_fulder	in that senario they can't even login
+2012-06-01T15:46:00.000Z	m_fulder	wawowe	ok then not all files are chmoded 700 .. say I chmod the dirs the ftp user need to access to login to 707 (only chmod not chmod -R now) .. then the user can login to that folder .. and there he has all files chmoded 700
+2012-06-01T15:47:00.000Z	m_fulder	wawowe	then he should be able to acces the folders (i.e. log in) but not be able to change/delete any files
+2012-06-01T15:48:00.000Z	wawowe	m_fulder	wouldn't be able to login because he wouldn't have permission to access root-home
+2012-06-01T15:49:00.000Z	m_fulder	wawowe	but if I set the roots home dir to chmod 777 he would
+2012-06-01T15:49:00.000Z	wawowe	m_fulder	assuming you meant the root user's home dir
+2012-06-01T15:49:00.000Z	wawowe	m_fulder	should just make a seperate directory
+2012-06-01T15:49:00.000Z	m_fulder	wawowe	I need the root and the ftp user to work on same folders and files
+2012-06-01T15:50:00.000Z	wawowe	m_fulder	you're talking about "root" as in the administrator account right?
+2012-06-01T15:50:00.000Z	m_fulder	wawowe	yes :)
+2012-06-01T15:50:00.000Z	wawowe	m_fulder	or root as in /
+2012-06-01T15:50:00.000Z	m_fulder	wawowe	nono the user :P
+2012-06-01T15:51:00.000Z	wawowe	m_fulder	why would you need root to have ftp access?
+2012-06-01T15:51:00.000Z	m_fulder	wawowe	no its the other way around, I need the ftp user to have access to some of roots files
+2012-06-01T15:52:00.000Z	wawowe	m_fulder	put root's files in a directory they have access to
+2012-06-01T15:52:00.000Z	m_fulder	wawowe	but why move them? can't I just make the ftp users access them where they are now (in roots home dir)
+2012-06-01T15:53:00.000Z	wawowe	m_fulder	you could but that gives those users access to everything else that's in root's home
+2012-06-01T15:55:00.000Z	wawowe	m_fulder	for instance if you had an ssh key or something in there..
+2012-06-01T15:56:00.000Z	wawowe	m_fulder	they don't
+2012-06-01T15:56:00.000Z	m_fulder	wawowe	they seems to get it :P
+2012-06-01T15:56:00.000Z	wawowe	m_fulder	if they don't own the directory or the file in it, then they do not
+2012-06-01T15:56:00.000Z	m_fulder	wawowe	well they own the dirs above where the file is placed..maybe that's the problem?
+2012-06-01T15:57:00.000Z	wawowe	m_fulder	that is the problem
+2012-06-01T15:57:00.000Z	wawowe	m_fulder	the file has to be in a directory that they do not own
+2012-06-01T15:57:00.000Z	m_fulder	wawowe	aha! but then they can't access that dir via FTP .. crap!
+2012-06-01T15:58:00.000Z	wawowe	m_fulder	as long as there's one directory that they don't own between them and the file they won't be able to delete it
+2012-06-01T15:58:00.000Z	wawowe	m_fulder	if the directory is chmodded then they can
+2012-06-01T15:58:00.000Z	wawowe	m_fulder	chmod 755 dir
+2012-06-01T15:59:00.000Z	m_fulder	wawowe	oh, so its the write folder flag that messes it up? does write for folders mean that the user get write access to all the files below?
+2012-06-01T16:00:00.000Z	wawowe	m_fulder	yes
+2012-06-01T16:01:00.000Z	wawowe	m_fulder	it's necessary for all directories if you want access to them
+2012-06-01T16:03:00.000Z	wawowe	m_fulder	yes
+2012-06-01T16:04:00.000Z	m_fulder	wawowe	then what's the differance between execute and read for a folder?
+2012-06-01T16:08:00.000Z	m_fulder	wawowe	sucess! now everything works as I wanted it to! Thanks a lot!
+2012-06-01T16:20:00.000Z	m_fulder	wawowe	now I only got one weird problem left .. in the folder which is now chmoded 755, I can replace all files chmoded 777, though I can't delete them :O (maybe that's a good thing, but still seems kind of weird :P)
+2012-06-01T16:20:00.000Z	m_fulder	wawowe	replace and delete through FTP *
+2012-06-01T16:20:00.000Z	wawowe	m_fulder	if you're replacing them you are deleting them
+2012-06-01T16:21:00.000Z	m_fulder	wawowe	yeah that's why its weird .. I can succesfully replace them .. but can't only delete them :P
+2012-06-01T16:21:00.000Z	wawowe	m_fulder	must be a client issue

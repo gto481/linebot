@@ -1,0 +1,99 @@
+2010-09-18T16:27:00.000Z	ikonia		swapping libc out is not a good idea
+2010-09-18T16:28:00.000Z	AbhiJit	ikonia	total four files
+2010-09-18T16:28:00.000Z	ikonia	AbhiJit	I know, but I think we get the message
+2010-09-18T16:28:00.000Z	AbhiJit	ikonia	hmm
+2010-09-19T17:07:00.000Z	ikonia	AbhiJit	what is the issue ?
+2010-09-19T17:07:00.000Z	AbhiJit	ikonia	i just installed previous version of linux kernle i.e. #23 and removedd the latest one i.e. #24 but now i in update it dont show any update for kernels.
+2010-09-19T17:08:00.000Z	AbhiJit	ikonia	actionParsnip should i again just manualy install the latest kernal #25?
+2010-09-19T17:08:00.000Z	ikonia	AbhiJit	I'd check to make sure it's not still installed
+2010-09-19T17:08:00.000Z	AbhiJit	ikonia	yah i removed the latest kernel with ubuntu tweak
+2010-09-19T17:09:00.000Z	ikonia	AbhiJit	ahhh ubuntu tweak = your system is no longer supported
+2010-09-19T17:09:00.000Z	AbhiJit	ikonia	:)
+2010-09-19T17:09:00.000Z	ikonia	AbhiJit	why you felt the need to use ubuntu tweek when the supported package manager tools are there I don't know
+2010-09-19T17:09:00.000Z	AbhiJit	ikonia	i just read on some blog that tweak is easy gui to do day to day ubutnu things
+2010-09-19T17:09:00.000Z	ikonia	AbhiJit	you read wrong
+2010-09-19T17:10:00.000Z	ikonia	AbhiJit	can you use synaptic ?
+2010-09-19T17:10:00.000Z	AbhiJit	ikonia	yes i can
+2010-09-19T17:10:00.000Z	ikonia	AbhiJit	ok - so why did you need to use unsupported software to remove a software package
+2010-09-19T17:10:00.000Z	AbhiJit	ikonia	dunno. i felt if fancy and good
+2010-09-19T17:10:00.000Z	ikonia	AbhiJit	well, your system is now unsupportible
+2010-09-19T17:11:00.000Z	AbhiJit	ikonia	so what you suggest now? should i uninstall ubuntu tweak?
+2010-09-19T17:11:00.000Z	ikonia	AbhiJit	too late, you don't know what it's changed, how and why, your system is now in an unsupportable state
+2010-09-19T17:11:00.000Z	AbhiJit	ikonia	so reinstall is the only solution?
+2010-09-19T17:12:00.000Z	AbhiJit	ikonia	i mean reinstall os
+2010-09-19T17:12:00.000Z	ikonia	AbhiJit	up to you
+2010-09-19T17:12:00.000Z	AbhiJit	ikonia	i want my system to be supportable. what to do?
+2010-09-19T17:12:00.000Z	ikonia	AbhiJit	up to you
+2010-09-19T17:13:00.000Z	AbhiJit	ikonia	:(
+2010-09-19T17:17:00.000Z	AbhiJit	ikonia	do you mean that using synaptic to remove kernel whould have not caused this problem? so that i wll use synpatic in next time
+2010-09-19T17:18:00.000Z	AbhiJit	ikonia	i am asking your suggestion
+2010-10-03T19:33:00.000Z	ikonia	AbhiJit	no, it's fine as it is
+2010-10-03T19:33:00.000Z	AbhiJit	ikonia	ok :)
+2010-10-08T13:19:00.000Z	AbhiJit	ikonia	i insatll hylafax. but where it goes? cant find it
+2010-10-08T13:19:00.000Z	ikonia	AbhiJit	how did you install it ?
+2010-10-08T13:19:00.000Z	AbhiJit	ikonia	sudo apt-get insatll hylafax-client
+2010-10-08T13:20:00.000Z	ikonia	AbhiJit	so it should be somewhere in /usr/bin I believe
+2010-10-08T13:20:00.000Z	AbhiJit	ikonia	ok
+2010-10-08T13:21:00.000Z	ikonia	AbhiJit	why are you showing me that ?
+2010-10-08T13:21:00.000Z	AbhiJit	ikonia	because it is not runnig. when i type hylafax in termianl it says command not found
+2010-10-16T13:21:00.000Z	ikonia	AbhiJit	it's not that simple,
+2010-10-16T13:22:00.000Z	AbhiJit	ikonia	yah
+2010-11-20T18:18:00.000Z	ikonia	AbhiJit	check the link
+2010-11-20T18:18:00.000Z	AbhiJit	ikonia	i followed that
+2010-11-20T18:18:00.000Z	AbhiJit	ikonia	and still it is not working
+2010-11-20T18:19:00.000Z	ikonia	AbhiJit	did all the steps in the install process work
+2010-11-20T18:20:00.000Z	AbhiJit	ikonia	im using lts. so i double click on font. and it told me that it got installed. and still it is not working
+2010-11-20T18:20:00.000Z	ikonia	AbhiJit	how did you check ?
+2010-11-20T18:20:00.000Z	AbhiJit	ikonia	on the same window it first display 'install font' button after clicking that button in the same place it shows grayed 'installed' button
+2010-11-20T18:21:00.000Z	ikonia	AbhiJit	run suco fc-cache -f -b
+2010-11-20T18:21:00.000Z	AbhiJit	ikonia	and thing is arora is displaying that website well but frefox is not
+2010-11-20T18:22:00.000Z	AbhiJit	ikonia	invalid option b
+2010-11-20T18:22:00.000Z	ikonia	AbhiJit	sory -v
+2010-11-20T18:22:00.000Z	ikonia	AbhiJit	typo
+2010-11-20T18:23:00.000Z	AbhiJit	ikonia	fc-cache succeded. and still not working in firefox
+2010-11-20T18:24:00.000Z	ikonia	AbhiJit	firefox should pickup fonts from the font server, have you restarted firefox
+2010-11-20T18:24:00.000Z	AbhiJit	ikonia	yes restarted
+2010-11-20T18:25:00.000Z	AbhiJit	ikonia	chromium and arora did successfully picked up the font. but firefox not :(
+2010-11-20T18:25:00.000Z	ikonia	AbhiJit	you are using firefox from the repos yes ?
+2010-11-20T18:25:00.000Z	AbhiJit	ikonia	yes
+2010-11-20T18:25:00.000Z	ikonia	AbhiJit	it should pickup from font server.
+2010-11-20T18:25:00.000Z	AbhiJit	ikonia	3.6.12
+2010-11-20T18:25:00.000Z	AbhiJit	ikonia	ok
+2011-02-05T19:38:00.000Z	ikonia	AbhiJit	in synaptic, how many kernels are showing as installed
+2011-02-05T19:38:00.000Z	AbhiJit	ikonia	checking..
+2011-02-05T19:40:00.000Z	AbhiJit	ikonia	2.6.32.29 is installed but its not being show in grub menu and 2.6.32.28 is installed which is being shows in menu and 2.6.32.27 is not installed (i removed) but its still being shown in menu Dr_Willis
+2011-02-05T19:40:00.000Z	ikonia	AbhiJit	show me the output of "uname -a" please.
+2011-02-05T19:41:00.000Z	AbhiJit	ikonia	Linux abhi-laptop 2.6.32-28-generic #55-Ubuntu SMP Mon Jan 10 23:42:43 UTC 2011 x86_64 GNU/Linux
+2011-02-05T19:41:00.000Z	ikonia	AbhiJit	can you pastebin the output of "dpkg -l | grep -i linux-image" please
+2011-02-05T19:42:00.000Z	AbhiJit	ikonia	http://pastebin.com/UrHDDUDs
+2011-02-05T19:43:00.000Z	ikonia	AbhiJit	and you're still seeing .27 in your grub menu  ?
+2011-02-05T19:43:00.000Z	AbhiJit	ikonia	yes
+2011-02-05T19:43:00.000Z	ikonia	AbhiJit	Hmmmm have you run update-grub ?
+2011-02-05T19:43:00.000Z	AbhiJit	ikonia	yes 3 times
+2011-02-05T19:44:00.000Z	AbhiJit	ikonia	while installing the latest updates it installed the latest kernel it asked me that i dont have menu.lst do i want to generate then i said yes
+2011-02-05T19:44:00.000Z	ikonia	AbhiJit	why did you say yes to that ?
+2011-02-05T19:44:00.000Z	AbhiJit	ikonia	i thought that menu.lst is imp file i should have it?
+2011-02-05T19:44:00.000Z	ikonia	AbhiJit	no, you're using grub2  aren't you ?
+2011-02-05T19:45:00.000Z	AbhiJit	ikonia	yes grub2
+2011-02-05T19:45:00.000Z	ikonia	AbhiJit	ok, so that doesn't use menu.lst
+2011-02-05T19:45:00.000Z	ikonia	AbhiJit	do you have /boot/grub/menu.lst ?
+2011-02-05T19:46:00.000Z	AbhiJit	ikonia	yes
+2011-02-05T19:46:00.000Z	ikonia	AbhiJit	ok, so if you look in there, does that match the menu you see on your grub boot screne ?
+2011-02-05T19:47:00.000Z	AbhiJit	ikonia	nope. because in menu.lst it is showing right kernels that is .29 first and then .28. but in real i see .28 and then .27 in grub menu screen
+2011-02-05T19:50:00.000Z	AbhiJit	ikonia	llutz how to clear this mess? i just wanted to coonfirm that this mess occured due to my saying yes to that create menu.lst?
+2011-02-05T19:53:00.000Z	AbhiJit	ikonia	no you are not missing anything. i told you everything. this time i take care to use only synaptic to do this.
+2011-02-05T19:56:00.000Z	ikonia	AbhiJit	not sure what's causing that behviour, never seen it before, never seen grub2 offer to generate a menu.lst either
+2011-02-05T19:57:00.000Z	AbhiJit	ikonia	ok. then should i try reinstalling grrub and then new kernel?
+2011-02-05T19:57:00.000Z	AbhiJit	ikonia	or instead ask on forums?
+2011-02-05T19:57:00.000Z	ikonia	AbhiJit	I don't think so, I wouldn't re-install unless I had reason to believe grub2 was broke, but it's your call
+2011-02-05T19:58:00.000Z	AbhiJit	ikonia	llutz_ llutz ok btw thanks your for time.i first ask on forum now
+2011-02-05T19:58:00.000Z	ikonia	AbhiJit	very odd behaviour from grub
+2011-02-05T19:58:00.000Z	AbhiJit	ikonia	yeah
+2011-02-05T20:02:00.000Z	AbhiJit	ikonia	llutz_ mkanyicy i just chekced synaptic for insatlling grub and i found that grub2 is not installed at all. there is only old grub installed. i think grub2 got remjoved while i was removing old kerrnel
+2011-02-05T20:03:00.000Z	ikonia	AbhiJit	intersting, then menu.lst should be used, but you say that is different to what you see on screen
+2011-02-05T20:03:00.000Z	AbhiJit	ikonia	llutz_ yeah now i am removing old grub and now installing grub2
+2011-02-05T20:08:00.000Z	ikonia	AbhiJit	do tell
+2011-02-05T20:09:00.000Z	AbhiJit	ikonia	llutz_ now i have the latest kernel .29 and .28 and i wanted to remove the .28. so please tell me whats the safest thing to remove from syaptic? there are two things generic,image i think
+2011-02-05T20:13:00.000Z	AbhiJit	ikonia	i told installing grub2 and removing old gurb solved my problem. now i wanted to know the safe way to remove old kernel. which thing to remove ? generic or image?
+2011-02-05T20:13:00.000Z	ikonia	AbhiJit	synaptic is a safe way
+2011-02-05T20:13:00.000Z	AbhiJit	ikonia	yeah i removed it. thanks for you all

@@ -1,0 +1,95 @@
+2005-09-03T15:26:00.000Z	brownie17		ok
+2005-09-03T15:27:00.000Z	brownie17		sudo: /etc/apt/sources.list: command not found
+2005-09-03T15:27:00.000Z	brownie17		http://paste.ubuntulinux.nl/1712
+2005-09-03T15:27:00.000Z	brownie17		that good?
+2005-09-03T15:28:00.000Z	Madpilot	brownie17	uncomment "# deb http://au.archive.ubuntu.com/ubuntu hoary universe" and the line right below it, and save the file
+2005-09-03T15:29:00.000Z	Madpilot	brownie17	uncomment = remove the # from the front of the line, btw
+2005-09-03T15:32:00.000Z	Madpilot	brownie17	you just allowed apt-get/Synaptic to view those two repositories
+2005-09-03T15:33:00.000Z	Madpilot	brownie17	explanation there ^^^
+2005-09-03T15:35:00.000Z	Madpilot	brownie17	try taking the au part out of your sources, the Australian archive might be the problem?
+2005-09-03T15:36:00.000Z	Madpilot	brownie17	this is an "official" sources list - paste it into your file: http://paste.ubuntulinux.nl/969
+2005-09-03T15:37:00.000Z	Madpilot	brownie17	nope, just copy-n-paste that pastebin into your sources.list
+2005-09-03T15:42:00.000Z	Madpilot	brownie17	not sure what it meant, but there might be an issue with one of the au. archives for Ubuntu...
+2005-09-03T15:44:00.000Z	Madpilot	brownie17	I'm just another user - check ubuntu.com if you want to contact the project
+2005-09-03T15:44:00.000Z	Madpilot	brownie17	hit the  Reload button in Synaptic
+2005-09-03T15:53:00.000Z	Madpilot	brownie17	have you enabled DMA on your CD drive?
+2005-09-03T15:54:00.000Z	Madpilot	brownie17	see the URL that ubotu posted ^^^ :)
+2005-09-03T16:01:00.000Z	Madpilot	brownie17	as far as I know. my only HDD is SATA, so I've never bothered with DMA for hard drives...
+2005-09-03T16:14:00.000Z	Madpilot	brownie17	with DMA vs without? odd, my optical drives both ripped faster after I enabled DMA...
+2005-09-03T16:18:00.000Z	Madpilot	brownie17	SoundJiucer isn't really fast, but it works; there are other rippers available - search in Synaptic
+2005-09-03T16:19:00.000Z	Madpilot	brownie17	knowing the right way to poke ubotu is at least 50% of appearing to know what you're doing on this channel... you're learning... ;)
+2005-09-03T16:25:00.000Z	Madpilot	brownie17	no kazaa in the repos - there is amule - and there's a bittorrent client installed by default
+2005-09-03T16:45:00.000Z	Madpilot	brownie17	upgrade FF thru Synaptic, that really is the 1.0.6 version
+2005-09-03T16:47:00.000Z	Madpilot	brownie17	flash works. shockwave doesn't
+2005-09-03T16:50:00.000Z	Madpilot	brownie17	as for Firefox, no idea why it doesn't work. I use a better browser: www.opera.com/download  ;)
+2005-09-03T16:56:00.000Z	Madpilot	brownie17	Lynx is better than IE - at least you can't get virii from Lynx... ;)
+2005-09-07T12:07:00.000Z	Madpilot	brownie17	I've got numlockx running on this PS/2 keyboard, and it works just fine
+2005-09-07T12:27:00.000Z	Madpilot	brownie17	using .desktop files?
+2005-09-07T12:28:00.000Z	Madpilot	brownie17	hmmm, I've used one and built a 2nd one, and they just worked - see wiki.ubuntu.com/OperaBrowser for a sample .desktop file...
+2005-09-07T12:29:00.000Z	Madpilot	brownie17	pastebin it, somebody can probably pick it apart
+2005-09-09T14:26:00.000Z	Madpilot	brownie17	so what's the trick?
+2005-09-09T14:27:00.000Z	Madpilot	brownie17	ah. I'm just going to wait a month for breezy, it's supposed to have saner sound configs...
+2005-09-09T14:28:00.000Z	Madpilot	brownie17	there have been Breezy screenshots - don't have URLs handy - ask googles
+2005-09-09T14:29:00.000Z	Madpilot	brownie17	lots of pics: http://shots.osdir.com/slideshows/slideshow.php?release=342&slide=27&title=ubuntu+linux+5.10+colony+1+breezy+badger+screenshots
+2005-09-10T12:36:00.000Z	Madpilot	brownie17	possibly because root owns it?
+2005-09-10T12:36:00.000Z	Madpilot	brownie17	in that case, check the permissions rather than the ownership
+2005-09-10T12:38:00.000Z	Madpilot	brownie17	I would have guessed so, but check permissions & ownership anyway
+2005-09-10T12:39:00.000Z	Madpilot	brownie17	in that case you should be able to do whatever you like to it... but I'm not an expert...
+2005-09-10T12:40:00.000Z	Madpilot	brownie17	"sudo rm <whatever>" doesn't work? (and no, it doesn't make sense to me either)
+2005-09-10T12:41:00.000Z	Madpilot	brownie17	www.linuxcommand.org - it's got a permissions tutorial
+2005-09-10T12:43:00.000Z	Madpilot	brownie17	http://www.linuxcommand.org/lts0070.php for Permissions - but going thru the entire tutorial from the beginning won't take that long and it's well written
+2005-09-10T12:46:00.000Z	Madpilot	brownie17	did you set root up on Ubuntu? or have you just forgotten your user password?
+2005-09-10T12:46:00.000Z	Madpilot	brownie17	your user pw is your sudo pw
+2005-09-10T12:47:00.000Z	Madpilot	brownie17	http://wiki.ubuntu.com/RootSudo
+2005-09-10T12:51:00.000Z	Madpilot	brownie17	"man rm"
+2005-09-10T12:52:00.000Z	Madpilot	brownie17	https://wiki.ubuntu.com/BasicCommands - "man <command>" brings up that command's manual page
+2005-09-11T12:18:00.000Z	Madpilot	brownie17	EVM mounts your system's partitions on boot, AFAIK
+2005-09-13T12:35:00.000Z	Madpilot	brownie17	try "killall esd" before you start the game - and restart esd afterward with just "esd"...
+2005-09-13T12:36:00.000Z	Madpilot	brownie17	in that case, I have no idea, sorry...
+2005-09-13T12:37:00.000Z	Madpilot	brownie17	I think sound on Linux confuses far, far tech-savvier people that you & I! ;)
+2005-09-14T11:42:00.000Z	Madpilot	brownie17	if it's open in a browser window, how about right click & save as?
+2005-09-15T10:52:00.000Z	Madpilot	brownie17	go ahead - and thanks for asking first
+2005-09-17T14:03:00.000Z	Madpilot	brownie17	what's up?
+2005-09-17T14:04:00.000Z	brownie17	Madpilot	well i want to know how i can force a program to start fullscreen. it is a game i dwonloaded out of suynaptic and it is a real time strategy, wheich means it is really annoying to scrool around if the ouse goes off the side!
+2005-09-17T14:04:00.000Z	Madpilot	brownie17	not sure about that, sorry...
+2005-09-17T14:04:00.000Z	brownie17	Madpilot	ok
+2005-09-29T08:11:00.000Z	brownie17	Madpilot	tell ubotu that
+2005-09-29T08:12:00.000Z	Madpilot	brownie17	good idea... one sec...
+2005-09-29T08:13:00.000Z	brownie17	Madpilot	good job
+2005-09-29T08:14:00.000Z	Madpilot	brownie17	thanks
+2005-09-29T13:45:00.000Z	Madpilot	brownie17	see that linuxshop.ru URL that dorkiaa posted, that's the table
+2005-10-27T10:08:00.000Z	Madpilot	brownie17	have you checked linuxprinting.org for info on your printer?
+2005-10-27T10:08:00.000Z	brownie17	Madpilot	no, never heard of it, ill try now
+2005-10-27T10:13:00.000Z	Madpilot	brownie17	http://www.linuxprinting.org/show_printer.cgi?recnum=Epson-Stylus_C46
+2005-10-27T10:13:00.000Z	brownie17	Madpilot	hahah my printer is about the only epson stylus that doesn't have a linux driver, the model before and after both do too.
+2005-10-27T10:14:00.000Z	Madpilot	brownie17	just noticed that; there isn't even an entry for C45 at linuxprinting...
+2005-10-27T10:16:00.000Z	brownie17	Madpilot	does that mean that no-one has tried it, and it might work? or it is not possible?
+2005-10-27T10:17:00.000Z	brownie17	Madpilot	i am having difficutly understanding, is this website telling me for the cups plug-in it is allready on my hardrive?
+2005-10-27T10:17:00.000Z	Madpilot	brownie17	no idea, sorry. Probably it means that noone has ever sent linuxprinting info
+2005-10-27T10:20:00.000Z	Madpilot	brownie17	Breezy has OOo2, yes
+2005-10-27T10:24:00.000Z	brownie17	Madpilot	i am having trouble, do you mind going to website for me and actualy locating the url for the file i need to download?
+2005-10-27T10:25:00.000Z	Madpilot	brownie17	download for what?
+2005-10-27T10:26:00.000Z	brownie17	Madpilot	the epson stylus c46 driver for CUPS
+2005-10-27T10:26:00.000Z	Madpilot	brownie17	from which site?
+2005-10-27T10:28:00.000Z	brownie17	Madpilot	if it is too much trouble, that's allright, don't worry about it
+2005-10-27T10:29:00.000Z	Madpilot	brownie17	you can't get to the linuxprinting.org download area?
+2005-10-27T10:29:00.000Z	brownie17	Madpilot	well i can, but i am retarded, and the link just seems to give me more information onf CUPS
+2005-10-27T10:30:00.000Z	brownie17	Madpilot	from here i got no further: http://www.linuxprinting.org/show_driver.cgi?driver=gimp-print&fromprinter=Epson-Stylus_C46
+2005-10-27T10:32:00.000Z	Madpilot	brownie17	looking at that page, I think the c46 drivers should be packaged in Ubuntu already, with the gimp-print stuff. All of that is, IIRC, installed by default
+2005-11-03T16:37:00.000Z	Madpilot	brownie17	the open source part is just the game engine, not the artwork and such
+2005-11-03T16:38:00.000Z	brownie17	Madpilot	oh ok. so if i want to get a working version, and i have the cd of it. and the engine from the repos, what do i do?
+2005-11-03T16:40:00.000Z	Madpilot	brownie17	no idea, I just know that only the game engine was opened... asked google yet?
+2005-11-03T16:40:00.000Z	brownie17	Madpilot	nope :)
+2005-11-03T16:43:00.000Z	Madpilot	brownie17	Nvidia or ATI card?
+2005-11-03T16:44:00.000Z	brownie17	Madpilot	ATI
+2005-11-03T16:45:00.000Z	Madpilot	brownie17	you might be SOL for actual 3d, then...
+2005-11-03T16:46:00.000Z	Madpilot	brownie17	good luck; I'm quitting for the night
+2005-11-26T17:04:00.000Z	Madpilot	brownie17	because they're KDE apps running in Gnome?
+2005-11-26T17:05:00.000Z	brownie17	Madpilot	no it is not. i thought KDE was really just a different like toolbar and window system
+2005-11-26T17:07:00.000Z	Madpilot	brownie17	KDE is an entirely different WM, different libraries and stuff
+2005-11-26T17:08:00.000Z	brownie17	Madpilot	wm?
+2005-11-26T17:08:00.000Z	Madpilot	brownie17	meh, OK, you know what I mean - it's a different beast, right? That said, I use a fair number of KDE apps in Gnome too...
+2005-11-26T17:09:00.000Z	brownie17	Madpilot	ok.
+2005-12-09T16:53:00.000Z	brownie17	Madpilot	j-linux has a question
+2005-12-09T16:55:00.000Z	Madpilot	brownie17	hmm? sorry, I was in another channel, and AFK too
+2006-01-01T06:38:00.000Z	brownie17	Madpilot	can you tell me what extension i use to make mplayer play a different audio track

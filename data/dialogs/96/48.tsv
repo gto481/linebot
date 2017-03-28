@@ -1,0 +1,96 @@
+2010-08-21T03:10:00.000Z	nikitis	d3vic3	still not good, problem isn't solved
+2010-08-21T02:11:00.000Z	d3vic3	nikitis	what "sudo mount" gives?
+2010-08-21T02:11:00.000Z	nikitis	d3vic3	/dev/sdb1 on /home/nikitis/Freeagent type fuseblk (rw,nosuid,nodev,allow_other,blksize=4096)
+2010-08-21T02:12:00.000Z	d3vic3	nikitis	ls ~/Freeagent lists nothing!
+2010-08-21T02:12:00.000Z	nikitis	d3vic3	correct.
+2010-08-21T02:12:00.000Z	nikitis	d3vic3	but when i plug it onto the windows box, it's all there
+2010-08-21T02:13:00.000Z	nikitis	d3vic3	wait wth.  It's showing up now?!
+2010-08-21T02:13:00.000Z	nikitis	d3vic3	I've done ls in that directory like 100 times
+2010-08-21T02:14:00.000Z	nikitis	d3vic3	why is it now showing up?
+2010-08-21T02:14:00.000Z	d3vic3	nikitis	sudo fdisk -l
+2010-08-21T02:15:00.000Z	nikitis	d3vic3	wait i may have solved my issue thanks to you
+2010-08-21T02:15:00.000Z	d3vic3	nikitis	and what was wrong?
+2010-08-21T02:15:00.000Z	nikitis	d3vic3	doing ls on the /Freeagent folder, reveals it's owned by root, but i have no idea how that could happen.  I did a mkdir as nikitis
+2010-08-21T02:16:00.000Z	nikitis	d3vic3	with no sudo
+2010-08-21T02:17:00.000Z	d3vic3	nikitis	 /dev/sdb1 on /home/nikitis/Freeagent type fuseblk (rw,nosuid,nodev,allow_other,blksize=4096)
+2010-08-21T02:17:00.000Z	d3vic3	nikitis	because of "allow_other"
+2010-08-21T02:17:00.000Z	d3vic3	nikitis	in fuseblk options
+2010-08-21T02:17:00.000Z	nikitis	d3vic3	that made it root?
+2010-08-21T02:18:00.000Z	d3vic3	nikitis	no, that made it possible to create a folder without being root
+2010-08-21T02:18:00.000Z	d3vic3	nikitis	try a sudo ls on Freeagent
+2010-08-21T02:18:00.000Z	nikitis	d3vic3	okay wait, I just umounted it, and Freeagent folder is owned by nikitis now?
+2010-08-21T02:18:00.000Z	nikitis	d3vic3	what is going on here
+2010-08-21T02:20:00.000Z	d3vic3	nikitis	not exactly but i think there was a double mount on that folder
+2010-08-21T02:20:00.000Z	nikitis	d3vic3	I have an fstab entry
+2010-08-21T02:20:00.000Z	d3vic3	nikitis	that says?
+2010-08-21T02:21:00.000Z	nikitis	d3vic3	UUID=15C86054380070A1   /home/nikitis/Freeagent           ntfs    defaults       0        0
+2010-08-21T02:22:00.000Z	nikitis	d3vic3	blkid says that is the UUID of the freeagent drive
+2010-08-21T02:23:00.000Z	nikitis	d3vic3	if an entry is added to fstab, is something else also trying to mount it?
+2010-08-21T02:24:00.000Z	d3vic3	nikitis	nop
+2010-08-21T02:25:00.000Z	nikitis	d3vic3	what can i put under options in fstab to make it mount as user nikitis?
+2010-08-21T02:26:00.000Z	nikitis	d3vic3	or at least accessible?  Can i chown nikitis.nikitis ~/Freeagent after mounting?
+2010-08-21T02:28:00.000Z	d3vic3	nikitis	not necessary, just try something like this in fstab :  UUID=youruuid   yourmedia    ntfs    defaults,nls=utf8,umask=0222    0       0
+2010-08-21T02:29:00.000Z	d3vic3	nikitis	save fstab, unmount the volume than remount it with sudo mount yourmedia
+2010-08-21T02:29:00.000Z	nikitis	d3vic3	that will mount the files as nikitis owns them and not root?
+2010-08-21T02:30:00.000Z	d3vic3	nikitis	no, but at least you'll have full access to it
+2010-08-21T02:32:00.000Z	d3vic3	nikitis	another point, yourmountpoint would be clearer than yourmedia :)
+2010-08-21T02:38:00.000Z	nikitis	d3vic3	trying it now on a reboot
+2010-08-21T02:40:00.000Z	nikitis	d3vic3	Hey it won't mount on boot!  It mounts though when I do a sudo mount -a
+2010-08-21T02:46:00.000Z	d3vic3	nikitis	what's in /etc/mtab?
+2010-08-21T02:46:00.000Z	nikitis	d3vic3	/dev/sdb1 /home/nikitis/Freeagent fuseblk rw,nosuid,nodev,allow_other,blksize=4096,default_permissions 0 0
+2010-08-21T02:47:00.000Z	nikitis	d3vic3	i haven't done a sudo mount -a yet, and there's nothing in the Freeagent folder.  if I try to sudo umount /dev/sdb1 it says drive not mounted
+2010-08-21T02:51:00.000Z	d3vic3	nikitis	when you open nautilus, nothing happens? (i assume you're using gnome!)
+2010-08-21T02:51:00.000Z	nikitis	d3vic3	all it does is go into the Freeagent directory, but no files
+2010-08-21T02:54:00.000Z	nikitis	d3vic3	When i open nautilus, there's nothing in the drive, and it says up top 750 GB Filesystem, which also appears to show up in the left menu.
+2010-08-21T02:55:00.000Z	nikitis	d3vic3	there's nothing in the folder i mean.  but nautilus seems to think I'm in 750 GB Folder.
+2010-08-21T02:55:00.000Z	nikitis	d3vic3	although, Freespace is indicating 32 GB's
+2010-08-21T02:57:00.000Z	d3vic3	nikitis	there must something wrong with the filesystem that confuses fuseblk
+2010-08-21T02:57:00.000Z	d3vic3	nikitis	what sudo fdisk -l gives?
+2010-08-21T02:57:00.000Z	nikitis	d3vic3	/dev/sdb1               1       91201   732572001    7  HPFS/NTFS
+2010-08-21T02:59:00.000Z	nikitis	d3vic3	http://fpaste.org/agGT/
+2010-08-21T03:00:00.000Z	d3vic3	nikitis	try mounting manually : sudo mount /dav/sdb1 mountpoint
+2010-08-21T03:01:00.000Z	d3vic3	nikitis	you're using ubuntu or fedora?
+2010-08-21T03:01:00.000Z	nikitis	d3vic3	ubuntu.  mount: according to mtab, /dev/sdb1 is already mounted on /home/nikitis/Freeagent
+2010-08-21T03:02:00.000Z	nikitis	d3vic3	i just used fpaste cause i couldn't remember the ubuntu paster lol
+2010-08-21T03:02:00.000Z	nikitis	d3vic3	mtab says it's already mounted
+2010-08-21T03:02:00.000Z	nikitis	d3vic3	but when I go into that directory, there's nothing...
+2010-08-21T03:03:00.000Z	nikitis	d3vic3	manually doing sudo mount -a which envokes all mount points in fstab, works.
+2010-08-21T03:03:00.000Z	nikitis	d3vic3	but I have no clue as to why it says it's mounted, but not showing up
+2010-08-21T03:04:00.000Z	d3vic3	nikitis	just http://paste.ubuntu.com/
+2010-08-21T03:05:00.000Z	d3vic3	nikitis	unmount it and try manually to see
+2010-08-21T03:06:00.000Z	nikitis	d3vic3	sudo umount /dev/sdb1  says umount: /home/nikitis/Freeagent: not mounted
+2010-08-21T03:07:00.000Z	d3vic3	nikitis	then mount it yourself
+2010-08-21T03:09:00.000Z	nikitis	d3vic3	sudo mount /dev/sdb1 /home/nikitis/Freeagent  Results in a successful mount, with folders viewable
+2010-08-21T03:10:00.000Z	d3vic3	nikitis	good 4 u :)
+2010-08-21T03:18:00.000Z	nikitis	d3vic3	So how can mtab say it's mounted to ~/Freeagent, but not be?
+2010-08-21T03:19:00.000Z	nikitis	d3vic3	isn't the point of mtab to show what is currently mounted?
+2010-08-21T03:19:00.000Z	nikitis	d3vic3	why then with mtab saying it's mounted, but not really, do I still have to manually mount it to work?
+2010-08-21T03:21:00.000Z	d3vic3	nikitis	backup fstab and mtab, remove sdb1 entries and reboot your system
+2010-08-21T03:24:00.000Z	nikitis	d3vic3	fstab, mtab backed up, and rebooted.  Awaiting your next commands
+2010-08-21T03:25:00.000Z	d3vic3	nikitis	just check if everything is ok, entries for sdb1 should've been created automatically and the drive may be accessible too
+2010-08-21T03:29:00.000Z	nikitis	d3vic3	mtab reports no mount of /dev/sdb1
+2010-08-21T03:30:00.000Z	d3vic3	nikitis	what's the output for groups command?
+2010-08-21T03:30:00.000Z	nikitis	d3vic3	nikitis adm dialout cdrom plugdev lpadmin admin sambashare
+2010-08-21T03:31:00.000Z	d3vic3	nikitis	you're not a member of fuse group!
+2010-08-21T03:32:00.000Z	nikitis	d3vic3	apparently not, why didn't it auto add me?
+2010-08-21T03:32:00.000Z	d3vic3	nikitis	i thiink that's why you can't see file content when it's mounted automatically
+2010-08-21T03:33:00.000Z	nikitis	d3vic3	useradd -G fuse nikitis
+2010-08-21T03:33:00.000Z	nikitis	d3vic3	?
+2010-08-21T03:35:00.000Z	d3vic3	nikitis	yep, but try sudo dpkg-reconfigure fuse-utils first
+2010-08-21T03:35:00.000Z	d3vic3	nikitis	if you still not member of fuse then proceed manually, don't forget to recover old fstab and mtab files
+2010-08-21T03:36:00.000Z	nikitis	d3vic3	yeah that didn't add me
+2010-08-21T03:38:00.000Z	d3vic3	nikitis	then usermod -a -G fuse nikitis
+2010-08-21T03:39:00.000Z	nikitis	d3vic3	nikitis adm dialout cdrom plugdev fuse lpadmin admin sambashare
+2010-08-21T03:39:00.000Z	d3vic3	nikitis	go ahead ;)
+2010-08-21T03:40:00.000Z	nikitis	d3vic3	wonder why fuse-utils didn't add me automatically during install, as well as dpkg-reconfigure...
+2010-08-21T03:41:00.000Z	d3vic3	nikitis	where nikitis the first account created on your system?
+2010-08-21T03:42:00.000Z	nikitis	d3vic3	yes, created during install
+2010-08-21T03:42:00.000Z	d3vic3	nikitis	which ubuntu verison?
+2010-08-21T03:42:00.000Z	nikitis	d3vic3	10.04
+2010-08-21T03:42:00.000Z	nikitis	d3vic3	same problem.  didn't work ;(  mtab says it's mounted in that directory, but when i go to visit the directory, no files still
+2010-08-21T03:45:00.000Z	d3vic3	nikitis	remember me what was the line in fstab for sdb1?
+2010-08-21T03:45:00.000Z	nikitis	d3vic3	UUID=15C86054380070A1   /home/nikitis/Freeagent           ntfs    defaults,nls=utf8,umask=022     0       0
+2010-08-21T03:48:00.000Z	nikitis	d3vic3	blkid says: /dev/sdb1: UUID="15C86054380070A1" TYPE="ntfs"
+2010-08-21T03:50:00.000Z	d3vic3	nikitis	substitue defaults, with rw,user,auto,exec,
+2010-08-21T03:54:00.000Z	d3vic3	nikitis	try a soft else http://flomertens.free.fr/disk-manager/features.html or http://albertomilone.wordpress.com/2006/07/27/pysdm-a-gui-for-fstab/
+2010-08-21T03:56:00.000Z	d3vic3	nikitis	http://www.hackourlives.com/auto-mount-windows-partitions-in-ubuntu-10-04-lucid/ is a good point too, I have to go now but you can email me if you solved it loadlogger[at]gmail.com

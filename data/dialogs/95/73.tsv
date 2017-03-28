@@ -1,0 +1,95 @@
+2005-07-23T07:58:00.000Z	MIK3MAN		I just installed ubuntu and my X will not start up... can someone try and help me here
+2005-07-23T07:58:00.000Z	MIK3MAN		I am going to reboot
+2005-07-23T07:58:00.000Z	tritium	MIK3MAN	which video chipset?
+2005-07-23T07:59:00.000Z	tritium	MIK3MAN	did you follow http://wiki.ubuntu.com/BinaryDriverHowto ?
+2005-07-23T07:59:00.000Z	MIK3MAN	tritium	not yet, but I will
+2005-07-23T08:00:00.000Z	tritium	MIK3MAN	I'm not sure you want to.  I don't know if Rage Pro is supported with fglrx.  That's why I'm asking.
+2005-07-23T08:01:00.000Z	MIK3MAN	tritium	hmmm, another problem wiki points me to apt-get, but I have to configure my wireless still... grrrr
+2005-07-23T08:02:00.000Z	tritium	MIK3MAN	please don't follow that wiki page.  Rage Pro is not supported by fglrx.  nalioth pointed out that you likely want the VESA driver
+2005-07-23T08:03:00.000Z	MIK3MAN	tritium	ok, so just get the proper driver?? I dont understand why this happened, I used the live cd for 2 days and it detected the proper driver
+2005-07-23T08:04:00.000Z	tritium	MIK3MAN	the installer should have.  Can we please see your /etc/X11/xorg.conf?  Please paste it on pastebin
+2005-07-23T08:04:00.000Z	MIK3MAN	tritium	I am on a separate machine, winblows xp
+2005-07-23T08:05:00.000Z	tritium	MIK3MAN	okay
+2005-07-23T08:17:00.000Z	tritium	MIK3MAN	what command did you run?
+2005-07-23T08:17:00.000Z	MIK3MAN	tritium	I can go into the x11 directory and manually edit, if you help
+2005-07-23T08:18:00.000Z	tritium	MIK3MAN	trying to.  what were you doing with dpkg?
+2005-07-23T08:20:00.000Z	tritium	MIK3MAN	did you just install?  did it complete?
+2005-07-23T08:22:00.000Z	tritium	MIK3MAN	did it complete succesfully?
+2005-07-23T08:23:00.000Z	MIK3MAN	tritium	I did get one error that said it was unsuccessful, then it brought me to the main menu and I chose base install I think it was called
+2005-07-23T08:24:00.000Z	tritium	MIK3MAN	do you recall the error?
+2005-07-23T08:24:00.000Z	MIK3MAN	tritium	the base install completed ok and it then installed the grub ok
+2005-07-23T08:25:00.000Z	MIK3MAN	tritium	said something like not being able to completely install all the packages,"maybe a bad cd" is what it said
+2005-07-23T08:26:00.000Z	MIK3MAN	tritium	I figured it was my wireless network
+2005-07-23T08:26:00.000Z	MIK3MAN	tritium	it gave me the option to hit enter to continue
+2005-07-23T08:27:00.000Z	tritium	MIK3MAN	that does not sound good
+2005-07-23T08:29:00.000Z	tritium	MIK3MAN	it's probably a bad burn.  Make sur ethe CD image you have is good
+2005-07-23T08:30:00.000Z	tritium	MIK3MAN	first check its md5sum
+2005-07-23T08:30:00.000Z	MIK3MAN	tritium	I know K3B auto does that, but what about windows?
+2005-07-23T08:30:00.000Z	tritium	MIK3MAN	I don't use windows, and can't say.
+2005-07-23T08:32:00.000Z	tritium	MIK3MAN	that is very rare.  Something is likely wrong with your media.  ubuntu would not top distrowatch if it failed like that very often
+2005-07-23T08:40:00.000Z	tritium	MIK3MAN	no, that's a feature.
+2005-07-23T08:40:00.000Z	tritium	MIK3MAN	https://wiki.ubuntu.com/RootSudo
+2005-07-23T08:45:00.000Z	tritium	MIK3MAN	did the md5sum not match?
+2005-07-23T08:46:00.000Z	MIK3MAN	tritium	I was on the ubuntu site, but they dont have the checksums posted
+2005-07-23T08:47:00.000Z	tritium	MIK3MAN	see the file named "MD5SUMS"
+2005-07-23T08:48:00.000Z	MIK3MAN	tritium	got it thanks
+2005-07-23T08:50:00.000Z	MIK3MAN	tritium	chesum matches.. could it be a setting in Nero that did it?? I remember switching to DAO instead of TAO
+2005-07-23T08:51:00.000Z	tritium	MIK3MAN	I suppose it's possible. Again, I don't use windows, and hence haven't used nero
+2005-07-23T08:57:00.000Z	MIK3MAN	tritium	I am reburning it right now
+2005-07-23T08:57:00.000Z	tritium	MIK3MAN	okay, good luck
+2005-07-23T09:07:00.000Z	MIK3MAN	tritium	ok installing ubuntu take 2!!
+2005-07-23T09:07:00.000Z	tritium	MIK3MAN	good luck, buddy :)
+2005-07-23T09:08:00.000Z	MIK3MAN	tritium	right away its asking me for my ESSID for my wifi
+2005-07-23T09:08:00.000Z	tritium	MIK3MAN	okay
+2005-07-23T09:09:00.000Z	MIK3MAN	tritium	it actually see's the card, but I dont know what to put here???
+2005-07-23T09:09:00.000Z	tritium	MIK3MAN	do you use an essid?
+2005-07-23T09:09:00.000Z	tritium	MIK3MAN	okay, leave it blank
+2005-07-23T09:12:00.000Z	MIK3MAN	tritium	ok, DHCP has failed cause I have to configure the wifi later, I have a menu here, should I choose do not configure network at this time?
+2005-07-23T09:12:00.000Z	tritium	MIK3MAN	how many wireless routers are in your proximity?
+2005-07-23T09:13:00.000Z	tritium	MIK3MAN	just the one?  It's yours?
+2005-07-23T09:15:00.000Z	tritium	MIK3MAN	can you drop to a virtual console, and verify you're seeing with iwlist please?
+2005-07-23T09:15:00.000Z	MIK3MAN	tritium	its not installed, Im on winblows remember?? heh
+2005-07-23T09:16:00.000Z	tritium	MIK3MAN	you're right.  Well, how important is getting networking configured right now rather than later?
+2005-07-23T09:17:00.000Z	tritium	MIK3MAN	okay, if you wish to proceed with the installation, go for it
+2005-07-23T09:17:00.000Z	tritium	MIK3MAN	that's fine.  You can install purely off CD
+2005-07-23T09:18:00.000Z	tritium	MIK3MAN	okay.  I won't be sticking around much longer, though.
+2005-07-23T09:19:00.000Z	tritium	MIK3MAN	okay, good luck to you :)
+2005-07-23T09:14:00.000Z	MIK3MAN	tritium	heya, good to see your still here... I've got problems
+2005-07-23T09:14:00.000Z	tritium	MIK3MAN	I'n back, haven't been here the whole time ;)
+2005-07-23T09:15:00.000Z	tritium	MIK3MAN	so what's up?
+2005-07-23T09:15:00.000Z	MIK3MAN	tritium	I will copy and paste in a PM for you ok?
+2005-07-23T09:15:00.000Z	tritium	MIK3MAN	ok
+2005-07-23T09:18:00.000Z	MIK3MAN	tritium	trying to get ubuntu to work, I hate giving up but the g/f is getting pissed at me not spending time away from the comp
+2005-07-23T09:18:00.000Z	tritium	MIK3MAN	I understand that.  What's the problem now?
+2005-07-23T09:19:00.000Z	MIK3MAN	tritium	btw, I lost that error cause the comp was in powersaver, I need to configure the video card... I cannot get into X
+2005-07-23T09:20:00.000Z	tritium	MIK3MAN	so X is still not getting configured right on install?
+2005-07-23T09:21:00.000Z	MIK3MAN	tritium	went through with no errors except the wifi configuration and DHCP
+2005-07-23T09:21:00.000Z	tritium	MIK3MAN	so no errors, but you still have no X?
+2005-07-23T09:22:00.000Z	MIK3MAN	tritium	right, but what I find strange is that the live cd works!!
+2005-07-23T09:22:00.000Z	tritium	MIK3MAN	so should the install CD.
+2005-07-23T09:22:00.000Z	tritium	MIK3MAN	is dpkg-reconfigure xserver-xorg still giving the same error?
+2005-07-23T09:30:00.000Z	tritium	MIK3MAN	something is going seriously wrong with your installations if that's the case
+2005-07-23T09:31:00.000Z	tritium	MIK3MAN	please first try "sudo apt-get install ubuntu-desktop"
+2005-07-23T09:31:00.000Z	tritium	MIK3MAN	I don't advise trying xfree86
+2005-07-23T09:34:00.000Z	MIK3MAN	tritium	I tried sudo apt-get and it told me to do apt-get -i
+2005-07-23T09:35:00.000Z	tritium	MIK3MAN	bizarre
+2005-07-23T09:37:00.000Z	tritium	MIK3MAN	bottom line is we need to get xserver-xorg installed
+2005-07-23T09:37:00.000Z	MIK3MAN	tritium	CORRECTION, it told me to do apt-get -f install
+2005-07-23T09:38:00.000Z	tritium	MIK3MAN	okay, that makes a little more sense, and confirms that something is going dreadfully wrong during your installation
+2005-07-23T09:38:00.000Z	MIK3MAN	tritium	after I did that it was unpacking stuff then open office had tar corruption
+2005-07-23T09:38:00.000Z	tritium	MIK3MAN	you're positive your installation media is good?
+2005-07-23T09:40:00.000Z	MIK3MAN	tritium	I reburned twice, unless the downloaded image is currupt?? also... I burned from Windows
+2005-07-23T09:40:00.000Z	tritium	MIK3MAN	if certain packages (e.g. openoffice) are corrupt, your install CD is hosed
+2005-07-23T09:40:00.000Z	tritium	MIK3MAN	did the "sudo apt-get install -f" complete?
+2005-07-23T09:41:00.000Z	MIK3MAN	tritium	no, did not complete, openoffice had tar corruption, it stopped
+2005-07-23T09:41:00.000Z	tritium	MIK3MAN	try "sudo dpkg --configure --pending" please
+2005-07-23T09:42:00.000Z	MIK3MAN	tritium	ok give me a min
+2005-07-24T05:45:00.000Z	tritium	MIK3MAN	finally, huh?
+2005-07-24T05:46:00.000Z	MIK3MAN	tritium	yeah!! thanks to you....
+2005-07-24T05:46:00.000Z	tritium	MIK3MAN	only in part :)
+2005-07-30T09:03:00.000Z	MIK3MAN	tritium	hows it going? I tried afew distros and came back to ubuntu :O)
+2005-07-30T09:03:00.000Z	tritium	MIK3MAN	glad you're back :)
+2005-07-30T09:05:00.000Z	MIK3MAN	tritium	I actually installed Kbuntu, and I now have problems installing additional software, synaptic is replaced with Knaptic and I cant update the repositories. I need to do some research
+2005-07-30T09:05:00.000Z	tritium	MIK3MAN	have you asked in #kubuntu ?
+2005-07-30T09:05:00.000Z	MIK3MAN	tritium	no, I'll head there now :)
+2005-07-30T09:06:00.000Z	tritium	MIK3MAN	okay.  :)

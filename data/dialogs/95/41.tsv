@@ -1,0 +1,95 @@
+2008-03-07T10:00:00.000Z	Downsay		I need some pretty big help...I'm a complete newb
+2008-03-07T10:00:00.000Z	Downsay		I need to repartition my hdd
+2008-03-07T10:00:00.000Z	Downsay		I downloaded the gparted livecd
+2008-03-07T10:01:00.000Z	Downsay		and it won't load when I reboot comp
+2008-03-07T10:01:00.000Z	Downsay		even after changing the bios settings
+2008-03-07T10:01:00.000Z	Downsay		yes, I've reburned 3x
+2008-03-07T10:01:00.000Z	prince_jammys	Downsay	put your whole question in one line, it's easier for everyone
+2008-03-07T10:02:00.000Z	prince_jammys	Downsay	you've been able to boot other CDs, right? such as the ubuntu live CD
+2008-03-07T10:02:00.000Z	Downsay	prince_jammys	no, I cannot
+2008-03-07T10:03:00.000Z	prince_jammys	Downsay	have you looked at your bios settings to make sure you have it set to "boot from cd" ?
+2008-03-07T10:03:00.000Z	Downsay	prince_jammys	I've already adjusted bios settings to make for priority to read cd, it won't do it still, it skips and goes straight to which operating system would I like to start, ubuntu or windows
+2008-03-07T10:03:00.000Z	prince_jammys	Downsay	i see
+2008-03-07T10:03:00.000Z	Downsay	prince_jammys	my linux is so full I cannot download any upgrades and I'm not sure how to make any additional room
+2008-03-07T10:04:00.000Z	prince_jammys	Downsay	just to clarify, you say you can't boot from ANY kind of live CD, or only from gparted?
+2008-03-07T10:04:00.000Z	Downsay	prince_jammys	I cannot boot from any type of cd
+2008-03-07T10:05:00.000Z	prince_jammys	Downsay	strange
+2008-03-07T10:05:00.000Z	Downsay	prince_jammys	is there any way I can make another 600mb of room on linux OS so I can upgrade to 7.10?
+2008-03-07T10:06:00.000Z	Downsay	prince_jammys	I'm really new to linux and I have no idea how to repartition...I lost my HD space when I downloaded and installed Virtual Box...after I tried to install Windows OS on my virtual box I ran out of room
+2008-03-07T10:06:00.000Z	prince_jammys	Downsay	the thing is i would just say to use the gparted live CD :)  which you can't do
+2008-03-07T10:07:00.000Z	Downsay	prince_jammys	do you have any idea how to uninstall the virtual box and all the HDD space the windows OS took up on it?
+2008-03-07T10:07:00.000Z	prince_jammys	Downsay	well, with gparted you would see that repartioning can be fairly simple. the thing is to get it so that can boot that cd
+2008-03-07T10:07:00.000Z	Downsay	prince_jammys	I'm about ready to give up and start fresh and delete ubuntu all together
+2008-03-07T10:08:00.000Z	prince_jammys	Downsay	no, i don't know how to install virtual box. the thing i find disconcerting is the inability to boot from cd. i'm going to look around on the internet
+2008-03-07T10:08:00.000Z	prince_jammys	Downsay	*uninstall i meant
+2008-03-07T10:13:00.000Z	prince_jammys	Downsay	are you able to boot that CD now?
+2008-03-07T10:13:00.000Z	Downsay	prince_jammys	I do not have that cd with me, I am 300miles away at school
+2008-03-07T10:14:00.000Z	prince_jammys	Downsay	you are positive that you burnt the CD image and not the CD data (in the recent Cd you burnt)?
+2008-03-07T10:14:00.000Z	prince_jammys	Downsay	you need to burn the iso as image
+2008-03-07T10:14:00.000Z	Downsay	prince_jammys	no, I am not positive at all, I'm a newb
+2008-03-07T10:15:00.000Z	prince_jammys	Downsay	this *might* be the problem
+2008-03-07T10:15:00.000Z	Downsay	prince_jammys	how do I burn as an iso?
+2008-03-07T10:15:00.000Z	prince_jammys	Downsay	what software are you using to burn?
+2008-03-07T10:15:00.000Z	Downsay	prince_jammys	I'll have to do it in windows because I don't have any room to DL the gparted file on this comp
+2008-03-07T10:15:00.000Z	Downsay	prince_jammys	I didn't use any software, just copy/pasted it onto a cd-r
+2008-03-07T10:17:00.000Z	prince_jammys	Downsay	then what's happening is the CD contains a file gparted.iso or something, which won't boot
+2008-03-07T10:18:00.000Z	prince_jammys	Downsay	try deepburner, it's free. and select "Burn cd image"
+2008-03-07T10:18:00.000Z	prince_jammys	Downsay	you can use DeepBurner -- just make sure you "burn cd image"
+2008-03-07T10:19:00.000Z	prince_jammys	Downsay	otherwise you just burn a data cd that contains the iso file. this is why it won't boot
+2008-03-07T10:19:00.000Z	Downsay	prince_jammys	that's fine, but after I've dl'ed the file I don't know what to do
+2008-03-07T10:20:00.000Z	Downsay	prince_jammys	it shows it as being a zipped file, do I need to unzip it?
+2008-03-07T10:20:00.000Z	prince_jammys	Downsay	go to deepburner.com
+2008-03-07T10:20:00.000Z	prince_jammys	Downsay	what is the name of the file you downloaded?
+2008-03-07T10:22:00.000Z	prince_jammys	Downsay	hold on
+2008-03-07T10:22:00.000Z	prince_jammys	Downsay	what is the full name of the file you downloaded?
+2008-03-07T10:24:00.000Z	Downsay	prince_jammys	then I clicked on the sourceforge http:
+2008-03-07T10:24:00.000Z	Downsay	prince_jammys	and I downloaded the first gparted iso
+2008-03-07T10:25:00.000Z	prince_jammys	Downsay	then you don't have to unzip anything. the file is already a .iso
+2008-03-07T10:26:00.000Z	Downsay	prince_jammys	so once I finish dl'ing this file then I can go ahead and use deepburner?
+2008-03-07T10:26:00.000Z	prince_jammys	Downsay	either that or the other burner that's up there
+2008-03-07T10:27:00.000Z	prince_jammys	Downsay	whatever you use, make sure it's set to "burn cd image".  one of the links if you scroll up is for a burner that only burns images
+2008-03-07T10:27:00.000Z	prince_jammys	Downsay	hold on, what do you mean with linux?
+2008-03-07T10:28:00.000Z	prince_jammys	Downsay	i thought you were doing this in windows
+2008-03-07T10:28:00.000Z	prince_jammys	Downsay	ok let's clarify - windows or linux?
+2008-03-07T10:29:00.000Z	prince_jammys	Downsay	oh then you don't need to download anything
+2008-03-07T10:29:00.000Z	prince_jammys	Downsay	if you use ubuntu, you can just click on the iso i think and the burner will open a window
+2008-03-07T10:30:00.000Z	prince_jammys	Downsay	lol, i thought you said you were doing this from windows
+2008-03-07T10:31:00.000Z	prince_jammys	Downsay	ok, well once the download is done, you can insert a blank CD and drag the iso file into the "nautilus cd burner" window.  then you select "burn CD image" and burn it
+2008-03-07T10:32:00.000Z	prince_jammys	Downsay	it's a window that will open on it's own - it's the name of the software that burns cds
+2008-03-07T10:33:00.000Z	Downsay	prince_jammys	alright, I'll be done here in 45 seconds with the DL
+2008-03-07T10:33:00.000Z	prince_jammys	Downsay	i'll be here
+2008-03-07T10:34:00.000Z	Downsay	prince_jammys	What would I like to do, make audio cd, data cd, or ignore?
+2008-03-07T10:35:00.000Z	prince_jammys	Downsay	mmm. try ignore --- and drag the iso into the window
+2008-03-07T10:35:00.000Z	Downsay	prince_jammys	it didn't open up a window, should I double click on the blank cd-r on the desktop and then try and click and drag it that way?
+2008-03-07T10:36:00.000Z	prince_jammys	Downsay	try that
+2008-03-07T10:36:00.000Z	prince_jammys	Downsay	i think it also appears in your menu under "places"->nautilus cd burner
+2008-03-07T10:37:00.000Z	Downsay	prince_jammys	alright, now that I opened it up and dragged it there, I clicked write disc, it brought up the option write as image, I clicked that
+2008-03-07T10:37:00.000Z	prince_jammys	Downsay	excellent, that's it
+2008-03-07T10:37:00.000Z	Downsay	prince_jammys	then under information it says write disc to: DVDRAM or File Image
+2008-03-07T10:37:00.000Z	Downsay	prince_jammys	Do I change it to File Image?
+2008-03-07T10:37:00.000Z	prince_jammys	Downsay	my guess on that is yes
+2008-03-07T10:38:00.000Z	Downsay	prince_jammys	I guess I'll go ahead and reboot and see if it comes up?
+2008-03-07T10:38:00.000Z	prince_jammys	Downsay	try it and come back if it didn't
+2008-03-07T10:38:00.000Z	Downsay	prince_jammys	be back soon:P
+2008-03-07T10:42:00.000Z	Downsay	prince_jammys	it didn't even burn the cd
+2008-03-07T10:42:00.000Z	Downsay	prince_jammys	how did you say to get to nautilus?
+2008-03-07T10:42:00.000Z	prince_jammys	Downsay	places->nautilus cd burner
+2008-03-07T10:43:00.000Z	prince_jammys	Downsay	ok, we try again
+2008-03-07T10:43:00.000Z	Downsay	prince_jammys	I don't even have nautilus, I only have something called cd/dvd creator
+2008-03-07T10:43:00.000Z	prince_jammys	Downsay	that's ok
+2008-03-07T10:43:00.000Z	prince_jammys	Downsay	use that
+2008-03-07T10:44:00.000Z	prince_jammys	Downsay	and drag the iso file in there
+2008-03-07T10:44:00.000Z	Downsay	prince_jammys	I'm burning again, we'll see if it works this time, this time I chose to burn to dvd rather than to image file
+2008-03-07T10:44:00.000Z	Downsay	prince_jammys	alright, it burnt I believe, I'll reboot and try again
+2008-03-07T10:44:00.000Z	prince_jammys	Downsay	yeah, that's what went wrong
+2008-03-07T10:44:00.000Z	Downsay	prince_jammys	see you soon
+2008-03-07T11:06:00.000Z	Downsay	prince_jammys	I couldn't figure out how to repartition
+2008-03-07T11:06:00.000Z	prince_jammys	Downsay	but you were able to boot gparted, right?
+2008-03-07T11:06:00.000Z	Downsay	prince_jammys	I got it to boot up, I got it to take away hdd from my windows os, but I couldn't get it to be placed onto my linux OS...only to be placed as unallocated
+2008-03-07T11:07:00.000Z	prince_jammys	Downsay	is the ubuntu partition next to the unallocated one?
+2008-03-07T11:08:00.000Z	Downsay	prince_jammys	yes, directly next to it, sda1 is windows, sda2 is linux, sda3 is unallocated
+2008-03-07T11:16:00.000Z	Downsay	prince_jammys	hrm, let me try that in a bit, I want to read this website really fast
+2008-03-07T11:17:00.000Z	Downsay	prince_jammys	I'll brb, going to try this again
+2008-03-07T11:34:00.000Z	prince_jammys	Downsay	you were able to resize the partition?
+2008-03-07T11:35:00.000Z	Downsay	prince_jammys	yes I was
+2008-03-07T11:35:00.000Z	prince_jammys	Downsay	good

@@ -1,0 +1,96 @@
+2007-11-29T18:48:00.000Z	Andycasss		How do i chmod 755 the subdirs?
+2007-11-29T18:48:00.000Z	Andycasss		Currently, it only chmods only the main dir but leaves the subdirs untouched
+2007-11-29T18:48:00.000Z	ikonia	Andycasss	chomod -R
+2007-11-29T19:11:00.000Z	ikonia	Andycasss	touch ?
+2007-11-29T19:11:00.000Z	ikonia	Andycasss	cat ?
+2007-11-29T19:12:00.000Z	ikonia	Andycasss	echo "hello" >file
+2007-11-29T19:14:00.000Z	ikonia	Andycasss	are you trying to make dir's too ?
+2007-11-29T19:14:00.000Z	Andycasss	ikonia	no
+2007-11-29T19:15:00.000Z	ikonia	Andycasss	your directory path is wrong in your command then
+2007-11-29T19:15:00.000Z	Andycasss	ikonia	No im sure its not, i can ls the path
+2007-11-29T19:16:00.000Z	ikonia	Andycasss	thats the only thing it can be then
+2007-11-29T19:17:00.000Z	Andycasss	ikonia	Sorry, you were right, my path was wrong, thank you
+2007-12-21T18:29:00.000Z	ikonia	Andycasss	mv
+2008-01-14T22:19:00.000Z	ikonia	Andycasss	find
+2008-01-14T22:23:00.000Z	ikonia	Andycasss	as I recall it's for multiple domains or "zones" is a better word for the apache webserver
+2008-01-14T22:23:00.000Z	ikonia	Andycasss	eg: relm1 = internet access users relm2 = intranet access users
+2008-01-14T22:23:00.000Z	Andycasss	ikonia	ok thanks
+2008-01-31T22:13:00.000Z	Andycasss	ikonia	how to search in manpage?
+2008-01-31T22:13:00.000Z	ikonia	Andycasss	man $command"
+2008-02-01T19:33:00.000Z	Andycasss	ikonia	I managed to get it functioning with a clear interfaces, but it doesnt want to ping anymore, nor connect to the internet, but ifconfig looks genuine
+2008-02-01T19:34:00.000Z	Andycasss	ikonia	i can connect via vnc from a lan computer to this ubuntu box, but when i try to ping my machine (the one that im connecting with), it doesnt respond?
+2008-02-01T19:53:00.000Z	ikonia	Andycasss	thats probably your firewall  (sorry I was away from my desk)
+2008-02-01T19:55:00.000Z	Andycasss	ikonia	i used sudo /etc/init.d/firestarter stop command but it still cant ping
+2008-02-01T19:55:00.000Z	Andycasss	ikonia	tells me unknown host
+2008-02-01T19:56:00.000Z	Andycasss	ikonia	oh, wait i can ping my lan box now, hm probably dns wrong?
+2008-02-01T20:08:00.000Z	ikonia	Andycasss	dns seems realistic problem there
+2008-02-01T20:08:00.000Z	ikonia	Andycasss	probably because your not using dhcp anymore
+2008-02-01T20:12:00.000Z	Andycasss	ikonia	hmm, i set the dns manually and it still doesnt work, connecting to ip doesnt work either. I think i have to set up routing, though i dont know which settings to use
+2008-02-01T20:12:00.000Z	ikonia	Andycasss	lets do this one thing at a time. Lets get the physical nic for eth0 working first, turn off your firewall / clear rules and lets begin
+2008-02-01T20:13:00.000Z	ikonia	Andycasss	eth1 sorry
+2008-02-01T20:14:00.000Z	Andycasss	ikonia	ok
+2008-02-01T20:15:00.000Z	Andycasss	ikonia	ive switched the fw off. i dont want to clear the rules tho - it should allow those protocols to pass anyway now
+2008-02-01T20:17:00.000Z	ikonia	Andycasss	as long as it's totally disabled and not causing any issues
+2008-02-01T20:18:00.000Z	ikonia	Andycasss	so show me the output of ifconfig eth1 and netstatn -rn in a pastebin please.
+2008-02-01T20:19:00.000Z	Andycasss	ikonia	weirdness... Can you access this page: http://andycas.pri.ee/ its being hosted by the same machine im having problems with
+2008-02-01T20:19:00.000Z	ikonia	Andycasss	yes, I can get there
+2008-02-01T20:20:00.000Z	Andycasss	ikonia	weird, i cant get any outside connection with this machine
+2008-02-01T20:20:00.000Z	Andycasss	ikonia	only incoming... Anyway ill run these commands and pastebin those for you, is it ok when i put them inside my server?
+2008-02-01T20:20:00.000Z	ikonia	Andycasss	sure, no problem
+2008-02-01T20:23:00.000Z	Andycasss	ikonia	http://andycas.pri.ee/files/logs1
+2008-02-01T20:23:00.000Z	Andycasss	ikonia	the gw is wrong, right?
+2008-02-01T20:24:00.000Z	ikonia	Andycasss	1.) don't konw why you have 2 routed exactly the same 2.) can you ping the 254 gateway ?
+2008-02-01T20:24:00.000Z	Andycasss	ikonia	yes, i can ping .254
+2008-02-01T20:24:00.000Z	Andycasss	ikonia	.254 is the real gateway i want it to use, also i can access routers web config
+2008-02-01T20:25:00.000Z	ikonia	Andycasss	ok - so you can ping your gateway - that means your machines networking is spot on (apart from having he same route 2 times ???) so the problem after that is outside of ubuntu and down to the device .254
+2008-02-01T20:26:00.000Z	Andycasss	ikonia	are you referring to those 2 last lines?
+2008-02-01T20:26:00.000Z	Andycasss	ikonia	0.0.0.0 etc..
+2008-02-01T20:27:00.000Z	ikonia	Andycasss	correct
+2008-02-01T20:27:00.000Z	ikonia	Andycasss	two routes that are exactly the same seems odd
+2008-02-01T20:28:00.000Z	Andycasss	ikonia	the first route is also wrong, it should have gw to .254, or is it linked with that 0.0.0.0?
+2008-02-01T20:28:00.000Z	ikonia	Andycasss	no - the first one looks fine
+2008-02-01T20:29:00.000Z	ikonia	Andycasss	anything on your 192 address use default (0.0.0.0) to get out of default use 192.168.1.254
+2008-02-01T20:29:00.000Z	Andycasss	ikonia	so, how to fix it?
+2008-02-01T20:29:00.000Z	ikonia	Andycasss	fix what ?
+2008-02-01T20:29:00.000Z	ikonia	Andycasss	your only issue with that routing table is the duplicate entry
+2008-02-01T20:29:00.000Z	Andycasss	ikonia	the duplicate
+2008-02-01T20:30:00.000Z	ikonia	Andycasss	delete one route, but I don't see how you've got the two duplicates
+2008-02-01T20:31:00.000Z	Andycasss	ikonia	wait
+2008-02-01T20:31:00.000Z	ikonia	Andycasss	what ?
+2008-02-01T20:38:00.000Z	ikonia	Andycasss	show me /etc/resolv.conf
+2008-02-01T20:31:00.000Z	Andycasss	ikonia	i did have the eth1:1 right? maybe thats the duplicate gw entry?
+2008-02-01T20:31:00.000Z	ikonia	Andycasss	did you set a gateway for it ?
+2008-02-01T20:31:00.000Z	Andycasss	ikonia	yes
+2008-02-01T20:32:00.000Z	ikonia	Andycasss	ok - thats the issue remove the gateway for that
+2008-02-01T20:34:00.000Z	Andycasss	ikonia	ok i removed that from my interfaces and the routing doesnt have that duplicate anymore but it still doesnt ping?
+2008-02-01T20:34:00.000Z	ikonia	Andycasss	you said you could ping your gateway before ?
+2008-02-01T20:35:00.000Z	Andycasss	ikonia	yes, but i cant ping google.com
+2008-02-01T20:35:00.000Z	ikonia	Andycasss	ok - so thats nothing to do with ubuntu, thats your router not forwarding
+2008-02-01T20:36:00.000Z	ikonia	Andycasss	ahhh disn
+2008-02-01T20:36:00.000Z	ikonia	Andycasss	dns
+2008-02-01T20:36:00.000Z	ikonia	Andycasss	what are your dns servers set to
+2008-02-01T20:37:00.000Z	Andycasss	ikonia	dns-nameservers 194.126.115.18 194.126.101.34
+2008-02-01T20:37:00.000Z	ikonia	Andycasss	can you ping any of them ?
+2008-02-01T20:37:00.000Z	ikonia	Andycasss	where are you getting that information from ?
+2008-02-01T20:37:00.000Z	Andycasss	ikonia	yes, i can ping them
+2008-02-01T20:37:00.000Z	ikonia	Andycasss	ok, so "nslookup www.google.com" see what happens
+2008-02-01T20:37:00.000Z	Andycasss	ikonia	those are my isp's ns
+2008-02-01T20:38:00.000Z	ikonia	Andycasss	but IS ubuntu using those dns servers ?
+2008-02-01T20:38:00.000Z	Andycasss	ikonia	yes, i set them in my /etc/network/interfaces
+2008-02-01T20:38:00.000Z	ikonia	Andycasss	thats not where they are set
+2008-02-01T20:39:00.000Z	ikonia	Andycasss	if in doubt - use the gui
+2008-02-01T20:40:00.000Z	Andycasss	ikonia	Thanks, its working now!
+2008-02-01T20:41:00.000Z	ikonia	Andycasss	ok, mega. I've got to drive home now, so if you need me, shout in a bit
+2008-02-01T20:42:00.000Z	Andycasss	ikonia	ok
+2008-03-30T00:38:00.000Z	ikonia	Andycasss	what do you mean, outside the lan
+2008-03-30T00:38:00.000Z	ikonia	Andycasss	if they are not on your lan, they can't connect
+2008-03-30T01:06:00.000Z	ikonia	Andycasss	as in #windows
+2008-04-23T18:25:00.000Z	ikonia	Andycasss	blacklist the module
+2008-04-23T18:25:00.000Z	ikonia	Andycasss	check the pm from ubotu
+2008-05-29T18:31:00.000Z	ikonia	Andycasss	restart the update
+2008-05-29T18:31:00.000Z	Andycasss	ikonia	How?
+2008-05-29T18:32:00.000Z	ikonia	Andycasss	sudo apt-get upgrade
+2008-05-29T18:34:00.000Z	Andycasss	ikonia	Got some dpkg was interrupted, have to use "dpkg --configure -a" to correct it, shall i do it?
+2008-05-29T18:34:00.000Z	ikonia	Andycasss	sounds good to me
+2008-05-29T18:35:00.000Z	Andycasss	ikonia	Oh, it continues from where it left off, i remember now, i got the same prompts when it halted
+2008-05-29T18:35:00.000Z	ikonia	Andycasss	well done

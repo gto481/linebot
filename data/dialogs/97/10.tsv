@@ -1,0 +1,97 @@
+2010-05-03T21:48:00.000Z	IsmAvatar		I personally use VMWare
+2010-05-03T21:48:00.000Z	IsmAvatar		is VirtualBox capable of shared folders?
+2010-05-03T21:49:00.000Z	Stereocaulon	IsmAvatar	not always, some OS'es are supported, most are not for the shared folders feature.
+2011-10-16T00:12:00.000Z	Stereocaulon	IsmAvatar	you are repeating your plea over and over, yet you do not specify it.
+2011-10-16T00:17:00.000Z	IsmAvatar	Stereocaulon	nobody's asked me to specify, and I don't really know what there is to specify. The sound stopped working.
+2011-10-16T00:19:00.000Z	Stereocaulon	IsmAvatar	the least you can do is tell us what you have already investigated. For instance, does your soundcard show up in lspci and if it does, does alsamixer start and can you control output volume with it. Do you get an error message when you tell Ubuntu to play a sound/ music?, That kind of things
+2011-10-16T00:20:00.000Z	IsmAvatar	Stereocaulon	ok, I'll take a look
+2011-10-16T00:21:00.000Z	IsmAvatar	Stereocaulon	It shows up in lspci. alsamixer starts, and shows 100 for everything except Headphone and Speaker which are 0 and can't change
+2011-10-16T00:22:00.000Z	IsmAvatar	Stereocaulon	no error when playing a sound with Banshee. It just plays but I can't hear anything
+2011-10-16T00:23:00.000Z	Stereocaulon	IsmAvatar	OK, that's a start. The Speaker channel is for lowfi speaker bleeps anyway, so that should not be a problem.
+2011-10-16T00:24:00.000Z	Stereocaulon	IsmAvatar	can you restart pulseaudio?
+2011-10-16T00:24:00.000Z	IsmAvatar	Stereocaulon	ok. Just `service pulseaudio restart`?
+2011-10-16T00:25:00.000Z	Stereocaulon	IsmAvatar	no, Pulse should run in user space, try pulseaudio -k
+2011-10-16T00:26:00.000Z	IsmAvatar	Stereocaulon	no output, so I guess it succeeded
+2011-10-16T00:26:00.000Z	Stereocaulon	IsmAvatar	yes, that's how linux works. Try pulseaudio --check
+2011-10-16T00:27:00.000Z	IsmAvatar	Stereocaulon	no output again
+2011-10-16T00:27:00.000Z	Stereocaulon	IsmAvatar	ok, now proceed with pulseaudio -D
+2011-10-16T00:27:00.000Z	IsmAvatar	Stereocaulon	Daemon startup failed.
+2011-10-16T00:28:00.000Z	Stereocaulon	IsmAvatar	we're getting somewhere now, now we know that Pulseaudio is indeed not working properly.
+2011-10-16T00:31:00.000Z	Stereocaulon	IsmAvatar	it's called pavucontrol, nat pauvcontrol
+2011-10-16T00:32:00.000Z	Stereocaulon	IsmAvatar	robin0800, indeed
+2011-10-16T00:38:00.000Z	Stereocaulon	IsmAvatar	it sounds like pulse is connected to the wrong alsa sink.
+2011-10-16T00:40:00.000Z	IsmAvatar	Stereocaulon	ok, how can we hook it up to the right one? lol
+2011-10-16T00:43:00.000Z	Stereocaulon	IsmAvatar	just a sec, it's been a long time since I had to configure a low level setting like sinks
+2011-10-16T00:45:00.000Z	Stereocaulon	IsmAvatar	could you tell me how the screen alsamixergui looks to you (it's rather ugly, but bear with me ;-) )
+2011-10-16T00:45:00.000Z	IsmAvatar	Stereocaulon	gotta install it first, moment
+2011-10-16T00:47:00.000Z	IsmAvatar	Stereocaulon	ok, I'm seeing "Card: PulseAudio | Chip: PulseAudio" at the top. Inside, I see a Master and a Capture, both have full bars initially.
+2011-10-16T00:48:00.000Z	Stereocaulon	IsmAvatar	this will sound strange. Please decrease both master bars to about halfway and try to play a sound again
+2011-10-16T00:49:00.000Z	IsmAvatar	Stereocaulon	it decreased my general sound to half (in the applet indicator), but I still hear nothing.
+2011-10-16T00:50:00.000Z	Stereocaulon	IsmAvatar	strange, well I guess it's time to compare our Alsa configs then...Could you please pastebin your alsa config file?
+2011-10-16T00:50:00.000Z	IsmAvatar	Stereocaulon	location?
+2011-10-16T00:52:00.000Z	Stereocaulon	IsmAvatar	Oh my, Ubuntu 11.10 seems to have changed the path of the config files...
+2011-10-16T00:54:00.000Z	Stereocaulon	IsmAvatar	yet more troubleshooting, please tell me the output of /proc/asound/version and /proc/asound/cards
+2011-10-16T00:55:00.000Z	IsmAvatar	Stereocaulon	pastebinning, moment
+2011-10-16T00:56:00.000Z	Stereocaulon	IsmAvatar	if you are pastebinning, please also add the outpu of /proc/asound/devices
+2011-10-16T00:56:00.000Z	IsmAvatar	Stereocaulon	http://pastebin.com/SJ8qQ46L
+2011-10-16T00:58:00.000Z	Stereocaulon	IsmAvatar	do you have any idea what Ubuntu might detect as a USB sound device?
+2011-10-16T01:00:00.000Z	IsmAvatar	Stereocaulon	I'm not sure what you mean by your question. When I first plugged my speakers in, the Ubuntu Sound Settings (from the applet) showed it as an option, but defaulted to Analog, but once I switched it to Digital, it played - until I upgraded to oneiric.
+2011-10-16T01:02:00.000Z	Stereocaulon	IsmAvatar	well /proc/asound/cards shows up two devices, one of them being designated USB audio, the other one NVidia/ HDA-Intel. I happen to have a HDA-Intel chipset myself
+2011-10-16T01:03:00.000Z	IsmAvatar	Stereocaulon	if it helps any: 00:08.0 Audio device: nVidia Corporation MCP79 High Definition Audio (rev b1)
+2011-10-16T01:04:00.000Z	Stereocaulon	IsmAvatar	follow the conversation with nazo__, he/ she is definitely talking about something that might help you as well
+2011-10-16T01:07:00.000Z	Stereocaulon	IsmAvatar	I have looked at your /proc/asound/devices and I have found the problem: 2: [ 1- 0]: digital audio playback. As I had thought, Ubuntu tries using your USB channel to output audio. Now for a way to change that rather silly behaviour...
+2011-10-16T01:09:00.000Z	IsmAvatar	Stereocaulon	well, they are USB speakers, but I'll assume you know what you're doing :-)
+2011-10-16T01:10:00.000Z	Stereocaulon	IsmAvatar	hang on? they are USB speakers? That does make sense then. Is there any way to switch Analog/ Digital with a switch on the speakers (*without damagin the device*)?
+2011-10-16T01:12:00.000Z	IsmAvatar	Stereocaulon	not on the speakers themselves. They just have 2 volume buttons and a mute button, and Ubuntu sound applet responds to them beautifully.
+2011-10-16T01:13:00.000Z	IsmAvatar	Stereocaulon	sorry to confuse you. I didn't realize you could have non-usb Digital speakers.
+2011-10-16T01:14:00.000Z	Stereocaulon	IsmAvatar	hmm whitemagic was so friendly to show me where the general system settings are to be found. There is a sound settings icon there. If you click it, you will be able to select the device you want to configure under the "hardware" tab
+2011-10-16T01:16:00.000Z	IsmAvatar	Stereocaulon	yes, I've been there. You can also access it by clicking on the Sound Applet icon, and clicking Sound Settings...
+2011-10-16T01:16:00.000Z	Stereocaulon	IsmAvatar	do you see two devices there as well, or only one?
+2011-10-16T01:17:00.000Z	IsmAvatar	Stereocaulon	I see 2. USB AUDIO and Internal Audio, both have 1 Output, and they both have configurable profiles, both are currently set to Digital Stereo (IEC958) Output.
+2011-10-16T01:18:00.000Z	Stereocaulon	IsmAvatar	that same options panel has a rather convenient choice dropdown along with a speaker test button. Try fiddling around with that if you have not already done so
+2011-10-16T01:20:00.000Z	IsmAvatar	Stereocaulon	yes, that's the Profile. Already tried fiddling with it. This whole window hasn't changed between 11.04 and 11.10 - everything is right where I intentionally put it to get it working the first time.
+2011-10-16T01:20:00.000Z	IsmAvatar	Stereocaulon	to clarify, after fiddling with it a bit, I haven't been able to get output, but before fiddling with it, it was on the settings that worked for 11.04.
+2011-10-16T01:24:00.000Z	Stereocaulon	IsmAvatar	if you have any headphones, please try if they have proper sound output or not.
+2011-10-16T01:27:00.000Z	IsmAvatar	Stereocaulon	I was able to get them working, but they are Analog.
+2011-10-16T01:29:00.000Z	Stereocaulon	IsmAvatar	your /proc/asound/cards shows that it is indeed outputting a digital signal, which should work just fine with your USB speakers...
+2011-10-16T01:30:00.000Z	Stereocaulon	IsmAvatar	I'm thinking aloud here, not having any solutions yet...
+2011-10-16T01:32:00.000Z	IsmAvatar	Stereocaulon	aware. It's pretty weird for me too. When I had the issue, first thing I checked was 1) Is it muted (no), and 2) Is Sound Settings set up right? (yes). Then, being out of ideas, I came here :-)
+2011-10-16T01:36:00.000Z	Stereocaulon	IsmAvatar	did you upgrade (like I did), or did you make a clean install?
+2011-10-16T01:37:00.000Z	IsmAvatar	Stereocaulon	upgraded
+2011-10-16T01:39:00.000Z	Stereocaulon	IsmAvatar	did you already try to boot a LiveCD of Oneiric? That way you can pinpoint it to either a config. conflict or a general failure of Oneiric to get the settings right for your setup.
+2011-10-16T01:39:00.000Z	IsmAvatar	Stereocaulon	I have not tried a LiveCD, since I haven't burned one yet.
+2011-10-16T01:40:00.000Z	Stereocaulon	IsmAvatar	that would be my next action if I were in your shoes.
+2011-10-16T01:41:00.000Z	IsmAvatar	Stereocaulon	ok. I'll try that out. Thanks for your help so far. I'll be back after I try that if I'm not able to fix it.
+2011-10-16T01:42:00.000Z	Stereocaulon	IsmAvatar	another thing that you might do is to monitor the syslog with a tail -f just before playing a sound.
+2011-10-16T01:43:00.000Z	IsmAvatar	Stereocaulon	tail -f is empty, aside from a warning that following stdin indefinitely is ineffective (lol?)
+2011-10-16T01:45:00.000Z	Stereocaulon	IsmAvatar	that warning is really funny , this might provide copy for a demotivational poster even.
+2011-10-16T01:45:00.000Z	Stereocaulon	IsmAvatar	aimed at *nix geeks of course ;-)
+2011-10-16T01:47:00.000Z	IsmAvatar	Stereocaulon	am I doing it right? Just `tail -f` or do I have to specify a log file?
+2011-10-16T01:47:00.000Z	Stereocaulon	IsmAvatar	I meant the following line: sudo tail -f /var/log/syslog
+2011-10-16T01:48:00.000Z	IsmAvatar	Stereocaulon	nothing of interest there. Want me to pastebin?
+2011-10-16T01:49:00.000Z	IsmAvatar	Stereocaulon	http://pastebin.com/sNeYaY8y
+2011-10-16T01:49:00.000Z	Stereocaulon	IsmAvatar	no, if you can't find anything audiorelated, you won't get anything that way...Sigh...
+2011-10-16T01:52:00.000Z	Stereocaulon	IsmAvatar	nope, nothing useful in that pastebin, the last entries were rather old.
+2011-10-16T01:54:00.000Z	IsmAvatar	Stereocaulon	we may have a different time zone. At the time I posted that pastebin, it was 17:49, 1 minute after the last entry.
+2011-10-16T01:55:00.000Z	Stereocaulon	IsmAvatar	thank you for that correction. Anyway, the log does not contain anything useful relating to sound.
+2011-10-16T01:55:00.000Z	IsmAvatar	Stereocaulon	I was watching it, and there was just a bunch of the CMD /dev/null stuff you saw until I opened Banshee and played a sound, at which point I saw those entries appear.
+2011-10-16T01:56:00.000Z	IsmAvatar	Stereocaulon	ok. I'll try the liveCD then
+2011-10-16T01:56:00.000Z	IsmAvatar	Stereocaulon	thanks again for your help so far.
+2011-10-16T01:56:00.000Z	Stereocaulon	IsmAvatar	that's quite strange as those entries seem to have nothinig to do with the sound system.
+2011-10-16T01:57:00.000Z	IsmAvatar	Stereocaulon	they may have just been invoked by Banshee
+2011-10-16T01:57:00.000Z	Stereocaulon	IsmAvatar	sorry for not being to help you. I sympathise with you. Sound is a constant string of troubles for Ubuntu Desktops.
+2011-10-16T01:57:00.000Z	IsmAvatar	Stereocaulon	I've noticed v_v
+2011-10-16T01:58:00.000Z	Stereocaulon	IsmAvatar	Banshee should not even have rights to call an apt service.
+2011-10-16T01:59:00.000Z	IsmAvatar	Stereocaulon	maybe it was just a coincidence then. System checking for updates or some such at the same time I happened to play banshee
+2011-10-16T01:59:00.000Z	Stereocaulon	IsmAvatar	to check that you can try to play the same file again, I seriously doubt those entries are related to Banshee or any part of the sound system
+2011-10-16T02:00:00.000Z	IsmAvatar	Stereocaulon	nope, it's Banshee all right. I just repeated the process.
+2011-10-16T02:02:00.000Z	Stereocaulon	IsmAvatar	that's *really* weird as those processes should have nothing in common with each other after having installed Banshee of course...The Cron line is also unrelated.
+2011-10-16T02:03:00.000Z	Stereocaulon	IsmAvatar	anyway, I hope that your sound does work on a LiveCD session, so you can make comparisons in config files involved.
+2011-10-16T02:03:00.000Z	IsmAvatar	Stereocaulon	let's keep our fingers crossed ;-)
+2011-10-16T02:04:00.000Z	Stereocaulon	IsmAvatar	indeed, it is getting rather late here, I have will have to logou within an hour or so.
+2011-10-16T02:04:00.000Z	IsmAvatar	Stereocaulon	ok, good night. I have no further need for you. It'll be a while before I finish the LiveCD test.
+2011-10-16T02:05:00.000Z	Stereocaulon	IsmAvatar	"I have no further need for you" sounds a bit harsh, but still...Good Luck
+2011-10-16T02:05:00.000Z	IsmAvatar	Stereocaulon	I was playing ;-)
+2011-10-16T02:06:00.000Z	Stereocaulon	IsmAvatar	Playing EvilGenius, are we now?
+2011-10-16T02:06:00.000Z	Stereocaulon	IsmAvatar	that would be something indeed. Well, I enjoyed our chat and I wish you the best of luck.
+2011-10-16T02:07:00.000Z	IsmAvatar	Stereocaulon	you too. Good night

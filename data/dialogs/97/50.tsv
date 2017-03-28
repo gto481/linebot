@@ -1,0 +1,97 @@
+2007-12-19T05:19:00.000Z	ifireball	michael_	it seems that xorg trying to use a video mode that is unsuitable to your monitor
+2007-12-19T05:20:00.000Z	michael_	ifireball	thanks, how did you infer that? (so i can learn)
+2007-12-19T05:21:00.000Z	ifireball	michael_	experience :P
+2007-12-19T05:21:00.000Z	michael_	ifireball	eww :)
+2007-12-19T05:22:00.000Z	ifireball	michael_	essentially since non of the fallback mechanisms activates it means that xorg thinks everything is ok, because its not getting status from the screen correctly... you're using arather old CRT maybe?
+2007-12-19T05:23:00.000Z	michael_	ifireball	likely; it's an emachines that is similarly very old
+2007-12-19T05:24:00.000Z	ifireball	michael_	yeah the failsafe stuff in hardy is unfortunately not good with old hardware...
+2007-12-19T05:25:00.000Z	michael_	ifireball	i'm in gutsy, if it helps at all :D
+2007-12-19T05:25:00.000Z	ifireball	michael_	I meant gusty... my bad
+2007-12-19T05:52:00.000Z	michael_	ifireball	any other ideas for attacking my graphics issues, since the fixres documents didn't work?
+2007-12-19T05:53:00.000Z	ifireball	michael_	do you have your screen's documentation by any chance?
+2007-12-19T05:53:00.000Z	michael_	ifireball	nope, except that it's an eMachines eView 15w2
+2007-12-19T05:55:00.000Z	ifireball	michael_	I think what you need to do is adjust the "Horizsync" and "Vertrefresh" in xorg.conf, try websearching to see what they need to be for your monitor
+2007-12-19T05:56:00.000Z	ifireball	michael_	or you can do some trial and error, lowering the values
+2007-12-19T05:56:00.000Z	michael_	ifireball	i tried this (it was in the help.ubuntu.org/community/video-problems page.
+2007-12-19T05:56:00.000Z	michael_	ifireball	no difference.  also tried all the other suggestions on that page.
+2007-12-19T05:57:00.000Z	ifireball	michael_	did that page also tell you how to disable the EDID registers?
+2007-12-19T05:57:00.000Z	michael_	ifireball	hmm, don't recall that, let me go look
+2007-12-19T05:58:00.000Z	michael_	ifireball	the only mention of edid on that page is when dealing with nvidia drivers which i'm not using - Option "UseEdidFreqs" False
+2007-12-19T05:59:00.000Z	ifireball	michael_	try that, I think it may be ignoring the manual "Horizsync" and "Vertrefresh" if EDID values are available
+2007-12-19T05:59:00.000Z	ifireball	michael_	also, try commenting out and ModeLines...
+2007-12-19T06:00:00.000Z	michael_	ifireball	do i use UseEdid, or UseEdidFreq, or something else?
+2007-12-19T06:00:00.000Z	ifireball	michael_	try setting useEdid to false
+2007-12-19T06:01:00.000Z	michael_	ifireball	just to make sure - my HorizSync and VertRefresh settings were added to the "MOnitor" section, but I should put "UseEdid false" into the "Screen" section - right?
+2007-12-19T06:03:00.000Z	ifireball	michael_	I think you put it in your device section, also comment out the "Option "DPMS"" line
+2007-12-19T06:04:00.000Z	michael_	ifireball	will put it in Device section; I saw nothing about ModeLines, which you mentioned above; and I'll comment out DPMS as well.
+2007-12-19T06:05:00.000Z	ifireball	michael_	you don't have any "ModeLine" lines in your xorg.conf?
+2007-12-19T06:05:00.000Z	michael_	ifireball	correct.
+2007-12-19T06:06:00.000Z	ifireball	michael_	well, one less thing to worry about... ;)
+2007-12-19T06:06:00.000Z	michael_	ifireball	with DPMS commented out and UseEdid=false in "Device" section, I restarted gdm; and now Alt-F7 gives me a blinking cursor instead of giving me nothing at all.
+2007-12-19T06:11:00.000Z	michael_	ifireball	i've commented out the BusID line.  What driver do you recommend I use, if not tdfx?
+2007-12-19T06:07:00.000Z	michael_	ifireball	'(EE) Screen(s) found, but none have a usable configuration'
+2007-12-19T06:07:00.000Z	michael_	ifireball	even more helpful: '(WW) VESA: No matching Device section for instance (BusID PCI:1:11:0) found'
+2007-12-19T06:07:00.000Z	ifireball	michael_	hmm... can you paste the whole file to pastebin
+2007-12-19T06:08:00.000Z	michael_	ifireball	sorry, what's pastebin?  and, do you mean the Xorg log or xorg.conf?
+2007-12-19T06:08:00.000Z	ifireball	michael_	log
+2007-12-19T06:10:00.000Z	ifireball	michael_	also if you have "busid" line in your "Device" section you can disable it (assuming you only have one gfx card) and make sure you got the right driver
+2007-12-19T06:10:00.000Z	michael_	ifireball	there's the old video card which seems to do nothing, even in win98 which i blew away, and then the new voodoo card... not sure if this matters.
+2007-12-19T06:11:00.000Z	michael_	ifireball	no idea how to check if i have the right driver; all i know is that "intel" didn't work, but "tdfx" at least gives me a cursor!
+2007-12-19T06:11:00.000Z	ifireball	michael_	no that cursor is no good, it means X isn't loading
+2007-12-19T06:12:00.000Z	michael_	ifireball	or how to find out what to use?
+2007-12-19T06:14:00.000Z	ifireball	michael_	 find the card you want to use with lspci, make sure the numbers in the beginning of the ones are the same as in the busid line, don't comment it
+2007-12-19T06:15:00.000Z	ifireball	michael_	if its is a 3dfx card then you should use the tdfx driver, not sure the vesa driver will even work with it
+2007-12-19T06:15:00.000Z	michael_	ifireball	ah, i get you.  ok, lspci shows 2 cards, and the important one is 01:0b.0 VGA compatible controller: 3Dfx Interactive, Inc. Voodoo 3 (rev 01).
+2007-12-19T06:15:00.000Z	ifireball	michael_	I think so
+2007-12-19T06:15:00.000Z	ifireball	michael_	w8
+2007-12-19T06:15:00.000Z	michael_	ifireball	or rather, PCI:01:0b.0 i'd guess
+2007-12-19T06:16:00.000Z	michael_	ifireball	waiting
+2007-12-19T06:16:00.000Z	ifireball	michael_	yeah the 2nd one
+2007-12-19T06:16:00.000Z	michael_	ifireball	ok, now trying gdm restart
+2007-12-19T06:17:00.000Z	michael_	ifireball	i'm not getting any movement on Alt-F7 or F9, except for 1 short blackout followed by returning to the old blinking cursor screen.
+2007-12-19T06:17:00.000Z	michael_	ifireball	(after doing a gdm restart)
+2007-12-19T06:17:00.000Z	michael_	ifireball	anyway, now trying to figure out how to copy text into paste.ubuntu-nl.org from a Cygwin sshd window :)
+2007-12-19T06:17:00.000Z	ifireball	michael_	take a look in the log file again, also paste it please
+2007-12-19T06:18:00.000Z	ifireball	michael_	you might wanna try putty
+2007-12-19T06:18:00.000Z	michael_	ifireball	yes, thanks
+2007-12-19T06:18:00.000Z	michael_	ifireball	don't have it on this machine because cygwin feels even more like linux :)
+2007-12-19T06:19:00.000Z	ifireball	michael_	it doesn't mean you need to suffer that silly featureless cmd window... run an xterm in cygwin maybe?
+2007-12-19T06:20:00.000Z	michael_	ifireball	ooh, that's a thought... although don't i have to have X running on my linux box in order to attach a remote xterm to it?
+2007-12-19T06:21:00.000Z	ifireball	michael_	iv you've got cygwin you can run X on windows...
+2007-12-19T06:21:00.000Z	michael_	ifireball	oh sweet, i had no idea.
+2007-12-19T06:21:00.000Z	michael_	ifireball	http://paste.ubuntu-nl.org/48790/
+2007-12-19T06:22:00.000Z	michael_	ifireball	holy crap, X was just two keystrokes away and i hadn't known :)
+2007-12-19T06:23:00.000Z	michael_	ifireball	i assume you saw the URL pasted for my Xorg.0.log output
+2007-12-19T06:24:00.000Z	ifireball	michael_	yeah, it seems you're still using "vesa"
+2007-12-19T06:25:00.000Z	ifireball	michael_	lets do some cleanup, make sure you don't have any gdm org X processes running, then delete the logfile and try again
+2007-12-19T06:25:00.000Z	michael_	ifireball	got it
+2007-12-19T06:26:00.000Z	ifireball	michael_	e.g. gdm _or_ X processes
+2007-12-19T06:26:00.000Z	michael_	ifireball	can i just do a ps gax | grep -i x, and look for things suspicious?
+2007-12-19T06:26:00.000Z	michael_	ifireball	or is there a better was?
+2007-12-19T06:27:00.000Z	ifireball	michael_	thats ok, I use ps -ef though, but thats just an old IRIX habit...
+2007-12-19T06:27:00.000Z	michael_	ifireball	ok, i did /etc/init.d/gdm stop and ther seems to be nothing related to gdm or x in ps.  now cleaning the log.
+2007-12-19T06:28:00.000Z	michael_	ifireball	log's clean, now running /etc/init.d/gdm start
+2007-12-19T06:29:00.000Z	ifireball	michael_	it it still doesn't work paste both the log and the xorg.conf files please
+2007-12-19T06:29:00.000Z	michael_	ifireball	didn't work, will do.  thanks so much for the cycles you're putting into this!
+2007-12-19T06:30:00.000Z	ifireball	michael_	I just can't help thinking its one tiny thing we're missing here
+2007-12-19T06:31:00.000Z	michael_	ifireball	http://paste.ubuntu-nl.org/48792/ is error log
+2007-12-19T06:31:00.000Z	michael_	ifireball	http://paste.ubuntu-nl.org/48793/ is xorg.conf
+2007-12-19T06:32:00.000Z	michael_	ifireball	i sure would love it if it were one tiny thing.  yessir.
+2007-12-19T06:35:00.000Z	ifireball	michael_	almost there: "PCI:*(1:11:0) 3Dfx Interactive, Inc..." so it seems you need to use decimal in xorg.conf rather then hex...
+2007-12-19T06:36:00.000Z	ifireball	michael_	 so it should be BusID  "PCI:01:11:0"
+2007-12-19T06:36:00.000Z	michael_	ifireball	ok, i'm willing to try it :)
+2007-12-19T06:37:00.000Z	michael_	ifireball	note that i had used PCI:01:0b.0, with a dot, not :0 with a colon.  shoudl i in fact use a colon?
+2007-12-19T06:37:00.000Z	ifireball	michael_	I think so
+2007-12-19T06:38:00.000Z	michael_	ifireball	k, i changed it, wiped the log, and am restarting gdm... cross your fingers.  F7 screen is currently blinking cursor plus some garbage i typed on it.
+2007-12-19T06:39:00.000Z	michael_	ifireball	oh good, got a parse error, UseEdid not valid in "Device".  I'll try in "Screen".
+2007-12-19T06:40:00.000Z	ifireball	michael_	just comment it for no
+2007-12-19T06:40:00.000Z	michael_	ifireball	ok
+2007-12-19T06:41:00.000Z	michael_	ifireball	hm, a couple lines from end of log (it failed again btw) is '(WW) TDFX: No matching Device section for instance (BusID PCI:1:11:0) found'
+2007-12-19T06:42:00.000Z	ifireball	michael_	lets try without the busid line
+2007-12-19T06:43:00.000Z	michael_	ifireball	erm, i seem to have used ".0" instead of ":0" in the xorg.conf BusID line.  Let's try this again, with :0...
+2007-12-19T06:45:00.000Z	michael_	ifireball	after a flash of garbage and i could swear seeing half of a "gentoo" graphic, it loaded just fine.
+2007-12-19T06:45:00.000Z	michael_	ifireball	thank you SO MUCH for your help.  so, the only thing changed from the default Gutsy install was the BusID and the driver=tdfx?
+2007-12-19T06:46:00.000Z	michael_	ifireball	i can't remember all the steps tried :/
+2007-12-19T06:47:00.000Z	ifireball	michael_	essentially is was the busid and tdfx, since it kept trying to use the wrong card and driver...
+2007-12-19T06:48:00.000Z	michael_	ifireball	got it.  thanks again.
+2007-12-19T06:48:00.000Z	ifireball	michael_	cheers, have a nice ubuntuing...

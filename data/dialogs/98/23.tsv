@@ -1,0 +1,98 @@
+2009-01-05T17:59:00.000Z	Maggie		what dependencies are required to update gvfs?
+2009-01-05T18:00:00.000Z	jrib	Maggie	update-manager takes care of updates for you
+2009-01-05T18:00:00.000Z	Maggie	jrib	what if i want to do it manually ?
+2009-01-05T18:01:00.000Z	jrib	Maggie	It's usually not a good idea, especially with core things like gvfs, unless you already know what you are doing.  Why do you want to?
+2009-01-05T18:02:00.000Z	Maggie	jrib	coz a frien of mine uninstalled nautilus
+2009-01-05T18:02:00.000Z	jrib	Maggie	so install it again?
+2009-01-05T18:02:00.000Z	Maggie	jrib	how?
+2009-01-05T18:03:00.000Z	jrib	Maggie	use APT, with for example Synaptic
+2009-01-05T18:04:00.000Z	Maggie	jrib	it is there when i look in package manager
+2009-01-05T18:04:00.000Z	jrib	Maggie	so what is the problem?
+2009-01-05T18:05:00.000Z	Maggie	jrib	when i open places>computer i get the msg "Error stating file '/usr/share/applications/nautilus-computer.desktop': No such file or directory"
+2009-01-05T18:05:00.000Z	jrib	Maggie	what did your friend do exactly?
+2009-01-05T18:07:00.000Z	Maggie	jrib	I had this problem that while opening places>computer I got msg "Nautilus cannot handle Computer: locations"
+2009-01-05T18:08:00.000Z	jrib	Maggie	you said your friend removed nautilus.  What did he do exactly?
+2009-01-05T18:08:00.000Z	Maggie	jrib	can i pm you?
+2009-01-05T18:08:00.000Z	jrib	Maggie	no, I'd prefer it if we use the channel
+2009-01-05T18:09:00.000Z	Maggie	jrib	so i used irc to seek help
+2009-01-05T18:09:00.000Z	jrib	Maggie	ok, but for me to help you, can you answer my question?
+2009-01-05T18:11:00.000Z	Maggie	jrib	i was told to update gvfs using source code...... so i tried to do it but i was unsuccessful when my friend came and i asked him to help
+2009-01-05T18:12:00.000Z	jrib	Maggie	you need to be more specific about what your friend has done
+2009-01-05T18:14:00.000Z	Maggie	jrib	then he downloaded gvfs_0.99.1-1_i386.deb and installed it and after installation we got msg that it was broken and we should write sudo apt-get install -f in the terminal and that uninstalled nautilus
+2009-01-05T18:15:00.000Z	jrib	Maggie	pastebin: apt-cache policy gvfs
+2009-01-05T18:16:00.000Z	Maggie	jrib	this is what i got http://paste.ubuntu.com/100304/
+2009-01-05T18:17:00.000Z	jrib	Maggie	sudo apt-get install gvfs/hardy-updates
+2009-01-05T18:17:00.000Z	jrib	Maggie	if it asks you a question, pastebin it before replying
+2009-01-05T18:19:00.000Z	Maggie	jrib	i got this http://paste.ubuntu.com/100306/
+2009-01-05T18:19:00.000Z	jrib	Maggie	ok, continue.  Sorry magicsrv
+2009-01-05T18:21:00.000Z	jrib	Maggie	if that downgraded without issue, what does 'apt-cache policy nautilus' return?
+2009-01-05T18:21:00.000Z	Maggie	jrib	i got this http://paste.ubuntu.com/100307/
+2009-01-05T18:23:00.000Z	Maggie	jrib	i got this for apt-cache policy nautilus http://paste.ubuntu.com/100308/
+2009-01-05T18:23:00.000Z	jrib	Maggie	sudo apt-get install nautilus
+2009-01-05T18:26:00.000Z	jrib	Maggie	any errors?
+2009-01-05T18:28:00.000Z	Maggie	jrib	no errors
+2009-01-05T18:28:00.000Z	jrib	Maggie	you should do 'sudo apt-get install ubuntu-desktop' too
+2009-01-05T18:29:00.000Z	Maggie	jrib	but still i am not able to open places > computer
+2009-01-05T18:29:00.000Z	jrib	Maggie	did you run that last command?
+2009-01-05T18:30:00.000Z	Maggie	jrib	no
+2009-01-05T18:33:00.000Z	Maggie	jrib	I have a slow internet connection last command is downloading something
+2009-01-05T18:34:00.000Z	jrib	Maggie	ok
+2009-01-05T18:34:00.000Z	jrib	Maggie	afterwards, you'll probably need to at least logout and back in
+2009-01-05T18:35:00.000Z	Maggie	jrib	ok
+2009-01-05T18:36:00.000Z	Maggie	jrib	the problem started 3 ddays ago when i used the command sudo apt-get update
+2009-01-05T18:37:00.000Z	Maggie	jrib	ok
+2009-01-05T18:57:00.000Z	Maggie	jrib	still not able to open places>computer
+2009-01-05T18:57:00.000Z	jrib	Maggie	you logged out and back in?
+2009-01-05T18:58:00.000Z	Maggie	jrib	no
+2009-01-05T18:58:00.000Z	jrib	Maggie	do that
+2009-01-05T18:58:00.000Z	Maggie	jrib	ok
+2009-01-05T19:00:00.000Z	Maggie	jrib	still nothing happened
+2009-01-05T19:00:00.000Z	jrib	Maggie	run 'nautilus' in a terminal
+2009-01-05T19:02:00.000Z	Maggie	jrib	nautilus in terminal opens the home folder
+2009-01-05T19:04:00.000Z	Maggie	jrib	the real problem that i am having is in the following post http://ubuntuforums.org/showthread.php?t=801597
+2009-01-05T19:05:00.000Z	jrib	Maggie	you get that error when you go to places -> home?
+2009-01-05T19:06:00.000Z	Maggie	jrib	i dont get any error
+2009-01-05T19:06:00.000Z	jrib	Maggie	why do you believe it's the same problem then?
+2009-01-05T19:07:00.000Z	Maggie	jrib	when i open places > computer i get "Nautilus cannot handle computer: locations."
+2009-01-05T19:07:00.000Z	jrib	Maggie	ls -l /usr/share/applications/nautilus-computer.desktop
+2009-01-05T19:08:00.000Z	Maggie	jrib	also i cannot mount any usb flash drive
+2009-01-05T19:09:00.000Z	Maggie	jrib	i got this -rw-r--r-- 1 root root 10082 2008-09-26 18:37 /usr/share/applications/nautilus-computer.desktop
+2009-01-05T19:11:00.000Z	jrib	Maggie	reboot, make sure it still happens
+2009-01-05T19:12:00.000Z	Maggie	jrib	my problem is discussed in the following thread and the solution to it has been given as to manually update gvfs "http://ubuntuforums.org/showthread.php?t=801597"
+2009-01-05T19:12:00.000Z	jrib	Maggie	you have https://bugs.edge.launchpad.net/ubuntu/+source/nautilus/+bug/233889
+2009-01-05T19:16:00.000Z	Maggie	jrib	the problem is still there
+2009-01-05T19:17:00.000Z	jrib	Maggie	see if it happens with a new user
+2009-01-05T19:18:00.000Z	jrib	Maggie	pastebin 'apt-cache policy libglib2.0-0' as well
+2009-01-05T19:18:00.000Z	Maggie	jrib	there is only one user on mu ubuntu box
+2009-01-05T19:18:00.000Z	jrib	Maggie	right, so create a fresh new one
+2009-01-05T19:20:00.000Z	Maggie	jrib	pastebin  "http://paste.ubuntu.com/100337/"
+2009-01-05T19:21:00.000Z	jrib	Maggie	your system isn't up to date.  I know you have a slow connectiont.  How long will the following take: sudo apt-get update && sudo apt-get upgrade
+2009-01-05T19:25:00.000Z	Maggie	jrib	the problem is still there on different user
+2009-01-05T19:25:00.000Z	jrib	Maggie	k, did you catch my message about updating?
+2009-01-05T19:26:00.000Z	Maggie	jrib	no
+2009-01-05T19:26:00.000Z	jrib	Maggie	your system isn't up to date.  I know you have a slow connectiont.  How long will the following take: sudo apt-get update && sudo apt-get upgrade
+2009-01-05T19:26:00.000Z	Maggie	jrib	7 hours
+2009-01-05T19:27:00.000Z	jrib	Maggie	k.  The only other thing I would check for is what do you have installed to /usr/local/?
+2009-01-05T19:27:00.000Z	Maggie	jrib	how do i do that
+2009-01-05T19:28:00.000Z	jrib	Maggie	ls /usr/local/*
+2009-01-05T19:30:00.000Z	Maggie	jrib	this was my output http://paste.ubuntu.com/100343/
+2009-01-05T19:30:00.000Z	jrib	Maggie	you have glib installed there.  Why?
+2009-01-05T19:31:00.000Z	Maggie	jrib	it was required when i was installing something from source code
+2009-01-05T19:32:00.000Z	jrib	Maggie	so why not use the repositories?
+2009-01-05T19:32:00.000Z	jrib	Maggie	what did you install from source code that you want to keep anyway?
+2009-01-05T19:33:00.000Z	Maggie	jrib	to keep a backup  coz u know i have a slow connection
+2009-01-05T19:34:00.000Z	Maggie	jrib	Cmake
+2009-01-05T19:34:00.000Z	jrib	Maggie	cmake is in the repositories.  Let's get rid of the /usr/local/ stuff.  'sudo mv /usr/local/ /usr/local.old && sudo mkdir /usr/local/' and then reboot
+2009-01-05T19:35:00.000Z	Maggie	jrib	nothing happened
+2009-01-05T19:36:00.000Z	jrib	Maggie	what does 'ls /usr/local/' say now?
+2009-01-05T19:37:00.000Z	Maggie	jrib	this was the output "http://paste.ubuntu.com/100346/"
+2009-01-05T19:38:00.000Z	jrib	Maggie	so reboot
+2009-01-05T19:39:00.000Z	Maggie	jrib	just have a look at this http://ubuntuforums.org/showthread.php?t=801597
+2009-01-05T19:43:00.000Z	Maggie	jrib	thanx its all working now
+2009-01-05T19:43:00.000Z	jrib	Maggie	no problem
+2009-01-05T19:44:00.000Z	jrib	Maggie	be wary about compiling things from source, especially core libraries.  Most are in the repository anyway
+2009-01-05T19:45:00.000Z	Maggie	jrib	thanx again but what if want a newer version
+2009-01-05T19:45:00.000Z	jrib	Maggie	a newer version of what?
+2009-01-05T19:46:00.000Z	Maggie	jrib	of what i want to download and its old available in the repository e.g. vlc
+2009-01-05T19:47:00.000Z	jrib	Maggie	feel free to compile vlc, but not the libraries it depends on since those are in the repositories
+2009-01-05T19:49:00.000Z	Maggie	jrib	thanx I was a real pain eh!

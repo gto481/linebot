@@ -1,0 +1,98 @@
+2011-10-19T03:44:00.000Z	prodigalN00b		anyone around from earlier when we were talking about  resolv.conf, and network manager?
+2011-10-19T03:45:00.000Z	yagoo	prodigalN00b	hi.. u again.. with the 400 servers.. wazzup
+2011-10-19T03:46:00.000Z	yagoo	prodigalN00b	did u have to blacklist nouveau like i told u?
+2011-10-19T03:47:00.000Z	prodigalN00b	yagoo	sure did
+2011-10-19T03:48:00.000Z	prodigalN00b	yagoo	any idea why on bootup the (is it grub?) splash screen, and basic TTY's are all garbage? I can't see anything clearly until i'm actually IN the window manager
+2011-10-19T03:49:00.000Z	yagoo	prodigalN00b	if u switch to tty1 when the gui logon screen shows up.. can u see the proper text login: ?
+2011-10-19T03:49:00.000Z	yagoo	prodigalN00b	and without having done a gui logon session
+2011-10-19T03:50:00.000Z	prodigalN00b	yagoo	no, it goes all ape nasty
+2011-10-19T03:50:00.000Z	yagoo	prodigalN00b	u sure u disabled nouveau?
+2011-10-19T03:50:00.000Z	yagoo	prodigalN00b	lsmod|grep -i nouv
+2011-10-19T03:50:00.000Z	prodigalN00b	yagoo	yeah
+2011-10-19T03:50:00.000Z	yagoo	prodigalN00b	pastebinit ur X log
+2011-10-19T03:50:00.000Z	yagoo	prodigalN00b	and ur grub.cfg if u want..
+2011-10-19T03:52:00.000Z	yagoo	prodigalN00b	btw does the screen flicker every 10 seconds?
+2011-10-19T03:52:00.000Z	prodigalN00b	yagoo	no, it's white with black text, but i only see about 15% of the text  on the screen, and it's mirrored
+2011-10-19T03:52:00.000Z	prodigalN00b	yagoo	looks all blotchy
+2011-10-19T03:53:00.000Z	prodigalN00b	yagoo	http://paste.ubuntu.com/712616/, http://paste.ubuntu.com/712618/
+2011-10-19T03:57:00.000Z	prodigalN00b	yagoo	that grub conf is a lot more complex that i recall them being, lol
+2011-10-19T03:57:00.000Z	yagoo	prodigalN00b	btw what's the dpi supposed to be acording to your monitor ? i don't think it's 75x75 is it?
+2011-10-19T03:58:00.000Z	prodigalN00b	yagoo	it's my 50" plasma
+2011-10-19T03:58:00.000Z	prodigalN00b	yagoo	actually, i think i recall seeing it mention my reciever
+2011-10-19T03:59:00.000Z	yagoo	prodigalN00b	can u find that out?
+2011-10-19T03:59:00.000Z	prodigalN00b	yagoo	well i don't think my reciever would indicate any DPI since it's a pass thru
+2011-10-19T03:59:00.000Z	prodigalN00b	yagoo	but isn't the x log a moot point since we're talking about BEFORE x starts?
+2011-10-19T04:00:00.000Z	prodigalN00b	yagoo	i'm having an issue with standard TTY, and grub boot splash
+2011-10-19T04:01:00.000Z	yagoo	prodigalN00b	did u take a look at this? http://forum.xbmc.org/showthread.php?p=489752
+2011-10-19T04:01:00.000Z	yagoo	prodigalN00b	if that's correct for those 4-5 lines -- option dpi would have an effect..
+2011-10-19T04:01:00.000Z	yagoo	prodigalN00b	u can pastebinit ur xorg.conf file
+2011-10-19T04:01:00.000Z	prodigalN00b	yagoo	it'd have an effect for grub?
+2011-10-19T04:02:00.000Z	yagoo	prodigalN00b	kms
+2011-10-19T04:02:00.000Z	yagoo	prodigalN00b	it can have an effect on tty1-6
+2011-10-19T04:03:00.000Z	prodigalN00b	yagoo	^^^ yeah i could see that, but really i think the issue starts sooner than X
+2011-10-19T04:03:00.000Z	prodigalN00b	yagoo	it's not like i often need to go to a tty, but i tihnk it looks ugly as it boots up in grub (it's just white with black blocks)
+2011-10-19T04:03:00.000Z	yagoo	prodigalN00b	is that the xorg.conf made from X -configure from yesterday?
+2011-10-19T04:04:00.000Z	prodigalN00b	yagoo	it's the one that the nvidia configurator built
+2011-10-19T04:04:00.000Z	yagoo	prodigalN00b	line 155 -> http://paste.ubuntu.com/712616/
+2011-10-19T04:06:00.000Z	yagoo	prodigalN00b	try this->
+2011-10-19T04:06:00.000Z	prodigalN00b	yagoo	i can see that being an issue, sorta.. except that X is workgin fine.. i feel like you're hung up on something that i'm not concerned about, i really just want grub to look right when booting
+2011-10-19T04:06:00.000Z	prodigalN00b	yagoo	after that lightdm is taking over and looks fine
+2011-10-19T04:07:00.000Z	yagoo	prodigalN00b	http://pastebin.com/wTa9LsNc .. add option dpi..
+2011-10-19T04:07:00.000Z	yagoo	prodigalN00b	restart lightdm from tty1 -- (u dont need to reboot ur machine)
+2011-10-19T04:08:00.000Z	yagoo	prodigalN00b	when lightdm starts.. see if tty1 looks fine
+2011-10-19T04:08:00.000Z	prodigalN00b	yagoo	right now the only way i can see anything outside of X is via ssh
+2011-10-19T04:08:00.000Z	prodigalN00b	yagoo	but i can restart it from there
+2011-10-19T04:09:00.000Z	prodigalN00b	yagoo	so 1) the warning no longer shows in the xorg log, 2) tty1 still looks nasty
+2011-10-19T04:14:00.000Z	prodigalN00b	yagoo	any other tricks?
+2011-10-19T04:15:00.000Z	yagoo	prodigalN00b	did u try turning of kms? Boot with the nouveau.modeset=0 kernel command line parameter.
+2011-10-19T04:15:00.000Z	yagoo	prodigalN00b	http://wiki.debian.org/KernelModesetting
+2011-10-19T04:15:00.000Z	prodigalN00b	yagoo	ok cool, let me try that
+2011-10-19T04:16:00.000Z	prodigalN00b	yagoo	hmm, it says to blacklist it for nvidia cards, which i already have
+2011-10-19T04:19:00.000Z	prodigalN00b	yagoo	lol i can't even get into the grub boot menu ... i tap esc non stop and it never goes into it :S ... actually i'm not too concerned about that.. trying to get my nameserver configurd correctly.. too much crap on here messign with basic settings
+2011-10-19T04:19:00.000Z	yagoo	prodigalN00b	not.
+2011-10-19T04:19:00.000Z	yagoo	prodigalN00b	You are supposed to edit /etc/default/grub
+2011-10-19T04:20:00.000Z	yagoo	prodigalN00b	then update-grub2
+2011-10-19T04:20:00.000Z	prodigalN00b	yagoo	yeah i just didn't want to have it break and not have a working grub entry
+2011-10-19T04:20:00.000Z	yagoo	prodigalN00b	it won't break anything.. update-grub2 uses /etc/default/grub to update grub.cfg
+2011-10-19T04:21:00.000Z	prodigalN00b	yagoo	yes i know, i meant the mod that i'm making... i'll give it a whirl
+2011-10-19T04:26:00.000Z	prodigalN00b	yagoo	ok, you got me in the right direction.. that value didn't fix it, but setting the GRUB_GFXMODE did
+2011-10-19T04:26:00.000Z	yagoo	prodigalN00b	u might as well try a nicer one for tty -- u can try vga=ask on the bootline
+2011-10-19T04:27:00.000Z	yagoo	prodigalN00b	using vga=<> prevents kms for tty1-6 i believe
+2011-10-19T04:27:00.000Z	prodigalN00b	yagoo	sorry, i don't quite follow
+2011-10-19T04:28:00.000Z	yagoo	prodigalN00b	"vga=ask" << literally can be passed on the kernel bootline
+2011-10-19T04:28:00.000Z	yagoo	prodigalN00b	u'll see what i mean..
+2011-10-19T04:28:00.000Z	prodigalN00b	yagoo	but will it prompt me on boot? cuz i don't want that
+2011-10-19T04:28:00.000Z	yagoo	prodigalN00b	a list is give of textual terminal dimensions.. (it probes)-- u can then find the value u like.. then change vga=<that value>
+2011-10-19T04:29:00.000Z	yagoo	prodigalN00b	i think using this method.. is better than using vgatextmode application
+2011-10-19T04:29:00.000Z	prodigalN00b	yagoo	so revert all that what i did before? or keep it since it's displaying something
+2011-10-19T04:30:00.000Z	yagoo	prodigalN00b	no need to revert .. u can add on to it
+2011-10-19T04:30:00.000Z	prodigalN00b	yagoo	oohh shit that broke it.. says "ask" parameter no longer supported, and fails to boot
+2011-10-19T04:30:00.000Z	yagoo	prodigalN00b	vga= is only for textual console.
+2011-10-19T04:30:00.000Z	yagoo	prodigalN00b	it does?
+2011-10-19T04:31:00.000Z	yagoo	prodigalN00b	probably a ubuntu mod of the kern..
+2011-10-19T04:31:00.000Z	yagoo	prodigalN00b	so just yank it out..
+2011-10-19T04:31:00.000Z	yagoo	prodigalN00b	oh really
+2011-10-19T04:31:00.000Z	yagoo	prodigalN00b	i'll try that on my machine..
+2011-10-19T04:32:00.000Z	yagoo	prodigalN00b	how high can u get GRUB_GFXMODE ?
+2011-10-19T04:32:00.000Z	prodigalN00b	yagoo	just did vbeinfo, looks like i can do 0x11b (1280x1024x32)
+2011-10-19T04:33:00.000Z	yagoo	prodigalN00b	did it complain only about "vga=ask" or can it do vga=<specific value" ?
+2011-10-19T04:33:00.000Z	yagoo	prodigalN00b	ya u can do vga=0x11b
+2011-10-19T04:35:00.000Z	prodigalN00b	yagoo	would i put that 0x11b in the GRUB_GFXMODE, or vga= in the kernel line in the default/grub
+2011-10-19T04:36:00.000Z	yagoo	prodigalN00b	GRUB_CMDLINE_LNUX i guess
+2011-10-19T04:36:00.000Z	yagoo	prodigalN00b	GRUB_CMDLINE_LINUX
+2011-10-19T04:38:00.000Z	yagoo	prodigalN00b	i see vbetool.. but no vbeinfo here
+2011-10-19T04:38:00.000Z	prodigalN00b	yagoo	in grub, run vbeinfo
+2011-10-19T04:41:00.000Z	yagoo	prodigalN00b	u should know that grub2 has modules.. i never looked into addon modules for video-- i also dont know how grub video mode would carry into tty terminals
+2011-10-19T04:41:00.000Z	yagoo	prodigalN00b	u should disable to kms if u want to use any vga=
+2011-10-19T04:42:00.000Z	prodigalN00b	yagoo	yeah i am (you mean nouveau.modeset=0 right?)
+2011-10-19T04:42:00.000Z	prodigalN00b	yagoo	it doesn't seem to work as well if i do vga=### as well as GRUB_GFXMODE="1024x768"
+2011-10-19T04:43:00.000Z	yagoo	prodigalN00b	i dont see any differenc on here too
+2011-10-19T04:43:00.000Z	yagoo	prodigalN00b	try seeing if there's a grub2 module for video
+2011-10-19T04:44:00.000Z	prodigalN00b	yagoo	might try that later.. right now wifey's etting irritated i keep rebooting
+2011-10-19T04:44:00.000Z	yagoo	prodigalN00b	ls -la /boot/grub/ shows modules for video
+2011-10-19T04:44:00.000Z	prodigalN00b	yagoo	i think she wants to watch a show :P
+2011-10-19T04:44:00.000Z	yagoo	prodigalN00b	pull out the pc speaker..
+2011-10-19T04:44:00.000Z	yagoo	prodigalN00b	but are the show no?
+2011-10-19T04:47:00.000Z	prodigalN00b	yagoo	thanks for the help man.. i might bug you again later :P you're good at this hardcore gui stuff
+2011-10-19T04:47:00.000Z	yagoo	prodigalN00b	been using linux longtime
+2011-10-19T04:48:00.000Z	prodigalN00b	yagoo	i go in and out of it every few years... been doing windows and basic debian administration for our clients... pretty basic really, but i play with kernels n stuff... the gui stuff has always been a trick for me

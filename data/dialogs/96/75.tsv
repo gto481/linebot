@@ -1,0 +1,96 @@
+2005-11-17T16:49:00.000Z	bluefoxicy		How the frick do I share a printer
+2005-11-17T16:49:00.000Z	gnomefreak	bluefoxicy	thats fairly easy
+2005-11-17T16:49:00.000Z	bluefoxicy	gnomefreak	 do tell?
+2005-11-17T16:49:00.000Z	bluefoxicy	gnomefreak	 there's not a "share this printer" in gnome cups manager
+2005-11-17T16:50:00.000Z	bluefoxicy	gnomefreak	 it's connected to a PC via USB; PC is connected to a router.
+2005-11-17T16:50:00.000Z	bluefoxicy	gnomefreak	 printer->Computer->(Network)->Computer
+2005-11-17T16:50:00.000Z	gnomefreak	bluefoxicy	in the cups set up set the pc without the printer to network and the printer with pc to local
+2005-11-17T16:51:00.000Z	gnomefreak	bluefoxicy	before you go there do you know the routers ip address?
+2005-11-17T16:51:00.000Z	bluefoxicy	gnomefreak	192.168.1.1 of course
+2005-11-17T16:51:00.000Z	bluefoxicy	gnomefreak	 I know my network, don't worry about that.  I also know how to setu p a local printer.
+2005-11-17T16:52:00.000Z	bluefoxicy	gnomefreak	 also, the computers are on DHCP so the IP can change.
+2005-11-17T16:52:00.000Z	bluefoxicy	gnomefreak	 why do I want the router's IP?  The printer isn't connected to it
+2005-11-17T16:53:00.000Z	bluefoxicy	gnomefreak	 printer->computer->router->(cable_modem; other computer)
+2005-11-17T16:53:00.000Z	bluefoxicy	gnomefreak	 the router is its own node, it's a small box with network jacks.
+2005-11-17T16:54:00.000Z	bluefoxicy	gnomefreak	 and the router is going to know abut the printer on the other computer?
+2005-11-17T16:55:00.000Z	bluefoxicy	gnomefreak	 the other computer btw has 2 printers on it.
+2005-11-17T16:55:00.000Z	bluefoxicy	gnomefreak	 the router is on both PCs
+2005-11-17T16:58:00.000Z	bluefoxicy	gnomefreak	 hold on, let me draw this
+2005-11-17T16:58:00.000Z	gnomefreak	bluefoxicy	listen if the printer and modem are on same pc than you can use the routers ip address
+2005-11-17T16:59:00.000Z	gnomefreak	bluefoxicy	maybe this is a stupid question but since there are 2 printers why not just put one on each pc?
+2005-11-18T17:00:00.000Z	bluefoxicy	gnomefreak	 one's a laser printer
+2005-11-18T17:01:00.000Z	bluefoxicy	gnomefreak	 http://i2.photobucket.com/albums/y10/bluefoxicy/Diagram2.png
+2005-11-18T17:02:00.000Z	bluefoxicy	gnomefreak	 check the idagram
+2005-11-18T17:03:00.000Z	bluefoxicy	gnomefreak	 you got it now?
+2005-11-18T17:04:00.000Z	gnomefreak	bluefoxicy	your modem has to be attached to one of the pcs or a 3rd pc your diagram soesnt show that
+2005-11-18T17:04:00.000Z	bluefoxicy	gnomefreak	 my cable modem is attached to a router.
+2005-11-18T17:04:00.000Z	bluefoxicy	gnomefreak	 start at the cloud that says "internet" and move down slowly.
+2005-11-18T17:05:00.000Z	bluefoxicy	gnomefreak	 here's a hint:  the linksys wrt54g is physically stationed inside my house.
+2005-11-18T17:05:00.000Z	gnomefreak	bluefoxicy	i understand that but you have a ehternet cord from pc-router and modem to router right?
+2005-11-18T17:05:00.000Z	bluefoxicy	gnomefreak	 yes.  That's what a router is for.
+2005-11-18T17:06:00.000Z	bluefoxicy	gnomefreak	 Port 1 on the router.  Icegate is plugged into port 2 on the router; icebox is plugged into port 3.
+2005-11-18T17:07:00.000Z	bluefoxicy	gnomefreak	 explain exactly why the router's ip should work?  The router isn't broadcasting printing packets, and it knows not of the two printers on Icegate.
+2005-11-18T17:07:00.000Z	bluefoxicy	gnomefreak	 at the same time, why exactly would the remote ubuntu machine be sharing the printer without me having configured it to do so
+2005-11-18T17:08:00.000Z	bluefoxicy	gnomefreak	 the router is not hosting a print server.
+2005-11-18T17:09:00.000Z	bluefoxicy	gnomefreak	 the remote computer (icegate) is also not broadcasting over the network anything about the printer.
+2005-11-18T17:09:00.000Z	bluefoxicy	gnomefreak	 the pc sees the printer, and uses it; it does not advertise to the network that there is a printer there, thus across the network nothing is saying that there's a printer.
+2005-11-18T17:10:00.000Z	bluefoxicy	gnomefreak	 ok let's try talking about windows.
+2005-11-18T17:10:00.000Z	bluefoxicy	gnomefreak	 in windows, you right click a printer, and hit, "Share"
+2005-11-18T17:10:00.000Z	bluefoxicy	gnomefreak	 Windows begins broadcasting packets that say, "I am sharing a printer.  It is called CLP-4000."
+2005-11-18T17:10:00.000Z	gnomefreak	bluefoxicy	 i am sharing a printer right now threw a router
+2005-11-18T17:11:00.000Z	bluefoxicy	gnomefreak	 Now, on a remote PC, you say, "Look at the network.  List the printers available."
+2005-11-18T17:11:00.000Z	bluefoxicy	gnomefreak	 and that PC says, "I found a CLP-4000"
+2005-11-18T17:12:00.000Z	bluefoxicy	gnomefreak	 Now step back, the remote host (Icegate) is running Linux instead of Windows.  Ubuntu Linux is not broadcasting samba packets.  It's not advertising that there's a printer connected to it.
+2005-11-18T17:12:00.000Z	bluefoxicy	gnomefreak	 so unless my computer has hacked into it and taken remote control, there's no way it knows there's a printer there.
+2005-11-18T17:12:00.000Z	bluefoxicy	gnomefreak	 I need to find the Linux equivalent of right-clicking the printer and telling the machine to share it.
+2005-11-18T17:13:00.000Z	gnomefreak	bluefoxicy	look you may have to go through the list and find the printer to set it up in cups than use ip address of router for network if you think that im wrong try looing at your help icon and see what that says or try ubuntu.wiki.org
+2005-11-18T17:13:00.000Z	bluefoxicy	gnomefreak	 ok, but the printer is not there in cups.
+2005-11-18T17:13:00.000Z	gnomefreak	bluefoxicy	windows and linux share nothing i mean nothing (as in same) you can share your windows printer but i dont think cups will help there i wouldnt know i hate windows
+2005-11-18T17:14:00.000Z	bluefoxicy	gnomefreak	 see, that's the thing.  I have a printer installed through cups, but cups isn't sharing it.
+2005-11-18T17:14:00.000Z	gnomefreak	bluefoxicy	if your printer is not listed in cups that is a sign that there isnt drivers for it
+2005-11-18T17:15:00.000Z	bluefoxicy	gnomefreak	 on my pc?  No, it's not.
+2005-11-18T17:16:00.000Z	bluefoxicy	gnomefreak	 it's in the list on the other one.
+2005-11-18T17:16:00.000Z	bluefoxicy	gnomefreak	 exactly why should it eb on the list on this one?  If I plug directly into the cable modem, will the whole world be able to print to my printer automatically?
+2005-11-18T17:20:00.000Z	bluefoxicy	gnomefreak	 Note that the 3745 is shown for CUPS and for the HP driver finding it, so those two entries are the local printer.
+2005-11-18T17:21:00.000Z	bluefoxicy	gnomefreak	 look at the pictures.  That's the entire process of pointing at my router.  Do you see something here?  (Hint:  There's 2 printers on the remote computer and one on the local)
+2005-11-18T17:22:00.000Z	bluefoxicy	gnomefreak	 the second one is my machine, it detected my local printer twice
+2005-11-18T17:23:00.000Z	bluefoxicy	gnomefreak	 both entries are my local 3745 printer.
+2005-11-18T17:24:00.000Z	bluefoxicy	gnomefreak	?
+2005-11-18T17:25:00.000Z	bluefoxicy	gnomefreak	 when i hit next from 03, it went there.
+2005-11-18T17:25:00.000Z	bluefoxicy	gnomefreak	 yeah.
+2005-11-18T17:26:00.000Z	gnomefreak	bluefoxicy	you say it went through but yet you still cant print
+2005-11-18T17:26:00.000Z	bluefoxicy	gnomefreak	 it blindly says whatever.  I can put the URI as 111.111.111.111 if I wanta nd it works.
+2005-11-18T17:27:00.000Z	gnomefreak	bluefoxicy	depends on what works means cause it works means to me is that u can print
+2005-11-18T17:28:00.000Z	bluefoxicy	gnomefreak	 your printer is connected to your network via an ethernet connection isn't it
+2005-11-18T17:29:00.000Z	gnomefreak	bluefoxicy	look im telling you how to make it print either do it the way i suggest or ask someone else cause right now mine works great and im on a different floor as my printer
+2005-11-18T17:30:00.000Z	bluefoxicy	gnomefreak	 are you using ipp printing?
+2005-11-18T17:30:00.000Z	bluefoxicy	gnomefreak	 or SMB?
+2005-11-18T17:48:00.000Z	bluefoxicy	gnomefreak	 installing samba does it.
+2005-12-07T13:02:00.000Z	bluefoxicy	gnomefreak	 Dapper appears to have 1.499+somebiglineoflettersandnumbers
+2005-12-07T13:05:00.000Z	bluefoxicy	gnomefreak	 I have 1.5 installed to my /home directory ;)
+2005-12-07T13:06:00.000Z	bluefoxicy	gnomefreak	 how in the fuck do I get a list of upgradable packages
+2005-12-07T13:06:00.000Z	bluefoxicy	gnomefreak	 they show in synaptic but no way to get a flat list in console
+2005-12-07T13:06:00.000Z	bluefoxicy	gnomefreak	 time is a factor, btw, before uptade-manager decides to apt-get update for me
+2005-12-07T13:07:00.000Z	gnomefreak	bluefoxicy	 the list of breezy and breezy backports as well as dapper and hoary and warty are at packages.ubuntu.com
+2005-12-07T13:07:00.000Z	bluefoxicy	gnomefreak	 current install base on this machine
+2005-12-07T13:07:00.000Z	bluefoxicy	gnomefreak	 I have dapper's source, upgraded gnome and everything, didn't upgrade anything havingto do with X or Firefox
+2005-12-07T13:07:00.000Z	gnomefreak	bluefoxicy	it all depends on what packages you think should be upgradable
+2005-12-07T13:07:00.000Z	bluefoxicy	gnomefreak	 trying to take a snapshot of what's left
+2005-12-07T13:08:00.000Z	gnomefreak	bluefoxicy	you upgraded gnome gnome is a part of X :(
+2005-12-07T13:09:00.000Z	gnomefreak	bluefoxicy	 i think gnome is more of a part gnome needs X to run (most current is always better) like you cant run gnome 2.12 on X from 3 years ago FF will run on any version of X
+2006-03-22T14:41:00.000Z	gnomefreak	bluefoxicy	did you enable the src repos?
+2006-03-22T14:44:00.000Z	bluefoxicy	gnomefreak	mwe, Healot:  It has 34 instead of 28
+2006-03-22T14:45:00.000Z	gnomefreak	bluefoxicy	if you have dapper repos in breezy that will cause that and thats bad
+2006-03-22T14:46:00.000Z	bluefoxicy	gnomefreak	 in dapper
+2006-03-22T14:47:00.000Z	gnomefreak	bluefoxicy	your using dapper?
+2006-03-22T14:47:00.000Z	gnomefreak	bluefoxicy	you can try to install the package you have for it and see if it works
+2006-06-16T11:19:00.000Z	gnomefreak	bluefoxicy	new kernel and new gnome
+2006-06-16T11:20:00.000Z	bluefoxicy	gnomefreak	 all from backports?
+2006-06-16T11:20:00.000Z	gnomefreak	bluefoxicy	no
+2006-06-16T11:21:00.000Z	gnomefreak	bluefoxicy	they cant be backported
+2006-06-16T11:21:00.000Z	bluefoxicy	gnomefreak	 I'm using dapper, dapper-updates, dapper-security, and dapper-backports o.o
+2006-06-16T11:21:00.000Z	gnomefreak	bluefoxicy	they are not in the backports
+2006-06-16T11:21:00.000Z	bluefoxicy	gnomefreak	 updates then?
+2006-06-16T11:21:00.000Z	gnomefreak	bluefoxicy	yes
+2006-06-16T11:22:00.000Z	gnomefreak	bluefoxicy	kernel=2.6.15-25 and gnome=2.14.2
+2006-06-16T11:33:00.000Z	gnomefreak	bluefoxicy	stop now please

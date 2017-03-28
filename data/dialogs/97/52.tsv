@@ -1,0 +1,97 @@
+2006-09-04T12:13:00.000Z	no_dog		I have a problem with my external harddrive. Whenever I try to rsync data to it, rsync will fail in the middle of transfer, and then the drive locks up as read only. I can't unmount it, either, because it says that the device is busy. Here is a pastebin of the problem: http://pastebin.com/783541 . Any suggestions?
+2006-09-04T12:14:00.000Z	enyc	no_dog	the kernel normally mounts devices readonly if it sees filesystem errors
+2006-09-04T12:15:00.000Z	no_dog	enyc	Interesting. Why might I be getting filesystem errors? I reformatted the drive as ext3 yesterday. It's a new drive, might there be some physical problems?
+2006-09-04T12:15:00.000Z	enyc	no_dog	right... 2 things
+2006-09-04T12:16:00.000Z	enyc	no_dog	joey@ubuntu:/media/250gb$
+2006-09-04T12:16:00.000Z	enyc	no_dog	you are cd'ed into that directory
+2006-09-04T12:16:00.000Z	no_dog	enyc	...d'oh
+2006-09-04T12:16:00.000Z	enyc	no_dog	unlike DOS / windoze... hawing a shell cd'ed to that directory... is holding it 'open' (busy)
+2006-09-04T12:17:00.000Z	enyc	no_dog	socondly... look at your 'dmesg' output
+2006-09-04T12:17:00.000Z	enyc	no_dog	poste that to postebin
+2006-09-04T12:17:00.000Z	enyc	no_dog	err... paste that in pastebin even
+2006-09-04T12:20:00.000Z	enyc	no_dog	?? whats happening?
+2006-09-04T12:21:00.000Z	no_dog	enyc	sorry, pastebin was taking awhile. Here's the dmesg output, first without the drive mounted, then with it mounted: http://pastebin.com/783578
+2006-09-04T12:22:00.000Z	enyc	no_dog	ext3_clear_journal_err: Filesystem error recorded from previous mount:
+2006-09-04T12:23:00.000Z	enyc	no_dog	 IO failure
+2006-09-04T12:23:00.000Z	enyc	no_dog	erm...erm ... you see higher up? more info?
+2006-09-04T12:23:00.000Z	enyc	no_dog	like erros from whon it was mounted previously?
+2006-09-04T12:23:00.000Z	no_dog	enyc	Do I see higher up?
+2006-09-04T12:24:00.000Z	enyc	no_dog	likee ... tho whole 'dmesg' output rather than the last fef lines
+2006-09-04T12:24:00.000Z	enyc	no_dog	try 'dmesg > no_nog_dmesg.txt' to create a txt file...
+2006-09-04T12:24:00.000Z	no_dog	enyc	That's all the output that 'dmesg | grep sdb' gives. Just 'demsg' by itself gives so much output that it scrolls past my buffer. Do you want all of it?
+2006-09-04T12:25:00.000Z	no_dog	enyc	k
+2006-09-04T12:26:00.000Z	enyc	no_dog	no_dog ;-)
+2006-09-04T12:28:00.000Z	enyc	no_dog	I wonder why pastebin is so slow today
+2006-09-04T12:29:00.000Z	no_dog	enyc	Beats me ;). Here's the full output from 'dmesg': http://pastebin.com/783582
+2006-09-04T12:29:00.000Z	enyc	no_dog	loading......
+2006-09-04T12:31:00.000Z	no_dog	enyc	yeah?
+2006-09-04T12:31:00.000Z	enyc	no_dog	hhrrm... weird pile of io errors with no details
+2006-09-04T12:31:00.000Z	enyc	no_dog	it could be a problem with allsorts ;-)
+2006-09-04T12:32:00.000Z	enyc	no_dog	problem with the driver or contrellor etc. for the  usb or ieee1394  interface
+2006-09-04T12:32:00.000Z	no_dog	enyc	Yeah... I'm not even sure what sda is :(
+2006-09-04T12:32:00.000Z	no_dog	enyc	Oh... how can I try to resolve that?
+2006-09-04T12:32:00.000Z	enyc	no_dog	it could be trouble with the drive (bad sectors)
+2006-09-04T12:32:00.000Z	enyc	no_dog	?are you able to erase/remove everything from the drive ?
+2006-09-04T12:33:00.000Z	no_dog	enyc	My external drive is sdb, though. All those errors are for sda.
+2006-09-04T12:33:00.000Z	enyc	no_dog	thefy  were for both
+2006-09-04T12:33:00.000Z	enyc	no_dog	 its as if you unplugged and replugged it
+2006-09-04T12:33:00.000Z	enyc	no_dog	and it called the new device instance sdb
+2006-09-04T12:34:00.000Z	enyc	no_dog	SCSI and SATA and usb/ieee1394 drives all get called 'sd?' iirc
+2006-09-04T12:34:00.000Z	no_dog	enyc	Hrm. Ok. My external drive has always showed up as 'sdb,' though, for what it's worth
+2006-09-04T12:35:00.000Z	no_dog	enyc	And, I can write to / remove from the drive. It just seems to lock up and go into read-only mode when I rsync a bunch of data.
+2006-09-04T12:35:00.000Z	enyc	no_dog	well a filesystem error in ogguring
+2006-09-04T12:35:00.000Z	no_dog	enyc	What do you recommend? I try to get my money back from newegg?
+2006-09-04T12:36:00.000Z	enyc	no_dog	EXT3-fs error (device sdb1): ext3_new_block:  Allocating block in system zone - block = 50888711
+2006-09-04T12:36:00.000Z	no_dog	enyc	Or do you think it might be a problem with my configuration?
+2006-09-04T12:36:00.000Z	enyc	no_dog	erm.. could be allsorts
+2006-09-04T12:36:00.000Z	enyc	no_dog	?are you able to erase/remove everything from the drive ?
+2006-09-04T12:36:00.000Z	no_dog	enyc	And, I can write to / remove from the drive. It just seems to lock up and go into read-only mode when I rsync a bunch of data.
+2006-09-04T12:37:00.000Z	no_dog	enyc	"everything?"
+2006-09-04T12:37:00.000Z	enyc	no_dog	I got that message....
+2006-09-04T12:37:00.000Z	enyc	no_dog	i mean like all your data // be ok to repartition it?
+2006-09-04T12:37:00.000Z	no_dog	enyc	Oh, I get you. I have no issues about reformatting it.
+2006-09-04T12:37:00.000Z	enyc	no_dog	ok
+2006-09-04T12:38:00.000Z	enyc	no_dog	many new dirves have bad sector hassles....
+2006-09-04T12:38:00.000Z	enyc	no_dog	in firsh bits of use.....
+2006-09-04T12:38:00.000Z	no_dog	enyc	I did reformat it yesterday, though.
+2006-09-04T12:38:00.000Z	enyc	no_dog	what do you mean
+2006-09-04T12:38:00.000Z	enyc	no_dog	mke2fs -j ?
+2006-09-04T12:39:00.000Z	no_dog	enyc	I bought the drive new a few weeks ago, used it fresh out of the box (it came FAT32), noticed some strange behavior, so I reformatted as ext3 yesterday, but am still having problems, so I came here :)
+2006-09-04T12:39:00.000Z	no_dog	enyc	"mke2fs -j"?
+2006-09-04T12:39:00.000Z	enyc	no_dog	what do you mean 'reformatted' ?
+2006-09-04T12:39:00.000Z	enyc	no_dog	dod you use mk31fs  to put an ext3  fsoon it ? or something?
+2006-09-04T12:40:00.000Z	enyc	no_dog	I didnt catch what command you ran
+2006-09-04T12:40:00.000Z	no_dog	enyc	I followed a guide, as it was my first time doing this in Linux. Don't remember the exact commands the I used, but I can find out. One moment.
+2006-09-04T12:41:00.000Z	no_dog	enyc	After setting up the partitions, I issued the command: "mkfs -t ext3 /dev/sdb1"
+2006-09-04T12:41:00.000Z	enyc	no_dog	right....
+2006-09-04T12:41:00.000Z	enyc	no_dog	this only creates the filesystem structure...
+2006-09-04T12:41:00.000Z	enyc	no_dog	thot does not 'reformat' (rewrite) all the data space
+2006-09-04T12:42:00.000Z	no_dog	enyc	Ok. Are you correcting my semantics, or saying that I did something incorrectly?
+2006-09-04T12:43:00.000Z	enyc	no_dog	I would try the following.... * unmount the filesystem....  * "badblocks -wvs /dev/sdb"   -- this will actually read-write test all the data space...  if the drive has dodgy sectors this will usually cause the disk to 'fix itself' after a few passes.....   if you cannot get that to work  then there is an incompatibility  or fault
+2006-09-04T12:44:00.000Z	no_dog	enyc	That will destroy the data on the drive, I take it?
+2006-09-04T12:44:00.000Z	enyc	no_dog	note that this will likely take a  long time...   I always  'badblocks -wvs' disks before using them
+2006-09-04T12:44:00.000Z	enyc	no_dog	yes
+2006-09-04T12:44:00.000Z	enyc	no_dog	-v  does destructive write test
+2006-09-04T12:45:00.000Z	enyc	no_dog	-vs does sensible display of progress
+2006-09-04T12:45:00.000Z	no_dog	enyc	Ok. I will execute that and let it run. How will I know the difference between a successful run (I can use the drive, good to go) and an unsuccessful (time to try to get my money back) one?
+2006-09-04T12:45:00.000Z	enyc	no_dog	 you will get '0 bad blocks found' ;-)
+2006-09-04T12:46:00.000Z	no_dog	enyc	Heh, ok. I'll give it a try and see what happens. Thanks for the help!
+2006-09-04T12:46:00.000Z	enyc	no_dog	auusing you used -vs -- i.e. 'badblocks -wvs /dev/sdb' -- BE CAREFUL what device you use
+2006-09-04T12:46:00.000Z	enyc	no_dog	dont say 'hda' or 'sda' ;-)
+2006-09-04T12:46:00.000Z	enyc	no_dog	remember to umount the filesystem first
+2006-09-04T12:46:00.000Z	no_dog	enyc	Done and done :)
+2006-09-04T12:47:00.000Z	enyc	no_dog	hard disks for years have 'internal defect management'
+2006-09-04T12:48:00.000Z	enyc	no_dog	this means..... that they will 'map out' bad sectors for spare sectors  but they only tend to remap on writing  having had read errors in past
+2006-09-04T12:49:00.000Z	enyc	no_dog	doing a 'badblocks -wvs' is both testing and alse reduction of likelihood of problems
+2006-09-04T12:49:00.000Z	no_dog	enyc	If it has bad sectors, but badblocks identifies them, is the drive still usable?
+2006-09-04T12:49:00.000Z	enyc	no_dog	if you have  errors on the (eventual) completion of badblocks.... do it all again... you may find the drive has then fixed itself
+2006-09-04T12:49:00.000Z	enyc	no_dog	not really
+2006-09-04T12:50:00.000Z	enyc	no_dog	you need to get it to give '0 bad blocks' before you use the drive
+2006-09-04T12:50:00.000Z	enyc	no_dog	it could  be a problem w/ the drive.... or caddy/cable  ... or usb driver/whatever
+2006-09-04T12:50:00.000Z	no_dog	enyc	So, just iterate until I get 0 bad blocks, and if I can't get that, send it back and hope that it was somebody else's fault?
+2006-09-04T12:50:00.000Z	enyc	no_dog	sounds sensible ;-)
+2006-09-04T12:51:00.000Z	enyc	no_dog	it will take a long time ;-)
+2006-09-04T12:51:00.000Z	no_dog	enyc	Noted :). Thanks again for the help!
+2006-09-04T12:52:00.000Z	enyc	no_dog	id be interestid te know what you eventually find out/do... please write to enyc@evtech.org  and remind me you were 'no_dog' and what happened... please
+2006-09-04T12:53:00.000Z	no_dog	enyc	Absolutely. Would be the least I could do :)
+2006-09-04T12:54:00.000Z	no_dog	enyc	I'm going to watch some vids and let this run

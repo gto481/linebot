@@ -1,0 +1,95 @@
+2009-08-29T16:57:00.000Z	_nano_		Hi all, is there a way to enable network at boot time in ubuntu jaunty? Right now networkmanager enables network only after a person logs in
+2009-08-29T16:58:00.000Z	Peddy	_nano_	are you using wired or wireless internet?
+2009-08-29T16:58:00.000Z	_nano_	Peddy	wired ethernet
+2009-08-29T16:59:00.000Z	Peddy	_nano_	static IP, or are you getting it via dhcp?
+2009-08-29T16:59:00.000Z	_nano_	Peddy	static ip
+2009-08-29T17:00:00.000Z	_nano_	Peddy	I can configure static ip in networkmanager, but it only gets enabled once you login. I want the network on when the machine turns on, kind of like a server
+2009-08-29T17:00:00.000Z	Peddy	_nano_	can I help you in a sec? it's rather straightforward to do, I've done it many times.
+2009-08-29T17:01:00.000Z	_nano_	Peddy	really appreciate it , i'll wait
+2009-08-29T17:04:00.000Z	Peddy	_nano_	if you log in, and log back out, does the network stay connected? do you have another computer to talk on, while we set up the connection?
+2009-08-29T17:04:00.000Z	_nano_	Peddy	let me set that up ..just a sec
+2009-08-29T17:05:00.000Z	_nano_	Peddy	yup I'm ready
+2009-08-29T17:06:00.000Z	Peddy	_nano_	good. Turn the computer off, reboot it. Don't log in at GDM (or whatever you use).
+2009-08-29T17:06:00.000Z	_nano_	Peddy	alright
+2009-08-29T17:06:00.000Z	Peddy	_nano_	hit ctrl-alt-F2. log in with your regular username and password.
+2009-08-29T17:07:00.000Z	_nano_	Peddy	alright will let you know once I've done so
+2009-08-29T17:08:00.000Z	_nano_	Peddy	logged in (in command line)
+2009-08-29T17:09:00.000Z	Peddy	_nano_	great. To start,  please type lspci.
+2009-08-29T17:09:00.000Z	_nano_	Peddy	yeah a list of devices
+2009-08-29T17:09:00.000Z	_nano_	Peddy	including the Ethernet controller
+2009-08-29T17:10:00.000Z	Peddy	_nano_	OK. Try pinging ubuntu.com with 'ping ubuntu.com'
+2009-08-29T17:10:00.000Z	_nano_	Peddy	how ???
+2009-08-29T17:10:00.000Z	Peddy	_nano_	I don't know, I guess network manager configured it for you. Did you reboot after you logged out?
+2009-08-29T17:11:00.000Z	_nano_	Peddy	yeah !
+2009-08-29T17:11:00.000Z	Peddy	_nano_	cool. You might not have static IP, though.
+2009-08-29T17:11:00.000Z	Peddy	_nano_	type 'ifconfig'. See if your IP is the one you want.
+2009-08-29T17:11:00.000Z	_nano_	Peddy	yeah you're right, it's automatically assigned IP
+2009-08-29T17:12:00.000Z	_nano_	Peddy	so which file should I set it at ?
+2009-08-29T17:12:00.000Z	Peddy	_nano_	do dhclient -r interfacename
+2009-08-29T17:13:00.000Z	_nano_	Peddy	it's saying something like Listening on ... Sending On
+2009-08-29T17:13:00.000Z	Peddy	_nano_	is the program closed, though? is your prompt there?
+2009-08-29T17:13:00.000Z	_nano_	Peddy	yeah the prompt is there
+2009-08-29T17:14:00.000Z	Peddy	_nano_	good. Type ifconfig eth0 down
+2009-08-29T17:14:00.000Z	_nano_	Peddy	done, no confirmation message, came back to the prompt
+2009-08-29T17:16:00.000Z	Peddy	_nano_	do 'ifconfig eth0 192.168.x.x netmask 255.255.255.0 up'
+2009-08-29T17:17:00.000Z	_nano_	Peddy	did. can't ping
+2009-08-29T17:18:00.000Z	Peddy	_nano_	what does ifconfig say?
+2009-08-29T17:18:00.000Z	_nano_	Peddy	is there a way to put gateway in that command?
+2009-08-29T17:18:00.000Z	_nano_	Peddy	well the ip  and netmask is showing
+2009-08-29T17:18:00.000Z	_nano_	Peddy	but cant ping
+2009-08-29T17:18:00.000Z	Peddy	_nano_	 can you ping another machine on the network?
+2009-08-29T17:19:00.000Z	_nano_	Peddy	yes I am able to ping other machines in my network, just not outside hosts
+2009-08-29T17:19:00.000Z	Peddy	_nano_	that's great, we haven't configured DNS servers yet.
+2009-08-29T17:20:00.000Z	_nano_	Peddy	I don't know about DNS servers, it's connected from a router, in networkmanager it never asked me and it worked :(
+2009-08-29T17:20:00.000Z	Peddy	_nano_	don't worry about it, it's easy :)
+2009-08-29T17:20:00.000Z	_nano_	Peddy	alright
+2009-08-29T17:20:00.000Z	Peddy	_nano_	do 'nano /etc/resolv.conf'
+2009-08-29T17:20:00.000Z	_nano_	Peddy	lol, yeah i see two nameserver entries
+2009-08-29T17:21:00.000Z	Peddy	_nano_	what exactly does it say?
+2009-08-29T17:22:00.000Z	_nano_	Peddy	above message
+2009-08-29T17:22:00.000Z	Peddy	_nano_	OK. when you uninstall NM, it;'ll delete that file, so you might want to make a backup if you don't want to manually edit it again.
+2009-08-29T17:22:00.000Z	Peddy	_nano_	for the gateway, you need to do 'route add default gw 192.168.x.x'
+2009-08-29T17:23:00.000Z	_nano_	Peddy	is there a file where i can put all this ?
+2009-08-29T17:23:00.000Z	Peddy	_nano_	then you should be able to ping the outside world.
+2009-08-29T17:23:00.000Z	Peddy	_nano_	we'll save these commands so they're executed at bootup later.
+2009-08-29T17:23:00.000Z	_nano_	Peddy	ok i've backed it up
+2009-08-29T17:23:00.000Z	Peddy	_nano_	great.
+2009-08-29T17:24:00.000Z	Peddy	_nano_	do the 'route add' thing. Can you ping ubuntu.com? :)
+2009-08-29T17:24:00.000Z	_nano_	Peddy	yes it's working :)
+2009-08-29T17:24:00.000Z	_nano_	Peddy	i meant by routed add thingy
+2009-08-29T17:24:00.000Z	Peddy	_nano_	great. Almost there.
+2009-08-29T17:25:00.000Z	Peddy	_nano_	now, it's time to configure everything to be run at startup.
+2009-08-29T17:25:00.000Z	_nano_	Peddy	i'm all set
+2009-08-29T17:26:00.000Z	_nano_	Peddy	for the next step i mean
+2009-08-29T17:26:00.000Z	Peddy	_nano_	firstly, you can delete network-manager and network-manager-gnome
+2009-08-29T17:26:00.000Z	_nano_	Peddy	aptitude remove?
+2009-08-29T17:26:00.000Z	_nano_	Peddy	ok
+2009-08-29T17:26:00.000Z	Peddy	_nano_	I think ...-gnome will be uninstalled as well, it relies on the first one.
+2009-08-29T17:27:00.000Z	_nano_	Peddy	yeah 2 packages removed
+2009-08-29T17:27:00.000Z	Peddy	_nano_	OK.  do sudo /etc/init.d/networking restart
+2009-08-29T17:28:00.000Z	_nano_	Peddy	it's saying ignoring interface eth0=eth0
+2009-08-29T17:28:00.000Z	_nano_	Peddy	now what?
+2009-08-29T17:28:00.000Z	Peddy	_nano_	then, restore the backup of /etc/resolv.conf, if its been deleted.
+2009-08-29T17:29:00.000Z	_nano_	Peddy	restored
+2009-08-29T17:29:00.000Z	_nano_	Peddy	(the network went down when I did the networking restart thing)
+2009-08-29T17:29:00.000Z	Peddy	_nano_	do 'sudo nano /etc/rc.local'
+2009-08-29T17:30:00.000Z	_nano_	Peddy	did, nothing's there except exit 0
+2009-08-29T17:30:00.000Z	_nano_	Peddy	I mean apart from comments
+2009-08-29T17:32:00.000Z	Peddy	_nano_	before exit 0, add 'ifconfig eth0 down /n dhclient -r eth0 /n ifconfig eth0 192.168.1.x.x netmask 255.255.255.0 up /n route add default gw 192.168.x.x'
+2009-08-29T17:32:00.000Z	_nano_	Peddy	ok
+2009-08-29T17:33:00.000Z	_nano_	Peddy	ok done
+2009-08-29T17:34:00.000Z	Peddy	_nano_	try doing 'sudo /etc/rc.local'. Is your internet working now?
+2009-08-29T17:34:00.000Z	_nano_	Peddy	yes!! its working :)
+2009-08-29T17:34:00.000Z	_nano_	Peddy	does that mean it's enabled at boot ?
+2009-08-29T17:34:00.000Z	Peddy	_nano_	great :) try rebooting
+2009-08-29T17:34:00.000Z	_nano_	Peddy	ok
+2009-08-29T17:37:00.000Z	_nano_	Peddy	yes its working at boot :) , now the nameservers .. someway to get it configured automatically ?
+2009-08-29T17:37:00.000Z	Peddy	_nano_	the nameservers (DNS) aren't working?
+2009-08-29T17:38:00.000Z	_nano_	Peddy	they are ..just that if network manager was able to automatically detect it
+2009-08-29T17:38:00.000Z	_nano_	Peddy	anyways for now it's working so thanks a lot :)
+2009-08-29T17:38:00.000Z	_nano_	Peddy	really appreciate your time and help :)
+2009-08-29T17:38:00.000Z	Peddy	_nano_	you could change /etc/resolv.conf to the name of your routers IP
+2009-08-29T17:38:00.000Z	Peddy	_nano_	you're welcome :)
+2009-08-29T17:38:00.000Z	_nano_	Peddy	ok
+2009-08-29T17:38:00.000Z	_nano_	Peddy	thanks again
+2009-08-29T17:38:00.000Z	Peddy	_nano_	NM was only detecting the router's IP.

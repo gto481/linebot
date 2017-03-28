@@ -1,0 +1,99 @@
+2008-03-10T00:42:00.000Z	bigjon32		hello, i'm having some trouble with my bootup on my ubuntu box, i disabled quiet splash and i can see where it's hanging but google hasn't helped
+2008-03-10T00:42:00.000Z	phoenix5002	bigjon32	when you turn on your comp does it go to a black screen and take a really long time to boot?
+2008-03-10T00:43:00.000Z	bigjon32		yeah
+2008-03-10T00:43:00.000Z	phoenix5002	bigjon32	hang on, I'll get you a link, this is a common problem
+2008-03-10T00:44:00.000Z	bigjon32	phoenix5002	https://answers.launchpad.net/ubuntu/+question/22297 was the closest thing that i found to my problem
+2008-03-10T00:45:00.000Z	phoenix5002	bigjon32	ok then did you edit the resolution in the usplash.conf file?
+2008-03-10T00:46:00.000Z	bigjon32	phoenix5002	well that's the thing, i can't get into the os at all.. its been hanging at the same place for ~5 min+ now
+2008-03-10T00:47:00.000Z	phoenix5002	bigjon32	then turn ur comp on and when it does grub loading press escape
+2008-03-10T00:47:00.000Z	bigjon32		phonenix5002: oh wow yeah i did, sorry i misunderstood that
+2008-03-10T00:48:00.000Z	phoenix5002	bigjon32	you did what?
+2008-03-10T00:48:00.000Z	bigjon32		phonenix5002: hit escape to go into the editor - let me restart this so we're on the same page
+2008-03-10T00:49:00.000Z	phoenix5002	bigjon32	ok, then just go into recovery mode and login to get to the command line
+2008-03-10T00:52:00.000Z	bigjon32	phoenix5002	booting into recovery mode is hanging aswell, is this normal?
+2008-03-10T00:52:00.000Z	phoenix5002	bigjon32	check ur PM
+2008-03-10T00:54:00.000Z	phoenix5002	bigjon32	check ur pm
+2008-03-10T00:54:00.000Z	bigjon32		phoneix5002: im trying to figure out how to on colloquy on os x, never used it before
+2008-03-10T00:54:00.000Z	phoenix5002	bigjon32	ok never mind then
+2008-03-10T00:55:00.000Z	phoenix5002	bigjon32	press escape at grub again but this time instead of selecting recovery mode press "c"
+2008-03-10T00:56:00.000Z	bigjon32		phonenix5002: alright, there
+2008-03-10T00:56:00.000Z	phoenix5002	bigjon32	u logged in?
+2008-03-10T00:56:00.000Z	bigjon32		phoneix5002: no, i hit c on the grub
+2008-03-10T00:57:00.000Z	phoenix5002		then what happened?
+2008-03-10T00:58:00.000Z	phoenix5002	bigjon32	ok ur at least at a command line right?
+2008-03-10T00:58:00.000Z	phoenix5002	bigjon32	can you enter commands like 'cd'?
+2008-03-10T00:58:00.000Z	bigjon32		phoneix5002: yeah, grub>
+2008-03-10T00:59:00.000Z	bigjon32	phoenix5002	no, i tried cd .. and it returns error 27: unrecognized command
+2008-03-10T01:00:00.000Z	phoenix5002	bigjon32	try typing login
+2008-03-10T01:00:00.000Z	bigjon32		phoneix5002: same thing
+2008-03-10T01:02:00.000Z	phoenix5002	bigjon32	hang on you should be able to log in from here let me check
+2008-03-10T01:04:00.000Z	phoenix5002	bigjon32	you really need to get to a command line, are you sure the system hangs when you go to (recovery mode)?
+2008-03-10T01:05:00.000Z	bigjon32	phoenix5002	pretty sure, i'll give it another shot but last time it hung and it just stopped at the same place as before
+2008-03-10T01:06:00.000Z	phoenix5002	bigjon32	just try and wait it out, it really does take a long time
+2008-03-10T01:06:00.000Z	phoenix5002	bigjon32	wait like 10min.  but once you get in once, you can fix this problem and should be able to boot in under a minuite after that
+2008-03-10T01:06:00.000Z	bigjon32	phoenix5002	alright then
+2008-03-10T01:07:00.000Z	phoenix5002	bigjon32	are you on a laptop?
+2008-03-10T01:07:00.000Z	bigjon32	phoenix5002	actively yes but for osx not ubuntu, that is on a desktop
+2008-03-10T01:17:00.000Z	bigjon32	phoenix5002	no luck as of yet on that by the way, still hanging at the same spot
+2008-03-10T01:17:00.000Z	phoenix5002	bigjon32	is it displaying anything on the screen at all?
+2008-03-10T01:18:00.000Z	bigjon32	phoenix5002	yup, full screen of text
+2008-03-10T01:18:00.000Z	bigjon32	phoenix5002	just hasn't moved in 12 minutes
+2008-03-10T01:18:00.000Z	phoenix5002	bigjon32	what sort of things is it displaying?
+2008-03-10T01:18:00.000Z	phoenix5002	bigjon32	try pressing ctrl+alt+F1
+2008-03-10T01:19:00.000Z	bigjon32	phoenix5002	it'd take me a long time to type out the entire screen, but the last line is [   24.809685] CR2: ffff814237c07530     - and ctrl alt f1 dosen't do anything
+2008-03-10T01:20:00.000Z	phoenix5002	bigjon32	can you type?
+2008-03-10T01:20:00.000Z	bigjon32	phoenix5002	no
+2008-03-10T01:20:00.000Z	phoenix5002	bigjon32	well that is really wierd, you should see text of output of things that are loading, not just a bunch of giberish
+2008-03-10T01:22:00.000Z	bigjon32	phoenix5002	well there's a bunch of lines like that, there's a line a few above it saying [   24.808841]  Code: 4d 8b 00 49 8d 4e 40 48 3b 4e 40 74 1e 83 2d 37 e2 28 00 01
+2008-03-10T01:22:00.000Z	bigjon32	phoenix5002	same sort of thing that was happening with the regular bootup
+2008-03-10T01:22:00.000Z	phoenix5002	bigjon32	that is not normal, even for this bug
+2008-03-10T01:23:00.000Z	bigjon32	phoenix5002	yeah, thats why i'm here heh
+2008-03-10T01:23:00.000Z	phoenix5002		well anyway, write this down:
+2008-03-10T01:23:00.000Z	phoenix5002	bigjon32	if you ever get to a command line to fix the splash screen type "sudo nano /etc/usplash.conf" and then edit the xres and yres to match your screens resolution
+2008-03-10T01:24:00.000Z	bigjon32	phoenix5002	it looks like output from a loading screen, its just like what's behind the window's loading bar on xp - it wouldnt mean anything to me
+2008-03-10T01:24:00.000Z	phoenix5002	bigjon32	do you see a bunch of ....[OK] 's?
+2008-03-10T01:25:00.000Z	bigjon32	phoenix5002	did before but not now
+2008-03-10T01:25:00.000Z	phoenix5002	bigjon32	oh well if you did before then that's good news I guess
+2008-03-10T01:25:00.000Z	phoenix5002	bigjon32	well maybe someone else can better help you get to a command line
+2008-03-10T01:26:00.000Z	phoenix5002	bigjon32	and once ur there just do what I wrote, then reboot and you should be fine, good luck :)
+2008-03-10T01:26:00.000Z	bigjon32	phoenix5002	alright, well thanks for your help -- every time i try to get linux running (been trying and getting hung up and giving up and coming back for several years now) i run into something like this.. i really want to get this working this time lol
+2008-03-10T01:28:00.000Z	bigjon32		So my Ubuntu 7.10 is hanging at startup and phoenix5002 and i can't figure out how to get to a command line... anyone have an idea?
+2008-03-10T01:33:00.000Z	phoenix5002	bigjon32	can you boot into Ubuntu with the Install CD?
+2008-03-10T01:35:00.000Z	phoenix5002		BIGJON32
+2008-03-10T01:35:00.000Z	bigjon32	phoenix5002	yeah i could last time
+2008-03-10T01:35:00.000Z	bigjon32	phoenix5002	giving it a try now
+2008-03-10T01:35:00.000Z	bigjon32	phoenix5002	yup works
+2008-03-10T01:36:00.000Z	phoenix5002	bigjon32	you should be able to edit the usplash.conf file on ur hardrive from the CD
+2008-03-10T01:37:00.000Z	bigjon32	phoenix5002	alright, waiting on it to come up --- i may have spoken too soon in which case im really confused since the same cd has worked just fine before
+2008-03-10T01:39:00.000Z	phoenix5002	bigjon32	It should, let me know when ur in
+2008-03-10T01:39:00.000Z	bigjon32	phoenix5002	kk
+2008-03-10T01:47:00.000Z	bigjon32	phoenix5002	no dice on the CD now, this worked before...
+2008-03-10T01:48:00.000Z	phoenix5002	bigjon32	that is extremely strange as the CD is independant of the hardrive.....
+2008-03-10T01:48:00.000Z	bigjon32		phoenix5002; you're telling me...
+2008-03-10T01:49:00.000Z	phoenix5002	bigjon32	did anything change on your computer since you tried last?
+2008-03-10T01:49:00.000Z	phoenix5002	bigjon32	hmm maybe your not actually booting from the CD
+2008-03-10T01:49:00.000Z	bigjon32	phoenix5002	nope, running the cd test right now.. i can try removing things though
+2008-03-10T01:50:00.000Z	bigjon32	phoenix5002	got a capturecard, thats about it and it's been in since i installed it
+2008-03-10T01:50:00.000Z	phoenix5002	bigjon32	do you know how to get to boot options when u turn on your comp?
+2008-03-10T01:50:00.000Z	bigjon32	phoenix5002	yeah.. is acting really weird right now
+2008-03-10T01:51:00.000Z	phoenix5002	bigjon32	ur boot options are acting wierd?
+2008-03-10T01:51:00.000Z	bigjon32	phoenix5002	no, just this whole thing
+2008-03-10T01:52:00.000Z	phoenix5002	bigjon32	well I gotta go so I'm just gonna tell you everything.....ok?
+2008-03-10T01:52:00.000Z	bigjon32	phoenix5002	everything should be stable in the system ran full on memtest when i was trying to figure out what was going on befoe i found out my last hard drive was bad
+2008-03-10T01:52:00.000Z	bigjon32	phoenix5002	that's fine
+2008-03-10T01:55:00.000Z	phoenix5002	bigjon32	ok so your best bet now is to boot from the LiveCD, if it doesn't appear to be working then you need to make SURE your booting from the CD by going to your systems boot options.  This is done by pressing F10, or F12 or some other key combination when you first see anything on your screen.  they keys are different for some computers so u might have to look it up.  Once you get into the LiveCD follow the instructions on this l
+2008-03-10T01:55:00.000Z	phoenix5002	bigjon32	good luck :)
+2008-03-10T01:57:00.000Z	bigjon32	phoenix5002	 are you just saying to reinstall?
+2008-03-10T01:57:00.000Z	phoenix5002	bigjon32	no lol
+2008-03-10T01:57:00.000Z	bigjon32	phoenix5002	did you mean to put a link?
+2008-03-10T01:57:00.000Z	phoenix5002		yes
+2008-03-10T01:57:00.000Z	bigjon32	phoenix5002	didn't show up
+2008-03-10T01:58:00.000Z	phoenix5002	bigjon32	did u read it?  You need to get into your live CD then follow the instructions on link to mount your hard drive while using the CD
+2008-03-10T01:58:00.000Z	phoenix5002		then you can edit the splash screen
+2008-03-10T01:59:00.000Z	phoenix5002		ok all the link said is to go to a terminal and type:
+2008-03-10T01:59:00.000Z	phoenix5002		sudo mkdir /recovery
+2008-03-10T01:59:00.000Z	phoenix5002		sudo umount /dev/hda1
+2008-03-10T01:59:00.000Z	phoenix5002		sudo mount -t ntfs /dev/hda1 /recovery -o nls=utf8,umask=0222
+2008-03-10T01:59:00.000Z	bigjon32	phoenix5002	there was no link.  but i think i can dig around and figure out how to
+2008-03-10T02:00:00.000Z	phoenix5002	bigjon32	I just wrote out everything the link said
+2008-03-10T02:00:00.000Z	phoenix5002	bigjon32	so use that with everything I wrote, if you can get into your LiveCD it should actually be pretty simple...I really gotta go, best of luck to you

@@ -1,0 +1,98 @@
+2006-12-18T12:02:00.000Z	dfcarney		Whenever I attempt to open a .PHP file (from Firefox or Konqueror) located in /var/www/... on my machine, it loops endlessly, creating new tabs each iteration.  Any ideas what's causing this and how to fix it?
+2006-12-18T12:03:00.000Z	neurosis__	dfcarney	Every PHP script, or just one particular one?
+2006-12-18T12:03:00.000Z	dfcarney	neurosis__	all that I've tried so far.  I'm about to write a dummy one...
+2006-12-18T12:05:00.000Z	neurosis__	dfcarney	Are you opening them via file:/// or http:// ?
+2006-12-18T12:05:00.000Z	dfcarney	neurosis__	http://
+2006-12-18T12:06:00.000Z	neurosis__	dfcarney	The PHP install work on your webserver? Can you run the .php scripts from the command line interpreter?
+2006-12-18T12:07:00.000Z	dfcarney	neurosis__	Not sure how to do that -- can you explain?
+2006-12-18T12:08:00.000Z	neurosis__	dfcarney	Run your script from the command line: # php < myFile.php
+2006-12-18T12:08:00.000Z	dfcarney	neurosis__	Even an empty .PHP file causes infinite loops.  I.e. "<?php ?> EOF"
+2006-12-18T12:09:00.000Z	dfcarney	neurosis__	I don't seem to have the interpreter installed...which is weird because I'd expect it to be included with php-common or something like that.
+2006-12-18T12:10:00.000Z	dfcarney	neurosis__	That is, the command-line interpreter
+2006-12-18T12:11:00.000Z	dfcarney	neurosis__	From the command line it just exits (as it should)
+2006-12-18T12:12:00.000Z	neurosis__	dfcarney	 it was libapache-mod-php5 for me, and the php5 metapackage
+2006-12-18T12:13:00.000Z	dfcarney	neurosis__	It doesn't appear that package is available to me...
+2006-12-18T12:13:00.000Z	dfcarney	neurosis__	...E: Package libapache-mod-php5 has no installation candidate
+2006-12-18T12:25:00.000Z	neurosis__	dfcarney	Did you get your scripts straightened out?
+2006-12-18T12:41:00.000Z	neurosis__	dfcarney	is php5.conf in /etc/apache2/mods-enabled ?
+2006-12-18T12:41:00.000Z	neurosis__	dfcarney	or php5.load in /etc/apache2/mods-available
+2006-12-18T12:43:00.000Z	neurosis__	dfcarney	from the command line interpreter?
+2006-12-18T12:45:00.000Z	neurosis__	dfcarney	Wordpress was fairly easy for me -- I grabbed the distro from their site, dropped it in /usr/share, and symlinked from /var/www
+2006-12-18T12:45:00.000Z	dfcarney	neurosis__	that's basically what I did.  What permissions are on the dir in /usr/share?
+2006-12-18T12:46:00.000Z	neurosis__	dfcarney	root root, rwxr-xr-x
+2006-12-18T12:48:00.000Z	neurosis__	dfcarney	I take it you reinstalled apache? When you first came here you said you were using apache 1.x, now you're 2.x?
+2006-12-18T12:50:00.000Z	dfcarney	neurosis__	Yup -- I upgraded to v2, as per !lamp
+2006-12-18T12:50:00.000Z	neurosis__	dfcarney	you upgrade from synaptic or something?
+2006-12-18T12:51:00.000Z	dfcarney	neurosis__	Not to my knowledge.
+2006-12-18T12:51:00.000Z	neurosis__	dfcarney	You need some relevent 'AddType' lines in your apache conf
+2006-12-18T12:51:00.000Z	neurosis__	dfcarney	Or else apache won't know how to serve files of type .php, etc
+2006-12-18T12:53:00.000Z	neurosis__	dfcarney	it doesn't even serve .html files?
+2006-12-18T12:53:00.000Z	dfcarney	neurosis__	no, and that's one source of my confusion
+2006-12-18T12:53:00.000Z	dfcarney	neurosis__	http://localhost/index.html works, as expected
+2006-12-18T12:53:00.000Z	neurosis__	dfcarney	Ah. You might try 'remove completely' and nuke your apache conf.
+2006-12-18T12:57:00.000Z	neurosis__	dfcarney	The default site is whatever is in /etc/apache2/sites-enabled/000-default, I think
+2006-12-18T12:58:00.000Z	neurosis__	dfcarney	Look for 'DocumentRoot'
+2006-12-18T13:02:00.000Z	dfcarney	neurosis__	DocumentRoot is /var/www
+2006-12-18T13:04:00.000Z	dfcarney	neurosis__	Here's the crazy part -- I've now completely blown away *all* instances of wordpress and yet if I go to http://localhost and save the .php file instead, it turns out to be a wordpress-generated .php file.
+2006-12-18T13:04:00.000Z	dfcarney	neurosis__	This is nuts.
+2006-12-18T13:04:00.000Z	neurosis__	dfcarney	You mean.. HTML file?
+2006-12-18T13:05:00.000Z	dfcarney	neurosis__	Well, a .PHTML
+2006-12-18T13:05:00.000Z	neurosis__	dfcarney	IE: Php interpreter is rendering HTML, but apache is not rendering it to the page
+2006-12-18T13:05:00.000Z	dfcarney	neurosis__	ah.
+2006-12-18T13:06:00.000Z	neurosis__	dfcarney	It shouldn't be that difficult though.. Seriously, a full LAMP install took me about 5 minutes - wordpress an additional 5-10 minutes. I suspect your config files are screwed from some previous mucking about
+2006-12-18T13:06:00.000Z	neurosis__	dfcarney	Which is why I suggested that when you remove/reinstall, to remove all configuration files as well
+2006-12-18T13:07:00.000Z	neurosis__	dfcarney	There is probably a more elegant way to do it, but in the interest of time :)
+2006-12-18T13:07:00.000Z	dfcarney	neurosis__	No, that's a quick-and-easy solution.  apt-get remove apache2 only?  Or PHP5 too?
+2006-12-18T13:08:00.000Z	dfcarney	neurosis__	(plus rm -rf /etc/apache2)
+2006-12-18T13:08:00.000Z	neurosis__	dfcarney	Sure, or use synaptic 'remove completely' option
+2006-12-18T13:08:00.000Z	neurosis__	dfcarney	Don't both removing wordpress -- that part is pretty trivial. yOu need to get basic php files served
+2006-12-18T13:10:00.000Z	dfcarney	neurosis__	It's currently being purged.  I'll get back to you in (approx) 5 minutes...
+2006-12-18T13:10:00.000Z	neurosis__	dfcarney	Roger..don't forget to kill it :)
+2006-12-18T13:10:00.000Z	dfcarney	neurosis__	fyrestrtr: Thanks for you help, by the way.
+2006-12-18T13:20:00.000Z	dfcarney	neurosis__	Great.  Now "sudo a2enmod php5" can't find the php5 module.
+2006-12-18T13:20:00.000Z	dfcarney	neurosis__	Though php < foo.php works on the command line.
+2006-12-18T13:31:00.000Z	neurosis__	dfcarney	is libapache2-mod-php5 installed?
+2006-12-18T13:34:00.000Z	dfcarney	neurosis__	I fixed that up...  Now, http://localhost/foo.php displays phpinfo() properly, but http://localhost/wordpress/wp-admin/install.php still asks me to save the .php file.
+2006-12-18T13:35:00.000Z	neurosis__	dfcarney	jsec.. phone
+2006-12-18T13:38:00.000Z	neurosis__	dfcarney	how'd you link wordpress in? ln -s ?
+2006-12-18T13:39:00.000Z	dfcarney	neurosis__	I just copied the entire directory and chown'ed it to root.root
+2006-12-18T13:40:00.000Z	neurosis__	dfcarney	so its in /var/www/wordpress?
+2006-12-18T13:40:00.000Z	dfcarney	neurosis__	yup
+2006-12-18T13:41:00.000Z	neurosis__	dfcarney	what files do you have in /etc/apache2/sites-enabled
+2006-12-18T13:43:00.000Z	dfcarney	neurosis__	I'm not entirely sure about that.  DocumentRoot is set to /var/www -- what else do you want to know?
+2006-12-18T13:43:00.000Z	neurosis__	dfcarney	can you paste the whole thing to pastebin?
+2006-12-18T13:44:00.000Z	neurosis__	dfcarney	ie: 000-default
+2006-12-18T13:46:00.000Z	neurosis__	dfcarney	And don't forget to paste the link here :)
+2006-12-18T13:47:00.000Z	dfcarney	neurosis__	Maybe I'm crazy, but it's just ubuntu.pastebin.com, right?
+2006-12-18T13:47:00.000Z	neurosis__	dfcarney	 http://paste.ubuntu-nl.org
+2006-12-18T13:48:00.000Z	neurosis__	dfcarney	But you have to send me the resulting link
+2006-12-18T13:48:00.000Z	neurosis__	dfcarney	ie: paste.ubuntu-nl.org/7483/
+2006-12-18T13:48:00.000Z	dfcarney	neurosis__	http://paste.ubuntu-nl.org/37801/
+2006-12-18T13:51:00.000Z	neurosis__	dfcarney	Hmm.. looks the same as mine -- except I have -Indexes, which shouldn't make a difference
+2006-12-18T13:52:00.000Z	dfcarney	neurosis__	Man, this sucks.  Why does it work from the command prompt, but not from my browser?!?
+2006-12-18T13:52:00.000Z	neurosis__	dfcarney	That points to mod_php being broken
+2006-12-18T13:53:00.000Z	neurosis__	dfcarney	But wait, you said a regular php script works from your browser, so long as its in the docroot?
+2006-12-18T13:53:00.000Z	neurosis__	dfcarney	ie: http://localhost/foo.php
+2006-12-18T13:54:00.000Z	dfcarney	neurosis__	Correct.  http://localhost/foo.php workd
+2006-12-18T13:54:00.000Z	dfcarney	neurosis__	Correct.  http://localhost/foo.php works
+2006-12-18T13:54:00.000Z	neurosis__	dfcarney	What if you just.. make an arbitrary dir under /var/www and move foo.php to it?
+2006-12-18T13:55:00.000Z	dfcarney	neurosis__	http://localhost/bar/foo.php works too
+2006-12-18T13:56:00.000Z	neurosis__	dfcarney	but the wordpress install script wants to download?
+2006-12-18T13:56:00.000Z	dfcarney	neurosis__	yup.  my browser asks me to open or save install.php
+2006-12-18T13:57:00.000Z	neurosis__	dfcarney	And when you open/save it, is it PHP script, or has the php interpreter done its job on the file already?
+2006-12-18T13:57:00.000Z	dfcarney	neurosis__	It's the raw PHP
+2006-12-18T13:58:00.000Z	neurosis__	dfcarney	you reinstalled (apt-get, etc) libapache2-mod-php5 package, correct?
+2006-12-18T13:58:00.000Z	neurosis__	dfcarney	I guess if foo.php is working, mod_php is working
+2006-12-18T13:59:00.000Z	neurosis__	dfcarney	What files are in /etc/apache2/mods-enabled   ?
+2006-12-18T14:02:00.000Z	dfcarney	neurosis__	cgi.load  php5.conf  php5.load  userdir.conf  userdir.load
+2006-12-18T14:02:00.000Z	dfcarney	neurosis__	Ok -- I kinda fixed it.  I copied the entire /var/www/wordpress dir to /var/www/foopress and tried http://localhost/foopress/wp-admin/install.php -- it worked!
+2006-12-18T14:02:00.000Z	dfcarney	neurosis__	Something about the wordpress subdir is screwing things up.
+2006-12-18T14:02:00.000Z	neurosis__	dfcarney	uh.. why would that work?
+2006-12-18T14:02:00.000Z	neurosis__	dfcarney	That is totally messed up :)
+2006-12-18T14:02:00.000Z	dfcarney	neurosis__	I have *no* idea.
+2006-12-18T14:03:00.000Z	dfcarney	neurosis__	Gah
+2006-12-18T14:04:00.000Z	dfcarney	neurosis__	Well, it looks like LAMP is working correctly...  Though I have no idea why I can't access /var/www/wordpress
+2006-12-18T14:06:00.000Z	dfcarney	neurosis__	Thanks for your time.
+2006-12-18T14:06:00.000Z	neurosis__	dfcarney	Your guess is as good as mine
+2006-12-18T14:06:00.000Z	neurosis__	dfcarney	Happy blogging :)
+2006-12-18T14:06:00.000Z	dfcarney	neurosis__	Thanks.

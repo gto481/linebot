@@ -1,0 +1,97 @@
+2009-01-04T10:38:00.000Z	nickrud	ebaby	you should use gksu gedit /boot/grub/menu.lst
+2009-01-04T10:41:00.000Z	ebaby	nickrud	i get "cannot open display" when I enter that cmd
+2009-01-04T10:42:00.000Z	nickrud	ebaby	are you running that in a terminal on the desktop?
+2009-01-04T10:43:00.000Z	ebaby	nickrud	yes i booted into recovery and entered the root and am typing commands into the terminal
+2009-01-04T10:43:00.000Z	nickrud	ebaby	so you're typing into a console, rather than running the gui?
+2009-01-04T10:44:00.000Z	ebaby	nickrud	yes as there is no gui for me after the restart following install
+2009-01-04T10:44:00.000Z	nickrud	ebaby	gedit only runs when the X is running, and you have a graphical desktop. You can use nano. And if you're using the recovery console, you don't need sudo because you're already root.
+2009-01-04T10:47:00.000Z	ebaby	nickrud	ok so then I am not sure which cmds to use then perhaps you can give me an assist as you may have explained why these cmds were not working - I am at: root@dawoud-ubuntu-latop:~#
+2009-01-04T10:49:00.000Z	nickrud	ebaby	ok. if you want to edit menu.lst, try typing    nano /boot/grub/menu.lst
+2009-01-04T10:50:00.000Z	ebaby	nickrud	i believe that is what i want to do as this page: "https://answers.launchpad.net/ubuntu/+question/54867"  pretty much describes my probs and give some (possible) fixes for it.
+2009-01-04T10:51:00.000Z	nickrud	ebaby	so you found the kernel options that enable your machine to install, now want to add them to menu.lst?
+2009-01-04T10:54:00.000Z	nickrud	ebaby	:)
+2009-01-04T10:54:00.000Z	ebaby	nickrud	well the article describes what is/was happening to me - install goes fine graphics works but after restart no graphics so I assume that if I can use the settings that were used during install and get them to stick then I am in business. This is not my forte so any assist U can give would be a lifejacket
+2009-01-04T10:55:00.000Z	nickrud	ebaby	ok. I can help you add that stuff to menu.lst. You said you booted into recovery mode; you got the blue screen and selected recovery console (or words to that effect)?
+2009-01-04T10:56:00.000Z	nickrud	ebaby	just want to make sure we're working from the same starting point
+2009-01-04T10:56:00.000Z	ebaby	nickrud	yes it gave options of ubuntu 8.10 straight or recovery Yes
+2009-01-04T10:57:00.000Z	ebaby	nickrud	yes right now i am at GNU nano 2.0.7
+2009-01-04T10:57:00.000Z	ebaby	nickrud	File: /boot/grub/menu/1st
+2009-01-04T10:58:00.000Z	nickrud	ebaby	ok, look for the line # defoptions=quiet splash
+2009-01-04T10:59:00.000Z	ebaby	nickrud	yeah looke dfor it but it is not here options are (for example:) ^g Get Help ^O Write out ^R Read file etc...
+2009-01-04T10:59:00.000Z	nickrud	ebaby	no, in the file menu.lst
+2009-01-04T11:01:00.000Z	ebaby	nickrud	thought I was there How do I get [to] there
+2009-01-04T11:01:00.000Z	nickrud	ebaby	hit ctl-X , and exit nano, without saving any files
+2009-01-04T11:04:00.000Z	nickrud	ebaby	yep, you exited the program :) Now, again, run  nano /boot/grub/menu.lst . Once you've done that, tell me the beginning of the first line on the screen, so I can make sure we're in the right file
+2009-01-04T11:05:00.000Z	nickrud	ebaby	just being cautious. this is a critical file, gotta be sure we don't muck it up
+2009-01-04T11:08:00.000Z	nickrud	ebaby	what's at the very top?
+2009-01-04T11:08:00.000Z	nickrud	ebaby	let me rephrase, does the 3d line start with # menu.lst
+2009-01-04T11:09:00.000Z	nickrud	ebaby	brain fart on my part, asking for the first line.
+2009-01-04T11:09:00.000Z	ebaby	nickrud	no that phrase is nowhere to be found where I am presently
+2009-01-04T11:10:00.000Z	nickrud	ebaby	ok then we have a problem. oh. it's menu.Lst, not menu.ONE.lst
+2009-01-04T11:10:00.000Z	ebaby	nickrud	closest things is File: /boot/grub/menu/1st  which is at the very top to the left of GNU nano 2.0.7
+2009-01-04T11:11:00.000Z	ebaby	nickrud	lol
+2009-01-04T11:12:00.000Z	ebaby	nickrud	so I exit again and then type "nano /... but with .Lst as in capital 'L'  ?
+2009-01-04T11:13:00.000Z	ebaby	nickrud	you mean to say not one but L (lowercase)i.e.  'l'
+2009-01-04T11:13:00.000Z	nickrud	ebaby	yes
+2009-01-04T11:16:00.000Z	nickrud	ebaby	ok now look for # defoptions=quiet splash
+2009-01-04T11:18:00.000Z	ebaby	nickrud	not visible  is there more to the screen e.g. can i scroll down otherewise it is not here
+2009-01-04T11:18:00.000Z	nickrud	ebaby	yes, page down/up and cursor keys work
+2009-01-04T11:20:00.000Z	ebaby	nickrud	## Stat default Kernel Options ## ? or keep scrolling?
+2009-01-04T11:20:00.000Z	ebaby	nickrud	**start
+2009-01-04T11:21:00.000Z	nickrud	ebaby	further down, maybe 20 lines or so
+2009-01-04T11:21:00.000Z	ebaby	nickrud	sorry found it
+2009-01-04T11:21:00.000Z	nickrud	ebaby	now add the options you used to that line. Don't change anything there already, just add the new stuff
+2009-01-04T11:24:00.000Z	ebaby	nickrud	done (can't remember if I did "edd=on" but I typed it in anyway have not hit enter yet so let me know its been like 24hrs on this things so its getting a little fuzzy...
+2009-01-04T11:25:00.000Z	nickrud	ebaby	you'd best be sure, since this could break your boot. Do you mean edid=on? Don't quote me on this, cuz I'm clueless about your actual issue, just helping you make this change to menu.lst
+2009-01-04T11:26:00.000Z	ebaby	nickrud	it is "edd=on" I'm pretty sure I did  hit enter or...?
+2009-01-04T11:26:00.000Z	nickrud	ebaby	now that you've made the change, just hit ctl-X and save the file.
+2009-01-04T11:30:00.000Z	ebaby	nickrud	after clt-X and then Y hit enter when it says " file Name to Write: /boot....lst" ?
+2009-01-04T11:30:00.000Z	nickrud	ebaby	say yes. It will write out the same name it loaded as
+2009-01-04T11:31:00.000Z	ebaby	nickrud	that is what I am seeing I guess  and then?
+2009-01-04T11:31:00.000Z	nickrud	ebaby	you've saved?
+2009-01-04T11:33:00.000Z	ebaby	nickrud	typed clt-X and then Y. cursor is now flashing at the end of "file Name to write:  /boot/grub/menu/lst
+2009-01-04T11:33:00.000Z	nickrud	ebaby	hit enter
+2009-01-04T11:34:00.000Z	nickrud	ebaby	ok, one step left.   run     update-grub .  that will add those options we just entered to the kernel lines, the ones you edited by hand during startup
+2009-01-04T11:39:00.000Z	ebaby	nickrud	had a temp screen freeze prob jumbed the gun as I exited found myself in recovery mode and then hit normal install
+2009-01-04T11:40:00.000Z	nickrud	ebaby	I did not understand that
+2009-01-04T11:40:00.000Z	ebaby	nickrud	waiting for it to reboot now. Will I need to go back to nano /boot... to check to see if the modification that was made was saved?
+2009-01-04T11:41:00.000Z	nickrud	ebaby	if it boots to gui, you're good to go. If not, we'll take a look.
+2009-01-04T11:42:00.000Z	ebaby	nickrud	No such fortune it rebooted to gobbledey gook Im in Recovery menu now  back to root huh
+2009-01-04T11:44:00.000Z	nickrud	ebaby	ok. nano /boot/grub/menu.lst , look for a line like kernel          /boot/vmlinuz-2.6.27-11-generic root=UUID=3d432ab1-9dc0-4313-a3f4-29db352cb3eb ro quiet splash (near the end) your additions should be at the end
+2009-01-04T11:47:00.000Z	ebaby	nickrud	mines quite different UUID is 4cfd1241-bdda...   nonetheless the additons that I made are NOT there at the end of the string
+2009-01-04T11:47:00.000Z	nickrud	ebaby	did you run   update-grub   ?
+2009-01-04T11:48:00.000Z	ebaby	nickrud	no I had a screen freeze (on this computer) before I saw your post
+2009-01-04T11:49:00.000Z	nickrud	ebaby	ok, exit without saving, then run   update-grub . then  look in the file again, see if it was added to the kernel line.
+2009-01-04T11:51:00.000Z	ebaby	nickrud	just to be sure as there are a couple of kernel lines  what should be directly above this particular kernel line?
+2009-01-04T11:52:00.000Z	ebaby	nickrud	because i am at the section ## End Default Options##
+2009-01-04T11:53:00.000Z	nickrud	ebaby	yes, that's where it should show up, below there, any lines that start with kernel but are not in (recovery) sections
+2009-01-04T11:54:00.000Z	ebaby	nickrud	yes  acouple  of sections that are grouped together e.g. title uuid kernel initrd - yeah I see what I changed "acpi=off" etc...
+2009-01-04T11:55:00.000Z	nickrud	ebaby	ok, now try a reboot again. Your changes will take effect with the next boot
+2009-01-04T11:56:00.000Z	ebaby	nickrud	resume normal boot from Recovery Menu or do an actual 'physical power button shutdown and restart?
+2009-01-04T11:57:00.000Z	nickrud	ebaby	physical button shutdown and restart.
+2009-01-04T12:01:00.000Z	ebaby	nickrud	rats! its the same grey matter Man this is some serious frustration no wonder some Linux heads get paid so much paper... LOL any suggestions as the  [in]famous "ubuntu is running in low-graphics mode window has popped up - as usual
+2009-01-04T12:01:00.000Z	nickrud	ebaby	what video card do you have?
+2009-01-04T12:03:00.000Z	ebaby	nickrud	via chrome9 HC IGP -running everex stepnote nc1502 1.5ghz 1.5gb ram
+2009-01-04T12:03:00.000Z	nickrud	ebaby	ah, that danged chrome. No, I don't know much about that one at all.
+2009-01-04T12:05:00.000Z	nickrud	ebaby	dpkg -l xserver-xorg-video-openchrome : you'll get back several lines, what 2 chars does the last line start with?
+2009-01-04T12:06:00.000Z	ebaby	nickrud	give me a sec as I will need to reboot to get to to recovery menu choose root or...
+2009-01-04T12:07:00.000Z	nickrud	ebaby	you can just hit clt-alt-f2 to get a console. ctl-alt-f7 to get back to gui
+2009-01-04T12:07:00.000Z	ebaby	nickrud	I'll try it again doesn't always work for me those cmds
+2009-01-04T12:08:00.000Z	ebaby	nickrud	ok here at recovery menu back to root or...
+2009-01-04T12:09:00.000Z	nickrud	ebaby	try what Jordan_U just suggested first
+2009-01-04T12:09:00.000Z	nickrud	ebaby	boot back to bad graphics if you're not there
+2009-01-04T12:09:00.000Z	nickrud	ebaby	it's getting late here for me ...
+2009-01-04T12:10:00.000Z	ebaby	nickrud	okay you guys lost me theres a lot of type flying around what should I try
+2009-01-04T12:11:00.000Z	nickrud	ebaby	clt-alt-f2 , log in, run sudo /etc/init.d/gdm stop , then run startx
+2009-01-04T12:24:00.000Z	ebaby	nickrud	 you mentioned " clt-alt-f2 , log in, run sudo /etc/init.d/gdm stop , then run startx" can you elaborate
+2009-01-04T12:25:00.000Z	nickrud	ebaby	ctl-alt-f2 takes you to a console, the stop shuts down the currently running gui, and startx starts it a different way
+2009-01-04T12:27:00.000Z	ebaby	nickrud	typing in crt alt xx dont achieve anything it seems i need to power down each time to get outside of the screen noise
+2009-01-04T12:28:00.000Z	nickrud	ebaby	oh, your consoles simply don't work then. I understand what you mean now. Truthfully, I'm sorry but I don't know the chrome chips at all.
+2009-01-04T12:29:00.000Z	ebaby	nickrud	I'm not opposed to re-installing or install via USB if you think that will make a difference
+2009-01-04T12:30:00.000Z	nickrud	ebaby	I really don't know. I just know that I've seen lots of people having problems with the chrome chips
+2009-01-04T12:30:00.000Z	nickrud	ebaby	well, not lots because there aren't that many of them :)
+2009-01-04T12:31:00.000Z	nickrud	ebaby	no, the video is supposed to be totally automated
+2009-01-04T12:33:00.000Z	nickrud	ebaby	I gotta go. You should ask specifically for help with the chrome video driver, people do come through that know it
+2009-01-04T12:34:00.000Z	nickrud	ebaby	hm, that's kinda old.
+2009-01-04T12:35:00.000Z	nickrud	ebaby	that last link
+2009-01-04T12:35:00.000Z	ebaby	nickrud	got it thanks

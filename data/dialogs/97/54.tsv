@@ -1,0 +1,97 @@
+2006-11-30T14:27:00.000Z	mordof		wow.. ubuntu repos for wine are huuuuge outdated
+2006-11-30T14:27:00.000Z	mordof		wine is 0.9.26, repos are 0.9.9
+2006-11-30T14:28:00.000Z	DARKGuy	mordof	mine are 0.9.26, and i Just got 'em by apt-get update (of course, in Edgy)
+2006-11-30T14:31:00.000Z	mordof	DARKGuy	yeah, i'm in dapper.. i just installed the wine repo and am getting the updated one from there
+2006-11-30T14:31:00.000Z	DARKGuy	mordof	Ah, you're right - my repos come from the winehq xD;
+2006-11-30T14:34:00.000Z	mordof	DARKGuy	hmmm.. print screen only takes one X instance at a time?
+2006-11-30T14:34:00.000Z	DARKGuy	mordof	Ah, I forgot to mention, I have XFCE
+2006-11-30T14:35:00.000Z	DARKGuy	mordof	I tried import -window root img.jpg, but it only takes the first screen
+2006-11-30T14:35:00.000Z	mordof	DARKGuy	would there possibly be another command for import to make it span? i dunno i'm not really experienced enough to know that
+2006-11-30T14:36:00.000Z	DARKGuy	mordof	I dunno
+2006-11-30T14:40:00.000Z	mordof	DARKGuy	that all depends on the bios
+2006-11-30T14:40:00.000Z	DARKGuy	mordof	Well, mostly :P
+2006-11-30T14:41:00.000Z	mordof	DARKGuy	however... keep in mind, i once had an mx420 and onboard, and i got my nvidia drivers (windows) to span the taskbar and clone and treat the onboard like it was part of it
+2006-11-30T14:42:00.000Z	mordof	DARKGuy	i would give twinview a try anyway
+2006-11-30T14:42:00.000Z	mordof	DARKGuy	twinview may act similar to the windows version drivers in that aspect, it may not.. i can't say at all how it might
+2006-11-30T14:43:00.000Z	mordof	DARKGuy	zomg no support for widescreen
+2006-11-30T14:44:00.000Z	mordof	DARKGuy	it's been a very long time since i used it, and i only used it in ubuntu with a dual head card capable.. so i can't say at all how it may react
+2006-11-30T14:45:00.000Z	mordof	DARKGuy	in your xorg you may have to do somethin funky, heh
+2006-11-30T14:45:00.000Z	DARKGuy	mordof	ah... well, I don't think it'll work with this trident :/ in Windows it doesn't, at least
+2006-11-30T14:45:00.000Z	mordof	DARKGuy	oh in windows it doesn't work with the trident card?
+2006-11-30T14:45:00.000Z	DARKGuy	mordof	Nope :P
+2006-11-30T14:45:00.000Z	DARKGuy	mordof	it's a 4Mb card :/
+2006-11-30T14:45:00.000Z	mordof	DARKGuy	i'd pretty much say it's a no-go then :P haha..
+2006-11-30T14:46:00.000Z	mordof	DARKGuy	if windows nvidia drivers won't do it, linux drivers won't either... as much as i like linux it can only do so much in some aspects
+2006-11-30T14:52:00.000Z	mordof	DARKGuy	yeah.. i ignored him before that happened
+2006-11-30T14:53:00.000Z	DARKGuy	mordof	whoah, I didn't know his spamming could cause that -.-'
+2006-11-30T14:53:00.000Z	mordof	DARKGuy	yeah
+2006-11-30T14:53:00.000Z	mordof	DARKGuy	so does /exec -o cat /dev/urandom :P haha
+2006-11-30T14:53:00.000Z	DARKGuy	mordof	Lol
+2006-11-30T14:54:00.000Z	mordof	DARKGuy	it should go away shortly after
+2006-11-30T14:54:00.000Z	DARKGuy	mordof	I hope so :P
+2006-11-30T14:58:00.000Z	DARKGuy	mordof	Lol, kinda
+2006-11-30T15:01:00.000Z	mordof	DARKGuy	folding@home.. protein folding research
+2006-11-30T15:01:00.000Z	DARKGuy	mordof	Ah!
+2006-11-30T15:01:00.000Z	DARKGuy	mordof	thanks :P
+2006-11-30T15:02:00.000Z	mordof	DARKGuy	team 33 :P
+2006-11-30T15:02:00.000Z	DARKGuy	mordof	got it xD
+2006-11-30T15:02:00.000Z	mordof	DARKGuy	team 33 is the winning team
+2006-11-30T15:11:00.000Z	mordof	DARKGuy	diablo 2 is in the gold list, it works and installs flawlessly
+2006-11-30T15:11:00.000Z	mordof	DARKGuy	what version of wine are you using?
+2006-11-30T15:12:00.000Z	DARKGuy	mordof	weird. 0.9.26. It just hangs before copying the files :/ and does nothing
+2006-11-30T15:12:00.000Z	DARKGuy	mordof	it worked with wine 0.9.X though
+2006-11-30T15:12:00.000Z	mordof	DARKGuy	the wine in the repos is about 15 versions behind
+2006-11-30T15:12:00.000Z	DARKGuy	mordof	yup, mine are from winehq
+2006-11-30T15:12:00.000Z	DARKGuy	mordof	so I'm with the latest :p
+2006-11-30T15:12:00.000Z	mordof	DARKGuy	hmm.. yeah i just tried photoshop cs2 and it didn't work
+2006-11-30T15:12:00.000Z	DARKGuy	mordof	see :P
+2006-11-30T15:13:00.000Z	mordof	DARKGuy	but they never said it would anyway, heh
+2006-11-30T15:13:00.000Z	DARKGuy	mordof	I really want that program to work :(
+2006-11-30T15:13:00.000Z	DARKGuy	mordof	 lol
+2006-12-04T09:22:00.000Z	DARKGuy	mordof	yes
+2006-12-04T09:22:00.000Z	DARKGuy	mordof	wine <app.exe> &
+2006-12-04T09:22:00.000Z	mordof	DARKGuy	k ty
+2006-12-04T09:22:00.000Z	DARKGuy	mordof	without the >'s and <'s
+2006-12-04T09:23:00.000Z	mordof	DARKGuy	it still closed the wine app when i closed the terminal
+2006-12-04T09:23:00.000Z	DARKGuy	mordof	try waiting a bit while the app loads, when it fully loads, close it
+2006-12-04T09:24:00.000Z	mordof	DARKGuy	nope, still takes it with it
+2006-12-04T09:24:00.000Z	DARKGuy	mordof	Hm, try...
+2006-12-04T09:24:00.000Z	DARKGuy	mordof	wine app.exe && sleep 5 && exit
+2006-12-04T09:25:00.000Z	mordof	DARKGuy	it's not closing, heh
+2006-12-04T09:26:00.000Z	DARKGuy	mordof	d'oh! dunno what to tell you then, I have a script for a wine app here I use, but it's just wine app.exe as a .sh file run like a launcher in iDesk
+2006-12-04T09:27:00.000Z	DARKGuy	mordof	cd /home/darkguy/Furcadia && WINEDEBUG="fixme-all" wine Furcadia_f3.exe &
+2006-12-04T09:27:00.000Z	DARKGuy	mordof	as an sh file
+2006-12-04T09:31:00.000Z	mordof	DARKGuy	i tried to make a .sh file, and then call it from the panel, but it gives (Permission Denied) when trying to run it
+2006-12-04T09:31:00.000Z	DARKGuy	mordof	chmod +x script.sh
+2006-12-04T09:31:00.000Z	DARKGuy	mordof	then   ./script.sh
+2006-12-04T09:31:00.000Z	mordof	DARKGuy	oh ok, ty
+2006-12-04T09:31:00.000Z	DARKGuy	mordof	welcome :)
+2006-12-04T09:32:00.000Z	mordof	DARKGuy	now it just says no such file or directory, heh
+2006-12-04T09:32:00.000Z	DARKGuy	mordof	what are you typing?
+2006-12-04T09:32:00.000Z	DARKGuy	mordof	and, is the script located in the directory you already are?
+2006-12-04T09:32:00.000Z	mordof	DARKGuy	the script is: /home/user/wine_calls/notepad.sh
+2006-12-04T09:33:00.000Z	DARKGuy	mordof	type pwd and tell me what does it says
+2006-12-04T09:33:00.000Z	mordof	DARKGuy	inside the file?
+2006-12-04T09:33:00.000Z	DARKGuy	mordof	nono, in the terminal
+2006-12-04T09:33:00.000Z	DARKGuy	mordof	just pwd
+2006-12-04T09:33:00.000Z	mordof	DARKGuy	i put user in there just as a replacement for my user
+2006-12-04T09:34:00.000Z	DARKGuy	mordof	I know ;)
+2006-12-04T09:34:00.000Z	mordof	DARKGuy	it's /home/mordof
+2006-12-04T09:34:00.000Z	DARKGuy	mordof	try going to the wine_calls folder (cd wine_calls) then doing ./script.sh again
+2006-12-04T09:35:00.000Z	DARKGuy	mordof	script.sh is the name of your .sh file anyways
+2006-12-04T09:35:00.000Z	mordof	DARKGuy	it works when i do that
+2006-12-04T09:35:00.000Z	mordof	DARKGuy	but i have to be in the dir to call it
+2006-12-04T09:35:00.000Z	DARKGuy	mordof	yes, that's neccesary
+2006-12-04T09:36:00.000Z	DARKGuy	mordof	unless you make a symlink to it in your home folder
+2006-12-04T09:36:00.000Z	DARKGuy	mordof	or move the script to your home folder
+2006-12-04T09:36:00.000Z	mordof	DARKGuy	ah ok, i'll just move it to my home folder
+2006-12-04T09:37:00.000Z	mordof	DARKGuy	woohoo! works now :) and it doesn't leave me with terminal windows giving output that i can't close, heh
+2006-12-04T09:37:00.000Z	DARKGuy	mordof	Yay! glad it worked :D
+2006-12-04T09:37:00.000Z	mordof	DARKGuy	tyvm
+2006-12-04T09:37:00.000Z	DARKGuy	mordof	you're welcome :9
+2006-12-04T09:37:00.000Z	DARKGuy	mordof	 :)
+2006-12-04T09:38:00.000Z	mordof	DARKGuy	and now.. to work on my website, heh.. i found that notepad++ works perfect under wine, and i really like it
+2006-12-04T09:38:00.000Z	mordof	DARKGuy	cause it's a single user project, so it's only developed for win
+2006-12-04T09:38:00.000Z	DARKGuy	mordof	Hey, nice one! I use EditPlus2, but good to know that notepad++ works :)
+2006-12-04T09:39:00.000Z	mordof	DARKGuy	tried that one before.. didn't much like it
+2006-12-04T09:41:00.000Z	mordof	DARKGuy	i like notepad++ because you can configure everything.. and i like tabs better than buttons, heh.. like you can have a file browsers and all that, but you don't have to if you don't want to

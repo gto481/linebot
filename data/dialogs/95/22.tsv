@@ -1,0 +1,95 @@
+2009-08-23T22:38:00.000Z	shreymech		http://paste.ubuntu.com/258189/
+2009-08-23T22:39:00.000Z	shreymech		can some1 go through these steps and help me.. plzzzz..!!! i completed up to 4th step.. now what to do in 5th .. please help me...http://paste.ubuntu.com/258189/
+2009-08-23T22:40:00.000Z	shreymech		prince: ok i m doing .. plzz be with me during my  installation
+2009-08-23T22:40:00.000Z	shreymech		but hey prince as ubuntu is case sensative
+2009-08-23T22:40:00.000Z	shreymech		i have home not HOME as given in script
+2009-08-23T22:41:00.000Z	shreymech		MTech : okk i got it.. :-)
+2009-08-23T22:42:00.000Z	shreymech		heyy prince :  i did the copt work at the end of bash .. and i saved it.. now what to do next..??
+2009-08-23T22:44:00.000Z	shreymech		hey Mtech.. i think Prince is gone.. can u plzzz help me
+2009-08-23T22:44:00.000Z	shreymech		can some1 go through these steps and help me.. plzzzz..!!! i completed up to 4th step.. now what to do in 5th .. please help me...http://paste.ubuntu.com/258189/
+2009-08-23T22:45:00.000Z	shreymech		ok prince:
+2009-08-23T22:45:00.000Z	prince_jammys	shreymech	or source ~/.bashrc   (will have the same effect)
+2009-08-23T22:45:00.000Z	shreymech		i did
+2009-08-23T22:46:00.000Z	prince_jammys	shreymech	then do the final step.
+2009-08-23T22:46:00.000Z	shreymech		okk thanx leachim6
+2009-08-23T22:46:00.000Z	shreymech		ok thanx leaf-sheep
+2009-08-23T22:47:00.000Z	prince_jammys	shreymech	 cd /the/directory/where_that_open_foam_thing_is  and then: ./foamInstallationTest
+2009-08-23T22:49:00.000Z	shreymech		FATAL ERROR: OpenFOAM environment not configured.
+2009-08-23T22:49:00.000Z	shreymech		    Please refer to the installation section of the README file:
+2009-08-23T22:49:00.000Z	shreymech		    <OpenFOAM installation dir>/OpenFOAM-1.6/README
+2009-08-23T22:49:00.000Z	shreymech		    to source the OpenFOAM environment.
+2009-08-23T22:49:00.000Z	shreymech		i got an error message
+2009-08-23T22:49:00.000Z	prince_jammys	shreymech	OK. looks like something went wrong in the other steps.
+2009-08-23T22:50:00.000Z	shreymech		http://paste.ubuntu.com/258195/ check it prince
+2009-08-23T22:50:00.000Z	shreymech		http://paste.ubuntu.com/258195/ check it prince_jammys
+2009-08-23T22:50:00.000Z	prince_jammys	shreymech	well, it looks like you did what they said. and sourcing .bashrc gave no errors.
+2009-08-23T22:52:00.000Z	shreymech	prince_jammys	 what mistake i did in configuring enviornment
+2009-08-23T22:52:00.000Z	prince_jammys	shreymech	you copied that other line into your .bashrc exactly as provided, right? (with the leading dot and everything)
+2009-08-23T22:52:00.000Z	shreymech		yessss
+2009-08-23T22:52:00.000Z	shreymech	prince_jammys	yess
+2009-08-23T22:53:00.000Z	shreymech	prince_jammys	shud i paste my .bashrc content after i copied that line...????
+2009-08-23T22:53:00.000Z	prince_jammys	shreymech	sure, though i suspect you did it right.
+2009-08-23T22:54:00.000Z	prince_jammys	shreymech	the last line is sourcing another file (that's what the dot does) that likely sets certain environment variables. if you had miscopied the line, you'd likely get an error from bash when you source ~/.bashrc
+2009-08-23T22:57:00.000Z	shreymech	prince_jammys	http://paste.ubuntu.com/258197/ check at lastline
+2009-08-23T22:58:00.000Z	prince_jammys	shreymech	that's not your .bashrc
+2009-08-23T22:58:00.000Z	prince_jammys	shreymech	i hope ...
+2009-08-23T22:59:00.000Z	shreymech	prince_jammys	it is the same file... they have clearly mentioned it location in procedure ..
+2009-08-23T22:59:00.000Z	shreymech	prince_jammys	did u saw that i pasted that line in the end.. is it ok..??
+2009-08-23T22:59:00.000Z	prince_jammys	shreymech	the line is ok, but what about all that other stuff?  you put all that stuff in your .bashrc?
+2009-08-23T23:00:00.000Z	prince_jammys	shreymech	do you know what .bashrc is?
+2009-08-23T23:01:00.000Z	prince_jammys	shreymech	.bashrc is the file sourced by your shell (bash) every time you start an  interactive session (like when you open a terminal)
+2009-08-23T23:01:00.000Z	shreymech	prince_jammys	i pasted u my full content under bashrc file
+2009-08-23T23:01:00.000Z	prince_jammys	shreymech	you only had to copy a single line to the bottom of that file.
+2009-08-23T23:01:00.000Z	shreymech	prince_jammys	i did the same thing prince.. didn't u checked my last line
+2009-08-23T23:02:00.000Z	shreymech	prince_jammys	i pasted the same line in the last
+2009-08-23T23:03:00.000Z	prince_jammys	shreymech	it looks like you copied much more than that.
+2009-08-23T23:03:00.000Z	prince_jammys	shreymech	what about all the other OpenFoam stuff in that file?
+2009-08-23T23:03:00.000Z	prince_jammys		and where's all the stuff that's in a normal .bashrc?
+2009-08-23T23:03:00.000Z	shreymech	prince_jammys	the other contents were already present in the bashrc file... i only copied the given line in the procedure only
+2009-08-23T23:04:00.000Z	prince_jammys	shreymech	had you ever edited .bashrc in the past?
+2009-08-23T23:04:00.000Z	shreymech	prince_jammys	yes once while configuring my wireless headset
+2009-08-23T23:04:00.000Z	shreymech	prince_jammys	i think.!!
+2009-08-23T23:06:00.000Z	prince_jammys	shreymech	i think you mistyped a command along the way and copied some entire file from OpenFOam into your bashrc, replacing it.
+2009-08-23T23:06:00.000Z	prince_jammys	shreymech	If you indeed just pasted the contents of ~/.bashrc
+2009-08-23T23:07:00.000Z	shreymech	prince_jammys	i think now i knw where i did the mistake.... listen me carefully.. i have a file named bashrc in my openfoam folder.. and i pasted the line in that file... but in the procedure it is written that ")Update your environment variables by adding the following line to our .bashrc script"
+2009-08-23T23:08:00.000Z	shreymech	prince_jammys	now i need to knw that where is my .bashrc script ...??
+2009-08-23T23:08:00.000Z	prince_jammys	shreymech	heh, yes, you "bashrc script" is at ~/.bashrc  (use the ~)
+2009-08-23T23:09:00.000Z	shreymech	prince_jammys	shud i type exactly ~/.bashrc in terminal
+2009-08-23T23:09:00.000Z	shreymech		??
+2009-08-23T23:09:00.000Z	prince_jammys	shreymech	you should type:  gedit ~/.bashrc  and paste the line said to the bottom of THAT
+2009-08-23T23:11:00.000Z	prince_jammys	shreymech	and remove the line you copied into the 'bashrc' file that's part of OpenFoam thingy.
+2009-08-23T23:15:00.000Z	shreymech	prince_jammys	hey prince i did it .. but when i typed this line source ~/.bashrc .. i got this message.. http://paste.ubuntu.com/258207/
+2009-08-23T23:15:00.000Z	shreymech	prince_jammys	now what to do ....??? :-(
+2009-08-23T23:17:00.000Z	prince_jammys	shreymech	try editing the file mentioned after 'Warning' (with gedit), find the line that says 'compilerInstall' , and change the setting to 'System'
+2009-08-23T23:18:00.000Z	prince_jammys	shreymech	there's probably a line that says: compilerInstall='Something or the other'
+2009-08-23T23:18:00.000Z	shreymech	prince_jammys	ok wait .. i m trying
+2009-08-23T23:19:00.000Z	prince_jammys	shreymech	At least now you have done exactly what they said. If things don't work after this, find a troubleshooting document/page/irc channel or something for OpenFOAM.
+2009-08-23T23:20:00.000Z	shreymech	prince_jammys	hey but u plzz don go.. wait i am finishing it .. plzz wait 4 me
+2009-08-23T23:23:00.000Z	shreymech	prince_jammys	bingooooo..!! this time i got no error.. now i am on final step... plzz pray :-)
+2009-08-23T23:25:00.000Z	shreymech	prince_jammys	check this man  http://paste.ubuntu.com/258217/
+2009-08-23T23:26:00.000Z	shreymech	prince_jammys	this time it runned but... :-(  check
+2009-08-23T23:27:00.000Z	prince_jammys	shreymech	they don't like your version of the gcc compiler
+2009-08-23T23:27:00.000Z	shreymech	prince_jammys	and what about other errors..??
+2009-08-23T23:28:00.000Z	prince_jammys	shreymech	that's the only error, isn't it?
+2009-08-23T23:28:00.000Z	prince_jammys	shreymech	go to whereever you downloaded this thing and see if there's any info on that (or see if it came with an INSTALL or README that talks about this).
+2009-08-23T23:29:00.000Z	shreymech	prince_jammys	okk,, but is there any other to upgrade my gcc compiler
+2009-08-23T23:33:00.000Z	shreymech	prince_jammys	 can u also check this http://www.opencfd.co.uk/openfoam/doc/README.html
+2009-08-23T23:37:00.000Z	shreymech	prince_jammys	u still there..??
+2009-08-23T23:38:00.000Z	prince_jammys	shreymech	that document suggests that there's a alternative to compiling.
+2009-08-23T23:38:00.000Z	shreymech	prince_jammys	what..??
+2009-08-23T23:38:00.000Z	prince_jammys	shreymech	was there perhaps a .deb file available for download?
+2009-08-23T23:38:00.000Z	shreymech	prince_jammys	which is that method...??
+2009-08-23T23:38:00.000Z	shreymech	prince_jammys	link..??
+2009-08-23T23:39:00.000Z	prince_jammys	shreymech	''If you cannot find the appropriate binary pack for your platform...'' suggests that they have some pre-packaged.
+2009-08-23T23:39:00.000Z	prince_jammys	shreymech	beyond that, the only way is to get a newer version of gcc.
+2009-08-23T23:40:00.000Z	shreymech	prince_jammys	how to get a new version of gcc
+2009-08-23T23:40:00.000Z	shreymech		:-(
+2009-08-23T23:40:00.000Z	shreymech		:'-
+2009-08-23T23:40:00.000Z	shreymech		:'-(
+2009-08-23T23:40:00.000Z	prince_jammys	shreymech	don't cry. get a coffee and take a break ;)
+2009-08-23T23:41:00.000Z	shreymech	prince_jammys	hey friend i wanna thank u first for tolerating such a dumb man like me... i wanna finish my task first and than i will take coffee
+2009-08-23T23:42:00.000Z	shreymech	prince_jammys	plzz stand by me and guide me
+2009-08-23T23:42:00.000Z	shreymech		:-(
+2009-08-23T23:42:00.000Z	prince_jammys	shreymech	i don't know what to do next.
+2009-08-23T23:43:00.000Z	prince_jammys	shreymech	go to where you got it and see if there are any .deb files available for ubuntu.
+2009-08-23T23:44:00.000Z	shreymech	prince_jammys	i checked there is no such.. but will it help  ftp://ftp.trolltech.com/qt/source/qt-x11-opensource-src-4.3.5.tar.bz2

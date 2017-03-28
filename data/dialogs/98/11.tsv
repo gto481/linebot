@@ -1,0 +1,98 @@
+2010-03-03T01:14:00.000Z	obscurant1st		i hv 9 more months warranty
+2010-03-03T01:14:00.000Z	obscurant1st		:(
+2010-03-03T01:14:00.000Z	obscurant1st		i got to install windows again then
+2010-03-03T01:14:00.000Z	obscurant1st		:(
+2010-03-03T01:15:00.000Z	obscurant1st		i dont like it
+2010-03-03T01:17:00.000Z	ActionParsnip	obscurant1st	does gtkpod not fly?
+2010-03-03T01:17:00.000Z	obscurant1st	ActionParsnip	i dont know, it doest detect my ipod
+2010-03-03T01:18:00.000Z	ActionParsnip	obscurant1st	try installing it, you may have to mount the device like a partition, unfortunately you have a device from one of the most closed minded companys out there
+2010-03-03T01:18:00.000Z	ActionParsnip	obscurant1st	the latest wine with some versions of itunes does actually work
+2010-03-03T01:19:00.000Z	obscurant1st	ActionParsnip	yeah i dont like apple, but ipod touch, i just love it
+2010-03-10T16:05:00.000Z	ActionParsnip	obscurant1st	uname -a   if you see i686 its 32bit x86_64 is 64bit
+2010-03-10T16:06:00.000Z	obscurant1st	ActionParsnip	it is 32 bit, is there anyway i can change mine to 64 bit withouht re installing the whole os?
+2010-03-10T16:06:00.000Z	ActionParsnip	obscurant1st	no, you must reinstall the 64bit OS
+2010-03-10T16:07:00.000Z	obscurant1st	ActionParsnip	oh, i see. So installing the 64 bit kernel wont work, thanks gor i asked here, i was about to do something stupid.
+2010-03-10T16:08:00.000Z	ActionParsnip	obscurant1st	how much ram do you have?
+2010-03-10T16:08:00.000Z	obscurant1st	ActionParsnip	2 GB, Why?
+2010-03-10T16:08:00.000Z	ActionParsnip	obscurant1st	then 32bit is fine, it can reference your ram without issue, if you had >3Gb ram then you'd need 64bit (or PAE kernel)
+2010-03-10T16:09:00.000Z	obscurant1st	ActionParsnip	no i thought 64bit OS could speed up my system a lil bit. :O
+2010-03-10T16:09:00.000Z	ActionParsnip	obscurant1st	only if you do a lot of data transforms (like audio encoding etc)
+2010-03-10T16:10:00.000Z	obscurant1st	ActionParsnip	oh, is it? so for normal use i wont be seeing much difference?
+2010-03-10T16:10:00.000Z	ActionParsnip	obscurant1st	for normal web / dtp /chat you wont see any difference
+2010-03-10T16:43:00.000Z	ActionParsnip	obscurant1st	right click panel -> add item
+2010-03-10T16:43:00.000Z	ActionParsnip	obscurant1st	then add what you need
+2010-03-10T16:44:00.000Z	obscurant1st	ActionParsnip	let me try, but system tray is not there in the right click add item menu
+2010-03-10T16:44:00.000Z	ActionParsnip	obscurant1st	its called the notification area i think (not used gnome is ages)
+2010-03-10T16:45:00.000Z	obscurant1st	ActionParsnip	thanks, let me see
+2010-03-10T16:52:00.000Z	obscurant1st	ActionParsnip	actully something is coming up, over there when i added notification area, but no icons are there, :(
+2010-03-10T16:54:00.000Z	obscurant1st	ActionParsnip	yes after doing what you said i just reatarted the xserver, and then all f it xcame back
+2010-03-10T16:55:00.000Z	ActionParsnip	obscurant1st	coolio
+2010-03-10T21:12:00.000Z	ActionParsnip	obscurant1st	whats the output of: sudo apt-get install vlc xchat
+2010-03-10T21:14:00.000Z	ActionParsnip	obscurant1st	plase
+2010-03-10T21:15:00.000Z	obscurant1st	ActionParsnip	gp5st , http://pastie.org/863360
+2010-03-10T21:17:00.000Z	ActionParsnip	obscurant1st	ok can you give a pastebin of: sudo apt-get update      you need to add a GPG key for some repo you have added
+2010-03-10T21:18:00.000Z	obscurant1st	ActionParsnip	yeah, one sec
+2010-03-10T21:21:00.000Z	ActionParsnip	obscurant1st	can you give the pastebin link
+2010-03-10T21:21:00.000Z	obscurant1st	ActionParsnip	link? which link
+2010-03-10T21:21:00.000Z	ActionParsnip	obscurant1st	of the output of: sudo apt-get update
+2010-03-10T21:23:00.000Z	obscurant1st	ActionParsnip	actually it is still executing, i mean the update command
+2010-03-10T21:26:00.000Z	ActionParsnip	obscurant1st	/var/cache/apt
+2010-03-10T21:28:00.000Z	obscurant1st	ActionParsnip	it is still updating, can i give you the sources.lst pastebined instead?
+2010-03-10T21:29:00.000Z	ActionParsnip	obscurant1st	just need the output of: sudo apt-get update   thats all
+2010-03-10T21:29:00.000Z	obscurant1st	ActionParsnip	ok, i will have to wait then, it is still executing,
+2010-03-10T21:29:00.000Z	ActionParsnip	obscurant1st	true
+2010-05-14T10:35:00.000Z	ActionParsnip	obscurant1st	find out your video chip / lappy mayke & model then see if there are some tweaks you need to do. Hiberante can be a REAL pain to get nice so expect some heartache and tears.
+2010-05-14T10:35:00.000Z	obscurant1st	ActionParsnip	its not hibernate, its sleep but fyi hibernate also wont work.
+2010-05-14T10:36:00.000Z	ActionParsnip	obscurant1st	same deal for the guides dude. You can find your video card with: lspci | grep -i vga
+2010-05-14T10:36:00.000Z	obscurant1st	ActionParsnip	videochi[ is radeon mobility x1300
+2010-05-14T10:37:00.000Z	obscurant1st	ActionParsnip	oops, it is 01:00.0 VGA compatible controller: ATI Technologies Inc Mobility Radeon X2300
+2010-05-14T10:37:00.000Z	ActionParsnip	obscurant1st	better than you thought ;)
+2010-05-14T10:37:00.000Z	obscurant1st	ActionParsnip	hehe, yep.
+2010-05-14T10:38:00.000Z	obscurant1st	ActionParsnip	now what kind of tweeks should i search for?
+2010-05-14T10:39:00.000Z	ActionParsnip	obscurant1st	you may need some power settings adding, or some module options. It can be loads of things. The web will tell you. There may also be a guide for your model on www.laptoplinux.com
+2010-09-05T23:35:00.000Z	ActionParsnip	obscurant1st	on the login screen log on as ubuntu with no pass then run: sudo gdm start
+2010-09-05T23:36:00.000Z	obscurant1st	ActionParsnip	ok
+2010-09-05T23:37:00.000Z	obscurant1st	ActionParsnip	yeah that seems to wokr, but now i am back at login screen
+2010-09-05T23:38:00.000Z	ActionParsnip	obscurant1st	ok do the same again but instead of starting gdm, run: passwd ,then set a password. Start gdm again and login with the account
+2010-09-05T23:39:00.000Z	obscurant1st	ActionParsnip	but where should i enter that command, actually the GUI already started but, after entering the login info , the login button again comes
+2010-09-05T23:40:00.000Z	ActionParsnip	obscurant1st	in the alt+f1 screen
+2010-09-05T23:41:00.000Z	obscurant1st	ActionParsnip	alt+f1 gives me nothin
+2010-09-05T23:41:00.000Z	obscurant1st	ActionParsnip	^^
+2010-09-05T23:41:00.000Z	ActionParsnip	obscurant1st	doh yeah ctrl+alt+f1
+2010-09-05T23:42:00.000Z	ActionParsnip	obscurant1st	you can set the pass to the account there
+2010-09-05T23:42:00.000Z	obscurant1st	ActionParsnip	but after pressing zlt+ctrl+f1 the screen became weird!
+2010-09-05T23:43:00.000Z	ActionParsnip	obscurant1st	does ctrl+L do anything?
+2010-09-05T23:43:00.000Z	obscurant1st	ActionParsnip	yes some changes @ the top of the screen
+2010-09-05T23:43:00.000Z	ActionParsnip	obscurant1st	hmm. Does the cd pass verification once first booted to?
+2010-09-05T23:44:00.000Z	obscurant1st	ActionParsnip	yes, actully i think its the problm with computer itslef, coz the cd have no problem n it works ok, in any other systems
+2010-09-05T23:45:00.000Z	ActionParsnip	obscurant1st	boot to the cd and use the memtest maybe
+2010-09-05T23:46:00.000Z	obscurant1st	ActionParsnip	oh, ok
+2010-09-05T23:47:00.000Z	obscurant1st	ActionParsnip	^^
+2010-09-05T23:47:00.000Z	ActionParsnip	obscurant1st	the command is: passwd
+2011-04-08T17:46:00.000Z	obscurant1st	ActionParsnip	after installing the fonts as per the link given by ubottu, now there is nothing in the page, can someone tell me why?? pls see the screenshot http://img195.imageshack.us/i/screenshotug.png/
+2011-04-08T17:53:00.000Z	ActionParsnip	obscurant1st	does it happen in all browsers?
+2011-04-08T17:54:00.000Z	obscurant1st	ActionParsnip	i have only ff4, i ll download chrome and try
+2011-04-08T18:12:00.000Z	obscurant1st	ActionParsnip	the problem is oly for firefox, in chrome the fonts are getting displayed without any issue
+2011-04-08T18:13:00.000Z	ActionParsnip	obscurant1st	ok then try renaming ~/.mozilla then rerun the browser. I don't use firefox so am not much help but certainly can help diagnose
+2011-04-08T18:14:00.000Z	obscurant1st	ActionParsnip	ok let me try. thanks for helping!
+2011-04-08T18:15:00.000Z	obscurant1st	ActionParsnip	no change, still the blank page
+2011-04-08T18:16:00.000Z	ActionParsnip	obscurant1st	ok then rename the old folder back, restoring your old settings
+2011-04-08T18:16:00.000Z	ActionParsnip	obscurant1st	so now we know its an app issue, not settings
+2011-04-08T18:16:00.000Z	obscurant1st	ActionParsnip	so reinstalling might be able to fix it?
+2011-04-08T18:16:00.000Z	ActionParsnip	obscurant1st	thats as far as I can go, I ditched firefox ages ago and use arora and chromium daily
+2011-04-08T18:16:00.000Z	ActionParsnip	obscurant1st	worth a try
+2011-04-08T18:17:00.000Z	obscurant1st	ActionParsnip	ok.
+2011-06-18T16:53:00.000Z	obscurant1st	ActionParsnip	i saw one of your questions regarding using proxy ofr transmission bitorrent client in launchpad, did you manage to do that?
+2011-06-18T16:53:00.000Z	ActionParsnip	obscurant1st	i don't use a proxy but it can be done
+2012-10-20T01:01:00.000Z	ActionParsnip	obscurant1st	does mount do it?
+2012-10-20T01:02:00.000Z	obscurant1st	ActionParsnip	yes actually I have mounted it wwith qemu tool. But now I have a directory with a file in it. I don't know what to do with that file! :/
+2012-10-20T01:04:00.000Z	ActionParsnip	obscurant1st	what is the file for exactly?
+2012-10-20T01:05:00.000Z	obscurant1st	ActionParsnip	I didn't get your question I am sorry? Which file?
+2012-10-20T01:08:00.000Z	ActionParsnip	obscurant1st	the file you mounted....
+2012-10-20T01:08:00.000Z	obscurant1st	ActionParsnip	That file is a vdi file with mac filesystem. I need to get access to a file from that partition very badly.
+2012-10-20T01:09:00.000Z	ActionParsnip	obscurant1st	well you said it was mounted, so you can access the data via the mount point
+2012-10-20T01:10:00.000Z	ActionParsnip	obscurant1st	http://www.ubuntugeek.com/how-to-mount-virtualbox-drive-image-vdi-in-ubuntu-12-1012-04.html   seems it uses vdfuse to mount it
+2012-10-20T01:10:00.000Z	obscurant1st	ActionParsnip	yeah thats what! :( The mounted partition just has one file. I guess its some other kind of filesystem. I tried my luck using hfsplus but no use
+2012-10-20T01:11:00.000Z	ActionParsnip	obscurant1st	its how you can mount the vdi, you could ask in #vbox maybe
+2012-10-20T01:12:00.000Z	obscurant1st	ActionParsnip	I tried that link you gave me. What happens is, when I do the last step, it shows me an error saying I need to specify the partition type!
+2012-10-20T01:12:00.000Z	obscurant1st	ActionParsnip	ok, I will try with them then. :)

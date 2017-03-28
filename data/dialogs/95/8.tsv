@@ -1,0 +1,95 @@
+2011-02-03T05:47:00.000Z	ActionParsnip	tbruff13	is the system a branded PC or laptop?
+2011-02-03T05:48:00.000Z	tbruff13	ActionParsnip	 laptop
+2011-02-03T05:48:00.000Z	tbruff13	ActionParsnip	an acer-aspire
+2011-02-03T05:48:00.000Z	ActionParsnip	tbruff13	what model aspire, there are MANY
+2011-02-03T05:49:00.000Z	tbruff13	ActionParsnip	 im on a sixty four bit system of ubuntu
+2011-02-03T05:50:00.000Z	tbruff13	ActionParsnip	 my model is 5517
+2011-02-03T05:51:00.000Z	ActionParsnip	tbruff13	http://www.linlap.com/wiki/acer+aspire+5517  says Lucid works 100% out of the box
+2011-02-03T05:51:00.000Z	tbruff13	ActionParsnip	my earphones work fine the speakers dont work
+2011-02-03T05:52:00.000Z	ActionParsnip	tbruff13	could add: options snd-hda-intel model=acer    to /etc/modprobe.d/alsa-base.conf
+2011-02-03T05:52:00.000Z	ActionParsnip	tbruff13	or change it to: options snd-hda-intel model=laptop    if that fails
+2011-02-03T05:53:00.000Z	tbruff13	ActionParsnip	 do i add the word options to the file to
+2011-02-03T05:54:00.000Z	tbruff13	ActionParsnip	 /etc/modprobe.d/alsa-base.conf no file found this is a 64 bit installation of linux
+2011-02-03T05:55:00.000Z	tbruff13	ActionParsnip	 look im sorry if im being mean but i came here as a last resort like i always do if you guys do not help me i do not know where else to turn
+2011-02-03T05:56:00.000Z	tbruff13	ActionParsnip	 i cant get to the flie help
+2011-02-03T05:57:00.000Z	ActionParsnip	tbruff13	gksudo gedit /etc/modprobe.d/alsa-base.conf
+2011-02-03T05:57:00.000Z	ActionParsnip	tbruff13	its a standard linux file
+2011-02-03T05:58:00.000Z	tbruff13	ActionParsnip	 found it now what
+2011-02-03T06:00:00.000Z	tbruff13	ActionParsnip	what do i do with the file
+2011-02-03T06:01:00.000Z	ActionParsnip	tbruff13	what I said, scroll up
+2011-02-03T06:02:00.000Z	tbruff13	ActionParsnip	 i put the first one in do i need to reboot or what if i uplug the earphones i get no sound
+2011-02-03T06:03:00.000Z	ActionParsnip	tbruff13	yes, save the file and reboot to test, if not re-edit the file
+2011-02-03T06:23:00.000Z	tbruff13	ActionParsnip	 im back ive got a new issue the first thing you told me to do worked, but now if i plug my earphones in i hear sound from them and my laptop
+2011-02-03T06:25:00.000Z	ActionParsnip	tbruff13	http://ubuntu-virginia.ubuntuforums.org/showthread.php?t=1533332&page=2
+2011-02-03T06:27:00.000Z	tbruff13	ActionParsnip	nice thanks
+2011-02-03T06:27:00.000Z	tbruff13	ActionParsnip	how do i get to the file again
+2011-02-03T06:28:00.000Z	ActionParsnip	tbruff13	gksudo gedit /etc/modprobe.d/alsa-base.conf   you can use up cursor in terminal to run the old commands
+2011-02-03T06:28:00.000Z	tbruff13	ActionParsnip	nevermind found it
+2011-02-03T06:35:00.000Z	tbruff13	ActionParsnip	its no good still go speaker and headphones going at the same time
+2011-02-03T06:37:00.000Z	tbruff13	ActionParsnip	are you there
+2011-03-25T05:52:00.000Z	ActionParsnip	tbruff13	apt-cache policy ffmpeg
+2011-04-25T07:34:00.000Z	ActionParsnip	tbruff13	you can disable it in alacarte
+2011-04-25T07:38:00.000Z	ActionParsnip	tbruff13	so you want to convert from mp3 to ogg?
+2011-04-25T07:41:00.000Z	ActionParsnip	tbruff13	what are you trying to achieve?
+2011-04-25T07:44:00.000Z	ActionParsnip	tbruff13	ffmpeg -i input.m4a -acodec vorbis -aq 60 -vn -ac 2 output.ogg
+2011-05-12T04:45:00.000Z	ActionParsnip	tbruff13	many do, yes
+2011-08-28T02:40:00.000Z	ActionParsnip	tbruff13	easier: http://www.techdrivein.com/2010/11/apt-fast-accelerates-your-apt-get.html
+2011-08-28T02:41:00.000Z	ActionParsnip	tbruff13	apt-fast is the bom!
+2011-08-28T02:41:00.000Z	tbruff13	ActionParsnip	help how do i get synaptic to use it too
+2011-08-28T02:41:00.000Z	ActionParsnip	tbruff13	not sure there dude, sorry. I don't use synaptic
+2011-08-28T02:44:00.000Z	tbruff13	ActionParsnip	help me install 1blinkupdater
+2011-08-28T02:45:00.000Z	ActionParsnip	tbruff13	the repo stated only supports up to maverick
+2011-08-28T02:46:00.000Z	tbruff13	ActionParsnip	well i am using linux mint based on ubuntu so how can i add the repo to my sources and install the maveric version
+2011-08-28T02:46:00.000Z	ActionParsnip	tbruff13	mint isn't supported here
+2011-08-28T02:48:00.000Z	ActionParsnip	tbruff13	by the same token, if you ask for support in #debian (which ubuntu is based on) you will be directed here
+2011-08-28T02:48:00.000Z	ActionParsnip	tbruff13	its really that simple
+2011-08-28T02:51:00.000Z	ActionParsnip	tbruff13	its not like that, you aren't using ubuntu, your support is elsewhere
+2011-09-21T20:58:00.000Z	ActionParsnip	tbruff13	do you have the ppa:   link
+2011-09-21T20:58:00.000Z	tbruff13	ActionParsnip	no that is what i need a ppa i do have one though
+2011-09-21T20:59:00.000Z	tbruff13	ActionParsnip	http://wiki.vinuxproject.org/index.php?title=How_Do_I_Add_the_Vinux_Repositories_to_my_Ubuntu_system%3F
+2011-09-21T21:00:00.000Z	ActionParsnip	tbruff13	gksudo gedit /etc/apt/sources.list
+2011-09-21T21:01:00.000Z	ActionParsnip	tbruff13	add the line:    http://ppa.launchpad.net/vinux/vinux-lucid/ubuntu lucid main       change lucid to your release (the PPA has all the way up to Oneiric). Save the new file, close gedit then run:
+2011-09-21T21:01:00.000Z	ActionParsnip	tbruff13	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EF2AFDCF
+2011-09-21T21:01:00.000Z	ActionParsnip	tbruff13	I literally copied and pasted 90% of that from the page YOU gave
+2011-09-21T21:02:00.000Z	tbruff13	ActionParsnip	i know i tried this i did not work
+2011-09-21T21:02:00.000Z	ActionParsnip	tbruff13	what errors do you get?
+2011-09-21T21:03:00.000Z	ActionParsnip	tbruff13	you need to add the word 'deb' to the start of the line, so it will look like this:   deb http://ppa.launchpad.net/vinux/vinux-lucid/ubuntu oneiric main
+2011-09-21T21:04:00.000Z	ActionParsnip	tbruff13	you should contact the maintainers of the wiki so they change that
+2011-09-21T21:05:00.000Z	ActionParsnip	tbruff13	obviously, use YOUR release name, I'm using Oneiric here
+2011-09-21T21:05:00.000Z	ActionParsnip	tbruff13	does the PPA support 64bit too?
+2011-10-12T21:47:00.000Z	ActionParsnip	tbruff13	http://en.wikipedia.org/wiki/Speech_recognition_in_Linux
+2011-10-12T21:48:00.000Z	ActionParsnip	tbruff13	http://ubuntuforums.org/showthread.php?t=838372
+2011-10-12T21:48:00.000Z	ActionParsnip	tbruff13	https://answers.launchpad.net/ubuntu/+question/27614
+2011-12-11T23:22:00.000Z	ActionParsnip	tbruff13	http://askubuntu.com/questions/16695/is-there-a-libreoffice-ppa#19794
+2012-03-20T00:34:00.000Z	ActionParsnip	tbruff13	still in #ubuntu+1 til release please
+2012-03-20T00:34:00.000Z	tbruff13	ActionParsnip	ok
+2012-11-04T00:14:00.000Z	ActionParsnip	tbruff13	are you wanting to upgrade to 12.10 or is it already happening?
+2012-11-04T00:19:00.000Z	tbruff13	ActionParsnip	I was told to talk to you
+2012-11-04T00:22:00.000Z	ActionParsnip	tbruff13	about what?
+2012-11-04T00:22:00.000Z	tbruff13	ActionParsnip	my upgrade from kubuntu 12.04 to 12.10 is frozen
+2012-11-04T00:23:00.000Z	ActionParsnip	tbruff13	have you tried rebooting?
+2012-11-04T00:23:00.000Z	tbruff13	ActionParsnip	it is installing packages for kubuntu 12.10 wont that break my system
+2012-11-04T00:25:00.000Z	ActionParsnip	tbruff13	i'd give it a while, you may have to kill the process off then run ubottu's aptfix command
+2012-11-04T00:26:00.000Z	tbruff13	ActionParsnip	i have given it an hour http://imagebin.org/234492
+2012-11-04T00:27:00.000Z	tbruff13	ActionParsnip	okay how can i kill the process and then run aptfix safely or as safe as possible
+2012-11-04T00:29:00.000Z	tbruff13	ActionParsnip	hello man is there anyway you can teach me to use aptfix
+2012-11-04T00:52:00.000Z	ActionParsnip	tbruff13	had to go sort a backup so was AFK
+2012-11-04T00:57:00.000Z	ActionParsnip	tbruff13	all ok?
+2012-11-04T00:59:00.000Z	tbruff13	ActionParsnip	yep it is setting up the missing packages
+2012-11-04T01:01:00.000Z	ActionParsnip	tbruff13	coolies
+2012-11-04T01:01:00.000Z	tbruff13	ActionParsnip	do i need to file a bug about dropbox causing the upgrade to freeze?
+2012-11-04T01:01:00.000Z	ActionParsnip	tbruff13	i would
+2012-11-04T01:03:00.000Z	ActionParsnip	tbruff13	you can start the process with:  ubuntu-bug nautilus-dropbox
+2012-11-04T01:04:00.000Z	tbruff13	ActionParsnip	my computer is still in recovery mode i am using a windoze and the webchat to talk to you
+2012-11-04T01:04:00.000Z	ActionParsnip	tbruff13	gotcha, you can use this link if you want
+2012-11-04T01:05:00.000Z	tbruff13	ActionParsnip	what link???
+2012-11-04T01:05:00.000Z	ActionParsnip	tbruff13	there is a link on launchpad to manually report a bug, its named on the Ubuntu bug reporting page
+2012-11-04T04:17:00.000Z	ActionParsnip	tbruff13	what video chip do you use please?
+2012-11-04T04:18:00.000Z	tbruff13	ActionParsnip	ATI Mobility Radeon HD 3200 Graphics
+2012-11-04T04:21:00.000Z	tbruff13	ActionParsnip	can you give me the command to so that the terminal will output what driver is currently in use
+2012-11-04T04:21:00.000Z	ActionParsnip	tbruff13	http://ubuntuxtreme.com/howto/how-to-fix-your-amd-graphics-in-ubuntu-12-10/   use the Makarewicz PPA
+2012-11-04T04:22:00.000Z	ActionParsnip	tbruff13	seems to affect 2xxx to 4xxx inclusive
+2012-11-04T04:23:00.000Z	tbruff13	ActionParsnip	thanks
+2012-11-04T04:24:00.000Z	tbruff13	ActionParsnip	will this ppa make any other system updates unstable and how will i stop the system from trying to update x in the future
+2012-11-04T04:25:00.000Z	ActionParsnip	tbruff13	should be fine, its a known issue
+2012-11-04T04:25:00.000Z	tbruff13	ActionParsnip	bottom line my laptop is a pos and i need a new one

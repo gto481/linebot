@@ -1,0 +1,97 @@
+2009-04-12T03:43:00.000Z	Roasted		I'm still just kind of surprised that Ubuntu can't handle this out of the box. I thought something as simple as ping via hostname would work fine. I mean I can ping web sites by their domain name, I just can't ping local computers on my router, which is laughable and confusing.
+2009-04-12T03:44:00.000Z	jrib	Roasted	well are you using your router for dns?
+2009-04-12T03:44:00.000Z	Roasted	jrib	- Yes. My router shows all of the computer names and IPs of the DHCP clients on the network.
+2009-04-12T03:44:00.000Z	jrib	Roasted	meh, should work then.  wfm
+2009-04-12T03:46:00.000Z	Roasted	jrib	- So you are saying that sinc emy router is logging the information (host names, ip addresses) that my router should be working fine with Ubuntu pinging other computers on the LAN via hostname?
+2009-04-12T03:47:00.000Z	jrib	Roasted	I use my router as the dns server and it works that way yes
+2009-04-12T03:49:00.000Z	jrib	Roasted	the only way to get automatically banned is if you ctcp the channel
+2009-04-12T03:49:00.000Z	Roasted	jrib	- I've gotten banned many times, but I won't go into that.
+2009-09-24T05:52:00.000Z	jrib	Roasted	yes
+2009-09-24T05:53:00.000Z	jrib	Roasted	well, assuming you are on some really old version where it is still .Trash, yes
+2009-10-29T06:00:00.000Z	jrib	Roasted	usually if you ask a really specific channel and it seems like no one knows the answer you are pointed to a place where you are more likely to get help
+2009-10-29T06:01:00.000Z	Roasted	jrib	- I'm often told to go to channels and when I get there, there's 0 users there. lol?
+2009-10-29T06:01:00.000Z	jrib	Roasted	well that's just plain not true.  But I don't wish to discuss it anymore.  People are just trying to get you help
+2009-11-23T04:59:00.000Z	jrib	Roasted	iirc normal unix permissions become part of the ACL ones (default I think) but it's been a while since I played with ACLs.  Did you check « man setfacl » ?
+2009-11-23T05:01:00.000Z	Roasted	jrib	- Hmm, it just confused me becuase I watched a how to video on how to set up ACLs and the guy had 700 permissions on a directory, owned by root:root, but he granted more user permissions through ACLs. I just didn't see how that made sense to have 700 root-root perms yet other users could access throguh ACLs.
+2009-11-23T05:03:00.000Z	jrib	Roasted	it's the same way that if you have a file owned by someuser:somegroup with permissions 770 a user in somegroup can access the files even though he is not someuser
+2009-11-23T05:04:00.000Z	jrib	Roasted	ACLs let you use more groups for one :)
+2009-11-23T05:04:00.000Z	Roasted	jrib	- exactly! So how could users access the files through ACLs when its owned by root:root 700. 700 means owner only, nothing to group, nothing to everyone else.
+2009-11-23T05:05:00.000Z	jrib	Roasted	ACLs let you add more rules. One way to think of it is you have 770_ _ _ _ _ _ _ _ _ _  where all the _ represent more ACL rules
+2009-11-23T05:05:00.000Z	Roasted	jrib	- so ideally if I want to set up the most secure file server ever, I should have the parent directory owned by root:root with 770 permissions. Then, ACLs would "grant" additional users to access the files themselves.
+2009-11-23T05:06:00.000Z	jrib	Roasted	sure, that would work
+2009-11-23T05:06:00.000Z	Roasted	jrib	- also, another question. Each time I open ecilel or whatever it is, it doesnt open my existing directory I set ACLs on. How do I save that?
+2009-11-23T05:07:00.000Z	jrib	Roasted	I have no idea how eiceil works
+2009-11-29T23:17:00.000Z	jrib	Roasted	change what?  Show us a pastebin of the commands you are running, and what you expected differently
+2009-11-29T23:18:00.000Z	Roasted	jrib	- Im  not running commands. Im setting the group assignments in the GUI. It just errors out and says I dont have sufficient priviledges. When I went to terminal, I can run chgrp samba5 test, chgrp samba8 test, but I NEED to run sudo with chgrp samba7 test. Theres something about that GID, 1007, thats being stupid
+2009-11-29T23:18:00.000Z	jrib	Roasted	what do you want to accomplish?
+2009-11-29T23:19:00.000Z	Roasted	jrib	- Well, I have 3 groups, all identical. And 1 requires root to change. I want to know why that one group requires root when theyre all identical.
+2009-11-29T23:19:00.000Z	jrib	Roasted	... change *what*?
+2009-11-29T23:19:00.000Z	Roasted	jrib	- when I assign that group to a folder.
+2009-11-29T23:19:00.000Z	jrib	Roasted	you always need to be root to change group ownership
+2009-11-29T23:19:00.000Z	Roasted	jrib	- I need root priviledges to assign samba7 to a folder, yet I can assign samba 5 and 8 to it just fine
+2009-11-29T23:19:00.000Z	Roasted	jrib	- no, you dont, not if you own the folder in question - which I do
+2009-11-29T23:20:00.000Z	Roasted	jrib	- this is all the same folder too btw
+2009-11-29T23:20:00.000Z	jrib	Roasted	show me in your pastebin
+2009-11-29T23:20:00.000Z	Roasted	jrib	- same folder, 3 groups, 2 work, 1 needs root, yet theyre identical
+2009-11-29T23:20:00.000Z	jrib	Roasted	show me you changing the group of a folder to samba5 without using sudo and then trying the same thing with samba7
+2009-11-29T23:21:00.000Z	Roasted	jrib	- hold that thought...
+2009-11-29T23:22:00.000Z	jrib	Roasted	though you are right you don't need root to change group owner, I thought you did
+2009-11-29T23:22:00.000Z	Roasted	jrib	- if you need to be root to change group ownership, EVEN if you own the directory, why, oh why, does nautilus and dolphin both have the option for it in the gui
+2009-11-29T23:23:00.000Z	Roasted	jrib	-okay wow, yeah all 3 are erroring out on me now
+2009-11-29T23:23:00.000Z	jrib	Roasted	pastebin
+2009-11-29T23:23:00.000Z	Roasted	jrib	- I changed the group in the gui though... and it was only one that errored out....
+2009-11-29T23:27:00.000Z	Roasted	jrib	usser - bingo. logging out did it
+2009-11-29T23:28:00.000Z	Roasted	jrib	shawnrisk - I have ubuntu 9.04 and kubuntu 9.04 dual booting on the same computer. I did a memory test from fresh boot and compared them
+2009-11-29T23:28:00.000Z	Roasted	jrib	shawnrisk - Gnome/Ubuntu, fresh boot no startup applications running was using 382mb of RAM, whereas KDE/Kubuntu, same scenario, was running 274mb of RAM. Surprisingly, KDE is indeed a bit slimmer than Gnome.
+2010-01-16T00:34:00.000Z	jrib	Roasted	are you using gnome-panel?
+2010-01-16T00:35:00.000Z	Roasted	jrib	- using gnome-shell. But it worked previously. I rebooted and it stopped working. :(
+2010-01-19T20:04:00.000Z	jrib	Roasted	check ~/.config/autostart permissions
+2010-01-19T20:04:00.000Z	Roasted	jrib	- 775 perms, owned by me:me
+2010-01-19T20:04:00.000Z	jrib	Roasted	and the files
+2010-01-19T20:05:00.000Z	jrib	Roasted	and ownership?
+2010-01-19T20:05:00.000Z	Roasted	jrib	- me:me
+2010-01-19T20:05:00.000Z	jrib	Roasted	not permissions then.  Check that the file actually changes when you use the gui
+2010-01-19T20:06:00.000Z	Roasted	jrib	- I think what scunizi said was right. Some things I uncheck uncheck fine. Others re-check themselves, such as gnome-do docky which in the preferences of that app is set to auto start.
+2010-01-19T20:06:00.000Z	jrib	Roasted	ok
+2010-10-01T02:55:00.000Z	jrib	Roasted	define "barking"
+2010-10-01T02:55:00.000Z	Roasted	jrib	wrong architecture error
+2010-10-01T02:55:00.000Z	jrib	Roasted	what exactly did you download?
+2010-10-01T02:59:00.000Z	jrib	Roasted	the package they have there says it's for i386
+2010-10-01T02:59:00.000Z	Roasted	jrib	I had frostwire on 10.04 64 bit. I got a new hard drive, reinstalled ubuntu 10.04 64 bit, and it wont work now.
+2010-10-01T02:59:00.000Z	jrib	Roasted	they may have changed the package
+2010-10-01T03:02:00.000Z	jrib	Roasted	well you could probably use the deb you have on your old install then
+2011-02-10T21:23:00.000Z	jrib	Roasted	that's not the way to kill it...
+2011-03-02T04:04:00.000Z	jrib	Roasted	pitivi, kino, ...
+2011-03-02T04:04:00.000Z	Roasted	jrib	not seeing how I was able to do that in pitivi
+2011-03-02T04:05:00.000Z	jrib	Roasted	you edit video files in pitivi
+2011-03-02T04:05:00.000Z	Roasted	jrib	pitivi doesnt support avi?
+2011-03-02T04:06:00.000Z	jrib	Roasted	I don't use pitivi but I would be surprised if that were the case
+2011-03-02T04:06:00.000Z	Roasted	jrib	error importing AVI, but imports ogv fine.
+2011-03-02T04:06:00.000Z	jrib	Roasted	what codec?
+2011-03-02T04:06:00.000Z	Roasted	jrib	I have no idea. I converted it with avidemux
+2011-03-02T04:07:00.000Z	jrib	Roasted	find the codec and figure out if pitivi should support it or not
+2011-03-02T04:08:00.000Z	Roasted	jrib	well I have an OGV of the file so itll work. IF I can figure out how to cut the video file, which I currently cannot find a solution to
+2011-03-02T04:08:00.000Z	jrib	Roasted	did you try reading the manual? http://www.pitivi.org/manual/
+2011-03-02T04:08:00.000Z	Roasted	jrib	no, the scissor option was grayed out
+2011-03-02T04:08:00.000Z	Roasted	jrib	but its not now
+2011-03-02T04:16:00.000Z	jrib	Roasted	not all channels are as active as this one.  You need to be more patient in the smaller channels
+2011-03-02T04:16:00.000Z	Roasted	jrib	I have been. I just want to create a simple video.
+2011-03-02T04:35:00.000Z	jrib	Roasted	honestly, your best bet is to ask in #pitivi and being really patient (like 24 hours because of timezones).  The reason being that though the smaller channels are smaller they are also filled with users dedicated to that particular app so probably know more.  The issue is no one is on their computer.  It's fine for you to ask here but it would be a more efficient use of your time and energy to just
+2011-03-02T04:36:00.000Z	Roasted	jrib	as I already stated, I already did ask, and I already am waiting, however openshot is proving to be a far more useful program to begin with, so I'm using that until I get the job done or pitivi responds with an intelligent response.
+2011-03-02T04:37:00.000Z	jrib	Roasted	right, I'm just telling you what I would do in your shoes
+2011-03-02T04:38:00.000Z	jrib	Roasted	if you want to hibernate use at least as much as your ram
+2011-03-03T22:33:00.000Z	jrib	Roasted	best to just ask the channel your actual question (on a single line)
+2011-03-03T22:33:00.000Z	Roasted	jrib	a single line?
+2011-03-03T22:33:00.000Z	Roasted	jrib	not sure that's possible, as the errors I'm getting are lengthy.
+2011-03-03T22:33:00.000Z	Roasted	jrib	I figured if ANYBODY has touched likewise, they've more than likely been familiarized with the errors I'm getting anyway.
+2011-03-03T22:33:00.000Z	jrib	Roasted	that's what pastebin is for!
+2011-03-03T22:34:00.000Z	Roasted	jrib	meh.
+2011-03-03T22:34:00.000Z	jrib	Roasted	you don't want soeone that deployed ubuntu on a windows domain, you want someone that can help you.  So just assume someone said "yes" and ask the question:)
+2011-03-03T22:36:00.000Z	Roasted	jrib	better?
+2011-03-03T22:40:00.000Z	jrib	Roasted	sure, though you should probably pastebin the errors in full
+2011-09-08T22:10:00.000Z	jrib	Roasted	take a wild guess from the names :D
+2011-09-08T22:10:00.000Z	Roasted	jrib	well, I figured it would be random data vs 0'ing out the drive. But I wasn't seeing how that would make it more interesting?
+2011-09-08T22:11:00.000Z	jrib	Roasted	ask whoever said it would be more interesting I suppose
+2012-06-22T14:52:00.000Z	jrib	Roasted	you should probably change /.JPG/ to /.JPG$/ in case you have files named like: AJPG.JPG :)
+2012-06-22T14:53:00.000Z	jrib	Roasted	you should probably change /.JPG/ to /\.JPG$/ in case you have files named like: AJPG.JPG :)
+2012-08-26T19:47:00.000Z	jrib	Roasted	gnome-terminal with -x or -e (try both and see what's the difference).  See « man gnome-terminal »

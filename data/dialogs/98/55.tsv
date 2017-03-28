@@ -1,0 +1,98 @@
+2006-07-28T15:35:00.000Z	Samus_Aran		can someone explain to me why there are no dictionaries for OpenOffice.org ?
+2006-07-28T15:35:00.000Z	Samus_Aran		-rw-r--r-- 1 root root 786 2006-07-10 14:12 /usr/lib/openoffice/share/wordbook/en-US/soffice.dic
+2006-07-28T15:35:00.000Z	Samus_Aran		that is the only dictionary showing up, it is empty
+2006-07-28T15:36:00.000Z	Samus_Aran		I've been trying to get a spellchecker in OO.o for days, I've installed every package I can think of, but there simply aren't any dictionaries
+2006-07-28T15:36:00.000Z	jrib	Samus_Aran	I believe it uses myspell
+2006-07-28T15:36:00.000Z	Samus_Aran	jrib	it doesn't, though.  it is using that file I just pasted
+2006-07-28T15:38:00.000Z	jrib	Samus_Aran	which myspell dictionaries did you install?
+2006-07-28T15:42:00.000Z	Samus_Aran	jrib	okay I just went and installed every myspell package I could find.  most were already installed, some were not
+2006-07-28T15:42:00.000Z	Samus_Aran	jrib	will restart and see if it makes a difference
+2006-07-28T15:43:00.000Z	jrib	Samus_Aran	just restart openoffice
+2006-07-28T15:44:00.000Z	Samus_Aran	jrib	that's what I meant.  done.  no difference.  when I go to spell check, it immediately says "completed, do you want to restart at the top of the document ?", I click "yes", it closes the window
+2006-07-28T15:44:00.000Z	jrib	Samus_Aran	make sure tools > options > language has a language selected with an "abc" checkmark next to it
+2006-07-28T15:44:00.000Z	Samus_Aran	jrib	no mispellings are underlined in red
+2006-07-28T15:45:00.000Z	Samus_Aran	jrib	well the "Language Settings" appears now.  it was not there when I went to Tools > Options yesterday.  hopefully I can turn on a spellchecker now
+2006-07-28T15:46:00.000Z	Samus_Aran	jrib	the only one that shows up in the top is "OO.o Hunspell SpellChecker"
+2006-07-28T15:46:00.000Z	Samus_Aran	jrib	as well as a thesaurus
+2006-07-28T15:47:00.000Z	jrib	Samus_Aran	yes, that is what I have as well
+2006-07-28T15:50:00.000Z	Samus_Aran	jrib	restarted, still not working.  the drop-down for "Edit" on the dictionary shows English for Australia, Great Britain and USA.  I want the UK English, but any time I select it and close the window, it reverts to Australia English .. and none of it produces any spell checking
+2006-07-28T15:52:00.000Z	jrib	Samus_Aran	what is selected in tools > options > language settings > language > default languages for documents > western?
+2006-07-28T15:53:00.000Z	Samus_Aran	jrib	English (Canada)
+2006-07-28T15:53:00.000Z	jrib	Samus_Aran	set that to what you desire, make sure it has the "abc" checkmark next to it
+2006-07-28T15:55:00.000Z	Samus_Aran	jrib	okay done: <ABC> English (UK)
+2006-07-28T15:55:00.000Z	Samus_Aran	jrib	still no spellchecking being done
+2006-07-28T15:55:00.000Z	Samus_Aran	jrib	I restarted OO.o
+2006-07-28T15:56:00.000Z	jrib	Samus_Aran	k, make sure the dictionary is using uk as well
+2006-07-28T15:56:00.000Z	Samus_Aran	jrib	it reset the document one to English (Canada) now
+2006-07-28T15:56:00.000Z	jrib	Samus_Aran	hmm, that won't do
+2006-07-28T15:56:00.000Z	Samus_Aran	jrib	the edit button shows "English (Australia)" and if I change it, it always reverts to that
+2006-07-28T15:58:00.000Z	Samus_Aran	jrib	I tried "English (Australia)" in the default document one, and that stuck ... but I would prefer "English (UK)" dictionaries.  it is spellchecking now
+2006-07-28T15:58:00.000Z	Samus_Aran	jrib	I did install the myspell dicts for English GB, US and AU
+2006-07-28T15:59:00.000Z	jrib	Samus_Aran	try starting with a blank document and changing the language to UK.  I just changed mine to canada and had to restart OO to get it to go back to USA (my default)
+2006-07-28T16:00:00.000Z	Samus_Aran	jrib	it seems to think the only dictionary in existance is "English (Australia)"
+2006-07-28T16:00:00.000Z	jrib	Samus_Aran	is there an <abc> next to the western language selection of English (UK)?
+2006-07-29T16:01:00.000Z	Samus_Aran	jrib	myspell-en-gb is already the newest version. myspell-en-au is already the newest version. myspell-en-us is already the newest version.
+2006-07-29T16:01:00.000Z	Samus_Aran	jrib	yes, there is an ABC
+2006-07-29T16:02:00.000Z	Samus_Aran	jrib	but if I select "ABC - English (UK)" it immediately reverts to the "English (Canada)" or "ABC - English (Australia)", whichever I had last selected
+2006-07-29T16:03:00.000Z	Samus_Aran	jrib	thank you kindly for your help, by the way.  this has been an issue since I switched to Ubuntu
+2006-07-29T16:03:00.000Z	Samus_Aran	jrib	and "English (Australia)" is a far better dictionary for me than ""
+2006-07-29T16:04:00.000Z	jrib	Samus_Aran	I see what you mean, I change mine to UK, restart OO and it shows up as USA again.  There must be something we are missing...
+2006-07-29T16:04:00.000Z	Samus_Aran	jrib	hm
+2006-07-29T16:04:00.000Z	Samus_Aran	jrib	perhaps the package that has the English UK dictionary is broken ?
+2006-07-29T16:05:00.000Z	jrib	Samus_Aran	I can't even make the default language for my documents stay as UK
+2006-07-29T16:05:00.000Z	Samus_Aran	jrib	english Australia and USA work here, I just tried both
+2006-07-29T16:09:00.000Z	jrib	Samus_Aran	oh I missed it, do you notice the checkbox that says "For the current document only", is taht grayed out for you as well in default doc lang settings?
+2006-07-29T16:10:00.000Z	Samus_Aran	jrib	yes, it is grayed out
+2006-07-29T16:17:00.000Z	jrib	Samus_Aran	I have to go now, but here are my thoughts: the ubuntu build my grab the language from elsewhere (locale settings?), you may be able to do this: http://www.oooforum.org/forum/viewtopic.phtml?p=157058  good luck
+2006-07-29T16:18:00.000Z	Samus_Aran	jrib	thank you very much for your help
+2006-11-03T13:31:00.000Z	jrib	Samus_Aran	take a look at equivs, but be sure that it is not actually a broken package...
+2006-11-03T13:32:00.000Z	Samus_Aran	jrib	I saw mention of equivs on a Debian forum, but I didn't see it on this system.  is it available on Ubuntu then ?
+2006-11-03T13:32:00.000Z	jrib	Samus_Aran	by the way, I'm assuming this isn't an official package
+2006-11-03T13:32:00.000Z	Samus_Aran	jrib	if so, I will uninstall the apps it thinks are broken and install 'equivs'
+2006-11-03T13:33:00.000Z	jrib	Samus_Aran	no, what exactly is broken?
+2006-11-03T13:34:00.000Z	Samus_Aran	jrib	I am trying to use an older version of the Opera web browser (which depends on a no-longer-existant, empty, transitional package) and a very new version of TuxPaint (which asks for *very* specific versions of common libs that it doesn't actually need)
+2006-11-03T13:34:00.000Z	jrib	Samus_Aran	you just use equivs to make a fake package with the name of that dep but doesn't actually install anything
+2006-11-03T13:35:00.000Z	Samus_Aran	jrib	well that is exactly what I need.  I was just asking if Ubuntu had this package ... as I can't install anything until apt removes these packages it thinks are broken
+2006-11-03T13:35:00.000Z	jrib	Samus_Aran	yes, it does.  It is in universe
+2006-11-03T13:44:00.000Z	Samus_Aran	jrib	thanks.  will investigate equivs now
+2008-11-06T08:26:00.000Z	jrib	Samus_Aran	the 8.04 CDs have a serious security issue
+2008-11-06T08:27:00.000Z	jrib	Samus_Aran	what's the link to the bug you are referring to?
+2008-11-06T08:27:00.000Z	Samus_Aran	jrib	well blah.  8.04.1 and 8.10 have a seriously broken Intel driver
+2008-11-06T08:35:00.000Z	Samus_Aran	jrib	there are numerous bug reports about it, so I'm not sure which is the main/official one.  here's an example: https://bugs.launchpad.net/ubuntu/+bug/252094
+2008-11-06T08:38:00.000Z	Samus_Aran	jrib	what was the security issue in 8.04, and wouldn't it just be fixed by an apt-get upgrade ?
+2008-11-06T08:38:00.000Z	jrib	Samus_Aran	that bug just shows people claiming degraded performance in intrepid.  In any case, you can just install 8.04 and try to downgrade to whatever package you feel 8.04 had that was better
+2008-11-06T08:38:00.000Z	jrib	Samus_Aran	8.04.1 is 8.04 with upgrades, so if you claim 8.04.1 has the issue, the upgrade would give you the same issue
+2008-11-06T08:39:00.000Z	Samus_Aran	jrib	this is on a new laptop I bought for my father.  I have never tried 8.04 on this laptop, only got it yesterday and installed 8.10 on it.  the Intel drivers that come with 8.10 are totally buggy
+2008-11-06T08:39:00.000Z	Samus_Aran	jrib	if compiz is on, then all other GL apps produce incorrect layering and tons of glitches.  if compiz is off, then certain glitches remain
+2008-11-06T08:40:00.000Z	jrib	Samus_Aran	you claimed 8.04.1 had these bugs.  Why not try 8.04.1?
+2008-11-06T08:40:00.000Z	Samus_Aran	jrib	I tried some of the suggested xorg.conf changes, and while they removed the glitching, they end up crashing Xorg and it won't reload until a reboot
+2008-11-06T08:41:00.000Z	Samus_Aran	jrib	I would rather than 8.10 working, as I've already spent many hours configuring things on this system, will be a pain to reinstall, only to find it's the same
+2008-11-06T08:41:00.000Z	jrib	Samus_Aran	best to just ask for help with that directly then
+2008-11-06T08:42:00.000Z	Samus_Aran	jrib	do you know anything about Intel drivers on laptops ?  I have one work laptop running 8.something with no issues.  other than that, I've never used Intel
+2008-11-06T08:43:00.000Z	jrib	Samus_Aran	sorry, I have a laptop with one but it "just works" so I don't know anything about it
+2008-11-06T08:43:00.000Z	Samus_Aran	jrib	8.04 or 8.10 ?
+2008-11-06T08:43:00.000Z	Samus_Aran	jrib	or earlier
+2008-11-06T08:44:00.000Z	jrib	Samus_Aran	8.04 and 8.10
+2008-11-06T08:44:00.000Z	Samus_Aran	jrib	on the same laptop ?
+2008-11-06T08:44:00.000Z	jrib	Samus_Aran	yes
+2008-11-06T08:45:00.000Z	Samus_Aran	jrib	out of curiousity, which chipset ?  (lspci|grep -i vga)
+2008-11-06T08:45:00.000Z	jrib	Samus_Aran	laptops off right now
+2009-01-28T17:27:00.000Z	jrib	Samus_Aran	if you read the source code though, you'll see it is not the same
+2010-05-10T18:47:00.000Z	jrib	Samus_Aran	3.x is not the default version of python in any ubuntu version
+2010-05-10T18:48:00.000Z	Samus_Aran	jrib	okay, 2.6.1 apparently, but there are only modules for 2.4 and 2.5
+2010-05-10T18:48:00.000Z	jrib	Samus_Aran	modules for what?
+2010-05-10T18:49:00.000Z	Samus_Aran	jrib	I'm on an older Ubuntu version (8.10 if I recall) and some recentish updates have broken a number of Python apps.  in this case python-wxversion only has 2.4 and 2.5 modules, but not one for 2.6
+2010-05-10T18:50:00.000Z	jrib	Samus_Aran	seems strange (from memory) that default python is 2.6 there, but in any case 8.10 is eol
+2010-05-10T18:51:00.000Z	Samus_Aran	jrib	I'll be updating to 10.04 soon, via clean install.  I am aware that it's old, I'm just wondering how one goes about setting the default python version ?  or should I just us mv on the files in /usr/bin ?
+2010-05-10T18:52:00.000Z	jrib	Samus_Aran	you shouldn't change the default python version.  Many scripts that are used by the operating system need the default python version to be what it is and stuff will likely break.  If you need to have some particular script run with 2.5, just use env python2.5 (python2.5 should be in the repositories)
+2010-05-10T18:54:00.000Z	Samus_Aran	jrib	well, the point is kind of that some apps broke as the result of 2.6 being installed or set to default.  I've run into this problem twice now, where modules don't exist for 2.6, so I wanted to fix future occurances as well
+2010-05-10T18:55:00.000Z	jrib	Samus_Aran	are you positive that python2.6 was not always the default.  I really doubt that would change in an update
+2010-05-10T18:57:00.000Z	Samus_Aran	jrib	all I know is that an app I've been using for years no longer loads (because it needs 2.4 or 2.5, not 2.6) and that my own app I was creating with PyGame also wouldn't work on 2.6, as there are again modules only for 2.4 and 2.5
+2010-05-10T19:00:00.000Z	jrib	Samus_Aran	see if you can replicate this behavior on a supported version. You mentioned wx but it certainly works with 2.6
+2010-05-10T19:01:00.000Z	Samus_Aran	jrib	as I said, I'm on 8.10, and some update within the last month or so caused it to switch to a default of 2.6 Python, which has broke many apps.  I'll go poke at it manually until I upgrade to 10.04, thanks.
+2010-05-10T19:02:00.000Z	jrib	Samus_Aran	as I said, I really doubt an update would change the default python version.  I can't obtain too much info about intrepid however as I don't have an intrepid install and the online tools drop unsupported versions
+2010-05-10T19:03:00.000Z	jrib	Samus_Aran	if you have a broken system already and don't really care if it breaks more I guess you can mess with /usr/share/python/debian_defaults ... (caveat emptor)
+2010-05-10T19:04:00.000Z	Samus_Aran	jrib	I'll probably just edit the broken app to use 2.5, seems safest after you've scared me about changing the system default
+2010-05-10T19:05:00.000Z	jrib	Samus_Aran	I would just install 10.04 and be done with it
+2010-05-10T19:05:00.000Z	Samus_Aran	jrib	not that simple, unfortunately.  this system is an NFS server to other computers in the house, and it's also an Internet server, and it's also a multiseat desktop.  so downtime ruins a lot of people's days.  :p
+2010-05-10T19:06:00.000Z	Samus_Aran	jrib	I'll probably do the update this weekend at 2:AM or something so nobody's using any of it

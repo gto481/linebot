@@ -1,0 +1,97 @@
+2011-01-29T06:25:00.000Z	psycho_oreos		!id| cahyo
+2011-01-29T06:25:00.000Z	arrrghhh	psycho_oreos	ok i'm installing that now.  thanks rusty149 & psycho_oreos !
+2011-01-29T06:20:00.000Z	psycho_oreos	arrrghhh	why not try the open source built-in kernel driver?
+2011-01-29T06:20:00.000Z	arrrghhh	psycho_oreos	when i started ubuntu there was no networks detected at all... there is no driver as i understand it.
+2011-01-29T06:21:00.000Z	psycho_oreos	arrrghhh	pastebin (not paste) me your lspci -nnk output
+2011-01-29T06:21:00.000Z	arrrghhh	psycho_oreos	sure 1 sec
+2011-01-29T06:23:00.000Z	arrrghhh	psycho_oreos	here's the wifi card http://paste.ubuntu.com/559753/
+2011-01-29T06:24:00.000Z	psycho_oreos	arrrghhh	humm, there are some support for it but its quite minimal, it maybe supported through linux backports as rusty149 mentioned
+2011-01-29T06:28:00.000Z	psycho_oreos	arrrghhh	hopefully that should work
+2011-01-29T07:17:00.000Z	arrrghhh	psycho_oreos	any other ideas...?  i tried every level of security, always said 'bad password' in wicd.
+2011-01-29T07:18:00.000Z	psycho_oreos	arrrghhh	pastebin (not paste) me again your lspci -nnk output. Hopefully you should by now have brcm80211 driver available under available kernel modules
+2011-01-29T07:19:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559753/
+2011-01-29T07:19:00.000Z	psycho_oreos	arrrghhh	humm bugger, it still has wl available, I suppose you've rebooted after installing linux-backports?
+2011-01-29T07:21:00.000Z	arrrghhh	psycho_oreos	oh yea.  i rebooted and then proceeded to try basically every type of authentication i could find in the router....
+2011-01-29T07:22:00.000Z	psycho_oreos	arrrghhh	hmm :/ you might need to do this manually, manually grabbing the latest compat-wireless and compiling that, which should hopefully has brcm80211
+2011-01-29T07:23:00.000Z	arrrghhh	psycho_oreos	i guess i should check broadcom's website, but i have a feeling i'm going to be let down.
+2011-01-29T07:24:00.000Z	psycho_oreos	arrrghhh	no there isn't the support for that is driver specific. There is support for that chipset via brcm80211 but its to be merged into 2.6.37 kernel iirc which only natty (11.04) will have
+2011-01-29T07:24:00.000Z	psycho_oreos	arrrghhh	the issue is also the use of broadcom's sta driver, notably wl, which is quite flaky and not verbose when it comes to debugging
+2011-01-29T07:26:00.000Z	arrrghhh	psycho_oreos	i really do detest anything broadcom.  as my friend put it "they're the yugo of the network card world"
+2011-01-29T07:26:00.000Z	psycho_oreos	arrrghhh	they are slowly opening up :) but I guess its `too little too late' sort of affair
+2011-01-29T07:30:00.000Z	psycho_oreos	arrrghhh	I'm sure soon enough someone will write up a big forum post on howto get brcm80211 to work but afaik its been noted bcm4313 does work with brcm80211
+2011-01-29T07:35:00.000Z	arrrghhh	psycho_oreos	i found a guide on compiling brcm80211 driver.  i guess i'll try that and see how it goes.
+2011-01-29T07:36:00.000Z	psycho_oreos	arrrghhh	good luck and hopefully the link does point to the later versions of compat-wireless :) fyi some info about brcm80211 maybe found here: http://wireless.kernel.org/en/users/Drivers/brcm80211
+2011-01-29T08:03:00.000Z	arrrghhh	psycho_oreos	it says "Kernel modules: wl, brcm80211" but "Kernel driver in use: wl" <---- is that wrong?
+2011-01-29T08:05:00.000Z	psycho_oreos	arrrghhh	it is, though you need to make sure that you have the right firmware for the brcm80211 driver and what not
+2011-01-29T08:06:00.000Z	arrrghhh	psycho_oreos	i pulled the git repo for the firmware
+2011-01-29T08:06:00.000Z	psycho_oreos	arrrghhh	and I presume with that you have compiled and installed the wireless-testing?
+2011-01-29T08:08:00.000Z	psycho_oreos	arrrghhh	hmm I suppose that guide seems to be useful. If everything works, try unloading the wl driver and load the brcm80211 driver. Once that is working blacklist wl and maybe remove the package if needed be
+2011-01-29T08:08:00.000Z	arrrghhh	psycho_oreos	rmmod?  sorry not used to this.
+2011-01-29T08:09:00.000Z	psycho_oreos	arrrghhh	rmmod works but ideally modprobe -r and to load use modprobe (if the driver is not installed then use insmod followed by the path to the driver)
+2011-01-29T08:12:00.000Z	arrrghhh	psycho_oreos	doesn't seem to be working at all now... bah.  i probably have to uninstall the driver that ubuntu installed eh?
+2011-01-29T08:14:00.000Z	psycho_oreos	arrrghhh	pastebin me the last few lines of dmesg, ideally 20 lines
+2011-01-29T08:14:00.000Z	arrrghhh	psycho_oreos	sure 1 sec
+2011-01-29T08:16:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559766/
+2011-01-29T08:18:00.000Z	psycho_oreos	arrrghhh	something isn't right there, it seems like wl wasn't removed and there were no traces of brcm80211 being loaded
+2011-01-29T08:19:00.000Z	arrrghhh	psycho_oreos	yea it doesn't seem to be loading it.  perhaps i messed a step up, lemme go thru it again.
+2011-01-29T08:19:00.000Z	psycho_oreos	arrrghhh	you appended sudo when it came to unloading wl and loading of brcm80211 right?
+2011-01-29T08:20:00.000Z	arrrghhh	psycho_oreos	oh... i thought the brcm80211 was loaded.  d'oh let me try to force it.
+2011-01-29T08:20:00.000Z	psycho_oreos	arrrghhh	make sure to unload wl first, brcm80211 will not work if wl is in the way
+2011-01-29T08:22:00.000Z	arrrghhh	psycho_oreos	hrm.  i see nothing in dmesg after the PCI INT A disabled
+2011-01-29T08:22:00.000Z	psycho_oreos	arrrghhh	that's when you unloaded wl driver via sudo and loaded the brcm80211 driver via sudo right?
+2011-01-29T08:23:00.000Z	arrrghhh	psycho_oreos	sudo modprobe brcm80211 rigth?
+2011-01-29T08:23:00.000Z	psycho_oreos	arrrghhh	yes but again did you unload wl driver?
+2011-01-29T08:24:00.000Z	arrrghhh	psycho_oreos	yup.  no wireless networks are showing
+2011-01-29T08:24:00.000Z	psycho_oreos	arrrghhh	checked it via lsmod to make sure wl isn't there?
+2011-01-29T08:26:00.000Z	arrrghhh	psycho_oreos	i don't see it
+2011-01-29T08:27:00.000Z	psycho_oreos	arrrghhh	hmm ok, and when you loaded brcm80211 it didn't give you errors? what about entries in lsmod? does it show brcm80211?
+2011-01-29T08:27:00.000Z	arrrghhh	psycho_oreos	this is odd... i guess i'll give you the output, i don't get it.
+2011-01-29T08:27:00.000Z	psycho_oreos	arrrghhh	ok, make sure to pastebin it
+2011-01-29T08:28:00.000Z	arrrghhh	psycho_oreos	haha i know.
+2011-01-29T08:30:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559768/
+2011-01-29T08:31:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559769/ <--- full lsmod.
+2011-01-29T08:31:00.000Z	psycho_oreos	arrrghhh	hmm it is loaded, and you don't have wireless interface?
+2011-01-29T08:31:00.000Z	arrrghhh	psycho_oreos	nope
+2011-01-29T08:32:00.000Z	arrrghhh	psycho_oreos	there is a wlan0, but it doesn't "work"
+2011-01-29T08:32:00.000Z	psycho_oreos	arrrghhh	ok I need pastebin output of modinfo brcm80211
+2011-01-29T08:32:00.000Z	arrrghhh	psycho_oreos	and AFAIK with wl it was eth1...
+2011-01-29T08:32:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559770/
+2011-01-29T08:32:00.000Z	psycho_oreos	arrrghhh	yeah wlan0 should be the interface for bcm4313 via brcm80211, ethX was used by wl driver
+2011-01-29T08:33:00.000Z	arrrghhh	psycho_oreos	ok... i have a wlan0, but it doesn't function.  iwlist scan says nothing, and wicd says it sees nothing as well.
+2011-01-29T08:34:00.000Z	psycho_oreos	arrrghhh	hmm, unload brcm80211 driver and try this sudo modprobe brcm80211 msglevel=9 phymsglevel=9
+2011-01-29T08:34:00.000Z	psycho_oreos	arrrghhh	might need sudo in front of those, failing that the device may need to be up to scan
+2011-01-29T08:37:00.000Z	arrrghhh	psycho_oreos	weird, it locked up hard on me.  i was pressing the key for wlan cards on/off... i just tried it again and it's not doing it now.  very odd.  perhaps this laptop just isn't ready for linux...
+2011-01-29T08:38:00.000Z	psycho_oreos	arrrghhh	wait you pressed the key for wlan to be on and off was before or after it locked up and was the lockup because of the command I told you to run?
+2011-01-29T08:39:00.000Z	arrrghhh	psycho_oreos	i have no clue what the lockup was associated to.  i just tried flipping the card on/off again, with wl removed... didn't happen again.
+2011-01-29T08:40:00.000Z	psycho_oreos	arrrghhh	what about the commmand I mentioned?
+2011-01-29T08:41:00.000Z	arrrghhh	psycho_oreos	the modinfo?
+2011-01-29T08:41:00.000Z	psycho_oreos	arrrghhh	no the modprobe with very verbose output
+2011-01-29T08:41:00.000Z	arrrghhh	psycho_oreos	never saw that one
+2011-01-29T08:42:00.000Z	psycho_oreos	arrrghhh	ahh ok lemme repaste it
+2011-01-29T08:42:00.000Z	psycho_oreos	arrrghhh	hmm, unload brcm80211 driver and try this sudo modprobe brcm80211 msglevel=9 phymsglevel=9
+2011-01-29T08:43:00.000Z	arrrghhh	psycho_oreos	then i'm guessing you want dmesg?
+2011-01-29T08:43:00.000Z	psycho_oreos	arrrghhh	yes if that worked
+2011-01-29T08:44:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559772/
+2011-01-29T08:45:00.000Z	psycho_oreos	arrrghhh	ahh that's much better, the output.. so if iwlist returns nothing, check to see if the interface is up via ifconfig
+2011-01-29T08:46:00.000Z	arrrghhh	psycho_oreos	interface is there, but it's not up.
+2011-01-29T08:47:00.000Z	arrrghhh	psycho_oreos	here's the results of those two commands
+2011-01-29T08:48:00.000Z	psycho_oreos	arrrghhh	well the first part shows that its up and the iwlist was after ifconfig wlan0?
+2011-01-29T08:48:00.000Z	arrrghhh	psycho_oreos	sorry for chopping it poorly.  first command is ifconfig, second is iwlist scan
+2011-01-29T08:49:00.000Z	psycho_oreos	arrrghhh	yeah I know that but the output of those was directly as is without you putting the interface down after trying to scan and not pasting that in?
+2011-01-29T08:50:00.000Z	arrrghhh	psycho_oreos	i'm not sure i follow.  i just did ifconfig and iwlist scan
+2011-01-29T08:50:00.000Z	psycho_oreos	arrrghhh	ahh ok, is there anything new after you did those two commands in dmesg?
+2011-01-29T08:52:00.000Z	arrrghhh	psycho_oreos	a lot of the same, doesn't look good.   let me pastebin
+2011-01-29T08:52:00.000Z	arrrghhh	psycho_oreos	http://paste.ubuntu.com/559774/
+2011-01-29T08:53:00.000Z	psycho_oreos	arrrghhh	hmm not too sure what to say about those, then again repeatedly pressing wlan button won't really help. The other thing one may also need to consider is the probability of rfkill
+2011-01-29T08:54:00.000Z	arrrghhh	psycho_oreos	that's the thing, i haven't been pressing the button...
+2011-01-29T08:55:00.000Z	psycho_oreos	arrrghhh	weird the log was saying something about some key being pressed.
+2011-01-29T08:55:00.000Z	arrrghhh	psycho_oreos	yea i see that.  i'm not sure what that is, might be the touchpad on/off button i have been hitting
+2011-01-29T08:56:00.000Z	arrrghhh	psycho_oreos	i have 2 more in dmesg, but i didn't hit the wireless key...
+2011-01-29T08:56:00.000Z	psycho_oreos	arrrghhh	its normally a driver responsible for turning on radio on the wireless device. Its there for laptop users so that they can disable/enable wireless at will. Normally the built-in stable kernel drivers will show information about radio disabled or rfkill unavailable, etc
+2011-01-29T08:56:00.000Z	arrrghhh	psycho_oreos	so... what can i do?  looks bleak TBH
+2011-01-29T08:57:00.000Z	psycho_oreos	arrrghhh	yeah something is wrong :) its showing up information about invalid mac address which lead me to thinking rfkill is either unavailable or invalid
+2011-01-29T08:58:00.000Z	arrrghhh	psycho_oreos	can i do anything?
+2011-01-29T08:58:00.000Z	arrrghhh	psycho_oreos	he's my neighbor, and is constantly breaking his windows install because he just clicks on things at random.  i need to put something on this thing that he won't break.
+2011-01-29T08:59:00.000Z	psycho_oreos	arrrghhh	hmm at this point I could suggest asking in #linux-wireless or even asking on the mailing-list. For the time being I guess you may need to go back to using wl
+2011-01-29T08:59:00.000Z	arrrghhh	psycho_oreos	bah.  well, i appreciate all the help!
+2011-01-29T09:01:00.000Z	psycho_oreos	arrrghhh	the dmesg output of those are really handy however. Though like I said the brcm80211 driver is still very new

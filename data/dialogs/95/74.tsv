@@ -1,0 +1,95 @@
+2005-07-14T16:13:00.000Z	MidNightRaVeN		do you guys know where i can get lvc from?? i look for it in synaptic but for whatever reason it's not there
+2005-07-14T16:15:00.000Z	MidNightRaVeN		lol you guys know where I can get lvc?? it doesn't show up on synaptic
+2005-07-14T16:15:00.000Z	MidNightRaVeN		*sigh*
+2005-07-14T16:16:00.000Z	MidNightRaVeN		<---- no one hears....
+2005-07-14T16:17:00.000Z	Danar	MidNightRaVeN	VLC
+2005-07-14T16:17:00.000Z	Danar	MidNightRaVeN	stands for vido lan client, i think
+2005-07-14T16:17:00.000Z	MidNightRaVeN	Danar	work well?
+2005-07-14T16:17:00.000Z	Danar	MidNightRaVeN	yep. one of the best
+2005-07-14T16:18:00.000Z	Danar	MidNightRaVeN	personally i don't like the interface, but it plays pretty much anything
+2005-07-14T16:18:00.000Z	Danar	MidNightRaVeN	i use xine when i can. then vlc or mplayer when it doesn't play something
+2005-07-14T16:18:00.000Z	Danar	MidNightRaVeN	yes
+2005-07-14T16:19:00.000Z	MidNightRaVeN	Danar	it would be under Multimedia right
+2005-07-14T16:19:00.000Z	Danar	MidNightRaVeN	i find xine easy to use, and it plays pretty much everything once you've installed the codecs from the repo
+2005-07-14T16:19:00.000Z	MidNightRaVeN	Danar	repo?
+2005-07-14T16:19:00.000Z	Danar	MidNightRaVeN	yeah. i don't use the categories though. it's easier to just search for what you're looking for, or apt-get it
+2005-07-14T16:19:00.000Z	Danar	MidNightRaVeN	repo = short for repository
+2005-07-14T16:21:00.000Z	MidNightRaVeN	Danar	do you know if it would be gxine?
+2005-07-14T16:21:00.000Z	Danar	MidNightRaVeN	that's the gnome xine interface
+2005-07-14T16:21:00.000Z	Danar	MidNightRaVeN	i prefer the regular xine
+2005-07-14T16:21:00.000Z	MidNightRaVeN	Danar	xine-ui then?
+2005-07-14T16:22:00.000Z	Danar	MidNightRaVeN	yeah
+2005-07-14T16:22:00.000Z	Danar	MidNightRaVeN	that would be xine User Interface
+2005-07-14T16:22:00.000Z	MidNightRaVeN	Danar	k, thx =) i tried Totem for some Dvds... and I dunno if it was my computer or totem, but they just wouldn't play so I'm gonna try xine first before going any further
+2005-07-14T16:23:00.000Z	Danar	MidNightRaVeN	i find xine is great with DVDs & CDs. it has buttons for that. just click & it plays
+2005-07-14T16:23:00.000Z	Danar	MidNightRaVeN	does the menus too, IIRC
+2005-07-14T16:23:00.000Z	MidNightRaVeN	Danar	do you know how to like rip straight to your drive?
+2005-07-14T16:24:00.000Z	MidNightRaVeN	Danar	so you can watch anytime ...
+2005-07-14T16:24:00.000Z	Danar	MidNightRaVeN	yeh, there's a bunch of apps for that. try searching
+2005-07-14T16:24:00.000Z	MidNightRaVeN	Danar	kk =)
+2005-07-14T16:24:00.000Z	Danar	MidNightRaVeN	handy sites: google.com/linux & www.sf.net
+2005-07-14T16:25:00.000Z	Danar	MidNightRaVeN	it's a library that lets your apps decode encrytped dvds
+2005-07-14T16:25:00.000Z	MidNightRaVeN	Danar	o... i'm guessing that xine should do that as well?
+2005-07-14T16:26:00.000Z	Danar	MidNightRaVeN	yeah
+2005-07-14T16:26:00.000Z	Danar	MidNightRaVeN	actually, i dunno if it uses that, cause i have it too
+2005-07-14T16:26:00.000Z	Danar	MidNightRaVeN	might do it on it's own though
+2005-07-14T16:26:00.000Z	MidNightRaVeN	Danar	i just got xine installed... so going to try it but how do you do repository stuff?
+2005-07-14T16:27:00.000Z	Danar	MidNightRaVeN	uh, what 'repository stuff'?
+2005-07-14T16:27:00.000Z	MidNightRaVeN	Danar	well.... you said you can download codecs from the repository?
+2005-07-14T16:27:00.000Z	Danar	MidNightRaVeN	yeh, do a search in description & name for codec
+2005-07-14T16:27:00.000Z	Danar	MidNightRaVeN	:p
+2005-07-14T16:28:00.000Z	MidNightRaVeN	Danar	lol thx =) i think I'm done bothering you for a bit ;-)
+2005-07-14T16:28:00.000Z	Danar	MidNightRaVeN	and see the link nalioths_dog posted for adding repositories
+2005-07-14T16:28:00.000Z	MidNightRaVeN	Danar	atleast for now ;-)
+2005-07-14T16:32:00.000Z	MidNightRaVeN	Danar	real quick question, how do i turn it so that Totem doens't start my DVDs up automatically?
+2005-07-14T16:33:00.000Z	Danar	MidNightRaVeN	hrm. that's probably a gnome setting. poke around in the menus
+2005-07-14T16:33:00.000Z	Danar	MidNightRaVeN	can't help much as i'm not on either gnome or ubuntu ATM
+2005-07-14T16:33:00.000Z	MidNightRaVeN	Danar	o, =) kk
+2005-07-14T16:42:00.000Z	Danar	MidNightRaVeN	might poke around in totem's settings actually...
+2005-07-14T16:42:00.000Z	MidNightRaVeN	Danar	yea... still looking and I'm not finding anything just yet...
+2005-07-14T05:06:00.000Z	Danar	MidNightRaVeN	if a folder or file is 'locked' then you don't have permissions because you either aren't the owner, or aren't root
+2005-07-14T05:07:00.000Z	Danar	MidNightRaVeN	just a note in case you don't know... never log in as root, except in a terminal, and only if necessary. use sudo instead
+2005-07-14T05:07:00.000Z	MidNightRaVeN	Danar	yea! see... how do you use sudo to open up the folder and create a codec folder inside?
+2005-07-14T05:08:00.000Z	Danar	MidNightRaVeN	if you want to create a sub folder, then in a terminal, put 'sudo mkdir foldername'
+2005-07-14T05:08:00.000Z	Danar	MidNightRaVeN	use the full path if you can't cd into that dir first
+2005-07-14T05:09:00.000Z	Danar	MidNightRaVeN	another handy tip if you don't know: use tab completion
+2005-07-14T05:10:00.000Z	Danar	MidNightRaVeN	sudo = Super User DO. ie, do as super user (root)
+2005-07-14T05:10:00.000Z	Danar	MidNightRaVeN	you can use it to run just about any command as root
+2005-07-14T05:11:00.000Z	MidNightRaVeN	Danar	i just haven't learned all the mkdir, and such commands yet...
+2005-07-14T05:11:00.000Z	Danar	MidNightRaVeN	yeh.. they're handy to know. use 'man' frequently
+2005-07-14T05:11:00.000Z	MidNightRaVeN	Danar	will do =) how do you extract files into the folder once you are ready though? with like the sudo command?
+2005-07-14T05:12:00.000Z	Danar	MidNightRaVeN	you can either change the permissions on the folder, or do it as root. as i said, you can run most commands as root with sudo: 'sudo command arguments'
+2005-07-14T05:13:00.000Z	Danar	MidNightRaVeN	see 'man sudo'
+2005-07-14T05:15:00.000Z	MidNightRaVeN	Danar	i just gotta find out what the sudo command is to extra files though
+2005-07-14T05:15:00.000Z	Danar	MidNightRaVeN	er, no. you need the command to extract files or whatever it is you're trying to do. then just put sudo in front of it to do it as root
+2005-07-14T05:16:00.000Z	MidNightRaVeN	Danar	oooo lol
+2005-07-14T05:16:00.000Z	MidNightRaVeN	Danar	k then.. i need to know the extract command for terminal =D
+2005-07-14T05:16:00.000Z	Danar	MidNightRaVeN	could be tar, unzip, unrar, etc
+2005-07-14T05:17:00.000Z	Danar	MidNightRaVeN	prolly tar. 'man tar'
+2005-07-14T05:17:00.000Z	MidNightRaVeN	Danar	yea, it just says .tar.bz2
+2005-07-14T05:17:00.000Z	Danar	MidNightRaVeN	is this your idea of ripping...?
+2005-07-14T05:18:00.000Z	Danar	MidNightRaVeN	you ought to be able to extract it in nautilus or something
+2005-07-14T05:18:00.000Z	Danar	MidNightRaVeN	you don't have to do everything in the terminal
+2005-07-14T05:18:00.000Z	Danar	MidNightRaVeN	oh yeah... no permissions
+2005-07-14T05:19:00.000Z	MidNightRaVeN	Danar	yea... but when i try to extract it in whatever progam Ubuntu uses... it says I don't have permission and I don't know how to get past it
+2005-07-14T05:22:00.000Z	Danar	MidNightRaVeN	did you check what's _in_ the file first?
+2005-07-14T05:23:00.000Z	Danar	MidNightRaVeN	are you sure it has the codecs, and only the codecs in them? might also have source, etc. IOW, things you don't need in /usr/lib
+2005-07-14T05:23:00.000Z	MidNightRaVeN	Danar	yea... and it has a readme that says to put all the files into /usr/local/lib/codecs
+2005-07-14T05:23:00.000Z	Danar	MidNightRaVeN	k
+2005-07-14T05:29:00.000Z	Danar	MidNightRaVeN	that's a confusing error, lol
+2005-07-14T05:30:00.000Z	Danar	MidNightRaVeN	ahem. shouldn't paste in here
+2005-07-14T05:30:00.000Z	Danar	MidNightRaVeN	there's rafb.net/paste and stuff liek that for pasting
+2005-07-14T05:32:00.000Z	Danar	MidNightRaVeN	did you use tab completion?
+2005-07-14T05:32:00.000Z	Danar	MidNightRaVeN	type the first few chars, and hit tab, and it completes it for you
+2005-07-14T05:32:00.000Z	MidNightRaVeN	Danar	yea... but now it says - r is an invalid option... is that right?? sudo mkir -r?
+2005-07-14T05:33:00.000Z	Danar	MidNightRaVeN	man mkdir :p
+2005-07-14T05:34:00.000Z	Danar	MidNightRaVeN	as you can see in 'man mkdir' there's no -r option
+2005-07-14T05:37:00.000Z	Danar	MidNightRaVeN	that's why tab completion helps. use it. frequently
+2005-07-14T05:37:00.000Z	MidNightRaVeN	Danar	did the second time around and that's the only reason i figured it out ;-)
+2005-07-14T05:40:00.000Z	Danar	MidNightRaVeN	yeh. copy & paste that
+2005-07-14T05:40:00.000Z	Danar	MidNightRaVeN	* is a wildcard
+2005-07-14T05:42:00.000Z	Danar	MidNightRaVeN	usually that means success. otherwise it gives an error/info message
+2005-07-14T05:42:00.000Z	MidNightRaVeN	Danar	kk
+2005-07-14T05:42:00.000Z	MidNightRaVeN	Danar	=)
+2005-07-14T11:32:00.000Z	Danar	MidNightRaVeN	64 if you can
+2005-07-14T11:32:00.000Z	MidNightRaVeN	Danar	kk...

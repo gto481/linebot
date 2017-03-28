@@ -1,0 +1,99 @@
+2009-02-12T07:35:00.000Z	dhruvasagar		Guys I have a weird problem!
+2009-02-12T07:36:00.000Z	dhruvasagar		I am here on Ubuntu 8.10 64bit version
+2009-02-12T07:36:00.000Z	dhruvasagar		if Ubuntu goes to sleep, it doesn't wake up properly I get errors while waking up and it doesnt start
+2009-02-12T07:37:00.000Z	soreau	dhruvasagar	Probably a video driver issue. Which one do you use?
+2009-02-12T07:38:00.000Z	dhruvasagar	soreau	wolter not sure...NVIDIA is my graphics driver...is it the same as Video driver?
+2009-02-12T07:39:00.000Z	dhruvasagar	soreau	so what can I do?
+2009-02-12T07:39:00.000Z	soreau	dhruvasagar	Either don't let the thing go to sleep or turn off visual effects. I found that screensavers make my nvidia machine crash
+2009-02-12T07:40:00.000Z	dhruvasagar	soreau	hmm
+2009-02-12T07:40:00.000Z	soreau	dhruvasagar	You can upgrade to 180 if it's an option in Sys>Admin>HW Drivers
+2009-02-12T07:41:00.000Z	dhruvasagar	soreau	177 is the highest version I see there...
+2009-02-12T07:42:00.000Z	soreau	dhruvasagar	Then disab;e power manager
+2009-02-12T07:42:00.000Z	dhruvasagar	soreau	ok will do that
+2009-02-12T07:46:00.000Z	soreau	dhruvasagar	The internet
+2009-02-12T07:46:00.000Z	dhruvasagar	soreau	lol, well I meant a particular website...
+2009-02-12T07:46:00.000Z	soreau	dhruvasagar	Read what ubottu said
+2009-02-12T07:47:00.000Z	dhruvasagar	soreau	I might have missed his message, I had got dc, I don't see any message from him about themes
+2009-02-12T07:48:00.000Z	soreau	dhruvasagar	Can you read that now?
+2009-02-12T07:49:00.000Z	dhruvasagar	soreau	yea
+2010-09-06T17:39:00.000Z	soreau	dhruvasagar	Does dmesg show anything interesting at this point?
+2010-09-06T17:42:00.000Z	dhruvasagar	soreau	what would be interesting? do you want to see the output !?
+2010-09-06T17:45:00.000Z	soreau	dhruvasagar	fusion-icon isnt going to help anything
+2010-09-06T17:45:00.000Z	dhruvasagar	soreau	hmm
+2010-09-06T17:45:00.000Z	dhruvasagar	soreau	any suggestions ?
+2010-09-06T17:45:00.000Z	soreau	dhruvasagar	Try this: Start compiz, then close all open windows and go to sys>prefs>startup>options and click remember currently running apps
+2010-09-06T17:46:00.000Z	dhruvasagar	soreau	hmmm
+2010-09-06T17:47:00.000Z	dhruvasagar	soreau	what about completely deleting /home/dhruva/.compiz/session folder !?
+2010-09-06T17:47:00.000Z	soreau	dhruvasagar	yea, it wont hurt to delete .compiz
+2010-09-06T17:50:00.000Z	soreau	dhruvasagar	Did you save the current session?
+2010-09-06T17:51:00.000Z	dhruvasagar	soreau	nope
+2010-09-06T17:51:00.000Z	dhruvasagar	soreau	I just deleted .compiz and reselected 'extra' visual effects & things seem to be back to normal
+2010-09-06T17:51:00.000Z	soreau	dhruvasagar	well it sounds like its fixed now
+2010-09-06T17:51:00.000Z	dhruvasagar	soreau	the only test now remains is to reboot and see if things will be normal on boot
+2010-09-06T17:51:00.000Z	soreau	dhruvasagar	I thought you already relogged in
+2010-09-06T17:52:00.000Z	dhruvasagar	soreau	well ok let me try t
+2010-09-06T18:12:00.000Z	soreau	dhruvasagar	Actually, you can enable metacity compositing
+2010-09-06T18:13:00.000Z	dhruvasagar	soreau	compositing ?
+2010-09-06T18:15:00.000Z	soreau	dhruvasagar	using gconf-editor, navigate to /apps/metacity/general/compositing_manager
+2010-09-06T18:15:00.000Z	soreau	dhruvasagar	this should enable metacity compositing, for basic shadows and transparency
+2010-09-06T18:15:00.000Z	dhruvasagar	soreau	checkin
+2010-09-06T18:17:00.000Z	dhruvasagar	soreau	ok, how do I switch to metacity from compiz ?
+2010-09-06T18:17:00.000Z	soreau	dhruvasagar	set the visual effects to None
+2010-09-06T18:18:00.000Z	dhruvasagar	soreau	done
+2010-09-06T18:18:00.000Z	dhruvasagar	soreau	the guake window is transparent, so does that mean transparency in metacity is working ?
+2010-09-06T18:18:00.000Z	soreau	dhruvasagar	yea
+2010-09-06T18:19:00.000Z	dhruvasagar	soreau	ok thanks a lot man, i'll reboot and confirm if things are fine at boot
+2010-09-06T18:19:00.000Z	soreau	dhruvasagar	It will only allow for programs that already have transparency support. It cant make any window transparent like compiz
+2010-09-06T18:19:00.000Z	dhruvasagar	soreau	ok
+2010-09-06T20:53:00.000Z	soreau	dhruvasagar	Did you try saving your session ?
+2010-09-06T20:54:00.000Z	dhruvasagar	soreau	how to save the session ?
+2010-09-06T20:55:00.000Z	soreau	dhruvasagar	Start compiz (or metacity), then close all open windows and go to sys>prefs>startup>options and click remember currently running apps
+2010-09-06T20:55:00.000Z	dhruvasagar	soreau	hmm ok and then reboot ?
+2010-09-06T20:56:00.000Z	soreau	dhruvasagar	just log out and back in to test
+2010-09-06T20:56:00.000Z	dhruvasagar	soreau	ok will try that out
+2010-09-06T20:56:00.000Z	dhruvasagar	soreau	although I have started to suspect that it could be a xorg problem...
+2010-09-06T20:56:00.000Z	soreau	dhruvasagar	it isnt.
+2010-09-06T20:56:00.000Z	dhruvasagar	soreau	hmm ok
+2010-09-06T20:56:00.000Z	soreau	dhruvasagar	It is a problem with gnome on ubuntu
+2010-09-06T20:57:00.000Z	dhruvasagar	soreau	right.
+2010-09-06T21:00:00.000Z	dhruvasagar	soreau	:( I did it, but still the same problem
+2010-09-06T21:02:00.000Z	soreau	dhruvasagar	Ok, what does it say for the gconf key /desktop/gnome/session/required_components/windowmanager?
+2010-09-06T21:03:00.000Z	dhruvasagar	soreau	it says compiz
+2010-09-06T21:03:00.000Z	soreau	dhruvasagar	well Im running out of ideas. Maybe its a permissions issue somehow
+2010-09-06T21:04:00.000Z	dhruvasagar	soreau	hmm I have been living with the issue for a long time, almost a month, so I am patient...
+2010-09-06T21:04:00.000Z	soreau	dhruvasagar	Is this an upgrade from a previous version of ubuntu?
+2010-09-06T21:04:00.000Z	dhruvasagar	soreau	yes
+2010-09-06T21:06:00.000Z	soreau	dhruvasagar	Only thing I can think of is try running the following (as your normal user in your terminal), then save the session again afterward: sudo chown $USER $HOME/.gconf*
+2010-09-06T21:06:00.000Z	soreau	dhruvasagar	sudo chown -R $USER $HOME/.gconf*
+2010-09-06T21:07:00.000Z	soreau	dhruvasagar	this should change the ownership to your regular user, for all directories in .gconf*, recursively
+2010-09-06T21:08:00.000Z	dhruvasagar	soreau	I know that much :)
+2010-09-06T21:08:00.000Z	dhruvasagar	soreau	ok, so I should try logging out and logging in again to test ?
+2010-09-06T21:09:00.000Z	soreau	dhruvasagar	well, run that command, then set to none, then back to extra, then save the session
+2010-09-06T21:09:00.000Z	soreau	dhruvasagar	then relogin to test
+2010-09-06T21:09:00.000Z	dhruvasagar	soreau	ok
+2010-09-06T21:11:00.000Z	dhruvasagar	soreau	:(
+2010-09-06T21:12:00.000Z	soreau	dhruvasagar	I dont know what is wrong then, sorry. I do recommend that you do a fresh install of ubuntu instead of upgrading, in the future though
+2010-09-06T21:13:00.000Z	dhruvasagar	soreau	np, thanks a lot for trying, but that's sad...
+2010-09-06T21:14:00.000Z	soreau	dhruvasagar	It is a bug that has plagued many for this ubuntu version, but usually saving the session works
+2010-09-06T21:15:00.000Z	dhruvasagar	soreau	ok, well I am sure, i'll be able to fix it soon though
+2010-09-06T21:15:00.000Z	dhruvasagar	soreau	I don't like the option of fresh install, will have to go through a lot of pain of installing a lot of applications :(
+2010-09-06T21:16:00.000Z	soreau	dhruvasagar	as a hack, you could add compiz --replace to the startup programs and see if that works
+2010-09-06T21:20:00.000Z	dhruvasagar	soreau	but it is not a compiz problem...I had switched to metacity as you had suggested and it was still the same...
+2010-09-06T21:22:00.000Z	soreau	dhruvasagar	I know it is not a compiz problem. I already told you, it is a problem with gnome + ubuntu 10.04
+2010-09-06T21:22:00.000Z	dhruvasagar	soreau	yea, but you asked me to try with compiz --replace ..
+2010-09-06T21:24:00.000Z	soreau	dhruvasagar	Oh right, that is something to try.. you might even try a script that does sleep 10; compiz --replace
+2010-09-06T21:24:00.000Z	soreau	dhruvasagar	and hopefully you put it in the right place, sys>prefs>startup apps
+2010-09-06T21:40:00.000Z	dhruvasagar	soreau	well I added a script in the startup, just as you suggested...it works
+2010-09-06T21:41:00.000Z	soreau	dhruvasagar	oh cool
+2010-09-06T21:41:00.000Z	dhruvasagar	soreau	can I run a script after this script in the startup ?
+2010-09-06T21:42:00.000Z	dhruvasagar	soreau	btw, thanks a lot again :)
+2010-09-06T21:42:00.000Z	soreau	dhruvasagar	You can, but if you want ordering control, you should probably use the same script
+2010-09-06T21:42:00.000Z	dhruvasagar	soreau	I did, I added this in the script : sleep 5; compiz --replace; guake
+2010-09-06T21:42:00.000Z	dhruvasagar	soreau	but guake doesn't seem to run...
+2010-09-06T21:43:00.000Z	dhruvasagar	soreau	I mean it doesn't run...
+2010-09-06T21:43:00.000Z	soreau	dhruvasagar	That is because compiz never exits, and that code waits until each command completes before running the next one
+2010-09-06T21:44:00.000Z	soreau	dhruvasagar	If it doesnt matter if it starts before compiz, I say make a separate startup entry
+2010-09-06T21:44:00.000Z	soreau	dhruvasagar	If you need it to start after compiz, you probably want dpac_s suggestion
+2010-09-06T21:44:00.000Z	dhruvasagar	soreau	I had a separate entry for it, but the thing is, guake transparency doesn't work, unless it starts after the compiz --replace
+2010-09-06T21:45:00.000Z	dhruvasagar	soreau	yea I will try the dpac_ solution...
+2010-09-06T21:46:00.000Z	dhruvasagar	soreau	I will try my best and help others here, your help & patience is really appreciated!

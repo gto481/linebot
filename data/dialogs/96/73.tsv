@@ -1,0 +1,96 @@
+2005-12-07T06:43:00.000Z	snorks		which is best
+2005-12-07T06:44:00.000Z	snorks		hows running a DC with AD in wmware on a linux comp using smb with ldap to simulate AD?
+2005-12-07T06:45:00.000Z	czr	snorks	what would you run DC and also simulate it at the same time?
+2005-12-07T06:45:00.000Z	czr	snorks	vmware runs any OS on a virtual machine
+2005-12-07T06:46:00.000Z	snorks	czr	Yes. I would like to see it
+2005-12-07T06:46:00.000Z	czr	snorks	please rephrase what you want to run then. it doesn't make much sense to me :-)
+2005-12-07T06:46:00.000Z	snorks	czr	Its not supposed to make sense
+2005-12-07T06:46:00.000Z	czr	snorks	touche :-)
+2005-12-07T06:46:00.000Z	snorks	czr	I would also like to activate dhcp on same netid juts for fun
+2005-12-07T06:46:00.000Z	czr	snorks	go and download vmware workstation and get the 30 day eval license from vmware.com
+2005-12-07T06:47:00.000Z	czr	snorks	and have your windows install CDs handy
+2005-12-07T06:47:00.000Z	snorks	czr	hehe yep :)
+2005-12-07T06:47:00.000Z	czr	snorks	if you ever end up building large enterprise virtual server systems, stick with vmware ;-)
+2005-12-07T06:48:00.000Z	snorks	czr	We made (the teacher) a legit win server 2k03 vmware image today. Sucks we can't take it home
+2005-12-07T06:48:00.000Z	czr	snorks	just use the "real" version (ESX)
+2005-12-07T06:48:00.000Z	snorks	czr	I have not heard of that.
+2005-12-07T06:48:00.000Z	czr	snorks	well, as I said, I don't need windows for anything, so I don't really feel the pain
+2005-12-07T06:48:00.000Z	czr	snorks	spend some 500k$ on storage (SAN), spend some 200k$ on blade server, spend some 100k$ on vmware, then you have ha/failover-whatever
+2005-12-07T06:49:00.000Z	snorks	czr	If I was a gamer or a musician I'd like windows. But I  quit gaming, and I don't have any electric guitars laying around, so :p
+2005-12-07T06:49:00.000Z	czr	snorks	I use xbox for gaming ;-)
+2005-12-07T06:49:00.000Z	czr	snorks	and music-wise I feel your pain. I've still to find good software that will work for my needs
+2005-12-07T06:49:00.000Z	snorks	czr	I use my CCNA book for gaming currently... working on my bachelor in network adm and security
+2005-12-07T06:50:00.000Z	czr	snorks	what kind of net adm?
+2005-12-07T06:50:00.000Z	snorks	czr	im still in my first year
+2005-12-07T06:50:00.000Z	snorks	czr	im not sure what you mean by that question... whatever the job I apply for requires?
+2005-12-07T06:50:00.000Z	czr	snorks	np :-). ah, I thought you were working on some network management software ;-)
+2005-12-07T06:51:00.000Z	snorks	czr	No :) I'm doing bachelor of network management and security, and I plan to top it off with a masters
+2005-12-07T06:51:00.000Z	czr	snorks	because that's my hobby nowadays, that's why I asked
+2005-12-07T06:51:00.000Z	snorks	czr	Ah, that is interesting. Got any url or something so I can look at it some time?
+2005-12-07T06:51:00.000Z	czr	snorks	build a L2-transparent NAT:ting firewall with custom linux distro, that will teach you a lot ;-)
+2005-12-07T06:52:00.000Z	snorks	czr	heh, i still need to master cisco wildcars (!#%@!#@)
+2005-12-07T06:52:00.000Z	czr	snorks	nothing complete/worth showing yet. as I said, it's a hobby. not sure whether I will open source it.
+2005-12-07T06:52:00.000Z	snorks	czr	wildcards
+2005-12-07T06:52:00.000Z	czr	snorks	IOS is ok once you get used to it :-) just need practice with real environments
+2005-12-07T06:53:00.000Z	snorks	czr	I feel I master most of the CCNA requirements when it comes to equipment, but wildcards is just a little hard
+2005-12-07T06:53:00.000Z	snorks	czr	off head that is... can always cheat
+2005-12-07T06:53:00.000Z	czr	snorks	CCNA didn't have wildcards when I did it
+2005-12-07T06:53:00.000Z	czr	snorks	so I wouldn't know :-)
+2005-12-07T06:53:00.000Z	snorks	czr	Ah ok :-)
+2005-12-07T06:54:00.000Z	snorks	czr	Well, think subnetting (or maybe reverse subnetting) with extensive use of block sizes. Again, it's easy if you wanna cheat
+2005-12-07T06:54:00.000Z	snorks	czr	if there is such a word
+2005-12-07T06:54:00.000Z	snorks	czr	It's hard to explain
+2005-12-07T07:12:00.000Z	snorks	czr	you get my point
+2005-12-07T06:57:00.000Z	czr	snorks	most other vendors use similar interfaces nowadays for managed network stuff
+2005-12-07T06:59:00.000Z	snorks	czr	without wildcards, how did you set a certain range of IP addresses to permit/deny in cisco ACLs?
+2005-12-07T07:01:00.000Z	snorks	czr	Thanks for pointing out stuff I really need to work on :) Have some kind of exam 16th dec
+2005-12-07T07:02:00.000Z	czr	snorks	get a prep book for CCNA if you're feeling shaky
+2005-12-07T07:02:00.000Z	czr	snorks	sybex had a decent one. just make sure the prep book is not out of date wrt the CCNA exam numbers
+2005-12-07T07:02:00.000Z	snorks	czr	I have the latest sybex ccba study guide
+2005-12-07T07:03:00.000Z	snorks	czr	it's not a ccna tho, it's a self-made exam in my school about general networking and some cisco management
+2005-12-07T07:03:00.000Z	snorks	czr	however, I still want to ace it
+2005-12-07T07:03:00.000Z	czr	snorks	ah. then I really don't know whether the prep book helps. do you get CCNA certification from the school then?
+2005-12-07T07:04:00.000Z	czr	snorks	or are you taking the 'cisco academy' thingy?
+2005-12-07T07:04:00.000Z	snorks	czr	Neither
+2005-12-07T07:04:00.000Z	snorks	czr	I'm from norway. We can do 2 years here, which are fully accredited at Univ. of Glamorgans' Bachelor of Network Management and Security
+2005-12-07T07:04:00.000Z	snorks	czr	then 3rd year is in Wales
+2005-12-07T07:05:00.000Z	czr	snorks	right. good for you :-)
+2005-12-07T07:05:00.000Z	czr	snorks	just do something useful with your time. don't leave it at CCNA :-). ccna is too common to be of any use
+2005-12-07T07:05:00.000Z	snorks	czr	So these 2 years holds no nationalized tests. Just stuff to prepare us for year 3
+2005-12-07T07:05:00.000Z	snorks	czr	errr. international
+2005-12-07T07:06:00.000Z	czr	snorks	how long is the program if one wants to do masters?
+2005-12-07T07:06:00.000Z	snorks	czr	4 years if you wanna spend year 4 doing nothing but masters. Most, however, chose 5 years
+2005-12-07T07:06:00.000Z	czr	snorks	heh ok. I'm on my 9th year at school ;-)
+2005-12-07T07:06:00.000Z	snorks	czr	A nice thing is that MI5 recruits master-doers from that univ
+2005-12-07T07:07:00.000Z	czr	snorks	you need to get a life ;-)
+2005-12-07T07:08:00.000Z	snorks	czr	hehe
+2005-12-07T07:08:00.000Z	czr	snorks	it's not that exciting. especially if you're using wrong terminology ;-) (hacker = computer enthusiast, cracker = people who crack into other ppls' systems)
+2005-12-07T07:08:00.000Z	snorks	czr	Well, I was a loser at my previous schools. You know thos common high schools and stuff. Didn't interest me at all. But networking really makes me shine
+2005-12-07T07:09:00.000Z	czr	snorks	and if this would have been a channel not related to unix/linux anyway, I would have let the 'hacker' pass ;-)
+2005-12-07T07:09:00.000Z	czr	snorks	wait until you start thinking about queue-theory in QoS. that will make you wish that you would have been more interested in math before :-)
+2005-12-07T07:09:00.000Z	czr	snorks	networking is quite fun at the start
+2005-12-07T07:09:00.000Z	snorks	czr	Well, I've tried saying cracker in real life. And people are like "what?". So I've stopped
+2005-12-07T07:10:00.000Z	czr	snorks	you need to select the correct word depending on who you say it to :-)
+2005-12-07T07:10:00.000Z	snorks	czr	But I'm well aware of it
+2005-12-07T07:10:00.000Z	czr	snorks	good :-). we need to educate people ;-)
+2005-12-07T07:11:00.000Z	czr	snorks	if you speak to people on a linux-related channel, that is a big clue :-)
+2005-12-07T07:12:00.000Z	snorks	czr	#ubuntu, sure?
+2005-12-07T07:12:00.000Z	czr	snorks	#ubuntu has something to do with linux, I think ;-)
+2005-12-07T07:15:00.000Z	snorks	czr	I haven't used vmware very much, but how good is it?
+2005-12-07T07:16:00.000Z	czr	snorks	it is good
+2005-12-07T07:16:00.000Z	snorks	czr	Thanks :) Just the answer I wanted
+2005-12-07T07:16:00.000Z	czr	snorks	best virtualization software for x86
+2005-12-07T07:16:00.000Z	czr	snorks	except for fringe cases
+2005-12-07T07:17:00.000Z	czr	snorks	if you'd want to run linux under linux, then probably uml or xen might be enough
+2005-12-07T07:17:00.000Z	snorks	czr	the vmware client for linux, it's good aswell?
+2005-12-07T07:17:00.000Z	czr	snorks	but setting them up requires quite a lot of tinkering. vmware is simple and easy
+2005-12-07T07:17:00.000Z	czr	snorks	err, not vmware client. just vmware :-)
+2005-12-07T07:17:00.000Z	czr	snorks	runs better on linux than on windows because windows is unstable anyway (based on my 6 years vmware experience at least)
+2005-12-07T07:18:00.000Z	snorks	czr	Ok, nice :-)
+2005-12-07T07:31:00.000Z	czr	snorks	http://koltsoff.com/wtf2.png
+2005-12-07T07:45:00.000Z	snorks	czr	your thoughts of windows vista ?
+2005-12-07T07:45:00.000Z	czr	snorks	I don't think about windows. I have interesting stuff to think about.
+2005-12-07T07:45:00.000Z	snorks	czr	lol, like a bot reply
+2005-12-07T07:46:00.000Z	czr	snorks	but it is true :-)
+2005-12-07T07:47:00.000Z	snorks	czr	But really :/
+2005-12-07T07:47:00.000Z	czr	snorks	I don't think about it. it doesn't contain anything interesting

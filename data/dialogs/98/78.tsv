@@ -1,0 +1,98 @@
+2005-07-31T12:12:00.000Z	bluefoxicy		what's a quick way to find out my actual CPU speed
+2005-07-31T12:12:00.000Z	cafuego	bluefoxicy	cat /proc/cpuinfo
+2005-07-31T12:12:00.000Z	bluefoxicy	cafuego	proc/cpuinfo says my 2800+ Athlon64 newcastle is 1005MHz
+2005-07-31T12:12:00.000Z	cafuego	bluefoxicy	it's throttling, then.
+2005-07-31T12:12:00.000Z	bluefoxicy	cafuego	?
+2005-07-31T12:13:00.000Z	cafuego	bluefoxicy	At full speed it will do 1809 MHz
+2005-07-31T12:13:00.000Z	cafuego	bluefoxicy	If it's got nothing to do, it will underclock itself.
+2005-07-31T12:13:00.000Z	bluefoxicy	cafuego	 wow that actually works now?
+2005-07-31T12:13:00.000Z	bluefoxicy	cafuego	 this is a desktop
+2005-07-31T12:13:00.000Z	cafuego	bluefoxicy	Yeah.
+2005-07-31T12:13:00.000Z	cafuego	bluefoxicy	I have an 2800+ too, does the same thing.
+2005-07-31T12:14:00.000Z	bluefoxicy	cafuego	 so if it's gonna relax, why doesn't it relax at 200Mhz?
+2005-07-31T12:14:00.000Z	cafuego	bluefoxicy	Ask AMd, they designed which speeds it should run at...
+2005-07-31T12:15:00.000Z	cafuego	bluefoxicy	The mobile CPUs go lower, my laptop for instance staps between 2GHz and 500 MHz
+2005-07-31T12:15:00.000Z	bluefoxicy	cafuego	 interesting.
+2005-07-31T12:16:00.000Z	bluefoxicy	cafuego	 my box is a 300 watt microatx ;)
+2005-07-31T12:16:00.000Z	bluefoxicy	cafuego	 think I got enough to drop in a Radeon x850?
+2005-07-31T12:16:00.000Z	cafuego	bluefoxicy	I expect so.
+2005-07-31T12:16:00.000Z	cafuego	bluefoxicy	No! No!
+2005-07-31T12:16:00.000Z	cafuego	bluefoxicy	The ATI drivers *suck* on amd64.
+2005-07-31T12:16:00.000Z	bluefoxicy	cafuego	 microatx makes a lot of difference in power usage
+2005-07-31T12:17:00.000Z	cafuego	bluefoxicy	Choose an nvidia card, their drivers work fine.
+2005-07-31T12:17:00.000Z	bluefoxicy	cafuego	 nVidia dissappoints me.
+2005-07-31T12:17:00.000Z	cafuego	bluefoxicy	But it will at least _work_
+2005-07-31T12:17:00.000Z	bluefoxicy	cafuego	 the latest nvidia cards and drivers I hear actually freeze when entering opengl mode; though the last person tried to fix that by updating the drivers, and they froze when starting X
+2005-07-31T12:18:00.000Z	cafuego	bluefoxicy	Mione isn't a "latest" card - 5700 TDH - which works absolutely fine.
+2005-07-31T12:18:00.000Z	bluefoxicy	cafuego	 besides that, nvidia shit will suddenly stop working when I deploy my OS, as they stop working on any properly secure linux distribution.
+2005-07-31T12:19:00.000Z	bluefoxicy	cafuego	 implementing a memory protection policy causes the glx drivers to fuck themselves as they try to generate code at runtime.
+2005-07-31T12:19:00.000Z	cafuego	bluefoxicy	My point is that (afaik) ATI has *no* working amd64 drivers.
+2005-07-31T12:19:00.000Z	cafuego	bluefoxicy	it's not a "foo is better than bar" issue.
+2005-07-31T12:19:00.000Z	bluefoxicy	cafuego	 *shrug*
+2005-07-31T12:19:00.000Z	cafuego	bluefoxicy	it's a "foo works, bar doesn't, at all" issue
+2005-07-31T12:20:00.000Z	bluefoxicy	cafuego	 ATi has working open source drivers that get 3D up to the 9400
+2005-07-31T12:20:00.000Z	bluefoxicy	cafuego	 and they're actively maintained.
+2005-07-31T12:20:00.000Z	cafuego	bluefoxicy	You talking about fglrx?
+2005-07-31T12:20:00.000Z	bluefoxicy	cafuego	no, I'm talking about the xorg standard ones you get with 'radeon' that got my quake3 working on my laptop with only open source drivers.
+2005-07-31T12:21:00.000Z	cafuego	bluefoxicy	*nod* I have that one on my laptop as well.
+2005-07-31T12:21:00.000Z	cafuego	bluefoxicy	a "latest" catd isn't going to work with that driver and the proprietary one doesn't (last I heard) even exist for amd64.
+2005-07-31T12:21:00.000Z	bluefoxicy	cafuego	 I don't need 3D yet anyway though, i'm on a via chipset without 3D
+2005-07-31T12:21:00.000Z	bluefoxicy	cafuego	 the proprietary nvidia driver still generates code at runtime.
+2005-07-31T12:22:00.000Z	cafuego	bluefoxicy	At least it _works_.
+2005-07-31T12:22:00.000Z	bluefoxicy	cafuego	 when I'm done, that won't be possible without explicitly removing security protections on the affected binary.
+2005-07-31T12:22:00.000Z	bluefoxicy	cafuego	 bzflag and blender don't even get the splash screen up in hardened gentoo unless you use open source xorg drivers ;)
+2005-07-31T12:23:00.000Z	cafuego	bluefoxicy	If you're security conscious you won't be running X at all <heh>
+2005-07-31T12:23:00.000Z	bluefoxicy	cafuego	 I'm using my gathered knowledge to design a hyper-secure, ultrauserfriendly OS based on linux
+2005-07-31T12:24:00.000Z	bluefoxicy	cafuego	 the hardened gentoo team did a good job with theirs, but it's slightly bulky on the administration side.
+2005-07-31T12:24:00.000Z	cafuego	bluefoxicy	Stop talking about gentoo to me.
+2005-07-31T12:24:00.000Z	bluefoxicy	cafuego	 next thing you're going to tell me is to stop talking about niggers to you?
+2005-07-31T12:25:00.000Z	bluefoxicy	cafuego	 I don't understand peoples' immature display of their personal insecurities when certain topics are brought up.
+2005-07-31T12:27:00.000Z	bluefoxicy	cafuego	 wake up and answer me before I completely splatter you against the channel walls.
+2005-07-31T12:28:00.000Z	bluefoxicy	cafuego	 Go home and come back online when you reach puberty kid.=
+2005-08-02T13:40:00.000Z	bluefoxicy	cafuego	 I don't have that kind of problem.  I have 10 gig for / and the rest /home.  If I have a system problem (hey I run breezy!) I just reinstall.
+2005-08-13T07:10:00.000Z	bluefoxicy	cafuego	 no not that kind of outline
+2005-08-13T07:14:00.000Z	bluefoxicy	cafuego	 there was some app on gpe that did outlines, it had a lightbulb for an icon and stuff, could collapse sections. . .
+2005-09-21T12:16:00.000Z	bluefoxicy	cafuego	 don't package gaim-vv
+2005-09-21T12:17:00.000Z	bluefoxicy	cafuego	 it's experimental and when it's ready it will be merged back into gaim.
+2005-09-21T12:17:00.000Z	bluefoxicy	cafuego	 it has to be a linux program.
+2005-09-21T12:17:00.000Z	bluefoxicy	cafuego	 if it's windows it doesn't run.
+2005-09-21T12:18:00.000Z	bluefoxicy	cafuego	lol
+2005-09-21T12:18:00.000Z	bluefoxicy	cafuego	 gaim-vv was forked by the gaim developers and is a side project run by the gaim developers because implementing the vv changes is intrusive and breaks shit
+2005-09-21T12:19:00.000Z	bluefoxicy	cafuego	 it's like an "experimental" branch, like i.e. Gimp 1.3 was, except that it's only work on a feature that will take a while to develop
+2005-09-21T12:20:00.000Z	bluefoxicy	cafuego	 The gaim devs work in mysterious ways.  :o  Also protocols like AIM and YIM and MSN with camera support are being altered, do you see a problem with breaking these?  :)
+2005-09-26T11:30:00.000Z	bluefoxicy	cafuego	 might be a good idea to make a baseline security tool
+2005-09-26T11:30:00.000Z	bluefoxicy	cafuego	that does that and a few other things
+2006-01-15T16:26:00.000Z	bluefoxicy	cafuego	 dude, do we have to tweak out our ubuntus?
+2006-01-27T13:54:00.000Z	cafuego	bluefoxicy	I've not had problems with any of the cd's I've ordered.
+2006-01-27T13:55:00.000Z	bluefoxicy	cafuego	 closer examination shos my HP laptop has a DVD drive that has an easier time with burned CDs
+2006-01-27T13:55:00.000Z	cafuego	bluefoxicy	Hmmm. HP laptop.
+2006-01-27T14:01:00.000Z	bluefoxicy	cafuego	 I just want to be able to say I have 6 OSes on my laptop and not say they're all Linux :)
+2006-01-27T13:55:00.000Z	cafuego	bluefoxicy	I don't my next one's going to be an HP.
+2006-01-27T13:56:00.000Z	bluefoxicy	cafuego	 I have a dapper live here i'll write out.
+2006-01-27T13:57:00.000Z	bluefoxicy	cafuego	 i'm trying to use gparted to hack around at my drive to make room for Ubuntu/Darwin and Nexenta ;)
+2006-01-27T13:57:00.000Z	bluefoxicy	cafuego	 don't ask how I'm going to make ubuntu work on darwin -- I haven't figured that out, perhaps some sort of "recompile" thingy
+2006-01-27T13:58:00.000Z	cafuego	bluefoxicy	Ubuntu on darwin?
+2006-01-27T13:59:00.000Z	bluefoxicy	cafuego	 opendarwin.org ?  :)
+2006-01-27T13:59:00.000Z	bluefoxicy	cafuego	 or gnu-darwin.sf.net (gnu-darwin is a trash pile -- they don't have install downloads, you have to BUY a CD)
+2006-01-27T14:00:00.000Z	bluefoxicy	cafuego	 Same deal, +ubuntu
+2006-01-27T14:00:00.000Z	cafuego	bluefoxicy	Hmmyeah, last I tried darwin (1.4.1) it didn't support half my hardware.
+2006-01-27T14:00:00.000Z	bluefoxicy	cafuego	 I"m not seeing a way to do it right now ;)
+2006-01-27T14:01:00.000Z	bluefoxicy	cafuego	 darwin 8.4 is out :O
+2006-01-27T14:01:00.000Z	cafuego	bluefoxicy	I'll stick to OSX 10.4 ;-)
+2006-01-27T14:01:00.000Z	bluefoxicy	cafuego	 OSX is built on darwin
+2006-01-27T14:01:00.000Z	cafuego	bluefoxicy	yes, I know
+2006-01-27T14:02:00.000Z	bluefoxicy	cafuego	 oh fucking holy jesus of sweet bobobo-bo bo-bobo what the hell!  Dude the dapper LIveCD is the second coming of Christ!
+2006-01-27T14:02:00.000Z	cafuego	bluefoxicy	I run dapper i386 on my box.
+2006-01-27T14:02:00.000Z	bluefoxicy	cafuego	 the livecd just drew a windows style window during kernel load, what the hell boot loader is that
+2006-01-27T14:03:00.000Z	bluefoxicy	cafuego	 I want this mojo on our install base :D
+2006-01-27T14:03:00.000Z	cafuego	bluefoxicy	Last I tried, it only did that on the first dialog.. then it reverted to `dialog'.
+2006-01-27T14:03:00.000Z	bluefoxicy	cafuego	 it does it in the BOOT LOADER!  whoever is making livecds more advanced than installed systems needs a beating.
+2006-01-27T14:04:00.000Z	cafuego	bluefoxicy	Well... it COULD just be a stealthily crafted bootsplash
+2006-01-27T14:04:00.000Z	bluefoxicy	cafuego	 during "Loading Linux"?  (while loading the kernel)
+2006-01-27T14:04:00.000Z	cafuego	bluefoxicy	Prolly.
+2006-01-27T14:06:00.000Z	bluefoxicy	cafuego	 the livecd printed kernel debugging info everywhere, then entered gnome :>
+2006-01-27T14:06:00.000Z	cafuego	bluefoxicy	neet :-)
+2006-01-27T14:06:00.000Z	bluefoxicy	cafuego	 dual kernels?
+2006-01-27T14:06:00.000Z	bluefoxicy	cafuego	 I'm pretty sure that was a kernel stack trace I saw.
+2006-02-19T09:10:00.000Z	cafuego	bluefoxicy	does it?
+2006-02-19T09:11:00.000Z	bluefoxicy	cafuego	 something about keyboards

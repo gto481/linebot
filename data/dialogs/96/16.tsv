@@ -1,0 +1,96 @@
+2010-04-13T14:54:00.000Z	knoppies	Jimi_Neutral	not necessarily. Each adapter would get its own IP from the DHCP server, even if they are using the same DHCP server.
+2010-04-13T14:55:00.000Z	Jimi_Neutral	knoppies	yeah just realised that lol
+2010-04-13T14:55:00.000Z	Jimi_Neutral	knoppies	cause i have done it myself at work, im a muppet
+2010-04-13T14:56:00.000Z	knoppies	Jimi_Neutral	are you talking about a mysql root password??
+2010-04-13T14:56:00.000Z	Jimi_Neutral	knoppies	yeah
+2010-04-13T14:57:00.000Z	Jimi_Neutral	knoppies	root@localhost and i have the password saved int he browser form and I have it written down so i have not forgotten it
+2010-04-13T14:57:00.000Z	knoppies	Jimi_Neutral	so then what is your problem? (I was going to find a tut that explained how to reset the root password)
+2010-04-13T14:59:00.000Z	Jimi_Neutral	knoppies	when i go phpmyadmin i get this error with the saved user and pass....#1405 - Access denied for user 'root'@'localhost' (using password: YES) then at the bottomit says Connection for controluser as defined in your configuration failed.....im trying to install Plogger
+2010-04-13T15:00:00.000Z	knoppies	Jimi_Neutral	I dont know what Plogger is (and you dont have to explain it), and I gave up on phpmyadmin because I had no luck with it the few times I tried to use it.
+2010-04-13T15:00:00.000Z	Jimi_Neutral	knoppies	well i installed it fine and have used it fine....went away fro a while, come back to it and the saved usernad pass no longer works
+2010-04-13T15:01:00.000Z	knoppies	Jimi_Neutral	can you edit the saved user and pass?
+2010-04-13T15:02:00.000Z	Jimi_Neutral	knoppies	i have no idea how to, still a newb to linux and mysql
+2010-04-13T15:03:00.000Z	knoppies	Jimi_Neutral	that makes two of us.
+2010-04-13T15:04:00.000Z	Jimi_Neutral	knoppies	this is typical i tell ya, i go away for a while and everythign is fucked whe i get back
+2010-04-13T15:04:00.000Z	knoppies	Jimi_Neutral	anybody else been using the PC?
+2010-04-13T15:06:00.000Z	knoppies	Jimi_Neutral	maybe, removing users sounds like the lethal injection.
+2010-04-13T15:06:00.000Z	knoppies	Jimi_Neutral	can you still log into the mysql cli?
+2010-04-13T15:07:00.000Z	Jimi_Neutral	knoppies	i dont know how, i have only used the browser to log into phpmyadmin
+2010-04-13T15:07:00.000Z	knoppies	Jimi_Neutral	mysql -u root -p
+2010-04-13T15:08:00.000Z	Jimi_Neutral	knoppies	no that gives me no access
+2010-04-13T15:08:00.000Z	Jimi_Neutral	knoppies	thats basically the same as going through the web browser but with a terminal instead
+2010-04-13T15:08:00.000Z	knoppies	Jimi_Neutral	Im going to try find that tut, see if it helps.
+2010-04-13T15:08:00.000Z	Jimi_Neutral	knoppies	ok ty, you aer a star
+2010-04-13T15:10:00.000Z	knoppies	Jimi_Neutral	https://help.ubuntu.com/community/MysqlPasswordReset you can try that, I dont know if it will help.
+2010-04-13T15:13:00.000Z	Jimi_Neutral	knoppies	ty i will give it a go
+2010-04-13T15:19:00.000Z	Jimi_Neutral	knoppies	lol that tut just told me to put a line that made sql run with the skip grant tables option...so i did that and then when i went to do SET PASSWORD it said it cant do it cause it is running with the skip grant tables option enabled hahahaha, mate dont you just love linux
+2010-04-13T15:26:00.000Z	Jimi_Neutral	knoppies	will you marry me lol
+2010-04-13T15:26:00.000Z	Jimi_Neutral	knoppies	it works bud, ty very muchly
+2010-04-13T15:36:00.000Z	knoppies	Jimi_Neutral	my pleasure. Im glad I could help.
+2010-04-13T15:53:00.000Z	knoppies	Jimi_Neutral	it sounds like you have to set up your apache server (or whatever you are using for your HTTP server) to parse the PHP.
+2010-04-13T15:53:00.000Z	Jimi_Neutral	knoppies	eh? lol
+2010-04-13T15:54:00.000Z	Jimi_Neutral	knoppies	it is apache
+2010-04-13T15:55:00.000Z	knoppies	Jimi_Neutral	https://help.ubuntu.com/community/ApacheMySQLPHP
+2010-04-13T15:55:00.000Z	knoppies	Jimi_Neutral	Im anti microsoft so I wouldnt say thats a bad thing.
+2010-04-13T15:55:00.000Z	Jimi_Neutral	knoppies	yes I have installed LAMP
+2010-04-13T15:56:00.000Z	knoppies	Jimi_Neutral	scroll down that tut for the "troubleshoot" part
+2010-04-13T15:59:00.000Z	Jimi_Neutral	knoppies	thats not really making much sense to a newb like me im afraid, ty for trying tho
+2010-04-13T16:01:00.000Z	knoppies	Jimi_Neutral	do you want me to try and explain?
+2010-04-13T16:02:00.000Z	Jimi_Neutral	knoppies	yeah sure....to be honest knoppies I dont really want to learn any of this, im just doing what im told using an O/S I have no idea about. I dont have time to read manuals and stuff, if it isnt done asap then i get moaned at.
+2010-04-13T16:02:00.000Z	knoppies	Jimi_Neutral	have a look at this (this time I scrolled it down for you): https://help.ubuntu.com/community/ApacheMySQLPHP#Troubleshooting%20PHP%205
+2010-04-13T16:03:00.000Z	knoppies	Jimi_Neutral	I assume its asking for you to download the .php files, rather than displaying them like it should??
+2010-04-13T16:03:00.000Z	Jimi_Neutral	knoppies	yuppers
+2010-04-13T16:03:00.000Z	knoppies	Jimi_Neutral	that link will tell you how to fix it.
+2010-04-13T16:03:00.000Z	knoppies	Jimi_Neutral	should take 4 CLI commands.
+2010-04-13T16:04:00.000Z	Jimi_Neutral	knoppies	rgr, on it now
+2010-04-13T16:09:00.000Z	Jimi_Neutral	knoppies	well so far it was installed and enabled and has made no difference, doing an update just in case
+2010-04-13T16:09:00.000Z	knoppies	Jimi_Neutral	k.
+2010-04-13T16:19:00.000Z	Jimi_Neutral	knoppies	nope, all that was installed fine but it is still not running the script
+2010-04-13T16:20:00.000Z	knoppies	Jimi_Neutral	I assume you are trying to access the file using localhost (or the IP/name of the server) and not just opening the .php file in your browser?
+2010-04-13T16:21:00.000Z	Jimi_Neutral	knoppies	never assume lol....yes I am trying to do that cause that what it says in the readme....."Run the install script _install.php in the web browser of your choice"
+2010-04-13T16:21:00.000Z	Jimi_Neutral	knoppies	i am actually working with the server....im not remoting into it
+2010-04-13T16:23:00.000Z	knoppies	Jimi_Neutral	Im not sure what install script you are reffering to. To access a php file you have to do it through the apache webserver. You do this by placing the .php file inside the www folder you have setup (I cant remember what the default folder is, but its something like /var/www/) and then accessing it by typing localhost into your browser. If you are not on the same machine as the webserver, then you must type in the IP/host
+2010-04-13T16:23:00.000Z	knoppies	Jimi_Neutral	I dont mean to offend you, but your answer was vague.
+2010-04-13T16:24:00.000Z	Jimi_Neutral	knoppies	its the plooger install script. Do all the plogger files have to be in root of /www cause i have put them in a folder within /www
+2010-04-13T16:25:00.000Z	knoppies	Jimi_Neutral	as long as its inside www it doesnt matter what folder its in. but then you need to browse to it using localhost/path/to/file.php
+2010-04-13T16:25:00.000Z	Jimi_Neutral	knoppies	ahhhh ok, brb
+2010-04-13T16:28:00.000Z	Jimi_Neutral	knoppies	ok browsed to it with firefox, there was the link for it to execute it along with all the other files, did that and it STILL is trying to open it with a program
+2010-04-13T16:30:00.000Z	knoppies	Jimi_Neutral	you said earlier that you had libapache2-mod-php5 installed, am I correct?
+2010-04-13T16:30:00.000Z	Jimi_Neutral	knoppies	that is correct
+2010-04-13T16:30:00.000Z	knoppies	Jimi_Neutral	did you try: sudo a2enmod php5
+2010-04-13T16:31:00.000Z	Jimi_Neutral	knoppies	yup
+2010-04-13T16:31:00.000Z	knoppies	Jimi_Neutral	and then you restarted the server with sudo /etc/init.d/apache2 restart
+2010-04-13T16:31:00.000Z	Jimi_Neutral	knoppies	yup yup
+2010-04-13T16:31:00.000Z	knoppies	Jimi_Neutral	ok, Lets try something else. Im going to pastebin a php file. give me a sec
+2010-04-13T16:32:00.000Z	Jimi_Neutral	knoppies	rgr
+2010-04-13T16:34:00.000Z	knoppies	Jimi_Neutral	http://paste.ubuntu.com/413600/
+2010-04-13T16:34:00.000Z	knoppies	Jimi_Neutral	that is a .php file (I call it phpinfo.php) create it and then browse to it, see what happens.
+2010-04-13T16:35:00.000Z	Jimi_Neutral	knoppies	create it?
+2010-04-13T16:36:00.000Z	knoppies	Jimi_Neutral	create a file named phpinfo.php inside your www folder. Then paste that into it. Save and browse to it using localhost/phpinfo.php
+2010-04-13T16:37:00.000Z	Jimi_Neutral	knoppies	yeah that gives me the phpversion and everything
+2010-04-13T16:38:00.000Z	knoppies	Jimi_Neutral	hmm, then php should be working, Im not sure why your install script isnt running.
+2010-04-13T16:38:00.000Z	Jimi_Neutral	knoppies	would it be something to do with the database and user i tried to create
+2010-04-13T16:39:00.000Z	Jimi_Neutral	knoppies	i just went and added a user and it gave me the option of creating a database at the same time so I did that
+2010-04-13T16:39:00.000Z	Jimi_Neutral	knoppies	or should it run it anyway
+2010-04-13T16:39:00.000Z	knoppies	Jimi_Neutral	that phpinfo script is awsome for debugging purposes, but can be a vulnerability issue if your server is open to the internet and a hacker stumbles across it. Im not sure about creating users and databases, that should not really affect the PHP, it depends how that script is set up though.
+2010-04-13T16:41:00.000Z	knoppies	Jimi_Neutral	Im getting tired and would like to retire to bed. I hope somebody else here can help you.
+2010-04-13T16:42:00.000Z	Jimi_Neutral	knoppies	i am almost there....i took all the files out of the folder i made and put the directly into /www...i then browsed to it and it worked i am on the plogger install page
+2010-04-13T16:43:00.000Z	knoppies	Jimi_Neutral	awesome. I can see you are getting a hang of this.
+2010-04-13T16:43:00.000Z	Jimi_Neutral	knoppies	but now it is saying the following probs need to be resolved before plogger will install.....the path /var/www/plog_contant/images is not the writable by the server and the same goes for /thumbs
+2010-04-13T16:45:00.000Z	knoppies	Jimi_Neutral	they should (in theory) work from within another folder within your www folder. That could be file permissions of the files/folders themselves. I think you need to chmod the www folder to allow write access to 'other' recursively. This could (in theory) be a security risk if your server is open to the public.
+2010-04-13T16:45:00.000Z	knoppies	Jimi_Neutral	do you understand how to chmod, or should I run you through it?
+2010-04-13T16:46:00.000Z	knoppies	Jimi_Neutral	Its quick and easy, wont take us long.
+2010-04-13T16:46:00.000Z	Jimi_Neutral	knoppies	ok, as long as it wont affect my access to any of it.
+2010-04-13T16:46:00.000Z	knoppies	Jimi_Neutral	in a shell prompt, cd to your www directory.
+2010-04-13T16:47:00.000Z	knoppies	Jimi_Neutral	no it shouldnt, I hope it doesnt break anything though, since its in /var/ I normally create a www folder inside my home directory and then use that.
+2010-04-13T16:47:00.000Z	Jimi_Neutral	knoppies	ok im in www
+2010-04-13T16:48:00.000Z	knoppies	Jimi_Neutral	chmod is used to change permissions of files/folders. you can read more about it by typing into a terminal (you dont have to do that now, I will explain what you need to do now): man chmod
+2010-04-13T16:49:00.000Z	knoppies	Jimi_Neutral	type this: chmod -R o+w .
+2010-04-13T16:49:00.000Z	Jimi_Neutral	knoppies	ok done tht
+2010-04-13T16:50:00.000Z	knoppies	Jimi_Neutral	then try your script again, that command above changes the file/folder permissions of everything inside the folder you are in (in this case www) by adding write permissions to everyone. you can read more about it by using: man chmod
+2010-04-13T16:54:00.000Z	Jimi_Neutral	knoppies	ok did those permissions and moved everyhting back into a folder and then tried it as before and now it works :)
+2010-04-13T16:54:00.000Z	knoppies	Jimi_Neutral	awesome. Glad I could help. Im off to bed.
+2010-04-13T16:54:00.000Z	Jimi_Neutral	knoppies	again, you are a star mate ty
+2010-04-13T16:54:00.000Z	Jimi_Neutral	knoppies	nn mate
+2010-04-13T16:54:00.000Z	knoppies	Jimi_Neutral	anytime.
+2010-04-13T16:54:00.000Z	knoppies	Jimi_Neutral	thanks.

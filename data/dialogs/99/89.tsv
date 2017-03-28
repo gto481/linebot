@@ -1,0 +1,99 @@
+2005-04-10T16:33:00.000Z	Arnia		8080 is standard... 9724 is debian
+2005-04-10T13:35:00.000Z	Arnia		kde is too crowded... the menus are packed too tightly and the number of options is unnecessary.
+2005-04-10T13:35:00.000Z	apokryphos	Arnia	They're not if they're used. :)
+2005-04-10T13:35:00.000Z	apokryphos	Arnia	Better to know that you have the options there, if need be, than to not.
+2005-04-10T13:37:00.000Z	apokryphos	Arnia	Your argument is changing :). One minute you say it has too many options, next you say that Gnome has them too.
+2005-04-10T13:37:00.000Z	Arnia	apokryphos	I said it has too many options in the user interface (or at least that is what I meant)
+2005-04-10T13:38:00.000Z	apokryphos	Arnia	That's a bad thing?
+2005-04-10T13:38:00.000Z	Arnia	apokryphos	Yes. Read any usability text and cognitive psychology text for reasons
+2005-04-10T13:38:00.000Z	apokryphos	Arnia	Hah. That's a nice way of not substantiating your position.
+2005-04-10T13:39:00.000Z	Arnia	apokryphos	No, I'm actually trying to find the links now. I'm just in a business discussion too which is slowing me down
+2005-04-10T13:39:00.000Z	apokryphos	Arnia	Ok, well please do share when you have.
+2005-04-10T13:45:00.000Z	Arnia	apokryphos	I can recommend http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html
+2005-04-10T13:45:00.000Z	Arnia	apokryphos	Just scanning one of my cognitive psychology texts now
+2005-04-10T13:46:00.000Z	apokryphos	Arnia	Ok, so -- to clarify your position so we know: you're arguing that there shouldn't be so many options available in the KDE user interface?
+2005-04-10T13:46:00.000Z	apokryphos	Arnia	I guess you're saying there shouldn't be GUI options for them?
+2005-04-10T13:48:00.000Z	Arnia	apokryphos	I'm arguing that options in GUIs should be treated with caution (their benefit must outweigh the extreme cognitive cost)... sane defaults are definitely preferable
+2005-04-10T13:49:00.000Z	apokryphos	Arnia	And you're consequently therefore arguing that KDE's use of options in its User Interface are "not used with caution", right?
+2005-04-10T13:50:00.000Z	apokryphos	Arnia	also partly wondering how much you know about KDE. If you know there are reasonably large accessibility and usability teams...
+2005-04-10T13:50:00.000Z	apokryphos	Arnia	Options and layout of KDE programs (particularly large ones) are not such whimisical decisions.
+2005-04-10T13:51:00.000Z	apokryphos	Arnia	just the title would have sufficed, but nevermind. ;-)
+2005-04-10T13:53:00.000Z	apokryphos	Arnia	do go on.
+2005-04-10T13:54:00.000Z	Arnia	apokryphos	How much detail do you want me to give?
+2005-04-10T13:55:00.000Z	apokryphos	Arnia	Well, enough to make your point (that assuredly doesn't substantiate your position).
+2005-04-10T13:55:00.000Z	apokryphos	Arnia	that tells us little more than Ockham's razor does
+2005-04-10T13:55:00.000Z	Arnia	apokryphos	And what's your background (so I know the metaphors to use)
+2005-04-10T13:55:00.000Z	apokryphos	Arnia	Philosophical/Scientific/Mathematical. :)
+2005-04-10T13:56:00.000Z	Arnia	apokryphos	Have you read Spolsky on Usability?
+2005-04-10T13:56:00.000Z	apokryphos	Arnia	Can't say that I have.
+2005-04-10T13:56:00.000Z	Arnia	apokryphos	Well I gave you the link. Read that as it gives a good background to usability and the terminology, theory and principals
+2005-04-10T13:57:00.000Z	Arnia	apokryphos	Then we can discuss other sources without confusion of language
+2005-04-10T13:57:00.000Z	apokryphos	Arnia	Well, you can go right ahead with your argument, and I'll try to keep up. ;)
+2005-04-10T13:57:00.000Z	apokryphos	Arnia	Though, am I of the firm belief that it's quite palpable that having options available is generally a good thing.
+2005-04-10T13:57:00.000Z	apokryphos	Arnia	I don't think usability or accessibility is sacrificed by this.
+2005-04-10T13:58:00.000Z	apokryphos	Arnia	As I've said, KDE has several members that they dedicate to this particular area.
+2005-04-10T13:59:00.000Z	Arnia	apokryphos	Options are ok... but the number KDE presents its users with is obscene. And most are so far away from the task domain (which is what users care about) that they're completely pointless
+2005-04-10T13:59:00.000Z	apokryphos	Arnia	KDE aims to be a powerful desktop environment for both users and developers.
+2005-04-11T14:18:00.000Z	apokryphos	Arnia	Would perhaps be interesting to have no person guiding
+2005-04-11T14:19:00.000Z	apokryphos	Arnia	In general I think it would vary
+2005-04-11T14:19:00.000Z	Arnia	apokryphos	It would indeed... there are some usability labs I may be able to book. I might design some tests if I can
+2005-04-11T14:19:00.000Z	apokryphos	Arnia	That dedicated, eh? ;-)
+2005-04-11T14:20:00.000Z	Arnia	apokryphos	I'm someone who always seeks to back up his arguments and improve failings in systems I care about.
+2005-04-11T14:20:00.000Z	apokryphos	Arnia	Both admirable qualities, to be sure.
+2005-04-11T14:21:00.000Z	apokryphos	Arnia	You'd probably have to do that testing on a pretty large scale for it to have any real significance
+2005-04-11T14:21:00.000Z	apokryphos	Arnia	Well, reasonably large at least. Would be interesting, I'm sure.
+2005-04-11T14:21:00.000Z	Arnia	apokryphos	I'm aware of that... I'm tempted to write a usability test suite that can be installed in the background of someone's system if they agree
+2005-04-11T14:21:00.000Z	Arnia	apokryphos	That would deal with information collection... the problem is filtering bias
+2005-04-11T14:22:00.000Z	apokryphos	Arnia	I think it would be pretty problematic to prove that a paritcular desktop environment was more inviting in some sort of intersubjective way. I predict the results would vary, but hey. You'll have to let me know how it goes. :)
+2005-04-11T14:25:00.000Z	Arnia	apokryphos	Hey, it would be a nice product for my business since we do some usability work :)
+2005-04-11T14:33:00.000Z	apokryphos	Arnia	more KDE debates? ;-)
+2005-04-11T14:34:00.000Z	Arnia	apokryphos	This is becoming a bad habit ;) But I'll defend my beliefs rationally ;)
+2005-04-11T14:50:00.000Z	Arnia	apokryphos	In Freud 'ego' is a positive thing... compared to 'superego' and 'id' at least
+2005-04-12T05:20:00.000Z	apokryphos	Arnia	Convert; you know you want to. ;-)
+2005-04-12T05:20:00.000Z	apokryphos	Arnia	we give out free tea and biscuits in #kubuntu
+2005-04-16T07:46:00.000Z	Arnia	apokryphos	It would look better if it was a local xchat script say
+2005-04-16T07:47:00.000Z	apokryphos	Arnia	if what was?
+2005-04-16T07:47:00.000Z	Arnia	apokryphos	The link look up script
+2005-04-16T07:47:00.000Z	Arnia	apokryphos	So the information comes from a human, not an unintelligent channel squatter :)
+2005-04-16T07:48:00.000Z	apokryphos	Arnia	sorry, I'm confused
+2005-04-16T07:48:00.000Z	Arnia	apokryphos	Your bot 'speaks' itself, right
+2005-04-16T07:48:00.000Z	apokryphos	Arnia	that's right
+2005-04-16T07:48:00.000Z	Arnia	apokryphos	That means its not YOU seen to give the advice, its a piece of effort saving script
+2005-04-16T07:49:00.000Z	Arnia	apokryphos	The perception difference would be massive
+2005-04-16T07:49:00.000Z	apokryphos	Arnia	I would have thought it was pretty obvious as in the post just before I'm *telling* it what to do, but go figure.
+2005-04-16T07:50:00.000Z	apokryphos	Arnia	well, I'm sorry that you see that as me dismissing them. I see it as me helping them.
+2005-04-16T07:51:00.000Z	apokryphos	Arnia	and, well, I've had loads of happy campers. Though, admittedly, I often add a note explaining the link.
+2005-04-16T07:51:00.000Z	Arnia	apokryphos	I'm not saying *I* see it as that... but I've been in enough communities to know how others perceive it
+2005-04-16T07:51:00.000Z	Arnia	apokryphos	Like I said, it would be better as a client-side script for 'support staff' here
+2005-04-16T07:51:00.000Z	apokryphos	Arnia	I've seen it used, and I can't say I agree. No dejection was prevelant.
+2005-04-16T07:51:00.000Z	apokryphos	Arnia	just what is it you're proposing?
+2005-04-16T07:52:00.000Z	Arnia	apokryphos	Turn your bot into a script for IRC clients. Then people interested in doing support can download it if they want to save time hunting for links
+2005-04-16T07:54:00.000Z	apokryphos	Arnia	(i) I don't know how to do that; (ii) it should be reasonably obvious that the majority of the time the people asking questions, who'll get a link posted to, are complete newbies. Why would they have already downloaded this?
+2005-04-16T07:54:00.000Z	apokryphos	Arnia	can't say I completely understand what it is. Do you have an example of where this is used?
+2005-04-16T07:54:00.000Z	Arnia	apokryphos	No! Not for newbies
+2005-04-16T07:54:00.000Z	Arnia	apokryphos	For those people wanting to do support
+2005-04-16T07:55:00.000Z	apokryphos	Arnia	I must be completely misunderstanding what this is. Example, anywhere?
+2005-04-16T07:55:00.000Z	Arnia	apokryphos	Basically, you'd type in a shortcut code and it would paste the link into your chat box
+2005-04-16T07:55:00.000Z	Arnia	apokryphos	A friend of mine has google wired up in his IRC client
+2005-04-16T07:55:00.000Z	apokryphos	Arnia	and then you'd copy and then paste into the channel?
+2005-04-16T07:56:00.000Z	Arnia	apokryphos	He just types "? search terms" into his chat entry box and it expands to the first link found on google
+2005-04-16T07:56:00.000Z	Arnia	apokryphos	No pasting... it just appears there
+2005-04-16T07:56:00.000Z	apokryphos	Arnia	well, I can use google with him too.
+2005-04-16T07:57:00.000Z	apokryphos	Arnia	Total agreement.
+2005-04-16T07:57:00.000Z	Arnia	apokryphos	I have no doubt you can use your bot like that
+2005-04-16T07:58:00.000Z	Arnia	apokryphos	But that isn't the point... the point is that its the bot that answers, not you
+2005-04-16T07:58:00.000Z	apokryphos	Arnia	I understand what you mean, and that would perhaps be a better solution. I have no idea how to do that though.
+2005-04-16T07:58:00.000Z	apokryphos	Arnia	No, it's me that answers
+2005-04-16T07:58:00.000Z	Arnia	apokryphos	There are scripts around already... give me some time and I'll find them for you
+2005-04-16T07:58:00.000Z	apokryphos	Arnia	the bot just gives the full information -- retrieves what I already know to work
+2005-04-16T08:00:00.000Z	Arnia	apokryphos	Yes, but how do people know that? How would you feel if everytime you asked a question you just got shuffled off to a bot?
+2005-04-16T08:01:00.000Z	apokryphos	Arnia	(i) people know that because my post appears above with "tell" in it; basic English is a presupposition of mine in the member, yes.
+2005-04-16T08:01:00.000Z	apokryphos	Arnia	(ii) It's not that "every time you ask a question you're shuffled off to a bot". I think a bot should be used when I would give the person a link
+2005-04-16T08:01:00.000Z	apokryphos	Arnia	this just shortens the time and effort from my side.
+2005-04-16T08:02:00.000Z	Arnia	apokryphos	Visibley shortens the effort
+2005-04-16T08:02:00.000Z	apokryphos	Arnia	Is that supposed to be a negative thing?
+2005-04-16T08:03:00.000Z	Arnia	apokryphos	That's it... it isn't a negative thing for geeks and techies who are typically obsessed with efficiency. It is a bad thing for normal humans who feel that their concerns are embarassingly trivial
+2005-04-16T08:04:00.000Z	apokryphos	Arnia	I disagree. I'm not techie or expert geek; my knowledge of many linux subjects is *very* primitive. When someone gives me a link I'm encouraged
+2005-04-16T16:43:00.000Z	apokryphos	Arnia	maybe we're juxtaposed by nature ;-)
+2005-04-16T05:08:00.000Z	apokryphos	Arnia	never heard of it :P
+2005-04-16T05:09:00.000Z	Arnia	apokryphos	You wouldn't like it anyway... ;)

@@ -1,0 +1,97 @@
+2011-01-09T03:09:00.000Z	glaceman		i wanna know something who is that maverick ?
+2011-01-09T03:10:00.000Z	rusty149	glaceman	Maverick Meercat
+2011-01-09T03:16:00.000Z	rusty149	glaceman	Is it a laptop?
+2011-01-09T03:20:00.000Z	rusty149	glaceman	Go to System > Administration > Additional Drivers   are the any Realtek drivers available?
+2011-01-09T03:20:00.000Z	glaceman	rusty149	no
+2011-01-09T03:22:00.000Z	glaceman	rusty149	i have done today a 200 mb download for the update manager
+2011-01-09T03:22:00.000Z	rusty149	glaceman	lspci | grep Audio
+2011-01-09T03:22:00.000Z	rusty149	glaceman	Did you reboot??
+2011-01-09T03:22:00.000Z	glaceman	rusty149	 of course i did
+2011-01-09T03:22:00.000Z	glaceman	rusty149	Audio device: Intel Corporation N10/ICH 7 Family High Definition Audio Controller (rev 02)
+2011-01-09T03:25:00.000Z	rusty149	glaceman	uname -r
+2011-01-09T03:26:00.000Z	glaceman	rusty149	2.6.35-24-generic
+2011-01-09T03:31:00.000Z	rusty149	glaceman	I need the rest as well sorry,  uname -a
+2011-01-09T03:32:00.000Z	glaceman	rusty149	Linux michel-X130 2.6.35-24-generic #42-Ubuntu SMP Thu Dec 2 01:41:57 UTC 2010 i686 GNU/Linux
+2011-01-09T03:34:00.000Z	glaceman	rusty149	 Linux michel-X130 2.6.35-24-generic #42-Ubuntu SMP Thu Dec 2 01:41:57 UTC 2010 i686 GNU/Linux
+2011-01-09T03:40:00.000Z	rusty149	glaceman	Try this: http://paste.ubuntu.com/551951/
+2011-01-09T03:57:00.000Z	rusty149	glaceman	It sounds like it is not mounted untill you click the drive though
+2011-01-09T03:57:00.000Z	glaceman	rusty149	click on ubuntu on places, then i access the D drive, then the shortcut on the desktop work
+2011-01-09T03:58:00.000Z	rusty149	glaceman	please paste: sudo cat /etc/fstab
+2011-01-09T04:00:00.000Z	rusty149	glaceman	Thats not the full output
+2011-01-09T04:00:00.000Z	glaceman	rusty149	 how do i do the paste bin stuff please
+2011-01-09T04:02:00.000Z	rusty149	glaceman	The 'D:' drive is not in that file so will not be automounted
+2011-01-09T04:02:00.000Z	glaceman	rusty149	what to do ?
+2011-01-09T04:17:00.000Z	rusty149	glaceman	paste.ubuntu.com
+2011-01-09T04:20:00.000Z	rusty149	glaceman	removable drives automount by default. Internal devices are controlled by /etc/fstab
+2011-01-09T04:21:00.000Z	glaceman	rusty149	 ok
+2011-01-09T12:36:00.000Z	rusty149	glaceman	Can you paste bin, sudo cat /etc/fstab
+2011-01-09T12:38:00.000Z	glaceman	rusty149	http://paste.ubuntu.com/552085/
+2011-01-09T12:38:00.000Z	rusty149	glaceman	it is set to read-only
+2011-01-09T12:39:00.000Z	glaceman	rusty149	i didn't set anything, how can i fix this please ?
+2011-01-09T12:39:00.000Z	rusty149	glaceman	Assuming that the other ntfs partition.
+2011-01-09T12:40:00.000Z	rusty149	glaceman	sudo nano /etc/fstab
+2011-01-09T12:46:00.000Z	rusty149	glaceman	Ctrl+Alt+F7
+2011-01-09T14:02:00.000Z	glaceman	rusty149	no i dont know how to use nano
+2011-01-09T13:37:00.000Z	rusty149	glaceman	sudo cat /proc/asound/cards
+2011-01-09T13:37:00.000Z	glaceman	rusty149	 0 [Intel          ]: HDA-Intel - HDA Intel
+2011-01-09T13:39:00.000Z	rusty149	glaceman	head -n 1 /proc/asound/card0/codec*
+2011-01-09T13:40:00.000Z	glaceman	rusty149	Codec: Realtek ALC272
+2011-01-09T13:40:00.000Z	rusty149	glaceman	Did you just get one codec?
+2011-01-09T13:41:00.000Z	glaceman	rusty149	yes
+2011-01-09T13:48:00.000Z	rusty149	glaceman	and add this line, options snd-hda-intel model=mobile
+2011-01-09T13:49:00.000Z	rusty149	glaceman	make a backup if like before with, sudo cp /etc/modprobe.d/alsa-base.conf /etc/modprobe.d/alsa-base.conf.backup
+2011-01-09T13:51:00.000Z	glaceman	rusty149	done
+2011-01-09T13:52:00.000Z	rusty149	glaceman	Try a restart now
+2011-01-09T13:52:00.000Z	glaceman	rusty149	ok brb
+2011-01-09T13:55:00.000Z	glaceman	rusty149	didn't helped out
+2011-01-09T13:58:00.000Z	rusty149	glaceman	add the same line, options snd-hda-intel model=mobile,  to sudo nano /etc/modprobe.d/options.conf
+2011-01-09T13:59:00.000Z	rusty149	glaceman	so the line reads
+2011-01-09T14:00:00.000Z	glaceman	rusty149	options.conf is empty by the way nothing inside
+2011-01-09T14:01:00.000Z	glaceman	rusty149	when i try to save it says could not find the file /home/michel/etc/modprobe.d/options.conf
+2011-01-09T14:02:00.000Z	rusty149	glaceman	It shouldn't are you using nano to edit it.
+2011-01-09T14:03:00.000Z	glaceman	rusty149	how to save
+2011-01-09T14:03:00.000Z	rusty149	glaceman	you should really use nano it takes 20 seconds to learn. At the bottom are commands so, ^C = Ctrl+C
+2011-01-09T14:03:00.000Z	glaceman	rusty149	i typed it, but how to save and exit
+2011-01-09T14:04:00.000Z	rusty149	glaceman	Ctrl+O = Save
+2011-01-09T14:04:00.000Z	rusty149	glaceman	Ctrl+X = Exit
+2011-01-09T14:05:00.000Z	rusty149	glaceman	you have to hit enter after Ctrl+O btw
+2011-01-09T14:05:00.000Z	glaceman	rusty149	i will restart and be back
+2011-01-09T14:08:00.000Z	glaceman	rusty149	im back, still no sound unfortunetly
+2011-01-09T14:09:00.000Z	rusty149	glaceman	just check that you did it correctly, pastebin sudo cat /etc/modprobe.d/alsa-base.conf
+2011-01-09T14:10:00.000Z	glaceman	rusty149	http://paste.ubuntu.com/552111/
+2011-01-09T14:16:00.000Z	rusty149	glaceman	Have you tried, sudo alsamixer ,  and turning everything up particularly speakers
+2011-01-09T14:17:00.000Z	glaceman	rusty149	yes
+2011-01-09T14:18:00.000Z	glaceman	rusty149	can i download the driver somewhere, so i can reinstall it ?
+2011-01-09T14:19:00.000Z	rusty149	glaceman	Try sudo dpkg-reconfigure linux-sound base
+2011-01-09T14:20:00.000Z	rusty149	glaceman	sudo dpkg-reconfigure linux-sound-base, ,  sorry
+2011-01-09T14:20:00.000Z	glaceman	rusty149	i get an error http://paste.ubuntu.com/552113/
+2011-01-09T14:21:00.000Z	rusty149	glaceman	sudo dpkg-reconfigure linux-sound-base
+2011-01-09T14:21:00.000Z	rusty149	glaceman	OK > Alsa
+2011-01-09T14:22:00.000Z	glaceman	rusty149	done
+2011-01-09T14:24:00.000Z	rusty149	glaceman	sudo apt-get install --reinstall alsa-base alsa-utils pulseaudio gstreamer0.10-pulseaudio libsdl1.2debian-pulseaudio libcanberra-pulse
+2011-01-09T14:25:00.000Z	glaceman	rusty149	 ok done
+2011-01-09T14:26:00.000Z	rusty149	glaceman	reboot.
+2011-01-09T14:30:00.000Z	glaceman	rusty149	back still no sound
+2011-01-09T14:33:00.000Z	glaceman	rusty149	im on realtek website, trying to download the driver again maybe it could help, what do u think ?
+2011-01-09T14:34:00.000Z	rusty149	glaceman	The drivers have to load into the Kernel through ALSA. They should be the latest ones. But stranger things happen. Let me know if you need help.
+2011-01-09T14:37:00.000Z	glaceman	rusty149	thanks buddy
+2011-01-09T14:56:00.000Z	glaceman	rusty149	when i used older version of ubuntu 8. i used to have under the sound propreties, alsa soundmixer, now i don;t see this option anymore
+2011-01-09T15:01:00.000Z	rusty149	glaceman	try, sudo alsactl /dev/snd
+2011-01-09T15:09:00.000Z	glaceman	rusty149	unknown command
+2011-01-11T05:48:00.000Z	rusty149	glaceman	lb? what language are you using?
+2011-01-11T05:48:00.000Z	glaceman	rusty149	didn't understood what u were asking
+2011-01-11T05:49:00.000Z	rusty149	glaceman	paste, sudo cat /etc/apt/sources.list
+2011-01-11T05:50:00.000Z	glaceman	rusty149	http://paste.ubuntu.com/552650/
+2011-01-11T05:51:00.000Z	rusty149	glaceman	Are you using Luxembourgish?
+2011-01-11T05:51:00.000Z	glaceman	rusty149	ubuntu 10.10
+2011-01-11T05:51:00.000Z	rusty149	glaceman	Luxembourgish language or english language?
+2011-01-11T05:51:00.000Z	glaceman	rusty149	english
+2011-01-11T05:52:00.000Z	rusty149	glaceman	lb.archive.ubuntu.com  is for Luxembourgish language
+2011-01-11T05:52:00.000Z	glaceman	rusty149	i didn't do anything
+2011-01-11T05:56:00.000Z	glaceman	rusty149	any clue ?
+2011-01-11T05:58:00.000Z	rusty149	glaceman	Try replaceing it with this http://paste.ubuntu.com/552653/
+2011-01-11T05:59:00.000Z	rusty149	glaceman	then run, sudo apt-get update
+2011-01-11T06:00:00.000Z	glaceman	rusty149	doing it
+2011-01-11T06:17:00.000Z	glaceman	rusty149	after i made the sudo apt-get update, i received this error http://paste.ubuntu.com/552660/
+2011-01-11T06:22:00.000Z	glaceman	rusty149	are u still around buddy ?
+2011-01-11T06:27:00.000Z	glaceman	rusty149	...

@@ -1,0 +1,97 @@
+2008-07-31T20:00:00.000Z	ManualOverDozer8		jennyG what seems to be the issue ?
+2008-07-31T20:01:00.000Z	JennyG	ManualOverDozer8	I can't get the card to work. It's a broadcom 4318
+2008-07-31T20:02:00.000Z	JennyG	ManualOverDozer8	I think so-- I'm really confused.
+2008-07-31T20:03:00.000Z	JennyG	ManualOverDozer8	Yeah, I've played with that but couldn't get anything
+2008-07-31T20:04:00.000Z	JennyG	ManualOverDozer8	I don't think so. What should it say if it does?
+2008-07-31T20:05:00.000Z	JennyG	ManualOverDozer8	k
+2008-07-31T20:05:00.000Z	JennyG	ManualOverDozer8	I have wlan0
+2008-07-31T20:08:00.000Z	JennyG	ManualOverDozer8	no
+2008-07-31T20:09:00.000Z	JennyG	ManualOverDozer8	Um, everything except wlan0 says no wireless extensions
+2008-07-31T20:09:00.000Z	JennyG	ManualOverDozer8	No, I'm on teh other laptop
+2008-07-31T20:11:00.000Z	JennyG	ManualOverDozer8	okay?
+2008-07-31T20:11:00.000Z	JennyG	ManualOverDozer8	No, Signal Level: 0
+2008-07-31T20:12:00.000Z	JennyG	ManualOverDozer8	WHat does that mean?
+2008-07-31T20:12:00.000Z	JennyG	ManualOverDozer8	okay? What should I do?
+2008-07-31T20:13:00.000Z	JennyG	ManualOverDozer8	Like wep?
+2008-07-31T20:13:00.000Z	JennyG	ManualOverDozer8	Yes
+2008-07-31T20:13:00.000Z	JennyG	ManualOverDozer8	yes
+2008-07-31T20:15:00.000Z	JennyG	ManualOverDozer8	k
+2008-07-31T20:15:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T20:16:00.000Z	JennyG	ManualOverDozer8	Okay?
+2008-07-31T20:17:00.000Z	JennyG	ManualOverDozer8	what?
+2008-07-31T20:18:00.000Z	JennyG	ManualOverDozer8	yes
+2008-07-31T20:19:00.000Z	JennyG	ManualOverDozer8	Yes
+2008-07-31T20:20:00.000Z	JennyG	ManualOverDozer8	okay?
+2008-07-31T20:21:00.000Z	JennyG	ManualOverDozer8	no signal
+2008-07-31T20:23:00.000Z	JennyG	ManualOverDozer8	no, it says not-associated
+2008-07-31T20:24:00.000Z	JennyG	ManualOverDozer8	Interface doesn
+2008-07-31T20:25:00.000Z	JennyG	ManualOverDozer8	Nope. I just put ubuntu on here today
+2008-07-31T20:26:00.000Z	JennyG	ManualOverDozer8	k
+2008-07-31T20:29:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T20:30:00.000Z	JennyG	ManualOverDozer8	yeah, empty
+2008-07-31T20:31:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T20:32:00.000Z	JennyG	ManualOverDozer8	yes, it says, "This is a sample configuration file..."
+2008-07-31T20:33:00.000Z	JennyG	ManualOverDozer8	among other things
+2008-07-31T20:39:00.000Z	JennyG	ManualOverDozer8	http://paste.ubuntu.com/32637/
+2008-07-31T20:41:00.000Z	JennyG	ManualOverDozer8	okay. What do I do?
+2008-07-31T20:41:00.000Z	JennyG	ManualOverDozer8	k
+2008-07-31T20:43:00.000Z	JennyG	ManualOverDozer8	the ssid is "I Like Cheese", we are weird people I know, and it won't take the spaces
+2008-07-31T20:44:00.000Z	JennyG	ManualOverDozer8	k
+2008-07-31T20:45:00.000Z	JennyG	ManualOverDozer8	I did
+2008-07-31T20:46:00.000Z	JennyG	ManualOverDozer8	k
+2008-07-31T20:46:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T20:47:00.000Z	JennyG	ManualOverDozer8	okay?
+2008-07-31T20:48:00.000Z	JennyG	ManualOverDozer8	um, it says Access point: Invalid
+2008-07-31T20:49:00.000Z	JennyG	ManualOverDozer8	okey dokey
+2008-07-31T20:51:00.000Z	JennyG	ManualOverDozer8	command not found
+2008-07-31T20:52:00.000Z	JennyG	ManualOverDozer8	yes
+2008-07-31T20:52:00.000Z	JennyG	ManualOverDozer8	not wait
+2008-07-31T20:53:00.000Z	JennyG	ManualOverDozer8	one thing was typed wrong
+2008-07-31T20:53:00.000Z	JennyG	ManualOverDozer8	there it goes
+2008-07-31T20:54:00.000Z	JennyG	ManualOverDozer8	"Network is down"
+2008-07-31T20:56:00.000Z	JennyG	ManualOverDozer8	a couple things say "No such file or directory," and it still says Network is down
+2008-07-31T20:57:00.000Z	JennyG	ManualOverDozer8	ifup did
+2008-07-31T20:58:00.000Z	JennyG	ManualOverDozer8	"ifdown: interface wlan0 not configured"
+2008-07-31T20:58:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T21:01:00.000Z	JennyG	ManualOverDozer8	There's only lo and eth0
+2008-07-31T21:01:00.000Z	JennyG	ManualOverDozer8	what does it explain? lol
+2008-07-31T21:02:00.000Z	JennyG	ManualOverDozer8	okay?
+2008-07-31T21:02:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T21:08:00.000Z	JennyG	ManualOverDozer8	on iwconfig, I get lo, eth0, wmaster0, and wlan0
+2008-07-31T21:11:00.000Z	JennyG	ManualOverDozer8	okay?
+2008-07-31T21:14:00.000Z	JennyG	ManualOverDozer8	okay, hold on
+2008-07-31T21:16:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T21:18:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T21:19:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T21:20:00.000Z	JennyG	ManualOverDozer8	access point: invalid, signal level: 0
+2008-07-31T21:21:00.000Z	JennyG	ManualOverDozer8	lo, eth0, and eth0:avahi
+2008-07-31T21:22:00.000Z	JennyG	ManualOverDozer8	k, lol
+2008-07-31T21:23:00.000Z	JennyG	ManualOverDozer8	I do remember reading in a few places that mine was particularly troublesome, lol
+2008-07-31T21:24:00.000Z	JennyG	ManualOverDozer8	BCM4318
+2008-07-31T21:25:00.000Z	JennyG	ManualOverDozer8	I tried to do that, but I couldn't figure out what to do at all
+2008-07-31T21:26:00.000Z	JennyG	ManualOverDozer8	if you can't, I'm glad you've helped me this much, lol Atleast I wouldn't be the only one who couldn't figure it out
+2008-07-31T21:27:00.000Z	JennyG	ManualOverDozer8	Curse my luck, lol
+2008-07-31T21:33:00.000Z	JennyG	ManualOverDozer8	Yeah
+2008-07-31T21:38:00.000Z	JennyG	ManualOverDozer8	okay
+2008-07-31T21:42:00.000Z	JennyG	ManualOverDozer8	okay?
+2008-07-31T21:45:00.000Z	JennyG	ManualOverDozer8	Okay?
+2008-07-31T21:48:00.000Z	JennyG	ManualOverDozer8	The i one
+2008-07-31T21:49:00.000Z	JennyG	ManualOverDozer8	yeah
+2008-07-31T21:50:00.000Z	JennyG	ManualOverDozer8	I've got it open on ubuntu
+2008-07-31T21:52:00.000Z	JennyG	ManualOverDozer8	click the check?
+2008-07-31T21:52:00.000Z	JennyG	ManualOverDozer8	no this Configuring bcmblah window
+2008-07-31T21:54:00.000Z	JennyG	ManualOverDozer8	it says it failed
+2008-07-31T21:55:00.000Z	JennyG	ManualOverDozer8	Yeah
+2008-07-31T21:55:00.000Z	JennyG	ManualOverDozer8	it looks like it tried to open a website
+2008-07-31T21:57:00.000Z	JennyG	ManualOverDozer8	lol let me bring this over to the router
+2008-07-31T22:00:00.000Z	JennyG	ManualOverDozer8	Good news. Something worked for once. It installed
+2008-07-31T22:00:00.000Z	JennyG	ManualOverDozer8	I did? lol
+2008-07-31T22:01:00.000Z	JennyG	ManualOverDozer8	?
+2008-07-31T22:02:00.000Z	JennyG	ManualOverDozer8	Okay?
+2008-07-31T22:03:00.000Z	JennyG	ManualOverDozer8	Which deb? The one we were just playing with?
+2008-07-31T22:04:00.000Z	JennyG	ManualOverDozer8	Okay, it's open
+2008-07-31T22:04:00.000Z	JennyG	ManualOverDozer8	Um, the creen for where you click install is up
+2008-07-31T22:05:00.000Z	JennyG	ManualOverDozer8	Reinstall?
+2008-07-31T22:07:00.000Z	JennyG	ManualOverDozer8	well, I reinstalled and there was no problems
+2008-07-31T22:08:00.000Z	JennyG	ManualOverDozer8	so now what?
+2008-07-31T22:19:00.000Z	JennyG	ManualOverDozer8	have I lost you? lol

@@ -1,0 +1,97 @@
+2007-11-22T01:06:00.000Z	nomojob		and my sudo fdisk...  http://paste.ubuntu-nl.org/45400/
+2007-11-22T01:07:00.000Z	ArthurArchnix	nomojob	The command is "fdisk -l"
+2007-11-22T01:09:00.000Z	nomojob	ArthurArchnix	 what is that character?  is that an " i "
+2007-11-22T03:15:00.000Z	ArthurArchnix	nomojob	are you still having grub issues?
+2007-11-22T03:15:00.000Z	nomojob	ArthurArchnix	yep
+2007-11-22T03:17:00.000Z	nomojob	ArthurArchnix	error 21
+2007-11-22T03:19:00.000Z	ArthurArchnix	nomojob	You've probably already posted it, but can I get a link to your menu.lst (aka. the grub file)
+2007-11-22T03:20:00.000Z	nomojob	ArthurArchnix	sure, one sec
+2007-11-22T03:21:00.000Z	nomojob	ArthurArchnix	http://paste.ubuntu-nl.org/45418/
+2007-11-22T03:21:00.000Z	ArthurArchnix	nomojob	Can you boot either os correctly?
+2007-11-22T03:22:00.000Z	nomojob	ArthurArchnix	 I cant boot windows. it brings up the Error 21 and then just sits there
+2007-11-22T03:22:00.000Z	nomojob	ArthurArchnix	I can only boot from live cd
+2007-11-22T03:22:00.000Z	ArthurArchnix	nomojob	But you can boot Gutsy?
+2007-11-22T03:23:00.000Z	ArthurArchnix	nomojob	So you can't boot anything, you need to use the live cd.
+2007-11-22T03:23:00.000Z	nomojob	ArthurArchnix	yes
+2007-11-22T03:24:00.000Z	ArthurArchnix	nomojob	Have you checked the connections of both drives, to ensure they're plugged in securely?
+2007-11-22T03:24:00.000Z	nomojob	ArthurArchnix	i have XP on one HD and Ubuntu on another
+2007-11-22T03:24:00.000Z	nomojob	ArthurArchnix	yep, I can view files on both drives
+2007-11-22T03:25:00.000Z	nomojob	ArthurArchnix	i've been at this for like 8 hours now, I hope there's a way around it
+2007-11-22T03:26:00.000Z	ArthurArchnix	nomojob	Grub sometimes messes up on two disc installs... it can be fixed though.
+2007-11-22T03:27:00.000Z	nomojob	ArthurArchnix	cool, any idea where to go from here?
+2007-11-22T03:27:00.000Z	ArthurArchnix	nomojob	Have you tried changing the order of discs booted in your bios? That is, usually it's hd1 then hd1, so swap it?
+2007-11-22T03:28:00.000Z	nomojob	ArthurArchnix	i have tried all different combinations in the BIOS
+2007-11-22T03:30:00.000Z	nomojob	ArthurArchnix	in other forums it says that Error 21 means that GRUB cant read from the disk or something
+2007-11-22T03:31:00.000Z	ArthurArchnix	nomojob	Typically, what happens is that you install to mbr, which in your case is sda. This overwrites you windows bootloader.
+2007-11-22T03:31:00.000Z	nomojob	ArthurArchnix	is it just not finding either OS then?
+2007-11-22T03:32:00.000Z	ArthurArchnix	nomojob	Then grub loads and looks for /boot/grub/menu.lst but it looks on the /sda whereas linux its actually on /sdb
+2007-11-22T03:32:00.000Z	ArthurArchnix	nomojob	It should find it anyway, on sdb, but for some reason with you, it hasn't.
+2007-11-22T03:32:00.000Z	ArthurArchnix	nomojob	Could it be an isue with master / slave pin settings? I didn' think this mattered with sata drives though.
+2007-11-22T03:33:00.000Z	nomojob	ArthurArchnix	i dont know much about that
+2007-11-22T03:34:00.000Z	nomojob	ArthurArchnix	cant we just make it look in sdb?
+2007-11-22T03:36:00.000Z	ArthurArchnix	nomojob	You had one hd in your compuer with xp right? Then what did you do, add a 20 gig hd and plug it in?
+2007-11-22T03:36:00.000Z	nomojob	ArthurArchnix	I have had 2 120GB drives for awhile.  One had XP and other programs and the second one was mainly for storage.
+2007-11-22T03:39:00.000Z	nomojob	ArthurArchnix	did you get that?
+2007-11-22T03:39:00.000Z	ArthurArchnix	nomojob	The surest way to fix the problem would be to swap the connections of the xp and linux drive, making linux sda and xp sdb, Then disconnect windows drive altogether. Then reinstall grub. Then reconnect the xp drive and add it to grub.
+2007-11-22T03:40:00.000Z	nomojob	ArthurArchnix	good lord.
+2007-11-22T03:41:00.000Z	nomojob	ArthurArchnix	 and then GRUB should recognize both OSes?
+2007-11-22T03:41:00.000Z	nomojob	ArthurArchnix	 also, what is the easiest way to reinstall GRUB?
+2007-11-22T03:43:00.000Z	nomojob	ArthurArchnix	I will try that.  Can I possibly have your email or AIM name so we can continue if I need some more help?
+2007-11-22T03:43:00.000Z	ArthurArchnix	nomojob	If you remove the xp drive and connect the wire to the ubuntu drive, when you install grub it will install to the mbr of the linux drive. Easiest way to reinstall is from the live cd. I'll find the link. And remember, you problem is bios/pin settings. You might fix it by trial and error changin the boot order and such in your bios.
+2007-11-22T03:44:00.000Z	ArthurArchnix	nomojob	Once you successfully boot from your ubuntu drive, you can come back here and figure out what to add to your grub so that you can boot xp too.
+2007-11-22T03:45:00.000Z	nomojob	ArthurArchnix	ok. Is it possible to get personal assistance from you since you know the whole situation now?  I just dont want to have to explain the whole situation to someone else if you arent here
+2007-11-22T03:46:00.000Z	nomojob	ArthurArchnix	 if not, thats ok, youve helped alot so far
+2007-11-22T03:46:00.000Z	ArthurArchnix	nomojob	Sorry no. But chances are you'll get someone who's even better at this stuff so dont' worry about it.
+2007-11-22T03:47:00.000Z	nomojob	ArthurArchnix	ok
+2007-11-22T04:09:00.000Z	nomojob	ArthurArchnix	IT WORKED!!!!!!!!!!!!!!!!!!!
+2007-11-22T04:10:00.000Z	nomojob	ArthurArchnix	WOOOOHOOOOOO!!!
+2007-11-22T04:10:00.000Z	nomojob	ArthurArchnix	sorry, got a little carried away
+2007-11-22T04:11:00.000Z	nomojob	ArthurArchnix	you there?
+2007-11-22T04:14:00.000Z	ArthurArchnix	nomojob	yes
+2007-11-22T04:14:00.000Z	nomojob	ArthurArchnix	it worked!!!
+2007-11-22T04:14:00.000Z	ArthurArchnix	nomojob	What did you do?
+2007-11-22T04:15:00.000Z	nomojob	ArthurArchnix	swithed the cable. the second HD is now plugged in as the Master.  I dont have the other HD hooked up though.  The one that has XP on it.
+2007-11-22T04:15:00.000Z	nomojob	ArthurArchnix	what do I do now?  Just hook it up and reboot to see what happens?
+2007-11-22T04:15:00.000Z	ArthurArchnix	nomojob	So right now you can boot ubuntu without problems?
+2007-11-22T04:16:00.000Z	nomojob	ArthurArchnix	 btw, I did have to change the numbers in the menu.lst
+2007-11-22T04:16:00.000Z	nomojob	ArthurArchnix	 yes, up and running
+2007-11-22T04:17:00.000Z	nomojob	ArthurArchnix	 it is installing all the updates right now
+2007-11-22T04:17:00.000Z	ArthurArchnix	nomojob	Ok, so you can boot ubuntu but xp isn't plugged in. Well, best plug xp in and start troubleshooting that now. Go ahead and reboot and try to login to XP. I don't think you'll be able to. When you come back, post the output of "fdisk -l" and "cat /boot/grub/menu.lst"
+2007-11-22T04:18:00.000Z	nomojob	ArthurArchnix	 I noticed on the boot menu, it has a something like Windows Whistler (something, something) listed.  What is that?
+2007-11-22T04:19:00.000Z	nomojob	ArthurArchnix	 i guess i'll find out
+2007-11-22T04:19:00.000Z	nomojob	ArthurArchnix	be back in a minute!
+2007-11-22T04:19:00.000Z	nomojob	ArthurArchnix	 well, i have to wait for the updates first...
+2007-11-22T05:06:00.000Z	nomojob	ArthurArchnix	you there?
+2007-11-22T05:08:00.000Z	nomojob	ArthurArchnix	 at the boot menu, when I click on Microsoft Windows Whistler Personal, it just says that it cant find it on the disk and makes me go back to the menu
+2007-11-22T05:11:00.000Z	ArthurArchnix	nomojob	Post the output of "fdisk -l" and "cat /grub/boot/menu.lst" and let me know if you can boot ubuntu, but just xp is failing to boot.
+2007-11-22T05:11:00.000Z	nomojob	ArthurArchnix	ok...
+2007-11-22T05:17:00.000Z	nomojob	ArthurArchnix	http://paste.ubuntu-nl.org/45435/
+2007-11-22T05:19:00.000Z	nomojob	ArthurArchnix	http://paste.ubuntu-nl.org/45436/
+2007-11-22T05:24:00.000Z	nomojob	ArthurArchnix	did you get those?
+2007-11-22T05:24:00.000Z	ArthurArchnix	nomojob	Yup. Looking at them now and eating supper.
+2007-11-22T05:24:00.000Z	nomojob	ArthurArchnix	ok, just checking.  Thanks again!
+2007-11-22T05:30:00.000Z	ArthurArchnix	nomojob	So, now we got ubuntu booting from the first disc, and xp on the second disc, but that's not booting is it?
+2007-11-22T05:30:00.000Z	nomojob	ArthurArchnix	correct
+2007-11-22T05:31:00.000Z	nomojob	ArthurArchnix	see in the menu.lst where it says Windows Whistler?
+2007-11-22T05:32:00.000Z	ArthurArchnix	nomojob	Yeah. Windows has issues with being second in line. Importance complex or something. We need to trick it into thinking its first.
+2007-11-22T05:32:00.000Z	nomojob	ArthurArchnix	is that supposed to be there?
+2007-11-22T05:32:00.000Z	ArthurArchnix	nomojob	It's just a title, it doesn't mean anything.
+2007-11-22T05:32:00.000Z	nomojob	ArthurArchnix	lol, sounds good
+2007-11-22T05:33:00.000Z	nomojob	ArthurArchnix	what next?
+2007-11-22T05:35:00.000Z	ArthurArchnix	nomojob	http://paste.ubuntu-nl.org/45437/ I made some changes that I think might work.
+2007-11-22T05:35:00.000Z	ArthurArchnix	nomojob	See the map stuff? That's suppsed to trick windows into thinking its actually disk one.
+2007-11-22T05:41:00.000Z	nomojob	ArthurArchnix	 alright, should i reboot now?
+2007-11-22T05:42:00.000Z	nomojob	ArthurArchnix	brb
+2007-11-22T05:45:00.000Z	nomojob	ArthurArchnix	Still says "Selected Disk does not exist"
+2007-11-22T05:46:00.000Z	nomojob	ArthurArchnix	actually, let me mess with the BIOS configurations for a minute...brb
+2007-11-22T05:51:00.000Z	nomojob	ArthurArchnix	Still didnt work
+2007-11-22T05:52:00.000Z	nomojob	ArthurArchnix	Im sure this is as frustrating to you as it is to me  :)
+2007-11-22T05:54:00.000Z	nomojob	ArthurArchnix	you get that?
+2007-11-22T05:56:00.000Z	ArthurArchnix	nomojob	I did. Hrmm.... it is frustrating. I think you need to take a look at the settings on the physical drives themselves. Are they sata drives?
+2007-11-22T05:58:00.000Z	nomojob	ArthurArchnix	how do I tell for sure if they are SATA?
+2007-11-22T05:58:00.000Z	nomojob	ArthurArchnix	when I go to Properties on the drive it says ATA
+2007-11-22T06:00:00.000Z	ArthurArchnix	nomojob	See above, and ATA means the master/slave jumper settings have to be correct. If they're both set to master you may have these sorts of trouble.
+2007-11-22T06:02:00.000Z	nomojob	ArthurArchnix	heres a question.  In the menu.lst, for each Ubuntu entry there is a path that leads to a file. Shouldnt there be one for XP also?
+2007-11-22T06:02:00.000Z	nomojob	ArthurArchnix	also, it looks like mine are PATA
+2007-11-22T06:05:00.000Z	ArthurArchnix	nomojob	Because you're having such a hard time with grub, I think you may have two drives set as master. You need to google the make and model of your hard-drive and find out how to set the plastic jumper on the hd to make one the master, and one the slave.
+2007-11-22T06:06:00.000Z	nomojob	ArthurArchnix	i'll try that.  thanks

@@ -1,0 +1,96 @@
+2005-09-23T11:39:00.000Z	Shin_Gouki		ok if i ll ask 3 good questions , am i then worthy of private discussion?
+2005-09-23T11:39:00.000Z	Shin_Gouki		why has ubuntu better mono support than debian?
+2005-09-23T11:39:00.000Z	bob2	Shin_Gouki	it doesn't
+2005-09-23T11:40:00.000Z	bob2	Shin_Gouki	sure, just like Debian does
+2005-09-23T11:42:00.000Z	bob2	Shin_Gouki	same as on any other linux OS; it depends on what tool you use
+2005-09-23T11:44:00.000Z	bob2	Shin_Gouki	please stop trying to weasel out of the channe, it's really quite annoying
+2005-09-23T11:44:00.000Z	bob2	Shin_Gouki	how is asking question here "spam"?
+2005-09-23T11:45:00.000Z	bob2	Shin_Gouki	no, it's not
+2005-09-23T11:45:00.000Z	bob2	Shin_Gouki	if you have trouble following, then you need to read faster or filter out things you don't care about it
+2005-09-23T11:48:00.000Z	bob2	Shin_Gouki	plug it in
+2005-09-23T11:49:00.000Z	bob2	Shin_Gouki	a window  will pop up; drag stuff to it, select burn, all done
+2005-09-23T11:50:00.000Z	Shin_Gouki	bob2	, ok thx for answr which Burn Software with GUI u can recommend?
+2005-09-23T11:51:00.000Z	bob2	Shin_Gouki	the file manager is a perfectly good dvd burner
+2005-09-23T11:51:00.000Z	Shin_Gouki	bob2	: does it support UDF?
+2005-09-23T11:51:00.000Z	bob2	Shin_Gouki	yes
+2005-09-23T11:53:00.000Z	bob2	Shin_Gouki	there's obviously no "best"
+2005-10-05T10:08:00.000Z	bob2	Shin_Gouki	even if you install and use gnome, there's no "config tool to find new HW"
+2005-10-05T10:08:00.000Z	bob2	Shin_Gouki	hotplug will load modules for most everything automatically
+2005-10-05T10:09:00.000Z	Shin_Gouki	bob2	what gui does hotplug require? how do i use it?
+2005-10-05T10:09:00.000Z	bob2	Shin_Gouki	there's no gui
+2005-10-05T10:10:00.000Z	bob2	Shin_Gouki	it loads modules automatically
+2005-10-05T10:10:00.000Z	Shin_Gouki	bob2	no gui, ... i see the fun with linux starts & end with the prompt.. ;)
+2005-10-05T10:10:00.000Z	bob2	Shin_Gouki	there's nothing to do
+2005-10-05T10:11:00.000Z	bob2	Shin_Gouki	the module gets loaded, software can start using the hardware
+2005-10-05T10:11:00.000Z	bob2	Shin_Gouki	what would you want the gui to do?
+2005-10-08T11:28:00.000Z	bob2	Shin_Gouki	build-essential
+2005-10-09T14:33:00.000Z	bob2	Shin_Gouki	presumably you want mozilla-browser
+2005-10-09T14:34:00.000Z	Shin_Gouki	bob2	i want mozilla firefox and remove the rest
+2005-10-09T14:34:00.000Z	Shin_Gouki	bob2	is this possible?
+2005-10-09T14:50:00.000Z	bob2	Shin_Gouki	yes, run the command I gave you
+2005-10-09T14:51:00.000Z	Shin_Gouki	bob2	mozilla is removed it did work!
+2005-10-09T14:51:00.000Z	Shin_Gouki	bob2	i just dont like it when i need an other command for uninstalling then for install , u know what i mean??
+2005-10-09T14:53:00.000Z	bob2	Shin_Gouki	then you shouldn't be using apt-get
+2005-10-09T14:53:00.000Z	Shin_Gouki	bob2	, what i should be using then?
+2005-10-09T14:53:00.000Z	bob2	Shin_Gouki	aptitude or synaptic
+2005-10-09T14:54:00.000Z	Shin_Gouki	bob2	is this gui? i like command prompt and im using icewm
+2005-10-09T14:55:00.000Z	bob2	Shin_Gouki	why don't you have a look?
+2005-10-09T14:55:00.000Z	Shin_Gouki	bob2	where do i have to look?
+2005-10-09T14:55:00.000Z	Shin_Gouki	bob2	my ubuntu is a "server" install
+2005-10-09T14:56:00.000Z	Shin_Gouki	bob2	my ubuntu is a "server" install, with custum gui, 550 MB
+2005-10-09T14:56:00.000Z	bob2	Shin_Gouki	sudo aptitude
+2005-10-11T14:24:00.000Z	bob2	Shin_Gouki	nope
+2005-10-11T14:25:00.000Z	Shin_Gouki	bob2	ther is still a swap file of the txt file present... any chance?
+2005-10-11T14:25:00.000Z	bob2	Shin_Gouki	copy the swap file, now
+2005-10-11T14:25:00.000Z	Shin_Gouki	bob2	where to?
+2005-10-11T14:26:00.000Z	bob2	Shin_Gouki	er, anywhere?
+2005-10-11T14:27:00.000Z	Shin_Gouki	bob2	i copyed the swp file, how can i regain my txtfile from the swp?
+2005-10-11T14:28:00.000Z	Shin_Gouki	bob2	plz explain slowly to me what to do with the swapfile now to regain txt document , plz
+2005-10-11T14:29:00.000Z	Shin_Gouki	bob2	dont focus on that
+2005-10-11T14:29:00.000Z	bob2	Shin_Gouki	"plz" is not a word
+2005-10-11T14:29:00.000Z	bob2	Shin_Gouki	did you actually look in the swp file yet?
+2005-10-11T14:30:00.000Z	Shin_Gouki	bob2	yes...not really readble text...strange characters... :(
+2005-10-11T14:34:00.000Z	Shin_Gouki	bob2	plz my swap file is stilll...a swap file and not a text tifle..
+2005-10-11T14:34:00.000Z	bob2	Shin_Gouki	that's great
+2005-10-11T14:34:00.000Z	bob2	Shin_Gouki	it sounds like your file is gone, sadly
+2005-10-11T14:35:00.000Z	Shin_Gouki	bob2	failure is not an option!
+2005-10-11T14:35:00.000Z	Shin_Gouki	bob2	failure is not an option! ;)
+2005-10-11T14:35:00.000Z	bob2	Shin_Gouki	good luck then
+2005-10-11T14:36:00.000Z	Shin_Gouki	bob2	, ...thx ur beeing...cheerful
+2005-10-11T14:36:00.000Z	bob2	Shin_Gouki	I'm not sure what you expect me to do, I don't have a backup of your file
+2005-10-11T14:36:00.000Z	Shin_Gouki	bob2	may be i expect there to be a command to create txtfile from swapfile?
+2005-10-11T14:37:00.000Z	bob2	Shin_Gouki	doubt it
+2005-10-11T14:37:00.000Z	bob2	Shin_Gouki	does the "java" command do something?
+2005-10-11T14:39:00.000Z	Shin_Gouki	bob2	it seems all in the swp file but its VERY strange coded...any idea how to remove that swp coding?
+2005-10-11T14:47:00.000Z	Shin_Gouki	bob2	it seems as i some how get managed in recover mode
+2005-10-11T14:48:00.000Z	Shin_Gouki	bob2	but that mode said , 1 Block could not be read.. how do i avoid this block?
+2005-10-11T14:48:00.000Z	bob2	Shin_Gouki	I said above I have no idea
+2005-10-12T14:45:00.000Z	bob2	Shin_Gouki	that's not your real question, tell us what you're trying to do
+2005-10-12T14:46:00.000Z	Shin_Gouki	bob2	i tried to install icecc a control center for icewm but then it said: icecc: error while loading shared libraries: libqt-mt.so.3: cannot open shared object file: No such file or directory
+2005-10-12T14:46:00.000Z	bob2	Shin_Gouki	packages.ubuntu.com will tell you what file that is in
+2005-10-12T14:47:00.000Z	bob2	Shin_Gouki	hint: libqt3c102-mt
+2005-10-12T14:47:00.000Z	Shin_Gouki	bob2	ur speaking not "easy" engough to me
+2005-10-12T14:47:00.000Z	Shin_Gouki	bob2	is this " libqt3c102-mt" a pkg i need to install via apt-get?
+2005-10-12T14:48:00.000Z	bob2	Shin_Gouki	indeed
+2005-10-12T14:49:00.000Z	bob2	Shin_Gouki	because it doesn't contain that file
+2005-10-12T14:49:00.000Z	Shin_Gouki	bob2	ok i try now ur search suggest
+2005-10-12T14:52:00.000Z	Shin_Gouki	bob2	im too clumsy for that search engine :/ is this my keyword:   libqt-mt.so.3 ..?
+2005-10-12T14:52:00.000Z	bob2	Shin_Gouki	yes
+2005-10-12T14:53:00.000Z	Shin_Gouki	bob2	but the search string must be incomplete it didn't find anything what else do i have to specify??
+2005-10-12T14:54:00.000Z	bob2	Shin_Gouki	scroll down. you want the package contents search page
+2005-10-12T14:56:00.000Z	Shin_Gouki	bob2	there was 2 results, showing the file and 2 diffrent paths...what now?
+2005-10-12T14:57:00.000Z	bob2	Shin_Gouki	?
+2005-10-12T14:57:00.000Z	bob2	Shin_Gouki	it told you the package name to install
+2005-10-12T14:58:00.000Z	Shin_Gouki	bob2	im very clumsy i found also the package name..but what is the command for installing it?
+2005-10-12T14:58:00.000Z	bob2	Shin_Gouki	you've really never installed a package on ubuntu before?
+2005-10-12T14:59:00.000Z	Shin_Gouki	bob2	, only with apt-get?
+2005-10-12T14:59:00.000Z	bob2	Shin_Gouki	then use apt-get
+2005-10-12T14:59:00.000Z	Shin_Gouki	bob2	, im using ubuntu for 3  days no 5 days
+2005-10-12T15:16:00.000Z	Shin_Gouki	bob2	how can i FASt switch my shell language to english? is it possible? i want to paste somewere an aeror message but my native language is german , so?
+2005-10-12T15:20:00.000Z	bob2	Shin_Gouki	you got that .deb from Debian?
+2005-10-12T15:23:00.000Z	Shin_Gouki	bob2	, yes debian is it problem?
+2005-10-12T15:23:00.000Z	bob2	Shin_Gouki	yes
+2005-10-12T15:23:00.000Z	bob2	Shin_Gouki	don't do that
+2005-10-12T15:23:00.000Z	Shin_Gouki	bob2	but i want to use that software...so now?
+2005-10-12T15:25:00.000Z	Shin_Gouki	bob2	if i cant compile, is there any way..?
+2005-10-12T15:26:00.000Z	bob2	Shin_Gouki	no

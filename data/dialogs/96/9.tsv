@@ -1,0 +1,96 @@
+2011-01-10T06:48:00.000Z	WhatToDo	nit-wit	last time that's what i did and i got the slpash screen (ie unable to actually boot the cd), but i have another livecd for 10.10 that wouldnt install, but boots to the desktop
+2011-01-10T06:41:00.000Z	nit-wit	WhatToDo	anything done before ahnd to cause this that you can think of
+2011-01-10T06:41:00.000Z	WhatToDo	nit-wit	nope, i noticed none of my programs would start so i shut down ubuntu and on start up i got some weird screen
+2011-01-10T06:41:00.000Z	nit-wit	WhatToDo	is it a wubi install?
+2011-01-10T06:42:00.000Z	WhatToDo	nit-wit	im not sure what that is
+2011-01-10T06:43:00.000Z	nit-wit	WhatToDo	did you install Ubuntu from a live windows enviroment
+2011-01-10T06:43:00.000Z	WhatToDo	nit-wit	nope, clean install from a cd
+2011-01-10T06:43:00.000Z	WhatToDo	nit-wit	everything was working fine and i went for a restart and this si what i get
+2011-01-10T06:44:00.000Z	nit-wit	WhatToDo	boot the cd again and hit the shift key on power the computer on to get the eraly try meneu and see if that gets you to a live session to run a script
+2011-01-10T06:45:00.000Z	nit-wit	WhatToDo	the script I will have you run if we get in is a what is where and quite helpful
+2011-01-10T06:46:00.000Z	WhatToDo	nit-wit	i got a screen with an option to install, try ubuntu, check disk, test memory, or boot from hard disk
+2011-01-10T06:46:00.000Z	WhatToDo	nit-wit	i also have some F-key optionas
+2011-01-10T06:47:00.000Z	nit-wit	WhatToDo	follow the instructions to get to a live desktop on the live cd, use the shift at powering on to get the first try, install, window
+2011-01-10T06:47:00.000Z	nit-wit	WhatToDo	choose try of course
+2011-01-10T06:48:00.000Z	WhatToDo	nit-wit	ill put that one in with hope for betetr success
+2011-01-10T06:49:00.000Z	nit-wit	WhatToDo	so what is the installed Ubuntu as is there any other OS are you dual booting
+2011-01-10T06:49:00.000Z	WhatToDo	nit-wit	as of now ubuntu 10.10 and thats it
+2011-01-10T06:49:00.000Z	nit-wit	WhatToDo	youcan boot to the desktop with the 10.10 cd correct
+2011-01-10T06:49:00.000Z	WhatToDo	nit-wit	right
+2011-01-10T06:50:00.000Z	WhatToDo	nit-wit	well at least i could...lets see if it actually still boots
+2011-01-10T06:51:00.000Z	nit-wit	WhatToDo	here is the script to be run from the 10.10 live cd <LoganJRuff> !ask | sarah1
+2011-01-10T06:51:00.000Z	nit-wit	WhatToDo	http://bootinfoscript.sourceforge.net/
+2011-01-10T06:53:00.000Z	nit-wit	WhatToDo	a couple of miss post on my part from the live cd run this script and pastebin the text from the generated file.http://bootinfoscript.sourceforge.net/
+2011-01-10T06:54:00.000Z	WhatToDo	nit-wit	alright liveCD is up and running
+2011-01-10T06:54:00.000Z	WhatToDo	nit-wit	what was the link to the script again?>
+2011-01-10T06:56:00.000Z	nit-wit	WhatToDo	http://bootinfoscript.sourceforge.net/
+2011-01-10T06:56:00.000Z	WhatToDo	nit-wit	 i downloaded the script but i need something to open it with?
+2011-01-10T06:57:00.000Z	nit-wit	WhatToDo	the links page tells you how
+2011-01-10T06:58:00.000Z	WhatToDo	nit-wit	my bad. maybe i should read first huh?
+2011-01-10T06:58:00.000Z	nit-wit	WhatToDo	thats what that multitasking will do to yah.:)\
+2011-01-10T06:59:00.000Z	WhatToDo	nit-wit	on another note, i tried to re-install 10.10 earlier and it hung after i clicked install for like 10 minutes and i gave up
+2011-01-10T07:00:00.000Z	nit-wit	WhatToDo	what is the ram amount on the computer
+2011-01-10T07:00:00.000Z	WhatToDo	nit-wit	1gig i think...its what i had installed earlier and it worked fine
+2011-01-10T07:01:00.000Z	WhatToDo	nit-wit	also, the script is at "Searching sdal for information", and its kiiinda not moving
+2011-01-10T07:01:00.000Z	nit-wit	WhatToDo	hard to say really what is going on but the script will show any boot anaomalies amongst other things
+2011-01-10T07:01:00.000Z	WhatToDo	nit-wit	time to wait it out i suppose
+2011-01-10T07:02:00.000Z	nit-wit	WhatToDo	the script should run in less then 5 seconds
+2011-01-10T07:03:00.000Z	WhatToDo	nit-wit	i had three lines "Identifying MBRs...", "Computing Partition Table of /dev/sda...", and "Searching sdal for information...". Right now, the cursor is flashing at the beginning of the line, and it doesnt say ubuntu@ubuntu:~$ as it usually does
+2011-01-10T07:04:00.000Z	WhatToDo	nit-wit	so apparently the process is still running
+2011-01-10T07:04:00.000Z	nit-wit	WhatToDo	where is the script downloaded to
+2011-01-10T07:05:00.000Z	WhatToDo	nit-wit	/Downloads
+2011-01-10T07:06:00.000Z	nit-wit	WhatToDo	did you copy and paste the command or type it so it was pointed at tyhe download, and did you cpatilize the Download
+2011-01-10T07:07:00.000Z	WhatToDo	nit-wit	 i typed it out as "sudo bash ~/Downloads/boot_info_script*.sh"
+2011-01-10T07:08:00.000Z	nit-wit	WhatToDo	strange that it is not running, can you open gparted and look to see if it is reading the hard drive and if any flags are on any partitions.
+2011-01-10T07:09:00.000Z	WhatToDo	nit-wit	 it has 3 partitions...im not sure why...but the main one is /dev/sda1 with the flag boot
+2011-01-10T07:09:00.000Z	nit-wit	WhatToDo	post a screen shot of gparted as well
+2011-01-10T07:09:00.000Z	nit-wit	WhatToDo	http://imagebin.org/index.php?page=add
+2011-01-10T07:09:00.000Z	WhatToDo	nit-wit	how do i screencap in ubuntu?
+2011-01-10T07:10:00.000Z	nit-wit	WhatToDo	prtsc key works
+2011-01-10T07:11:00.000Z	WhatToDo	nit-wit	grr i tried to do something on my own, and it got my screwed up. give me a couple minutes i need to restart
+2011-01-10T07:11:00.000Z	nit-wit	WhatToDo	k
+2011-01-10T07:12:00.000Z	WhatToDo	nit-wit	before i retsart, illl try to install again just in case it works miraculously
+2011-01-10T07:16:00.000Z	nit-wit	WhatToDo	I think you have some hardware problems or a HD that is old, how old is the HD?
+2011-01-10T07:17:00.000Z	WhatToDo	nit-wit	a couple of years i think..nothing rediculous
+2011-01-10T07:17:00.000Z	nit-wit	WhatToDo	alright
+2011-01-10T07:20:00.000Z	WhatToDo	nit-wit	so i tried to boot from thd hd for kicks and all i get is a flashing cursor with no text and its not booting anything...
+2011-01-10T07:21:00.000Z	WhatToDo	nit-wit	i think i screwed with the partitions and erased the boot files or moved them or idk what
+2011-01-10T07:23:00.000Z	nit-wit	WhatToDo	so it sounds like something happened how do you think I can help?
+2011-01-10T07:23:00.000Z	WhatToDo	nit-wit	 well mainly im not sure lol at this point i want top reinstall but it freezes and its not the disk i dont think
+2011-01-10T07:24:00.000Z	nit-wit	WhatToDo	you could use the alternative disc, but your the one there. How exsperienced are you at this?
+2011-01-10T07:25:00.000Z	WhatToDo	nit-wit	relatively, in that ive installed a few times
+2011-01-10T07:26:00.000Z	nit-wit	WhatToDo	if the install is not working you might try rebooting and running a memerory check at that first window.
+2011-01-10T07:26:00.000Z	WhatToDo	nit-wit	 i just googled my issue and it seems relatively common for a freeze at this screen
+2011-01-10T07:27:00.000Z	nit-wit	WhatToDo	never have freezes in mine not sure what your doing or where from.
+2011-01-10T07:28:00.000Z	WhatToDo	nit-wit	im trying to install 10.10 and its the first screen after you click install that says Preparing to install Ubuntu and you choose whether to install updates while installing. I click forward and the cursor goes in circles and doesnt advance
+2011-01-10T07:29:00.000Z	nit-wit	WhatToDo	for how long
+2011-01-10T07:29:00.000Z	WhatToDo	nit-wit	forever, it wont advance sao i cant install
+2011-01-10T07:29:00.000Z	nit-wit	WhatToDo	you said 10 min before s this accurate
+2011-01-10T07:30:00.000Z	nit-wit	WhatToDo	have hyou used this cd to install with before?
+2011-01-10T07:30:00.000Z	WhatToDo	nit-wit	yes i left it for 10 minutes and it didnt move and i turned the computer off because the first time i installed from this disk it didnt hang at all
+2011-01-10T07:30:00.000Z	WhatToDo	nit-wit	yeah
+2011-01-10T07:31:00.000Z	nit-wit	WhatToDo	so is the actual install fryed, can you remove it?
+2011-01-10T07:31:00.000Z	WhatToDo	nit-wit	remove whay?
+2011-01-10T07:31:00.000Z	nit-wit	WhatToDo	you had a Ubuntu install that stopped booting correct?
+2011-01-10T07:31:00.000Z	WhatToDo	nit-wit	right
+2011-01-10T07:32:00.000Z	nit-wit	WhatToDo	I am wondering if it has made a problem with writing a new install to the HD.
+2011-01-10T07:36:00.000Z	nit-wit	WhatToDo	whats happening?
+2011-01-10T07:38:00.000Z	WhatToDo	nit-wit	uhhhh i put back in the 10
+2011-01-10T07:38:00.000Z	nit-wit	WhatToDo	you got the installer working?
+2011-01-10T07:38:00.000Z	nit-wit	WhatToDo	 see the Lucid disc
+2011-01-10T07:38:00.000Z	WhatToDo	nit-wit	nope...still on splash screen...different disk
+2011-01-10T07:39:00.000Z	nit-wit	WhatToDo	okay time for a cig break brb
+2011-01-10T07:40:00.000Z	WhatToDo	nit-wit	dinner for me brb
+2011-01-10T08:04:00.000Z	WhatToDo	nit-wit	so i left my 10.04 disk in while i ate dinner for like 15 minutes and its still at the splash screen
+2011-01-10T08:05:00.000Z	nit-wit	WhatToDo	have you tried running the memory check at the try scree?
+2011-01-10T08:14:00.000Z	WhatToDo	nit-wit	running memory check now
+2011-01-10T08:29:00.000Z	nit-wit	WhatToDo	sorry for the long waiy had to do some chores.:)
+2011-01-10T08:30:00.000Z	WhatToDo	nit-wit	no problem im waiting for memtest tp finish
+2011-01-10T08:31:00.000Z	nit-wit	WhatToDo	I will be on
+2011-01-10T08:34:00.000Z	nit-wit	WhatToDo	yes
+2011-01-10T08:34:00.000Z	nit-wit	WhatToDo	hard to say from here really
+2011-01-10T08:42:00.000Z	nit-wit	WhatToDo	have you tried loading a thumb of the computer will boot from one?
+2011-01-10T11:21:00.000Z	nit-wit	WhatToDo	have hyou tried a thumb loaded if you can boot one
+2011-01-10T11:22:00.000Z	WhatToDo	nit-wit	im not sure what you mean
+2011-01-10T11:22:00.000Z	nit-wit	WhatToDo	can you boot a thumb
+2011-01-10T11:24:00.000Z	nit-wit	WhatToDo	you can load the ISO to a thumb and boot it if your computer allows booting from a USB

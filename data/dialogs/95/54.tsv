@@ -1,0 +1,95 @@
+2007-03-11T15:57:00.000Z	Kosssu		meh, wants the command to start mysqld? ive looked over 60 pages on forums, but nobody mentions it
+2007-03-11T15:58:00.000Z	h1st0	Kosssu	sudo /etc/init.d/mysql start
+2007-03-11T15:59:00.000Z	h1st0	Kosssu	did you get errors?
+2007-03-11T15:59:00.000Z	Kosssu	h1st0	none
+2007-03-11T15:59:00.000Z	h1st0	Kosssu	How did you install mysql?
+2007-03-11T16:00:00.000Z	Kosssu	h1st0	from synaptic
+2007-03-11T16:00:00.000Z	h1st0	Kosssu	well if you install from synaptic mysql should be running.
+2007-03-11T16:01:00.000Z	h1st0	Kosssu	perhaps you didn't install mysql-server
+2007-03-11T16:01:00.000Z	Kosssu	h1st0	had to reinstall it, because I wasn't able to change root for some reason
+2007-03-11T16:01:00.000Z	h1st0	Kosssu	well root by default has no password also.
+2007-03-11T16:01:00.000Z	h1st0	Kosssu	and if you reinstalled without purging you will have the same issue.
+2007-03-11T16:02:00.000Z	Kosssu	h1st0	thats what i figured, however mythtv had other plans about that
+2007-03-11T16:02:00.000Z	h1st0	Kosssu	try sudo aptitude purge mysql mysql-server
+2007-03-11T16:02:00.000Z	h1st0	Kosssu	Then sudo aptitude install mysql mysql-server
+2007-03-11T16:02:00.000Z	Kosssu	h1st0	mmk, its setup. Should I try starting it now?
+2007-03-11T16:03:00.000Z	h1st0	Kosssu	well it should be running .
+2007-03-11T16:03:00.000Z	h1st0	Kosssu	lsmod | grep mysql
+2007-03-11T16:03:00.000Z	Kosssu	h1st0	returns nothing
+2007-03-11T16:03:00.000Z	h1st0	Kosssu	wai tthat will return nothing.
+2007-03-11T16:04:00.000Z	h1st0	Kosssu	hold up let me try somehting
+2007-03-11T16:04:00.000Z	h1st0	Kosssu	try sudo /etc/init.d/mysql status
+2007-03-11T16:05:00.000Z	Kosssu	h1st0	returns " * MySQL is stopped."
+2007-03-11T16:05:00.000Z	h1st0	Kosssu	you have to use sudo
+2007-03-11T16:06:00.000Z	Kosssu	h1st0	i did
+2007-03-11T16:06:00.000Z	h1st0	Kosssu	well sudo /etc/init.d/mysql restart
+2007-03-11T16:06:00.000Z	Kosssu	h1st0	i always use sudo, just in case
+2007-03-11T16:06:00.000Z	Kosssu	h1st0	stopped it fine, however failed to start it.
+2007-03-11T16:07:00.000Z	h1st0	Kosssu	Did it give an erro or just say fail
+2007-03-11T16:07:00.000Z	Kosssu	h1st0	just a red fail
+2007-03-11T16:08:00.000Z	h1st0	Kosssu	okay check in /var/log/mysql.err
+2007-03-11T16:08:00.000Z	Kosssu	h1st0	file empty
+2007-03-11T16:09:00.000Z	h1st0	Kosssu	yeah i'm looking for a proper log.
+2007-03-11T16:10:00.000Z	h1st0	Kosssu	hrm.. did mysql ever work?
+2007-03-11T16:11:00.000Z	Kosssu	h1st0	Ive never used it, this is a fairly fresh install, I reinstalled mysql earlier due to problems with mythtv not being able to connect to server
+2007-03-11T16:11:00.000Z	h1st0	Kosssu	did you purge it like I showed you?
+2007-03-11T16:12:00.000Z	h1st0	Kosssu	then try installing again just now?
+2007-03-11T16:12:00.000Z	Kosssu	h1st0	purge?
+2007-03-11T16:12:00.000Z	h1st0	Kosssu	alright sudo /etc/init.d/mysql stop
+2007-03-11T16:12:00.000Z	Kosssu	h1st0	oh yeah, I did
+2007-03-11T16:12:00.000Z	h1st0	Kosssu	then sudo aptitude purge mysql mysql-server
+2007-03-11T16:12:00.000Z	h1st0	Kosssu	then sudo aptitude install mysql mysql-server
+2007-03-11T16:13:00.000Z	h1st0	Kosssu	I have no idea why it isn't logging to /var/log/
+2007-03-11T16:13:00.000Z	Kosssu	h1st0	i got 2 versions of mysql server 2
+2007-03-11T16:13:00.000Z	Kosssu	h1st0	both installed, that might cause a conflict?
+2007-03-11T16:14:00.000Z	h1st0	Kosssu	yeap
+2007-03-11T16:14:00.000Z	h1st0	Kosssu	how'd you get 2 version installed?
+2007-03-11T16:14:00.000Z	h1st0	Kosssu	did you install a deb or smoething?
+2007-03-11T16:14:00.000Z	Kosssu	h1st0	don't think their 100% identical
+2007-03-11T16:15:00.000Z	Kosssu	h1st0	when trying to uninstall mysql it returned alot of errors since mythtv was installed
+2007-03-11T16:15:00.000Z	Kosssu	h1st0	had to remove mythtv in order to even uninstall mysql
+2007-03-11T16:16:00.000Z	h1st0	Kosssu	Kosssu there should be a mysql-server then another mysql-server if you dpkg -l | grep mysql  one is binaries one is meta package
+2007-03-11T16:19:00.000Z	h1st0	Kosssu	okay logging is turned off by default in /etc/mysql/my.cnf
+2007-03-11T16:19:00.000Z	h1st0	Kosssu	if you edit that file you can enable loggin by removing the # inf front of the log line.
+2007-03-11T16:19:00.000Z	h1st0	Kosssu	then try to sudo /etc/init.d/mysql start    once it fails check you /var/log/mysql.log  for some errors
+2007-03-11T16:20:00.000Z	Kosssu	h1st0	which file to edit?
+2007-03-11T16:20:00.000Z	h1st0	Kosssu	Do you have a desktop on this machine or just terminal?
+2007-03-11T16:20:00.000Z	h1st0	Kosssu	gksu gedit /etc/mysql/my.cnf
+2007-03-11T16:21:00.000Z	h1st0	Kosssu	look for the line that says #log /var/log/msyql.log
+2007-03-11T16:21:00.000Z	h1st0	Kosssu	remove the # from the front of that line.
+2007-03-11T16:23:00.000Z	Kosssu	h1st0	was in process of reinstall mysql from synaptic and it returned alot of errors
+2007-03-11T16:23:00.000Z	Kosssu	h1st0	E: mysql-server-5.0: subprocess post-installation script returned error exit status 1
+2007-03-11T16:24:00.000Z	h1st0	Kosssu	sudo aptitude update && sudo aptitude reinstall mysql-server
+2007-03-11T16:24:00.000Z	h1st0	Kosssu	copy and paste that in terminal
+2007-03-11T16:25:00.000Z	Kosssu	h1st0	returning same error in terminal too
+2007-03-11T16:26:00.000Z	h1st0	Kosssu	sudo /etc/init.d/mysql stop          In a terminal
+2007-03-11T16:27:00.000Z	h1st0	Kosssu	can you pastebin the results of doing dpkg -l | grep mysql and then sudo aptitude install mysql-server
+2007-03-11T16:30:00.000Z	Kosssu	h1st0	http://paste.ubuntu-nl.org/9794/
+2007-03-11T16:32:00.000Z	h1st0	Kosssu	alright sudo aptitude purge mysql-server-5.0 mysql-server
+2007-03-11T16:33:00.000Z	Kosssu	h1st0	done
+2007-03-11T16:33:00.000Z	h1st0	Kosssu	now try sudo aptitude install mysql-server   Shouldn't error out this time.
+2007-03-11T16:34:00.000Z	Kosssu	h1st0	still failed to start it :(, same error
+2007-03-11T16:35:00.000Z	h1st0	Kosssu	it failed to start but did you get the same error about mysql-server-5.0?
+2007-03-11T16:35:00.000Z	Kosssu	h1st0	yes
+2007-03-11T16:35:00.000Z	Kosssu	h1st0	mysql-server depends on mysql-server-5.0; however:
+2007-03-11T16:36:00.000Z	h1st0	Kosssu	I dunno something is messed up beyond my knowledge on that one.  Try posting to the forums.  Make sure you put in the error you are getting when trying to install mysql-server
+2007-03-11T16:36:00.000Z	Kosssu	h1st0	should I try configuring mysql-server-5.0?
+2007-03-11T16:36:00.000Z	h1st0	Kosssu	you could try sudo dpkg-configure mysql-server-5.0
+2007-03-11T16:37:00.000Z	h1st0	Kosssu	but don't think that is going to help.
+2007-03-11T16:37:00.000Z	Kosssu	h1st0	command not found :(
+2007-03-11T16:38:00.000Z	h1st0	Kosssu	sudo dpkg-reconfigure mysql-server-5.0
+2007-03-11T16:39:00.000Z	h1st0	Kosssu	sry bout that.
+2007-03-11T16:39:00.000Z	Kosssu	h1st0	returns, mysql-server-5.0 is broken or not fully installed
+2007-03-11T16:40:00.000Z	Kosssu	h1st0	ima post on forums and see if anyone has any ideas, thanks alot for taking ur time and trying to help
+2007-03-11T16:40:00.000Z	h1st0	Kosssu	sudo aptitude reinstall mysql-server-5.0
+2007-03-11T16:41:00.000Z	Kosssu	h1st0	returns same :(
+2007-03-11T16:42:00.000Z	h1st0	Kosssu	yeah try posting in the forums.
+2007-03-11T16:42:00.000Z	h1st0	Kosssu	or asking someone else here.  Their is a package that is mesed up.
+2007-03-11T16:46:00.000Z	Kosssu	h1st0	just noticted there is a process called mysqld_safe running, taking all spare cpu atm
+2007-03-11T16:50:00.000Z	h1st0	Kosssu	hrm...
+2007-03-11T16:50:00.000Z	h1st0	Kosssu	You could try killing that and reinstalling mysql-server
+2007-03-11T16:50:00.000Z	Kosssu	h1st0	know the command to kill ?
+2007-03-11T16:50:00.000Z	h1st0	Kosssu	killall mysql-safe
+2007-03-11T16:51:00.000Z	Kosssu	h1st0	thanks, using 99% cpu atm :P
+2007-03-11T16:51:00.000Z	h1st0	Kosssu	you might need to do it as sudo
+2007-03-11T16:54:00.000Z	Kosssu	h1st0	damn, same error still :(

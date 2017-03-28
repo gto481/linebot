@@ -1,0 +1,95 @@
+2006-04-05T16:08:00.000Z	CNAP		FATAL: Failed to make swap directory /usr/local/squid/var/cache/00/: (13) Permission denied
+2006-04-05T16:08:00.000Z	CNAP		can somebody help me with that?
+2006-04-05T16:09:00.000Z	nickrud	CNAP	did you get squid out of the repos?
+2006-04-05T16:12:00.000Z	CNAP	nickrud	no, i downloaded from squid's site
+2006-04-05T16:12:00.000Z	nickrud	CNAP	the one in the repos is already set up (mostly) why not use it?
+2006-04-05T16:13:00.000Z	nickrud	CNAP	it's in the main repository, which is enabled by default. How about posting your /etc/apt/sources.list to http://paste.ubuntu-nl.org
+2006-04-05T16:13:00.000Z	nickrud	CNAP	or better yet (first) type apt-cache policy squid
+2006-04-05T16:14:00.000Z	nickrud	CNAP	yeah, post your sources
+2006-04-05T16:16:00.000Z	CNAP	nickrud	have at it...
+2006-04-05T16:19:00.000Z	nickrud	CNAP	go to !easysource and create a new sources.list, that one's pretty fubar'd.
+2006-04-05T16:20:00.000Z	CNAP	nickrud	i'm there
+2006-04-05T16:20:00.000Z	nickrud	CNAP	ok, enable everything above the unofficial lines
+2006-04-05T16:24:00.000Z	nickrud	CNAP	everything going ok?
+2006-04-05T16:26:00.000Z	CNAP	nickrud	yeah...i just don't know how to save in VI :-(
+2006-04-05T16:27:00.000Z	nickrud	CNAP	escape :wq   (write quit)
+2006-04-05T16:28:00.000Z	CNAP	nickrud	ok i think i got it
+2006-04-05T16:28:00.000Z	nickrud	CNAP	the easiest way is gksudo gedit , cut and paste is easy there
+2006-04-05T16:30:00.000Z	CNAP	nickrud	ok, check the pastebin and see if that's ok?
+2006-04-05T16:31:00.000Z	nickrud	CNAP	you should replace all of what's in /etc/apt/sources.list with the one made by the source-o-matic
+2006-04-05T16:32:00.000Z	nickrud	CNAP	the most important reason being it's easy to read & understand
+2006-04-05T16:32:00.000Z	CNAP	nickrud	source-o-matic?
+2006-04-05T16:33:00.000Z	nickrud	CNAP	thats !easysource
+2006-04-05T16:35:00.000Z	CNAP	nickrud	it's updating now...
+2006-04-05T16:36:00.000Z	CNAP	nickrud	it found squid, and it's installing now...
+2006-04-05T16:36:00.000Z	nickrud	CNAP	great, you should have no trouble finding most things you are going to want now.
+2006-04-05T16:42:00.000Z	nickrud	CNAP	in the terminal, press ctl-c
+2006-04-29T09:33:00.000Z	nickrud	CNAP	that is something I haven't seen in a long time, what are you compiling?
+2006-04-29T09:33:00.000Z	CNAP	nickrud	actually i just apt-get'ed monodevelop, ran it and got that
+2006-04-29T09:34:00.000Z	nickrud	CNAP	heh. that's an error I thought would be very old, can I see the whole error?
+2006-04-29T09:34:00.000Z	CNAP	nickrud	you did. that's the error message
+2006-04-29T09:34:00.000Z	nickrud	CNAP	thats it?!
+2006-04-29T09:35:00.000Z	nickrud	CNAP	try export MOZILLA_FIVE_HOME=/usr/lib/mozilla , that'd be my first stab at it
+2006-04-29T09:35:00.000Z	CNAP	nickrud	export? how?
+2006-04-29T09:35:00.000Z	CNAP	nickrud	i don't even know what's MOZILLA_FIVE_HOME
+2006-04-29T09:36:00.000Z	nickrud	CNAP	try typing exactly: MOZILLA_FIVE_HOME=/usr/lib/mozilla monodevelop
+2006-04-29T09:36:00.000Z	CNAP	nickrud	whoa...ok now how did you know that would work? ;-)
+2006-04-29T09:37:00.000Z	nickrud	CNAP	I used to compile galeon, and back in the day I had to know that environment variable. You should file a bug
+2006-04-29T09:38:00.000Z	nickrud	CNAP	a very nice browser
+2006-04-29T09:39:00.000Z	nickrud	CNAP	it's in the repos
+2006-04-29T09:39:00.000Z	CNAP	nickrud	i'll look it up. thanks for the assist ;-)
+2006-04-29T09:41:00.000Z	nickrud	CNAP	I'm serious about the bug, I don't use monodevelop but that's not right
+2006-04-29T09:43:00.000Z	CNAP	nickrud	what do you mean?
+2006-04-29T09:43:00.000Z	CNAP	nickrud	i'm just trying to pick up C# and i've already gotten problems from the start
+2006-04-29T09:44:00.000Z	nickrud	CNAP	I gave up programming C back in the k&R days, but a bug is a bug
+2006-04-29T09:45:00.000Z	CNAP	nickrud	k&r?
+2006-04-29T09:45:00.000Z	nickrud	CNAP	kernigan & richie
+2006-04-29T09:50:00.000Z	nickrud	CNAP	it's a book written by the original authors of C , before it got standardized & extended.
+2006-04-29T09:51:00.000Z	CNAP	nickrud	yeah i just googled it
+2006-04-29T09:52:00.000Z	nickrud	CNAP	I spent many fruitful hours reading that book, it's almost as useful as Strunk
+2006-04-29T10:28:00.000Z	CNAP	nickrud	is there a permanent way i can set MOZILLA_FIVE_HOME to The mozilla directory
+2006-04-29T10:29:00.000Z	nickrud	CNAP	yes, you can add export MOZILLA_FIVE_HOME=/usr/lib/mozilla to /etc/profile , it should be valid
+2006-04-29T10:30:00.000Z	CNAP	nickrud	would you be kind enough to tell me how? appreciate all your help on this
+2006-04-29T10:31:00.000Z	nickrud	CNAP	gksudo gedit /etc/profile      , then add that line to the end of that file & save it. When you next log out and back in, it should be active
+2006-04-29T10:31:00.000Z	CNAP	nickrud	i knew that ;-)
+2006-04-29T10:34:00.000Z	nickrud	CNAP	just go to the bottom, add it there :)
+2006-04-29T10:35:00.000Z	nickrud	CNAP	but, I still think it's a bug that you need to do that. I'll never run monodevelop myself so I can't usefully file it
+2006-04-29T10:36:00.000Z	CNAP	nickrud	i agree
+2006-04-29T10:36:00.000Z	nickrud	CNAP	so file it :)
+2006-04-29T10:36:00.000Z	CNAP	nickrud	what other IDE's can i use for C#>
+2006-04-29T10:47:00.000Z	CNAP	nickrud	can you do me a favor and check the pastebin to see if i've entered the path correctly? i'm not getting any change in behavior
+2006-04-29T10:47:00.000Z	nickrud	CNAP	which pastebin?
+2006-04-29T10:48:00.000Z	CNAP	nickrud	http://paste.ubuntu-nl.org/12822
+2006-04-29T10:49:00.000Z	nickrud	CNAP	change that line to   '   export MOZILLA_FIVE_HOME=/usr/lib/mozilla  '
+2006-04-29T10:49:00.000Z	nickrud	CNAP	when you log out & back in, monodevelop will use that data
+2006-04-29T10:50:00.000Z	CNAP	nickrud	ok let me try it
+2006-04-29T10:57:00.000Z	CNAP	nickrud	i did what you said and still doesn't want to work. i not only logged out, but rebooted
+2006-04-29T10:57:00.000Z	nickrud	CNAP	in a terminal (in X) env | sort ; does MOZILLA_FIVE_HOME appear ?
+2006-04-29T10:58:00.000Z	CNAP	nickrud	no
+2006-04-29T11:00:00.000Z	nickrud	CNAP	I'm gonna skip all the right stuff, and tell you a hack: create the file ~/.gnomerc , and add the line export MOZILLA_FIVE_HOME=/usr/lib/mozilla     to that file.
+2006-04-29T11:01:00.000Z	nickrud	CNAP	don't forget to file a bug about this
+2006-04-29T11:01:00.000Z	CNAP	nickrud	i've done a little research and i don't think i'm the first one to complain about it. but i'll file one anyway just so they don't forget about it
+2006-04-29T11:02:00.000Z	nickrud	CNAP	bugs get dealt with one way or another someday, if the bug doesn't exist the issue will drop thru the cracks.
+2006-04-29T11:03:00.000Z	nickrud	CNAP	like I said I'll never use monodevelop so I'll never see that but. You have :)
+2006-04-29T11:03:00.000Z	nickrud	CNAP	try source ~/.gnomerc from a terminal, then run monodevelop from that terminal. If it works there, it should be good anytime you log in
+2006-04-29T11:04:00.000Z	nickrud	CNAP	log into gnome
+2006-04-29T11:04:00.000Z	CNAP	nickrud	~/.gnomerc is going to be located in my home dir?
+2006-04-29T11:04:00.000Z	nickrud	CNAP	yes, that's what ~ means (/home/<you>)
+2006-04-29T11:05:00.000Z	CNAP	nickrud	just checking.
+2006-04-29T11:05:00.000Z	nickrud	CNAP	just expanding, like the ~ :)
+2006-04-29T11:06:00.000Z	CNAP	nickrud	why is it when i type 'ls' in the home dir it doesn't show
+2006-04-29T11:06:00.000Z	nickrud	CNAP	you'd use ls -a (all, including the hidden files that start with a .)
+2006-04-29T11:07:00.000Z	CNAP	nickrud	ok i ran monodevelop, nothing....
+2006-04-29T11:09:00.000Z	nickrud	CNAP	if MOZILLA_FIVE_HOME=/usr/lib/mozilla monodevelop works, putting export MOZILLA_FIVE_HOME=/usr/lib/mozilla in ~/.gnomerc and relogging in and running monodevelop in a terminal will work. Check for typos.
+2006-04-29T11:10:00.000Z	CNAP	nickrud	ok let me check, and tweak...
+2006-04-29T11:16:00.000Z	nickrud	CNAP	success?
+2006-04-29T11:16:00.000Z	CNAP	nickrud	FCUK YEAH! YOU'RE A MAD GENIUS!
+2006-04-29T11:16:00.000Z	nickrud	CNAP	people who know me would drop the noun
+2006-04-29T11:17:00.000Z	CNAP	nickrud	so how do you know all this stuff?
+2006-04-29T11:17:00.000Z	nickrud	CNAP	same you will, time
+2006-04-29T11:17:00.000Z	nickrud	CNAP	if you get serious, you'll outstrip me in no time :)
+2006-04-29T11:18:00.000Z	CNAP	nickrud	lol, now that i got it working i've got to figure out how to use it
+2006-04-29T11:19:00.000Z	CNAP	nickrud	so what's a .gnomerc file anyway?
+2006-04-29T11:19:00.000Z	nickrud	CNAP	it's simply a file that gnome reads upon startup, it's like a .bashrc
+2006-04-29T11:20:00.000Z	CNAP	nickrud	so basically a really simple script
+2006-04-29T11:21:00.000Z	nickrud	CNAP	roughly yes.

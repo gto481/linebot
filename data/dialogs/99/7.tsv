@@ -1,0 +1,99 @@
+2011-05-24T19:03:00.000Z	roasted		Question - if I set up a box with 1hdd to root and a pair of 500gb Software Raid 1 drives as /home, would /home be on the 500gb drives for any user I create?
+2011-05-24T19:03:00.000Z	ActionParsnip	roasted	yes
+2011-05-24T19:33:00.000Z	ActionParsnip	roasted	test access. I like to screw mine does with access allowed and access denied lists
+2011-05-24T19:33:00.000Z	roasted	ActionParsnip	do you by chance use gadmin for your samba needs?
+2011-05-24T19:34:00.000Z	ActionParsnip	roasted	no, i use smb.conf so I can configure it via ssh
+2011-05-24T19:34:00.000Z	roasted	ActionParsnip	I see. HAve you ever used anything else, such as a web based frontend for it? Or always ssh/smb.conf?
+2011-05-24T19:34:00.000Z	ActionParsnip	roasted	I suggest you add: root bin daemon nobody    to the denied list, for security
+2011-05-24T19:34:00.000Z	ActionParsnip	roasted	no, never had to, the file is insanely simple
+2011-05-24T19:35:00.000Z	roasted	ActionParsnip	I agree. I'm just trying to figure out a way to remotely handle the system. I didn't think about ssh, as I could forward that outside the router for external access.
+2011-05-24T19:35:00.000Z	ActionParsnip	roasted	plus its secure :)
+2011-05-24T19:36:00.000Z	roasted	ActionParsnip	the one thing I like about gadmin is any changes I make I can see the config file in another tab. It's not a bad way to learn the ins and outs of the real smb.conf
+2011-05-24T19:36:00.000Z	ActionParsnip	roasted	add   http://paste.ubuntu.com/612299/   to the file, restart smbd  and you have a share
+2011-05-24T19:37:00.000Z	roasted	ActionParsnip	its funny how much info is in the smb.conf. IT looks huge and confusing when nearly 90% of it is just tips and advice.
+2011-05-24T19:37:00.000Z	ActionParsnip	roasted	yeah a few files are like that
+2011-07-13T07:21:00.000Z	ActionParsnip	roasted	I can recommend deadbeef :)
+2011-07-13T07:33:00.000Z	roasted	ActionParsnip	deadbeef... as in, a media management application???
+2011-07-13T07:37:00.000Z	ActionParsnip	roasted	yeah its nice
+2011-07-13T07:39:00.000Z	roasted	ActionParsnip	it seems very simple. does it do playlist syncing to ipods and such?
+2011-07-13T07:39:00.000Z	ActionParsnip	roasted	no idea, i don't use apples garbage. my sense outstrips my wallet
+2011-07-13T07:39:00.000Z	roasted	ActionParsnip	you and me both. I'm just trying to get acquianted with more media players since I have a few friends who might switch to linux IF they can find something to suit their ipod needs :P
+2011-07-13T07:40:00.000Z	roasted	ActionParsnip	just trying to get more well educated on which apps I can recommend them.
+2011-07-13T07:40:00.000Z	ActionParsnip	roasted	i'd either check its feature list, or just install it and test :)
+2011-07-22T22:30:00.000Z	roasted	ActionParsnip	I uninstalled network manager and set it as static in the network interface file. I thought it was weird that my network connection wasnt working, then I realized it was 17.11 when the IP should be static @ 17.2
+2011-07-22T22:30:00.000Z	roasted	ActionParsnip	with the dhcp range being 17.10 to 17.254
+2011-07-22T22:31:00.000Z	roasted	ActionParsnip	I just restarted the net interfaces and now its 17.2, but it legitimently puled a DHCP address when it was set to static, which shocked me.
+2011-08-24T20:59:00.000Z	ActionParsnip	roasted	if you uninstall alacarte, does the package manager want to gut the OS?
+2011-08-25T20:49:00.000Z	ActionParsnip	roasted	was it gracefully removed last time it was removed
+2011-11-03T07:34:00.000Z	ActionParsnip	roasted	you may be able to resize the mac filesystem
+2011-11-03T07:34:00.000Z	roasted	ActionParsnip	can gparted do that or do I need a mac utility?
+2011-11-03T07:35:00.000Z	ActionParsnip	roasted	not sure, I don't buy mac rubbish
+2011-11-03T07:35:00.000Z	roasted	ActionParsnip	nor do I. It's a work laptop and I want to liberate it. :P
+2011-11-03T07:35:00.000Z	roasted	ActionParsnip	besides, we're moving to ubuntu, but we're not there full bore just yet. takes time!
+2011-11-03T07:41:00.000Z	ActionParsnip	roasted	nice but be civil pleas
+2011-11-03T07:43:00.000Z	ActionParsnip	roasted	use /ignore dude ;)
+2012-03-27T08:14:00.000Z	ActionParsnip	roasted	is there an option to not use the system tray icon..
+2012-03-27T08:14:00.000Z	roasted	ActionParsnip	oh wow, it doesn't even show up in alt tab....
+2012-03-27T08:15:00.000Z	roasted	ActionParsnip	weird??
+2012-04-06T23:15:00.000Z	ActionParsnip	roasted	do it in an inistalled OS and use the LiveCD to customize
+2012-04-06T23:16:00.000Z	roasted	ActionParsnip	not sure I understand. I installed Ubuntu on my laptop, but I'd like to snapshot it into a custom ISO and use that ISO to "reimage it" (if I dare say) when I get my SSD tomorrow.
+2012-04-06T23:16:00.000Z	ActionParsnip	roasted	not sure there dude, I've looked into that a few times
+2012-04-06T23:17:00.000Z	roasted	ActionParsnip	I'm just not sure if I can run remastersys when I'm actually booted into the install I want to back up. The guides I'm reading don't say.
+2012-04-16T23:47:00.000Z	ActionParsnip	roasted	killall -u $USER    works, if a bit heavy handed
+2012-04-16T23:48:00.000Z	roasted	ActionParsnip	is that the optimum way to quietly log out, though?
+2012-04-16T23:48:00.000Z	ActionParsnip	roasted	define optimum
+2012-04-16T23:49:00.000Z	roasted	ActionParsnip	pulling the plug on a computer is convenient to turn it off, but not optimum.
+2012-04-16T23:49:00.000Z	ActionParsnip	roasted	that 'ideal' not optimum
+2012-04-16T23:50:00.000Z	ActionParsnip	roasted	there is the gnome-session command but the command I gave will work
+2012-04-16T23:51:00.000Z	ActionParsnip	roasted	gnome-session-quit --no-prompt
+2012-04-16T23:51:00.000Z	roasted	ActionParsnip	snazzy. I'll try that out. Appreciate it.
+2012-04-17T00:00:00.000Z	roasted	ActionParsnip	any idea how I'd accomplish taht task (gnome-session-quit --no-prompt) but with xfce?
+2012-04-17T00:01:00.000Z	ActionParsnip	roasted	not sure, let me see.
+2012-04-17T00:02:00.000Z	roasted	ActionParsnip	looks like xfce session is xfce4-session, but not sure how to drop it. it says command not found = xfce4-session-quit --no-prompt
+2012-04-17T00:03:00.000Z	ActionParsnip	roasted	http://linux.die.net/man/1/xfce4-session-logout
+2012-04-17T00:04:00.000Z	roasted	ActionParsnip	you the man.
+2012-04-17T00:04:00.000Z	ActionParsnip	roasted	all I do is web search
+2012-04-17T00:04:00.000Z	roasted	ActionParsnip	hey, I did too.
+2012-04-17T00:04:00.000Z	roasted	ActionParsnip	perhaps I fail @ web search :(
+2012-05-31T04:19:00.000Z	ActionParsnip	roasted	sudo usermod -a -G motion jason
+2012-05-31T04:19:00.000Z	ActionParsnip	roasted	you are adding the user to a supplementary group, your command wil make the user in ONLY the motion group
+2012-05-31T08:11:00.000Z	roasted	ActionParsnip	for president.
+2012-05-31T08:12:00.000Z	ActionParsnip	roasted	I'm british ;)
+2012-05-31T08:12:00.000Z	roasted	ActionParsnip	I failed :(
+2012-05-31T08:12:00.000Z	roasted	ActionParsnip	you should become an expert in Motion so you can help me with understanding these ridiculous daemon issues. :D
+2012-05-31T08:13:00.000Z	ActionParsnip	roasted	hehe wel I'll be doing LPI101 and LP102 soon so its a step closer :)
+2012-05-31T08:13:00.000Z	roasted	ActionParsnip	I'm actually very fond of this software. Its proving to be quite awesome for home surveillance. I just wish I understood some of this crap more.
+2012-06-04T21:32:00.000Z	ActionParsnip	roasted	is usb legacy mode enabled in the BIOS?
+2012-06-04T21:32:00.000Z	roasted	ActionParsnip	not entirely sure. Is what I'm seeing a common symptom of that?
+2012-06-04T21:41:00.000Z	roasted	ActionParsnip	usb legacy is enabled in bios :(
+2012-06-04T21:42:00.000Z	ActionParsnip	roasted	try turning it off then, switch it to the other option
+2012-06-04T21:42:00.000Z	roasted	ActionParsnip	eh, it seems like it's working now.
+2012-06-04T21:43:00.000Z	roasted	ActionParsnip	wonder if the reboot alone helped
+2012-06-21T19:26:00.000Z	ActionParsnip	roasted	some_command 2>&1 | tee ~/file
+2012-06-21T19:27:00.000Z	ActionParsnip	roasted	thats stderr and stdout :)
+2012-08-22T15:58:00.000Z	ActionParsnip	roasted	cron the rsync job to run at regular  intervals
+2012-08-22T15:59:00.000Z	roasted	ActionParsnip	the idea is to have it active at all times, not so much scheduled. The idea here is to have two linux boxes on a LAN, no external ISP connection, and run video surveillance feeds to those two boxes. That way if mr thief jacks one box, he'll likely not realize there's a 2nd DVR on site. Problem is, cron'ing a job wouldn't fly because if it runs hourly, it'll likely miss the most important window.
+2012-08-22T15:59:00.000Z	ActionParsnip	roasted	you don't need a web connection for LAN sync
+2012-08-22T16:00:00.000Z	ActionParsnip	roasted	a cron job can run every second if you desire
+2012-08-22T16:00:00.000Z	roasted	ActionParsnip	I know. I meant if there was a web connection, I would just rsync the data offsite. But since we don't have a web connection, I want to LAN sync it across a 2nd box for a greater chance of retaining the footage even if a box is stolen.
+2012-08-22T16:00:00.000Z	roasted	ActionParsnip	how would the command ever complete itself? I would think it would cancel out the previous job, then begin the new job, therefore negating the previous point of it running.
+2012-08-22T16:01:00.000Z	ActionParsnip	roasted	you can use dropbox to sync over LAN
+2012-08-22T16:01:00.000Z	roasted	ActionParsnip	dropbox... on the LAN?
+2012-08-22T16:02:00.000Z	ActionParsnip	roasted	sure
+2012-08-22T16:04:00.000Z	ActionParsnip	roasted	why not just make a file share and have it accessible as a single point, rather than syncing it?
+2012-08-22T16:04:00.000Z	roasted	ActionParsnip	the idea is to have two identical boxes on the LAN, so if one gets stolen by a thief, the video feeds still exist elsewhere.
+2012-08-22T16:05:00.000Z	roasted	ActionParsnip	otherwise I would just share it out via samba, like I do at home with my own personal surveillance setup.
+2012-08-22T16:05:00.000Z	roasted	ActionParsnip	but actually, it is. Think about it. If a thief breaks in and within 3-5 minutes finds the DVR and steals it, I'm counting on those specific 3-5 minutes of his entrance to be on box B
+2012-08-22T16:05:00.000Z	roasted	ActionParsnip	if it's not an active sync, or an hourly sync or whatever, I could easily miss out on that time frame.
+2012-08-23T19:55:00.000Z	ActionParsnip	roasted	have you played with socket options?
+2012-08-23T19:55:00.000Z	roasted	ActionParsnip	I have not. I've never needed to. Things were always very fast.
+2012-08-23T19:56:00.000Z	roasted	ActionParsnip	I thought at first it was due to my encrypted home dir, but I created a samba share on my root, which isn't encrypted, and it's the same thing there.
+2012-08-23T19:56:00.000Z	ActionParsnip	roasted	try some different options, may help
+2012-08-23T19:59:00.000Z	ActionParsnip	roasted	try: socket options = TCP_NODELAY SO_KEEPALIVE SO_SNDBUF=16384 SO_RCVBUF=16384     in /etc/samba/smb.conf    there will be a line similar, just add the extra options
+2012-08-23T20:10:00.000Z	roasted	ActionParsnip	I didn't get a chance to try what you said for Samba, but fun thought - wireless via samba 200MB in 5 minutes. wired via samba 200MB in 2 hours. Weird.
+2012-09-12T19:39:00.000Z	ActionParsnip	roasted	if you copy one from ~/.config/autorun you can modify it and throw it in /usr/share/applications
+2012-09-12T19:39:00.000Z	roasted	ActionParsnip	cool, thanks
+2012-09-12T19:40:00.000Z	ActionParsnip	roasted	you may need a script to cd to the containing folder first, then execute the binary if the pwd is significant
+2012-09-12T19:40:00.000Z	roasted	ActionParsnip	the autorun part has me a little lost tho.
+2012-09-12T19:41:00.000Z	ActionParsnip	roasted	the ones in ~/.config/autorun are simple, make a copy of one and you can edit it in your favourite text editor
+2012-09-12T19:41:00.000Z	roasted	ActionParsnip	I don't see autorun, though

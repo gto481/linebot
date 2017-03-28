@@ -1,0 +1,99 @@
+2004-11-10T09:31:00.000Z	Echylo		but it still takes 2min> to boot
+2004-11-10T09:31:00.000Z	Echylo		of course :)
+2004-11-10T09:33:00.000Z	Echylo		yes
+2004-11-10T09:33:00.000Z	Echylo		how do you know?
+2004-11-10T09:33:00.000Z	Echylo		:p
+2004-11-10T09:33:00.000Z	Echylo		yea I put them on the blacklist, cause of an error : modprobe.....
+2004-11-10T09:35:00.000Z	Echylo		ow
+2004-11-10T09:35:00.000Z	Echylo		so I have to wait 2.15 minutes
+2004-11-10T09:35:00.000Z	Echylo		until my pc is booted? :p
+2004-11-10T09:35:00.000Z	Echylo		nope
+2004-11-10T09:36:00.000Z	thoreauputic	Echylo	so just leave your linux running: it will go for months or even years
+2004-11-10T09:38:00.000Z	thoreauputic	Echylo	2 minutes is not long to wait for something - I bet you could use that time to study Shakespeare or aomething useful ;)
+2004-11-10T09:40:00.000Z	thoreauputic	Echylo	tell your mom that every time you boot it brings the national electric grid to its knees
+2004-11-22T16:02:00.000Z	thoreauputic	Echylo	dive into a console ( ctrl-alt-F2 ) , login , startx -- :1
+2004-11-22T16:04:00.000Z	Echylo	thoreauputic	are you sure?
+2004-11-22T16:04:00.000Z	thoreauputic	Echylo	startx -- :1  (spaces important)
+2004-11-22T16:05:00.000Z	thoreauputic	Echylo	yep
+2004-11-22T16:05:00.000Z	thoreauputic	Echylo	I don't use gdm here, so ymmv
+2004-11-22T16:06:00.000Z	thoreauputic	Echylo	ctrl-alt-F7 to return
+2005-02-27T11:15:00.000Z	thoreauputic	Echylo	pan is quite a nice app - sudo apt-get install pan
+2005-02-27T11:16:00.000Z	thoreauputic	Echylo	type apt-cache show pan to read about it, enable universe, then install it with synaptic or just sudo apt-get install pan
+2005-02-27T11:20:00.000Z	Echylo	thoreauputic	I think I would work if he would reinstall ubuntu at the same partition
+2005-02-27T11:21:00.000Z	thoreauputic	Echylo	I'm not going to attempt to explain chroot to him, so a reinstall is simpler
+2005-02-27T11:21:00.000Z	thoreauputic	Echylo	just to get his mbr working
+2005-02-27T11:30:00.000Z	thoreauputic	Echylo	whatever ;)
+2005-02-28T14:43:00.000Z	thoreauputic	Echylo	if everything works, ignore it ;)
+2005-03-01T09:12:00.000Z	thoreauputic	Echylo	synaptic is just a front end for apt
+2005-03-01T09:32:00.000Z	thoreauputic	Echylo	you just add the word "multiverse" at the end of your "universe" lines
+2005-03-01T09:33:00.000Z	Echylo	thoreauputic	I was just kidding
+2005-03-01T09:34:00.000Z	thoreauputic	Echylo	yeah, I saw it too late :)
+2005-03-01T09:35:00.000Z	thoreauputic	Echylo	sudo dpkg -i <package>
+2005-03-01T09:45:00.000Z	thoreauputic	Echylo	suggestion
+2005-03-01T09:45:00.000Z	thoreauputic	Echylo	sed. awk, cut
+2005-03-01T09:46:00.000Z	thoreauputic	Echylo	heh - that sounds like a foreign language, eh?
+2005-03-01T11:33:00.000Z	thoreauputic	Echylo	what were you expecting? It's a complete upgrade...
+2005-03-01T11:34:00.000Z	thoreauputic	Echylo	that depends entirely on the speed of your connection
+2005-03-01T11:35:00.000Z	thoreauputic	Echylo	well , do the maths
+2005-03-01T11:36:00.000Z	thoreauputic	Echylo	that bit won't take long
+2005-03-01T11:39:00.000Z	thoreauputic	Echylo	he just has a superior connection
+2005-03-02T17:51:00.000Z	thoreauputic	Echylo	hmm - OK, can't help then
+2005-03-02T17:54:00.000Z	Echylo	thoreauputic	got it working
+2005-03-02T17:55:00.000Z	thoreauputic	Echylo	oh? what did you do?
+2005-03-03T08:14:00.000Z	thoreauputic	Echylo	it's a bit limited - grip is better
+2005-03-03T08:30:00.000Z	thoreauputic	Echylo	what is the advantage exactly?
+2005-03-03T08:31:00.000Z	thoreauputic	Echylo	you can just leave a browser running on workspace4 opened to google, can't you?
+2005-03-06T09:23:00.000Z	thoreauputic	Echylo	indeed, I agree
+2005-03-06T09:23:00.000Z	thoreauputic	Echylo	that guide is a good place to start
+2005-03-06T10:32:00.000Z	thoreauputic	Echylo	your keyboard is insensitive ? ;-)
+2005-03-06T10:32:00.000Z	thoreauputic	Echylo	remove the chewing gum then ;-)
+2005-03-06T10:33:00.000Z	thoreauputic	Echylo	hehe
+2005-03-06T13:36:00.000Z	thoreauputic	Echylo	 Whippersnapper!
+2005-03-06T13:51:00.000Z	thoreauputic	Echylo	there are easier ways of achieving that... but I won't tell !
+2005-03-06T13:52:00.000Z	thoreauputic	Echylo	no your english is fine :)
+2005-03-06T13:54:00.000Z	thoreauputic	Echylo	I haven't noticed any big mistakes
+2005-03-06T13:55:00.000Z	thoreauputic	Echylo	I have limited bandwidth here... ;-)
+2005-03-06T13:56:00.000Z	thoreauputic	Echylo	plenty of native english speakers have much worse grammar and spelling anyway - in fact I think they are often worse taught than Europeans and others
+2005-03-06T14:58:00.000Z	thoreauputic	Echylo	does this mean you will be quieter in channel now ?  *grin*
+2005-03-17T06:38:00.000Z	thoreauputic	Echylo	you have mp3 support installed?
+2005-03-17T06:39:00.000Z	thoreauputic	Echylo	hang on
+2005-03-17T06:40:00.000Z	thoreauputic	Echylo	http://www.ubuntulinux.org/wiki/RestrictedFormats
+2005-03-18T12:33:00.000Z	thoreauputic	Echylo	ez-ipupdate
+2005-03-18T12:33:00.000Z	thoreauputic	Echylo	you can apt-get install it
+2005-03-18T12:35:00.000Z	thoreauputic	Echylo	well, it's easy to try it - just choose to let debconf configure it and it will ask you for details
+2005-03-18T12:35:00.000Z	thoreauputic	Echylo	should be fine, I think
+2005-03-18T12:37:00.000Z	thoreauputic	Echylo	just apt-get install, chosse automatic when it asks
+2005-03-18T12:37:00.000Z	thoreauputic	Echylo	and answer the questions
+2005-03-18T12:37:00.000Z	thoreauputic	Echylo	is it installed??
+2005-03-18T12:38:00.000Z	thoreauputic	Echylo	when you installed, it should have asked how you waned it configured
+2005-03-18T12:38:00.000Z	thoreauputic	Echylo	you chose automatic?
+2005-03-18T09:11:00.000Z	Echylo	thoreauputic	you there?
+2005-03-20T10:35:00.000Z	Echylo	thoreauputic	you know solution to my problem?
+2005-03-20T10:35:00.000Z	thoreauputic	Echylo	sorry, I'm not on hoary
+2005-03-20T10:36:00.000Z	thoreauputic	Echylo	it's different in hoary
+2005-03-20T10:36:00.000Z	thoreauputic	Echylo	in warty you could do applications:///  and edit the menu
+2005-03-20T10:37:00.000Z	thoreauputic	Echylo	killing gnome-panel doesn't fix it?
+2005-03-20T14:04:00.000Z	thoreauputic	Echylo	mpg321
+2005-03-20T14:06:00.000Z	thoreauputic	Echylo	do you have universe and multiverse?
+2005-03-20T14:09:00.000Z	Echylo	thoreauputic	I got both enabled
+2005-03-20T14:09:00.000Z	Echylo	thoreauputic	can you show me your sources.list?
+2005-03-20T14:10:00.000Z	thoreauputic	Echylo	which package are yo trying to install?
+2005-03-20T14:10:00.000Z	thoreauputic	Echylo	it's in universe, I think
+2005-03-20T14:11:00.000Z	thoreauputic	Echylo	hmm - that lib is in main, in warty
+2005-03-24T14:14:00.000Z	thoreauputic	Echylo	with great difficulty, it would seem
+2005-03-24T14:14:00.000Z	thoreauputic	Echylo	haha
+2005-03-24T14:15:00.000Z	thoreauputic	Echylo	I believe "they" are working on it...
+2005-03-24T15:12:00.000Z	thoreauputic	Echylo	epiphany-browser
+2005-03-25T11:10:00.000Z	thoreauputic	Echylo	yes, it's possible to compile on another machine
+2005-03-25T11:11:00.000Z	thoreauputic	Echylo	most of the speed claims for gentoo are exagerated
+2005-06-26T14:30:00.000Z	thoreauputic	Echylo	any particular reason you are using a .xinitrc file? It should be .xsession (.xinitrc is only there for legacy purposes)
+2005-06-26T14:30:00.000Z	thoreauputic	Echylo	and if you have 47 lines, that's one heck of a .xinitrc
+2005-06-26T14:31:00.000Z	thoreauputic	Echylo	did you write your own ~/.xinitrc ?
+2005-06-26T14:32:00.000Z	thoreauputic	Echylo	is there a .xinitrc in your home dir ?
+2005-06-26T14:32:00.000Z	Echylo	thoreauputic	yes
+2005-06-26T14:32:00.000Z	thoreauputic	Echylo	delete it
+2005-06-26T14:32:00.000Z	thoreauputic	Echylo	and choose xfce4 from login screen
+2005-06-26T14:33:00.000Z	thoreauputic	Echylo	if you are paranoid, rename it instead ( eg mv .xinitrc .xinitrc.old )
+2005-06-26T14:33:00.000Z	thoreauputic	Echylo	that's OK
+2005-06-26T14:34:00.000Z	thoreauputic	Echylo	xfce4 should have given you a session entry anyway in gdm
+2005-06-26T14:56:00.000Z	thoreauputic	Echylo	gdm should ask you if you want the current choice as default

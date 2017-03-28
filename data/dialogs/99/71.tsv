@@ -1,0 +1,99 @@
+2006-03-19T06:00:00.000Z	rob138		what would cause all my repositories being 404 not found?
+2006-03-19T06:00:00.000Z	cwillu	rob138	paste your sources.list (use the pastebin)
+2006-03-19T06:00:00.000Z	cwillu		!paste
+2006-03-19T06:01:00.000Z	cwillu		Rubin; I believe there are packages in synaptic with the ubuntu patches already applied
+2006-03-19T06:01:00.000Z	rob138		where is my sources.list?
+2006-03-19T06:03:00.000Z	cwillu		IdleOne; gotta love it when completion requires more keypresses than just typing the thing in the first place :)
+2006-03-19T06:03:00.000Z	rob138	cwillu	http://paste.ubuntu-nl.org/10147
+2006-03-19T06:04:00.000Z	cwillu		rob138; are all the repositories giving 404's, or just some/most?
+2006-03-19T06:05:00.000Z	cwillu		rob138; next, do you use a proxy?
+2006-03-19T06:05:00.000Z	rob138		some/most, i am also cannot connect to gaim, and had to ping irc.freenode.net before connecting to irc, i think there is something wrong with my computer figuring out adresses
+2006-03-19T06:05:00.000Z	cwillu		rob138; finally, can you enter any of the url's in firefox and have them show up?
+2006-03-19T06:05:00.000Z	rob138		i am on a wireless router (not sure about proxy)
+2006-03-19T06:06:00.000Z	cwillu		rob138; paste the output of "host -v archive.ubuntu.com"
+2006-03-19T06:06:00.000Z	cwillu		also, what model/type of router is it?
+2006-03-19T06:07:00.000Z	rob138	cwillu	what part of it?
+2006-03-19T06:07:00.000Z	cwillu		the whole thing
+2006-03-19T06:07:00.000Z	cwillu		paste bin it
+2006-03-19T06:08:00.000Z	cwillu		Ads_; firefox open?
+2006-03-19T06:09:00.000Z	cwillu		Ads_; check how much vm and resident its using (top in a terminal)
+2006-03-19T06:09:00.000Z	rob138	cwillu	i can get the repositories if i first ping them in the terminal, as with most sites,
+2006-03-19T06:09:00.000Z	cwillu		rob138; I really need to see the host -v archive.ubuntu.com :)
+2006-03-19T06:09:00.000Z	rob138		sure, one sec
+2006-03-19T06:09:00.000Z	cwillu		rob138; and what brand of router is it?  :)
+2006-03-19T06:09:00.000Z	cwillu		pay attention dammit :p
+2006-03-19T06:10:00.000Z	cwillu		Ads_; if it's more than 200Mb virtual or so, and things get immediately better when you "pkill firefox" from a terminal (which kills it)
+2006-03-19T06:10:00.000Z	rob138	cwillu	http://paste.ubuntu-nl.org/10149
+2006-03-19T06:10:00.000Z	cwillu		rob138; thx
+2006-03-19T06:10:00.000Z	cwillu		rob138; one sec
+2006-03-19T06:11:00.000Z	cwillu		rob138; it's a problem with your router; it's screwing up the dns resolution just enough to confuse apt-get
+2006-03-19T06:11:00.000Z	cwillu		!1.0.0.0
+2006-03-19T06:11:00.000Z	cwillu		bah
+2006-03-19T06:11:00.000Z	cwillu		who deleted that
+2006-03-19T06:11:00.000Z	rob138	cwillu	what should i do then?
+2006-03-19T06:11:00.000Z	cwillu		rob138; what type of router is it?
+2006-03-19T06:12:00.000Z	cwillu		I really want to know :)
+2006-03-19T06:12:00.000Z	cwillu		lol
+2006-03-19T06:12:00.000Z	rob138	cwillu	what should i do then?
+2006-03-19T06:12:00.000Z	cwillu		and I still am looking for a good solution for override dhcp's dns setting in resolv.conf
+2006-03-19T06:12:00.000Z	rob138		oops
+2006-03-19T06:12:00.000Z	rob138	cwillu	it is an actiontec
+2006-03-19T06:12:00.000Z	cwillu		rob138; .... :/
+2006-03-19T06:12:00.000Z	cwillu		:p
+2006-03-19T06:13:00.000Z	cwillu		okay, go into the router configuration page, and look around to figure out what your isp's dns server is
+2006-03-19T06:13:00.000Z	rob138	cwillu	do i need the username/password?
+2006-03-19T06:13:00.000Z	cwillu		silvaran; the best I've seen so far is to do an 'up' action to add the data to resolv.conf;  I really don't like that though because if they ever fix it, you'll start getting a huge resolv.conf file
+2006-03-19T06:13:00.000Z	cwillu		rob138; probably admin|admin or admin|<blank>
+2006-03-19T06:14:00.000Z	cwillu		silvaran; I've usually been getting people to just use a static address, but I don't like doing that either
+2006-03-19T06:14:00.000Z	rob138	cwillu	no luck with those two
+2006-03-19T06:15:00.000Z	cwillu		silvaran; I know the problem, it's just complicated by the behaviour of dns and dhcp :)
+2006-03-19T06:15:00.000Z	cwillu		silvaran; his router is mangling the dns packets it passes through, just enough to confuse apt
+2006-03-19T06:15:00.000Z	cwillu		silvaran; the major symptom is the warning message you get when you do a 'host <some host name>'
+2006-03-19T06:15:00.000Z	cwillu		http://paste.ubuntu-nl.org/10149
+2006-03-19T06:16:00.000Z	cwillu		;; Warning: Message parser reports malformed message packet.
+2006-03-19T06:16:00.000Z	rob138	cwillu	i got in!
+2006-03-19T06:16:00.000Z	cwillu		yay!  look for a status page;  might end up going through every page on it
+2006-03-19T06:17:00.000Z	rob138		i'm on the status page, and see two dns servers
+2006-03-19T06:17:00.000Z	cwillu		rob138; your looking for "dns server" or "name server" or something along thos lines
+2006-03-19T06:17:00.000Z	cwillu		logical_mark; -->#ubuntu+1, #ubuntu-xgl
+2006-03-19T06:17:00.000Z	rob138	cwillu	dns #1 and #2...
+2006-03-19T06:17:00.000Z	cwillu		rob138; what are the ip addresses?
+2006-03-19T06:18:00.000Z	rob138		205.171.3.65 and 205.171.2.65
+2006-03-19T06:18:00.000Z	cwillu		rob138; k, one second, I'm going to see if I can find a better fix than the one I'm about to tell you :)
+2006-03-19T06:19:00.000Z	rob138		heh
+2006-03-19T06:27:00.000Z	cwillu		silvaran; /etc/dhcp3/dhclient.conf has the approriate line commented out
+2006-03-19T06:28:00.000Z	cwillu		silvaran; easy enough to put in the dns server and uncomment to unbreak this, I think
+2006-03-19T06:31:00.000Z	cwillu		rob138; are you getting any of my messages in the other chat
+2006-03-19T06:31:00.000Z	rob138	cwillu	no did you get mine?
+2006-03-19T06:31:00.000Z	cwillu		rob138; yep :)
+2006-03-19T06:31:00.000Z	rob138		try again
+2006-03-19T06:31:00.000Z	cwillu		rob138; I wrote like 30 lines of instructions :)
+2006-03-19T06:31:00.000Z	rob138		i was disconnected
+2006-03-19T06:32:00.000Z	rob138		sorry
+2006-03-19T06:32:00.000Z	cwillu		rob138; I take it you're not seeing them still :p
+2006-03-19T06:32:00.000Z	cwillu		rob138; how did you end up fixing it?
+2006-03-19T06:32:00.000Z	rob138		yeah do i need to turn them on in xirc?
+2006-03-19T06:33:00.000Z	rob138		well i first went to networking from administration in gnome, and saw that one of the dns servers was not one of the two i mentioned, in fact it was an old one from another wireless connection, so i changed that, but it didnt seem to do me any help, so i edited resolv.conf and saw the same results as networking, so i again changed it, and now everything is working perfectly
+2006-03-19T06:34:00.000Z	cwillu		rob138; okay, that's the root cause :)
+2006-03-19T06:34:00.000Z	cwillu		rob138; your problem however will now be that resolv.conf gets overwritten by dhcpd everytime it renews the lease :)
+2006-03-19T06:34:00.000Z	rob138		oh thats not good
+2006-03-19T06:34:00.000Z	rob138		heh
+2006-03-19T06:34:00.000Z	cwillu		lol
+2006-03-19T06:34:00.000Z	rob138		is there a fix?
+2006-03-19T06:35:00.000Z	cwillu		rob138; /etc/dhcp3/dhclient.conf
+2006-03-19T06:35:00.000Z	cwillu		rob138;  there's a line
+2006-03-19T06:35:00.000Z	cwillu		rob138; prepend domain-name-servers 127.0.0.1;
+2006-03-19T06:35:00.000Z	rob138		that line is #'d
+2006-03-19T06:35:00.000Z	cwillu		rob138; uncomment it and change 127.0.0.1 to your dns server
+2006-03-19T06:35:00.000Z	cwillu		yep, it'll override what the dhcp client passes you
+2006-03-19T06:36:00.000Z	cwillu		then if-down eth0 and if-up eth0, and see if everything still works
+2006-03-19T06:36:00.000Z	rob138	cwillu	is there a better way to do that? (i am on wlan0 btw)
+2006-03-19T06:36:00.000Z	cwillu		rob138; host archive.ubuntu.com should not give you any warnings
+2006-03-19T06:36:00.000Z	cwillu		rob138; it doesn't replace the entry, it just adds the hard coded one in front
+2006-03-19T06:36:00.000Z	cwillu		so if it can't find that dns server, it'll fail over to whichever the dhcp provides
+2006-03-19T06:37:00.000Z	rob138		but what will happen in four days, when i am going to be on a different wireless router?
+2006-03-19T06:37:00.000Z	cwillu		rob138; it's better than my usual fix (using a static address :)
+2006-03-19T06:38:00.000Z	cwillu		rob138; you could try playing around with the network-locations stuff, but I haven't played with that before
+2006-03-19T06:38:00.000Z	cwillu		rob138; the prepend line shouldn't break other providers
+2006-03-19T06:38:00.000Z	cwillu		it just uses it first if its available, otherwise it'll use the dhcp provded one
+2006-03-19T06:38:00.000Z	rob138	cwillu	Oh okay, i gotcha, should i bother using wifi-radar?

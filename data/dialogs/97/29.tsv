@@ -1,0 +1,97 @@
+2009-09-19T04:53:00.000Z	soreau	Jordan_U	If you have a graphics card capable of running compiz and your drivers are working then yes
+2009-09-20T09:21:00.000Z	Jordan_U	soreau	X is broken when using a default ( or no ) xorg.conf
+2009-09-20T09:21:00.000Z	soreau	Jordan_U	I see
+2009-09-20T09:31:00.000Z	Jordan_U	soreau	The "solution" was to try using a default Xorg.conf, it failed to he had to revert back to his vesa xorg.conf
+2009-09-20T09:32:00.000Z	Jordan_U	soreau	For some reason X isn't working with the intel driver
+2009-09-20T09:32:00.000Z	soreau	Jordan_U	Why don't you have him pastebin X log?
+2009-09-20T09:33:00.000Z	Jordan_U	soreau	Because at the time he had never booted with the intel driver ( he used safe graphics mode on the LiveCD ) so there was nothing relavent
+2009-09-20T09:34:00.000Z	Jordan_U	soreau	I am not sure if it's easiest to have him fix his install and then pastebin, or walk him through mounting his root partition and pastebinning from the LiveCD
+2009-09-20T09:35:00.000Z	soreau	Jordan_U	Well try to get an X log for the failed intel session
+2009-11-20T11:05:00.000Z	soreau	Jordan_U	Before posting, grade it on the hax scale in your head ;)
+2009-11-30T16:19:00.000Z	soreau	Jordan_U	heh
+2010-06-16T13:34:00.000Z	Jordan_U	soreau	Could it be suspending? Can you interact with the computer through the keyboard / screen?
+2010-06-16T13:37:00.000Z	soreau	Jordan_U	I dont know since it doesnt have any i/o connected other than network stuff
+2010-06-16T13:37:00.000Z	soreau	Jordan_U	Why would it suspend by itself?
+2010-06-19T05:04:00.000Z	Jordan_U	soreau	You can grab the firmware from here: http://jordanu.dyndns.org/b43-firmware-lucid.tar.gz http://jordanu.dyndns.org/b43legacy-firmware-lucid.tar.gz and extract it to /lib/firmware/
+2010-06-19T05:05:00.000Z	soreau	Jordan_U	I need both of those?
+2010-06-19T05:06:00.000Z	soreau	Jordan_U	If I extract both of these to /lib/firmware/, then I don't need to install b43-fwcutter package at all, right?
+2010-06-19T05:06:00.000Z	soreau	Jordan_U	Then I can just reload b43 module and done?
+2010-06-19T05:07:00.000Z	Jordan_U	soreau	Correct (though I'd keep b43-fwcutter installed just so you get updates if there are any in the future)
+2010-06-19T05:07:00.000Z	soreau	Jordan_U	Well this is just going to be on a live session so..
+2010-06-19T05:09:00.000Z	soreau	Jordan_U	Ok so b43.ko is the free kernel module but needs the firmware for the hw to work _at all_ and I can just extract those two firmware to cover pretty much all broadcom chips, right?
+2010-06-19T05:09:00.000Z	Jordan_U	soreau	Correct.
+2010-06-19T05:09:00.000Z	soreau	Jordan_U	Ok, just making sure. Thanks for those links!
+2010-06-19T05:09:00.000Z	Jordan_U	soreau	You're welcome.
+2010-06-20T13:11:00.000Z	Jordan_U	soreau	Why not just uninstall network-manager?
+2010-06-20T13:14:00.000Z	soreau	Jordan_U	I also edit files that are commented with DONT EDIT ME!!!
+2010-06-20T13:17:00.000Z	Jordan_U	soreau	I do my fare share of unsupported hacks, confident in the fact that if it breaks I get to keep both pieces :)
+2010-06-20T13:17:00.000Z	soreau	Jordan_U	Debian guarantee
+2010-07-12T10:27:00.000Z	Jordan_U	soreau	That's why there was no install icon :)
+2010-07-12T10:27:00.000Z	soreau	Jordan_U	All makes sense now ;)
+2010-07-22T10:07:00.000Z	soreau	Jordan_U	git reset --hard master && git clean -fd && git pull ;)
+2010-07-22T10:08:00.000Z	Jordan_U	soreau	Not everyone names their main branch master :)
+2010-07-22T10:10:00.000Z	soreau	Jordan_U	Touche! xD
+2010-08-31T10:39:00.000Z	soreau	Jordan_U	thanks
+2010-08-31T10:39:00.000Z	Jordan_U	soreau	You're welcome.
+2010-09-12T07:23:00.000Z	soreau	Jordan_U	He saved it then I had him check again
+2010-10-10T15:07:00.000Z	soreau	Jordan_U	I don't understand how that would work. If you boot such a 'dual-iso' disk, how do you select one or the other?
+2010-10-10T15:07:00.000Z	soreau	Jordan_U	Ah ok
+2010-10-10T15:08:00.000Z	Jordan_U	soreau	From the grub menu (I'll post an example grub.cfg in a moment).
+2010-10-10T15:08:00.000Z	soreau	Jordan_U	Got it.
+2010-10-11T12:25:00.000Z	Jordan_U	soreau	gksu is not needed (the password will be asked for when you actually choose to upgrade).
+2010-10-11T12:26:00.000Z	soreau	Jordan_U	Ah ok. Kinda like gdebi (oh I really miss gdebi after seeing software center)
+2010-10-11T12:26:00.000Z	Jordan_U	soreau	You can still use gdebi.
+2010-10-11T12:27:00.000Z	soreau	Jordan_U	Thanks ghad
+2010-10-11T12:27:00.000Z	soreau	Jordan_U	I'll look it up
+2010-10-11T12:27:00.000Z	Jordan_U	soreau	In fact I think it's still included by default.
+2010-10-11T12:27:00.000Z	soreau	Jordan_U	Unless it's under a different binary name, it isn't
+2010-10-11T12:27:00.000Z	Jordan_U	soreau	The "-d" isn't needed now that it's released :)
+2010-10-11T12:27:00.000Z	soreau	Jordan_U	Well you'd think
+2010-10-11T12:29:00.000Z	soreau	Jordan_U	Yea, fyi you have to install it *wonders if software center can be removed*
+2010-10-11T12:29:00.000Z	Jordan_U	soreau	Of course it can.
+2010-12-20T15:42:00.000Z	soreau	Jordan_U	He already has installed xorg-edgers.. is that something different?
+2010-12-20T15:43:00.000Z	Jordan_U	soreau	It's more stable than -edgers, I didn't realize he'd already tried -edgers. I doubt -updates will be any better with regard to 3D.
+2010-12-20T15:44:00.000Z	soreau	Jordan_U	Yea, its not even attempting to load intel but jumping straight to vesa which makes me wonder if his chipset is even supported at all
+2010-12-31T01:22:00.000Z	soreau	Jordan_U	thanks
+2010-12-31T01:35:00.000Z	soreau	Jordan_U	What have you done to your poor terminal? ;)
+2011-01-04T11:20:00.000Z	soreau	Jordan_U	ccsm makes them feel enough like a programmer ;)
+2011-01-10T11:03:00.000Z	soreau	Jordan_U	Does that allow you to forward ports easily as well?
+2011-01-10T11:05:00.000Z	Jordan_U	soreau	Not that I can find in the nm-connection-editor GUI.
+2011-01-10T11:06:00.000Z	soreau	Jordan_U	ok
+2011-02-17T22:06:00.000Z	soreau	Jordan_U	Thanks :)
+2011-03-25T18:37:00.000Z	Jordan_U	soreau	Still, no open source driver has OpenGL 3 support, let alone openGL 4.
+2011-03-25T18:38:00.000Z	soreau	Jordan_U	Radeon will eventually
+2011-03-25T18:39:00.000Z	Jordan_U	soreau	At the rate their going, and with the legal issues, eventually could end up being many years.
+2011-03-25T18:39:00.000Z	soreau	Jordan_U	Bah, you're just being pessimistic
+2011-03-25T18:39:00.000Z	soreau	Jordan_U	A couple years is nothing ;)
+2011-03-27T16:05:00.000Z	Jordan_U	soreau	That has to be done by the hardware. Even with flash cards wear leveling is done on the card itself.
+2011-03-27T16:05:00.000Z	soreau	Jordan_U	Thats what I meant, wear-leveling
+2011-03-27T16:06:00.000Z	soreau	Jordan_U	ikonia: thanks
+2011-03-27T16:06:00.000Z	Jordan_U	soreau	You're welcome.
+2011-03-30T09:53:00.000Z	soreau	Jordan_U	What was he asking?
+2011-05-15T07:15:00.000Z	Jordan_U	soreau	jockey-gtk uses policykit now, so the gksu is not required.
+2011-05-15T07:15:00.000Z	soreau	Jordan_U	Ah ok
+2011-05-15T07:28:00.000Z	Jordan_U	soreau	alfe is currently *not* using the nvidia driver (at least as far as I can tell). Why are you having him blacklist it?
+2011-05-15T07:29:00.000Z	soreau	Jordan_U	To make sure it doesn't load.. why do you think he'd get a purple screen with default nouveau?
+2011-05-15T07:30:00.000Z	Jordan_U	soreau	You think that the proprietary driver is currently loaded?
+2011-05-15T07:30:00.000Z	soreau	Jordan_U	Well he said if he boots he gets a purple screen but recovery mode works
+2011-05-15T07:30:00.000Z	soreau	Jordan_U	So I'm guessing it's possible it may be loading or trying to load nvidia
+2011-05-15T07:31:00.000Z	soreau	Jordan_U	I don't think it would load it in recovery mode
+2011-05-15T07:32:00.000Z	soreau	Jordan_U	Or maybe it is oO
+2011-05-15T07:33:00.000Z	Jordan_U	soreau	Seems you're right, nvidia is being loaded :)
+2011-05-15T07:33:00.000Z	soreau	Jordan_U	:D
+2011-09-18T09:26:00.000Z	soreau	Jordan_U	What say you? ;)
+2011-10-02T14:50:00.000Z	soreau	Jordan_U	Hey, how do you load the grub boot menu in Natty?
+2011-10-02T14:50:00.000Z	Jordan_U	soreau	Hold shift.
+2011-10-02T14:51:00.000Z	soreau	Jordan_U	That's what I thought, thanks
+2011-10-02T14:51:00.000Z	Jordan_U	soreau	You're welcome.
+2011-10-31T10:34:00.000Z	soreau	Jordan_U	That's not exactly true
+2011-10-31T10:34:00.000Z	Jordan_U	soreau	How not?
+2011-10-31T10:35:00.000Z	soreau	Jordan_U	You can't run 'compiz' in the default session, only their unity hack-up of it
+2011-10-31T10:40:00.000Z	soreau	Jordan_U	Another thing ubuntu upgrades like to do is install proprietary drivers, regardless of what gpu hw you have
+2011-11-30T10:45:00.000Z	soreau	Jordan_U	Can you take care of that?
+2011-12-29T23:14:00.000Z	Jordan_U	soreau	Please watch your language and attitude.
+2011-12-29T23:15:00.000Z	soreau	Jordan_U	I can see it fine from here
+2011-12-30T00:05:00.000Z	soreau	Jordan_U	pangolin: I was sited earlier for using the exact same statement earlier and theadmin can use it but it's not language
+2011-12-30T00:06:00.000Z	soreau	Jordan_U	See? Even pangolin used 'hell'. So why did you call me out for language earlier
+2012-05-05T11:02:00.000Z	soreau	Jordan_U	I think he's just asking him to try it for testing purposes

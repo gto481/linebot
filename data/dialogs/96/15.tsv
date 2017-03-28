@@ -1,0 +1,96 @@
+2009-11-28T00:23:00.000Z	ron-l-j		so black screen with cursor is ?
+2009-11-28T00:24:00.000Z	ron-l-j		NICE DOM !
+2009-11-28T00:25:00.000Z	ron-l-j		did it give you a prompt ???
+2009-11-28T00:25:00.000Z	ron-l-j		strange it should quit in the middle after it boots
+2009-11-28T00:25:00.000Z	ron-l-j		some think is failing
+2009-11-28T00:27:00.000Z	ron-l-j		Dom you are getting a shell
+2009-11-28T00:27:00.000Z	ron-l-j		fine
+2009-11-28T00:27:00.000Z	ron-l-j		:D
+2009-11-28T00:28:00.000Z	ron-l-j		Sence you have a /home partition and a cd\
+2009-11-28T00:29:00.000Z	ron-l-j		Your should reinstall completely with the disk and format everything except your / home partition
+2009-11-28T00:29:00.000Z	dom96	ron-l-j	ok
+2009-11-28T00:29:00.000Z	dom96	ron-l-j	and i do that how ?
+2009-11-28T00:29:00.000Z	ron-l-j		you will have to re install your programs
+2009-11-28T00:30:00.000Z	dom96	ron-l-j	ok that shouldn't be too much trouble
+2009-11-28T00:30:00.000Z	dom96	ron-l-j	as long as my data is there
+2009-11-28T00:30:00.000Z	dom96		and ubuntu works
+2009-11-28T00:31:00.000Z	ron-l-j		as long as you have /home you can use the live cd your data has to be saved on your /home partition
+2009-11-28T00:31:00.000Z	ron-l-j		or you can use the live cd to access the drive and copy your info out to a usb drive
+2009-11-28T00:32:00.000Z	ron-l-j		DOm copy your important stuff to en external if your not sure about doing a manual partition
+2009-11-28T00:32:00.000Z	dom96	ron-l-j	ok then
+2009-11-28T00:32:00.000Z	ron-l-j		Backups are great they make fixing things stress free :D
+2009-11-28T00:33:00.000Z	dom96	ron-l-j	well i have quite a lot of movies etc. i can't backup that lol
+2009-11-28T00:33:00.000Z	dom96	ron-l-j	i'm already really stressed
+2009-11-28T00:34:00.000Z	dom96	ron-l-j	would copying my /home to another partition be allright ?
+2009-11-28T00:34:00.000Z	ron-l-j		you have your personal data the rest is just ones and zeros :D
+2009-11-28T00:34:00.000Z	dom96	ron-l-j	i don't know how to find that partition, it's not in Places
+2009-11-28T00:34:00.000Z	dom96		:(
+2009-11-28T00:35:00.000Z	ron-l-j		just do a manual partition with the cd but choose format when you reach the / partition
+2009-11-28T00:35:00.000Z	ron-l-j		do not format the /home keep swap the same
+2009-11-28T00:36:00.000Z	ron-l-j		by formating the / partition you over writ your system and install fresh leaving the other partition alone
+2009-11-28T00:36:00.000Z	dom96	ron-l-j	but my /home is on that partition
+2009-11-28T00:36:00.000Z	dom96	ron-l-j	it's not like i have another partition for /home
+2009-11-28T00:37:00.000Z	ron-l-j		Dom if your on the cd you have to go to in and copy out
+2009-11-28T00:37:00.000Z	dom96	ron-l-j	but how?
+2009-11-28T00:37:00.000Z	ron-l-j		open your places
+2009-11-28T00:37:00.000Z	dom96		yeah i'm there
+2009-11-28T00:37:00.000Z	ron-l-j		and look for a disc icon
+2009-11-28T00:37:00.000Z	dom96		i can see all the ntfs partitions
+2009-11-28T00:37:00.000Z	dom96		but my ext4 one isn't there
+2009-11-28T00:38:00.000Z	ron-l-j		did windows over write it ?
+2009-11-28T00:38:00.000Z	dom96	ron-l-j	i don't know
+2009-11-28T00:38:00.000Z	dom96		i hope not
+2009-11-28T00:38:00.000Z	dom96		the installer detected it
+2009-11-28T00:39:00.000Z	ron-l-j		if you cant see it now then you will have to look in to hard drive recovery tools
+2009-11-28T00:40:00.000Z	dom96	ron-l-j	so windows did overwrite it...:(
+2009-11-28T00:40:00.000Z	dom96		well then i guess i'm fucked
+2009-11-28T00:40:00.000Z	ron-l-j		how important was the data you had in your home folder ?   100 dollars 40 hours of work ?
+2009-11-28T00:40:00.000Z	dom96	ron-l-j	well it wasn't like REALLY important
+2009-11-28T00:40:00.000Z	dom96		but i did put in quite a lot of work into it
+2009-11-28T00:41:00.000Z	ron-l-j		Good recovery tools charge cash
+2009-11-28T00:41:00.000Z	dom96	ron-l-j	if i could just get the desktop
+2009-11-28T00:41:00.000Z	dom96	ron-l-j	that would be enough
+2009-11-28T00:42:00.000Z	ron-l-j		open a command line and fdisk -l
+2009-11-28T00:43:00.000Z	dom96	ron-l-j	then what ? it gave me some partition info
+2009-11-28T00:43:00.000Z	ron-l-j		can you  see your ext4 partition info ?
+2009-11-28T00:44:00.000Z	dom96	ron-l-j	dunno, it doesn't really say the partition type, but it says /dev/sd3 and System Linux, and i think that's it
+2009-11-28T00:45:00.000Z	ron-l-j		THATS THE ONE
+2009-11-28T00:45:00.000Z	dom96	ron-l-j	ok what now ?
+2009-11-28T00:45:00.000Z	dom96		mount /dev/sd3
+2009-11-28T00:45:00.000Z	dom96		?
+2009-11-28T00:45:00.000Z	ron-l-j		cd /dev/sd3
+2009-11-28T00:46:00.000Z	dom96		No such file or directory...
+2009-11-28T00:48:00.000Z	dom96	ron-l-j	you know what i think this is just fucked now... i think fixboot made the partition FAT32
+2009-11-28T00:49:00.000Z	dom96	ron-l-j	do you think i should just format it and install ubuntu ? and give up ?
+2009-11-28T00:49:00.000Z	ron-l-j		It is a folder if you mount it try sudo mount /dev/sda3
+2009-11-28T00:49:00.000Z	dom96	ron-l-j	it said it's not in /etc/fstab or /etc/mtab
+2009-11-28T00:49:00.000Z	ron-l-j		ok cat /etcfstab
+2009-11-28T00:50:00.000Z	ron-l-j		cat /ect/fstab
+2009-11-28T00:50:00.000Z	dom96	ron-l-j	umm ok then ?
+2009-11-28T00:50:00.000Z	ron-l-j		Mount device as a folder
+2009-11-28T00:50:00.000Z	ron-l-j		everything is a file
+2009-11-28T00:50:00.000Z	dom96	ron-l-j	it just says swap and some aufs, and tmpfs
+2009-11-28T00:51:00.000Z	ron-l-j		mount dev/sda3
+2009-11-28T00:51:00.000Z	dom96	ron-l-j	same thing
+2009-11-28T00:52:00.000Z	dom96	ron-l-j	not found in /etc/fstab ...
+2009-11-28T00:52:00.000Z	ron-l-j		if you cant mount it then it is unread able
+2009-11-28T00:52:00.000Z	dom96	ron-l-j	ok, so then the only thing to do is to reinstall ubuntu ?
+2009-11-28T00:54:00.000Z	ron-l-j		yep i am out of options anyone else ?
+2009-11-28T00:54:00.000Z	dom96		:(
+2009-11-28T00:54:00.000Z	ron-l-j		reinstall last options
+2009-11-28T00:55:00.000Z	ron-l-j		this time make a manual partion called / DOM96 as ext 4 so even if your system has issues your data is safe
+2009-11-28T00:55:00.000Z	ron-l-j		:D
+2009-11-28T00:55:00.000Z	dom96	ron-l-j	huh ?
+2009-11-28T00:55:00.000Z	dom96	ron-l-j	this time i will backup my data to other drives
+2009-11-28T00:55:00.000Z	dom96		*partitions
+2009-11-28T00:57:00.000Z	ron-l-j		make a /home partition when you install and back up I learned the hard way with windows
+2009-11-28T00:58:00.000Z	dom96	ron-l-j	i learned the hard way now too
+2009-11-28T00:58:00.000Z	dom96	ron-l-j	well thanks for the help anyway
+2009-11-28T00:58:00.000Z	ron-l-j	dom96	we wont for get :D
+2009-11-28T00:59:00.000Z	dom96	ron-l-j	i propably will lol
+2009-11-28T00:59:00.000Z	ron-l-j		no problem I do it all the time data recovery can be fun and sometimes not so fun
+2009-11-28T00:59:00.000Z	ron-l-j		:D
+2009-11-28T00:59:00.000Z	ron-l-j		you can make a living at it
+2009-11-28T01:00:00.000Z	dom96	ron-l-j	i don't get it, the installer shows /dev/sda3 and says how much space is taken
+2009-11-28T01:00:00.000Z	ron-l-j		the partition flags are marked but its currupted
+2009-11-28T01:00:00.000Z	dom96	ron-l-j	oh right ok then

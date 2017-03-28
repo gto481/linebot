@@ -1,0 +1,95 @@
+2010-07-11T14:20:00.000Z	scriptwarlock		jagadish_:try to read this link itmay help you https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia
+2010-07-11T14:22:00.000Z	jagadish	scriptwarlock	cant i find better drivers for the onboard card i already have..??
+2010-07-12T11:29:00.000Z	jagadish	scriptwarlock	is it not possible at all..??
+2010-07-12T11:01:00.000Z	jagadish	scriptwarlock	hey man how are you
+2010-07-12T11:01:00.000Z	scriptwarlock	jagadish	fine
+2010-07-12T11:02:00.000Z	jagadish	scriptwarlock	can i update my onboard intel graphics to the latest version..??
+2010-07-12T11:02:00.000Z	jagadish	scriptwarlock	if yes .. How..?
+2010-07-12T11:03:00.000Z	scriptwarlock	jagadish	why is the current not enough?
+2010-07-12T11:03:00.000Z	jagadish	scriptwarlock	i cant enable effects..
+2010-07-12T11:03:00.000Z	jagadish	scriptwarlock	my onboard card is intel 82845G
+2010-07-12T11:04:00.000Z	scriptwarlock	jagadish	intel is supported but cant enable fx?
+2010-07-12T11:04:00.000Z	jagadish	scriptwarlock	yeh i cant enable fx..!!
+2010-07-12T11:04:00.000Z	scriptwarlock	jagadish	lay your graphics intel chipset here
+2010-07-12T11:05:00.000Z	jagadish	scriptwarlock	rest of it seems fine
+2010-07-12T11:05:00.000Z	jagadish	scriptwarlock	i ran lspci command which game me the following
+2010-07-12T11:29:00.000Z	scriptwarlock	jagadish	possible of course
+2010-07-12T11:29:00.000Z	jagadish	scriptwarlock	take ur time man.. i'm there
+2010-07-12T11:05:00.000Z	jagadish	scriptwarlock	VGA compatible controller: Intel Corporation 82845G/GL[Brookdale-G]/GE Chipset Integrated Graphics Device
+2010-07-12T11:08:00.000Z	jagadish	scriptwarlock	hey ... did u get the chipset . .??
+2010-07-12T11:09:00.000Z	scriptwarlock	jagadish	yes
+2010-07-12T11:09:00.000Z	jagadish	scriptwarlock	VGA compatible controller: Intel Corporation 82845G/GL[Brookdale-G]/GE Chipset Integrated Graphics Device
+2010-07-12T11:10:00.000Z	scriptwarlock	jagadish	glxinfo | grep render
+2010-07-12T11:11:00.000Z	jagadish	scriptwarlock	grep render is doing something.. .
+2010-07-12T11:11:00.000Z	scriptwarlock	jagadish	what
+2010-07-12T11:12:00.000Z	jagadish	scriptwarlock	i dont know i typed in grep render its been doing something (what's it supposed to do...)
+2010-07-12T11:13:00.000Z	scriptwarlock	jagadish	supposed to display some infos about rendering
+2010-07-12T11:14:00.000Z	jagadish	scriptwarlock	lets see it seems to take time...!!!
+2010-07-12T11:17:00.000Z	jagadish	scriptwarlock	its doing nothin...
+2010-07-12T11:17:00.000Z	scriptwarlock	jagadish	ctl+c
+2010-07-12T11:18:00.000Z	jagadish	scriptwarlock	i did it
+2010-07-12T11:19:00.000Z	jagadish	scriptwarlock	u want me to install mesa_utils
+2010-07-12T11:19:00.000Z	scriptwarlock	jagadish	sure
+2010-07-12T11:22:00.000Z	jagadish	scriptwarlock	i did and it gave a long list of numbers
+2010-07-12T11:23:00.000Z	jagadish	scriptwarlock	u want to see the log
+2010-07-12T11:24:00.000Z	jagadish	scriptwarlock	??
+2010-07-12T11:25:00.000Z	scriptwarlock	jagadish	glxinfo | grep render
+2010-07-12T11:25:00.000Z	jagadish	scriptwarlock	yeh i got it
+2010-07-12T11:25:00.000Z	jagadish	scriptwarlock	direct rendring: yes
+2010-07-12T11:26:00.000Z	jagadish	scriptwarlock	OpenGL renderer string : software rasterizer
+2010-07-12T11:26:00.000Z	scriptwarlock	jagadish	and you want to run the desktop effects?
+2010-07-12T11:27:00.000Z	jagadish	scriptwarlock	is it not possible.. by updating any drivers
+2010-07-12T11:29:00.000Z	scriptwarlock	jagadish	hang for awhile busy for ues
+2010-07-12T11:31:00.000Z	jagadish	scriptwarlock	reply me when ur free
+2010-07-12T11:41:00.000Z	scriptwarlock	jagadish	im back
+2010-07-12T11:41:00.000Z	jagadish	scriptwarlock	yeh...
+2010-07-12T11:42:00.000Z	scriptwarlock	jagadish	where are we now?
+2010-07-12T11:42:00.000Z	jagadish	scriptwarlock	gfxinfo | ....
+2010-07-12T11:43:00.000Z	scriptwarlock	jagadish	oh yes i remember that intel graphics somewhere in launchpad
+2010-07-12T11:43:00.000Z	scriptwarlock	jagadish	hmm read this https://bugs.launchpad.net/ubuntu/+source/compiz/+bug/297234
+2010-07-12T11:44:00.000Z	scriptwarlock	jagadish	and here http://art.ubuntuforums.org/showthread.php?t=1467202
+2010-07-12T11:45:00.000Z	jagadish	scriptwarlock	so u think i can blacklist my intel card and start using my nv44..??
+2010-07-12T11:45:00.000Z	scriptwarlock	jagadish	could be according to the link why not try run compiz in the terminal
+2010-07-12T11:46:00.000Z	scriptwarlock	jagadish	just type compiz iin the temrinal and see the result
+2010-07-12T11:48:00.000Z	jagadish	scriptwarlock	Blacklisted PCI ID 8086:2562 detected
+2010-07-12T11:48:00.000Z	jagadish	scriptwarlock	and a couple of warnings
+2010-07-12T11:49:00.000Z	scriptwarlock	jagadish	what kind of warning? doe sit launches?
+2010-07-12T11:51:00.000Z	jagadish	scriptwarlock	hey ...
+2010-07-12T11:51:00.000Z	jagadish	scriptwarlock	i ran compiz in terminal and it game me some errors
+2010-07-12T11:52:00.000Z	scriptwarlock	jagadish	what error is that?
+2010-07-12T11:53:00.000Z	jagadish	scriptwarlock	it blackListed my pci card at some  address... and then
+2010-07-12T11:53:00.000Z	jagadish	scriptwarlock	launching fallback window manager
+2010-07-12T11:53:00.000Z	scriptwarlock	jagadish	make your way here http://wiki.compiz.org/Hardware/Blacklist
+2010-07-12T11:54:00.000Z	scriptwarlock	jagadish	see if your hardware is one of those
+2010-07-12T11:55:00.000Z	jagadish	scriptwarlock	no ...
+2010-07-12T11:56:00.000Z	jagadish	scriptwarlock	my hardware is not one of those
+2010-07-12T11:56:00.000Z	scriptwarlock	jagadish	can you paste some lines of error here
+2010-07-12T11:57:00.000Z	scriptwarlock	jagadish	one line to paste is enough
+2010-07-12T11:57:00.000Z	jagadish	scriptwarlock	sorry]
+2010-07-12T12:01:00.000Z	jagadish	scriptwarlock	what's wrong
+2010-07-12T12:02:00.000Z	scriptwarlock	jagadish	i dont know if this will help you mkdir -p ~/.config/compiz; echo SKIP_CHECKS=yes >> ~/.config/compiz/compiz-manager
+2010-07-12T12:03:00.000Z	jagadish	scriptwarlock	u want me to copy that and paste it in the terminal right
+2010-07-12T12:03:00.000Z	scriptwarlock	jagadish	ya just try it anyway its simple to remove
+2010-07-12T12:05:00.000Z	scriptwarlock	jagadish	now try to launch compiz in terminal
+2010-07-12T12:06:00.000Z	scriptwarlock	jagadish	if everything failed then visit the compiz channel
+2010-07-12T12:07:00.000Z	scriptwarlock	jagadish	#compiz
+2010-07-13T11:54:00.000Z	jagadish	scriptwarlock	hi how are you
+2010-07-13T11:54:00.000Z	scriptwarlock	jagadish	fine
+2010-07-13T11:55:00.000Z	jagadish	scriptwarlock	were were you... i was desperate to get some help yesterday...
+2010-07-13T11:56:00.000Z	scriptwarlock	jagadish	sleeping.. whats the problem
+2010-07-13T11:56:00.000Z	jagadish	scriptwarlock	my nvidia card (that's not sorted leave it...) i removed it and i was trying to start compiz with my Intel 82845G
+2010-07-13T11:57:00.000Z	jagadish	scriptwarlock	and it gives a blacklist error The strangest thinng is my PCI ID is not listed in he hardware/blacklist section
+2010-07-13T11:57:00.000Z	scriptwarlock	jagadish	have you talked to #compiz?
+2010-07-13T11:58:00.000Z	jagadish	scriptwarlock	yeh i'm right now
+2010-07-13T11:58:00.000Z	scriptwarlock	jagadish	ask a bleeding question to that compiz guys there.. :)
+2010-07-13T11:59:00.000Z	jagadish	scriptwarlock	yeh i am...!!!!
+2010-07-13T12:15:00.000Z	jagadish	scriptwarlock	hey will my video issues be solved if i go back to a earlier version of ubuntu
+2010-07-13T12:16:00.000Z	scriptwarlock	jagadish	possibly on 9.04 if you have some budget buy a decent videocard which f course nvidia i personaly recommends... so you can enjoy the desktop effects itf thats what you are up to.
+2010-07-13T12:17:00.000Z	jagadish	scriptwarlock	yeh...
+2010-07-13T12:17:00.000Z	scriptwarlock	jagadish	vc ar enot really that expensive these days..
+2010-07-13T12:18:00.000Z	jagadish	scriptwarlock	yes i have to check out
+2010-07-13T12:20:00.000Z	jagadish	scriptwarlock	if i'm stepping down which version u think would be good
+2010-07-13T12:21:00.000Z	scriptwarlock	jagadish	9.04
+2010-07-13T12:33:00.000Z	jagadish	scriptwarlock	transmission says operation failed
+2010-07-13T12:37:00.000Z	jagadish	scriptwarlock	ok man... i'll catch up later...
+2010-07-13T12:37:00.000Z	jagadish	scriptwarlock	thanks a ton

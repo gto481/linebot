@@ -1,0 +1,98 @@
+2008-06-06T20:30:00.000Z	Bodsda		can i use the notification area to display a welcome message? what command is used to call it?
+2008-06-06T20:30:00.000Z	Bodsda		hi
+2008-06-06T20:31:00.000Z	jrib	Bodsda	you can use notify-send in a shell.  There are libnotify bindings in many languages if you prefer
+2008-06-06T20:31:00.000Z	Bodsda	jrib	cool,.,.il take a look at the man page,.,. cheers dude
+2008-06-13T16:26:00.000Z	Bodsda	jrib	what are you trying to do
+2008-06-13T16:27:00.000Z	jrib	Bodsda	help eleetmind :)
+2008-06-13T16:27:00.000Z	Bodsda	jrib	and whats he trying to do?
+2008-06-13T16:28:00.000Z	jrib	Bodsda	he is coping the contents of a directory to another
+2008-06-13T16:28:00.000Z	Bodsda	jrib	cp /path/somewhere/.* /path/to/anywhere
+2008-06-13T16:31:00.000Z	jrib	Bodsda	mistake still there though :)  ".*" instead of "*."
+2008-06-25T16:45:00.000Z	Bodsda	jrib	probably server
+2008-09-05T17:47:00.000Z	jrib	Bodsda	I have that setup.  Did you connect the usb from your monitor to your pc's usb?
+2008-09-05T17:47:00.000Z	Bodsda	jrib	no
+2008-09-05T17:47:00.000Z	Bodsda	jrib	im not sure what you mean by that
+2008-09-05T17:48:00.000Z	jrib	Bodsda	hold on, let me check how my monitor is setup.  Do you have dell monitor btw?
+2008-09-05T17:48:00.000Z	Bodsda	jrib	yep :)
+2008-09-05T17:48:00.000Z	Bodsda	jrib	dell 1907FP
+2008-09-05T17:49:00.000Z	jrib	Bodsda	yeah, I have the same model 17in.  The monitor came with a usb cable right?
+2008-09-05T17:49:00.000Z	Bodsda	jrib	dunno, this one was kinda pinched from the nhs lol
+2008-09-05T17:50:00.000Z	Bodsda	jrib	i dont have a double ended usb cable unforyunately
+2008-09-05T17:50:00.000Z	jrib	Bodsda	you have more usb ports in the back btw.  Let me take you a picture of the quick-setup so you can see what you need to do
+2008-09-05T17:55:00.000Z	jrib	Bodsda	one better: http://support.dell.com/support/edocs/systems/1907FP/en/setup.htm#Connecting%20Your%20Monitor
+2008-12-19T02:38:00.000Z	jrib	Bodsda	that's a dumb thing to do really. dependencies are dependencies for a reason.  Give more details
+2008-12-19T02:39:00.000Z	Bodsda	jrib	the dependency is not satisfiable, it has no installation candidate and recommends using the newer version (which i have)
+2008-12-19T02:40:00.000Z	jrib	Bodsda	give more details.  pastebin errors etc
+2008-12-19T02:42:00.000Z	Bodsda	jrib	im giving you all i have, i downloaded a deb of maniadrive, it needs a dependency, when i try to install said dependency i get this http://paste.ubuntu.com/88046/
+2008-12-19T02:45:00.000Z	jrib	Bodsda	where did you get it?  I can't find a deb on maniadrive's site
+2008-12-19T02:45:00.000Z	Bodsda	jrib	http://www.getdeb.net/release/2575
+2008-12-19T02:46:00.000Z	jrib	Bodsda	the deb is for hardy
+2008-12-19T02:46:00.000Z	Bodsda	jrib	so
+2008-12-19T02:46:00.000Z	jrib	Bodsda	so it's not intended to be used with intrepid since deps may be broken as you just found out.  Get the source package and try to rebuild it if you want
+2008-12-19T02:47:00.000Z	Bodsda	jrib	id prefer to forcefully install it regardless of the dep first
+2008-12-19T02:48:00.000Z	jrib	Bodsda	install it properly, it will save you headaches later
+2008-12-19T02:48:00.000Z	Bodsda	jrib	thankyou for your suggestion, but do you know how to forcefullly install a deb regardless of dependencies or not?
+2008-12-19T02:50:00.000Z	jrib	Bodsda	I don't help people do things they shouldn't do sorry
+2008-12-19T02:51:00.000Z	Bodsda	jrib	this is my computer, there is nothing (legal) i 'shouldnt' do
+2008-12-19T02:51:00.000Z	jrib	Bodsda	I didn't say anything about legality...
+2008-12-19T02:53:00.000Z	Bodsda	jrib	no but you not answering someones question because you think they shouldnt do it seems like a strange policy, i would agree with things like not telling them how to rm rf there hard drive due to this channels rules however if someone asks a legitimate question i would warn them of consequences 'and' give them there answer, i will no longer discuss this, in this channel, your choice if you want to continue, just tell me where
+2009-02-07T20:53:00.000Z	jrib	Bodsda	~/.config/autostart/ but you would need to create a desktop file (see the freedesktop.org spec).  Depending on what you want to do, you can use ~/.gnomerc or ~/.xprofile instead.
+2009-02-07T20:54:00.000Z	Bodsda	jrib	im writing a qotd script. is graphical and i want it to run when i log in, i also plan to make it into a .deb so automation of the starting at login is pretty crucial
+2009-02-07T20:54:00.000Z	Bodsda	jrib	thanks for the links, il check em out
+2009-02-10T18:45:00.000Z	jrib	Bodsda	it's trivial to do in zsh.  In bash, you probably need to do some awkward piping
+2009-02-10T18:46:00.000Z	Bodsda	jrib	yeah, i thought it might resort ot that
+2009-02-10T18:47:00.000Z	jrib	Bodsda	zsh is a nice shell.  In zsh you can do: mv ^folder folder  to do what you said for example
+2009-02-10T18:47:00.000Z	Bodsda	jrib	hmm, i might think about using it, thanks
+2009-06-26T05:15:00.000Z	Bodsda	jrib	checking...
+2009-06-26T05:15:00.000Z	jrib	Bodsda	ubiquity maybe...?
+2009-06-26T05:15:00.000Z	jrib	Bodsda	if you mean a real terminal, you might try yaquake or tilda
+2009-06-26T05:16:00.000Z	Bodsda	jrib	can they be embeded in firefox?
+2009-06-26T05:16:00.000Z	jrib	Bodsda	no, but they pop out from the top of your screen like the console in quake
+2009-06-26T05:17:00.000Z	Bodsda	jrib	ubiquity is not really what I want -- I want to be able to run vim in firefox to do some coding without having to open another app
+2009-06-26T05:18:00.000Z	jrib	Bodsda	give those two thing I mentioned a try... I think they will satisfy you.  You may also want to try vimperator.  You can then edit input boxes in vim and control firefox like vim
+2009-06-26T05:18:00.000Z	Bodsda	jrib	yeah ive used that.. and i assume the two terminal apps behave like fluxbox does anyway yeah? double click to hide
+2009-06-26T05:19:00.000Z	jrib	Bodsda	I didn't use them much.  I thought you just assigned some keyboard shortcut for them
+2009-06-26T05:19:00.000Z	Bodsda	jrib	oh, well .. thanks jrib :)
+2009-09-25T03:28:00.000Z	jrib	Bodsda	use fluxbox as the window manager in gnome?
+2009-09-25T03:29:00.000Z	Bodsda	jrib	I would love to, but I cant find any 'recent' documentation on how to do so, can you assist?
+2009-09-25T03:29:00.000Z	jrib	Bodsda	I haven't done it in a while, but fluxbox wiki used to have a guide iirc
+2009-09-25T03:29:00.000Z	Bodsda	jrib	yeah, I found a few links to such an article, but it seems dead now
+2009-09-25T03:30:00.000Z	jrib	Bodsda	one way to set window manager is "export WINDOW_MANAGER=/path/to/window/manager" in ~/.gnomerc.  There may be other things you wish to do as well
+2009-09-25T03:31:00.000Z	jrib	Bodsda	http://fluxbox-wiki.org/index.php?title=FAQ#Can_I_use_fluxbox_as_the_window_manager_in_GNOME different approach
+2009-09-25T03:33:00.000Z	Bodsda	jrib	brilliant, I will try, thank you
+2009-09-25T03:42:00.000Z	Bodsda	jrib	just thought I would let you know, the fluxbox wiki has incorrect information, but if I enter exec=/usr/bin/startfluxbox  into a (may need to be created) ~/.gnomerc and then uninstall gnome-panel everything works like a charm!!! thank you so much
+2009-09-25T03:42:00.000Z	jrib	Bodsda	hmm, you should be able to use gnome-panel though
+2009-09-25T03:42:00.000Z	jrib	Bodsda	did you try what I said
+2009-09-25T03:43:00.000Z	Bodsda	jrib	yeah, you can use the panel, but it screws with fluxbox a wee bit. I use dual screens so things were a bit strange. what do you mean 'try what I said'?
+2009-09-25T03:44:00.000Z	jrib	Bodsda	one way to set window manager is "export WINDOW_MANAGER=/path/to/window/manager" in ~/.gnomerc.  There may be other things you wish to do as well
+2009-09-25T03:44:00.000Z	Bodsda	jrib	that is what I did, dont know what the 'other things' were though
+2009-09-25T03:44:00.000Z	jrib	Bodsda	you can ignore that
+2009-09-25T03:44:00.000Z	Bodsda	jrib	then your instructions were near perfect... again :)
+2009-09-25T03:45:00.000Z	jrib	Bodsda	i think i saw a howto on the forums that might address the panel issue if you care
+2009-09-25T03:45:00.000Z	Bodsda	jrib	hit me :)
+2009-10-23T04:32:00.000Z	jrib	Bodsda	use 'at'
+2009-10-23T04:32:00.000Z	Bodsda	jrib	it does not seem to work properly. I just did    at 12:31<enter>   >firefox www.google.com    >ctrl+d        and then waited till 12:31 and it did not run
+2009-10-23T04:33:00.000Z	jrib	Bodsda	what do you actually want to run?
+2009-10-23T04:34:00.000Z	Bodsda	jrib	pretty much that -- I need firefox to go to a youtube site then to wake me up in the morning
+2009-10-23T04:35:00.000Z	jrib	Bodsda	at probably runs in some limited environment (check)
+2009-10-23T04:35:00.000Z	Bodsda	jrib	check what??? do you want me to run at as sudo or something?
+2009-10-23T04:35:00.000Z	jrib	Bodsda	check what environment at is running your commands in...
+2009-10-23T04:36:00.000Z	Bodsda	jrib	/bin/sh
+2009-10-23T04:36:00.000Z	jrib	Bodsda	I mean save the output of "env" somewhere
+2009-10-23T04:37:00.000Z	Bodsda	jrib	http://pastebin.com/f7be02882
+2009-10-23T04:38:00.000Z	jrib	Bodsda	tell it to save stdout and stderr of your firefox command somewhere then
+2009-10-23T04:38:00.000Z	jrib	Bodsda	you ran env inside at right?
+2009-10-23T04:39:00.000Z	Bodsda	jrib	is there an easier way to do this? I just need an alarm clock and it is late here
+2009-10-23T04:39:00.000Z	Bodsda	jrib	no
+2009-10-23T04:39:00.000Z	jrib	Bodsda	I meant for you too, but see what trism said anyway
+2009-10-23T04:39:00.000Z	jrib	Bodsda	you can just do something like: sleep [time to sleep goes here]; some command here
+2009-10-23T04:40:00.000Z	Bodsda	jrib	here is env from at http://pastebin.com/m3fefb632
+2009-10-23T04:42:00.000Z	jrib	Bodsda	does gedit work?  (setting DISPLAY properly)
+2009-10-23T04:43:00.000Z	Bodsda	jrib	trism -- sorry guys, it is so late. I am gonna go with a python   time.sleep((60 * 60) * 6)       to get up in 6 hours
+2009-10-23T04:43:00.000Z	jrib	Bodsda	just use the regular "sleep" command in bash
+2009-10-23T04:43:00.000Z	Bodsda	jrib	trism -- thanks guys
+2009-11-24T00:15:00.000Z	Bodsda	jrib	your comparing mind reading (impossible) to moon cheese (far more likely) ... interesting :)
+2010-01-30T18:55:00.000Z	jrib	Bodsda	can www-data read the file?
+2010-01-30T18:55:00.000Z	Bodsda	jrib	yes, for the purposes of trying to get it working I gave everyone read execute
+2010-03-30T03:12:00.000Z	jrib	Bodsda	yes, why do you want to?
+2010-03-30T03:12:00.000Z	Bodsda	jrib	I just find the current format rather irritating, I couldnt care less if it is in a seperate dir, I just want to recursively list files

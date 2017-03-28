@@ -1,0 +1,99 @@
+2010-03-10T20:40:00.000Z	abhi_nav		!rsync
+2010-03-10T20:42:00.000Z	abhi_nav		for all of you: http://www.daniweb.com/news/story265826.html
+2010-03-10T20:43:00.000Z	ActionParsnip	abhi_nav	the things it lists are present in all linux distros.
+2010-03-10T20:44:00.000Z	abhi_nav	ActionParsnip	a just wanted to point out that article not for any debate
+2010-03-10T20:44:00.000Z	ActionParsnip	abhi_nav	its offtopic here too ;)
+2010-03-10T20:44:00.000Z	abhi_nav	ActionParsnip	hmm :-)
+2010-03-14T19:33:00.000Z	ActionParsnip	abhi_nav	typed what?
+2010-03-14T19:34:00.000Z	ActionParsnip	abhi_nav	ubottu is sleeping, i'm sure there is some work being done on her or somesuch
+2010-03-19T15:28:00.000Z	ActionParsnip	abhi_nav	british pounds
+2010-03-19T15:28:00.000Z	abhi_nav	ActionParsnip	hmmm thnx
+2010-03-19T15:34:00.000Z	ActionParsnip	abhi_nav	http://shop.canonical.com/product_info.php?products_id=512
+2010-03-19T15:36:00.000Z	ActionParsnip	abhi_nav	it was as this is Ubuntu OS support ONLY
+2010-03-19T15:36:00.000Z	abhi_nav	ActionParsnip	hmm ok thnx for link
+2010-03-19T15:36:00.000Z	ActionParsnip	abhi_nav	like people having issue with their OS, not merch
+2010-03-21T10:50:00.000Z	ActionParsnip	abhi_nav	unless you accidentally shoot their wife dead
+2010-03-21T10:51:00.000Z	abhi_nav	ActionParsnip	haa haa ha :D :) ;)
+2010-03-22T09:26:00.000Z	abhi_nav	ActionParsnip	I am planning to use my current hdd (on which this ubuntu 9.04 is installed) to use as backup disk and to have fresh install of ubuntu on new hdd. Which is the better way to proced? 1. Install 9.04 on new disk and then upgrade to 9.10 2. do fresh installation of 9.10 on new hdd 3. upgrade from 9.04 to 9.10 to 10.04 4. upgrade from 9.10 to 10.04 5. Should I use 9.04 itself till the end of its life? or upgrade it to 9.10
+2010-03-22T09:27:00.000Z	abhi_nav	ActionParsnip	trinikrono recommended to use 9.04 untill 10.04 comes out
+2010-03-22T09:27:00.000Z	ActionParsnip	abhi_nav	if you clean install use 9.10 unless you are ok with fixing bugs then use 10.04
+2010-03-22T09:27:00.000Z	ActionParsnip	abhi_nav	i wouldnt bother with 9.04 and 9.10 is stable
+2010-03-22T09:28:00.000Z	abhi_nav	ActionParsnip	yes clean install
+2010-03-22T09:30:00.000Z	ActionParsnip	abhi_nav	go for 9.10 then
+2010-03-22T09:30:00.000Z	abhi_nav	ActionParsnip	ok. thank you.
+2010-03-22T09:34:00.000Z	abhi_nav	ActionParsnip	:D
+2010-03-22T10:02:00.000Z	ActionParsnip	abhi_nav	uname -a | grep i686    if you get an output its 32bit, if not then its 64bit
+2010-03-22T10:02:00.000Z	ActionParsnip	abhi_nav	that is the architecture of the OS
+2010-03-22T10:03:00.000Z	ActionParsnip	abhi_nav	if you run: cat /proc/cpuinfo | head -n 20     you can websearch for your CPU model to see if its 64bit
+2010-03-22T10:04:00.000Z	ActionParsnip	abhi_nav	ok your ubuntu install is 32bit, but you can run a 32bit OS on a 64bit CPU (mostly)
+2010-03-22T10:04:00.000Z	abhi_nav	ActionParsnip	darolu: Trek: this is output of lshw | grep width : http://paste.ubuntu.com/399129/
+2010-03-22T10:06:00.000Z	abhi_nav	ActionParsnip	darolu: Trek: this is output of cat /proc/cupinfo | head -n 20 http://paste.ubuntu.com/399130/
+2010-03-22T10:07:00.000Z	abhi_nav	ActionParsnip	darolu: Trek: is it that 64 systems have less no. of apps or less no. of driver support etc?
+2010-03-22T10:07:00.000Z	ActionParsnip	abhi_nav	T5750 is 64bit
+2010-03-22T10:07:00.000Z	abhi_nav	ActionParsnip	hmm
+2010-03-22T10:08:00.000Z	ActionParsnip	abhi_nav	64bit is very supported, some companys dont make 64bit but a large majority do (some games only come in 32bit flavour from what ive seen)
+2010-03-22T10:09:00.000Z	abhi_nav	ActionParsnip	darolu: ohh ok. so e.g. If i only have a aps or game of 32 bit then i can easily run it on my 64 bit 9.10?
+2010-03-22T10:09:00.000Z	ActionParsnip	abhi_nav	should be fnie yes, you will most likely find that all apps are 64bit available (unless you get real unlucky)
+2010-03-22T10:10:00.000Z	abhi_nav	ActionParsnip	ohhhh hmmm :D
+2010-03-22T10:12:00.000Z	abhi_nav	ActionParsnip	darolu: Trek: Thank you!
+2010-03-22T10:24:00.000Z	ActionParsnip	abhi_nav	http://releases.ubuntu.com/karmic/
+2010-03-22T10:25:00.000Z	abhi_nav	ActionParsnip	^^
+2010-03-22T10:28:00.000Z	ActionParsnip	abhi_nav	the 64bit torrent is on the page i gave you too
+2010-03-22T10:28:00.000Z	abhi_nav	ActionParsnip	yah I found!!!
+2010-03-22T10:33:00.000Z	ActionParsnip	abhi_nav	64bit will only give speed in certain cases
+2010-03-22T10:34:00.000Z	abhi_nav	ActionParsnip	only certain means? not always? I want always
+2010-03-22T10:34:00.000Z	ActionParsnip	abhi_nav	for standard desktop stuff there will be no speed increase, if you do lots of music encoding, dvd encoding then it is advantageous
+2010-03-22T10:35:00.000Z	ActionParsnip	abhi_nav	64bit isnt twice as fast
+2010-03-22T10:35:00.000Z	abhi_nav	ActionParsnip	ohh I see
+2010-03-22T10:35:00.000Z	abhi_nav	ActionParsnip	why? Theoritically it should be naa?
+2010-03-22T10:35:00.000Z	ActionParsnip	abhi_nav	no, its just a larger adressing range for ram
+2010-03-22T10:35:00.000Z	ActionParsnip	abhi_nav	and larger data registers in the cpu
+2010-03-22T10:36:00.000Z	ActionParsnip	abhi_nav	i think you need to read on what 64bit actually means
+2010-03-22T10:36:00.000Z	abhi_nav	ActionParsnip	ok
+2010-03-22T10:36:00.000Z	abhi_nav	ActionParsnip	ok I read. where? I google it?
+2010-03-22T10:36:00.000Z	ActionParsnip	abhi_nav	its an option
+2010-03-22T10:37:00.000Z	abhi_nav	ActionParsnip	hmm
+2010-03-22T10:40:00.000Z	abhi_nav	ActionParsnip	ranjan: darolu:  ok can I upgrade form 32 bit to 64 bit in future?
+2010-03-22T10:40:00.000Z	ActionParsnip	abhi_nav	no, you have to re-install
+2010-03-22T10:41:00.000Z	abhi_nav	ActionParsnip	ok
+2010-03-22T10:41:00.000Z	abhi_nav	ActionParsnip	ranjan: darolu:  So now I am going for 64 bit. Thank all of you!!!
+2010-03-22T10:41:00.000Z	ActionParsnip	abhi_nav	any time
+2010-03-27T10:35:00.000Z	abhi_nav	ActionParsnip	ha :D
+2010-06-20T20:56:00.000Z	abhi_nav	ActionParsnip	when I check in software center it says that it is already installed
+2010-06-20T20:56:00.000Z	abhi_nav	ActionParsnip	shoudl i reinstall?
+2010-06-20T20:56:00.000Z	ActionParsnip	abhi_nav	you will have to install 32bit libs any of the apps need manually
+2010-06-20T20:56:00.000Z	abhi_nav	ActionParsnip	manually? how?
+2010-06-20T20:56:00.000Z	abhi_nav	ActionParsnip	i want to install 32 bit mmc on 64 bit ubjuntu
+2010-06-20T20:57:00.000Z	ActionParsnip	abhi_nav	then you have what you need just install your deb with --force-all option and it will install
+2010-06-20T20:57:00.000Z	abhi_nav	ActionParsnip	ok i try wait
+2010-06-20T20:59:00.000Z	abhi_nav	ActionParsnip	using command it wll only install from database of aptget. but mmc is not there in ubuntu repository. it is in my home folder . then how to install?
+2010-06-20T21:00:00.000Z	ActionParsnip	abhi_nav	you will need a 32bit deb for what you want. You won't get it via apt-get
+2010-06-20T21:00:00.000Z	abhi_nav	ActionParsnip	i have that 32 bit deb
+2010-06-20T21:02:00.000Z	abhi_nav	ActionParsnip	whoohaa !!!!!! yes it done!!! thanks :)
+2010-06-20T21:06:00.000Z	ActionParsnip	abhi_nav	some apps may not run right away quoting missing libs which you will need to put in /usr/lib32
+2010-06-20T21:06:00.000Z	abhi_nav	ActionParsnip	ok. I will.
+2010-06-24T22:28:00.000Z	abhi_nav	ActionParsnip	he is most probably talking abotu Jetflash
+2010-06-26T09:00:00.000Z	ActionParsnip	abhi_nav	i access it in evolution using op
+2010-06-26T09:00:00.000Z	abhi_nav	ActionParsnip	'op'?
+2010-06-26T09:01:00.000Z	ActionParsnip	abhi_nav	s/op/pop
+2010-06-26T09:01:00.000Z	abhi_nav	ActionParsnip	what is that?
+2010-06-26T09:01:00.000Z	ActionParsnip	abhi_nav	it means 'switch op for pop'
+2010-06-26T09:01:00.000Z	abhi_nav	ActionParsnip	ohh you mean imap , pop , pop3, ? that one pop?
+2010-06-26T09:53:00.000Z	ActionParsnip	abhi_nav	looks like a weird gaming device
+2010-06-26T09:53:00.000Z	ActionParsnip	abhi_nav	http://lh3.googleusercontent.com/3Zl8PhoJvF8G-dWPmyV9DSXjz4OwJEiEwSX_aiakm_gVIKAaTl0Pc8vQMo8N5fXKvhceRkbF9AUDXfjaYo3P39zK84qrsXnWgRFWh1IP3JEPD2vucb9m1bq0ReA_
+2010-06-26T09:53:00.000Z	abhi_nav	ActionParsnip	Redache aahhh ok
+2010-06-26T12:13:00.000Z	abhi_nav	ActionParsnip	just curiosity. if someone placed keylogger in some useful app and I installed that ap from ppa. then wll that keylogger wll be able sent info to its owner? or my ubuntu firewall wll identify it as virus and stop it?
+2010-06-26T12:14:00.000Z	ActionParsnip	abhi_nav	not sure
+2010-06-26T12:15:00.000Z	ActionParsnip	abhi_nav	stick to the official repos only
+2010-06-26T12:15:00.000Z	abhi_nav	ActionParsnip	ok I wll
+2010-06-26T12:16:00.000Z	ActionParsnip	abhi_nav	could also run scans for stuff every now and again. Depends on how many tinfoil hats you have
+2010-06-26T12:17:00.000Z	abhi_nav	ActionParsnip	means? I dont understand
+2010-06-26T12:17:00.000Z	ActionParsnip	abhi_nav	go sling tinfoil hat into wikipedia
+2010-06-26T12:17:00.000Z	abhi_nav	ActionParsnip	ok
+2010-06-26T12:21:00.000Z	abhi_nav	ActionParsnip	I read.
+2010-06-28T21:05:00.000Z	abhi_nav	ActionParsnip	Dr_Willis in cant type number in english in oo. text is in english all settings are for english (uk). numbers appers in some wierd language. this problem only for this standard account not in my admin account. any suggestion?
+2010-07-01T11:28:00.000Z	ActionParsnip	abhi_nav	sudo lshw | less ,may help
+2010-07-14T18:52:00.000Z	ActionParsnip	abhi_nav	https://help.ubuntu.com/community/IrcServer
+2010-07-14T18:52:00.000Z	abhi_nav	ActionParsnip	yah :)
+2010-07-14T19:17:00.000Z	abhi_nav	ActionParsnip	:D
+2010-07-14T19:18:00.000Z	abhi_nav	ActionParsnip	ohh :D

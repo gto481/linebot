@@ -1,0 +1,99 @@
+2006-10-10T10:16:00.000Z	fetale		nobody is willing to lend a hand with this locale error?
+2006-10-10T10:16:00.000Z	cwillu	fetale	which?
+2006-10-10T10:17:00.000Z	fetale	cwillu	this oneperl: warning: Setting locale failed.
+2006-10-10T10:18:00.000Z	cwillu	fetale	one sec
+2006-10-10T10:19:00.000Z	fetale	cwillu	thanks
+2006-10-10T10:19:00.000Z	cwillu	fetale	http://forum.freespire.org/showthread.php?t=1358 might be relevant
+2006-10-10T10:21:00.000Z	fetale	cwillu	sorry, that was for you
+2006-10-10T10:21:00.000Z	cwillu	fetale	k, let me look a bit longer :p
+2006-10-10T10:23:00.000Z	fetale	cwillu	haven't tried that yet, I'll see if it works
+2006-10-10T10:24:00.000Z	fetale	cwillu	didn't quite work
+2006-10-10T10:24:00.000Z	fetale	cwillu	quite as in not at all
+2006-10-10T10:24:00.000Z	cwillu	fetale	reconfig locales after?
+2006-10-10T10:25:00.000Z	fetale	cwillu	got the same error on the repackage
+2006-10-10T10:29:00.000Z	cwillu	fetale	in a terminal, what does echo $LANG $LANGUAGE say?
+2006-10-10T10:30:00.000Z	fetale	cwillu	en_US.UTF-8 en
+2006-10-10T10:30:00.000Z	cwillu	fetale	one sec (pocket aces :p)
+2006-10-10T10:31:00.000Z	cwillu	fetale	you're launching the perl thingy from the terminal, or know how to?
+2006-10-10T10:32:00.000Z	fetale	cwillu	I'm trying to aptitude install automake1.9
+2006-10-10T10:33:00.000Z	fetale	cwillu	not just aptitude, but that's when I noticed it
+2006-10-10T10:33:00.000Z	fetale	cwillu	I installed via apt-get
+2006-10-10T10:34:00.000Z	cwillu	fetale	what happens if you put LANGUAGE="" before the command?
+2006-10-10T10:35:00.000Z	fetale	cwillu	the error still comes up
+2006-10-10T10:37:00.000Z	cwillu	fetale	I don't think I quite got the point accross :p
+2006-10-10T10:37:00.000Z	fetale	cwillu	makes more sense
+2006-10-10T10:39:00.000Z	cwillu	fetale	which ubuntu are you running?
+2006-10-10T10:41:00.000Z	cwillu	fetale	still looking...
+2006-10-10T10:41:00.000Z	fetale	cwillu	I understand, I've been at this for the past hour or so. Thanks!
+2006-10-10T10:43:00.000Z	cwillu	fetale	^^^
+2006-10-10T10:43:00.000Z	cwillu	fetale	I don't see anything in there that should break anything at least, so it might be worth a shot (http://ubuntuforums.org/showthread.php?p=1171422)
+2006-10-10T10:50:00.000Z	fetale	cwillu	still going through this...
+2006-10-10T10:50:00.000Z	cwillu	fetale	ya, I got the sense that it could take a while
+2006-10-10T10:51:00.000Z	fetale	cwillu	sudo apt-get source -b glib gives me errors... ugh
+2006-10-10T10:52:00.000Z	cwillu	fetale	bah;  it may need build-essential installed first
+2006-10-10T10:55:00.000Z	fetale	cwillu	how would that change things?
+2006-10-10T10:56:00.000Z	cwillu	fetale	build-essential?
+2006-10-10T10:56:00.000Z	cwillu	fetale	 the apt-source -b ... command tries to build that package from source
+2006-10-10T10:57:00.000Z	fetale	cwillu	okay, that makes more sense to me
+2006-10-10T10:57:00.000Z	fetale	cwillu	because I haven't been able to build
+2006-10-10T10:59:00.000Z	fetale	cwillu	build-essential is at it's newest...
+2006-10-10T11:00:00.000Z	cwillu	fetale	paste the errors into http://paste.ubuntu-nl.org/
+2006-10-10T11:01:00.000Z	fetale	cwillu	is there any log in particular that you're looking for? or just the terminal output?
+2006-10-10T11:06:00.000Z	fetale	cwillu	http://paste.ubuntu-nl.org/26137/
+2006-10-10T11:06:00.000Z	cwillu	fetale	one sec, full house
+2006-10-10T11:07:00.000Z	fetale	cwillu	I didn't read the second line you posted, I'll send you the apt-build error
+2006-10-10T11:07:00.000Z	cwillu	fetale	k
+2006-10-10T11:10:00.000Z	fetale	cwillu	http://paste.ubuntu-nl.org/26138/
+2006-10-10T11:11:00.000Z	fetale	cwillu	it's possible, maybe edgy has worked it's way in, in which case should I just get the whole package?
+2006-10-10T11:12:00.000Z	cwillu	fetale	dunno, shouldn't happen though unless you've been installing new repositories, or debs outside of the standard repo's (not that that's bad, merely useful to know if you have)
+2006-10-10T11:13:00.000Z	cwillu	fetale	pastebin me the output of 'LANGUAGE="en_US:en" locale'
+2006-10-10T11:13:00.000Z	cwillu	fetale	that too, thanks :)
+2006-10-10T11:13:00.000Z	cwillu	fetale	quite possible that several of the standard compiz packages are including some edgy stuff now
+2006-10-10T11:14:00.000Z	fetale	cwillu	I've had to do some weird stuff for my video card (damn ATI 200m on an AMD64!)
+2006-10-10T11:16:00.000Z	fetale	cwillu	http://paste.ubuntu-nl.org/26139/
+2006-10-10T11:20:00.000Z	cwillu	fetale	one sec
+2006-10-10T11:20:00.000Z	fetale	cwillu	np, it's awesome that you're doing anything at all!
+2006-10-10T11:21:00.000Z	cwillu	fetale	cd to /usr/lib/locales/, and pastebin the output of 'find'
+2006-10-10T11:23:00.000Z	fetale	cwillu	ls: /usr/lib/locales/: No such file or directory!!!!
+2006-10-10T11:23:00.000Z	fetale	cwillu	/usr/lib/locale/ works though...
+2006-10-10T11:24:00.000Z	cwillu	fetale	what abiyt /usr/share/locale/ ?
+2006-10-10T11:25:00.000Z	cwillu	fetale	on my system, I've got exactly one folder in /usr/lib/locales/, called supported.d, and inside that, a couple files, without much in them
+2006-10-10T11:26:00.000Z	cwillu	fetale	the 'no such directory' error you get makes me suspicious
+2006-10-10T11:27:00.000Z	cwillu	fetale	do you have a /usr/share/locale/ directory with a ton of stuff in it?
+2006-10-10T11:27:00.000Z	fetale	cwillu	locale: Cannot set LC_ALL to default locale: No such file or directory - that makes me suspicious
+2006-10-10T11:27:00.000Z	fetale	cwillu	not a ton, but enough
+2006-10-10T11:27:00.000Z	cwillu	fetale	try the reinstall line he gave above
+2006-10-10T11:27:00.000Z	cwillu	fetale	otherwise, we'll try to make up the folder that your missing by hand :)  only 2 files, about 10 lines total
+2006-10-10T11:29:00.000Z	cwillu	fetale	there's a reinstall option I believe
+2006-10-10T11:32:00.000Z	fetale	cwillu	the reinstall command didn't work
+2006-10-10T11:33:00.000Z	cwillu	fetale	synaptic or aptitude has the operation I believe
+2006-10-10T11:33:00.000Z	fetale	cwillu	allright, that reinstalled it...
+2006-10-10T11:36:00.000Z	cwillu	fetale	any luck?
+2006-10-10T11:36:00.000Z	fetale	cwillu	It still seems to give the error
+2006-10-10T11:37:00.000Z	fetale	cwillu	maybe I should just take the hint and upgrade to edgy
+2006-10-10T11:40:00.000Z	cwillu	fetale	well, if you're willing to try, I suspect that just remaking the folder by hand might fix it
+2006-10-10T11:41:00.000Z	fetale	cwillu	I'm up for that, sure!
+2006-10-10T11:41:00.000Z	cwillu	fetale	k, just give me ten minutes, just finishing up a tourny
+2006-10-10T11:41:00.000Z	fetale	cwillu	thanks a bunch!
+2006-10-10T11:48:00.000Z	cwillu	fetale	2 more to knock out
+2006-10-10T11:49:00.000Z	cwillu	fetale	one more :)
+2006-10-10T11:49:00.000Z	fetale	cwillu	that's faster than 10 minutes
+2006-10-10T11:49:00.000Z	cwillu	fetale	what can I say, I'm just that good :)
+2006-10-10T11:54:00.000Z	cwillu	fetale	almost done
+2006-10-10T11:54:00.000Z	fetale	cwillu	sweet
+2006-10-10T11:56:00.000Z	cwillu	fetale	damn, cracked my kings
+2006-10-10T11:57:00.000Z	cwillu	fetale	read.cwillu.com/Files has the two files
+2006-10-10T11:57:00.000Z	cwillu	fetale	checked the contents already, doesn't look like there's anything that's particular to my system really
+2006-10-10T11:57:00.000Z	fetale	cwillu	that's excellent, I'll wget them right now..
+2006-10-10T11:58:00.000Z	cwillu	fetale	'sudo mkdir /var/lib/locales' followed by 'sudo mkdir /var/lib/locales/supported.d'
+2006-10-10T12:01:00.000Z	fetale	cwillu	what goes where?
+2006-10-10T12:01:00.000Z	cwillu	fetale	create the folder /var/lib/locales/supported.d
+2006-10-10T12:08:00.000Z	fetale	cwillu	should I copy into the regular locales folder?
+2006-10-10T12:01:00.000Z	fetale	cwillu	cool
+2006-10-10T12:02:00.000Z	cwillu	fetale	and they need to be read only for everyone (group and other)
+2006-10-10T12:04:00.000Z	cwillu	fetale	how goes the battle?
+2006-10-10T12:06:00.000Z	fetale	cwillu	I've copied them, should I restart something at this point?
+2006-10-10T12:07:00.000Z	cwillu	fetale	try hitting locale in the terminal again I guess
+2006-10-10T12:08:00.000Z	cwillu	fetale	no, the /var/lib/locales/supported.d/ directory you created
+2006-10-10T12:10:00.000Z	fetale	cwillu	it's still giving the error, but I'll have to look at it tomorrow (it's 2AM here)
+2006-10-10T12:10:00.000Z	cwillu	fetale	k, sorry I couldn't help

@@ -1,0 +1,95 @@
+2006-06-22T10:55:00.000Z	Jack_Sparrow		ANYONE here know how to install a printer?
+2006-06-22T10:55:00.000Z	erUSUL	Jack_Sparrow	System>Admin>Printers?
+2006-09-18T08:41:00.000Z	erUSUL	Jack_Sparrow	i have burned knoppix dvd isos without problems...
+2006-09-18T08:42:00.000Z	Jack_Sparrow	erUSUL	agreed..
+2007-07-04T08:10:00.000Z	erUSUL	Jack_Sparrow	not in the grub menu but in /etc/fstab
+2007-07-04T08:11:00.000Z	erUSUL	Jack_Sparrow	yw
+2007-07-04T08:11:00.000Z	Jack_Sparrow	erUSUL	IF I have a swap partition from another linux install can I use one for both and just edit the fstab in ubunto to point to it?
+2007-07-04T08:13:00.000Z	erUSUL	Jack_Sparrow	sure
+2007-07-26T12:37:00.000Z	erUSUL	Jack_Sparrow	sound juicer and grip both look up freedb afaik
+2007-07-26T12:37:00.000Z	Jack_Sparrow	erUSUL	Soundjuicer didnt pull up the names and didnt see an option to have it do so..  maybe just couldnt find that title?
+2007-07-26T12:39:00.000Z	erUSUL	Jack_Sparrow	probably i do not rip cd's often but iirc sound juicer does look up the tracks
+2007-07-26T12:39:00.000Z	Jack_Sparrow	erUSUL	thanks..
+2007-07-26T12:39:00.000Z	erUSUL	Jack_Sparrow	no problem
+2007-07-26T12:45:00.000Z	Jack_Sparrow	erUSUL	It figures the three discs the wife wanted me to rip anre not in the db... everything working fine
+2007-07-26T15:39:00.000Z	Jack_Sparrow	erUSUL	You can double check me...
+2007-07-26T15:44:00.000Z	Jack_Sparrow	erUSUL	Did you verify that dd command.. I very sure I had it right
+2007-07-26T15:44:00.000Z	erUSUL	Jack_Sparrow	yes, yours was right afaics
+2007-07-26T15:45:00.000Z	Jack_Sparrow	erUSUL	np.. would not intentionally mislead anyone
+2007-08-07T12:54:00.000Z	Jack_Sparrow	erUSUL	Didnt mean to use caps...  Fat fingers today
+2007-08-07T12:55:00.000Z	Jack_Sparrow	erUSUL	How can I disable caps lock....?  One key I never use...
+2007-11-25T21:18:00.000Z	Jack_Sparrow	erUSUL	good morning...   Time for me to go, play nice everyone
+2007-11-25T21:19:00.000Z	erUSUL	Jack_Sparrow	good morning ;)
+2007-12-03T21:49:00.000Z	Jack_Sparrow	erUSUL	How would that be different than just burning /var/cache/apt/archives to a cd or dvd?
+2007-12-03T21:49:00.000Z	erUSUL	Jack_Sparrow	easier for the newbie?
+2007-12-03T21:50:00.000Z	erUSUL	Jack_Sparrow	i guess that aptoncd just do this and generates a Packages.gz to make it look like a repo
+2007-12-03T21:50:00.000Z	Jack_Sparrow	erUSUL	Cool, I bookmarked that page for later.. thanks
+2007-12-03T21:51:00.000Z	erUSUL	Jack_Sparrow	no need to bookmark... ubotu is allways here to tell you... ;P
+2007-12-03T21:51:00.000Z	Jack_Sparrow	erUSUL	NOt if I cant remember the trigger, I am getting old
+2007-12-03T22:40:00.000Z	Jack_Sparrow	erUSUL	I hate it when I cant even remember his proble, or question...
+2007-12-03T22:41:00.000Z	erUSUL	Jack_Sparrow	something about swap... ;P
+2007-12-06T22:29:00.000Z	erUSUL	Jack_Sparrow	you are right it does not
+2007-12-20T01:21:00.000Z	Jack_Sparrow	erUSUL	Keep an eye on him... brb
+2007-12-20T01:22:00.000Z	erUSUL	Jack_Sparrow	i will ;)
+2007-12-22T23:00:00.000Z	Jack_Sparrow	erUSUL	 Goodmorning (Here anyhow)
+2007-12-22T23:00:00.000Z	erUSUL	Jack_Sparrow	Good evening here ;)
+2008-01-22T21:04:00.000Z	Jack_Sparrow	erUSUL	Do you have the link for the ATI that are blacklisted?
+2008-01-22T21:05:00.000Z	erUSUL	Jack_Sparrow	no; sorry :(
+2008-01-22T21:06:00.000Z	Jack_Sparrow	erUSUL	Got it... thanks
+2008-02-04T22:50:00.000Z	Jack_Sparrow	erUSUL	I agree...  but he seemed dead set on getting flash.... DEAD is the key word
+2008-02-11T21:02:00.000Z	erUSUL	Jack_Sparrow	dmraid is a driver to use bios raid (fakeraid) using device mapper
+2008-02-11T21:03:00.000Z	Jack_Sparrow	erUSUL	Do you need to install from alternate to get that "dmraid" going
+2008-02-11T21:04:00.000Z	Jack_Sparrow	erUSUL	Will read up and try to ask some intelligent questions later
+2008-02-25T21:01:00.000Z	erUSUL	Jack_Sparrow	no problem ;)
+2008-02-25T21:22:00.000Z	erUSUL	Jack_Sparrow	you call yourself ;)
+2008-02-25T21:23:00.000Z	Jack_Sparrow	erUSUL	Yep, my op trigger didnt work
+2008-03-11T18:14:00.000Z	Jack_Sparrow	erUSUL	that factoid needs a skull and crossbones
+2008-03-11T18:15:00.000Z	erUSUL	Jack_Sparrow	maybe unicode provides them ;)
+2008-03-11T18:20:00.000Z	erUSUL	Jack_Sparrow	ヅ
+2008-03-24T19:57:00.000Z	erUSUL	Jack_Sparrow	bye;
+2008-04-19T22:49:00.000Z	erUSUL	Jack_Sparrow	evening here ;) but morning to you
+2008-04-19T22:51:00.000Z	Jack_Sparrow	erUSUL	will that work on bin/cue as well?
+2008-04-19T22:52:00.000Z	erUSUL	Jack_Sparrow	i used the factoid for the image convresion tools part...
+2008-04-19T22:52:00.000Z	Jack_Sparrow	erUSUL	agreed.. just curious about how you could do it without converting. it is a basic image file
+2008-04-19T22:53:00.000Z	erUSUL	Jack_Sparrow	i think there are fuse "filesystems" plugins that do just that (acetone iso is a gui)
+2008-05-21T22:38:00.000Z	Jack_Sparrow	erUSUL	beat me to it anyhow
+2008-05-31T04:40:00.000Z	Jack_Sparrow	erUSUL	Would you double checkmy advice to Ben
+2009-01-03T22:56:00.000Z	erUSUL	Jack_Sparrow	abuyusuf_ that goes up in history not back in paths...
+2009-01-03T22:57:00.000Z	Jack_Sparrow	erUSUL	I understand that
+2009-01-19T02:15:00.000Z	Jack_Sparrow	erUSUL	Are you here?
+2009-01-19T02:15:00.000Z	erUSUL	Jack_Sparrow	yep
+2009-01-19T02:16:00.000Z	Jack_Sparrow	erUSUL	can you look at line 6 for me.. http://pastebin.com/m1f1ca038
+2009-01-19T02:17:00.000Z	erUSUL	Jack_Sparrow	looking... mount point / "check" file system type vfat "FAIL" 0.o!!
+2009-01-19T02:17:00.000Z	erUSUL	Jack_Sparrow	is that from a running system???
+2009-01-19T02:17:00.000Z	Jack_Sparrow	erUSUL	thanks, that is antonehenry 's fstab
+2009-01-19T02:18:00.000Z	Jack_Sparrow	erUSUL	Just wnated to make sure I was not crazy
+2009-01-19T02:19:00.000Z	erUSUL	Jack_Sparrow	well that's what its there maybe he make a mistake while editing and only need to 's/vfat/ext3/' from a ivecd
+2009-01-19T02:20:00.000Z	Jack_Sparrow	erUSUL	His question was unrelated to root
+2009-01-19T02:21:00.000Z	erUSUL	Jack_Sparrow	yep... maybe when adding lines 10/11 he changes line 6 by mistake
+2009-01-19T02:21:00.000Z	Jack_Sparrow	erUSUL	thanks..  but see his response above
+2009-02-05T02:28:00.000Z	erUSUL	Jack_Sparrow	seems like the ltsp factoid can get an edit...
+2009-02-05T02:29:00.000Z	Jack_Sparrow	erUSUL	My link or the actual factoid
+2009-02-05T02:29:00.000Z	erUSUL	Jack_Sparrow	well the factoid should include your link imho
+2009-02-05T02:31:00.000Z	Jack_Sparrow	erUSUL	I made a note in -ops to check it
+2009-02-05T02:31:00.000Z	erUSUL	Jack_Sparrow	thanks
+2009-02-05T17:50:00.000Z	erUSUL	Jack_Sparrow	Morning! \o/ ( althought 13:49 in my timezone ;P )
+2009-02-25T04:30:00.000Z	Jack_Sparrow	erUSUL	Do you have a sec to try this for me..?  http://paste.ubuntu.com/122541/
+2009-02-25T04:32:00.000Z	erUSUL	Jack_Sparrow	checking...
+2009-02-25T04:32:00.000Z	Jack_Sparrow	erUSUL	ty
+2009-02-25T04:34:00.000Z	erUSUL	Jack_Sparrow	fails because i do not have a Desktop directory ;P my ubuntu is in spanish so i have Escritorio
+2009-02-25T04:34:00.000Z	erUSUL	Jack_Sparrow	better to output in $HOME
+2009-02-25T04:34:00.000Z	Jack_Sparrow	erUSUL	Great.. NOted..
+2009-02-25T04:35:00.000Z	erUSUL	Jack_Sparrow	you want the output for my system?
+2009-02-25T04:36:00.000Z	Jack_Sparrow	erUSUL	Not needed
+2009-02-25T04:36:00.000Z	erUSUL	Jack_Sparrow	seems to work as spected...
+2009-02-25T04:36:00.000Z	Jack_Sparrow	erUSUL	Was just trying to make a better tool
+2009-02-25T04:41:00.000Z	erUSUL	Jack_Sparrow	also fails if pastebinit is not installed in do_pastebin there is no sudo for the apt-get command
+2009-02-25T04:45:00.000Z	erUSUL	Jack_Sparrow	another glitch... in do_pastebin again you hardcoded outfile instead of using $OUTFILE in the sed call
+2009-02-25T04:48:00.000Z	erUSUL	Jack_Sparrow	more input to your script... export LC_ALL=C so the messages of the various utils do not are in native language... some of mine are in spanish
+2009-02-25T04:48:00.000Z	erUSUL	Jack_Sparrow	hope that helps
+2009-02-25T04:54:00.000Z	erUSUL	Jack_Sparrow	a patch http://pastebin.com/m8179bb6
+2009-02-25T04:58:00.000Z	Jack_Sparrow	erUSUL	thanks, I would not found sudo apt- myself since it is installed already
+2009-02-25T05:03:00.000Z	Jack_Sparrow	erUSUL	what does LC_ALL=C Do ?
+2009-06-02T18:54:00.000Z	erUSUL	Jack_Sparrow	that was it thanks XD
+2009-06-04T03:29:00.000Z	Jack_Sparrow	erUSUL	What is the life span of non-lts?
+2009-06-04T03:29:00.000Z	erUSUL	Jack_Sparrow	18 months iirc

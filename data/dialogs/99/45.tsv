@@ -1,0 +1,99 @@
+2007-06-12T15:17:00.000Z	Jordan_U	Pirate_Hunter	Try tracepath
+2007-06-12T15:39:00.000Z	Jordan_U	Pirate_Hunter	sudo apt-get remove privoxy  ?
+2007-06-12T15:40:00.000Z	Pirate_Hunter	Jordan_U	will try that
+2007-06-12T15:41:00.000Z	Pirate_Hunter	Jordan_U	tanx that did the trick
+2007-06-19T05:56:00.000Z	Pirate_Hunter	Jordan_U	tanx will check it out
+2007-06-19T05:56:00.000Z	Jordan_U	Pirate_Hunter	np
+2007-06-24T14:38:00.000Z	Jordan_U	Pirate_Hunter	What gfx card?
+2007-06-24T14:39:00.000Z	Pirate_Hunter	Jordan_U	to tel you d truth i dont know & Zeph_: dotn know how
+2007-06-24T14:39:00.000Z	Jordan_U	Pirate_Hunter	Do you know what brand ( ati / intel / nvidia ) ?
+2007-06-24T14:39:00.000Z	Pirate_Hunter	Jordan_U	yeha intel
+2007-06-24T14:40:00.000Z	Jordan_U	Pirate_Hunter	install 915resolution
+2007-06-24T14:40:00.000Z	Pirate_Hunter	Jordan_U	how?
+2007-06-24T14:40:00.000Z	Jordan_U	Pirate_Hunter	Do you know how to use synaptic / apt ?
+2007-06-24T14:41:00.000Z	Pirate_Hunter	Jordan_U	u mean that is actually something I cna install through synaptic.... lol.. sorry will look for it
+2007-06-24T14:42:00.000Z	Jordan_U	Pirate_Hunter	Yea, I have no idea why it isn't installed by default, there is a bug filed so that it hopefully will be in Gutsy
+2007-06-24T14:43:00.000Z	Pirate_Hunter	Jordan_U	kk will try after it install how do I access it?
+2007-06-24T14:43:00.000Z	Jordan_U	Pirate_Hunter	No need, just install the package and restart X, bam full resolution :)
+2007-06-24T14:44:00.000Z	Pirate_Hunter	Jordan_U	damn need to restart will do that later, just hope things dont go messed up, last thing i need is for 600x460 resolution
+2007-06-24T14:45:00.000Z	Jordan_U	Pirate_Hunter	Not a full restart, just restarting the GUI ( X )
+2007-06-24T14:45:00.000Z	Pirate_Hunter	Jordan_U	how do I restart the GUI? this is all new to me
+2007-06-24T14:46:00.000Z	Jordan_U	Pirate_Hunter	Close any GUI applications, then hit ctrl + alt + backspace
+2007-06-24T14:46:00.000Z	Pirate_Hunter	Jordan_U	& _Ahti: ok will try tell you in a sec
+2007-06-24T14:50:00.000Z	Pirate_Hunter	Jordan_U	I actually cnat tell if thats worked or not. My resolution menu still says 1024x800
+2007-06-24T14:51:00.000Z	Jordan_U	Pirate_Hunter	After installing 915resolution and pressing ctrl+ alt+ backspace ?
+2007-06-24T14:51:00.000Z	Pirate_Hunter	Jordan_U	i did that i loged out and did that
+2007-06-24T14:53:00.000Z	Pirate_Hunter	Jordan_U	yeha I did that
+2007-06-24T14:54:00.000Z	Jordan_U	Pirate_Hunter	Try running this and choose "i810" as the driver and mark resolutions you want to use with space bar : sudo dpkg-reconfigure xserver-xorg -phigh
+2007-06-24T14:57:00.000Z	Pirate_Hunter	Jordan_U	yeha about that do i put the rsolution at the end??
+2007-06-24T14:58:00.000Z	Jordan_U	Pirate_Hunter	What do you mean?
+2007-06-24T15:00:00.000Z	Pirate_Hunter	Jordan_U	dotn worry worked it out how do i find out from ubuntu what is my actual graphics card called, otherwise i will have to boot to windows
+2007-06-27T16:46:00.000Z	Pirate_Hunter	Jordan_U	Im sure for you to edit the disk label it must be formated otherwise it is just stuck unless im wrong
+2007-06-27T16:47:00.000Z	Jordan_U	Pirate_Hunter	You can change a disk label without reformatting, I know that gparted has some option they call changing the disk label which does not do what I generally know that term to mean
+2007-06-27T16:48:00.000Z	Pirate_Hunter	Jordan_U	thats new always thought disk label couldnt be changed but than I only had to do it when I formatted my HD
+2007-06-27T16:50:00.000Z	Jordan_U	Pirate_Hunter	You can do it with e2label without reformatting
+2007-06-27T16:51:00.000Z	Pirate_Hunter	Jordan_U	& clem: thanks thats new to me will try it out sometime i..e when I buy my new HD
+2007-06-28T16:06:00.000Z	Jordan_U	Pirate_Hunter	alacarte
+2007-06-28T16:08:00.000Z	Pirate_Hunter	Jordan_U	I have alacarte open cant find an option to insert add & remove
+2007-06-28T05:14:00.000Z	Jordan_U	Pirate_Hunter	By downloaded do you mean installed with apt / synaptic ?
+2007-06-28T05:15:00.000Z	Pirate_Hunter	Jordan_U	nope I used autopackage to get the latest from the mozilla site
+2007-06-28T06:10:00.000Z	Jordan_U	Pirate_Hunter	Is it integrated ( intel )? if not then none
+2007-06-28T06:21:00.000Z	Jordan_U	Pirate_Hunter	use -phigh and it won't ask those questions
+2007-06-28T06:22:00.000Z	Pirate_Hunter	Jordan_U	did that but it si not as precise and doesnt do the graphics d rndering settings
+2007-07-12T14:52:00.000Z	Jordan_U	Pirate_Hunter	Yes, that is more than enough
+2007-07-12T14:59:00.000Z	Jordan_U	Pirate_Hunter	eww, VB
+2007-07-12T14:53:00.000Z	Pirate_Hunter	Jordan_U	nice very nice. Which app would you advise me to use for virtualisation at the moment im thinking of Virtual box but is that really stable and simple to use?
+2007-07-12T14:55:00.000Z	Jordan_U	Pirate_Hunter	Oh, sorry I misread that, I didn't see the part about "xp inside of" :(
+2007-07-12T14:55:00.000Z	Jordan_U	Pirate_Hunter	I don't know how well windows will run on low RAM, I use VMware Server but I havn't tried virtual box yet
+2007-07-12T14:56:00.000Z	Pirate_Hunter	Jordan_U	lol i found it strange but still im guessing not, well just wanted to test some aps that dont run on wine or even crossover. I guess I have to run it on windows which will be a problem in Feisty and yeah the low ram thing on this comp is a bugger but i just cant be bothered upgrading it
+2007-07-12T14:57:00.000Z	Jordan_U	Pirate_Hunter	Out of curiosity what app?
+2007-07-12T14:58:00.000Z	Pirate_Hunter	Jordan_U	m,obile connection apps, i need to use my fones with the PC and there CDs dotn run well or at all with wine
+2007-07-12T14:59:00.000Z	Pirate_Hunter	Jordan_U	also there are a few other apps I have to run which require a windows environment like VB
+2007-07-12T15:00:00.000Z	Pirate_Hunter	Jordan_U	... heh? i guess you dont like Visual Basic?
+2007-07-12T15:00:00.000Z	Jordan_U	Pirate_Hunter	Not at all :)
+2007-07-12T15:01:00.000Z	Pirate_Hunter	Jordan_U	dont blame you but than python/ruby etc are all messed up for me its like chinese in my point of view which I cnat speak :(
+2007-07-12T15:02:00.000Z	Jordan_U	Pirate_Hunter	Have you read dive into python? ( sorry to go off topic )
+2007-07-12T15:02:00.000Z	Pirate_Hunter	Jordan_U	nope not really just looked at some of the codes and texts but haven't put my head into it
+2007-07-13T16:58:00.000Z	Jordan_U	Pirate_Hunter	lspci
+2007-10-11T12:32:00.000Z	Jordan_U	Pirate_Hunter	Do you get an error?
+2007-10-11T12:32:00.000Z	Pirate_Hunter	Jordan_U	everytime I try to enable desktop effects it just gives me it cnat be enabled which is weird
+2007-10-11T12:33:00.000Z	Jordan_U	Pirate_Hunter	Nothing else to the error? just "Can't enable desktop effects" ?
+2007-10-11T12:33:00.000Z	Pirate_Hunter	Jordan_U	yup thats all it shows nothing more
+2007-10-11T12:34:00.000Z	Pirate_Hunter	Jordan_U	is it normal for the upgrade manager to be showing the same upgrade that i have installed 3 times i.e. compiz-core
+2007-10-11T12:35:00.000Z	Jordan_U	Pirate_Hunter	No, try "sudo apt-get dist-upgrade" and look very carefully if it proposes removing anything before you type 'y'
+2007-10-11T12:36:00.000Z	Pirate_Hunter	Jordan_U	kk tell you in a sec
+2007-10-11T12:38:00.000Z	Pirate_Hunter	Jordan_U	how do i authenticate compiz-core, it keeps coming up, I ignored it twice but i think that might be the problem
+2007-10-11T12:40:00.000Z	Jordan_U	Pirate_Hunter	Did you add a third party repository?
+2007-10-11T12:40:00.000Z	Pirate_Hunter	Jordan_U	yeah to be able to get compiz on my system
+2007-10-11T12:40:00.000Z	Jordan_U	Pirate_Hunter	You don't need extra repos for compiz, it comes installed by default in Feisty
+2007-10-11T12:41:00.000Z	Jordan_U	Pirate_Hunter	#ubuntu-effects is for Compiz help...
+2007-10-11T12:42:00.000Z	Pirate_Hunter	Jordan_U	ive been following instructions on this site https://help.ubuntu.com/community/CompositeManager/CompizFusion and ill pop over there to see if there are actually ppl active
+2007-10-11T12:43:00.000Z	Jordan_U	Pirate_Hunter	You know that you don't need Compiz fusion if you just want compiz right?
+2007-10-11T12:44:00.000Z	Pirate_Hunter	Jordan_U	nope didnt know... i watched the videos online liked it and after using google followed instructions from that site
+2007-10-11T12:45:00.000Z	Jordan_U	Pirate_Hunter	Yea,all you needed to do for the most basic effects was go to System -> Preferences -> Desktop Effects, and for more just needed to install the extra compiz packages :)
+2007-10-11T12:46:00.000Z	Pirate_Hunter	Jordan_U	just like the compiz channel they are not active dang this is annoying
+2007-10-11T12:46:00.000Z	Pirate_Hunter	Jordan_U	so what do i do now? should i unnistall it than
+2007-10-11T12:46:00.000Z	Jordan_U	Pirate_Hunter	You might want to remove the repository you added, remove all the compiz packages then install the *stable* Compiz packages that come with Feisty
+2007-10-11T12:47:00.000Z	Pirate_Hunter	Jordan_U	i dont even know what is the stable compiz package for ubuntu and i relaly liked the effects for compiz fusion
+2007-10-11T12:48:00.000Z	Pirate_Hunter	Jordan_U	*really
+2007-10-11T12:49:00.000Z	Jordan_U	Pirate_Hunter	If you wait a week you can just upgrade to 7.10 which will have Compiz Fusion installed, and enabled, by default
+2007-10-11T12:50:00.000Z	Pirate_Hunter	Jordan_U	lol i udnerstand what you mean but than after spending all this time... i might as well continue and once gutsy comes out im doing a clean install on my empty partition
+2007-10-11T12:50:00.000Z	Jordan_U	Pirate_Hunter	Then go for it and have fun :)
+2007-10-11T12:51:00.000Z	Pirate_Hunter	Jordan_U	its better if we have fun together
+2007-10-11T12:53:00.000Z	Jordan_U	Pirate_Hunter	I don't know if that repository has a pgp key, if it doesn't then you can ignore the warning about not being able to authenticate, it's a security thing, but it's no less secure than downloading any program from a site that doesn't use https, which is most of them :)
+2007-10-11T12:55:00.000Z	Pirate_Hunter	Jordan_U	true heck im getting it from the actuall site so i dont mind
+2007-10-11T13:02:00.000Z	Jordan_U	Pirate_Hunter	System -> Preferences -> Hardware Info
+2007-10-11T13:08:00.000Z	Pirate_Hunter	Jordan_U	wheer do I find the graphics card in the hardware information
+2007-10-11T13:30:00.000Z	Pirate_Hunter	Jordan_U	kl will do so
+2007-10-11T13:30:00.000Z	Jordan_U	Pirate_Hunter	It gets removed because you have to remove the version of compiz that is installed by default, ubuntu-desktop pretty much just depends on everything installed by default
+2007-10-11T13:32:00.000Z	Jordan_U	Pirate_Hunter	If you try to re-install ubuntu-desktop compiz-fusion will not work, and like you know it is not needed anyway
+2007-10-11T13:33:00.000Z	Pirate_Hunter	Jordan_U	np second in command and yet im the pirate
+2007-10-11T13:43:00.000Z	Pirate_Hunter	Jordan_U	c yah for now
+2007-10-25T04:44:00.000Z	Jordan_U	Pirate_Hunter	Use swapon
+2007-10-25T04:44:00.000Z	Pirate_Hunter	Jordan_U	how or is that a command i must type in terminal
+2007-10-25T04:44:00.000Z	Jordan_U	Pirate_Hunter	It's a command
+2007-10-25T04:45:00.000Z	Pirate_Hunter	Jordan_U	how do i use swapon it seems i need more commands
+2008-09-03T03:32:00.000Z	Jordan_U	Pirate_Hunter	Can you please pastebin the output of "sudo dpkg --configure -a" ?
+2008-09-03T03:34:00.000Z	Pirate_Hunter	Jordan_U	unop: that command is not doing nothing, it seems this all started after latest system update that fixed eject.... than on installing icewm i keep getting this
+2008-09-18T13:47:00.000Z	Jordan_U	Pirate_Hunter	privoxy FF plugin
+2008-09-18T13:48:00.000Z	Pirate_Hunter	Jordan_U	ActionParsnip: will try

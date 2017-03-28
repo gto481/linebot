@@ -1,0 +1,95 @@
+2009-01-11T20:32:00.000Z	Gnea		okay, here's a really strange issue - if I start Battle of Wesnoth (a game) while logged into Gnome, the sound works just fine (pulseaudio is all turned off, so it's going straight to ALSA), but if I'm logged into something other than Gnome, sound doesn't work at all - why is that? this is 8.10
+2009-01-11T20:32:00.000Z	Gnea		the funny part is, other sound apps work just fine
+2009-01-11T20:33:00.000Z	jane81	Gnea	yes
+2009-01-11T20:33:00.000Z	Gnea	jane81	that's weird... by 'properly', you mean from the shutdown menu?
+2009-01-11T20:34:00.000Z	jane81	Gnea	and even if the drive checking runs it does not complete
+2009-01-11T20:34:00.000Z	Gnea	jane81	can you pastebin the output of your dmesg command please?
+2009-01-11T20:34:00.000Z	jane81	Gnea	I get the message "unsexpected inconsistency:run fsck manually
+2009-01-11T20:35:00.000Z	jane81	Gnea	I havnt used linux for so long. How do I get the dmesg?
+2009-01-11T20:35:00.000Z	jane81	Gnea	and how do I post it?
+2009-01-11T20:35:00.000Z	Gnea	jane81	easiest way, nowadays, is this:  sudo apt-get install pastebinit && dmesg | pastebinit
+2009-01-11T20:37:00.000Z	Gnea	jane81	say no :)
+2009-01-11T20:37:00.000Z	jane81	Gnea	I did :)
+2009-01-11T20:48:00.000Z	jane81	Gnea	but I have had this problem before I upgraded
+2009-01-11T20:48:00.000Z	jane81	Gnea	Yes i do
+2009-01-11T20:40:00.000Z	jane81	Gnea	http://pastebin.com/f8317b92
+2009-01-11T20:41:00.000Z	jane81	Gnea	thanks for your help
+2009-01-11T20:42:00.000Z	jane81	Gnea	did you get the link?
+2009-01-11T20:44:00.000Z	Gnea	jane81	yup, was just reading it over - what is /dev/sda3 mounted to?
+2009-01-11T20:45:00.000Z	jane81	Gnea	as in?
+2009-01-11T20:45:00.000Z	Gnea	jane81	df -Th | grep sda3
+2009-01-11T20:45:00.000Z	jane81	Gnea	Sorry Gnea, I am a newbie :s
+2009-01-11T20:45:00.000Z	Gnea	jane81	that's okay :)
+2009-01-11T20:46:00.000Z	jane81	Gnea	/dev/sda3     ext3     40G   27G   12G  71% /home
+2009-01-11T20:47:00.000Z	Gnea	jane81	interesting, most newbies wouldn't know to put /home on its own partition. ;p  okay, do you still have your livecd?
+2009-01-11T20:47:00.000Z	jane81	Gnea	haha, I didnt install the system on my own :)
+2009-01-11T20:48:00.000Z	Gnea	jane81	ah, okay :)
+2009-01-11T20:48:00.000Z	jane81	Gnea	No, It is long gone...I upgraded the system yesterday
+2009-01-11T20:48:00.000Z	Gnea	jane81	hrm... do you have a cd burner on the system?
+2009-01-11T20:49:00.000Z	Gnea	jane81	could be a bad hard disk - but let's make sure before jumping to that conclusion.  go to http://ubuntu.com and download the 8.10 desktop cd ISO and burn it to a CD (assuming you have some blanks laying around)
+2009-01-11T20:50:00.000Z	jane81	Gnea	yes
+2009-01-11T20:50:00.000Z	jane81	Gnea	want me to reinstall?
+2009-01-11T20:50:00.000Z	Gnea	jane81	awesome. no.
+2009-01-11T20:50:00.000Z	jane81	Gnea	ok
+2009-01-11T20:50:00.000Z	Gnea	jane81	the idea here is to boot it up into desktop/livecd mode and fsck /dev/sda3 from there, while /home is not mounted - it should cleanly take care of it
+2009-01-11T20:51:00.000Z	Gnea	jane81	if you start getting errors, and it doesn't finish, then you'll know for sure if it's a software or hardware problem
+2009-01-11T20:51:00.000Z	jane81	Gnea	aha ok
+2009-01-11T20:51:00.000Z	jane81	Gnea	so if it doesnt finish would that be a hardware problem?
+2009-01-11T20:51:00.000Z	Gnea	jane81	the chance will be greater for it, yes
+2009-01-11T20:52:00.000Z	jane81	Gnea	aha ok
+2009-01-11T20:52:00.000Z	jane81	Gnea	so let me download the iso
+2009-01-11T20:52:00.000Z	Gnea	jane81	let me know when you're ready :)
+2009-01-11T20:52:00.000Z	jane81	Gnea	what program do i need to use for burning the CD?
+2009-01-11T20:52:00.000Z	Gnea	jane81	I suggest k3b
+2009-01-11T20:53:00.000Z	jane81	Gnea	Ok, need to get that one as well :)
+2009-01-11T20:53:00.000Z	Gnea	jane81	also, you might want to save the ISO to /tmp so that it's not on /home
+2009-01-11T20:53:00.000Z	jane81	Gnea	Ok
+2009-01-11T20:53:00.000Z	jane81	Gnea	I started downloading it to home now but will move it to /tmp when it is done
+2009-01-11T20:53:00.000Z	Gnea	jane81	at this point, i would stop the download and just repoint it to save to /tmp
+2009-01-11T20:54:00.000Z	Gnea	jane81	if /home is unstable, it could cause problems
+2009-01-11T20:54:00.000Z	jane81	Gnea	ok
+2009-01-11T20:55:00.000Z	Gnea	jane81	ie. you could burn the CD and it won't boot because some of the bits got corrupted from the filesystem
+2009-01-11T20:55:00.000Z	jane81	Gnea	got it
+2009-01-11T20:55:00.000Z	Gnea	jane81	:)
+2009-01-11T20:56:00.000Z	jane81	Gnea	:)
+2009-01-11T20:57:00.000Z	jane81	Gnea	back in 20 mins
+2009-01-11T20:57:00.000Z	jane81	Gnea	sorry 15 :)
+2009-01-11T21:16:00.000Z	jane81	Gnea	burning the CD now
+2009-01-11T21:18:00.000Z	jane81	Gnea	so what should I do when the burning is complete? Reboot from the cd?
+2009-01-11T21:18:00.000Z	jane81	Gnea	then...
+2009-01-11T21:21:00.000Z	jane81	Gnea	r u there?
+2009-01-11T21:23:00.000Z	jane81	Gnea	i will boot from the CD now then fsck the sda3 drive. Ok?
+2009-01-11T22:00:00.000Z	jane81	Gnea	i think it worked :)
+2009-01-11T22:00:00.000Z	jane81	Gnea	r u there?
+2009-01-11T22:00:00.000Z	jane81	Gnea	thanks for your help
+2009-01-11T22:34:00.000Z	Gnea	jane81	awesome :)
+2009-01-11T22:35:00.000Z	jane81	Gnea	if you have time, can you help me resolve another problem?
+2009-01-11T22:36:00.000Z	Gnea	jane81	what's that?
+2009-01-11T22:38:00.000Z	jane81	Gnea	since I updated ubuntu yesterday, my sound has stopped working in the browsers
+2009-01-11T22:39:00.000Z	Gnea	jane81	have you ever setup pulseaudio from the ubuntu guide?
+2009-01-11T22:39:00.000Z	jane81	Gnea	and another thing, my volume control buttons have stopped communicating with the computer's volume control
+2009-01-11T22:40:00.000Z	Gnea	jane81	give that a once over and see if an of it helps... if not, we'll figure something else out
+2009-01-11T22:40:00.000Z	Gnea	jane81	*any
+2009-01-11T22:40:00.000Z	jane81	Gnea	cool! i'll try that
+2009-01-11T22:41:00.000Z	jane81	Gnea	thanx a lot for your help
+2009-01-11T22:41:00.000Z	jane81	Gnea	I got a message before saying my audio device wasnt working
+2009-01-11T22:41:00.000Z	Gnea	jane81	you're welcome. sorry for the lack of response earlier, i'm afk at random today :)
+2009-01-11T22:41:00.000Z	jane81	Gnea	dont know why everything stopped working after upgrading :)
+2009-01-11T22:42:00.000Z	Gnea	jane81	there are a lot of problems with 8.10 lately
+2009-01-11T22:42:00.000Z	jane81	Gnea	no probs! i should be sorry for the trouble I'm causing you
+2009-01-11T22:43:00.000Z	Gnea	jane81	don't be silly, but I do have to go in a few minutes
+2009-01-11T22:43:00.000Z	jane81	Gnea	:)
+2009-01-11T22:44:00.000Z	jane81	Gnea	when are you back?
+2009-01-11T22:44:00.000Z	Gnea	jane81	about 30 minutes
+2009-01-11T22:44:00.000Z	jane81	Gnea	ok, cool. By the way, why will I be needing pulse audio when I havnt needed it before using 8.04?
+2009-01-11T22:45:00.000Z	Gnea	jane81	did you disable it before?
+2009-01-11T22:45:00.000Z	jane81	Gnea	I have never installed it before
+2009-01-11T22:45:00.000Z	Gnea	jane81	because pulseaudio comes installed and running by default with 8.04 and 8.10... the problem is, it wasn't ever fully setup correctly
+2009-01-11T22:46:00.000Z	jane81	Gnea	Aha! got it
+2009-01-11T22:46:00.000Z	jane81	Gnea	I will try installing it then
+2009-01-11T22:46:00.000Z	Gnea	jane81	if you do this:  ps axf | grep pulseaudio   you should get a few responses
+2009-01-11T22:46:00.000Z	jane81	Gnea	back in about 2 hours...thanks alot for your help
+2009-01-11T22:46:00.000Z	Gnea	jane81	it should already be installed, it just needs to be configured more - so check that website to get it configured and sound *should* work...
+2009-01-11T22:46:00.000Z	Gnea	jane81	good luck :)
+2009-01-11T22:47:00.000Z	jane81	Gnea	thank you :)
+2009-01-12T00:45:00.000Z	jane81	Gnea	I'm back

@@ -1,0 +1,98 @@
+2005-09-08T06:46:00.000Z	houman_zhu		i have a question regarding the mail command, everytime i try to send an email from commandline it is sent from localhost.localdomain, how do i set the commandline mail client to use my real email info?
+2005-09-08T06:46:00.000Z	cafuego	houman_zhu	Check /etc/mailname and /etc/postfix/main.cf
+2005-09-08T06:46:00.000Z	cafuego	houman_zhu	it will use info from either of those files and prefix your login name.
+2005-09-08T06:47:00.000Z	houman_zhu	cafuego	thank you , also if this email command works does that mean im runing a mail server?
+2005-09-08T06:47:00.000Z	cafuego	houman_zhu	if you installed ubuntu, you're running postfix (a mail server).
+2005-09-08T06:48:00.000Z	cafuego	houman_zhu	yes, you can.
+2005-09-08T06:48:00.000Z	houman_zhu	cafuego	hmm, i guess most of you guys turn it off after installation right?
+2005-09-08T06:48:00.000Z	cafuego	houman_zhu	it's not exactly trivial, though.
+2005-09-08T06:48:00.000Z	houman_zhu	cafuego	i mean the mail server
+2005-09-08T06:48:00.000Z	cafuego	houman_zhu	No, I just set mine up to forward all mail to the office smtp server; that box is set up to deal with any mails appropriately.
+2005-09-08T06:49:00.000Z	cafuego	houman_zhu	if you turn it off, the system can't send you info about misconfigured packages or failed cron jobs,
+2005-09-08T06:49:00.000Z	houman_zhu	cafuego	but say for most people having an email server is unecesary kind of, so how would i turn it off?
+2005-09-08T06:50:00.000Z	cafuego	houman_zhu	The best way is to remove postficx and install nullmailer (many packages depend on an installed mail server, that gives you a fake one, so other stuff doesn't break)
+2005-09-08T06:50:00.000Z	houman_zhu	cafuego	so if you set up your mail toforward to the office mail server, say you sent an email to bob@mail.com, will bob see your real office email address as the sender? i mean im trying to think how does your office mail server figure out who this mail was sent frmo
+2005-09-08T06:51:00.000Z	houman_zhu	cafuego	wow that sounds like a great idea, cuz i dont want the overhead of running an unecessary service
+2005-09-08T06:51:00.000Z	cafuego	houman_zhu	You can give it mapping tables; so that email coming from cafuego@dhcp-10.10.1.18.intranet is mapped to cafuego@domain.com before it's sent on.
+2005-09-08T06:52:00.000Z	cafuego	houman_zhu	If you already use thunderbird anyway, just install nullmailer.
+2005-09-08T06:52:00.000Z	houman_zhu	cafuego	you got to ask the admin right? in that case i cant do that, i have a commercial ISP
+2005-09-08T06:52:00.000Z	cafuego	houman_zhu	You can make YOUR postfix do that mapping.
+2005-09-08T06:53:00.000Z	cafuego	houman_zhu	... and then YOUR postfix can send those mails on securely to your ISPs mail server, which can then do as it sees fit.
+2005-09-08T06:53:00.000Z	houman_zhu	cafuego	thanks, i guess i should go with the nullmailer thing, thank you so mcuh for your help
+2005-09-08T06:53:00.000Z	cafuego	houman_zhu	It's just a matter of deciding whether it's worth fiddling with for a week... ;-)
+2005-09-08T06:54:00.000Z	houman_zhu	cafuego	yea, i might set that up, its cool to be able to send mail from commandline, hahaha, im such a geek
+2005-09-08T06:55:00.000Z	houman_zhu	cafuego	im being nosy , one question, do you run ubuntu in your office?
+2005-09-08T06:55:00.000Z	cafuego	houman_zhu	The thing in postfi to look for is a smarthost (maybe using smtp auth) and virtusertable settings.
+2005-09-08T06:56:00.000Z	cafuego	houman_zhu	I have two machines running Ubuntu, one running WinXP, one running Win2K, one running Debian Sarge and two running MacOS X Tiger.
+2005-09-08T06:56:00.000Z	houman_zhu	cafuego	thanks, i guess i have to read some docs about postfix if i wanna figure that out
+2005-09-08T06:56:00.000Z	houman_zhu	cafuego	is that a home office or somehting :|
+2005-09-08T06:56:00.000Z	cafuego	houman_zhu	The remote (main) server runs Debian sarge.
+2005-09-08T06:56:00.000Z	cafuego	houman_zhu	yep.
+2005-09-08T06:56:00.000Z	houman_zhu	cafuego	at my work they just give you one box, haha
+2005-09-08T06:57:00.000Z	cafuego	houman_zhu	The remote server does all the main mail handling (for clients as well).
+2005-09-08T06:57:00.000Z	houman_zhu	cafuego	no wonder you knwo so much, for us the admin does everything so we wont learn squat
+2005-09-08T06:57:00.000Z	cafuego	houman_zhu	I *am* the admin.
+2005-09-08T06:57:00.000Z	houman_zhu	cafuego	i assume youre hosting a website there too right?
+2005-09-08T06:57:00.000Z	cafuego	houman_zhu	I host web and mail for about 120 domains.
+2005-09-08T06:58:00.000Z	houman_zhu	cafuego	wow thats pretty amazing, do you do web design and programming too?
+2005-09-08T06:58:00.000Z	cafuego	houman_zhu	A bit yes.
+2005-09-08T06:59:00.000Z	cafuego	houman_zhu	I wrote most of the admin backend, so clients can manage all their own email stuff (liek adding mailboxes and aliases)
+2005-09-08T06:59:00.000Z	houman_zhu	cafuego	lotsa shell scripting?
+2005-09-08T06:59:00.000Z	cafuego	houman_zhu	php
+2005-09-08T06:59:00.000Z	cafuego	houman_zhu	and C wrappers
+2005-09-08T07:02:00.000Z	cafuego	houman_zhu	flash is BAD.
+2005-09-08T07:02:00.000Z	cafuego	houman_zhu	1) it is slow to load; more then 50% of people are on 56K. Flash cannot be indexed by search engines.
+2005-09-08T07:02:00.000Z	houman_zhu	cafuego	why? then how do you make interactive and colorful webpages? no java and no flash? then what else?
+2005-09-08T07:03:00.000Z	cafuego	houman_zhu	If people want interactivity that requires flash I tell them to find a gfx designer, not a web coder.
+2005-09-08T07:04:00.000Z	houman_zhu	cafuego	and where do 50% of people have dialup? USA? mo way, everyone has broadband
+2005-09-08T07:04:00.000Z	cafuego	houman_zhu	People don't LOOK at websites because they want visual effects. They want info.
+2005-09-08T07:04:00.000Z	cafuego	houman_zhu	I suggest you check the figures before you make that usa broadband claim.
+2005-09-08T07:04:00.000Z	houman_zhu	cafuego	i disagree, MOST of the time people lok to the web for entertainment
+2005-09-08T07:05:00.000Z	cafuego	houman_zhu	I find that the clients I work for don't have that audience.
+2005-09-08T07:05:00.000Z	cafuego	houman_zhu	Thus I don't have to build shock-the-monkey flash scripts.
+2005-09-08T07:06:00.000Z	houman_zhu	cafuego	ok, then you cant make a general claim about web usage, i liek flash, specially those games :p
+2005-09-08T07:07:00.000Z	cafuego	houman_zhu	I'm just going on what I have seen from people I visit and work for. Most know about flash, but aren't interested in waitinf for movies or splash intros to download. They invariably click 'skip'.
+2005-09-08T07:07:00.000Z	houman_zhu	cafuego	but i think the future of the web wont be html, it will be something else, i mean in the future people will have broadband and there is a need for something more sophisticated than pure js and css, thats why i assumed flash would be it
+2005-09-08T07:07:00.000Z	cafuego	houman_zhu	maybe you have experience with different usage, but I know what my clienst want and I know what I prefer designing <heh>
+2005-09-08T07:08:00.000Z	houman_zhu	cafuego	absoluetly i didnt say youre wrong, im just saying there is a large group out there (maybe 50%) who go to websites for entertainment, for example i like when people show their thumbnails and images using flash, very interactive :)
+2005-09-08T07:09:00.000Z	cafuego	houman_zhu	The future of the web 9if corporations have anything to say about it) involves an INTARWEB Browser[tm]  with a menu of precompiled crap and advertisit. A bit like AOL.
+2005-09-08T07:09:00.000Z	houman_zhu	cafuego	so i guess unecssarily long and tedious intros to websites with flash are redundant, but there are places that they are very much appropriate
+2005-09-08T07:10:00.000Z	cafuego	houman_zhu	Perhaps, I find that showing thumnails in flash as opposed to just pngs on html is slower.
+2005-09-08T07:10:00.000Z	houman_zhu	cafuego	you say AOL? if thats the future of the web then ill run over with my modem with my truck and never use my computer again
+2005-09-08T07:10:00.000Z	cafuego	houman_zhu	Time Warner already owns you <heh>
+2005-09-08T07:10:00.000Z	houman_zhu	cafuego	if you have broadband and a new cpu i dont think you can really tell the difference
+2005-09-08T07:11:00.000Z	houman_zhu	cafuego	why? my isp is not AOL
+2005-09-08T07:11:00.000Z	cafuego	houman_zhu	Your main content provider probably is, though.
+2005-09-08T07:12:00.000Z	houman_zhu	cafuego	:( that sucks , i thought my isp was a small canadian company run by good old local people
+2005-09-08T07:12:00.000Z	cafuego	houman_zhu	Your opinion on internet latency is probably a bit skewed as well. I live a MINIMUM 170msec away from anywhere except new zealand.
+2005-09-08T07:12:00.000Z	houman_zhu	cafuego	:| may i ask where you live? pupa new ginea or something?
+2005-09-08T07:13:00.000Z	cafuego	houman_zhu	Bit further south.
+2005-09-08T07:13:00.000Z	cafuego	houman_zhu	Australia (Melbourne)
+2005-09-08T07:13:00.000Z	houman_zhu	cafuego	oh ok, hahah, well you guys are connected to internet backbones through satellite or somerthing i dunno, so i dont think it will be slow
+2005-09-08T07:14:00.000Z	cafuego	houman_zhu	sattellites are FAR slower then cable.
+2005-09-08T07:14:00.000Z	houman_zhu	cafuego	ohg now that im talking to a pro, do you know how i can lauch embedded videos in websites in an external player, i always have to switch to windows cuz i cant watch the daily show in my browser
+2005-09-08T07:15:00.000Z	cafuego	houman_zhu	No, we have a few links from Sydnet to LA and sydney/melbourne to Auckland then LA. I think there's something going off north through the Phillipines as well.
+2005-09-08T07:15:00.000Z	cafuego	houman_zhu	Still, 6000km equals lag.
+2005-09-08T07:15:00.000Z	cafuego	houman_zhu	embedded video doesn't run on AMD64.
+2005-09-08T07:15:00.000Z	houman_zhu	cafuego	well, latency doesnt mean low speed right?
+2005-09-08T07:16:00.000Z	houman_zhu	cafuego	why embedded video doesnt run on amd? im sure everything in linux has been ported to amd
+2005-09-08T07:16:00.000Z	cafuego	houman_zhu	I'd never design a site with embedded video anyway, I'd provide a link
+2005-09-08T07:16:00.000Z	cafuego	houman_zhu	Oh no, it's FAST enough, the initial response time isn't low, though.
+2005-09-08T07:16:00.000Z	houman_zhu	cafuego	to see embedded video you need 1- firefox 2- mplayer 3- mplayer-plugin, and there is 64 bit version for everything
+2005-09-08T07:16:00.000Z	cafuego	houman_zhu	stuff like w32codecs (WMA, Real, Quicktime) run 32bit windows code.
+2005-09-08T07:17:00.000Z	houman_zhu	cafuego	you gotta be kidding, i was gonna buy an amd now i wont
+2005-09-08T07:17:00.000Z	cafuego	houman_zhu	amd64 doesn't run 32bit windows code when Linux runs in 64bit mode.
+2005-09-08T07:18:00.000Z	houman_zhu	cafuego	but im sure someone will port those codecs to 64 bit soon enough, and isnt here 32 bit emulation in amd? so it will be backward compatible with 32 bits? or yhou totally cant run anythign 32
+2005-09-08T07:18:00.000Z	cafuego	houman_zhu	They haven't ported them in the past year; what do you mean by 'soon' ?
+2005-09-08T07:19:00.000Z	cafuego	houman_zhu	I can run them in a 32bit chroot, yes. but i don't NEED them, so why would I bother setting them up?
+2005-09-08T07:19:00.000Z	houman_zhu	cafuego	well the number of people owning 64 bit processors is increasing dramatically, im sure the free software people will come up with a solution soon
+2005-09-08T07:19:00.000Z	cafuego	houman_zhu	that's optimistic, I'
+2005-09-08T07:20:00.000Z	cafuego	houman_zhu	If you want Linux on an amd64, just run the i386 flavour. it'll STILL be faster then a P4.
+2005-09-08T07:21:00.000Z	houman_zhu	cafuego	but i want higher floating point op accuracy!!!! haha im, kidding
+2005-09-08T07:21:00.000Z	cafuego	houman_zhu	INT_MAX is still INT_MAX
+2005-09-08T07:30:00.000Z	houman_zhu	cafuego	anywya sim off to bed, thanks again for all your help if youre there, night m8
+2006-04-17T07:43:00.000Z	cafuego	houman_zhu	uisually /etc/default/<service>
+2006-04-17T07:45:00.000Z	houman_zhu	cafuego	hmm, its not there, the process is mysqld
+2006-04-17T07:45:00.000Z	cafuego	houman_zhu	Ah ok, edit /etc/mysql/my.cnf
+2006-04-17T07:45:00.000Z	cafuego	houman_zhu	You can set options in that file.
+2006-04-17T07:46:00.000Z	houman_zhu	cafuego	yea found it, thank you very much :)

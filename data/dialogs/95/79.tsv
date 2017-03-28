@@ -1,0 +1,95 @@
+2005-04-30T14:28:00.000Z	makyo2		sorry, who was the one who told me about the aconnectgui?
+2005-04-30T14:28:00.000Z	delire	makyo2	me i believe
+2005-04-30T14:29:00.000Z	makyo2	delire	yes, thanks... I installed that and it opens an empty window
+2005-04-30T14:29:00.000Z	delire	makyo2	because you aren't running any applications that use it.
+2005-04-30T14:30:00.000Z	makyo2	delire	do you know which modules are needed for midi mpu401 to work?
+2005-04-30T14:31:00.000Z	delire	makyo2	: " aconnectgui is a graphical utility to connect and disconnect two existing ports on ALSA sequencer system. "
+2005-04-30T14:31:00.000Z	delire	makyo2	run 'aseqview' now
+2005-04-30T14:32:00.000Z	makyo2	delire	command not found
+2005-04-30T14:33:00.000Z	delire	makyo2	ok, then install it. at some point you'll have to take the lead on this. these are essential tools for working with midi in linux. i use them alot myself.
+2005-04-30T14:35:00.000Z	makyo2	delire	I'm glad you use midi, I need a lot of help there... hope you don't mind helping me
+2005-04-30T14:36:00.000Z	delire	makyo2	it's late here, not for long sadly. join #alsa for more specific support
+2005-04-30T14:37:00.000Z	makyo2	delire	thanks... maybe other day... just one last thing, where can I find asqview? what repositorie?
+2005-04-30T14:38:00.000Z	delire	makyo2	it should be on your system now 'aseqview'
+2005-04-30T14:39:00.000Z	makyo2	delire	I get command not found
+2005-04-30T14:39:00.000Z	delire	makyo2	you spelt it wrong above albeit.
+2005-04-30T14:39:00.000Z	makyo2	delire	aseqview
+2005-04-30T14:40:00.000Z	delire	makyo2	: ok give me a moment. debian here. things are slightly bit different
+2005-04-30T14:43:00.000Z	delire	makyo2	what does 'lspci | grep audio' give you?
+2005-04-30T14:45:00.000Z	makyo2	delire	0000:00:1f.5 Multimedia audio controller: Intel Corp. 82801EB/ER (ICH5/ICH5R) AC'97 Audio Controller (rev 02)
+2005-04-30T14:45:00.000Z	delire	makyo2	i'm sorry.. no chance ;)
+2005-04-30T14:45:00.000Z	makyo2	delire	why?
+2005-04-30T14:45:00.000Z	delire	makyo2	that's an onboard card with no proper midi support.
+2005-04-30T14:46:00.000Z	makyo2	delire	eventhough it has midi/joysitck port?
+2005-04-30T14:46:00.000Z	delire	makyo2	you can however compile a kernel to include the raw_midi which will give you midi control.
+2005-04-30T14:46:00.000Z	delire	makyo2	out of the box in ubuntu, i don't think so. you'll need to use this 'raw_midi'
+2005-04-30T14:47:00.000Z	makyo2	delire	lsmod show this:
+2005-04-30T14:48:00.000Z	delire	makyo2	hmm.. ok.. the module *is* there.. that's good. already compiled.
+2005-04-30T14:48:00.000Z	delire	makyo2	i'm thinking
+2005-04-30T14:49:00.000Z	makyo2	delire	I had to modprobe it
+2005-04-30T14:49:00.000Z	delire	makyo2	well try again !
+2005-04-30T14:49:00.000Z	delire	makyo2	you could be in luck
+2005-04-30T14:49:00.000Z	makyo2	delire	it doesnt load at boot
+2005-04-30T14:49:00.000Z	delire	makyo2	edit /etc/modules to include what you want to load.
+2005-04-30T14:49:00.000Z	delire	makyo2	just the names are fine
+2005-04-30T14:50:00.000Z	makyo2	delire	I did that and then it loads but the audio is gone...
+2005-04-30T14:50:00.000Z	delire	makyo2	after a reboot?
+2005-04-30T14:50:00.000Z	makyo2	delire	yes
+2005-04-30T14:50:00.000Z	delire	makyo2	hmm. you need to tell that to crimsun. he is aware of this problem
+2005-04-30T14:50:00.000Z	makyo2	delire	it loads the mpu modules and snd_intel8x0 but there is no audio...
+2005-04-30T14:51:00.000Z	makyo2	delire	I was looking for crimsum as a friend told me he could help me, but he seems to be away
+2005-04-30T14:51:00.000Z	delire	makyo2	odd. did you try a 'depmod -ae' afterwards? that may help. (believe it or not this was the only thing that hoary broke).
+2005-04-30T14:51:00.000Z	delire	makyo2	afaik..
+2005-04-30T14:53:00.000Z	delire	makyo2	after modprobing have you tried aconnectgui??
+2005-04-30T14:53:00.000Z	delire	makyo2	i think this should work now
+2005-04-30T14:54:00.000Z	makyo2	delire	what is depmod -ae for?
+2005-04-30T14:55:00.000Z	delire	makyo2	it pull in all the modules that the loaded modules depend upon (in a general sense)
+2005-04-30T14:55:00.000Z	delire	makyo2	try aconnectgui now after loading snd_seq_device snd_seq_midi
+2005-04-30T14:56:00.000Z	delire	makyo2	also snd_seq_oss just to be sure. put all those in /etc/modules afterwards..
+2005-04-30T14:57:00.000Z	makyo2	delire	muse should be able to connect?
+2005-04-30T14:58:00.000Z	delire	makyo2	yep && rosegarden, timidity.
+2005-04-30T14:58:00.000Z	delire	makyo2	did you try aconnectgui or not
+2005-04-30T14:59:00.000Z	makyo2	delire	good! they seem to be connecting in aconnectgui
+2005-04-30T14:59:00.000Z	delire	makyo2	great. make some notes. ubuntu (being a great distro) shipped all those modules precompiled and ready to go. to ensure they load edit /etc/modules
+2005-04-30T15:00:00.000Z	makyo2	delire	Ill do that
+2005-04-30T15:00:00.000Z	makyo2	delire	but why is that whe I add mpu401 to load at boot then the audio card is dead?
+2005-04-30T15:01:00.000Z	delire	makyo2	i'd say because it competes with ALSA's midi interface
+2005-04-30T15:02:00.000Z	makyo2	delire	any idea how to solve that?
+2005-04-30T15:02:00.000Z	delire	makyo2	really that's only any good for serial joysticks AFAIK
+2005-04-30T15:02:00.000Z	delire	makyo2	to ensure it doesn't load?
+2005-04-30T15:03:00.000Z	makyo2	delire	do you know if usb midi ports are working in ubuntu?
+2005-04-30T15:03:00.000Z	makyo2	delire	I have an usb midi keyboard but there are not controllers for linux, so I want to try to use it via midi
+2005-04-30T15:03:00.000Z	delire	makyo2	over serial?
+2005-04-30T15:04:00.000Z	makyo2	delire	I have a cheap Miditech Midistduio-2
+2005-04-30T15:04:00.000Z	delire	makyo2	hmm.. just a moment
+2005-04-30T15:04:00.000Z	makyo2	delire	over serial or maybe I should buy a M-Audio usb midi interface
+2005-04-30T15:07:00.000Z	delire	makyo2	all devices with midi over USB should work.
+2005-04-30T15:07:00.000Z	delire	makyo2	try 'modprobe usb-midi'
+2005-04-30T15:08:00.000Z	makyo2	delire	AFAIK only midi usb with EZ USB works
+2005-04-30T15:09:00.000Z	delire	makyo2	nope.. All USB MIDI devices from Roland/Edirol, Evolution, M-Audio/Midiman, and
+2005-04-30T15:09:00.000Z	delire	makyo2	i've used a few different types.
+2005-04-30T15:09:00.000Z	delire	makyo2	including the midiman but that requires firmware
+2005-04-30T15:10:00.000Z	makyo2	delire	modprobe usb_midi loaded fine
+2005-04-30T15:10:00.000Z	makyo2	delire	should just turn on my keyboard?
+2005-04-30T15:10:00.000Z	delire	makyo2	i would do this..
+2005-04-30T15:10:00.000Z	delire	makyo2	as follows 'tail -f /var/log/syslog | grep usb'
+2005-04-30T15:11:00.000Z	delire	makyo2	and then turn on and plug in your keyboard.
+2005-04-30T15:11:00.000Z	delire	makyo2	do you have familiarity with Pure Data or MaxMSP?
+2005-04-30T15:12:00.000Z	makyo2	delire	hablas espaniol?
+2005-04-30T15:13:00.000Z	makyo2	delire	I have to mention that I have an M-Audio Duo connected also
+2005-04-30T15:14:00.000Z	makyo2	delire	this is what I get when I plug my keyboard: Apr 19 17:12:11 localhost kernel: usb 7-2: new full speed USB device using ohci_hcd and address 3
+2005-04-30T15:14:00.000Z	delire	makyo2	hmm that will work fine
+2005-04-30T15:14:00.000Z	makyo2	delire	yes, that is working fine
+2005-04-30T15:14:00.000Z	delire	makyo2	gret..
+2005-04-30T15:14:00.000Z	makyo2	delire	and now?
+2005-04-30T15:14:00.000Z	delire	makyo2	ok.. start up your favourite midi sequencer (timidity, rosegarden et al) and try some input
+2005-04-30T15:15:00.000Z	makyo2	delire	should the midi keybord show in jack?
+2005-04-30T15:15:00.000Z	delire	makyo2	use aconnectgui to ensure that the notes are being received however
+2005-04-30T15:15:00.000Z	delire	makyo2	no
+2005-04-30T15:15:00.000Z	makyo2	delire	aconnectgui is not showing the usb keyboard
+2005-04-30T15:16:00.000Z	delire	makyo2	hmm (thinks)
+2005-04-30T15:16:00.000Z	makyo2	delire	I got to go... are you ofen around here?
+2005-04-30T15:16:00.000Z	delire	makyo2	just startup rosegarden or timidity
+2005-04-30T15:16:00.000Z	delire	makyo2	on anf off. try me
+2005-04-30T15:17:00.000Z	makyo2	delire	got ot go... see you later, thank you for your help! I hope I can find you tomorrow
+2005-04-30T15:17:00.000Z	delire	makyo2	anytime

@@ -1,0 +1,99 @@
+2005-02-03T08:55:00.000Z	BROKEN_LADDER		what is the config file for gnome volume manager?
+2005-02-03T08:56:00.000Z	BROKEN_LADDER		gui?
+2005-02-03T08:56:00.000Z	BROKEN_LADDER		for fuck's sake man.
+2005-02-03T08:57:00.000Z	tritium	BROKEN_LADDER	what's the matter
+2005-02-03T08:58:00.000Z	tritium	BROKEN_LADDER	yes, that's it.  Try to be nice to those that help you.
+2005-02-03T08:59:00.000Z	BROKEN_LADDER	tritium	i'm not being mean.  i'm just saying, it's revolting to have to use a gui.  and removable storage doesn't do anything useful.
+2005-02-03T09:07:00.000Z	tritium	BROKEN_LADDER	try to appreciate the help, and not criticize nitpicky details
+2005-02-03T09:09:00.000Z	tritium	BROKEN_LADDER	you've been treated very kindly, and with a great deal of patience
+2005-02-03T09:59:00.000Z	tritium	BROKEN_LADDER	try searching either the wiki or ubuntuguide.  There's a write-up on your power-off problem.
+2005-02-03T13:52:00.000Z	tritium	BROKEN_LADDER	you can configure gdm to spawn multiple servers.  Just edit /etc/gdm/gdm.conf
+2005-02-03T13:53:00.000Z	BROKEN_LADDER	tritium	i already know about that.
+2005-02-03T13:53:00.000Z	BROKEN_LADDER	tritium	but is what i asked possible?
+2005-02-03T13:53:00.000Z	tritium	BROKEN_LADDER	you asked
+2005-02-03T13:55:00.000Z	tritium	BROKEN_LADDER	are you talking about "Applications->System Tools->New Login"?
+2005-02-03T13:56:00.000Z	BROKEN_LADDER	tritium	that's not possible if, say, the user has left his session locked.
+2005-02-03T14:03:00.000Z	tritium	BROKEN_LADDER	try looking at a diff to determine if anything significantly new is in the new config file
+2005-02-03T14:03:00.000Z	tritium	BROKEN_LADDER	then, typically, keep your own config
+2005-02-03T14:04:00.000Z	tritium	BROKEN_LADDER	if you hit "d" it'll display the diff between the old config and the new, wherever it resides
+2005-02-03T14:04:00.000Z	tritium	BROKEN_LADDER	you described a generic situation.  We're not talking specifics
+2005-02-03T14:05:00.000Z	tritium	BROKEN_LADDER	e.g., if you configure a printer, you probably don't want to hit
+2005-02-03T14:06:00.000Z	tritium	BROKEN_LADDER	config files for any particular package
+2005-02-03T14:11:00.000Z	tritium	BROKEN_LADDER	you can specify the install directory when you compile it
+2005-02-03T15:40:00.000Z	tritium	BROKEN_LADDER	he is free to use whatever he wants.
+2005-02-03T15:41:00.000Z	tritium	BROKEN_LADDER	you want to take away his freedom to choose?
+2005-02-03T15:41:00.000Z	BROKEN_LADDER	tritium	no.  but he should excercise his freedom to choose by choosing sip.
+2005-02-03T15:41:00.000Z	tritium	BROKEN_LADDER	he can exercise his freedom however he best sees fit
+2005-02-03T15:42:00.000Z	tritium	BROKEN_LADDER	quit forcing your opinion on others
+2005-02-03T15:43:00.000Z	tritium	BROKEN_LADDER	it most certainly is
+2005-02-03T15:46:00.000Z	tritium	BROKEN_LADDER	you're a BROKEN_RECORD
+2005-02-03T15:48:00.000Z	tritium	BROKEN_LADDER	your zealousy is rather frightening, given that you're talking about violence.
+2005-02-03T15:50:00.000Z	tritium	BROKEN_LADDER	give it a rest
+2005-02-03T15:52:00.000Z	BROKEN_LADDER	tritium	but you shouldn't.
+2005-02-03T15:53:00.000Z	tritium	BROKEN_LADDER	don't force your goddamn zealous point of view on me!
+2005-02-03T16:24:00.000Z	tritium	BROKEN_LADDER	if you delete files, you'll have broken packages.
+2005-02-03T16:25:00.000Z	BROKEN_LADDER	tritium	you mean if i delete a kernel image that i'm not even using?
+2005-02-03T16:25:00.000Z	tritium	BROKEN_LADDER	if you delete any file that belongs to a package you'll break that package.  Use the package management system.
+2005-02-03T16:27:00.000Z	tritium	BROKEN_LADDER	if you're not using vmlinuz-2.6.8.1-3-686, then apt-get remove linux-image-2.6.8.1-3-686, the package to which it belongs
+2005-02-03T16:29:00.000Z	tritium	BROKEN_LADDER	you're welcome
+2005-02-03T16:47:00.000Z	tritium	BROKEN_LADDER	I would use kernel-package
+2005-02-03T16:54:00.000Z	tritium	BROKEN_LADDER	you can use them with kernel-package as well
+2005-02-03T16:56:00.000Z	tritium	BROKEN_LADDER	we know you wouldn't
+2005-02-04T06:07:00.000Z	BROKEN_LADDER	tritium	is it not?
+2005-02-04T06:08:00.000Z	tritium	BROKEN_LADDER	:)
+2005-02-04T07:05:00.000Z	tritium	BROKEN_LADDER	the .desktop files are in /usr/share/applications
+2005-02-04T07:05:00.000Z	BROKEN_LADDER	tritium	i'm not talking about the .desktop files.
+2005-03-20T09:57:00.000Z	tritium	BROKEN_LADDER	easytag
+2005-09-10T05:09:00.000Z	tritium	BROKEN_LADDER	what was upgraded?  Are you running breezy?
+2005-09-10T05:09:00.000Z	tritium	BROKEN_LADDER	which packages were upgraded?
+2005-09-10T05:10:00.000Z	tritium	BROKEN_LADDER	which packages were upgraded?
+2005-09-10T05:51:00.000Z	tritium	BROKEN_LADDER	don't we all?
+2005-09-10T05:52:00.000Z	tritium	BROKEN_LADDER	you're using unofficial repos
+2005-09-10T13:20:00.000Z	tritium	BROKEN_LADDER	you don't recall what got upgraded, and therefore can't guarantee that something didn't get pulled in from the alsa repos
+2005-09-10T12:53:00.000Z	tritium	BROKEN_LADDER	please watch your choice of words, man
+2005-09-10T12:57:00.000Z	tritium	BROKEN_LADDER	not when you use the "n" word, or talk about assasinations
+2005-09-28T12:04:00.000Z	tritium	BROKEN_LADDER	too hard to say without more info
+2005-11-01T12:24:00.000Z	tritium	BROKEN_LADDER	is it a "vastly more mature" problem?  ;)
+2005-11-01T13:25:00.000Z	tritium	BROKEN_LADDER	bugzilla.ubuntu.com
+2005-11-09T11:42:00.000Z	tritium	BROKEN_LADDER	did you already build the fuse modules?
+2005-11-09T11:42:00.000Z	tritium	BROKEN_LADDER	read the output of "apt-cache show gmailfs"
+2005-11-09T11:43:00.000Z	tritium	BROKEN_LADDER	nope
+2005-11-09T11:44:00.000Z	tritium	BROKEN_LADDER	read the output of "apt-cache show gmailfs"
+2005-11-09T11:46:00.000Z	tritium	BROKEN_LADDER	you need to build kernel modules, as the info tells you
+2005-11-09T11:47:00.000Z	tritium	BROKEN_LADDER	read the docs in /usr/share/doc/fuse-source.  I've not used it
+2005-11-09T11:48:00.000Z	tritium	BROKEN_LADDER	right
+2005-11-17T13:47:00.000Z	tritium	BROKEN_LADDER	take it easy
+2005-11-22T10:40:00.000Z	tritium	BROKEN_LADDER	not by default, no
+2005-11-22T10:41:00.000Z	tritium	BROKEN_LADDER	it's not needed by the average user
+2005-11-22T10:42:00.000Z	tritium	BROKEN_LADDER	no, the average user (not developer) doesn't compile stuff
+2005-11-22T10:42:00.000Z	tritium	BROKEN_LADDER	no, usage statistics
+2005-11-22T10:43:00.000Z	tritium	BROKEN_LADDER	nonsense
+2005-11-22T10:43:00.000Z	tritium	BROKEN_LADDER	you're not describing things the average user needs to do
+2005-11-22T10:44:00.000Z	tritium	BROKEN_LADDER	nope.  Now let's please not discuss this any more
+2005-11-22T10:49:00.000Z	tritium	BROKEN_LADDER	definitely
+2005-11-22T10:52:00.000Z	tritium	BROKEN_LADDER	sudo aptitude install linux-686
+2005-11-22T10:53:00.000Z	tritium	BROKEN_LADDER	what are you compiling?
+2005-11-22T11:31:00.000Z	tritium	BROKEN_LADDER	with the -march=cpu-type option
+2005-11-22T11:32:00.000Z	tritium	BROKEN_LADDER	not quite.  man gcc for valid cpu types
+2005-11-22T11:33:00.000Z	tritium	BROKEN_LADDER	you asked about gcc
+2005-11-22T11:35:00.000Z	tritium	BROKEN_LADDER	make uses whatever you tell it to
+2005-11-22T11:38:00.000Z	tritium	BROKEN_LADDER	did you run ./configure?
+2005-12-02T14:56:00.000Z	tritium	BROKEN_LADDER	are you using a reasonable quality?
+2005-12-02T14:58:00.000Z	tritium	BROKEN_LADDER	distortion is introduced as you lower the quality
+2005-12-02T15:00:00.000Z	tritium	BROKEN_LADDER	it's obviously true, as ogg is lossy
+2005-12-02T15:01:00.000Z	tritium	BROKEN_LADDER	drop the semantics.
+2005-12-02T15:03:00.000Z	tritium	BROKEN_LADDER	semantics aside, normally people are referring to vorbis when they say "ogg"
+2005-12-02T15:13:00.000Z	tritium	BROKEN_LADDER	lossy means that information is lost in the process of encoding
+2005-12-02T15:17:00.000Z	tritium	BROKEN_LADDER	you asked...
+2005-12-02T15:17:00.000Z	tritium	BROKEN_LADDER	and last time we talked, you still didn't believe Nyquist's sampling theorem
+2005-12-02T15:20:00.000Z	tritium	BROKEN_LADDER	and who are you calling wrong?
+2005-12-02T15:23:00.000Z	tritium	BROKEN_LADDER	again, don't get so caught up on semantics.  Most people mean vorbis when they say "ogg", because of the file extension
+2005-12-02T15:23:00.000Z	tritium	BROKEN_LADDER	please lose the elitist attitude
+2005-12-02T15:58:00.000Z	tritium	BROKEN_LADDER	please let people use what they want to use
+2005-12-02T15:58:00.000Z	tritium	BROKEN_LADDER	not so.  Please stop.
+2005-12-02T15:58:00.000Z	tritium	BROKEN_LADDER	well, please don't
+2005-12-02T15:59:00.000Z	tritium	BROKEN_LADDER	that is not your choice to make for others
+2005-12-02T16:00:00.000Z	tritium	BROKEN_LADDER	this is not the place for that
+2005-12-02T16:01:00.000Z	tritium	BROKEN_LADDER	that's not all you do.
+2005-12-02T16:03:00.000Z	tritium	BROKEN_LADDER	stop!  Using flash is his right.
+2005-12-03T06:03:00.000Z	tritium	BROKEN_LADDER	treated me with such complete disrespect, foul language, and name calling, that he is banned

@@ -1,0 +1,95 @@
+2011-01-11T22:59:00.000Z	Franz24		Could anyone help me? I have exactly the same problem as this guy: http://ubuntuforums.org/showthread.php?t=1649969 but still after reading the thread I don't really understand what to do. I've just installed Ubuntu 10.10 on an empty partition as a dual boot with Windows 7, and after the installation when I tried to restart the computer, it freezes on the purple bootscreen. Could anyone tell me what I should do?
+2011-01-11T23:00:00.000Z	edbian	Franz24	let me read
+2011-01-11T23:03:00.000Z	edbian	Franz24	press shift while booting before you see any ubuntu stuff.  This gets you into the grub menu.  Try to boot recovery mode or something.  The problem is vague and may be caused by many things.  If we can get Ubuntu to boot we can try to find error messages that will point us to the real problem.
+2011-01-11T23:04:00.000Z	edbian	Franz24	This is a much better method than finding a thread with the same problem but with everything else different.
+2011-01-11T23:05:00.000Z	Franz24	edbian	Okay, so I should boot in the recovery mode, and just let it do it's work and go back here to tell which errors it gave me?
+2011-01-11T23:05:00.000Z	edbian	Franz24	It has a much higher probability of booting.
+2011-01-11T23:06:00.000Z	edbian	Franz24	Eventually you land at some menu, tell me what the options are and I can help you pick one that is helpful
+2011-01-11T23:13:00.000Z	edbian	Franz24	hi
+2011-01-11T23:15:00.000Z	edbian	Franz24	do resume
+2011-01-11T23:15:00.000Z	Franz24	edbian	ok it asked my for my username and password, I entered them and now I can run commands
+2011-01-11T23:16:00.000Z	edbian	Franz24	so the system works.  There is nothing wrong with any hardware.  This means that there is a software problem
+2011-01-11T23:16:00.000Z	Franz24	edbian	ok, so what do I have to do now?
+2011-01-11T23:16:00.000Z	edbian	Franz24	run dmesg.  most of it is just 'everything is ok' status messages.  Look near the end for relavent stuff.  Do you see anything that's an error?
+2011-01-11T23:20:00.000Z	Franz24	edbian	Well, the last line say ¨28.334654] EXT4-fs (sda5): re-mounted. Opts: errors=remount-ro,commit=0
+2011-01-11T23:20:00.000Z	edbian	Franz24	really?  That's your HDD.  That line says you had to re-mount your hdd and now you can only read it.  (ro = read only)
+2011-01-11T23:21:00.000Z	Franz24	edbian	what exactly is re-mounting?
+2011-01-11T23:21:00.000Z	edbian	Franz24	it's mounting but, again
+2011-01-11T23:22:00.000Z	Franz24	edbian	how should I do that?
+2011-01-11T23:22:00.000Z	edbian	Franz24	do what?  It already did it automatically.
+2011-01-11T23:23:00.000Z	Franz24	edbian	I don´t really understand ^^´ sorry, could you explain again what the exact problem is and (if you know) the solution to it?
+2011-01-11T23:23:00.000Z	edbian	Franz24	I don't know why the hdd is being re-mounted.  I don't know what causes that.  I'm looking it up
+2011-01-11T23:24:00.000Z	edbian	Franz24	What is the exact error it gave you?
+2011-01-11T23:24:00.000Z	Franz24	edbian	ok thanks
+2011-01-11T23:25:00.000Z	edbian	Franz24	What was the exact error it gave you?
+2011-01-11T23:26:00.000Z	Franz24	edbian	this one? ¨[   28.334654] EXT4-fs (sda5): re-mounted. Opts: errors=remount-ro,commit=0¨
+2011-01-11T23:27:00.000Z	edbian	Franz24	apparently the system mounts / read only during boot for safety, then it remounts after you've logged in.  That message is standard and not an error.
+2011-01-11T23:28:00.000Z	edbian	Franz24	It's possible (and likely) that there are none
+2011-01-11T23:29:00.000Z	edbian	Franz24	shift + page up  scrolls up. Don't worry about it.  The end is the only part that matters.
+2011-01-11T23:29:00.000Z	edbian	Franz24	try this: sudo gdm
+2011-01-11T23:30:00.000Z	edbian	Franz24	It will launch the graphical log in.  If it crashes it should go back to this screen and give you errors
+2011-01-11T23:30:00.000Z	Franz24	edbian	lots of errors here
+2011-01-11T23:31:00.000Z	edbian	Franz24	haha, such as... ?
+2011-01-11T23:31:00.000Z	Franz24	edbian	WARNING: Unable to load file ´/etc/gdm/custom.conf´ : No such file or directory
+2011-01-11T23:32:00.000Z	edbian	Franz24	was that from running sudo gdm?
+2011-01-11T23:32:00.000Z	Franz24	edbian	yes
+2011-01-11T23:32:00.000Z	edbian	Franz24	Maybe some of the files are missing.  Reinstall the package.  sudo apt-get install gdm
+2011-01-11T23:32:00.000Z	Franz24	edbian	also ¨WARNING: Unable to find users: no seat-id found
+2011-01-11T23:33:00.000Z	edbian	Franz24	that one I have never seen before
+2011-01-11T23:33:00.000Z	Franz24	edbian	I´ll try what you said
+2011-01-11T23:33:00.000Z	edbian	Franz24	you might have to do: sudo apt-get reinstall gdm
+2011-01-11T23:34:00.000Z	edbian	Franz24	If that doesn't work we'll try the shotgun approach: sudo apt-get reinstall ubuntu-desktop
+2011-01-11T23:34:00.000Z	Franz24	edbian	I just did the first, is it true that that´s finished immediatly?
+2011-01-11T23:34:00.000Z	edbian	Franz24	Well what did it say?  'already installed' ?
+2011-01-11T23:34:00.000Z	edbian	Franz24	just do sudo apt-get reinstall gdm  it won't hurt anything
+2011-01-11T23:35:00.000Z	Franz24	edbian	as i said, I just did it and nothing happened..
+2011-01-11T23:36:00.000Z	edbian	Franz24	what?  Are you sure?  it just puts you back at the prompt?
+2011-01-11T23:36:00.000Z	edbian	Franz24	you gave it your password and such
+2011-01-11T23:37:00.000Z	edbian	Franz24	you're kidding!
+2011-01-11T23:37:00.000Z	edbian	Franz24	dmesg works
+2011-01-11T23:37:00.000Z	edbian	Franz24	?  but sudo apt-get reinstall gdm does nothing?
+2011-01-11T23:38:00.000Z	Franz24	edbian	I´ll try it once more in case I made a typing mistake
+2011-01-11T23:38:00.000Z	edbian	Franz24	If there was a typing mistake it would have spitted out errors
+2011-01-11T23:39:00.000Z	Franz24	edbian	with both sudo apt-get reinstall gdm and with sudo apt-get install gdm nothing happens
+2011-01-11T23:39:00.000Z	edbian	Franz24	what about sudo apt-get install geany
+2011-01-11T23:39:00.000Z	edbian	Franz24	It's just a random app. does that work / do anything?
+2011-01-11T23:40:00.000Z	edbian	Franz24	ok.  I believe that your install was bad.  You're probably going to have to re-install
+2011-01-11T23:41:00.000Z	edbian	Franz24	random files are just missing.  apt-get does not appear to work at all
+2011-01-11T23:41:00.000Z	Franz24	edbian	maybe it works when I restart the recovery mode
+2011-01-11T23:41:00.000Z	edbian	Franz24	I DOUBT it :)
+2011-01-11T23:41:00.000Z	Franz24	edbian	I can always try
+2011-01-11T23:41:00.000Z	edbian	Franz24	sure
+2011-01-11T23:42:00.000Z	Franz24	edbian	by the way, this is the second time that this happens, yesterday I installed ubuntu with the same problem, and today I reinstalled it but nothing changed.
+2011-01-11T23:42:00.000Z	edbian	Franz24	maybe the CD is bad
+2011-01-11T23:42:00.000Z	edbian	Franz24	You should re-burn it.
+2011-01-11T23:44:00.000Z	Franz24	edbian	now when I do ´sudo apt-get reinstall gdm´ it asks me for my password, and when I enter it it says: ¨E: Invalid operation reinstall¨
+2011-01-11T23:44:00.000Z	edbian	Franz24	ok good, does ls work?
+2011-01-11T23:44:00.000Z	Franz24	edbian	Is: command not found
+2011-01-11T23:45:00.000Z	edbian	Franz24	ok, it is REALLY BAD, that ls is not found.  But if you wanna try and fix this install I will help you.  I suggest you download and burn a new image and reinstall the OS
+2011-01-11T23:46:00.000Z	edbian	Franz24	try that
+2011-01-11T23:47:00.000Z	edbian	Franz24	yes, you are typing 'EL' 'ESS'  right
+2011-01-11T23:47:00.000Z	Franz24	edbian	E Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+2011-01-11T23:47:00.000Z	edbian	Franz24	What command did you run?
+2011-01-11T23:48:00.000Z	Franz24	edbian	the reinstall command
+2011-01-11T23:48:00.000Z	edbian	Franz24	that's because ls is a command and is is not
+2011-01-11T23:48:00.000Z	Franz24	edbian	i meant the sudo command
+2011-01-11T23:49:00.000Z	edbian	Franz24	sudo apt-get install -reinstall gdm
+2011-01-11T23:49:00.000Z	Franz24	edbian	that one is works
+2011-01-11T23:49:00.000Z	Franz24	edbian	it has just finished
+2011-01-11T23:49:00.000Z	edbian	Franz24	then try sudo gdm again
+2011-01-11T23:49:00.000Z	Franz24	edbian	same errors as before
+2011-01-11T23:50:00.000Z	edbian	Franz24	try this:
+2011-01-11T23:50:00.000Z	edbian	Franz24	sudo apt-get install -reinstall ubuntu-desktop
+2011-01-11T23:50:00.000Z	Franz24	edbian	ok I´ll try
+2011-01-11T23:52:00.000Z	Franz24	edbian	it has finished working
+2011-01-11T23:52:00.000Z	edbian	Franz24	sudo gdm
+2011-01-11T23:52:00.000Z	edbian	Franz24	(that was fast)
+2011-01-11T23:53:00.000Z	Franz24	edbian	same errors, and really fast because I even restarted my pc in the time, after ´sudo gdm´ i can´t enter any commands for some weird reason
+2011-01-11T23:53:00.000Z	Franz24	edbian	btw, it gives the same errors again
+2011-01-11T23:54:00.000Z	edbian	Franz24	ok, I suggest you reinstall the OS
+2011-01-11T23:54:00.000Z	edbian	Franz24	There shouldn't be random files missing
+2011-01-11T23:54:00.000Z	Franz24	edbian	Ok, I still have the original downloaded iso file on my pc, how should I put it on an usb?
+2011-01-11T23:54:00.000Z	Franz24	edbian	and do I have to uninstal anything?
+2011-01-11T23:55:00.000Z	edbian	Franz24	You don't need to uninstall. https://help.ubuntu.com/community/Installation/FromUSBStickQuick
+2011-01-11T23:57:00.000Z	Franz24	edbian	I´ll switch to my pc now, could you send the link again in a moment?
+2011-01-12T00:07:00.000Z	Franz24	edbian	I´m back, could you send the link again?

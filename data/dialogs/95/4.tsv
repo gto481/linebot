@@ -1,0 +1,95 @@
+2011-10-07T02:52:00.000Z	escott	savid	check /etc/udev
+2011-10-07T02:53:00.000Z	savid	escott	interesting. I'll check it out.
+2012-03-05T00:51:00.000Z	escott	savid	security requirement
+2012-03-05T10:05:00.000Z	escott	savid	does the windows installer know its working with gpt? you could setup a hybrid mbr/gpt and then install as mbr for windows. see rodsbooks.com
+2012-03-05T10:06:00.000Z	escott	savid	if you have enough space at the front of the disk and the partitions are correctly positioned that might be the easiest setup
+2012-03-05T10:07:00.000Z	savid	escott	 *
+2012-03-05T10:07:00.000Z	escott	savid	can you tell me what the partition layout is and where the first partition begins?
+2012-03-05T10:09:00.000Z	savid	escott	Well, that's the weird part.  In Linux I have my gpt partition, swap, root, and unallocated.   But windows installer sees an extra 0byte partition at the beginning.
+2012-03-05T10:09:00.000Z	escott	savid	is this an efi system? i notice you dont have a grub_bios partition
+2012-03-05T10:10:00.000Z	escott	savid	and what type is the 0byte partition
+2012-03-05T10:12:00.000Z	savid	escott	 well, that's another thing I'm not sure of.   I had Ubuntu installed normally (bios),  but had an empty fat partition in front in case i needed it later.  I then installed windows,  but in order to recover grub, I learned I had to set up that first partition as bios_grub
+2012-03-05T10:13:00.000Z	savid	escott	but now windows partition won't show up again so I'm trying to install it again
+2012-03-05T10:14:00.000Z	escott	savid	ok. so you have a bios system. you dont have a efi partition instead you have a bios_grub
+2012-03-05T10:14:00.000Z	savid	escott	yes it appears so.
+2012-03-05T10:16:00.000Z	escott	savid	here is how i would recommend setting things up: efi partition beginning at 1mb (yes you aren't efi but this may avoid some issues) 100mb, windows partition (you pick the size), bios_grub, ubuntu
+2012-03-05T10:16:00.000Z	escott	savid	sorry efi should be 100mb (per spec IIRC)
+2012-03-05T10:16:00.000Z	savid	escott	so...  I have to reinstall ubuntu?
+2012-03-05T10:16:00.000Z	escott	savid	actually holdon let me reread the relevant section of the docs
+2012-03-05T10:19:00.000Z	escott	savid	Overall, hybrid MBRs should be avoided. I've included support for them in GPT fdisk only because certain popular OSes (read: Microsoft Windows, at least through Windows 7) can't boot from GPT disks on BIOS-based computers.
+2012-03-05T10:20:00.000Z	escott	savid	thats why the windows installer is all confused. it wants to install an efi bootloader, but it cant because you have no efi partition
+2012-03-05T10:21:00.000Z	savid	escott	here's what windows installer currently shows: http://imgur.com/COFvn
+2012-03-05T10:22:00.000Z	savid	escott	*
+2012-03-05T10:22:00.000Z	escott	savid	its no good you have to go hybrid is my understanding
+2012-03-05T10:22:00.000Z	savid	escott	what do you mean by hybrid?
+2012-03-05T10:23:00.000Z	escott	savid	this means you will have an mbr partition and a gpt partition table. the mbr will look somewhat like the gpt, and windows will boot thinking it is mbr, but ubuntu will see the gpt and do things correctly
+2012-03-05T10:23:00.000Z	escott	savid	windows will not be able to access anything beyond the 2TB mbr limit
+2012-03-05T10:24:00.000Z	savid	escott	don't I already have an mbr partition?
+2012-03-05T10:24:00.000Z	escott	savid	the mbr partition table will look like: 0xEE (gpt partition beginning in sector 2 to protect the gpt structures and the gpt partition) and running up to the beginning of the windows partition. then the windows partition, and then if there is anything after the windows but less than 2TiB that needs another protective partition (or it shows as unallocated)
+2012-03-05T10:25:00.000Z	escott	savid	http://www.rodsbooks.com/gdisk/hybrid.html
+2012-03-05T10:25:00.000Z	escott	savid	you may have some kind of mbr but its out of sync with the proper gpt partition table
+2012-03-05T10:25:00.000Z	savid	escott	not sure where I would see "0xEE"...
+2012-03-05T10:26:00.000Z	escott	savid	you would see it in gdisk
+2012-03-05T10:26:00.000Z	savid	escott	not sure what gdisk is.  i generally use gparted.
+2012-03-05T10:26:00.000Z	escott	savid	welcome to the hell that is the mbr/gpt and bios/efi transition
+2012-03-05T10:26:00.000Z	savid	escott	it is a fresh hell.
+2012-03-05T10:27:00.000Z	escott	savid	so lets just lay out how we want to do it, and then i can leave you with some instructions to implement
+2012-03-05T10:27:00.000Z	escott	savid	i need to know how big the disk is and how much space you want to allocate to windows/ubuntu
+2012-03-05T10:27:00.000Z	savid	escott	ok.  it's a 750GB disk.  I want roughly equal space for ubuntu/windows.
+2012-03-05T10:28:00.000Z	escott	savid	in that case why are you using gpt?
+2012-03-05T10:28:00.000Z	savid	escott	I thought I had no choice :-P
+2012-03-05T10:28:00.000Z	escott	savid	its less than 2TiB you can and should use mbr
+2012-03-05T10:28:00.000Z	savid	escott	 so how do I *not* use GPT
+2012-03-05T10:29:00.000Z	savid	escott	when I originally partitioned the drive I just used gparted.
+2012-03-05T10:29:00.000Z	escott	savid	boot the livecd, install gdisk, then use gdisk to create a hybrid and tell it you want to save all partitions except the grub_bios partition. then delete the gpt partition that will switch you to pure mbr. at that point you can do a grub-install
+2012-03-05T10:30:00.000Z	escott	savid	which will put grub in the mbr instead of in the grub_bios and you shouldn't lose any data
+2012-03-05T10:31:00.000Z	savid	escott	and "use gdisk to create a hybrid" is straight-forward?  not sure exactly what that entails, unless you're talking about just selecting an option called "hybrid" somewhere...
+2012-03-05T10:31:00.000Z	escott	savid	this is assuming you have a bios system (so make sure thats correct)
+2012-03-05T10:31:00.000Z	savid	escott	it's a macbook pro, if that tells you anything   :-P
+2012-03-05T10:32:00.000Z	escott	savid	ohhh then it is efi
+2012-03-05T10:32:00.000Z	savid	escott	 yeah but I don't think I installed ubuntu in EFI mode
+2012-03-05T10:32:00.000Z	escott	savid	are you using bootcamp? or did you remove osx
+2012-03-05T10:32:00.000Z	savid	escott	removed OSX.  it broke after I installed ubuntu but I didn't need it.
+2012-03-05T10:33:00.000Z	savid	escott	I eventually wiped the whole drive and started fresh
+2012-03-05T10:33:00.000Z	escott	savid	i would imagine you are better off using OSX and bootcamp
+2012-03-05T10:34:00.000Z	escott	savid	while people (like you) have successfully gotten ubuntu to boot on efi macs, im not sure if thats true of windows
+2012-03-05T10:34:00.000Z	savid	escott	I'm just using the mac bootloader.  it's been working well enough for now
+2012-03-05T10:35:00.000Z	escott	savid	I would think the best thing to do is go ahead and use a small amount of space 10gb or so to install OSX and then setup bootcamp to boot everything else
+2012-03-05T10:36:00.000Z	savid	escott	unfortunately my macbook didn't come with physical install media.  I think I have to go buy it now.
+2012-03-05T10:36:00.000Z	escott	savid	that way you will have OSX to rescue the system/update firmware/etc with whatever support apple provides
+2012-03-05T10:36:00.000Z	escott	savid	borrow it from somebody. you already paid for it when you bought the system
+2012-03-05T10:38:00.000Z	escott	savid	its just a big can of worms because osx while being efi is not fully compliant with the efi spec (see mathew garretts blog)
+2012-03-05T10:38:00.000Z	escott	savid	and then windows support for efi is very limited and new. you can ask around/check online, maybe you can get windows to boot efi directly
+2012-03-05T10:41:00.000Z	escott	savid	i did find one blog saying they were able to get windows 7 to boot directly on apple efi, so it might be possible, but it sounds like you have some weird setup going on where maybe you tried to use bootcamp to install ubuntu (ie why do you have a grub_bios partition)
+2012-03-05T10:42:00.000Z	savid	escott	 I don't think I ever used bootcamp for anything
+2012-03-05T10:42:00.000Z	escott	savid	so what grub did you end up installing? because if you had a true efi boot you would have had to have installed grub-efi. and you would not have a grub_bios partition
+2012-03-05T10:44:00.000Z	savid	escott	 I just used the ubuntu installer to repartition the drive.   I don't think I ever was able to do a true EFI boot.   At one point someone told me to make a fat32 partition for EFI, and that ubuntu would automatically use that for EFI boot, but it never did.  so I ended up with that partition just being empty up front.
+2012-03-05T10:44:00.000Z	savid	escott	when I installed windows,  I had to recover grub,  and grub wouldn't let me install unless I had a grub_boot partition.
+2012-03-05T10:44:00.000Z	escott	savid	so thats the efi partition which is required as part of the efi spec, but osx doesn't use it the way the spec says its supposed to use it
+2012-03-05T10:45:00.000Z	savid	escott	but I don't even use OSX any more, so it shouldn't matter, right?
+2012-03-05T10:46:00.000Z	escott	savid	and you would have to install the efi version of grub which would put all its files in that fat partition. you have something else going on (i dont know what exactly) my guess is that you have a bios grub installed somewhere?? and the osx efi implementation is noticing that and doing the bootcamp bios emulation for you to chainload grub
+2012-03-05T10:47:00.000Z	escott	savid	so my guess is that you are using bootcamp without knowing it, but i dont know for sure. long and short if you just install osx, and use bootcamp you can boot both windows and ubuntu without much difficulty
+2012-03-05T10:47:00.000Z	savid	escott	but again, I don't have osx nor have I used bootcamp
+2012-03-05T10:47:00.000Z	savid	escott	unless I'm misunderstanding what bootcamp is
+2012-03-05T10:48:00.000Z	escott	savid	bootcamp is just a bios emulation layer implemented in efi together with a nice gui in the osx system
+2012-03-05T10:48:00.000Z	escott	savid	so it makes your efi system look like a nice normal mbr pc_bios system which can boot windows easily
+2012-03-05T10:49:00.000Z	savid	escott	if it's worth anything, this is how parted sees my partition scheme:   http://dpaste.com/711745/
+2012-03-05T10:49:00.000Z	escott	savid	and my guess is that the gui in osx is just a luxury and that somehow you got the bootcamp drivers to automatically detect the mbr stuff and boot that way
+2012-03-05T10:50:00.000Z	savid	escott	I'm just not sure how I would have used bootcamp for anything when I completely nuked OSX
+2012-03-05T10:51:00.000Z	escott	savid	thats assuming that bootcamp needs the osx stuff to work. if i were implementing bootcamp i would just have an efi driver that scans the partition table and enables bios emulation for anything that is not OSX
+2012-03-05T10:51:00.000Z	escott	savid	and if thats how apple implemented it then you are using bootcamp, you just dont know it
+2012-03-05T10:52:00.000Z	savid	escott	so is the thing that pops up when I hold down the option key during boot what you're referring to as bootcamp?  I thought that was something different...  At least, I had read that was different.
+2012-03-05T10:53:00.000Z	escott	savid	in any case you will not be able to boot windows with the current layout, because you dont have an efi partition. you could shrink the bios_grub (it can be as small as 1mb) and make the newely freed space into efi partition and maybe that would make windows happy
+2012-03-05T10:54:00.000Z	savid	escott	how do I make windows "think" that the new partition is an EFI partition?  Is there a special flag for EFI?
+2012-03-05T10:55:00.000Z	escott	savid	the problem you have is that your disk is gpt and must be gpt because you system is efi
+2012-03-05T10:56:00.000Z	escott	savid	but you want to do a bios boot for windows, and windows does not support bios/gpt boots
+2012-03-05T10:56:00.000Z	savid	escott	 so EFI is a hardware thing?
+2012-03-05T11:02:00.000Z	savid	escott	Jordan_U,  thanks a bunch for the help.  much appreciated.
+2012-03-11T00:46:00.000Z	escott	savid	the standard disclaimer applies here... "have you checked that the software is not in APT. have you looked for a PPA. do you know how to use checkinstall or --prefix directories?"
+2012-03-11T00:48:00.000Z	savid	escott	 yeah, there's a PPA for this but I need to use a specific version that's not in the PPA.  I'm not familiar w/ checkinstall,   and I've tried --prefix=/usr
+2012-03-11T00:49:00.000Z	savid	escott	 I'm not able to get past ./autogen.sh so checkinstall wouldn't really even help
+2012-03-11T00:49:00.000Z	escott	savid	you definitely dont want to prefix to /usr. it should be prefixed to /usr/local/bin or /opt depending upon your preference. install something to /usr and you stomp on your system binaries and libraries and break your box
+2012-03-11T00:50:00.000Z	savid	escott	well, whatever I use for the prefix I get the same result
+2012-03-11T00:50:00.000Z	savid	escott	 it seems as if the autoconf directory does not get created, which is why these errors are coming up.  I'm just not familiar enough with autoconf internals to know what is normally responsible for creating that directory.
+2012-03-11T00:52:00.000Z	escott	savid	im not too familiar with autotools, and i have to get going, so im not much help in the actual problem, just wanted to warn you not to install to /usr
+2012-03-23T23:09:00.000Z	escott	savid	the concern is "chown to root" attacks so if it would be chowning to something you don't control that will be disallowed

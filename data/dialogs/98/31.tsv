@@ -1,0 +1,98 @@
+2008-08-29T00:59:00.000Z	hubar		hi.
+2008-08-29T00:59:00.000Z	hubar		How do I know which repository a package I am going to get is from? (with synaptic)
+2008-08-29T01:00:00.000Z	Flannel	hubar	go to the properties for that package
+2008-08-29T01:00:00.000Z	hubar	Flannel	then?
+2008-08-29T01:00:00.000Z	Flannel	hubar	One of the tabs should mention it.
+2008-08-29T01:01:00.000Z	hubar	Flannel	nope. it just said its version.
+2008-08-29T01:01:00.000Z	hubar	Flannel	The thing is, I need libsqlite3-dev for apache2-dev.
+2008-08-29T01:02:00.000Z	hubar	Flannel	and libsqlite3-dev depends on libsqlite.
+2008-08-29T01:02:00.000Z	hubar	Flannel	 But the libsqlite version on my box is higher than libsqlite3-dev.
+2008-08-29T01:02:00.000Z	Flannel	hubar	apache2-dev doesn't exist in Ubuntu
+2008-08-29T01:02:00.000Z	hubar	Flannel	well, it exists, as prefork-dev and thread-dev.
+2008-08-29T01:03:00.000Z	Flannel	hubar	apache2-prefork-dev, not apache2-dev, please be specific.
+2008-08-29T01:04:00.000Z	Flannel	hubar	That doesn't depend on sqlite at all.
+2008-08-29T01:04:00.000Z	Flannel	hubar	http://packages.ubuntu.com/hardy/apache2-prefork-dev
+2008-08-29T01:05:00.000Z	hubar	Flannel	apache2-prefork-dev:
+2008-08-29T01:06:00.000Z	hubar	Flannel	and if you are trying to install libaprutil1-dev, it will ask you about sth else.
+2008-08-29T01:06:00.000Z	hubar	Flannel	eventually it leads to libsqlite3
+2008-08-29T01:08:00.000Z	Flannel	hubar	What do you have going onwith your sources that your depends aren't satisfiable then?
+2008-08-29T01:09:00.000Z	Flannel	hubar	pastebin your sources.list
+2008-08-29T01:12:00.000Z	hubar	Flannel	http://pastebin.com/m16b8e6d9
+2008-08-29T01:13:00.000Z	hubar	Flannel	libsqlite3 version on my box is 3.5.*
+2008-08-29T01:13:00.000Z	hubar	Flannel	It uses (now) not (hardy).
+2008-08-29T01:14:00.000Z	Flannel	hubar	You need to enable all the repos for deb as well as deb-src,
+2008-08-29T01:14:00.000Z	Flannel	hubar	mmm, I guess you have them.  What does sudo apt-get install libapache2-prefork-dev give you?  the error that is.  pastebin the output
+2008-08-29T01:15:00.000Z	Flannel	hubar	actually, do this: sudo apt-get update && apt-cache policy libapache2-prefork-dev && sudo apt-get install libapache2-prefork-dev
+2008-08-29T01:15:00.000Z	Flannel	hubar	pastebin the output of that
+2008-08-29T01:16:00.000Z	hubar	Flannel	got it, doing that :)
+2008-08-29T01:17:00.000Z	hubar	Flannel	btw, it should be apache2-prefork-dev, not libapach2-prefork-dev...
+2008-08-29T01:18:00.000Z	Flannel	hubar	alright, well, whatever package it is :)
+2008-08-29T01:19:00.000Z	hubar	Flannel	http://pastebin.com/m77d5c28e
+2008-08-29T01:19:00.000Z	hubar	Flannel	I skipped all the boring details about reading repositories in the beginning.
+2008-08-29T01:20:00.000Z	Flannel	hubar	alright, and then the error when you try and install libaprutil1-dev? (if it gives a "is not going to be installed" error, recurse one more time, eventually we'll get a meaningful reason as to why we're not installing)
+2008-08-29T01:22:00.000Z	hubar	Flannel	http://pastebin.com/m6c4ab5b
+2008-08-29T01:23:00.000Z	Flannel	hubar	right, now the error when installing libsqlite3-dev?  (we're looking for a proper error message, not a "because" sort of thing)
+2008-08-29T01:23:00.000Z	hubar	Flannel	http://pastebin.com/m28ae8cfa
+2008-08-29T01:24:00.000Z	Flannel	hubar	Alright, and apt-cache policy libsqlite3-0
+2008-08-29T01:26:00.000Z	hubar	Flannel	http://pastebin.com/m519303a1
+2008-08-29T01:27:00.000Z	Flannel	hubar	Alright, your problem is you've manually installed (looks like its not from a repository) that newer version.  And obviously that's not happy with it.
+2008-08-29T01:27:00.000Z	hubar	Flannel	How can I downgrade it? w/o whacking any of my software that depends on it?
+2008-08-29T01:29:00.000Z	Flannel	hubar	if you have any software that depend on the newer version, they won't like it.  But you can use pinning or a number of other ways to force the older version (which you should then remove after its installed)
+2008-08-29T01:30:00.000Z	hubar	Flannel	How do I force the older version to install?
+2008-08-29T01:31:00.000Z	Flannel	hubar	try apt-get install -t hardy libsqlite3-0
+2008-08-29T01:32:00.000Z	Flannel	hubar	We can specify a version string of course, but I'd like to make it as vague as possible
+2008-08-29T01:33:00.000Z	Flannel	hubar	go ahead
+2008-08-29T01:33:00.000Z	hubar	Flannel	libsqlite3-0 is already the newest version.
+2008-08-29T01:37:00.000Z	Flannel	hubar	alright, we're going to have to use apt pinning, with a priority of over 1000 (so, 1001)  you'll have to edit /etc/apt/preferences
+2008-08-29T01:38:00.000Z	hubar	Flannel	I dont have that file though
+2008-08-29T01:39:00.000Z	Flannel	hubar	correct, just create it.  sudo nano /etc/apt/preferences
+2008-08-29T01:39:00.000Z	hubar	Flannel	ok and?
+2008-08-29T01:39:00.000Z	Flannel	hubar	http://pastebin.ubuntu.com/41351/
+2008-08-29T01:39:00.000Z	Flannel	hubar	make that the contents of the file
+2008-08-29T01:40:00.000Z	hubar	Flannel	and?
+2008-08-29T01:40:00.000Z	Flannel	hubar	save, and then sudo apt-get upgrade
+2008-08-29T01:41:00.000Z	Flannel	hubar	it should downgrade that package
+2008-08-29T01:42:00.000Z	hubar	Flannel	http://pastebin.ubuntu.com/41352/
+2008-08-29T01:43:00.000Z	hubar	Flannel	I got that from sudo apt-get upgrade
+2008-08-29T01:43:00.000Z	hubar	Flannel	But there is no libsqlite3 in the list. That got me worried.
+2008-08-29T01:44:00.000Z	Flannel	hubar	that looks like regular updates.  Yeah, no sqlite3-0 maybe upgrades don't trigger pins.  Try sudo apt-get install --reinstall libsqlite3-0
+2008-08-29T01:45:00.000Z	hubar	Flannel	The following packages will be REMOVED:
+2008-08-29T01:46:00.000Z	Flannel	hubar	Check the dependencies of sqlite3, what version does it depend on?
+2008-08-29T01:46:00.000Z	hubar	Flannel	How do I do that in command line?
+2008-08-29T01:46:00.000Z	hubar	Flannel	I used to use synaptic. :)
+2008-08-29T01:47:00.000Z	Flannel	hubar	synaptic will work fine.  It'll show depends.  but, apt-cache show [package]
+2008-08-29T01:49:00.000Z	hubar	Flannel	Output is here. http://pastebin.ubuntu.com/41354/
+2008-08-29T01:49:00.000Z	Flannel	hubar	no no, sqlite3, not lib*3-0
+2008-08-29T01:49:00.000Z	hubar	Flannel	oh
+2008-08-29T01:50:00.000Z	hubar	Flannel	http://pastebin.ubuntu.com/41357/
+2008-08-29T01:51:00.000Z	Flannel	hubar	right, so that's the newer version too.  sqlite3 is being removed because it wants 3.5, anyway... if thats all thats going ot be removeed, its easy to reinstall them afterwards.
+2008-08-29T01:51:00.000Z	Flannel	hubar	I say go with it, then reinstall f-spot and sqlite3, they'll use the versions from the repositories, and you'll be fine.
+2008-08-29T01:52:00.000Z	hubar	Flannel	Alright let me try that! :)
+2008-08-29T02:03:00.000Z	Flannel	hubar	Once its all working, go ahead and delete that preferences file
+2008-08-29T02:03:00.000Z	hubar	Flannel	Will do. Btw, is there a command option to do the "spinning"?
+2008-08-29T02:04:00.000Z	Flannel	hubar	spinning?
+2008-08-29T02:05:00.000Z	hubar	Flannel	What you use to refer to the preferences file again? apt spinning or sth like that.
+2008-08-29T02:05:00.000Z	Flannel	hubar	that was apt pinning.  /etc/apt/preferences see man apt_preferences for all sorts of goodies
+2008-08-29T02:06:00.000Z	hubar	Flannel	oh ok good day sir. :)
+2008-10-27T05:15:00.000Z	Flannel	hubar	If you don't mind (and are comfortable with) using a development version of the software
+2008-10-27T05:15:00.000Z	hubar	Flannel	hmm, I will wait then. :)
+2008-10-27T05:18:00.000Z	Flannel	hubar	You need to set your preferences to non-LTS only upgrades (in software sources/properties) and then it'll let you know automatically through update-manager
+2008-10-27T05:19:00.000Z	hubar	Flannel	preferences? from synaptic?
+2008-10-27T05:19:00.000Z	Flannel	hubar	Um, I think it's software repositories or software preferences or something.  Not Synaptic preferences.  It also has its own menu entry in administration.
+2008-10-27T05:22:00.000Z	hubar	Flannel	ok. I have release upgrade in software sources -> updates.
+2008-10-27T05:23:00.000Z	hubar	Flannel	LTS means long term release?
+2008-10-27T05:25:00.000Z	Flannel	hubar	yes.
+2008-10-27T05:25:00.000Z	Flannel	hubar	If you want to go to intrepid, you want non-LTS as well.  Otherwise you wont be notified until 10.04
+2008-10-27T05:26:00.000Z	hubar	Flannel	what if I just want the official relase?
+2008-10-27T05:26:00.000Z	hubar	Flannel	Do I needto change anything?
+2008-10-27T05:26:00.000Z	Flannel	hubar	What are your three options?
+2008-10-27T05:27:00.000Z	hubar	Flannel	never/normal releases/LTS only
+2008-10-27T05:27:00.000Z	Flannel	hubar	you want normal releases
+2008-11-07T05:50:00.000Z	Flannel	hubar	To do what with it?
+2008-11-07T05:50:00.000Z	hubar	Flannel	edit, of course
+2008-11-07T05:50:00.000Z	Flannel	hubar	Right click and hit "edit"
+2008-11-07T05:50:00.000Z	hubar	Flannel	no that won't work.
+2008-11-07T05:50:00.000Z	hubar	Flannel	there is an entry that is shown in my appmenu.
+2008-11-07T05:51:00.000Z	hubar	Flannel	But it isn't showing up in edit menu.
+2008-11-07T05:52:00.000Z	hubar	Flannel	Any ideas? solutions? :)
+2008-11-07T05:54:00.000Z	Flannel	hubar	Try gconf I guess. Also, check... whatever folder apps put .desktop files into, /usr/share/ something

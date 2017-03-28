@@ -1,0 +1,98 @@
+2004-10-04T10:16:00.000Z	probs		what's the deal with sound on ubuntu? I had to change my gstreamer setting to get mp3 playback, but I still have no sound anywhere else.
+2004-10-04T10:16:00.000Z	probs		anybody else had that problem?
+2004-10-04T10:17:00.000Z	subterrific	probs	what did you change gsteamer to use?
+2004-10-04T10:17:00.000Z	subterrific	probs	did you try ALSA?
+2004-10-04T10:18:00.000Z	subterrific	probs	i have no clue. lets see if we can't get ALSA working for you
+2004-10-04T10:19:00.000Z	probs	subterrific	that sounds awesome
+2004-10-04T10:20:00.000Z	probs	subterrific	okay..killing esd...
+2004-10-04T10:21:00.000Z	probs	subterrific	okay...dead:)
+2004-10-04T10:21:00.000Z	subterrific	probs	now start some audio playing in rhythmbox or something and then go into Applications->Multimedia->Volume Control and unmute your output channels and turn up the volume until you hear something :)
+2004-10-04T10:21:00.000Z	subterrific	probs	also do you know what sound card and driver you're using?
+2004-10-04T10:22:00.000Z	probs	subterrific	yeah..nforce2 mobo w/ ac97...
+2004-10-04T10:22:00.000Z	probs	subterrific	rhythmbox crash:)
+2004-10-04T10:24:00.000Z	subterrific	probs	thats no good. try totem?
+2004-10-04T10:25:00.000Z	probs	subterrific	hey...totem works!
+2004-10-04T10:26:00.000Z	probs	subterrific	uh...sorry...what's paste.plone.org?
+2004-10-04T10:27:00.000Z	probs	subterrific	wow..that's neat:)
+2004-10-04T10:30:00.000Z	subterrific	probs	ok, now download this: http://subterrific.net/~jason/intel8x0_asoundrc and save it to .asoundrc in your home directory
+2004-10-04T10:33:00.000Z	probs	subterrific	beautiful...I think it worked:)
+2004-10-04T10:33:00.000Z	subterrific	probs	rock
+2004-10-04T10:33:00.000Z	subterrific	probs	if you wanna stick around maybe i can help you fix rhythmbox
+2004-10-04T10:34:00.000Z	probs	subterrific	now if I could figure out why rhythmbox crashes?
+2004-10-04T10:34:00.000Z	probs	subterrific	yeah! sure! if you're up to it:)
+2004-10-04T10:35:00.000Z	subterrific	probs	do you have gdb installed?
+2004-10-04T10:36:00.000Z	probs	subterrific	yup
+2004-10-04T10:40:00.000Z	subterrific	probs	do that, run it from a terminal
+2004-10-04T10:46:00.000Z	probs	subterrific	gdb doesn't give anything more useful than this:
+2004-10-04T10:47:00.000Z	probs	subterrific	I can hear the first second of the song before it crashes
+2004-10-04T10:48:00.000Z	subterrific	probs	i had that happen to me too. it was because i tried to play a wma file or something
+2004-10-04T10:48:00.000Z	probs	subterrific	hmm...I think these are all mp3s..but let me make sure
+2004-10-04T10:49:00.000Z	probs	subterrific	it's kind of strange...when I run gstreamer-properties, the 'tests' both crash when I'm using alsa as well.
+2004-10-04T10:51:00.000Z	subterrific	probs	what kernel are you using?
+2004-10-04T10:51:00.000Z	probs	subterrific	default ubuntu 2.6.8.1-2-386
+2004-10-04T10:52:00.000Z	subterrific	probs	i've got a kernel that adds the latest ALSA stuff, if you want to try it
+2004-10-04T10:53:00.000Z	subterrific	probs	i'd also suggest upgrading everything via apt/synaptic first too
+2004-10-04T10:53:00.000Z	probs	subterrific	sure..is it one you built?
+2004-10-04T10:53:00.000Z	probs	subterrific	yeah, I just updated everything a few hours ago
+2004-10-04T10:54:00.000Z	subterrific	probs	yeah, its the stock ubuntu kernel with the latest ALSA patch from alsa-project.org
+2004-10-04T10:55:00.000Z	probs	subterrific	would it be easier for me to just patch it?
+2004-10-04T10:55:00.000Z	subterrific	probs	maybe try restarting too, 2.6.8 kernel seems kind of iffy, and who knows what esd does ;)
+2004-10-04T10:58:00.000Z	probs	subterrific	okay...restarting;) I'll try the alsa patch if nothing changes. 
+2004-10-04T11:13:00.000Z	probs	subterrific	okay, after reboot I am back to the error from a few days ago where it says 'alsa device default is used by another program'
+2004-10-04T11:13:00.000Z	subterrific	probs	what is saying that?
+2004-10-04T11:13:00.000Z	probs	subterrific	rhythmbox
+2004-10-04T11:14:00.000Z	subterrific	probs	Desktop Preferences->Sound do you have Enable sound server startup  checked?
+2004-10-04T11:15:00.000Z	probs	subterrific	ah, yes that seems to have been the problem, so now rhythmbox crashes again:)
+2004-10-04T11:16:00.000Z	subterrific	probs	use paste.plone to show me the output from lsof | grep snd
+2004-10-04T11:17:00.000Z	probs	subterrific	okay it's there
+2004-10-04T11:18:00.000Z	probs	subterrific	you know, my card shows up in /proc/asound/cards too
+2004-10-04T11:18:00.000Z	probs	subterrific	yep, every time
+2004-10-04T11:19:00.000Z	probs	subterrific	for everything except esd:)
+2004-10-04T11:20:00.000Z	subterrific	probs	i seriously think esd is your problem
+2004-10-04T11:20:00.000Z	subterrific	probs	killall -9 esd
+2004-10-04T11:21:00.000Z	probs	subterrific	okay...thanks:) rebooting:)
+2004-10-04T11:22:00.000Z	subterrific	probs	restart with gstreamer set to ALSA and sound server startup disabled
+2004-10-04T11:23:00.000Z	probs	subterrific	okay:)
+2004-10-04T11:26:00.000Z	subterrific	probs	ps aux | grep esd ;-)
+2004-10-04T11:27:00.000Z	probs	subterrific	:D
+2004-10-04T11:28:00.000Z	subterrific	probs	ok, well at least now we know it really is an ALSA problem and you can try the new kernel if you'd like
+2004-10-04T11:28:00.000Z	subterrific	probs	and does the gstreamer-properties test sound still crash?
+2004-10-04T11:28:00.000Z	probs	subterrific	yup, just like rhythmbox
+2004-10-04T11:30:00.000Z	probs	subterrific	you know...I just realized, I think the reason totme was working is because I uninstalled the gstreamer version and installed the xine version a while back
+2004-10-04T11:30:00.000Z	subterrific	probs	maybe, i think xine might be using ALSA though
+2004-10-04T11:30:00.000Z	subterrific	probs	see if aplay /usr/lib/openoffice/share/gallery/sounds/train.wav works
+2004-10-04T11:30:00.000Z	probs	subterrific	yeah, that's what I was thinking...maybe the problem is just with gstreamer and not alsa?
+2004-10-04T11:31:00.000Z	probs	subterrific	yep it plays perfectly
+2004-10-04T11:31:00.000Z	subterrific	probs	hrm, thats pointing to gstreamer then
+2004-10-04T11:33:00.000Z	subterrific	probs	try running gst-register-0.8
+2004-10-04T11:33:00.000Z	probs	subterrific	arrgh...nope
+2004-10-04T11:34:00.000Z	subterrific	probs	and make sure that nasty esd isn't running again ;)
+2004-10-04T11:34:00.000Z	probs	subterrific	no esd
+2004-10-04T11:35:00.000Z	probs	subterrific	flash has sound now though:)
+2004-10-04T11:35:00.000Z	subterrific	probs	i guess its a gstreamer-alsa issue then if aplay works :\
+2004-10-04T11:36:00.000Z	subterrific	probs	i wonder if totem-xine uses alsa or oss
+2004-10-04T11:37:00.000Z	probs	subterrific	haha...maybe it's because I don't have gstreamer-alsa installed?
+2004-10-04T11:40:00.000Z	subterrific	probs	really?
+2004-10-04T11:40:00.000Z	probs	subterrific	yeah, it wasn't installed before
+2004-10-04T11:41:00.000Z	probs	subterrific	oh ah hm, I think I did:)
+2004-10-04T11:42:00.000Z	probs	subterrific	so did you end up installing that patch because of a similar problem?
+2004-10-04T11:43:00.000Z	subterrific	probs	i ended up doing the patch because there was no driver for my sound card in the kernel, but there was one recently added to ALSA
+2004-10-04T11:43:00.000Z	probs	subterrific	oh yeah
+2004-10-04T11:44:00.000Z	subterrific	probs	if you really can't live without rhythmbox, maybe you could try setting gstreamer to use OSS, but stay away from esd ;)
+2004-10-04T11:45:00.000Z	probs	subterrific	I'll try that:)
+2004-10-04T11:46:00.000Z	probs	subterrific	yeah I've had similar problems with other distros as well...
+2004-10-04T11:47:00.000Z	probs	subterrific	but I think I can live without gstreamer...probably even rhythmbox as well
+2004-10-04T11:52:00.000Z	probs	subterrific	anyway, thanks a ton for your help, I really appreciate it
+2004-10-04T11:53:00.000Z	subterrific	probs	no problem, glad i could help
+2004-10-04T11:58:00.000Z	subterrific	probs	when you were using esd, what was was working?
+2004-10-04T11:58:00.000Z	probs	subterrific	you mean rhythmbox?
+2004-10-04T11:59:00.000Z	probs	subterrific	yeah, rhythmbox worked, but I think it's the only gstreamer app I was using
+2004-10-04T11:59:00.000Z	probs	subterrific	the flash player in my browser was mute though
+2004-10-04T12:01:00.000Z	probs	subterrific	I could also play the sample sound events in 'sound preferences'
+2004-10-04T12:01:00.000Z	subterrific	probs	k
+2004-10-04T12:02:00.000Z	probs	subterrific	tuxracer didn't have sound under esd, but it does now:)
+2004-10-04T12:07:00.000Z	subterrific	probs	are you going to stick around irc?
+2004-10-04T12:07:00.000Z	probs	subterrific	probably for another hour or so;)
+2004-10-04T12:07:00.000Z	subterrific	probs	i mean in coming days. i might need your help if i try to fix that gstreamer-alsa crash
+2004-10-04T12:08:00.000Z	probs	subterrific	oh:)....um yeah but probably only in the evenings (like now)
+2004-10-04T12:11:00.000Z	probs	subterrific	great, I'd love to help:)

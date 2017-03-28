@@ -1,0 +1,98 @@
+2006-07-07T06:23:00.000Z	dmitri		hello. i have a package in dapper (ltmodem...) which the packet manager cannot install or remove. it hence prevents installation of any other packages. can you give me some advice please
+2006-07-07T06:24:00.000Z	ccooke	dmitri	there is no "ltmodem" package in dapper
+2006-07-07T06:25:00.000Z	ccooke	dmitri	the linux-restricted-modules packages provide ltmodem drivers already
+2006-07-07T06:25:00.000Z	ccooke	dmitri	there is no ltmodem package in dapper.
+2006-07-07T06:27:00.000Z	dmitri	ccooke	ok...but it didnt detect my thinkpad x31 modem - or i didnt know how to set it up proprely. now, the installation of any further packages is resrticed, becayse synaptics packet manager tries to remove that ltmodem package and cannot
+2006-07-07T06:27:00.000Z	ccooke	dmitri	try this: At a console, type 'sudo dpkg --purge ltmodem'
+2006-07-07T06:28:00.000Z	ccooke	dmitri	That should force it to purge any installed ltmodem package and any references to it
+2006-07-07T06:28:00.000Z	ccooke	dmitri	if it fails, please put the output in a pastebin
+2006-07-07T06:32:00.000Z	dmitri	ccooke	ok..its there (with the error!) thanks
+2006-07-07T06:32:00.000Z	ccooke	dmitri	did it remove the package?
+2006-07-07T06:32:00.000Z	dmitri	ccooke	no
+2006-07-07T06:32:00.000Z	ccooke	dmitri	the pastebin should have given you a URL to give us
+2006-07-07T06:32:00.000Z	ccooke	dmitri	what is it?
+2006-07-07T06:33:00.000Z	ccooke	dmitri	thank you
+2006-07-07T06:34:00.000Z	ccooke	dmitri	(and don't worry about it. Everyone has to learn)
+2006-07-07T06:34:00.000Z	ccooke	dmitri	ahh. So, you've installed a non-ubuntu ltmodem package. that's fine.
+2006-07-07T06:34:00.000Z	dmitri	ccooke	i try - only i got much bigger problems...after this package minor!
+2006-07-07T06:34:00.000Z	ccooke	dmitri	right. Try this:
+2006-07-07T06:35:00.000Z	ccooke	dmitri	sudo dpkg --force-all --purge ltmodem
+2006-07-07T06:37:00.000Z	dmitri	ccooke	didnt work again http://paste.ubuntu-nl.org/17414
+2006-07-07T06:41:00.000Z	ccooke	dmitri	Okay. Can you do me a favour and upload a file into the pastebin?
+2006-07-07T06:42:00.000Z	ccooke	dmitri	it'll be called: /var/lib/dpkg/info/ltmodem.postrm
+2006-07-07T06:46:00.000Z	dmitri	ccooke	sorry, there no such file there
+2006-07-07T06:47:00.000Z	ccooke	dmitri	ah. try: sudo find /var/lib/dpkg -name '*ltmodem*'
+2006-07-07T06:47:00.000Z	ccooke	dmitri	do you see a file that ends 'postinst'?
+2006-07-07T06:48:00.000Z	ccooke	dmitri	ah, my fault. Sorry
+2006-07-07T06:48:00.000Z	ccooke	dmitri	What files do you see there?
+2006-07-07T06:49:00.000Z	dmitri	ccooke	ltmodem*** .postrm, .list, .postinst, .md5sums
+2006-07-07T06:49:00.000Z	ccooke	dmitri	right. put the postrm one in pastebin, please
+2006-07-07T06:51:00.000Z	dmitri	ccooke	http://paste.ubuntu-nl.org/17416
+2006-07-07T06:52:00.000Z	ccooke	dmitri	That's only the first few lines, actually
+2006-07-07T06:52:00.000Z	dmitri	ccooke	how do i 'select all' in vi?
+2006-07-07T06:53:00.000Z	ccooke	dmitri	you can't, really
+2006-07-07T06:53:00.000Z	ccooke	dmitri	if you use: 'sudo gedit /path/to/file', you'll be able to select it all easily
+2006-07-07T06:53:00.000Z	dmitri	ccooke	i would upload the file, but the pastebin asks for screenshots, jpegs, pngs only
+2006-07-07T06:53:00.000Z	dmitri	ccooke	ok..thanks
+2006-07-07T06:53:00.000Z	ccooke	dmitri	yeah, I thought it allowed small uploads
+2006-07-07T06:59:00.000Z	dmitri	ccooke	ok! here we go http://paste.ubuntu-nl.org/17417
+2006-07-07T07:02:00.000Z	ccooke	dmitri	Right. Basically,  that package was designed for (I presume) an older version of Debian. Most of the things it assumes are there don't exist any more in the kernel.
+2006-07-07T07:02:00.000Z	ccooke	dmitri	it's failing because it doesn't know what to do.
+2006-07-07T07:02:00.000Z	ccooke	dmitri	however, since it doesn't do anything you need to care about... just remove that file.
+2006-07-07T07:03:00.000Z	ccooke	dmitri	sudo rm /path/to/file.postrm
+2006-07-07T07:03:00.000Z	ccooke	dmitri	then, try 'sudo dpkg --purge ltmodem' again
+2006-07-07T07:03:00.000Z	dmitri	ccooke	ok..i give it a whirl..thanks..and the other ltmodem files also?
+2006-07-07T07:03:00.000Z	ccooke	dmitri	other ltmodem files?
+2006-07-07T07:03:00.000Z	ccooke	dmitri	oh, don't touch those
+2006-07-07T07:03:00.000Z	dmitri	ccooke	ok..ta
+2006-07-07T07:04:00.000Z	ccooke	dmitri	once the postrm script is gone, they'll be removed automatically by dpkg when you uninstall it
+2006-07-07T07:08:00.000Z	dmitri	ccooke	i'm trying the autodetect through the 'network connections' but its saying its not attched or busy
+2006-07-07T07:09:00.000Z	ccooke	dmitri	First thing - let's be sure you have all the modules you need
+2006-07-07T07:09:00.000Z	ccooke	dmitri	what processor does your computer have?
+2006-07-07T07:09:00.000Z	ccooke	dmitri	is it an AMD or Intel or something else chip?
+2006-07-07T07:10:00.000Z	ccooke	dmitri	(speed doesn't really matter, just the make)
+2006-07-07T07:10:00.000Z	dmitri	ccooke	Intel...device manager says unknown - but i think its intel
+2006-07-07T07:11:00.000Z	ccooke	dmitri	right. they please install the "linux-686" package. That makes sure you have up-to-date kernel, restricted modules etc.
+2006-07-07T07:13:00.000Z	dmitri	ccooke	ok...you should tell me how..i installed ubuntu and fully updated about 3 weeks ago...how do i check my version?
+2006-07-07T07:13:00.000Z	ccooke	dmitri	ah, right.
+2006-07-07T07:13:00.000Z	ccooke	dmitri	System -> Administration -> Synaptic Package Manager
+2006-07-07T07:14:00.000Z	ccooke	dmitri	search for "linux-686"
+2006-07-07T07:14:00.000Z	ccooke	dmitri	there's a guide to using it, too
+2006-07-07T07:14:00.000Z	ccooke	dmitri	or if you're impatient, you can use the command line: 'sudo apt-get install linux-686'
+2006-07-07T07:15:00.000Z	dmitri	ccooke	ok, they are blank...install them both? (also linux-686-smp)
+2006-07-07T07:15:00.000Z	ccooke	dmitri	if you have a multiprocessor computer, use the -smp one.
+2006-07-07T07:15:00.000Z	ccooke	dmitri	if it's just one processor, the -686
+2006-07-07T07:16:00.000Z	dmitri	ccooke	ok. I am patient when it comes to my working machine! am installing...(maybe this will solve my sudden freezing problems also!)
+2006-07-07T07:18:00.000Z	dmitri	ccooke	should i restart now, or we do something else before?
+2006-07-07T07:19:00.000Z	ccooke	dmitri	has a little notification icon popped up on the top right telling you to reboot?
+2006-07-07T07:19:00.000Z	ccooke	dmitri	if not, you're fine
+2006-07-07T07:19:00.000Z	dmitri	ccooke	yup
+2006-07-07T07:19:00.000Z	ccooke	dmitri	just click the notification icon and do as it says
+2006-07-07T07:19:00.000Z	dmitri	ccooke	ok...i'llbe back!
+2006-07-07T07:25:00.000Z	dmitri	ccooke	ok...restarted
+2006-07-07T07:25:00.000Z	ccooke	dmitri	Okay, then
+2006-07-07T07:26:00.000Z	ccooke	dmitri	what type of modem is it, again?
+2006-07-07T07:26:00.000Z	ccooke	dmitri	what make?
+2006-07-07T07:27:00.000Z	dmitri	ccooke	0000:00:1f.6 Modem: Intel Corporation 82801DB/DBL/DBM (ICH4/ICH4-L/ICH4-M) AC'97 Modem Controller (rev 01)
+2006-07-07T07:28:00.000Z	ccooke	dmitri	Try this: https://help.ubuntu.com/community/DialupModemHowto
+2006-07-07T07:28:00.000Z	dmitri	ccooke	i did before...and the conexant auto modem detect tried to install the very drivers we just removed!
+2006-07-07T07:29:00.000Z	dmitri	ccooke	i can try again though
+2006-07-07T07:29:00.000Z	ccooke	dmitri	ahhh!
+2006-07-07T07:29:00.000Z	ccooke	dmitri	wait a sec
+2006-07-07T07:31:00.000Z	ccooke	dmitri	try 'sudo modprobe snd-intel8x0m'
+2006-07-07T07:31:00.000Z	ccooke	dmitri	then see if the software detects a modem
+2006-07-07T07:31:00.000Z	dmitri	ccooke	says it found new audio device!
+2006-07-07T07:32:00.000Z	ccooke	dmitri	https://help.ubuntu.com/community/DialupModemHowto#head-4be470bbae4b120bd5f6101c9aa218df7518b0c7
+2006-07-07T07:32:00.000Z	dmitri	ccooke	i remember i had this message last time, when i was going through the process - i guess its the mode's audio driver
+2006-07-07T07:32:00.000Z	ccooke	dmitri	try the URL I just gave you
+2006-07-07T07:36:00.000Z	dmitri	ccooke	! looks like it works - amazing..thanks! i will test it properly later at home.
+2006-07-07T07:37:00.000Z	ccooke	dmitri	anything you used modprobe on, you should add to /etc/modules so it'll load on reboot
+2006-07-07T07:37:00.000Z	dmitri	ccooke	you mean add that lines to modules?
+2006-07-07T07:38:00.000Z	ccooke	dmitri	just the names of modules
+2006-07-07T07:38:00.000Z	dmitri	ccooke	modprobe snd-intel8x0m
+2006-07-07T07:39:00.000Z	ccooke	dmitri	just the module name - you don't need the 'modprobe' bit
+2006-07-07T07:40:00.000Z	dmitri	ccooke	ok. one more thing - can u recommend a good GUI for gpg? I am using GNOMEPGP - but it does not encrypt files
+2006-07-07T07:41:00.000Z	ccooke	dmitri	sorry, I only use command-line tools
+2006-07-07T07:41:00.000Z	ccooke	dmitri	try doing a search on 'gpg' in Synaptic (the package manager)
+2006-07-07T07:41:00.000Z	ccooke	dmitri	No worries.
+2006-07-08T06:41:00.000Z	dmitri	ccooke	hi, its dmitri from yesterday, with a few more questions

@@ -1,0 +1,96 @@
+2008-03-25T09:11:00.000Z	hischild		what is the easiest way to connect via nautilus on an ubuntu <--> ubuntu home network?
+2008-03-25T09:12:00.000Z	Svenstaro	hischild	most likely samba or NFS
+2008-03-25T09:23:00.000Z	Svenstaro	hischild	well run mount -a on the client and hope :)
+2008-03-25T09:13:00.000Z	hischild	Svenstaro	cellofellow, alright. The problem i'm having with it, is that ssh and sftp keep timing out on it and i don't see a problem, since i can ssh from one to the other.
+2008-03-25T09:15:00.000Z	hischild	Svenstaro	this is NFS we're talking about? If so, them i'm interested in hearing more about it. Do you have a link or would you mind guiding me through it?
+2008-03-25T09:15:00.000Z	Svenstaro	hischild	its real easy, were talking about 7.10?
+2008-03-25T09:15:00.000Z	hischild	Svenstaro	one is 7,10, the other 8,04. The one that would act as server, is the 7,10
+2008-03-25T09:16:00.000Z	Svenstaro	hischild	in the one that acts as the server, open /etc/exports with some editor and put the following in there: /home 192.168.1.0/255.255.255.0(rw)
+2008-03-25T09:16:00.000Z	Svenstaro	hischild	of course, change ip and path and even subnet as needed
+2008-03-25T09:17:00.000Z	Svenstaro	hischild	be careful to leave a .0 at the end of the ip for the subnet mask to work of course
+2008-03-25T09:17:00.000Z	hischild	Svenstaro	the subnet is ok, the ip is slightly different. The /home is the folder going to be shared? Also, that file doesn't exist, thus i should create it?
+2008-03-25T09:18:00.000Z	Svenstaro	hischild	yes and yes
+2008-03-25T09:18:00.000Z	hischild	Svenstaro	and that ip should be the server one?
+2008-03-25T09:18:00.000Z	Svenstaro	hischild	the one for the client or client range which is allowed to access the share
+2008-03-25T09:18:00.000Z	hischild	Svenstaro	alright, done
+2008-03-25T09:19:00.000Z	Svenstaro	hischild	on the client, go to /etc/fstab and paste this onto a new line "<server>:</path/of/dir> </local/mnt/point> nfs <options> 0 0" w/o quotes
+2008-03-25T09:19:00.000Z	Svenstaro	hischild	and of course change as needed
+2008-03-25T09:19:00.000Z	Svenstaro	hischild	I suggest you create the local mnt point in /media so you can easily access it in nautilus
+2008-03-25T09:20:00.000Z	hischild	Svenstaro	that is what i planned to do
+2008-03-25T09:21:00.000Z	hischild	Svenstaro	alright one last question: the path/of/dir on fstab should be the same as the one on exports?
+2008-03-25T09:22:00.000Z	Svenstaro	hischild	yes
+2008-03-25T09:22:00.000Z	Svenstaro	hischild	I forgot to mention, on the server you ahve to run "exportfs -a"
+2008-03-25T09:23:00.000Z	hischild	Svenstaro	alright will do.
+2008-03-25T09:24:00.000Z	hischild	Svenstaro	seem to be missing nfs-kernel-server ... installing =) (with the chance of writing it all over again)
+2008-03-25T09:24:00.000Z	Svenstaro	hischild	Oh i thought that one got installed by default, well better make backups of your files
+2008-03-25T09:25:00.000Z	hischild	Svenstaro	ofcourse we have backups. It's second nature of a linux user to have backups. We make backups so easy we don't even remember where we put them ... wait ... where did i put that file again?
+2008-03-25T09:25:00.000Z	hischild	Svenstaro	it gave me an option :-) it's done
+2008-03-25T09:26:00.000Z	Svenstaro	hischild	nice, succes?
+2008-03-25T09:27:00.000Z	hischild	Svenstaro	unfortunately, no. Server is giving me an error. "Neither subtree_check or no_subtre_check specified for export *insert some ip stuff for client*
+2008-03-25T09:28:00.000Z	Svenstaro	hischild	doesnt it default to subtree?
+2008-03-25T09:29:00.000Z	hischild	Svenstaro	this isn't something i know much about so i can't answer that question ..
+2008-03-25T09:30:00.000Z	Svenstaro	hischild	put this onto the exports string "(rw,no_root_squash,async)"
+2008-03-25T09:30:00.000Z	Svenstaro	hischild	and run exportfs -a again
+2008-03-25T09:30:00.000Z	Svenstaro	hischild	just in case also issue sudo /etc/init.d/nfs-kernel-server restart
+2008-03-25T09:31:00.000Z	hischild	Svenstaro	alright that's a whole list, Give me a min to do it
+2008-03-25T09:33:00.000Z	hischild	Svenstaro	this is odd. If i do this from the command line (exportfs -o rw 192.168.2.5:/home/iositd) it does work. Also, it still complains, yet when running exportfs without options it does show up.
+2008-03-25T09:34:00.000Z	Svenstaro	hischild	uhm
+2008-03-25T09:34:00.000Z	hischild	Svenstaro	man is a mighty tool sometimes ... :p
+2008-03-25T09:35:00.000Z	Svenstaro	hischild	man can be a mighty fool as well :)
+2008-03-25T09:35:00.000Z	hischild	Svenstaro	oh that's true as well, though i try to make the best of it ;-)
+2008-03-25T09:35:00.000Z	Svenstaro	hischild	anyway, everything working now?
+2008-03-25T09:35:00.000Z	hischild	Svenstaro	not yet. Client can't seem to connect
+2008-03-25T09:36:00.000Z	hischild	Svenstaro	according to the error it's a faulty file system selection so i'm guessing i'm missing a package
+2008-03-25T09:37:00.000Z	Svenstaro	hischild	on the server do this sudo apt-get install nfs-kernel-server nfs-common portmap
+2008-03-25T09:37:00.000Z	Svenstaro	hischild	on the client do sudo apt-get install portmap nfs-common
+2008-03-25T09:38:00.000Z	hischild	Svenstaro	that seems to give some stuff to install client side
+2008-03-25T09:39:00.000Z	Svenstaro	hischild	it be working? :)
+2008-03-25T09:39:00.000Z	hischild	Svenstaro	yes it is. :-)
+2008-03-25T09:39:00.000Z	Svenstaro	hischild	\o/
+2008-03-25T09:40:00.000Z	hischild	Svenstaro	\../. _o_ .\../  is more my thing ;-)
+2008-03-25T09:40:00.000Z	Svenstaro	hischild	I'm a bit more on the conservative site concerning emoticons
+2008-03-25T09:40:00.000Z	hischild	Svenstaro	i understand. But a metal fan has to do what a metal fan has to do
+2008-03-25T09:41:00.000Z	Svenstaro	hischild	I have yet to get to know one single linux user who listens to hiphop
+2008-03-25T09:42:00.000Z	hischild	Svenstaro	i have to agree on that one ... most of the ones i know either listen to metal, alternative or some other non-mainstream style of music
+2008-03-25T09:43:00.000Z	Svenstaro	hischild	ALTERNATIVE all the way
+2008-03-25T09:43:00.000Z	hischild	Svenstaro	kindofabuzz_, <-- gothic metal, viking metal, and all the likings off
+2008-03-25T09:59:00.000Z	hischild	Svenstaro	!!!!
+2008-03-25T10:03:00.000Z	hischild	Svenstaro	you just so much made my day
+2008-03-25T10:04:00.000Z	Svenstaro	hischild	:)
+2008-03-25T10:08:00.000Z	hischild	Svenstaro	there are good alternatives to it though =)
+2008-03-25T10:15:00.000Z	Svenstaro	hischild	fat32 for sticks, ext3 for platters
+2008-03-25T10:16:00.000Z	hischild	Svenstaro	platters being?
+2008-03-25T10:16:00.000Z	hischild	Svenstaro	external ones with drives in them?
+2008-03-25T10:16:00.000Z	Svenstaro	hischild	everything that rotates at 7200 rpm and uses a magnetic head to write bits
+2008-03-25T10:16:00.000Z	hischild	Svenstaro	mine rotates 5400rpm but ok ... ext3 it is
+2008-03-25T11:54:00.000Z	Svenstaro	hischild	wanna compare the contents?
+2008-03-25T11:55:00.000Z	hischild	Svenstaro	yes that'd be correct. I got 2 versions of a programming project and i would like to compare them.
+2008-03-25T11:57:00.000Z	Svenstaro	hischild	I wouldnt know a program to do it, but a script should well be possible to do it
+2008-03-25T11:58:00.000Z	hischild	Svenstaro	could you help me with something with that?
+2008-03-26T02:10:00.000Z	hischild	Svenstaro	aah a familiar face. How's things going out there?
+2008-03-26T02:10:00.000Z	Svenstaro	hischild	ive just woken up with an empty stomach, now I've eaten too much and my stomach hurts :(
+2008-03-26T02:11:00.000Z	hischild	Svenstaro	tutut you should know better then that =p some milk will do that some good, it'll relieve the pain. Don't drink it cold though, a bit warm helps. (no joke)
+2008-03-26T02:13:00.000Z	Svenstaro	hischild	thing is ive eaten cereals with milk :(
+2008-03-26T02:13:00.000Z	hischild	Svenstaro	warm milk or cold? warm relieves pain.
+2008-03-26T02:14:00.000Z	Svenstaro	hischild	cold mild im afraid :(
+2008-03-26T02:14:00.000Z	hischild	Svenstaro	drink half a glass of warm milk with sugar. You'll feel better
+2008-03-26T02:34:00.000Z	hischild	Svenstaro	we should so much have that factoid
+2008-03-31T15:06:00.000Z	Svenstaro	hischild	we left no questions open it seems :P
+2008-03-31T15:06:00.000Z	hischild	Svenstaro	hehe we did a good job so far then :-)
+2008-03-31T15:09:00.000Z	hischild	Svenstaro	actually, i prefer rice ... i'm eating that now with chopsticks ...
+2008-03-31T15:10:00.000Z	Svenstaro	hischild	rice? good idea actually
+2008-03-31T15:11:00.000Z	hischild	Svenstaro	yes ... i like it ... and the chopsticks make you eat more slowly so you don't get stomach ache
+2008-03-31T15:33:00.000Z	hischild	Svenstaro	you should know better then trying to list a file
+2008-03-31T16:23:00.000Z	hischild	Svenstaro	sorry should've said along with it: external hd ...
+2008-03-31T18:37:00.000Z	Svenstaro	hischild	whats the trouble?
+2008-03-31T18:37:00.000Z	hischild	Svenstaro	we were having a discussion about wine and sourceforts (my game, a hl2dm mod)
+2008-03-31T18:37:00.000Z	Svenstaro	hischild	sourceforts owns, thats about it
+2008-03-31T18:38:00.000Z	hischild	Svenstaro	yes it does ... just won't run properly under linux
+2008-03-31T18:38:00.000Z	Svenstaro	hischild	as in?
+2008-03-31T18:39:00.000Z	hischild	Svenstaro	as in, 40 max fps on all turned down, while windows has 100+ on max
+2008-03-31T18:39:00.000Z	Svenstaro	hischild	are you running compiz?
+2008-03-31T18:39:00.000Z	hischild	Svenstaro	tried it on a metacity one without any extra stuff running ..
+2008-03-31T18:40:00.000Z	hischild	Svenstaro	it's no big deal as i dualboot anyway
+2008-03-31T18:40:00.000Z	Svenstaro	hischild	that should give you double the fps because compiz rerenders everything effectively halfing your fps
+2008-03-31T18:40:00.000Z	hischild	Svenstaro	didn't notice a difference ...
+2008-03-31T18:40:00.000Z	hischild	Svenstaro	perhaps, somewhere, sometime, in the future... i'll try it again

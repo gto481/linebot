@@ -1,0 +1,96 @@
+2006-09-25T13:31:00.000Z	tau		hello, can anyone tell me how I can upgrade mplayer to version 1.0pre8 (to run on dapper)?  The only official packages appear to be for edgy, which hasn't even been released yet?!  any ideas?
+2006-09-25T13:31:00.000Z	variant	tau	you could try the backports or prefereably compile the source. its easy
+2006-09-25T13:31:00.000Z	tau	variant	where do I find backports?
+2006-09-25T13:32:00.000Z	variant	tau	its an ubuntu repository
+2006-09-25T13:32:00.000Z	variant	tau	you should prefer compiling the source its much easyer and quite fast with mplayer
+2006-09-25T13:32:00.000Z	tau	variant	compiling source huh?  hmmm..
+2006-09-25T13:34:00.000Z	variant	tau	its easy, i can talk you through it
+2006-09-25T13:34:00.000Z	tau	variant	would the backport repository be dapper-backports? I've just enabled it in synaptic and reloading...
+2006-09-25T13:35:00.000Z	variant	tau	yep, but the backports can break you system
+2006-09-25T13:35:00.000Z	variant	tau	seriously, compiling is a peice of cake, i can explain it to you :)
+2006-09-25T13:35:00.000Z	tau	variant	oh?  that's no good :(  well...  I guess I can give compiling a try then..
+2006-09-25T13:35:00.000Z	tau	variant	do I do an apt-get source mplayer first?
+2006-09-25T13:36:00.000Z	variant	tau	no, download the exact version you want from mplayer.hq
+2006-09-25T13:36:00.000Z	tau	variant	ok..
+2006-09-25T13:36:00.000Z	variant	tau	mplayerhq.hu i mean
+2006-09-25T13:57:00.000Z	tau	variant	waiting..
+2006-09-25T13:36:00.000Z	variant	tau	http://www.mplayerhq.hu/design7/dload.html
+2006-09-25T13:37:00.000Z	tau	variant	synaptic is showing the newer version as available to install if I force the version to 1:1.0-pre8-1 (unstable)
+2006-09-25T13:38:00.000Z	variant	tau	you can do that if you want, if it doesnt work just let me know and we can do it my way :)
+2006-09-25T13:38:00.000Z	tau	variant	should I try that first?
+2006-09-25T13:38:00.000Z	variant	tau	yep
+2006-09-25T13:38:00.000Z	tau	variant	ok
+2006-09-25T13:44:00.000Z	tau	variant	well, it's let me mark it to upgrade, but it doesn't seem to want to let me apply it ??  I guess it's not going to work :(  ok, I'll start downloading the source
+2006-09-25T13:45:00.000Z	variant	tau	apt-get install build-essential
+2006-09-25T13:45:00.000Z	variant	tau	that will install what you need to get mplayer compiled
+2006-09-25T13:45:00.000Z	tau	variant	I think I've already done that once before
+2006-09-25T13:45:00.000Z	variant	tau	ok, np
+2006-09-25T13:47:00.000Z	tau	variant	ok, downloading now
+2006-09-25T13:49:00.000Z	variant	tau	i am at work, back in five
+2006-09-25T13:49:00.000Z	tau	variant	ok
+2006-09-25T13:53:00.000Z	variant	tau	back, you download the source?
+2006-09-25T13:53:00.000Z	tau	variant	yup, and unpacked
+2006-09-25T13:54:00.000Z	variant	tau	great, cd to that untarred directory
+2006-09-25T13:54:00.000Z	variant	tau	you do this in a terminal
+2006-09-25T13:54:00.000Z	tau	variant	ok, i'm there
+2006-09-25T13:55:00.000Z	variant	tau	you want the guy?
+2006-09-25T13:55:00.000Z	variant	tau	gui*
+2006-09-25T13:55:00.000Z	variant	tau	you want the graphical interface or just the command line version?
+2006-09-25T13:55:00.000Z	tau	variant	well, I don't really use the gui, I actually find it kind of gets in the way - I usually only use the command line
+2006-09-25T13:55:00.000Z	variant	tau	bearing in mind that the gui sucks :P
+2006-09-25T13:55:00.000Z	tau	variant	hehe :)
+2006-09-25T13:55:00.000Z	variant	tau	fine, just type ./configure
+2006-09-25T13:56:00.000Z	tau	variant	do I need to worry about downloading extra codecs or something?
+2006-09-25T13:56:00.000Z	variant	tau	that should not take long
+2006-09-25T13:56:00.000Z	variant	tau	yeah, thats no issue though.. we can do that after
+2006-09-25T13:56:00.000Z	tau	variant	ok
+2006-09-25T13:56:00.000Z	variant	tau	did the ./configure go ok?
+2006-09-25T13:57:00.000Z	tau	variant	(I only have a 1.2ghz duron :p)
+2006-09-25T13:57:00.000Z	tau	variant	ok it seems to have finished ok
+2006-09-25T13:58:00.000Z	variant	tau	cool, type make
+2006-09-25T13:58:00.000Z	variant	tau	this will take a bit longer
+2006-09-25T13:58:00.000Z	variant	tau	up to 15 minnuits
+2006-09-25T13:59:00.000Z	tau	variant	I seem to be getting a number of warnings about pointer targets missing in signedness or something..  but it's still ploughing through..
+2006-09-25T13:59:00.000Z	variant	tau	yeah dont worry about that
+2006-09-25T13:59:00.000Z	tau	variant	15 mins to compile?  gee
+2006-09-25T14:00:00.000Z	variant	tau	yeah, be glad its not open office (10 hours +)
+2006-09-25T14:00:00.000Z	tau	variant	10 hours!?!? owww
+2006-09-25T14:00:00.000Z	variant	tau	feel sorry for gentoo users? :)
+2006-09-25T14:01:00.000Z	tau	variant	why, don't they have binary packages available for open office?
+2006-09-25T14:01:00.000Z	variant	tau	i installed gentoo on a 386 once, took three weeks :P
+2006-09-25T14:01:00.000Z	variant	tau	yeah they do, but some poeople like punishment
+2006-09-25T14:01:00.000Z	variant	tau	:P
+2006-09-25T14:02:00.000Z	tau	variant	is adding codecs something I can do after it's compiled?
+2006-09-25T14:02:00.000Z	variant	tau	yeah
+2006-09-25T14:02:00.000Z	tau	variant	ok
+2006-09-25T14:02:00.000Z	variant	tau	there might be a few compile time options for codecs but the default should include most
+2006-09-25T14:03:00.000Z	variant	tau	actualy, do you want dvd support?
+2006-09-25T14:03:00.000Z	variant	tau	then you will have to rerun ./configure with --enable-dvd sorry about htat
+2006-09-25T14:03:00.000Z	tau	variant	well, I only just did some research an hour or so ago trying to find the best dvd player in linux - it seems xine is the best bet, since it supports dvd menus, and also deinterlacing (unlike ogle)
+2006-09-25T14:04:00.000Z	tau	variant	and mplayer didn't seem to support dvd menus, unless this new version does, I don't know, but it's ok I can live without dvd support
+2006-09-25T14:04:00.000Z	variant	tau	mplayer also supports menues but its not very great
+2006-09-25T14:05:00.000Z	tau	variant	ok
+2006-09-25T14:05:00.000Z	variant	tau	ogle is quite nice but it forces you to watch the damn copyright notice etc which i dont like
+2006-09-25T14:05:00.000Z	tau	variant	I tried gxine earlier, and it worked like a charm..  even supported my favorite deinterlacer pp=md
+2006-09-25T14:06:00.000Z	variant	tau	cool
+2006-09-25T14:07:00.000Z	tau	variant	one of the reasons I wanted to try this new mplayer are the new deinterlacers they've added
+2006-09-25T14:07:00.000Z	variant	tau	cool
+2006-09-25T14:07:00.000Z	variant	tau	makes no difference to me on my crappy 15inch laptop screen :)
+2006-09-25T14:08:00.000Z	tau	variant	you only have a laptop?
+2006-09-25T14:10:00.000Z	variant	tau	yeah, i travel a lot
+2006-09-25T14:11:00.000Z	tau	variant	ok
+2006-09-25T14:12:00.000Z	tau	variant	hey whaddaya know, it's finished compiling! :)
+2006-09-25T14:12:00.000Z	variant	tau	cool :)
+2006-09-25T14:13:00.000Z	variant	tau	now become root and run make install
+2006-09-25T14:13:00.000Z	variant	tau	or run sudo make install
+2006-09-25T14:13:00.000Z	variant	tau	this part take a couple of hours
+2006-09-25T14:13:00.000Z	variant	tau	jk :P
+2006-09-25T14:13:00.000Z	tau	variant	someone a bit further up there gave a link to a page on compiling mplayer, and it mentions on that page using checkinstall
+2006-09-25T14:13:00.000Z	variant	tau	if you like
+2006-09-25T14:14:00.000Z	tau	variant	ok, it says I can just use sudo checkinstall instead of sudo make install..  I'll give it a try
+2006-09-25T14:19:00.000Z	tau	variant	well, it seems to have installed!  is that it?
+2006-09-25T14:19:00.000Z	variant	tau	yep, should be able to run mplayer now
+2006-09-25T14:19:00.000Z	tau	variant	trying now..
+2006-09-25T14:22:00.000Z	tau	variant	seems to be working fine..  that was a lot easier than I expected - as you said it would be :)  thanks for your help
+2006-09-25T14:22:00.000Z	variant	tau	np :P
+2006-09-25T14:22:00.000Z	tau	variant	:)

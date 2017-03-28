@@ -1,0 +1,99 @@
+2009-01-22T07:06:00.000Z	rahduke		im hoping someone can help me, i installed ubuntu on my buddies laptop because it rules and he kept destroying windows with malware and such. I figured he couldn't absolutely destroy ubutnu without some hard work. Its been about 6 months and he's having problems, dropped the laptop off to me today and its all messed up.... there are tons of processes running i don't recognize (getty 4x kthreadd, watchdog/0 and many more) and i
+2009-01-22T07:08:00.000Z	rahduke		anyone? helo.....
+2009-01-22T07:10:00.000Z	ActionParsnip	rahduke	run: dpkg -l | less and see what is installed
+2009-01-22T07:12:00.000Z	ActionParsnip	rahduke	http://paste.ubuntu.com/108082/
+2009-01-26T04:29:00.000Z	ActionParsnip	rahduke	when the connection gets lost, check dmesg and other logs to see whats happening
+2009-01-26T04:30:00.000Z	rahduke	ActionParsnip	thanks, i cant make heads or tails of the output of dmesg
+2009-01-26T04:31:00.000Z	ActionParsnip	rahduke	well if you see anything that MAY look like an issue, get websearching
+2009-01-26T04:31:00.000Z	rahduke	ActionParsnip	is there a way to update my ethernet driver?
+2009-01-26T04:32:00.000Z	ActionParsnip	rahduke	lspci will identify the device, you can websearch from there, if it was detected automatically then a full system update will update it, you may want to find your own driver and install that. it may give a more solid connection
+2009-01-26T04:33:00.000Z	rahduke	ActionParsnip	thanks alot
+2010-05-02T03:22:00.000Z	rahduke	ActionParsnip	is a smart guy
+2010-05-02T03:22:00.000Z	ActionParsnip	rahduke	half right, I'm a guy :)
+2010-05-02T03:22:00.000Z	rahduke	ActionParsnip	you are the man
+2010-05-02T03:22:00.000Z	ActionParsnip	rahduke	thatnks though dude :)
+2010-05-02T03:23:00.000Z	ActionParsnip	rahduke	keep using ubuntu  and you will learn stuff
+2010-05-02T03:23:00.000Z	rahduke	ActionParsnip	you know anything about permissions?
+2010-05-02T03:23:00.000Z	ActionParsnip	rahduke	some, wassup
+2010-05-02T03:23:00.000Z	ActionParsnip	rahduke	chmod +x file.sh
+2010-05-02T03:24:00.000Z	rahduke	ActionParsnip	lol thats the 1st thing i did
+2010-05-02T03:24:00.000Z	ActionParsnip	rahduke	no do not 777 anything
+2010-05-02T03:25:00.000Z	rahduke	ActionParsnip	so what do you suggest i do?
+2010-05-02T03:26:00.000Z	ActionParsnip	rahduke	whats the issue, chmod +x will make the file executable and you can then launch it in a terminal or launch it in nautilus
+2010-05-02T03:26:00.000Z	rahduke	ActionParsnip	thats exactly the problem, that doesnt work... nor does changing the preferences in nautilus
+2010-05-02T03:26:00.000Z	ActionParsnip	rahduke	it allows everybody with access to the system, full access to the file so they can edit it and execute it
+2010-05-02T03:27:00.000Z	ActionParsnip	rahduke	do you change the directory in terminal to the directory of the file, then use ./filename
+2010-05-02T03:27:00.000Z	ActionParsnip	rahduke	just tping filename will not work, you must use ./filename
+2010-05-02T03:27:00.000Z	rahduke	ActionParsnip	every time i double click a file gedit launches... and yes i am in the correct directory... i can run .sh files from terminal but when it goes to .configure i get permission denied errors
+2010-05-02T03:28:00.000Z	rahduke	ActionParsnip	i've tried to sudo, SU, i'm almost positiive its some weird permissions issue
+2010-05-02T03:28:00.000Z	ActionParsnip	rahduke	what is the file for?
+2010-05-02T03:28:00.000Z	rahduke	ActionParsnip	http://gloobus.wordpress.com/ trying to compile the new covergloobus for lucid
+2010-05-02T03:29:00.000Z	ActionParsnip	rahduke	the page doesn't mention a .sh file
+2010-05-02T03:30:00.000Z	rahduke	ActionParsnip	well in this case the issue stems from ./autogen --prefix=/usr/ command
+2010-05-02T03:30:00.000Z	ActionParsnip	rahduke	is the autogen file in the pwd?
+2010-05-02T03:30:00.000Z	rahduke	ActionParsnip	when it goes to configure i get permission denied errors
+2010-05-02T03:30:00.000Z	rahduke	ActionParsnip	im not sure what you mean
+2010-05-02T03:31:00.000Z	ActionParsnip	rahduke	do you have write access to the place you downloaded the files to ($HOME is a good choice here)
+2010-05-02T03:31:00.000Z	ActionParsnip	rahduke	if you run: ls    do you see the autogen file?
+2010-05-02T03:31:00.000Z	rahduke	ActionParsnip	sure do... i'm running into all sorts of permission errors with .sh .run ./configure all sorts of stuff
+2010-05-02T03:32:00.000Z	rahduke	ActionParsnip	yes i do see the file
+2010-05-02T03:33:00.000Z	ActionParsnip	rahduke	http://www.webupd8.org/2010/04/how-to-install-gloobus-preview-in.html
+2010-05-02T03:33:00.000Z	ActionParsnip	rahduke	just add the ppa and install with apt-get
+2010-05-02T03:34:00.000Z	rahduke	ActionParsnip	ok imma do that, the ppa is for 9.10 tho is that gunna cause issues?
+2010-05-02T03:34:00.000Z	ActionParsnip	rahduke	read the title on the page
+2010-05-02T03:35:00.000Z	ActionParsnip	rahduke	sudo add-apt-repository ppa:gloobus-dev/gloobus-preview; sudo apt-get update && sudo apt-get install gloobus-preview
+2010-05-02T03:35:00.000Z	rahduke	ActionParsnip	yup thanks
+2010-05-02T03:35:00.000Z	ActionParsnip	rahduke	its worth trying to find a ppa in ubuntu you often will find someone has already compiled
+2010-05-02T03:39:00.000Z	rahduke	ActionParsnip	lol just realized i installed gloobus preview not covergloobus, which is what i was looking for.... adding that PPA didnt work in lucid
+2010-05-02T03:40:00.000Z	ActionParsnip	rahduke	mmm, the guide says thats what it was, weird
+2010-05-02T03:40:00.000Z	ActionParsnip	rahduke	https://launchpad.net/ubuntu/+ppas  try searching the ppas
+2010-05-02T03:41:00.000Z	rahduke	ActionParsnip	heres a dumb question, how do i change the default browser back to firefox? I cant find an option for it
+2010-05-02T03:42:00.000Z	ActionParsnip	rahduke	system -> prefs -> preferred applications
+2010-05-02T03:42:00.000Z	rahduke	ActionParsnip	lol duh, this ppa site is cool never knew about it b4 thanks!
+2010-05-02T03:43:00.000Z	ActionParsnip	rahduke	i use it loads
+2010-05-02T03:44:00.000Z	rahduke	ActionParsnip	unfortuantely the ppa's for covergloobus don't work in lucid.... I'm sure its just a mkatter of time till someone updates the ppas
+2010-05-02T03:45:00.000Z	ActionParsnip	rahduke	i'd just hang for a while or work out why the compile is failing
+2010-05-02T04:20:00.000Z	rahduke	ActionParsnip	hey man you still around?
+2010-05-02T04:21:00.000Z	rahduke	ActionParsnip	this permissions thing is really screwing me up, now i'm trying to install veetle.... www.veetle.com
+2010-05-02T04:21:00.000Z	ActionParsnip	rahduke	sup?
+2010-05-02T04:23:00.000Z	ActionParsnip	rahduke	can you use http://pastebin.com to give the output of: cd /home; ls -la ./$USER
+2010-05-02T04:23:00.000Z	rahduke	ActionParsnip	sure can gimmie 1 sec
+2010-05-02T04:24:00.000Z	rahduke	ActionParsnip	http://pastebin.com/sXCUCuQu
+2010-05-02T04:25:00.000Z	ActionParsnip	rahduke	ok cool, you are the owner of all your own data
+2010-05-02T04:25:00.000Z	rahduke	ActionParsnip	yea thats why i'm freaking out it doesnt seem to make any sense
+2010-05-02T04:26:00.000Z	rahduke	ActionParsnip	what do you think could be wrong?
+2010-05-02T04:27:00.000Z	ActionParsnip	rahduke	are you the owner of the file you are running?
+2010-05-02T04:27:00.000Z	rahduke	ActionParsnip	i sure am....
+2010-05-02T04:27:00.000Z	rahduke	ActionParsnip	i've had problems with all .sh .run files its really strange
+2010-05-02T04:31:00.000Z	rahduke	ActionParsnip	so no ideas?
+2010-05-02T04:31:00.000Z	ActionParsnip	rahduke	doesn't make  any sense. is it identical as another user?
+2010-05-02T04:32:00.000Z	rahduke	ActionParsnip	it is identical to the username i was using on 9.10
+2012-01-21T05:06:00.000Z	ActionParsnip	rahduke	are you the owner of all of your $HOME ?
+2012-01-21T05:06:00.000Z	rahduke	ActionParsnip	looks like it
+2012-01-21T05:09:00.000Z	ActionParsnip	rahduke	you can make sure with:  sudo chown -R $USER:USER $HOME
+2012-01-21T05:09:00.000Z	ActionParsnip	rahduke	your trash is stored in your home folder and may be the issue
+2012-01-21T05:09:00.000Z	rahduke	ActionParsnip	Ok that would take care of my home folder, what about other drives
+2012-01-21T05:09:00.000Z	rahduke	ActionParsnip	Ohhh
+2012-01-21T05:11:00.000Z	rahduke	ActionParsnip	"chown: cannot access `/home/rahduke3/.gvfs': Permission denied"
+2012-01-21T05:11:00.000Z	rahduke	ActionParsnip	is that the issue
+2012-01-21T05:11:00.000Z	ActionParsnip	rahduke	thats normal
+2012-01-21T05:11:00.000Z	rahduke	ActionParsnip	still having the same issue
+2012-02-18T04:28:00.000Z	ActionParsnip	rahduke	xbmc isn't supported here
+2012-02-18T04:28:00.000Z	rahduke	ActionParsnip	its not technically an XBMC question
+2012-02-18T04:29:00.000Z	ActionParsnip	rahduke	well, yes it is as you to configure xbmc to run the ubuntu app
+2012-02-18T04:29:00.000Z	ActionParsnip	rahduke	the commands youo need will be in /usr/bin
+2012-02-18T04:29:00.000Z	ActionParsnip	rahduke	you can find the path of any command using the 'which' command
+2012-02-18T05:33:00.000Z	ActionParsnip	rahduke	I do it in xorg.conf myself :)
+2012-02-18T05:34:00.000Z	rahduke	ActionParsnip	thats a recipe for disaster with me, i judge how good a distro is by how little i need to use xorg.conf
+2012-02-18T05:34:00.000Z	ActionParsnip	rahduke	some setups need it, especially with displays not reporting EDID
+2012-02-18T05:34:00.000Z	ActionParsnip	rahduke	if that is missing then it will be the same in any distro
+2012-05-31T02:53:00.000Z	ActionParsnip	rahduke	the wired connections you can define in /etc/network/interfaces if you want, and you can then uninstall network manager
+2012-05-31T02:54:00.000Z	ActionParsnip	rahduke	you can define the addressing in network manager instead, if you prefer a GUI
+2012-05-31T02:54:00.000Z	ActionParsnip	rahduke	set the static IPs at the top end of your network range so that DHCP addresses don't clash
+2012-05-31T02:56:00.000Z	rahduke	ActionParsnip	ill have a look
+2012-05-31T02:57:00.000Z	rahduke	ActionParsnip	are you telling me to goto network manager change from Auto DHCP to manualand set the address from there w/ dns servers and all?
+2012-05-31T02:58:00.000Z	ActionParsnip	rahduke	yes you will need to set IP and DNS
+2012-05-31T02:59:00.000Z	rahduke	ActionParsnip	so basically just copy the info from my current connection information and set the IP to what i want it to be?
+2012-05-31T02:59:00.000Z	ActionParsnip	rahduke	should be fine, yes. You can get the DNS servers with:  cat /etc/resolv.conf
+2012-05-31T03:00:00.000Z	rahduke	ActionParsnip	netmask and subnetmask are the same thing right?
+2012-05-31T03:01:00.000Z	ActionParsnip	rahduke	yes, same difference

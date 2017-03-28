@@ -1,0 +1,95 @@
+2004-09-27T11:04:00.000Z	neighborlee		 ?
+2004-09-27T11:05:00.000Z	neighborlee		no I used my cats toy
+2004-09-27T11:06:00.000Z	neighborlee		great just in time lol
+2004-09-27T11:06:00.000Z	neighborlee		throm: only one that I can see
+2004-09-27T11:06:00.000Z	neighborlee		wait ...one more
+2004-09-27T11:06:00.000Z	neighborlee		it also tried to 'update' at end
+2004-09-27T11:06:00.000Z	neighborlee		but gave error that it was unable to and started aptitude
+2004-09-27T11:07:00.000Z	neighborlee		thats it 
+2004-09-27T11:08:00.000Z	neighborlee		startx says X not found as well
+2004-09-27T11:08:00.000Z	neighborlee		err I mean command not found
+2004-09-27T11:09:00.000Z	Kamion	neighborlee	that should be '~tubuntu-desktop' at the end of thom's command
+2004-09-27T11:09:00.000Z	neighborlee	Kamion	ok
+2004-09-27T11:23:00.000Z	neighborlee	Kamion	ok...Idid the command and got this: ..unable  to correct problems: you have held packages....
+2004-09-27T11:27:00.000Z	neighborlee	Kamion	did you have any idea for me ...I gotta do something one way or the other here sorry..;-)
+2004-09-27T11:28:00.000Z	Kamion	neighborlee	I'd try 'apt-get -f install' as a first instance
+2004-09-27T11:28:00.000Z	neighborlee	Kamion	yes I wondered..okay trying
+2004-09-27T11:29:00.000Z	neighborlee	Kamion	its saying nothing to do..0 upgraded, 0 newly installed and 0 to remove or upgraded :(
+2004-09-27T11:34:00.000Z	neighborlee	Kamion	again which apt package did you think I might be missing ???
+2004-09-27T11:35:00.000Z	Kamion	neighborlee	aptitude install ~tubuntu-desktop
+2004-09-27T11:35:00.000Z	neighborlee	Kamion	no not that...that one errors out saying noting to do and that I have broken held packages
+2004-09-27T11:35:00.000Z	neighborlee	Kamion	the X package you earlier seemed to think I lacked possiby
+2004-09-27T11:36:00.000Z	Kamion	neighborlee	run just 'aptitude' then and sort it out in the UI; ubuntu-desktop is in the Tasks section at the bottom
+2004-09-27T11:36:00.000Z	Kamion	neighborlee	xbase-clients, but that's all part of the desktop
+2004-09-27T11:39:00.000Z	Kamion	neighborlee	archive.ubuntulinux.org is really slow at the moment, release effect
+2004-09-27T11:40:00.000Z	neighborlee	Kamion	ahhhh I did wonder yup
+2004-09-27T11:40:00.000Z	neighborlee	Kamion	ok thx man
+2004-09-27T11:49:00.000Z	Kamion	neighborlee	press +
+2004-09-27T11:49:00.000Z	neighborlee	Kamion	OK thx
+2004-09-28T10:35:00.000Z	Kamion	neighborlee	... any more
+2004-09-28T10:36:00.000Z	Kamion	neighborlee	you do know that's easy to change, don't you?
+2004-09-28T10:37:00.000Z	neighborlee	Kamion	whats easy to change
+2004-09-28T10:37:00.000Z	Kamion	neighborlee	sudo timeouts
+2004-09-28T12:03:00.000Z	Kamion	neighborlee	debian-installer
+2004-09-28T12:06:00.000Z	neighborlee	Kamion	lol ah ok heh
+2004-10-03T15:36:00.000Z	Kamion	neighborlee	unstable's got current fixes, and we have enough active Debian developers on staff who are well aware of the current state of unstable that we're confident we can fix the breakage that occurs
+2004-10-03T15:37:00.000Z	Kamion	neighborlee	we're not using unstable in unmodified form, that would be a bit mad
+2004-10-03T15:39:00.000Z	neighborlee	Kamion	so if I break I dont own both pieces ? <G>
+2004-10-03T15:40:00.000Z	Kamion	neighborlee	within our supported set, you can bring the pieces to us and ask for help; outside that, the pieces are all yours :-)
+2004-10-03T15:40:00.000Z	neighborlee	Kamion	heh
+2004-10-03T15:44:00.000Z	neighborlee	Kamion	as I mentioned its MO...I like debian but its not imposing price wize..try to download mdk and youlll see exactly what I mean
+2004-10-03T15:44:00.000Z	neighborlee	Kamion	try and use the panel applet notifier and you'll again see what I mean
+2004-10-03T15:52:00.000Z	Kamion	neighborlee	any release-critical bugs, for a start
+2004-10-03T15:53:00.000Z	neighborlee	Kamion	where is this list please
+2004-10-03T15:53:00.000Z	Kamion	neighborlee	bugzilla.ubuntu.com
+2004-10-03T15:54:00.000Z	Kamion	neighborlee	or indeed http://bugs.debian.org/release-critical/
+2004-10-03T15:55:00.000Z	neighborlee	Kamion	ahh now that more like it ;-0..thx <
+2004-10-03T15:57:00.000Z	neighborlee	Kamion	everyday???
+2004-10-03T15:57:00.000Z	neighborlee	Kamion	talking about QT :-)))
+2004-10-03T15:57:00.000Z	Kamion	neighborlee	really confused now :-)
+2004-10-03T15:58:00.000Z	neighborlee	Kamion	or QA
+2004-10-09T12:47:00.000Z	neighborlee	Kamion	is it known yet why the installer is failing during 'connect to internet for updates' ?
+2004-10-09T12:49:00.000Z	neighborlee	Kamion	once I went back in and said 'no ' to internet update then install with without a hitch.....and faik my internet has been working just fine..this was an issue I thought had been fixed sometime ago
+2004-10-09T12:55:00.000Z	Kamion	neighborlee	"failing" in what way?
+2004-10-09T12:57:00.000Z	neighborlee	Kamion	well it comes up and says 'unable to install software'..please resort to using aptitude to try and fix things
+2004-10-09T12:59:00.000Z	neighborlee	Kamion	no idea
+2004-10-09T13:00:00.000Z	neighborlee	Kamion	I'd have to look at the CD assuming relevant info is there to tell me
+2004-10-09T13:02:00.000Z	neighborlee	Kamion	#define DISKNAME  Ubuntu 4.10 "Warty Warthog" - Unofficial i386 Binary-1 < file on my CD fyi
+2004-10-09T13:11:00.000Z	Kamion	neighborlee	where did you download it from?
+2004-10-09T13:13:00.000Z	neighborlee	Kamion	its been too long now to remember..but i'd imagine from here: http://ftp.cs.umn.edu/pub/ubuntu-cdimage/releases/warty/preview/
+2004-10-09T13:14:00.000Z	Kamion	neighborlee	ok, I haven't tested recently but the archive has shifted somewhat since the preview; if it's just package drift, that won't happen in the final release
+2004-10-09T13:15:00.000Z	neighborlee	Kamion	yup np
+2004-10-11T12:30:00.000Z	Kamion	neighborlee	probably just trying to guess the partition type, doesn't seem like anything to worry about
+2004-10-11T12:31:00.000Z	neighborlee	Kamion	why would it have to guess anything when its clear from the install what choice I made ;-)...okay if you say so but i'm not sure the logic is sound
+2004-10-11T12:31:00.000Z	neighborlee	Kamion	should I bug this ?
+2004-10-11T12:33:00.000Z	neighborlee	Kamion	alright ill check when I get back into linux..had to do some invoicing stuff till I get this crappy .mdb converted over for mysql or something ;(
+2004-10-11T13:20:00.000Z	Kamion	neighborlee	good community leaders
+2004-10-11T13:21:00.000Z	neighborlee	Kamion	irrelevant
+2004-10-11T13:21:00.000Z	Kamion	neighborlee	very relevant
+2004-10-11T13:21:00.000Z	neighborlee	Kamion	IF those leaders aren't 'there' how can it work <G>
+2004-10-11T13:21:00.000Z	Kamion	neighborlee	why d'you think all the Ubuntu community council hang out on IRC? :-)
+2004-10-11T13:21:00.000Z	neighborlee	Kamion	we use a bot for the time when most members are gone and can't keep things under control..its a just in case scenario of cousre
+2004-10-11T13:22:00.000Z	Kamion	neighborlee	I think we'd rather not have automatically enforced stuff like that, it tends to produce bad results
+2004-10-11T13:22:00.000Z	neighborlee	Kamion	well i'm glad the channel is ran so well...;-))..glad you have the numbers to do so
+2004-10-11T13:23:00.000Z	neighborlee	Kamion	it can yes...but those cussing should know better anyway so I have little sympathy ;-)
+2004-10-11T13:23:00.000Z	Kamion	neighborlee	"Scunthorpe"
+2004-10-11T13:25:00.000Z	Kamion	neighborlee	in any case we don't want to treat people on this channel with babies; the point is treating people with respect, not a narrow-minded focus on cursing)
+2004-10-11T13:28:00.000Z	neighborlee	Kamion	scunthorpe ? ;-)
+2004-10-11T13:28:00.000Z	Kamion	neighborlee	20:24 < Kamion> (classic case where curse detectors fail amusingly)
+2004-10-11T13:29:00.000Z	neighborlee	Kamion	lol
+2004-10-13T12:35:00.000Z	neighborlee	Kamion	Any idea about this ext3 boot issue ?..i checked bugzilla and found nothing which is odd and may just be that no one yet has filed one ?
+2004-10-15T12:18:00.000Z	Kamion	neighborlee	kernel source = linux-source-2.6.8.1
+2004-10-15T12:20:00.000Z	neighborlee	Kamion	well problem is I can't even find that one
+2004-10-15T12:20:00.000Z	neighborlee	Kamion	Its only listing up to 2.6.7
+2004-10-15T12:21:00.000Z	neighborlee	Kamion	apparantly due to my gzip errors :(
+2004-10-15T12:21:00.000Z	Kamion	neighborlee	linux-source, not kernel-source.
+2004-10-15T12:21:00.000Z	Kamion	neighborlee	ah, well yes, if mdz's theory is correct then you only have universe
+2004-10-15T12:22:00.000Z	Kamion	neighborlee	I also suggest removing the duplicate 'main restricted' entries that I bet you have in /etc/apt/sources.list
+2004-10-15T12:22:00.000Z	neighborlee	Kamion	checking
+2004-10-15T13:06:00.000Z	Kamion	neighborlee	that's what non-GNU/Linux people call 'make'
+2004-10-22T05:23:00.000Z	Kamion	neighborlee	no need to suggest a rescue mode, we're already aware that it's needed
+2004-10-22T11:13:00.000Z	neighborlee	Kamion	by chance did you message me earlier..I can't tell as the log doesn't far enough and I seemed to have been disconnected on top of that ...;-=)
+2004-10-22T11:15:00.000Z	Kamion	neighborlee	yes, I said that we do know that a rescue mode is desirable
+2004-10-22T11:15:00.000Z	neighborlee	Kamion	oh ok 
+2004-10-22T11:15:00.000Z	neighborlee	Kamion	I wont bother with a bug report/whatever then...thank you
+2004-10-22T11:38:00.000Z	neighborlee	Kamion	so you'd suggest both then..wiki & ML's

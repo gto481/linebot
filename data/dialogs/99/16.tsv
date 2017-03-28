@@ -1,0 +1,99 @@
+2010-03-22T05:51:00.000Z	jadakren	bigtom21485	not all ipods are the same btw.. so it helps to mention which type you have and what version of itunes you were using
+2010-03-22T05:52:00.000Z	bigtom21485	jadakren	ipod classic 5th gen 120gb
+2010-03-22T05:52:00.000Z	jadakren	bigtom21485	>>>> and what version of itunes you were using
+2010-03-22T05:52:00.000Z	bigtom21485	jadakren	i dont remember
+2010-03-22T05:52:00.000Z	jadakren	bigtom21485	thats unfortunate
+2010-03-22T05:53:00.000Z	jadakren	bigtom21485	because now your ipod will onyl work on windows or mac
+2010-03-22T05:55:00.000Z	jadakren	bigtom21485	i suggest you look at using floola
+2010-03-22T05:55:00.000Z	bigtom21485	jadakren	what does floola do? :-)
+2010-03-22T05:55:00.000Z	jadakren	bigtom21485	you'll find out when visit its website
+2010-03-22T05:57:00.000Z	bigtom21485	jadakren	thanks :-)
+2010-03-22T05:58:00.000Z	jadakren	bigtom21485	but i will wanr you allowing itunes 9 to touch your ipod has severely limited your options
+2010-03-22T05:59:00.000Z	bigtom21485	jadakren	if it doesnt work i can use a windows computer with itunes to copy my library to my external then copy it to my ubuntu computer, then erase my ipod and resync my library from the linux computer using that first program you mentioned, right?
+2010-03-22T05:59:00.000Z	jadakren	bigtom21485	or you could 1) use virtualbox 2) export everything and use rockbox on your ipod isntead (i did this on the 5th gen)
+2010-03-22T06:00:00.000Z	jadakren	bigtom21485	isntead of rebooting just setup virtualbox to have a windowsxp guest operating system
+2010-03-22T06:01:00.000Z	bigtom21485	jadakren	my roommate would let me borrow his itunes and windows to do the transfer
+2010-03-22T06:04:00.000Z	bigtom21485	jadakren	ive never worked with a tar.gz file what do i do with it?
+2010-03-22T06:05:00.000Z	jadakren	bigtom21485	explain. where is the tar ball from  ?
+2010-03-22T06:07:00.000Z	bigtom21485	jadakren	I have the floola-linux.tar.gz file on my desktop, how do i install it now?
+2010-03-22T06:07:00.000Z	jadakren	bigtom21485	tried right clicking it yet ?
+2010-03-22T06:07:00.000Z	bigtom21485	jadakren	lol my bad
+2010-03-22T06:13:00.000Z	bigtom21485	jadakren	i got it out of the tar file as a folder
+2010-03-22T06:13:00.000Z	jadakren	bigtom21485	and ? tried running the floola file?
+2010-03-22T06:15:00.000Z	bigtom21485	jadakren	where does linux put its programs? (like windows uses "program files")
+2010-03-22T06:16:00.000Z	bigtom21485	jadakren	just so i dont have to put it on my desktop
+2010-03-22T06:16:00.000Z	jadakren	bigtom21485	there is no central place. i'd keep that floola on your ipod
+2010-03-22T06:17:00.000Z	jadakren	bigtom21485	it does not rely on anything you have installed on your system. which also means that if you grab the windows version of floola and keep that on your ipod alos then you have a portable cross platform method of dealing with your ipod
+2010-03-22T06:17:00.000Z	jadakren	bigtom21485	but to be honest, i would just dual boot the ipod with rockbox
+2010-03-22T06:19:00.000Z	jadakren	bigtom21485	is your 5th gen ipod the 30 or 60/80gb version ?
+2010-03-22T06:19:00.000Z	bigtom21485	jadakren	120gb
+2010-03-22T06:22:00.000Z	bigtom21485	jadakren	how do i tell this program to copy everything on my ipod to my ubuntu's music folder?
+2010-03-22T06:22:00.000Z	jadakren	bigtom21485	not sure, i havent used an apple product in about 5 years now.
+2010-03-22T06:28:00.000Z	bigtom21485	jadakren	good thin gi keep a backed-up copy of my music somewhere else because floola just flipped out and erased my entire library
+2010-03-22T06:34:00.000Z	bigtom21485	jadakren	ipod
+2010-03-22T06:34:00.000Z	jadakren	bigtom21485	yes?
+2010-03-22T06:35:00.000Z	bigtom21485	jadakren	why is the link to download ipod support for songbird not functional?
+2010-03-22T06:35:00.000Z	jadakren	bigtom21485	use the songbird ppa instead
+2010-03-22T06:36:00.000Z	jadakren	bigtom21485	https://launchpad.net/~songbird-daily/+archive/ppa
+2010-03-22T06:36:00.000Z	bigtom21485	jadakren	what is the songbird ppa?  songbird is very nice, (by the way, excellent suggestion. ;-) )
+2010-03-22T06:36:00.000Z	jadakren	bigtom21485	http://linuxers.org/howto/how-install-software-ubuntu-ppa
+2010-03-22T06:36:00.000Z	jadakren	bigtom21485	https://launchpad.net/+help/soyuz/ppa-sources-list.html
+2010-03-22T06:40:00.000Z	bigtom21485	jadakren	how do i install it from the ipod update i just downloaded from the songbird website?
+2010-03-22T06:41:00.000Z	jadakren	bigtom21485	wouldn't bother with the one from the website. it has problems running on ubuntu. use the ppa instead
+2010-03-22T06:44:00.000Z	bigtom21485	jadakren	im kinda confused by the instructions on the website can you wlak me though this? i m kinda stressed out as it is
+2010-03-22T06:45:00.000Z	jadakren	bigtom21485	1) open a terminal 2) type : sudo add-apt-repository ppa:songbird-daily/ppa 3) type : sudo apt-get update && sudo apt-get install songbird
+2010-03-22T06:45:00.000Z	jadakren	bigtom21485	this is assuming you dont already have songbird installed, which then means you'll need to remove it first'
+2010-03-22T06:49:00.000Z	jadakren	bigtom21485	is that working for you ?
+2010-03-22T06:51:00.000Z	bigtom21485	jadakren	what is the command-line method of installing (ppa) the ipod add-on for linux 64?
+2010-03-22T06:51:00.000Z	bigtom21485	jadakren	if i wasnt so tired i would be studying command-line more
+2010-03-22T06:51:00.000Z	jadakren	bigtom21485	what do you mean by 'ipod addon'
+2010-03-22T06:54:00.000Z	bigtom21485	jadakren	its not seeing my ipod so dont i need to get the ipod add-on?
+2010-03-22T06:55:00.000Z	jadakren	bigtom21485	i assume so... i dont have an ipod anymore : http://addons.songbirdnest.com/addon/12
+2010-03-22T06:56:00.000Z	bigtom21485	jadakren	what do you use for a portable music player?
+2010-03-22T06:56:00.000Z	jadakren	bigtom21485	my netbook.
+2010-03-22T06:56:00.000Z	bigtom21485	jadakren	lol i need something that fits in an armband
+2010-03-22T06:57:00.000Z	jadakren	bigtom21485	have you tried using rhythmbox or banshee ?
+2010-03-22T07:05:00.000Z	jadakren	bigtom21485	are you sure its a 5th gen because they only went up to 80gb
+2010-03-22T07:05:00.000Z	bigtom21485	jadakren	its a classic 120gb
+2010-03-22T07:06:00.000Z	jadakren	bigtom21485	ok so its not a real 5th gen then.
+2010-03-22T07:07:00.000Z	jadakren	bigtom21485	look at this table : http://www.rockbox.org/wiki/IpodPort#Rockbox_Status
+2010-03-22T07:07:00.000Z	jadakren	bigtom21485	according to that table yours is : 2nd Gen Classic (120GB)
+2010-03-22T07:08:00.000Z	jadakren	bigtom21485	its alot mroe recent than a 5th gen ipod video :)
+2010-03-22T07:10:00.000Z	jadakren	bigtom21485	use the repair function of floola
+2010-03-22T07:11:00.000Z	jadakren	bigtom21485	the db file just probably corrupted
+2010-03-22T07:11:00.000Z	bigtom21485	jadakren	hwo do i repair it with floola?
+2010-03-22T07:11:00.000Z	jadakren	bigtom21485	look in the menus
+2010-03-22T07:16:00.000Z	bigtom21485	jadakren	it doesnt work! is there another way?
+2010-03-22T07:17:00.000Z	bigtom21485	jadakren	floola doesn't repair it when i tell it to, then after says its repaired and its going to quit, it just sits there...i have to force it to quit...and my ipod is still fucked up
+2010-03-22T07:18:00.000Z	jadakren	bigtom21485	there might be if my ipod battery didnt die 3 years after i bought my 5th gen, but since im just operating from 5 year old knowledge through someone that doesnt have a good amount of  experience with linux and apple products... theres only so much i can suggest.
+2010-03-22T07:19:00.000Z	jadakren	bigtom21485	1) mount the ipod 2) look in the folders for music files. 3) rejoice 4) plug the ipod back in to the windows machine running itunes 5) repair. 6) start over with using banshee or rhythmbox
+2010-03-22T07:20:00.000Z	jadakren	bigtom21485	maybe try this in wine : http://www.getsharepod.com/download/
+2010-03-22T07:29:00.000Z	bigtom21485	jadakren	you there
+2010-03-22T07:30:00.000Z	jadakren	bigtom21485	yes
+2010-03-22T07:31:00.000Z	bigtom21485	jadakren	im just gunna run itunes for now on wine...is there a better way to do this?
+2010-03-22T07:32:00.000Z	jadakren	bigtom21485	yes. use rockbox instead of appleod on your ipod.
+2010-03-22T07:33:00.000Z	jadakren	bigtom21485	appleOS*
+2010-03-22T07:33:00.000Z	bigtom21485	jadakren	you mean change the firmware on my ipod?
+2010-03-22T07:34:00.000Z	jadakren	bigtom21485	yes. rockbox has a windows installer utility. makes it easy. it then means that you just dump music on your ipod like a usb hardrive and dnt need to sync.
+2010-03-22T07:34:00.000Z	jadakren	bigtom21485	you can also dualboot with appleOS and rockbox
+2010-03-22T07:34:00.000Z	bigtom21485	jadakren	dualboot what? i have linux ubuntu
+2010-03-22T07:35:00.000Z	jadakren	bigtom21485	im talking about your ipod not your computer.
+2010-03-22T07:35:00.000Z	bigtom21485	jadakren	i dont have access to windows right now so what are my options for better ipod firmware
+2010-03-22T07:37:00.000Z	jadakren	bigtom21485	better is relative term. i used rockbox because it meant i didnt have to use sync software to get music on my ipod. i just used the ipod like a harddrive and rockbox lets you browse the drive like a file manager or it can give gnre/artist/album view too...
+2010-03-22T07:37:00.000Z	jadakren	bigtom21485	http://www.rockbox.org/
+2010-03-22T07:37:00.000Z	jadakren	bigtom21485	http://mikesubuntu.blogspot.com/2007/10/how-to-install-rockbox-and-extras-on.html
+2010-03-22T07:38:00.000Z	jadakren	bigtom21485	ignore those wget steps.
+2010-03-22T07:38:00.000Z	bigtom21485	jadakren	what if i want a copy of my library on my computer in case my ipod is somewhere else or just in case?
+2010-03-22T07:39:00.000Z	jadakren	bigtom21485	i did that too... because i had rockbox on the ipod i just used the file manager to move songs across
+2010-03-22T07:40:00.000Z	jadakren	bigtom21485	http://www.rockbox.org/wiki/RockboxUtility#Download
+2010-03-22T07:40:00.000Z	jadakren	bigtom21485	http://www.rockbox.org/wiki/GraphicalInstall
+2010-03-22T07:41:00.000Z	jadakren	bigtom21485	sorry should of read this in more detail : http://www.rockbox.org/wiki/IpodPort. your ipod is not supported.
+2010-03-22T07:41:00.000Z	bigtom21485	jadakren	i see...and i tried itunes in wine it cant even finish installing
+2010-03-22T07:42:00.000Z	jadakren	bigtom21485	yeah known problem. try restoring it with a windows copy then.
+2010-03-22T07:43:00.000Z	jadakren	bigtom21485	7 i think.
+2010-03-22T07:43:00.000Z	jadakren	bigtom21485	but the problem is that your ipod has touched version 9 so it wont talk to any other version
+2010-03-22T07:44:00.000Z	bigtom21485	jadakren	can i hack the firmware to take it back to where it was?
+2010-03-22T07:45:00.000Z	jadakren	bigtom21485	not sure. thats out of my depth.
+2010-03-22T07:51:00.000Z	bigtom21485	jadakren	what were some other programs you might reccommend once i fix my ipod?
+2010-03-22T07:52:00.000Z	jadakren	bigtom21485	well since songbird dropped support for ipods it wont be that... but maybe check out the ppa version of banshee
+2010-03-22T07:54:00.000Z	bigtom21485	jadakren	what were those commands im guessing i just substitue the name banshee instead of songbird in the command lines in the terminal

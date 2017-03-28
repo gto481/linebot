@@ -1,0 +1,99 @@
+2005-08-03T12:06:00.000Z	nelsongs		help anyone?
+2005-08-03T12:06:00.000Z	nelsongs		couldn't see anything when i installed ubuntu on my laptop
+2005-08-03T12:06:00.000Z	znh	nelsongs	define anything
+2005-08-03T12:07:00.000Z	nelsongs	znh	 i have an hp dv4000 notebook
+2005-08-03T12:07:00.000Z	nelsongs	znh	 intel 915GMhipset
+2005-08-03T12:07:00.000Z	znh	nelsongs	hm.. when did you see nothing? after you installed ?
+2005-08-03T12:07:00.000Z	nelsongs	znh	 i can't see anything
+2005-08-03T12:07:00.000Z	nelsongs	znh	 though i can hear the drums
+2005-08-03T12:08:00.000Z	znh	nelsongs	could you see the installation process?
+2005-08-03T12:08:00.000Z	nelsongs	znh	yes.  and it went well
+2005-08-03T12:08:00.000Z	znh	nelsongs	ok, then I fully understand, I think the default resolution is too high for your laptop screen
+2005-08-03T12:09:00.000Z	znh	nelsongs	can you boot up your laptop, so we might be able to fix it?
+2005-08-03T12:09:00.000Z	nelsongs	znh	 actually, i'm using the console
+2005-08-03T12:09:00.000Z	znh	nelsongs	ah you found the console, nice nice nice
+2005-08-03T12:09:00.000Z	nelsongs	znh	 well, not in this irc
+2005-08-03T12:09:00.000Z	nelsongs	znh	 but beside me.  heheh
+2005-08-03T12:10:00.000Z	znh	nelsongs	Ok, lets open the X.org configuration - it's located in your /etc/X11/xorg.conf - you can open it by typing nano /etc/X11/xorg.conf - If you didn't knew already
+2005-08-03T12:10:00.000Z	nelsongs	znh	 okay, i opened it
+2005-08-03T12:11:00.000Z	znh	nelsongs	good, press ctrl+w
+2005-08-03T12:11:00.000Z	znh	nelsongs	typ: modes, and hit enter - repeat this twice
+2005-08-03T12:12:00.000Z	nelsongs	znh	okay, what's next?
+2005-08-03T12:12:00.000Z	znh	nelsongs	have you got your cursor near Modes now?
+2005-08-03T12:13:00.000Z	nelsongs	znh	 yeah
+2005-08-03T12:13:00.000Z	nelsongs	znh	section screen, right?
+2005-08-03T12:13:00.000Z	znh	nelsongs	wee, alright do you know some laptop screen specifications of yours?
+2005-08-03T12:13:00.000Z	nelsongs	znh	 it's a widescreen 15.4"
+2005-08-03T12:14:00.000Z	znh	nelsongs	Ok, so the maximum resolution should be 1024x786 or 800x600 right?
+2005-08-03T12:14:00.000Z	nelsongs	znh	 hp brightview.  well, when windows was installed here, it was just a plug and play monitor
+2005-08-03T12:14:00.000Z	znh	nelsongs	same here, just a resolution ;)
+2005-08-03T12:14:00.000Z	nelsongs	znh	 oh okay  :D
+2005-08-03T12:15:00.000Z	znh	nelsongs	in that section screen, what is the default Dept?
+2005-08-03T12:15:00.000Z	nelsongs	znh	 24
+2005-08-03T12:15:00.000Z	znh	nelsongs	change that to 16
+2005-08-03T12:15:00.000Z	nelsongs	znh	 okay, next?
+2005-08-03T12:16:00.000Z	znh	nelsongs	go down with your cursor to SubSection "Display", where Dept 16 is located
+2005-08-03T12:16:00.000Z	nelsongs	znh	 okay
+2005-08-03T12:17:00.000Z	znh	nelsongs	now, replace that Modes line with this mode line: Modes<tab>"640x480" "800x600"
+2005-08-03T12:18:00.000Z	nelsongs	znh	 just two modes?   so i have to delete the 1024x768 mode?
+2005-08-03T12:19:00.000Z	znh	nelsongs	just two modes, if there are more working we can always add more ;-)
+2005-08-03T12:19:00.000Z	nelsongs	znh	oh i see, so the highest resolution would be 800x600 if it works?
+2005-08-03T12:19:00.000Z	znh	nelsongs	yes indeed
+2005-08-03T12:19:00.000Z	nelsongs	znh	 okay, so what's next?
+2005-08-03T12:20:00.000Z	znh	nelsongs	exit the editor by pressing ctrl+x, don't forget to save it
+2005-08-03T12:20:00.000Z	nelsongs	znh	 okay, so, what's next?  reboot?
+2005-08-03T12:20:00.000Z	znh	nelsongs	No!!
+2005-08-03T12:20:00.000Z	znh	nelsongs	in linux you never would have to reboot  :D
+2005-08-03T12:21:00.000Z	nelsongs	znh	 okay, hehe.  don't worry, i'm still waiting for you
+2005-08-03T12:21:00.000Z	znh	nelsongs	are you logged in as a normal user?
+2005-08-03T12:21:00.000Z	nelsongs	znh	 yeah, but used sudo to edit xorg.conf
+2005-08-03T12:21:00.000Z	znh	nelsongs	okay, great - start the graphical X server we just edited with 'startx'
+2005-08-03T12:22:00.000Z	nelsongs	znh	 but it has been started.  i just used the ctrl-alt-f key to use the console
+2005-08-03T12:23:00.000Z	znh	nelsongs	so.. it already worked :-
+2005-08-03T12:23:00.000Z	nelsongs	znh	 forgot, how do i exit from this console?
+2005-08-03T12:24:00.000Z	znh	nelsongs	press the following buttons ctrl+alt+backspace
+2005-08-03T12:25:00.000Z	nelsongs	znh	 startx error, couldn't start because there's one running already
+2005-08-03T12:25:00.000Z	znh	nelsongs	shutdown the current one by pressing ctrl+alt+backspace
+2005-08-03T12:27:00.000Z	nelsongs	znh	 didn't work
+2005-08-03T12:27:00.000Z	znh	nelsongs	what happend after you pressed the buttons?
+2005-08-03T12:28:00.000Z	nelsongs	znh	nothing, displays the console for 1 sec, then no display
+2005-08-03T12:28:00.000Z	nelsongs	znh	 same as before we started
+2005-08-03T12:30:00.000Z	nelsongs	znh	 still the same  :(
+2005-08-03T12:32:00.000Z	znh	nelsongs	what do you see then? you can see a terminal you just said :-/
+2005-08-03T12:32:00.000Z	nelsongs	znh	 yup  just the terminal for about a sec, then blank
+2005-08-03T12:32:00.000Z	nelsongs	znh	 then heard the drums again
+2005-08-03T12:33:00.000Z	znh	nelsongs	oh.. I wish I could help you further, but I have to go now :-( - Hope someone else can help you further
+2005-08-06T14:34:00.000Z	znh	nelsongs	hey wb :-)
+2005-08-06T14:34:00.000Z	nelsongs	znh	 thanks!
+2005-08-06T14:34:00.000Z	nelsongs	znh	 do you have any idea on the TI media card reader?
+2005-08-06T14:35:00.000Z	znh	nelsongs	hmm card readers
+2005-08-06T14:35:00.000Z	nelsongs	znh	 aren't they supported yet?
+2005-08-06T14:35:00.000Z	znh	nelsongs	I think they are, i'll google some
+2005-08-06T14:35:00.000Z	nelsongs	znh	 i have a texas instrument media card reader
+2005-08-06T14:36:00.000Z	nelsongs	znh	i have resolved my video, just to let you know  :)
+2005-08-06T14:36:00.000Z	znh	nelsongs	did you? how :-)?
+2005-08-06T14:37:00.000Z	nelsongs	znh	lot of steps that i couldn't even remember anymore.  **confused**
+2005-08-06T14:38:00.000Z	znh	nelsongs	hehe, well yea the result mathers :D
+2005-08-06T14:38:00.000Z	znh	nelsongs	about the TI card reader, I see more people with the problem that it's not being recounized
+2005-08-06T14:40:00.000Z	znh	nelsongs	http://ubuntuforums.org/archive/index.php/t-25121.html
+2005-08-06T14:41:00.000Z	nelsongs	znh	now i'm getting frustrated again
+2005-08-06T14:42:00.000Z	nelsongs	znh	good thing i don't need the media card reader atm
+2005-08-06T14:42:00.000Z	znh	nelsongs	It's a known issue, and your not the only one that has the problem - I bet they are working on it
+2005-08-06T14:43:00.000Z	nelsongs	znh	i hope they are.  i actually saw one group that develops TI drivers
+2005-08-06T14:43:00.000Z	nelsongs	znh	and they're selling the sdk for the driver
+2005-08-06T14:44:00.000Z	nelsongs	znh	i tried to install it, but it's just an evaluation.
+2005-08-06T14:44:00.000Z	znh	nelsongs	evaluation?
+2005-08-06T14:44:00.000Z	nelsongs	znh	no proper documentation on how to activate the drivers
+2005-08-06T14:44:00.000Z	znh	nelsongs	is it a tar package?
+2005-08-06T14:44:00.000Z	nelsongs	znh	yeah, coz they're selling the sdk
+2005-08-06T14:45:00.000Z	nelsongs	znh	and you can generate and compile the drivers thru their sdk, but won't let you use it
+2005-08-06T14:45:00.000Z	znh	nelsongs	blah that's kinda useless :-(
+2005-08-06T14:46:00.000Z	nelsongs	znh	they have their own program to run it so that you could test it to your hardware if it works
+2005-08-06T14:46:00.000Z	nelsongs	znh	yeah, i know, suckers, they all are
+2005-08-06T14:46:00.000Z	znh	nelsongs	I agree, you might also want to ring the bell on the ubuntuforums about the Ti Cardreader
+2005-08-06T14:49:00.000Z	nelsongs	znh	 yeah, i will
+2005-08-06T14:49:00.000Z	nelsongs	znh	 i'll try to document the stuffs i did to my notebook, especially the video
+2005-08-06T14:49:00.000Z	znh	nelsongs	yes that would be nice
+2005-08-06T14:50:00.000Z	nelsongs	znh	 and i'll let you know, i'll just post it in my site tomorrow
+2005-08-06T14:50:00.000Z	nelsongs	znh	got to go now, thanks!  see ya all later!
+2005-08-06T14:50:00.000Z	znh	nelsongs	goodbye :-)

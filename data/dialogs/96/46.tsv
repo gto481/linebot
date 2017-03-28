@@ -1,0 +1,96 @@
+2007-03-15T10:47:00.000Z	Crazytom	ladonna	what kind of card do you have
+2007-03-15T10:48:00.000Z	ladonna	Crazytom	belkin F5D7000 ver.7000
+2007-03-15T10:48:00.000Z	ladonna	Crazytom	tried ndiswrapper w/bcmwl5 did not work
+2007-03-15T10:49:00.000Z	ladonna	Crazytom	also tried ndiswrapper w/ driver on cd (XP and 98)
+2007-03-15T10:49:00.000Z	ladonna	Crazytom	I thought it used a broadcom chipset, but apparently not
+2007-03-15T10:49:00.000Z	Crazytom	ladonna	shouldn't need ndiswrapper on a broadcom chip
+2007-03-15T10:50:00.000Z	ladonna	Crazytom	I used ndiswrapper on another belkin w/bcmwl5 worked as advertised. that is why im confused
+2007-03-15T10:51:00.000Z	Crazytom	ladonna	what is the card doing
+2007-03-15T10:51:00.000Z	ladonna	Crazytom	nothing, it doesnt even show in networking just modem and wired. I'm using the wired connection now....
+2007-03-15T10:52:00.000Z	ladonna	Crazytom	ndiswrapper -l bcmwl5 invalid driver. tried driver off the cd, loaded fine but no connection
+2007-03-15T10:52:00.000Z	Crazytom	ladonna	what about ifconfig -a
+2007-03-15T10:53:00.000Z	ladonna	Crazytom	what info too extract?
+2007-03-15T10:54:00.000Z	Crazytom	ladonna	does the card show up?
+2007-03-15T10:55:00.000Z	ladonna	Crazytom	eth0  Link encap:Ethernet
+2007-03-15T10:55:00.000Z	ladonna	Crazytom	lo Link encap:Local Loopback
+2007-03-15T10:56:00.000Z	ladonna	Crazytom	sit0 Link encap:IPv6-in-IPv4
+2007-03-15T10:57:00.000Z	Crazytom	ladonna	have you installed fwcutter?
+2007-03-15T10:57:00.000Z	ladonna	Crazytom	sorry, no idea?
+2007-03-15T10:58:00.000Z	Crazytom	ladonna	bcm43xx-fwcutter is the package name
+2007-03-15T10:58:00.000Z	ladonna	Crazytom	i need to install this for the card to work?
+2007-03-15T10:59:00.000Z	Crazytom	ladonna	it sounds like you don't have firmware installed... so yes
+2007-03-15T11:00:00.000Z	ladonna	Crazytom	okay, install bcm43xx-fwcutter, ndiswrapper, load driver and configure?
+2007-03-15T11:01:00.000Z	Crazytom	ladonna	you already have ndiswrapper installed right?
+2007-03-15T11:01:00.000Z	ladonna	Crazytom	yes
+2007-03-15T11:02:00.000Z	ladonna	Crazytom	i would like to start from scratch though
+2007-03-15T11:02:00.000Z	Crazytom	ladonna	check this out http://ubuntuforums.org/showthread.php?p=1071920&mode=linear
+2007-03-15T11:04:00.000Z	ladonna	Crazytom	i tried this before, when i  lspci | grep Broadcom\ Corporation I get something different
+2007-03-15T11:05:00.000Z	ladonna	Crazytom	 lspci: Belkin Unknown device 700f (rev 20)
+2007-03-15T11:09:00.000Z	Crazytom	ladonna	how did you conclude it was a broadcom chip?
+2007-03-15T11:10:00.000Z	ladonna	Crazytom	 i wasnt sure, it is the same as the other belkin i have that uses a broadcom chipset
+2007-03-15T11:10:00.000Z	ladonna	Crazytom	 the driver that was on the cd did not work with ndiswrapper either, is this of any consequence?
+2007-03-15T11:11:00.000Z	Crazytom	ladonna	same version card?
+2007-03-15T11:12:00.000Z	ladonna	Crazytom	 not sure, sorry. that is why I was tring to use madwifi becaus ei thought this card uses a different chipset
+2007-03-15T11:13:00.000Z	ladonna	Crazytom	 when using bcmwl5 i received invalid driver. when using the driver from the cd with ndiswrapper, the driver loads but the card does not show up anywhere
+2007-03-15T11:13:00.000Z	Crazytom	ladonna	any chance that you could try the other card?
+2007-03-15T11:14:00.000Z	ladonna	Crazytom	 the other card is installed in another system
+2007-03-15T11:14:00.000Z	ladonna	Crazytom	 that is why im confused. i tried the exact same procedures on this card as i did on the card that is functional
+2007-03-15T11:15:00.000Z	Crazytom	ladonna	you can't swap temporarily?
+2007-03-15T11:16:00.000Z	ladonna	Crazytom	 what are you suggesting? trying to determine if its the card or the something else?
+2007-03-15T11:16:00.000Z	Crazytom	ladonna	yes, I'm over my head here if anyone else wants to take over.
+2007-03-15T11:17:00.000Z	ladonna	Crazytom	 im going to swap cards, are you going to be avail.....
+2007-03-15T11:17:00.000Z	Crazytom	ladonna	i have about thirty cards so i just changed until i got one that worked
+2007-03-15T11:18:00.000Z	Crazytom	ladonna	i'll be here for a bit i'm trying to get my computer to boot in under ten minutes
+2007-03-15T11:19:00.000Z	ladonna	Crazytom	 i have an extra D-Link AirPlus Xtreme DWL-G520 H/W Ver::B2 F/W Ver::3.1.6 will this work?
+2007-03-15T11:19:00.000Z	Crazytom	ladonna	what chipset is it
+2007-03-15T11:19:00.000Z	ladonna	Crazytom	 not sure i think it is atheros
+2007-03-15T11:20:00.000Z	ladonna	Crazytom	 is there a way to confirm on the card?
+2007-03-15T11:20:00.000Z	ladonna	Crazytom	 im so confused, ive been trying to get this to work for 2 weeks
+2007-03-15T11:27:00.000Z	Crazytom	ladonna	did you swap cards yet
+2007-03-15T11:29:00.000Z	ladonna	Crazytom	 not yet. im sorry but i have to go. thanks for all your help. if I figure something out ill let you know, thanks again
+2007-03-15T12:55:00.000Z	Crazytom	ladonna	where are you at?
+2007-03-15T12:57:00.000Z	Crazytom	ladonna	did you install fwcutter?
+2007-03-15T13:01:00.000Z	Crazytom	ladonna	did you install fwcutter?
+2007-03-15T13:02:00.000Z	Crazytom	ladonna	ok so what is it doing now?  anything different?
+2007-03-15T13:02:00.000Z	ladonna	Crazytom	the same if you need specifics I can give
+2007-03-15T13:03:00.000Z	ladonna	Crazytom	i also tried to install madwifi, ran into some errors on install
+2007-03-15T13:04:00.000Z	Crazytom	ladonna	have you done a iwconfig?
+2007-03-15T13:06:00.000Z	ladonna	Crazytom	lo  no wireless extensions. eth0  no wireless extensions. sit0  no wireless extensions.
+2007-03-15T13:06:00.000Z	Crazytom	ladonna	it didn't even show up?
+2007-03-15T13:07:00.000Z	ladonna	Crazytom	no even after everything i have tried this is the same result
+2007-03-15T13:08:00.000Z	ladonna	Crazytom	if this card does not use the broadcom chipset then my options are use a linux driver if avail or use madwifi, is this correct?
+2007-03-15T13:10:00.000Z	ladonna	Crazytom	when i loaded the native driver with ndiswrapper/ ndiswrapper -l listed the driver as present. but i was still unable to configure and connect
+2007-03-15T13:10:00.000Z	Crazytom	ladonna	yes u should be able to use ndiswrapper with the windows driver
+2007-03-15T13:11:00.000Z	ladonna	Crazytom	im thinking of doing a clean install, starting from scratch. do you have any advise......
+2007-03-15T13:11:00.000Z	ladonna	Crazytom	......just the wireless configuration part
+2007-03-15T13:12:00.000Z	Crazytom	ladonna	hold on for a sec
+2007-03-15T13:12:00.000Z	ladonna	Crazytom	ok
+2007-03-15T13:16:00.000Z	ladonna	Crazytom	i appreciate it but i have already tried this howto, is it possible that the problem lies somewhere else?
+2007-03-15T13:16:00.000Z	Crazytom	ladonna	try iwlist eth1 scan
+2007-03-15T13:17:00.000Z	ladonna	Crazytom	eth1 Interface doesn't support scanning.
+2007-03-15T13:18:00.000Z	Crazytom	ladonna	I had these same problems and when I installed the firmware it cleared up
+2007-03-15T13:19:00.000Z	ladonna	Crazytom	 was this the firmware bcm43xx-fwcutter
+2007-03-15T13:20:00.000Z	ladonna	Crazytom	 does the BCM mean that it is a broadcom chipset?
+2007-03-15T13:21:00.000Z	ladonna	Crazytom	 okay, i think this card might not be a broadcom. the chip on the card has a RTL on it
+2007-03-15T13:22:00.000Z	ladonna	Crazytom	 does this suggest that this belkin device uses a different chipset?
+2007-03-15T13:25:00.000Z	ladonna	Crazytom	 if i install ndiswrapper, load the native drivers and find the firmware for this device, then everything should work as advertised correct?
+2007-03-15T13:25:00.000Z	Crazytom	ladonna	theoretically
+2007-03-15T13:25:00.000Z	Crazytom	ladonna	find your card here http://ndiswrapper.sourceforge.net/mediawiki/index.php/List
+2007-03-15T13:26:00.000Z	Crazytom	ladonna	what is the model of your card again?
+2007-03-15T13:27:00.000Z	ladonna	Crazytom	 belkin wireless g ver.7000 part#F5D7000
+2007-03-15T13:29:00.000Z	ladonna	Crazytom	 couldnt find a F5D7000 with a RTL chipset
+2007-03-15T13:32:00.000Z	ladonna	Crazytom	 so i'll be looking for realtek firmware for this thing to work?
+2007-03-15T13:34:00.000Z	Crazytom	ladonna	i would google firmware for broadcom and also the atheros drivers in ndiswrapper
+2007-03-15T13:35:00.000Z	ladonna	Crazytom	 so you are saying use the broadcom drivers and firmware or the atheros drivers?
+2007-03-15T13:36:00.000Z	Crazytom	ladonna	I would try and figure out if the firmware is installed to start off with
+2007-03-15T13:36:00.000Z	Crazytom	ladonna	then i would try all kinds of drivers with ndiswrapper
+2007-03-15T13:36:00.000Z	ladonna	Crazytom	 how do you check for firmware install?
+2007-03-15T13:42:00.000Z	Crazytom	ladonna	https://help.ubuntu.com/community/WifiDocs
+2007-03-15T13:42:00.000Z	ladonna	Crazytom	 got it im there now
+2007-03-15T13:43:00.000Z	ladonna	Crazytom	 im going to sign off for now and try to get this working. Thanks again for you help. Ill get back with and keep you posted on the progress
+2007-03-15T13:43:00.000Z	Crazytom	ladonna	what does sudo pccardctl ident get you
+2007-03-15T13:43:00.000Z	Crazytom	ladonna	later
+2007-03-15T13:43:00.000Z	ladonna	Crazytom	 hold on
+2007-03-15T13:44:00.000Z	ladonna	Crazytom	 nothing ?
+2007-03-15T13:45:00.000Z	Crazytom	ladonna	just look at that troubleshooting doc that's all i can do from here
+2007-03-15T13:45:00.000Z	ladonna	Crazytom	 will do, we made some progress wont be long before this thing is up and runnin

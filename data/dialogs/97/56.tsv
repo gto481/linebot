@@ -1,0 +1,97 @@
+2006-08-19T06:54:00.000Z	stopher		I just got a 4 processor (P3 all around xeon) and it has 4 SCSI HD's (6 available slots) and 1 OS Controller HD that is IDE.  Has CDRW etc etc etc.  It has Windows 2000 Server pre-loaded but I keep getting a STOP! error on it.  I went to install Ubuntu Server Text Install and it keeps freezing when the system goes to Partition Manager.  I think the server install is for one processor, but was told I could install the controller afte
+2006-08-19T06:56:00.000Z	BlueEagle	stopher	Your text was cut after ", but was told I could install the controller afte"
+2006-08-19T06:56:00.000Z	stopher	BlueEagle	... but was told I could install the controller afterward.  Any Ideas on this?
+2006-08-19T06:58:00.000Z	stopher	BlueEagle	Any ideas?
+2006-08-19T06:59:00.000Z	BlueEagle	stopher	Nope. It would help to know which chipset your controller is using. Try running lspci (if you're in linux).
+2006-08-19T06:59:00.000Z	stopher	BlueEagle	I can't even get to the windows command prompts, so no, i can't do that either.
+2006-08-19T07:00:00.000Z	stopher	BlueEagle	should BIOS boot-up display that?
+2006-08-19T07:01:00.000Z	BlueEagle	stopher	I really do not know or think so.
+2006-08-19T07:01:00.000Z	BlueEagle	stopher	Have you got the name of the motherboard?
+2006-08-19T07:02:00.000Z	stopher	BlueEagle	lemme check and ill get back to you asap
+2006-08-19T07:03:00.000Z	BlueEagle	stopher	:)
+2006-08-19T07:03:00.000Z	stopher	BlueEagle	i have it in the room next door
+2006-08-19T07:08:00.000Z	stopher	BlueEagle	It's not showing anything...motherboard wise.
+2006-08-19T07:09:00.000Z	BlueEagle	stopher	Now let me see if I got this right. The disk controller is it on the motherboard or is it an expansion card?
+2006-08-19T07:11:00.000Z	BlueEagle	stopher	That really did not answer my quetsion. The question is if the server has got the SCSI controller buildt in on the motherboard or if it is an expansion card that sits in a PCI slot.
+2006-08-19T07:11:00.000Z	stopher	BlueEagle	It's on the motherboard
+2006-08-19T07:12:00.000Z	BlueEagle	stopher	I see. Have you got any chance at all to open the chassis of the server and have a look-see on the motherboard in question to determine the producer and model? Perhaps you've got this information in any manuals that may have accompanied the server?
+2006-08-19T07:12:00.000Z	BlueEagle	stopher	If the server is prebuildt who buildt it and what did they call the server?
+2006-08-19T07:12:00.000Z	stopher	BlueEagle	I have opened the server to look for a model/producer, but can't find anything.
+2006-08-19T07:13:00.000Z	stopher	BlueEagle	the manufacturer built it, but no software/docs/anything with it, just called it a server
+2006-08-19T07:13:00.000Z	stopher	BlueEagle	Actually they called it a ProServ
+2006-08-19T07:15:00.000Z	BlueEagle	stopher	Whi manufactured it? And has it got a number after ProServ?
+2006-08-19T07:19:00.000Z	BlueEagle	stopher	I've found a manual for proserv 900, 1200 and 1500 servers. There should probably be one that indicates which of these you've got.
+2006-08-19T07:20:00.000Z	BlueEagle	stopher	Actually it goes all the way up to 5000 :)
+2006-08-19T07:20:00.000Z	BlueEagle	stopher	and as far as I can tell the manufacturer is Tangent
+2006-08-19T07:22:00.000Z	BlueEagle	stopher	You still there?
+2006-08-19T07:24:00.000Z	stopher	BlueEagle	I'm back sorry about that.
+2006-08-19T07:25:00.000Z	stopher	BlueEagle	I'm going to go check again, make sure I didn't miss the manufacturer name.
+2006-08-19T07:25:00.000Z	BlueEagle	stopher	I am guessing Tangent Computer ProServ 3000 with four 550MHz Xeon processors and six hot-swappable drives and six pci and one isa slot.
+2006-08-19T07:25:00.000Z	BlueEagle	stopher	guess is based on
+2006-08-19T07:26:00.000Z	BlueEagle	stopher	Seems like an old piece of equiptment tbh. :)
+2006-08-19T07:27:00.000Z	BlueEagle	stopher	however on tangent.com I find no reference to the proserv series so finding the hardware is probably a matter of looking on it.
+2006-08-19T07:30:00.000Z	stopher	BlueEagle	the cable on the SCSI has a tag on the side that connects to the motherboard. says FoxCONN  probably the cable maker or something.
+2006-08-19T07:31:00.000Z	BlueEagle	stopher	Yes. I am looking for the name of the motherboard. I've been all trough the tangent.com website and found various proserv owners manuals but none of them list anythign useful.
+2006-08-19T07:32:00.000Z	BlueEagle	stopher	You might want to contact tangent on http://www.tangent.com/explore/tech/support.htm they do list that they provide "Lifetime technical support"
+2006-08-19T07:32:00.000Z	BlueEagle	stopher	I suggest that you ask them for all technical spesifications on the Proserv 3000 and wether or not it was ever shipped with support for P3 processors.
+2006-08-19T07:33:00.000Z	BlueEagle	stopher	Also they need a serial number which should be printed on the chasis somwhere. Perhaps near the power supply, perhaps somwhere else.
+2006-08-19T07:33:00.000Z	stopher	BlueEagle	hmmm. I can't find a name on the motherboard. The chips have different names on them, (the ones soldered onto the board.) NEC, INTEL, and LSI
+2006-08-19T07:34:00.000Z	BlueEagle	stopher	Now, judging by the look and feel of the tangent.com website I wouldn't get my hopes up.
+2006-08-19T07:34:00.000Z	stopher	BlueEagle	There are a couple places i have seen S/N's but they aren't labeled...all on the chasis
+2006-08-19T07:34:00.000Z	BlueEagle	stopher	The name I am looking for should not be on any chip. It should be written on the motherboard itself.
+2006-08-19T07:35:00.000Z	BlueEagle	stopher	Common places are near the processor seat (in your case there's four) and near the pins where the cables from the front panel of the chasis are plugged (for hdd and power lights and such)
+2006-08-19T07:35:00.000Z	stopher	BlueEagle	there is a sticker on the processor bays that says SMP/PORTLAND
+2006-08-19T07:36:00.000Z	BlueEagle	stopher	No, that's not it. SMP = Something Multiple Pocessors or something.
+2006-08-19T07:37:00.000Z	BlueEagle	stopher	What you could do is google the names and numbers on the chips near the SCSI connectors. One of them will probably be the SCSI controller chip.
+2006-08-19T07:37:00.000Z	BlueEagle	stopher	Now how new is this server btw?
+2006-08-19T07:38:00.000Z	BlueEagle	stopher	Is this server in a regular chasis or is it for rack mounting?
+2006-08-19T07:39:00.000Z	stopher	BlueEagle	Regular chasis...its short (height) and long (depth) and about as wide as it is tall
+2006-08-19T07:39:00.000Z	stopher	BlueEagle	i wouldn't be surprised if it were an older system
+2006-08-19T07:40:00.000Z	BlueEagle	stopher	"about as wide as it is tall"? And appox how many centimeter is that?
+2006-08-19T07:40:00.000Z	BlueEagle	stopher	15-20 cm?
+2006-08-19T07:41:00.000Z	stopher	BlueEagle	18tall x12wide x25depth
+2006-08-19T07:41:00.000Z	BlueEagle	stopher	That would be a shuttle chassis, wouldn't it?
+2006-08-19T07:41:00.000Z	stopher	BlueEagle	shuttle?
+2006-08-19T07:42:00.000Z	BlueEagle	stopher	something like http://global.shuttle.com/Product/images/SB95Pv2_Top.jpg ?
+2006-08-19T07:43:00.000Z	stopher	BlueEagle	Nope.. Its IVORY (white) not black, has a air door in front that swings open and the drives can be removed that way... and you can access floppy/cdrom then
+2006-08-19T07:43:00.000Z	BlueEagle	stopher	I was thinking about the form factor.
+2006-08-19T07:43:00.000Z	stopher	BlueEagle	oooh. in that case, yes
+2006-08-19T07:44:00.000Z	BlueEagle	stopher	Ok. Well that will make it a newer model than what I was concidering. :)
+2006-08-19T07:44:00.000Z	stopher	BlueEagle	oh.
+2006-08-19T07:44:00.000Z	BlueEagle	stopher	those cases and the mobos for them aren't all that old
+2006-08-19T07:44:00.000Z	stopher	BlueEagle	okay.
+2006-08-19T07:47:00.000Z	stopher	BlueEagle	where the SCSI connectors are, it says NSCO
+2006-08-19T07:47:00.000Z	stopher	BlueEagle	where the SCSI connectors are, it says NSCI
+2006-08-19T07:51:00.000Z	stopher	BlueEagle	I THINK I FOUND IT! :D
+2006-08-19T07:52:00.000Z	stopher	BlueEagle	http://america.hongfaith.com/Case_Chassis/Server%20Chassis/cabrillo-c.htm
+2006-08-19T07:53:00.000Z	stopher	BlueEagle	http://www.dealtime.co.uk/xPF-Intel_Cabrillo_C_Server_Chassis_KCYCABRAL
+2006-08-19T07:53:00.000Z	BlueEagle	stopher	Those look like regular mini towers and not shuttle cases tbh.
+2006-08-19T07:54:00.000Z	stopher	BlueEagle	it looks just like the one i have, which is a server case, not regular.
+2006-08-19T07:54:00.000Z	stopher	BlueEagle	Intel Cabrillo-C Server Chassis
+2006-08-19T07:59:00.000Z	stopher	BlueEagle	you still there?
+2006-08-19T08:00:00.000Z	BlueEagle	stopher	working :)
+2006-08-19T08:00:00.000Z	stopher	BlueEagle	oh okay.
+2006-08-19T08:00:00.000Z	stopher	BlueEagle	so you have no clue either?
+2006-08-19T08:04:00.000Z	BlueEagle	stopher	I've been looking for possible matches for baby atx motherboards with quad P3 socket 370
+2006-08-19T08:07:00.000Z	stopher	BlueEagle	Oh...okay
+2006-08-19T08:08:00.000Z	BlueEagle	stopher	so far the only quad boards of that form factor have been for AMD processors. :/
+2006-08-19T08:08:00.000Z	BlueEagle	stopher	Still it would amaze me if the name and model of the mobo wasn't printed on the mobo itself.
+2006-08-19T08:09:00.000Z	BlueEagle	stopher	Have you got a digital camera? Could you take a picture of the mobo and send it to me?
+2006-08-19T08:09:00.000Z	stopher	BlueEagle	it's not and yes, can you get DCC;s thru chat?
+2006-08-19T08:11:00.000Z	BlueEagle	stopher	I think that port should be open.
+2006-08-19T08:11:00.000Z	BlueEagle	stopher	try it.
+2006-08-19T08:15:00.000Z	BlueEagle	stopher	alternately you can publish it on esnips.com or photobucket.com (registration required)
+2006-08-19T08:15:00.000Z	stopher	BlueEagle	i just took them, sendin now
+2006-08-19T08:16:00.000Z	BlueEagle	stopher	The requests are getting to me just fine but I am unable to connect to your machine to initiate the transfer.
+2006-08-19T08:17:00.000Z	BlueEagle	stopher	You need to open up some ports to allow dcc file transfers.
+2006-08-19T08:17:00.000Z	BlueEagle	stopher	np. :)
+2006-08-19T08:17:00.000Z	BlueEagle	stopher	You could always email them to me.
+2006-08-19T08:18:00.000Z	BlueEagle	stopher	You auto-replied me. :p
+2006-08-19T08:56:00.000Z	BlueEagle	stopher	oh...
+2006-08-19T08:56:00.000Z	BlueEagle	stopher	I must have closed that window by mistake. Please /msg the url again. :)
+2006-08-19T08:57:00.000Z	stopher	BlueEagle	You have PM
+2006-08-19T08:57:00.000Z	BlueEagle	stopher	ehh.. no I don't o.O
+2006-08-19T08:58:00.000Z	stopher	BlueEagle	you need to PM me first, i am unregged here... so you have to initiate contacty
+2006-08-19T08:58:00.000Z	stopher	BlueEagle	LOL i will reg
+2006-08-19T09:31:00.000Z	stopher	BlueEagle	I'm back Paging BlueEagle:
+2006-08-19T09:39:00.000Z	stopher	BlueEagle	Paging BlueEagle to DCC please :)

@@ -1,0 +1,99 @@
+2007-10-30T17:39:00.000Z	manu__	ubuntu	italiano???
+2007-10-30T21:53:00.000Z	manu__	ubuntu	italiano??
+2007-11-02T18:30:00.000Z	ubuntu		oi
+2007-11-02T23:10:00.000Z	manu__		ubuntu.it?????
+2007-11-03T12:34:00.000Z	ubuntu		hey wassup guys
+2007-11-03T12:35:00.000Z	ubuntu		hey NOYA
+2007-11-03T12:35:00.000Z	ubuntu		wanna chat ?
+2007-11-03T12:35:00.000Z	ubuntu		D
+2007-11-03T12:35:00.000Z	ubuntu		wat the hell has happing here
+2007-11-03T12:35:00.000Z	ubuntu		m 1st on ubuntu
+2007-11-03T12:35:00.000Z	ubuntu		:D
+2007-11-03T19:37:00.000Z	ubuntu		Does anyone know if there is a way to download package files, save them to a usb stick, and install them on another computer later?
+2007-11-03T19:41:00.000Z	ubuntu		Does anyone know if I could transfer package files downloaded with Synaptic to another Ubuntu computer, and make Synaptic use those files instead of downloading them again?
+2007-11-03T19:43:00.000Z	ubuntu		Synaptic will detect them and use them?
+2007-11-03T19:44:00.000Z	ubuntu		okay, thank you
+2007-11-03T19:51:00.000Z	ubuntu		Can anyone tell me where Synaptic stores downloaded package files?
+2007-11-04T03:50:00.000Z	ubuntu		so..this is a hardware question, kind of, i think?
+2007-11-04T03:50:00.000Z	ubuntu		i can't get my graphics card out of 340*320 mode
+2007-11-04T03:51:00.000Z	ubuntu		srry bout my naem as well, the widnow is too big for the screen to change it
+2007-11-04T03:53:00.000Z	ubuntu		anyone?
+2007-11-04T03:53:00.000Z	ubuntu		teh card is an ATI and the only one the machine will boot
+2007-11-04T03:53:00.000Z	ubuntu		hence me thinking this is a hardware problem
+2007-11-04T04:11:00.000Z	ubuntu		it says that i don't have any restricted drivers after  do the install
+2007-11-04T04:12:00.000Z	ubuntu		um, sorry, that's out of context: https://help.ubuntu.com/community/BinaryDriverHowto/ATI
+2007-11-04T04:14:00.000Z	ubuntu		sure: I have an ati card (it's the only card my compy boots with...?), well, I'm stuck in 640*320 (yes 320, not even 480)
+2007-11-04T04:15:00.000Z	ubuntu		live cd at the moment, but it does the same thing with the installed version
+2007-11-04T04:15:00.000Z	ubuntu		i was hoping to swap graphics cards, but it will only book with the ati one, which confuses the heck out of me
+2007-11-04T04:16:00.000Z	ubuntu		it is an nvidia gforce fx 5290
+2007-11-04T04:16:00.000Z	ubuntu		and the other is a generic pci vga card
+2007-11-04T04:17:00.000Z	ubuntu		(sorry about the multi line things, getting use still to not doing that).  And whn I say won't boot, i mean the bios doesn't even show its information and when i put the ati card in, it says that it has had a few failed attemps (it := bios)
+2007-11-04T04:18:00.000Z	ubuntu		hmm
+2007-11-04T04:18:00.000Z	ubuntu		ill need to download an burn it at work tomorrow then
+2007-11-04T04:19:00.000Z	ubuntu		is teh alternate (text based) install much different from other distros?
+2007-11-04T04:19:00.000Z	ubuntu		ok, thank you
+2007-11-04T11:34:00.000Z	ubuntu		hi, when trying to install sun-java5-plugin this is what i get: E: sun-java5-bin: subprocess post-installation script returned error exit status 2
+2007-11-04T11:34:00.000Z	ubuntu		E: sun-java5-plugin: dependency problems - leaving unconfigured
+2007-11-04T11:34:00.000Z	ubuntu		i am also runing xubuntu on a usb key
+2007-11-04T11:35:00.000Z	ubuntu		if that makes a difference
+2007-11-04T11:35:00.000Z	ubuntu		anyone help?
+2007-11-04T11:36:00.000Z	ubuntu		:(
+2007-11-04T11:38:00.000Z	ubuntu		scguy, ok hold on
+2007-11-04T11:40:00.000Z	ubuntu		ubuntu@ubuntu:~$
+2007-11-04T11:41:00.000Z	ubuntu		ok let me change nick
+2007-11-04T12:51:00.000Z	ubuntu		hi me again :)
+2007-11-04T12:53:00.000Z	ubuntu		in restricted drivers i enable the nvidia card and it asks for reboot, but then when xubuntu starts up again the nvidia driver is still not in use
+2007-11-04T12:54:00.000Z	ubuntu		i am also runing xubuntu on usb key if that makes a difference
+2007-11-04T13:27:00.000Z	ubuntu		me again :(
+2007-11-04T13:27:00.000Z	ubuntu		:)
+2007-11-04T13:34:00.000Z	ubuntu		why cant i open and edit /etc/x11/xorg.conf ?
+2007-11-04T16:53:00.000Z	ubuntu		hi. I'm installing ubuntu on fake raid and all went fine except for the boot loader installation phase. I already have grub installed so it's not a problem. is there other steps after the grub installation?
+2007-11-04T17:01:00.000Z	ubuntu		when installing ubuntu, what comes after the grub installation?
+2007-11-04T17:03:00.000Z	ubuntu	IndyGunFreak	I hope so. it seems a failure in the grub installation is fatal.
+2007-11-04T17:04:00.000Z	ubuntu	IndyGunFreak	yeah I guess. but it is to the installer. but if nothing else gets done after, it's all good :)
+2007-11-04T17:05:00.000Z	ubuntu		brb
+2007-11-04T18:57:00.000Z	ubuntu		I already have grub installed, starting a distro. if I want to install another distro then start it through grub, all I have to do is update menu.lst on the previously installed distro's /boot/grub, right?
+2007-11-04T18:59:00.000Z	ubuntu		what the hell? I try to join #debian and I'm forwarded here. what gives?
+2007-11-05T01:20:00.000Z	ubuntu		:(
+2007-11-05T01:21:00.000Z	ubuntu		i need heeelp!
+2007-11-05T01:21:00.000Z	ubuntu		aight....sorry
+2007-11-05T01:21:00.000Z	ubuntu		jeje
+2007-11-05T01:24:00.000Z	ubuntu		just installed ubuntu but it wont start up xDesktop, it says (EE) Intel (0) Virtual Height (1392) is too large for the hardware (max 1200)
+2007-11-05T01:24:00.000Z	ubuntu		....i'm using the live cd now
+2007-11-05T01:26:00.000Z	ubuntu		---> (EE) Intel (0) Virtual Height (1392) is too large for the hardware (max 1200)    need help
+2007-11-05T01:28:00.000Z	ubuntu		how can i set screen resolution while in x?
+2007-11-05T16:13:00.000Z	manu__	ubuntu	italiano????
+2007-11-05T16:29:00.000Z	manu__		PER UBUNTU ITALIANO???
+2007-11-05T16:48:00.000Z	manu__	ubuntu	italiano
+2007-11-05T16:48:00.000Z	manu__		??
+2007-11-05T20:25:00.000Z	ubuntu		hello, how to remove grub and boot to vista normaly?
+2007-11-05T20:32:00.000Z	ubuntu		ciao
+2007-11-05T20:37:00.000Z	ubuntu		!list
+2007-11-05T22:01:00.000Z	manu__	ubuntu	italiano???
+2007-11-06T03:03:00.000Z	ubuntu		someone help me please
+2007-11-06T03:04:00.000Z	ubuntu		i changed some settings in the startup manager
+2007-11-06T03:04:00.000Z	ubuntu		now my ubuntu wont boot
+2007-11-06T03:04:00.000Z	ubuntu		it goes to a black screen
+2007-11-06T03:04:00.000Z	ubuntu		8800gts
+2007-11-06T03:04:00.000Z	ubuntu		it worked before
+2007-11-06T03:04:00.000Z	ubuntu		i just changed some settings and now it wont work
+2007-11-06T03:05:00.000Z	ubuntu		it says it does
+2007-11-06T03:05:00.000Z	ubuntu		but then it just goes to a black screen
+2007-11-06T03:05:00.000Z	ubuntu		and sits
+2007-11-06T03:05:00.000Z	ubuntu		im only on cause of the CD
+2007-11-06T03:05:00.000Z	ubuntu		the install cd
+2007-11-06T03:05:00.000Z	ubuntu		i changed some settings in the startup manager
+2007-11-06T03:06:00.000Z	ubuntu		my splash screen wasnt working so someone recommended i install that
+2007-11-06T03:06:00.000Z	ubuntu		ya just the resoultion from 800x600 to 1024x768
+2007-11-06T03:06:00.000Z	ubuntu		i dont understand why that would prevent me from even reaching the login screen
+2007-11-06T03:07:00.000Z	ubuntu		i did that
+2007-11-06T03:07:00.000Z	ubuntu		i duno any commands tho
+2007-11-06T03:07:00.000Z	ubuntu		so i came here
+2007-11-06T03:07:00.000Z	ubuntu		ok
+2007-11-06T03:07:00.000Z	ubuntu		just that one line ?
+2007-11-06T03:08:00.000Z	ubuntu		ok
+2007-11-06T03:08:00.000Z	ubuntu		is that all ?
+2007-11-06T03:08:00.000Z	ubuntu		alright what does that command do exactly
+2007-11-06T03:08:00.000Z	ubuntu		sets the startup manager to defaults ?
+2007-11-06T03:09:00.000Z	ubuntu		ok ill give it a shot thanks ill be back
+2007-11-06T03:54:00.000Z	manu__	ubuntu	italiano????

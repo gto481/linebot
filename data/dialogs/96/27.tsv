@@ -1,0 +1,96 @@
+2010-08-08T11:23:00.000Z	Dr_Willis		!ies4linux
+2010-08-08T11:24:00.000Z	sacarlson	Dr_Willis	wow I didn't know you can install IE in wine.  I wonder if it would work with ruby watir
+2010-08-21T10:49:00.000Z	Dr_Willis	sacarlson	 the 2 are bascally the same. theres just a save file on the flash drive with the install
+2010-08-21T10:51:00.000Z	sacarlson	Dr_Willis	well then I might as well not try I used portablelinux that failed and also the manual method shown in ubuntu both fail.
+2010-08-21T10:53:00.000Z	Dr_Willis	sacarlson	 ive used unetbootin, grub2 to boot an iso file. or some of the other tools at pendrivelinux web site. - most work  i HAVE had some pc's be quirky and not like some flashdrive/setups that Do work on other pc's... Mainly its older pc's with the issues.,
+2010-08-21T17:05:00.000Z	sacarlson	Dr_Willis	with what another package called hal?
+2010-08-21T17:08:00.000Z	sacarlson	Dr_Willis	ok I see that running on my system also udevd several times
+2010-08-22T16:07:00.000Z	Dr_Willis	sacarlson	 alsa is the core of the sound system . the card drivers use alsa  and then it goes to pulse audio  (normally)
+2010-08-26T16:32:00.000Z	Dr_Willis	sacarlson	 what remanes of /etc/init.d is actually (for the most part) upstart scripts that just look like the old sysv system. Upstart is the  way ubuntu is heading
+2010-08-26T16:36:00.000Z	Dr_Willis	sacarlson	 rc.local is ran as root.. at boot.
+2010-08-26T16:37:00.000Z	sacarlson	Dr_Willis	don't you need to be a supper user to modify the contents of rc.local then?
+2010-08-26T16:38:00.000Z	Dr_Willis	sacarlson	 rc.local is ran when the system boots befor users login. You could set up  a command to run an app as a user if you wanted.. it does Not run apps at set time.. just once at bootup.
+2010-08-26T16:39:00.000Z	sacarlson	Dr_Willis	user cron is also started before users login but never require supper user to modify or start them.
+2010-08-28T16:48:00.000Z	Dr_Willis	sacarlson	 you sure its -r or is it -R   heres a grep tutorial i saw the other day -> http://www.linux.com/learn/tutorials/317617:getting-a-grip-on-gnu-grep
+2010-08-28T16:49:00.000Z	sacarlson	Dr_Willis	my man page says -r or -R did they change something?
+2010-08-28T16:49:00.000Z	Dr_Willis	sacarlson	 no idea. i normally pipe things to grep.
+2010-08-28T16:52:00.000Z	sacarlson	Dr_Willis	I just verified seems recursion in grep isn't working for me also.  seems it worked before.
+2010-08-28T17:00:00.000Z	Dr_Willis	sacarlson	 the ting with '*' in bash is to rember its the SHELL parseing the * and passing the matched  files/dirs to the command. Not the command.
+2010-09-01T21:20:00.000Z	sacarlson	Dr_Willis	wow good salesman I thought they wanted windows?
+2010-09-01T21:20:00.000Z	Dr_Willis	sacarlson	  I imagine  he mnay be back and stuck with No OS at all... having them get a Live cd NOW that they can use.. may save trouble later. :)
+2010-09-11T19:53:00.000Z	Dr_Willis	sacarlson	 a hacked web siet hacked your web site? :)
+2010-09-11T19:54:00.000Z	sacarlson	Dr_Willis	yes but couldn't do much since www-data didn't have priv to change much
+2010-09-11T19:54:00.000Z	Dr_Willis	sacarlson	 security in layers. :)
+2010-09-11T19:54:00.000Z	sacarlson	Dr_Willis	it was wide open like a filemanager that they could upload anything and run there program
+2010-09-12T16:01:00.000Z	Dr_Willis	sacarlson	 webcam, or other type devices.. what sort of devices do you have?
+2010-09-12T16:02:00.000Z	sacarlson	Dr_Willis	webcam
+2010-09-12T16:02:00.000Z	Dr_Willis	sacarlson	  see if theres a /dev/video* made. also try 'cheese' see if cheese finds it.
+2010-09-12T16:02:00.000Z	Dr_Willis	sacarlson	 also theres 2 modes of devices.. v4l and v4l2 i recall
+2010-09-12T16:02:00.000Z	sacarlson	Dr_Willis	yes it works in cheese as a jpg capture ok
+2010-09-12T16:02:00.000Z	Dr_Willis	sacarlson	 it may be the other type of device.
+2010-09-12T16:03:00.000Z	sacarlson	Dr_Willis	oh ya I think I had v4l2 setup
+2010-09-12T16:03:00.000Z	sacarlson	Dr_Willis	I'll try the 4vl
+2010-09-12T16:04:00.000Z	sacarlson	Dr_Willis	can I just leave the device box empty?
+2010-09-12T16:05:00.000Z	Dr_Willis	sacarlson	 see what exists in /dev/video*
+2010-09-12T16:06:00.000Z	sacarlson	Dr_Willis	only thing I see is /dev/video0
+2010-09-12T16:09:00.000Z	sacarlson	Dr_Willis	ok I don't know what I did different this time but it played fine in v4l2 with /dev/video0  maybe I mistyped video0 for vide0 I'm not sure.  so how do I set it to record this ?
+2010-09-14T22:20:00.000Z	Dr_Willis	sacarlson	 a 'nasty' work around would be to 'set the suid bit' on shutdown. - but then any user could run shutdown at any time and shutdown the machine
+2010-09-14T22:21:00.000Z	sacarlson	Dr_Willis	that's ok I'm the only user how do I set the suid bit?
+2010-09-14T22:21:00.000Z	Dr_Willis	sacarlson	 'sudo chmod +s whatever'    You may want to read up on suid also. :)
+2010-09-14T22:21:00.000Z	sacarlson	Dr_Willis	ok cool that should fix it thanks
+2010-09-14T22:21:00.000Z	Dr_Willis	sacarlson	 i had a user named 'shutdown' whos default shell was... shutdown.. :)  i could login as him and shutdown the box.. heh. (no idea why i needed to do that now)
+2010-12-19T15:27:00.000Z	Dr_Willis	sacarlson	 it can IF you have the rar binaries installed.
+2010-12-28T17:38:00.000Z	sacarlson	Dr_Willis	rafii: there is a very limited us gui for grub2  package startup-manager
+2011-01-03T22:01:00.000Z	sacarlson	Dr_Willis	why do people hate me when I use sudo su?
+2011-01-03T22:02:00.000Z	sacarlson	Dr_Willis	I just did a man on su and it seems to be well documented and still works
+2011-01-03T22:05:00.000Z	Dr_Willis	sacarlson	 sudo su, is 'redundant' and may or may not give a proper 'enviroment' and  you may as well just do 'sudo -i'
+2011-01-15T16:39:00.000Z	sacarlson	Dr_Willis	zombie-robot: I'm not sure or not if it would work in x11vnc
+2011-01-23T15:30:00.000Z	sacarlson	Dr_Willis	I tried to get grub2 to boot an iso and failed,  did you ever get that to work?
+2011-01-23T15:32:00.000Z	Dr_Willis	sacarlson	 yes. it was rather trivial once you learned the basics, :) and that every disrto seems to have its own *#&*&!&@# options needed with non-standard naming of various variables.
+2011-01-23T15:32:00.000Z	Dr_Willis	sacarlson	 check http://delicious.com/dr_willis  under my grub/grub2 tags.
+2011-01-23T15:32:00.000Z	sacarlson	Dr_Willis	cool I"ll take a look, thanks
+2011-01-23T15:33:00.000Z	Dr_Willis	sacarlson	 once you get one going.. i  made a 8gb flash drive tha tcould boot like 8 differnt iso's
+2011-01-23T15:34:00.000Z	Dr_Willis	sacarlson	 another trick - you can keep the ISO files on a ntfs, or other partition. and have a 'emergancy rescue/live cd' option in your grub menus on a normal install.
+2011-01-23T16:17:00.000Z	sacarlson	Dr_Willis	this link you gave me worked to boot from a grub2 entry added to boot iso files,  not sure what I did wrong before http://ubuntuforums.org/showthread.php?t=1288604   thanks again
+2011-01-23T16:18:00.000Z	Dr_Willis	sacarlson	 they make the task way harder then it should be. :) they need to get togetyher and standarize the options. Every disrto seems to need different options for that to work.
+2011-01-23T16:19:00.000Z	sacarlson	Dr_Willis	ya I guess the method I tried was not for ubuntu so it failed,  this gave about 4 examples that showed differences in each distro
+2011-01-23T16:19:00.000Z	Dr_Willis	sacarlson	 ive done a dozen disrtos.. each with differnt options.
+2011-01-23T16:23:00.000Z	sacarlson	Dr_Willis	my goal was to just install without a usb flash or cd and this should do that,  I guess one last problem it might not install on the same disk? I've had that problem also since you can't do partition manipulation on the same disk you boot from,  you have a solution for that?  or will this work?
+2011-01-23T16:24:00.000Z	Dr_Willis	sacarlson	 i set up a 'rescue' partition, i kept the iso's on (on a hd) then i setup grub2 and the files on that partition. the pc could then boot any of the iso files.  (about 10gb in size) - i left  the rest of the HD unallocated. I could boot the rescue partition. then boot an iso/install to the rest of the HD.
+2011-01-23T16:24:00.000Z	Dr_Willis	sacarlson	 or simile thing with a flash, or a 2nd hard drive.
+2011-01-23T16:25:00.000Z	sacarlson	Dr_Willis	like I said the iso live boot is booting fine,  but the next problem is to do the install from this boot
+2011-01-23T16:25:00.000Z	Dr_Willis	sacarlson	 you install to a differnt drive, or alrleady partitioned location. You dont resize where they are at during the install.
+2011-01-23T16:26:00.000Z	sacarlson	Dr_Willis	ya that might work,  maybe if the partitions are already there,  I'll try it
+2011-01-23T16:27:00.000Z	Dr_Willis	sacarlson	 the trick is you CANT resize the partition you booted from - during the isntaller..
+2011-01-23T16:28:00.000Z	Dr_Willis	sacarlson	 after i get an install going. I set up my iso files on /boot/ or some other HD. and set grub to boot them from my installed system. as a 'failsafe'
+2011-01-23T16:28:00.000Z	sacarlson	Dr_Willis	for now I'll live with just adding another disk drive,  I found some old laptop drives that I have a converter for to plug in so problem solved
+2011-01-23T16:30:00.000Z	Dr_Willis	sacarlson	 watch out for swap partitions also. the live  cd's often see/use them automatically
+2011-01-30T13:57:00.000Z	sacarlson	Dr_Willis	I assumed my disconects were my isp changing my ip address,  I see it on average about 2 times a day but sometimes more
+2011-02-10T22:35:00.000Z	Dr_Willis	sacarlson	 if you upgrade.. you basiucally redownload/reinstall everything anyway.
+2011-02-22T22:31:00.000Z	Dr_Willis	sacarlson	 with the non-ose version and it setup right. i belive you can.
+2011-02-22T22:31:00.000Z	sacarlson	Dr_Willis	I'd like to try that
+2011-02-22T22:31:00.000Z	sacarlson	Dr_Willis	I have the non-ose version installed
+2011-02-22T22:31:00.000Z	Dr_Willis	sacarlson	 i know ive made usb flash drive/disrtos from vbox.. but i dont recall trying to boot from one. :) you could dd it to a image file and boot from that.
+2011-02-23T23:05:00.000Z	Dr_Willis	sacarlson	 set a static ip. :_) actually i think teh static ip 'settings' have a way to set static just for the dns servers
+2011-02-23T23:06:00.000Z	sacarlson	Dr_Willis	I don't use network manager so I'm not sure
+2011-02-23T23:07:00.000Z	Dr_Willis	sacarlson	 its all in there.. :) im checking it now.
+2011-02-23T23:07:00.000Z	sacarlson	Dr_Willis	point it at Jonii^: also it's her question
+2012-06-07T07:04:00.000Z	sacarlson	Dr_Willis	I have an ssh client on android, I'll have to get you the name
+2012-06-07T07:05:00.000Z	sacarlson	Dr_Willis	I've got my android phone also working as the remote control for vlc that is cool,  it's now a tv too
+2012-06-07T07:11:00.000Z	sacarlson	Dr_Willis	ya that's what I think I should try a separate power supply like that
+2012-06-07T07:12:00.000Z	sacarlson	Dr_Willis	edbian: but I thought it would be cool if that small box would just plug into a laptop or ?? and instant have 50gb
+2012-06-07T07:18:00.000Z	sacarlson	Dr_Willis	who me?  no there are connector adapters that plug direct to your ide inside a normal pc
+2012-06-07T07:19:00.000Z	sacarlson	Dr_Willis	those small ide for laptops to standard big ide to plug a laptop hd into a standard pc
+2012-06-07T07:19:00.000Z	sacarlson	Dr_Willis	ya and it's about 4lb instead of 4 oz
+2012-06-08T08:57:00.000Z	sacarlson	Dr_Willis	I note that my grayed out firefox I think is from java as when I turn off java it never gets gray (locked or slow)  but it seems that's with several java versions
+2012-06-11T16:49:00.000Z	sacarlson	Dr_Willis	oh then why not just write direct to /boot/grub/grub.cfg?
+2012-06-11T16:49:00.000Z	Dr_Willis	sacarlson	 if you DONT also fix /etc/default/grub - then update-grub will put the old settings back
+2012-06-11T16:49:00.000Z	sacarlson	Dr_Willis	ya that sounds correct
+2012-06-14T08:29:00.000Z	Dr_Willis	sacarlson	 you may an tto read up on some bash tutorials also.
+2012-06-14T08:31:00.000Z	sacarlson	Dr_Willis	well this works sudo cp ./zamgo.txt /var/www/zamgo.txt  so is there something wrong with this method?
+2012-06-14T08:32:00.000Z	Dr_Willis	sacarlson	 permissions and ownership on the file  many be wrong
+2012-06-14T08:34:00.000Z	sacarlson	Dr_Willis	oh so it will copy but may not have perms set for www-data to access it.  this is true
+2012-06-14T08:35:00.000Z	sacarlson	Dr_Willis	but normaly the perms of packages downloaded to install for apache and php have perms already set, just not the owner
+2012-06-20T06:51:00.000Z	sacarlson	Dr_Willis	is there a link that shows how to add values to the scripts run from nautilus  like the selected file you right clicked?
+2012-06-25T06:55:00.000Z	sacarlson	Dr_Willis	agreed
+2012-06-25T07:24:00.000Z	sacarlson	Dr_Willis	ya knooobs

@@ -1,0 +1,95 @@
+2011-10-08T13:44:00.000Z	meerkats		when is 11.10 out?
+2011-10-08T13:45:00.000Z	ActionParsnip	meerkats	ask in #ubuntu+1 please
+2011-12-05T04:58:00.000Z	ActionParsnip	meerkats	the engine is free, the levels and textures etc (wads) are not
+2011-12-10T21:06:00.000Z	ActionParsnip	meerkats	find . -name "fire*"
+2012-01-02T21:18:00.000Z	ActionParsnip	meerkats	ALT+F4 maybe
+2012-01-02T21:19:00.000Z	ActionParsnip	meerkats	works in many OSes, same as Windows
+2012-01-02T21:21:00.000Z	ActionParsnip	meerkats	its the same control, is all I'm saying
+2012-01-03T20:18:00.000Z	ActionParsnip	meerkats	can you give a pastebin of the output of:  sudo apt-get update
+2012-01-03T20:19:00.000Z	meerkats	ActionParsnip	as soon as the updater finishes the updating of the other packages
+2012-01-03T20:19:00.000Z	ActionParsnip	meerkats	no worries
+2012-01-03T20:19:00.000Z	meerkats	ActionParsnip	is vlc's ppa
+2012-01-03T20:19:00.000Z	ActionParsnip	meerkats	can you give the output of the command please, once you can
+2012-01-03T20:38:00.000Z	meerkats	ActionParsnip	http://pastebin.com/rNMaZhTT
+2012-01-03T20:39:00.000Z	ActionParsnip	meerkats	sudo apt-key adv --recv-key --keyserver keyserver.ubuntu.com 09589874801DF724
+2012-01-03T20:40:00.000Z	ActionParsnip	meerkats	if you add the ppa using:  add-apt-repositpry    it sorts that out for yo
+2012-01-03T20:41:00.000Z	ActionParsnip	meerkats	simples
+2012-01-05T04:02:00.000Z	ActionParsnip	meerkats	imagemagick should be able to
+2012-01-19T02:29:00.000Z	ActionParsnip	meerkats	gui to what?
+2012-01-19T02:30:00.000Z	ActionParsnip	meerkats	yes, but to what thing. Like xsane is a GUI for sane, gparted is a gui to parted.
+2012-01-19T02:31:00.000Z	meerkats	ActionParsnip	ubuntu GUI
+2012-01-19T02:31:00.000Z	ActionParsnip	meerkats	so you mean Unity...
+2012-01-19T02:31:00.000Z	meerkats	ActionParsnip	im using fallback, if that means something
+2012-01-19T02:32:00.000Z	ActionParsnip	meerkats	you can use a terminal to unload then reload the mouse module
+2012-01-19T02:33:00.000Z	meerkats	ActionParsnip	somethin really strange: I connected an independet mouse via USB and this one works (craptop user here, with an embedded mouse area)
+2012-01-19T02:33:00.000Z	ActionParsnip	meerkats	what make and model system?
+2012-01-19T02:34:00.000Z	meerkats	ActionParsnip	the independent mouse is a logitech M180
+2012-01-19T02:34:00.000Z	ActionParsnip	meerkats	no, the system, not the mouse
+2012-01-19T02:37:00.000Z	meerkats	ActionParsnip	sorry, do you mean kernel and gnome information?
+2012-01-19T02:37:00.000Z	ActionParsnip	meerkats	no, the make and model of the laptop. Sony Vaio, Acer Aspire, Dell Lattitude??? Nothing at all to do with the operating system at all
+2012-01-19T02:39:00.000Z	meerkats	ActionParsnip	sorry, AHTEC
+2012-01-19T02:41:00.000Z	ActionParsnip	meerkats	try the boot option: i8042.reset
+2012-01-19T02:42:00.000Z	meerkats	ActionParsnip	open terminal, copy that, right?
+2012-01-19T02:42:00.000Z	ActionParsnip	meerkats	see the long line I gave HSarena earlier
+2012-01-19T03:56:00.000Z	ActionParsnip	meerkats	scan 800 images afaik, with the filename having the number, with a 2 second pause between
+2012-01-19T03:57:00.000Z	ActionParsnip	meerkats	;)
+2012-01-19T03:57:00.000Z	meerkats	ActionParsnip	how do I limit the size to 1 MB maximum?
+2012-01-19T03:58:00.000Z	ActionParsnip	meerkats	not sure
+2012-01-21T04:50:00.000Z	ActionParsnip	meerkats	try ALT+TAB
+2012-01-26T01:32:00.000Z	ActionParsnip	meerkats	can you run:  gedit /etc/apt/sources.list    and pastebin the output please
+2012-01-26T01:34:00.000Z	ActionParsnip	meerkats	gksudo gedit /etc/apt/sources.list    and comment out the line or delete it
+2012-01-26T01:46:00.000Z	ActionParsnip	meerkats	sudo apt-key adv --recv-key --keyserver keyserver.ubuntu.com AE6DFF70DAD80779
+2012-02-03T22:29:00.000Z	ActionParsnip	meerkats	apt-get is nice and fast, apt-fast is even faster
+2012-02-09T03:22:00.000Z	ActionParsnip	meerkats	its in $PATH so just run it
+2012-02-09T03:22:00.000Z	ActionParsnip	meerkats	its like asking the same question but for apt-get instead of alsamixer
+2012-02-09T03:23:00.000Z	meerkats	ActionParsnip	then
+2012-02-09T03:24:00.000Z	ActionParsnip	meerkats	why are you runing it as root?
+2012-02-09T03:24:00.000Z	ActionParsnip	meerkats	run it as your user
+2012-02-09T03:24:00.000Z	meerkats	ActionParsnip	to see if it made any difference
+2012-02-09T03:26:00.000Z	ActionParsnip	meerkats	can you give the output of: wget -O alsa-info.sh http://www.alsa-project.org/alsa-info.sh; chmod +x ./alsa-info.sh; ./alsa-info.sh
+2012-02-09T03:27:00.000Z	meerkats	ActionParsnip	HTTP request sent, awaiting response... 200 OK
+2012-02-09T03:29:00.000Z	ActionParsnip	meerkats	select to upload to the server, a red URL will be gemnerated. What is the URL
+2012-02-09T03:31:00.000Z	meerkats	ActionParsnip	i haven t been prompted to choose anything yet, I can only see 2 ip's though: one of them is Resolving git.alsa-project.org... 77.48.224.243
+2012-02-09T03:33:00.000Z	ActionParsnip	meerkats	or try this: cd; wget http://dl.dropbox.com/u/8850924/alsa-info.sh; chmod +x ./alsa-info.sh; ./alsa-info.sh
+2012-02-09T03:33:00.000Z	meerkats	ActionParsnip	finally: http://www.alsa-project.org/db/?f=875c1e25dd180721659b9c7efa8e710b61cd8688
+2012-02-09T03:36:00.000Z	ActionParsnip	meerkats	no alsa driver version isn't good
+2012-02-09T03:36:00.000Z	ActionParsnip	meerkats	on the ubuntu sound trouble shooting procedure there is a command to run, try that
+2012-02-09T03:40:00.000Z	meerkats	ActionParsnip	what if I do: sudo aptitude --purge reinstall linux-sound-base alsa-base alsa-utils linux-image-`uname -r` linux-ubuntu-modules-`uname -r` libasound2
+2012-02-09T03:40:00.000Z	ActionParsnip	meerkats	use apt-get
+2012-02-09T03:41:00.000Z	meerkats	ActionParsnip	patience with the noob: sudo apt-get --purge reinstall linux-sound-base alsa-base alsa-utils linux-image-`uname -r` linux-ubuntu-modules-`uname -r` libasound2
+2012-02-09T03:43:00.000Z	ActionParsnip	meerkats	just reinstall the packages using the reinstall part of the command, some of the packages will not exist
+2012-02-09T13:25:00.000Z	ActionParsnip	meerkats	sure. There is a handy ppa if you are not on oneiric
+2012-02-09T13:27:00.000Z	ActionParsnip	meerkats	install unp then ru
+2012-02-09T13:28:00.000Z	ActionParsnip	meerkats	you missed the word install
+2012-02-09T13:28:00.000Z	meerkats	ActionParsnip	I have downloaded manually both 1.0.24 and 1.0.25, should I get rid of both?
+2012-02-09T13:29:00.000Z	ActionParsnip	meerkats	get 24, it matches the tools and utils
+2012-02-09T13:31:00.000Z	meerkats	ActionParsnip	Got rid of both extracted 1.0.25 and 1.0.24 Do I need to ONLY extract 1.0.24 or do the nmp thing you just told me to do?
+2012-02-09T13:53:00.000Z	ActionParsnip	meerkats	tar jxvf alsa-driver....
+2012-03-11T03:59:00.000Z	ActionParsnip	meerkats	#winehq
+2012-03-19T20:00:00.000Z	ActionParsnip	meerkats	Windows is offtopic here, ask in ##windows
+2012-03-28T01:16:00.000Z	ActionParsnip	meerkats	try running:  nautilus -q   in an ALT+F2
+2012-03-28T01:16:00.000Z	ActionParsnip	meerkats	may be:  nautilus -k
+2012-03-28T01:17:00.000Z	meerkats	ActionParsnip	do updates work better if Insert the 11.10 usb stick while updating?
+2012-03-28T01:19:00.000Z	ActionParsnip	meerkats	if you add it as a source, possibly (assuming you are using Oneiric and the online versions are not later than the ones on the USB storage)
+2012-03-28T01:21:00.000Z	meerkats	ActionParsnip	whats the difference runnig nautilus -q from ALT-F2 and from the terminal?
+2012-03-29T03:44:00.000Z	ActionParsnip	meerkats	64bit helps with data intense operations like video encoding and such
+2012-03-29T03:45:00.000Z	meerkats	ActionParsnip	would 64bit mean any difference if I use yacy? its very resource consuming
+2012-03-29T03:48:00.000Z	ActionParsnip	meerkats	possibly (just websearched)
+2012-04-04T13:55:00.000Z	meerkats	ActionParsnip	/dev/sdb1
+2012-04-04T13:46:00.000Z	ActionParsnip	meerkats	gvfs does that
+2012-04-04T13:46:00.000Z	ActionParsnip	meerkats	then you are good to go
+2012-04-04T13:47:00.000Z	ActionParsnip	meerkats	 when you last unplugged the device did you safely eject it or just pull it out?
+2012-04-04T13:47:00.000Z	meerkats	ActionParsnip	no, because, even having that installed, external HDD dont mount, I cannot access it
+2012-04-04T13:47:00.000Z	ActionParsnip	meerkats	thats why then
+2012-04-04T13:48:00.000Z	ActionParsnip	meerkats	the safe remove feature is there for a reaon
+2012-04-04T13:48:00.000Z	meerkats	ActionParsnip	why now?
+2012-04-04T13:48:00.000Z	ActionParsnip	meerkats	if you don't safe remove, especially with FAT and NTFS, you will get issues in Linux
+2012-04-04T13:48:00.000Z	meerkats	ActionParsnip	this is an ext4
+2012-04-04T13:48:00.000Z	ActionParsnip	meerkats	the partition is marked as dirty, not unmounted clean
+2012-04-04T13:49:00.000Z	ActionParsnip	meerkats	I'd fsck the partition then, linux partitions not been unmounted gracefully isn't good either
+2012-04-04T13:49:00.000Z	ActionParsnip	meerkats	I suggest you manually mount it after an fsck, then safely unmount it and then eject the drive
+2012-04-04T13:50:00.000Z	ActionParsnip	meerkats	it wil be 'clean' then and gvfs will work]
+2012-04-04T13:53:00.000Z	meerkats	ActionParsnip	I can ls -l the HDD in terminal, is this concurrent with the gvfs idea you told me?
+2012-04-04T13:54:00.000Z	ActionParsnip	meerkats	you need to mount it first
+2012-04-04T13:54:00.000Z	ActionParsnip	meerkats	sudo mkdir /media/usb; sudo mount /dev/sdb1 /media/usb
+2012-04-04T13:55:00.000Z	ActionParsnip	meerkats	assuming sdb1 is the partition...

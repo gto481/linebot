@@ -1,0 +1,95 @@
+2008-04-12T09:03:00.000Z	flyback		ok chris
+2008-04-12T09:03:00.000Z	flyback		before I vent my skull to relieve the pressure
+2008-04-12T09:03:00.000Z	flyback		what's going on
+2008-04-12T09:04:00.000Z	chris42050707	flyback	i tried the  tail -f /var/log/syslog then insert a disk thing and it gave no response at all
+2008-04-12T09:04:00.000Z	flyback		uhh
+2008-04-12T09:04:00.000Z	flyback		what do you mean
+2008-04-12T09:04:00.000Z	flyback		what were you trying to do
+2008-04-12T09:04:00.000Z	chris42050707		im working with trying to get my asus dwr-1608p dvd-r-rw working here and having no luck
+2008-04-12T09:05:00.000Z	flyback		ah
+2008-04-12T09:06:00.000Z	flyback		what is it doing or not
+2008-04-12T09:06:00.000Z	chris42050707	flyback	see bios recognizes it as an optical device... but its not recognized by linux at all it seems
+2008-04-12T09:06:00.000Z	flyback		hmm
+2008-04-12T09:07:00.000Z	flyback		besides this is more fun than going back to shit more blood
+2008-04-12T09:08:00.000Z	chris42050707		lol flyback a really head scratcher huh? and to kick that in the but 7.10 isn't recognizing the CD-rom i installed it off of thats on the same ide channel
+2008-04-12T09:09:00.000Z	flyback		chris no I am just in a lot of pain right now and none of my pc's want to run tonight
+2008-04-12T09:09:00.000Z	flyback		hang on
+2008-04-12T09:09:00.000Z	chris42050707		Flyback im sorry dude hope all is good with ya...
+2008-04-12T09:10:00.000Z	flyback		it hasn
+2008-04-12T09:10:00.000Z	chris42050707		Flyback: my dads got hella back probs to  so i can sort of feel for ya
+2008-04-12T09:10:00.000Z	flyback		been right in 34 yrs
+2008-04-12T09:10:00.000Z	flyback		so I am used it
+2008-04-12T09:10:00.000Z	flyback		mine also
+2008-04-12T09:10:00.000Z	flyback		ugh
+2008-04-12T09:10:00.000Z	flyback		I can't get my browser yup
+2008-04-12T09:11:00.000Z	chris42050707	flyback	how many uncooperative computers do you have? are they networked?
+2008-04-12T09:11:00.000Z	flyback		lost my keyboard again
+2008-04-12T09:11:00.000Z	flyback		yeah and 3 right now
+2008-04-12T09:11:00.000Z	flyback		used to have around 30 or so in parts etc
+2008-04-12T09:12:00.000Z	chris42050707		Flyback: ouch  yeah your comps seem to be far worse off then mine lol
+2008-04-12T09:12:00.000Z	flyback		the new laptop works fine but I don't touch it except for work
+2008-04-12T09:12:00.000Z	chris42050707		lol
+2008-04-12T09:12:00.000Z	flyback		although  am using it to watch anime video streams right now :)
+2008-04-12T09:12:00.000Z	chris42050707		good choice haha
+2008-04-12T09:12:00.000Z	flyback		chris
+2008-04-12T09:12:00.000Z	flyback		dwr or drw
+2008-04-12T09:13:00.000Z	chris42050707		drw
+2008-04-12T09:14:00.000Z	flyback		hmm I don't see anything bugs affecting klinux with that driver
+2008-04-12T09:14:00.000Z	chris42050707		how would i go about it because i couldn't even found a driver for it compatible with linux
+2008-04-12T09:15:00.000Z	flyback		it sdhould just work
+2008-04-12T09:15:00.000Z	flyback		it appears
+2008-04-12T09:15:00.000Z	chris42050707	flyback	would the fact that i didn't have it hooked up during the install have something to do with it?
+2008-04-12T09:15:00.000Z	flyback		external ?
+2008-04-12T09:15:00.000Z	chris42050707		flyback:internal
+2008-04-12T09:16:00.000Z	flyback		sata or pata?
+2008-04-12T09:16:00.000Z	chris42050707		PATA
+2008-04-12T09:16:00.000Z	flyback		what chipset is the pata controller
+2008-04-12T09:16:00.000Z	chris42050707	flyback	is in normal for 7.10 to put ide in the scsi category?
+2008-04-12T09:16:00.000Z	flyback		with sata ide for sure
+2008-04-12T09:17:00.000Z	chris42050707		hmmmm good question the guts are out of a dimension 300 from dell.... its running a dual core p4
+2008-04-12T09:17:00.000Z	flyback		well find out
+2008-04-12T09:17:00.000Z	flyback	tritium	stfu
+2008-04-12T09:17:00.000Z	flyback		you are so damn unstable
+2008-04-12T09:17:00.000Z	chris42050707	flyback	hmmm thats got me scratching my head as welll because of tghe fact that on my last machine it showed ide as exactly that IDE lol
+2008-04-12T09:18:00.000Z	flyback		blow an electron out your ass
+2008-04-12T09:18:00.000Z	flyback		chris
+2008-04-12T09:18:00.000Z	flyback		lspci
+2008-04-12T09:18:00.000Z	flyback		andf mabye you need to try disabling ide-scsi emilation
+2008-04-12T09:18:00.000Z	flyback		if it's not working
+2008-04-12T09:19:00.000Z	chris42050707		hmmm how would i go about that?
+2008-04-12T09:19:00.000Z	flyback		option on boot
+2008-04-12T09:19:00.000Z	chris42050707		bios?
+2008-04-12T09:19:00.000Z	flyback		been a few yrs since I checked
+2008-04-12T09:19:00.000Z	flyback		no it's a linux thing
+2008-04-12T09:19:00.000Z	chris42050707		hmmmm aight let me run a google search on that!!
+2008-04-12T09:20:00.000Z	flyback		well first
+2008-04-12T09:20:00.000Z	flyback		run lspci
+2008-04-12T09:20:00.000Z	flyback		tell me who makes your ide controller
+2008-04-12T09:20:00.000Z	chris42050707		ok
+2008-04-12T09:20:00.000Z	chris42050707		one sec
+2008-04-12T09:21:00.000Z	chris42050707	flyback	 82865G/PE/P
+2008-04-12T09:21:00.000Z	chris42050707		intel
+2008-04-12T09:21:00.000Z	flyback		ok intel that';s fine
+2008-04-12T09:21:00.000Z	flyback		no promise stuff right?
+2008-04-12T09:22:00.000Z	chris42050707	flyback	hers right from the terminal00:1f.1 IDE interface: Intel Corporation 82801EB/ER (ICH5/ICH5R) IDE Controller (rev 02)
+2008-04-12T09:22:00.000Z	chris42050707		i guess so lol
+2008-04-12T09:22:00.000Z	flyback		yeah that's not th eproblem then
+2008-04-12T09:22:00.000Z	chris42050707		hmmmmm
+2008-04-12T09:23:00.000Z	flyback		so I would next time out about if it';s ide-scsi emulation that is the issue
+2008-04-12T09:23:00.000Z	chris42050707		ok cool i just googled that too hehe
+2008-04-12T09:24:00.000Z	chris42050707		you think if i turn that off my optical probs would solve themselves?
+2008-04-12T09:24:00.000Z	flyback		I dunno
+2008-04-12T09:24:00.000Z	chris42050707		ill give it a try
+2008-04-12T09:24:00.000Z	chris42050707		be back in a few
+2008-04-12T09:30:00.000Z	flyback		robert___1111:
+2008-04-12T09:30:00.000Z	flyback		that's normal
+2008-04-12T09:31:00.000Z	flyback		you need PAE support enabled kernel to get around that
+2008-04-12T09:31:00.000Z	flyback		or 64 bit mode if your cpu has it
+2008-04-12T09:31:00.000Z	chris42050707		hmmmm
+2008-04-12T09:31:00.000Z	chris42050707		i guess google ain't good for everything lol
+2008-04-12T09:32:00.000Z	chris42050707		anyone know how to turn off scsi emulation?   even google ain't got an answer for that lol
+2008-04-12T09:33:00.000Z	chris42050707		brb
+2008-04-12T09:33:00.000Z	chris42050707		#xubuntu
+2008-04-12T09:38:00.000Z	chris42050707		any one know about scsi emulation?
+2008-04-12T09:47:00.000Z	chris42050707		any body know how to disable scsi emulation?
+2008-04-12T09:55:00.000Z	chris42050707	flyback	you around?

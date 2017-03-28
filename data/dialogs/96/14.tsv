@@ -1,0 +1,96 @@
+2009-12-22T00:29:00.000Z	Diverdude		is it possible to create a mountpoint in /media/ folder+
+2009-12-22T00:29:00.000Z	Diverdude		?
+2009-12-22T00:29:00.000Z	Dr_Willis	Diverdude	 of course it is.. just make a directoruy. and edit fstab to mount whatever to that dir
+2010-01-08T02:33:00.000Z	Dr_Willis	Diverdude	 video card makers not releaseing specs - is the big issue
+2010-01-08T02:36:00.000Z	Diverdude	Dr_Willis	ok...so again it boils down to lack of drivers?
+2010-01-08T02:37:00.000Z	Dr_Willis	Diverdude	 it lack of proper support from the HW makers to allow proper drivers to be made.
+2010-01-08T02:38:00.000Z	Diverdude	Dr_Willis	is there at all any prospects of proper support from HW makers in the future?
+2010-01-08T02:38:00.000Z	Dr_Willis	Diverdude	 every so often nvidia and ati make promises...
+2010-01-08T02:39:00.000Z	Dr_Willis	Diverdude	 Intel seems to be giveing better support more and more
+2010-01-08T02:39:00.000Z	Diverdude	Dr_Willis	but they cannnot be held up to those promises?
+2010-01-10T09:35:00.000Z	Dr_Willis	Diverdude	 normally  you use some nice 'safe' place. like 'myworkarea' then see what it untars to.
+2010-01-10T09:36:00.000Z	Diverdude	Dr_Willis	ok, and when i have verified that it makes a nice folder a structure, then what it a good place to move it to?
+2010-01-10T09:38:00.000Z	Diverdude	Dr_Willis	?
+2010-01-10T09:38:00.000Z	Dr_Willis	Diverdude	 Huh?
+2010-01-10T09:38:00.000Z	Diverdude	Dr_Willis	ok, and when i have verified that it makes a nice folder a structure, then what it a good place to move it to?
+2010-01-10T09:39:00.000Z	Dr_Willis	Diverdude	 depends on what it is..
+2010-01-10T09:39:00.000Z	Diverdude	Dr_Willis	its a vpn-client
+2010-01-10T09:39:00.000Z	Dr_Willis	Diverdude	 if its source you compile it.. if its binary.. you can proberly run it from the extracted dir.
+2010-01-10T09:41:00.000Z	Diverdude	Dr_Willis	yeah....but not i just untared it in /home/myusername/vpnclient  I am sure there is a better place to put a program folder than that
+2010-01-10T09:41:00.000Z	Dr_Willis	Diverdude	 its all relative.. toss it in /opt/ if you really want to.
+2010-01-10T09:42:00.000Z	Diverdude	Dr_Willis	ok...what is /opt/ normally used for?
+2010-01-10T09:42:00.000Z	Dr_Willis	Diverdude	 junk you dident install via package manager  :)
+2010-01-10T09:42:00.000Z	Dr_Willis	Diverdude	 exactly what you are asking for/doing basically
+2010-01-10T09:42:00.000Z	Diverdude	Dr_Willis	ahh perfect hehe
+2010-01-30T12:24:00.000Z	Dr_Willis	Diverdude	 use the search feature of the package manager and see
+2010-02-21T14:04:00.000Z	Dr_Willis	Diverdude	 differnt tools using the same stuff underneeth.
+2010-02-21T14:06:00.000Z	Diverdude	Dr_Willis	ok...so it does not matter which one is used?
+2010-02-21T14:06:00.000Z	Dr_Willis	Diverdude	 dosent matter.
+2010-02-21T14:08:00.000Z	Diverdude	Dr_Willis	ok....and for my second question...isn't the idea of a packet manager that it should keep all programs installed using it, up to date automatically? I have on several occations found software which was very old in the packet manager
+2010-02-21T14:08:00.000Z	Dr_Willis	Diverdude	 it gets updates from the REPOSITORIES.. if the repos are not up to date.. then the programs wont be
+2010-02-21T14:09:00.000Z	Dr_Willis	Diverdude	  there are updated unoffical repos you could use. Ubuntu uses a 6 mo relese cycle. so theres always stuff out of date
+2010-02-21T14:09:00.000Z	Diverdude	Dr_Willis	mmm....but then the ubuntu repos are not up of date?
+2010-02-21T14:09:00.000Z	Dr_Willis	Diverdude	 6 mo release cycle.. see what bot says.
+2010-02-21T14:10:00.000Z	Dr_Willis	Diverdude	 every new release - everything is updated...  then it pauses for 6 mo...
+2010-02-21T14:11:00.000Z	Diverdude	Dr_Willis	okay
+2010-05-08T15:09:00.000Z	Dr_Willis	Diverdude	 gparted can 'see' ntfs partitions. but in order for it to actually do most things to them. You need the ntfs tools package installed.
+2010-05-16T12:07:00.000Z	Dr_Willis	Diverdude	 dont worry about the updates if they come in rpm.. perhaps they will have a deb  at the download site for the app you may want to use.
+2010-08-07T17:05:00.000Z	Dr_Willis	Diverdude	 find a dos version and use dosbox.
+2010-08-07T17:01:00.000Z	Dr_Willis	Diverdude	 i dident find it hard at all.
+2010-08-07T17:02:00.000Z	Diverdude	Dr_Willis	really? Did you make it work=?
+2010-08-07T17:02:00.000Z	Dr_Willis	Diverdude	 you need to find some amiga 'bios/rom' images from somewhere.  Ive been using UAE for years
+2010-08-07T17:02:00.000Z	Dr_Willis	Diverdude	 i still have several real amigas
+2010-08-07T17:03:00.000Z	Diverdude	Dr_Willis	where can i find these images, and what is it?
+2010-08-07T17:03:00.000Z	Dr_Willis	Diverdude	 They are not legazlly free... they are the kickstart/rom/bios images needed for the emulator to work. Then you need the actuial games/os disks images.
+2010-08-07T17:05:00.000Z	Diverdude	Dr_Willis	hmm i see...Actually all i want is to play the old Pirates! from 1990 made by micropose
+2010-08-07T17:06:00.000Z	Diverdude	Dr_Willis	does this game exist in DOS version?
+2010-08-07T17:07:00.000Z	Dr_Willis	Diverdude	 err.. yes.. and a C64 version i recall
+2010-08-07T17:07:00.000Z	Dr_Willis	Diverdude	 and they did a remake of it a few years back.
+2010-08-07T17:08:00.000Z	Dr_Willis	Diverdude	 of the old versions.. the amiga version was the best. :)  best gfx and music
+2010-08-07T17:08:00.000Z	Diverdude	Dr_Willis	ahh yes ok now i know what you mean...the problem is that the content of the games actually differ quite a lot
+2010-08-07T17:08:00.000Z	Dr_Willis	Diverdude	 for dos/amiga/c64 the game was vbasuicaly the same.
+2010-08-07T17:08:00.000Z	Diverdude	Dr_Willis	e.g. they this pirate gold once which actually turned out to be quite boring
+2010-10-10T11:59:00.000Z	Dr_Willis	Diverdude	 many of those work in wine. check the wine app database.
+2010-10-10T11:59:00.000Z	Dr_Willis	Diverdude	 if you like the Civilization games. check out 'freeciv' and 'freecol'   also.
+2010-10-10T12:00:00.000Z	Dr_Willis	Diverdude	 yes.
+2010-10-24T11:43:00.000Z	Dr_Willis	Diverdude	 install whatever mediscenter software you want to use..
+2010-10-24T11:44:00.000Z	Dr_Willis	Diverdude	 and let the clients access it.
+2010-10-24T11:44:00.000Z	Diverdude	Dr_Willis	Do you have any recommendations?
+2010-10-24T11:45:00.000Z	Dr_Willis	Diverdude	 it totallty depends on what you are doing specifically with the media.
+2010-10-24T11:45:00.000Z	Dr_Willis	Diverdude	 all my gizmos access the samba shares i make.
+2010-10-24T11:45:00.000Z	Diverdude	Dr_Willis	basically watching movies
+2010-10-24T11:46:00.000Z	Diverdude	Dr_Willis	i wanted to just be able to output the movies on the TV and have a nice browsing menu
+2010-10-24T11:46:00.000Z	Dr_Willis	Diverdude	   You mean you hook the PC to the tv?
+2010-10-24T11:46:00.000Z	Diverdude	Dr_Willis	yeah
+2010-10-24T11:46:00.000Z	Dr_Willis	Diverdude	  then thats not really a media 'server' its just a Home Theater PC setup.
+2010-10-24T11:47:00.000Z	Diverdude	Dr_Willis	ahh yeah ok
+2010-10-24T11:47:00.000Z	Dr_Willis	Diverdude	 theres dozens of options for that. XMBC. Moovidia,  Enna,  proberly more...
+2010-10-24T11:47:00.000Z	Diverdude	Dr_Willis	and they run on ubuntu server even though ubuntu server is terminal only?
+2010-10-24T11:48:00.000Z	Dr_Willis	Diverdude	 think logically about this.. You are hooking a SERVER up to a TV? and watch videos? that dosent make sence..
+2010-10-24T11:48:00.000Z	Dr_Willis	Diverdude	 server is text only.. so unless we got some confuseing going on.. you need somthing to display the videos to the actual tv.
+2010-10-24T11:48:00.000Z	Diverdude	Dr_Willis	i used to do that on my windows machine
+2010-10-24T11:49:00.000Z	Dr_Willis	Diverdude	 I think you got some terms confused.. windows was using the windows desktop and playing  in a video player.. same thing would apply to a linux box.
+2010-10-24T11:49:00.000Z	Dr_Willis	Diverdude	 you can use a Desktop install of ubuntu and XBMC and have a nice HTPC setup going rather quickly
+2010-10-24T11:49:00.000Z	Diverdude	Dr_Willis	yes ok that is true
+2010-10-26T16:49:00.000Z	Dr_Willis	Diverdude	 http://us.archive.ubuntu.com/ubuntu/pool/main/b/b43-fwcutter/
+2010-11-14T20:24:00.000Z	Dr_Willis	Diverdude	 see if there exists 'ppa' repositories for it.. or some deb files.
+2010-11-14T20:25:00.000Z	Diverdude	Dr_Willis	how do i search for a ppa repo with it?
+2010-11-20T15:45:00.000Z	Dr_Willis	Diverdude	 how are you upgradeing? You have a lot of extra entries in your sources listing. that sould be disabled for one thing.
+2010-11-21T16:12:00.000Z	Dr_Willis	Diverdude	 theres no default rules.. for the firewall that is installed by default.
+2010-11-21T16:12:00.000Z	Dr_Willis	Diverdude	 so basically its turned 'off'
+2010-11-21T16:13:00.000Z	Diverdude	Dr_Willis	right, and for ubuntu 10.04 desktop ed. ?
+2010-11-21T16:13:00.000Z	Dr_Willis	Diverdude	 been that way for ALL releases that ive ever used
+2010-11-25T19:00:00.000Z	Dr_Willis	Diverdude	 ive moved hd's with ubuntu installs from one laptop to antoher with very few issues.
+2011-01-12T19:10:00.000Z	Dr_Willis	Diverdude	 ffmpeg, and mencoder i think can do that. or front ends to those tools
+2011-01-12T19:11:00.000Z	Diverdude	Dr_Willis	i have ffmpeg, do i just do ffmpeg myfile.flv myfile.avi  ?   I tried that, and does not seem to really work
+2011-01-12T19:12:00.000Z	Dr_Willis	Diverdude	 i suggest checking the ffmpeg faq - i think it gives examples...
+2011-01-12T19:14:00.000Z	Diverdude	Dr_Willis	yeah, thx
+2011-05-08T13:58:00.000Z	Dr_Willis	Diverdude	 you did check the software center/package manager's search feature?
+2011-05-30T16:03:00.000Z	Dr_Willis	Diverdude	 the unrar command can do that
+2011-05-30T16:04:00.000Z	Diverdude	Dr_Willis	unrar jRating.rar did not do it
+2011-05-30T16:04:00.000Z	Dr_Willis	Diverdude	 check unrar --help and man unrar  - you need to tell it an option
+2011-05-30T16:07:00.000Z	Diverdude	Dr_Willis	x ?
+2011-05-30T16:07:00.000Z	Diverdude	Dr_Willis	maybe e?
+2011-05-30T16:07:00.000Z	Dr_Willis	Diverdude	 unrar --help will tell us :)
+2011-05-30T16:08:00.000Z	Diverdude	Dr_Willis	i tried -e but everything is just unzipped in the same folder
+2011-05-30T16:08:00.000Z	Dr_Willis	Diverdude	 perhaps tahts how x and e differ

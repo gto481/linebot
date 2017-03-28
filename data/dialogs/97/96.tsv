@@ -1,0 +1,97 @@
+2004-11-05T16:55:00.000Z	Hikaru79		Yay :)
+2004-11-05T16:55:00.000Z	Hikaru79		Running from ubuntu livecd
+2004-11-05T16:56:00.000Z	Hikaru79		OK, so if I'm having no display problems using the LiveCD then there's a good chance I won't have any if I actually install it, right?
+2004-11-05T16:57:00.000Z	Hikaru79		LOL
+2004-11-05T16:57:00.000Z	Hikaru79		So anyone can change the topic?
+2004-11-05T16:57:00.000Z	Hikaru79		OK, so if I'm having no display problems using the LiveCD then there's a good chance I won't have any if I actually install it, right?
+2004-11-05T16:58:00.000Z	Hikaru79		o_O;
+2004-11-05T16:58:00.000Z	Hikaru79		Oh...
+2004-11-05T16:58:00.000Z	Hikaru79		=S
+2004-11-05T16:58:00.000Z	Hikaru79		So there's no guarantee that the install CD will work well?
+2004-11-05T16:58:00.000Z	ogra	Hikaru79	its pretty likely
+2004-11-06T17:00:00.000Z	ogra	Hikaru79	its easy in ubuntu
+2004-11-06T17:00:00.000Z	ogra	Hikaru79	no need to compile ;)
+2004-11-08T08:03:00.000Z	ogra	Hikaru79	works both ways ;)
+2004-11-08T08:04:00.000Z	ogra	Hikaru79	nope
+2004-11-08T08:08:00.000Z	ogra	Hikaru79	yep, but the default on debian systems.... not essentially needed though
+2004-11-08T08:09:00.000Z	ogra	Hikaru79	.bin ???
+2004-11-08T08:10:00.000Z	ogra	Hikaru79	no deb... :(
+2004-11-10T14:47:00.000Z	Hikaru79	ogra	I'm trying to find the correct place to put the Java plugin link
+2004-11-10T14:49:00.000Z	ogra	Hikaru79	on debian this once reqired to be a link ....
+2004-11-10T14:50:00.000Z	ogra	Hikaru79	does java work at all ?
+2004-11-10T15:01:00.000Z	Hikaru79	ogra	>> Sorry, back
+2004-11-10T15:01:00.000Z	Hikaru79	ogra	yes it works
+2004-11-10T15:02:00.000Z	Hikaru79	ogra	any more ideas? =/
+2004-11-10T15:03:00.000Z	ogra	Hikaru79	probably the java wasn't compiled with the same version of gcc as firwfox....
+2004-11-10T15:04:00.000Z	ogra	Hikaru79	ask sun ? :/
+2004-11-10T15:04:00.000Z	ogra	Hikaru79	which java package did you use ?
+2004-11-10T15:04:00.000Z	Hikaru79	ogra	J2SE 5.0
+2004-11-10T15:05:00.000Z	ogra	Hikaru79	some of this could probably work better: http://wiki.ubuntulinux.org/Java
+2004-11-10T15:40:00.000Z	Hikaru79	ogra	I solved my java problem :) It seems I had simply made a type in the 'ln -s' command xD
+2004-11-10T15:40:00.000Z	ogra	Hikaru79	yay
+2004-11-11T09:57:00.000Z	ogra	Hikaru79	21st century ;)
+2004-12-09T15:16:00.000Z	ogra	Hikaru79	for web you need port 80
+2004-12-09T15:18:00.000Z	Hikaru79	ogra	I forwarded 80 too, but my Apache server works fine, so I didn't list that one.
+2004-12-09T15:20:00.000Z	ogra	Hikaru79	i missed the ftp://
+2004-12-09T15:20:00.000Z	ogra	Hikaru79	sorry
+2004-12-10T17:59:00.000Z	ogra	Hikaru79	is /home/hikaru79/.ICEauthority there ?
+2004-12-10T06:00:00.000Z	ogra	Hikaru79	and which permissions has it if yes ?
+2004-12-10T06:05:00.000Z	ogra	Hikaru79	nope it shouldnt...its knoppix
+2004-12-10T06:05:00.000Z	ogra	Hikaru79	remount with the rw option
+2004-12-10T06:06:00.000Z	ogra	Hikaru79	knoppix is supposed to mount ro by default
+2004-12-10T06:07:00.000Z	ogra	Hikaru79	remount it with rw option
+2004-12-10T06:09:00.000Z	ogra	Hikaru79	mount -o remount,rw dev/hda1 /mnt/hda1
+2004-12-10T06:11:00.000Z	ogra	Hikaru79	touch the file :)
+2004-12-10T06:14:00.000Z	ogra	Hikaru79	is the file there ?
+2004-12-10T06:15:00.000Z	ogra	Hikaru79	you will need to chown it to the dir owner.... dunno if that works from knoppix
+2004-12-10T06:16:00.000Z	ogra	Hikaru79	in ubuntu ....from the console
+2004-12-10T06:16:00.000Z	ogra	Hikaru79	if you are at the login screen, hit ctrl-alt-f1 to get there
+2004-12-10T06:17:00.000Z	ogra	Hikaru79	login, type: sudo chown $USER.$USER .ICEauthority
+2004-12-10T06:17:00.000Z	ogra	Hikaru79	hit ctrl-alt-f7 to get back to graph
+2004-12-10T06:18:00.000Z	ogra	Hikaru79	try echo $USER if you are logged in in ubuntu ;)
+2004-12-10T15:05:00.000Z	ogra	Hikaru79	ask its developer...he also wrote on the new one :)
+2004-12-10T15:28:00.000Z	ogra	Hikaru79	killall -HUP inetd is an option
+2004-12-10T15:28:00.000Z	ogra	Hikaru79	with sudo
+2004-12-10T15:28:00.000Z	ogra	Hikaru79	or sudo /etc/init.d/inetd restart
+2004-12-11T14:58:00.000Z	ogra	Hikaru79	i use totem-xine here
+2004-12-11T14:58:00.000Z	Hikaru79	ogra	tried it... when I first got Ubuntu
+2004-12-11T15:04:00.000Z	ogra	Hikaru79	the one for your arch ;)
+2004-12-11T15:06:00.000Z	ogra	Hikaru79	not necessarily
+2004-12-11T15:08:00.000Z	ogra	Hikaru79	if the file is not there it reads /etc/mplayer.conf .....
+2005-01-03T13:24:00.000Z	ogra	Hikaru79	already read this ? http://archive.ubuntulinux.org/ubuntu/dists/warty/main/installer-i386/current/doc/manual/en/index.html
+2005-01-03T13:28:00.000Z	Hikaru79	ogra	that guide doesn't help. All it says is that it's possible. it gives maybe two lines on the whole topic
+2005-01-03T13:29:00.000Z	ogra	Hikaru79	you need the debian bootfloppies i think.... and then the bootstrap method
+2005-01-03T13:41:00.000Z	ogra	Hikaru79	as i said, install from debian bootfloppies and use the bootstrap method
+2005-01-03T13:42:00.000Z	Hikaru79	ogra	I'm trying =/
+2005-01-03T13:48:00.000Z	Hikaru79	ogra	how would I use the Ubuntu debootstraps if I'm booting from debian floppies?
+2005-01-03T13:49:00.000Z	ogra	Hikaru79	install a debian base system (2 or 4 floppies) then use the described bootstrap method
+2005-01-03T13:50:00.000Z	ogra	Hikaru79	from the ubuntu installer doc
+2005-01-03T14:28:00.000Z	Hikaru79	ogra	it booted off the boot.img floppy just fine, but when I put in the root.img floppy, I get:
+2005-01-03T14:28:00.000Z	ogra	Hikaru79	so trust the mesage, take a new floppy
+2005-01-03T14:29:00.000Z	ogra	Hikaru79	best is to take a really _new_ one
+2005-01-03T14:34:00.000Z	Hikaru79	ogra	I changed floppies now it's a bigger error
+2005-01-03T14:35:00.000Z	ogra	Hikaru79	hmm, probably your floppy drive...
+2005-01-03T14:52:00.000Z	Hikaru79	ogra	I'm in the debian setup screen now
+2005-01-03T14:57:00.000Z	ogra	Hikaru79	http://www.ubuntulinux.org/wiki/InstallWithFloppiesHowto/view?searchterm=network%20install
+2005-01-03T15:42:00.000Z	ogra	Hikaru79	can you still ping ?
+2005-01-03T15:45:00.000Z	Hikaru79	ogra	I'm still in the installer. The part where you're configuring apt to download all the stuff.
+2005-01-03T15:46:00.000Z	ogra	Hikaru79	alt f2 brings you to a console
+2005-01-03T15:48:00.000Z	ogra	Hikaru79	217.115.139.139
+2005-01-03T15:48:00.000Z	Hikaru79	ogra	network is unreachable :(
+2005-01-03T15:48:00.000Z	ogra	Hikaru79	ifconfig
+2005-01-03T15:49:00.000Z	ogra	Hikaru79	is there an ip address ?
+2005-01-03T15:50:00.000Z	ogra	Hikaru79	something valid ?
+2005-01-03T15:50:00.000Z	Hikaru79	ogra	shall I type out its input on a pasteboard?
+2005-01-03T15:50:00.000Z	ogra	Hikaru79	put it in #flood
+2005-01-03T15:50:00.000Z	ogra	Hikaru79	no eth0 ?
+2005-01-03T15:51:00.000Z	ogra	Hikaru79	127.0.0.1 is only loopback
+2005-01-03T15:51:00.000Z	ogra	Hikaru79	and you had a working net setup ?
+2005-01-03T15:51:00.000Z	ogra	Hikaru79	weird
+2005-01-03T15:59:00.000Z	ogra	Hikaru79	why are you this sure the driver isnt loaded anymore ?
+2005-01-03T15:59:00.000Z	Hikaru79	ogra	because I can't ping anything?
+2005-01-03T16:00:00.000Z	ogra	Hikaru79	it probably is only the net connection dropped
+2005-01-03T16:01:00.000Z	ogra	Hikaru79	no idea... try a lsmod and see if there is something related to the NIC
+2005-01-03T16:11:00.000Z	ogra	Hikaru79	alt-f1
+2005-01-11T13:08:00.000Z	ogra	Hikaru79	which is important if you upgrade from one stable version to the next
+2005-01-11T13:09:00.000Z	Hikaru79	ogra	I see.
+2005-01-11T13:09:00.000Z	Hikaru79	ogra	scroll up a bit-- do you have any ideas about the issue I asked about?

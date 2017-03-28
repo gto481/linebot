@@ -1,0 +1,96 @@
+2005-11-17T15:51:00.000Z	sunshine82		hello
+2005-11-17T15:51:00.000Z	oskude	sunshine82	hmm, the error "make: *** /usr/src/linux-source-2.6.12/drivers/usb/media/usbvideo.c: Not a direc tory.  Stop." looks funny, it complains ...usbvideo.c is not a directory. correct. why it complains about that, dunno sry
+2005-11-17T15:52:00.000Z	oskude	sunshine82	have you tried "sudo make" (but i didnt say that if something goes wrong :)
+2005-11-17T15:53:00.000Z	sunshine82	oskude	ive fix that now that not the problem these are the right ones http://paste.ubuntulinux.nl/4443 http://paste.ubuntulinux.nl/4438
+2005-11-17T15:54:00.000Z	sunshine82	oskude	ive tried sudo make i get the same error i paste at thouse two up there
+2005-11-17T15:56:00.000Z	oskude	sunshine82	could be that something is not comapitble with the source code, like compiler, libraries, kernel...
+2005-11-17T15:57:00.000Z	sunshine82	oskude	but i dont know how to check that
+2005-11-17T15:58:00.000Z	oskude	sunshine82	what are you trying to compile ?
+2005-11-17T15:58:00.000Z	sunshine82	oskude	my webcam  this file keep comin up to be error one ake[2] : *** [/home/sunshine/nw802-2.4/nw8xx_jpgl.o]  Error 1#
+2005-11-17T15:59:00.000Z	sunshine82	oskude	ive tried lookin on the web and searchin for the file i found a copy and i gedit and replace itand that didnt work i put it back after
+2005-11-17T16:00:00.000Z	oskude	sunshine82	ist a usb webcam ?
+2005-11-17T16:00:00.000Z	sunshine82	oskude	yes
+2005-11-17T16:00:00.000Z	oskude	sunshine82	do you find it with "lsusb" ?
+2005-11-17T16:01:00.000Z	sunshine82	oskude	ill try that now
+2005-11-17T16:02:00.000Z	sunshine82	oskude	i believe it this one Bus 001 Device 005: ID 06be:d001 AME Optimedia Technology Co., Ltd
+2005-11-17T16:02:00.000Z	sunshine82	oskude	ame is the company name of the webcam
+2005-11-17T16:03:00.000Z	oskude	sunshine82	and where did you download your drivers for it ? (the thing you try to compile)
+2005-11-17T16:04:00.000Z	sunshine82	oskude	http://sourceforge.net/projects/nw802
+2005-11-17T16:06:00.000Z	oskude	sunshine82	OMG its a kernel-module, sry dont have any experience with those. and its from 2003, so dunno if it even works on the current breezy kernel...
+2005-11-17T16:07:00.000Z	sunshine82	oskude	last question what is omg
+2005-11-17T16:07:00.000Z	oskude	sunshine82	but you could test these instructions http://nw802.sourceforge.net/news.html (OMG = Oh My God:)
+2005-11-17T16:09:00.000Z	sunshine82	oskude	im there already tried doesnt work
+2005-11-17T16:09:00.000Z	oskude	sunshine82	"patch -p0 < patch-2.6" ?
+2005-11-17T16:09:00.000Z	oskude	sunshine82	did this work "patch -p0 < patch-2.6" ?
+2005-11-17T16:12:00.000Z	sunshine82	oskude	tried it it say patching file nw802.c
+2005-11-17T16:12:00.000Z	oskude	sunshine82	well sry, but i can hardly help you compile a kernel module and then use it... :(
+2005-11-17T16:13:00.000Z	sunshine82	oskude	make clean give me this rm -f usbvideo.h usbvideo.c *.o *.ko *~ *.mod.c
+2005-11-17T16:15:00.000Z	oskude	sunshine82	sry but kernel module compiling is out of my knowledge... (and VERY har to explain in IRC, i assume)
+2005-12-16T06:12:00.000Z	oskude	sunshine82	are you in Terminal ? Applications->Accessories->Terminal ?
+2005-12-16T06:13:00.000Z	sunshine82	oskude	im in terminal
+2005-12-16T06:14:00.000Z	oskude	sunshine82	what do you want to move and to where ?
+2005-12-16T06:14:00.000Z	sunshine82	oskude	do i put the one it from first or the one it goin to first eg. mv (where the files are)(where the files are goin)
+2005-12-16T06:14:00.000Z	oskude	sunshine82	mv (this) (there)
+2005-12-16T06:15:00.000Z	sunshine82	oskude	ok what the location of the desktop
+2005-12-16T06:15:00.000Z	oskude	sunshine82	"~/Desktop"
+2005-12-16T06:16:00.000Z	oskude	sunshine82	"~/" shows allways to your home directory
+2005-12-16T06:17:00.000Z	oskude	sunshine82	the complete path would be "/home/yourusername/Desktop/"
+2005-12-16T06:19:00.000Z	sunshine82	oskude	cool i got it move to the folder im just tryin to figure out how to fix the nex problem
+2005-12-16T06:21:00.000Z	sunshine82	oskude	i need to check if this is correct /lib/modules/`uname -r`/build
+2005-12-16T06:22:00.000Z	oskude	sunshine82	type "uname -r" in the terminal and it shows your kernel version
+2005-12-16T06:23:00.000Z	sunshine82	oskude	this is the make file http://paste.ubuntu-nl.org/5609
+2005-12-16T06:24:00.000Z	oskude	sunshine82	i would leave that line like it is and try...
+2005-12-16T06:24:00.000Z	sunshine82	oskude	i know my kernel that not the problem the problem is the driver for my webcam was created for 2.4
+2005-12-16T06:25:00.000Z	oskude	sunshine82	well, then you need kernel 2.4
+2005-12-16T06:25:00.000Z	sunshine82	oskude	i corrected the first two lines i made sure those two files where in the folder butr i need to figur outt the last line because im gettin a new error
+2005-12-16T06:26:00.000Z	oskude	sunshine82	i have build some programs and i have NEVER messed with makefiles....
+2005-12-16T06:26:00.000Z	oskude	sunshine82	do you have experience with makefiles, or compiling ?
+2005-12-16T06:27:00.000Z	sunshine82	oskude	there is a way for it to work on 2.6 the person who created the driver started to figure it out but he gave up i guess or ran out of money
+2005-12-16T06:27:00.000Z	sunshine82	oskude	ive got this far ok i just need to fix one more thing and it would work
+2005-12-16T06:27:00.000Z	oskude	sunshine82	well, i can only try to help track your errors, post on pastebin
+2005-12-16T06:30:00.000Z	sunshine82	oskude	this is the last error i got when i placed the files the make file need ed into the foder it was directed to http://paste.ubuntu-nl.org/5611
+2005-12-16T06:30:00.000Z	sunshine82	oskude	you see it now have an error created nw802.c
+2005-12-16T06:30:00.000Z	sunshine82	oskude	you see it now have an error created nw802.o
+2005-12-16T06:32:00.000Z	oskude	sunshine82	did you "patch" the 2.4 version of this "nw802" or are you trying to compile the "normal" 2.4 version ?
+2005-12-16T06:33:00.000Z	sunshine82	oskude	yea i patch the one that suppose to make it work on 2.6 but it doesnt
+2005-12-16T06:34:00.000Z	sunshine82	oskude	http://nw802.sourceforge.net/news.html
+2005-12-16T06:34:00.000Z	oskude	sunshine82	what compiler version (gcc) do they recommend in their readme or so (breezy standard is 4.0)
+2005-12-16T06:35:00.000Z	sunshine82	oskude	i dont understand the question
+2005-12-16T06:36:00.000Z	oskude	sunshine82	ill try to find, sec...
+2005-12-16T06:37:00.000Z	oskude	sunshine82	did you get that source code from CVS ?
+2005-12-16T06:38:00.000Z	sunshine82	oskude	yea
+2005-12-16T06:39:00.000Z	sunshine82	oskude	this is there readme file http://paste.ubuntu-nl.org/5615
+2005-12-16T06:39:00.000Z	oskude	sunshine82	well, CVS != stable... and its pretty old too
+2005-12-16T06:42:00.000Z	sunshine82	oskude	any ideas
+2005-12-16T06:43:00.000Z	oskude	sunshine82	its a long shot, but try gcc-3.4
+2005-12-16T06:45:00.000Z	sunshine82	oskude	ok it installed how do i use it
+2005-12-16T06:46:00.000Z	oskude	sunshine82	AFAIK, in best case "export CC=gcc-3.4" (or was it "export cc=gcc-3.4")
+2005-12-16T06:47:00.000Z	sunshine82	oskude	i type it into terminal it done what nex
+2005-12-16T06:47:00.000Z	oskude	sunshine82	then you try to build again
+2005-12-16T06:48:00.000Z	sunshine82	oskude	so hw far back do i go
+2005-12-16T06:48:00.000Z	sunshine82	oskude	do i http://nw802.sourceforge.net/news.html
+2005-12-16T06:48:00.000Z	sunshine82	oskude	again
+2005-12-16T06:49:00.000Z	oskude	sunshine82	"make clean" and "make" should be enough
+2005-12-16T06:50:00.000Z	sunshine82	oskude	well i did that make clean and make im gettin the same error the nw802.o is error
+2005-12-16T06:51:00.000Z	oskude	sunshine82	then you could try "Switch gcc link to gcc-3.4" in here http://pastebin.com/459335
+2005-12-16T06:52:00.000Z	sunshine82	oskude	the is something wrong with that file nw802.c do u want to have a look
+2005-12-16T06:52:00.000Z	sunshine82	oskude	how do i switch gcc link to gcc-34
+2005-12-16T06:52:00.000Z	oskude	sunshine82	OMG, i know like nothing about c :)
+2005-12-16T06:52:00.000Z	oskude	sunshine82	sudo mv /usr/bin/gcc /usr/bin/gcc.backup
+2005-12-16T06:52:00.000Z	oskude	sunshine82	sudo ln -s /usr/bin/gcc-3.4 /usr/bin/gcc
+2005-12-16T06:53:00.000Z	oskude	sunshine82	and the make all like it was "sudo mv /usr/bin/gcc.backup /usr/bin/gcc"
+2005-12-16T06:53:00.000Z	oskude	sunshine82	and to make all like it was "sudo mv /usr/bin/gcc.backup /usr/bin/gcc"
+2005-12-16T06:54:00.000Z	oskude	sunshine82	but before you undo that link, try "make clean" and "make" again
+2005-12-16T06:55:00.000Z	oskude	sunshine82	but if that doesnt help, i dont know more...
+2005-12-16T06:55:00.000Z	sunshine82	oskude	waht was that pastebin thing for
+2005-12-16T06:56:00.000Z	oskude	sunshine82	forget that
+2005-12-16T06:57:00.000Z	sunshine82	oskude	well iv done all the sudo commands u gave then make clean make it still doesnt work have i forget to do something
+2005-12-16T06:58:00.000Z	oskude	sunshine82	dunno, over my head then...
+2005-12-16T06:59:00.000Z	oskude	sunshine82	sec.... telephone...
+2005-12-16T07:04:00.000Z	oskude	sunshine82	ok, im bak
+2005-12-16T07:05:00.000Z	oskude	sunshine82	did you get the same error as before the new link of gcc ?
+2005-12-16T07:09:00.000Z	oskude	sunshine82	you also know that the source code is 17months old ?
+2005-12-16T07:14:00.000Z	sunshine82	oskude	i know
+2005-12-16T07:15:00.000Z	oskude	sunshine82	you could ask on the mailing list of the program
+2005-12-16T07:16:00.000Z	oskude	sunshine82	dont forget to do "sudo mv /usr/bin/gcc.backup /usr/bin/gcc"
+2005-12-16T07:16:00.000Z	oskude	sunshine82	so that all is like it was...

@@ -1,0 +1,97 @@
+2007-04-20T10:14:00.000Z	kahrytan		Hello
+2007-04-20T10:14:00.000Z	kahrytan		Is the repo servers back to normal?
+2007-04-20T10:15:00.000Z	LjL	kahrytan	not quite
+2007-04-20T10:15:00.000Z	LjL	kahrytan	waiting a little won't hurt. some of the mirrors are fine, though
+2007-09-27T13:26:00.000Z	LjL	kahrytan	find out where you got the package from
+2007-09-27T13:33:00.000Z	kahrytan	LjL	The package is broken from my last source.
+2007-09-27T13:33:00.000Z	LjL	kahrytan	we cannot know where you got the package from, only you can know that... but perhaps if you pastebin the output of "apt-cache show <packagename>", we can find out
+2007-09-27T13:34:00.000Z	kahrytan	LjL	http://ubuntuforums.org/showthread.php?p=2342997
+2007-09-27T13:36:00.000Z	kahrytan	LjL	http://paste.ubuntu-nl.org/38840/
+2007-09-27T13:37:00.000Z	kahrytan	LjL	 package isnt in the cache since it wasnt installed via apt-get
+2007-09-27T13:38:00.000Z	LjL	kahrytan	yuk, that's the output of what exactly? it looks weird. hmm, it should be in the cache anyway -- packages installed with dpkg end up listed in the cache too
+2007-09-27T13:38:00.000Z	kahrytan	LjL	it's apt-get cache
+2007-09-27T13:39:00.000Z	LjL	kahrytan	you mean apt-cache show?
+2007-09-27T13:39:00.000Z	kahrytan	LjL	yes
+2007-09-27T13:39:00.000Z	kahrytan	LjL	and tell people not ot use tuxfamily.org repos.
+2007-09-27T13:40:00.000Z	LjL	kahrytan	well it's a weird output, for starters i don't understand why *many* packages are listed, and you can see that there is lines that appear cut out
+2007-09-27T13:40:00.000Z	LjL	kahrytan	i generally tend to tell people to not use anything but the official repositories - but i'll keep that particular one in mind
+2007-09-27T13:40:00.000Z	kahrytan	LjL	I will post to the posting so admin will mark is as broken
+2007-09-27T13:41:00.000Z	LjL	kahrytan	good, meanwhile try fixing it by installing a newer version of it from somewhere else
+2007-09-27T13:41:00.000Z	kahrytan	LjL	I cant find it
+2007-09-27T13:43:00.000Z	LjL	kahrytan	try the one that nrx gave you
+2007-09-27T13:44:00.000Z	kahrytan	LjL	also broken
+2007-09-27T13:46:00.000Z	LjL	kahrytan	"also broken" as in "gives the same error"?
+2007-09-27T13:47:00.000Z	kahrytan	LjL	it says the deb is corrupted
+2007-09-27T13:48:00.000Z	LjL	kahrytan	hmm. let me check it out (hope i don't break my own apt too..:)
+2007-09-27T13:51:00.000Z	kahrytan	LjL	any help?
+2007-09-27T13:52:00.000Z	kahrytan	LjL	original file is giving the same error. it is corrupt. but it didnt before
+2007-09-27T13:53:00.000Z	kahrytan	LjL	 Any deb I try to open with dpkg gives off corrupted package error.
+2007-09-27T13:53:00.000Z	kahrytan	LjL	even ones from official repo
+2007-09-27T13:54:00.000Z	kahrytan	LjL	dpkg itself is broken.
+2007-09-27T13:54:00.000Z	LjL	kahrytan	[nrx] : it installed fine for me. kahrytan, i really fear that your problems are much more widespread than just that package.  i want to be very sure of one thing: is the stuff you pasted the *exact* output of the command  apt-cache show xwinwrap ?
+2007-09-27T13:55:00.000Z	kahrytan	LjL	 is is exact. minus actually command entered.
+2007-09-27T13:56:00.000Z	kahrytan	LjL	I know. It is affecting ANY package from official repository.
+2007-09-27T13:57:00.000Z	LjL	kahrytan	try "sudo apt-cache gencaches"
+2007-09-27T13:57:00.000Z	kahrytan	LjL	 and then what
+2007-09-27T13:57:00.000Z	LjL	kahrytan	and then see if by any chances, that fixes your apt-get
+2007-09-27T13:58:00.000Z	kahrytan	LjL	nope. no fix
+2007-09-27T13:59:00.000Z	kahrytan	LjL	frm synaptic; Internal error opening cache (1).
+2007-09-27T14:02:00.000Z	LjL	kahrytan	i'm not dead, i'm looking if someone else has a hint. i admit i'm quite clueless myself.
+2007-09-27T14:04:00.000Z	kahrytan	LjL	 how about cleaning the cache manually?
+2007-09-27T14:04:00.000Z	kahrytan	LjL	 or force it forget about it
+2007-09-27T14:05:00.000Z	LjL	kahrytan	try "sudo cp /var/lib/dpkg/status /var/lib/dpkg/status-corrupted ; sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status"
+2007-09-27T14:06:00.000Z	kahrytan	LjL	and to test it?
+2007-09-27T14:06:00.000Z	LjL	kahrytan	apt-get install anything (avoid xwinwrap though)
+2007-09-27T14:06:00.000Z	kahrytan	LjL	still broken. used compiz from official.
+2007-09-27T14:07:00.000Z	kahrytan	LjL	why not just remove status all together?
+2007-09-27T14:08:00.000Z	LjL	kahrytan	because then your APT would have no idea what you have installed and what you don't, i am afraid
+2007-09-27T14:08:00.000Z	kahrytan	LjL	and there isnt way to get package list now?
+2007-09-27T14:08:00.000Z	LjL	kahrytan	you could try also "sudo dpkg --clear-avail"
+2007-09-27T14:09:00.000Z	kahrytan	LjL	 is there a way to get package list?
+2007-09-27T14:10:00.000Z	LjL	kahrytan	not really, it *is* in the status file... i assume that "dpkg --get-selections" doesn't work, either?
+2007-09-27T14:10:00.000Z	kahrytan	LjL	make a list then reinstall them all after clearing status?
+2007-09-27T14:11:00.000Z	kahrytan	LjL	 that worked
+2007-09-27T14:12:00.000Z	kahrytan	LjL	xwinwrap     deinstall
+2007-09-27T14:12:00.000Z	LjL	kahrytan	do a "dpkg --get-selections | wc -l", what's the number it gives?
+2007-09-27T14:13:00.000Z	kahrytan	LjL	1515
+2007-09-27T14:14:00.000Z	kahrytan	LjL	 this might be something developers might want to make a fix for.
+2007-09-27T14:14:00.000Z	LjL	kahrytan	could you send me your status file by email, or something? i might be able to fix it by hand perhaps
+2007-09-27T14:15:00.000Z	kahrytan	LjL	 it's 1.4mb
+2007-09-27T14:15:00.000Z	kahrytan	LjL	what if I just remove xwinwrap from status file?
+2007-09-27T14:16:00.000Z	LjL	kahrytan	compress it.     sudo cp /var/lib/dpkg/status ~/status-file   ;   gzip status-file   ; ls -l status-file
+2007-09-27T14:16:00.000Z	LjL	kahrytan	you could but i think there's also other entries that are broken... i'd like to see it first
+2007-09-27T14:17:00.000Z	LjL	kahrytan	make the last command "ls -l status-file.gz"
+2007-09-27T14:19:00.000Z	kahrytan	LjL	 no need
+2007-09-27T14:19:00.000Z	kahrytan	LjL	I removed xwinwrap manually after backup. works now
+2007-09-27T14:20:00.000Z	LjL	kahrytan	"removed" it from the status file, you mean i suppose?
+2007-09-27T14:20:00.000Z	kahrytan	LjL	 yes.
+2007-09-27T14:20:00.000Z	LjL	kahrytan	cool. yet try installing and removing a couple of packages (from the repositories) to make sure it's all sane
+2007-09-27T14:21:00.000Z	kahrytan	LjL	I checked for updates
+2007-09-27T14:21:00.000Z	LjL	kahrytan	i think you should also try installing and removing a package at least
+2007-09-27T14:23:00.000Z	kahrytan	LjL	I used add/remove on xchat-gnome
+2007-09-27T14:23:00.000Z	kahrytan	LjL	 remember what I did
+2007-09-27T14:25:00.000Z	LjL	kahrytan	well i hope your status file is sane enough now. i was wondering, have you had automatix installed? or have you recently turned off your computer forcibly while APT was running, or killed it? there should be a reason why a status file gets corrupted like that
+2007-09-27T14:25:00.000Z	kahrytan	LjL	 moved the deb file when it was installinh?
+2007-09-27T14:26:00.000Z	LjL	kahrytan	uhg, that sounds like a bad thing to do :P still perhaps not enough to break status...
+2007-09-27T14:27:00.000Z	kahrytan	LjL	thats only thing I did.
+2007-09-27T14:27:00.000Z	kahrytan	LjL	I was so scared I might have to reinstall ubuntu
+2007-09-27T14:28:00.000Z	kahrytan	LjL	You know how to make a reinstall script from package list?
+2007-09-27T14:29:00.000Z	kahrytan	LjL	I tempted fate with the original deb. and installed it successfully
+2007-09-27T14:31:00.000Z	LjL	kahrytan	if you have the package list from dpkg --get-selections, reinstalling them is trivial. problem is that if status is corrupt, that won't much help
+2007-09-27T14:31:00.000Z	LjL	kahrytan	and also see http://www.outflux.net/blog/archives/2007/09/26/stupid-dpkg-tricks-when-fighting-xfs-bugs/ on the topic
+2007-09-27T14:32:00.000Z	LjL	kahrytan	but anyway remember that the status file should really never ever be touched unless you're 100% sure the problem lies in there -- i made sure by consulting by others, before even proposing you
+2007-09-27T14:32:00.000Z	kahrytan	LjL	what 'others'?
+2007-09-27T14:32:00.000Z	kahrytan	LjL	I wanted clone thing for oct 18th :)
+2007-09-27T14:33:00.000Z	LjL	kahrytan	other people who i trust to have some knowledge... won't tell you the nicknames, sorry, i'd feel like being rude to them
+2007-09-27T14:33:00.000Z	kahrytan	LjL	Thats okay. thanks for the help.
+2007-11-05T07:58:00.000Z	kahrytan	LjL	doesnt synaptic do that already?
+2007-11-05T07:59:00.000Z	LjL	kahrytan	i have no idea, i'm on KDE
+2007-11-05T07:59:00.000Z	kahrytan	LjL	 It shows how much space is going to be used.
+2007-11-05T08:00:00.000Z	LjL	kahrytan	apt-get does that too, but it's based on *what you already have on your system*. if you want to just simulate possibilities (like, "let's see how much space xauth takes if i only have ubuntu-minimal installed"), you can use that site and input "xauth" and "ubuntu-minimal"
+2007-11-05T08:00:00.000Z	kahrytan	LjL	 what if type stuff eh?
+2007-11-05T08:01:00.000Z	LjL	kahrytan	hm?
+2007-11-05T08:04:00.000Z	kahrytan	LjL	 Now I get your nick ... :-P
+2007-11-05T08:04:00.000Z	LjL	kahrytan	err, a /whois ljl would have worked too :P
+2007-11-05T08:05:00.000Z	kahrytan	LjL	 never dawned on me until now
+2007-11-05T08:06:00.000Z	kahrytan	LjL	 Did you know Human-Theme package doesnt install gtk theme? just metacity theme
+2007-12-12T00:29:00.000Z	LjL	kahrytan	and?

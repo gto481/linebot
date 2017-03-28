@@ -1,0 +1,96 @@
+2009-07-10T10:41:00.000Z	Maximo		 http://pastie.org/541001 <----can any1 tell me how do I add this packages to my repository?
+2009-07-10T10:41:00.000Z	Maximo		thanks
+2009-07-10T10:42:00.000Z	indus	Maximo	copy paste those lines into synaptic
+2009-07-10T10:43:00.000Z	indus	Maximo	under repositories
+2009-07-10T10:43:00.000Z	Maximo	indus	okay
+2009-07-10T10:46:00.000Z	indus	Maximo	you need to also add the key to the repos,which i will tell you how to
+2009-07-10T10:55:00.000Z	indus	Maximo	first reload the repositories
+2009-07-10T10:56:00.000Z	indus	Maximo	yes its a message, paste it
+2009-07-10T10:57:00.000Z	Maximo	indus	I pasted it in there then pressed ok ....then 'reload' then error given ...then closed window
+2009-07-10T10:57:00.000Z	indus	Maximo	i want to see that error
+2009-07-10T10:57:00.000Z	Maximo	indus	oh lol
+2009-07-10T10:58:00.000Z	Maximo	indus	okay is late now don't know how to get it back (error message)
+2009-07-10T10:58:00.000Z	indus	Maximo	just reload again
+2009-07-10T11:03:00.000Z	indus	Maximo	hello?
+2009-07-10T11:06:00.000Z	indus	Maximo	can u paste again i didnt see it'
+2009-07-10T11:07:00.000Z	indus	Maximo	no no not that one
+2009-07-10T11:07:00.000Z	Maximo	indus	you gave me that pastein #
+2009-07-10T11:07:00.000Z	indus	Maximo	i want you to paste the error you get
+2009-07-10T11:07:00.000Z	Maximo	indus	okay
+2009-07-10T11:09:00.000Z	indus	Maximo	fast
+2009-07-10T11:10:00.000Z	Maximo	indus	http://pastebin.com/m390f33a4
+2009-07-10T11:11:00.000Z	indus	Maximo	in terminal type this    gpg  --keyserver  subkeys.pgp.net --recv-keys 9220067F
+2009-07-10T11:12:00.000Z	Maximo	indus	okay
+2009-07-10T11:12:00.000Z	indus	Maximo	just copy paste it
+2009-07-10T11:15:00.000Z	indus	Maximo	sorry wrong command
+2009-07-10T11:15:00.000Z	indus	Maximo	in terminal type this    gpg  --keyserver  keyserver.ubuntu.com  --recv-keys 9220067F
+2009-07-10T11:15:00.000Z	Maximo	indus	http://pastebin.ca/1490444
+2009-07-10T11:16:00.000Z	indus	Maximo	wait
+2009-07-10T11:16:00.000Z	indus	Maximo	aah keys created so type this sudo apt-get add -
+2009-07-10T11:18:00.000Z	indus	Maximo	first one was correct, you must have got  a message keys imported
+2009-07-10T11:18:00.000Z	indus	Maximo	just type sudo apt-get add -
+2009-07-10T11:18:00.000Z	Maximo	indus	http://pastebin.ca/1490449
+2009-07-10T11:19:00.000Z	indus	Maximo	now reload repos
+2009-07-10T11:19:00.000Z	indus	Maximo	ya its fine all is good
+2009-07-10T11:19:00.000Z	Maximo	indus	let me reload it
+2009-07-10T11:20:00.000Z	indus	Maximo	working now?
+2009-07-10T11:21:00.000Z	Maximo	indus	is still giving same erro unless you want to do something different
+2009-07-10T11:22:00.000Z	indus	Maximo	did u type command sudo apt-get add -
+2009-07-10T11:22:00.000Z	Maximo	indus	just did reload ....and nothing
+2009-07-10T11:22:00.000Z	indus	Maximo	wait
+2009-07-10T11:23:00.000Z	Maximo	indus	invalid operation
+2009-07-10T11:23:00.000Z	indus	Maximo	1 sec
+2009-07-10T11:24:00.000Z	indus	Maximo	sorry type this sudo apt-key add -
+2009-07-10T11:25:00.000Z	indus	Maximo	sorry wrong
+2009-07-10T11:26:00.000Z	indus	Maximo	gpg --export --armor 1135D466 | sudo apt-key add -
+2009-07-10T11:26:00.000Z	indus	Maximo	copy paste it , will work now
+2009-07-10T11:26:00.000Z	Maximo	indus	still wrong
+2009-07-10T11:26:00.000Z	indus	Maximo	yiks
+2009-07-10T11:27:00.000Z	indus	Maximo	gpg --export --armor 9220067F | sudo apt-key add -
+2009-07-10T11:27:00.000Z	indus	Maximo	guaranteed to work now
+2009-07-10T11:28:00.000Z	Maximo	indus	it's said OK
+2009-07-10T11:28:00.000Z	indus	Maximo	i know :) now reload
+2009-07-10T11:29:00.000Z	Maximo	indus	no error went okay
+2009-07-10T11:29:00.000Z	Maximo	indus	do I mark all upgrades?
+2009-07-10T11:29:00.000Z	indus	Maximo	well now your new packages will appear in synaptic what else
+2009-07-10T11:30:00.000Z	Maximo	indus	now will have to follow all instructions you gave me before...
+2009-07-10T11:31:00.000Z	indus	Maximo	no i tell you easy method for future
+2009-07-10T11:32:00.000Z	indus	Maximo	when you add a new repository, and reload, you get a message with a long ID ( numbers and alphabet)s , copy the last eight digits in a txt file
+2009-07-10T11:33:00.000Z	indus	Maximo	the very first message you got after adding the repo
+2009-07-10T11:33:00.000Z	indus	Maximo	then from synaptic>repositories>keys> import key file and point it to the file and it will import the keys
+2009-07-10T11:33:00.000Z	Maximo	indus	 http://pastie.org/541001
+2009-07-10T11:35:00.000Z	indus	Maximo	what is this paste? i cant open
+2009-07-10T11:35:00.000Z	Maximo	indus	really?
+2009-07-10T11:35:00.000Z	indus	Maximo	what is it about? isnt it working now?
+2009-07-10T11:36:00.000Z	indus	Maximo	my net went down
+2009-07-10T11:36:00.000Z	Maximo	indus	this ---->  http://pastie.org/541001
+2009-07-10T11:36:00.000Z	indus	Maximo	what is it about
+2009-07-10T11:37:00.000Z	Maximo	indus	is just to fix my audio playback  from very begining
+2009-07-10T11:37:00.000Z	indus	Maximo	the new repository you added with give you some extra packages which you can install
+2009-07-10T11:38:00.000Z	indus	Maximo	ya follow those instructions from the original paste you sent
+2009-07-10T11:38:00.000Z	Maximo	indus	question is do I mark all for installations or not?
+2009-07-10T11:38:00.000Z	Maximo	indus	okay
+2009-07-10T11:38:00.000Z	indus	Maximo	ya why not
+2009-07-10T11:38:00.000Z	indus	Maximo	but it will mark all repos for upgrade
+2009-07-10T11:38:00.000Z	Maximo	indus	thanks for you patience ...you hear me....thakns
+2009-07-10T11:39:00.000Z	indus	Maximo	which is fine,you should always update your system
+2009-07-10T11:39:00.000Z	indus	Maximo	you are welcome
+2009-07-10T11:39:00.000Z	Maximo	indus	always do
+2009-07-10T11:39:00.000Z	indus	Maximo	what problem u have with sound?
+2009-07-10T11:42:00.000Z	Maximo	indus	problem I was having with audio playback with skype: could not hear anything with or without mic...or even if I were to make a call.....
+2009-07-10T11:45:00.000Z	Maximo	indus	will reboot and chck for changes in my test pc....will right back
+2009-07-10T11:54:00.000Z	Maximo	indus	thanks alot all my stations are back with nice sound (but did not try skype yet)...good start
+2009-07-10T12:20:00.000Z	Maximo	indus	you back
+2009-07-10T12:20:00.000Z	indus	Maximo	sorry got disconnected
+2009-07-10T12:20:00.000Z	Maximo	indus	listen....I need a plugin for my ubuntu9.04...please4
+2009-07-10T12:20:00.000Z	Maximo	indus	which works nicely with ubuntu 9:04
+2009-07-10T12:20:00.000Z	indus	Maximo	what plugin
+2009-07-10T12:21:00.000Z	Maximo	indus	some stations in order to listened asking for plugin
+2009-07-10T12:21:00.000Z	indus	Maximo	radio? which player are you using?
+2009-07-10T12:22:00.000Z	Maximo	indus	you thing with the package installed could missed that one
+2009-07-10T12:22:00.000Z	Maximo	indus	totem
+2009-07-10T12:23:00.000Z	Maximo	indus	just gonna look in the synaptic Package Manager for one
+2009-07-10T12:23:00.000Z	indus	Maximo	just install gstreamer extra plugins
+2009-07-10T12:24:00.000Z	Maximo	indus	through a way terminal, correct?
+2009-07-10T12:24:00.000Z	indus	Maximo	no use add/remove search for gstreamer
+2009-07-10T12:25:00.000Z	Maximo	indus	okay

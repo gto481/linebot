@@ -1,0 +1,99 @@
+2008-04-03T18:41:00.000Z	ChaosTheory		activeobser: with sudo. =D
+2008-04-03T18:41:00.000Z	ChaosTheory		hischild: Hi.
+2008-04-03T18:41:00.000Z	hischild	ChaosTheory	good day
+2008-04-03T18:41:00.000Z	ChaosTheory	hischild	Your command was ./sound .ch, yes?
+2008-04-03T18:41:00.000Z	hischild	ChaosTheory	it was ./sound.sh from the folder where you saved it.
+2008-04-03T18:42:00.000Z	ChaosTheory	hischild	Right. Where did I say it? =D
+2008-04-03T18:42:00.000Z	hischild	ChaosTheory	i gave you a link to a pastebin where i put the script. You copied it to a new script and made it executable, and then ran it.
+2008-04-03T18:43:00.000Z	ChaosTheory	hischild	Okay, I have the sound .sh in gedit.
+2008-04-03T18:43:00.000Z	ChaosTheory	hischild	Sorry.
+2008-04-03T18:44:00.000Z	hischild	ChaosTheory	ok, then save it and go in console to the folder you saved it. Then type chmod +x sound.sh and then run it.
+2008-04-03T18:45:00.000Z	ChaosTheory	hischild	No output?
+2008-04-03T18:46:00.000Z	hischild	ChaosTheory	chmod will give you no output. The script should give you a lot of output.
+2008-04-03T18:47:00.000Z	ChaosTheory	hischild	How do I execute it?
+2008-04-03T18:47:00.000Z	hischild	ChaosTheory	type ./sound
+2008-04-03T18:47:00.000Z	ChaosTheory	hischild	Oh, there was an extra space in there.
+2008-04-03T18:47:00.000Z	ChaosTheory	hischild	-_- sorry.
+2008-04-03T18:47:00.000Z	hischild	ChaosTheory	use tab completion :-)
+2008-04-03T18:50:00.000Z	ChaosTheory	hischild	Wow. A *lot* of output. =P
+2008-04-03T18:50:00.000Z	hischild	ChaosTheory	that's what i said =) can you pastebin it all please?
+2008-04-03T18:50:00.000Z	ChaosTheory	hischild	How do I know if it worked?
+2008-04-03T18:51:00.000Z	ChaosTheory	hischild	One second.
+2008-04-03T18:51:00.000Z	ChaosTheory	hischild	I can't see all of it in terminal. . .
+2008-04-03T18:51:00.000Z	hischild	ChaosTheory	scroll up?
+2008-04-03T18:51:00.000Z	hischild	ChaosTheory	otherwise just pastebin what you can see
+2008-04-03T18:52:00.000Z	ChaosTheory	hischild	It doesn't show all of it.
+2008-04-03T18:52:00.000Z	ChaosTheory	hischild	Okay.
+2008-04-03T18:53:00.000Z	ChaosTheory	hischild	http://pastebin.com/d757a8de
+2008-04-03T18:54:00.000Z	hischild	ChaosTheory	let's do it by hand then ...
+2008-04-03T18:54:00.000Z	hischild	ChaosTheory	hischild ;-) and the compiling of your sound.
+2008-04-03T18:55:00.000Z	ChaosTheory	hischild	=D
+2008-04-03T18:55:00.000Z	ChaosTheory	hischild	okay. I don't know what that means. Let's do it. =D
+2008-04-03T18:55:00.000Z	hischild	ChaosTheory	do you think you can make any sense of this guide ==> https://help.ubuntu.com/community/HdaIntelSoundHowto
+2008-04-03T18:55:00.000Z	ChaosTheory	hischild	nope. =D
+2008-04-03T18:56:00.000Z	hischild	ChaosTheory	lol ... ok well it requires a lot of reading ..
+2008-04-03T18:56:00.000Z	hischild	ChaosTheory	just do as it tells you exactly and you'll be fine. I'll be here about one more hour to answer questions.
+2008-04-03T18:57:00.000Z	ChaosTheory	hischild	okay.
+2008-04-03T18:58:00.000Z	ChaosTheory	hischild	okay, the first step worked.
+2008-04-03T18:59:00.000Z	ChaosTheory	hischild	how do I install my "kernel headers?"
+2008-04-03T18:59:00.000Z	hischild	ChaosTheory	use the command it gives you
+2008-04-03T18:59:00.000Z	ChaosTheory	hischild	it says install kernel headers twice. . .
+2008-04-03T18:59:00.000Z	hischild	ChaosTheory	 linux-headers-`uname -r` part of that commands is your kernel headers.
+2008-04-03T18:59:00.000Z	ChaosTheory	hischild	okay, I did that.
+2008-04-03T18:59:00.000Z	hischild	ChaosTheory	useful ... once is enough
+2008-04-03T19:00:00.000Z	ChaosTheory	hischild	oh, okay.
+2008-04-03T19:01:00.000Z	ChaosTheory	hischild	which one is the newest driver?
+2008-04-03T19:01:00.000Z	ChaosTheory	hischild	ftp://ftp.alsa-project.org/pub/driver/
+2008-04-03T19:02:00.000Z	hischild	ChaosTheory	the one with the highest version number, i think 1.0.16rc1
+2008-04-03T19:02:00.000Z	ChaosTheory	hischild	it seems like "File: alsa-driver-1.0.9rc4a.tar.bz2" is the highest one?
+2008-04-03T19:03:00.000Z	hischild	ChaosTheory	imo 1.0.16 is higher then 1.0.9 :-) look a bit up, it's between 0.2 and 0.1
+2008-04-03T19:03:00.000Z	ChaosTheory	hischild	okay. =D
+2008-04-03T19:04:00.000Z	ChaosTheory	hischild	there's an rc1 and an rc2?
+2008-04-03T19:05:00.000Z	hischild	ChaosTheory	i prefer not to mix rc versions, so i'd stick with rc1.
+2008-04-03T19:05:00.000Z	hischild	ChaosTheory	one of those files doesn't have a rc2
+2008-04-03T19:05:00.000Z	ChaosTheory	hischild	oh, okay.
+2008-04-03T19:13:00.000Z	ChaosTheory	hischild	I got an error at sudo make.
+2008-04-03T19:14:00.000Z	hischild	ChaosTheory	what error?
+2008-04-03T19:14:00.000Z	ChaosTheory	hischild	http://pastebin.com/d2d76197
+2008-04-03T19:14:00.000Z	ChaosTheory	hischild	that's what came up at the end.
+2008-04-03T19:14:00.000Z	ChaosTheory	hischild	everything else seems to be okay?
+2008-04-03T19:15:00.000Z	hischild	ChaosTheory	i need more then just this part i'm afraid ... can you be more specific? like copy the entire output from what  you can see?
+2008-04-03T19:16:00.000Z	ChaosTheory	hischild	http://pastebin.com/d6b2d203b
+2008-04-03T19:17:00.000Z	ChaosTheory	hischild	I think that was "sudo make install," maybe.
+2008-04-03T19:18:00.000Z	hischild	ChaosTheory	this might sound stupid ... but please remove the /usr/src/alsa* directories and then do it again ... it might be that 2 versions got switched through each other ..
+2008-04-03T19:18:00.000Z	ChaosTheory	hischild	how?
+2008-04-03T19:18:00.000Z	ChaosTheory	hischild	just move out of those directories?
+2008-04-03T19:18:00.000Z	hischild	ChaosTheory	yes.
+2008-04-03T19:18:00.000Z	ChaosTheory	hischild	so just go back to home?
+2008-04-03T19:19:00.000Z	hischild	ChaosTheory	mv /usr/src/alsa* ~/ should move them to home
+2008-04-03T19:22:00.000Z	ChaosTheory	hischild	okay, I did that.
+2008-04-03T19:22:00.000Z	ChaosTheory	hischild	now just run sudo make, sudo make install again?
+2008-04-03T19:22:00.000Z	ChaosTheory	hischild	it says I'm still in the directory.
+2008-04-03T19:22:00.000Z	hischild	ChaosTheory	then follow the guide from the part of the copying.
+2008-04-03T19:22:00.000Z	hischild	ChaosTheory	it only moved the 2 folders out.
+2008-04-03T19:22:00.000Z	ChaosTheory	hischild	oh.
+2008-04-03T19:25:00.000Z	ChaosTheory	hischild	http://pastebin.com/d2c44d60c
+2008-04-03T19:25:00.000Z	ChaosTheory	hischild	after I did that I ran "compile and install alsa-driver" again
+2008-04-03T19:26:00.000Z	ChaosTheory	hischild	after moving the directories.
+2008-04-03T19:26:00.000Z	ChaosTheory	hischild	I mean folders. I don't know. -_-
+2008-04-03T19:27:00.000Z	hischild	ChaosTheory	folders and directories are basically the same ...
+2008-04-03T19:27:00.000Z	hischild	ChaosTheory	i'm sorry, but i'm lost then :(
+2008-04-03T19:28:00.000Z	ChaosTheory	hischild	oh. =\
+2008-04-03T19:28:00.000Z	ChaosTheory	hischild	all three files are rc1.
+2008-04-03T19:28:00.000Z	hischild	ChaosTheory	yes ... i've used the same files more then once and they succeed for me ...
+2008-04-03T19:31:00.000Z	ChaosTheory	hischild	I suppose I don't *need* sound. . . =P
+2008-04-03T19:31:00.000Z	hischild	ChaosTheory	if you can live without sound, then you're good
+2008-04-03T19:31:00.000Z	ChaosTheory	hischild	haha.
+2008-04-03T19:32:00.000Z	hischild	ChaosTheory	i for one can't live without sound ;-)
+2008-04-03T19:32:00.000Z	ChaosTheory	hischild	I have a disk that Linux can't mount.
+2008-04-03T19:32:00.000Z	hischild	ChaosTheory	what kind of disc?
+2008-04-03T19:32:00.000Z	ChaosTheory	hischild	normally, I can't live without baroque. . .
+2008-04-03T19:32:00.000Z	ChaosTheory	hischild	I think "normally" still applies, but I have the classical music station on my cellphone. =P
+2008-04-03T19:32:00.000Z	ChaosTheory	hischild	it has books on it.
+2008-04-03T19:35:00.000Z	ChaosTheory	hischild	Invalid mount option when attempting to mount volume 'UDF Volume.'
+2008-04-03T19:35:00.000Z	hischild	ChaosTheory	what command do you use?
+2008-04-03T19:36:00.000Z	ChaosTheory	hischild	it just automatically tries to open up.
+2008-04-03T19:36:00.000Z	hischild	ChaosTheory	type dmesg please to see what the error is.
+2008-04-03T19:37:00.000Z	ChaosTheory	hischild	http://pastebin.com/d194c009c
+2008-04-03T19:39:00.000Z	hischild	ChaosTheory	i'm afraid i can't be much help ... maybe it's damaged or some other wierd file system ..
+2008-04-03T19:39:00.000Z	ChaosTheory	hischild	oh, okay. =|

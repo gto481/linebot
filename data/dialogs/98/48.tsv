@@ -1,0 +1,98 @@
+2007-01-23T10:21:00.000Z	IntuitiveNipple	unperson	http://www.busybox.net/downloads/BusyBox.html
+2007-01-23T10:37:00.000Z	unperson	IntuitiveNipple	Thanks, but vi doesn't seem to work at this busybox prompt.
+2007-01-23T10:37:00.000Z	IntuitiveNipple	unperson	Hmmm, thats not helpful
+2007-01-23T10:37:00.000Z	IntuitiveNipple	unperson	How about "vim" ?
+2007-01-23T10:37:00.000Z	unperson	IntuitiveNipple	I can try it, but it wasn't listed among the shell functions and I see no executables.  Not for anything I recognize as an editor, actually.
+2007-01-23T10:37:00.000Z	IntuitiveNipple	unperson	What version of Ubuntu do you have?
+2007-01-23T10:37:00.000Z	unperson	IntuitiveNipple	Edgy.
+2007-01-23T10:37:00.000Z	IntuitiveNipple	unperson	Yes... and ok :)
+2007-01-23T10:37:00.000Z	IntuitiveNipple	unperson	I'll try booting the liveCD on a spare notebook here, see what it gives me
+2007-01-23T10:37:00.000Z	unperson	IntuitiveNipple	Ok, I checked busybox again, and help listed nothing I recognized as an editor.  The only way to edit a file I could see was via sed.
+2007-01-23T10:37:00.000Z	unperson	IntuitiveNipple	Does it matter that mine was at the initramfs prompt?
+2007-01-23T10:37:00.000Z	unperson	IntuitiveNipple	Sorry, I'm not familiar enough with the boot process to give a clearer explanation.
+2007-01-23T10:37:00.000Z	IntuitiveNipple	unperson	I'm not sure but I'll be very surprised if they took out an editor!
+2007-01-23T10:38:00.000Z	unperson	IntuitiveNipple	In any case, I had type vi in busybox and the shell said command not found (or some such).
+2007-01-23T10:38:00.000Z	unperson	IntuitiveNipple	In any case, I've now booted with the live CD and mounted the /boot partition on the HD.  I have menu.lst open.
+2007-01-23T10:38:00.000Z	IntuitiveNipple	unperson	is this all related to getting your RAID config to work?
+2007-01-23T10:39:00.000Z	unperson	IntuitiveNipple	Yes.  I think the RAID is working but for some reason grub is pointed to the wrong partition for root.
+2007-01-23T10:39:00.000Z	IntuitiveNipple	unperson	Nothing surprises me anymore :)
+2007-01-23T10:40:00.000Z	unperson	IntuitiveNipple	In menu.lst it has a bunch of occurances of "root=/dev/md1" while the device containing / is /dev/md0.
+2007-01-23T10:41:00.000Z	IntuitiveNipple	unperson	create another boot stanza and point it to the partition you think it ought to be, and try that. if it doesn't work you haven't disturbed an existing entry
+2007-01-23T10:42:00.000Z	unperson	IntuitiveNipple	Ok.  Though either way it doesn't make too much difference.  As yet the disks just have the install on them, no personal data.  But good advice nonetheless.
+2007-01-23T10:43:00.000Z	IntuitiveNipple	unperson	did you read my reply earlier tonight to your forum posts?
+2007-01-23T10:45:00.000Z	unperson	IntuitiveNipple	But the question is, after I edit that, then what do I do?  I saw things about running grub-update, but will that act on the right thing, since this menu.lst is not the one for the live CD but for the boot partition I've mounted as /mnt/boot
+2007-01-23T10:45:00.000Z	IntuitiveNipple	unperson	you don't need to run grub-update when you manually edit the file :)
+2007-01-23T10:46:00.000Z	IntuitiveNipple	unperson	as long as the GRUB file makes sense when the system boots
+2007-01-23T10:46:00.000Z	unperson	IntuitiveNipple	I hadn't seen your forum post until just now..  Risk of data loss isn't a huge issue, as I intend to back up the data on another drive either way.  Based on what I'd read, RAID0 is supposed to considerably increase HD throughput.
+2007-01-23T10:47:00.000Z	unperson	IntuitiveNipple	I see.  Good to know.  I'd not messed with grub much.
+2007-01-23T10:47:00.000Z	IntuitiveNipple	unperson	in my experience it gives very little gain
+2007-01-23T10:47:00.000Z	unperson	IntuitiveNipple	I suppose I can find out. soon.  :-)
+2007-01-23T10:49:00.000Z	unperson	IntuitiveNipple	I'm seldom doing anything so important that losing 1 day's worth of data on this machine will be a huge deal.  It's just my home desktop.  And at even twice the failure probability, it is still rather low.
+2007-01-23T10:49:00.000Z	IntuitiveNipple	unperson	as long as you're sure - the only reason for stripping is if the drive is doing a lot of random writes or reads
+2007-01-23T10:51:00.000Z	unperson	IntuitiveNipple	You mean because otherwise caching and stuff ought to save you?
+2007-01-23T10:53:00.000Z	IntuitiveNipple	unperson	It depends so much on the hardware layout - the reason for stripping is to avoid latency of the disk heads moving from track to track on the disk.
+2007-01-23T10:58:00.000Z	unperson	IntuitiveNipple	But ought it not also give (in the ideal case) double the data throughput, assuming your controller can handle it?
+2007-01-23T10:59:00.000Z	IntuitiveNipple	unperson	theoretically if you want to write a file system and applications that are aware to that degree. There's a few good studies of RAID software performance I've seen, they're well worth looking at
+2007-01-23T10:59:00.000Z	IntuitiveNipple	unperson	Good luck :)
+2007-01-23T11:03:00.000Z	unperson	IntuitiveNipple	frogzoo, It worked!  Reboot was successful and my Ubuntu desktop came up.
+2007-01-23T11:03:00.000Z	IntuitiveNipple	unperson	Well done... I'll have a cup of tea to celebrate :)
+2007-01-23T11:05:00.000Z	unperson	IntuitiveNipple	Thanks a lot for your help.  I was beginning to despair of ever figuring it out.
+2007-01-23T11:05:00.000Z	IntuitiveNipple	unperson	I've been through it, I know how it feels :)
+2007-01-23T11:06:00.000Z	unperson	IntuitiveNipple	As far as the RAID0 performance thing, it's something that might be worth looking into some more.  I mean, on a basic level, it seems there should be considerable advantage to a RAID0, but I'm certainly open to the idea that that's not how it works in practice.
+2007-01-23T11:07:00.000Z	IntuitiveNipple	unperson	I love RAID1 - Ive seen so many hard disk go down and it simply means no disruption
+2007-01-23T11:07:00.000Z	unperson	IntuitiveNipple	I'd be interested in reading a bit about comparisons of actual performance, though I sometimes can't make heads or tails of the details of FS comparisons when they get down to all the different sorts of operations.
+2007-01-23T11:08:00.000Z	unperson	IntuitiveNipple	(and I study quantum physics for my day job  :-) )
+2007-01-23T11:08:00.000Z	IntuitiveNipple	unperson	I read a neat comparison that was all pretty graphs - thats what brought it home to me
+2007-01-23T11:09:00.000Z	IntuitiveNipple	unperson	I study quantum linux :p
+2007-01-23T11:09:00.000Z	unperson	IntuitiveNipple	Yeah, I think because this is not a mission critical server or anything, RAID1 has limited advantages for me.  Frequent backups to a seperate disk have the advantage that they protect against user error as well as hardware failures.  A little bit of downtime for my personal desktop to restore from the backup is not a big deal.
+2007-01-23T11:10:00.000Z	IntuitiveNipple	unperson	I can tell you're not a techie that's really suffered... you lucky sod :D
+2007-01-23T11:11:00.000Z	IntuitiveNipple	unperson	check this out scroll down to Table 1 http://archive.nlm.nih.gov/pubs/bangbuck/bangbuck.php
+2007-01-23T11:15:00.000Z	unperson	IntuitiveNipple	This looks quite interesting.  Yeah, i can see in table 1 that the difference between 6 disk RAID0 and 6 simple disks is quite small.
+2007-01-23T11:15:00.000Z	IntuitiveNipple	unperson	its a whole fascinating subject in its own right :)
+2007-01-23T11:18:00.000Z	unperson	IntuitiveNipple	I guess the question is to what degree the distribution of file sizes is representative of files that will be read during user interaction on a home desktop (i.e. MY desktop :-).  If they're as small as they're using in the study, I guess it makes sense that striping doesn't help too much.
+2007-01-23T11:18:00.000Z	unperson	IntuitiveNipple	I'll have to read it more carefully to understand the assumptions that go into the study.
+2007-01-23T11:19:00.000Z	IntuitiveNipple	unperson	Just make sure you back up your findings :p
+2007-01-23T11:20:00.000Z	IntuitiveNipple	unperson	This is a recent heavyweight but good report http://techreport.com/reviews/2004q2/chipset-raid/index.x?pg=1
+2007-01-23T11:21:00.000Z	unperson	IntuitiveNipple	Unfortunately, I'm a theorist, not an experimenalist.  :-)
+2007-01-23T11:22:00.000Z	IntuitiveNipple	unperson	Pretty pictures: http://techreport.com/reviews/2004q2/chipset-raid/index.x?pg=3
+2007-01-23T11:28:00.000Z	unperson	IntuitiveNipple	Cool.  Thanks for showing me these.  I'll have to look them over more when I have time.  Unfortunately, I think I need to head for bed in a minute.  One last question:  Now that I figured out how to get grub to boot the system with this new entry, how do I change to fix it up for all the entries?
+2007-01-23T11:29:00.000Z	IntuitiveNipple	unperson	same here, its 5.30am! Alter the default settings in menu.lst in those # comments areas that kopt etc are at
+2007-01-23T11:29:00.000Z	unperson	IntuitiveNipple	I mean, I can change the same thing (the value of root=) for each entry, but do I have to do anything with that kopt stuff?
+2007-01-23T11:29:00.000Z	unperson	IntuitiveNipple	I see.  And then must I run update-grub?
+2007-01-23T11:30:00.000Z	unperson	IntuitiveNipple	What you said.  I guess the answer is no.
+2007-01-23T11:30:00.000Z	unperson	IntuitiveNipple	The only one I don't know what to do with is the root=UUID one.  I don't know how to figure out what that should be set to.
+2007-01-23T11:31:00.000Z	IntuitiveNipple	unperson	check in /etc/fstab for the UUIDs
+2007-01-23T11:32:00.000Z	unperson	IntuitiveNipple	Ok.  Thanks for all your help.  Sleep well.
+2012-05-10T20:47:00.000Z	unperson	IntuitiveNipple	I assume that newer Ubuntus have a newer version of libstdc++?
+2012-05-10T20:48:00.000Z	IntuitiveNipple	unperson	I  think the issue is that the library required is named as for a different distro, from what I am reading
+2012-05-10T20:49:00.000Z	unperson	IntuitiveNipple	Yeah, that seems right.  The naming convention I'm seeing on my Ubuntu is certainly different.
+2012-05-10T20:50:00.000Z	IntuitiveNipple	unperson	see http://rpmfind.net/linux/rpm2html/search.php?query=libstdc%2B%2B-libc6.2-2.so.3
+2012-05-10T20:50:00.000Z	unperson	IntuitiveNipple	I have no idea how that version corresponds to the version in 11.10.
+2012-05-10T20:51:00.000Z	IntuitiveNipple	unperson	invincible_  see this thread to the end http://ubuntuforums.org/showthread.php?t=1517863
+2012-05-10T20:52:00.000Z	unperson	IntuitiveNipple	Thanks.  Yeah, I see this is libstdc++ v2, whereas the current ubuntu uses v3.
+2012-05-10T20:57:00.000Z	unperson	IntuitiveNipple	Any idea why they have him downloading the Debian packages and not the old Ubuntu ones?
+2012-05-10T20:59:00.000Z	IntuitiveNipple	unperson	From what I could tell the packages had been deleted from the ubuntu archive servers.... thought I didn't notice if they checked  old-releases.ubuntu.com
+2012-05-10T21:00:00.000Z	IntuitiveNipple	unperson	if they're on old-releases.ubuntu.com then invincible_ could add a temporary apt repository entry to pull the required library in
+2012-05-10T21:03:00.000Z	IntuitiveNipple	unperson	invincible_ The earliest versions I can see on old-versions.ubuntu.com is 2.3.2: http://old-releases.ubuntu.com/ubuntu/pool/main/g/glibc/
+2012-05-10T21:07:00.000Z	IntuitiveNipple	unperson	invincible_ That program really ought to have beeen statically linked if it is to be widely distributed, not rely on system libraries if it is that particular about the supported ABI
+2012-05-10T21:18:00.000Z	IntuitiveNipple	unperson	or see what jpds suggested ... basically the same thing
+2012-05-10T21:09:00.000Z	IntuitiveNipple	unperson	I'm concerned, if invincible_ installs that libc .deb package it could replace some existing system library symlinks
+2012-05-10T21:09:00.000Z	IntuitiveNipple	unperson	which might render the system unhappy to say the least
+2012-05-10T21:09:00.000Z	unperson	IntuitiveNipple	Yes, that's possible.  I thought it would warn him first.  No?
+2012-05-10T21:10:00.000Z	unperson	IntuitiveNipple	Also, you're of course right that they should have statically linked the library.
+2012-05-10T21:11:00.000Z	IntuitiveNipple	unperson	I'm not sure if it would warn ... running dpkg -i is pretty clear you want to upgrade/downgrade a package, after all
+2012-05-10T21:11:00.000Z	unperson	IntuitiveNipple	True.  Yes, I agree that replacing libstdc++ would be bad.  I thought it would not overwrite any existing files installed by apt/dpkg without a warning, but I may be wrong.
+2012-05-10T21:12:00.000Z	IntuitiveNipple	unperson	It won't overwrite files but it may replace symbolic links for the default link to the SONAME
+2012-05-10T21:12:00.000Z	IntuitiveNipple	unperson	invincible_ This is the kind of thing to do in a minimal virtual machine instance
+2012-05-10T21:12:00.000Z	unperson	IntuitiveNipple	That's true.  I haven't had that happen to me, but my experience is very limited with this sort of thing.
+2012-05-10T21:15:00.000Z	unperson	IntuitiveNipple	I wonder if it's possible to just grab the library SO out of the .deb without actually installing it.
+2012-05-10T21:16:00.000Z	unperson	IntuitiveNipple	Basically install it manually to avoid any issues.
+2012-05-10T21:17:00.000Z	IntuitiveNipple	unperson	Yes, dkg --unpack <package> can do that ... then he could install the library in the correct location and create a version-specific symlink without affecting any system symlinks
+2012-05-10T21:17:00.000Z	IntuitiveNipple	unperson	oops ... dpkg --unpack ...
+2012-05-10T21:19:00.000Z	unperson	IntuitiveNipple	Yeah, maybe that could work.  I have almost no experience with chroot, though, so I'm no use there.
+2012-05-10T21:22:00.000Z	IntuitiveNipple	unperson	invincible_ Here's a possibility. A wiki page describing how to set up various ubuntu release chroot. The links to the older debootstrap packages (for Dapper etc.) are no longer good BUT those debootstrap versions can be found on old-releases: http://old-releases.ubuntu.com/ubuntu/pool/main/d/debootstrap/
+2012-05-10T21:23:00.000Z	IntuitiveNipple	unperson	invincible_ wait 5 mins ... I'm trying out the chroot idea here
+2012-05-10T21:23:00.000Z	unperson	IntuitiveNipple	invincible_:  If you're willing to just install an old OS, you could probably go here http://old-releases.ubuntu.com/releases/6.06.1/ and install Dapper Drake.  I think that should work.  Otherwise it sounds like IntuitiveNipple has an idea that might work.
+2012-05-10T21:24:00.000Z	IntuitiveNipple	unperson	I'm hoping the info I got about that library version being in dapper is correct... let me check it first!
+2012-05-10T21:26:00.000Z	unperson	IntuitiveNipple	Looks like i have to go.  Good luck.
+2012-05-10T21:26:00.000Z	IntuitiveNipple	unperson	Thanks :s

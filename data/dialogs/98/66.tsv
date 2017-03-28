@@ -1,0 +1,98 @@
+2012-07-27T16:10:00.000Z	Hfuy		This: http://www.ubuntu.com/download/help/create-a-usb-stick-on-windows
+2012-07-27T16:10:00.000Z	Hfuy		I used "Universal USB Installer", from pendrivelinux.com
+2012-07-27T16:11:00.000Z	Hfuy		Gah.
+2012-07-27T16:11:00.000Z	Hfuy		I'll rant while it downloads, if that's OK
+2012-07-27T16:13:00.000Z	Hfuy		should I select Ubuntu 12.04 for "ubuntu-12.04-desktop-i386.iso"
+2012-07-27T16:13:00.000Z	Hfuy		Honestly this seems to be exactly the same as the last one.
+2012-07-27T16:14:00.000Z	Hfuy		It's not even in good English.
+2012-07-27T16:14:00.000Z	Hfuy		I mean.... "cow"?
+2012-07-27T16:15:00.000Z	Hfuy		I checked the download.
+2012-07-27T16:15:00.000Z	Hfuy		It's cherry.
+2012-07-27T16:16:00.000Z	usr13	Hfuy	So what is the problem?  (Sorry but I'm a latecomer to the issue.)
+2012-07-27T16:16:00.000Z	Hfuy	usr13	I'm attempting to use a linux USB stick to check whether a problem on my machine is hardware or OS (usually it runs win7)
+2012-07-27T16:17:00.000Z	usr13	Hfuy	Do you have a problem booting the media? Ok, I see, check the BIOS settings.
+2012-07-27T16:19:00.000Z	usr13	Hfuy	If you have verified the ISO, then you have two more issues, 1) Properly burning the ISO image to the USB device.  & 2) Configuring the BIOS settings to the point that the PC will actually boot a USB device, (and sometimes that takes some doing...).
+2012-07-27T16:19:00.000Z	Hfuy	usr13	oh that I can do.
+2012-07-27T16:20:00.000Z	usr13	Hfuy	Ok, if you properly solve those other two problems, you will be successful.
+2012-07-27T16:20:00.000Z	Hfuy	usr13	Well, I used the thing that was recommended on ubuntu.com to build the USB stick. But again, this is linux. Don't expect too much...
+2012-07-27T16:21:00.000Z	usr13	Hfuy	On the contrary, expect a lot.
+2012-07-27T16:21:00.000Z	usr13	Hfuy	That may be the problem, if you downloaded a compressed image....
+2012-07-27T16:22:00.000Z	Hfuy	usr13	I let the installer tool download the image.
+2012-07-27T16:22:00.000Z	usr13	Hfuy	Usually that is not the case, you just end up with an ISO image, (not a compressed ISO).
+2012-07-27T16:23:00.000Z	usr13	Hfuy	I've not done it on MS Windows, only on Linux so I'm not really familiar with the process for doing it on a MS Windows machine, but I'm pretty sure the instructions are correct, they are tried and proven.
+2012-07-27T16:24:00.000Z	Hfuy	usr13	well, clearly not.
+2012-07-27T16:27:00.000Z	usr13	Hfuy	You might try another USB stic,
+2012-07-27T16:28:00.000Z	usr13	Hfuy	The BIOS is set to disallow it.
+2012-07-27T16:28:00.000Z	Hfuy	usr13	well, that too, but windows is internally set up such that the installer will not let you install it to USB devices.
+2012-07-27T16:29:00.000Z	usr13	Hfuy	ThinkT510 is correct, you don't need to unplug devices, you only need to look at BIOS settings for proper choices.
+2012-07-27T16:29:00.000Z	Hfuy	usr13	This is work data on big RAIDs. The last thing I need is some linux daemon deciding they all need formatting.
+2012-07-27T16:29:00.000Z	usr13	Hfuy	This is not a MS Windows issue.
+2012-07-27T16:30:00.000Z	usr13	Hfuy	They will not all be formatted unless you select an option to do it.
+2012-07-27T16:33:00.000Z	usr13	Hfuy	That's ok, USB installs work just fine. In fact, I prefer USB install.
+2012-07-27T16:33:00.000Z	usr13	Hfuy	No, it works fine, you just have an issue or two to work out.
+2012-07-27T16:34:00.000Z	usr13	Hfuy	You'll get it if you try.
+2012-07-27T21:04:00.000Z	usr13	Hfuy	xchat *should* be in the repositories.
+2012-07-27T21:06:00.000Z	usr13	Hfuy	Did you select wrong time zone?
+2012-07-27T21:07:00.000Z	usr13	Hfuy	tzselect
+2012-07-27T21:17:00.000Z	usr13	Hfuy	Win7, yea, slightly scary
+2012-07-27T21:17:00.000Z	usr13	Hfuy	WHy wouldn't it?
+2012-07-27T21:17:00.000Z	usr13	Hfuy	if you have the partition mounted, it's mounted.  That's it.
+2012-07-27T21:18:00.000Z	usr13	Hfuy	mount
+2012-07-27T21:18:00.000Z	Hfuy	usr13	no such.
+2012-07-27T21:18:00.000Z	usr13	Hfuy	If you issue command "mount"  it will tell you where evertying is mounted.
+2012-07-27T21:19:00.000Z	usr13	Hfuy	df  will also tell you pretty much same
+2012-07-27T21:19:00.000Z	usr13	Hfuy	sudo fdisk -l
+2012-07-27T21:23:00.000Z	usr13	Hfuy	What?  mounted boot device as ____?
+2012-07-27T21:23:00.000Z	Hfuy	usr13	well, Windows mounts the boot device as c: (invariably); I was wondering where my 4GB flash key was mounted. But it sort of isn't, this being linux.
+2012-07-27T21:24:00.000Z	usr13	Hfuy	It all depends on what mount points you set up in the /etc/fstab file.  (Unless it's a USB device that you prefer to mount and umount on the fly).
+2012-07-27T21:24:00.000Z	usr13	Hfuy	du
+2012-07-27T21:25:00.000Z	usr13	Hfuy	You mean /boot/
+2012-07-27T21:26:00.000Z	usr13	Hfuy	You can place it on a separate partition if you choose to.
+2012-07-27T21:27:00.000Z	usr13	Hfuy	Yes, anything you put on a mount point goes on the disk it is mounted on. yes
+2012-07-27T21:28:00.000Z	usr13	Hfuy	Wait, I don't think I'm understanding your questions?  Are you planning a Linux install?  ... or are you trying to customize an existing one?
+2012-07-27T21:29:00.000Z	usr13	Hfuy	What is mounted on /cdrom ?
+2012-07-27T21:29:00.000Z	Hfuy	usr13	/dev/sdb1
+2012-07-27T21:29:00.000Z	usr13	Hfuy	sdb1 is the first partition on the second drive
+2012-07-27T21:30:00.000Z	usr13	Hfuy	sda1 is the first partition on the first drive
+2012-07-27T21:30:00.000Z	usr13	Hfuy	Maybe because it's dissabled?
+2012-07-27T21:30:00.000Z	usr13	Hfuy	(turned off)
+2012-07-27T21:31:00.000Z	usr13	Hfuy	What do you need blue tooth for at this point?
+2012-07-27T21:32:00.000Z	usr13	Hfuy	I see.
+2012-07-27T21:32:00.000Z	usr13	Hfuy	Well, I use wifi
+2012-07-27T21:34:00.000Z	usr13	Hfuy	Why wouldn't it?
+2012-07-27T21:34:00.000Z	Hfuy	usr13	well, you know.
+2012-07-27T21:35:00.000Z	usr13	Hfuy	Yea, I do know  :):):):)
+2012-07-27T21:36:00.000Z	usr13	Hfuy	Well, it might work after full install.
+2012-07-27T21:37:00.000Z	Hfuy	usr13	that's a bit fail.
+2012-07-27T21:38:00.000Z	usr13	Hfuy	Please disreguard dist-upgrade
+2012-07-27T21:38:00.000Z	usr13	Hfuy	Why not?
+2012-07-27T21:39:00.000Z	usr13	Hfuy	I think you are confused
+2012-07-27T21:39:00.000Z	usr13	Hfuy	By all means, use apt
+2012-07-27T21:39:00.000Z	usr13	Hfuy	Sorry, but you have been mislead about apt
+2012-07-27T21:40:00.000Z	usr13	Hfuy	You are on a live USB device, installing applications is for after the install.
+2012-07-27T21:41:00.000Z	usr13	Hfuy	What does BT mean?
+2012-07-27T21:42:00.000Z	usr13	Hfuy	You should do an install, see if it works then. Ok?
+2012-07-27T21:43:00.000Z	usr13	Hfuy	Just resize the partition(s) to make room for the Ubuntu install.
+2012-07-27T21:43:00.000Z	usr13	Hfuy	The installer will do it for you.
+2012-07-27T21:43:00.000Z	usr13	Hfuy	sure, works fine.
+2012-07-27T21:44:00.000Z	usr13	Hfuy	But if you have critical files and are worried, do a backup of them first.
+2012-07-27T21:44:00.000Z	usr13	Hfuy	Skype works fine
+2012-07-27T21:44:00.000Z	usr13	Hfuy	Blocking?
+2012-07-27T21:47:00.000Z	usr13	Hfuy	Bluetooth works.
+2012-07-27T21:47:00.000Z	usr13	Hfuy	Ok, I'm wrong. It doesnt' work.  You better go back to MS Windows.
+2012-07-27T21:49:00.000Z	usr13	Hfuy	ix6550 ? is that right?
+2012-07-27T21:49:00.000Z	Hfuy	usr13	yes.
+2012-07-27T21:49:00.000Z	usr13	Hfuy	Don't see that model
+2012-07-27T21:52:00.000Z	usr13	Hfuy	firefox localhost:631
+2012-07-27T21:54:00.000Z	usr13	Hfuy	Sure
+2012-07-27T21:54:00.000Z	usr13	Hfuy	But no use to configure the printer now... wait till you get your install done.
+2012-07-27T21:55:00.000Z	usr13	Hfuy	Any configurations you do now are pointless.
+2012-07-27T21:55:00.000Z	usr13	Hfuy	Well, then don't install anything.  No one is forcing you to do anything.
+2012-07-27T21:56:00.000Z	usr13	Hfuy	What?
+2012-07-27T21:56:00.000Z	usr13	Hfuy	You are not making any sense
+2012-07-27T21:56:00.000Z	usr13	Hfuy	You are nonsensical
+2012-07-27T21:58:00.000Z	usr13	Hfuy	If you do a linux install first, you can discover things that don't work very well, but right now, you are just quibling over stuff that is mostly not relevant.
+2012-07-27T21:58:00.000Z	Hfuy	usr13	Great linux attitude! Doesn't work? Obviously not relevant then!
+2012-07-27T21:58:00.000Z	usr13	Hfuy	That is not what I said.
+2012-07-27T21:59:00.000Z	usr13	Hfuy	The USB drive that you are suing is *not* a full install.  It is *not* fully functional.  DO you undertand?
+2012-07-27T22:00:00.000Z	usr13	Hfuy	Again:  The LiveUSB you have booted to is *not* a full install and so there are some limitations.

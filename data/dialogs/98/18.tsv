@@ -1,0 +1,98 @@
+2009-03-28T17:13:00.000Z	grawity	iceroot	Correction: irssi + screen + irssiproxy = bnc
+2009-03-28T17:13:00.000Z	iceroot	grawity	nope. irssi + screen + ssh
+2009-03-28T17:13:00.000Z	grawity	iceroot	You forgot irssiproxy.
+2009-03-28T17:13:00.000Z	iceroot	grawity	no
+2009-03-28T17:14:00.000Z	grawity	iceroot	Why not?
+2009-03-28T17:15:00.000Z	iceroot	grawity	why needing irssi-proxy for a bouncer?
+2009-03-28T17:15:00.000Z	grawity	iceroot	irssiproxy lets you use any other IRC client if you don't want to use irssi at the moment.
+2009-03-28T17:16:00.000Z	iceroot	grawity	you dont need another ircclient, you have ssh so you are using irssi on the server
+2009-03-28T17:16:00.000Z	grawity	iceroot	what if I want to use Pidgin or Xchat when I'm at home, but irssi everywhere else?
+2009-03-28T17:16:00.000Z	iceroot	grawity	ssh!
+2009-03-28T17:17:00.000Z	grawity	iceroot	WHAT THE HELL YOU'RE TALKING ABOUT
+2009-03-28T17:17:00.000Z	iceroot	grawity	you dont need a gui for chatting
+2009-03-28T17:17:00.000Z	iceroot	grawity	irssi is an irc-client
+2009-03-28T17:17:00.000Z	grawity	iceroot	And what if I *want* one?
+2009-03-28T17:17:00.000Z	grawity	iceroot	and I know what's irssi, I *am* using it at the moment.
+2009-03-28T17:17:00.000Z	grawity	iceroot	(without screen, but it's still irssi over ssh)
+2009-03-28T17:18:00.000Z	iceroot	grawity	so why are you saying yu need irssiproxy to have a bnc? i have said that you only need irssi + screen + ssh for bnc
+2009-04-21T22:36:00.000Z	grawity	iceroot	nope, it's 'root'
+2009-04-21T22:36:00.000Z	grawity	iceroot	ooor... might be wrong though.
+2009-06-10T13:49:00.000Z	grawity	iceroot	Dots in usernames should not be bad.
+2009-07-17T15:04:00.000Z	grawity	iceroot	grep -r "foo" directory
+2009-07-17T15:05:00.000Z	iceroot	grawity	thx
+2009-07-27T22:22:00.000Z	grawity	iceroot	iFconfig
+2009-07-27T22:22:00.000Z	iceroot	grawity	yeah..
+2009-08-01T13:53:00.000Z	grawity	iceroot	It's the "safe graphics" mode.
+2009-08-01T13:54:00.000Z	iceroot	grawity	sounds like windows-safe-mode. never heard of it in ubuntu
+2009-08-01T13:54:00.000Z	iceroot	grawity	but thank you
+2009-08-01T13:55:00.000Z	grawity	iceroot	When Xorg fails to initialize the graphics driver or something, it switches to "safe graphics" mode - VGA, 640x480x16.
+2009-08-05T19:34:00.000Z	grawity	iceroot	Who said you have to access a server remotely?
+2009-08-05T19:34:00.000Z	iceroot	grawity	who said you need x on a server?
+2009-08-05T19:47:00.000Z	grawity	iceroot	Umm. I thought exim4 is the standard MTA on Ubuntu?
+2009-08-11T20:01:00.000Z	grawity	iceroot	Windows 7 is already RTMed, it can now be considered final.
+2009-08-11T20:01:00.000Z	iceroot	grawity	ah ok, didnt know
+2009-08-25T20:10:00.000Z	grawity	iceroot	You mean the Print Screen key?
+2009-08-25T20:11:00.000Z	iceroot	grawity	yes, i want to start ksnapshot instead of the gnome-tool
+2009-08-25T20:11:00.000Z	grawity	iceroot	And are you using Metacity or Compiz?
+2009-08-25T20:11:00.000Z	iceroot	grawity	normal gnome without compiz
+2009-08-25T20:12:00.000Z	grawity	iceroot	Metacity then... I think the settting should be in gconf, but I can't find it :\
+2009-08-25T20:12:00.000Z	grawity	iceroot	Ah, /apps/metacity/keybinding_commands/command-screenshot - you'll find that in gconf-editor.
+2009-08-25T20:12:00.000Z	iceroot	grawity	thx
+2009-09-05T14:08:00.000Z	iceroot	grawity	there are more, ubuntu lts, ubuntu 8.10, 9.04, website
+2009-09-12T22:25:00.000Z	grawity	iceroot	I think it's an Ubuntu mirror hosted at kernel.org
+2009-09-12T22:25:00.000Z	iceroot	grawity	hm, yes you are right
+2009-09-24T21:38:00.000Z	iceroot	grawity	or tail or less or nano or something else
+2009-10-01T00:38:00.000Z	grawity	iceroot	Hotmail does not support IMAP.
+2009-10-01T00:38:00.000Z	iceroot	grawity	then we should use a good provider
+2009-10-01T00:38:00.000Z	iceroot	grawity	he
+2009-10-03T16:27:00.000Z	grawity	iceroot	It should.
+2009-10-03T16:27:00.000Z	grawity	iceroot	ssh -v, if you have any problems
+2009-10-03T16:27:00.000Z	iceroot	grawity	i forgot to mention, the pc in the middle did not have x installed
+2009-10-03T16:28:00.000Z	grawity	iceroot	You might try it like this:  ssh -fN -L 2345:machine-b:22 machine-a; ssh -oHostkeyAlias=machine-b localhost -p 2345 -X
+2009-10-03T16:29:00.000Z	iceroot	grawity	so its a ssh-tunnel?
+2009-10-03T16:29:00.000Z	grawity	iceroot	Yeah.
+2009-10-03T16:29:00.000Z	iceroot	grawity	sound great, thx
+2009-10-04T13:21:00.000Z	grawity	iceroot	Is the CPU 32-bit or 64-bit? And the OS?
+2009-10-04T13:22:00.000Z	iceroot	grawity	64bit ubuntu on amd64 cpu
+2009-10-04T13:22:00.000Z	grawity	iceroot	Then, maybe it just hasn't needed the extra RAM yet.
+2009-10-09T21:57:00.000Z	grawity	iceroot	Waitwait. You can compare the quality of _digital_ _binary_ data?
+2009-10-09T21:58:00.000Z	iceroot	grawity	nice,, i can compare the data.... but the burner cant make a good image (just readable at the burner not in other drives)
+2009-10-09T21:59:00.000Z	iceroot	grawity	and that is the problem, the burner can read his own cds but another drive will have problems with 48x speed burned cds
+2009-10-21T18:42:00.000Z	grawity	iceroot	>> redirects stdout (stream 1), 2>> redirects stderr (stream 2)
+2009-10-21T18:42:00.000Z	grawity	iceroot	So 2>> would only redirect error messages.
+2009-10-21T18:43:00.000Z	iceroot	grawity	so i have to use cat foo >> bar 2>> bar  to have stdout and stderr
+2009-10-21T18:43:00.000Z	grawity	iceroot	You can use >> bar 2>&1
+2009-10-21T18:43:00.000Z	grawity	iceroot	This will redirect stderr to stdout (stream 2 to stream 1)
+2009-10-21T18:44:00.000Z	grawity	iceroot	Or, try this: &>> bar
+2009-10-21T18:45:00.000Z	iceroot	grawity	good to know, where i can find something like that in manpages?
+2009-10-21T18:45:00.000Z	grawity	iceroot	'man bash'
+2009-10-21T18:45:00.000Z	iceroot	grawity	ok, thank you
+2009-10-24T00:53:00.000Z	iceroot	grawity	if you only have local users, yes
+2009-10-24T00:53:00.000Z	grawity	iceroot	That's why I said "Most of the time". (I used to administer a couple of servers with LDAP.)
+2009-10-24T01:13:00.000Z	grawity	iceroot	Symlinks are 'l'
+2009-10-24T01:13:00.000Z	iceroot	grawity	oh, i am sorry
+2009-10-26T12:13:00.000Z	grawity	iceroot	:%s/foo/bar/g
+2009-10-26T12:13:00.000Z	grawity	iceroot	And use vim.
+2009-10-26T12:14:00.000Z	iceroot	grawity	thx
+2009-10-29T14:37:00.000Z	grawity	iceroot	I thought all BitTorrent clients do that. Try rtorrent.
+2009-11-03T22:08:00.000Z	grawity	iceroot	Oh it _can_ be an IP address.
+2009-11-03T22:09:00.000Z	grawity	iceroot	It simply defaults to localhost.
+2009-11-03T22:09:00.000Z	iceroot	grawity	but you know what i mean
+2009-11-03T22:09:00.000Z	grawity	iceroot	No, I don't.
+2009-11-03T22:09:00.000Z	iceroot	grawity	that is bad :)
+2009-11-03T22:10:00.000Z	grawity	iceroot	DISPLAY=192.168.15.2:0 is perfectly fine syntax.
+2009-11-03T22:10:00.000Z	grawity	iceroot	It used to be common before the days of X-over-SSH.
+2009-12-03T00:44:00.000Z	iceroot	grawity	irssi is not like xchat :-)
+2009-12-03T00:44:00.000Z	grawity	iceroot	I know, I tried both (and many many others).
+2009-12-03T00:44:00.000Z	grawity	iceroot	But they both are IRC clients.
+2009-12-03T00:44:00.000Z	iceroot	grawity	yes of course :)
+2009-12-10T22:52:00.000Z	grawity	iceroot	editing resolv.conf is pointless when NetworkManager is active.
+2009-12-10T22:52:00.000Z	iceroot	grawity	hm, network-manager == nm-applet?
+2009-12-10T22:52:00.000Z	grawity	iceroot	nm-applet is only the GUI
+2009-12-10T22:53:00.000Z	iceroot	grawity	ok
+2009-12-13T17:53:00.000Z	grawity	iceroot	ashzilla has left long ago.
+2009-12-13T17:53:00.000Z	iceroot	grawity	:(
+2009-12-13T17:54:00.000Z	iceroot	grawity	i wanted to say "thank you" for the thing about "noob"
+2009-12-26T17:18:00.000Z	grawity	iceroot	C# is free, Mono is free
+2009-12-26T17:18:00.000Z	iceroot	grawity	free?
+2009-12-26T17:19:00.000Z	iceroot	grawity	free as in freedom or free beer?

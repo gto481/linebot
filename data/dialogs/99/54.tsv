@@ -1,0 +1,99 @@
+2006-12-21T15:44:00.000Z	doug_h		meh i only use linux for my web server
+2006-12-21T15:44:00.000Z	doug_h		which works nicely btw
+2006-12-21T15:44:00.000Z	doug_h		low maintenance and quick to setup
+2006-12-21T15:44:00.000Z	Bepo	doug_h	oh crap its says A disk read error occured
+2006-12-21T15:45:00.000Z	doug_h	Bepo	give the full error message
+2006-12-21T15:45:00.000Z	Bepo	doug_h	thats exactly it: A disk read error occured ctrl+alt+del to restart
+2006-12-21T15:46:00.000Z	doug_h	Bepo	is this before or after running fixboot or fixmbr?
+2006-12-21T15:46:00.000Z	Bepo	doug_h	its after running both
+2006-12-21T15:46:00.000Z	doug_h	Bepo	after restarting?
+2006-12-21T15:46:00.000Z	doug_h	Bepo	do you have multiple hard drives?
+2006-12-21T15:47:00.000Z	Bepo	doug_h	just one
+2006-12-21T15:49:00.000Z	doug_h	Bepo	you there still?
+2006-12-21T15:50:00.000Z	Bepo	doug_h	yeah
+2006-12-21T15:50:00.000Z	doug_h	Bepo	how many partitions are there on the drive?
+2006-12-21T15:50:00.000Z	Bepo	doug_h	theres ntsf, ext3, extension, and swap
+2006-12-21T15:51:00.000Z	Bepo	doug_h	in that exact order
+2006-12-21T15:52:00.000Z	doug_h	Bepo	Did you do the fixmbr and fixboot from the recovery console?
+2006-12-21T15:52:00.000Z	doug_h	Bepo	hmm so you're trying to get NTLDR reinstalled?
+2006-12-21T15:53:00.000Z	Bepo	doug_h	I'm just trying to get windows to start again, cuz i need the stuff in there
+2006-12-21T15:53:00.000Z	doug_h	Bepo	did GRUB not boot windows?
+2006-12-21T15:55:00.000Z	Bepo	doug_h	that was the problem it didnt boot it... I kept getting the root (hd0,0)  Filesystem type unknown Partition type 0x7
+2006-12-21T15:55:00.000Z	doug_h	Bepo	oi
+2006-12-21T15:56:00.000Z	doug_h	Bepo	lol yes thats right you erased it, ubuntu by default installs grub on the MBR and you ran fixmbr which replaces the mbr with NTLDR
+2006-12-21T15:56:00.000Z	doug_h	Bepo	go into the recovery console again and run a chkdsk, then use the help command to find the scan program that finds current installs
+2006-12-21T15:57:00.000Z	doug_h	Bepo	plenty of possibility it's just a little ugly
+2006-12-21T15:59:00.000Z	doug_h	Bepo	yeah sure, once you get NTLDR running again and into windows, i'll just help you through installing GRUB manually on the root partition for ubuntu
+2006-12-21T15:59:00.000Z	doug_h	Bepo	and then we'll just chainload it from NTLDR
+2006-12-21T15:59:00.000Z	doug_h	Bepo	i've done it several times and it works nicely after it's all done
+2006-12-21T16:05:00.000Z	doug_h	Bepo	you get my pm?
+2006-12-21T16:06:00.000Z	doug_h	Bepo	run help, there should be something about scan or find installs
+2006-12-21T16:09:00.000Z	doug_h	Bepo	ok i'm looking up something real quick
+2006-12-21T16:10:00.000Z	Bepo	doug_h	when I ran chkdsk it said The volume appears to be in good condiion and was not checked. Use /p if you want to the volume anyway.
+2006-12-21T16:11:00.000Z	doug_h	Bepo	try it with the /p parameter
+2006-12-21T16:12:00.000Z	Bepo	doug_h	so what do i type in? chkdsk /p
+2006-12-21T16:12:00.000Z	doug_h	Bepo	try bootcfg
+2006-12-21T16:12:00.000Z	Bepo	doug_h	ah there it goes i typed in the chkdsk /p
+2006-12-21T16:12:00.000Z	doug_h	Bepo	bootcfg /scan
+2006-12-21T16:13:00.000Z	Bepo	doug_h	ill let you know when it stops scanning and run the command you have above
+2006-12-21T16:14:00.000Z	doug_h	Bepo	when the thing finishes run bootcfg /rebuild
+2006-12-21T16:15:00.000Z	Bepo	doug_h	after I run bootcfg /scan right?
+2006-12-21T16:15:00.000Z	doug_h	Bepo	nah run bootcfg /rebuild only
+2006-12-21T16:15:00.000Z	Bepo	doug_h	ok its going
+2006-12-21T16:16:00.000Z	Bepo	doug_h	scanning all disks for windows installation
+2006-12-21T16:18:00.000Z	Bepo	doug_h	Add installation to boot list?
+2006-12-21T16:18:00.000Z	doug_h	Bepo	is there only one?
+2006-12-21T16:18:00.000Z	Bepo	doug_h	yup just one
+2006-12-21T16:18:00.000Z	doug_h	Bepo	yeah then go for it
+2006-12-21T16:18:00.000Z	doug_h	Bepo	try restarting after this
+2006-12-21T16:18:00.000Z	Bepo	doug_h	enter load identifier?
+2006-12-21T16:19:00.000Z	Bepo	doug_h	lol i have no idea what that means
+2006-12-21T16:20:00.000Z	Bepo	doug_h	it jumped back to c:\windows>
+2006-12-21T16:20:00.000Z	doug_h	Bepo	ok
+2006-12-21T16:20:00.000Z	doug_h	Bepo	go ahead and restart then report back with the damage done
+2006-12-21T16:21:00.000Z	Bepo	doug_h	k rebooting
+2006-12-21T16:21:00.000Z	Bepo	doug_h	yeah it did nothing
+2006-12-21T16:21:00.000Z	doug_h	Bepo	same thing?
+2006-12-21T16:22:00.000Z	Bepo	doug_h	i think i actually have to put in values for those things they asked
+2006-12-21T16:22:00.000Z	doug_h	Bepo	not likely
+2006-12-21T16:22:00.000Z	doug_h	Bepo	when booting go into the bios
+2006-12-21T16:22:00.000Z	doug_h	Bepo	and look through the device boot order
+2006-12-21T16:22:00.000Z	doug_h	Bepo	make sure thats right
+2006-12-21T16:23:00.000Z	Bepo	doug_h	that should be under boot device priority right?
+2006-12-21T16:23:00.000Z	doug_h	Bepo	yes indeed
+2006-12-21T16:24:00.000Z	Bepo	doug_h	1st boot Device floopy group( i have no floppy), 2nd boot device CDROM, 3rd Harddrive, 4th Network Boot Group
+2006-12-21T16:24:00.000Z	doug_h	Bepo	move cdrom to the top hdd 2nd and then network 3rd floppy last
+2006-12-21T16:24:00.000Z	doug_h	Bepo	then when you restart press the key to get into the boot menu
+2006-12-21T16:26:00.000Z	Bepo	doug_h	in boot menu
+2006-12-21T16:26:00.000Z	Bepo	doug_h	maxtor is my drive
+2006-12-21T16:27:00.000Z	Bepo	doug_h	PM-Maxtor, 3M-HP DVD Writer, 3s-asus dvd
+2006-12-21T16:27:00.000Z	doug_h	Bepo	do PM-Maxtor
+2006-12-21T16:27:00.000Z	Bepo	doug_h	same error
+2006-12-21T16:28:00.000Z	doug_h	Bepo	hmm sounds like you may not get back into windows
+2006-12-21T16:28:00.000Z	doug_h	Bepo	try doing a repair install
+2006-12-21T16:28:00.000Z	Bepo	doug_h	ok doing it now
+2006-12-21T16:40:00.000Z	Bepo	doug_h	ah crap
+2006-12-21T16:40:00.000Z	Bepo	doug_h	same darn error
+2006-12-21T16:40:00.000Z	doug_h	Bepo	what?
+2006-12-21T16:40:00.000Z	doug_h	Bepo	sounds like something else is broken... usually it mentions that NTLDR is missing if it's a data error
+2006-12-21T16:41:00.000Z	Bepo	doug_h	lol i guess installing Ubuntu again wouldn't fix it?
+2006-12-21T16:41:00.000Z	doug_h	Bepo	not likely, i'm not sure what your problem is anymore
+2006-12-21T16:43:00.000Z	Bepo	doug_h	what would install ubuntu again do? my system has worked correctly with Grub before
+2006-12-21T16:43:00.000Z	Bepo	doug_h	maybe if Grub is on there again and partition everything correctly?
+2006-12-21T16:43:00.000Z	doug_h	Bepo	if GRUB boots ubuntu at least it could be used to boot windows
+2006-12-21T16:44:00.000Z	Bepo	doug_h	pop in my Ubuntu and installl?
+2006-12-21T16:44:00.000Z	doug_h	Bepo	go for it
+2006-12-21T16:44:00.000Z	Bepo	doug_h	can you walk me through so i do it correctly?
+2006-12-21T16:45:00.000Z	doug_h	Bepo	ubuntu doesn't let you choose where to put GRUB it does that all for you
+2006-12-21T16:45:00.000Z	Bepo	doug_h	but the partitioning?
+2006-12-21T16:45:00.000Z	doug_h	Bepo	just put ubuntu where it was before and leave the windows partition alone
+2006-12-21T16:45:00.000Z	Bepo	doug_h	k
+2006-12-21T16:46:00.000Z	Bepo	doug_h	delete the old partition for ubuntu?
+2006-12-21T16:46:00.000Z	doug_h	Bepo	yes
+2006-12-21T16:48:00.000Z	Bepo	doug_h	of the 4 do i just delete Ext3?
+2006-12-21T16:49:00.000Z	doug_h	Bepo	delete all but NTFS
+2006-12-21T16:49:00.000Z	doug_h	Bepo	then let ubuntu partition the freespace
+2006-12-21T16:50:00.000Z	Bepo	doug_h	ok so last time I did this I deleted manually and went all the way back to main menu to install on the largest empy space?
+2006-12-21T16:51:00.000Z	doug_h	Bepo	yes
+2006-12-21T16:52:00.000Z	Bepo	doug_h	if ubuntu goes up and running... is there still hope for my windows data?
+2006-12-21T16:52:00.000Z	doug_h	Bepo	yes it should all still be there

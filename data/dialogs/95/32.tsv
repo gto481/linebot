@@ -1,0 +1,95 @@
+2008-12-26T08:27:00.000Z	R1_		Is anyone else here familiar with problems with gnome-power-management and laptop brightness in  ubuntu 8.10 ??
+2008-12-26T08:29:00.000Z	R1_		Hi, if anyone here is free, experienced with ubuntu, and willing to help a new ubuntu lover, please PM me
+2008-12-26T08:31:00.000Z	R1_		what is the abbrevation  PPA
+2008-12-26T08:31:00.000Z	R1_		How do you download someone's public PPA package
+2008-12-26T08:32:00.000Z	Paddy_EIRE	R1_	what are you trying to do specifically?
+2008-12-26T08:33:00.000Z	R1_	Paddy_EIRE	my laptop crashes/becomes unresponsive when I use FN keys on my laptop and I found a  solution on a forum on launchpad, but the solution requires  me to download something that someone has built from a PPA  site and I don't really understand this stuff since  i just started using ubuntu yesterday
+2008-12-26T08:34:00.000Z	Paddy_EIRE	R1_	link me to where you are getting your info please :)
+2008-12-26T08:35:00.000Z	R1_	Paddy_EIRE	go to http://ubuntuforums.org/archive/index.php/t-966869.html and search wgrant =)   Thanks
+2008-12-26T08:35:00.000Z	Paddy_EIRE	R1_	Just a moment.. no probs :)
+2008-12-26T08:38:00.000Z	R1_	Paddy_EIRE	i'm there
+2008-12-26T08:38:00.000Z	Paddy_EIRE	R1_	choose the "Third-Party Software" tab and add this repository (ppa) "https://launchpad.net/~wgrant/+archive" without the quotes of course :)
+2008-12-26T08:39:00.000Z	Paddy_EIRE	R1_	everything from http to archive
+2008-12-26T08:39:00.000Z	R1_	Paddy_EIRE	1 sec =D
+2008-12-26T08:39:00.000Z	Paddy_EIRE	R1_	sure
+2008-12-26T08:40:00.000Z	Paddy_EIRE	R1_	once you add that reload your package lists and update :)
+2008-12-26T08:40:00.000Z	Paddy_EIRE	R1_	if you need any more help just ring :P
+2008-12-26T08:40:00.000Z	R1_	Paddy_EIRE	i'm having trouble adding it
+2008-12-26T08:41:00.000Z	Paddy_EIRE	R1_	how so?
+2008-12-26T08:41:00.000Z	R1_	Paddy_EIRE	when i put the link in, add source is still greyed out
+2008-12-26T08:41:00.000Z	Paddy_EIRE	R1_	silly me
+2008-12-26T08:41:00.000Z	Paddy_EIRE	R1_	my mistake
+2008-12-26T08:41:00.000Z	R1_	Paddy_EIRE	lol it's okay, Thanks a lot for the help i really appreciate it
+2008-12-26T08:42:00.000Z	Paddy_EIRE	R1_	hey are you using 8.10 (intrepid) ?
+2008-12-26T08:42:00.000Z	R1_	Paddy_EIRE	yes
+2008-12-26T08:42:00.000Z	R1_	Paddy_EIRE	the problem that i have, only occurs in intepid i believe (from research)
+2008-12-26T08:42:00.000Z	Paddy_EIRE	R1_	ok add this "deb http://ppa.launchpad.net/wgrant/ubuntu intrepid main"  and  "deb-src http://ppa.launchpad.net/wgrant/ubuntu intrepid main"
+2008-12-26T08:43:00.000Z	R1_	Paddy_EIRE	both links?
+2008-12-26T08:43:00.000Z	Paddy_EIRE	R1_	add both seperately
+2008-12-26T08:43:00.000Z	R1_	Paddy_EIRE	can you please tell me the difference between deb and deb-src?
+2008-12-26T08:44:00.000Z	Paddy_EIRE	R1_	deb-src is source code
+2008-12-26T08:44:00.000Z	Paddy_EIRE	R1_	just in case
+2008-12-26T08:44:00.000Z	Paddy_EIRE	R1_	sometimes it may be required
+2008-12-26T08:44:00.000Z	R1_	Paddy_EIRE	done  :)
+2008-12-26T08:44:00.000Z	R1_	Paddy_EIRE	currently reloading
+2008-12-26T08:45:00.000Z	R1_	Paddy_EIRE	sorry to bother you some more, but what do i do here
+2008-12-26T08:45:00.000Z	Paddy_EIRE	R1_	sure thing
+2008-12-26T08:45:00.000Z	Paddy_EIRE	R1_	has it notified you to tell you updates are available?
+2008-12-26T08:46:00.000Z	R1_	Paddy_EIRE	it notified me that an adobe flash update was availible, but i'm guessing that is not what i am looking for
+2008-12-26T08:46:00.000Z	R1_	Paddy_EIRE	but i installed reguardless
+2008-12-26T08:47:00.000Z	Paddy_EIRE	R1_	go to 'Applications > Accessories > Terminal" and type "sudo apt-get update && sudo apt-get upgrade -y"
+2008-12-26T08:48:00.000Z	R1_	Paddy_EIRE	are  those 2 seperate commands or can  i  perform that in 1 line?
+2008-12-26T08:48:00.000Z	Paddy_EIRE	R1_	1 line that is what the && is for :)
+2008-12-26T08:49:00.000Z	R1_	Paddy_EIRE	i never knew! ty =D i that will  be important to me
+2008-12-26T08:50:00.000Z	R1_	Paddy_EIRE	0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2008-12-26T08:50:00.000Z	Paddy_EIRE	R1_	ok do "sudo apt-get install gnome-power-manager"
+2008-12-26T08:50:00.000Z	R1_	Paddy_EIRE	Very sorry for taking up so much of your time
+2008-12-26T08:51:00.000Z	Paddy_EIRE	R1_	hey thats what I am here for :)
+2008-12-26T08:51:00.000Z	R1_	Paddy_EIRE	gnome-power-manager is already the newest version.
+2008-12-26T08:52:00.000Z	Paddy_EIRE	R1_	sudo apt-get autoremove
+2008-12-26T08:53:00.000Z	Paddy_EIRE	R1_	do "apt-cache policy gnome-power-manager"
+2008-12-26T08:53:00.000Z	R1_	Paddy_EIRE	done. Should i somehow check my gnome-power-manager version to see if i have the new one wgrant built?
+2008-12-26T08:53:00.000Z	Paddy_EIRE	R1_	:)
+2008-12-26T08:53:00.000Z	Paddy_EIRE	R1_	which repository  does it say it is coming from?
+2008-12-26T08:53:00.000Z	Paddy_EIRE	R1_	and which version number is printed?
+2008-12-26T08:54:00.000Z	R1_	Paddy_EIRE	gnome-power-manager:
+2008-12-26T08:55:00.000Z	Paddy_EIRE	R1_	it happens
+2008-12-26T08:55:00.000Z	R1_	Paddy_EIRE	did my message go through?
+2008-12-26T08:56:00.000Z	Paddy_EIRE	R1_	you got that pastebin link I think I missed the bulk of info
+2008-12-26T08:57:00.000Z	R1_	Paddy_EIRE	http://paste.ubuntu.com/93026/
+2008-12-26T08:58:00.000Z	R1_	Paddy_EIRE	remember when you told me to perform  sudo apt-get autoremove, something called xutils-dev was removed, can you tell me what just happened?
+2008-12-26T08:58:00.000Z	Paddy_EIRE	R1_	it seems to be installed.. could you reboot and see if it made any difference
+2008-12-26T08:58:00.000Z	Paddy_EIRE	R1_	it removed old dependencies
+2008-12-26T08:59:00.000Z	R1_	Paddy_EIRE	dependencies?
+2008-12-26T08:59:00.000Z	R1_	Paddy_EIRE	sorry me newb =(
+2008-12-26T08:59:00.000Z	Paddy_EIRE	R1_	yeah other libraries and such that are required to run
+2008-12-26T09:00:00.000Z	R1_	Paddy_EIRE	Thank you for everything, i'll reboot and come back and let you  know  the result
+2008-12-26T09:00:00.000Z	R1_	Paddy_EIRE	one more thing before i go
+2008-12-26T09:00:00.000Z	R1_	Paddy_EIRE	should i remove the 2 repositories i added after i reboot and see it's working?
+2008-12-26T09:02:00.000Z	R1_	Paddy_EIRE	but aren't the repositories i added just personally modified versions of programs by wgrant?
+2008-12-26T09:03:00.000Z	R1_	Paddy_EIRE	I am confused?? Isn't it better to have updates from original ubuntu repositories rather than someone's personal custom versions?
+2008-12-26T09:03:00.000Z	Paddy_EIRE	R1_	yeah.. but the one in the official repositories is not the one wgrants ppa offers
+2008-12-26T09:04:00.000Z	R1_	Paddy_EIRE	so my understanding is i should keep this  repository from wgrant, until the official ubuntu repositories have an official update that fixes gnome-power-manager that covers this problem
+2008-12-26T09:05:00.000Z	Paddy_EIRE	R1_	well yeah.. that is if you are monitoring the situation
+2008-12-26T09:05:00.000Z	Paddy_EIRE	R1_	like subscribing to the particular bug report you are effected by
+2008-12-26T09:06:00.000Z	R1_	Paddy_EIRE	i'll stop bugging you and restart now! thanks for everything
+2008-12-26T09:11:00.000Z	R1_	Paddy_EIRE	I'm back and sad to say it did not fix my problems........... So from here it is best if i remove the 2 repositories I've added and continue searching for  another solution?
+2008-12-26T09:11:00.000Z	Paddy_EIRE	R1_	I think that package did not install
+2008-12-26T09:11:00.000Z	Paddy_EIRE	R1_	I believe you may have to remove your existing gnome-power-manager
+2008-12-26T09:12:00.000Z	R1_	Paddy_EIRE	would that be in add/remove ?
+2008-12-26T09:12:00.000Z	R1_	Paddy_EIRE	or would i have to do it through terminal?
+2008-12-26T09:12:00.000Z	Paddy_EIRE	R1_	go to 'System > Administration > Synaptic Package Manager
+2008-12-26T09:14:00.000Z	Paddy_EIRE	R1_	close synaptic and open a terminal
+2008-12-26T09:14:00.000Z	R1_	Paddy_EIRE	i see 1 gnome-power-manager
+2008-12-26T09:14:00.000Z	Paddy_EIRE	R1_	cleaner to just purge it
+2008-12-26T09:14:00.000Z	Paddy_EIRE	R1_	yeah thats okl
+2008-12-26T09:14:00.000Z	Paddy_EIRE	R1_	sudo apt-get purge gnome-power-manager
+2008-12-26T09:15:00.000Z	Paddy_EIRE	R1_	I find this method cleaner.. but you can use synaptic if you want
+2008-12-26T09:16:00.000Z	R1_	Paddy_EIRE	it is complete =D
+2008-12-26T09:16:00.000Z	Paddy_EIRE	R1_	when done reboot and then "sudo apt-get install gnome-power-manager"
+2008-12-26T09:17:00.000Z	R1_	Paddy_EIRE	i'll perform that after i reboot, then i'll reboot again and see if it works, then i'llcome back with results
+2008-12-26T09:17:00.000Z	R1_	Paddy_EIRE	ty again
+2008-12-26T09:29:00.000Z	R1_	Paddy_EIRE	i hope you're still there
+2008-12-26T10:01:00.000Z	Paddy_EIRE	R1_	You there?
+2008-12-26T10:26:00.000Z	R1_	Paddy_EIRE	I are you back yet?
+2008-12-28T07:33:00.000Z	Paddy_EIRE	R1_	hey

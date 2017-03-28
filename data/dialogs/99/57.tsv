@@ -1,0 +1,99 @@
+2007-02-18T10:24:00.000Z	Ice_Wewe		Ubuntu won't see my WLAN card, how do I get it to revert to the default install settings, since it's using the (wrong) settings from the Edgy install that it upgraded from
+2007-02-18T10:24:00.000Z	bulmer	Ice_Wewe	whats the name of your wifi card?
+2007-02-18T10:25:00.000Z	Ice_Wewe	bulmer	it's a Broadcom card, Airforce One
+2007-02-18T10:25:00.000Z	Ice_Wewe	bulmer	BCM4318
+2007-02-18T10:26:00.000Z	Ice_Wewe	bulmer	the Feisty Herd 4 live CD can see the interface, but doesn't like my WEP password. But, the GUI installer is broken, so I downloaded the alternate install CD, and followed the upgrade process. Unfortunately, Edgy never saw that as an interface, and Feisty took over Edgy's preferences, so I'm wondering what the fastest way I can revert ALL settings is
+2007-02-18T10:26:00.000Z	bulmer	Ice_Wewe	look what do you have under /lib/firmware/`uname -r`/bcm*
+2007-02-18T10:27:00.000Z	Ice_Wewe	bulmer	2.6.17-10-powerpc, 2.6.20-8-powerpc, and a bunch of bcm43xx firmware files
+2007-02-18T10:28:00.000Z	bulmer	Ice_Wewe	lsmod| grep bcm  whats the result?
+2007-02-18T10:28:00.000Z	Ice_Wewe	bulmer	nothing for BCM, because that's what the program to extract the firmware is called, but I do have a Broadcom card, BCM4318 chipset
+2007-02-18T10:29:00.000Z	Ice_Wewe	bulmer	AirForce One 54g
+2007-02-18T10:29:00.000Z	bulmer	Ice_Wewe	am confused, what is your answer on that lsmod ?
+2007-02-18T10:29:00.000Z	Ice_Wewe	bulmer	I have a Broadcom BCM4318 wireless card
+2007-02-18T10:30:00.000Z	bulmer	Ice_Wewe	once more, give me the result of lsmod|grep bcm
+2007-02-18T10:31:00.000Z	Ice_Wewe	bulmer	one sec, nuts to typing this manually
+2007-02-18T10:31:00.000Z	Ice_Wewe	bulmer	0001:10:11.0 Network controller: Broadcom Corporation BCM4318 [AirForce One 54g]  802.11g Wireless LAN Controller (rev 02)
+2007-02-18T10:32:00.000Z	bulmer	Ice_Wewe	am expecting like bmc_ ????   as the answer for drivers loaded.
+2007-02-18T10:32:00.000Z	Ice_Wewe	bulmer	oh, sorry, half asleep
+2007-02-18T10:32:00.000Z	Ice_Wewe	bulmer	nada
+2007-02-18T10:33:00.000Z	bulmer	Ice_Wewe	then your driver is not loaded for bcm*
+2007-02-18T10:33:00.000Z	Ice_Wewe	bulmer	well how do I load it?
+2007-02-18T10:33:00.000Z	bulmer	Ice_Wewe	what is in /lib/firmware/`uname -r`/bcm*/default
+2007-02-18T10:34:00.000Z	Ice_Wewe	bulmer	nothing
+2007-02-18T10:34:00.000Z	Ice_Wewe	bulmer	because there is *no* folder bcm
+2007-02-18T10:34:00.000Z	Ice_Wewe	bulmer	there are just a bunch of bcm_43xx.fw files
+2007-02-18T10:35:00.000Z	bulmer	Ice_Wewe	whats in your /etc/modprobe.d/options  file anything resembles bcm ?
+2007-02-18T10:36:00.000Z	bulmer	Ice_Wewe	there should be one directory under /lib/firmware/`uname -r`/   what is the name?
+2007-02-18T10:36:00.000Z	Ice_Wewe	bulmer	no on the options
+2007-02-18T10:36:00.000Z	Ice_Wewe	bulmer	-bash: /lib/firmware/2.6.20-8-powerpc/: is a directory
+2007-02-18T10:37:00.000Z	bulmer	Ice_Wewe	there should be one directory under /lib/firmware/`uname -r`/   what is the name?
+2007-02-18T10:37:00.000Z	Ice_Wewe	bulmer	I already told you, 2.6.20-8-powerpc
+2007-02-18T10:38:00.000Z	bulmer	Ice_Wewe	no other directory below that?
+2007-02-18T10:38:00.000Z	Ice_Wewe	bulmer	acx and zd1211 are the ONLY sub directories
+2007-02-18T10:38:00.000Z	bulmer	Ice_Wewe	you are not paying attention to my question..i cant waste my time like that
+2007-02-18T10:40:00.000Z	Ice_Wewe	bulmer	there are two directories below /lib/firmware/2.6.20-8-powerpc/, acx, and zd1211
+2007-02-18T10:41:00.000Z	bulmer	Ice_Wewe	now do a dmesg|grep wlan   see if your bmc* is detected
+2007-02-18T10:41:00.000Z	Ice_Wewe	bulmer	no
+2007-02-18T10:41:00.000Z	bulmer	Ice_Wewe	no results of your wifi card detected from dmesg ?
+2007-02-18T10:41:00.000Z	Ice_Wewe	bulmer	no
+2007-02-18T10:41:00.000Z	Ice_Wewe	bulmer	I have no wifi card detected!
+2007-02-18T10:42:00.000Z	Ice_Wewe	bulmer	the system doesn't see a WLAN0, or an eth1
+2007-02-18T10:42:00.000Z	bulmer	Ice_Wewe	then you need to play with your bios so that these card can be detected
+2007-02-18T10:42:00.000Z	Ice_Wewe	bulmer	it would just be easier if there were a command to completely reconfigure the entire OS to be like what it would've been after a fresh install
+2007-02-18T10:42:00.000Z	Ice_Wewe	bulmer	Mac's don't *have* a BIOS
+2007-02-18T10:43:00.000Z	bulmer	Ice_Wewe	there must be something in the mobo that detects your hardware or to activate additional ones?
+2007-02-18T10:43:00.000Z	Ice_Wewe	bulmer	I'm on a PowerBook G4. It has NO BIOS, it Has Open Firmware. The wireless card would bite Ubuntu in the face if it could
+2007-02-18T10:43:00.000Z	Ice_Wewe	bulmer	this card is NOT new, it's been on the computer since I got it, Ubuntu is just too stupid to detect it properly
+2007-02-18T10:44:00.000Z	bulmer	Ice_Wewe	i bit more that i can chew..im not familiar with Mac's  :)
+2007-02-18T10:45:00.000Z	bulmer	Ice_Wewe	what shows up if you do an ls -la /proc/sys/net/ipv4/conf
+2007-02-18T10:46:00.000Z	Ice_Wewe	bulmer	all, default, eth0, and lo
+2007-04-15T07:50:00.000Z	bulmer	Ice_Wewe	when you compiled the kernel, did you update the links? maybe those are part of the make targets
+2007-04-15T07:51:00.000Z	Ice_Wewe	bulmer	I configured it, made the modules, and
+2007-04-15T07:52:00.000Z	bulmer	Ice_Wewe	isnt there like an extra step of making sure initrd is also prepared?
+2007-04-15T07:52:00.000Z	Ice_Wewe	bulmer	mkinitrd?
+2007-04-15T07:52:00.000Z	bulmer	Ice_Wewe	perhaps, i dont recall the exact command
+2007-04-15T07:53:00.000Z	Ice_Wewe	bulmer	make install just told me to add /boot/linux-2.6.17.14-ubuntu1 to my grub/menu.lst, so I did, and it created an initrd
+2007-04-15T07:53:00.000Z	Ice_Wewe	bulmer	however, the initrd it created is not the same file type as the ones that apt installs
+2007-04-15T07:53:00.000Z	bulmer	Ice_Wewe	okay, so its probably part ot that make install target
+2007-04-15T07:54:00.000Z	Ice_Wewe	bulmer	whenever I build an initrd, I get a weird file type
+2007-04-15T07:54:00.000Z	bulmer	Ice_Wewe	am grasping here...how do you know that the apt installs are not same type as the ones you created from make install (mkinitrd) ?
+2007-04-15T07:55:00.000Z	Ice_Wewe	bulmer	initrd.img-2.6.17.14-ubuntu1-amd64-k8: gzip compressed data, from Unix, max compression
+2007-04-15T07:55:00.000Z	Ice_Wewe	bulmer	that's an initrd that apt installed
+2007-04-15T07:55:00.000Z	bulmer	Ice_Wewe	hang on, let me look at mine, just for comparison
+2007-04-15T07:55:00.000Z	Ice_Wewe	bulmer	and here is the one that mkinitrd made: Linux Compressed ROM File System data, little endian size 5795840 version #2 sorted_dirs CRC 0x17278aa7, edition 0, 4472 blocks, 360 files
+2007-04-15T07:56:00.000Z	Ice_Wewe	bulmer	I've installed kernels on other distros, and I've never had this problem before
+2007-04-15T07:56:00.000Z	Ice_Wewe	bulmer	I've even followed a Ubuntu Kernel-Compilation How-To, and those instructions didn't work either
+2007-04-15T07:56:00.000Z	bulmer	Ice_Wewe	doesnt it normally reside at /boot/  ?
+2007-04-15T07:56:00.000Z	Ice_Wewe	bulmer	that's where it is
+2007-04-15T07:57:00.000Z	bulmer	Ice_Wewe	hang on, let me look at some of my notes..
+2007-04-15T07:57:00.000Z	Ice_Wewe	bulmer	ok
+2007-04-15T07:59:00.000Z	bulmer	Ice_Wewe	sorry cant find my notes on that..
+2007-04-15T07:59:00.000Z	Ice_Wewe	bulmer	it's ok
+2007-04-15T08:00:00.000Z	Ice_Wewe	bulmer	I left the FS types alone in the config, because I've been burned by taking some out before, on previous systems, but I assumed devfs has to be supported by defaults
+2007-04-15T08:02:00.000Z	bulmer	Ice_Wewe	you can check the current installed configure file its in /boot/ too  config-2.6.x-386 something, if it has the FS you needed
+2007-04-15T08:03:00.000Z	Ice_Wewe	bulmer	what am I looking for? cat /boot/config-2.6.17.14-ubuntu1 | grep devfs
+2007-04-15T08:03:00.000Z	bulmer	Ice_Wewe	yes thats the one
+2007-04-15T08:03:00.000Z	Ice_Wewe	bulmer	'config-2.6.17.14-ubuntu1 | grep devfs' returns nothing
+2007-04-15T08:04:00.000Z	Ice_Wewe	bulmer	sorry, make that 'cat config-2.6.17.14-ubuntu1 | grep devfs'
+2007-04-15T08:04:00.000Z	bulmer	Ice_Wewe	or basically i do   grep devfs  config-*
+2007-04-15T08:04:00.000Z	Ice_Wewe	bulmer	nope
+2007-04-15T08:05:00.000Z	bulmer	Ice_Wewe	that indicates that the current installed one does not support devfs?
+2007-04-15T08:05:00.000Z	Ice_Wewe	bulmer	it won't boot
+2007-04-15T08:05:00.000Z	Ice_Wewe	bulmer	the kernel panics
+2007-04-15T08:06:00.000Z	Ice_Wewe	bulmer	It decompresses the image, and I get a bunch of stuff about how it can't find /lib/modules/$version/modules.dep and how DEVFS is not mounted
+2007-04-15T08:06:00.000Z	bulmer	Ice_Wewe	i forget the steps to revert back to the working kernel..umm..
+2007-04-15T08:06:00.000Z	Ice_Wewe	bulmer	I'm on a working kernel
+2007-04-15T08:06:00.000Z	Ice_Wewe	bulmer	well, hardly working
+2007-04-15T08:06:00.000Z	Ice_Wewe	bulmer	this kernel is dying, and it's not a pretty death
+2007-04-15T08:07:00.000Z	bulmer	Ice_Wewe	as long as you saved your important data on separate partition, you can fiddle with the kernel as much..
+2007-04-15T08:07:00.000Z	Ice_Wewe	bulmer	my home directory is on another partition
+2007-04-15T08:08:00.000Z	bulmer	Ice_Wewe	you are okay then, keep hacking at it.. :)
+2007-04-15T08:08:00.000Z	Ice_Wewe	bulmer	I experience multiple kernel panics/day on this kernel, so it is necessary that I migrate off it
+2007-04-15T08:08:00.000Z	Ice_Wewe	bulmer	yes, but I've run out of things to do. I've followed a Ubuntu Kernel install How-To, and that didn't produce a booting kernel
+2007-04-15T08:09:00.000Z	bulmer	Ice_Wewe	i actually have not done ubuntu or debian like kernels, i would assume its not too different from others that are rpm based
+2007-04-15T08:09:00.000Z	Ice_Wewe	bulmer	I've tried everything I know how to do to get this 2.6.17.14-ubuntu1 kernel to boot, and still nothing
+2007-04-15T08:09:00.000Z	Ice_Wewe	bulmer	I've installed many kernels on Mandrake and RedHat systems, I've checked my notes, followed them too, nothing works
+2007-04-15T08:10:00.000Z	bulmer	Ice_Wewe	let me look around for that article i read about something it uses utf-8 vs 8559 ..let me see if thats the cause of your issues
+2007-04-15T08:10:00.000Z	Ice_Wewe	bulmer	thanks
+2007-04-15T08:13:00.000Z	bulmer	Ice_Wewe	i have to log off, my bookmarks are corrupted, i did an update last night and have not rebooted yet..
+2007-04-15T08:13:00.000Z	Ice_Wewe	bulmer	ok, bye

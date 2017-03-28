@@ -1,0 +1,99 @@
+2012-07-23T23:50:00.000Z	_jdccdevel	boghiu	In a terminal run: "sudo lspci | grep Ethernet"
+2012-07-23T23:52:00.000Z	boghiu	_jdccdevel	 NVIDIA Corporation MCP65 Ethernet
+2012-07-23T23:59:00.000Z	_jdccdevel	boghiu	Can you run "sudo lsmod | grep -i force" and tell me if it returns a result?
+2012-07-23T23:59:00.000Z	boghiu	_jdccdevel	ok
+2012-07-24T00:00:00.000Z	boghiu	_jdccdevel	 i2c_nforce2        12906    0
+2012-07-24T00:01:00.000Z	boghiu	_jdccdevel	 forcedeth        58096   0
+2012-07-24T00:01:00.000Z	_jdccdevel	boghiu	Your network driver is only in kernel 3.2+ can you run "uname -a" and post the result pls?
+2012-07-24T00:02:00.000Z	boghiu	_jdccdevel	i must tell u that my cable with internet is plugged in laptop
+2012-07-24T00:02:00.000Z	boghiu	_jdccdevel	and my ubuntu is in pc
+2012-07-24T00:03:00.000Z	_jdccdevel	boghiu	I understand. The problem appears to be that the driver for your ethernet card is not loaded (it should be forcedeth) I need to know what kernel you are running.
+2012-07-24T00:04:00.000Z	boghiu	_jdccdevel	i run unamed -a  and : Linux boghiu 3.2.0 -23 - generic-pae #36 ubuntu smp
+2012-07-24T00:06:00.000Z	boghiu	_jdccdevel	and now?
+2012-07-24T00:08:00.000Z	_jdccdevel	boghiu	sorry, I was on the phone.
+2012-07-24T00:09:00.000Z	boghiu	_jdccdevel	NO
+2012-07-24T00:09:00.000Z	_jdccdevel	boghiu	try: "sudo modprobe forcedeth"
+2012-07-24T00:10:00.000Z	boghiu	_jdccdevel	but i must plug in pc the cable? or i can run this comands without the internet cable?
+2012-07-24T00:10:00.000Z	_jdccdevel	boghiu	sorry, I didn't see the post where you said that forcedeth is loaded.
+2012-07-24T00:11:00.000Z	boghiu	_jdccdevel	 i2c_nforce2        12906    0
+2012-07-24T00:11:00.000Z	_jdccdevel	boghiu	so you do have the driver installed and active. That's good.
+2012-07-24T00:11:00.000Z	boghiu	_jdccdevel	 forcedeth        58096   0
+2012-07-24T00:12:00.000Z	boghiu	_jdccdevel	so what should i do now?
+2012-07-24T00:14:00.000Z	_jdccdevel	boghiu	if you run run "sudo ifconfig | grep Ethernet" what does it show in the first column?
+2012-07-24T00:14:00.000Z	boghiu	_jdccdevel	wait
+2012-07-24T00:16:00.000Z	boghiu	_jdccdevel	Link encap: Ethernet (in red letters) HWaddr 00:1b:fc:2b:35:b7
+2012-07-24T00:18:00.000Z	boghiu	_jdccdevel	remember i dont have any internet  cable plugged in the pc
+2012-07-24T00:18:00.000Z	_jdccdevel	boghiu	does the line start with "eth0" or something else?
+2012-07-24T00:18:00.000Z	boghiu	_jdccdevel	yes
+2012-07-24T00:18:00.000Z	boghiu	_jdccdevel	with eth0
+2012-07-24T00:20:00.000Z	_jdccdevel	boghiu	Ok, good. Now, with the cable plugged in, can you type "sudo ifup eth0"
+2012-07-24T00:20:00.000Z	boghiu	_jdccdevel	ok but wait i will be disconnected now i will reconnect after that ok?
+2012-07-24T00:21:00.000Z	_jdccdevel	boghiu	k
+2012-07-24T00:34:00.000Z	_jdccdevel	boghiu	Ok. We'll try it another way.
+2012-07-24T00:43:00.000Z	_jdccdevel	boghiu	sorry, I'm still on that call.
+2012-07-24T00:48:00.000Z	_jdccdevel	boghiu	you still there?
+2012-07-24T01:08:00.000Z	boghiu	_jdccdevel	second line is with inet6 addr
+2012-07-24T00:55:00.000Z	boghiu	_jdccdevel	 that method doesnt work
+2012-07-24T00:56:00.000Z	_jdccdevel	boghiu	try these commands (everything after the colon)
+2012-07-24T00:56:00.000Z	_jdccdevel	boghiu	1: sudo bash
+2012-07-24T00:57:00.000Z	_jdccdevel	boghiu	2: echo "auto eth0" >> /etc/network/interfaces
+2012-07-24T00:57:00.000Z	_jdccdevel	boghiu	3: exit
+2012-07-24T00:57:00.000Z	boghiu	_jdccdevel	DOING NOW
+2012-07-24T00:57:00.000Z	_jdccdevel	boghiu	Now run "sudo ifup eth0"
+2012-07-24T00:58:00.000Z	_jdccdevel	boghiu	with the cable plugged in for the ifup command
+2012-07-24T00:58:00.000Z	boghiu	_jdccdevel	OK
+2012-07-24T01:04:00.000Z	boghiu	_jdccdevel	back ... when i wrote the ifup comand it told me ignoring unknown interface eth0=eth0
+2012-07-24T01:06:00.000Z	_jdccdevel	boghiu	To confirm, you get output if you run "sudo ifconfig eth0" right?
+2012-07-24T01:06:00.000Z	boghiu	_jdccdevel	wati
+2012-07-24T01:07:00.000Z	boghiu	_jdccdevel	i wrote this comand now and it shows me a lot of letters:)) first line is Link encap: ethernet HWaddr
+2012-07-24T01:09:00.000Z	boghiu	_jdccdevel	:((((( i want enjoy ubuntu
+2012-07-24T01:11:00.000Z	boghiu	_jdccdevel	inet6 addr: fe80: :21b:fcff..................
+2012-07-24T01:11:00.000Z	_jdccdevel	boghiu	that's the only line?
+2012-07-24T01:11:00.000Z	boghiu	_jdccdevel	last words Scope: Link
+2012-07-24T01:11:00.000Z	boghiu	_jdccdevel	yes
+2012-07-24T01:12:00.000Z	boghiu	_jdccdevel	 1 line
+2012-07-24T01:12:00.000Z	boghiu	_jdccdevel	with the cable in???
+2012-07-24T01:13:00.000Z	boghiu	_jdccdevel	i didnt saw that i needed the cable in what was the last comand ?
+2012-07-24T01:14:00.000Z	_jdccdevel	boghiu	Yes, with the cable in. Try this too: "ifconfig eth0 | grep MTU" with the cable plugged in. does the line contain the word "UP" ?
+2012-07-24T01:14:00.000Z	boghiu	_jdccdevel	 wait i must plug in the cable
+2012-07-24T01:14:00.000Z	boghiu	_jdccdevel	1 min
+2012-07-24T01:21:00.000Z	boghiu	_jdccdevel	back
+2012-07-24T01:22:00.000Z	_jdccdevel	boghiu	and?
+2012-07-24T01:22:00.000Z	boghiu	_jdccdevel	when i wrote the comand with grep inet it shows me some commands
+2012-07-24T01:22:00.000Z	boghiu	_jdccdevel	fconfig from package redboot-tools
+2012-07-24T01:23:00.000Z	boghiu	_jdccdevel	and another 5 should i tell u all of them?
+2012-07-24T01:23:00.000Z	_jdccdevel	boghiu	I think you missed the "i" at the front of "ifconfig"
+2012-07-24T01:24:00.000Z	boghiu	_jdccdevel	and the second comand with MTU it tells me UP BROADCAST RUNING MULTICAST MTU:1500 Metric 1
+2012-07-24T01:24:00.000Z	boghiu	_jdccdevel	dam i missed the f
+2012-07-24T01:24:00.000Z	boghiu	_jdccdevel	should i plug in again and write that comand?
+2012-07-24T01:25:00.000Z	boghiu	_jdccdevel	??????
+2012-07-24T01:25:00.000Z	_jdccdevel	boghiu	is your network running dhcp? How are you connecting (i.e. are you behind a router, direct to your ISP, something else) ?
+2012-07-24T01:27:00.000Z	_jdccdevel	boghiu	are you behind a router? Or directly connected?
+2012-07-24T01:27:00.000Z	boghiu	_jdccdevel	 i connect to RDS thast my provider with an username and a pasword
+2012-07-24T01:27:00.000Z	boghiu	_jdccdevel	directly with a cable in my laptop
+2012-07-24T01:28:00.000Z	_jdccdevel	boghiu	did your provider give you static IP information? Or are they running DHCP?
+2012-07-24T01:29:00.000Z	boghiu	_jdccdevel	how can i know that?
+2012-07-24T01:30:00.000Z	boghiu	_jdccdevel	i have 1 ip ... what means DHCP?
+2012-07-24T01:30:00.000Z	_jdccdevel	boghiu	Is the PC you're using now windows? or Linux?
+2012-07-24T01:30:00.000Z	boghiu	_jdccdevel	now am am using windows 7 on my laptop
+2012-07-24T01:30:00.000Z	_jdccdevel	boghiu	do you have to manually type in the address in windows 7, or does it get it for you?
+2012-07-24T01:31:00.000Z	boghiu	_jdccdevel	manually
+2012-07-24T01:31:00.000Z	_jdccdevel	boghiu	Ah!
+2012-07-24T01:32:00.000Z	_jdccdevel	boghiu	so you have an IP, Netmask, Gateway, and DNS server IPs?
+2012-07-24T01:32:00.000Z	boghiu	_jdccdevel	Yes
+2012-07-24T01:32:00.000Z	boghiu	_jdccdevel	i think:D
+2012-07-24T01:33:00.000Z	_jdccdevel	boghiu	The problem isn't your network drivers, the problem is that we need to configure your static IP on the card.
+2012-07-24T01:33:00.000Z	boghiu	_jdccdevel	oh and how we do that?:))
+2012-07-24T01:33:00.000Z	_jdccdevel	boghiu	most of the time people just assume you're behind a router, which would give you the correct IP.
+2012-07-24T01:33:00.000Z	boghiu	_jdccdevel	i can give u my ip correctly
+2012-07-24T01:34:00.000Z	_jdccdevel	boghiu	do you have all the info I gave above? or do you need to look some of it up?
+2012-07-24T01:34:00.000Z	_jdccdevel	boghiu	Ip address, netmask, gateway, and DNS servers?
+2012-07-24T01:34:00.000Z	boghiu	_jdccdevel	 u need those info?
+2012-07-24T01:35:00.000Z	_jdccdevel	boghiu	no, but I need to know you have them.
+2012-07-24T01:36:00.000Z	boghiu	_jdccdevel	i have the ip the rest i dont know how to get them
+2012-07-24T01:37:00.000Z	_jdccdevel	boghiu	on your windows 7 box, open a command prompt (win-r, type cmd) then type "ipconfig /all" in the dos box
+2012-07-24T01:37:00.000Z	boghiu	_jdccdevel	done
+2012-07-24T01:38:00.000Z	_jdccdevel	boghiu	ok you should see values for "netmask" and dns servers (or nameservers)
+2012-07-24T01:38:00.000Z	boghiu	_jdccdevel	i see my ip dns servers and wait ...
+2012-07-24T01:38:00.000Z	_jdccdevel	boghiu	you should also see "default gateway"
+2012-07-24T01:40:00.000Z	boghiu	_jdccdevel	ok i see them what now?

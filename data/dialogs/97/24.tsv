@@ -1,0 +1,97 @@
+2008-03-03T00:45:00.000Z	x89x	danand	: it says
+2008-03-03T00:20:00.000Z	danand	x89x	- first check your sound card has the required drivers/modules installed . SB cards use the emu10k driver. Type lsmod | grep emu in a terminal and see if you get any output
+2008-03-03T00:21:00.000Z	x89x	danand	yes i get a long list
+2008-03-03T00:23:00.000Z	danand	x89x	- ok - do you have alsa and alsa-utils installed? type dpkg-query -s alsa and dpkg-query -s alsa-utils. there should be a line in the output telling you if those packages are installed
+2008-03-03T00:24:00.000Z	x89x	danand	Package `alsa' is not installed and no info is available.
+2008-03-03T00:24:00.000Z	danand	x89x	- try alsa-base instead of alsa and see if that turns up anything
+2008-03-03T00:26:00.000Z	danand	x89x	- ok, how about alsa-utils
+2008-03-03T00:28:00.000Z	danand	x89x	- ;) - ok. try typing the following cat /dev/urandom > /dev/audio. you should hear a load of static. press ctrl+c to stop it if you do
+2008-03-03T00:29:00.000Z	x89x	danand	no sound
+2008-03-03T00:30:00.000Z	danand	x89x	- ok check you are a member of the audio group - type groups in a terminal - you should see a long list with audio as one of the entries
+2008-03-03T00:31:00.000Z	x89x	danand	: cat /dev/urandom > /dev/audi
+2008-03-03T00:31:00.000Z	x89x	danand	: x89x adm dialout cdrom floppy audio dip video plugdev scanner netdev lpadmin powerdev admin
+2008-03-03T00:32:00.000Z	danand	x89x	- that should have been cat /dev/urandom > /dev/audio. but your a member of the audio group at least :)
+2008-03-03T00:32:00.000Z	x89x	danand	: still no sound
+2008-03-03T00:33:00.000Z	danand	x89x	- type alsamixer in a terminal - go through each of the settings making sure they are enabled. if external amplifier or something similar is enabled you need to disable that
+2008-03-03T00:35:00.000Z	x89x	danand	: How do i eanble. so look different
+2008-03-03T00:38:00.000Z	danand	x89x	- if something is muted you can toggle on and off with the m key. try the up and down arrows too.
+2008-03-03T00:39:00.000Z	x89x	danand	: all are showing a infinity like sign in green
+2008-03-03T00:40:00.000Z	x89x	danand	: heres what is on top
+2008-03-03T00:42:00.000Z	danand	x89x	- type asoundconf list in the terminal and see what the output is
+2008-03-03T00:42:00.000Z	x89x	danand	:  Names of available sound cards: VT82xx Live
+2008-03-03T00:44:00.000Z	danand	x89x	- does that match the name of your sound card - type lspci in a terminal to list your hardware, find your sound card and see if that matches
+2008-03-03T00:49:00.000Z	danand	x89x	- that looks right then ....
+2008-03-03T00:49:00.000Z	x89x	danand	: But audio give the onbaord name not sblive
+2008-03-03T00:51:00.000Z	danand	x89x	- ahh ... hold on .... i thought your paste above was part of the same thing. so your saying lspci lists _two_ audio devices - on the onboard via and the other the sblive?
+2008-03-03T00:53:00.000Z	danand	x89x	- ok, that would be the problem then .... we want alsa to use your sb_live card rather than the onboard one.
+2008-03-03T00:56:00.000Z	danand	x89x	- try typing aplay -l and see what the output is
+2008-03-03T00:58:00.000Z	x89x	danand	: http://pastebin.com/d2165b856
+2008-03-03T01:00:00.000Z	x89x	danand	 : waiting
+2008-03-03T01:01:00.000Z	danand	x89x	- cool - at least the sb_live card is listed :) .... patience i'm just checking something out...
+2008-03-03T01:06:00.000Z	danand	x89x	- sorry, just having a bit of bother with specifying the device that aplay should use...
+2008-03-03T01:08:00.000Z	danand	x89x	- no, how to get aplay to use the sb_live card - see man aplay
+2008-03-03T01:08:00.000Z	x89x	danand	: typing aplay in the terminal gives no Output
+2008-03-03T01:14:00.000Z	danand	x89x	- you need an input file. i did cat /dev/urandom > file.wav and pressed ctrl+c to stop that file getting too big. i then did aplay file.wav and heard the static. however, aplay lets you specify which audio card you want to use ... so we should be able to test if your sb_live card is working that way. then go about setting the system to use that card as default
+2008-03-03T01:16:00.000Z	x89x	danand	: I tried to change my cable by putting in the onboard output
+2008-03-03T01:16:00.000Z	x89x	danand	: but not when i put it in my sound card port :(
+2008-03-03T01:17:00.000Z	danand	x89x	- yes - that should be the case - we just need to tell your system to use the sb_live card instead of the onboard one.... just googling to see how to do that now
+2008-03-03T01:22:00.000Z	danand	x89x	- you still there??
+2008-03-03T01:25:00.000Z	x89x	danand	: did you reply just now ??
+2008-03-03T01:26:00.000Z	danand	x89x	- yes - thought you had disapeared :)
+2008-03-03T01:27:00.000Z	danand	x89x	- think i've found solution ... type asoundconf list in a terminal - both your soundcards should be listed
+2008-03-03T01:29:00.000Z	danand	x89x	- ok now type asoundconf set-default-card CARDNAME where CARDNAME is the name of the sb_live card output by the previous command you just run
+2008-03-03T01:30:00.000Z	x89x	danand	: i wrote  asoundconf set-default-card Live
+2008-03-03T01:31:00.000Z	danand	x89x	- ok - try your sound now though with cat /dev/urandom > /dev/audio
+2008-03-03T01:32:00.000Z	danand	x89x	- just cat /dev/urandom > /dev/audio
+2008-03-03T01:33:00.000Z	danand	x89x	- either that or aplay file.wav
+2008-03-03T01:33:00.000Z	x89x	danand	: nope
+2008-03-03T01:35:00.000Z	danand	x89x	- try running alsamixer again and see what card its using
+2008-03-03T01:36:00.000Z	x89x	danand	: alsamixer: function snd_ctl_open failed for default: No such device
+2008-03-03T01:36:00.000Z	x89x	danand	: same error
+2008-03-03T01:37:00.000Z	x89x	danand	: aslamixer is not working !!!
+2008-03-03T01:37:00.000Z	danand	x89x	- ok can you check the output of the command asoundconf list again
+2008-03-03T01:38:00.000Z	x89x	danand	: Should i reset default card and try >>
+2008-03-03T01:39:00.000Z	x89x	danand	: I reset it and alsamixer is now working
+2008-03-03T01:39:00.000Z	danand	x89x	- ok can you check the output of the command asoundconf list again
+2008-03-03T01:44:00.000Z	danand	x89x	- not really - it was all a bit wierd
+2008-03-03T02:11:00.000Z	x89x	danand	: when i press ctrl + shift + F1
+2008-03-03T02:10:00.000Z	x89x	danand	: you there ?
+2008-03-03T02:11:00.000Z	danand	x89x	- hi
+2008-03-03T02:12:00.000Z	x89x	danand	: i meant what happens when i press ctrl + shift + F1
+2008-03-03T02:13:00.000Z	danand	x89x	- do you mean ctrl-alt-F1?? ctrl-shift-F1 has no effect on my system
+2008-03-03T02:16:00.000Z	danand	x89x	- that takes you to a tty. tty is just a text based login shell. ctrl-alt- and keys F1 - F6 give you text based login screens. tty7 (ctrl-alt-F7) gives you the X based login or X.
+2008-03-03T02:17:00.000Z	x89x	danand	: how do i exit that console ??
+2008-03-03T02:17:00.000Z	danand	x89x	- press ctrl-alt-F7 to get back to X
+2008-03-03T02:18:00.000Z	danand	x89x	- did you get my last about blacklisting that driver for your onboard sound card
+2008-03-03T02:19:00.000Z	x89x	danand	: which one ??
+2008-03-03T02:22:00.000Z	danand	x89x	- in a terminal type   cat /proc/asound/modules - you should get two modules listed - one of them should be snd_emu10k1. that is for your sb_live card. the other will be for your onboard sound. if you can find out that we can stop the kernel from loading it
+2008-03-03T02:23:00.000Z	x89x	danand	the two are :  0 snd_hda_intel 1    snd_emu10k1
+2008-03-03T02:25:00.000Z	danand	x89x	- ok. first lets create a backup copy of your blacklist file. do   cp /etc/modprobe.d/blacklist ~/blacklist.old
+2008-03-03T02:27:00.000Z	danand	x89x	- then we need to add a single line containing the text    snd_hda_intel   to the file /etc/modprobe.d/blacklist. you must do this as root ie gksu gedit /etc/modprobe.d/blacklist    and then add snd_hda_intel at the end of the file
+2008-03-03T02:28:00.000Z	x89x	danand	: do i have to put that 0 ?
+2008-03-03T02:28:00.000Z	danand	x89x	- after you've done that just save the file. that should prevent the kernel from loading that module at boot
+2008-03-03T02:28:00.000Z	danand	x89x	- no ... just snd_hda_intel
+2008-03-03T02:28:00.000Z	x89x	danand	: there is no save option !!!!!
+2008-03-03T02:29:00.000Z	x89x	danand	: its grayed out
+2008-03-03T02:30:00.000Z	danand	x89x	- did you edit that file as root? type   gksu gedit /etc/modprobe.d/blacklist    then enter your password to edit that as root
+2008-03-03T02:31:00.000Z	x89x	danand	: Dont i didnt know about that root thing
+2008-03-03T02:32:00.000Z	danand	x89x	- ok that should do it. that entry in that file will stop the kernel from loading that module :)
+2008-03-03T02:32:00.000Z	x89x	danand	: i am trying to use virtualbox. what the hard disk image thing ?
+2008-03-03T02:35:00.000Z	danand	x89x	- virtualbox emulates a hard disk by using a file it creates on your system ... very clever stuff.... the files or disk images can get quite big though. what OS are you trying to install in virtualbox?
+2008-03-03T02:36:00.000Z	x89x	danand	: i want to run Microsoft Visual studio
+2008-03-03T02:37:00.000Z	danand	x89x	- yuck :P - what programming language are you using that for?
+2008-03-03T02:38:00.000Z	x89x	danand	: Visual C# and am trying to learn XNA and have  to learn C++ and JAVA in next semester
+2008-03-03T02:39:00.000Z	x89x	danand	: CAn i get NTFS write access in ubuntu?>
+2008-03-03T02:39:00.000Z	danand	x89x	- you may want to look at the kdevelop package - that supports loads of languages and is really quite good.
+2008-03-03T02:39:00.000Z	x89x	danand	: is it ! gotta check it out
+2008-03-03T02:40:00.000Z	danand	x89x	- i think ntfs write is enabled by default nowadays - not entirely sure though - i don't use windows at all anymore :)
+2008-03-03T02:43:00.000Z	x89x	danand	: I cant copy or create a flder in my NTFS partition
+2008-03-03T02:46:00.000Z	danand	x89x	- check the contents of your /etc/fstab file... check that the filesystem is mounted rw (ie read write) also check that you have permission to write to the filesystem
+2008-03-03T02:47:00.000Z	danand	x89x	- check the output of ls -l /ntfs_mountpoint to see who owns that
+2008-03-03T02:48:00.000Z	danand	x89x	- before all that check that write access to ntfs partitions are supported - like i said i don;t use windows so its not something i've had to do
+2008-03-03T02:48:00.000Z	x89x	danand	: the second ls -l /ntfs_mountpoint gioves an error saying  No such file or directory
+2008-03-03T02:50:00.000Z	danand	x89x	- you need to replace /ntfs_mountpoint with the actual mountpoint of the disk/partition ie /media/hda1 or whatever it is??
+2008-03-03T02:50:00.000Z	danand	x89x	- :)
+2008-03-03T02:53:00.000Z	x89x	danand	: still doesnt work ! I worte ls -l /hda1 (Hda1 shows in Computer)
+2008-03-03T02:55:00.000Z	danand	x89x	- you need to find where that is mounted exactly - look in /etc/fstab and it should tell you the device and mountpoint
+2008-03-03T04:03:00.000Z	x89x	danand	: you there ??

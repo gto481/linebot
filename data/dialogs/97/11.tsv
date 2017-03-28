@@ -1,0 +1,97 @@
+2010-03-07T23:51:00.000Z	markd		having a issue connecting to my network ive tried both of my routers here in the house and i cannot connect i know im typing in the right password but its still not working
+2010-03-07T23:53:00.000Z	markd		having a  problem connecting to my network i know im typing in the right password but not working on both of my routers here
+2010-03-07T23:54:00.000Z	markd		 having a  problem connecting to my network i know im typing in the right password but not working on both of my routers here
+2010-03-07T23:54:00.000Z	markd		the second one uses aes do i have to change something for it to work?
+2010-03-07T23:55:00.000Z	markd		anyone?
+2010-03-07T23:56:00.000Z	markd		 having a  problem connecting to my network i know im typing in the right password but not working on both of my routers here
+2010-03-07T23:56:00.000Z	markd		the second router uses aes do i have to change a setting for it to work
+2010-03-07T23:56:00.000Z	markd		????
+2010-03-07T23:57:00.000Z	markd		CAN ANYONE SEE ME!!!
+2010-03-07T23:57:00.000Z	greezmunkey	markd	maybe even better in smapp caps
+2010-03-07T23:58:00.000Z	greezmunkey	markd	what are you trying to do?
+2010-03-08T00:00:00.000Z	greezmunkey	markd	open a termial type: tail -f /var/log/syslog and see how far you are getting when you try to access your network - it's a starting point.
+2010-03-08T00:05:00.000Z	greezmunkey	markd	you ssid doesn't have any spaces in it, does it?
+2010-03-08T00:15:00.000Z	greezmunkey	markd	?
+2010-03-08T00:15:00.000Z	greezmunkey	markd	about spaces?
+2010-03-08T00:15:00.000Z	greezmunkey	markd	if so make your ssid with no spaces - i.e yes it's bad
+2010-03-08T01:26:00.000Z	markd	greezmunkey	true
+2010-03-08T00:33:00.000Z	greezmunkey	markd	Now that you have the ssid taken care of, are you using WPA-Personal?
+2010-03-08T00:34:00.000Z	greezmunkey	markd	you may have to try TKIP - try that
+2010-03-08T00:42:00.000Z	greezmunkey	markd	I don't pm, sorry.
+2010-03-08T00:43:00.000Z	markd	greezmunkey	i think for some reason its trying to use ethernet
+2010-03-08T00:43:00.000Z	markd	greezmunkey	is eth2 wireless or ethernet?
+2010-03-08T00:44:00.000Z	greezmunkey	markd	that depends, some wireless adapters will show up as eth(n)...
+2010-03-08T00:44:00.000Z	markd	greezmunkey	i only have eth0 and eth2
+2010-03-08T00:45:00.000Z	greezmunkey	markd	eth0 is wired, the other is probably your adapter. What type is it?
+2010-03-08T00:45:00.000Z	markd	greezmunkey	says eth2 its a broadcom chipset
+2010-03-08T00:46:00.000Z	greezmunkey	markd	in a terminal, type iwconfig, and paste the result to paste.ubuntu.com
+2010-03-08T00:49:00.000Z	markd	greezmunkey	http://paste.ubuntu.com/390551/
+2010-03-08T00:50:00.000Z	markd	greezmunkey	did you get it?
+2010-03-08T00:52:00.000Z	greezmunkey	markd	ok, your card is not configured, in a term, type sudo lshw -C network and paste the result
+2010-03-08T00:55:00.000Z	markd	greezmunkey	you want the wireless adapter settngs right?
+2010-03-08T00:55:00.000Z	greezmunkey	markd	yes
+2010-03-08T00:56:00.000Z	markd	greezmunkey	the chipset is BCM34XG
+2010-03-08T00:56:00.000Z	greezmunkey	markd	paste sudo lshw -C netowrk
+2010-03-08T00:57:00.000Z	markd	greezmunkey	i don't have the internet on that computer remember just tell me what your looking  for
+2010-03-08T00:57:00.000Z	markd	greezmunkey	im using b43 driver if thats what you want to know
+2010-03-08T00:58:00.000Z	markd	greezmunkey	actually not im using sta wireless driver not b43
+2010-03-08T00:58:00.000Z	greezmunkey	markd	ok, what does the "configuration" line say?
+2010-03-08T00:59:00.000Z	markd	greezmunkey	i think i know the issue im using fcutter
+2010-03-08T00:59:00.000Z	greezmunkey	markd	nice to know!
+2010-03-08T01:00:00.000Z	markd	greezmunkey	driver version 5.10.91.9
+2010-03-08T01:00:00.000Z	markd	greezmunkey	so im uninstalling fcutter
+2010-03-08T01:01:00.000Z	greezmunkey	markd	sudo /etc/init.d/networking restart should do it.
+2010-03-08T01:02:00.000Z	markd	greezmunkey	now reboot?
+2010-03-08T01:03:00.000Z	greezmunkey	markd	I am not aware that removing fwcutter requires a restart...
+2010-03-08T01:03:00.000Z	greezmunkey	markd	sudo /etc/init.d/networking restart should do it.
+2010-03-08T01:03:00.000Z	markd	greezmunkey	i did both
+2010-03-08T01:03:00.000Z	markd	greezmunkey	just to be safe
+2010-03-08T01:04:00.000Z	greezmunkey	markd	guess you're covered then :)
+2010-03-08T01:04:00.000Z	markd	greezmunkey	fingers crossed
+2010-03-08T01:04:00.000Z	greezmunkey	markd	sometimes it's just a process...
+2010-03-08T01:05:00.000Z	greezmunkey	markd	brb
+2010-03-08T01:07:00.000Z	greezmunkey	markd	back
+2010-03-08T01:09:00.000Z	markd	greezmunkey	tried to restart interface and ubuntu locked up
+2010-03-08T01:09:00.000Z	markd	greezmunkey	im wondering if this is because i installed using wubi?
+2010-03-08T01:10:00.000Z	greezmunkey	markd	that's how I started with U, should'nt matter. Is it locked now, did it lock on boot?
+2010-03-08T01:11:00.000Z	markd	greezmunkey	it locked when i tried to restart the wireless interface becuase it said the device wasn't ready
+2010-03-08T01:12:00.000Z	greezmunkey	markd	right, my bad, restart the PC, but leave the interface alone, you need to check a couple of log files first.
+2010-03-08T01:12:00.000Z	markd	greezmunkey	ok
+2010-03-08T01:12:00.000Z	greezmunkey	markd	once it's back up, paste the contents of dmesg
+2010-03-08T01:13:00.000Z	markd	greezmunkey	how do i run it? linux noob
+2010-03-08T01:13:00.000Z	greezmunkey	markd	in a term just type dmesg, then copy the result
+2010-03-08T01:13:00.000Z	markd	greezmunkey	lol
+2010-03-08T01:14:00.000Z	markd	greezmunkey	lol
+2010-03-08T01:14:00.000Z	greezmunkey	markd	:)
+2010-03-08T01:14:00.000Z	markd	greezmunkey	DUH!!!
+2010-03-08T01:14:00.000Z	greezmunkey	markd	that's ok
+2010-03-08T01:15:00.000Z	markd	greezmunkey	not seeing anything about wireless
+2010-03-08T01:16:00.000Z	markd	greezmunkey	talking about usb
+2010-03-08T01:16:00.000Z	greezmunkey	markd	you would look for specifics on the device, driver, etc.
+2010-03-08T01:16:00.000Z	markd	greezmunkey	wait its saying something about ndiswrapper
+2010-03-08T01:16:00.000Z	markd	greezmunkey	this is so confused
+2010-03-08T01:17:00.000Z	markd	greezmunkey	lol
+2010-03-08T01:17:00.000Z	greezmunkey	markd	specifically if there is a conflict, take your time if it was easy it wouldn't be fun :)
+2010-03-08T01:17:00.000Z	markd	greezmunkey	ya i think i screwed it good
+2010-03-08T01:18:00.000Z	markd	greezmunkey	cuz i had ndiswrapper cuz i thought that would be easier but it doesn't like the windows driver that linksys gives
+2010-03-08T01:18:00.000Z	greezmunkey	markd	How do you figure?
+2010-03-08T01:19:00.000Z	greezmunkey	markd	ah, there are alr=ternatives, I'm sure
+2010-03-08T01:19:00.000Z	markd	greezmunkey	so than i put on b43 then found the broadcom driver
+2010-03-08T01:19:00.000Z	markd	greezmunkey	yes but im lazy
+2010-03-08T01:19:00.000Z	markd	greezmunkey	so it was trying to use ndiswrapper for some reason
+2010-03-08T01:20:00.000Z	markd	greezmunkey	even though these are linux drivers
+2010-03-08T01:21:00.000Z	greezmunkey	markd	so back out the ndiswrapper, right?!
+2010-03-08T01:21:00.000Z	markd	greezmunkey	its removed
+2010-03-08T01:21:00.000Z	markd	greezmunkey	cross your fingers
+2010-03-08T01:22:00.000Z	greezmunkey	markd	sounds like you're there. I have to go. There's also lots of help via google. Good luck.
+2010-03-08T01:23:00.000Z	markd	greezmunkey	YES IT WORKED
+2010-03-08T01:23:00.000Z	greezmunkey	markd	go on with your bad self :)
+2010-03-08T01:24:00.000Z	markd	greezmunkey	so now we know not to use ndiswrapper with linux drivers
+2010-03-08T01:24:00.000Z	markd	greezmunkey	im wondering if wubi disk got currputed somehow?
+2010-03-08T01:25:00.000Z	greezmunkey	markd	not necessarily. ndiswrapper is only for cards that don't have linux equivelants - sfaik
+2010-03-08T01:25:00.000Z	markd	greezmunkey	any idea how to fix a currputed wubi disk
+2010-03-08T01:26:00.000Z	greezmunkey	markd	blow it away and reinstall?
+2010-03-08T01:26:00.000Z	markd	greezmunkey	then i have to do this all over again
+2010-03-08T01:26:00.000Z	greezmunkey	markd	well at least you know what to do!
+2010-03-08T01:26:00.000Z	markd	greezmunkey	stay away from ndiswrapper and b43
+2010-03-08T01:27:00.000Z	greezmunkey	markd	you'll get it - no doubt on ndiswrapper. That's what the compatibility lists are for :)

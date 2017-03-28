@@ -1,0 +1,98 @@
+2004-09-27T16:20:00.000Z	mxpxpod		does anyone here use ubuntu on ppc?
+2004-09-27T16:21:00.000Z	jdub	mxpxpod	yeah
+2004-09-27T16:21:00.000Z	mxpxpod	jdub	how well does it work?
+2004-09-27T16:23:00.000Z	jdub	mxpxpod	it's rad.
+2004-09-27T16:23:00.000Z	mxpxpod	jdub	I'd like to try it out before I just blow away my debian setup... is there a live cd for ppc?
+2004-09-27T09:54:00.000Z	mxpxpod	jdub	ok, so what's the main diff between ubuntu and debian?
+2004-09-27T10:21:00.000Z	mxpxpod	jdub	so, you have ubuntu installed on ppc, right?
+2004-09-27T10:21:00.000Z	jdub	mxpxpod	on my bright green toilet seat
+2004-09-27T10:22:00.000Z	mxpxpod	jdub	lol, ok
+2004-09-27T10:22:00.000Z	jdub	mxpxpod	and i've seen it installed and running on many other kinds.
+2004-09-27T10:22:00.000Z	mxpxpod	jdub	ok, good :)
+2004-09-27T10:22:00.000Z	mxpxpod	jdub	does the mad phat startup stuff work on ppc?
+2004-09-27T10:22:00.000Z	jdub	mxpxpod	mad phat startup will be in Hoary
+2004-09-27T10:22:00.000Z	mxpxpod	jdub	oh, ok
+2004-09-27T10:22:00.000Z	jdub	mxpxpod	and will work on every arch
+2004-09-27T10:23:00.000Z	mxpxpod	jdub	awesome
+2004-09-27T10:36:00.000Z	jdub	mxpxpod	unlikely
+2004-09-27T10:36:00.000Z	jdub	mxpxpod	it's very well tested, and i've done the same thing on a number of machines
+2004-09-27T12:51:00.000Z	mxpxpod	jdub	can you answer that? why pbbuttonsd instead of pmud?
+2004-09-27T12:55:00.000Z	jdub	mxpxpod	pmud is not really a living project
+2004-09-27T12:55:00.000Z	jdub	mxpxpod	so we chose to ship pbbuttonsd
+2004-09-27T12:55:00.000Z	mxpxpod	jdub	ok, that's cool
+2004-09-27T12:55:00.000Z	mxpxpod	jdub	as long as it comes with sane defaults
+2004-09-27T12:56:00.000Z	mxpxpod	jdub	my experience with it sucks (but I was using it on gentoo... so go figure)
+2004-09-27T12:57:00.000Z	jdub	mxpxpod	we sanified them a bit
+2004-09-27T12:57:00.000Z	mxpxpod	jdub	good
+2004-09-27T14:55:00.000Z	mxpxpod	jdub	ping
+2004-09-28T07:16:00.000Z	jdub	mxpxpod	for junk checking
+2004-09-28T07:16:00.000Z	jdub	mxpxpod	you can turn it off
+2004-09-28T07:16:00.000Z	mxpxpod	jdub	I want it to check junk, but it shouldn't spawn a new process if I have spamd running already
+2004-09-28T07:17:00.000Z	jdub	mxpxpod	it uses a user-spamd for some reason
+2004-09-28T07:29:00.000Z	mxpxpod	jdub	where do you work?
+2004-09-28T07:30:00.000Z	jdub	mxpxpod	little professional services company called canonical
+2004-09-28T07:30:00.000Z	mxpxpod	jdub	located in .au, I would guess
+2004-09-28T07:30:00.000Z	jdub	mxpxpod	isle of man, as it happens
+2004-09-28T07:31:00.000Z	mxpxpod	jdub	I'd like to find a company where I could work on GNOME all day long :)
+2004-09-28T07:31:00.000Z	mxpxpod	jdub	hehe
+2004-09-28T07:33:00.000Z	jdub	mxpxpod	ross works on javur
+2004-09-28T08:28:00.000Z	jdub	mxpxpod	perhaps in universe, but legal concerns, yada yada. we'll see.
+2004-09-28T08:28:00.000Z	mxpxpod	jdub	heh, damn legal concerns :)
+2004-09-28T08:28:00.000Z	mxpxpod	jdub	I guess for now I'll have to install it manually
+2004-09-28T08:30:00.000Z	mxpxpod	jdub	why are schemas still installed in /etc/gconf?
+2004-09-28T08:30:00.000Z	jdub	mxpxpod	we froze before those changes
+2004-09-28T08:30:00.000Z	mxpxpod	jdub	ah, ok
+2004-09-28T08:30:00.000Z	jdub	mxpxpod	also, seb128 is lame
+2004-09-28T08:32:00.000Z	mxpxpod	jdub	did you talk to jbailey about the escaping fix in evo-exchange?
+2004-09-28T08:33:00.000Z	jdub	mxpxpod	no
+2004-09-28T08:33:00.000Z	mxpxpod	jdub	I guess evo-exchange escapes some stuff that exchange servers don't like escaped
+2004-09-28T08:36:00.000Z	mxpxpod	jdub	well, basically ;)
+2004-09-28T09:00:00.000Z	mxpxpod	jdub	how much is it going to cost to get that package in?
+2004-09-28T09:06:00.000Z	jdub	mxpxpod	legal issues
+2004-09-28T09:07:00.000Z	jdub	mxpxpod	install totem-xine
+2004-09-28T09:08:00.000Z	mxpxpod	jdub	I did and it says it can't play windows media video 9
+2004-09-28T09:17:00.000Z	jdub	mxpxpod	they're on the list for hoary
+2004-09-28T09:17:00.000Z	mxpxpod	jdub	cool
+2004-09-28T09:17:00.000Z	jdub	mxpxpod	i have a repo you can test from too
+2004-09-28T09:18:00.000Z	mxpxpod	jdub	oh??
+2004-09-28T09:18:00.000Z	mxpxpod	jdub	huh?
+2004-09-28T09:18:00.000Z	jdub	mxpxpod	i posted about it on the -devel list
+2004-09-28T09:20:00.000Z	mxpxpod	jdub	are those only i386 binaries in your repo?
+2004-09-28T09:26:00.000Z	mxpxpod	jdub	that's a lot of asking :)
+2004-09-28T09:30:00.000Z	mxpxpod	jdub	can you compile those gnome-bluetooth packages for ppc when you get time?
+2004-09-28T09:30:00.000Z	jdub	mxpxpod	not really
+2004-09-28T09:31:00.000Z	mxpxpod	jdub	darn
+2004-09-28T09:56:00.000Z	mxpxpod	jdub	nite
+2004-10-03T11:13:00.000Z	mxpxpod	jdub	ping
+2004-10-01T14:28:00.000Z	mxpxpod	jdub	what version of linux were the ppc packages compiled on?
+2004-10-03T11:14:00.000Z	mxpxpod	jdub	how did you build those gnome-bluetooth packages?
+2004-10-03T11:16:00.000Z	jdub	mxpxpod	dpkg-buildpackage...
+2004-10-03T11:16:00.000Z	mxpxpod	jdub	nothing more, nothing less?
+2004-10-03T11:19:00.000Z	mxpxpod	jdub	^  :D
+2004-10-03T11:19:00.000Z	mxpxpod	jdub	does he have source packages?
+2004-10-03T11:20:00.000Z	mxpxpod	jdub	huh?
+2004-10-03T11:21:00.000Z	jdub	mxpxpod	it was posted to -devel, and it is noted on the wiki in Universe(somethingorother)
+2004-10-03T11:22:00.000Z	mxpxpod	jdub	ok, thanks
+2004-10-03T11:28:00.000Z	mxpxpod	jdub	thanks for the help :)
+2004-10-03T12:07:00.000Z	mxpxpod	jdub	ping
+2004-10-03T12:08:00.000Z	mxpxpod	jdub	how do I keep dpkg-buildpackage from signing the .dsc files?
+2004-10-03T12:09:00.000Z	mxpxpod	jdub	thanks :)
+2004-10-03T14:33:00.000Z	mxpxpod	jdub	why did you choose bogofilter over sa?
+2004-10-03T14:34:00.000Z	jdub	mxpxpod	due to a serious misbalance in rules vs. sucks.
+2004-10-03T14:40:00.000Z	mxpxpod	jdub	so, I don't need sa installed...
+2004-10-03T14:40:00.000Z	jdub	mxpxpod	the evo spam stuff still uses SA
+2004-10-03T14:41:00.000Z	mxpxpod	jdub	ok... so explain to me this bogofilter hack you did...
+2004-10-03T14:41:00.000Z	jdub	mxpxpod	it's not present
+2004-10-03T14:41:00.000Z	mxpxpod	jdub	oh, ok
+2004-10-03T15:35:00.000Z	mxpxpod	jdub	how did you get the ubuntu1 in the names of your .debs?
+2004-10-03T15:36:00.000Z	jdub	mxpxpod	the version is taken from the top changelog entry
+2004-10-03T15:36:00.000Z	mxpxpod	jdub	ahhh
+2004-10-03T15:37:00.000Z	mxpxpod	jdub	so you updated the changelogs... ok
+2004-10-03T15:37:00.000Z	jdub	mxpxpod	when you change a package, you have to update the changelog
+2004-10-03T15:37:00.000Z	mxpxpod	jdub	gotcha
+2004-10-04T08:34:00.000Z	mxpxpod	jdub	do you guys have a *mm maintainer?
+2004-10-08T08:22:00.000Z	mxpxpod	jdub	ok, I figured out what was wrong with SA
+2004-10-08T08:23:00.000Z	mxpxpod	jdub	for some reason, it was using bogofilter as well as itself... which wasw strange to me
+2004-11-21T09:38:00.000Z	jdub	mxpxpod	not strong plans, but if you want to help out...
+2004-11-21T09:38:00.000Z	mxpxpod	jdub	if I had more time, I would
+2004-11-21T09:38:00.000Z	mxpxpod	jdub	or if I was hired by canonical......

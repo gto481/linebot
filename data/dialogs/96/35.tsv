@@ -1,0 +1,96 @@
+2008-05-04T04:15:00.000Z	macd	gleyve	you installed amsn via apt/synaptic?
+2008-05-04T04:16:00.000Z	gleyve	macd	yes..via apt and via synaptic
+2008-05-04T04:16:00.000Z	macd	gleyve	and when you ran apt-get install amsn, what did you see happen? an error, or successfully isntalled./
+2008-05-04T04:16:00.000Z	macd	gleyve	well which was it apt or synaptic ;)
+2008-05-04T04:17:00.000Z	gleyve	macd	sucessfully installed...but gives me error when trying to run..following the error:
+2008-05-04T04:17:00.000Z	gleyve	macd	/usr/bin/wish: error while loading shared libraries: libtcl8.5.so: cannot open shared object file: No such file or directory
+2008-05-04T04:17:00.000Z	macd	gleyve	are you loading it by clicking its icon? or trying from the terminal?
+2008-05-04T04:17:00.000Z	gleyve	macd	im not sure..but i think the same error happened when installing
+2008-05-04T04:18:00.000Z	gleyve	macd	from the terminal
+2008-05-04T04:18:00.000Z	macd	gleyve	'sudo apt-get install tcl8.5', after that completes, then use the icon on the menu to start amsn.
+2008-05-04T04:18:00.000Z	gleyve	macd	ok..i'll try it now
+2008-05-04T04:19:00.000Z	macd	gleyve	however if tcl8.5 wasnt installed with amsn, then we have a bug.
+2008-05-04T04:19:00.000Z	gleyve	macd	anothe message: it tells me that tcl8.5 is already the newer version
+2008-05-04T04:20:00.000Z	macd	gleyve	actually, amsn requires tcl8.5 to be installed, this is fairly odd
+2008-05-04T04:20:00.000Z	gleyve	macd	it tells me that tcl8.5 is already the newer version
+2008-05-04T04:21:00.000Z	macd	gleyve	do NOT install those packages in that forum thread, that is very antiquated
+2008-05-04T04:22:00.000Z	gleyve	macd	ok man
+2008-05-04T04:24:00.000Z	macd	gleyve	open a terminal, and try this "sudo apt-get remove --purge amsn && sudo apt-get autoremove && sudo apt-get update && sudo apt-get install amsn"
+2008-05-04T04:24:00.000Z	gleyve	macd	I'll try
+2008-05-04T04:24:00.000Z	gleyve	macd	just a minute
+2008-05-04T04:27:00.000Z	gleyve	macd	i got some problems...about public key
+2008-05-04T04:28:00.000Z	macd	gleyve	paste it to a pastebin please.
+2008-05-04T04:28:00.000Z	gleyve	macd	the error is in portuguese
+2008-05-04T04:28:00.000Z	gleyve	macd	pastebin ???
+2008-05-04T04:32:00.000Z	macd	gleyve	your using a bunch of non-official ubuntu repos, automatix being one of them, good luck fixing it.
+2008-05-04T04:32:00.000Z	gleyve	macd	is it easy to fix it?
+2008-05-04T04:32:00.000Z	macd	gleyve	If I were you I'd remove all that 3rd party garbage repos from my /etc/apt/sources.list and ONLY use official ubuntu repos.
+2008-05-04T04:33:00.000Z	gleyve	macd	I see...i'll do that
+2008-05-04T04:34:00.000Z	macd	gleyve	yeah remove the automatix ones, and the sunnet.de ones, and debian-multimedia
+2008-05-04T04:36:00.000Z	gleyve	macd	I removed them..do i need to restart my computer?
+2008-05-04T04:36:00.000Z	macd	gleyve	no, rerun the command I gave you earlier.
+2008-05-04T04:36:00.000Z	macd	gleyve	actually, dont
+2008-05-04T04:37:00.000Z	macd	gleyve	do this: "sudo apt-get update && sudo apt-get remove --purge amsn && sudo apt-get autoremove && sudo apt-get install amsn"
+2008-05-04T04:39:00.000Z	gleyve	macd	it's working..i'll give you a feedback in a moment
+2008-05-04T04:39:00.000Z	macd	gleyve	great
+2008-05-04T04:41:00.000Z	gleyve	macd	Sorry..still gives an erro when trying to run...nut instalation was sucessfull
+2008-05-04T04:41:00.000Z	gleyve	macd	/usr/bin/tclsh: error while loading shared libraries: libtcl8.5.so: cannot open shared object file: No such file or directory
+2008-05-04T04:42:00.000Z	gleyve	macd	I Dondt want to bore you..thanks anyways
+2008-05-04T04:42:00.000Z	macd	gleyve	what happens when you try to run amsn from the aaplications menu?
+2008-05-04T04:42:00.000Z	gleyve	macd	from the aplications menu nothin happens...just this.." starting..."
+2008-05-04T04:43:00.000Z	macd	gleyve	k, one sec
+2008-05-04T04:43:00.000Z	macd	gleyve	"sudo dpkg-reconfigure tcl8.5"
+2008-05-04T04:44:00.000Z	gleyve	macd	ok
+2008-05-04T04:44:00.000Z	gleyve	macd	the problem still goes on
+2008-05-04T04:45:00.000Z	macd	gleyve	'ls /usr/lib/libtcl*' return anything?
+2008-05-04T04:46:00.000Z	gleyve	macd	yes,...it lists me some filepaths
+2008-05-04T04:47:00.000Z	macd	gleyve	try this "cd /usr/lib/ && sudo ln -sf libtcl8.5.so.0 libtcl8.5.so && sudo ln -sf libtk8.5.so.0 libtk8.5.so"
+2008-05-04T04:49:00.000Z	gleyve	macd	wish: error while loading shared libraries: libtk8.5.so: cannot open shared object file: No such file or directory
+2008-05-04T04:50:00.000Z	macd	gleyve	ok, one more try here, 'sudo apt-get install tk8.5-dev tcl8.5.dev'
+2008-05-04T04:50:00.000Z	gleyve	macd	ok..
+2008-05-04T04:51:00.000Z	gleyve	macd	impossible to find the package tk8.5-dev
+2008-05-04T04:52:00.000Z	macd	gleyve	try "sudo apt-get install tk8.5 && cd /usr/lib && ln -sf libtk8.5.so.0 libtk8.5.so
+2008-05-04T04:55:00.000Z	gleyve	macd	tells me: tk8.5 is the newer version and also impossible to remove tk8.5.so(denied)
+2008-05-04T04:56:00.000Z	macd	gleyve	man, I dont know what all todo now man, automatix has seriously fubared your package system.
+2008-05-04T04:58:00.000Z	gleyve	macd	ok man..I thank you for trying...so I should not use automatix?
+2008-05-04T04:58:00.000Z	macd	gleyve	is this a recent install?
+2008-05-04T04:58:00.000Z	macd	gleyve	dont ever use automatix.
+2008-05-04T04:58:00.000Z	gleyve	macd	aMSN It worked before...but when I tried some stepds to fix the webcam with aMSN I got in trouble
+2008-05-04T04:59:00.000Z	gleyve	macd	some forums adviced me to use automatix :(
+2008-05-04T04:59:00.000Z	macd	gleyve	is this a recent install? are you at all opposed to loosing your settings, but not programs, and documents?
+2008-05-04T05:01:00.000Z	macd	gleyve	I guess since tcl/tk is already essentialy hosed up, lets remove and reinstall them
+2008-05-04T05:01:00.000Z	gleyve	macd	I've my ubuntu instalation for 8 months...my docs are ok
+2008-05-04T05:02:00.000Z	macd	gleyve	so type "sudo apt-get remove --purge tcl8.5 tk8.5 tcl8.5-dev tk8.5-dev"
+2008-05-04T05:02:00.000Z	macd	gleyve	if you get any errors about package not installed, just remove it form that command and reissue it.
+2008-05-04T05:03:00.000Z	gleyve	macd	now it tells me: "impossible to find the package tcl8.5-dev"
+2008-05-04T05:04:00.000Z	gleyve	macd	I'm in trouble
+2008-05-04T05:04:00.000Z	macd	gleyve	then just remove tcl8.5-dev from that command I gave you
+2008-05-04T05:08:00.000Z	gleyve	macd	I removed tk8.5 and tcl8.5
+2008-05-04T05:08:00.000Z	macd	gleyve	ok, now lets go delete some stuff from /usr/lib, so "cd /usr/lib && ls libtcl*"
+2008-05-04T05:09:00.000Z	macd	gleyve	and then "ls libtk*" and paste those to a pastebin please
+2008-05-04T05:10:00.000Z	gleyve	macd	http://paste.ubuntu.com/9882/
+2008-05-04T05:13:00.000Z	gleyve	macd	http://paste.ubuntu.com/9882/
+2008-05-04T05:13:00.000Z	macd	gleyve	ok, now 'sudo apt-get remove --purge amsn && sudo rm -rf /var/cache/apt/archives'
+2008-05-04T05:15:00.000Z	gleyve	macd	Ok...config files where deleted
+2008-05-04T05:15:00.000Z	macd	gleyve	ok, now lets do a lil fixing, 'sudo apt-get update && sudo apt-get install -f'
+2008-05-04T05:17:00.000Z	gleyve	macd	 E: missing repository directory /var/cache/apt/archives/partial está faltando.
+2008-05-04T05:17:00.000Z	gleyve	macd	 E: missing repository directory /var/cache/apt/archives/partial
+2008-05-04T05:17:00.000Z	macd	gleyve	oops!, "sudo mkdir /var/cache/apt/archives/partial"
+2008-05-04T05:19:00.000Z	gleyve	macd	impossible to create directoty :(
+2008-05-04T05:19:00.000Z	macd	gleyve	one sec
+2008-05-04T05:19:00.000Z	macd	gleyve	let me break my system real fast and see whats wrong
+2008-05-04T05:20:00.000Z	gleyve	macd	I create fir archives and then partial...so it worked...one per time
+2008-05-04T05:21:00.000Z	gleyve	macd	I create first "archives" and then "partial"...so it worked...one per time
+2008-05-04T05:21:00.000Z	macd	gleyve	now you can: "sudo apt-get update && sudo apt-get install -f'"
+2008-05-04T05:25:00.000Z	gleyve	macd	0 updated packages, 0 instaled packages, 0 to be removed and 0 not updated
+2008-05-04T05:25:00.000Z	macd	gleyve	YAY!, now lets 'sudo apt-get install amsn'
+2008-05-04T05:30:00.000Z	gleyve	macd	heheh...congratulations my friend...now it worked :)
+2008-05-04T05:30:00.000Z	macd	gleyve	great!
+2008-05-04T05:30:00.000Z	gleyve	macd	thanks very much...now i'll try the webcam :)
+2008-05-04T05:31:00.000Z	gleyve	macd	good job man
+2008-05-04T05:31:00.000Z	macd	gleyve	my logitech cam worked out of the box with amsn, hopefully youll have the same luck ;)
+2008-05-04T05:31:00.000Z	gleyve	macd	I hope..my girlfrined will love it
+2008-05-04T05:44:00.000Z	gleyve	macd	do u know where can I download easycam2?
+2008-05-04T05:44:00.000Z	macd	gleyve	if its not in the repos, I wouldnt download it,  to search for software "apt-cache search easycam"
+2008-05-04T05:46:00.000Z	gleyve	macd	ok...no results found...I'll get back other day..I got go now....thank you macd.....thank you people
+2008-05-04T05:46:00.000Z	macd	gleyve	sure thing.

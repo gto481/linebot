@@ -1,0 +1,99 @@
+2007-03-19T07:45:00.000Z	Bohica_		Evening to all
+2007-03-19T07:47:00.000Z	Bohica_		doe anyone have a step-by-step guide to setting up ubuntu as webserver
+2007-03-19T07:48:00.000Z	Bohica_		how does one set up a webserver?
+2007-03-19T07:48:00.000Z	rukuartic	Bohica_	Just install apache2 from the repos. It sets itself up.
+2007-03-19T07:49:00.000Z	rukuartic	Bohica_	What type of internet connection are you on?
+2007-03-19T07:49:00.000Z	rukuartic	Bohica_	specifically? Verizon? Comcast?
+2007-03-19T07:50:00.000Z	rukuartic	Bohica_	Ok. You might want to make sure they let you do that in their TOS.
+2007-03-19T07:50:00.000Z	rukuartic	Bohica_	If you're trying to set up an easy to manage thing that lets other people sign up and in, look around for "Ubuntu Perfect Setup" on google.
+2007-03-19T07:51:00.000Z	rukuartic	Bohica_	I see my own website :3
+2007-03-19T07:51:00.000Z	rukuartic	Bohica_	127.0.0.1 is a special internet address that ALWAYS points to your own computer.
+2007-03-19T07:52:00.000Z	rukuartic	Bohica_	The IP address you'd want to send me to is the one that you get off of www.ipchicken.com
+2007-03-19T07:55:00.000Z	Bohica_	rukuartic	- I get access permission is currently denied
+2007-03-19T07:56:00.000Z	rukuartic	Bohica_	When you do what?
+2007-03-19T07:56:00.000Z	rukuartic	Bohica_	You might find that bell is blocking port 80
+2007-03-19T07:56:00.000Z	rukuartic	Bohica_	Try adding "Listen 8080" in /etc/apache2/ports.conf
+2007-03-19T07:57:00.000Z	rukuartic	Bohica_	Restart apache (sudo /etc/init.d/apache restart) and try your ip address again
+2007-03-19T07:58:00.000Z	rukuartic	Bohica_	but this time, put http://my.ip.addr.ess:8080
+2007-03-19T07:59:00.000Z	rukuartic	Bohica_	Those files are owned by "root"
+2007-03-19T07:59:00.000Z	rukuartic	Bohica_	Type "sudo -i" in the terminal
+2007-03-19T08:01:00.000Z	rukuartic	Bohica_	Yes... are you editing the files as "root"?
+2007-03-19T08:02:00.000Z	Bohica_	rukuartic	- here are the lines - root@agws-desktop:~# /etc/apache2/ports.conf
+2007-03-19T08:02:00.000Z	rukuartic	Bohica_	type "ls -l /etc/apache2/" and see who owns "ports.conf"
+2007-03-19T08:03:00.000Z	rukuartic	Bohica_	Ok... type this in the terminal
+2007-03-19T08:03:00.000Z	rukuartic	Bohica_	"nano /etc/apache2/ports.conf"
+2007-03-19T08:04:00.000Z	rukuartic	Bohica_	Press ctrl+o to save, and ctrl+x to quit.
+2007-03-19T08:04:00.000Z	Bohica_	rukuartic	- I think it worked
+2007-03-19T08:05:00.000Z	rukuartic	Bohica_	type "cat /etc/apache2/ports.conf"
+2007-03-19T08:07:00.000Z	Bohica_	rukuartic	- I tried the IP address:8080 and I can't establish connection on my other computer
+2007-03-19T08:07:00.000Z	rukuartic	Bohica_	Did you restart apache?
+2007-03-19T08:08:00.000Z	rukuartic	Bohica_	type in this
+2007-03-19T08:08:00.000Z	rukuartic	Bohica_	"/etc/init.d/apache restart"
+2007-03-19T08:08:00.000Z	rukuartic	Bohica_	sorry thats "apache2"
+2007-03-19T08:10:00.000Z	Bohica_	rukuartic	- I think I will go with the google link that you gave me to set up my server.  I think I screwed it up somwhere and have no clue as to what I'm doing or what the next step is, etc., etc.
+2007-03-19T08:10:00.000Z	rukuartic	Bohica_	Naw, you haven't messed up anything yet. I'm pretty sure :P
+2007-03-19T08:11:00.000Z	rukuartic	Bohica_	If you get a website when you visit http://127.0.0.1 you're on the right track.
+2007-03-19T08:11:00.000Z	rukuartic	Bohica_	So did you restart apache?
+2007-03-19T08:13:00.000Z	Bohica_	rukuartic	- I restarted apache and nothing happend.  This is what it gave me "root@agws-desktop:~# /etc/init.d/apache2 restart
+2007-03-19T08:13:00.000Z	rukuartic	Bohica_	Yup it restarted
+2007-03-19T08:13:00.000Z	rukuartic	Bohica_	try this now... http://127.0.0.1:8080
+2007-03-19T08:14:00.000Z	Bohica_	rukuartic	- it shows me the same page as before.
+2007-03-19T08:14:00.000Z	rukuartic	Bohica_	Sweet.
+2007-03-19T08:14:00.000Z	rukuartic	Bohica_	Now try putting your ip from ipchicken into that, with the :8080 at the end still
+2007-03-19T08:16:00.000Z	Bohica_	rukuartic	- this is what I got "Firefox can't find the server at  74.13.76.148"
+2007-03-19T08:16:00.000Z	rukuartic	Bohica_	Hurm.
+2007-03-19T08:17:00.000Z	rukuartic	Bohica_	Hurm. Try another port, say... 10000
+2007-03-19T08:17:00.000Z	rukuartic	Bohica_	They might block 8080 as well (its another popular port for internet traffic)
+2007-03-19T08:18:00.000Z	Bohica_	rukuartic	- Are you telling me that I have to go through all the commands to write the stuff in or do I just type the port in my browser?
+2007-03-19T08:18:00.000Z	rukuartic	Bohica_	No, you'll need to edit ports.conf to "Listen 10000"
+2007-03-19T08:18:00.000Z	rukuartic	Bohica_	Then restart apache2 again
+2007-03-19T08:18:00.000Z	rukuartic	Bohica_	And try http://74.13.76.148:10000/
+2007-03-19T08:18:00.000Z	rukuartic	Bohica_	Its frustrating isn't it?
+2007-03-19T08:19:00.000Z	rukuartic	Bohica_	If you're just looking for web hosting with Linux, I can recommend nearyfreespeech.net to you.
+2007-03-19T08:20:00.000Z	Bohica_	rukuartic	- thanks but I already got hosting out there, I just want to have my own.
+2007-03-19T08:21:00.000Z	rukuartic	Bohica_	Hee... hosting in your own basement is fairly difficult.
+2007-03-19T08:21:00.000Z	Bohica_	rukuartic	- I'm willing to learn
+2007-03-19T08:22:00.000Z	Bohica_	rukuartic	- I changed the port again and nada
+2007-03-19T08:22:00.000Z	rukuartic	Bohica_	Hurm. Your ISP might be blocking more ports than I expected! :P
+2007-03-19T08:22:00.000Z	rukuartic	Bohica_	Oh my gosh.
+2007-03-19T08:22:00.000Z	rukuartic	Bohica_	I just forgot. Are you forwarding ports through your router?
+2007-03-19T08:22:00.000Z	Bohica_	rukuartic	- huh?
+2007-03-19T08:23:00.000Z	Bohica_	rukuartic	- I got a router
+2007-03-19T08:23:00.000Z	rukuartic	Bohica_	Who made it?
+2007-03-19T08:24:00.000Z	Bohica_	rukuartic	- Linksys HUB
+2007-03-19T08:24:00.000Z	rukuartic	Bohica_	Type in this... http://192.168.1.1
+2007-03-19T08:25:00.000Z	rukuartic	Bohica_	When someone tries to visit http://your-ip-addy:10000 the router intercepts the request, and doesn't know what to do with it so it drops it.
+2007-03-19T08:26:00.000Z	rukuartic	Bohica_	What you need to do, is tell it to "forward" all requests to the IP of your server.
+2007-03-19T08:26:00.000Z	Bohica_	rukuartic	- I tried http://192.168.2.1 and I get the BELL modem status page and all the connections
+2007-03-19T08:27:00.000Z	rukuartic	Bohica_	Ah. Well then look around for "port forwarding" or something...
+2007-03-19T08:27:00.000Z	rukuartic	Bohica_	This is where Google might come in handy, I don't know how to do it with a bell router... ...unless you have two routers in your network!
+2007-03-19T08:28:00.000Z	rukuartic	Bohica_	Yes, see Apocrypha's link (portforward.com)
+2007-03-19T08:28:00.000Z	rukuartic	Bohica_	Yes... ...but you said you saw "Dell"
+2007-03-19T08:28:00.000Z	rukuartic	Bohica_	Which makes me think you have two routers in your setup
+2007-03-19T08:30:00.000Z	Bohica_	rukuartic	- sorry for the confusion I got the ADSL Modem and Lynksys Hub.  When I typed the IP 192.168.2.1 I got the connection screen from the modem and all other crap from Bell.
+2007-03-19T09:03:00.000Z	Bohica_	rukuartic	- I have typed the IP 192.168.2.1 on both of my computers and they are both spewing out the same info. Than I went on the ipchicken.com and got the exact same info for both my mac and linux.  The only differance was the Remote Port.
+2007-03-19T09:03:00.000Z	rukuartic	Bohica_	Yup. I'm going to bet that you have two routers installed on your system
+2007-03-19T09:04:00.000Z	Bohica_	rukuartic	- I only have a hub
+2007-03-19T09:04:00.000Z	rukuartic	Bohica_	Are you SURE you don't have two? You said you had a linksys.
+2007-03-19T09:05:00.000Z	Bohica_	rukuartic	- I got linksys  5 port hub, and the modem that's all
+2007-03-19T09:05:00.000Z	rukuartic	Bohica_	But you said when you type "http://192.168.2.1" it brings up "Dell"
+2007-03-19T09:06:00.000Z	rukuartic	Bohica_	Dell is not linksys.
+2007-03-19T09:07:00.000Z	Bohica_	rukuartic	- not Dell but Bell with a 'B', that who my ISP is, that is their modem
+2007-03-19T09:07:00.000Z	rukuartic	Bohica_	Oh, sorry!
+2007-03-19T09:08:00.000Z	rukuartic	Bohica_	Do you see "applications and gaming"?
+2007-03-19T09:09:00.000Z	Bohica_	rukuartic	- I've seen those files somewhere, but where exaccly no idea
+2007-03-19T09:10:00.000Z	rukuartic	Bohica_	Ok, click "Applications and gaming" link on http://192.168.2.1/ and fill in this
+2007-03-19T09:11:00.000Z	rukuartic	Bohica_	Type "ifconfig" in the terminal to see what your local ip is... it should be 192.168.2.100 or something like that.
+2007-03-19T09:11:00.000Z	rukuartic	Bohica_	You might want to make a second entry, except with "10000 to 10000"
+2007-03-19T09:13:00.000Z	Bohica_	rukuartic	- you are way ahead of me.  got lost after applications and gaming.  my machine ip is 192.168.2.11, what's next?
+2007-03-19T09:14:00.000Z	rukuartic	Bohica_	Ok... go to http://192.168.2.1/, click "Applications and Gaming"
+2007-03-19T09:14:00.000Z	Bohica_	rukuartic	- no go, there is no link like that anywhere
+2007-03-19T09:14:00.000Z	rukuartic	Bohica_	hurm.
+2007-03-19T09:16:00.000Z	Bohica_	rukuartic	- I can't even go to http://127.0.0.1/
+2007-03-19T09:17:00.000Z	Bohica_	rukuartic	- is there a way to use ubuntu as a Firewall, server and let other computers connect to internet through it?
+2007-03-19T09:17:00.000Z	rukuartic	Bohica_	Yes, but you'll need two ethernet cards to do that and a whole lot of knowhow.
+2007-03-19T09:18:00.000Z	Bohica_	rukuartic	- well I got the 2 Ethernet cards, but I don't have the know how yet.  any ideas/suggestions?
+2007-03-19T09:18:00.000Z	rukuartic	Bohica_	Yup... look up "linux router ubuntu" or something on google
+2007-03-19T09:21:00.000Z	Bohica_	rukuartic	- I guess I can't do everything in one night.  Lots to rean and learn.  Thanks for all your help.
+2007-03-19T09:21:00.000Z	rukuartic	Bohica_	No problem man :)
+2007-03-19T09:21:00.000Z	rukuartic	Bohica_	Its a fun thing to do... you'll get help from here.

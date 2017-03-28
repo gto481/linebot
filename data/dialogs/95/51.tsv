@@ -1,0 +1,95 @@
+2007-05-06T13:54:00.000Z	lucek	enodev	yep
+2007-05-06T13:55:00.000Z	enodev	lucek	well then you know the name of the packages. just try to remove every single one.
+2007-05-06T13:56:00.000Z	enodev	lucek	sudo apt-get remove <package>
+2007-05-06T13:56:00.000Z	enodev	lucek	if you're lucky that does it
+2007-05-06T13:56:00.000Z	lucek	enodev	ok, i'll try
+2007-05-06T13:56:00.000Z	lucek		i got all of em in one folder
+2007-05-06T13:56:00.000Z	lucek		so got the names
+2007-05-06T13:57:00.000Z	enodev	lucek	and next time you install debs don't use the -f option. it means force. and if it doesnt work in the first place you shouldnt try to forceit ;)
+2007-05-06T13:57:00.000Z	lucek	enodev	ok :)
+2007-05-06T14:04:00.000Z	lucek	enodev	r u there?
+2007-05-06T14:05:00.000Z	enodev	lucek	here
+2007-05-06T14:06:00.000Z	lucek	enodev	i typed apt-get remove, shown  about more than 80 packages without dependencies. look at it -> http://wklej.org/id/1bd76bcbf7  maybe those the broken packages
+2007-05-06T14:07:00.000Z	lucek	enodev	what u think?
+2007-05-06T14:08:00.000Z	enodev	lucek	many broken dependencies...
+2007-05-06T14:08:00.000Z	lucek		yep
+2007-05-06T14:08:00.000Z	lucek		synaptic tells me about 80 of em
+2007-05-06T14:08:00.000Z	lucek	enodev	maybe those the broken ones that makes so many shit
+2007-05-06T14:09:00.000Z	lucek	enodev	remove all of them ? or only those installed ?
+2007-05-06T14:09:00.000Z	lucek		only those i installed
+2007-05-06T14:10:00.000Z	enodev	lucek	maybe you only need to restore python
+2007-05-06T14:10:00.000Z	enodev	lucek	try: sudo apt-get install python
+2007-05-06T14:11:00.000Z	lucek	enodev	ok
+2007-05-06T14:12:00.000Z	lucek	enodev	have a look -> http://wklej.org/id/b537493621
+2007-05-06T14:14:00.000Z	enodev	lucek	did you install a python.deb or did you also add package sources to synaptic or sources.list?
+2007-05-06T14:15:00.000Z	lucek	enodev	i did install python.deb, dont remember of adding python to synaptic, for sure i didnt add it in sources.list
+2007-05-06T14:16:00.000Z	enodev	lucek	can you use synaptic? you said something about it not working?
+2007-05-06T14:17:00.000Z	lucek	enodev	no, i cant use it
+2007-05-06T14:17:00.000Z	lucek	enodev	wait,
+2007-05-06T14:18:00.000Z	lucek	enodev	it works now, but shows that i have 80 packages broken, use 'broken' filter to find them
+2007-05-06T14:19:00.000Z	enodev	lucek	search the python and force the old version. click on it, press ctrl+e and select the older version.
+2007-05-06T14:20:00.000Z	enodev	lucek	alternatively you could install the lastest ubuntu if you have the time :)
+2007-05-06T14:21:00.000Z	lucek	enodev	hyh ;] 
+2007-05-06T14:21:00.000Z	lucek	enodev	how long does it take ? :>
+2007-05-06T14:21:00.000Z	lucek	enodev	to install new one ? ;] 
+2007-05-06T14:21:00.000Z	lucek		the latest one ;] 
+2007-05-06T14:22:00.000Z	enodev	lucek	doesnt take longer than dapper but it depends on your hardware and whether you have to backup stuff or can do a clean install.
+2007-05-06T14:24:00.000Z	lucek	enodev	aight, i get it, now tell me, when i search in synaptic the python, choose 'look in dependencies'?
+2007-05-06T14:25:00.000Z	lucek	enodev	by dependencies, by name... bla bla bla;] 
+2007-05-06T14:25:00.000Z	enodev	lucek	just by name. as if you were to install it
+2007-05-06T14:28:00.000Z	lucek	enodev	remove only python or all python's packages?
+2007-05-06T14:28:00.000Z	enodev	lucek	NOOO ;)
+2007-05-06T14:28:00.000Z	lucek	enodev	python.dev only or python-new etc. ?
+2007-05-06T14:28:00.000Z	lucek		;)
+2007-05-06T14:28:00.000Z	enodev	lucek	is there one package only called "python"?
+2007-05-06T14:29:00.000Z	lucek		yes, it is ;] 
+2007-05-06T14:29:00.000Z	lucek		get it :)
+2007-05-06T14:29:00.000Z	enodev	lucek	click on it and press ctrl+e on your keyboard
+2007-05-06T14:29:00.000Z	lucek		yep
+2007-05-06T14:29:00.000Z	enodev	lucek	can you select the old version now?
+2007-05-06T14:29:00.000Z	enodev	lucek	it should say python... (dapper) i guess
+2007-05-06T14:30:00.000Z	lucek	enodev	forced removed
+2007-05-06T14:30:00.000Z	enodev	lucek	is that good?
+2007-05-06T14:31:00.000Z	enodev	lucek	did it install the old version?
+2007-05-06T14:31:00.000Z	lucek	enodev	fuck
+2007-05-06T14:31:00.000Z	enodev		ugh
+2007-05-06T14:31:00.000Z	lucek		sorry
+2007-05-06T14:32:00.000Z	lucek	enodev	it's removing all stuff
+2007-05-06T14:32:00.000Z	lucek		open office all of it
+2007-05-06T14:32:00.000Z	lucek		everything
+2007-05-06T14:32:00.000Z	enodev	lucek	cancel?
+2007-05-06T14:33:00.000Z	lucek		not working
+2007-05-06T14:33:00.000Z	enodev	lucek	hopefully you'll stay online
+2007-05-06T14:33:00.000Z	lucek	enodev	cancelled
+2007-05-06T14:33:00.000Z	lucek	enodev	i dont know what i have lost ;] 
+2007-05-06T14:35:00.000Z	enodev	lucek	If you haven't changed the sources.list you can install all the packages with apt-get dist-upgrade
+2007-05-06T14:36:00.000Z	enodev	lucek	that should give you all the packages you had when you installed dapper
+2007-05-06T14:36:00.000Z	lucek	enodev	yeah, i didnt change  sources list
+2007-05-06T14:39:00.000Z	lucek	enodev	u know what? the pythos is still installed ;)
+2007-05-06T14:39:00.000Z	lucek		python ;] 
+2007-05-06T14:39:00.000Z	enodev	lucek	great. so your system is worse than before ;)
+2007-05-06T14:39:00.000Z	lucek	enodev	fantastic;] 
+2007-05-06T14:41:00.000Z	lucek	enodev	when i mark to remove totally python it wants to remove 110 packages
+2007-05-06T14:41:00.000Z	enodev	lucek	alot of stuff depends on it
+2007-05-06T14:41:00.000Z	enodev	lucek	are there still broken packages?
+2007-05-06T14:41:00.000Z	lucek	enodev	so what 2 do ?
+2007-05-06T14:41:00.000Z	lucek	enodev	about 18
+2007-05-06T14:43:00.000Z	enodev	lucek	to be honest I'd install feisty. fixing broken systems is no fun. did it take long to install dapper? hardware issues?
+2007-05-06T14:45:00.000Z	lucek	enodev	about 30min of install dapper
+2007-05-06T14:46:00.000Z	enodev	lucek	and everything was ok?
+2007-05-06T14:47:00.000Z	lucek	enodev	yeah, untill i was trying  to install that idjc
+2007-05-06T14:48:00.000Z	enodev	lucek	so you don't have dapper that long?
+2007-05-06T14:49:00.000Z	lucek	enodev	i have dapper since 3days ;)
+2007-05-06T14:49:00.000Z	enodev	lucek	well then go ahead and install feisty. idjc is in that repos.
+2007-05-06T14:51:00.000Z	lucek	enodev	so, leave dapper and install feisty? no sense with repairing those broken packages?
+2007-05-06T14:52:00.000Z	enodev	lucek	in the time that it took us to come this far you could installed feisty three times and everything would be fine.
+2007-05-06T14:54:00.000Z	lucek	enodev	i get  are there big differences between dapper and feisty ?
+2007-05-06T14:55:00.000Z	enodev	lucek	a few. basicly it's newer, better, easier ;)
+2007-05-06T14:56:00.000Z	enodev	lucek	and I think you can't break packages as easy as in dapper ;)
+2007-05-06T14:56:00.000Z	lucek	enodev	hehe :)
+2007-05-06T14:57:00.000Z	lucek	enodev	can i download iso from ubuntu page?
+2007-05-06T14:57:00.000Z	lucek		iso of feisty ;] 
+2007-05-06T14:57:00.000Z	enodev		yes
+2007-05-06T14:57:00.000Z	lucek		ok i'll try it :)
+2007-05-06T15:02:00.000Z	lucek	enodev	feisty fawn desktop edition 7.04 ?
+2007-05-06T15:02:00.000Z	enodev	lucek	that should be it

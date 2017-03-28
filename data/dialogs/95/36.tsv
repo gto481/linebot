@@ -1,0 +1,95 @@
+2012-10-21T10:09:00.000Z	Jordan_U	ix_	How much work are you willing to put into it?
+2012-10-21T10:14:00.000Z	ix_	Jordan_U	very much work
+2012-10-21T10:14:00.000Z	Jordan_U	ix_	Great. Will you be able to access a mac to test things?
+2012-10-21T10:15:00.000Z	ix_	Jordan_U	yes
+2012-10-21T10:15:00.000Z	Jordan_U	ix_	Are you working from Ubuntu 12.10?
+2012-10-21T10:15:00.000Z	ix_	Jordan_U	I have a macbook pro here, but I erased everything on the HDD
+2012-10-21T10:15:00.000Z	ix_	Jordan_U	I have Lubuntu 12.10 installed here
+2012-10-21T10:17:00.000Z	ix_	Jordan_U	so, basically, I have my laptop with Debian and Lubuntu and I have a Macbook pro which does not boot
+2012-10-21T10:19:00.000Z	Jordan_U	ix_	First, use GParted to create a new GPT label on the USB drive you want to use (which will wipe all the data currently on the drive) and create one EFI System Partition.
+2012-10-21T10:19:00.000Z	ix_	Jordan_U	would it be easier to make a cd with ubuntu and boot it on that macbook pro? I have a few linux cds around but they don't boot on the thing and I thought the optical drive might have a problem
+2012-10-21T10:21:00.000Z	ix_	Jordan_U	I've formatted it with gpt partition table, but what is that about efi?
+2012-10-21T10:23:00.000Z	Jordan_U	ix_	For a USB drive to be bootable via EFI it needs to have an EFI System Partition, which is a FAT32 partition with a GUID of C12A7328-F81F-11D2-BA4B-00A0C93EC93B (though GParted probably has a name for it rather than having you enter that GUID).
+2012-10-21T10:26:00.000Z	ix_	Jordan_U	I can't figure out how to make that efi system partition
+2012-10-21T10:27:00.000Z	Jordan_U	ix_	I can't find an option in GParted to do it. Just create a FAT32 partition in GParted and then I'll tell you how to set its GUID properly via gdisk ("sudo apt-get install gdisk").
+2012-10-21T10:28:00.000Z	ix_	Jordan_U	ok, fat32 partition created
+2012-10-21T10:53:00.000Z	Jordan_U	ix_	Great. Now unmount the drive and try to boot from it.
+2012-10-21T10:29:00.000Z	ix_	Jordan_U	I've installed gdisk
+2012-10-21T10:30:00.000Z	Jordan_U	ix_	t
+2012-10-21T10:30:00.000Z	Jordan_U	ix_	Sorry, "sudo gdisk /dev/sdX" then type 't' and hit enter.
+2012-10-21T10:31:00.000Z	ix_	Jordan_U	no t
+2012-10-21T10:32:00.000Z	ix_	Jordan_U	http://i.imgur.com/iNEVy.png
+2012-10-21T10:33:00.000Z	Jordan_U	ix_	You should have run "sudo gdisk /dev/sdb" not /dev/sdb1. 'q' to quit.
+2012-10-21T10:34:00.000Z	ix_	Jordan_U	ok, I did that
+2012-10-21T10:35:00.000Z	Jordan_U	ix_	Good, is it asking for a "hex code or UID"?
+2012-10-21T10:35:00.000Z	ix_	Jordan_U	oops, yes it did
+2012-10-21T10:35:00.000Z	Jordan_U	ix_	'ef00' then enter.
+2012-10-21T10:36:00.000Z	ix_	Jordan_U	ok, I did that, it still asks for a command
+2012-10-21T10:36:00.000Z	Jordan_U	ix_	It should then report "Changed type of partition to 'EFI System'". If it does, then type 'w' and enter to write (after confirming with 'y' most likely).
+2012-10-21T10:37:00.000Z	ix_	Jordan_U	yes, it did that
+2012-10-21T10:37:00.000Z	Jordan_U	ix_	Ok, gdkisk should have quit and you should now have an EFI System Partition.
+2012-10-21T10:37:00.000Z	ix_	Jordan_U	I typed q
+2012-10-21T10:38:00.000Z	ix_	Jordan_U	now what?
+2012-10-21T10:38:00.000Z	Jordan_U	ix_	sudo apt-get install grub-efi-amd64-bin
+2012-10-21T10:39:00.000Z	ix_	Jordan_U	I'm on a 32 bit laptop, does it matter?
+2012-10-21T10:39:00.000Z	Jordan_U	ix_	The mac is 32 bit?
+2012-10-21T10:39:00.000Z	ix_	Jordan_U	the macbook pro has a core 2 duo cpu
+2012-10-21T10:40:00.000Z	ix_	Jordan_U	it's 64 bit
+2012-10-21T10:41:00.000Z	ix_	Jordan_U	ok, I've installed grub-efi-amd64-bin
+2012-10-21T10:41:00.000Z	Jordan_U	ix_	Try "sudo apt-get install grub-efi-amd64-bin", the package should be available even for 32 bit systems (for situations exactly like this). If it's not available then I'm a little dissapointed in the Ubuntu/Debian packagers :)
+2012-10-21T10:42:00.000Z	ix_	Jordan_U	it installed fine
+2012-10-21T10:42:00.000Z	Jordan_U	ix_	Just as a check, what is the output of "grub-install --version"?
+2012-10-21T10:43:00.000Z	ix_	Jordan_U	1.99-23, should I go to Lubuntu? it has grub 2
+2012-10-21T10:43:00.000Z	Jordan_U	ix_	Yes, you should go to Lubuntu (12.10), grub 2.00 has better EFI support.
+2012-10-21T10:44:00.000Z	ix_	Jordan_U	ok, wait until I reboot
+2012-10-21T10:47:00.000Z	Jordan_U	ix_	Mount the EFI System Partition to /mnt/.
+2012-10-21T10:48:00.000Z	ix_	Jordan_U	sudo mount /dev/sdb /mnt ???
+2012-10-21T10:48:00.000Z	Jordan_U	ix_	sudo mount /dev/sdb1 /mnt/
+2012-10-21T10:49:00.000Z	ix_	Jordan_U	ok
+2012-10-21T10:49:00.000Z	Jordan_U	ix_	A device like "sdb" is the entire drive, a device like "sdb1" is a partition. You might have been confused by the fact that we ran "sudo gdisk /dev/sdb", but that's because while we were changing information about a partition, that information is stored in the partition table, and there is only one of those per device.
+2012-10-21T10:49:00.000Z	ix_	Jordan_U	darn it, it was already mounted on media
+2012-10-21T10:51:00.000Z	Jordan_U	ix_	Great. Now run "sudo grub-install --removable --target=x86_64-efi --boot-directory=/mnt/boot/ --efi-directory=/mnt/"
+2012-10-21T10:52:00.000Z	ix_	Jordan_U	installation finished, ni error reported
+2012-10-21T10:54:00.000Z	ix_	Jordan_U	hm, I've opened the macbook and pressed alt, but nothing appeared to be booted from
+2012-10-21T10:55:00.000Z	ix_	Jordan_U	with the usb stick in, obviously
+2012-10-21T10:55:00.000Z	ix_	Jordan_U	maybe the macbook has a problem
+2012-10-21T10:57:00.000Z	Jordan_U	ix_	Can you put the USB drive back in the Ubuntu machine and run "sudo gdisk -l /dev/sdb" and mount /dev/sdb1 and run "find /path/to/mountpoint" and pastebin the output of both?
+2012-10-21T11:00:00.000Z	ix_	Jordan_U	http://i.imgur.com/ulllr.png
+2012-10-21T11:02:00.000Z	ix_	Jordan_U	sorry, I made a typo
+2012-10-21T11:02:00.000Z	ix_	Jordan_U	http://pastebin.com/WShg2Z68
+2012-10-21T11:03:00.000Z	Jordan_U	ix_	The problem there is that we didn't actually successfully change the UID of the partition to make it a System Partition.
+2012-10-21T11:03:00.000Z	ix_	Jordan_U	and why is that?
+2012-10-21T11:04:00.000Z	Jordan_U	ix_	Run "sudo gdisk /dev/sdb" and pastebin the output (I'd prefer http://pastebin.ubuntu.com to an image screenshot if it's not too difficult for you).
+2012-10-21T11:04:00.000Z	ix_	Jordan_U	LOL, no, it's not difficult
+2012-10-21T11:04:00.000Z	Jordan_U	ix_	My guess is that you quit before issuing the 'w' command to write.
+2012-10-21T11:05:00.000Z	ix_	Jordan_U	this changes everything
+2012-10-21T11:05:00.000Z	ix_	Jordan_U	http://pastebin.com/1Snb4rNz
+2012-10-21T11:06:00.000Z	Jordan_U	ix_	Looks good. Now try booting from the USB drive again.
+2012-10-21T11:06:00.000Z	ix_	Jordan_U	ok
+2012-10-21T11:07:00.000Z	ix_	Jordan_U	still nothing, I think I should start from scratch
+2012-10-21T11:13:00.000Z	Jordan_U	ix_	Everything looks correct at the moment though.
+2012-10-21T11:17:00.000Z	Jordan_U	ix_	OK, how old is this macbook? There was a short period of time a few years back where Apple was shipping 64 bit machines with 32 bit EFI firmware.
+2012-10-21T11:17:00.000Z	ix_	Jordan_U	it's from 2006
+2012-10-21T11:21:00.000Z	Jordan_U	ix_	Then you might have a machine with that odd combination.
+2012-10-21T11:22:00.000Z	ix_	Jordan_U	so what should I do?
+2012-10-21T11:23:00.000Z	ix_	Jordan_U	I see there is a grub-efi-ia32
+2012-10-21T11:23:00.000Z	Jordan_U	ix_	Try "sudo apt-get install grub-efi-ia32-bin" and running "sudo grub-install --removable --target=i386-efi --boot-directory=/mnt/boot/ --efi-directory=/mnt/"
+2012-10-21T11:24:00.000Z	Jordan_U	ix_	And the really nice thing is that since you've run both commands, this USB will (hopefully) be bootable from both 32 bit and 64 bit [U]EFI firmware.
+2012-10-21T11:25:00.000Z	ix_	Jordan_U	and I was thinking about deleting the old files :)
+2012-10-21T11:25:00.000Z	ix_	Jordan_U	ok, I did that
+2012-10-21T11:25:00.000Z	Jordan_U	ix_	Great now try booting from the USB.
+2012-10-21T11:26:00.000Z	ix_	Jordan_U	it still does not work, I think this thing is broken
+2012-10-21T11:27:00.000Z	Jordan_U	ix_	Please pastebin the gdisk -l and find output again.
+2012-10-21T11:29:00.000Z	ix_	Jordan_U	you were right about the efi32, the model of this macbook pro is a1212
+2012-10-21T11:29:00.000Z	ix_	Jordan_U	http://pastebin.com/02KMAddV
+2012-10-21T11:30:00.000Z	Jordan_U	ix_	That all looks right :(
+2012-10-21T11:30:00.000Z	ix_	Jordan_U	I thought so
+2012-10-21T11:31:00.000Z	ix_	Jordan_U	thank you for your effort, if you have any more ideas, I'm all ears :)
+2012-10-21T11:33:00.000Z	Jordan_U	ix_	Try asking in #grub. Include in your question the exact grub-install command you ran, the model of mac, and that most recent pastebin link. Be patient though, #grub is low traffic but grub developers will often chime in if they're around so it's high quality.
+2012-10-21T11:33:00.000Z	Jordan_U	ix_	And if you don't get an answer today try again tomorrow.
+2012-10-21T11:38:00.000Z	ix_	Jordan_U	my internet died and I'm back in Debian, it seems to work here for some odd reason
+2012-10-21T11:39:00.000Z	Jordan_U	ix_	Try asking in #grub. Include in your question the exact grub-install command you ran, the model of mac, and that most recent pastebin link. Be patient though, #grub is low traffic but grub developers will often chime in if they're around so it's high quality. And if you don't get an answer today, try again tomorrow.
+2012-10-21T11:40:00.000Z	ix_	Jordan_U	ok, thank you
+2012-10-21T11:40:00.000Z	Jordan_U	ix_	One last test. Can you pastebin the output of "sudo blkid"?
+2012-10-21T11:40:00.000Z	ix_	Jordan_U	/dev/sdb1: UUID="FF09-D509" TYPE="vfat"
+2012-10-21T11:41:00.000Z	Jordan_U	ix_	That precludes the theory that it was the wrong filesystem then :(

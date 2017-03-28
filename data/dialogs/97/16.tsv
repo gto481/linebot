@@ -1,0 +1,97 @@
+2009-05-24T03:56:00.000Z	myxo_		hey guys, anyone know of a good guide i can follow to setup a vbox?
+2009-05-24T03:57:00.000Z	Zzeiss	myxo_	: What's a vbox?
+2009-05-24T04:00:00.000Z	Zzeiss	myxo_	Virtualbox is _easy_.   There is a guide on the SUN website, and after reading that, I had no problems.  Or just try it.
+2009-05-24T04:01:00.000Z	Zzeiss	myxo_	What do you mean by "seamlessly"?
+2009-05-24T04:01:00.000Z	Zzeiss	myxo_	I just use the one on the SUN website.  I don't have a URL handy.  One read, and everything became obvious.  :)
+2009-05-24T04:03:00.000Z	Zzeiss	myxo_	OK, did you get something like a "hit F12 to select boot media" down at the bottom?
+2009-05-24T04:03:00.000Z	Zzeiss	myxo_	and then that goes away and you have a blank screen?
+2009-05-24T04:04:00.000Z	Zzeiss	myxo_	OK.  No problem.   It _is_ easy.  You just have to put a virtual boot CDROM into the virtual drive.  :)
+2009-05-24T04:04:00.000Z	Zzeiss	myxo_	which you can do easily enough- or map the virtual cd to a .iso somewhere in your hard drive.    Either works, but the hard drive is faster.
+2009-05-24T04:05:00.000Z	Zzeiss	myxo_	Do you have a .iso of the operating system you want to load into the empty virtual machine?
+2009-05-24T04:06:00.000Z	Zzeiss	myxo_	one important concept you might be missing: a virtual machine is the _same_ as a real copper-and-silicon machine.  It knows _nothing_ till you boot and install the operating system.
+2009-05-24T04:06:00.000Z	Zzeiss	myxo_	for XP?  Or for Ubuntu?  Or what?
+2009-05-24T04:07:00.000Z	Zzeiss	myxo_	a .iso is the image of a CD you have on a hard drive.... it's the equivalent of the CD, but not yet turned into pits in the plastic.
+2009-05-24T04:07:00.000Z	Zzeiss	myxo_	sure.  That would work.  Or your Ubuntu CD.  Maybe start with Ubuntu first, bfcause you already have it running and you know how it works.
+2009-05-24T04:08:00.000Z	Zzeiss	myxo_	Yep.  That's what I do when I want to play.  If you hose the virtual machine, no harm/no foul, you delete it (or revert it to a snapshot) and the hosage goes magically away.  Meanwhile, you can be IRCing safely along in another VM.  :)
+2009-05-24T04:09:00.000Z	Zzeiss	myxo_	So that's why I say "try it with Ubuntu in the virtual machine first".
+2009-05-24T04:10:00.000Z	Zzeiss	myxo_	(note- I have to do this with my wife, so we can have her running XP in a VM in her Mac and we can ditch the Dell boat anchor!)
+2009-05-24T04:10:00.000Z	Zzeiss	myxo_	Anyway, wanna give this a spin?
+2009-05-24T04:11:00.000Z	Zzeiss	myxo_	Got your Ubuntu install CD?
+2009-05-24T04:11:00.000Z	Zzeiss	myxo_	Yep.  the .iso you downloaded works fine.
+2009-05-24T04:11:00.000Z	Zzeiss	myxo_	No problem.  32 or 64, both work under VB.
+2009-05-24T04:12:00.000Z	Zzeiss	myxo_	is it on your hard drive now?  Or do you want to grab the CD you used?
+2009-05-24T04:13:00.000Z	Zzeiss	myxo_	No problem with the name.  :)  Yes, create a new virtual machine.  Give it 10 gigabytes of disk, to be created as needed, and 1 gig of RAM
+2009-05-24T04:13:00.000Z	Zzeiss	myxo_	how much disk and RAM does your real machine have?
+2009-05-24T04:13:00.000Z	Zzeiss	myxo_	OK, plenty.  :)
+2009-05-24T04:14:00.000Z	Zzeiss	myxo_	OK, do you have VirtualBox OSE installed on the real machine?
+2009-05-24T04:15:00.000Z	Zzeiss	myxo_	OK, what version of VBox?  (
+2009-05-24T04:15:00.000Z	Zzeiss	myxo_	perfect.  We're in sync.
+2009-05-24T04:15:00.000Z	Zzeiss	myxo_	I'll be working along with you on this.  :)
+2009-05-24T04:16:00.000Z	Zzeiss	myxo_	Did you give your machine a name yet?
+2009-05-24T04:16:00.000Z	Zzeiss	myxo_	and linux/ubuntu?
+2009-05-24T04:17:00.000Z	Zzeiss	myxo_	and what did you set on the next window after that, where it says "boot disk (primary)
+2009-05-24T04:18:00.000Z	Zzeiss	myxo_	Yeah, make a new one.  give it 8 gigs of disk.
+2009-05-24T04:19:00.000Z	Zzeiss	myxo_	yes, you canincrease it later, but let's keep it easy for now.
+2009-05-24T04:19:00.000Z	Zzeiss	myxo_	Oh, you preallocated then.  I don't usually do that... I let it allocate as needed.
+2009-05-24T04:20:00.000Z	Zzeiss	myxo_	Yes, the space taken up is not usable by the main machine (it's consumed on the filespace).
+2009-05-24T04:20:00.000Z	Zzeiss	myxo_	That's what I usually do.  It seems to work OK for me.  :)
+2009-05-24T04:21:00.000Z	Zzeiss	myxo_	No problem
+2009-05-24T04:21:00.000Z	Zzeiss	myxo_	We have time.  The net result will be yours will run a bit faster.  :)
+2009-05-24T04:21:00.000Z	Zzeiss	myxo_	whoa.  Beefy.  :)
+2009-05-24T04:21:00.000Z	Zzeiss	myxo_	Core 2 duo?
+2009-05-24T04:22:00.000Z	Zzeiss	myxo_	should be fine then.  What's your status bar at?
+2009-05-24T04:22:00.000Z	Zzeiss	myxo_	What kind of laptop?
+2009-05-24T04:23:00.000Z	Zzeiss	myxo_	OK.  Nice HW.  Anyway, you should now have a machine listed in the sidebar.  Click on it once, then click "settings" (the orange gear).
+2009-05-24T04:24:00.000Z	Zzeiss	myxo_	I would leave most of it alone... but lessee...  General > Basic, give it 32 MB of vram,
+2009-05-24T04:26:00.000Z	Zzeiss	myxo_	General>advanced,  checkoff "Floppy, CDROM, Hard Disk", enable ACPI, enable VTx, enable nested paging, enable NX
+2009-05-24T04:26:00.000Z	Zzeiss	myxo_	no other changes on General.
+2009-05-24T04:26:00.000Z	Zzeiss	myxo_	Hard Disks: no changes.
+2009-05-24T04:27:00.000Z	Zzeiss	myxo_	CD/DVD > HERE is where you have to set the boot media.  Either point it at the CDROM (andput your Ubuntu CD in) or point it at the .iso on the hard drive.).   This is the magic part.  :)
+2009-05-24T04:28:00.000Z	Zzeiss	myxo_	OK.  Lemme check the rest of settings...
+2009-05-24T04:29:00.000Z	Zzeiss	myxo_	you might want to enable audio.  :-)  And yes,  a new Windoze machine needs to go thru the install procedure- and the WGA authentication!  So write down the volume ID and Ethernet MAC because you might need to recreate it.
+2009-05-24T04:30:00.000Z	Zzeiss	myxo_	Yeah.  That's the way ti goes.  :)
+2009-05-24T04:30:00.000Z	Zzeiss	myxo_	Wish I had one.  I have licenses.  But the f***** WGA annoys the heck out of me, which is another reason I run Linux.  :)
+2009-05-24T04:31:00.000Z	Zzeiss	myxo_	anyway, you should be ready.  Click "OK" to exit settings, then (assuming the new VM is still highlighted) click the green START arrow, and off it should boot!
+2009-05-24T04:32:00.000Z	Zzeiss	myxo_	it will produce a window that looks just like Ubuntu doing a virgin install - which it is, inside the virtual disk you already created.  Don't let it scare ya; the virtual machine cannot get outside of that.
+2009-05-24T04:32:00.000Z	Zzeiss	myxo_	tell me later.  :)
+2009-05-24T04:33:00.000Z	Zzeiss	myxo_	OK, how's it working?
+2009-05-24T04:34:00.000Z	Zzeiss	myxo_	Yeah.  go back to Settings>CD/DVDROM
+2009-05-24T04:34:00.000Z	Zzeiss	myxo_	Tell me what you have in Settings>DVDROM.
+2009-05-24T04:35:00.000Z	Zzeiss	myxo_	er, tell me what you have in Settings > CD/DVD-ROM ?
+2009-05-24T04:35:00.000Z	Zzeiss	myxo_	OK, that's right.
+2009-05-24T04:36:00.000Z	Zzeiss	myxo_	OK, back to General > Advanced.  What's your boot order- and is CD/DVD checked off?
+2009-05-24T04:36:00.000Z	Zzeiss	myxo_	(you might need to move CD/DVD to the top of the list.  )
+2009-05-24T04:36:00.000Z	Zzeiss	myxo_	no you don't need to F12.  Just check the CD/DVD and it will find it.
+2009-05-24T04:37:00.000Z	Zzeiss	myxo_	isn't it an absolute GAS to see the bootup sequence happening in that little window?  :)
+2009-05-24T04:38:00.000Z	Zzeiss	myxo_	yeah.  It's a gas.  :)
+2009-05-24T04:38:00.000Z	Zzeiss	myxo_	Just be sure to take snapshots and back up those snapshots!
+2009-05-24T04:38:00.000Z	Zzeiss	myxo_	Yes, you can.  One guy I know got something like twenty levels deep before he got bored.  :)
+2009-05-24T04:39:00.000Z	Zzeiss	myxo_	actually, the snapshot is NOT bootable.  It is _resumeable_, so essentially it's insta-boot (like resuming from suspend-to-RAM).
+2009-05-24T04:39:00.000Z	Zzeiss	myxo_	you don't even need to go thru the bootup sequence... it wakes up exactly where you left off.
+2009-05-24T04:42:00.000Z	Zzeiss	myxo_	Oh, shoulda warned you about that.  Down in the lower right corner there is a logo that tells you what button will release the mouse and KB.
+2009-05-24T04:43:00.000Z	Zzeiss	myxo_	also, the first time it happens on any VM, it pops a warning box you have to click thru that says "here is how you un-capture the mouse".
+2009-05-24T04:44:00.000Z	Zzeiss	myxo_	Lemme guess, you clicked thru the clickthru box.
+2009-05-24T04:44:00.000Z	Zzeiss	myxo_	Depends on what you have it set for.  You can change it.  I have mine set for "right ALT" here on the MB.
+2009-05-24T04:45:00.000Z	Zzeiss	myxo_	You should be able to.  It might get a little slow but it should still work.  Give it a try- if it fails, delete the virtual machine and try again .
+2009-05-24T04:46:00.000Z	Zzeiss	myxo_	note- BE CAREFUL to always use the menu to add/delete virtual machines, don't use "rm" from the command line, because there's a lot of bookkeeping inside VBox that depends on the filenames being intact and there.
+2009-05-24T04:48:00.000Z	Zzeiss	myxo_	No problem then.  To delete the virtual disks, you use VirtualBox > File > Virtual Media Manager " and do it in there.  That keeps all of the pointers correct.
+2009-05-24T04:50:00.000Z	Zzeiss	myxo_	No problem.  :)  We all have our little moments like that.  :)
+2009-05-24T04:50:00.000Z	Zzeiss	myxo_	You know, in a way, I feel kinda bad that I'm helping you get XP running in Vbox.  I feel like I'm loaning you money to buy crack cocaine or something...
+2009-05-24T04:50:00.000Z	Zzeiss	myxo_	This is your XP disk?
+2009-05-24T04:52:00.000Z	Zzeiss	myxo_	Oh.... that would do it.
+2009-05-24T04:54:00.000Z	Zzeiss	myxo_	Yep.  That's one of the great things about it.  Also it
+2009-05-24T04:55:00.000Z	Zzeiss	myxo_	Also because you can snapshot it and roll back to the snapshot, it's a great place for experimenting.
+2009-05-24T04:55:00.000Z	Zzeiss	myxo_	that's the way computers _should_ be.  Psychotic, in a nice way.  :)
+2009-05-24T04:56:00.000Z	Zzeiss	myxo_	depends on Vbox, but I think that you'll end up paging like crazy, and yes, it will run like crap.
+2009-05-24T04:56:00.000Z	Zzeiss	myxo_	Glad to be of service.  :)
+2009-05-24T04:57:00.000Z	Zzeiss	myxo_	Usually.  You might need to check the checkbox to allow the game to access your 3d card, if it is that kind of game.
+2009-05-24T04:58:00.000Z	Zzeiss	myxo_	but I haven't been able to try that, since the Macbook Nvidia 9400M is NOT supported AT ALL, even by the Nvidia binary blob, so I am running in vESA mode.
+2009-05-24T04:58:00.000Z	Zzeiss	myxo_	But if you can run the game in WINE, that might be simpler.  :)
+2009-05-24T04:59:00.000Z	Zzeiss	myxo_	and if you can run it in WINE, it will be a lot more secure.  Remember, even a VBox virtual XP machine can get virused just as easily as a real XP machine.  Which, if you ask me sucks, but it is proof that it's a real XP and not an emulator.
+2009-05-24T04:59:00.000Z	Zzeiss	myxo_	Yes, WINE is an emulator for Windows.  That's how I played Portal thru to the end.  :)
+2009-05-24T05:00:00.000Z	Zzeiss	myxo_	Yep.  And, I believe, comes with 9.04 standard.
+2009-05-24T05:09:00.000Z	Zzeiss	myxo_	I believe so.
+2009-05-24T05:10:00.000Z	Zzeiss	myxo_	I believe so.  That's what I would do, though I usually just create new VMs.  But the book has a whole chapter on it.
+2009-05-24T05:14:00.000Z	Zzeiss	myxo_	Exactly so.  Especially since if you screw it up, you can toss back to a snapshot and then it UNhappens.  :)
+2009-05-24T05:21:00.000Z	Zzeiss	myxo_	Yes.  You get the inside machine to request that size, and then VBox will resize to it.  Magically.  :)
+2009-05-24T05:27:00.000Z	Zzeiss	myxo_	Hmmm... dunno.... maybe install the driver or the addon extras for XP?  I've only done it inside Linux.

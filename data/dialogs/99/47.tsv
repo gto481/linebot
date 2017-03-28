@@ -1,0 +1,99 @@
+2009-12-28T22:19:00.000Z	bullgard		What will take longer time to partition a 160 GB hard disk for Windows and Ubuntu: Gparted or cfdisk?
+2009-12-28T22:20:00.000Z	llutz	bullgard	cfdisk needs abt 5 seconds
+2009-12-28T22:22:00.000Z	bullgard	llutz	And why does GParted tell me that in needs > 3 hours?
+2009-12-28T22:22:00.000Z	llutz	bullgard	idk, i never used gparted
+2009-12-28T22:23:00.000Z	llutz	bullgard	thats why i talked only about cfdisk :)
+2009-12-28T22:24:00.000Z	llutz	bullgard	and btw, you asked for partitioning, not for creating a filesystem (which cfdisk won't do)
+2009-12-28T22:25:00.000Z	bullgard	llutz	Ah! That is an important point of view. --  Thank you for pointing me at that.
+2010-01-05T20:24:00.000Z	llutz	bullgard	your news-account password
+2010-01-05T20:25:00.000Z	bullgard	llutz	And where do I know this news-account password from?
+2010-01-06T00:40:00.000Z	llutz	bullgard	seems to be pan-issue, slrn/thunderbird don't ask when accessing news.gmane.org
+2010-01-06T00:42:00.000Z	bullgard	llutz	Thank you very much for commenting.
+2010-01-06T00:46:00.000Z	llutz	bullgard	accidently checkd "server requires authorization" box?
+2010-01-06T00:47:00.000Z	bullgard	llutz	I will check that immediately now.
+2010-01-06T00:57:00.000Z	bullgard	llutz	Where is the box "server requires authorization" to be found in Pan?
+2010-01-06T00:58:00.000Z	llutz	bullgard	i never used pan, according to the screenshots on their website, at "server-setting" tab
+2010-01-06T01:16:00.000Z	bullgard	llutz	Do you mean this website? http://pan.rebelbase.com/
+2010-01-06T01:20:00.000Z	llutz	bullgard	yes http://pan.rebelbase.com/screenshots/servers.png
+2010-01-06T01:40:00.000Z	bullgard	llutz	The layout of my two Pan server windows deviates a little bit from what you have shown me but is basically the same as the windows which you showed me. I am using Pan version 0.133. But there is no box "Server requires authorization" provided. So I filled in my name and a password which I selected deliberately. But I do not get access to news.gmane.org.
+2010-01-06T01:42:00.000Z	llutz	bullgard	no more ideas then, sorry
+2010-01-06T01:42:00.000Z	bullgard	llutz	Ok, thank you.
+2010-01-11T14:53:00.000Z	llutz	bullgard	reinstalled "libzvbi0"?
+2010-01-11T14:58:00.000Z	bullgard	llutz	libzvbi0 is not installed. Why should I install it?
+2010-01-11T14:59:00.000Z	llutz	bullgard	sorry typo, meant someone else
+2010-01-11T19:09:00.000Z	llutz	bullgard	they exist to make win-users feel like home, just meta-directories
+2010-01-11T19:14:00.000Z	bullgard	llutz	At least they either keep or change their names if I change the locale. How is this feature implemented in tem?
+2010-01-11T19:14:00.000Z	bullgard	llutz	What is a meta-directory?
+2010-01-11T19:15:00.000Z	llutz	bullgard	sorry, no idea about how that mechanism works, i always delete them after installation.
+2010-01-11T19:16:00.000Z	bullgard	llutz	Right. --  Thank you for explaining.
+2010-01-12T00:13:00.000Z	llutz	bullgard	~/.profile and .bashrc (read man bash)
+2010-01-12T00:22:00.000Z	bullgard	llutz	'man bash' does not even mention 'configuration'.
+2010-01-12T00:23:00.000Z	llutz	bullgard	it lists files which are read, depending on invocation. that are the "configfiles"
+2010-01-12T00:30:00.000Z	bullgard	llutz	I found these files now under the heading 'FILES'.  --  Thank you for explaining.
+2010-01-12T00:31:00.000Z	llutz	bullgard	read part "invokation" to see in which case what file will be read
+2010-02-22T19:59:00.000Z	llutz	bullgard	$ gpg --list-public-keys
+2010-02-22T20:04:00.000Z	bullgard	llutz	'~$ gpg --list-public-keys' lists pub, uid and sub of several persons. This list is the 'public keyring'?
+2010-02-22T20:06:00.000Z	llutz	bullgard	basically yes
+2010-02-22T20:07:00.000Z	bullgard	llutz	Is there also a 'private' keyring on my Ubuntu 9.10 computer?
+2010-02-22T20:08:00.000Z	llutz	bullgard	$ gpg --list-secret-keys
+2010-02-22T20:09:00.000Z	llutz	bullgard	"man gpg" for further help
+2010-02-22T20:12:00.000Z	bullgard	llutz	Thank you very much for your help.
+2010-03-11T20:10:00.000Z	llutz	bullgard	that user would be used to run ircd
+2010-03-11T20:10:00.000Z	llutz	bullgard	that group too
+2010-03-11T20:14:00.000Z	bullgard	llutz	What is ircd?
+2010-03-11T20:14:00.000Z	llutz	bullgard	an irc daemon
+2010-03-11T20:14:00.000Z	llutz	bullgard	http://en.wikipedia.org/wiki/IRCd
+2010-03-11T20:17:00.000Z	bullgard	llutz	Thank you very much for your help.
+2010-06-07T12:39:00.000Z	llutz	bullgard	if you prefer to "cd" into all those working-dirs, you should make sure not to have "." in your $PATH
+2010-06-07T12:42:00.000Z	bullgard	llutz	I agree with you. But I rather prefer to leave the . where it is and act acoordingly depening on my current job at hand.
+2010-06-07T13:02:00.000Z	llutz	bullgard	/usr/lib/xorg/modules/input/synaptics_drv.so
+2010-06-07T13:24:00.000Z	bullgard	llutz	/usr/lib/xorg/modules/input/synaptics_drv.so is a "shared object". 'Shared' means that several programs will use it. What programs will use the shared object /usr/lib/xorg/modules/input/synaptics_drv.so?
+2010-06-07T13:25:00.000Z	llutz	bullgard	at least the xserver
+2010-06-07T13:26:00.000Z	bullgard	llutz	If it is only the xserver, why is synaptics_drv.so driver provided in the "shared object" format?
+2010-06-07T13:27:00.000Z	llutz	bullgard	idk, sorry. i guess theres more that needs  access to hardware using it, but i'mm not so familiar with the internal organisation of X
+2010-06-07T13:27:00.000Z	bullgard	llutz	Thank you very much for your help.
+2010-06-07T13:29:00.000Z	llutz	bullgard	there should be documentation about that at www.x.org
+2010-06-07T13:29:00.000Z	bullgard	llutz	ok.
+2010-07-20T13:49:00.000Z	llutz	bullgard	there is nothing like "fsck.swap"
+2010-12-20T15:19:00.000Z	llutz	bullgard	"not associated" ~ not connected to an AP (or has no APs essid)  AP=AccessPoint
+2010-12-20T15:24:00.000Z	bullgard	llutz	Thank you very much for your help. I appreciate it.
+2011-02-21T21:12:00.000Z	llutz	bullgard	listening port 111 (grep sunrpc /etc/services)
+2011-02-21T21:13:00.000Z	llutz	bullgard	netstat -an   to get ports listed
+2011-02-21T21:24:00.000Z	bullgard	llutz	ohsix: Thank you very much for your help.
+2011-02-21T23:39:00.000Z	llutz	bullgard	hostid != ip-address even if its calculated from it
+2011-02-21T23:45:00.000Z	bullgard	llutz	Of course 'hostid != ip-address'. This is trivial because hostid is a command and no address in my question. But this does not anser my question.
+2011-02-21T23:46:00.000Z	llutz	bullgard	it does. what "hostid" gives you is a random number (mostly generated from ip-addresses/mac-addr). gethostip prints the IP of a given host.
+2011-02-21T23:49:00.000Z	bullgard	llutz	You say:"what "hostid" gives you is a random number (mostly generated from ip-addresses/mac-addr)". Your statement contradicts 'man hostid': "hostid prints the numeric identifier for the current host."
+2011-02-21T23:52:00.000Z	llutz	bullgard	"numeric identifier" is just a unique number to identify a host. thats the purpose of hostid.  read man-pages (2) for gethostid/sethostid
+2011-02-22T00:44:00.000Z	bullgard	llutz	I presume that you meant "read man-pages (3)" and not "read man-pages (2). -- '~$ man 2 gethostid' says: "sethostid()  sets a unique 32-bit identifier for the current machine.  The 32-bit identifier is intended to be unique among all Unix systems in existence.  This normally resembles the Internet address for the local machine, as returned by gethostbyname(3), and thus usually never...
+2011-02-22T00:45:00.000Z	llutz	bullgard	just to identify a machine, some software-licenses use it. and no, i meant "man 2 gethostid/sethostid"
+2011-02-22T00:56:00.000Z	bullgard	llutz	Ah! Thank you for explaining. --  A minor supplementing question: If I tpye 'man 2 gethostid' Maverick will present a page headlined: "GETHOSTID(3), Linux Programmer's Manual, GETHOSTID(3)." Why changes the digit 2 to 3?
+2011-02-22T00:57:00.000Z	llutz	bullgard	seems its the same page in section 2 and 3, i don't know
+2011-02-22T01:19:00.000Z	bullgard	llutz	Thank you again very much for your help.
+2011-02-23T22:29:00.000Z	llutz	bullgard	sorry for very late response, if you're still interested: nmap -sP <network>      where network is like "192.168.1.0/24"   if you use 192.168.1.xxx ip-range with netmask 255.255.255.0
+2011-02-23T22:30:00.000Z	bullgard	llutz	Yes indeed: I tried it in the mean time,  and it works great. --  Thank you very much for your help.
+2011-02-23T22:32:00.000Z	llutz	bullgard	but even that won't find hosts filtering ICMP. afaik there is no perfect solution to find all hosts in a network except using special switches or other expensive hardware
+2011-02-23T22:38:00.000Z	bullgard	llutz	In my (rather simple) case it worked. --  What do you mean by "special switches"? Hardware or software switches?
+2011-02-23T22:39:00.000Z	llutz	bullgard	manageable switches often have functions to list all connected hosts
+2011-02-23T22:41:00.000Z	bullgard	llutz	Yes. Thank you for explaining.
+2011-02-26T19:22:00.000Z	llutz	bullgard	you want to read the part "Funktionsweise am Beispiel Ethernet"
+2011-02-26T19:24:00.000Z	llutz	bullgard	/j ##networking
+2011-02-26T19:35:00.000Z	bullgard	llutz	Thank you.
+2011-03-03T01:17:00.000Z	llutz	bullgard	ps aux|head -1     tells you what the columns are
+2011-03-05T19:29:00.000Z	llutz	bullgard	 #NX
+2011-03-05T19:32:00.000Z	bullgard	llutz	Thank you very much for your help.
+2011-03-10T15:55:00.000Z	bullgard	llutz	I managed to join. --  Thank you very much for your help.
+2011-03-12T22:56:00.000Z	llutz	bullgard	used sudo?
+2011-03-12T22:57:00.000Z	bullgard	llutz	No. I wil repeat but using sudo.
+2011-03-12T22:58:00.000Z	bullgard	llutz	: "~$ sudo lsof | grep /var/log/kern.log; [sudo] password for detlef: ***; lsof: WARNING: can't stat() fuse.gvfs-fuse-daemon file system /home/detlef/.gvfs;  Output information may be incomplete. rsyslogd    815      syslog    5w      REG        8,6   425596     292906 /var/log/kern.log.'  --  Thank you very much for your help.
+2011-03-12T23:09:00.000Z	bullgard	llutz	Installing the DEB program package »sysklogd« would install the daemons sysklogd and klogd and apparently deinstall rsyslogd. What is the advantage of such an endeavour?
+2011-03-12T23:09:00.000Z	llutz	bullgard	i don't see any advantage, imho rsyslogd is much user-friendlier and does a good job
+2011-03-12T23:10:00.000Z	bullgard	llutz	Ah! Thank you very much for your judgement.
+2011-03-12T23:11:00.000Z	llutz	bullgard	syslogd/klogd are much older and were used in most distros over years. thats why most howtos/docs refer to it
+2011-03-12T23:11:00.000Z	bullgard	llutz	I see.
+2011-03-16T00:43:00.000Z	llutz	bullgard	better ask canonical directly
+2011-03-16T00:44:00.000Z	bullgard	llutz	How can I ask Canonical directly?
+2011-03-16T00:44:00.000Z	llutz	bullgard	canonical.com - contact or supprt
+2011-03-16T00:45:00.000Z	bullgard	llutz	I dont think that thisl little comprehension problem of mine justifies to ask Canonical for support.
+2011-03-16T00:47:00.000Z	llutz	bullgard	if you click the link you mentioned and read "Register for your free trial of Ubuntu Advantage"  it sounds like you have to pay (sooner or later). but thats offtopic here
+2011-03-16T00:49:00.000Z	bullgard	llutz	I've got the same impression. --  Thank you.

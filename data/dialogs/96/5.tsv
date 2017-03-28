@@ -1,0 +1,96 @@
+2011-07-30T14:30:00.000Z	aGamingDaddy		Help neede with ubuntu 10.10. Stops during startup
+2011-07-30T14:31:00.000Z	aGamingDaddy		milen: yes
+2011-07-30T14:31:00.000Z	aGamingDaddy		It stops  and tells me that init is is missing
+2011-07-30T14:32:00.000Z	aGamingDaddy		milen: It's a harddisk installation on usb-stick
+2011-07-30T14:32:00.000Z	aGamingDaddy		What info do you need
+2011-07-30T14:33:00.000Z	nit-wit	aGamingDaddy	you did a full install on a usb and it wont boot?
+2011-07-30T14:35:00.000Z	nit-wit	aGamingDaddy	you can reload grub to the thumb. https://help.ubuntu.com/community/Grub2#Copy%20LiveCD%20Files
+2011-07-30T14:35:00.000Z	nit-wit	aGamingDaddy	to the mbr
+2011-07-30T14:36:00.000Z	nit-wit	aGamingDaddy	if it is natty use a natty cd, for a from the cd load
+2011-07-30T14:36:00.000Z	nit-wit	aGamingDaddy	3 commands
+2011-07-30T14:36:00.000Z	nit-wit	aGamingDaddy	do you have a cd
+2011-07-30T14:37:00.000Z	aGamingDaddy	nit-wit	 Ok I'll start it up with a CD
+2011-07-30T14:37:00.000Z	nit-wit	aGamingDaddy	a live cd = to the install?
+2011-07-30T14:38:00.000Z	aGamingDaddy	nit-wit	yes I can start it up with a live cd
+2011-07-30T14:39:00.000Z	nit-wit	aGamingDaddy	is it the same as the install on the usb?
+2011-07-30T14:39:00.000Z	nit-wit	aGamingDaddy	I guess you said yes sorry. ;)
+2011-07-30T14:39:00.000Z	aGamingDaddy	nit-wit	yes
+2011-07-30T14:40:00.000Z	aGamingDaddy	nit-wit	It's the same install..
+2011-07-30T14:40:00.000Z	nit-wit	aGamingDaddy	cool when you get the cd up plugin the thumb and go to disk manager and unm,ount it.
+2011-07-30T14:41:00.000Z	aGamingDaddy	nit-wit	ok..
+2011-07-30T14:42:00.000Z	nit-wit	aGamingDaddy	once you have done that run this command and identify the usb installed partition with this command sudo fdisk -l
+2011-07-30T14:42:00.000Z	aGamingDaddy	nit-wit	ok I'm still starting up...
+2011-07-30T14:43:00.000Z	nit-wit	aGamingDaddy	soory it the disk utility for unmounting  opps
+2011-07-30T14:46:00.000Z	aGamingDaddy	nit-wit	: ok I've ran sudo fdisk -l and the device is is sdb
+2011-07-30T14:47:00.000Z	nit-wit	aGamingDaddy	what is the partition like sda1
+2011-07-30T14:47:00.000Z	aGamingDaddy	nit-wit	it's an ntfs windows...
+2011-07-30T14:47:00.000Z	nit-wit	aGamingDaddy	you ave a installed windows on the usb not linux
+2011-07-30T14:48:00.000Z	aGamingDaddy	nit-wit	the usb is sdb
+2011-07-30T14:49:00.000Z	nit-wit	aGamingDaddy	hold on lets get this straight what is installed on the usb
+2011-07-30T14:50:00.000Z	aGamingDaddy	nit-wit	on the usb I've have a linux installation of ubuntu 10.10 called sdb. On the laptops hard disk called sda it is windows
+2011-07-30T14:52:00.000Z	aGamingDaddy	nit-wit	: It is a hard disk installation but on a usb-stick
+2011-07-30T14:52:00.000Z	nit-wit	aGamingDaddy	okay that is fine I thought you meant that the usb was a ntfs partition.  sdb is the thumbs over all identification look at the fdisk-l and tell me the sdb# that is the actual partition installed to we need this to get it fixed.
+2011-07-30T14:53:00.000Z	aGamingDaddy	nit-wit	yes sdb is the one...
+2011-07-30T14:53:00.000Z	nit-wit	aGamingDaddy	I need a actual partition look closer sdb is the device I need a sdb with a number at the end
+2011-07-30T14:55:00.000Z	aGamingDaddy	nit-wit	sdb contains sdb1, sdb2,sdb5 where 1 is an 83(ext4?) 2 is a 5 and sdb5 is 82(ext3?)
+2011-07-30T14:56:00.000Z	nit-wit	aGamingDaddy	so sdb5 is the partition where linux is installed, this is very important .
+2011-07-30T14:57:00.000Z	aGamingDaddy	nit-wit	sdb5 starts at 3729 ends at 3895 and uses 1333248 blocks
+2011-07-30T14:58:00.000Z	nit-wit	aGamingDaddy	here lets try this open gparted, in the top right corner is a dropdown click on the usb and take a screen shot and imagebin it, we are getting no where.
+2011-07-30T14:58:00.000Z	aGamingDaddy	nit-wit	: it's denoted as a Linux swap/solaris
+2011-07-30T15:00:00.000Z	nit-wit	aGamingDaddy	that is not helpful; follow my instuctions or I will stop helping.
+2011-07-30T15:00:00.000Z	aGamingDaddy	nit-wit	: I'm writning from my working computer but I'll try to send it some how from the live cd computer...
+2011-07-30T15:01:00.000Z	nit-wit	aGamingDaddy	we have to know exactly what partition Linux is in you can't tell me you we need to work with that.
+2011-07-30T15:05:00.000Z	aGamingDaddy	nit-wit	I've opened gparted and I'm looking at sdb: sdb1 has a bootflag and is ext4, sdb2 is an extended, sdb5 is a linux swap. Tell me what you need
+2011-07-30T15:06:00.000Z	nit-wit	aGamingDaddy	all I need is for you to tell which is which partition the install is in, can you figure ta=hat out.
+2011-07-30T15:07:00.000Z	nit-wit	aGamingDaddy	linux does not need a boot flag, so that means nothing here, just the booting partition the ?
+2011-07-30T15:08:00.000Z	aGamingDaddy	nit-wit	the patition volume (sdb1) is using 9.36 Gb, the otheres are not using any space
+2011-07-30T15:09:00.000Z	nit-wit	aGamingDaddy	take a picture I don't guess.
+2011-07-30T15:09:00.000Z	aGamingDaddy	nit-wit	Ok I'll try to send one but it will take some time
+2011-07-30T15:10:00.000Z	nit-wit	aGamingDaddy	'm here no big deal, we just want to get it correct.
+2011-07-30T15:27:00.000Z	nit-wit	aGamingDaddy	put it on the channel.
+2011-07-30T15:28:00.000Z	nit-wit	aGamingDaddy	I have no idea how that works
+2011-07-30T15:30:00.000Z	aGamingDaddy	nit-wit	??
+2011-07-30T15:31:00.000Z	nit-wit	aGamingDaddy	I don't know how the pinging woeks, and would rather not get the information that way can you just post the imagebin
+2011-07-30T15:31:00.000Z	aGamingDaddy	nit-wit	: I'm new to irc... How do i send the picture
+2011-07-30T15:32:00.000Z	nit-wit	aGamingDaddy	http://imagebin.org/index.php?page=add
+2011-07-30T15:32:00.000Z	nit-wit	aGamingDaddy	post the link.
+2011-07-30T15:34:00.000Z	nit-wit	aGamingDaddy	I'm on a MS set up now you were turned away by my security.
+2011-07-30T15:35:00.000Z	aGamingDaddy	nit-wit	I've sent/posted the picture. Take your time
+2011-07-30T15:35:00.000Z	nit-wit	aGamingDaddy	where?
+2011-07-30T15:35:00.000Z	aGamingDaddy	nit-wit	http://imagebin.org/165664
+2011-07-30T15:36:00.000Z	nit-wit	aGamingDaddy	cool hold on
+2011-07-30T15:38:00.000Z	nit-wit	aGamingDaddy	so you have the thumb unmouted with disk utility
+2011-07-30T15:39:00.000Z	nit-wit	aGamingDaddy	in the terminal run this command   sudo mount /dev/sdb1 /mnt
+2011-07-30T15:39:00.000Z	nit-wit	aGamingDaddy	let me know when you have done that
+2011-07-30T15:40:00.000Z	aGamingDaddy	nit-wit	computer is busy...
+2011-07-30T15:41:00.000Z	aGamingDaddy	nit-wit	it's 32Gb
+2011-07-30T15:42:00.000Z	nit-wit	aGamingDaddy	okay we are out in space here, from the booted cd in the terminal can you run 2 commands to reload the mbr of the thumb
+2011-07-30T15:43:00.000Z	aGamingDaddy	nit-wit	ok how?
+2011-07-30T15:43:00.000Z	nit-wit	aGamingDaddy	open a terminal.
+2011-07-30T15:44:00.000Z	aGamingDaddy	nit-wit	shall I kill/close the other termial because it's still doing something
+2011-07-30T15:44:00.000Z	nit-wit	aGamingDaddy	what is running on a live cd terminal
+2011-07-30T15:45:00.000Z	aGamingDaddy	nit-wit	the mount command...
+2011-07-30T15:45:00.000Z	nit-wit	aGamingDaddy	so what I think you mean is that ran the first command I posted did you run this
+2011-07-30T15:46:00.000Z	aGamingDaddy	nit-wit	I ran sudo mount /dev/sdb1 /mnt
+2011-07-30T15:48:00.000Z	nit-wit	aGamingDaddy	is it done running leave the terminal open
+2011-07-30T15:49:00.000Z	aGamingDaddy	nit-wit	Ok., I'll leave it open and I open a second terminal
+2011-07-30T15:49:00.000Z	nit-wit	aGamingDaddy	NONONONO
+2011-07-30T15:50:00.000Z	aGamingDaddy	nit-wit	It's still running or busy
+2011-07-30T15:50:00.000Z	nit-wit	aGamingDaddy	you only have to run two commands they run in like 2 seconds whats going on with the first?
+2011-07-30T15:51:00.000Z	nit-wit	aGamingDaddy	something is not right here, close that terminal
+2011-07-30T15:51:00.000Z	aGamingDaddy	nit-wit	if you mean sudo mount /dev....... It's still running
+2011-07-30T15:52:00.000Z	aGamingDaddy	nit-wit	What to next
+2011-07-30T15:52:00.000Z	nit-wit	aGamingDaddy	open disk manager look at the usb and make sure it is unmounted, or even showing.
+2011-07-30T15:54:00.000Z	nit-wit	aGamingDaddy	are you multitasking?
+2011-07-30T15:55:00.000Z	aGamingDaddy	nit-wit	No multitasking. I'm slow...
+2011-07-30T15:55:00.000Z	aGamingDaddy	nit-wit	It finds the volume and it says that it's not mounted
+2011-07-30T15:57:00.000Z	nit-wit	aGamingDaddy	and leave the terminal open.
+2011-07-30T15:58:00.000Z	aGamingDaddy	nit-wit	thats what I wrote some minutes ago and it's still running
+2011-07-30T15:58:00.000Z	nit-wit	aGamingDaddy	I thought you closed that partition
+2011-07-30T15:59:00.000Z	aGamingDaddy	nit-wit	It's still open
+2011-07-30T15:59:00.000Z	nit-wit	aGamingDaddy	I give up .
+2011-07-30T15:59:00.000Z	aGamingDaddy	nit-wit	but nothing seemes to happend
+2011-07-30T16:00:00.000Z	aGamingDaddy	nit-wit	thnx for your time
+2011-07-30T16:00:00.000Z	nit-wit	aGamingDaddy	close evry teminal on that computer and maybe another will j=help I can't seem to sorry.
+2011-07-30T16:01:00.000Z	aGamingDaddy	nit-wit	ok, U gave it ur best. thnx
+2011-07-30T16:02:00.000Z	nit-wit	aGamingDaddy	I will say here I have helped 1000's of people do this and have done ot on my own setuos 1000's of times.

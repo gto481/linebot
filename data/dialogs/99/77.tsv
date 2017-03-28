@@ -1,0 +1,99 @@
+2006-01-10T09:29:00.000Z	JoeBlow		how do u run a program through wine, I was typing "wine e:\\quake2\\setup.exe
+2006-01-10T09:31:00.000Z	JoeBlow		dude music in europe sucks, ive been living here a year, and its all pop
+2006-01-10T09:31:00.000Z	JoeBlow		maybe its just germany
+2006-01-10T09:31:00.000Z	JoeBlow		but the radio is terrible
+2006-01-10T09:33:00.000Z	JoeBlow		anyway, if anyone has a few minutes of time, can someone help me with wine
+2006-01-10T09:34:00.000Z	JoeBlow		but seriously, i cant get anything to load in wne, and i think i followed winehq's directions properly
+2006-01-10T09:35:00.000Z	mwe	JoeBlow	can't you even get notepad to run?
+2006-01-10T09:37:00.000Z	mwe	JoeBlow	you're doing wrong
+2006-01-10T09:37:00.000Z	mwe	JoeBlow	also there's a q2 linux installer
+2006-01-10T09:37:00.000Z	mwe	JoeBlow	dont wine the windows one
+2006-01-10T09:37:00.000Z	JoeBlow	mwe	quake2 was just my test program
+2006-01-10T09:38:00.000Z	mwe	JoeBlow	you're not supposed to type a smb style url to run a windows exe
+2006-01-10T09:38:00.000Z	JoeBlow	mwe	then how do i do it?
+2006-01-10T09:38:00.000Z	mwe	JoeBlow	and only very few windows application actually work. try something simple first, like notepad.exe
+2006-01-10T09:39:00.000Z	mwe	JoeBlow	wine /path/to/notepad.exe
+2006-01-10T09:39:00.000Z	mwe	JoeBlow	I doubt the windows installer for q2 will even run in wine
+2006-01-10T09:40:00.000Z	JoeBlow	mwe	ok I ran notepad, theirs a start
+2006-01-10T09:40:00.000Z	mwe	JoeBlow	good. then it works
+2006-01-10T09:40:00.000Z	mwe	JoeBlow	you can only run a tiny fraction of windows apps in wine
+2006-01-10T09:43:00.000Z	mwe	JoeBlow	wine generally don't work with the apps I need it to run
+2006-01-10T09:43:00.000Z	mwe	JoeBlow	the have a compatiblity list
+2006-01-10T09:43:00.000Z	mwe	JoeBlow	it's like way less than one percent of all windows apps
+2006-01-10T09:44:00.000Z	mwe	JoeBlow	I still keep windows around so I can play my favorite games
+2006-01-10T09:45:00.000Z	JoeBlow	mwe	I am locked out of windows right now lol, because 64 bit version requires activation, and i dont have a 32 bit disk laying around
+2006-01-10T09:46:00.000Z	mwe	JoeBlow	I see. also I wouldn't recommend the 64 bit unubuntu version at this point
+2006-01-10T09:46:00.000Z	mwe	JoeBlow	there are simply too much stuff that don't work or work bad
+2006-01-10T09:47:00.000Z	JoeBlow	mwe	is their something free thats better then wine?
+2006-01-10T09:47:00.000Z	mwe	JoeBlow	no
+2006-01-10T09:47:00.000Z	JoeBlow	mwe	or is gaming on linux rightnow just really not happening?
+2006-01-10T09:47:00.000Z	mwe	JoeBlow	you simply cannot run most windows apps in linux
+2006-01-10T09:48:00.000Z	mwe	JoeBlow	if you don't mind only playing those few games that work in linux you'll be ok. but like 99.99 of all games don't run in linux even with stuff like cedega
+2006-01-10T09:49:00.000Z	mwe	JoeBlow	you can play most id games like q4. half-life 2 works too
+2006-01-10T09:49:00.000Z	JoeBlow	mwe	all i play is quake 2, and hl2
+2006-01-10T09:49:00.000Z	mwe	JoeBlow	good then
+2006-01-10T09:49:00.000Z	mwe	JoeBlow	but I doubt youll get it to work in 64bit ubuntu
+2006-01-10T09:49:00.000Z	JoeBlow	mwe	I just gotta find a way to get quake 2 working
+2006-01-10T09:49:00.000Z	mwe	JoeBlow	use the 32bit version instead
+2006-01-10T09:50:00.000Z	JoeBlow	mwe	Im on 32 bit
+2006-01-10T09:50:00.000Z	mwe	JoeBlow	good
+2006-01-10T09:50:00.000Z	mwe	JoeBlow	just google icculus
+2006-01-10T09:50:00.000Z	mwe	JoeBlow	he did the quake2 for linux and there's a good guide as well
+2006-01-10T09:51:00.000Z	JoeBlow	mwe	ill check it out, thnx
+2006-01-10T09:52:00.000Z	mwe	JoeBlow	beware that getting steam to run in linux takes some dedication though
+2006-01-12T09:16:00.000Z	JoeBlow	mwe	thank you
+2006-01-12T09:16:00.000Z	mwe	JoeBlow	you're welcome
+2006-01-12T09:41:00.000Z	mwe	JoeBlow	mount /dev/hd?? /mnt/something
+2006-01-12T09:41:00.000Z	JoeBlow	mwe	, can u do it in live cd?
+2006-01-12T09:41:00.000Z	mwe	JoeBlow	sure
+2006-01-12T09:42:00.000Z	JoeBlow	mwe	, mount: can't find /dev/hdb3 in /etc/fstab or /etc/mtab
+2006-01-12T09:42:00.000Z	mwe	JoeBlow	if it can't detect the file system you need mount -t <fs_type> though
+2006-01-12T09:43:00.000Z	mwe	JoeBlow	type it like I told you to
+2006-01-12T09:43:00.000Z	mwe	JoeBlow	mount /dev/hdb /mnt/<mountpoint>
+2006-01-12T09:43:00.000Z	mwe	JoeBlow	mount /dev/hdb3 /mnt/<mountpoint>
+2006-01-12T09:43:00.000Z	mwe	JoeBlow	that is
+2006-01-12T09:43:00.000Z	JoeBlow	mwe	oh crap, i forgot the /mnt/boot
+2006-01-12T09:43:00.000Z	mwe	JoeBlow	mkdir -p /mnt/hdb3 && mount /dev/hdb3 /mnt/hdb3
+2006-01-12T09:44:00.000Z	JoeBlow	mwe	ok i got it mounted
+2006-01-12T09:44:00.000Z	mwe	JoeBlow	great
+2006-01-12T09:45:00.000Z	JoeBlow	mwe	when i do grub install for it, it tells me /dev/mapper/casper-snapshot does not have any corresponding BIOS drive.
+2006-01-12T09:46:00.000Z	mwe	JoeBlow	what are you trying to do?
+2006-01-12T09:46:00.000Z	JoeBlow	mwe	/sbin/grub-install /dev/hdb
+2006-01-12T09:47:00.000Z	mwe	JoeBlow	I only know how to use the grub shell. did you read the wiki?
+2006-01-12T09:47:00.000Z	JoeBlow	mwe	yea
+2006-01-12T09:48:00.000Z	mwe	JoeBlow	sure you didn't miss anything, like the chroot if you wanna do it automatically?
+2006-01-12T09:48:00.000Z	JoeBlow	mwe	it didnt say anythignabout chroot in wili
+2006-01-12T09:48:00.000Z	JoeBlow	mwe	wiki
+2006-01-12T09:49:00.000Z	mwe	JoeBlow	well here it does: https://wiki.ubuntu.com/RecoveringUbuntuAfterInstallingWindows
+2006-01-12T09:50:00.000Z	JoeBlow	mwe	on what part, im on that page
+2006-01-12T09:50:00.000Z	JoeBlow	mwe	oh shit, ok i see it
+2006-01-12T09:50:00.000Z	mwe	JoeBlow	about a page down, just before "Recovering GRUB Automatically"
+2006-01-12T09:51:00.000Z	JoeBlow	mwe	I never even had to touch that part before, ive installed grub about 5 times this week, and this is the first trouble its given me, i could have done it by memory before this
+2006-01-12T09:51:00.000Z	mwe	JoeBlow	ok
+2006-01-12T09:51:00.000Z	mwe	JoeBlow	just run "grub" and do it manually. that should work
+2006-01-12T09:51:00.000Z	JoeBlow	mwe	thats how i was doing it, and it wasnt working, was it because the hd wasnt mounted?
+2006-01-12T09:52:00.000Z	mwe	JoeBlow	in that case you can forget about chroot
+2006-01-12T09:52:00.000Z	mwe	JoeBlow	no
+2006-01-12T09:52:00.000Z	mwe	JoeBlow	what was the error. be careful about typing the right partitions
+2006-01-12T10:32:00.000Z	JoeBlow	mwe	hey can uhelp me out with manual grub install, it tells me my disk does not exist
+2006-01-12T10:34:00.000Z	mwe	JoeBlow	you need to give it the correct disk and partition
+2006-01-12T10:34:00.000Z	JoeBlow	mwe	im using hdb3, i tell it (hd1,2)
+2006-01-12T10:35:00.000Z	mwe	JoeBlow	looks ok. use tab completion to see what it recognizes
+2006-01-12T10:35:00.000Z	JoeBlow	mwe	how do i do that?
+2006-01-12T10:36:00.000Z	mwe	JoeBlow	type root(hd<tab> in the grub shell
+2006-01-12T10:37:00.000Z	JoeBlow	mwe	it just repeats what i wrote, doesnt add any numbers
+2006-01-12T10:39:00.000Z	JoeBlow	mwe	any ideas, i know the drives mounted, ive browsed it
+2006-01-12T10:40:00.000Z	mwe	JoeBlow	so root(hd1,2) doesn't work?
+2006-01-12T10:44:00.000Z	JoeBlow	mwe	right
+2006-01-12T11:09:00.000Z	JoeBlow	mwe	i think its unix
+2006-01-12T11:10:00.000Z	mwe	JoeBlow	do you what unix then?
+2006-01-12T11:10:00.000Z	JoeBlow	mwe	no, i want ubuntu
+2006-01-12T11:10:00.000Z	JoeBlow	mwe	but it is giving me trouble with install
+2006-01-24T15:49:00.000Z	mwe	JoeBlow	don't run wine with sudo
+2006-01-24T15:50:00.000Z	JoeBlow	mwe	ok
+2006-01-24T15:51:00.000Z	JoeBlow	mwe	If i dont, it tells me "Setup has detected the install shield is already in use, please close it then try again" , And its not
+2006-01-24T15:52:00.000Z	mwe	JoeBlow	I don't know. did you run wine with sudo the first time?
+2006-01-24T15:52:00.000Z	JoeBlow	mwe	yea
+2006-01-24T15:52:00.000Z	mwe	JoeBlow	.wine has wrong permissions then
+2006-01-24T15:53:00.000Z	mwe	JoeBlow	sudo chown -R JoeBlow:JoeBlow ~/.wine
+2006-01-24T15:53:00.000Z	mwe	JoeBlow	or whatever your login name is

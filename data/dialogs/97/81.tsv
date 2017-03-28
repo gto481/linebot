@@ -1,0 +1,97 @@
+2005-07-11T10:45:00.000Z	nalioth	Harold	how is the upgrade goin?
+2005-07-11T10:46:00.000Z	nalioth	Harold	you shouldn't have to move anything
+2005-07-11T10:46:00.000Z	Harold	nalioth	Do I need to move the new kernel version now that I've apt-get upgraded?
+2005-07-11T10:47:00.000Z	Harold	nalioth	But there's a new kernel in there.
+2005-07-11T10:47:00.000Z	nalioth	Harold	but wait, you are on the old world mac
+2005-07-11T10:47:00.000Z	nalioth	Harold	then yes (but by now, you are experienced at it)
+2005-07-11T10:49:00.000Z	Harold	nalioth	So right now I'm transferring the kernel and the initrid.img
+2005-07-11T10:50:00.000Z	Harold	nalioth	I also ran that dpkg-reconfigure xserver-xfree86 earlier.
+2005-07-11T10:56:00.000Z	nalioth	Harold	ctrl-c
+2005-07-11T10:56:00.000Z	nalioth	Harold	or pull the ethernet
+2005-07-11T11:00:00.000Z	nalioth	Harold	anything you want
+2005-07-11T11:04:00.000Z	nalioth	Harold	you should look at the supported wireless hardware b4 you purchase a wireless device for your old powerbook
+2005-07-11T11:04:00.000Z	Harold	nalioth	True; I researched it to see if it would at least work with Linux
+2005-07-11T11:05:00.000Z	Harold	nalioth	I was also hoping it might work with Mac, but no drivers exist (that i know of)
+2005-07-11T11:06:00.000Z	nalioth	Harold	there is a wireless thing in that old powerbook?
+2005-07-11T11:07:00.000Z	Harold	nalioth	No, it's a pccard I picked up at Fry's
+2005-07-11T11:07:00.000Z	nalioth	Harold	ah, well education pays
+2005-07-11T11:08:00.000Z	Harold	nalioth	6 years with Linux, huh?  What was your first distro?
+2005-07-11T11:08:00.000Z	nalioth	Harold	way back in the day, it was redhat
+2005-07-11T11:09:00.000Z	Harold	nalioth	That was going to be my first install, but I ended up trying Xandros first.
+2005-07-20T06:41:00.000Z	Harold	nalioth	As soon as I show up, you decide to stop working, huh?
+2005-07-20T06:42:00.000Z	Harold	nalioth	Did I seem pissy the other day?
+2005-07-20T06:43:00.000Z	nalioth	Harold	pissy?
+2005-07-20T06:43:00.000Z	Harold	nalioth	Seveas I finally got my wireless card working, and it looks like I'm sticking with Ubuntu.
+2005-07-20T06:43:00.000Z	Harold	nalioth	I was frustrated, trying to get this wireless card going.
+2005-07-20T06:43:00.000Z	Harold	nalioth	Looks like madwifi worked on this old Mac.
+2005-07-20T06:44:00.000Z	nalioth	Harold	i saw no problems
+2005-07-20T06:44:00.000Z	Harold	nalioth	Pissy/pissed off/frustrated/impatient
+2005-07-20T06:44:00.000Z	Harold	nalioth	Now: Happy/happy/joy/joy
+2005-07-20T06:45:00.000Z	nalioth	Harold	great to hear
+2005-07-20T06:46:00.000Z	Harold	nalioth	You've been an outstanding help.
+2005-07-20T06:47:00.000Z	Harold	nalioth	So I'm using dillo - I believe you mentioned it to me - and I've also got Kazehakase installed, though I believe it takes took much of my 64MB RAM.
+2005-07-20T06:51:00.000Z	nalioth	Harold	german for "not allowed"
+2005-07-20T06:52:00.000Z	Harold	nalioth	Ah, I had a feeling it was "forbidden" or something.  (That's what it *sounds* like.)
+2005-07-20T06:55:00.000Z	nalioth	Harold	may i point you toward a software that will introduce you to software compiling
+2005-07-20T06:55:00.000Z	Harold	nalioth	Trying to get rid of me, huh nalioth?
+2005-07-20T06:55:00.000Z	Harold	nalioth	Absolutely
+2005-07-20T06:56:00.000Z	nalioth	Harold	not at all, just some simple lessons
+2005-07-20T06:56:00.000Z	nalioth	Harold	and a BIG benefit to you
+2005-07-20T06:57:00.000Z	Harold	nalioth	I'd *love* to learn some more.
+2005-07-26T11:10:00.000Z	Harold	nalioth	When are they going to launch that shuttle already?
+2005-07-26T11:11:00.000Z	nalioth	Harold	my brother says they'll try tuesday
+2005-07-26T11:12:00.000Z	Harold	nalioth	Hey, you are here!  Thanks for getting me to compile links 2 the other day.
+2005-07-26T11:12:00.000Z	nalioth	Harold	best to stay with ubuntu packages
+2005-07-26T11:14:00.000Z	nalioth	Harold	have you gone and compiled the world since?
+2005-07-26T11:14:00.000Z	Harold	nalioth	nalioth So I was able to compile and install links 2, following your instructions, though I wasn't able to get the graphics to install.  But that's alright, because I've today received my 256MB RAM card and I'm now using Mozilla again!
+2005-07-26T11:14:00.000Z	nalioth	Harold	great!
+2005-07-26T11:15:00.000Z	Harold	nalioth	Well, yes I am compiling.  I picked up a C++ book at the library and I'm learning how to program.
+2005-07-26T11:15:00.000Z	nalioth	Harold	wow
+2005-07-26T11:15:00.000Z	Harold	nalioth	And of course, learning how to program entails lots of compiling.
+2005-07-26T12:03:00.000Z	Harold	nalioth	night, nalioth
+2005-07-26T12:03:00.000Z	Harold	nalioth	Real quick - seen any astronauts in town?
+2005-07-26T12:24:00.000Z	Harold	nalioth	Ah, okay
+2005-07-26T12:18:00.000Z	nalioth	Harold	did you sneak in here?
+2005-07-26T12:18:00.000Z	Harold	nalioth	Yes, I did
+2005-07-26T12:19:00.000Z	Harold	nalioth	Well, not exactly.  I've been here quietly all morning.
+2005-07-26T12:19:00.000Z	nalioth	Harold	ah
+2005-07-26T12:20:00.000Z	Harold	nalioth	Actually, I've only been here for about an hour..
+2005-07-26T12:20:00.000Z	Harold	nalioth	Is there any reason I should be using Synaptic as opposed to apt-get on Ubuntu?
+2005-07-26T12:21:00.000Z	nalioth	Harold	personal preference
+2005-07-26T12:21:00.000Z	Harold	nalioth	For example, yesterday you said I should always use Ubuntu packages before trying Debian ones.
+2005-07-26T12:22:00.000Z	Harold	nalioth	, It's all about the repository list, isn't it?
+2005-07-26T12:22:00.000Z	nalioth	Harold	most debian binarys will not do well, with ubuntu
+2005-07-26T12:23:00.000Z	Harold	nalioth	There's a new Skype client I wanted to try.  The repos is
+2005-07-26T12:23:00.000Z	Harold	nalioth	Is that a binary?
+2005-07-26T12:24:00.000Z	nalioth	Harold	any URL beginning with a "deb" is a binary repo (deb-src beginning a line is a source repo)
+2005-07-30T11:04:00.000Z	nalioth	Harold	my two ibooks suffered heatstoke today
+2005-07-30T11:04:00.000Z	Harold	nalioth	No...what do you mean?
+2005-07-30T11:05:00.000Z	nalioth	Harold	got a little hot in here, and the ibooks went down
+2005-07-30T11:05:00.000Z	Harold	nalioth	You are kidding...both?  Are they okay?  What exactly happened?
+2005-07-30T11:05:00.000Z	nalioth	Harold	heat kills
+2005-07-30T11:06:00.000Z	Harold	nalioth	Yes it does...are you having a heat stroke in Houston?
+2005-07-30T11:06:00.000Z	Harold	nalioth	Ooops.  I meant, are you having a heat wave in Houston?
+2005-08-01T11:02:00.000Z	nalioth	Harold	howdy
+2005-08-01T11:03:00.000Z	Harold	nalioth	dabaR : Hello
+2005-08-01T10:14:00.000Z	nalioth	Harold	howdy
+2005-08-01T10:14:00.000Z	Harold	nalioth	Howdy, partner.
+2005-08-01T10:15:00.000Z	Harold	nalioth	We've had liftoff.  I know, I know, it was Florida...
+2005-08-01T10:16:00.000Z	Harold	nalioth	...Mission Control has quite a bit of work ahead, though...
+2005-08-01T10:16:00.000Z	Harold	nalioth	...as they're explainin' why the shuttle is boundin' off'a birds 'n' stuff.
+2005-08-01T10:17:00.000Z	Harold	nalioth	After you told me about your iBook burnin' up, I made sure to turn off my PowerBook when it got real hot here.  No A/C here either, you know?
+2005-08-01T10:19:00.000Z	nalioth	Harold	yes, the operating temperature range is >95f
+2005-08-01T10:20:00.000Z	Harold	nalioth	What're you using to check the temp?
+2005-08-01T10:21:00.000Z	nalioth	Harold	on the ibook or the room temp?
+2005-08-01T10:21:00.000Z	Harold	nalioth	On the iBook?
+2005-08-01T10:22:00.000Z	nalioth	Harold	my fingers. (when i touch it and can't keep my hand on it, it's too hot)
+2005-08-01T10:22:00.000Z	Harold	nalioth	LOL
+2005-08-01T10:23:00.000Z	Harold	nalioth	Have you ever plugged headphones into your iBook(s) and found no sound coming out (except for from the iBook's speakers)?  That's my current issue.
+2005-08-01T10:23:00.000Z	nalioth	Harold	are you using ubuntu?
+2005-08-01T10:23:00.000Z	Harold	nalioth	Of course!Q
+2005-08-01T10:23:00.000Z	Harold	nalioth	Are you?
+2005-08-01T10:24:00.000Z	nalioth	Harold	yes ubuntu, no to the headphones (i dont use 'phones)
+2005-08-01T10:24:00.000Z	Harold	nalioth	I don't know that it's critical, but I wanted to be able to listen to sound through headphones once in awhile.
+2005-08-01T10:25:00.000Z	Harold	nalioth	Here's what I've found: http://ubuntuforums.org/archive/index.php/t-40400.html
+2005-08-01T10:25:00.000Z	Harold	nalioth	Basically, that's a link to someone else experiencing the same issue, but no explanation.
+2005-08-01T10:33:00.000Z	nalioth	Harold	quit tellin stories
+2005-08-01T10:33:00.000Z	Harold	nalioth	LOL

@@ -1,0 +1,95 @@
+2008-02-23T19:20:00.000Z	Aquahallic		Is there a way to find where an installed application would have put its launcher??
+2008-02-23T19:20:00.000Z	sofiankrt	Aquahallic	try running the programs name in the terminal
+2008-02-23T19:21:00.000Z	sofiankrt	Aquahallic	does it work?
+2008-02-23T19:21:00.000Z	Aquahallic	sofiankrt	I tried and it's not there... it's powertweak-gtk
+2008-02-23T19:21:00.000Z	sofiankrt	Aquahallic	check in synaptic if it's installed, if it is, make sure you have the name right
+2008-02-23T19:22:00.000Z	sofiankrt	Aquahallic	when you find the name, just try launching it from the terminal
+2008-02-23T19:23:00.000Z	sofiankrt	Aquahallic	if that works, we can create a launcher on the desktop/panel/menu
+2008-02-23T19:25:00.000Z	Aquahallic	sofiankrt	it shows in synaptic as powertweak-gtk when I go look in /usr/share/applications there's nothing in there for powertweak at all
+2008-02-23T19:25:00.000Z	sofiankrt	Aquahallic	what happens if you run powertweak-gtk in the terminal?
+2008-02-23T19:27:00.000Z	sofiankrt	Aquahallic	ok, run :         sudo apt-get install powertweak-gtk
+2008-02-23T19:29:00.000Z	sofiankrt	Aquahallic	but it says command not found when you run powertweak-gtk?
+2008-02-23T19:29:00.000Z	sofiankrt	Aquahallic	ok, hold on
+2008-02-23T19:31:00.000Z	sofiankrt	Aquahallic	ok, run:              sudo apt-get remove powertweak-gtk
+2008-02-23T19:33:00.000Z	sofiankrt	Aquahallic	let's try reinstalling it                    sudo apt-get install powertweak
+2008-02-23T19:33:00.000Z	sofiankrt	Aquahallic	it should automatically install powertweak-gtk
+2008-02-23T19:35:00.000Z	sofiankrt	Aquahallic	that's weird, I got the same thing...
+2008-02-23T19:35:00.000Z	sofiankrt	Aquahallic	hang on
+2008-02-23T19:38:00.000Z	sofiankrt	Aquahallic	ok run            sudo apt-get remove powertweak
+2008-02-23T19:41:00.000Z	sofiankrt	Aquahallic	now run                sudo apt-get install powertweak-gtk powertweakd powertweak-extra
+2008-02-23T19:41:00.000Z	Aquahallic	sofiankrt	I also have powertweakd installed that wouldn't have anything to do with this would it??
+2008-02-23T19:42:00.000Z	Aquahallic	sofiankrt	says they're all already installed and latest versions
+2008-02-23T19:43:00.000Z	sofiankrt	Aquahallic	powertweak only ensures that the three packages are installed
+2008-02-23T19:43:00.000Z	sofiankrt	Aquahallic	ok, sudo apt-get remove these packages
+2008-02-23T19:44:00.000Z	Aquahallic	sofiankrt	removed
+2008-02-23T19:45:00.000Z	sofiankrt	Aquahallic	try reinstalling them, does it give you 'already installed'?
+2008-02-23T19:45:00.000Z	Aquahallic	sofiankrt	it installed them.. and started the powertweak service
+2008-02-23T19:46:00.000Z	sofiankrt	Aquahallic	so it's working now?
+2008-02-23T19:47:00.000Z	sofiankrt	Aquahallic	just a moment please
+2008-02-23T19:49:00.000Z	sofiankrt	Aquahallic	how do you know the service is running?
+2008-02-23T19:50:00.000Z	Aquahallic	sofiankrt	when it installed... it showed it starting the service for powertweak
+2008-02-23T19:50:00.000Z	sofiankrt	Aquahallic	My guess is, powertweak-gtk wasn't installed in your PATH
+2008-02-23T19:51:00.000Z	sofiankrt	Aquahallic	try              sudo updatedb
+2008-02-23T19:51:00.000Z	sofiankrt	Aquahallic	it should take some time
+2008-02-23T19:51:00.000Z	Aquahallic	sofiankrt	it did.. and it's done
+2008-02-23T19:52:00.000Z	sofiankrt	Aquahallic	now           locate powertweak-gtk
+2008-02-23T19:54:00.000Z	Aquahallic	sofiankrt	found it in /usr/share/menu/powertweak-gtk
+2008-02-23T19:54:00.000Z	sofiankrt	Aquahallic	try                        cd /usr/share/menu
+2008-02-23T19:54:00.000Z	sofiankrt	Aquahallic	then                    ./powertweak-gtk
+2008-02-23T19:55:00.000Z	Aquahallic	sofiankrt	permission denied
+2008-02-23T19:56:00.000Z	sofiankrt	Aquahallic	sudo ./powertweak-gtk
+2008-02-23T19:59:00.000Z	Aquahallic	sofiankrt	Ok that doesn't work either.. BUT... I just went and looked at the file in nautilus
+2008-02-23T19:59:00.000Z	sofiankrt	Aquahallic	can chmod chgrp and chown the file?
+2008-02-23T20:00:00.000Z	Aquahallic	sofiankrt	should I make it executable?
+2008-02-23T20:01:00.000Z	sofiankrt	Aquahallic	yes
+2008-02-23T20:01:00.000Z	sofiankrt	Aquahallic	sudo chmod 755 powertweak-gtk
+2008-02-23T20:03:00.000Z	Aquahallic	sofiankrt	did that
+2008-02-23T20:03:00.000Z	sofiankrt	Aquahallic	did you change the ownership and group?
+2008-02-23T20:04:00.000Z	Aquahallic	sofiankrt	no but I did a sudo -s and became root and did ./powertweak-gtk and got an error
+2008-02-23T20:05:00.000Z	sofiankrt	Aquahallic	try changing the ownership and group
+2008-02-23T20:06:00.000Z	Aquahallic	sofiankrt	change to my user?
+2008-02-23T20:06:00.000Z	sofiankrt	Aquahallic	yes,         sudo chown (your username) powertweak-gtk
+2008-02-23T20:08:00.000Z	Aquahallic	sofiankrt	ok.. my user is owner but group is still root... should I change the group to my user also?
+2008-02-23T20:09:00.000Z	sofiankrt	Aquahallic	                 sudo chgrp (your group) powertweak-gtk
+2008-02-23T20:21:00.000Z	sofiankrt	Aquahallic	try                   powertweakd
+2008-02-23T20:12:00.000Z	Aquahallic	sofiankrt	check your PM... I just pasted the error I'm getting
+2008-02-23T20:13:00.000Z	sofiankrt	Aquahallic	PM? You can PM in pidgin? I didn't know that. Where can I check the messages?
+2008-02-23T20:13:00.000Z	Aquahallic	sofiankrt	dunno... let me pastebin it
+2008-02-23T20:16:00.000Z	Aquahallic	sofiankrt	http://paste.uni.cc/18377
+2008-02-23T20:17:00.000Z	sofiankrt	Aquahallic	ok, try                locate powertweakd
+2008-02-23T20:18:00.000Z	sofiankrt	Aquahallic	and powertweak-extra
+2008-02-23T20:18:00.000Z	sofiankrt	Aquahallic	And change the user, group and make them executable
+2008-02-23T20:18:00.000Z	Aquahallic	sofiankrt	powertweakd returned a WHACK of 'em
+2008-02-23T20:19:00.000Z	sofiankrt	Aquahallic	Perhaps from earlier installations
+2008-02-23T20:19:00.000Z	sofiankrt	Aquahallic	which one seems most relevant?
+2008-02-23T20:19:00.000Z	Aquahallic	sofiankrt	there's one in /usr/sbin and one in /etc/init.d
+2008-02-23T20:20:00.000Z	Aquahallic	sofiankrt	rest are like docs and stuff
+2008-02-23T20:20:00.000Z	Aquahallic	sofiankrt	I'm assuming the one is /usr/sbin is the actual application and the /etc/init.d is a startup script?
+2008-02-23T20:21:00.000Z	Aquahallic	sofiankrt	says need to be root
+2008-02-23T20:22:00.000Z	Aquahallic	sofiankrt	let me do sudo -s and then run it
+2008-02-23T20:23:00.000Z	Aquahallic	sofiankrt	as root I try powertweakd and it returns nothing.. if I do a /etc/init.d/powertweakd restart.. it shows it stopping then starting with no errors
+2008-02-23T20:23:00.000Z	sofiankrt	Aquahallic	ok, let's try compiling it from source. the binary doesn't seem to be working
+2008-02-23T20:24:00.000Z	sofiankrt	Aquahallic	 sudo rm -f `locate powertweak`
+2008-02-23T20:26:00.000Z	Aquahallic	sofiankrt	yes it does
+2008-02-23T20:26:00.000Z	sofiankrt	Aquahallic	it didn't for me
+2008-02-23T20:26:00.000Z	sofiankrt	Aquahallic	I apt-get removed all these files, and then located powertweak, and found a bunch of unremoved files
+2008-02-23T20:27:00.000Z	sofiankrt	Aquahallic	apt-get removed powertweak, that is
+2008-02-23T20:27:00.000Z	Aquahallic	sofiankrt	powertweakd is working properly.. it's just the gui frontend that isn't
+2008-02-23T20:27:00.000Z	sofiankrt	Aquahallic	do you still have the files when you locate powertweak?
+2008-02-23T20:28:00.000Z	sofiankrt	Aquahallic	how do you know powertweakd is working properly?
+2008-02-23T20:29:00.000Z	Aquahallic	sofiankrt	I installed lspowertweak and run it and it returns back everything properly... it's a program to look at powertweakd
+2008-02-23T20:30:00.000Z	sofiankrt	Aquahallic	ok, I've got one last idea. perhaps when we installed the packages separately, the powertweak-gtk wasn't installed properly
+2008-02-23T20:30:00.000Z	sofiankrt	Aquahallic	so just apt-get remove them, and apt-get install powertweak
+2008-02-23T20:30:00.000Z	sofiankrt	Aquahallic	and check it with lspowertweak
+2008-02-23T20:31:00.000Z	sofiankrt	Aquahallic	remove them all, install powertweak, and then install lspowertweak
+2008-02-23T20:32:00.000Z	sofiankrt	Aquahallic	try creating a launcher for powertweak-gtk
+2008-02-23T20:35:00.000Z	Aquahallic	sofiankrt	launcher doesn't work either
+2008-02-23T20:36:00.000Z	sofiankrt	Aquahallic	I really have no idea.... I would try to install it a different way, from source, perhaps
+2008-02-23T20:40:00.000Z	Aquahallic	sofiankrt	do you still have those files installed???
+2008-02-23T20:40:00.000Z	sofiankrt	Aquahallic	I removed them
+2008-02-23T20:49:00.000Z	Aquahallic	sofiankrt	thank you for your help btw... you did get me to the point that I broke into that file and found the actual executable...:)
+2008-02-23T20:49:00.000Z	sofiankrt	Aquahallic	any time, glad to be of help
+2008-02-23T20:50:00.000Z	sofiankrt	Aquahallic	;-)
+2008-02-23T20:51:00.000Z	sofiankrt	Aquahallic	now it's working?
+2008-02-23T20:52:00.000Z	Aquahallic	sofiankrt	when I broke open that txt file I found the actual executable file... when I do a sudo gpowertweak it works fine and opens the grafical configurator
+2008-02-23T20:55:00.000Z	sofiankrt	Aquahallic	no probs

@@ -1,0 +1,97 @@
+2005-05-14T07:28:00.000Z	afroman		hi
+2005-05-14T07:29:00.000Z	afroman		anyone can help me transfer files from my pc to another using ethernet
+2005-05-14T07:29:00.000Z	karsten	afroman	Any protocol in particular?
+2005-05-14T07:29:00.000Z	afroman	karsten	none that I know of...
+2005-05-14T07:29:00.000Z	karsten	afroman	FTP, SCP, rsync, http, netcat, nfs, smb, ...
+2005-05-14T07:29:00.000Z	karsten	afroman	...take your pick.
+2005-05-14T07:30:00.000Z	karsten	afroman	What's your local system, what's the remote system?
+2005-05-14T07:30:00.000Z	afroman	karsten	I have stationary that has Ubuntu and a laptop that has Debian and Windows
+2005-05-14T07:30:00.000Z	karsten	afroman	Will you be wanting to transfer files frequently?
+2005-05-14T07:31:00.000Z	afroman	karsten	I want to know to transfer Linux to Linux, and Linux to Windows... protocal won't matter, just tell me the easiest
+2005-05-14T07:32:00.000Z	karsten	afroman	Easiest would be to set up a share on the linux system and access that from other hosts.
+2005-05-14T07:32:00.000Z	karsten	afroman	Otherwise, you can put the files on your webserver ($HOME/public_html/ or /var/www/), or scp them between systems.
+2005-05-14T07:33:00.000Z	afroman	karsten	U mean like a soort of server
+2005-05-14T07:33:00.000Z	karsten	afroman	Speak english please.
+2005-05-14T07:33:00.000Z	afroman	karsten	U mean like a sort of server
+2005-05-14T07:34:00.000Z	karsten	afroman	You'll need a server running in general.  Web, SSH, FTP, Sambe...
+2005-05-14T07:35:00.000Z	karsten	afroman	SSH lets you copy individual files back and forth:  scp localfile user@remotehost:file
+2005-05-14T07:35:00.000Z	afroman	karsten	ok... let's take step by step
+2005-05-14T07:35:00.000Z	karsten	afroman	... FTP is sort of similar.  HTTP lets you stage files and copy them from the server but not the other way, without a few tricks.
+2005-05-14T07:35:00.000Z	karsten	afroman	...and a remote filesystem (samba, NFS) lets you access the remote files like any other, pretty much.
+2005-05-14T07:36:00.000Z	afroman	karsten	I'm a beginer, plz take it slow
+2005-05-14T07:36:00.000Z	afroman	karsten	I have files in Windows, how do I transfer them to Linux
+2005-05-14T07:36:00.000Z	karsten	afroman	Explain what you want to do, and how often.  You've got some choices to make.  My suggestion remains that you should set up a samba share.
+2005-05-14T07:37:00.000Z	karsten	afroman	...which will let you copy files (command line, Windows Explorer, other tools) without thinking about it.
+2005-05-14T07:37:00.000Z	karsten	afroman	See above wrt "how do I transfer..."
+2005-05-14T07:38:00.000Z	karsten	afroman	Install samba-server
+2005-05-14T07:38:00.000Z	afroman	karsten	no, I mean between 2 pcs
+2005-05-14T07:38:00.000Z	karsten	afroman	Install samba-server
+2005-05-14T07:39:00.000Z	karsten	afroman	Actually, it's just 'samba'.
+2005-05-14T07:39:00.000Z	afroman	karsten	in apt-get I see many... wot do U recommand
+2005-05-14T07:39:00.000Z	karsten	afroman	'aptitude install samba'
+2005-05-14T07:43:00.000Z	karsten	afroman	Still here?
+2005-05-14T07:43:00.000Z	karsten	afroman	Launch your file manager.
+2005-05-14T07:43:00.000Z	afroman	karsten	ya but I seem to have a problem installing SAmba
+2005-05-14T07:44:00.000Z	karsten	afroman	OK, let's try something else.
+2005-05-14T07:44:00.000Z	karsten	afroman	Launch your file manager.  'nautilus'.
+2005-05-14T07:45:00.000Z	afroman	karsten	I installed Samba
+2005-05-14T07:46:00.000Z	karsten	afroman	OK, actually, I'm going to try something a little different, but we can use that later.
+2005-05-14T07:46:00.000Z	karsten	afroman	As I've asked three times:  start your file manager, nautilus.
+2005-05-14T07:46:00.000Z	afroman	karsten	done
+2005-05-14T07:46:00.000Z	karsten	afroman	What's your Windows system's IP address?
+2005-05-14T07:47:00.000Z	afroman	karsten	192.168.1.3
+2005-05-14T07:47:00.000Z	karsten	afroman	Enter:  "smb://192.168.1.3/" in the nautilus nav box.
+2005-05-14T07:48:00.000Z	afroman	karsten	how?? it is a window manager...
+2005-05-14T07:48:00.000Z	karsten	afroman	It's also a file manager.  Launch your file manager.
+2005-05-14T07:49:00.000Z	afroman	karsten	how?? I only see my files in root
+2005-05-14T07:52:00.000Z	afroman	karsten	r you still there??? I wrote nautilus in the terminal and there opened the window manager
+2005-05-14T07:52:00.000Z	karsten	afroman	Still here.
+2005-05-14T07:52:00.000Z	karsten	afroman	Good.
+2005-05-14T07:52:00.000Z	karsten	afroman	smb://<ip of windows box>/
+2005-05-14T07:52:00.000Z	afroman	karsten	in the terminal...???
+2005-05-14T07:53:00.000Z	karsten	afroman	In natilus's nav window.
+2005-05-14T07:54:00.000Z	afroman	karsten	I only have 1 ethernet card... so I might need to get offline for this
+2005-05-14T07:55:00.000Z	afroman	karsten	but how should I proceed if it works???
+2005-05-14T07:56:00.000Z	karsten	afroman	Well, whichever way it goes, let me know.
+2005-05-14T07:56:00.000Z	afroman	karsten	but wot might happen??
+2005-05-14T07:57:00.000Z	karsten	afroman	I'll trust you to figure it out.  If it works you'll either get a listing of shares, or you'll be prompted for a username/password.
+2005-05-14T07:57:00.000Z	karsten	afroman	If it doesn't, plug in here and ask.
+2005-05-14T07:58:00.000Z	afroman	karsten	aight... thx a lot
+2005-05-14T08:42:00.000Z	afroman	karsten	hi again
+2005-05-14T08:43:00.000Z	afroman	karsten	I'm back
+2005-05-14T08:52:00.000Z	karsten	afroman	Sorry, was AFK.
+2005-05-14T08:55:00.000Z	karsten	afroman	It should be configured sanely out of the box.
+2005-05-14T08:55:00.000Z	karsten	afroman	'ssh localhost' to test.
+2005-05-14T08:58:00.000Z	afroman	karsten	the test, how do I know if it works or not...??? it is just standing still
+2005-05-14T08:58:00.000Z	karsten	afroman	'ssh -v localhost'.
+2005-05-14T08:58:00.000Z	karsten	afroman	...you should at some point get a password prompt, or a timeout.
+2005-05-14T08:59:00.000Z	afroman	karsten	how long do I have to wait...??
+2005-05-14T09:02:00.000Z	afroman	karsten	I waited nothing came
+2005-05-14T09:02:00.000Z	karsten	afroman	/etc/init.d/ssh start
+2005-05-14T09:10:00.000Z	karsten	afroman	grep ssh /var/log/daemon.log
+2005-05-14T09:12:00.000Z	afroman	karsten	nothing comes with that command
+2005-05-14T09:12:00.000Z	karsten	afroman	ps aux | grep [s] shd
+2005-05-14T09:13:00.000Z	karsten	afroman	...and what happens when you do '/etc/init.d/ssh start' ?
+2005-05-14T09:14:00.000Z	afroman	karsten	it says "Starting OpenBSD Secure Shell Server
+2005-05-14T09:15:00.000Z	karsten	afroman	ssh localhost
+2005-05-14T09:15:00.000Z	karsten	afroman	...confirm the server is running:  ps aux | grep [s] shd
+2005-05-14T09:16:00.000Z	afroman	karsten	root     14415  0.0  0.3   3512  1524 ?        Ss   01:58   0:00 /usr/sb
+2005-05-14T09:17:00.000Z	karsten	afroman	??
+2005-05-14T09:17:00.000Z	afroman	karsten	that is wot I get
+2005-05-14T09:18:00.000Z	karsten	afroman	Thanks. You're running ssh.  'ssh localhost'
+2005-05-14T09:20:00.000Z	afroman	karsten	but why did it time out when I ran ssh -v Localhost
+2005-05-14T09:20:00.000Z	karsten	afroman	Try it again.
+2005-05-14T09:20:00.000Z	afroman	karsten	as root???
+2005-05-14T09:20:00.000Z	karsten	afroman	Doesn't matter.
+2005-05-14T09:21:00.000Z	afroman	karsten	OpenSSH_3.9p1 Debian-1ubuntu2, OpenSSL 0.9.7e 25 Oct 2004
+2005-05-14T09:21:00.000Z	karsten	afroman	Paste to #flood please.
+2005-05-14T09:22:00.000Z	afroman	karsten	what is #flood??
+2005-05-14T09:24:00.000Z	afroman	karsten	what do U think?? it timed out again
+2005-05-14T09:25:00.000Z	karsten	afroman	I think your computer is stoned.
+2005-05-14T09:26:00.000Z	afroman	karsten	what do I do???
+2005-05-14T09:26:00.000Z	karsten	afroman	Panic.
+2005-05-14T09:30:00.000Z	afroman	karsten	I think I can handle if U tell me what to do
+2005-05-14T09:31:00.000Z	karsten	afroman	Nalioth please.
+2005-05-14T09:32:00.000Z	karsten	afroman	Please direct to Nalioth only.
+2005-05-14T09:33:00.000Z	afroman	karsten	nalioth: it is getting worse... now when I start SSH it says that no hostkeys avaible
+2005-05-14T09:33:00.000Z	karsten	afroman	I'm /ignoring you.

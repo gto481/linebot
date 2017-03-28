@@ -1,0 +1,97 @@
+2006-08-31T10:02:00.000Z	Snake		I Need someone that knos more about ubuntu than me...anyone? :-P
+2006-08-31T10:03:00.000Z	Snake		first off, I want to map my right shift key to be a "space" key. Then I want to fix my ubuntu to launch amarok when I press my "Start Media" button, thats currently set up for rythmbox
+2006-08-31T10:03:00.000Z	Snake		can anyone help?
+2006-08-31T10:04:00.000Z	Snake		first off, I want to map my right shift key to be a "space" key. Then I want to fix my ubuntu to launch amarok when I press my "Start Media" button, thats currently set up for rythmbox
+2006-08-31T10:04:00.000Z	Snake		can anyone help?
+2006-08-31T10:05:00.000Z	ladydoor	Snake	you need to install xmodmap and xbindkeys
+2006-08-31T10:05:00.000Z	Snake	ladydoor	thank you
+2006-08-31T10:05:00.000Z	ladydoor	Snake	xmodmap will allow you to remap your keys, and xbindkeys will allow you to assign a key to a program
+2006-08-31T10:06:00.000Z	ladydoor	Snake	and if you need any help, feel free to ask
+2006-08-31T10:06:00.000Z	Snake	ladydoor	well its already assigned with the "keyboard shortcuts" but it trys to launch rythembox, rather than amarok
+2006-08-31T10:07:00.000Z	ladydoor	Snake	aha...you need to edit that keyboard shortcut so that it'll specifically use amarok instead of "music-player" or whatever
+2006-08-31T10:08:00.000Z	Snake	ladydoor	amarok
+2006-08-31T10:11:00.000Z	Snake	ladydoor	im sorry to bug you, but can you explain to me exactly what I need to do with xmodmap? This man page is terriable
+2006-08-31T10:11:00.000Z	ladydoor	Snake	you're not bugging me
+2006-08-31T10:11:00.000Z	Snake	ladydoor	would it be like xmodmap -e shift_r = Backspace or something?
+2006-08-31T10:11:00.000Z	ladydoor	Snake	what keys are you trying to remap? (first open .Xmodmap in your favorite text editor)
+2006-08-31T10:12:00.000Z	ladydoor	Snake	it's better to use a .Xmodmap file
+2006-08-31T10:12:00.000Z	Snake	ladydoor	where is that located
+2006-08-31T10:12:00.000Z	ladydoor	Snake	in your home dir. it might not exist yet :-)
+2006-08-31T10:12:00.000Z	Snake	ladydoor	it doesnt :)
+2006-08-31T10:13:00.000Z	ladydoor	Snake	cool beans. ok, so open that up and let me know when it's ready
+2006-08-31T10:13:00.000Z	Snake	ladydoor	~/.Xmodmap is open
+2006-08-31T10:14:00.000Z	ladydoor	Snake	sweet. ok, what keys were you trying to remap?
+2006-08-31T10:14:00.000Z	Snake	ladydoor	I Want to make my right shift key a space button
+2006-08-31T10:14:00.000Z	ladydoor	Snake	for serious? that'll be hard to type...but ok...just a sec
+2006-08-31T10:15:00.000Z	Snake	ladydoor	na its to loud with my spacebar, wait, I can have the spacebar and the shift key mapped to space right??
+2006-08-31T10:15:00.000Z	Snake	ladydoor	also, im on a lappy, they kb is nice and small :)
+2006-08-31T10:15:00.000Z	ladydoor	Snake	i should think so. i'm just trying to find the command to dump your current config
+2006-08-31T10:18:00.000Z	Snake	ladydoor	Couldnt get a file descriptor referring to the console
+2006-08-31T10:18:00.000Z	ladydoor	Snake	i'm sorry?
+2006-08-31T10:18:00.000Z	Snake	ladydoor	thats the output
+2006-08-31T10:18:00.000Z	ladydoor	Snake	oh. do which dumpkeys to see if it's installed...
+2006-08-31T10:19:00.000Z	Snake	ladydoor	incoming
+2006-08-31T10:20:00.000Z	ladydoor	Snake	ok, do dumpkeys > keymap
+2006-08-31T10:20:00.000Z	ladydoor	Snake	then less keymap
+2006-08-31T10:20:00.000Z	Snake	ladydoor	nothin?
+2006-08-31T10:20:00.000Z	ladydoor	Snake	you mean it's a blank file?
+2006-08-31T10:20:00.000Z	Snake	ladydoor	incoming
+2006-08-31T10:21:00.000Z	Snake	ladydoor	then less keymap is blank
+2006-08-31T10:21:00.000Z	ladydoor	Snake	you are in X, right?
+2006-08-31T10:21:00.000Z	ladydoor	Snake	what term are you using?
+2006-08-31T10:21:00.000Z	Snake	ladydoor	Im in gnome with a terminal open
+2006-08-31T10:21:00.000Z	Snake	ladydoor	gnome-terminal
+2006-08-31T10:22:00.000Z	ladydoor	Snake	hmmm...try it in an xterm (<alt>f2, type xterm, hit <enter>
+2006-08-31T10:22:00.000Z	ladydoor	Snake	failing that, try it with sudo
+2006-08-31T10:22:00.000Z	Snake	ladydoor	sudo did it
+2006-08-31T10:23:00.000Z	Snake	ladydoor	what now?
+2006-08-31T10:23:00.000Z	ladydoor	Snake	sweet. so now you're looking at a bunch of key info?
+2006-08-31T10:23:00.000Z	Snake	ladydoor	correcty
+2006-08-31T10:23:00.000Z	ladydoor	Snake	find the keycode for the shift you want to replace and the keycode for the space bar and write them down or something
+2006-08-31T10:23:00.000Z	Snake	ladydoor	psh writing.. we have gedit for that
+2006-08-31T10:24:00.000Z	ladydoor	Snake	meh. i prefer emacs
+2006-08-31T10:24:00.000Z	Snake	ladydoor	just as well
+2006-08-31T10:24:00.000Z	ladydoor	Snake	ok, so let me know when you're ready :-)
+2006-08-31T10:25:00.000Z	ladydoor	Snake	you should probably also write down the name of the key
+2006-08-31T10:25:00.000Z	Snake	ladydoor	okay so like this:
+2006-08-31T10:26:00.000Z	Snake	ladydoor	or do I need all this: (small flood)
+2006-08-31T10:27:00.000Z	ladydoor	Snake	i don't know. i think that just the first will do
+2006-08-31T10:27:00.000Z	Snake	ladydoor	sounds good
+2006-08-31T10:27:00.000Z	Snake	ladydoor	is this fixable when my kb gets screwed up?
+2006-08-31T10:27:00.000Z	ladydoor	Snake	it should be reversible, yes
+2006-08-31T10:27:00.000Z	Snake	ladydoor	alright
+2006-08-31T10:27:00.000Z	Snake	ladydoor	so what now
+2006-08-31T10:28:00.000Z	ladydoor	Snake	ok...enter a line that looks like this:
+2006-08-31T10:28:00.000Z	ladydoor	Snake	deb http://wine.budgetdedicated.com/apt dapper main
+2006-08-31T10:28:00.000Z	ladydoor	Snake	like this: remove Lock = Caps_Lock
+2006-08-31T10:28:00.000Z	ladydoor	Snake	only, say, remove Shift = Shift_L
+2006-08-31T10:28:00.000Z	Snake	ladydoor	where at?
+2006-08-31T10:28:00.000Z	ladydoor	Snake	just at the top of that .Xmodmap file
+2006-08-31T10:29:00.000Z	ladydoor	Snake	and then another one for space
+2006-08-31T10:29:00.000Z	Snake	ladydoor	okay.
+2006-08-31T10:29:00.000Z	Snake	ladydoor	so remove Space = Space?
+2006-08-31T10:29:00.000Z	ladydoor	Snake	shiny...i guess
+2006-08-31T10:30:00.000Z	Snake	ladydoor	I hope you know what your doing
+2006-08-31T10:30:00.000Z	Snake	ladydoor	alright I got those, feel free to continue when your ready
+2006-08-31T10:31:00.000Z	ladydoor	Snake	and an identical one just the other way around ( Space = Shift_L or whatever)
+2006-08-31T10:31:00.000Z	ladydoor	Snake	and finally, lines along these lines:
+2006-08-31T10:32:00.000Z	Snake	ladydoor	again, alright thats done, whats next
+2006-08-31T10:33:00.000Z	Snake	ladydoor	done
+2006-08-31T10:33:00.000Z	ladydoor	Snake	and the same for space
+2006-08-31T10:33:00.000Z	ladydoor	Snake	now let's see if it works. in a terminal, do xmodmap .Xmodmap
+2006-08-31T10:33:00.000Z	Snake	ladydoor	hang on can you review first? Ill pastebin
+2006-08-31T10:34:00.000Z	ladydoor	Snake	if it doesn't work, then do xmodmap .Xmodmap again
+2006-08-31T10:34:00.000Z	Snake	ladydoor	http://pastebin.ca/155575
+2006-08-31T10:35:00.000Z	ladydoor	Snake	shiny. i would maybe make sure all of your spaces are capitalized, then save
+2006-08-31T10:35:00.000Z	Snake	ladydoor	okie dokie
+2006-08-31T10:36:00.000Z	Snake	ladydoor	saved, now run the xmodmap thing?
+2006-08-31T10:36:00.000Z	ladydoor	Snake	then after you've saved, in a terminal do xmodmap .Xmodmap
+2006-08-31T10:36:00.000Z	ladydoor	Snake	yea
+2006-08-31T10:36:00.000Z	ladydoor	Snake	let me know if it works!
+2006-08-31T10:36:00.000Z	Snake	ladydoor	errors!
+2006-08-31T10:36:00.000Z	ladydoor	Snake	what do they say?
+2006-08-31T10:36:00.000Z	Snake	ladydoor	http://pastebin.ca/155577
+2006-08-31T10:37:00.000Z	Snake	ladydoor	I apologize, but I must be up for school in 3 hours, so im going to go to sleep, and ill catch someone tomorrow
+2006-08-31T10:37:00.000Z	ladydoor	Snake	sweet. sorry i couldn't help more
+2006-09-15T13:30:00.000Z	ladydoor	Snake	easytag
+2006-09-15T13:30:00.000Z	ladydoor	Snake	maybe

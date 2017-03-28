@@ -1,0 +1,98 @@
+2008-12-10T06:55:00.000Z	onetinsoldier	badawi	get an answer yet?
+2008-12-10T06:56:00.000Z	badawi	onetinsoldier	no i'm googling
+2008-12-10T06:56:00.000Z	onetinsoldier	badawi	ok, i might be able to help
+2008-12-10T06:56:00.000Z	badawi	onetinsoldier	please
+2008-12-10T06:56:00.000Z	onetinsoldier	badawi	well, first you need to unpack the source to the /usr/src directory
+2008-12-10T06:57:00.000Z	onetinsoldier	badawi	what is the full name of the file?
+2008-12-10T06:58:00.000Z	badawi	onetinsoldier	uqm_0.6.2.dfsg.orig.tar.gz
+2008-12-10T06:58:00.000Z	badawi	onetinsoldier	what i'm looking for is rebuilding it into a .deb file but with -g flag set
+2008-12-10T06:59:00.000Z	onetinsoldier	badawi	ok... cd /usr/src . then use the following command  tar -zxvf /path_to_file/uqm_0.6.2.dfsg.orig.tar.gz -C .
+2008-12-10T07:00:00.000Z	onetinsoldier	badawi	you will probably need to use the 'sudo' command in front of that
+2008-12-10T07:02:00.000Z	onetinsoldier	badawi	what's happening? you with me?
+2008-12-10T07:03:00.000Z	badawi	onetinsoldier	yes
+2008-12-10T07:03:00.000Z	onetinsoldier	badawi	ok, is it unpacked?
+2008-12-10T07:03:00.000Z	badawi	onetinsoldier	yes but without -C in the end
+2008-12-10T07:04:00.000Z	onetinsoldier	badawi	well i don't know if it would have unpacked into  /usr/ src  dir then. did it?
+2008-12-10T07:04:00.000Z	badawi	onetinsoldier	yes it's unpacked
+2008-12-10T07:05:00.000Z	onetinsoldier	badawi	does it have a 'debian' dir in there?
+2008-12-10T07:05:00.000Z	badawi	onetinsoldier	no
+2008-12-10T07:06:00.000Z	badawi	onetinsoldier	ok if it apt-get source uqm, that unpacks it and creates the debian folder
+2008-12-10T07:06:00.000Z	badawi	onetinsoldier	s/it/i
+2008-12-10T07:07:00.000Z	badawi	onetinsoldier	i got the debian folder, what's the next move
+2008-12-10T07:08:00.000Z	onetinsoldier	badawi	ok, cool. now, i've never used the debian dir before, but i have seen the command for it. i have used a simple program called checkinstall to make .debs. but perhaps we can see if we can use the debian dir to build it
+2008-12-10T07:08:00.000Z	badawi	onetinsoldier	sure
+2008-12-10T07:08:00.000Z	onetinsoldier	badawi	hang on a minute
+2008-12-10T07:09:00.000Z	onetinsoldier	badawi	ok. do you see the 'Makefile' in there?
+2008-12-10T07:10:00.000Z	badawi	onetinsoldier	no Makefile in debian or base_dir
+2008-12-10T07:11:00.000Z	onetinsoldier	badawi	base_dir
+2008-12-10T07:11:00.000Z	badawi	onetinsoldier	uqm-0.6.2.dfsg
+2008-12-10T07:11:00.000Z	onetinsoldier	badawi	yes
+2008-12-10T07:13:00.000Z	onetinsoldier	badawi	well, one way to add the -g flag is to edit that file. but, now it been a while since i've done this, i think you can export the -g option as an environment variable. let's try that
+2008-12-10T07:13:00.000Z	badawi	onetinsoldier	sure
+2008-12-10T07:14:00.000Z	onetinsoldier	badawi	to do that, here's the command,   export "gcc=gcc -g"  ..however, let me try and look and see if i have that right
+2008-12-10T07:16:00.000Z	onetinsoldier	badawi	instead try   export "CCFLAGS=-g" ...there, i'm pretty certain that's how to do it.
+2008-12-10T07:16:00.000Z	badawi	onetinsoldier	and what
+2008-12-10T07:17:00.000Z	badawi	onetinsoldier	and what's the command to build the .deb package?
+2008-12-10T07:17:00.000Z	onetinsoldier	badawi	you can see that with  echo "$CCFLAGS"
+2008-12-10T07:17:00.000Z	onetinsoldier	badawi	do you have the CCFLAGS environment variable set?
+2008-12-10T07:17:00.000Z	badawi	onetinsoldier	yes
+2008-12-10T07:19:00.000Z	badawi	onetinsoldier	is it CCFLAGS or CFLAG?
+2008-12-10T07:20:00.000Z	onetinsoldier	badawi	hmm, been so long, perhaps it is CFLAG
+2008-12-10T07:20:00.000Z	onetinsoldier	badawi	yep. i think it is CFLAG]
+2008-12-10T07:20:00.000Z	badawi	onetinsoldier	it's building with CCFLAGS, i'll try CFLAG in a minute
+2008-12-10T07:21:00.000Z	onetinsoldier	badawi	i think your right CFLAGS. CFLAGS is for the C compiler options, while i believe that CCFLAGS is for the C++ options
+2008-12-10T07:21:00.000Z	badawi	onetinsoldier	know what, i'll export all of them and try again :)
+2008-12-10T07:59:00.000Z	onetinsoldier	badawi	a morbid emphasis eh? hehe
+2008-12-10T07:22:00.000Z	onetinsoldier	badawi	ok.. but if you are redoing, you need to run a clean command
+2008-12-10T07:22:00.000Z	onetinsoldier	badawi	or remove the dir and unpack it again
+2008-12-10T07:25:00.000Z	onetinsoldier	badawi	if you need to clean the source for a clean compile, try  sudo debuild clean
+2008-12-10T07:25:00.000Z	onetinsoldier	badawi	again, i've never done this using the debian build dir
+2008-12-10T07:26:00.000Z	badawi	onetinsoldier	ok got the .deb file!! now to see if it has the debugging information
+2008-12-10T07:26:00.000Z	onetinsoldier	badawi	roger, gl!
+2008-12-10T07:27:00.000Z	badawi	onetinsoldier	didn't work :( (no debugging symbols found)
+2008-12-10T07:28:00.000Z	onetinsoldier	badawi	dang... well, you can edit the Makefile and see if that works
+2008-12-10T07:28:00.000Z	badawi	onetinsoldier	we're close i'll try changing config.state in debian
+2008-12-10T07:28:00.000Z	onetinsoldier	badawi	ok
+2008-12-10T07:34:00.000Z	onetinsoldier	badawi	Ur-Quan Masters is Star Control released as free open source. i used to play Star Control way back on a game console called a 3DO.
+2008-12-10T07:36:00.000Z	badawi	onetinsoldier	ok, for debugging, uqm creates uqm-debug, but debian isn't including it in the .deb
+2008-12-10T07:37:00.000Z	onetinsoldier	badawi	hmmm, you could use checkinstall to make the .deb. but it's more simplistic. the .deb won't contain stuff like all the dependency information and things of that nature
+2008-12-10T07:38:00.000Z	onetinsoldier	badawi	is uqm-debug a toaly separate executable?
+2008-12-10T07:39:00.000Z	badawi	onetinsoldier	yes otherwise it's uqm
+2008-12-10T07:40:00.000Z	onetinsoldier	badawi	i'm thinking checkinstall wouldn't include either, but i could be wrong. you would probably need to edit some file in the debian dir, or perhaps the Makefile in base_dir, in order to get it included in the .deb
+2008-12-10T07:41:00.000Z	onetinsoldier	badawi	if you want i can download this and start looking at it myself
+2008-12-10T07:41:00.000Z	badawi	onetinsoldier	don't bother, unless you want to play it too ;)
+2008-12-10T07:42:00.000Z	badawi	onetinsoldier	i got by debug file, it's not that much of a problem that it's not installed, i can copy the file manually
+2008-12-10T07:42:00.000Z	onetinsoldier	badawi	i will do it. this has been a good refresher for me, besides, like the game and have installed older versions of uqm in linux as well as in windows
+2008-12-10T07:42:00.000Z	onetinsoldier	badawi	ok, whatever works, but i will take a look anyway
+2008-12-10T07:43:00.000Z	badawi	onetinsoldier	i need the debug version to cheat, the game is sooo hard
+2008-12-10T07:43:00.000Z	onetinsoldier	badawi	oh, hehe
+2008-12-10T07:43:00.000Z	badawi	onetinsoldier	pause when it's about to save, and change the values on the fly >:)
+2008-12-10T07:45:00.000Z	onetinsoldier	badawi	ahh, i see. the game is hard, but i have beaten it without cheat. but i have to save a lot and restart from my saves. ;-)
+2008-12-10T07:49:00.000Z	badawi	onetinsoldier	hey thanks for your dedicated help btw
+2008-12-10T07:49:00.000Z	onetinsoldier	badawi	yw, although i was obviously rusty
+2008-12-10T07:50:00.000Z	onetinsoldier	badawi	what window manager do you use?
+2008-12-10T07:50:00.000Z	badawi	onetinsoldier	right now it's gnome or gnome/openbox
+2008-12-10T07:50:00.000Z	badawi	onetinsoldier	when i'm remote
+2008-12-10T07:51:00.000Z	onetinsoldier	badawi	gnome is the environment. do you know what window manager it is? enlightenment(e16), xfce? icewm?
+2008-12-10T07:51:00.000Z	badawi	onetinsoldier	metacity, but openbox for vnc
+2008-12-10T07:52:00.000Z	onetinsoldier	badawi	roger that. are you using 64-bit install?
+2008-12-10T07:52:00.000Z	badawi	onetinsoldier	no 32
+2008-12-10T07:53:00.000Z	onetinsoldier	badawi	ok, copy. i was going to ask if you wanted to try something. i made the Makefile work for x86_64 for an old program call 'xsnow'. it would need to be edited again to make it work for 32-bit tho
+2008-12-10T07:55:00.000Z	badawi	onetinsoldier	what do you need? i think xsnow is already there in the repo
+2008-12-10T07:56:00.000Z	onetinsoldier	badawi	oh, it might be in ubuntu. i'm using regular debian here. it's not in available in debian. but i just got downloading ubuntu 8.10 a bit ago because i thought i'd install it to see what it's all about.
+2008-12-10T07:58:00.000Z	badawi	onetinsoldier	it's debian testing with a re renamed firefox and morbid emphasis on sudo
+2008-12-10T07:58:00.000Z	onetinsoldier	badawi	i'll have three linux installs. debian lenny, debian sid, and ubuntu, lol. and then winxp pro to boot.. lol. i can hardly keep up witjh them all. anyway, i'm off to install. gl with uqm!
+2008-12-10T07:59:00.000Z	onetinsoldier	badawi	what happens if you don't use sudo?
+2008-12-10T08:00:00.000Z	badawi	onetinsoldier	from the link ubottu gave -> . If you believe you need a root account to perform a certain action, please consult the official support channels first, to make sure there is not a better alternative.
+2008-12-10T08:00:00.000Z	badawi	onetinsoldier	lol
+2008-12-10T08:01:00.000Z	badawi	onetinsoldier	there's a section called -> Re-disabling your root account
+2008-12-10T08:01:00.000Z	onetinsoldier	badawi	ok, see ya later. have fun
+2008-12-10T08:01:00.000Z	badawi	onetinsoldier	later
+2008-12-10T08:01:00.000Z	onetinsoldier	badawi	i'll have a look at it befoe i install
+2008-12-11T07:55:00.000Z	onetinsoldier	badawi	dpkg -S /path/file
+2008-12-11T07:55:00.000Z	badawi	onetinsoldier	thank you, that's what i was looking for
+2008-12-11T07:56:00.000Z	onetinsoldier	badawi	you're welcomne
+2008-12-11T19:51:00.000Z	badawi	onetinsoldier	hey onetinsoldier, which bug are you talking about?
+2008-12-11T19:52:00.000Z	onetinsoldier	badawi	i might have to try and dig around to find an exact bug report number or whatever. do a search on   ubuntu 8.10 end_request
+2008-12-12T04:19:00.000Z	onetinsoldier	badawi	it's to see what version of IRC client someone is using
+2008-12-12T04:20:00.000Z	onetinsoldier	badawi	what kind and what version... if you CTCP version me it should show xchat

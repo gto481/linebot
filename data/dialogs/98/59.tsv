@@ -1,0 +1,98 @@
+2011-05-29T12:04:00.000Z	tanath		this is upsetting. i just upgraded to 11.04 and do not have the option to use 'gnome classic'
+2011-05-29T12:04:00.000Z	tanath		how do i fix this?
+2011-05-29T12:05:00.000Z	tanath		what i read said there was an option at login screen
+2011-05-29T12:06:00.000Z	lotuspsychje	tanath	first login to your username, then choose classic
+2011-05-29T12:06:00.000Z	tanath	lotuspsychje	i am logged in... where's the classic option then? didn't know it moved
+2011-05-29T12:07:00.000Z	lotuspsychje	tanath	i mean at login screen, first type your username- then choose classic- then enter your password
+2011-05-29T12:07:00.000Z	tanath	lotuspsychje	i saw no such option... and i was looking for it
+2011-05-29T12:07:00.000Z	lotuspsychje	tanath	unity is now the default boot
+2011-05-29T12:08:00.000Z	tanath	lotuspsychje	unfortunately
+2011-05-29T12:08:00.000Z	lotuspsychje	tanath	i think unity is cool
+2011-05-29T12:08:00.000Z	tanath	lotuspsychje	it removed a lot of features i use
+2011-05-29T12:09:00.000Z	tanath	lotuspsychje	like gnome applets. system monitor and disk mounter. i need to see my resource usage...
+2011-05-29T12:09:00.000Z	tanath	lotuspsychje	it also coopted shortcuts i use for other things
+2011-05-29T12:09:00.000Z	lotuspsychje	tanath	yeah i didnt found yet system monitor either on unity
+2011-05-29T12:09:00.000Z	tanath	lotuspsychje	it's basically made my computer more difficult and less efficient to use
+2011-05-29T12:09:00.000Z	tanath	lotuspsychje	also lost the ability to middle-click on scroll bar to jump to position
+2011-05-29T12:10:00.000Z	lotuspsychje	tanath	did you update or clean install?
+2011-05-29T12:10:00.000Z	tanath	lotuspsychje	update
+2011-05-29T12:10:00.000Z	lotuspsychje	tanath	i clean installed mine, less problems
+2011-05-29T12:10:00.000Z	tanath	lotuspsychje	i waited a month instead
+2011-05-29T12:10:00.000Z	tanath	lotuspsychje	for some reason i expected most issues to be fixed by now
+2011-05-29T12:11:00.000Z	tanath	lotuspsychje	should be less work this way instead of remembering and installing apps all over again
+2011-05-29T12:11:00.000Z	lotuspsychje	tanath	you could try ubuntu-tweak for editing stuff
+2011-05-29T12:11:00.000Z	tanath	lotuspsychje	i use it... though it removed it for upgrade
+2011-05-29T12:12:00.000Z	tanath	lotuspsychje	brb. gonna check for gnome classic one more time
+2011-05-29T12:14:00.000Z	lotuspsychje	tanath	http://askubuntu.com/questions/29757/what-can-replace-system-monitoring-in-the-top-gnome-panel-in-unity
+2011-05-29T12:14:00.000Z	tanath	lotuspsychje	ok, i hadn't seen it before i chose my username and missed the change after. got it now, thanks
+2011-05-29T12:14:00.000Z	tanath	lotuspsychje	it really should be there before you choose
+2011-05-29T12:15:00.000Z	lotuspsychje	tanath	it makes sense you need seperate desktop choice for each user
+2011-05-29T12:16:00.000Z	tanath	lotuspsychje	thanks for link
+2011-05-29T12:16:00.000Z	lotuspsychje	tanath	i also installed natty on gf laptop and unity really rox on it
+2011-05-29T12:16:00.000Z	tanath	lotuspsychje	not really. you need to choose which environment before logging in, so naturally you look for any available options _before_ login
+2011-05-29T12:17:00.000Z	tanath	lotuspsychje	not really. i know it has potential and will be an improvement long run, but it's a regression at this point and shouldn't be default yet
+2011-05-29T12:18:00.000Z	tanath	lotuspsychje	and for some reason, the option is at the bottom and my mouse moves unbearably slow at login screen
+2011-05-29T12:18:00.000Z	lotuspsychje	tanath	there are many pro and contra i know...but i think in the touchscreen world thing getting improved
+2011-05-29T12:19:00.000Z	tanath	lotuspsychje	enh, touchscreen i suspect (hope?) is largely a fad
+2011-05-29T12:19:00.000Z	lotuspsychje	tanath	compiz still running fine?
+2011-05-29T12:19:00.000Z	tanath	lotuspsychje	that was another thing, i lost my compiz functions in unity
+2011-05-29T12:19:00.000Z	tanath	lotuspsychje	i need several compiz plugin functions
+2011-05-29T12:20:00.000Z	tanath	lotuspsychje	and actually no, the plugins aren't working in gnome now either
+2011-05-29T12:20:00.000Z	lotuspsychje	tanath	yeah desktop cube is disabled on mine
+2011-05-29T12:20:00.000Z	lotuspsychje	tanath	i really sugest clean install
+2011-05-29T12:20:00.000Z	tanath	lotuspsychje	hell, everything seems disabled
+2011-05-29T12:20:00.000Z	lotuspsychje	tanath	lol
+2011-05-29T12:20:00.000Z	tanath	lotuspsychje	i don't. this way saved me more time/effort
+2011-05-29T12:21:00.000Z	tanath	lotuspsychje	upgrade largely worked well
+2011-05-29T12:21:00.000Z	lotuspsychje	tanath	same here, but still clean install fixed a lot for me
+2011-05-29T12:22:00.000Z	tanath	lotuspsychje	like what? any issues i have?
+2011-05-29T12:22:00.000Z	tanath	lotuspsychje	wow, they really messed up compiz. even removed the default keybindings for enhanced zoom
+2011-05-29T12:22:00.000Z	lotuspsychje	tanath	unity was bit buggy for me after update
+2011-05-29T12:22:00.000Z	tanath	lotuspsychje	not for me
+2011-05-29T12:22:00.000Z	tanath	lotuspsychje	prolly depends on card
+2011-05-29T12:23:00.000Z	lotuspsychje	tanath	it was more after trying different compiz layouts
+2011-05-29T12:23:00.000Z	lotuspsychje	tanath	lie wobbly windows and such
+2011-05-29T12:23:00.000Z	lotuspsychje	tanath	not sure why desktop cube and unity cant run togheter
+2011-05-29T12:24:00.000Z	tanath	lotuspsychje	this is frustrating. good thing i've been through this before and know the mouse shortcuts and crap. used to be able to click reset and it would set the shortcuts
+2011-05-29T12:25:00.000Z	tanath	lotuspsychje	how would a noob guess that scroll wheel up & down are eg., button 4 & 5?
+2011-05-29T12:25:00.000Z	lotuspsychje	tanath	i think we have to get used to untiy now :p
+2011-05-29T12:25:00.000Z	tanath	lotuspsychje	no, we don't. if they don't get this right people will switch away
+2011-05-29T12:26:00.000Z	lotuspsychje	tanath	personal i also better liked if untiy was an option...but what can we do?
+2011-05-29T12:27:00.000Z	tanath	lotuspsychje	i've been a very happy ubuntu user for the past ~5-6 yrs, but if they don't get some things sorted out, i'll be looking for another distro
+2011-05-29T12:27:00.000Z	tanath	lotuspsychje	and i'll be bringing people with me
+2011-05-29T12:27:00.000Z	lotuspsychje	tanath	i like ubuntu to much to switch
+2011-05-29T12:27:00.000Z	tanath	lotuspsychje	i though that 'till now
+2011-05-29T12:27:00.000Z	lotuspsychje	tanath	what about you use classic instaed of unity?
+2011-05-29T12:28:00.000Z	lotuspsychje	tanath	everything still works on classic?
+2011-05-29T12:28:00.000Z	tanath	lotuspsychje	they've made a lot of bold decisions lately that aren't popular but were good decisions, but unity needs more work before becoming default
+2011-05-29T12:28:00.000Z	tanath	lotuspsychje	they're removing classic next release
+2011-05-29T12:28:00.000Z	tanath	lotuspsychje	i am using it for now
+2011-05-29T12:28:00.000Z	lotuspsychje	tanath	maybe next time untiy will have classic options :p
+2011-05-29T12:29:00.000Z	tanath	lotuspsychje	i wanted to like unity, but frankly it's not up to par yet. not enough of an improvement in ways that matter to users
+2011-05-29T12:29:00.000Z	tanath	lotuspsychje	at the very least they need to keep gnome/classic around for a couple releases 'til unity is good enough
+2011-05-29T12:30:00.000Z	lotuspsychje	tanath	i agree
+2011-05-29T12:30:00.000Z	lotuspsychje	tanath	im sure the community will fix main untiy bugs to keep every1 happy
+2011-05-29T12:31:00.000Z	tanath	lotuspsychje	problem is, it's not all bugs. there are feature regressions too. which means they need to do more work on it
+2011-05-29T12:31:00.000Z	lotuspsychje	tanath	i personal would loved unity bar at bottom
+2011-05-29T12:31:00.000Z	tanath	lotuspsychje	losing features and efficiency/ease of use is very bad. something i despise. i always felt crippled using windows after i switched to ubuntu
+2011-05-29T12:31:00.000Z	tanath	lotuspsychje	now i feel that way in unity
+2011-05-29T12:32:00.000Z	lotuspsychje	tanath	i understand your frustration, but like i say there is a linux solution for everything
+2011-05-29T12:33:00.000Z	tanath	lotuspsychje	is there a linux solution for the current state of ubuntu linux? :P
+2011-05-29T12:34:00.000Z	lotuspsychje	tanath	im sure issues can be solved
+2011-05-29T12:34:00.000Z	tanath	lotuspsychje	well they can be or i wouldn't bother bitching about them. question is whether they will be
+2011-05-29T12:35:00.000Z	lotuspsychje	tanath	the community is always open for sugestions right...thats why unity is being created in the first place right?
+2011-05-29T12:35:00.000Z	lotuspsychje	tanath	there is not 1 gates at the top choosing stuff
+2011-05-29T12:36:00.000Z	tanath	lotuspsychje	well, not exactly. i don't think there was a suggestion for ubuntu to switch to unity. it was decided by mark shuttleworth, founder of ubuntu
+2011-05-29T12:36:00.000Z	tanath	lotuspsychje	he makes good arguments for implementing & working on it, but it really isn't ready for default yet
+2011-05-29T12:37:00.000Z	tanath	lotuspsychje	and he's been stubborn in the face of criticism. arguably with good reason. he has a good vision, and he's right that if the effort is put in it's prolly the best replacement for X
+2011-05-29T12:37:00.000Z	lotuspsychje	tanath	so opensource get influenced these days lol?
+2011-05-29T12:38:00.000Z	tanath	lotuspsychje	of course. always has been
+2011-05-29T12:38:00.000Z	tanath	lotuspsychje	but yeah, ubuntu wouldn't exist if not for him
+2011-05-29T12:38:00.000Z	tanath	lotuspsychje	created canonical, the company behind ubuntu
+2011-05-29T12:38:00.000Z	lotuspsychje	tanath	but i agree you on every point mate, they should at least give the user the choice...
+2011-05-29T12:38:00.000Z	tanath	lotuspsychje	mhm
+2011-05-29T12:39:00.000Z	tanath	lotuspsychje	anyway, thanks for pointer, and the chat. i'm off
+2011-05-29T12:39:00.000Z	lotuspsychje	tanath	like providing classic natty on seperate download iso
+2011-05-29T12:39:00.000Z	lotuspsychje	tanath	ok take care mate
+2011-05-29T12:40:00.000Z	tanath	lotuspsychje	nah, just a clear(er) option
+2011-05-29T12:46:00.000Z	tanath	lotuspsychje	even sticking with classic isn't good enough >.<

@@ -1,0 +1,96 @@
+2004-09-27T14:18:00.000Z	calc		hmm can you request specific types of cd's on the site?
+2004-09-27T14:20:00.000Z	calc		bbs
+2004-09-27T14:20:00.000Z	calc		well web forum/bbs thing
+2004-09-27T14:22:00.000Z	calc		phpBB is just as nice and free
+2004-09-27T14:23:00.000Z	jdub	calc	ideally we'd like something that interfaced to our mailing lists
+2004-09-27T14:23:00.000Z	jdub	calc	so if you know anything that does nntp backend...
+2004-10-31T14:33:00.000Z	calc	jdub	shaddup n00b1e
+2004-11-01T12:44:00.000Z	calc	jdub	so how many downloads has ubuntu gotten so far?
+2004-11-16T12:41:00.000Z	jdub	calc	uninstalling menu makes it have no menu items ;)
+2004-11-16T12:41:00.000Z	jdub	calc	but the menu itself stays there
+2004-11-16T12:41:00.000Z	calc	jdub	oh hahaha it doesn't make the top level go away
+2004-11-16T12:41:00.000Z	calc	jdub	so how will it show debian menu items now?
+2004-11-16T12:41:00.000Z	jdub	calc	[menu.c is gnome-panel is famously horrific :-) ] 
+2004-11-16T12:42:00.000Z	jdub	calc	it doesn't.
+2004-11-16T12:42:00.000Z	calc	jdub	isn't that a violation of policy for debian's anyway
+2004-11-16T12:42:00.000Z	jdub	calc	from my POV, the debian menu structure is terrible, and the kinds of stuff that appears in it is baroque. :-)
+2004-11-16T12:42:00.000Z	calc	jdub	agreed
+2004-11-16T12:43:00.000Z	calc	jdub	something needs to be done to unify the menu in fdo, once more than just kde supports menu spec it will be a big mess
+2004-11-16T12:44:00.000Z	jdub	calc	yeah
+2004-11-16T12:44:00.000Z	jdub	calc	especially with menu-xdg... eeeeeek! :)
+2004-11-16T12:46:00.000Z	calc	jdub	eh?
+2004-11-16T12:48:00.000Z	jdub	calc	given the haphazard nature of the menu structure already, adding menu-xdg items to the gnome/kde structure is going to be seriously scary. (not menu-xdg's fault, it's the items themselves.)
+2004-11-16T12:49:00.000Z	calc	jdub	wrt menu-xdg all of them are shoved off into a debian submenu like gnome was
+2004-11-16T12:49:00.000Z	jdub	calc	so i don't think we'll be shipping menu-xdg (unless we patch all the menu items). ;-)
+2004-11-16T12:49:00.000Z	jdub	calc	oh right.
+2004-11-16T12:49:00.000Z	calc	jdub	it builds out a debian menu that looks the same as any other wm that just uses the debian default layout
+2004-11-16T12:53:00.000Z	calc	jdub	it looks like: http://cheney.cx/menu-xdg.jpg
+2004-11-16T12:54:00.000Z	jdub	calc	404...
+2004-11-16T12:55:00.000Z	calc	jdub	should be there now
+2004-11-16T12:56:00.000Z	jdub	calc	ahr. yeah.
+2004-12-03T08:14:00.000Z	calc	jdub	better hide out in the other channel, too many people here ;)
+2004-12-03T08:19:00.000Z	jdub	calc	gnome 2.8 in warty, 2.9 in hoary ;-)
+2004-12-03T08:19:00.000Z	calc	jdub	whee 8)
+2004-12-03T11:45:00.000Z	calc	jdub	#ubuntu means blackhole of all off topic freenode discussions :)
+2004-12-03T11:50:00.000Z	calc	jdub	hopefully #ubuntu won't become as bad as #debian ;)
+2004-12-03T15:15:00.000Z	jdub	calc	the gelato project are collaborating :)
+2004-12-03T15:23:00.000Z	jdub	calc	evo's a bit b0rk atm.
+2004-12-03T15:24:00.000Z	calc	jdub	well the whole OS shouldn't go down is what i meant to say, gnome related stuff is the only things in early beta on hoary, right?
+2004-12-03T15:25:00.000Z	jdub	calc	yeah
+2004-12-03T15:25:00.000Z	jdub	calc	so i hear you're moving into gnome development :)
+2004-12-05T16:22:00.000Z	calc	jdub	good job :)
+2004-12-05T16:25:00.000Z	jdub	calc	install credits to Kamion :)
+2005-01-26T14:41:00.000Z	jdub	calc	but debian and ubuntu are STRONGER THAN THEM ALL! riowr! :-) :-)
+2005-01-26T14:41:00.000Z	calc	jdub	yes
+2005-01-26T14:48:00.000Z	jdub	calc	what you learn with lfs/gentoo is kinda facile though
+2005-01-26T14:49:00.000Z	calc	jdub	true, lfs didn't exist when i started using linux so i just learned from a book and slackware 2
+2005-01-26T14:51:00.000Z	jdub	calc	it's a bit like "made sushi before? no? here's a blindfold and some seaweed!"
+2005-01-26T14:51:00.000Z	calc	jdub	rotflmao, yea i guess that is a good point, perhaps it should include some more chapters explaining better what you are actually doing
+2005-01-26T14:55:00.000Z	calc	jdub	well with how seldom debian releases, probably under 50K
+2005-01-26T15:12:00.000Z	calc	jdub	putting it at the end makes it faster, or for some other reason?
+2005-01-26T15:12:00.000Z	jdub	calc	disk heads switch there faster
+2005-01-26T15:13:00.000Z	jdub	calc	only really matters on machines where swap performance matters (not a desktop issue, generally)
+2005-01-26T15:13:00.000Z	calc	jdub	ok
+2005-01-26T15:21:00.000Z	calc	jdub	there is a mini.iso that does net install ;)
+2005-01-26T15:21:00.000Z	calc	jdub	is that not supposed to be publicized?
+2005-01-26T15:22:00.000Z	jdub	calc	i always forget about that.
+2005-01-26T15:23:00.000Z	jdub	calc	now you do get lynched for that :)
+2005-01-26T15:27:00.000Z	jdub	calc	vicious man.
+2005-01-26T15:27:00.000Z	calc	jdub	heh :)
+2005-01-26T15:28:00.000Z	calc	jdub	btw does gnome have that same sort of problem?
+2005-01-26T15:29:00.000Z	jdub	calc	yeah
+2005-01-26T15:31:00.000Z	calc	jdub	btw seen fc3, it seems redhat got the idea to use the (near) default look of gnome from ubuntu ;)
+2005-01-26T15:31:00.000Z	jdub	calc	heh
+2005-01-26T15:32:00.000Z	jdub	calc	oh, bluecurve is just the theme
+2005-01-26T15:32:00.000Z	jdub	calc	bottom bar was just red hat default configuration
+2005-01-26T15:33:00.000Z	calc	jdub	oh they had it so that you could switch to kicker and have it look identical?
+2005-01-26T15:33:00.000Z	jdub	calc	that was some kind of handwavy goal, yeah
+2005-01-26T15:33:00.000Z	jdub	calc	but i think in fedora they realised all the users though that was LCD
+2005-01-26T15:35:00.000Z	calc	jdub	btw is there any way to format a cd/dvd in ubuntu now besides using the command line with dvd+rw-tools?
+2005-01-26T15:37:00.000Z	jdub	calc	i think n-c-b automatically formats before writing
+2005-01-26T15:37:00.000Z	jdub	calc	but i'm not sure if you can explicitly do it
+2005-01-27T09:07:00.000Z	jdub	calc	possibly, there were some katie problems earlier
+2005-01-27T09:08:00.000Z	calc	jdub	the md5sum doesn't match
+2005-02-10T13:44:00.000Z	jdub	calc	note "sane" :)
+2005-02-10T13:45:00.000Z	calc	jdub	well fdo menu spec etc shouldn't get in the way much i've seen the actual output of editted menu items, etc and it looks sane to me
+2005-02-10T13:46:00.000Z	jdub	calc	notice how you're not talking about user interaction? :)
+2005-02-10T13:48:00.000Z	jdub	calc	see, direct manipulation is more attractive, but also more unwieldy with menus and submenus; the standalone editor route is completely abstract.
+2005-02-10T13:49:00.000Z	jdub	calc	currently, i'm aiming to get rid of the applications menu idea entirely.
+2005-02-10T13:49:00.000Z	jdub	calc	launchers
+2005-02-10T13:50:00.000Z	jdub	calc	the ui would have to change more drastically to accomodate it
+2005-02-10T13:50:00.000Z	calc	jdub	ok] 
+2005-02-10T13:50:00.000Z	jdub	calc	consider the difference between the OS9 and OSX execution models
+2005-02-10T13:51:00.000Z	calc	jdub	not very familiar with those, sorry
+2005-02-10T13:52:00.000Z	jdub	calc	used windowmaker?
+2005-02-10T13:52:00.000Z	calc	jdub	yes
+2005-02-10T13:52:00.000Z	jdub	calc	so windowmaker conflates the idea of what's running and what's there to run
+2005-02-10T13:52:00.000Z	jdub	calc	this is quite similar to osx (osx and windowmaker being based on next, etc)
+2005-02-10T13:53:00.000Z	calc	jdub	ah with the osx bottom bar?
+2005-02-10T13:54:00.000Z	jdub	calc	most people only regularly directly execute 3-6 things
+2005-02-10T13:54:00.000Z	calc	jdub	yea
+2005-02-10T13:55:00.000Z	jdub	calc	so why do we have great big long menus of categories of stuff they'd rarely run directly (think gpdf, it's *very* rare that you'd run gpdf itself - you'd open a pdf)
+2005-02-10T13:55:00.000Z	jdub	calc	so there's the vague handwaving behind it :)
+2005-02-10T13:56:00.000Z	jdub	calc	it's all smoke and mirrors on osx too you know :)
+2005-02-10T13:57:00.000Z	jdub	calc	just means we have to think in the user's terms instead of the mechanics underneath ;)
+2005-02-10T13:57:00.000Z	calc	jdub	ok, have only seen osx at in store demos :\  i need to get one now that i have a job finally
+2005-02-10T13:57:00.000Z	jdub	calc	that menu is not in osx, btw

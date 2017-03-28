@@ -1,0 +1,95 @@
+2005-04-16T14:05:00.000Z	holycow		game player are you?
+2005-04-16T14:05:00.000Z	holycow		all my systems here are 1ghz
+2005-04-16T14:05:00.000Z	holycow		plenty fast for everything, but i don't play games
+2005-04-16T14:06:00.000Z	holycow		hey speaking of graphics ...
+2005-04-16T14:06:00.000Z	holycow		whats a good onboard video chipset with decent 3d acceleration?
+2005-04-16T14:06:00.000Z	holycow		not game level, would just love to be able to play something like neverball with an onboard vid chipset
+2005-04-16T14:08:00.000Z	holycow		speaking of security ....
+2005-04-16T14:08:00.000Z	holycow		isn't the sudo EVERYTHING in ubuntu dangerous?
+2005-04-16T14:08:00.000Z	Burgundavia	holycow	not more than a root account is
+2005-04-22T08:17:00.000Z	Burgundavia	holycow	technically not true. Solutions exist. There are just no defintions for any linux virii
+2005-04-22T08:18:00.000Z	holycow	Burgundavia	nor will they spread at all
+2005-04-22T08:19:00.000Z	Burgundavia	holycow	some will spread, but the diversity will play against them
+2005-04-22T08:19:00.000Z	holycow	Burgundavia	:) yes the virus will haveto popup a menu that asks the user for their sudo password
+2005-04-22T12:53:00.000Z	Burgundavia	holycow	Mono is several different pieces, of which .net compat is only one part. In other words, Beage/Muine/Tomboy is probably safe
+2005-04-24T12:02:00.000Z	holycow	Burgundavia	bizatch you beat me :)
+2005-04-25T08:13:00.000Z	Burgundavia	holycow	have you tested another printer?
+2005-04-27T08:10:00.000Z	holycow	Burgundavia	any chance it might be backported to hoary?
+2005-04-27T08:11:00.000Z	holycow	Burgundavia	ah okay
+2005-04-29T15:43:00.000Z	Burgundavia	holycow	apple is sort of open source friendly
+2005-04-29T15:44:00.000Z	Burgundavia	holycow	they do pay money for darwin development
+2005-04-29T15:44:00.000Z	Burgundavia	holycow	there are different levels of support. They do support some stuff but not the desktop stuff
+2005-04-29T15:45:00.000Z	holycow	Burgundavia	really? heh, i just don't see much beyond khtml stuff, okay darwin stuff sure
+2005-04-29T15:45:00.000Z	Burgundavia	holycow	apple does stuff behind the scenese
+2005-04-29T15:46:00.000Z	holycow	Burgundavia	really? okay good to hear, they need to advertise it more
+2005-04-29T15:46:00.000Z	Burgundavia	holycow	hmm, had a talk from terrasoft at my lug the other day
+2005-04-29T15:46:00.000Z	holycow	Burgundavia	yeah?
+2005-04-29T15:46:00.000Z	Burgundavia	holycow	twas interesting
+2005-04-29T15:47:00.000Z	holycow	Burgundavia	i don't want them to share 'their stuff'
+2005-04-29T15:47:00.000Z	Burgundavia	holycow	IBM is also doing a lot regarding power
+2005-04-29T15:47:00.000Z	holycow	Burgundavia	ibm is on my good list these days :) i'm pleasantly surprised how they 'get it'
+2005-04-29T15:48:00.000Z	Burgundavia	holycow	openoffice is not in their financial best interest, but this talk is not really relevant to #ubuntu
+2005-04-29T15:48:00.000Z	holycow	Burgundavia	true, but oo.o really is in their self interest, oo ads huge value immediately
+2005-04-29T15:50:00.000Z	Burgundavia	holycow	but they want to sell words and appleworks
+2005-04-29T15:50:00.000Z	holycow	Burgundavia	perhaps i should focus my opinions more to productive 'pro co-operative' activites, i'd love to see what they have to say
+2005-04-29T15:50:00.000Z	holycow	Burgundavia	well thats just stupid, thats a lot of dev costs, lots.
+2005-04-29T15:51:00.000Z	Burgundavia	holycow	I am not saying that apple is a complete friend of OSS, but they are not the enemy that MS is
+2005-04-29T15:51:00.000Z	holycow	Burgundavia	oh i agree very very much with you there *nod*
+2005-05-13T16:13:00.000Z	holycow	Burgundavia	heh
+2005-05-16T09:10:00.000Z	Burgundavia	holycow	is going to be making its was into Ubuntu realsoonnow
+2005-05-16T09:10:00.000Z	holycow	Burgundavia	really? *oooooooooooo*
+2005-05-16T09:17:00.000Z	holycow	Burgundavia	over to you
+2005-05-19T07:55:00.000Z	Burgundavia	holycow	ubuntu is not unstable
+2005-05-19T07:55:00.000Z	holycow	Burgundavia	debian unstable ....
+2005-05-19T07:55:00.000Z	Burgundavia	holycow	that is different
+2005-05-19T07:56:00.000Z	Burgundavia	holycow	Ubuntu is a delta of unstable
+2005-05-27T06:31:00.000Z	holycow	Burgundavia	_hp_, you have never done help desk stuff then  <-- heh exactly
+2005-05-31T14:41:00.000Z	holycow	Burgundavia	perhaps a guid of some sort would help eventually too :)
+2005-05-31T14:41:00.000Z	Burgundavia	holycow	guide? yes that is what is coming
+2005-05-31T14:43:00.000Z	Burgundavia	holycow	IIIEars the major issue is that while deb is very powerful, it is not really that easy to get your feet wet
+2005-05-31T14:43:00.000Z	holycow	Burgundavia	right, thats exactly what i mean
+2005-05-31T14:44:00.000Z	holycow	Burgundavia	i'm a command line junkie too don't get me wrong, perhaps you are right sometimes guis make things worse, so far i'm not convinced
+2005-05-31T14:45:00.000Z	Burgundavia	holycow	I think there too many issues with creating a gui, like the idea that anybody could package
+2005-05-31T14:45:00.000Z	holycow	Burgundavia	oh thats not exactly what i meant
+2005-05-31T14:45:00.000Z	holycow	Burgundavia	packagin debian compliant packages is a lot of work, i'm only thinking a gui doing a step 1 do this, step 2 do this, step 3 do this
+2005-05-31T14:46:00.000Z	Burgundavia	holycow	that is what a good document is for. You don't need a gui for that
+2005-05-31T14:46:00.000Z	holycow	Burgundavia	ah, have you seen the debian packagin manual?
+2005-05-31T14:47:00.000Z	holycow	Burgundavia	oh, i see what you are saying
+2005-05-31T14:47:00.000Z	Burgundavia	holycow	if you want to help, ping tseng in #ubuntu-motu
+2005-05-31T14:48:00.000Z	holycow	Burgundavia	hey i am going to update our sarge desktop pilot to ubuntu in the next couple of weeks ...
+2005-05-31T14:49:00.000Z	holycow	Burgundavia	do you guys have anything standardized for testing desktop usability under such environments?
+2005-05-31T14:49:00.000Z	holycow	Burgundavia	i wouldn't mind giving back some real world feedback
+2005-05-31T14:49:00.000Z	Burgundavia	holycow	not really
+2005-05-31T14:49:00.000Z	Burgundavia	holycow	mostly file the bug if you think it is a bug
+2005-05-31T14:50:00.000Z	Burgundavia	holycow	if you have an idea, -devel
+2005-05-31T14:50:00.000Z	Burgundavia	holycow	and file as far upstream as you can go
+2005-05-31T14:50:00.000Z	holycow	Burgundavia	okay
+2005-05-31T10:57:00.000Z	holycow	Burgundavia	hey are you around?
+2005-05-31T10:58:00.000Z	holycow	Burgundavia	do you have the breezy linkage you posted for the goals for breeze from yesterday?
+2005-05-31T10:58:00.000Z	holycow	Burgundavia	my linkage is at home unfortunately
+2005-05-31T11:16:00.000Z	Burgundavia	holycow	the udu wiki page?
+2005-05-31T11:19:00.000Z	holycow	Burgundavia	close enough :) danke
+2005-05-31T11:21:00.000Z	Burgundavia	holycow	http://udu.wiki.ubuntu.com/UbuntuDownUnder/BreezyGoals
+2005-07-03T13:13:00.000Z	holycow	Burgundavia	you keep strange hours
+2005-07-03T13:13:00.000Z	Burgundavia	holycow	it is only midnight here
+2005-07-06T12:59:00.000Z	holycow	Burgundavia	url?
+2005-07-06T13:01:00.000Z	holycow	Burgundavia	danke for the linkage
+2005-07-06T13:02:00.000Z	Burgundavia	holycow	very well, from what I understand
+2005-07-06T13:03:00.000Z	holycow	Burgundavia	you guys fucking rock
+2005-07-06T13:03:00.000Z	Burgundavia	holycow	don't blame/laud me, I just report the news and document it
+2005-07-06T13:10:00.000Z	holycow	Burgundavia	does it come with fries?
+2005-07-06T13:11:00.000Z	Burgundavia	holycow	please watch the language
+2005-07-06T13:15:00.000Z	Burgundavia	holycow	sorry, no fries with Breezy
+2005-07-06T05:39:00.000Z	holycow	Burgundavia	you around?
+2005-07-08T13:35:00.000Z	holycow	Burgundavia	are you around?
+2005-07-08T13:35:00.000Z	holycow	Burgundavia	have you written the shorthand debian packaging tutorial by any chance?
+2005-07-31T15:43:00.000Z	Burgundavia	holycow	anybody that joins with the hoary or breezy livecds gets that nick
+2005-07-31T15:44:00.000Z	holycow	Burgundavia	really?
+2005-08-09T09:29:00.000Z	Burgundavia	holycow	esd support needs to be coded in
+2005-08-12T13:23:00.000Z	Burgundavia	holycow	it is very sad. I cannot blow my brother up (he is still sanely running hoary)
+2005-08-12T13:24:00.000Z	Burgundavia	holycow	feel free to start one
+2005-08-12T13:25:00.000Z	holycow	Burgundavia	*smack* i forget its a wiki, righto
+2005-08-12T13:25:00.000Z	Burgundavia	holycow	UbuntuGaming sounds good
+2005-08-12T13:26:00.000Z	Burgundavia	holycow	link to the category for a full listing
+2005-08-12T13:26:00.000Z	Burgundavia	holycow	but a page is not a category and vice versa
+2005-08-12T13:26:00.000Z	holycow	Burgundavia	good point

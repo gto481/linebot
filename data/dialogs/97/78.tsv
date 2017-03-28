@@ -1,0 +1,97 @@
+2005-08-22T13:43:00.000Z	Ronan		How do I mount my other hard drive? :/
+2005-08-22T13:43:00.000Z	kemik	Ronan	 that link contains a script that will automount ntfs/fat partitions and add them to fstab
+2005-08-22T13:44:00.000Z	Ronan	kemik	I know that it's NTFS, Do I just simply mount it in my fstab
+2005-08-22T13:44:00.000Z	kemik	Ronan	 use the link and do as it says
+2005-08-22T13:44:00.000Z	Ronan	kemik	thanks.
+2005-08-22T13:44:00.000Z	kemik	Ronan	 or if you're familiar with fstab you can add it manually ofcourse
+2005-08-22T13:52:00.000Z	Ronan	kemik	it says no usable windows/mac partitions found
+2005-08-22T13:53:00.000Z	Ronan	kemik	my windows is on the other HARD DRIVE, not partition.
+2005-08-22T13:56:00.000Z	kemik	Ronan	 ah
+2005-08-22T13:57:00.000Z	Ronan	kemik	how would I mount my other hard drive?
+2005-08-22T13:58:00.000Z	kemik	Ronan	 add something like /dev/hdb1  /mountpoint  ntfs  ro,uid=youruser,gid=youruser  0  1
+2005-08-22T13:58:00.000Z	kemik	Ronan	 is it a single-user-system?
+2005-08-22T13:58:00.000Z	Ronan	kemik	awesome, thanks. Yeah.
+2005-08-22T13:59:00.000Z	kemik	Ronan	 of course you'll have to make sure /dev/hdX# is correct
+2005-08-22T13:59:00.000Z	Ronan	kemik	it's hda1
+2005-08-22T14:00:00.000Z	kemik	Ronan	 ok. just add that line to /etc/fstab then
+2005-08-22T14:01:00.000Z	kemik	Ronan	NTFS isnt writable in linux (you can achieve it, but it is not safe or recommended)
+2005-08-22T14:02:00.000Z	kemik	Ronan	 dont chmod fstab
+2005-08-22T14:02:00.000Z	kemik	Ronan	 edit it with "sudo gedit /etc/fstab"
+2005-08-22T14:03:00.000Z	Ronan	kemik	i tried to but it wont let me.
+2005-08-22T14:04:00.000Z	kemik	Ronan	 that sounds really weird.. whats the errormsg?
+2005-08-22T14:04:00.000Z	Ronan	kemik	er...it just wont let me type.
+2005-08-22T14:04:00.000Z	Ronan	kemik	nevermind, got it.
+2005-08-22T14:08:00.000Z	Ronan	kemik	/dev/hda1       /media/windowshd  ntfs  ro,uid=Ronan,gid=Ronan  0  1
+2005-08-22T14:08:00.000Z	Ronan	kemik	right?
+2005-08-22T14:09:00.000Z	kemik	Ronan	 that looks good
+2005-08-22T14:09:00.000Z	Ronan	kemik	do i have to restart linux or something? it's not showing up when I open the folder.
+2005-08-22T14:12:00.000Z	kemik	Ronan	 im not sure if there's a command to cycle fstab, but you can do "sudo mount -t ntfs -o ro,uid=Ronan,gid=Ronan /dev/hda1 /media/windowshd"
+2005-08-22T14:12:00.000Z	Ronan	kemik	thanks.
+2005-08-22T14:13:00.000Z	Ronan	kemik	mount: wrong fs type, bad option, bad superblock on /dev/hda1,
+2005-08-22T14:15:00.000Z	kemik	Ronan	 not sure whats gone wrong there
+2005-08-22T14:15:00.000Z	Ronan	kemik	In some cases useful info is found in syslog - try
+2005-08-22T14:15:00.000Z	kemik	Ronan	  are you sure its /dev/hda1 and not hda2/3/4 etc ?
+2005-08-22T14:16:00.000Z	Ronan	kemik	oh wait, shit. I don't know where it is, SHOULD it be /dev/hda1 ?
+2005-08-22T14:16:00.000Z	Ronan	kemik	yeah /dev/hda1
+2005-08-22T14:17:00.000Z	kemik	Ronan	 fdisk told you that ?
+2005-08-22T14:17:00.000Z	Ronan	kemik	nah, i found it with my file browser thing.
+2005-08-22T14:17:00.000Z	kemik	Ronan	 that's not necessarily the right one
+2005-08-22T14:17:00.000Z	kemik	Ronan	 use the stuff EdLin told me about
+2005-08-22T14:21:00.000Z	kemik	Ronan	 paste it on pastebin
+2005-08-22T14:21:00.000Z	Ronan	kemik	pastebin?
+2005-08-22T14:25:00.000Z	Ronan	kemik	if i change the order of the hdd boots in BIOS, will hda become hdb?
+2005-08-22T16:37:00.000Z	kemik	Ronan	 got that NTFS partition mounted?
+2005-08-22T16:39:00.000Z	Ronan	kemik	nope
+2005-08-22T16:40:00.000Z	kemik	Ronan	 fdisk -l /dev/hdX didnt show any NTFS partitions??
+2005-08-22T16:40:00.000Z	Ronan	kemik	nope
+2005-08-22T16:43:00.000Z	kemik	Ronan	 "fuser /dev/hda2"
+2005-08-22T16:44:00.000Z	Ronan	kemik	i entered that and it didn't say/do anything.
+2005-08-22T16:50:00.000Z	kemik	Ronan	 paste your /etc/fstab
+2005-08-22T16:50:00.000Z	Ronan	kemik	one sec
+2005-08-22T16:50:00.000Z	kemik	Ronan	 along with output from "fdisk -l /dev/hda" "fdisk -l /dev/hdb"
+2005-08-22T16:50:00.000Z	kemik	Ronan	 (and fdisk for HDC and HDD too )
+2005-08-22T16:54:00.000Z	Ronan	kemik	http://paste.ubuntulinux.nl/1321
+2005-08-22T16:55:00.000Z	kemik	Ronan	 there are no more disks in that computer, right?
+2005-08-22T16:55:00.000Z	Ronan	kemik	nope
+2005-08-22T16:55:00.000Z	Ronan	kemik	well, dvd, cdrom and floppy
+2005-08-22T16:56:00.000Z	kemik	Ronan	 that's ok, those are not needed.. are you actually able to boot windows?
+2005-08-22T16:56:00.000Z	kemik	Ronan	 its a bit worrisome that there's no NTFS partiton showing at all
+2005-08-22T16:56:00.000Z	Ronan	kemik	Let me try to boot windows
+2005-08-22T16:57:00.000Z	kemik	Ronan	 yeah
+2005-08-22T16:57:00.000Z	Ronan	kemik	brb
+2005-08-22T05:03:00.000Z	Ronan	kemik	:(...i erased the wrong drive! :( :( :( :( :( :(
+2005-08-22T05:03:00.000Z	kemik	Ronan	 that's what i was beginning to suspect
+2005-08-22T05:03:00.000Z	Ronan	kemik	all my photos, work, music, EVERYTHING was on there! :(
+2005-08-22T05:03:00.000Z	Ronan	kemik	is there anyway i can get any of it back? :(
+2005-08-22T05:04:00.000Z	kemik	Ronan	 yes.. if it's not too badly overwritten
+2005-08-22T05:04:00.000Z	Ronan	kemik	what do you mean too badly overwritten
+2005-08-22T05:04:00.000Z	Ronan	kemik	please, i must know, aaaaaaaaaaaallllllll my photographs ><
+2005-08-22T05:05:00.000Z	kemik	Ronan	 either turn it into a professional service place, or get your hands on Norton recovery or similar recovery program
+2005-08-22T05:05:00.000Z	Ronan	kemik	what can I do about it at this second?
+2005-08-22T05:05:00.000Z	kemik	Ronan	 as PurpleMotion says, dont write ANYTHING to the drive..
+2005-08-22T05:06:00.000Z	Ronan	kemik	maybe i didn't
+2005-08-22T05:06:00.000Z	kemik	Ronan	 well that's only 1.8gb, most likely you'll not have overwritten your files
+2005-08-22T05:06:00.000Z	Ronan	kemik	well, what can I do about it, what can I download and such?
+2005-08-22T05:06:00.000Z	kemik	Ronan	 i dont know a good program from the top of my head.. but try google for "harddrive recovery" or "disk recovery" etc.
+2005-08-22T05:07:00.000Z	Ronan	kemik	i did this before, but it just erased what windows needed to boot, now it says "error while loading operating system"
+2005-08-22T05:07:00.000Z	kemik	Ronan	 you'll most likely be able to rescue a whole lot of you data.. (a friend did a similar thing... accidentally wiped all his photos)
+2005-08-22T05:08:00.000Z	kemik	Ronan	 the  best solution methinks, is to disconnect the drive, and ask a friend with lots of computer experience or take it to a serviceshop.. it's a bit hard to guide you through it all via the internet
+2005-08-22T05:09:00.000Z	Ronan	kemik	there aren't any programs or bootdisks? maybe the windows boot disk?
+2005-08-22T05:09:00.000Z	kemik	Ronan	 if you've formatted your partition you'll most likely need a boot disk with a recovery program
+2005-08-22T05:10:00.000Z	Ronan	kemik	ooh, i know. I'll be back in a bit, I'll tr ymy fedora one.
+2005-08-22T05:10:00.000Z	kemik	Ronan	 but you still need a recoveryprogram
+2005-08-22T05:10:00.000Z	Ronan	kemik	okay wait, so even if i erased all the partitions and installed ubuntu on it, a service shop can fix it?
+2005-08-22T05:11:00.000Z	kemik	Ronan	 yes, a service shop or you yourself with the appropriate tools
+2005-08-22T05:11:00.000Z	Ronan	kemik	like what?
+2005-08-22T05:12:00.000Z	kemik	Ronan	 http://www.stellarinfo.com/ seems to be one, and there are plenty more
+2005-08-22T05:12:00.000Z	Ronan	kemik	I ment what tools
+2005-08-22T05:13:00.000Z	kemik	Ronan	 http://www.stellarinfo.com/ <-- they sell recovery tools
+2005-08-22T05:13:00.000Z	kemik	Ronan	  im not sure you'll find many freeware applications for this task... you'll have to try google and search for "disk recovery"
+2005-08-22T05:13:00.000Z	Ronan	kemik	$250?!?!
+2005-08-22T05:14:00.000Z	kemik	Ronan	 well that's just the first hit i looked at... im sure there are other tools available.. maybe even freeware
+2005-08-22T05:14:00.000Z	kemik	Ronan	 and there's always Bit-Torrent..
+2005-08-22T05:16:00.000Z	Ronan	kemik	so what should I do right now?
+2005-08-22T05:17:00.000Z	kemik	Ronan	 either A; learn how to recover yourself, B; ask a friend C; goto a computerstore and see what they'd charge
+2005-08-22T05:18:00.000Z	Ronan	kemik	i'll just shut down i'll talk to you later
+2005-08-22T05:18:00.000Z	kemik	Ronan	 good luck :)
+2005-08-22T05:18:00.000Z	Ronan	kemik	thanks

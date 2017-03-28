@@ -1,0 +1,98 @@
+2010-12-18T21:47:00.000Z	dh003i		anyone have any suggestions on my partition problems?
+2010-12-18T21:49:00.000Z	sacarlson	dh003i	sounds like you installed windows xp in the wrong order and it erased you linux partitions
+2010-12-18T21:50:00.000Z	dh003i	sacarlson	what do you mean "in the wrong order"?
+2010-12-18T21:50:00.000Z	sacarlson	dh003i	you should install windows first then install linux or ubuntu in this case
+2010-12-18T21:51:00.000Z	dh003i	sacarlson	no, but the partitions show up in sudo cfdisk /dev/sda ... just not in gparted
+2010-12-18T21:52:00.000Z	sacarlson	dh003i	what is cfdisk?  what does fdisk -l show as the format types for those partitions ?
+2010-12-18T21:53:00.000Z	sacarlson	dh003i	does cfdisk show format types?
+2010-12-18T21:54:00.000Z	sacarlson	dh003i	oh there not gone there still there,  why did you say there were set to unused?   so you just need to reinstall grub2 then
+2010-12-18T21:55:00.000Z	sacarlson	dh003i	install the mbr
+2010-12-18T21:58:00.000Z	sacarlson	dh003i	so I think you can try sudo grub-install /dev/sda
+2010-12-18T22:01:00.000Z	sacarlson	dh003i	oh I think for fsck you need to give it the partition to test like fsck /dev/sda1
+2010-12-18T22:04:00.000Z	sacarlson	dh003i	oh and you may not be able to fsck a windows disk I'm not sure so fsck /dev/sda2  might work
+2010-12-18T22:04:00.000Z	sacarlson	dh003i	but all you need to do is install the mbr as I stated before
+2010-12-18T22:04:00.000Z	dh003i	sacarlson	ok, i'll give that a try
+2010-12-18T22:33:00.000Z	sacarlson	dh003i	I'm not sure I understand wacky,  how can it boot at all if it's mest up?
+2010-12-18T22:34:00.000Z	dh003i	sacarlson	I'll pastebin the cfdisk results
+2010-12-18T22:34:00.000Z	sacarlson	dh003i	would like to see mount
+2010-12-18T22:34:00.000Z	sacarlson	dh003i	 no the oposit
+2010-12-18T22:35:00.000Z	sacarlson	dh003i	I want to see mount as it is seen after boot ubuntu from hd
+2010-12-18T22:36:00.000Z	dh003i	sacarlson	here's mount, sudo fdisk -l, and sudo cfdisk /dev/sda : http://pastebin.com/PJ81Mz9Z
+2010-12-18T22:37:00.000Z	sacarlson	dh003i	it's all perfect nothing wrong
+2010-12-18T22:37:00.000Z	sacarlson	dh003i	so maybe the only problem left is with windows?
+2010-12-18T22:38:00.000Z	dh003i	sacarlson	it is "perfect" in-so-far as it boots, yea...but see the "Unusable 16384.76 MB" at the beginning of the cfdisk list
+2010-12-18T22:39:00.000Z	dh003i	sacarlson	and gparted still displays everything as one unallocated nothing...Disk Manager, if I try to open it, just crashes
+2010-12-18T22:39:00.000Z	sacarlson	dh003i	try disk analizer
+2010-12-18T22:40:00.000Z	dh003i	sacarlson	what's the sudo apt-get install for that?
+2010-12-18T22:40:00.000Z	sacarlson	dh003i	Application>accesories>Disk usage analizer   I think it's preinstalled
+2010-12-18T22:42:00.000Z	dh003i	sacarlson	disk analyzer doesn't seem like it is looking at partitions...but at folder layout
+2010-12-18T22:43:00.000Z	sacarlson	dh003i	I still don't see were this 16gb you say is missing is coming from
+2010-12-18T22:43:00.000Z	dh003i	sacarlson	did you see my pastebin?
+2010-12-18T22:43:00.000Z	sacarlson	dh003i	yes but I never us cfdisk
+2010-12-18T22:43:00.000Z	sacarlson	dh003i	fdisk -l looks fine to me
+2010-12-18T22:44:00.000Z	dh003i	sacarlson	fdisk -l seems to only e reporting all mounted partitions
+2010-12-18T22:44:00.000Z	dh003i	sacarlson	cfdisk is reporting on the entireity of /dev/sda
+2010-12-18T22:44:00.000Z	dh003i	sacarlson	the first line in cfdisk says "Unusable 16384.76"
+2010-12-18T22:44:00.000Z	sacarlson	dh003i	how big is the disk suposed to be?
+2010-12-18T22:45:00.000Z	sacarlson	dh003i	and that's what it shows is there
+2010-12-18T22:45:00.000Z	dh003i	sacarlson	yes, it does...but the results disagree with cfdisk
+2010-12-18T22:45:00.000Z	sacarlson	dh003i	ya and if disk analizer shows 1tb then it's all good
+2010-12-18T22:46:00.000Z	dh003i	sacarlson	cfdisk says it isn't all good...gparted and Disk Utility aren't working anymore
+2010-12-18T22:46:00.000Z	sacarlson	dh003i	well if disk analizer says it has 1tb and fdisk says it has 1tb I think it has 1tb
+2010-12-18T22:46:00.000Z	sacarlson	dh003i	 maybe the 16gb loss is from the way it's formated I don't know
+2010-12-18T22:48:00.000Z	sacarlson	dh003i	oh that unusable space is the mbr
+2010-12-18T22:49:00.000Z	sacarlson	dh003i	it's not 16gb it's just 16000bytes
+2010-12-18T22:49:00.000Z	dh003i	sacarlson	ahhh, lol
+2010-12-18T22:49:00.000Z	dh003i	sacarlson	no, I think its 16GB
+2010-12-18T22:50:00.000Z	sacarlson	dh003i	they just don't bother to show that in fdisk
+2010-12-18T22:50:00.000Z	sacarlson	dh003i	see how they say you have 1000204886016 bytes
+2010-12-18T22:51:00.000Z	dh003i	sacarlson	yea
+2010-12-18T22:51:00.000Z	sacarlson	dh003i	 it's only MB if they put MB at the end
+2010-12-18T22:51:00.000Z	dh003i	sacarlson	look at cfdisk's output: http://pastebin.com/PJ81Mz9Z
+2010-12-18T22:52:00.000Z	dh003i	sacarlson	the  column header says "Size (MB)" and underneath it says "Unusable 16384.76"...so it is MB...which makes sense, as hat was he size of the partition I tried installing winXP to
+2010-12-18T22:54:00.000Z	sacarlson	dh003i	well if that's the case you would be getting an extra 16gb of space for free,
+2010-12-18T22:56:00.000Z	sacarlson	dh003i	when I run cfdisk I see something completely different with (util-linux-ng 2.17.2
+2010-12-18T23:03:00.000Z	sacarlson	dh003i	I didn't know sata was hot plugable but I know my usb flashes are
+2010-12-18T23:04:00.000Z	sacarlson	dh003i	after the sata is pluged in you should try fdisk -l again  if not seen there try reboot and see if it apears
+2010-12-18T23:04:00.000Z	dh003i	sacarlson	I figured part of that out...SATA HD didn't show up when I plugged it into SATA-hotplug backplane b/c I put it in wrong one! I have 6 SATA ports to plug it into, but hte one I plugged it into wasn't connected to the motherboard...only 2 ports are connected to mobo by the sata-cables
+2010-12-18T23:05:00.000Z	sacarlson	dh003i	ok
+2010-12-18T23:06:00.000Z	dh003i	sacarlson	but I still don't know why the USB stick and HD aren't showing up by default in Ubuntu and being auto-mounted when I plug them in....now I have to manually mount
+2010-12-18T23:06:00.000Z	sacarlson	dh003i	and what about the usb flash drive?  did you try the frunt and read plugs?  my frunt don't work but I don't know wy
+2010-12-18T23:06:00.000Z	sacarlson	dh003i	oh if they aren't formated they won't auto mount
+2010-12-18T23:06:00.000Z	dh003i	sacarlson	well, I tried both plugs, front one that is part of an installed CF-reader, and the ones on top of my case...they worked before
+2010-12-18T23:06:00.000Z	dh003i	sacarlson	nope, all formatted...I just mounted manually
+2010-12-18T23:06:00.000Z	dh003i	sacarlson	I stuck in my 2TB backup drive
+2010-12-18T23:07:00.000Z	sacarlson	dh003i	but maybe the usb flash isn't formated?
+2010-12-18T23:08:00.000Z	sacarlson	dh003i	oh and see if it is at least seen at all with lsusb
+2010-12-18T23:08:00.000Z	dh003i	sacarlson	the USB is mountable...it is the very same USB that was auto-mounting before I tried installing windows on the 1st 16GB
+2010-12-18T23:09:00.000Z	sacarlson	dh003i	 but is it still seen now?
+2010-12-18T23:10:00.000Z	dh003i	sacarlson	ls /dev/disk/by-label -lah picks it up
+2010-12-18T23:12:00.000Z	sacarlson	dh003i	so it is working?
+2010-12-18T23:12:00.000Z	dh003i	sacarlson	yes, the 2TB SATA and my USB stick are now mounted...but I had to do it manually
+2010-12-18T23:13:00.000Z	sacarlson	dh003i	 must be a new feature
+2010-12-18T23:14:00.000Z	dh003i	sacarlson	huh? what do u mean? Ubuntu has been auto-mounting USB's and SATA's for a while, I hink. what's new, for me, is it not doing this
+2010-12-18T23:15:00.000Z	sacarlson	dh003i	that's what I mean it did it for a while but now it has the new feature of not doing it?  since they do work I'm sure there is a way to fix them
+2010-12-18T23:18:00.000Z	dh003i	sacarlson	well, I wouldn't call it a "new feature"...it is something that got broken for me within 10.10 after trying to install windows, then recovering the MBR
+2010-12-18T23:19:00.000Z	sacarlson	dh003i	I see other posts about unused space seen with cfdisk but not in fdisk but I don't see them getting an answer as to why
+2010-12-18T23:21:00.000Z	dh003i	sacarlson	why is prolly b/c windows fsked everything
+2010-12-18T23:22:00.000Z	dh003i	sacarlson	it's really awful, it didn't even install the OS...just deleted a partition and *tried* to format it as WinFS (but didn't succeed)...wtf, why is it even touching the MBR for that?
+2010-12-18T23:22:00.000Z	sacarlson	dh003i	 I guess that's posible
+2010-12-18T23:25:00.000Z	sacarlson	dh003i	this guy might have the answer he says you can't have too many primary partitons https://bbs.archlinux.org/viewtopic.php?id=103096
+2010-12-18T23:26:00.000Z	sacarlson	dh003i	and I note that I only have 1 primary and all others are logicals
+2010-12-18T23:31:00.000Z	sacarlson	dh003i	would this spectraview work in virtualbox?  probly not but
+2010-12-18T23:33:00.000Z	dh003i	sacarlson	well, Graeme, the creator of the free linux profiling software, Argyll, and others on the Argyll mailing list didn't think Spectraview would work in a virtualbox as it has to use DDC (data display channel) to access the monitor
+2010-12-18T23:33:00.000Z	sacarlson	dh003i	figures
+2010-12-18T23:34:00.000Z	dh003i	sacarlson	I think what it comes down to is that one way or another, to calibrate the monitor from software, u need to access it by DDC (data display channel) via the DVI-D cable...and Linux has no standard protocol for that...hence no monitor is detected in Wine when I try installing the prog from Wine, and virtualbox'd prolly be same
+2010-12-18T23:44:00.000Z	sacarlson	dh003i	I'm not sure I'm reading you last grub thing correct but is grub 16gb?  16.3GB: grub/stage2
+2010-12-18T23:44:00.000Z	dh003i	sacarlson	the 1st unused area from cfdisk is 16 GB, yes
+2010-12-18T23:44:00.000Z	sacarlson	dh003i	I guess it was needed for grub?
+2010-12-18T23:45:00.000Z	dh003i	sacarlson	no, it was originally a 16GB swap partition
+2010-12-18T23:45:00.000Z	dh003i	sacarlson	then I thought I'd use it for Windows XP, because windows needs the 1st partition
+2010-12-18T23:45:00.000Z	dh003i	sacarlson	but windows failed to install
+2010-12-18T23:46:00.000Z	sacarlson	dh003i	 ok that clears that up I guess
+2010-12-18T23:46:00.000Z	sacarlson	dh003i	so was this guy right then https://bbs.archlinux.org/viewtopic.php?id=103096
+2010-12-18T23:47:00.000Z	sacarlson	dh003i	 I think you still only have 3 primary so I guess it could still have 1 more
+2010-12-18T23:47:00.000Z	dh003i	sacarlson	I don't even know what he's trying to say
+2010-12-18T23:47:00.000Z	dh003i	sacarlson	oh yea, I do remember xp saying something about max # of partitions already on disk, lol...but the first 16GB was deleted and unused, which was where I wanted it to make the partition
+2010-12-18T23:49:00.000Z	sacarlson	dh003i	so the fix would be to not put so many primary partitions?
+2010-12-18T23:51:00.000Z	dh003i	sacarlson	yea, maybe...I think  Ionly had 3, though.../sda1 as swap (b4 I deleted it for winxp), sda2 for boot, sda 3 for /...ahh, no it was 4, sda 4 for extended, where /var, /tmp, and /home went

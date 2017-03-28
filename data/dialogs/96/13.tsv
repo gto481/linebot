@@ -1,0 +1,96 @@
+2010-07-05T14:47:00.000Z	abhi_nav		!ask | abhijain
+2010-07-05T14:48:00.000Z	abhijain	abhi_nav	installed window vista after ubuntu 10.4 and now unable to find the grub of ubuntu . how can i recover it
+2010-07-05T14:50:00.000Z	abhijain	abhi_nav	i am onn 10.4 lucid
+2010-07-05T14:50:00.000Z	abhi_nav	abhijain	yes go thro that
+2010-07-05T14:50:00.000Z	abhi_nav	abhijain	you have to restore grub2.
+2010-07-05T14:53:00.000Z	abhi_nav	abhijain	first go here : https://help.ubuntu.com/community/RestoreGrub
+2010-07-05T14:58:00.000Z	abhijain	abhi_nav	i am new for ubuntu can u help me step by step . i have live cd
+2010-07-05T14:59:00.000Z	abhi_nav	abhijain	are you on same computer?
+2010-07-05T14:59:00.000Z	abhijain	abhi_nav	yeah
+2010-07-05T15:00:00.000Z	abhi_nav	abhijain	i try wait
+2010-07-05T15:04:00.000Z	abhi_nav	abhijain	what happend where were you been gone?
+2010-07-05T15:04:00.000Z	abhijain	abhi_nav	n/w probem
+2010-07-05T15:04:00.000Z	abhi_nav	abhijain	I see. so can we continew now?
+2010-07-05T15:04:00.000Z	abhijain	abhi_nav	yeah
+2010-07-05T15:05:00.000Z	abhi_nav	abhijain	ok so you are using 10.04?
+2010-07-05T15:05:00.000Z	abhijain	abhi_nav	yeah lucid 10.4 wubi
+2010-07-05T15:14:00.000Z	abhijain	abhi_nav	sorry . bsnl sucks here
+2010-07-05T15:15:00.000Z	abhi_nav	abhijain	yah its ok :) tell me you are using wubi?
+2010-07-05T15:15:00.000Z	abhijain	abhi_nav	yeah 10.4
+2010-07-05T15:15:00.000Z	abhi_nav	abhijain	then wubi is nothing to do with grub resoration. what exactly you want to do?
+2010-07-05T15:16:00.000Z	abhijain	abhi_nav	i want to recover grub of linux . i installed windows vista after ubuntu and windows hide the grub of ubuntu
+2010-07-05T15:17:00.000Z	abhi_nav	abhijain	do you mean you install windows fully and you also installed ubuntu fully? in real hdd? in real partition?
+2010-07-05T18:23:00.000Z	abhijain	abhi_nav	hello
+2010-07-05T18:24:00.000Z	abhijain	abhi_nav	sorry that time internet sucks
+2010-07-05T18:24:00.000Z	abhi_nav	abhijain	ohh yah. you read my memo?
+2010-07-05T18:24:00.000Z	abhijain	abhi_nav	so now we can proceed
+2010-07-05T18:24:00.000Z	abhi_nav	abhijain	sure.
+2010-07-05T18:24:00.000Z	abhijain	abhi_nav	this time i am on bindows
+2010-07-05T18:25:00.000Z	abhijain	abhi_nav	yeah windows yar
+2010-07-05T18:25:00.000Z	abhijain	abhi_nav	yeah . actually iu hate bindows
+2010-07-05T18:26:00.000Z	abhijain	abhi_nav	so step first  live cd  and ubuntu live
+2010-07-05T18:26:00.000Z	abhi_nav	abhijain	:D ok. look so now we follow that guide only. I never need to restore grub. I am just interpreting that guide for you. so 'anything' happends will be fully your responsibily. ok?
+2010-07-05T18:26:00.000Z	abhi_nav	abhijain	^^
+2010-07-05T18:26:00.000Z	abhijain	abhi_nav	its ok . i am ready
+2010-07-05T18:27:00.000Z	abhijain	abhi_nav	ping
+2010-07-05T18:27:00.000Z	abhi_nav	abhijain	from live cd mount your hdd ubuntu partition from Places. then do mount | tail -1  and crosscheck your output with one given on that guide.
+2010-07-05T18:28:00.000Z	abhi_nav	abhijain	Note the designation for the disk /dev/sda which you will be using later, and the directory in /media.
+2010-07-05T18:28:00.000Z	abhijain	abhi_nav	can u tell me command for mount
+2010-07-05T18:28:00.000Z	abhi_nav	abhijain	no you first mount it graphically. by going 'Places' menu
+2010-07-05T18:29:00.000Z	abhijain	abhi_nav	ok i check that
+2010-07-05T18:29:00.000Z	abhi_nav	abhijain	mount means just open your ubuntu partition from 'Places' menu.
+2010-07-05T18:30:00.000Z	abhijain	abhi_nav	ok . next
+2010-07-05T18:30:00.000Z	abhi_nav	abhijain	now do mount | tail -1  in terminal and crosscheck your output with the one provided in that guide.
+2010-07-05T18:31:00.000Z	abhijain	abhi_nav	ok . next
+2010-07-05T18:32:00.000Z	abhi_nav	abhijain	output matched?
+2010-07-05T18:32:00.000Z	abhi_nav	abhijain	paste your mount | tail -1 here for me
+2010-07-05T18:33:00.000Z	abhijain	abhi_nav	i told you i am on windows
+2010-07-05T18:33:00.000Z	abhi_nav	abhijain	:(. shutdown that winthingy and boot into ubuntu live cd. to restore grub you need to be in live cd.
+2010-07-05T18:34:00.000Z	abhijain	abhi_nav	ok
+2010-07-05T18:34:00.000Z	abhijain	abhi_nav	ok now wait
+2010-07-05T19:11:00.000Z	abhijain	abhi_nav	i installed it when ubuntu released
+2010-07-05T19:01:00.000Z	abhi_nav	abhijain	hello
+2010-07-05T19:01:00.000Z	abhijain	abhi_nav	now on ubuntu live
+2010-07-05T19:02:00.000Z	abhijain	abhi_nav	mounted drive
+2010-07-05T19:03:00.000Z	abhi_nav	abhijain	ok
+2010-07-05T19:04:00.000Z	abhi_nav	abhijain	now do mount | tail -1  and paste its output here
+2010-07-05T19:04:00.000Z	abhijain	abhi_nav	link please
+2010-07-05T19:05:00.000Z	abhi_nav	abhijain	which os?
+2010-07-05T19:05:00.000Z	abhi_nav	abhijain	ok
+2010-07-05T19:08:00.000Z	abhi_nav	abhijain	now do mount | tail -1  and paste its output here
+2010-07-05T19:09:00.000Z	abhijain	abhi_nav	in filesystem/boot/grub
+2010-07-05T19:10:00.000Z	abhi_nav	abhijain	but why are you checking it?
+2010-07-05T19:10:00.000Z	abhijain	abhi_nav	: for confirm my grub is grub 2
+2010-07-05T19:11:00.000Z	abhi_nav	abhijain	you using 10.04 then you are grub is surely grub2 if you done fresh installation? was your fresh installation?
+2010-07-05T19:12:00.000Z	abhijain	abhi_nav	ok we proceed with grub2
+2010-07-05T19:12:00.000Z	abhi_nav	abhijain	now do mount | tail -1  and paste its output here
+2010-07-05T19:13:00.000Z	abhijain	abhi_nav	/dev/sda6 on /media/0682be9c-e3d6-4d09-8d28-236cb35cf0dc type ext3 (rw,nosuid,nodev,uhelper=udisks)
+2010-07-05T19:14:00.000Z	abhi_nav	abhijain	now do ls /media/0682be9c-e3d6-4d09-8d28-236cb35cf0dc/boot and paste its output in pastebin to me
+2010-07-05T19:21:00.000Z	abhi_nav	abhijain	sudo grub-install --root-directory=/media/0682be9c-e3d6-4d09-8d28-236cb35cf0dc /dev/sda6
+2010-07-05T19:24:00.000Z	abhi_nav	abhijain	after completion it wll give you finishng message. pastebinint to me
+2010-07-05T19:26:00.000Z	abhi_nav	abhijain	sudo grub-install --root-directory=/media/0682be9c-e3d6-4d09-8d28-236cb35cf0dc /dev/sda6 --recheck
+2010-07-05T19:30:00.000Z	abhi_nav	abhijain	sudo grub-install --root-directory=/media/0682be9c-e3d6-4d09-8d28-236cb35cf0dc /dev/sda
+2010-07-05T19:56:00.000Z	abhi_nav	abhijain	see my pm
+2010-07-05T19:30:00.000Z	abhi_nav	abhijain	just last guess try that. otherwise we need soneone help
+2010-07-05T19:32:00.000Z	abhi_nav	abhijain	you see you ddnt type the full word 'sudo' you typed 'udo'. correct that :p
+2010-07-05T19:35:00.000Z	abhijain	abhi_nav	Installation finished. No error reported.
+2010-07-05T19:35:00.000Z	abhi_nav	abhijain	just paste the output
+2010-07-05T19:35:00.000Z	abhi_nav	abhijain	using pastebin
+2010-07-05T19:37:00.000Z	abhi_nav	abhijain	:(
+2010-07-05T19:37:00.000Z	abhijain	abhi_nav	??
+2010-07-05T19:37:00.000Z	abhi_nav	abhijain	ok now remove livecd reboot and you should be able to boot into real ubuntu.
+2010-07-05T19:38:00.000Z	abhijain	abhi_nav	rebooting ??
+2010-07-05T19:38:00.000Z	abhi_nav	abhijain	yes. restart your computer. remove your ubuntu cd and then you should be able to boot into ubuntu.
+2010-07-05T19:38:00.000Z	abhijain	abhi_nav	thanx alot
+2010-07-05T19:38:00.000Z	abhi_nav	abhijain	dont boot intto cd.
+2010-07-05T19:52:00.000Z	abhijain	abhi_nav	hey really thanx alot
+2010-07-05T19:52:00.000Z	abhi_nav	abhijain	can you logint to real ubuntu now?
+2010-07-05T19:52:00.000Z	abhijain	abhi_nav	yeah
+2010-07-05T19:52:00.000Z	abhi_nav	abhijain	good. :)
+2010-07-05T19:54:00.000Z	abhijain	abhi_nav	one more help . i need ur personal im . and can u paste me our last chat log
+2010-07-05T19:55:00.000Z	abhi_nav	abhijain	chat log ? why? you can still have all those instruction on that guide? !fixgrub
+2010-07-05T19:56:00.000Z	abhijain	abhi_nav	thanx alot
+2010-07-05T19:56:00.000Z	abhi_nav	abhijain	yes?
+2010-07-05T19:56:00.000Z	abhijain	abhi_nav	personal im
+2010-07-09T22:37:00.000Z	abhijain	abhi_nav	solve my problem now
+2010-07-09T22:38:00.000Z	abhi_nav	abhijain	If I could have information then I have already solved there in im only. I dont know that why I suggest you to come here. now be Patienct. :P :P :P :D

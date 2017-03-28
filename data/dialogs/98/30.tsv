@@ -1,0 +1,98 @@
+2008-07-19T11:32:00.000Z	Decepticon		im trying to set up ssh keys login, i followed http://pkeck.myweb.uga.edu/ssh/ to the end and i still get password prompts!!! what am i doing wrong?
+2008-07-19T11:34:00.000Z	Decepticon		nobody wants to help me with my ssh keys problem?
+2008-07-19T11:34:00.000Z	superfirelord42	Decepticon	what is the problem?
+2008-07-19T11:35:00.000Z	superfirelord42	Decepticon	i think i may know, let me look at the link first
+2008-07-19T11:36:00.000Z	superfirelord42	Decepticon	in ubuntu, you need to edit your /etc/ssh/sshd file
+2008-07-19T11:36:00.000Z	Decepticon	superfirelord42	okay please tell me more
+2008-07-19T11:36:00.000Z	superfirelord42	Decepticon	there is an option to allow that connection type, you need to uncomment it
+2008-07-19T11:36:00.000Z	Decepticon	superfirelord42	do you speak of /etc/ssh/sshd_config
+2008-07-19T11:37:00.000Z	superfirelord42	Decepticon	correct
+2008-07-19T11:37:00.000Z	Decepticon	superfirelord42	#AuthorizedKeysFile %h/.ssh/authorized_keys
+2008-07-19T11:37:00.000Z	superfirelord42	Decepticon	can you pastebin the file?
+2008-07-19T11:38:00.000Z	Decepticon	superfirelord42	one sec
+2008-07-19T11:38:00.000Z	superfirelord42	Decepticon	and yes, that is one of them
+2008-07-19T11:39:00.000Z	Decepticon	superfirelord42	i am going to pm you the link is it ok?
+2008-07-19T11:39:00.000Z	superfirelord42	Decepticon	sure
+2008-07-19T11:40:00.000Z	superfirelord42	Decepticon	uncomment the authorized files keys like you said
+2008-07-19T11:41:00.000Z	Decepticon	superfirelord42	is there anything else to be edited in sshd_config
+2008-07-19T11:41:00.000Z	superfirelord42	Decepticon	still looking
+2008-07-19T11:42:00.000Z	superfirelord42	Decepticon	try that, see if it works..
+2008-07-19T11:43:00.000Z	Decepticon	superfirelord42	hmmm nope
+2008-07-19T11:43:00.000Z	superfirelord42	Decepticon	hmm, still reading
+2008-07-19T11:43:00.000Z	superfirelord42	Decepticon	yup... change the path to the one with a 2
+2008-07-19T11:44:00.000Z	Decepticon	superfirelord42	did you say i want to mv ~/.ssh/authorized_keys2 ~/.ssh/authorized_keys ?
+2008-07-19T11:44:00.000Z	superfirelord42	Decepticon	you can do taht or change the path on the config file
+2008-07-19T11:44:00.000Z	Decepticon	superfirelord42	did you say i want to mv ~/.ssh/authorized_keys2 ~/.ssh/authorized_keys ##### on the remote machine?
+2008-07-19T11:45:00.000Z	superfirelord42	Decepticon	thats if you have ssh1 isntalled, they dont install ssh1 on ubuntu unless youg et it from apt
+2008-07-19T11:46:00.000Z	Decepticon	superfirelord42	didnt seem to work
+2008-07-19T11:46:00.000Z	superfirelord42	Decepticon	if you want to block to SSH2, you use "Protocol 2" in your config file
+2008-07-19T11:48:00.000Z	Decepticon	superfirelord42	i already have Protocol 2 in my sshd_config so im not sure whats wrong
+2008-07-19T11:48:00.000Z	superfirelord42	Decepticon	that should work... take a look at http://www.g-loaded.eu/2005/11/10/ssh-with-keys/
+2008-07-19T11:48:00.000Z	Decepticon	superfirelord42	isnt there a way i can test its working ?
+2008-07-19T11:50:00.000Z	superfirelord42	Decepticon	i think i have it.. do chmod 0600 ~/.ssh/*
+2008-07-19T11:50:00.000Z	Decepticon	superfirelord42	i have drwxrwxrwx 2 bizinichi bizinichi 4096 2008-07-19 08:50 .ssh/
+2008-07-19T11:50:00.000Z	superfirelord42	Decepticon	ok, that should be chmod 0700 ~/.ssh
+2008-07-19T11:51:00.000Z	superfirelord42	Decepticon	and then chmod 0600 ~/.ssh/*
+2008-07-19T11:51:00.000Z	superfirelord42	Decepticon	in order to change it later, you will have to chmod it again...
+2008-07-19T11:51:00.000Z	superfirelord42	Decepticon	reload and try it... thats the one that kept catching me when i was having problems with it...
+2008-07-19T11:52:00.000Z	Decepticon	superfirelord42	nope...
+2008-07-19T11:52:00.000Z	superfirelord42	Decepticon	you reloaded hte config after doing the modes like that? and it still wouldnt work?
+2008-07-19T11:53:00.000Z	superfirelord42	Decepticon	are you sure the connecting computer has the right key?
+2008-07-19T11:54:00.000Z	Decepticon	superfirelord42	ive uploaded the key from my debian machine (this is the machine that wants to connect without passwords) with scp ~/.ssh/id_dsa.pub bizinichi@myserver.com:.ssh/authorized_keys2
+2008-07-19T11:55:00.000Z	superfirelord42	Decepticon	and then we renamed that to authorized_keys
+2008-07-19T11:56:00.000Z	superfirelord42	Decepticon	its close.. we are missing something simple....
+2008-07-19T11:57:00.000Z	Decepticon	superfirelord42	no i ahve not yet
+2008-07-19T11:57:00.000Z	superfirelord42	Decepticon	that loads it to allow
+2008-07-19T11:57:00.000Z	Decepticon	superfirelord42	isnt that supposed to be run on the ubuntu machien (where the sshd is)
+2008-07-19T11:57:00.000Z	superfirelord42	Decepticon	nope, thats on the client... it adds it to hte agent
+2008-07-19T11:57:00.000Z	Decepticon	superfirelord42	my debian machine wants to connect to ubuntu without passwords
+2008-07-19T11:58:00.000Z	Decepticon	superfirelord42	im not using that sort of command for my other logins
+2008-07-19T11:58:00.000Z	superfirelord42	Decepticon	could be a configuratoin diffrence
+2008-07-19T11:59:00.000Z	Decepticon	superfirelord42	that command "ssh-add ~/.ssh/id_dsa" run on the debian machine gives "Could not open a connection to your authentication agent"
+2008-07-19T12:00:00.000Z	superfirelord42	Decepticon	your right, i did get that command confused...
+2008-07-19T12:00:00.000Z	Decepticon	superfirelord42	in any case, ive run that command on the ubuntu sshd computer as well
+2008-07-19T12:00:00.000Z	superfirelord42	Decepticon	and it has the same error
+2008-07-19T12:01:00.000Z	Decepticon	superfirelord42	yes thats right, i got the same message "Could not open a connection to your authentication agent." when doing ssh-add ~/.ssh/id_dsa on ubuntu machine
+2008-07-19T12:02:00.000Z	superfirelord42	Decepticon	what you could do... you said you have servers doing it correctly... you can compare the config and setup of hte machines
+2008-07-19T12:02:00.000Z	superfirelord42	Decepticon	i have a feeling its something small and simple
+2008-07-19T12:03:00.000Z	superfirelord42	Decepticon	the other option, is try to regen the keys....
+2008-07-19T12:05:00.000Z	Decepticon	superfirelord42	bu
+2008-07-19T12:06:00.000Z	superfirelord42	Decepticon	best i can sugest, is compare the files from the other servers... everything from what we have gone over... *should* work
+2008-07-19T12:06:00.000Z	Decepticon	superfirelord42	i have another person using the ubuntu machine, ill see if he has a clue
+2008-07-19T12:06:00.000Z	Decepticon	superfirelord42	ill also try that
+2008-07-19T12:06:00.000Z	superfirelord42	Decepticon	last one i did it with was dapper, im dated a bit on it... hehe...
+2008-07-19T23:54:00.000Z	superfirelord42	Decepticon	still having trouble?
+2008-07-19T23:54:00.000Z	Decepticon	superfirelord42	yes
+2008-07-19T23:55:00.000Z	superfirelord42	Decepticon	i have a feeling htat command will fail... you are chmoding it to 0600, and then modifiying it
+2008-07-19T23:56:00.000Z	Decepticon	superfirelord42	ill chmod it 0600 after i cat
+2008-07-20T01:39:00.000Z	Decepticon	superfirelord42	what do i do about my ssh keys problem :/ i have sshd_config of two machines (1 which allows key login, and 1 of my ubuntu machine which doesnt care and asks me for pass prompt) would you like to compare
+2008-07-20T01:39:00.000Z	superfirelord42	Decepticon	this is going to sound odd in a linux forum, do you have a widows machine nearby?
+2008-07-20T01:40:00.000Z	Decepticon	superfirelord42	yes i do
+2008-07-20T01:41:00.000Z	superfirelord42	Decepticon	lets set up the windows client to the ubuntu server
+2008-07-20T02:11:00.000Z	Decepticon	superfirelord42	ssh -vvv user@server says http://pastebin.ca/1076974 (this is debian logging onto the faulty ubuntu sshd who wants to keep asking for passwords)
+2008-07-20T02:12:00.000Z	superfirelord42	Decepticon	well, as you can probably tell, your keys are bad... did you say these where dsa?
+2008-07-20T02:39:00.000Z	Decepticon	superfirelord42	i figured it out
+2008-07-20T02:40:00.000Z	superfirelord42	Decepticon	how?
+2008-07-20T02:40:00.000Z	Decepticon	superfirelord42	on the ubuntu sshd, where i want to login without a password, /var/log/auth.log gives "Jul 19 23:34:01 ks361773 sshd[29256]: Authentication refused: bad ownership or modes for directory /home/bizinichi" so i had to chmod /home/bizinichi 700 to make it work
+2008-07-20T02:40:00.000Z	Decepticon	superfirelord42	but i need it so that another user can write to /home/bizinichi... this is not good
+2008-07-20T02:41:00.000Z	superfirelord42	Decepticon	so you couldnt do a chmod 770?
+2008-07-20T02:41:00.000Z	superfirelord42	Decepticon	that basicly allows group memebers to write in it
+2008-07-20T02:42:00.000Z	Decepticon	superfirelord42	chmod 770 /home/bizinichi screws it up
+2008-07-20T02:42:00.000Z	Decepticon	superfirelord42	it asks me for a password
+2008-07-20T02:42:00.000Z	superfirelord42	Decepticon	interesting... what about creating a shared directory for them?
+2008-07-20T02:42:00.000Z	superfirelord42	Decepticon	thats very strange, i have never seen that requirement before...
+2008-07-20T02:43:00.000Z	superfirelord42	Decepticon	no, that would not work... i mean like /home/shared ?
+2008-07-20T02:43:00.000Z	Decepticon	superfirelord42	im afraid the shared dir has to be inside my /home/bizinichi/some_place/here
+2008-07-20T02:44:00.000Z	superfirelord42	Decepticon	thats an interesting situation... i wonder if there is an overide for that behaviour
+2008-07-20T02:45:00.000Z	Decepticon	superfirelord42	i sure hope so. if i understand correctly if /home/bizinichi/ is chmod 700, then even if /home/bizinichi/shareddir is 777, the other users cannot write to /home/bizinichi/shared ? is this correct
+2008-07-20T02:45:00.000Z	superfirelord42	Decepticon	correct, but what if you set it to 660?
+2008-07-20T02:46:00.000Z	superfirelord42	Decepticon	would it still error out?
+2008-07-20T02:46:00.000Z	Decepticon	superfirelord42	set chmod 660 to /home/bizinichi? i will try one sec,
+2008-07-20T02:46:00.000Z	superfirelord42	Decepticon	the only diffrence is 6 is read and write only
+2008-07-20T02:47:00.000Z	Decepticon	superfirelord42	660 does not let me passwordless logins either, 640 does
+2008-07-20T02:47:00.000Z	superfirelord42	Decepticon	its the write part it doesnt like then... it doesnt like the ability to write in the directory
+2008-07-20T02:48:00.000Z	superfirelord42	Decepticon	I bet 650 works to...
+2008-07-20T02:49:00.000Z	superfirelord42	Decepticon	ok, here is waht I am thinking, do either 740 or 640.... then in an internal directory, do 660.. see if its writable...
+2008-07-20T02:49:00.000Z	Decepticon	superfirelord42	640 doesnt work for some reason either ahaha
+2008-07-20T02:50:00.000Z	superfirelord42	Decepticon	ok, do 740... and inside, do a 660, see if it works
+2008-07-20T02:50:00.000Z	superfirelord42	Decepticon	so like /home/user/shared where shared is 660

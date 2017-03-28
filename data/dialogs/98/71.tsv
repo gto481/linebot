@@ -1,0 +1,98 @@
+2005-08-23T15:21:00.000Z	tristanmike		How do people create a database of all their cd's and dvd's in Linux??
+2005-08-23T15:21:00.000Z	tristanmike		can it be done?
+2005-08-23T15:22:00.000Z	Seveas	tristanmike	ghe, I do that on my webserver wit a php app :)
+2005-08-23T15:22:00.000Z	tristanmike	Seveas	crap, nice tho, is there a program like Advanced Disk Catalog or WhereIsIt?
+2005-08-23T15:23:00.000Z	Seveas	tristanmike	no idea...
+2005-08-23T15:23:00.000Z	tristanmike	Seveas	AdmiralCrunch: I'll keep that in mind although I have no idea how to create scripts.....I'm a Linux Virgin
+2005-08-23T15:24:00.000Z	Seveas	tristanmike	cdcat - media catalog program
+2005-08-23T15:25:00.000Z	tristanmike	Seveas	I'll look into it, I am indebted to you kind sir
+2005-08-23T15:28:00.000Z	tristanmike	Seveas	if you don't mind, would you suggest that I install the .99-1 version from synaptic or get the 1.0 from the website?
+2005-08-23T15:28:00.000Z	Seveas	tristanmike	synaptic
+2005-08-23T15:29:00.000Z	tristanmike	Seveas	I woulda thought. How would I check to see if this will be included in breezy?
+2005-08-23T15:29:00.000Z	tristanmike	Seveas	sorry for the 20 questions
+2005-08-23T15:30:00.000Z	Seveas	tristanmike	http://packages.ubuntu.com
+2005-08-23T15:30:00.000Z	tristanmike	Seveas	you are a credit to this community sir
+2005-08-23T15:30:00.000Z	Seveas	tristanmike	it's 1.0-2 http://packages.ubuntu.com/cgi-bin/search_packages.pl?keywords=cdcat&searchon=names&subword=1&version=breezy&release=all
+2005-08-24T09:35:00.000Z	Seveas	tristanmike	no
+2005-08-24T09:36:00.000Z	tristanmike	Seveas	Merci Beaucoup as well
+2005-08-24T09:36:00.000Z	Seveas	tristanmike	debfoster is a good way to clean out unneeded dependencies :)
+2005-08-24T09:36:00.000Z	tristanmike	Seveas	run from the terminal??
+2005-08-24T09:36:00.000Z	tristanmike	Seveas	or is that a package?
+2005-08-24T09:37:00.000Z	tristanmike	Seveas	yeah, just looked, thanx uber-much
+2005-08-27T05:35:00.000Z	Seveas	tristanmike	windows drive or linux?
+2005-08-27T05:36:00.000Z	Seveas	tristanmike	if it is ntfs or fat:
+2005-08-27T05:36:00.000Z	Seveas	tristanmike	Download and run http://www.ubuntulinux.nl/files/winmac_fstab to make your windows and mac partions mount automatically
+2005-08-27T05:41:00.000Z	tristanmike	Seveas	that link you gave me, what do I save it as, "winmac_fstab"? then how do i run it, just type the name of the file while in the directory?
+2005-08-29T09:45:00.000Z	tristanmike	Seveas	save us
+2005-08-29T09:45:00.000Z	tristanmike	Seveas	spunk is being a punk
+2005-09-23T15:46:00.000Z	Seveas	tristanmike	at rock bottom :)
+2005-09-24T15:02:00.000Z	tristanmike	Seveas	since I have never used it, and I do hear good things about it, why about e17 don't you like so I can weigh that against the good?
+2005-09-24T15:02:00.000Z	Seveas	tristanmike	I couldn't get used to the way it works/doesn't work in the few days I tried it
+2005-09-25T16:19:00.000Z	Seveas	tristanmike	why don't you upgrade now?
+2005-09-25T16:20:00.000Z	tristanmike	Seveas	oh, no, that's way too much for me to handle right now, I'm just catching up. ;)
+2005-09-25T16:20:00.000Z	Seveas	tristanmike	breezy is pretty stable :)
+2005-09-27T13:18:00.000Z	tristanmike	Seveas	lol
+2005-09-28T13:59:00.000Z	Seveas	tristanmike	stop using crappy backports
+2005-09-28T13:59:00.000Z	tristanmike	Seveas	I just did what I was told to do on the Forums, nothing else
+2005-09-28T14:00:00.000Z	Seveas	tristanmike	the forums are filled with idiots...
+2005-09-28T14:00:00.000Z	tristanmike	Seveas	lol
+2005-09-28T14:01:00.000Z	Seveas	tristanmike	the mods and admins are not the smartest per se
+2005-09-28T14:02:00.000Z	Seveas	tristanmike	apt-show-versions | grep ubp | xargs aptitude remove
+2005-09-28T14:03:00.000Z	tristanmike	Seveas	I get errors with that command
+2005-09-28T14:03:00.000Z	Seveas	tristanmike	then you need to do it manually :)
+2005-09-28T14:11:00.000Z	tristanmike	Seveas	now my firefox doesn't start at all
+2005-09-28T14:12:00.000Z	Seveas	tristanmike	your own fault
+2005-09-28T14:12:00.000Z	tristanmike	Seveas	I don't know what I'm doing, I just did what I was told when I installed Ubuntu
+2005-09-28T14:13:00.000Z	tristanmike	Seveas	it's not my fault I have bad advice, please be nice....
+2005-09-28T14:14:00.000Z	Seveas	tristanmike	sorry, it's just that I have seen so much mess coming from the old backports that I hate them now
+2005-09-28T14:14:00.000Z	tristanmike	Seveas	I understand, but I'm sorry, the wiki is very confusing
+2005-09-28T14:15:00.000Z	Seveas	tristanmike	mods are just forum regulars
+2005-09-28T15:14:00.000Z	Seveas	tristanmike	ubuntuguide.org sucks and is down too
+2005-09-28T15:15:00.000Z	tristanmike	Seveas	see how confused I am
+2005-09-28T15:47:00.000Z	Seveas	tristanmike	nothing :)
+2005-09-28T15:48:00.000Z	tristanmike	Seveas	lol, ok but what about the software in them, might there be something I need?
+2005-09-28T15:48:00.000Z	Seveas	tristanmike	what did you use from backports?
+2005-09-28T15:49:00.000Z	tristanmike	Seveas	see, that's thing, i don't know how to distinguish what's from the backports and what isn't, is there a way?
+2005-09-28T15:49:00.000Z	tristanmike	Seveas	I guess java and mp3, is that the backports, I installed them in june
+2005-09-28T15:50:00.000Z	Seveas	tristanmike	apt-show-versions | grep ubp
+2005-09-28T15:51:00.000Z	tristanmike	Seveas	yeah, I do, sudo apt-get install apt-show-versions?
+2005-09-28T15:52:00.000Z	Seveas	tristanmike	yes
+2005-09-28T15:53:00.000Z	tristanmike	Seveas	ok, so installed, and I ran that command, what is the info?
+2005-09-28T15:54:00.000Z	tristanmike	Seveas	that' just the "Offical" stuff? if I have something not in there, it's from the backports?
+2005-09-28T15:54:00.000Z	Seveas	tristanmike	apt-show-versions | grep ubp
+2005-09-28T15:55:00.000Z	tristanmike	Seveas	yeah, that's what I'm saying, I ran that command, what is the info, just the "official" stuff anything else was installed via Backports or on my own, ie Americas Army
+2005-09-28T15:59:00.000Z	tristanmike	Seveas	Ubuntu is pretty unique in a lot of ways eh?
+2005-09-28T15:59:00.000Z	Seveas	tristanmike	unique in goodness :)
+2005-09-28T16:00:00.000Z	Seveas	tristanmike	to me Ubuntu is the ideal mix of stability, recent packages, good support and a fabulous community
+2005-09-29T16:00:00.000Z	tristanmike	Seveas	it's too bad there is a lot of emphasis on the forums if they are sending the wrong information
+2005-09-29T16:33:00.000Z	tristanmike	Seveas	rotflmao, that's funny
+2005-09-29T16:35:00.000Z	tristanmike	Seveas	what do they do?
+2005-09-29T16:42:00.000Z	tristanmike	Seveas	you must have developed a strong bond with ubotu by now
+2005-09-29T05:57:00.000Z	tristanmike	Seveas	sweet dreams
+2005-10-08T16:53:00.000Z	Seveas	tristanmike	scale -- package is building...
+2005-10-08T16:54:00.000Z	tristanmike	Seveas	that's sweet, when I learn to do the same thing, I will return the favors
+2005-10-08T16:58:00.000Z	tristanmike	Seveas	that was very nice of you to take the time to do that for us, thanx
+2005-10-08T05:13:00.000Z	Seveas	tristanmike	try 7za -e filename.7z
+2005-10-08T05:13:00.000Z	tristanmike	Seveas	that's what I did, I forgot the ">" in that last line
+2005-10-08T05:14:00.000Z	tristanmike	Seveas	I didn't really use the <>
+2005-10-08T05:14:00.000Z	Seveas	tristanmike	ah ok
+2005-10-08T05:15:00.000Z	Seveas	tristanmike	7za e instead of 7za -e
+2005-10-08T05:15:00.000Z	tristanmike	Seveas	yeah, bingo, isn't the "-" used to define the option though? Why does it work without it?
+2005-10-08T05:16:00.000Z	Seveas	tristanmike	read 'man 7za' :)
+2005-10-08T05:17:00.000Z	Seveas	tristanmike	that specific one is quite clear
+2005-10-08T05:18:00.000Z	tristanmike	Seveas	thanx, I'm trying to get a hang of it still, sorry for the obvious questions
+2005-10-08T05:32:00.000Z	Seveas	tristanmike	msn is flaky today
+2005-10-10T05:03:00.000Z	tristanmike	Seveas	do you still have the .deb for 7zip up?
+2005-10-10T05:03:00.000Z	Seveas	tristanmike	yes
+2005-10-10T05:04:00.000Z	tristanmike	Seveas	do you happen to have the address handy, sorry, i forgot to bookmark, *bad tristan, bad*
+2005-10-10T05:06:00.000Z	Seveas	tristanmike	binaries4all.nl/~dennis/
+2005-10-10T05:06:00.000Z	tristanmike	Seveas	thanx
+2006-01-28T12:06:00.000Z	Seveas	tristanmike	type faster ;)
+2006-03-01T10:25:00.000Z	Seveas	tristanmike	true, true
+2006-04-10T06:13:00.000Z	tristanmike	Seveas	.....who me....? :p
+2006-04-15T12:10:00.000Z	Seveas	tristanmike	bad
+2006-04-15T12:10:00.000Z	Seveas	tristanmike	sovieticool: sudo -i
+2006-04-15T12:10:00.000Z	tristanmike	Seveas	:( sorry
+2006-06-16T09:49:00.000Z	Seveas	tristanmike	?
+2006-06-16T09:50:00.000Z	tristanmike	Seveas	the "dcc" send
+2006-07-23T12:40:00.000Z	Seveas	tristanmike	apparently ubuntuguide.org has improved

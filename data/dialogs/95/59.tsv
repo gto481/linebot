@@ -1,0 +1,95 @@
+2007-06-22T11:49:00.000Z	god		than it is back on for 2 seconds
+2007-06-22T11:50:00.000Z	god		n it repeats...
+2007-06-22T11:50:00.000Z	god		it is the same for 2 different computers
+2007-06-22T11:50:00.000Z	god		i am running ubuntu april edition 2007
+2007-06-22T11:50:00.000Z	god		syslog and dmesg output how do i get this?
+2007-06-22T11:51:00.000Z	god		i click a website, it loads...than i press the link form it and it says  it can't load it...
+2007-06-22T11:52:00.000Z	god		it is always like this...the first website always loads...but when i switch to another it stops
+2007-06-22T11:52:00.000Z	god		ok...i am confused...
+2007-06-22T11:53:00.000Z	god		i will
+2007-06-22T11:54:00.000Z	god		can we go to private messaging...i am afraid to miss some posts :(
+2007-06-22T11:55:00.000Z	wols_	god	you can do what you want, I won't go PM
+2007-06-22T11:49:00.000Z	wols_	god	syslog and dmesg output
+2007-06-22T11:53:00.000Z	wols_	god	will you do what I asked you?
+2007-06-22T12:00:00.000Z	god	wols_	pls help me :'(
+2007-06-22T12:01:00.000Z	wols_	god	I told you long ago
+2007-06-22T12:01:00.000Z	wols_	god	you choose to ignore it
+2007-06-22T12:02:00.000Z	wols_	god	yes
+2007-06-22T12:03:00.000Z	god	wols_	i type this inside the terminal right?
+2007-06-22T12:05:00.000Z	god	wols_	it says permission denied :(
+2007-06-22T12:05:00.000Z	wols_	god	I know. use suodo to look at it
+2007-06-22T12:07:00.000Z	god	wols_	it says command not found :(
+2007-06-22T12:11:00.000Z	wols_	god	so you use a router?
+2007-06-22T12:11:00.000Z	wols_	god	pastebin the dmesg output please
+2007-06-22T12:13:00.000Z	wols_	god	not if you can coonnect to it via wireless and wired. do you use pppoe?
+2007-06-22T12:22:00.000Z	god	wols_	shall i  paste it here?
+2007-06-22T12:23:00.000Z	god	wols_	it doesn't let me paste it here :(
+2007-06-22T12:24:00.000Z	god	wols_	it lets me paste only the first line :(
+2007-06-22T12:24:00.000Z	wols_	god	 you DON't paste it here.. see the ubuto facrtoid
+2007-06-22T12:25:00.000Z	god	wols_	i am running from window right now...ubuntu is on  the other pc///internetless
+2007-06-22T12:26:00.000Z	god	wols_	i use ppp0
+2007-06-22T12:26:00.000Z	wols_	god	I don#t care. unless w can see the output I doubt we can help you
+2007-06-22T12:35:00.000Z	god	wols_	were u able to open http://paste.ubuntu-nl.org/26766/ ?
+2007-06-22T12:36:00.000Z	wols_	god	we need syslog output sudo grep ppp /var/log/syslog
+2007-06-22T12:41:00.000Z	god	wols_	thanks a lot for the help by the way :D
+2007-06-22T12:42:00.000Z	wols_	god	before you start any new ppp connection, STOP the old ones first. you only want pppp0
+2007-06-22T12:43:00.000Z	god	wols_	i have no other connections on that pc ... i installed the sys from scratch...than i only configured adsl
+2007-06-22T12:43:00.000Z	wols_	god	it more looks like a modem hardware or ISP issue. but I still donw't get how you can connect via wireless to it. also, your 2nd PC you have, is it connected to the internt too when you use ppp?
+2007-06-22T12:43:00.000Z	god	wols_	it is the same problem on 2 computers :(
+2007-06-22T12:43:00.000Z	wols_	god	are both computers connected via ppp?
+2007-06-22T12:44:00.000Z	god	wols_	maybe i messed things up?!  2 computers are conected seperately ( i only have one cable to go to internet )
+2007-06-22T12:44:00.000Z	wols_	god	are both computers connected via that ppp connection on that modem?
+2007-06-22T12:44:00.000Z	wols_	god	at the same time?
+2007-06-22T12:45:00.000Z	god	wols_	the only way i was able to go to internet through ubuntu... i set up a network in windows, so that the win PC is connected to internet and others connect through this win PC through wireless to internet...than i used ubuntu pc to connect to win wireless...and internet worked perfectly with no config ...
+2007-06-22T12:46:00.000Z	god	wols_	yes, i am using the same connection right now, and it works perfectly with windows
+2007-06-22T12:46:00.000Z	wols_	god	yes. either that or use the ubuntu PC only to go tto the internet and connect the Windows PC to the ubuntu PC via 2nd network car din ubuntu or wireless
+2007-06-22T12:47:00.000Z	wols_	god	and as soon as you use ubunut and the windows machine is still on you get problems?
+2007-06-22T12:47:00.000Z	god	wols_	but how i make it so that ubuntu pc goes to internet on its own? da solo ? with no other pc connected?
+2007-06-22T12:48:00.000Z	wols_	god	does that give you the error when you do that?
+2007-06-22T12:48:00.000Z	wols_	god	cause you said you had your problems with both. you can only have one PC connected directly to the internet. never both
+2007-06-22T12:50:00.000Z	god	wols_	no no no... first i tried to connect to internet using my first pc...i failed... so i installed ubuntu an the other pc...but the same problem came up :( ubuntu just doesn't want to work with internet :( i am not connecting two pc's at the same time
+2007-06-22T12:50:00.000Z	wols_	god	well you said the windows pc worked on the internet. and you sais both PCs had the same error
+2007-06-22T12:50:00.000Z	god	wols_	i can only go to internet using windows... or connecting ubuntu pc to the windows pc using wifi
+2007-06-22T12:52:00.000Z	god	wols_	ok i ll try to make it simple... there is only one PC and it doesn't connect to the internet for longer than 2 seconds, what shall i do?
+2007-06-22T12:54:00.000Z	god	wols_	do u know any other instances like mine?
+2007-06-22T12:56:00.000Z	god	wols_	did u give up on me ?
+2007-06-22T12:58:00.000Z	wols_	god	give me a clear ppp log without wout ppp1 and ppp2 used. one pppd at a time for clarity
+2007-06-22T13:00:00.000Z	god	wols_	i ll switch internet to the other pc...generate the log...n i ll be back in less than 10 minutes ok?! the problem is not just with web pages but also with software downloads and updates (though the ubuntu system
+2007-06-22T13:00:00.000Z	wols_	god	hose are webpages too even if you don't see it. try irc
+2007-06-22T13:28:00.000Z	god	wols_	can u pls gimmi the commands again
+2007-06-22T13:29:00.000Z	god	wols_	thank you
+2007-06-22T13:29:00.000Z	god	wols_	:) be back in a couple of minutes
+2007-06-22T13:50:00.000Z	god	wols_	i am back ...
+2007-06-22T13:51:00.000Z	god	wols_	http://paste.ubuntu-nl.org/26783/
+2007-06-22T13:52:00.000Z	god	wols_	http://paste.ubuntu-nl.org/26784/
+2007-06-22T13:52:00.000Z	god	wols_	did u get the two links?
+2007-06-22T13:55:00.000Z	god	wols_	what does "Cannot determine ethernet address for proxy ARP" mean? can this be the problem?
+2007-06-22T13:56:00.000Z	wols_	god	do you have more than one ethernet ion that ubuntu PC?
+2007-06-22T13:57:00.000Z	wols_	god	and you again started several pppd something I explicitly told you NOT to do
+2007-06-22T13:57:00.000Z	wols_	god	and what is connected to your eth1?
+2007-06-22T13:58:00.000Z	god	wols_	nothing eth 1 is not used at all
+2007-06-22T13:58:00.000Z	wols_	god	it is
+2007-06-22T13:59:00.000Z	wols_	god	no that's not for you
+2007-06-22T14:01:00.000Z	god	wols_	the second internet card is not used
+2007-06-22T14:03:00.000Z	wols_	god	it is connected to something
+2007-06-22T14:04:00.000Z	god	wols_	but it is not, i have nothing in it... there is no cable connected...and i don't think that's the problem because in the other pc i only have one internet card
+2007-06-22T14:05:00.000Z	god	wols_	i guess i am stuck with usinf wireless :)
+2007-06-22T14:05:00.000Z	wols_	god	what card is that then and why does it get dhcp offers from 192.168.1.1?
+2007-06-22T14:05:00.000Z	wols_	god	then why the heck do you use ppp?
+2007-06-22T14:06:00.000Z	wols_	god	sotp using ppp
+2007-06-22T14:06:00.000Z	god	wols_	because it is an adsl modem...
+2007-06-22T14:06:00.000Z	wols_	god	you don#t have a modem, you have a router!
+2007-06-22T14:06:00.000Z	wols_	god	it's no adsl modem, it's arouter
+2007-06-22T14:06:00.000Z	god	wols_	so how do i set up the internet connection than?
+2007-06-22T14:06:00.000Z	wols_	god	rmeove all pppd stuff
+2007-06-22T14:06:00.000Z	god	wols_	how ?
+2007-06-22T14:07:00.000Z	wols_	god	rest will take care by itself
+2007-06-22T14:08:00.000Z	wols_	god	your adsl router has username and password
+2007-06-22T14:08:00.000Z	god	wols_	it says modem adsl on it...it can't be the router :(
+2007-06-22T14:09:00.000Z	wols_	god	what device is it? what model/brand?
+2007-06-22T14:13:00.000Z	wols_	god	look on your manual on page 16. or look at page 16 here: http://dlink-me.com/ftp/modems/DSL-302T/DSL302T_Manual_2_00.pdf
+2007-06-22T14:14:00.000Z	wols_	god	you remove ALL ppp stuff and then use a browser to connect to http://192.168.1.1 and there you configure it
+2007-06-22T14:14:00.000Z	wols_	god	you enter usename password there on the modem and let it connect
+2007-06-22T14:16:00.000Z	god	wols_	ok thank you...it is just that i had tu use a software packeage for pc
+2007-06-22T14:16:00.000Z	god	wols_	thanks a lot
+2007-06-22T14:16:00.000Z	wols_	god	if you do that you shouldn't need a software package anymore

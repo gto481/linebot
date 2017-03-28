@@ -1,0 +1,99 @@
+2006-09-07T14:05:00.000Z	UKMatt		hey guys, i need some help translating code from KDE to gnome
+2006-09-07T14:05:00.000Z	UKMatt		what would "su -c "make install" " be, "sudo "make install" "?
+2006-09-07T14:06:00.000Z	mcphail	UKMatt	what do you mean KDE to gnome?
+2006-09-07T14:07:00.000Z	UKMatt	mcphail	well amarok is giving me an error and telling me what code to execute, but it's "su -c" and i'm in gnome and it has no clue what that means, so i assumed there's some difference between the two
+2006-09-07T14:08:00.000Z	mcphail	UKMatt	hmm. I wouldn't trust amarok with root priveleges - what does it need to do?
+2006-09-07T14:09:00.000Z	UKMatt	mcphail	i installed it from synaptic and it's never worked, it's saying that sound-engine plugins couldnt be found, so told em to cd to the directory the source code is in and then to run code that it gives me to uninstall/install
+2006-09-07T14:09:00.000Z	UKMatt	mcphail	i've taken it off through synaptic and put it on again, and it still gives me this, and this is a fresh version of gnome ub
+2006-09-07T14:11:00.000Z	mcphail	UKMatt	try "sudo apt-get install amarok-xine"
+2006-09-07T14:11:00.000Z	UKMatt	mcphail	"0 upgraded - 0 newly installed"
+2006-09-07T14:12:00.000Z	UKMatt	mcphail	and still the error
+2006-09-07T14:12:00.000Z	mcphail	UKMatt	select the xine engine in the config menu
+2006-09-07T14:12:00.000Z	UKMatt	mcphail	where's the config menu?
+2006-09-07T14:13:00.000Z	mcphail	UKMatt	unser Settings -> config amarok -> engine
+2006-09-07T14:13:00.000Z	UKMatt	mcphail	oh IN amarok?  i can't it never opens up just gives me the error
+2006-09-07T14:13:00.000Z	mcphail	UKMatt	ok, give me a moment
+2006-09-07T14:13:00.000Z	UKMatt	mcphail	i have a screenshot of the error on the forums if that'll help
+2006-09-07T14:19:00.000Z	mcphail	UKMatt	try editing $HOME/kde/share/config/amarokrc and change the appropriate line to "Sound System=xine-engine"
+2006-09-07T14:21:00.000Z	UKMatt	mcphail	i don't have that file, only /HOME/.kde/share/applnk   , thats the only one in there
+2006-09-07T14:22:00.000Z	mcphail	UKMatt	hmm - maybe it is created after a successful first run...
+2006-09-07T14:22:00.000Z	UKMatt	mcphail	murrr haha, i don't get it, its a new partition, and synaptic install, how did this go wrong
+2006-09-07T14:23:00.000Z	mcphail	UKMatt	why not try and create that file as an empty file? It might kick it into action
+2006-09-07T14:24:00.000Z	UKMatt	mcphail	did you mean amarok on the end?
+2006-09-07T14:24:00.000Z	mcphail	UKMatt	just try to create $HOME/kde/share/config/amarokrc
+2006-09-07T14:25:00.000Z	UKMatt	mcphail	same error, and i didn't mention, before it gives me the code error, it gives me a file:/// error
+2006-09-07T14:26:00.000Z	mcphail	UKMatt	pastebin the whole error message
+2006-09-07T14:26:00.000Z	UKMatt	mcphail	http://ubuntuforums.org/showthread.php?t=252055&highlight=amarok+issue
+2006-09-07T14:26:00.000Z	UKMatt	mcphail	those'll have the graphical messages, limme pastebin the terminal error for u
+2006-09-07T14:27:00.000Z	mcphail	UKMatt	i can't access those grphical errors without a login for the forums
+2006-09-07T14:28:00.000Z	UKMatt	mcphail	oh hmmmm.. that directory you mentioned early might make sense
+2006-09-07T14:28:00.000Z	UKMatt	mcphail	waiting on pastebin, but it gave me a bunch of permission error
+2006-09-07T14:30:00.000Z	UKMatt	mcphail	i think pastebin is down
+2006-09-07T14:31:00.000Z	mcphail	UKMatt	join #flood and paste there
+2006-09-07T14:33:00.000Z	UKMatt	mcphail	posted it there
+2006-09-07T14:33:00.000Z	mcphail	UKMatt	i can't believe you were kicked from #flood ...
+2006-09-07T14:33:00.000Z	UKMatt	mcphail	wha?
+2006-09-07T14:34:00.000Z	UKMatt	mcphail	oh well, did you see the output?
+2006-09-07T14:34:00.000Z	mcphail	UKMatt	if "Amarok: [Loader]  Starting amarokapp.." is the last line then yes
+2006-09-07T14:35:00.000Z	mcphail	UKMatt	what is the output of "ls -l /home/matt/.kde/share" ?
+2006-09-07T14:35:00.000Z	UKMatt	mcphail	nope, limme try webboard someone said
+2006-09-07T14:36:00.000Z	UKMatt	mcphail	wait if you know how to pm, message me and i'll paste it
+2006-09-07T14:37:00.000Z	mcphail	UKMatt	ok, i see what has gone wrong
+2006-09-07T14:38:00.000Z	mcphail	UKMatt	don't _ever_ run kde apps as "sudo"
+2006-09-07T14:39:00.000Z	UKMatt	mcphail	wha?
+2006-09-07T14:39:00.000Z	mcphail	UKMatt	you need to run "sudo chown -R matt:matt /home/matt/.kde
+2006-09-07T14:40:00.000Z	UKMatt	mcphail	woah i think that was it, what happened?
+2006-09-07T14:41:00.000Z	mcphail	UKMatt	sudo is broken. If you run graphical apps with it, it messes up permissions. Use gksudo instead
+2006-09-07T14:41:00.000Z	UKMatt	mcphail	so kde needs gksudo b/c of graphics?
+2006-09-07T14:42:00.000Z	mcphail	UKMatt	you shouldn't need to run amarok as root anyway, but my guess is that you have run some kde app as root in the past using sudo
+2006-09-07T14:42:00.000Z	mcphail	UKMatt	if you need to run a graphical app as root, use gksudo
+2006-09-07T14:43:00.000Z	UKMatt	mcphail	yeah i don't know why i would have done amarok w/ it
+2006-09-07T14:43:00.000Z	UKMatt	mcphail	the code, what's that do?
+2006-09-07T14:44:00.000Z	mcphail	UKMatt	sudo changed the owner and group of the .kde directory to root. Amarok has no permission to read or write to a root owned directory. That line changes ownership back to you
+2006-09-07T14:51:00.000Z	UKMatt	mcphail	would any of that explain why it's giving me a "cannot talk to klauncher"
+2006-09-07T14:52:00.000Z	mcphail	UKMatt	don't know. Is it still not working?
+2006-09-07T14:52:00.000Z	UKMatt	mcphail	nah, it's telling me that
+2006-09-07T14:53:00.000Z	mcphail	UKMatt	at least a new error message is progress :)
+2006-09-07T14:54:00.000Z	UKMatt	mcphail	haha yeah, i ran in terminal and it gives a "different database stats version detected!  will rebuild, then database stats too new for this version, quitting", so i uninstalled, restarted and then reinstalled and still the same
+2006-09-07T14:55:00.000Z	UKMatt	mcphail	except this time it added couldnt talk to klauncher
+2006-09-07T14:57:00.000Z	mcphail	UKMatt	try deleting /home/matt/.kde/share/config/amarokrc and /home/matt/.kde/share/apps/amarok/
+2006-09-07T15:01:00.000Z	UKMatt	mcphail	still the klauncher error, and when i ran it in terminal, terminal was freaking out w/ that error
+2006-09-07T15:02:00.000Z	mcphail	UKMatt	did it get rid of the database error?
+2006-09-07T15:02:00.000Z	UKMatt	mcphail	actually no, i thought it did but its still there
+2006-09-07T15:03:00.000Z	mcphail	UKMatt	:(
+2006-09-07T15:04:00.000Z	UKMatt	mcphail	i'm bordering on just wiping again since its only a couple days old, when I had problems with it, i thought it might be an older version with issues, so went to the website and added it to repo and updated like it said, and that might be part of the reason
+2006-09-07T15:05:00.000Z	mcphail	UKMatt	which repo are you using for amarok?
+2006-09-07T15:06:00.000Z	UKMatt	mcphail	actually i'm not, i'm on the normal one, i guess i forgot i took the other one off
+2006-09-07T15:06:00.000Z	UKMatt	mcphail	i think i'm just gonna rewipe, its a mess and i have an external HD, its probably easier
+2006-09-07T15:06:00.000Z	mcphail	UKMatt	try "deb http://kubuntu.org/packages/amarok-142 dapper main"
+2006-09-07T15:07:00.000Z	UKMatt	mcphail	k added that and refreshed, what next?
+2006-09-07T15:08:00.000Z	mcphail	UKMatt	sudoa pt-get update && sudo apt-get upgrade
+2006-09-07T15:10:00.000Z	UKMatt	mcphail	it upgraded 3 things, xine i think, but then when i ran it still gave klauncher error
+2006-09-07T15:14:00.000Z	mcphail	UKMatt	try "sudo aptitude install amarok=2:1.4.2-0ubuntu2"
+2006-09-07T15:15:00.000Z	UKMatt	mcphail	nothing changed, and "0 upgraded, installed, removed or not upgraded"
+2006-09-07T15:16:00.000Z	mcphail	UKMatt	ok, try removing it with the --purge option, then reinstalling it with the line you just typed
+2006-09-07T15:17:00.000Z	UKMatt	mcphail	how do you remove w/ purge
+2006-09-07T15:17:00.000Z	mcphail	UKMatt	sudo apt-get remove --purge amarok
+2006-09-07T15:18:00.000Z	UKMatt	mcphail	same
+2006-09-07T15:21:00.000Z	mcphail	UKMatt	ps -u matt | grep klauncher
+2006-09-07T15:21:00.000Z	UKMatt	mcphail	ran that and it didn't say anything, and had no impact on amarok
+2006-09-07T15:22:00.000Z	mcphail	UKMatt	ps -u root | grep klauncher
+2006-09-07T15:22:00.000Z	UKMatt	mcphail	same
+2006-09-07T15:22:00.000Z	mcphail	UKMatt	ps aux | grep klauncher
+2006-09-07T15:23:00.000Z	UKMatt	mcphail	matt     18332  0.0  0.1   2880   800 pts/1    R+   17:23   0:00 grep klauncher
+2006-09-07T15:23:00.000Z	mcphail	UKMatt	ps aux | grep kde
+2006-09-07T15:24:00.000Z	UKMatt	mcphail	hey what was the last line?
+2006-09-07T15:24:00.000Z	mcphail	UKMatt	ps aux | grep kde
+2006-09-07T15:25:00.000Z	UKMatt	mcphail	matt     18553  0.0  0.1   2880   800 pts/1    S+   17:24   0:00 grep kde
+2006-09-07T15:26:00.000Z	mcphail	UKMatt	try it again with amarok "running"
+2006-09-07T15:26:00.000Z	UKMatt	mcphail	doesn't look like its impacting it
+2006-09-07T15:27:00.000Z	mcphail	UKMatt	the last thing i can suggest is restarting the xserver
+2006-09-07T15:28:00.000Z	UKMatt	mcphail	haha nope, i just did that a sec ago accidently trying to hit the |
+2006-09-07T15:28:00.000Z	mcphail	UKMatt	lol
+2006-09-07T15:28:00.000Z	UKMatt	mcphail	where do you get all this from?
+2006-09-07T15:29:00.000Z	mcphail	UKMatt	i'm just wondering if some kde service is running as "root", and blocking things for you
+2006-09-07T15:30:00.000Z	UKMatt	mcphail	don't worry about it, i'll rewipe, everythings backed up and all i'll lose are some themes and program configs, no biggie, then just hope it doesn't happen again
+2006-09-07T15:31:00.000Z	mcphail	UKMatt	pity. I'm sure there must be a way to carck it for you
+2006-09-07T15:31:00.000Z	UKMatt	mcphail	nah don't worry about it though, but trying things like this, do you come up with them or is there some reference you're using
+2006-09-07T15:32:00.000Z	mcphail	UKMatt	no reference. Just a bit of experience messing around with linux
+2006-09-07T15:32:00.000Z	UKMatt	mcphail	ha ok wow, well ty though

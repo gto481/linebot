@@ -1,0 +1,96 @@
+2006-01-21T10:35:00.000Z	MrDez		ya u just need to change your kernel
+2006-01-21T10:36:00.000Z	MrDez		trapp: exactly, jsut the card name and 'linux driver' took me less than a minute
+2006-01-21T10:37:00.000Z	MrDez		ew, that xfx raid card is an ata100 raid card with an sata bridge built onto it
+2006-01-21T10:38:00.000Z	MrDez		sam: use 2.6.13.x
+2006-01-21T10:38:00.000Z	MrDez		it obviously works that .13.x
+2006-01-21T10:39:00.000Z	MrDez		noundi: could be a drive mbr problem
+2006-01-21T10:39:00.000Z	MrDez		sam: use google
+2006-01-21T10:40:00.000Z	MrDez		noundi: weird, ive had problems in the past with grub but never with ub 5.10
+2006-01-21T10:40:00.000Z	MrDez		unless it was a problem with the drive
+2006-01-21T10:40:00.000Z	MrDez		is it at least a 20gig drive?
+2006-01-21T10:40:00.000Z	Noundi	MrDez	I have no problems installing slack with lilo.
+2006-01-21T10:41:00.000Z	MrDez		ever had winXP or win2k server on it?
+2006-01-21T10:41:00.000Z	Noundi		ext3
+2006-01-21T10:41:00.000Z	Noundi	MrDez	Yes, a long time ago.
+2006-01-21T10:41:00.000Z	MrDez		try wiping it out using qtparted (if its a wipable drive)
+2006-01-21T10:43:00.000Z	Noundi	MrDez	Alright, I think UBCD has qparted, I'll boot with it and try it.
+2006-01-21T10:44:00.000Z	MrDez		ah
+2006-01-21T10:44:00.000Z	MrDez		ubcd has dos based drive wipers too
+2006-01-21T10:44:00.000Z	MrDez		cant remember which menu its under, but it has an mbr wiper which is what u probably need
+2006-01-21T10:44:00.000Z	MrDez		sam: look thru the wiki for kernel upgrade hotwo
+2006-01-21T10:44:00.000Z	MrDez		howto
+2006-01-21T10:45:00.000Z	Noundi	MrDez	Yeah I did a fdisk /mbr with it just to get rid of lilo, but it still didn't work, I'll try qparted.
+2006-01-21T10:45:00.000Z	MrDez		fdisk /mbr didnt kill lilo?
+2006-01-21T10:45:00.000Z	Noundi		It did
+2006-01-21T10:45:00.000Z	Noundi		But grub still get's stuck
+2006-01-21T10:45:00.000Z	MrDez		ah
+2006-01-21T10:45:00.000Z	Noundi		Thing is, I think it gets stuck on the install.
+2006-01-21T10:45:00.000Z	MrDez		strange
+2006-01-21T10:45:00.000Z	Noundi		Not on the mbr writing.
+2006-01-21T10:45:00.000Z	MrDez		thats always frustrating
+2006-01-21T10:46:00.000Z	MrDez		just kill the whole drive with qtparted and start fresh with the 5.10 install
+2006-01-21T10:46:00.000Z	Noundi		Yup, I'll try that.
+2006-01-21T10:46:00.000Z	MrDez		are u using server only install or full?
+2006-01-21T10:46:00.000Z	Noundi		Full
+2006-01-21T10:46:00.000Z	MrDez		only other thing id suggest is writing another disc, perhaps a problem wiht the grub files written to disc
+2006-01-21T10:47:00.000Z	Noundi	MrDez	yeah I was kind of hoping to get it working on this drive.
+2006-01-21T10:47:00.000Z	MrDez		i installed ubuntu on an old damaged drive for someone earlier tonight and didnt have trouble even with the bad drive (luck)
+2006-01-21T10:47:00.000Z	MrDez		noundi: i mean writing another ub install cd
+2006-01-21T10:47:00.000Z	Noundi	MrDez	did that too, have 2 different.
+2006-01-21T10:48:00.000Z	MrDez		sonofa...
+2006-01-21T10:48:00.000Z	MrDez		heh
+2006-01-21T10:48:00.000Z	MrDez		grub is being bastardly then
+2006-01-21T10:48:00.000Z	MrDez		qtparted should do it
+2006-01-21T10:48:00.000Z	Noundi	MrDez	Probably, I'll try it, wish me luck.
+2006-01-21T10:49:00.000Z	MrDez		good luck
+2006-01-21T10:49:00.000Z	MrDez		slash: first, never wait 15 mins, what 3-5 mins at most, 15 mins is what ISP tech support tells u to get u off the phone. ;)
+2006-01-21T10:51:00.000Z	MrDez		slash: open terminal and type 'sudo pico /etc/network/interfaces' and find the line that starts iface eth0 and paste it
+2006-01-21T10:51:00.000Z	MrDez		poning: ive worked for AOL and local ISPs, so I definitely know the drill ;)
+2006-01-21T10:53:00.000Z	MrDez		slas: didnt finish line, 'paste it to chan'
+2006-01-21T10:53:00.000Z	MrDez		well then
+2006-01-21T10:53:00.000Z	MrDez		ur configured for dhcp
+2006-01-21T10:53:00.000Z	MrDez		restart router
+2006-01-21T10:53:00.000Z	MrDez		er
+2006-01-21T10:53:00.000Z	MrDez		ah
+2006-01-21T10:53:00.000Z	MrDez		what kind of modem
+2006-01-21T10:53:00.000Z	MrDez		speedstream?
+2006-01-21T10:54:00.000Z	MrDez		ah
+2006-01-21T10:54:00.000Z	MrDez		uh
+2006-01-21T10:54:00.000Z	MrDez		hmm
+2006-01-21T10:54:00.000Z	MrDez		i have comcast too
+2006-01-21T10:54:00.000Z	MrDez		motorola with one LAN port?
+2006-01-21T10:54:00.000Z	MrDez		hooked directly to ur ubuntu box?
+2006-01-21T10:55:00.000Z	MrDez		so u have no router or switch hooked into the motorola, just one machine at a time?
+2006-01-21T10:55:00.000Z	MrDez		!yourmom
+2006-01-21T10:59:00.000Z	MrDez		slash: one sec
+2006-01-21T11:00:00.000Z	MrDez		slash: try connecting the box and ping 64.233.187.99 (a google.com ip)
+2006-01-21T11:01:00.000Z	MrDez		if thats successful, its dns server settings from dhcp (i wasnt getting dns from dhcp to my router for a while here)
+2006-01-21T11:01:00.000Z	MrDez		also
+2006-01-21T11:01:00.000Z	MrDez		u can try setting ur primary dns to 4.2.2.2
+2006-01-21T11:01:00.000Z	MrDez		nice and easy to remember
+2006-01-21T11:02:00.000Z	MrDez		yes, if its successful, enter the network configuration and change the dns to specify 4.2.2.2 and then try ping google.com
+2006-01-21T11:02:00.000Z	MrDez		if not successful reconnect laptop
+2006-01-21T11:03:00.000Z	MrDez	parisi	is the axim windows based?
+2006-01-21T11:04:00.000Z	MrDez		just install opie on it
+2006-01-21T11:04:00.000Z	MrDez		then u have nix goodness all around
+2006-01-21T11:04:00.000Z	MrDez		and much better non-commercial waste-of-money apps
+2006-01-21T11:07:00.000Z	MrDez		slash: did u connect the cable directly to the ubuntu box?
+2006-01-21T11:09:00.000Z	MrDez		ok when its connected, open terminal, type su (enter, enter root passwd, this way u dont have to keep doing sudo on commands), type 'ifdown eth0'  then type 'ifup eth0' then type ifconfig and make sure u have an internet routable (or NAT'ed) ip address
+2006-01-21T11:09:00.000Z	MrDez		or u could just reboot if u dont mind being disconnected very long
+2006-01-21T11:09:00.000Z	MrDez		that will renew dhcp properly as well (sometimes the X based tools are fidgety)
+2006-01-21T11:11:00.000Z	MrDez		only the ones with sandwhiches in them
+2006-01-21T11:11:00.000Z	MrDez		slash: reboot is the easiest
+2006-01-21T11:11:00.000Z	MrDez		in case something goes awry
+2006-01-21T11:11:00.000Z	MrDez		if ur linux noob in general
+2006-01-21T11:12:00.000Z	MrDez		reboot, open term, sudo ifconfig, make sure it gives you an ip (and not a 169.x.x.x or 0.0.0.0) for eth0 interface
+2006-01-21T11:12:00.000Z	MrDez		then trying pinging ip
+2006-01-21T11:15:00.000Z	MrDez		zatoic: ive successfully let apt-get configure it and fu for me ;)
+2006-01-21T11:21:00.000Z	MrDez		UF?
+2006-01-21T11:22:00.000Z	MrDez		as in gators?
+2006-01-21T11:22:00.000Z	MrDez		congratulations, ur smart
+2006-01-21T11:22:00.000Z	MrDez		;)
+2006-01-21T11:22:00.000Z	Noundi	MrDez	Nope
+2006-01-21T11:22:00.000Z	MrDez		sslash: no ip?
+2006-01-21T11:22:00.000Z	Noundi	MrDez	I reset the the table and the mbr, still gets stuck at grub install.
+2006-01-21T11:22:00.000Z	MrDez		noundi: fack.
+2006-01-21T11:23:00.000Z	Noundi	MrDez	Yup

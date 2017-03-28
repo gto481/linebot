@@ -1,0 +1,99 @@
+2006-06-06T08:46:00.000Z	Tobberoth		I have 140gb free unpartitioned space on my harddrive.. how do I make it a FAT32 partition, using Ubuntu?
+2006-06-06T08:47:00.000Z	Tobberoth		I have Windows on the primary partition, so nothing too fancy ;(
+2006-06-06T08:47:00.000Z	Kyral_FreeBSD	Tobberoth	mkfs.vfat -F 32 /dev/<device node>
+2006-06-06T08:50:00.000Z	Kyral_FreeBSD	Tobberoth	I gave you the command
+2006-06-06T08:50:00.000Z	Kyral_FreeBSD	Tobberoth	What is the name of the drive? /dev/what?
+2006-06-06T08:51:00.000Z	Kyral_FreeBSD	Tobberoth	okay, do this "sudo mkfs.vfat -F 32 /dev/sda"
+2006-06-06T08:51:00.000Z	Kyral_FreeBSD	Tobberoth	oh wait you need to make a partition first
+2006-06-06T08:51:00.000Z	Kyral_FreeBSD	Tobberoth	Didn't you want to?
+2006-06-06T08:52:00.000Z	Tobberoth	Kyral_FreeBSD	I want to make an ew partition out of the free space
+2006-06-06T08:52:00.000Z	Kyral_FreeBSD	Tobberoth	CFDisk :D
+2006-06-06T08:52:00.000Z	Tobberoth	Kyral_FreeBSD	Then make it FAT32
+2006-06-06T08:52:00.000Z	Kyral_FreeBSD	Tobberoth	First you need to make the physical partition, then you need to apply the FS
+2006-06-06T08:52:00.000Z	Kyral_FreeBSD	Tobberoth	cfdisk is a console based partitioner with a nice GUI
+2006-06-06T08:52:00.000Z	Kyral_FreeBSD	Tobberoth	sudo cfdisk /dev/sda
+2006-06-06T08:53:00.000Z	Tobberoth	Kyral_FreeBSD	Okej, I'm in, hold on
+2006-06-06T08:53:00.000Z	Kyral_FreeBSD	Tobberoth	It ain't scary! Someone dig up my old Terminal For Beginners on UbuntuForums
+2006-06-06T08:53:00.000Z	Kyral_FreeBSD	Tobberoth	use the arrow keys to select "New"
+2006-06-06T08:55:00.000Z	Tobberoth	Kyral_FreeBSD	Wow, it was really easy to use! I think I've made it into a logical partition now
+2006-06-06T08:55:00.000Z	Tobberoth	Kyral_FreeBSD	Now, how do I make it FAT32?
+2006-06-06T08:55:00.000Z	Kyral_FreeBSD	Tobberoth	remember that command I gave earlier?
+2006-06-06T08:55:00.000Z	Tobberoth	Kyral_FreeBSD	 Well.. no >_>
+2006-06-06T08:55:00.000Z	Kyral_FreeBSD	Tobberoth	sudo mkfs.vfat -F /dev/sda1
+2006-06-06T08:56:00.000Z	Tobberoth	Kyral_FreeBSD	But I should put sda8 insted of sda, right? To show which partition
+2006-06-06T08:56:00.000Z	Kyral_FreeBSD	Tobberoth	if thats what it is called
+2006-06-06T08:56:00.000Z	Kyral_FreeBSD	Tobberoth	to check, pull sudo fdisk -l
+2006-06-06T08:56:00.000Z	Kyral_FreeBSD	Tobberoth	then use that :D
+2006-06-06T08:58:00.000Z	Kyral_FreeBSD	Tobberoth	did it work?
+2006-06-06T08:59:00.000Z	Tobberoth	Kyral_FreeBSD	When writing the partitiontable to disk, I got an error
+2006-06-06T08:59:00.000Z	Tobberoth	Kyral_FreeBSD	It told me to reboot
+2006-06-06T08:59:00.000Z	Kyral_FreeBSD	Tobberoth	pastebin it
+2006-06-06T09:00:00.000Z	Kyral_FreeBSD	Tobberoth	its a place were you paste the error so others can look at it
+2006-06-06T09:01:00.000Z	Tobberoth	Kyral_FreeBSD	Oh, I see.. Anyway, it seems to be working now, the partition is listen with the fdisk -l command
+2006-06-06T09:02:00.000Z	Tobberoth	Kyral_FreeBSD	I tried the mkfs thing.. it gave me the error Bad FAT type:
+2006-06-06T09:04:00.000Z	Tobberoth	Kyral_FreeBSD	I get Bad FAT type: /dev/sda8
+2006-06-06T09:05:00.000Z	Kyral_FreeBSD	Tobberoth	gimme a second
+2006-06-06T09:05:00.000Z	Kyral_FreeBSD	Tobberoth	I prolly had the command wrong
+2006-06-06T09:06:00.000Z	Kyral_FreeBSD	Tobberoth	Lemme reference the manpage
+2006-06-06T09:08:00.000Z	Kyral_FreeBSD	Tobberoth	seems stupid but try sudo mkfs.vfat -F32 -v /dev/sda8
+2006-06-06T09:09:00.000Z	Tobberoth	Kyral_FreeBSD	It responds with: /dev/sda8: No such file or directory
+2006-06-06T09:09:00.000Z	Kyral_FreeBSD	Tobberoth	hmm
+2006-06-06T09:10:00.000Z	Kyral_FreeBSD	Tobberoth	paste the output of sudo fdisk -l to pastebin please
+2006-06-06T09:11:00.000Z	Tobberoth	Kyral_FreeBSD	http://paste.ubuntu-nl.org/15195
+2006-06-06T09:12:00.000Z	Tobberoth	Kyral_FreeBSD	But keep in mind, cfdisk gave me an error after writing the partition table
+2006-06-06T09:12:00.000Z	Kyral_FreeBSD	Tobberoth	and sda8 is the new one?
+2006-06-06T09:12:00.000Z	Kyral_FreeBSD	Tobberoth	it did? What was it?
+2006-06-06T09:14:00.000Z	Tobberoth	Kyral_FreeBSD	It says: "Wrote partition table, but re-read table failed. Reboot to update table."
+2006-06-06T09:14:00.000Z	Kyral_FreeBSD	Tobberoth	I think you should do that :D
+2006-06-06T09:14:00.000Z	Tobberoth	Kyral_FreeBSD	Allright, be right back :)
+2006-06-06T09:17:00.000Z	Kyral_FreeBSD	Tobberoth	did it work now?
+2006-06-06T09:19:00.000Z	Tobberoth	Kyral_FreeBSD	I think it works now :) Will try to mount it
+2006-06-06T09:21:00.000Z	Tobberoth	Kyral_FreeBSD	In the diskmanager, I can't make it accessible :(
+2006-06-06T09:21:00.000Z	Kyral_FreeBSD	Tobberoth	you don't need no stinkin disk manager
+2006-06-06T09:21:00.000Z	Tobberoth	Kyral_FreeBSD	Then, how do I mount it?
+2006-06-06T09:21:00.000Z	Kyral_FreeBSD	Tobberoth	You have the original disk manager, the terminal
+2006-06-06T09:22:00.000Z	Kyral_FreeBSD	Tobberoth	use mkdir to create the mountpoint wherever you want it
+2006-06-06T09:22:00.000Z	Tobberoth	Kyral_FreeBSD	I want both windows and ubuntu to be able to use this partition
+2006-06-06T09:22:00.000Z	Kyral_FreeBSD	Tobberoth	then do sudo mount -t vfat /dev/sd8 <yourmountpoint?
+2006-06-06T09:22:00.000Z	Kyral_FreeBSD	Tobberoth	where you mount it in Linux has no bearing on where it is in XP
+2006-06-06T09:23:00.000Z	Tobberoth	Kyral_FreeBSD	Okej.. what is a mountpoint? SHould I write like... </share
+2006-06-06T09:23:00.000Z	Kyral_FreeBSD	Tobberoth	where ever you want it to be
+2006-06-06T09:23:00.000Z	Kyral_FreeBSD	Tobberoth	a mount point is just where it attaches to the file system
+2006-06-06T09:24:00.000Z	Tobberoth	Kyral_FreeBSD	It said mount point /share does not exist
+2006-06-06T09:24:00.000Z	Kyral_FreeBSD	Tobberoth	you have to make it with mkdir :P
+2006-06-06T09:24:00.000Z	Kyral_FreeBSD	Tobberoth	sudo mkdir /share
+2006-06-06T09:25:00.000Z	Tobberoth	Kyral_FreeBSD	Wow, it worked! Thanks :)
+2006-06-06T09:25:00.000Z	Kyral_FreeBSD	Tobberoth	no problem :D
+2006-06-06T09:43:00.000Z	Kyral_FreeBSD	Tobberoth	no, su doesn'
+2006-06-06T09:33:00.000Z	Tobberoth	Kyral_FreeBSD	Sorry, I'm allready back with problems :(
+2006-06-06T09:33:00.000Z	Kyral_FreeBSD	Tobberoth	sokay
+2006-06-06T09:33:00.000Z	Tobberoth	Kyral_FreeBSD	Now Windows won't boot anymore!
+2006-06-06T09:34:00.000Z	Kyral_FreeBSD	Tobberoth	heeh, Windows hates having its partition table changed :D
+2006-06-06T09:34:00.000Z	Tobberoth	Kyral_FreeBSD	I can imagine.. anyway to fix it?
+2006-06-06T09:34:00.000Z	Kyral_FreeBSD	Tobberoth	Sorry mate, I have little experiance with XP since I stopped using it about 2 years ago
+2006-06-06T09:35:00.000Z	Tobberoth	Kyral_FreeBSD	Oh man :/ Now what do I do? I'm dependant on Windows
+2006-06-06T09:35:00.000Z	Kyral_FreeBSD	Tobberoth	Use this as a way to break your addiction? :P
+2006-06-06T09:35:00.000Z	Tobberoth	Kyral_FreeBSD	Besides, I can't even write to the FAT partition >_< Says I don't have permission
+2006-06-06T09:35:00.000Z	Kyral_FreeBSD	Tobberoth	THAT I can help with
+2006-06-06T09:37:00.000Z	Kyral_FreeBSD	Tobberoth	open up /etc/fstab in your favorite editor as root
+2006-06-06T09:37:00.000Z	Kyral_FreeBSD	Tobberoth	add this line to the bottom
+2006-06-06T09:37:00.000Z	Kyral_FreeBSD	Tobberoth	"/dev/sda8  /share vfat users,rw,umask=000 0 0"
+2006-06-06T09:37:00.000Z	Kyral_FreeBSD	Tobberoth	then save it
+2006-06-06T09:38:00.000Z	Tobberoth	Kyral_FreeBSD	pwd /etc won't work
+2006-06-06T09:39:00.000Z	Kyral_FreeBSD	Tobberoth	why are you using pwd /etc?
+2006-06-06T09:39:00.000Z	Kyral_FreeBSD	Tobberoth	try this "sudo gedit /etc/fstab"
+2006-06-06T09:39:00.000Z	Kyral_FreeBSD	Tobberoth	you need to do it as root
+2006-06-06T09:41:00.000Z	Kyral_FreeBSD	Tobberoth	just do in terminal "sudo gedit /etc/fstab"
+2006-06-06T09:42:00.000Z	Kyral_FreeBSD	Tobberoth	did you see that line up there?
+2006-06-06T09:42:00.000Z	Tobberoth	Kyral_FreeBSD	Should I be worried that simply su doesn't work in my terminal?
+2006-06-06T09:43:00.000Z	Kyral_FreeBSD	Tobberoth	its sudo
+2006-06-06T09:43:00.000Z	Tobberoth	Kyral_FreeBSD	ah phew :)
+2006-06-06T09:43:00.000Z	Tobberoth	Kyral_FreeBSD	I have one last question I know you can help me with
+2006-06-06T09:43:00.000Z	Tobberoth	Kyral_FreeBSD	How do I make Ubuntu mount dev/sda8 to /share each time I start ubuntu?
+2006-06-06T09:44:00.000Z	Kyral_FreeBSD	Tobberoth	see those "user,rw,umask" section in fstab?
+2006-06-06T09:44:00.000Z	Kyral_FreeBSD	Tobberoth	tag "auto" onto it
+2006-06-06T09:44:00.000Z	Kyral_FreeBSD	Tobberoth	so its like "auto,user,rw..."
+2006-06-06T09:45:00.000Z	Tobberoth	Kyral_FreeBSD	But, how does it know where to mount it automatically?
+2006-06-06T09:45:00.000Z	Kyral_FreeBSD	Tobberoth	it knows because you entered the data into fstab
+2006-06-06T09:45:00.000Z	Kyral_FreeBSD	Tobberoth	remember /dev/sda8 is the device and /share is the mountpoint right?
+2006-06-06T09:46:00.000Z	Kyral_FreeBSD	Tobberoth	Thats fstab's job. FileSystem TABle

@@ -1,0 +1,97 @@
+2004-12-31T12:27:00.000Z	anir		qerub: will kde spport ubuntu??
+2004-12-31T12:29:00.000Z	anir		qerub: yes..its the other way..lol
+2004-12-31T12:29:00.000Z	anir		guys help meeeeeee
+2004-12-31T12:30:00.000Z	anir		i tried totem .. i tried vlc.. but i cant play my cds on ubuntu...why??
+2004-12-31T12:30:00.000Z	anir		who has coded ubuntu??
+2004-12-31T12:31:00.000Z	anir		goobox..
+2004-12-31T12:32:00.000Z	anir		bur[n] er: where is mplayer?
+2004-12-31T12:32:00.000Z	anir		oh. ubuntu.. u r letting me down
+2004-12-31T12:33:00.000Z	anir		i have searched davyd.. its not there
+2004-12-31T12:33:00.000Z	anir		ya its turned on davyd
+2004-12-31T12:34:00.000Z	ogra	anir	for mplayer you need a enabled multiverse or the marillat repository
+2004-12-31T12:37:00.000Z	ogra	anir	http://www.ubuntulinux.org/wiki/RestrictedFormats
+2004-12-31T12:47:00.000Z	ogra	anir	did you read the url i gave you ?
+2004-12-31T12:48:00.000Z	ogra	anir	it describes exactly what to do to get w32codecs
+2004-12-31T12:49:00.000Z	anir	ogra	where should i see?
+2004-12-31T12:49:00.000Z	ogra	anir	look for marillat.....
+2004-12-31T12:54:00.000Z	anir	ogra	its written install..how?
+2004-12-31T12:56:00.000Z	ogra	anir	add marillat to synaptic as described ;)
+2004-12-31T12:57:00.000Z	ogra	anir	then reload in synaptic and you can install the codecs package
+2004-12-31T12:57:00.000Z	anir	ogra	i am getting no idea how to add
+2004-12-31T12:58:00.000Z	ogra	anir	http://www.ubuntulinux.org/wiki/SynapticHowto
+2004-12-31T13:00:00.000Z	anir	ogra	i have checked all universe..
+2004-12-31T13:01:00.000Z	ogra	anir	you need marillat...... the synaptic howto describes how to add it
+2004-12-31T13:05:00.000Z	ogra	anir	you need to add the marillat repository to synaptic
+2004-12-31T13:06:00.000Z	ogra	anir	the data you need for this is on the restricted format page
+2004-12-31T13:06:00.000Z	ogra	anir	the description how to add repositorys to synaptic is in the synaptic howto
+2004-12-31T13:12:00.000Z	anir	ogra	i am tried
+2004-12-31T13:12:00.000Z	ogra	anir	no ?
+2004-12-31T13:13:00.000Z	anir	ogra	i am tired.. could not find..
+2004-12-31T13:13:00.000Z	ogra	anir	what ? how to add repos ?
+2004-12-31T13:13:00.000Z	ogra	anir	or marillat ?
+2004-12-31T13:14:00.000Z	anir	ogra	marillat
+2004-12-31T13:15:00.000Z	ogra	anir	its in the middle of the resricted formats page
+2004-12-31T13:19:00.000Z	ogra	anir	you understood how to add a repo in synaptic ?
+2004-12-31T13:19:00.000Z	ogra	anir	then add the following:
+2004-12-31T13:19:00.000Z	ogra	anir	URI: ftp://ftp.nerim.net/debian-marillat/
+2004-12-31T13:20:00.000Z	ogra	anir	Distribution:   testing
+2004-12-31T13:20:00.000Z	ogra	anir	Section(s):     main
+2004-12-31T13:20:00.000Z	ogra	anir	add this data......as described in the synaptic howto page.....
+2004-12-31T13:21:00.000Z	ogra	anir	then reload your packae list with the reload button and you should find it then
+2004-12-31T13:22:00.000Z	anir	ogra	i have done
+2004-12-31T13:22:00.000Z	ogra	anir	you added marillat ?
+2004-12-31T13:24:00.000Z	anir	ogra	i have not find marillant
+2004-12-31T13:24:00.000Z	anir	ogra	is it okay if i directly add w32codecs
+2004-12-31T13:25:00.000Z	ogra	anir	you only need this.....
+2004-12-31T13:26:00.000Z	ogra	anir	marillat is a repository....which contains w32codecs.....
+2004-12-31T13:38:00.000Z	anir	ogra	where r  u frm?
+2004-12-31T13:38:00.000Z	ogra	anir	germany
+2004-12-31T13:48:00.000Z	anir	ogra	i am still having the same problem
+2004-12-31T13:48:00.000Z	anir	ogra	it says no plugin to handle the movie
+2005-01-04T10:34:00.000Z	ogra	anir	gcc
+2005-01-04T10:35:00.000Z	ogra	anir	gcc
+2005-01-04T10:35:00.000Z	ogra	anir	;)
+2005-01-08T09:36:00.000Z	ogra	anir	kde puts a K in front of every app name
+2005-01-08T09:41:00.000Z	ogra	anir	the gnome tools are not integrated.....
+2005-01-08T09:41:00.000Z	ogra	anir	i mean the system/admin stuff.....but else i dont think so...
+2005-01-08T09:42:00.000Z	ogra	anir	and even thins will change for hoarys kubuntu i guess
+2005-01-08T09:42:00.000Z	ogra	anir	nearly all
+2005-01-08T09:43:00.000Z	ogra	anir	an attempt to make ubuntu kde based
+2005-01-08T09:43:00.000Z	ogra	anir	i'm using it _because_ of gnome
+2005-01-08T09:45:00.000Z	ogra	anir	win will wipe your bootrecord....
+2005-01-08T09:46:00.000Z	ogra	anir	shouldnt be a prob
+2005-01-08T09:46:00.000Z	ogra	anir	what for ? desktop ?
+2005-01-08T09:47:00.000Z	ogra	anir	i think they do it similar to RH
+2005-01-08T09:47:00.000Z	ogra	anir	trying to make gnome apps like kde apps and use both
+2005-01-08T09:59:00.000Z	ogra	anir	why not ?
+2005-01-08T10:00:00.000Z	ogra	anir	dont you recieve mail where you live ?
+2005-01-08T10:00:00.000Z	ogra	anir	i think there already were shipments to india
+2005-01-08T10:01:00.000Z	ogra	anir	it is absolutely free, including the shipment
+2005-01-08T10:01:00.000Z	ogra	anir	order 100 and give them away, saves costs
+2005-01-08T10:02:00.000Z	ogra	anir	shipit.ubuntu.com
+2005-01-08T10:02:00.000Z	ogra	anir	order more then you need and share them, saves shipping costs...else ubuntu has to pay for each single cd
+2005-01-08T10:03:00.000Z	ogra	anir	not like that... ;) ubuntu is unique in shiping for free
+2005-01-08T10:11:00.000Z	ogra	anir	look for hoary goals in the wiki
+2005-01-08T10:11:00.000Z	ogra	anir	hoary is the name of the next release....
+2005-01-08T10:12:00.000Z	ogra	anir	wiki is this: https://www.ubuntulinux.org/wiki/
+2005-01-08T10:30:00.000Z	ogra	anir	chinese government ?
+2005-01-08T10:30:00.000Z	ogra	anir	redflag is from the chinese government
+2005-01-08T13:21:00.000Z	anir	ogra	using which application i will open my "executable" files??
+2005-01-08T13:22:00.000Z	ogra	anir	/bin/bash ?
+2005-01-08T13:23:00.000Z	anir	ogra	for example i have this "clock-applet" which is a "executable file".. now how will i open it?
+2005-01-08T13:24:00.000Z	ogra	anir	you just run it (either from a terminal or with the "run application" tool from the Apps menu)
+2005-01-08T13:26:00.000Z	anir	ogra	i tried to run 3dc it says "Details: There is no default action associated with this location."
+2005-01-08T13:26:00.000Z	ogra	anir	with the terminal ?
+2005-01-08T13:27:00.000Z	anir	ogra	the command??
+2005-01-08T13:27:00.000Z	ogra	anir	/path/to/the/file/you/want/to/run
+2005-01-08T13:27:00.000Z	ogra	anir	thats all
+2005-01-08T13:28:00.000Z	anir	ogra	as a root?
+2005-01-08T13:28:00.000Z	ogra	anir	nope
+2005-01-08T13:28:00.000Z	anir	ogra	yes its running..but how will i create a shortcut for it??
+2005-01-08T13:29:00.000Z	ogra	anir	right click in the menu or go to applications:// in anutilus....create a launcher
+2005-01-11T07:23:00.000Z	ogra	anir	why dont you take the j2re1.5 ? http://www.ubuntulinux.org/wiki/Java
+2005-01-11T07:24:00.000Z	ogra	anir	in the wiki there is a repo with ubuntu java packages for 1.5
+2005-01-11T07:24:00.000Z	ogra	anir	1.4 as well if you urgently want it
+2005-01-11T07:26:00.000Z	ogra	anir	for both versions a jre and jdk as you need.....(installs the plugin automatically and sets up your environment for you)
+2005-01-11T07:27:00.000Z	ogra	anir	its the easiest way...
+2005-01-11T07:27:00.000Z	ogra	anir	its described in the wiki page

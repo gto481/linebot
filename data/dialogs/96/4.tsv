@@ -1,0 +1,96 @@
+2011-08-06T14:48:00.000Z	karni		Hi guys. I'm having issues booting 10.04.3 from USB key. It tells me "Unknown keyword in configuration file: gfxboot"
+2011-08-06T14:49:00.000Z	karni		I've booted it from USB key.
+2011-08-06T14:49:00.000Z	karni		I have also tried re-burning the iso onto the USB, still same issue.
+2011-08-06T14:49:00.000Z	karni		I also can't find other 10.04 version than 10.04.3
+2011-08-06T14:49:00.000Z	karni		Any hints how can I boot the 10.04.3 installer?
+2011-08-06T14:49:00.000Z	Blade20	karni	be sure to check the md5sum
+2011-08-06T14:50:00.000Z	karni	Blade20	I'll do that, thank you
+2011-08-06T14:50:00.000Z	Blade20	karni	it is always better/easer to burn Linux distro ISO in Linux
+2011-08-06T14:51:00.000Z	karni	Blade20	I did that..
+2011-08-06T14:53:00.000Z	karni	Blade20	md5sum is correct :<
+2011-08-06T14:53:00.000Z	Blade20	karni	are you burning slow....
+2011-08-06T14:53:00.000Z	karni	Blade20	What do you mean :)?
+2011-08-06T14:54:00.000Z	Blade20	karni	are you using a Linux distro to burn it?
+2011-08-06T15:21:00.000Z	Blade20	karni	the main thing i would like to get is the temp...
+2011-08-06T14:55:00.000Z	karni	Blade20	Ok, let's start from scratch. I'm running 11.04 - I used "Startup Disk Creator" (from *UBuntu*) to burn 10.04.3 iso onto my USB. I use ubuntu for 12+ years now :)
+2011-08-06T14:55:00.000Z	Blade20	karni	 if you are using a linux distro get K3B
+2011-08-06T14:55:00.000Z	karni	Blade20	I've used this tool to 'burn' tens of ubuntu isos on usb sticks
+2011-08-06T14:55:00.000Z	karni	Blade20	I'm not burning a CD..
+2011-08-06T14:55:00.000Z	Blade20	karni	ok then you will want unetbootin
+2011-08-06T14:55:00.000Z	karni	Blade20	that's a KDE tool isn't it, Brasero runs under gnome (just by the way :) )
+2011-08-06T14:56:00.000Z	karni	Blade20	kk thx!
+2011-08-06T14:56:00.000Z	Blade20	karni	yes it is a kde tool but will run under gnome and xfce
+2011-08-06T14:56:00.000Z	karni	Blade20	with 300MB+ of KDE dependencies ;D
+2011-08-06T14:57:00.000Z	Blade20	karni	i have both kde and gnome so i already have them :)
+2011-08-06T14:57:00.000Z	karni	Blade20	hah ;) good for you :)!
+2011-08-06T14:58:00.000Z	Blade20	karni	hope it works out... :) ... i understand why.... i made the move back from 11.4 myself
+2011-08-06T14:58:00.000Z	karni	Blade20	I'm quite happy with 11.04, I need 10.04 LTS for my aunts shop :)
+2011-08-06T14:58:00.000Z	karni	Blade20	 I do get occasional X crashes, though.
+2011-08-06T14:59:00.000Z	Blade20	karni	i just could not get used to Unity
+2011-08-06T14:59:00.000Z	karni	Blade20	I'm running UBuntu Classic on 11.04 (you knew you could do that, right?)
+2011-08-06T14:59:00.000Z	Blade20	karni	waiting to see how Gnome 3 looks once stable
+2011-08-06T14:59:00.000Z	karni	Blade20	yeah, that might be interesting
+2011-08-06T14:59:00.000Z	Blade20	karni	yes but studio had a ton of problems with 11.4
+2011-08-06T15:00:00.000Z	karni	Blade20	ah, that I didn't know
+2011-08-06T15:01:00.000Z	Blade20	karni	over 90% of what i do is media on here... and with the move to windows 7 (fail!) i decided to come back to linux... :) so i love studio for the media
+2011-08-06T15:02:00.000Z	karni	Blade20	ah! great to hear :) I now use Windows 7 like.. twice a year ;)
+2011-08-06T15:21:00.000Z	karni	Blade20	All right, I don't think it's in lspci. lemme see..
+2011-08-06T15:21:00.000Z	Blade20	karni	i have all my temps other than the video
+2011-08-06T15:03:00.000Z	Blade20	karni	i built this computer for windows 7 lol... 7 just is not stable enough for me
+2011-08-06T15:03:00.000Z	karni	Blade20	:D
+2011-08-06T15:10:00.000Z	karni	Blade20	GirlyGirl: Sidewinder1: Hah! For the first time 'Startup Disk Creator' failed to do the job. unetbootin did the trick, sweet!
+2011-08-06T15:11:00.000Z	Blade20	karni	glad it worked out )
+2011-08-06T15:12:00.000Z	Blade20	karni	any time :)
+2011-08-06T15:13:00.000Z	karni	Blade20	;)
+2011-08-06T15:16:00.000Z	Blade20	karni	nope not it
+2011-08-06T15:18:00.000Z	Blade20	karni	what i'm looking for is temps on my video card... with the grep commands i should be able to put that into my conky...
+2011-08-06T15:18:00.000Z	karni	Blade20	ah! sweet. let me install lscpi
+2011-08-06T15:18:00.000Z	Blade20	karni	thank you
+2011-08-06T15:20:00.000Z	karni	Blade20	What info do you want to extract exactly?
+2011-08-06T15:20:00.000Z	karni	Blade20	oh, temperatures?
+2011-08-06T15:22:00.000Z	Blade20	karni	lspci will show my radeon 5670 and i can get the temp with aticonfig --adapter=0 --od-gettemperature
+2011-08-06T15:23:00.000Z	karni	Blade20	oh, you can? so.. what are we looking for exactly then :)? that's on another computer? (nvidia / ati ?)
+2011-08-06T15:24:00.000Z	karni	Blade20	Is your graphic card Nvidia or ATI? (If ATI, I believe you already have a solution?)
+2011-08-06T15:24:00.000Z	Blade20	karni	it is ati... i can see my temps in terminal... but if i can find the grep command i can use that to write to conky
+2011-08-06T15:24:00.000Z	karni	Blade20	oh! paste that output of that command to paste.ubuntu.com , I'll help you.
+2011-08-06T15:28:00.000Z	Blade20	karni	are you teasing me?
+2011-08-06T15:28:00.000Z	karni	Blade20	Come on, I want some grep fun :) Gimme that command output :)
+2011-08-06T15:28:00.000Z	karni	Blade20	No, not really. I guess I'm trying to understand your question.
+2011-08-06T15:28:00.000Z	karni	Blade20	If the output of aticonfig --adapter=0 --od-gettemperature is the temperature, what do you need to grep?
+2011-08-06T15:29:00.000Z	karni	Blade20	grep finds info. If you have the temperature, there's nothing to find. Does that command return the temperature? Sorry, I don't use conky, so I'm not sure why you need grep (which is a 'find' tool)
+2011-08-06T15:29:00.000Z	Blade20	karni	in conky i can not use the aticonfig.... but if i can get the same info with grep i can use that in conky
+2011-08-06T15:30:00.000Z	karni	Blade20	do you need administrator privileges to run aticonfig?
+2011-08-06T15:30:00.000Z	Blade20	karni	no
+2011-08-06T15:30:00.000Z	Blade20	karni	the command i need to use in conky will look something like this ..... Cpu Temp ${alignr}${execi 5 sensors | grep "temp2" | cut -d "+" -f2 | cut -c1-2}C
+2011-08-06T15:30:00.000Z	karni	Blade20	Since aticonfig is just any command like grep, why can't you use aticonfig in conky :<? /me is completely lost
+2011-08-06T15:30:00.000Z	karni	Blade20	right
+2011-08-06T15:31:00.000Z	Blade20	karni	well i guess if i could figure out the way to lay out the aticonfig command to get conky to read it right i could but i dont... i know the grep...
+2011-08-06T15:32:00.000Z	karni	Blade20	I'm guessing that execi executres the following command every 5 seconds
+2011-08-06T15:32:00.000Z	Blade20	karni	i'll give it a try :)
+2011-08-06T15:32:00.000Z	karni	Blade20	if so, replace sensors | grep "temp2" | cut -d "+" -f2 | cut -c1-2 with your ati command
+2011-08-06T15:32:00.000Z	Blade20	karni	yes
+2011-08-06T15:32:00.000Z	karni	Blade20	:)
+2011-08-06T15:32:00.000Z	Blade20	karni	thank you
+2011-08-06T15:33:00.000Z	karni	Blade20	you're welcome. lemme know if it worked :)
+2011-08-06T15:37:00.000Z	Blade20	karni	nope... every thing looks right but no numbers ... so i will keep messing with the code and see what i can come up with... thank you for getting me on the right path
+2011-08-06T15:39:00.000Z	Blade20	karni	thank you :)
+2011-08-06T15:43:00.000Z	Blade20	karni	your encouraging bad behavior lol
+2011-08-06T15:44:00.000Z	karni	Blade20	I only said it was compliment ;) I didn't say it was good behaviour ^_^
+2011-08-06T15:45:00.000Z	Blade20	karni	lol
+2011-08-06T15:45:00.000Z	Blade20	karni	got it... ${color}GPU Temp:${color} ${execi 60 aticonfig --adapter=0 --od-gettemperature}°C
+2011-08-06T15:46:00.000Z	karni	Blade20	hah! so it was it :) awesome
+2011-08-06T15:47:00.000Z	karni	Blade20	I've installed ubuntu, and.. well, the graphics are totally broken meh. I'll start googling.
+2011-08-06T15:48:00.000Z	Blade20	karni	what gpu
+2011-08-06T15:48:00.000Z	karni	Blade20	I've no idea. It's ASUS K52J, lemme check.
+2011-08-06T15:48:00.000Z	karni	Blade20	NVIDIA GeForce 310M (1GB)
+2011-08-06T15:49:00.000Z	Blade20	karni	wols_ is the nvidia man... :)
+2011-08-06T15:50:00.000Z	karni	Blade20	got it ;)
+2011-08-06T16:07:00.000Z	Blade20	karni	you said that was a dual boot you are working on right?
+2011-08-06T16:08:00.000Z	karni	Blade20	which do you mean? I've installed 10.04.3 on the second laptop. I have 11.04 + win7 on this laptop.
+2011-08-06T16:08:00.000Z	karni	Blade20	I work on Ubuntu 100%
+2011-08-06T16:09:00.000Z	Blade20	karni	just a heads up on win 7 sp1 is 900mb and will not install if you have linux dual boot
+2011-08-06T16:10:00.000Z	karni	Blade20	I don't know what to say.. I think it makes me laugh. Thank you :) (I use win7 for two things = college stuff and GTAIV maybe one a year, nothing else ;))
+2011-08-06T16:11:00.000Z	karni	Blade20	That's really sad..
+2011-08-06T16:13:00.000Z	Blade20	karni	just thought i would give you a heads up... when you try to install the sp1 update it will tell you that an unrecognized partition is on the disk and you need to remove it before sp1 can install
+2011-08-06T16:14:00.000Z	karni	Blade20	Ehhh... :<
+2011-08-06T16:14:00.000Z	karni	Blade20	It just makes me sad in general, the windows-only policy etc. I simply won't update, but it's certainly an issue for people who dual boot on regular basis.

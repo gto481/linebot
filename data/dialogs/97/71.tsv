@@ -1,0 +1,97 @@
+2005-10-20T16:58:00.000Z	enoon		aumix?
+2005-10-20T05:04:00.000Z	enoon		my 5.10 kernelcrashes
+2005-10-20T05:05:00.000Z	enoon		on boot
+2005-10-20T05:05:00.000Z	sn9	enoon	which cpu?
+2005-10-20T05:06:00.000Z	sn9	enoon	and which kernel are you using now?
+2005-10-20T05:07:00.000Z	sn9	enoon	i meant, which kernel crashes?
+2005-10-20T05:07:00.000Z	sn9	enoon	is it a 64-bit athlon?
+2005-10-20T05:08:00.000Z	sn9	enoon	does the livecd work?
+2005-10-20T05:10:00.000Z	enoon	sn9	kernel panic - interrupt exception
+2005-10-20T05:10:00.000Z	sn9	enoon	the livecd panics too?
+2005-10-20T05:11:00.000Z	sn9	enoon	can you boot the installer into rescue mode?
+2005-10-20T05:14:00.000Z	enoon	sn9	it booted
+2005-10-20T05:15:00.000Z	sn9	enoon	check which kernel is in your installed system
+2005-10-20T05:16:00.000Z	sn9	enoon	try chrooting to the installed system and installing linux-image-k7
+2005-10-20T05:17:00.000Z	enoon	sn9	chroot? has it not booted the sys? okay - that explains it... okay
+2005-10-20T05:17:00.000Z	enoon	sn9	where is it ?
+2005-10-20T05:17:00.000Z	sn9	enoon	where is what?
+2005-10-20T05:18:00.000Z	enoon	sn9	mount tells me that my partition is mounted as / - wht do you mean by chroot into the sys?
+2005-10-20T05:18:00.000Z	sn9	enoon	if you booted from cd, the cd will be /
+2005-10-20T05:21:00.000Z	enoon	sn9	ah okay - i booted the recovery grub entry
+2005-10-20T05:21:00.000Z	sn9	enoon	from cd or hd?
+2005-10-20T05:22:00.000Z	enoon	sn9	hd - i am already installing - i was just confused
+2005-10-20T05:23:00.000Z	sn9	enoon	then just install the pkg
+2005-10-20T05:23:00.000Z	enoon	sn9	already rebooting
+2005-10-20T05:24:00.000Z	enoon	sn9	panic
+2005-10-20T05:25:00.000Z	sn9	enoon	is this with the new kernel you just installed?
+2005-10-20T05:25:00.000Z	enoon	sn9	yes
+2005-10-20T05:25:00.000Z	sn9	enoon	what is the message prior to the panic?
+2005-10-20T05:27:00.000Z	sn9	enoon	before that
+2005-10-20T05:28:00.000Z	sn9	enoon	you're positive it's booting with the k7 kernel?
+2005-10-20T05:29:00.000Z	enoon	sn9	i double checked on boot but i check again
+2005-10-20T05:31:00.000Z	enoon	sn9	reboot - loading - crashes a sec after entering runlevel2
+2005-10-20T05:35:00.000Z	enoon	sn9	got it? any ideas? [crashes a second after runlevel 2 entry] 
+2005-10-20T05:36:00.000Z	sn9	enoon	try single user mode
+2005-10-20T05:36:00.000Z	enoon	sn9	that is recovery boot?
+2005-10-20T05:36:00.000Z	sn9	enoon	no
+2005-10-20T05:36:00.000Z	enoon	sn9	than how do i do that?
+2005-10-20T05:36:00.000Z	sn9	enoon	append the kernel arg "1"
+2005-10-20T05:37:00.000Z	enoon	sn9	uhm - lineedit grub kernel - just append a 1 ??
+2005-10-20T05:38:00.000Z	sn9	enoon	yes, but you can do it from within grub; just press E
+2005-10-20T05:38:00.000Z	enoon	sn9	i am okay thanks
+2005-10-20T05:39:00.000Z	enoon	sn9	up and running
+2005-10-20T05:42:00.000Z	enoon	sn9	what now?
+2005-10-20T05:43:00.000Z	sn9	enoon	go through the /etc/rc2.d folder, starting services one at a time
+2005-10-20T05:44:00.000Z	enoon	sn9	any particular order?
+2005-10-20T05:44:00.000Z	sn9	enoon	YES
+2005-10-20T05:44:00.000Z	enoon	sn9	which - sorry i never worked with that stuff
+2005-10-20T05:44:00.000Z	sn9	enoon	the order they are numbered
+2005-10-20T05:45:00.000Z	enoon	sn9	acpid or sysklogd first? they both got a 10
+2005-10-20T05:46:00.000Z	enoon	sn9	what about K77 by the way
+2005-10-20T05:47:00.000Z	sn9	enoon	a comes before s
+2005-10-20T05:47:00.000Z	sn9	enoon	K comes before S
+2005-10-20T05:51:00.000Z	enoon	sn9	S12 crashed the kernel
+2005-10-20T05:51:00.000Z	sn9	enoon	what was the name?
+2005-10-20T05:53:00.000Z	enoon	sn9	i forgot about it when the kernel panicked - it was: dbus
+2005-10-20T05:54:00.000Z	sn9	enoon	that is definitely a HAL thing
+2005-10-20T05:54:00.000Z	enoon	sn9	that means?
+2005-10-20T05:54:00.000Z	enoon	sn9	yes i saw "starting hardware abstraction layer" flickering by before it crashed
+2005-10-20T05:57:00.000Z	sn9	enoon	unfortunately, i haven't managed to sort out my own dbus problems yet
+2005-10-20T05:58:00.000Z	enoon	sn9	okay - should i submit a bugreport or something?
+2005-10-20T06:04:00.000Z	enoon	sn9	what about bugreport? (dbus/hal kernel panic)
+2005-10-20T10:47:00.000Z	enoon	sn9	anything new about dbus/hal kernel crash prob? i can use my system with a kernel from another distro
+2005-10-20T11:18:00.000Z	enoon	sn9	ping!! anything new aboout dbus/hal problems?? (no suffices)
+2005-10-21T16:30:00.000Z	enoon	sn9	have you figured out anything about the HAL problems?
+2005-10-21T16:30:00.000Z	sn9	enoon	remind me
+2005-10-21T16:30:00.000Z	enoon	sn9	now?
+2005-10-21T16:31:00.000Z	sn9	enoon	i don't remember what it was about since i haven't slept since Fri. morning
+2005-10-21T16:32:00.000Z	enoon	sn9	are you a ubuntu developer by the way?
+2005-10-21T16:32:00.000Z	sn9	enoon	no, i'm just finding it hard to leave here
+2005-10-21T16:32:00.000Z	enoon	sn9	wow - i already had the impression you didnt doi anything but talking to people all the time
+2005-10-21T16:33:00.000Z	enoon	sn9	so if you figure out about the HAL prob - will you report it as bug/solution ?
+2005-10-21T16:33:00.000Z	enoon	sn9	lol
+2005-10-21T16:33:00.000Z	sn9	enoon	i don't even remember what problem you mean
+2005-10-21T16:34:00.000Z	enoon	sn9	you said you had a HAL problem AND I have a serious HAL problem - the ubuntu kernel crashes on boot in runlevel 2 on HAL start
+2005-10-21T16:35:00.000Z	sn9	enoon	i remember mine; i don't remember yours
+2005-10-21T16:35:00.000Z	enoon	sn9	/etc/rc2.d/S12dbus start crashes the kernel
+2005-10-21T16:36:00.000Z	sn9	enoon	as in tracebacks?
+2005-10-21T16:36:00.000Z	enoon	sn9	i am able to boot the system anyway using a kernel from a different install/dustri
+2005-10-21T16:36:00.000Z	enoon	sn9	tracebacks?
+2005-10-21T16:36:00.000Z	sn9	enoon	on the screen
+2005-10-21T16:36:00.000Z	enoon	sn9	when the kernel panics it draws a screen full of dumps and i cant scroll up -
+2005-10-21T16:37:00.000Z	sn9	enoon	but a different kernel works?
+2005-10-21T16:38:00.000Z	enoon	sn9	yes / a kernel from a different partition runs fine
+2005-10-21T16:39:00.000Z	sn9	enoon	same optimization?
+2005-10-21T16:40:00.000Z	enoon	sn9	i cannot remember - i think the one i use now is a custom kernel i compiled || anyways i tried running a different kernel on ubuntu (k7 opposed to i386)
+2005-10-21T16:41:00.000Z	enoon	sn9	you are suggesting i compile a custom kernel for ubuntu and check if the problem stems from default ubuntu kernelconfig?
+2005-10-21T16:41:00.000Z	sn9	enoon	you have an athlon?
+2005-10-21T16:41:00.000Z	enoon	sn9	yep
+2005-10-21T16:41:00.000Z	enoon	sn9	1ghz
+2005-10-21T16:42:00.000Z	sn9	enoon	 are both the working kernel and the bad one k7?
+2005-10-21T16:43:00.000Z	enoon	sn9	i think so
+2005-10-21T16:43:00.000Z	enoon	sn9	i will just have a look at the partition the kernel is on
+2005-10-21T16:50:00.000Z	enoon	sn9	it is a custom kernel and thus it is configured for athlon
+2005-10-21T16:59:00.000Z	enoon	sn9	i will try and compile a custom kernel now
+2005-10-21T06:47:00.000Z	enoon	sn9	my custom kernel did the trick
+2005-10-21T06:48:00.000Z	sn9	enoon	ok
+2005-10-21T06:48:00.000Z	enoon	sn9	thank you very much for helping me think

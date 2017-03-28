@@ -1,0 +1,98 @@
+2009-06-01T14:41:00.000Z	fafaz		Hi all.. I have a problem with broken packages. can't fix it :(
+2009-06-01T14:42:00.000Z	fafaz		anybody can help?
+2009-06-01T14:43:00.000Z	fafaz		broken dependency package.. what should I do to fix it? I can't even update my system. I can't Add/Remove programs
+2009-06-01T14:44:00.000Z	fafaz		the broken packages are: openoffice.org-style-human and openoffice.org-writer
+2009-06-01T14:46:00.000Z	indus	fafaz	in terminal type sudo dpkg --configure -a
+2009-06-01T14:52:00.000Z	indus	fafaz	did you try that command i gave you in terminal
+2009-06-01T14:53:00.000Z	indus	fafaz	sudo dpkg --configure -a
+2009-06-01T14:53:00.000Z	indus	fafaz	what message did u get
+2009-06-01T14:55:00.000Z	indus	fafaz	cat /etc/apt/sources.list paste it using pastebin
+2009-06-01T15:00:00.000Z	fafaz	indus	how to paste ?
+2009-06-01T15:02:00.000Z	indus	fafaz	just copy output of cat /etc/apt/sources.list to pastebin.ubuntu.com
+2009-06-01T15:02:00.000Z	fafaz	indus	I did
+2009-06-01T15:02:00.000Z	fafaz	indus	I did
+2009-06-01T15:03:00.000Z	fafaz	indus	you see it?
+2009-06-01T15:04:00.000Z	indus	fafaz	what does sudo apt-get update give u
+2009-06-01T15:06:00.000Z	fafaz	indus	I have 2 broken packages. openoffice.org-writer and openoffice.org-human-style. sudo apt-get update Failed to fetch ...
+2009-06-01T15:08:00.000Z	indus	fafaz	go to synaptic and go to edit/fix broken packages
+2009-06-01T15:09:00.000Z	fafaz	indus	I did.. I'm getting error: Package in very bad inconsistent state
+2009-06-01T15:09:00.000Z	indus	fafaz	ok wait a min
+2009-06-01T15:11:00.000Z	indus	fafaz	try this sudo dpkg install -f openoffice-writer
+2009-06-01T15:12:00.000Z	indus	fafaz	oops wrrong command
+2009-06-01T15:12:00.000Z	indus	fafaz	try this sudo apt-get install -f openoffice-writer
+2009-06-01T15:14:00.000Z	fafaz	indus	dpkg: need an action option
+2009-06-01T15:14:00.000Z	indus	fafaz	1 min
+2009-06-01T15:15:00.000Z	indus	fafaz	try this sudo apt-get install -f openoffice-writer
+2009-06-01T15:16:00.000Z	indus	fafaz	if it doenst work , remove the package from synaptic using broken packages filter
+2009-06-01T15:16:00.000Z	fafaz	indus	it doesnt work. My problem is I can't remove the package from synaptic!!
+2009-06-01T15:17:00.000Z	fafaz	indus	I'm stuck with this problem from weeks
+2009-06-01T15:17:00.000Z	indus	fafaz	can u give me the names of the packages again
+2009-06-01T15:18:00.000Z	fafaz	indus	openoffice.org-writer
+2009-06-01T15:18:00.000Z	indus	fafaz	in synaptic when u right click on that package what options do u get
+2009-06-01T15:18:00.000Z	fafaz	indus	mark for removal and mark for completely remove
+2009-06-01T15:19:00.000Z	indus	fafaz	try this sudo apt-get clean
+2009-06-01T15:19:00.000Z	fafaz	indus	and I've tries both with no luck
+2009-06-01T15:20:00.000Z	fafaz	indus	ok I did
+2009-06-01T15:20:00.000Z	indus	fafaz	after that step , sudo apt-get update
+2009-06-01T15:23:00.000Z	fafaz	indus	do you see anything wrong in my source.lis ?
+2009-06-01T15:24:00.000Z	indus	fafaz	did u do a apt get update
+2009-06-01T15:25:00.000Z	fafaz	indus	yes.. it's Hit(ing) and Get(ing) and Ign
+2009-06-01T15:25:00.000Z	indus	fafaz	what?
+2009-06-01T15:26:00.000Z	fafaz	indus	yes I did update.. it's working
+2009-06-01T15:26:00.000Z	indus	fafaz	problem solved then
+2009-06-01T15:26:00.000Z	indus	fafaz	now sudo apt-get upgrade
+2009-06-01T15:26:00.000Z	fafaz	indus	it seems to be solved.. thank you very much
+2009-06-01T15:26:00.000Z	indus	fafaz	yeah i know :)
+2009-06-01T15:26:00.000Z	fafaz	indus	BUT wait
+2009-06-01T15:27:00.000Z	indus	fafaz	ok tell me
+2009-06-01T15:28:00.000Z	fafaz	indus	Some index files failed to download, the have been ignored or old ones used instead. and also Failed to fetch some ..
+2009-06-01T15:28:00.000Z	indus	fafaz	thats all normal
+2009-06-01T15:28:00.000Z	indus	fafaz	do a sudo apt-get upgrade
+2009-06-01T15:29:00.000Z	indus	fafaz	some repositories are down probably
+2009-06-01T15:29:00.000Z	indus	fafaz	for which package
+2009-06-01T15:29:00.000Z	fafaz	indus	all are regarding to openoffice
+2009-06-01T15:30:00.000Z	indus	fafaz	did u install open office from outside?
+2009-06-01T15:30:00.000Z	indus	fafaz	does open office work on ur ssystem
+2009-06-01T15:30:00.000Z	indus	fafaz	now do a sudo dpkg --configure -a
+2009-06-01T15:31:00.000Z	fafaz	indus	no.. now I did sudo apt-get -f upgrade
+2009-06-01T15:31:00.000Z	indus	fafaz	now do a sudo dpkg --configure -a
+2009-06-01T15:32:00.000Z	indus	fafaz	is it showing broken packages in system?
+2009-06-01T15:32:00.000Z	fafaz	indus	cancel the current operation?
+2009-06-01T15:32:00.000Z	indus	fafaz	no let it finish
+2009-06-01T15:33:00.000Z	fafaz	indus	I have to wait until the current operation finished then check if there is any broken
+2009-06-01T15:33:00.000Z	indus	fafaz	yeah
+2009-06-01T15:33:00.000Z	fafaz	indus	it'll take 2 min :)
+2009-06-01T15:41:00.000Z	indus	fafaz	hello?
+2009-06-01T15:41:00.000Z	fafaz	indus	yes
+2009-06-01T15:41:00.000Z	indus	fafaz	so whats the status
+2009-06-01T15:43:00.000Z	fafaz	indus	the problem is with the package openoffice.org-writer .. package in a very bad inconsistent state. you should reinstall it before attempt to remove. also, error code(1) /usr/sbin/dpkg
+2009-06-01T15:44:00.000Z	indus	fafaz	sudo aptitude reinstall openoffice.org-writer
+2009-06-01T15:44:00.000Z	fafaz	indus	but I don't have the option "Mark for reinstall" for openoffice.org-writer
+2009-06-01T15:45:00.000Z	fafaz	indus	executing your command
+2009-06-01T15:46:00.000Z	fafaz	indus	it returns: Current status: 1 broken 13 updates
+2009-06-01T15:47:00.000Z	fafaz	indus	is there a way to manually remove openoffice.org-writer? or is this will solve the problem?
+2009-06-01T15:50:00.000Z	fafaz	indus	what will happen if I remove the directory /usr/lib/openoffice ?
+2009-06-01T15:51:00.000Z	fafaz	indus	hello?
+2009-06-01T15:52:00.000Z	indus	fafaz	dont
+2009-06-01T15:52:00.000Z	fafaz	indus	ok, sir
+2009-06-01T15:53:00.000Z	indus	fafaz	hmm u still getting same error then
+2009-06-01T15:54:00.000Z	indus	fafaz	sudo aptitude remove openoffice.org-writer
+2009-06-01T15:55:00.000Z	fafaz	indus	seems worked
+2009-06-01T15:55:00.000Z	indus	fafaz	what worked
+2009-06-01T15:56:00.000Z	fafaz	indus	I did sudo aptitude remove openoffice.org-writer with no errors
+2009-06-01T15:57:00.000Z	fafaz	indus	but sitll, the broken package appears in Synaptic
+2009-06-01T16:00:00.000Z	fafaz	indus	anything else could I do ?
+2009-06-01T16:03:00.000Z	fafaz	indus	pls advice
+2009-06-01T16:05:00.000Z	indus	fafaz	hi
+2009-06-01T16:05:00.000Z	fafaz	indus	ya
+2009-06-01T16:05:00.000Z	indus	fafaz	1  sec
+2009-06-01T16:05:00.000Z	fafaz	indus	what to do???
+2009-06-01T16:05:00.000Z	indus	fafaz	do a sudo apt-get autoremove
+2009-06-01T16:07:00.000Z	fafaz	indus	Unmet dependencies
+2009-06-01T16:08:00.000Z	indus	fafaz	try again sudo apt-get -f install
+2009-06-01T16:10:00.000Z	fafaz	indus	/usr/bin/dpkg returns error code (1)
+2009-06-01T16:10:00.000Z	indus	fafaz	wait
+2009-06-01T16:10:00.000Z	indus	fafaz	sudo apt-get clean all
+2009-06-01T16:11:00.000Z	indus	fafaz	then sudo apt-get autoremove
+2009-06-01T16:12:00.000Z	indus	fafaz	autoremove?
+2009-06-01T16:12:00.000Z	fafaz	indus	yes. now I tried it with -f

@@ -1,0 +1,95 @@
+2010-02-21T14:23:00.000Z	newbie		so Zorin has a windows interface
+2010-02-21T14:24:00.000Z	newbie		i'm on the distrowatch.com now
+2010-02-21T14:25:00.000Z	Dr_Willis	newbie	 none are a 'copy' of windows. some are more windows like then others
+2010-02-21T14:12:00.000Z	Dr_Willis	newbie	 never heard of it... thers dozens if not hundereds of disrtos out you could try
+2010-02-21T14:12:00.000Z	Dr_Willis	newbie	 it all depends on your neeeds and system specs
+2010-02-21T14:13:00.000Z	newbie	Dr_Willis	its the 1st in OS's list in linux.com download site
+2010-02-21T14:13:00.000Z	Dr_Willis	newbie	 means very little to me. :)
+2010-02-21T14:15:00.000Z	Dr_Willis	newbie	 with what?
+2010-02-21T14:15:00.000Z	Dr_Willis	newbie	 then go get ubuntu and   have fun
+2010-02-21T14:16:00.000Z	Dr_Willis	newbie	 ubuntu BASED is not ubuntu
+2010-02-21T14:17:00.000Z	Dr_Willis	newbie	 they took ubuntu and heavly modified it
+2010-02-21T14:17:00.000Z	newbie	Dr_Willis	 may i have a pvt with you plz?
+2010-02-21T14:18:00.000Z	Dr_Willis	newbie	 about what? I dont use zorin or plan on using it.. I use ubuntu. for many reasons
+2010-02-21T14:18:00.000Z	Dr_Willis	newbie	 depends on your needs and system specs.
+2010-02-21T14:19:00.000Z	Dr_Willis	newbie	 we dont know what either are..unless you tell us
+2010-02-21T14:24:00.000Z	Dr_Willis	newbie	 they all have a interace.. some are more like windows then others.. some are radically diffrent
+2010-02-21T14:25:00.000Z	newbie	Dr_Willis	yes I know each Os has its interface. But i want to work on linux not a copy of windows
+2010-02-21T14:25:00.000Z	Dr_Willis	newbie	 go try them out and see.. Most ubuntu based ones use gnome with some tweaks
+2010-02-21T14:27:00.000Z	Dr_Willis	newbie	 if you have a graphical interface you will be using a 'window manager'   not 'windows manager'
+2010-02-21T14:27:00.000Z	Dr_Willis	newbie	 thats a gernic term for a graphical user interface. a 'windowmanager' is a spcific program that manages the progrms windows you are seeing .
+2010-02-21T14:27:00.000Z	newbie	Dr_Willis	sorry i did not notice the different
+2010-02-21T14:28:00.000Z	Dr_Willis	newbie	 windows does not mean 'ms windows' :) in all cases
+2010-02-21T14:31:00.000Z	Dr_Willis	newbie	 you are using a window manager if you are using X and a GUI on Linux most likely. theres dozens of 'window maangers' you could be using.
+2010-02-21T14:31:00.000Z	Dr_Willis	newbie	 a 'desktop' is a window manager + a set of apps to give a full featured work 'area' for you to do things in
+2010-02-21T14:33:00.000Z	Dr_Willis	newbie	 summary of most winow managers for X ==>>>  http://xwinman.org/
+2010-02-21T14:33:00.000Z	newbie	Dr_Willis	 i will have a look there
+2010-08-15T08:16:00.000Z	Dr_Willis	newbie	 state the actual problem to the channel.
+2010-08-15T08:19:00.000Z	Dr_Willis	newbie	 with video issues. always tgell the channel the exact chipset.
+2012-05-23T09:41:00.000Z	Dr_Willis	newbie	 what os is  onthe other pcs? Samba should work in most cases
+2012-05-23T09:41:00.000Z	Dr_Willis	newbie	 if you  just  want to  do  some quick  transfers, you  can use other  tools also
+2012-05-23T09:42:00.000Z	newbie	Dr_Willis	 nine_  Bsims  the other os is also *buntu  i though samba is for windows file sharing?
+2012-05-23T09:42:00.000Z	Dr_Willis	newbie	  you  may  want to check out 'sshfs'  and learn how  to  use scp and ssh. VERY worthwile  info  toknow
+2012-05-23T09:42:00.000Z	Dr_Willis	newbie	 with  scp  you can easially  copy  files tothe other pc
+2012-05-23T09:44:00.000Z	Dr_Willis	newbie	 id use scpthen, install ssh  on both machines.  then you  can  scp from one box to  the  other
+2012-05-23T09:48:00.000Z	Dr_Willis	newbie	 sshfs can  mount a remote box locally.as a simple way tohave a 'share' or you  canuse samba,or nfs,
+2012-05-23T09:49:00.000Z	newbie	Dr_Willis	 ryanturner  thanks !
+2012-05-23T21:39:00.000Z	newbie	Dr_Willis	 ill reboot
+2012-05-23T21:10:00.000Z	Dr_Willis	newbie	 what sort of 'service' are you refering to?
+2012-05-23T21:13:00.000Z	newbie	Dr_Willis	 i have installed samba on both computers. and i want to share files from one to another. i just go to samba shares and can view the folders but cant acces them
+2012-05-23T21:14:00.000Z	Dr_Willis	newbie	 you gave the user a samba password with the 'sudo smbpasswd -a username' command on the machines?
+2012-05-23T21:16:00.000Z	newbie	Dr_Willis	 no... on which should i give it. client or server. and by the way i am unable to view the contents now. and nautilus says unable to mount share folder.
+2012-05-23T21:17:00.000Z	Dr_Willis	newbie	 the machine that the user is connecting to needs to be setup for a samba password for them to login with.
+2012-05-23T21:17:00.000Z	Dr_Willis	newbie	 i set up both machines the same way. since i could be going either direction
+2012-05-23T21:18:00.000Z	Dr_Willis	newbie	 if you use the on the fly share creation fature of nautilus, you can make guest accessable shares.. or set a password.
+2012-05-23T21:19:00.000Z	newbie	Dr_Willis	 ok so i should do sudo smb passwd -a :the username of?" ?
+2012-05-23T21:19:00.000Z	Dr_Willis	newbie	  the server has an identical user as the connecting machine?  whatever user name you want to use on the server and will be entering.
+2012-05-23T21:20:00.000Z	newbie	Dr_Willis	 i did the same thing. enable guest accesable shares by nautilus but now it doesnt even shows the contents. at first it was but not accepting password. or i should say letting me in
+2012-05-23T21:20:00.000Z	Dr_Willis	newbie	 i rarely use the nautilus feature. i normally edit the smb.conf file and enable home shares, and then give the users samba passwords.  so all their home files are allready shared.
+2012-05-23T21:20:00.000Z	newbie	Dr_Willis	 ya.. both users of both machins have the same name. how did you know?
+2012-05-23T21:21:00.000Z	Dr_Willis	newbie	 so give both users the same samba password.
+2012-05-23T21:23:00.000Z	newbie	Dr_Willis	 username is the username of both machins . that is bob in my case
+2012-05-23T21:24:00.000Z	newbie	Dr_Willis	 right ?
+2012-05-23T21:26:00.000Z	newbie	Dr_Willis	 it says unable to mount windows share
+2012-05-23T21:27:00.000Z	Dr_Willis	newbie	 did it ask for a username/pass?   you could enter the full path to the share in nautilus's  address bar..   ctrl-L then -> smb://server.ip.number/sharename
+2012-05-23T21:27:00.000Z	Dr_Willis	newbie	 and to make things easier.. dont ever use spaces in share names. ;)
+2012-05-23T21:30:00.000Z	newbie	Dr_Willis	 it did asked and i gave one. and it keeps asking again and again and not let me in
+2012-05-23T21:32:00.000Z	newbie	Dr_Willis	 what could be wrong. mounting problem or permision problem
+2012-05-23T21:33:00.000Z	newbie	Dr_Willis	 and i am giving computer name instead of ip name
+2012-05-23T21:34:00.000Z	Dr_Willis	newbie	 try the ip # ?
+2012-05-23T21:34:00.000Z	newbie	Dr_Willis	 how do i know my ip
+2012-05-23T21:35:00.000Z	Dr_Willis	newbie	 look on teh server and its ifconfig command
+2012-05-23T21:35:00.000Z	Dr_Willis	newbie	 perhaps the smbtree or findsmb command may show it also
+2012-05-23T21:37:00.000Z	newbie	Dr_Willis	 did that but same problem. do i need to reboot. what could be the problem. i can see the shares but cant get in
+2012-05-23T21:38:00.000Z	Dr_Willis	newbie	 no idea. I dont fight wiath samba much any more.  for a linux to linux box id just use sshfs
+2012-05-23T21:38:00.000Z	Dr_Willis	newbie	 you could try restarting the samba service on both machines i guess.
+2012-05-23T21:39:00.000Z	Dr_Willis	newbie	 also i tend to edit the smb.conf and enable the homes share feature.  i rarely use the user-controlled-shares
+2012-05-23T21:40:00.000Z	newbie	Dr_Willis	 hmm. i was trying to share a partition that is to be mounted each time i reboot. (it is mounted by the way.)
+2012-05-23T21:40:00.000Z	Dr_Willis	newbie	 you will want to have that partion mounted via fstab most likely. Otehrwise it wont be shared untill the user logs in.. and what FS is the partition?
+2012-05-23T21:42:00.000Z	newbie	Dr_Willis	the partition that is to be shared is ntfs (windows files system)
+2012-05-23T21:45:00.000Z	newbie	Dr_Willis	 how do i edit fstab. what do i need to chang
+2012-05-23T21:47:00.000Z	Dr_Willis	newbie	 shareing a ntfs/vfat may require some extra options in the fstab file also. been a while since i shared a ntfs/vfat
+2012-05-23T21:47:00.000Z	newbie	Dr_Willis	 hmm. so difficult thing.
+2012-05-23T21:47:00.000Z	Dr_Willis	newbie	 rather trivial actually...
+2012-05-23T21:48:00.000Z	Dr_Willis	newbie	 but it depends on what thing you are talking about.
+2012-05-23T21:48:00.000Z	newbie	Dr_Willis	^
+2012-05-23T21:48:00.000Z	Dr_Willis	newbie	 samba has 100000's of documents out there about it.. whole books on its ussage
+2012-05-23T21:48:00.000Z	Dr_Willis	newbie	 samba can work for Huge businesses with 1000's of people and shares...
+2012-05-23T21:49:00.000Z	newbie	Dr_Willis	 i dont want to spend 1 month just tring to share a partition
+2012-05-23T21:49:00.000Z	Dr_Willis	newbie	 if you want simple access to anotehr ubuntu box.. we suggested sshfs, and/or nfs
+2012-05-23T21:49:00.000Z	newbie	Dr_Willis	 ya i know its very powerfull but ...
+2012-05-23T21:50:00.000Z	newbie	Dr_Willis	 its already an ntfs
+2012-05-23T21:50:00.000Z	Dr_Willis	newbie	 and its mounted ON the FLy..  so thats 2 very big complications to it.
+2012-05-23T21:50:00.000Z	newbie	Dr_Willis	yes. its never permemntly mounted at boot. i click it and dolphine/nautilus mounts it auto
+2012-05-23T21:51:00.000Z	Dr_Willis	newbie	 so i would make fstab mount it at boot.  then edit the smb.conf to make it shared by the system. not a user.
+2012-05-23T21:51:00.000Z	newbie	Dr_Willis	 hm. i see theres not fstab command in terminal. strange
+2012-05-23T21:52:00.000Z	Dr_Willis	newbie	 not at all. there is no fstab command...
+2012-05-23T21:52:00.000Z	newbie	Dr_Willis	oh ok
+2012-05-23T21:52:00.000Z	Dr_Willis	newbie	 the ntfs-config tool Might setup a proper fstab entry for that filesystem. i do it by hand normally
+2012-05-23T21:54:00.000Z	newbie	Dr_Willis	 how do you know the uids by the way
+2012-05-23T22:03:00.000Z	newbie	Dr_Willis	 bazhang  no luck with ntfs-config    . iam stuck with unable to share ntfs partition
+2012-05-23T22:04:00.000Z	Dr_Willis	newbie	 you could practice by shareing some Other directory so you know samba is working.  then work on shareing the ntfs. You can edit the fstab by hand,
+2012-05-23T22:10:00.000Z	newbie	Dr_Willis	 ok. now the home folder is not even adding . previously i added atleast ntfs .(despite i couldnt login) any ways. let me see what i can do. see you in some time.
+2012-05-23T22:18:00.000Z	newbie	Dr_Willis	 i can acces /home/bob/documents but when i try to share /home/bob it doenst.
+2012-05-23T22:19:00.000Z	Dr_Willis	newbie	 i normally edit the smb.conf file to have it make the  special 'home' share. each users home is then shared under the smb://servername/username  share
+2012-05-23T22:20:00.000Z	newbie	Dr_Willis	 thanks. but i really have to struge to share the ntfs partition. iam a newbie

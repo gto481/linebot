@@ -1,0 +1,97 @@
+2005-04-04T16:55:00.000Z	corza	nis	its fine :)
+2005-04-04T16:26:00.000Z	nis	corza	yes. thanks.
+2005-04-04T16:26:00.000Z	nis	corza	well now try xvidtune to do the same thing.
+2005-04-04T16:27:00.000Z	nis	corza	it will also step thru vid modes. but this time it gives metrics.
+2005-04-04T16:28:00.000Z	nis	corza	yeah and for good reason. u can fry the CRT easily.
+2005-04-04T16:28:00.000Z	nis	corza	yes it will.
+2005-04-04T16:28:00.000Z	nis	corza	you are not.
+2005-04-04T16:28:00.000Z	corza	nis	what am i doing?
+2005-04-04T16:28:00.000Z	nis	corza	drag the okay window a bit to one side.
+2005-04-04T16:29:00.000Z	nis	corza	use the titlebar to do so.
+2005-04-04T16:29:00.000Z	nis	corza	the okay window obscures the main interface to xvidtune.
+2005-04-04T16:29:00.000Z	nis	corza	that is INTENTIONAL.
+2005-04-04T16:29:00.000Z	nis	corza	they knew this day would come. ;)
+2005-04-04T16:30:00.000Z	nis	corza	until you press that OK you cannot fry the CRT.
+2005-04-04T16:30:00.000Z	nis	corza	and it will fry.  it really will. fire extinguisher time and such.
+2005-04-04T16:31:00.000Z	corza	nis	OH I GOT IT THE okay window..
+2005-04-04T16:31:00.000Z	corza	nis	lol ok its to the side what do i do?
+2005-04-04T16:32:00.000Z	nis	corza	that obscuring window pops up on top of the main xvidtune interface, each and every time you start it.  you can quit xvidtune from the popup. the one obsuring the danger will robinson section.
+2005-04-04T16:32:00.000Z	nis	corza	just study it.
+2005-04-04T16:33:00.000Z	corza	nis	okay...?
+2005-04-04T16:33:00.000Z	corza	nis	vertical sync says 60 still
+2005-04-04T16:33:00.000Z	nis	corza	take your time and absorb what's there.  it's all your vid timings.  this is the core of your 60Hz limitation.
+2005-04-04T16:34:00.000Z	corza	nis	uh-huh :S
+2005-04-04T16:34:00.000Z	nis	corza	you can take a common table fan and set it in front of the display. view the display thru the spinning fan blades.
+2005-04-04T16:34:00.000Z	nis	corza	you will be able to see the refresh rate directly.
+2005-04-04T16:35:00.000Z	corza	nis	i dont have a table fan
+2005-04-04T16:35:00.000Z	nis	corza	I can see 60hz refresh without the fan. ;)
+2005-04-04T16:35:00.000Z	corza	nis	oh how true lol
+2005-04-04T16:35:00.000Z	nis	corza	averted vision usually.
+2005-04-04T16:35:00.000Z	corza	nis	ok so what actually am i doing
+2005-04-04T16:36:00.000Z	nis	corza	however, the main thing here is to quit xvidtune, go into one of those other vid modes we saw, and examine xvidtune again.
+2005-04-04T16:36:00.000Z	nis	corza	so.  1. quit xvidtune.  2. ctrl alt +   3. xvidtune (and iterate -- repeat -- the sequence 1. 2. 3.)
+2005-04-04T16:48:00.000Z	nis	corza	thanks. ;)
+2005-04-04T16:48:00.000Z	corza	nis	no prob lol u sent me to restart my computer.. i didnt know how to get out of fullscreen terminal oh ok
+2005-04-04T16:49:00.000Z	corza	nis	ok now.. argh i dont know if its worth bothering..
+2005-04-04T16:49:00.000Z	nis	corza	it's worth bothering for but it's kinda hard to do interactively at ur skill lvl.
+2005-04-04T16:50:00.000Z	corza	nis	if u didnt get the guist then i got it :0
+2005-04-04T16:51:00.000Z	corza	nis	onto my second chore.. need to get my 5 mouse buttons working
+2005-04-04T16:51:00.000Z	nis	corza	oof.
+2005-04-04T16:52:00.000Z	nis	corza	I need a refresher of the overview of what brought you here.  What was main issue?
+2005-04-04T16:52:00.000Z	corza	nis	its mainly just the back forward and middle button
+2005-04-04T16:53:00.000Z	nis	corza	no the 60 hz problem. btw there's an easy way to map the keyboard to mouse buttons in /etc/sysctl.conf.
+2005-04-04T16:54:00.000Z	nis	corza	well on powerpc anyway, there is. ;)
+2005-04-04T16:54:00.000Z	corza	nis	umm no i fixed the 60hz problem i'm at 85hz now :)
+2005-04-04T16:55:00.000Z	nis	corza	does the display function well for u now at 85 hz? correct resolution etc?
+2005-04-04T16:55:00.000Z	corza	nis	just giong to try and fix my mouse buttons
+2005-04-04T16:56:00.000Z	nis	corza	good! mouse not too bad.
+2005-04-04T16:56:00.000Z	nis	corza	lemee see.
+2005-04-04T16:57:00.000Z	corza	nis	k k
+2005-04-04T05:00:00.000Z	nis	corza	briefly, you 'Emulate3Buttons' (true) and also 'ZAxisMapping' (4 5).  That's XFree tho.
+2005-04-04T05:00:00.000Z	corza	nis	where is this in?
+2005-04-04T05:00:00.000Z	nis	corza	that should .. um .. give u at least one more mouse button than u have now. ;)
+2005-04-04T05:00:00.000Z	nis	corza	/etc/X11/xorg.conf
+2005-04-04T05:01:00.000Z	nis	corza	the main thing is the test phase.  It's best (IMO) to stop the display manager (xdm, gdm) first, and use startx from the console to troubleshoot xorg.conf.
+2005-04-04T05:02:00.000Z	corza	nis	oook.. umm so instead of 4 5 i put true?
+2005-04-04T05:03:00.000Z	corza	nis	argh i forget how to gedit a file..
+2005-04-04T05:03:00.000Z	nis	corza	depends.  first of all this is xorg not Xfree.  2nd I dunno if the mouse options are same in both.
+2005-04-04T05:04:00.000Z	nis	corza	third, u generally enclose with quotations in this part of xorg.conf/XF86Config-4.  I used my old XF86Config-4 with xorg here. ;)
+2005-04-04T05:04:00.000Z	nis	corza	sudo
+2005-04-04T05:05:00.000Z	corza	nis	i'm in root
+2005-04-04T05:05:00.000Z	nis	corza	easier. there's an example xorg.conf in my gentoo. let me look there.
+2005-04-04T05:06:00.000Z	corza	nis	hey i found a site that i can use for the codes
+2005-04-04T05:07:00.000Z	corza	nis	how do u get into gedit to edit a file in terminal with root?
+2005-04-04T05:07:00.000Z	nis	corza	the terminal /launches/ gedit, a GUI editor
+2005-04-04T05:20:00.000Z	corza	nis	did u end up finding anything?
+2005-04-04T05:20:00.000Z	nis	corza	I'm burned out and snowed in and hungry.  I didn't look. ;)
+2005-04-04T05:21:00.000Z	corza	nis	lol
+2005-04-04T05:22:00.000Z	corza	nis	i found something but i have to get imwheel
+2005-04-04T05:22:00.000Z	corza	nis	i found the .. .tar-1 file but i dont know what to do with it
+2005-04-04T05:23:00.000Z	nis	corza	make a directory in your home dir. change directory to it.  then unpack it to see what's in it.
+2005-04-04T05:24:00.000Z	corza	nis	its not a .gz file
+2005-04-04T05:26:00.000Z	nis	corza	what is it?
+2005-04-04T05:26:00.000Z	corza	nis	well i dont know what to do with it
+2005-04-04T05:26:00.000Z	nis	corza	is it an archive?
+2005-04-04T05:27:00.000Z	corza	nis	its named imwheel-1.0.0pre12.tar-1
+2005-04-04T05:27:00.000Z	corza	nis	no?
+2005-04-04T05:27:00.000Z	nis	corza	a tarball.
+2005-04-04T05:28:00.000Z	corza	nis	affirmative
+2005-04-04T05:28:00.000Z	nis	corza	cat myfile.tar | tar -xvf -
+2005-04-04T05:31:00.000Z	corza	nis	ok that done something??
+2005-04-04T05:31:00.000Z	corza	nis	what did that do?
+2005-04-04T05:32:00.000Z	nis	corza	8 conversations going here.
+2005-04-04T05:33:00.000Z	corza	nis	sorry, what did typing that do just list what was in imwheel?
+2005-04-04T05:33:00.000Z	nis	corza	u unpacked a tarball. now browse.
+2005-04-04T05:33:00.000Z	nis	corza	lynx is your friend here.
+2005-04-04T05:33:00.000Z	corza	nis	ok..
+2005-04-04T05:34:00.000Z	corza	nis	where did i unpack it to?
+2005-04-04T05:34:00.000Z	corza	nis	found it
+2005-04-04T05:34:00.000Z	corza	nis	what do you mean lynx is my friend?? eh??
+2005-04-04T05:34:00.000Z	nis	corza	type 'lynx' in the terminal.
+2005-04-04T05:34:00.000Z	corza	nis	current dir: home
+2005-04-04T05:35:00.000Z	nis	corza	text-based www browser also file browser
+2005-04-04T05:35:00.000Z	nis	corza	so install it. ;)
+2005-04-04T05:36:00.000Z	corza	nis	i'll do it another day i have to go thanks for all ur help mate
+2005-04-04T05:36:00.000Z	nis	corza	you're welcome. was fun and challenging.  good luck.
+2005-04-04T05:36:00.000Z	corza	nis	thanks alot catcha
+2005-04-04T05:36:00.000Z	nis	corza	be well friend

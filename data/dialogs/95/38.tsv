@@ -1,0 +1,95 @@
+2008-06-29T04:27:00.000Z	Steven1		Can someone help me edit my grub menu.lst to include Vista?
+2008-06-29T04:28:00.000Z	SebNaitsabes	Steven1	 open termianl and  sudo gedit /boot/grub/menu.lst
+2008-06-29T04:29:00.000Z	Steven1	SebNaitsabes	I have the file opened already. I just don't know what to type in there for Vista.
+2008-06-29T04:30:00.000Z	SebNaitsabes	Steven1	by the way you can run Windows inside Ubuntu if you want
+2008-06-29T04:30:00.000Z	Steven1	SebNaitsabes	This is what mine looks like: http://pastebin.org/46869. What do I need to change to add Vista to the list?
+2008-06-29T04:31:00.000Z	Steven1	SebNaitsabes	No that's ok. I did that for a while. It requires way too much resources and isn't compatible with 3d graphics.
+2008-06-29T04:32:00.000Z	SebNaitsabes	Steven1	well VMware has experimental 3D suppourt
+2008-06-29T04:33:00.000Z	Steven1	SebNaitsabes	Ah well it'd be a lot easier if I just did it this way. Also, I already have Windows Physically installed so having it Virtually installed would just be a waste of space.
+2008-06-29T04:34:00.000Z	SebNaitsabes	Steven1	 which Vista version?
+2008-06-29T04:34:00.000Z	Steven1	SebNaitsabes	Although when I try to boot into Ubuntu from the grub it hangs loading the desktop oddly enough.
+2008-06-29T04:34:00.000Z	Steven1	SebNaitsabes	Ultimate
+2008-06-29T04:36:00.000Z	Steven1	SebNaitsabes	You still there?
+2008-06-29T04:36:00.000Z	SebNaitsabes	Steven1	oh right thought it would have been Home Premium or something.  and if it had been then,  I would have said something like.  oh right well  it's agaisnt the agreement to do Home Premium in a VM
+2008-06-29T04:36:00.000Z	Steven1	SebNaitsabes	Ah ok.
+2008-06-29T04:37:00.000Z	SebNaitsabes	Steven1	 this should help for Vista  you can call the entry whatever you want,  and  it has to be for your partition  the number.  the partition number is the most important thing here, since if it's the wrong one it won't boot.  http://pastebin.com/d7bad8fc9
+2008-06-29T04:37:00.000Z	SebNaitsabes	Steven1	and yes the chain loader thing is just what is put for a Windows in Grub
+2008-06-29T04:37:00.000Z	SebNaitsabes	Steven1	 Windows in Grub menu.lst has the chain loader thing
+2008-06-29T04:38:00.000Z	Steven1	SebNaitsabes	Ah ok...so how do I verify that hd0,1 is correct or not?
+2008-06-29T04:38:00.000Z	SebNaitsabes	Steven1	  hd0,1 is for my VIsta
+2008-06-29T04:38:00.000Z	SebNaitsabes	Steven1	what's the link for your menu.lst again
+2008-06-29T04:38:00.000Z	Steven1	SebNaitsabes	http://pastebin.org/46869
+2008-06-29T04:39:00.000Z	SebNaitsabes	Steven1	home premimum in my case,  no real good reason for me to upgrade to ultimate
+2008-06-29T04:39:00.000Z	SebNaitsabes	Steven1	 exepsaily so since I hardly ever boot Vista :)
+2008-06-29T04:39:00.000Z	Steven1	SebNaitsabes	Luckily for me. I didn't have to.
+2008-06-29T04:39:00.000Z	SebNaitsabes	Steven1	didn't have to what?
+2008-06-29T04:40:00.000Z	Steven1	SebNaitsabes	Upgrade to anything. I got it for free lol.
+2008-06-29T04:40:00.000Z	SebNaitsabes	Steven1	pirate copy?
+2008-06-29T04:40:00.000Z	Steven1	SebNaitsabes	Fully-working and upgradable.
+2008-06-29T04:40:00.000Z	SebNaitsabes	Steven1	right, but a pirate copy?
+2008-06-29T04:40:00.000Z	Steven1	SebNaitsabes	Uh yeah...
+2008-06-29T04:41:00.000Z	SebNaitsabes	Steven1	heh you just told a load of people that in a IRC channel and there are probably a few logs of this channel going at the moment.  and your IP address can be found out from the channel
+2008-06-29T04:41:00.000Z	Steven1	SebNaitsabes	Well you asked!
+2008-06-29T04:41:00.000Z	SebNaitsabes	Steven1	and MS can come and knock on your door and ask you to pay up :D
+2008-06-29T04:42:00.000Z	Steven1	SebNaitsabes	Anyway how do I find out what the grub name for the partition with Vista on it is?
+2008-06-29T04:42:00.000Z	SebNaitsabes	Steven1	 mine is pretty obviosuly brought well yeah came with this comp. only a fool would pirate Home Premium for obvious reasons.
+2008-06-29T04:43:00.000Z	SebNaitsabes	Steven1	yes looking at your file now hang on
+2008-06-29T04:43:00.000Z	Steven1	SebNaitsabes	Ok.
+2008-06-29T04:44:00.000Z	Steven1	SebNaitsabes	All I know is that it is hdb1. But I need the grub name lol.
+2008-06-29T04:44:00.000Z	SebNaitsabes	Steven1	 ok so hd0,3 is Ubuntu, but what other partitions have you got?
+2008-06-29T04:46:00.000Z	Steven1	SebNaitsabes	Under /dev/hdb I have hdb1 - Vista, hdb2 - Linux Swap, hdb3 - ext3, and hdb4 - ext3 partitions.
+2008-06-29T04:47:00.000Z	SebNaitsabes	Steven1	 you have two hard disks?
+2008-06-29T04:47:00.000Z	Steven1	SebNaitsabes	No. One HD with 4 partitions.
+2008-06-29T04:48:00.000Z	SebNaitsabes	Steven1	 well then it will start with 0
+2008-06-29T04:48:00.000Z	SebNaitsabes	Steven1	 and you just got to experiment with the partition numbers or take a guess at which one it is
+2008-06-29T04:48:00.000Z	Steven1	SebNaitsabes	Well I guess I technically do have two HDs but. The first is fried and is inaccessible.
+2008-06-29T04:49:00.000Z	SebNaitsabes	Steven1	 you have two hard disks inside the computer?
+2008-06-29T04:49:00.000Z	Steven1	SebNaitsabes	Yes. But the one is fried. So I have 4 partitions on the working HD.
+2008-06-29T04:49:00.000Z	SebNaitsabes	Steven1	well then as long as the computer is only detecting a hard disk the partition numbering will start with 0
+2008-06-29T04:49:00.000Z	SebNaitsabes	Steven1	 0 being the hard disk
+2008-06-29T04:50:00.000Z	SebNaitsabes	Steven1	 and 3 is your Linux partition  however the numbering between Grub and Linux itself is a bit diffenrt
+2008-06-29T04:50:00.000Z	Steven1	SebNaitsabes	So what your saying is the first number will be 0?
+2008-06-29T04:51:00.000Z	SebNaitsabes	Steven1	I got 6 partitions or something here,  and yes of course not all of them are for Grub to use
+2008-06-29T04:51:00.000Z	Steven1	SebNaitsabes	So I should just start with hd0,1 and go up from there? Trial and Error?
+2008-06-29T04:51:00.000Z	SebNaitsabes	Steven1	 yep
+2008-06-29T04:52:00.000Z	SebNaitsabes	Steven1	 but it won't be hd0,3, because that's Ubuntu
+2008-06-29T04:52:00.000Z	SebNaitsabes	Steven1	however you can make it easier for your self
+2008-06-29T04:52:00.000Z	Steven1	SebNaitsabes	Orly?
+2008-06-29T04:52:00.000Z	SebNaitsabes	Steven1	instead of botting up trying editing menu.lst again booting up trying menu.list agian
+2008-06-29T04:53:00.000Z	SebNaitsabes	Steven1	if it won't boot it will say so and then it will go back to Grub
+2008-06-29T04:53:00.000Z	SebNaitsabes	Steven1	 just copy the correct info a few times and change the number
+2008-06-29T04:53:00.000Z	Steven1	SebNaitsabes	So I can edit grub from grub itself? Nice!
+2008-06-29T04:53:00.000Z	SebNaitsabes	Steven1	and in the name I would suggest putting something there so you know which one it was
+2008-06-29T04:53:00.000Z	SebNaitsabes	Steven1	 well that can be done, but not entirely sure about that.  I meant you set it all up how I am saying
+2008-06-29T04:54:00.000Z	SebNaitsabes	Steven1	 before re booting
+2008-06-29T04:54:00.000Z	SebNaitsabes	Steven1	 set up menu.lst in Ubuntu
+2008-06-29T04:54:00.000Z	Steven1	SebNaitsabes	What do you mean change the name so I know what it is?
+2008-06-29T04:54:00.000Z	SebNaitsabes	Steven1	well your going to add the same entry a few or more times
+2008-06-29T04:54:00.000Z	SebNaitsabes	Steven1	with the only difference being a partition number
+2008-06-29T04:54:00.000Z	Steven1	SebNaitsabes	Ahhhh ok.
+2008-06-29T04:55:00.000Z	SebNaitsabes	Steven1	of course they will all be the same thing,  unless you cahnge the name
+2008-06-29T04:55:00.000Z	SebNaitsabes	Steven1	and so I would suggest putting for example  Vista 2 in the name for Vista 2
+2008-06-29T04:55:00.000Z	Steven1	SebNaitsabes	I see what your saying.
+2008-06-29T04:55:00.000Z	SebNaitsabes	Steven1	 for what would be the second partition
+2008-06-29T04:55:00.000Z	SebNaitsabes	Steven1	and if it won't work it won't boot
+2008-06-29T04:56:00.000Z	SebNaitsabes	Steven1	and it will take you back to Grub and then you try the next and so on
+2008-06-29T04:56:00.000Z	Steven1	SebNaitsabes	Nice. I see what your saying.
+2008-06-29T04:56:00.000Z	Steven1	SebNaitsabes	So it can be any of the 4 partitions except 3 right?
+2008-06-29T04:57:00.000Z	SebNaitsabes	Steven1	 yep it will be one of the 4, but it won't be what Grub is calling partition 3, because that's Ubuntu
+2008-06-29T04:58:00.000Z	Steven1	SebNaitsabes	Ok one more check over to make sure I did it right. http://pastebin.org/46873
+2008-06-29T04:59:00.000Z	SebNaitsabes	Steven1	 your using the old Grub that's what I use
+2008-06-29T04:59:00.000Z	SebNaitsabes	Steven1	 but apparnatlly Grub2 is a load better
+2008-06-29T04:59:00.000Z	Steven1	SebNaitsabes	I heard it was. But I haven't a clue how to upgrade.
+2008-06-29T04:59:00.000Z	SebNaitsabes	Steven1	 if you uncomment pretty colours on your next re boot it will look nicer.  just delete the # to uncomment
+2008-06-29T05:00:00.000Z	SebNaitsabes	Steven1	 oh upgrading is pretty easy, haven't done so yet myself since,  well I got two menu.lsts
+2008-06-29T05:00:00.000Z	SebNaitsabes	Steven1	every time a new kernel is installed it  updates the one that is in this Ubuntu install, which is not the one it is using so I have to manualley edit for the new kerenl
+2008-06-29T05:01:00.000Z	SebNaitsabes	Steven1	also hidden menus in your menu.lst  ah ha that's nice, but you can just delete that
+2008-06-29T05:01:00.000Z	Steven1	SebNaitsabes	Delete it?
+2008-06-29T05:03:00.000Z	Steven1	SebNaitsabes	Also, one more thing. When I boot into Ubuntu from grub and it hangs on loading the user login screen.
+2008-06-29T05:36:00.000Z	SebNaitsabes	Steven1	still won't boot hummmmmm
+2008-06-29T05:37:00.000Z	Steven1	SebNaitsabes	Nope. I tried all of the 3 listings for Vista you had me make too.
+2008-06-29T05:37:00.000Z	Steven1	SebNaitsabes	Also, tried Recovery mode and tried to repair X. But it still does the same thing.
+2008-06-29T05:37:00.000Z	SebNaitsabes	Steven1	hardly heron Live CD?
+2008-06-29T05:38:00.000Z	Steven1	SebNaitsabes	Also, tried Recovery mode and tried to repair X. But it still does the same thing.
+2008-06-29T05:40:00.000Z	SebNaitsabes	Steven1	 join #steven
+2008-06-29T05:41:00.000Z	SebNaitsabes	Steven1	 easier to caht there

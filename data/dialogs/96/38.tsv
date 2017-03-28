@@ -1,0 +1,96 @@
+2008-02-02T18:43:00.000Z	h6mi1007		does anyone know if installing restricted drivers for graphics may be a cause of terminal not loading?
+2008-02-02T18:45:00.000Z	oskude	h6mi1007	do you mean the text console ? if yes, what ever your X driver does, should in worst case fall back to text console
+2008-02-02T18:46:00.000Z	h6mi1007	oskude	i dont know, i just know terminal is not loadings, it acts like it wants to though and that just started after i installed new drivers for nvidia, my second day :D
+2008-02-02T18:47:00.000Z	oskude	h6mi1007	so what do you see on the screen before the computer stops doing "anything" ?
+2008-02-02T18:48:00.000Z	h6mi1007	oskude	well i click terminal, and at the bottom on the bar i see the terminal tab but nothing loads
+2008-02-02T18:48:00.000Z	oskude	h6mi1007	ah ok, i got you wrong... so X works but Terminal not ? what ubuntu are you using ?
+2008-02-02T18:49:00.000Z	oskude	h6mi1007	are you using somtehing experimental like compiz ?
+2008-02-02T18:50:00.000Z	oskude	h6mi1007	from the ubuntu repos ?
+2008-02-02T18:51:00.000Z	oskude	h6mi1007	did you reboot after installing the drivers ?
+2008-02-02T18:51:00.000Z	oskude	h6mi1007	hmm, all other programs work ? just Terminal doesnt ?
+2008-02-02T18:53:00.000Z	h6mi1007	oskude	before the drivers i did goto terminal and type some cmds to get my ntfs drive to read...
+2008-02-02T18:54:00.000Z	oskude	h6mi1007	one way would be to go to CTRL+ALT+F1, login, and read some log files, but which, i dont know...
+2008-02-02T18:54:00.000Z	oskude	h6mi1007	you can come back to X with CTRL+ALT+F7
+2008-02-02T18:55:00.000Z	oskude	h6mi1007	you could try "sudo dpkg-reconfigure gnome-terminal" in the text console... but dunno if helps, just a long shot
+2008-02-02T18:55:00.000Z	h6mi1007	oskude	how can i change my password?
+2008-02-02T18:55:00.000Z	oskude	h6mi1007	passwd
+2008-02-02T18:57:00.000Z	oskude	h6mi1007	yup
+2008-02-02T18:58:00.000Z	oskude	h6mi1007	it asks your current password and then for a new
+2008-02-02T19:00:00.000Z	oskude	h6mi1007	no, but you can write the standard output of commands to a file with >
+2008-02-02T19:00:00.000Z	oskude	h6mi1007	like: ls . > list_of_files.txt
+2008-02-02T19:01:00.000Z	oskude	h6mi1007	and if you want to also write the error output of commands: ls . &> files_and_if_any_errors.txt
+2008-02-02T19:02:00.000Z	oskude	h6mi1007	notice the added & in >
+2008-02-02T19:02:00.000Z	oskude	h6mi1007	and theres also a program called "script" that can record whole sessions... and propably other tools
+2008-02-02T19:05:00.000Z	h6mi1007	oskude	says g-nome not installed
+2008-02-02T19:05:00.000Z	oskude	h6mi1007	youre using ubuntu ? not xubuntu, kubuntu etc ?
+2008-02-02T19:06:00.000Z	oskude	h6mi1007	and what exactly is not installed ?
+2008-02-02T19:06:00.000Z	h6mi1007	oskude	package g-nome is not installed
+2008-02-02T19:06:00.000Z	oskude	h6mi1007	what command says that ?
+2008-02-02T19:07:00.000Z	h6mi1007	oskude	uhh, i duno, i just typed what you asked me to type "sudo spkg-reconfigure g-nome-terminal"
+2008-02-02T19:08:00.000Z	oskude	h6mi1007	please read carefully its, gnome-terminal
+2008-02-02T19:10:00.000Z	h6mi1007	oskude	i tried that, it accepted it but terminal still won't completely load, nothing different happends
+2008-02-02T19:10:00.000Z	oskude	h6mi1007	hmm, if i knew what log file to read, we would know why it wont load...
+2008-02-02T19:11:00.000Z	h6mi1007	oskude	how can i search for log files?
+2008-02-02T19:11:00.000Z	oskude	h6mi1007	most are in /var/log
+2008-02-02T19:11:00.000Z	oskude	h6mi1007	i assume /var/log/syslog would be what we need
+2008-02-02T19:12:00.000Z	h6mi1007	oskude	ok
+2008-02-02T19:17:00.000Z	oskude	h6mi1007	i gotta go do something, be back in 15~30 mins
+2008-02-02T19:46:00.000Z	oskude	h6mi1007	back
+2008-02-02T19:47:00.000Z	h6mi1007	oskude	welcome back
+2008-02-02T19:50:00.000Z	h6mi1007	oskude	you think i can try the cd and fix it from there?
+2008-02-02T19:50:00.000Z	h6mi1007	oskude	the install probably took 30 min, i'm about ready to just reformat, reinstall hehe.
+2008-02-02T20:00:00.000Z	oskude	h6mi1007	so please press ALT+F2 (in X, CTRL+ALT+F7) and run the command xterm
+2008-02-02T19:50:00.000Z	oskude	h6mi1007	did you try reading in /var/log/syslog or /var/log/dmesg after you tried to start gnome-terminal ?
+2008-02-02T19:51:00.000Z	h6mi1007	oskude	no but i will
+2008-02-02T19:52:00.000Z	oskude	h6mi1007	you can open files with: tail -f /var/log/syslog :to see changes when it happens...
+2008-02-02T19:53:00.000Z	h6mi1007	oskude	ok, i did look in /var/lod/syslog but didn't know what to look for, i'm in /var/log/dmsg atm
+2008-02-02T19:53:00.000Z	oskude	h6mi1007	i got an idea
+2008-02-02T19:54:00.000Z	h6mi1007	oskude	shoot
+2008-02-02T19:54:00.000Z	oskude	h6mi1007	run xterm with ALT+F2 (in X) and then run gnome-terminal from that xterm terminal and see what errors you get
+2008-02-02T19:55:00.000Z	h6mi1007	oskude	ok
+2008-02-02T19:55:00.000Z	h6mi1007	oskude	so try to enter "sudo dpkg-reconfigure gnome-terminal"?
+2008-02-02T19:55:00.000Z	oskude	h6mi1007	no no
+2008-02-02T19:56:00.000Z	oskude	h6mi1007	run "gnome-terminal" from there
+2008-02-02T19:56:00.000Z	h6mi1007	oskude	ok
+2008-02-02T19:56:00.000Z	oskude	h6mi1007	it should then try to run gnome-terminal (like from the menu) but also show errors, if any
+2008-02-02T19:57:00.000Z	h6mi1007	oskude	brb
+2008-02-02T19:57:00.000Z	oskude	h6mi1007	i hope youre doing this in X (the gnome desktop) and not in text console...
+2008-02-02T19:59:00.000Z	h6mi1007	oskude	where is x?
+2008-02-02T19:59:00.000Z	oskude	h6mi1007	X is the windowing system X.org, what whe use, eg in CTRL+ALT+F7
+2008-02-02T20:00:00.000Z	oskude	h6mi1007	CTRL+ALT+F1 is one of the text consoles
+2008-02-02T20:01:00.000Z	oskude	h6mi1007	now you get the xterm terminal in your X (gnome desktop)
+2008-02-02T20:01:00.000Z	oskude	h6mi1007	from there, try to run the gnome-terminal and see if you get any errors
+2008-02-02T20:02:00.000Z	h6mi1007	oskude	so from here i do alt+ctrl+f1 then alt+ctrl+f2? then f7 thing?
+2008-02-02T20:03:00.000Z	oskude	h6mi1007	... no ... just stay in X (gnome desktop, CTRL+ALT+F7) and press ALT+F2, you get the "run application" dialog
+2008-02-02T20:03:00.000Z	oskude	h6mi1007	sorry, it gets a little confusing with these shortcuts..
+2008-02-02T20:05:00.000Z	h6mi1007	oskude	what is x?
+2008-02-02T20:05:00.000Z	oskude	h6mi1007	http://www.x.org - its the "CTRL+ALT+F7" thing in easy words :)
+2008-02-02T20:06:00.000Z	h6mi1007	oskude	nothing happends when i hit ctrl+atl+f7 from my desktop.
+2008-02-02T20:06:00.000Z	oskude	h6mi1007	because your already int it
+2008-02-02T20:06:00.000Z	oskude	h6mi1007	because you're already in it
+2008-02-02T20:07:00.000Z	h6mi1007	oskude	ok, so from here do ctrl+atl+f2/
+2008-02-02T20:07:00.000Z	oskude	h6mi1007	please read carefully! i said ALT+F2
+2008-02-02T20:08:00.000Z	h6mi1007	oskude	ok
+2008-02-02T20:08:00.000Z	h6mi1007	oskude	and that is xterm?
+2008-02-02T20:08:00.000Z	oskude	h6mi1007	thats the Run Application dialog, type "xterm" in it and click run
+2008-02-02T20:08:00.000Z	h6mi1007	oskude	got it
+2008-02-02T20:09:00.000Z	oskude	h6mi1007	now in that xterm, type: gnome-terminal
+2008-02-02T20:09:00.000Z	oskude	h6mi1007	and i hope we get errors :)
+2008-02-02T20:09:00.000Z	h6mi1007	oskude	hehe ok
+2008-02-02T20:09:00.000Z	oskude	h6mi1007	i assume xterm worked (you got a black or white window, like gnome-terminal)
+2008-02-02T20:09:00.000Z	h6mi1007	oskude	can i copy/paste?
+2008-02-02T20:10:00.000Z	oskude	h6mi1007	please use what ubotu said
+2008-02-02T20:10:00.000Z	oskude	h6mi1007	and then paste the link to your "paste"
+2008-02-02T20:10:00.000Z	h6mi1007	oskude	hmm ok...
+2008-02-02T20:11:00.000Z	h6mi1007	oskude	how do i copy?
+2008-02-02T20:11:00.000Z	oskude	h6mi1007	just go to http://paste.ubuntu-nl.org/ post your lines there, then paste the link you get in here
+2008-02-02T20:11:00.000Z	oskude	h6mi1007	wait, gotta test how it works in xterm
+2008-02-02T20:12:00.000Z	oskude	h6mi1007	damn, doesnt seem to work with gnome paste :( sec
+2008-02-02T20:13:00.000Z	oskude	h6mi1007	you could do: gnome-terminal &> debug1.txt
+2008-02-02T20:13:00.000Z	oskude	h6mi1007	and then open that debug1.txt in text editor and copy paste from there...
+2008-02-02T20:14:00.000Z	oskude	h6mi1007	i assume in youre home dir
+2008-02-02T20:16:00.000Z	oskude	h6mi1007	brb, gotta do something, again...
+2008-02-02T20:21:00.000Z	h6mi1007	oskude	http://paste.ubuntu-nl.org/54481/.
+2008-02-02T20:21:00.000Z	oskude	h6mi1007	ill check
+2008-02-02T20:22:00.000Z	oskude	h6mi1007	ok, i think that is over my skills :(
+2008-02-02T20:23:00.000Z	oskude	h6mi1007	np, later

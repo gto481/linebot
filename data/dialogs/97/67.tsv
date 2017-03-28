@@ -1,0 +1,97 @@
+2005-12-28T06:57:00.000Z	Eleaf		?..
+2005-12-28T06:57:00.000Z	Eleaf		every time this has happend and I don't want to do this again..
+2005-12-28T06:57:00.000Z	Eleaf		i have to reinstall
+2005-12-28T06:59:00.000Z	Eleaf		It keeps freezing at Calculating module dependencies...
+2005-12-28T06:59:00.000Z	Eleaf		ahhhhhhhhh
+2005-12-28T06:59:00.000Z	Eleaf		ahh
+2005-12-28T07:00:00.000Z	Eleaf		It keeps freezing at Calculating module dependencies
+2005-12-28T07:00:00.000Z	Eleaf		ahhhhhhh
+2005-12-28T07:00:00.000Z	Eleaf		HELLP
+2005-12-28T07:00:00.000Z	Eleaf		'
+2005-12-28T07:01:00.000Z	pashaw	Eleaf	are you trying to add something or just update?
+2005-12-28T07:01:00.000Z	Eleaf	pashaw	I'm just trying to boot
+2005-12-28T07:02:00.000Z	pashaw	Eleaf	 you mean this happened during initial install of ubuntu?
+2005-12-28T07:02:00.000Z	Eleaf	pashaw	no, I've had ubuntu running fabulous for half a year...
+2005-12-28T07:03:00.000Z	pashaw	Eleaf	  lol  thats what i asked you   did you add someting or upgrade
+2005-12-28T07:06:00.000Z	pashaw	Eleaf	 does it boot using recovery
+2005-12-28T07:06:00.000Z	Eleaf	pashaw	how do i use recovery?
+2005-12-28T07:07:00.000Z	pashaw	Eleaf	 grub menu
+2005-12-28T07:07:00.000Z	Eleaf	pashaw	I don't have a grub menu, It's ppc
+2005-12-28T07:09:00.000Z	pashaw	Eleaf	 have you added or removed any hardware lately?
+2005-12-28T07:09:00.000Z	Eleaf	pashaw	no... theres not really anything to install on an ibook
+2005-12-28T07:09:00.000Z	pashaw	Eleaf	  is /home on its own partition?
+2005-12-28T07:09:00.000Z	Eleaf	pashaw	no
+2005-12-28T07:10:00.000Z	pashaw	Eleaf	  you could always use a liveCD to copy off your /home settings
+2005-12-28T07:11:00.000Z	pashaw	Eleaf	huh?   it wont boot either?
+2005-12-28T07:11:00.000Z	Eleaf	pashaw	what?
+2005-12-28T07:11:00.000Z	pashaw	Eleaf	  sorry  ::P
+2005-12-28T07:32:00.000Z	pashaw	Eleaf	the LiveCDs dont work either
+2005-12-28T07:48:00.000Z	pashaw	Eleaf	  does fdisk -l   show any partitions?
+2005-12-28T07:49:00.000Z	Eleaf	pashaw	the livecd doesn't have the fdisk command
+2005-12-28T07:52:00.000Z	pashaw	Eleaf	  what directory are you trying to mount it to?
+2005-12-28T07:58:00.000Z	pashaw	Eleaf	  do you have ANY other liveCDs  say knoppix?
+2005-12-28T07:58:00.000Z	Eleaf	pashaw	no I don't...
+2005-12-28T08:13:00.000Z	pashaw	Eleaf	my vote goes for having a friend burn you  2 diff liveCDs   say 1-ubuntu and 1-knoppix    then  have a go  before the reinstall wipes it
+2005-12-28T08:13:00.000Z	Eleaf	pashaw	I have a cd burner
+2005-12-28T08:14:00.000Z	Eleaf	pashaw	at least I have my main ubuntu computer, this one.  But my iBook is important whenever I have to go places
+2005-12-29T06:56:00.000Z	pashaw	Eleaf	  yes  i keep both
+2005-12-29T06:57:00.000Z	Eleaf	pashaw	which do you think I should use first?
+2005-12-29T06:57:00.000Z	pashaw	Eleaf	  whats broken?
+2005-12-29T06:57:00.000Z	Eleaf	pashaw	my iBook..
+2005-12-29T06:57:00.000Z	pashaw	Eleaf	  zero experience with apple products   wich i did
+2005-12-29T06:57:00.000Z	Eleaf	pashaw	I did a dist-upgrade from breezy to breezy and it got rid of a kernel module or something, then had some hard drive errors on some modules
+2005-12-29T06:58:00.000Z	Eleaf	pashaw	and it won't boot at all past calculating module dependencies
+2005-12-29T06:58:00.000Z	Eleaf	pashaw	should I use knoppix ?
+2005-12-29T06:59:00.000Z	pashaw	Eleaf	 sure
+2005-12-29T07:00:00.000Z	pashaw	Eleaf	  but i think Ubuntu liveCD should be your first choice
+2005-12-29T07:00:00.000Z	Eleaf	pashaw	alright, but that corrupted on me randomly a lot...
+2005-12-29T07:01:00.000Z	Eleaf	pashaw	I wanna try something new anyways... = p  I'll be able to make changes to my hard drive right?  Will I be able to use apt on the hard drive to make changes?
+2005-12-29T07:01:00.000Z	pashaw	Eleaf	ohhh i remember you    is this a new problem or same one?
+2005-12-29T07:01:00.000Z	Eleaf	pashaw	yea it's me,  It's that same problem
+2005-12-29T07:01:00.000Z	pashaw	Eleaf	 i thought we left you with a plan of attack last night
+2005-12-29T07:02:00.000Z	pashaw	Eleaf	im not at home yet  so i cant check my log
+2005-12-29T07:04:00.000Z	Eleaf	pashaw	ahh, does knoppix have a ppc version??
+2005-12-29T07:06:00.000Z	pashaw	Eleaf	  i thought there was one
+2005-12-29T07:06:00.000Z	Eleaf	pashaw	I'm not seeing one, but the ubuntu live cd and its brownness distracts me = p
+2005-12-29T07:21:00.000Z	pashaw	Eleaf	all i found was a 2year old ppc version of knoppix     the Gentoo PPC LiveCD  is also an option
+2005-12-29T07:21:00.000Z	Eleaf	pashaw	alright, I'll just go with ubuntu live
+2005-12-29T07:22:00.000Z	pashaw	Eleaf	  im still at work  sorry for the delay with replies
+2005-12-29T07:22:00.000Z	Eleaf	pashaw	It's alright! = )
+2005-12-29T07:23:00.000Z	Eleaf	pashaw	what do you do for work?
+2005-12-29T07:23:00.000Z	pashaw	Eleaf	network admin
+2005-12-29T07:23:00.000Z	Eleaf	pashaw	That's cool, is it fun?
+2005-12-29T07:24:00.000Z	pashaw	Eleaf	  as long as the servers dont catch on fire i mess with "tech toys" all day
+2005-12-29T07:24:00.000Z	Eleaf	pashaw	= p
+2006-01-04T14:43:00.000Z	pashaw	Eleaf	 easy big fella
+2006-01-04T14:43:00.000Z	Eleaf	pashaw	?
+2006-01-04T14:45:00.000Z	Eleaf	pashaw	lol, I'm confused what to do..
+2006-01-04T14:46:00.000Z	pashaw	Eleaf	 i have to run a min to check on my users,  but   are you doing a fresh install?
+2006-01-04T14:46:00.000Z	Eleaf	pashaw	do you know what ubuntu is doing when it is calculating module dependencies at boot?
+2006-01-04T14:46:00.000Z	Eleaf	pashaw	I'm trying to repair my system after a dist-upgrade from breezy pre-release to breezy
+2006-01-04T14:47:00.000Z	Eleaf	pashaw	It freezes at calculating module dependencies every time after that
+2006-01-04T14:47:00.000Z	Eleaf	pashaw	your a network admin right? lol
+2006-01-04T14:47:00.000Z	pashaw	Eleaf	  yes
+2006-01-04T14:48:00.000Z	Eleaf	pashaw	yay.  But do you have any idea what to do to fix my ibook?
+2006-01-04T14:48:00.000Z	pashaw	Eleaf	  nothing about ibooks :(
+2006-01-04T14:48:00.000Z	pashaw	Eleaf	   too busy playing with Linux
+2006-01-04T14:48:00.000Z	Eleaf	pashaw	well I'm trying to fix the calculating module dependencies thing
+2006-01-04T14:49:00.000Z	Eleaf	pashaw	do I chroot to the harddrive with the livecd, and then what?
+2006-01-04T14:49:00.000Z	pashaw	Eleaf	   im not a chroot pro  only used it a few times
+2006-01-04T14:50:00.000Z	Eleaf	pashaw	ok, well how do i fix the module dependencies thing? lolol
+2006-01-04T14:50:00.000Z	pashaw	Eleaf	   im re-reading your post
+2006-01-04T14:51:00.000Z	pashaw	Eleaf	  it boots to grub right    have you tried a recovery kernel
+2006-01-04T14:51:00.000Z	pashaw	Eleaf	  your old ones
+2006-01-04T14:53:00.000Z	Eleaf	pashaw	they don't put a recover kernel with the ppc version, anyways, I got the livecd up and my hard drive mounted, I have access to all the files on my harddrive
+2006-01-04T14:54:00.000Z	pashaw	Eleaf	   also you can "append"  some commends to your grub boot   to disable all the fancy stuff like acpi   so you can at least boot to fix it
+2006-01-04T14:54:00.000Z	pashaw	Eleaf	  i dont have a clue  what would help an ibook boot
+2006-01-04T14:55:00.000Z	Eleaf	pashaw	ok but I'm booted into the livecd and I can make the changes there, I just don't know what to fix...
+2006-01-04T14:55:00.000Z	pashaw	Eleaf	  on an ibm lappy i would try disabling acpi and apic
+2006-01-04T14:55:00.000Z	pashaw	Eleaf	  reinstall the kernel  wold be a start
+2006-01-04T14:55:00.000Z	Eleaf	pashaw	ok, should I use apt?
+2006-01-04T14:56:00.000Z	Eleaf	pashaw	for some reason, the livecd isn't letting me use my ethernet...
+2006-01-04T14:56:00.000Z	pashaw	Eleaf	someone else has to be better for this question    ask   how to chroot into your broekn Ubuntu to reinstalll the kernel
+2006-01-04T14:57:00.000Z	Eleaf	pashaw	alright, I am chrooted into it I have a bunch of kernels there, but only the kernel named "Linux" shows up at boot...
+2006-01-06T17:17:00.000Z	pashaw	Eleaf	  are you a girl?  lol   j/k
+2006-01-06T17:17:00.000Z	Eleaf	pashaw	lol
+2006-01-06T17:17:00.000Z	pashaw	Eleaf	  my neice would like that desktop
+2006-01-06T17:17:00.000Z	Eleaf	pashaw	I think it's cute, I love it.

@@ -1,0 +1,97 @@
+2006-06-15T09:01:00.000Z	N9URK		did anyone have any problems installing ubuntu-desktop?
+2006-06-15T09:02:00.000Z	N9URK		I keep getting this error "SyntaxError: EOF while scanning triple-quoted string"
+2006-06-15T09:03:00.000Z	N9URK		then it loops through some stuff too quickly to read and then comes back to the error time and time and time again Dr_Willis
+2006-06-15T09:04:00.000Z	N9URK		it keeps going back to that error message
+2006-06-15T09:06:00.000Z	N9URK		Do you not know Dr_Willis
+2006-06-15T09:06:00.000Z	N9URK		?
+2006-06-15T09:08:00.000Z	BioVorE	N9URK	whats the error apt throwing?
+2006-06-15T09:09:00.000Z	BioVorE	N9URK	hmm intressting.. your /etc/apt/source.list correct..  also try a apt-get update and try again
+2006-06-15T09:11:00.000Z	BioVorE	N9URK	well there is a database apt builds from that information.. it looks lke that could be messed up.. re turnning apt-get update will refresh the local database with that of the internet server..  apt-get upgrade dose the upgrades
+2006-06-15T09:12:00.000Z	N9URK	BioVorE	is there something I am missing?  I ran apt-get upgrade just before the install.
+2006-06-15T09:21:00.000Z	N9URK	BioVorE	  ctl-c doesn't work   ctl-z suspends it.  then when I do kill -9 -1 it will kill it but when I run apt-get again it tells me to do dpkg --configure -a
+2006-06-15T09:14:00.000Z	BioVorE	N9URK	apt-get upgrade just updates you local list of what packages are avalible on the remote servers listed in /etc/apt/sources.list   when apt-get update gose out and downloads stuff from the web, what is grabs is a pckages.gz file thats just a text file that list all the packages and assorted info..
+2006-06-15T09:15:00.000Z	N9URK	BioVorE	OK I get it. I am sorry.  Too much stress here.  I didn't see you had typed update
+2006-06-15T09:15:00.000Z	BioVorE	N9URK	np
+2006-06-15T09:15:00.000Z	N9URK	BioVorE	 looking closely is important ;)
+2006-06-15T09:17:00.000Z	N9URK	BioVorE	you do Echolink, IRLP, or EQSO?
+2006-06-15T09:17:00.000Z	BioVorE	N9URK	not really.. I linkin via repeaters like wa3nan
+2006-06-15T09:18:00.000Z	BioVorE	N9URK	there is a linux version of echolink though
+2006-06-15T09:18:00.000Z	BioVorE	N9URK	works kinda crappy like though..
+2006-06-15T09:19:00.000Z	BioVorE	N9URK	you can run the windows version on wine though.
+2006-06-15T09:20:00.000Z	BioVorE	N9URK	ctrl-c send a program a sigterm and if that dosn't work.. try ctrl-z sigkill (or drop dead)
+2006-06-15T09:21:00.000Z	BioVorE	N9URK	If that dosn't work as root run kill -9 PID   (you find the pid looking at ps ax)
+2006-06-15T09:22:00.000Z	BioVorE	N9URK	Might be something with filelocking..  Hard to tell from here
+2006-06-15T09:22:00.000Z	N9URK	BioVorE	kill-9 PID did it
+2006-06-15T09:22:00.000Z	BioVorE	N9URK	ah ok..
+2006-06-15T09:23:00.000Z	N9URK	BioVorE	it is telling me now dpkg was interrupted, you must manually run 'dpkg~blah~' to correct the problem
+2006-06-15T09:23:00.000Z	BioVorE	N9URK	yeah.. dirty lock file and stuff
+2006-06-15T09:24:00.000Z	BioVorE	N9URK	what speed computer?
+2006-06-15T09:24:00.000Z	N9URK	BioVorE	1.8G
+2006-06-15T09:25:00.000Z	BioVorE	N9URK	yeah.. that shouldn't be cranking alot on apt things
+2006-06-15T09:25:00.000Z	N9URK	BioVorE	and it goes and goes and goes and then after about 10 minutes of looping it then ends.  But  I cannot get it to kill myself
+2006-06-15T09:26:00.000Z	BioVorE	N9URK	apt-get is a perl script I believe (might be pythong)  IT just parses a text file to get information to download a file then run dpkg -i
+2006-06-15T09:26:00.000Z	BioVorE	N9URK	I think is got an issue tring to parse the packages file it got of the server for some reason.
+2006-06-15T09:28:00.000Z	BioVorE	N9URK	I am not really sure what you got it doing atm..
+2006-06-15T09:30:00.000Z	BioVorE	N9URK	I would have to research it.. I don't know apt down the lowest level
+2006-06-15T09:31:00.000Z	N9URK	BioVorE	thanks for your help though anyway
+2006-06-15T09:31:00.000Z	N9URK	BioVorE	at least you tried
+2006-06-15T09:32:00.000Z	BioVorE	N9URK	you can try asking in the #debian room too.. same engine
+2006-06-15T09:32:00.000Z	N9URK	BioVorE	good idea
+2006-06-15T09:32:00.000Z	BioVorE	N9URK	I am kinda intressed to see what happend and maybe is if there is a bug in apt
+2006-06-15T09:33:00.000Z	N9URK	BioVorE	I am going there now if you want to follow me
+2006-06-15T09:38:00.000Z	BioVorE	N9URK	rgr.. take a look at /var/lib/dpkg
+2006-06-15T09:43:00.000Z	BioVorE	N9URK	it shouldn't be doing that
+2006-06-15T09:43:00.000Z	N9URK	BioVorE	I wish I could take a screenshot for you
+2006-06-15T09:44:00.000Z	BioVorE	N9URK	the only stat.py I have my system here is part of the python2.4 package
+2006-06-15T09:44:00.000Z	BioVorE	N9URK	might have a Disk error problem and messed up the stat.py file (its a text file)
+2006-06-15T09:45:00.000Z	BioVorE	N9URK	/usr/lib/python2.4/stat.py
+2006-06-15T09:45:00.000Z	N9URK	BioVorE	is that a conf file?
+2006-06-15T09:45:00.000Z	BioVorE	N9URK	its a python module..  that I think apt is tring to use.. but those errors your seening look like there from the python interpiter barfing on that file.
+2006-06-15T09:46:00.000Z	BioVorE	N9URK	well.. theres your problem :-P
+2006-06-15T09:47:00.000Z	BioVorE	N9URK	do a dpkg -l | grep python
+2006-06-15T09:47:00.000Z	BioVorE	N9URK	lima
+2006-06-15T09:47:00.000Z	N9URK	BioVorE	hokey smokes - there is a lot of stuff
+2006-06-15T09:48:00.000Z	BioVorE	N9URK	rgr.. that why there is a | grep python.. should just spit out pythong stuff
+2006-06-15T09:49:00.000Z	BioVorE	N9URK	you have a /usr/lib/python2.4 directory?
+2006-06-15T09:53:00.000Z	N9URK	BioVorE	I am looking
+2006-06-15T09:54:00.000Z	N9URK	BioVorE	Yes it is there
+2006-06-15T09:55:00.000Z	BioVorE	N9URK	is there a file called stat.py in that directory?
+2006-06-15T09:55:00.000Z	BioVorE	N9URK	(/usr/lib/python2.4)
+2006-06-15T09:57:00.000Z	N9URK	BioVorE	yes there is
+2006-06-15T09:57:00.000Z	BioVorE	N9URK	what dose md5sum stat.py give you back
+2006-06-15T09:58:00.000Z	BioVorE	N9URK	well that file looks correct.. I have the same md5sum here as well
+2006-06-15T09:59:00.000Z	BioVorE	N9URK	yeah.. its having issues with parsing a text file somewhere..
+2006-06-15T10:00:00.000Z	BioVorE	N9URK	I think the file it parses is /var/lib/dpkg/avaliable   its a text file that list all the packages on the mirrors.  Its a big text file
+2006-06-15T10:01:00.000Z	BioVorE	N9URK	the parser is probably seending an open string.  "I am a string"     I am a broken string"
+2006-06-15T10:01:00.000Z	BioVorE	N9URK	need a even number of " or else stuff gets confused
+2006-06-15T10:02:00.000Z	N9URK	BioVorE	: on the first line of stats.py it has <quote>"""Constants/functions~</quote>
+2006-06-15T10:03:00.000Z	N9URK	BioVorE	line 2 is blank. line 3 <quote>suggested usage: from stat import *</quote>
+2006-06-15T10:03:00.000Z	N9URK	BioVorE	line 4 <quote>"""</quote>
+2006-06-15T10:03:00.000Z	BioVorE	N9URK	""" in python I think is a quote
+2006-06-15T10:05:00.000Z	N9URK	BioVorE	removing those lines didn't help
+2006-06-15T10:05:00.000Z	N9URK	BioVorE	I sure wish I knew how to stop apt-get's processing
+2006-06-15T10:06:00.000Z	BioVorE	N9URK	sudo killall -9 apt-get  (you might also look in ps ax for dpkg, python and see if its running as well)  Time for bed here.. I'll be on tomarrow night
+2006-06-15T10:09:00.000Z	N9URK	BioVorE	thanks for all the help good night om
+2006-06-17T15:43:00.000Z	N9URK	BioVorE	where you be?
+2006-06-17T15:45:00.000Z	BioVorE	N9URK	nice
+2006-06-17T15:45:00.000Z	N9URK	BioVorE	I have the LAMP server with desktop set up
+2006-06-17T15:45:00.000Z	N9URK	BioVorE	easy install, Gnucash isn't in apt-get though so I am going to have to find the source that does have it
+2006-06-17T15:46:00.000Z	BioVorE	N9URK	its not!!  I am sure it is..
+2006-06-17T15:47:00.000Z	N9URK	BioVorE	I did apt-get -s install gnucash and got "couldnt find package gnucash"
+2006-06-17T15:47:00.000Z	N9URK	BioVorE	There always has to be some problem, even if just a small one ;)
+2006-06-17T15:48:00.000Z	BioVorE	N9URK	look at the repos
+2006-06-17T15:48:00.000Z	BioVorE	N9URK	is in the universe repository
+2006-06-17T15:48:00.000Z	N9URK	BioVorE	cool thanks
+2006-06-17T15:48:00.000Z	N9URK	BioVorE	 I will add it
+2006-06-17T15:49:00.000Z	N9URK	BioVorE	what can I do to get ubotu to give me a list of his commands?
+2006-06-17T15:50:00.000Z	BioVorE	N9URK	Its on there wiki site
+2006-06-17T15:50:00.000Z	N9URK	BioVorE	ok I will look there. tnx
+2006-06-17T15:50:00.000Z	N9URK	BioVorE	those are the basic linux commands: not ubotu's commands
+2006-06-17T15:51:00.000Z	N9URK	BioVorE	nice thanks.  am looking there
+2006-06-17T15:58:00.000Z	N9URK	BioVorE	I am on https://wiki.ubuntu.com/AddingRepositoriesHowto and my System -> Administration menu only has 5 things on it.  How do I get the rest pictured on that page?
+2006-06-17T15:58:00.000Z	BioVorE	N9URK	I just edit /etc/apt/sources.list
+2006-06-17T15:59:00.000Z	BioVorE	N9URK	I my opinion its still very borked
+2006-06-18T16:01:00.000Z	N9URK	BioVorE	I have never really used a Linux desktop.  I have done everything from the command line, so I don't really know how good it is. but since you know, I will just edit it by hand
+2006-06-18T16:01:00.000Z	N9URK	BioVorE	much easier that way
+2006-06-18T16:02:00.000Z	BioVorE	N9URK	I am a command line rat here..  you can do so much from it you can't do in a gui enviroment
+2006-06-18T16:05:00.000Z	N9URK	BioVorE	THanks for all of your help

@@ -1,0 +1,96 @@
+2008-09-13T07:17:00.000Z	BrightSunnyBunny		﻿ patrick__: you have a touchpad on the tab-pc...
+2008-09-13T07:19:00.000Z	BrightSunnyBunny		﻿ patrick__: put this (paste in ) in the top of xorg.conf
+2008-09-13T07:19:00.000Z	BrightSunnyBunny		http://paste.ubuntu.com/46474/ ,patrick_
+2008-09-13T07:19:00.000Z	BrightSunnyBunny		thatss whats meant
+2008-09-13T07:20:00.000Z	BrightSunnyBunny		later you could try the two other suggestions
+2008-09-13T07:21:00.000Z	BrightSunnyBunny		﻿ darkcard: try : no apic no lapic
+2008-09-13T07:21:00.000Z	BrightSunnyBunny		﻿ darkcard: try :( also boot options)
+2008-09-13T07:23:00.000Z	BrightSunnyBunny		﻿ patrick__: did both changes ? saved ? File>quit or ctr-c in terminal
+2008-09-13T07:24:00.000Z	patrick__	BrightSunnyBunny	i dont know i just saved in the xorg abd exist
+2008-09-13T07:24:00.000Z	BrightSunnyBunny		﻿ darkcard: shure drive is proper ; experiment with these 3 options /combinations
+2008-09-13T07:24:00.000Z	patrick__	BrightSunnyBunny	 then i exit the terminal...
+2008-09-13T07:26:00.000Z	BrightSunnyBunny		﻿ patrick__: took step 11, too ?
+2008-09-13T07:27:00.000Z	patrick__		yea but i got this patrick@patrick-laptop:~$ cp /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko wacom.ko.`uname -r`
+2008-09-13T07:27:00.000Z	patrick__		patrick@patrick-laptop:~$ sudo cp linuxwacom-0.8.0-3/src/2.6.24/wacom.ko /lib/modules/`uname -r`/kernel/drivers/input/tablet/wacom.ko
+2008-09-13T07:27:00.000Z	patrick__		[sudo] password for patrick:
+2008-09-13T07:27:00.000Z	patrick__		cp: cannot stat `linuxwacom-0.8.0-3/src/2.6.24/wacom.ko': No such file or directory
+2008-09-13T07:27:00.000Z	patrick__		patrick@patrick-laptop:~$
+2008-09-13T07:28:00.000Z	patrick__		i dont know where i went wrong
+2008-09-13T07:29:00.000Z	BrightSunnyBunny		﻿ patrick__: find linuxwacom*
+2008-09-13T07:30:00.000Z	patrick__		patrick@patrick-laptop:~$ find linuxwacom
+2008-09-13T07:30:00.000Z	patrick__		find: linuxwacom: No such file or directory
+2008-09-13T07:30:00.000Z	patrick__		patrick@patrick-laptop:~$
+2008-09-13T07:32:00.000Z	BrightSunnyBunny		sudo apt-get install linux-headers-`uname -r` build-essential x11proto-core-dev libxau-dev libxdmcp-dev x11proto-input-dev x11proto-kb-dev xtrans-dev libx11-dev x11proto-xext-dev libxext-dev libxi-dev linux-libc-dev libc6-dev libncurses5-dev xserver-xorg-dev tk-dev tcl-dev -y  ,patrick_  is this installed ?
+2008-09-13T07:34:00.000Z	patrick__		patrick@patrick-laptop:~$ sudo find / -name linuxwacom -print
+2008-09-13T07:34:00.000Z	patrick__		patrick@patrick-laptop:~$
+2008-09-13T07:34:00.000Z	patrick__		it doesnt do anythign
+2008-09-13T07:34:00.000Z	patrick__		i see my folder though
+2008-09-13T07:35:00.000Z	BrightSunnyBunny		﻿ patrick__: are you in /wacom ? cd wacom !
+2008-09-13T07:35:00.000Z	BrightSunnyBunny		﻿ patrick__: cd            then :  cd /wacom !
+2008-09-13T07:36:00.000Z	patrick__		bash: cd: /wacom: No such file or directory
+2008-09-13T07:37:00.000Z	patrick__	BrightSunnyBunny	 i see ny folded under patrick > wacom
+2008-09-13T07:38:00.000Z	BrightSunnyBunny		﻿ patrick__: are you in /wacom ?
+2008-09-13T07:39:00.000Z	patrick__	BrightSunnyBunny	 yea in the terminal i see wacom/linuxwacom-0.8.0-3/prebuilt/64/wacomcfg.h
+2008-09-13T07:39:00.000Z	patrick__		wacom/linuxwacom-0.8.0-3/prebuilt/64/xsetwacom
+2008-09-13T07:39:00.000Z	patrick__		wacom/linuxwacom-0.8.0-3/prebuilt/64/wacomcpl-exec
+2008-09-13T07:39:00.000Z	patrick__		wacom/linuxwacom-0.8.0-3/prebuilt/64/wacdump
+2008-09-13T07:39:00.000Z	patrick__		wacom/linuxwacom-0.8.0-3/prebuilt/64/wacom_drv.so
+2008-09-13T07:39:00.000Z	patrick__		wacom/linuxwacom-0.8.0-3/prebuilt/wacom.4x.gz
+2008-09-13T07:40:00.000Z	BrightSunnyBunny	Nutzebahn	apt-cache search libusb, first 3
+2008-09-13T07:40:00.000Z	patrick__	BrightSunnyBunny	did u see  my flood
+2008-09-13T07:41:00.000Z	BrightSunnyBunny		﻿ patrick__: are you in /wacom ? yes, saw it
+2008-09-13T07:42:00.000Z	BrightSunnyBunny	Nutzebahn	evil sources..rpm seek
+2008-09-13T07:42:00.000Z	patrick__	BrightSunnyBunny	 im it sure what ur asking me but this is http://paste.ubuntu.com/46487/plain/where im at now link
+2008-09-13T07:44:00.000Z	patrick__	BrightSunnyBunny	ok im in the webcom now in the terminal
+2008-09-13T07:44:00.000Z	BrightSunnyBunny		﻿ patrick__: lik doesn't exist ... first : cd             second: cd /wacom    third: ls (don't floood1) files there ?
+2008-09-13T07:44:00.000Z	BrightSunnyBunny		link*
+2008-09-13T07:45:00.000Z	patrick__	BrightSunnyBunny	im a newbie!!!! im conused
+2008-09-13T07:45:00.000Z	patrick__	BrightSunnyBunny	 all i know is im here patrick@patrick-laptop:~$ cd wacom
+2008-09-13T07:45:00.000Z	patrick__		patrick@patrick-laptop:~/wacom$
+2008-09-13T07:46:00.000Z	BrightSunnyBunny		﻿ patrick__:good, now repeat the last cmd from website-wiki
+2008-09-13T07:48:00.000Z	patrick__	BrightSunnyBunny	i did now it brought me to the /wacomm
+2008-09-13T07:49:00.000Z	patrick__	BrightSunnyBunny	 i ddi not relize there was more steos
+2008-09-13T07:49:00.000Z	patrick__		steps
+2008-09-13T07:50:00.000Z	BrightSunnyBunny		if you strictly followed the wicki you should have benn there already (step 3), patrick_
+2008-09-13T07:51:00.000Z	patrick__	BrightSunnyBunny	 in on step 14 what are u talking about
+2008-09-13T07:52:00.000Z	BrightSunnyBunny		the dir , patrick_
+2008-09-13T07:53:00.000Z	BrightSunnyBunny		cmd 13 worked now ? patrick_
+2008-09-13T07:55:00.000Z	patrick__	BrightSunnyBunny	13 is good im on 16 but i cant tell what its trying to do
+2008-09-13T07:56:00.000Z	patrick__	BrightSunnyBunny	does this look like it downloaded correctly ? HTTP request sent, awaiting response... 200 OK
+2008-09-13T07:56:00.000Z	patrick__		Length: unspecified [text/plain]
+2008-09-13T07:56:00.000Z	patrick__		    [ <=>                                 ] 6,661         --.--K/s
+2008-09-13T07:56:00.000Z	patrick__		21:54:58 (44.28 KB/s) - `wacom.udev' saved [6661]
+2008-09-13T07:56:00.000Z	patrick__		patrick@patrick-laptop:~/wacom/linuxwacom-0.8.0-3/prebuilt$ cp /etc/udev/rules.d/50-xserver-xorg-input-wacom.rules wacom.udev.backup
+2008-09-13T07:56:00.000Z	BrightSunnyBunny		patrick_:3 seperate cmds to download and configure wacom tools
+2008-09-13T07:56:00.000Z	BrightSunnyBunny		stop flooding!
+2008-09-13T07:57:00.000Z	patrick__		oh
+2008-09-13T07:57:00.000Z	patrick__		LOL
+2008-09-13T07:58:00.000Z	patrick__		??
+2008-09-13T07:58:00.000Z	patrick__		WHAT CMD>
+2008-09-13T08:00:00.000Z	patrick__	BrightSunnyBunny	 help me
+2008-09-13T08:00:00.000Z	BrightSunnyBunny		1) wget 'http://git.debian.org/?p=users/ron/wacom-tools.git;a=blob_plain;f=debian/xserver-xorg-input-wacom.udev;hb=master' -O wacom.udev          ,patrick_
+2008-09-13T08:00:00.000Z	BrightSunnyBunny		patrick_:no link, but one cmd
+2008-09-13T08:01:00.000Z	BrightSunnyBunny		patrick_:2)cp /etc/udev/rules.d/50-xserver-xorg-input-wacom.rules wacom.udev.backup
+2008-09-13T08:02:00.000Z	BrightSunnyBunny		3)sudo cp wacom.udev /etc/udev/rules.d/50-xserver-xorg-input-wacom.rules           ,patrick_, each line one cmd
+2008-09-13T08:03:00.000Z	patrick__		thank you
+2008-09-13T08:03:00.000Z	patrick__	BrightSunnyBunny	 now we on 17 right
+2008-09-13T08:04:00.000Z	BrightSunnyBunny		patrick_:type  /paste line by line until 19
+2008-09-13T08:06:00.000Z	patrick__	BrightSunnyBunny	 immm on the last 1 where i have to make  and i get this make: *** No rule to make target `install'.  Stop.
+2008-09-13T08:06:00.000Z	patrick__		patrick@patrick-laptop:~/wacom$
+2008-09-13T08:08:00.000Z	BrightSunnyBunny		whats the directory youre in now, patrick_
+2008-09-13T08:09:00.000Z	patrick__		wacom
+2008-09-13T08:09:00.000Z	patrick__		let ne see
+2008-09-13T08:11:00.000Z	BrightSunnyBunny		cd linuxwacom-0.8.0-3/
+2008-09-13T08:11:00.000Z	BrightSunnyBunny		15, first cmd.. even a strter can follow lines, can't he ?
+2008-09-13T08:13:00.000Z	BrightSunnyBunny		Nutzebahn:even on rpmseek there is no libusb2
+2008-09-13T08:13:00.000Z	patrick__		yes im ollowing
+2008-09-13T08:13:00.000Z	patrick__		this damn thing is just stupid
+2008-09-13T08:14:00.000Z	patrick__		bash: cd: linuxwacom-0.8.0-3/prebuilt: No such file or directory
+2008-09-13T08:14:00.000Z	patrick__		patrick@patrick-laptop:~$
+2008-09-13T08:14:00.000Z	patrick__		see
+2008-09-13T08:15:00.000Z	BrightSunnyBunny		patrick_:get a hot chocolate and simply line by line....exept from backing up xorgconf (we succesfully did), the wiki looks right:)
+2008-09-13T08:15:00.000Z	BrightSunnyBunny		you can paste from wiki to terminal,       patrick_
+2008-09-13T08:16:00.000Z	patrick__		i know that but it gives ne error!!!
+2008-09-13T08:17:00.000Z	BrightSunnyBunny		﻿Widgit:try also #grub, they sometimes got some raid-proved personal
+2008-09-13T08:17:00.000Z	BrightSunnyBunny		!raid
+2008-09-13T08:18:00.000Z	patrick__	BrightSunnyBunny	  ok im here patrick@patrick-laptop:~/wacom/linuxwacom-0.8.0-3/prebuilt$

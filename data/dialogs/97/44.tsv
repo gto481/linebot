@@ -1,0 +1,97 @@
+2007-01-04T17:53:00.000Z	adaptr		oh he's gone again
+2007-01-04T06:02:00.000Z	adaptr		okay, well I won't be missing him
+2007-01-04T06:02:00.000Z	adaptr		!autoload | hemantsolanki
+2007-01-04T06:03:00.000Z	hemantsolanki	adaptr	lol.
+2007-01-04T06:08:00.000Z	adaptr	hemantsolanki	put the name of the module in /etc/modules
+2007-01-04T06:10:00.000Z	adaptr	hemantsolanki	sudo "echo forcedeth >> /etc/modules"
+2007-01-04T06:12:00.000Z	adaptr	hemantsolanki	how do you know it is not detected ?
+2007-01-04T06:19:00.000Z	adaptr	hemantsolanki	there are various tools you can use to see if Ubuntu/Linux recognises your soundcard
+2007-01-04T06:19:00.000Z	hemantsolanki	adaptr	and .. what are those tools?
+2007-01-04T06:20:00.000Z	adaptr	hemantsolanki	well, first I'd run "lspci"
+2007-01-04T06:20:00.000Z	hemantsolanki	adaptr	i did that
+2007-01-04T06:21:00.000Z	adaptr	hemantsolanki	okay, next I'd see if Ubuntu loaded any drivers; run "lsmod | grep snd"
+2007-01-04T06:22:00.000Z	hemantsolanki	adaptr	this is the lspci -vv information about my sound card http://pastebin.ca/304535
+2007-01-04T06:23:00.000Z	adaptr	hemantsolanki	see if there are drivers loaded
+2007-01-04T06:23:00.000Z	hemantsolanki	adaptr	ok i got this information about drivers http://pastebin.ca/304538 lsmod | grep snd
+2007-01-04T06:24:00.000Z	adaptr	hemantsolanki	this one: saa7134_alsa is not part of the system sound support, so it would be the one loaded for your hardware
+2007-01-04T06:25:00.000Z	hemantsolanki	adaptr	what should i do in order to get sound ?
+2007-01-04T06:25:00.000Z	adaptr	hemantsolanki	well, first I'd get some more info on that driver, from Google or a Linux specific site
+2007-01-04T06:26:00.000Z	adaptr	hemantsolanki	I've never seen that one, and I also have an nforce board - mine uses a cs8427 chipset
+2007-01-04T06:26:00.000Z	hemantsolanki	adaptr	oh i see. so i cant use sound in edgy
+2007-01-04T06:27:00.000Z	adaptr	hemantsolanki	where did you get that from ?
+2007-01-04T06:27:00.000Z	hemantsolanki	adaptr	board?
+2007-01-04T06:27:00.000Z	adaptr	hemantsolanki	yes ?
+2007-01-04T06:28:00.000Z	hemantsolanki	adaptr	i got m2n-mx asus board here i live in india. it has nvidia chipset.
+2007-01-04T06:30:00.000Z	hemantsolanki	adaptr	http://www.nvnews.net/vbulletin/showthread.php?t=80975
+2007-01-04T06:30:00.000Z	adaptr	hemantsolanki	ADI AD1986A High Difinition Audio 5.1channel CODEC is what the asus site says
+2007-01-04T06:31:00.000Z	hemantsolanki	adaptr	mine is 6.1 channel
+2007-01-04T06:31:00.000Z	adaptr	hemantsolanki	okay, whatever - does the chipset match ? your lspci output implies it doesn't understand the chipset....
+2007-01-04T06:32:00.000Z	adaptr	hemantsolanki	next is to search for info on a driver for that card
+2007-01-04T06:32:00.000Z	hemantsolanki	adaptr	i want to install kernel 2.6.19 in edgy can i do that? maybe that helps
+2007-01-04T06:32:00.000Z	adaptr	hemantsolanki	you can do that manually, yes - but I really don't recommend it until you know your way around Linux
+2007-01-04T06:33:00.000Z	hemantsolanki	adaptr	is 2.6.19 in the any of the ubuntu repo's?
+2007-01-04T06:33:00.000Z	adaptr	hemantsolanki	I think it is in feisty - but you don;t want to mess with that
+2007-01-04T06:33:00.000Z	hemantsolanki	adaptr	i read in one of the forums that i need a latest kernel in order to get the sound work
+2007-01-04T06:34:00.000Z	hemantsolanki	adaptr	http://www.nvnews.net/vbulletin/showthread.php?t=80394
+2007-01-04T06:34:00.000Z	adaptr	hemantsolanki	please, do yourself a favour and set a trend now - *search* first, moan later
+2007-01-04T06:36:00.000Z	hemantsolanki	adaptr	i got a driver cd with my board that has linux driver some name of file is alsa-driver*.bz2
+2007-01-04T06:36:00.000Z	adaptr	hemantsolanki	a quick search reveals that drivers have existed for at least a year, so it cannot be that you *have* to use a newer kernel.. there are audio drivers not in the stock kernel that you can still use with 2.6.17
+2007-01-04T06:36:00.000Z	hemantsolanki	adaptr	they are in the sounds driver folder
+2007-01-04T06:37:00.000Z	adaptr	hemantsolanki	yes, but you'd be better off using the real alsa module.. let me investigate some
+2007-01-04T06:37:00.000Z	hemantsolanki	adaptr	okay
+2007-01-04T06:41:00.000Z	hemantsolanki	adaptr	http://www.nvidia.com/object/linux_nforce_1.21.html see this?
+2007-01-04T06:48:00.000Z	hemantsolanki	adaptr	any progress dude?
+2007-01-04T06:48:00.000Z	adaptr	hemantsolanki	try this: "sudo modprobe snd-hda-intel"
+2007-01-04T06:48:00.000Z	hemantsolanki	adaptr	i just did that. now what i need to do
+2007-01-04T06:48:00.000Z	adaptr	hemantsolanki	what was the result ?
+2007-01-04T06:48:00.000Z	hemantsolanki	adaptr	it got loaded
+2007-01-04T06:49:00.000Z	adaptr	hemantsolanki	so - do you have sound ?
+2007-01-04T06:49:00.000Z	hemantsolanki	adaptr	no
+2007-01-04T06:52:00.000Z	adaptr	hemantsolanki	can you paste the full output of "lsmod" ?
+2007-01-04T06:52:00.000Z	hemantsolanki	adaptr	snd-intel8x0?
+2007-01-04T06:52:00.000Z	hemantsolanki	adaptr	ya
+2007-01-04T06:53:00.000Z	hemantsolanki	adaptr	here its http://pastebin.ca/304559
+2007-01-04T06:54:00.000Z	adaptr	hemantsolanki	that's weird - were the intel8x0 drivers there before ?
+2007-01-04T06:55:00.000Z	hemantsolanki	adaptr	no i added them should i remove them?
+2007-01-04T06:55:00.000Z	adaptr	hemantsolanki	well, I'd not use both at the same time
+2007-01-04T06:56:00.000Z	hemantsolanki	adaptr	i removed them. intel8x0
+2007-01-04T06:57:00.000Z	hemantsolanki	adaptr	i will reboot now let me see if it helps. brb.
+2007-01-04T06:57:00.000Z	adaptr	hemantsolanki	okay, well - try adding the snd-hda-intel one to /etc/modules (autoload) and re-init ("sudo init 2"), as I'm not sure what all gets initialised when Ubuntu boots up
+2007-01-04T07:15:00.000Z	hemantsolanki	adaptr	it doesn't work
+2007-01-04T07:16:00.000Z	adaptr	hemantsolanki	no, it doesn't, you were rather too impatient... the module is not loaded
+2007-01-04T07:16:00.000Z	hemantsolanki	adaptr	i have problem with my lan card also. it's onboard nvidia but it doesn't work i have to use realtek lan card on pci slot
+2007-01-04T07:18:00.000Z	adaptr	hemantsolanki	well, the googles I did seemed to indicate that getting forcedeth to work is easier than the sound, but both are very possible
+2007-01-04T07:18:00.000Z	hemantsolanki	adaptr	forcedeth is loaded but edgy only detects realtek. why doesn't it show two lan cards in ifconfig -a
+2007-01-04T07:19:00.000Z	adaptr	hemantsolanki	I have no clue; what does mii-diag reveal ?
+2007-01-04T07:19:00.000Z	hemantsolanki	adaptr	do i need to create a udev rule or something?
+2007-01-04T07:20:00.000Z	adaptr	hemantsolanki	it has nothing to do with that, you say forcedeth is loaded, so I assume it shows up in lsmod ?
+2007-01-04T07:20:00.000Z	hemantsolanki	adaptr	http://pastebin.ca/304575
+2007-01-04T07:21:00.000Z	adaptr	hemantsolanki	is that the realtek card ?
+2007-01-04T07:21:00.000Z	hemantsolanki	adaptr	ya
+2007-01-04T07:22:00.000Z	adaptr	hemantsolanki	can you paste me the full output of lsmod once more please ?
+2007-01-04T07:23:00.000Z	hemantsolanki	adaptr	http://pastebin.ca/304578
+2007-01-04T07:27:00.000Z	adaptr	hemantsolanki	the forcedeth module isn't used by anything - and neither is the "tulip" driver I see laoded, which is like.. very old, for 10mbit cards
+2007-01-04T07:29:00.000Z	adaptr	hemantsolanki	your forcedeth driver is not the same size as mine - and mine is working flawlessly.. are you running x64 ?
+2007-01-04T07:29:00.000Z	hemantsolanki	adaptr	ya
+2007-01-04T07:30:00.000Z	adaptr	hemantsolanki	and you did not think to mention this before ? I'm sorry if this seems fatalistic, but x64 is nowhere near ready for the average user...
+2007-01-04T07:30:00.000Z	adaptr	hemantsolanki	install the regular 32 bit Edgy and enjoy glorious working nvidia hardware
+2007-01-04T07:31:00.000Z	hemantsolanki	adaptr	sorry to say but does that mean i can't expect ubuntu amd64 to work for me?
+2007-01-04T07:31:00.000Z	hemantsolanki	adaptr	even if i compile my own custom kernel?
+2007-01-04T07:32:00.000Z	adaptr	hemantsolanki	compiling your own kernel won't solve a basic incompatibility.. and 90% of all the Google results I have seen for the nforce 430 so far have been about 64 bit *not working*
+2007-01-04T07:33:00.000Z	hemantsolanki	adaptr	you mean to say if i install x86 with 32 bit i will get sound , network support in edgy?
+2007-01-04T07:33:00.000Z	adaptr	hemantsolanki	I have :)
+2007-01-04T07:33:00.000Z	hemantsolanki	adaptr	ok then i will now install edgy 32 bit. and try it then.
+2007-01-04T07:33:00.000Z	adaptr	hemantsolanki	and I have a very crappy ULi mainboard, that just barely supports amd64...
+2007-01-04T09:03:00.000Z	hemantsolanki	adaptr	i have installed ubuntu 6.10 edgy 32 bit now.
+2007-01-04T09:03:00.000Z	adaptr	hemantsolanki	goody, sound working ?
+2007-01-04T09:03:00.000Z	hemantsolanki	adaptr	but now also my network card and sound not working
+2007-01-04T09:03:00.000Z	hemantsolanki	adaptr	i am installing vlc right now can you tell me how to install audacious dude
+2007-01-04T09:03:00.000Z	adaptr	hemantsolanki	well, at least you knwo what to do know.. load forcedeth, load snd_hda_intel.. try again
+2007-01-04T09:05:00.000Z	hemantsolanki	adaptr	i have loaded forcedeth, snd-hda-intel but still nothing works
+2007-01-04T09:05:00.000Z	adaptr	hemantsolanki	sorry, but I really have no clue then
+2007-01-04T09:05:00.000Z	hemantsolanki	adaptr	oh dude don't do like that please help dude
+2007-01-04T09:06:00.000Z	adaptr	hemantsolanki	what ? you wish to pay for support ? you probably wouldn't like what it costs.... :)
+2007-01-04T09:06:00.000Z	adaptr	hemantsolanki	some great tips: 1. register on ubuntu forums and use them
+2007-01-04T09:06:00.000Z	hemantsolanki	adaptr	lol
+2007-01-04T09:07:00.000Z	adaptr	hemantsolanki	2. try another distro, one that has built-in detection, like opensuse or madriva, or even fedora
+2007-01-04T09:07:00.000Z	hemantsolanki	adaptr	i tried gentoo and vlos both detect my network but not my sound dude

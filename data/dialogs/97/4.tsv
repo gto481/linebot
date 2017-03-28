@@ -1,0 +1,97 @@
+2011-04-15T16:54:00.000Z	Guest60593		i removed my python
+2011-04-15T16:55:00.000Z	Guest60593		and suddenly i saw some broken packages in broken filter of synaptic
+2011-04-15T16:55:00.000Z	jrib	Guest60593	well you need python...
+2011-04-15T16:57:00.000Z	jrib	Guest60593	why did you even remove it?
+2011-04-15T16:58:00.000Z	Guest60593	jrib	i clicked on synaptic, searched for python and right click on python, mark for removal
+2011-04-15T16:58:00.000Z	Guest60593	jrib	and apply
+2011-04-15T16:58:00.000Z	jrib	Guest60593	this is "how" you removed it.  I asked "why" you removed it
+2011-04-15T16:59:00.000Z	Guest60593	jrib	yes :D xqz me
+2011-04-15T16:59:00.000Z	Guest60593	jrib	my rhythmbox had a problem with pygtk
+2011-04-15T16:59:00.000Z	Guest60593	jrib	and i tried installing python gtk but it had some problems with python
+2011-04-15T17:00:00.000Z	Guest60593	jrib	so i decided to remove python and install it again
+2011-04-15T17:01:00.000Z	Guest60593	jrib	no idea? :(
+2011-04-15T17:01:00.000Z	jrib	Guest60593	what problems with python did python gtk have?
+2011-04-15T17:02:00.000Z	Guest60593	jrib	i dont remember
+2011-04-15T17:02:00.000Z	Guest60593	jrib	the big problem here is python itself
+2011-04-15T17:02:00.000Z	Guest60593	jrib	which i cannot install it again
+2011-04-15T17:02:00.000Z	jrib	Guest60593	that's weird...
+2011-04-15T17:03:00.000Z	jrib	Guest60593	what happens when you try to install it now...?
+2011-04-15T17:03:00.000Z	Guest60593	jrib	i dont need pygtk if python is back
+2011-04-15T17:03:00.000Z	jrib	Guest60593	this is not why I am asking the questions.  I'm trying to understand the situation you were in *before* you decided to remove python
+2011-04-15T17:03:00.000Z	jrib	Guest60593	please just pastebin what happens when you try to install python
+2011-04-15T17:04:00.000Z	Guest60593	jrib	alright
+2011-04-15T17:08:00.000Z	Guest60593	jrib	http://pastebin.com/yGgQFE4B
+2011-04-15T17:08:00.000Z	Guest60593	jrib	here is stuff which im able to copy
+2011-04-15T17:08:00.000Z	jrib	Guest60593	why can't you copy everything including command ?
+2011-04-15T17:20:00.000Z	Guest60593	jrib	its been a while im using my ubuntu
+2011-04-15T17:08:00.000Z	Guest60593	jrib	im trying to make a screenshot out of those i cannot
+2011-04-15T17:08:00.000Z	Guest60593	jrib	um!
+2011-04-15T17:09:00.000Z	Guest60593	jrib	cuz i use synaptic and it doesn't let me to copy anything
+2011-04-15T17:09:00.000Z	jrib	Guest60593	use a terminal: sudo apt-get install python
+2011-04-15T17:11:00.000Z	jrib	Guest60593	please just pastebin command and full output, then we can decide what to do
+2011-04-15T17:11:00.000Z	Guest60593	jrib	doesn't it mess everything up? :(
+2011-04-15T17:12:00.000Z	Guest60593	jrib	http://pastebin.com/WQaD6xk7
+2011-04-15T17:12:00.000Z	Guest60593	jrib	this is apt-get install python
+2011-04-15T17:13:00.000Z	jrib	Guest60593	what's the output of « sudo apt-get -f install »?
+2011-04-15T17:14:00.000Z	jrib	Guest60593	and please try to include the command in what you copy to pastebin
+2011-04-15T17:14:00.000Z	Guest60593	jrib	http://pastebin.com/u5bnVpt8
+2011-04-15T17:17:00.000Z	jrib	Guest60593	we can try to fix this if you wish but reinstall will likely be faster.  How do you wish to proceed?
+2011-04-15T17:18:00.000Z	jrib	Guest60593	k
+2011-04-15T17:19:00.000Z	jrib	Guest60593	it's also strange that you have thees packages like alacarte installed because they clearly depend on python
+2011-04-15T17:19:00.000Z	jrib	Guest60593	no, I mean reinstall ubuntu
+2011-04-15T17:19:00.000Z	Guest60593	jrib	o0oW! n0oo0o0o0o0oo0
+2011-04-15T17:19:00.000Z	Guest60593	jrib	thats awful!!!
+2011-04-15T17:19:00.000Z	jrib	Guest60593	hmm?
+2011-04-15T17:20:00.000Z	Guest60593	jrib	:( there aint any other solution?
+2011-04-15T17:20:00.000Z	jrib	Guest60593	like I said, we can try to fix it but it will likely take longer than a reinstall
+2011-04-15T17:21:00.000Z	Guest60593	jrib	no problem for me! i guess i rather fix my mess than reinstall my ubuntu
+2011-04-15T17:21:00.000Z	jrib	Guest60593	ok, to check if PACKAGE is installed, you run « apt-cache policy PACKAGE » and look at the "Installed: " line.  Is gconf2 installed?
+2011-04-15T17:23:00.000Z	Guest60593	jrib	W: Unable to locate package PACKAGE
+2011-04-15T17:24:00.000Z	jrib	Guest60593	right, that's if you wanted to know whether or not a package named PACKAGE is installed.  But we want to know whether or not gconf2 is installed, so you would run: apt-cache policy gconf2   and look at the "Installed:" line
+2011-04-15T17:25:00.000Z	Guest60593	jrib	:D sure, Installed: 2.28.1-0ubuntu1
+2011-04-15T17:26:00.000Z	jrib	Guest60593	ok, pastebin the contents of the file /var/lib/dpkg/info/empathy.prerm .  You can type « gedit /var/lib/dpkg/info/empathy.prerm » in a terminal, then copy and paste the whole file to pastebin
+2011-04-15T17:28:00.000Z	Guest60593	jrib	http://pastebin.com/PBf02Y2w
+2011-04-15T17:30:00.000Z	jrib	Guest60593	« ls /usr/share/gconf/schemas/empathy.schemas » returns what?
+2011-04-15T17:31:00.000Z	Guest60593	jrib	/usr/share/gconf/schemas/empathy.schemas
+2011-04-15T17:33:00.000Z	jrib	Guest60593	ah, gconf-schemas is a python script :)
+2011-04-15T17:33:00.000Z	Guest60593	jrib	is that a good news?
+2011-04-15T17:33:00.000Z	jrib	Guest60593	it explains what's happening
+2011-04-15T17:34:00.000Z	Guest60593	jrib	my python is not deleted?
+2011-04-15T17:35:00.000Z	jrib	Guest60593	uh, it is?  What happens when you run « python »?
+2011-04-15T17:35:00.000Z	Guest60593	jrib	i see python command line
+2011-04-15T17:35:00.000Z	jrib	Guest60593	erm.  What does « apt-cache policy python » return?
+2011-04-15T17:36:00.000Z	Guest60593	jrib	Installed: 2.6.5-0ubuntu1
+2011-04-15T17:37:00.000Z	jrib	Guest60593	so you didn't remove python.  What exactly happened when you used synaptic, right clicked on python, removed, and applied?
+2011-04-15T17:37:00.000Z	Guest60593	jrib	yes. but in the middle of removal it made some errors
+2011-04-15T17:37:00.000Z	jrib	Guest60593	ok
+2011-04-15T17:38:00.000Z	jrib	Guest60593	is the ubuntu-minimal package installed?
+2011-04-15T17:38:00.000Z	Guest60593	jrib	uhum
+2011-04-15T17:39:00.000Z	jrib	Guest60593	?
+2011-04-15T17:39:00.000Z	Guest60593	jrib	Installed: 1.197
+2011-04-15T17:40:00.000Z	jrib	Guest60593	« sudo apt-get install #
+2011-04-15T17:41:00.000Z	Guest60593	jrib	http://pastebin.com/3YEgmUEG
+2011-04-15T17:41:00.000Z	jrib	Guest60593	« sudo apt-get install aptdaemon gnome-control-center gnome-menus gnome-panel gnome-session indicator-applet libgnomekbd4 nautilus empathy-common evolution-data-server totem »
+2011-04-15T17:42:00.000Z	Guest60593	jrib	http://pastebin.com/CQjB4f6E
+2011-04-15T17:42:00.000Z	jrib	Guest60593	pastebin output of « apt-cache policy totem » and the contents of /etc/apt/sources.list
+2011-04-15T17:44:00.000Z	Guest60593	jrib	http://pastebin.com/PsNRfWAi
+2011-04-15T17:45:00.000Z	Guest60593	jrib	http://pastebin.com/eKAnaiYt
+2011-04-15T17:45:00.000Z	jrib	Guest60593	why do you have dapper, hard, lenny (a debian distribution), and lucid repositories?  And what version of ubuntu is this?
+2011-04-15T17:45:00.000Z	Guest60593	jrib	im on ubuntu 10.10
+2011-04-15T17:46:00.000Z	Guest60593	jrib	does it make any problem
+2011-04-15T17:46:00.000Z	Guest60593	jrib	to have all of them
+2011-04-15T17:46:00.000Z	jrib	Guest60593	yes, it's a problem since you have repositories for almost everything except 10.10...
+2011-04-15T17:47:00.000Z	jrib	Guest60593	at this point I think you should just backup your data and reinstall and stick to the official repositories for your version of ubuntu in the future
+2011-04-15T17:47:00.000Z	Guest60593	jrib	um! so what is 10.10's repository!!
+2011-04-15T17:48:00.000Z	jrib	Guest60593	you're probably (I hope) not on 10.10.  What does « lsb_release -r » return?
+2011-04-15T17:48:00.000Z	Guest60593	jrib	for god's sake no! :( couldn't i jus fix these?
+2011-04-15T17:48:00.000Z	Guest60593	jrib	bash: /usr/bin/lsb_release: /usr/bin/python: bad interpreter: No such file or directory
+2011-04-15T17:49:00.000Z	jrib	Guest60593	cat /etc/lsb-release
+2011-04-15T17:49:00.000Z	Guest60593	jrib	DISTRIB_RELEASE=10.04 my bad!
+2011-04-15T17:50:00.000Z	jrib	Guest60593	back up your data (/home) and reinstall ubuntu.  In the future do *not* use unofficial repositories or repositories not meant for your version of ubuntu
+2011-04-15T17:51:00.000Z	Guest60593	jrib	you do not know any other solution??
+2011-04-15T17:51:00.000Z	jrib	Guest60593	it would require too much work
+2011-04-15T17:51:00.000Z	jrib	Guest60593	it's not worth it
+2011-04-15T17:52:00.000Z	Guest60593	jrib	how can i do it myself??
+2011-04-15T17:53:00.000Z	Guest60593	jrib	because i got too many packages and configurations in my linux :(
+2011-04-15T17:53:00.000Z	Guest60593	jrib	it's tough to reinstall it like this
+2011-04-15T17:54:00.000Z	jrib	Guest60593	get the last apt-get command I gave you to succeed.  You'll notice there are version issues, likely because of your repository list.  So first you'll have to fix your sources.list.  Then you seem to be able to run python but just now you had a command that could not use python (lsb_release).  So you'll have to investigate that too.  Lastly, you'll want to make sure you get something like

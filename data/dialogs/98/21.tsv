@@ -1,0 +1,98 @@
+2010-08-08T11:45:00.000Z	deostroll		hi my lucid lynx is getting stuck @ the login screen...I always hve 2 restart, go into recovery mode, and start gnome via shell...
+2010-08-08T11:45:00.000Z	deostroll		is this a known bug?
+2010-08-08T11:47:00.000Z	deostroll		hi my lucid lynx is getting stuck @ the splash screen (prior to login)...I always hve 2 restart, go into recovery mode, and start gnome via shell...
+2010-08-08T11:48:00.000Z	sacarlson	deostroll	so you can boot in single user mode?
+2010-08-08T11:49:00.000Z	deostroll	sacarlson	didn't understand question? single user mode?
+2010-08-08T11:50:00.000Z	sacarlson	deostroll	I guess recover mode single user is the same.  so you can get into X gui envirment manualy?
+2010-08-08T11:51:00.000Z	deostroll	sacarlson	yes I type startx in the shell to start X and gnome...
+2010-08-08T11:52:00.000Z	sacarlson	deostroll	so maybe you can look in /var/log/syslog and see what error you might of had at boot
+2010-08-08T11:53:00.000Z	sacarlson	deostroll	sounds like a driver problem or maybe a disk that's still in /etc/fstab that it gets stuck on
+2010-08-08T11:54:00.000Z	sacarlson	deostroll	does sound and network still work when you startx
+2010-08-08T11:54:00.000Z	deostroll	sacarlson	yes...they don't hve a prob...
+2010-08-08T11:57:00.000Z	sacarlson	deostroll	maybe just a bad install of gdm?
+2010-08-08T11:57:00.000Z	sacarlson	deostroll	no errors in the text at boot time the indicate a problem?
+2010-08-08T11:58:00.000Z	deostroll	sacarlson	i seem 2 notice that the OS doesn't do it routine hard disk checkups like it normally does...can this b the issue?
+2010-08-08T12:00:00.000Z	deostroll	sacarlson	do u mean the text I see in recovery mode...?
+2010-08-08T12:01:00.000Z	sacarlson	deostroll	yes before it stops don't you see text that indicate the error it has?
+2010-08-08T12:02:00.000Z	sacarlson	deostroll	maybe it tries a few kernel entry before it stops?
+2010-08-08T12:03:00.000Z	deostroll	sacarlson	yes there ws something...can't rem wht it exactly is...it says it tried mounting the hard disk more than 34 times, hence its forcing to do something...
+2010-08-08T12:03:00.000Z	sacarlson	deostroll	lets see when it does start working what you have ended up with:  do a uname -a
+2010-08-08T12:04:00.000Z	deostroll	sacarlson	but then I somehow get out of it...since I am in recovery mode...the recovery mode menus turn up...
+2010-08-08T12:04:00.000Z	sacarlson	deostroll	ok so how many partitions do we have on this computer?
+2010-08-08T12:05:00.000Z	sacarlson	deostroll	now I understand it is having problems mounting something and fails
+2010-08-08T12:19:00.000Z	deostroll	sacarlson	so this means I can't boot from my cd drive?
+2010-08-08T12:05:00.000Z	sacarlson	deostroll	so if it's not needed we can just remove the disk that has the problem from your /etc/fstab file
+2010-08-08T12:06:00.000Z	deostroll	sacarlson	well, I hve 2 hard disks!!!
+2010-08-08T12:07:00.000Z	sacarlson	deostroll	well I think one is failing to mount.  one has windows?
+2010-08-08T12:08:00.000Z	deostroll	sacarlson	the result of uname -a ->http://paste.ubuntu.com/474832/
+2010-08-08T12:08:00.000Z	deostroll	sacarlson	had windows 1ce...now its over written w/ ubuntu, an older version...
+2010-08-08T12:09:00.000Z	sacarlson	deostroll	ok that looks good but what's on that secound drive?
+2010-08-08T12:09:00.000Z	deostroll	sacarlson	ubuntu 8.10
+2010-08-08T12:10:00.000Z	sacarlson	deostroll	so now it's just used as an extX data disk?  I think for now we should just remove that entry from your /etc/fstab
+2010-08-08T12:10:00.000Z	sacarlson	deostroll	then if that's the problem we will eather fix it or format it
+2010-08-08T12:13:00.000Z	deostroll	sacarlson	this is wht /etc/fstab looks like http://paste.ubuntu.com/474833/
+2010-08-08T12:15:00.000Z	sacarlson	deostroll	does your error say anything about this device? /dev/scd0
+2010-08-08T12:15:00.000Z	deostroll	sacarlson	can't remember...if I remove both the entries from fstab wht will happen?
+2010-08-08T12:17:00.000Z	deostroll	sacarlson	isn't that something to do with the cdroM?
+2010-08-08T12:18:00.000Z	sacarlson	deostroll	yes
+2010-08-08T12:18:00.000Z	sacarlson	deostroll	I have no entry for my cdrom on my copy
+2010-08-08T12:18:00.000Z	sacarlson	deostroll	worst case you won't have a cd drive for one boot
+2010-08-08T12:19:00.000Z	sacarlson	deostroll	no your cd drive will still boot boot but when this patition boots you may not have a cd automounted
+2010-08-08T12:20:00.000Z	sacarlson	deostroll	you will still be able to manualy mount it
+2010-08-08T12:21:00.000Z	sacarlson	deostroll	I also don't see your secound drive in here.
+2010-08-08T12:22:00.000Z	sacarlson	deostroll	what we should also do is see where it did mount # mount
+2010-08-08T12:24:00.000Z	deostroll	sacarlson	wait...i log off n try to come back from another machine...2 min.
+2010-08-08T12:24:00.000Z	sacarlson	deostroll	I also want to see what is mounted where with the mount comand
+2010-08-08T12:25:00.000Z	sacarlson	deostroll	maybe you moved the phisical plug position of your disk drives as of late?
+2010-08-08T12:25:00.000Z	deostroll	sacarlson	yes, I am back
+2010-08-08T12:25:00.000Z	sacarlson	deostroll	maybe you moved the phisical plug position of your disk drives as of late?
+2010-08-08T12:26:00.000Z	deostroll	sacarlson	i hve 2 disks...but i manage them separately....
+2010-08-08T12:26:00.000Z	sacarlson	deostroll	I also want to see what is mounted where with the mount comand
+2010-08-08T12:27:00.000Z	deostroll	sacarlson	if I want to boot ubuntu 8.10, i boot frm tht hard disk from the bios it self...
+2010-08-08T12:27:00.000Z	sacarlson	deostroll	ok well that will change the device names
+2010-08-08T12:27:00.000Z	deostroll	sacarlson	that is why u prob only find 1 entry
+2010-08-08T12:28:00.000Z	sacarlson	deostroll	not sure so how about that mount command results?
+2010-08-08T12:28:00.000Z	deostroll	sacarlson	nw i've commented wht u told and restarted, but it is still stuck...i'll restart and go to recovery...wait
+2010-08-08T12:30:00.000Z	deostroll	sacarlson	weird now it goes to the login prompt, i don't think the problem is fixed tho...nw wht do you want me to do?
+2010-08-08T12:31:00.000Z	sacarlson	deostroll	mount
+2010-08-08T12:31:00.000Z	sacarlson	deostroll	from a terminal the comand #mount
+2010-08-08T12:35:00.000Z	deostroll	sacarlson	this is wht mount said http://paste.ubuntu.com/474842/
+2010-08-08T12:35:00.000Z	deostroll	sacarlson	wrkin on 2 machines n networking via internet...so I'll b a little show with responding :)
+2010-08-08T12:37:00.000Z	sacarlson	deostroll	it looks ok but maybe just unplug your secound drive and see if it works.  if it does just reverse the position you plug them in
+2010-08-08T12:38:00.000Z	sacarlson	deostroll	maybe you can just disable one disk in bios
+2010-08-08T12:38:00.000Z	deostroll	sacarlson	disable in the bios...hw do u do that?
+2010-08-08T12:39:00.000Z	sacarlson	deostroll	I would do it in hardware but I thought you played in the bios and knew
+2010-08-08T12:40:00.000Z	sacarlson	deostroll	it is booting as sdb the secound drive so it's getting the grub from sda and I think that could mess it up
+2010-08-08T12:41:00.000Z	sacarlson	deostroll	but after boot it all seems to work so I'm not sure?
+2010-08-08T12:42:00.000Z	deostroll	sacarlson	restarting...only nw
+2010-08-08T12:42:00.000Z	sacarlson	deostroll	nw?
+2010-08-08T12:43:00.000Z	sacarlson	deostroll	one?
+2010-08-08T12:44:00.000Z	deostroll	sacarlson	don't think its possible to do via bios?
+2010-08-08T12:44:00.000Z	sacarlson	deostroll	ok just phisicaly unplug the ubuntu 8.X drive to give it a try with just one
+2010-08-08T12:44:00.000Z	deostroll	sacarlson	wait...
+2010-08-08T12:49:00.000Z	deostroll	sacarlson	wht is the indication that it is disabled?
+2010-08-08T12:50:00.000Z	sacarlson	deostroll	well after boot if you go to terminal and do a fdisk -l  you should not see it
+2010-08-08T12:55:00.000Z	deostroll	sacarlson	opening up the box is going to take a while...
+2010-08-08T13:08:00.000Z	deostroll	sacarlson	okay opened up the box  n removed the hdd
+2010-08-08T13:09:00.000Z	sacarlson	deostroll	and it works?
+2010-08-08T13:09:00.000Z	deostroll	sacarlson	no it doesn't
+2010-08-08T13:09:00.000Z	sacarlson	deostroll	same as before?
+2010-08-08T13:09:00.000Z	deostroll	sacarlson	it got stuck...i restarted...
+2010-08-08T13:10:00.000Z	sacarlson	deostroll	it gets stuck the same as before?
+2010-08-08T13:10:00.000Z	deostroll	sacarlson	yes
+2010-08-08T13:10:00.000Z	sacarlson	deostroll	ok I'm clueless
+2010-08-08T13:11:00.000Z	deostroll	sacarlson	wehn i restarted it went in clean tho
+2010-08-08T13:11:00.000Z	sacarlson	deostroll	I thought from what you said you saw 34 retries on a mount that it must be a disk that fails to mount but now there are none
+2010-08-08T13:12:00.000Z	sacarlson	deostroll	clean is that good?
+2010-08-08T13:12:00.000Z	deostroll	sacarlson	clean? wht do u mean?
+2010-08-08T13:13:00.000Z	sacarlson	deostroll	maybe the disk just works sometime and just needs to be fixed?  ya clean you said clean what is clean?
+2010-08-08T13:14:00.000Z	sacarlson	deostroll	 you think the disk is just retrys out sometimes and after enuf tries it just works?
+2010-08-08T13:16:00.000Z	sacarlson	deostroll	if you think that what it might be maybe boot a live cd and do an fsck /dev/sda1  or something like that
+2010-08-08T13:19:00.000Z	sacarlson	deostroll	 you think the disk is just retrys out sometimes and after enuf tries it just works?
+2010-08-08T13:19:00.000Z	sacarlson	deostroll	if you think that what it might be maybe boot a live cd and do an fsck
+2010-08-08T13:24:00.000Z	deostroll	sacarlson	k
+2010-08-08T13:36:00.000Z	deostroll	sacarlson	output of fsck http://paste.ubuntu.com/474860/
+2010-08-08T13:38:00.000Z	sacarlson	deostroll	 what disk was that from /dev/sda1 ?
+2010-08-08T13:39:00.000Z	deostroll	sacarlson	it said 80 gb /dev/sda...so I just did that against fsck
+2010-08-08T13:40:00.000Z	sacarlson	deostroll	so you think that's the ubuntu 10.04?  then that good news just fix it
+2010-08-08T13:43:00.000Z	deostroll	sacarlson	here is the entire list of commands i executed http://paste.ubuntu.com/474863/

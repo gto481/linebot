@@ -1,0 +1,99 @@
+2009-05-20T12:43:00.000Z	maco	indus	netbook remix
+2009-05-20T12:43:00.000Z	indus	maco	thnks
+2009-05-20T12:46:00.000Z	indus	maco	no firestarter not being maintained now !
+2009-05-20T12:46:00.000Z	indus	maco	use gufw
+2009-05-20T12:47:00.000Z	maco	indus	tell |Newton| :P
+2009-05-20T12:50:00.000Z	maco	indus	how does that differ from what i said?
+2009-05-20T12:52:00.000Z	maco	indus	i still dont see how thats any different than me saying that ufw was a simple text frontend to iptables (it is. its text. it's simpler than iptables syntax. and it configures iptables....)
+2009-05-20T12:53:00.000Z	indus	maco	sorry i didnt read ur earlier post
+2009-05-20T12:55:00.000Z	indus	maco	yah you are right about ufw
+2009-05-20T12:55:00.000Z	indus	maco	but i didnt read full conversation
+2009-05-20T12:59:00.000Z	indus	maco	yes he got that i think :)
+2009-05-20T13:00:00.000Z	indus	maco	|Newton|:you can have an icon in taskbar if u wish
+2009-11-24T18:20:00.000Z	indus	maco	wrong kernel ? hmm
+2009-11-24T18:21:00.000Z	maco	indus	yes, something was broke in jaunty and it fubar'd a bunch of upgrades
+2009-11-24T18:21:00.000Z	indus	maco	doestn Huck have a sound problem?
+2009-11-24T18:21:00.000Z	maco	indus	yes, and pulseaudio cannot find devices if youre not using the right kernel
+2009-11-24T18:21:00.000Z	indus	maco	ok you help, ill watch :)
+2009-11-24T18:21:00.000Z	maco	indus	this hit several hundred people on release day
+2009-11-24T18:22:00.000Z	indus	maco	any link to this problem
+2009-11-24T18:22:00.000Z	maco	indus	http://drowninginbugs.blogspot.com/2009/10/caveats-for-audio-in-910.html
+2009-11-24T18:23:00.000Z	indus	maco	crAP
+2009-11-24T18:35:00.000Z	indus	maco	here is a link for delete
+2009-11-24T18:35:00.000Z	indus	maco	http://www.cyberciti.biz/faq/linux-how-to-delete-a-partition-with-fdisk-command/
+2009-11-24T18:36:00.000Z	maco	indus	um wrong person?
+2009-11-24T18:36:00.000Z	indus	maco	yeah i think damn
+2009-11-30T12:20:00.000Z	maco	indus	== is a test for equality
+2009-11-30T12:22:00.000Z	maco	indus	the kernel will not be the same. armornick doesn't know what they're talking about
+2009-11-30T12:22:00.000Z	indus	maco	and you do? :D
+2009-11-30T12:23:00.000Z	maco	indus	i was at UDS and in the kernel team sessions
+2009-11-30T12:23:00.000Z	indus	maco	ook
+2009-11-30T12:26:00.000Z	maco	indus	on ubuntu desktop, i dont know. im a kubuntu person.
+2009-11-30T14:30:00.000Z	maco	indus	navigator
+2009-11-30T14:30:00.000Z	indus	maco	navigator ? what is it?
+2009-11-30T14:30:00.000Z	maco	indus	avant window navigator, not decorator
+2009-11-30T14:31:00.000Z	indus	maco	aha yes indeed avn
+2009-12-01T14:07:00.000Z	indus	maco	i hear there wont be any new theme again in 10.04?
+2009-12-01T14:08:00.000Z	maco	indus	*shrug* im a kubuntu person. dunno what those gnome people are doing
+2009-12-01T14:08:00.000Z	indus	maco	aah ok K Is beautiful
+2009-12-01T14:09:00.000Z	indus	maco	actually i wonder why people had such long discussions on forums about the look, they already have it with kubuntu
+2009-12-01T14:09:00.000Z	maco	indus	they do not yet know the awesome that is kde ;-)
+2009-12-01T14:09:00.000Z	indus	maco	i want to move to it now, iam tired of ugliness
+2009-12-08T14:23:00.000Z	maco	indus	yes you can
+2009-12-08T14:23:00.000Z	indus	maco	it doesnt install properly if you dont select F for /
+2009-12-08T14:23:00.000Z	maco	indus	if you go to manual partitioning mode you can choose to use the same partition as before and itll save your /home
+2009-12-08T14:23:00.000Z	indus	maco	the home may be left sure but not the /
+2009-12-08T14:24:00.000Z	maco	indus	right itll wipe out everything except /home, but /home isnt its own partition, just a directory
+2009-12-08T14:24:00.000Z	maco	indus	so you can save /home without needing to figure out how to make a separate /home partition. ive used it for upgrades at installfests a bunch
+2009-12-08T14:25:00.000Z	indus	maco	you mean when /home is not a separate [partition?
+2009-12-08T14:25:00.000Z	maco	indus	yes
+2009-12-08T14:25:00.000Z	indus	maco	how
+2009-12-08T14:25:00.000Z	indus	maco	with manual install?
+2009-12-08T14:25:00.000Z	maco	indus	if home is not a separate partition and you choose to use the same / partition again with the same filesystem but not formatting it, itll delete everything *except* home so that you can keep your data
+2009-12-08T14:26:00.000Z	maco	indus	of course with manual partitioning. thats the only way you get the option to not format
+2009-12-08T14:27:00.000Z	indus	maco	bah iam confused
+2009-12-08T14:27:00.000Z	maco	indus	why? perhaps you're still thinking of how it was 3 years ago?
+2009-12-08T14:27:00.000Z	indus	maco	ok i assume /home is not separate but created during manual
+2009-12-08T14:27:00.000Z	maco	indus	no
+2009-12-08T14:27:00.000Z	indus	maco	i mean automatic
+2009-12-08T14:28:00.000Z	indus	maco	or in manual i didnt specify /home separate
+2009-12-08T14:28:00.000Z	maco	indus	if you did a normal install where everything is in one partition (plus swap) and then you want to do a clean install later
+2009-12-08T14:28:00.000Z	indus	maco	yes ok continue ...
+2009-12-08T14:28:00.000Z	maco	indus	when you do that clean install later, you choose manual partitioning. then you choose the same partition, keep the same "use as:" filesystem, set it to still be / and set it to DONT format
+2009-12-08T14:29:00.000Z	maco	indus	then itll install into the same partition but retain the /home directory's contents so you dont lose data
+2009-12-08T14:29:00.000Z	indus	maco	hmm strange , i have found that install fails with the K option for /
+2009-12-08T14:29:00.000Z	maco	indus	K?
+2009-12-08T14:29:00.000Z	indus	maco	tried it 2 3 times and failed so
+2009-12-08T14:29:00.000Z	indus	maco	K is keep
+2009-12-08T14:29:00.000Z	maco	indus	ive done this on hardy, intrepid, and karmic
+2009-12-08T14:29:00.000Z	indus	maco	F format K keep
+2009-12-08T14:31:00.000Z	indus	maco	does it install / cleanly WITHOUT format? seems like dirty
+2009-12-08T14:31:00.000Z	maco	indus	i dont know. i just know that it works and any files that are part of a default install should be overwritten by the package installation process
+2009-12-08T14:32:00.000Z	indus	maco	hmm ok, but i remember in dapper it failed for me
+2009-12-08T14:32:00.000Z	maco	indus	it wasnt supported in dapper
+2009-12-08T14:32:00.000Z	maco	indus	this is as of hardy...*maybe* gutsy
+2009-12-08T14:32:00.000Z	indus	maco	hmm
+2009-12-08T14:34:00.000Z	maco	indus	dontzap is gone in 9.10
+2009-12-08T14:34:00.000Z	maco	indus	at least, i think it is
+2009-12-14T12:02:00.000Z	maco	indus	he already de-opped
+2009-12-14T12:06:00.000Z	maco	indus	i am SO not clicking this.
+2009-12-14T12:06:00.000Z	maco	indus	you look
+2009-12-14T12:06:00.000Z	indus	maco	me too :D
+2009-12-14T12:06:00.000Z	indus	maco	iam at work :)
+2009-12-14T12:07:00.000Z	maco	indus	quassel gave preview. i saw lots of flesh colour and faces. guessing adult images
+2009-12-14T15:02:00.000Z	indus	maco	only for server
+2009-12-14T15:03:00.000Z	maco	indus	sanderj_ is talking about a server
+2010-03-12T17:59:00.000Z	maco	indus	language
+2010-06-09T18:34:00.000Z	maco	indus	Mahmoud cant figure out how to uninstall it
+2010-06-09T18:34:00.000Z	indus	maco	oh oops
+2010-06-09T18:34:00.000Z	indus	maco	thanks
+2010-06-09T18:37:00.000Z	maco	indus	if its just a sh not a tarball its not going to have another readme attached to it...
+2010-06-09T18:37:00.000Z	maco	indus	it probably has a wget inside the sh
+2010-06-09T18:37:00.000Z	indus	maco	true that
+2010-06-09T18:37:00.000Z	indus	maco	so what are his options
+2010-06-09T18:37:00.000Z	maco	indus	read the .sh file and see what it did, then undo that
+2010-06-09T18:38:00.000Z	indus	maco	you mean open as text file
+2010-06-09T18:38:00.000Z	maco	indus	yes
+2010-06-09T18:39:00.000Z	indus	maco	wow so that means he has to manually remove whatever the script did
+2010-06-09T18:39:00.000Z	maco	indus	i know... but i dont have the file yet. he didnt post a link to it
+2010-06-09T18:39:00.000Z	maco	indus	yes

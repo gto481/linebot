@@ -1,0 +1,99 @@
+2006-04-09T10:41:00.000Z	bliss1_		hello guys
+2006-04-09T10:43:00.000Z	bliss1_		can find program chkconfig in apt-get
+2006-04-09T10:43:00.000Z	bliss1_		cannot
+2006-04-09T10:44:00.000Z	nickrud	bliss1_	that's a redhat tool, not used in ubuntu
+2006-04-09T10:44:00.000Z	bliss1_	nickrud	hows it going man
+2006-04-09T10:44:00.000Z	nickrud	bliss1_	the equiv is update-rc.d (and good, thank you :)
+2006-04-09T10:45:00.000Z	bliss1_	nickrud	got this tar from intel for my processor maybe they have a rpm that i can use alien wiyj
+2006-04-09T10:45:00.000Z	bliss1_	nickrud	with
+2006-04-09T10:45:00.000Z	nickrud	bliss1_	could be, what is it, what does it do, and have you checked for a deb?
+2006-04-09T10:46:00.000Z	bliss1_	nickrud	VTune(TM) Performance Analyzer for Linux* do not think i need it nothing to anaylse
+2006-04-09T10:47:00.000Z	nickrud	bliss1_	heh
+2006-04-09T10:47:00.000Z	bliss1_	nickrud	heh as what the hell or does this really exist
+2006-04-09T10:48:00.000Z	nickrud	bliss1_	as in a generic laugh, well, whatever, etc. http://www.urbandictionary.com/define.php?term=heh
+2006-04-09T13:24:00.000Z	bliss1_	nickrud	hi
+2006-04-09T13:26:00.000Z	bliss1_	nickrud	hi how is it
+2006-04-09T13:28:00.000Z	nickrud	bliss1_	could be. I'm locked to a desk off and on, and hate daytime tv.
+2006-04-09T13:29:00.000Z	bliss1_	nickrud	I am going to get a P45 any day now
+2006-04-09T13:37:00.000Z	bliss1_	nickrud	just a question that I would like some feedback on ?
+2006-04-09T13:54:00.000Z	bliss1_	nickrud	hi sorry went to eat
+2006-04-09T14:10:00.000Z	bliss1_	nickrud	hi are you still around
+2006-04-09T14:19:00.000Z	bliss1_	nickrud	hi everything ok
+2006-04-09T14:32:00.000Z	bliss1_	nickrud	please are you about
+2006-04-09T14:33:00.000Z	nickrud	bliss1_	you caught me
+2006-04-09T14:39:00.000Z	nickrud	bliss1_	my first thought is that you should be asking this of someone who's run qemu and xen recently.
+2006-04-09T14:40:00.000Z	bliss1_	nickrud	ok it was just a thought
+2006-04-10T16:07:00.000Z	bliss1_	nickrud	in the office mant thanks for your help a some days ago
+2006-04-11T16:17:00.000Z	bliss1_	nickrud	hI hows life?
+2006-04-12T14:38:00.000Z	nickrud	bliss1_	~/xchat2/xchatlogs
+2006-04-12T14:39:00.000Z	nickrud	bliss1_	or something spelled similar to that, anyway :)
+2006-04-12T14:48:00.000Z	nickrud	bliss1_	less will read it (get a better editor)
+2006-04-14T14:57:00.000Z	bliss1_	nickrud	not still at work!
+2006-04-14T14:57:00.000Z	nickrud	bliss1_	locked to the desk today, yes.
+2006-04-14T14:58:00.000Z	bliss1_	nickrud	sounds about normal
+2006-04-15T16:13:00.000Z	bliss1_	nickrud	in your office or bed
+2006-04-15T07:33:00.000Z	bliss1_	nickrud	at work or in bed?
+2006-04-16T11:11:00.000Z	bliss1_	nickrud	working hard?
+2006-04-16T11:12:00.000Z	nickrud	bliss1_	no, I'm reading reversible errors
+2006-04-16T11:14:00.000Z	bliss1_	nickrud	am I coorect in thinking that to mout another partition the command is  sudo mount /dev/hda2 /mnt/
+2006-04-16T11:16:00.000Z	nickrud	bliss1_	yes, except you might possibly need to specify file type during the mount in some situations now and then
+2006-04-16T11:18:00.000Z	bliss1_	nickrud	thanks i thought so its just when i look at this file shels via natulis there is something in it but from the command line its emmply when I open t
+2006-04-16T14:36:00.000Z	bliss1_	nickrud	ping ping still tied to your deask?
+2006-04-17T07:28:00.000Z	bliss1_	nickrud	ping tied to desk still?
+2006-04-17T07:42:00.000Z	bliss1_	nickrud	where are the screen saver /power settings controled by unbuntu to be found?
+2006-04-17T07:45:00.000Z	nickrud	bliss1_	in the monitor section of xorg.conf & system-prefs-xscreensaver
+2006-04-17T07:46:00.000Z	bliss1_	nickrud	xorg.conf also thanks nick
+2006-04-19T16:36:00.000Z	bliss1_	nickrud	hi I noticed that my box will not reboot since diabling USB legacy in BIOS diabled because i have a pertition with kernal 2.6 and another with the same kernel so I was told to diable so keybord would work
+2006-04-19T13:19:00.000Z	nickrud	bliss1_	a silly question, but you are using sudo?
+2006-04-19T13:19:00.000Z	bliss1_	nickrud	yes
+2006-04-19T13:27:00.000Z	nickrud	bliss1_	 yes this is a fairly kind place :)
+2006-04-19T13:29:00.000Z	bliss1_	nickrud	take just a little time out catch you later
+2006-04-22T11:34:00.000Z	bliss1_	nickrud	hi ,you sound good
+2006-04-22T11:34:00.000Z	nickrud	bliss1_	I should sound tired, I'm about to call it an evening
+2006-04-22T11:35:00.000Z	bliss1_	nickrud	just having breakfast
+2006-04-22T11:38:00.000Z	bliss1_	nickrud	is it possible to work for example from a live CD on say hda2 as root, not to alter the partition but just to do some work in that partition without loseing data
+2006-04-22T11:39:00.000Z	nickrud	bliss1_	sure, I do that often. I haven't used the ubuntu livecd for that, but it's all the same
+2006-04-22T11:39:00.000Z	bliss1_	nickrud	thanks
+2006-04-22T11:40:00.000Z	nickrud	bliss1_	for example, I've done mount /dev/hdd4 -text3 /mnt and then altered files under /mnt
+2006-04-22T11:43:00.000Z	nickrud	bliss1_	mount -t<devtype> /dev/hda2 /mnt
+2006-04-22T11:44:00.000Z	nickrud	bliss1_	<devtype> should be, more precisely, <filesystemtype> such as vfat, reiserfs, ext3, etc
+2006-04-22T11:44:00.000Z	bliss1_	nickrud	thanks
+2006-04-22T11:48:00.000Z	bliss1_	nickrud	once you have mounted on live cd then all the commands are like so mnt/dev/hda2/usr/src ? for example or is it mnt/usr/src?
+2006-04-22T11:50:00.000Z	nickrud	bliss1_	it depends on what the partition is, and where you mounted it. if you'll note, the example I gave: mount /dev/hdd4 -text3 /mnt says that the partition is on /mnt so for what you're looking for, it'd be /mnt/usr/src
+2006-04-22T11:52:00.000Z	bliss1_	nickrud	i will use  mount -t ext3  /dev/hda2 /mnt to mount hda2
+2006-04-22T12:02:00.000Z	bliss1_	nickrud	but how do you save all the data in that hda2 before you umount hda2? you cannot do shutdown -r now from a live cd?
+2006-04-22T12:02:00.000Z	nickrud	bliss1_	umount /dev/hda2 , that will write all data to that partition
+2006-04-22T12:03:00.000Z	bliss1_	nickrud	thanks finished your accounting ?
+2006-04-22T12:03:00.000Z	nickrud	bliss1_	that is a never ending task, money in, money out.
+2006-04-22T12:21:00.000Z	bliss1_	nickrud	what are the advantages and distadvantages of working from a live cd into a particular hda on your system
+2006-04-22T12:22:00.000Z	nickrud	bliss1_	advantage? you can :) disadvantage? live cd's take forever to boot
+2006-04-22T12:24:00.000Z	bliss1_	nickrud	when I installed a debain OS i was told to type linux26 at install so the kernel 2.6 would be installed but is it possible to be more specific and install for example 2.6  x. x. ?
+2006-04-22T12:25:00.000Z	nickrud	bliss1_	for the install, no. do the linux26. You can upgrade to the latest kernel after the install is completed.
+2006-04-22T12:26:00.000Z	bliss1_	nickrud	ok thanks
+2006-04-22T12:26:00.000Z	nickrud	bliss1_	the linux26 installes the kernel that's available on the cd, iirc
+2006-04-22T12:26:00.000Z	bliss1_	nickrud	ok
+2006-04-22T12:29:00.000Z	bliss1_	nickrud	the reason I  asked is that I was hoping a kernel 2.6 upgrade might solve my ACPI problem
+2006-04-22T12:30:00.000Z	nickrud	bliss1_	luckily I've either just said to heck with apm/acpi and disabled it, or more recently ignored it, since it didn't interfere with my anchor/desktop
+2006-04-22T12:31:00.000Z	nickrud	bliss1_	in other words, I know acpi like I know trancendental mathematics
+2006-04-22T12:32:00.000Z	bliss1_	nickrud	its a labtop/
+2006-04-22T12:47:00.000Z	bliss1_	nickrud	see you
+2006-04-22T12:47:00.000Z	nickrud	bliss1_	good night. I'll be right behind you, I thin
+2006-04-22T12:48:00.000Z	bliss1_	nickrud	:)
+2006-04-23T10:56:00.000Z	bliss1_	nickrud	welcome!
+2006-04-23T10:57:00.000Z	bliss1_	nickrud	hello seem a bit down or are you fired and ready to go
+2006-04-23T10:58:00.000Z	nickrud	bliss1_	wary of getting too deeply involved today. I'm killing about a half hour before a metting
+2006-04-23T11:16:00.000Z	bliss1_	nickrud	got a slight repremand yesterday
+2006-04-23T11:16:00.000Z	nickrud	bliss1_	you don't count here till you've been kicked at least once :)
+2006-04-23T11:17:00.000Z	bliss1_	nickrud	ok then how about this!
+2006-04-23T11:22:00.000Z	bliss1_	nickrud	so repremand was why do it from the live CD when you can do it from the os itself -so there
+2006-04-23T11:23:00.000Z	nickrud	bliss1_	sounds like education to me.
+2006-04-23T11:23:00.000Z	bliss1_	nickrud	it was and it is hope we both benefit
+2006-04-25T15:43:00.000Z	bliss1_	nickrud	hi is your office so big that you would no problems with a herd of wilderbeast running through it
+2006-04-25T15:43:00.000Z	nickrud	bliss1_	I have a sledgehammer, I'm good :)
+2006-05-01T14:06:00.000Z	nickrud	bliss1_	no, I still have an appliance in my mouth, which is driving my crazy
+2006-05-01T14:07:00.000Z	bliss1_	nickrud	bliss_ gets the sledge hammer out
+2006-05-01T14:11:00.000Z	nickrud	bliss1_	I'm almost wishing I'd missed the sledgehammer comment, I already one that part of it :)
+2006-05-01T14:20:00.000Z	bliss1_	nickrud	can you open the window in your office can smell the stuf on your jaw from here
+2006-05-01T14:21:00.000Z	nickrud	bliss1_	I brushed my teeth as much as the pain would allow :) and on that, and 36 hours till metal is gone, good night
+2006-05-02T14:22:00.000Z	bliss1_	nickrud	how you feeling?
+2006-05-03T13:37:00.000Z	bliss1_	nickrud	felling better?

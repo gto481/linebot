@@ -1,0 +1,98 @@
+2007-10-18T03:40:00.000Z	neopsyche		TONS OF PEOPLE ON THE WEB SEEM TO BE LOOKING FOR THIS FILE IN .deb
+2007-10-18T03:42:00.000Z	neopsyche		I installed 2 programs which were both terrible compaired to irfanview.. one was gview (if i remember correctly) and another Xpaint
+2007-10-18T03:43:00.000Z	neopsyche		Could someone please help me install xnview?
+2007-10-18T03:45:00.000Z	neopsyche		Im surprised that this does not exist in a .deb file .. its such a cool program.
+2007-10-18T03:45:00.000Z	neopsyche		http://www.xnview.com/
+2007-10-18T03:45:00.000Z	neopsyche		I have tried to download the .deb.. they are all outdated or dont work. scarce.
+2007-10-18T03:45:00.000Z	neopsyche		Tried google .. not much .. out of date and / or not downloading properly
+2007-10-18T03:45:00.000Z	neopsyche		how so?
+2007-10-18T03:46:00.000Z	neopsyche		Statement from the xnview website: XnView is a free software to view, organise, convert graphics files.
+2007-10-18T03:46:00.000Z	Dr_willis	neopsyche	 it depends on their exact licensing. They may not be following the GPL.
+2007-10-18T03:46:00.000Z	Dr_willis	neopsyche	 grab the source and compile it perhaps.
+2007-10-18T03:47:00.000Z	Dr_willis	neopsyche	 thers also Picassa for Linux. :) (yes it uses wine so its a bit of a cheat but it works)
+2008-02-09T08:53:00.000Z	Dr_willis	neopsyche	 i just use mythtv. :) that way it zaps out the commercials.
+2008-02-09T08:53:00.000Z	Dr_willis	neopsyche	 i found it simple. :P
+2008-02-09T08:54:00.000Z	Dr_willis	neopsyche	 but im a leet-haxor-dude i guess.
+2008-02-09T08:54:00.000Z	Dr_willis	neopsyche	 the mythubuntu package makes it very easy to get going. :)
+2008-02-09T08:54:00.000Z	neopsyche	Dr_willis	i installed myth tv and i dont know what the *#$)(*)#(* (insert preferred swear word here) is going on
+2008-02-09T08:54:00.000Z	Dr_willis	neopsyche	 the guys in #mythbuntu may know a more straight forward way to do it.
+2008-02-09T08:55:00.000Z	neopsyche	Dr_willis	see above
+2008-02-09T09:01:00.000Z	Dr_willis	neopsyche	 i am RTFMing right now. :)
+2008-02-09T09:01:00.000Z	neopsyche	Dr_willis	ok ;-) lol
+2008-02-09T09:01:00.000Z	Dr_willis	neopsyche	  looks like it has a few odd depenecies..  thats about it.. i dont even have a tv tuner card installed any more on my mythtv box
+2008-02-09T09:02:00.000Z	neopsyche	Dr_willis	the main problem it says my dependency on specific kde thingy is wrong.
+2008-02-09T09:02:00.000Z	neopsyche	Dr_willis	downloaded the .deb
+2008-02-09T09:03:00.000Z	neopsyche	Dr_willis	upon installation it says it needs kdelibs4c2
+2008-02-09T09:03:00.000Z	neopsyche	Dr_willis	but i only have  kdelibs4c2a and kdelibs4c2 is no longer in repos.. etc.
+2008-02-09T09:03:00.000Z	Dr_willis	neopsyche	 that deb is for an OLD OLD release of ubuntu
+2008-02-09T09:03:00.000Z	neopsyche	Dr_willis	what to do?
+2008-02-09T09:03:00.000Z	Dr_willis	neopsyche	 use the source. recompile
+2008-02-09T09:03:00.000Z	neopsyche	Dr_willis	can you help me make new deb?
+2008-02-09T09:03:00.000Z	neopsyche	Dr_willis	can you help me recompile?
+2008-02-09T09:04:00.000Z	neopsyche	Dr_willis	cool!
+2008-02-09T09:04:00.000Z	Dr_willis	neopsyche	 for a start i had to do a  sudo apt-get install kde-devel  qt3-dev-tools  qt3-apps-dev
+2008-02-09T09:05:00.000Z	neopsyche	Dr_willis	sounds way advanced.. im a windows refugee.. so it has been challenging.. with this whole compile thing i dont know where to start... but thanks for helping .. legendary.. perhaps we should post the .deb to the site for future users
+2008-02-09T09:05:00.000Z	neopsyche	Dr_willis	(when its done)
+2008-02-09T09:06:00.000Z	Dr_willis	neopsyche	 you may want to go read some of the mythty/mythbuntu docs/guides then - they are decently well done.   I dont even have a tv tuner card installed any more to test this thing once it does compile
+2008-02-09T09:07:00.000Z	Dr_willis	neopsyche	 you would proberly have better luck in posting to the kalva forums asking for a more recent deb.
+2008-02-09T09:07:00.000Z	neopsyche	Dr_willis	its ok.. if you send me the .deb i can test it ;-) myth tv is not what i am looking for for the very reasons explained on the http://hafizpariabi.blogspot.com/2007/12/install-kalva-in-kubuntu-gutsy.html among others
+2008-02-09T09:07:00.000Z	neopsyche	Dr_willis	but thanks
+2008-02-09T09:07:00.000Z	Dr_willis	neopsyche	 im not making a .deb - im just gettting the wouce to compile right now.
+2008-02-09T09:08:00.000Z	neopsyche	Dr_willis	wouce?
+2008-02-09T09:10:00.000Z	Dr_willis	neopsyche	 i dont even know how to make a .deb :)
+2008-02-09T09:11:00.000Z	Dr_willis	neopsyche	 the source did compile. and kalva did run. so  i would say download the source.. get all the developer files you need.. and compile it.   -
+2008-02-09T09:11:00.000Z	neopsyche	Dr_willis	oh, well if you manage to compile it.. please let me know how
+2008-02-09T09:11:00.000Z	Dr_willis	neopsyche	 i allready did..:) i downloaded the source. installed all the depenedneciues.. and did the normal ./configure, make, make isntall song and dance. :)
+2008-02-09T09:12:00.000Z	neopsyche	Dr_willis	could you talk me through it?
+2008-02-09T09:13:00.000Z	Dr_willis	neopsyche	 proberly not in any great detail. i got 10000+ dev packages installed.. so you will proberly need to start grabbing the various dev packages .. and download the source for a start compiling it and see what else it wants
+2008-02-09T09:15:00.000Z	neopsyche	Dr_willis	thanks.
+2008-02-09T09:16:00.000Z	neopsyche	Dr_willis	how do i download source? is that the tar.bz2 package?
+2008-02-09T09:16:00.000Z	Dr_willis	neopsyche	 This may be a VERY long night for you. :)
+2008-02-09T09:17:00.000Z	Dr_willis	neopsyche	 yes.. thats the source
+2008-02-09T09:17:00.000Z	neopsyche	Dr_willis	ok.
+2008-02-09T09:17:00.000Z	neopsyche	Dr_willis	lol
+2008-02-09T09:17:00.000Z	neopsyche	Dr_willis	need help.. kalva is perfect for my needs .. but for some reason;; IT REFUSES TO WORK ON MY SYSTEM!!!
+2008-02-09T09:17:00.000Z	neopsyche	Dr_willis	so what do i do with the source now.
+2008-02-09T09:20:00.000Z	Dr_willis	neopsyche	 make a directory.. put the source in there. uncompress it..  read its readme/install docs.. and of course You should be installing the various -dev packages...  (ive think ive said about 10 min ago what i was installing) :) you may have to install quite a few things to get the thing tocompile.
+2008-02-09T09:21:00.000Z	Dr_willis	neopsyche	 for a start install the 'build-essential' package
+2008-02-09T09:21:00.000Z	Dr_willis	neopsyche	 for a start i had to do a  sudo apt-get install kde-devel  qt3-dev-tools  qt3-apps-dev
+2008-02-09T09:28:00.000Z	Dr_willis	neopsyche	 egads.. this is going to be a VERY VERY long night for you.
+2008-02-09T09:29:00.000Z	neopsyche	Dr_willis	lol windows refugee remember. ;-)
+2008-02-09T09:29:00.000Z	Dr_willis	neopsyche	 you may want to spend an hr reading a few bash tutorials befor trying this compilation song and dance.
+2008-02-09T09:29:00.000Z	neopsyche	Dr_willis	oh.. i have it onw
+2008-02-09T09:48:00.000Z	Dr_willis	neopsyche	 this MIGHT work --> http://rapidshare.com/files/90314282/kalva_0.8.90-1_i386.deb.html
+2008-02-09T09:49:00.000Z	neopsyche	Dr_willis	thanks
+2008-02-09T09:49:00.000Z	Dr_willis	neopsyche	 and if it blows up your pc.. well --- too bad. :P
+2008-02-09T09:49:00.000Z	neopsyche	Dr_willis	but could you possibly download that and email it to me .. as i dont have rapidshare account and free option never works for me
+2008-02-09T09:49:00.000Z	neopsyche	Dr_willis	oh
+2008-02-09T09:49:00.000Z	neopsyche	Dr_willis	i think i already downloaded that
+2008-02-09T10:08:00.000Z	Dr_willis	neopsyche	 i dont even know where you left off.   :)
+2008-02-09T10:14:00.000Z	Dr_willis	neopsyche	 been trying other upload sites -> http://www.load.to/?d=2FDgvRKuti        is that same file. :)
+2008-02-09T10:15:00.000Z	neopsyche	Dr_willis	yes
+2008-02-09T10:16:00.000Z	neopsyche	Dr_willis	the same
+2008-02-09T11:09:00.000Z	Dr_willis	neopsyche	 still dident try that deb i built eh? :)
+2008-02-09T11:09:00.000Z	neopsyche	Dr_willis	you built a deb?
+2008-02-09T11:09:00.000Z	neopsyche	Dr_willis	where?!
+2008-02-09T11:10:00.000Z	neopsyche	Dr_willis	is that the .deb from the file share?
+2008-02-09T11:10:00.000Z	Dr_willis	neopsyche	 ive sent you 2 different fileshare and some other site links to the deb packages over the last hour.
+2008-02-09T11:10:00.000Z	Dr_willis	neopsyche	 the last one was not a fileshare. it was some other place. :)
+2008-02-09T11:10:00.000Z	neopsyche	Dr_willis	i thought that was the original deb i downloaded earlier from another source
+2008-02-09T11:10:00.000Z	Dr_willis	neopsyche	 why would i send you that one. :P
+2008-02-09T11:11:00.000Z	Dr_willis	neopsyche	 looks like it.
+2008-02-09T11:12:00.000Z	neopsyche	Dr_willis	after clicking download .. it takes me to a page to uplaod..
+2008-02-09T11:13:00.000Z	neopsyche	Dr_willis	can you put it on a public ftp?
+2008-02-09T11:13:00.000Z	Dr_willis	neopsyche	 the download worked for me. I just waited the 4 sec. and clicked on download. :0
+2008-02-09T11:14:00.000Z	neopsyche	Dr_willis	doesnt want to work fo rme
+2008-02-09T11:14:00.000Z	neopsyche	Dr_willis	could you email it?
+2008-02-09T11:14:00.000Z	Dr_willis	neopsyche	 you got bigger issues then. :)
+2008-02-09T11:15:00.000Z	Dr_willis	neopsyche	 try that dcc send.
+2008-02-09T11:15:00.000Z	neopsyche	Dr_willis	dcc send?
+2008-02-09T11:15:00.000Z	neopsyche	Dr_willis	im using chatzilla.. cant see dcc
+2008-02-09T11:16:00.000Z	Dr_willis	neopsyche	 you may want to start using xchat
+2008-02-09T11:18:00.000Z	neopsyche	Dr_willis	can you send file to my other id?
+2008-02-09T11:18:00.000Z	Dr_willis	neopsyche	 could try  http://www.yourfilelink.com/get.php?fid=457460
+2008-02-09T11:19:00.000Z	Dr_willis	neopsyche	 i found 15 other file-shareing sites. :)
+2008-02-09T11:19:00.000Z	neopsyche	Dr_willis	thanks.. is downloading?
+2008-02-09T11:19:00.000Z	neopsyche	Dr_willis	it is downloading ;-)
+2008-02-09T11:25:00.000Z	Dr_willis	neopsyche	  NOW go read some bash tutorials! and learn the fundamentals!
+2008-02-09T11:29:00.000Z	Dr_willis	neopsyche	 no idea. Could be some support files/stuff you need. it ran.. and i closed the app.. is all i did with it.

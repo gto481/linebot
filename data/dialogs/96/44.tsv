@@ -1,0 +1,96 @@
+2007-08-03T11:38:00.000Z	ctopkelly		anyone want to help me setup a wireless card
+2007-08-03T11:38:00.000Z	profanephobia	ctopkelly	what card
+2007-08-03T11:38:00.000Z	profanephobia	ctopkelly	alright lets do it then
+2007-08-03T11:39:00.000Z	profanephobia	ctopkelly	ok first youll need an app called bcm43xx-fwcutter
+2007-08-03T11:40:00.000Z	profanephobia	ctopkelly	what have you tried and whats happening
+2007-08-03T11:40:00.000Z	profanephobia	ctopkelly	sudo apt-get install bcm43xx-fwcutter
+2007-08-03T11:41:00.000Z	profanephobia	ctopkelly	wait you are trying with an active internet conection right
+2007-08-03T11:42:00.000Z	profanephobia	ctopkelly	have you enabled universe repos
+2007-08-03T11:42:00.000Z	profanephobia	ctopkelly	and have you run sudo apt-get update at least once
+2007-08-03T11:43:00.000Z	profanephobia	ctopkelly	it works for me but one sec and ill locate a deb
+2007-08-03T11:44:00.000Z	profanephobia	ctopkelly	ok just open synaptic and search for bcm43xx-fwcutter
+2007-08-03T11:46:00.000Z	profanephobia	ctopkelly	ok somethings not right then cause that package is definitely in the repos
+2007-08-03T11:57:00.000Z	ctopkelly	profanephobia	Any suggestions about the wireless card
+2007-08-03T11:57:00.000Z	profanephobia	ctopkelly	check one more time to make sure all your repos are in use
+2007-08-03T11:57:00.000Z	profanephobia	ctopkelly	then do an apt-get update
+2007-08-03T12:04:00.000Z	profanephobia	ctopkelly	then you should be able to do sudo apt-get install bcm43xx-fwcutter
+2007-08-03T12:06:00.000Z	profanephobia	ctopkelly	so it installed
+2007-08-03T12:06:00.000Z	ctopkelly	profanephobia	yes
+2007-08-03T12:07:00.000Z	profanephobia	ctopkelly	also download this http://boredklink.googlepages.com/wl_apsta.o
+2007-08-03T12:08:00.000Z	ctopkelly	profanephobia	Done
+2007-08-03T12:09:00.000Z	profanephobia	ctopkelly	do sudo bcm43xx-fwcutter -w /lib/firmware ~/Desktop/wl_apsta.o
+2007-08-03T12:10:00.000Z	profanephobia	ctopkelly	once thats complete do sudo bcm43xx-fwcutter -w /lib/firmware/`uname -r` ~/Desktop/wl_apsta.o
+2007-08-03T12:10:00.000Z	ctopkelly	profanephobia	done
+2007-08-03T12:10:00.000Z	ctopkelly	profanephobia	donw
+2007-08-03T12:10:00.000Z	profanephobia	ctopkelly	have you already got a network manager installed
+2007-08-03T12:11:00.000Z	profanephobia	ctopkelly	just in case sudo apt-get install network-manager-gnome
+2007-08-03T12:12:00.000Z	ctopkelly	profanephobia	already install and is newest verison
+2007-08-03T12:12:00.000Z	profanephobia	ctopkelly	ok now do  nm-applet --sm-disable
+2007-08-03T12:12:00.000Z	profanephobia	ctopkelly	finally modprobe bcm43xx
+2007-08-03T12:13:00.000Z	profanephobia	ctopkelly	ctrl+c
+2007-08-03T12:14:00.000Z	ctopkelly	profanephobia	this is what i got ......"WARNING: Error inserting ieee80211_crypt (/lib/modules/2.6.20-16-generic/kernel/net/ieee80211/ieee80211_crypt.ko): Operation not permitted
+2007-08-03T12:15:00.000Z	profanephobia	ctopkelly	ok do su before trying again
+2007-08-03T12:15:00.000Z	ctopkelly	profanephobia	ok back to prompt
+2007-08-03T12:16:00.000Z	ctopkelly	profanephobia	does not look like it did anything
+2007-08-03T12:16:00.000Z	profanephobia	ctopkelly	once you run that as root (modprobe bcm43xx) then restart and see if your card works ill brb
+2007-08-03T12:20:00.000Z	profanephobia	ctopkelly	have you restarted
+2007-08-03T12:20:00.000Z	profanephobia	ctopkelly	and when you click the wireless manager do you see any wireless networks
+2007-08-03T12:21:00.000Z	profanephobia	ctopkelly	ok lets try ndiswrapper then
+2007-08-03T12:24:00.000Z	profanephobia	ctopkelly	sudo apt-get install ndiswrapper-utils
+2007-08-03T12:24:00.000Z	ctopkelly	profanephobia	ok
+2007-08-03T12:25:00.000Z	profanephobia	ctopkelly	if that doesnt work do sudo apt-get install ndiswrapper-common
+2007-08-03T12:26:00.000Z	ctopkelly	profanephobia	already installed
+2007-08-03T12:26:00.000Z	profanephobia	ctopkelly	ok
+2007-08-03T12:26:00.000Z	profanephobia	ctopkelly	you need to ge tthe windows drivers
+2007-08-03T12:27:00.000Z	profanephobia	ctopkelly	you can prolly do that by installing your cards drivers with wine or copy them from a windows box
+2007-08-03T12:27:00.000Z	ctopkelly	profanephobia	i have the bcmwl5 files on my desktop
+2007-08-03T12:28:00.000Z	profanephobia	ctopkelly	  sudo ndiswrapper -i /where your drivers are
+2007-08-03T12:30:00.000Z	profanephobia	ctopkelly	use pastebin for big pastes otherwise some jerk will bother you
+2007-08-03T12:30:00.000Z	profanephobia	ctopkelly	did it complete successfully
+2007-08-03T12:30:00.000Z	ctopkelly	profanephobia	i think so
+2007-08-03T12:31:00.000Z	ctopkelly	profanephobia	thats all it said
+2007-08-03T12:31:00.000Z	profanephobia	ctopkelly	this is pastebin http://paste.ubuntu-nl.org/
+2007-08-03T12:32:00.000Z	profanephobia	ctopkelly	to check do   ndiswrapper -l then see if the device shows up as installed
+2007-08-03T12:33:00.000Z	ctopkelly	profanephobia	 here is what it says
+2007-08-03T12:34:00.000Z	profanephobia	ctopkelly	sudo depmod -a
+2007-08-03T12:35:00.000Z	ctopkelly	profanephobia	done
+2007-08-03T12:35:00.000Z	profanephobia	ctopkelly	ok restart and pray it works
+2007-08-03T12:40:00.000Z	ctopkelly	profanephobia	 sorry no go on the wireless card
+2007-08-03T12:41:00.000Z	profanephobia	ctopkelly	dude that should have worked
+2007-08-03T12:41:00.000Z	profanephobia	ctopkelly	who makes your card
+2007-08-03T12:41:00.000Z	ctopkelly	profanephobia	when i do an iwconfig i only see lo eth0
+2007-08-03T12:42:00.000Z	ctopkelly	profanephobia	broadcom
+2007-08-03T12:42:00.000Z	profanephobia	ctopkelly	thats the chip who actually makes it
+2007-08-03T12:42:00.000Z	profanephobia	ctopkelly	or the model number
+2007-08-03T12:43:00.000Z	ctopkelly	profanephobia	it is a built in card for me ZD8000 hp notebook
+2007-08-03T12:43:00.000Z	profanephobia	ctopkelly	ill brb
+2007-08-03T12:46:00.000Z	ctopkelly	profanephobia	it says broadcom 802.11b/g wireless lan
+2007-08-03T13:12:00.000Z	ctopkelly	profanephobia	 are you back yet?
+2007-08-03T13:12:00.000Z	profanephobia	ctopkelly	i just back back
+2007-08-03T13:13:00.000Z	ctopkelly	profanephobia	cool   was just checking everyfew min
+2007-08-03T13:14:00.000Z	profanephobia	ctopkelly	sry im at work (it guy) and we haad wireless probss of our own
+2007-08-03T13:14:00.000Z	ctopkelly	profanephobia	NP
+2007-08-03T13:16:00.000Z	ctopkelly	profanephobia	are you still able to help.?
+2007-08-03T13:17:00.000Z	profanephobia	ctopkelly	ive tried all i know man if those two didnt work then im not sure whats happenin
+2007-08-03T13:17:00.000Z	ctopkelly	profanephobia	 thats ok thanks for the help
+2007-08-03T13:18:00.000Z	profanephobia	ctopkelly	welcome sorry
+2007-08-03T13:27:00.000Z	profanephobia	ctopkelly	ahh you blacklisted bcm43xx... did someone tell you that
+2007-08-03T13:30:00.000Z	ctopkelly	profanephobia	do you know how to do this remove something fom the blacklist?
+2007-08-03T13:31:00.000Z	profanephobia	ctopkelly	try sudo modprobe bcm43xx
+2007-08-03T13:32:00.000Z	ctopkelly	profanephobia	i get nothing
+2007-08-03T13:33:00.000Z	profanephobia	ctopkelly	you wouldnt
+2007-08-03T13:33:00.000Z	ctopkelly	profanephobia	so that means?
+2007-08-03T13:36:00.000Z	profanephobia	ctopkelly	just edit it manually /etc/modprobe.d/blacklist
+2007-08-03T13:38:00.000Z	ctopkelly	profanephobia	would the command vim /etc/modprobe.d/blacklist?
+2007-08-03T13:39:00.000Z	profanephobia	ctopkelly	yeah but i prefer gedit but thats just me
+2007-08-03T13:40:00.000Z	ctopkelly	profanephobia	just removed it with gedit now how do you save it?
+2007-08-03T13:41:00.000Z	profanephobia	ctopkelly	just hit save
+2007-08-03T13:41:00.000Z	profanephobia	ctopkelly	wait in vim or gedit
+2007-08-03T13:41:00.000Z	ctopkelly	profanephobia	no it is read only?
+2007-08-03T13:41:00.000Z	profanephobia	ctopkelly	open it as root
+2007-08-03T13:44:00.000Z	ctopkelly	profanephobia	will i need to reboot to get it to work now
+2007-08-03T13:44:00.000Z	profanephobia	ctopkelly	not sure maybe
+2007-08-03T13:46:00.000Z	ctopkelly	profanephobia	it looks to be working
+2007-08-03T13:46:00.000Z	profanephobia	ctopkelly	good you mean your wireless
+2007-08-03T13:46:00.000Z	ctopkelly	profanephobia	how can i scan for a net work?  yes the wireless
+2007-08-03T13:46:00.000Z	profanephobia	ctopkelly	just click the network manager

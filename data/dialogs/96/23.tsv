@@ -1,0 +1,96 @@
+2009-07-08T20:42:00.000Z	bala		hi
+2009-07-08T20:44:00.000Z	bala		hello friends i've huawei ets 2288 wireless wll phone modem gnome-ppp can't detect my port /dev/ttyUSB0 can any one help out ?
+2009-07-08T20:44:00.000Z	dakarn	bala	what version of ubuntu are you using?
+2009-07-08T20:45:00.000Z	dakarn	bala	it should autorecognize. does your card have a built in memory stick?
+2009-07-08T20:47:00.000Z	dakarn	bala	have you been able to connect with it at all? or is this the first time trying to use it
+2009-07-08T20:50:00.000Z	dakarn	bala	maybe it's a conflict with network manager
+2009-07-08T20:50:00.000Z	dakarn	bala	have you tried configuring a connection through nm-applet?
+2009-07-08T20:53:00.000Z	dakarn	bala	right click and edit connections. there should be a mobile broadband tab
+2009-07-08T20:54:00.000Z	dakarn	bala	click add
+2009-07-08T20:54:00.000Z	dakarn	bala	it should auto recognize your country as india, and you select your service provider
+2009-07-08T20:56:00.000Z	dakarn	bala	bsnl?
+2009-07-08T20:58:00.000Z	dakarn	bala	is it 3g?
+2009-07-08T20:58:00.000Z	dakarn	bala	it's a wired connection?
+2009-07-08T21:00:00.000Z	dakarn	bala	gprs/edge/hsdpa/hsupa/evdo type connection?
+2009-07-08T21:01:00.000Z	dakarn	bala	perhaps you will find help on this webpage:  http://www.indiabroadband.net/bsnl-broadband/13261-solved-bsnl-connection-fedora-10-a.html
+2009-07-08T21:02:00.000Z	dakarn	bala	i don't understand your connection type. i thought it was a GPRS mobile broadband
+2009-07-08T21:03:00.000Z	bala	dakarn	my phone model is huawei ets 2288
+2009-07-08T21:03:00.000Z	dakarn	bala	perhaps someone at http://broadbandforum.in/bsnl-mobile/  can help you more =/
+2009-07-08T21:06:00.000Z	bala	dakarn	do u knw wireless local loop..? that's mine phone type my model is huawei ets 2288 phone
+2009-07-08T21:08:00.000Z	dakarn	bala	oh man it's a phone for real. i have no idea bud =/
+2009-07-08T21:08:00.000Z	bala	dakarn	hmmm ok bro
+2009-07-08T21:09:00.000Z	dakarn	bala	sorry i dunno how that system works at all
+2009-07-08T21:09:00.000Z	bala	dakarn	now i'm in ubuntu os.. but connecting through terminal
+2009-07-08T22:30:00.000Z	dakarn	bala	tar -zxvf name.tar.gz
+2009-07-08T22:31:00.000Z	dakarn	bala	did you download the tarball?
+2009-07-08T22:31:00.000Z	bala	dakarn	tar.gz file downloaded
+2009-07-08T22:32:00.000Z	dakarn	bala	sudo su to get a root terminal
+2009-07-08T22:32:00.000Z	bala	dakarn	ok next
+2009-07-08T22:32:00.000Z	dakarn	bala	you unpack tarballs using #tar -zxvf filename.tar.gz
+2009-07-08T22:32:00.000Z	dakarn	bala	there is a .configure file, you run it with /.configure
+2009-07-08T22:33:00.000Z	dakarn	bala	then you 'make' and 'make install' to compile it and install it
+2009-07-08T22:33:00.000Z	bala	dakarn	entered sudo mode
+2009-07-08T22:34:00.000Z	dakarn	bala	tar -zxvf filename.tar.gz
+2009-07-08T22:36:00.000Z	dakarn	bala	make sure you're in the right directory
+2009-07-08T22:38:00.000Z	dakarn	bala	you need to cd ~/Desktop
+2009-07-08T22:38:00.000Z	bala	dakarn	entered desktop
+2009-07-08T22:38:00.000Z	dakarn	bala	what is the filename
+2009-07-08T22:39:00.000Z	dakarn	bala	tar -zxvf netscape-navigator-9.0.0.6.tar.gz
+2009-07-08T22:40:00.000Z	bala	dakarn	root@bala-desktop:~# tar -zxvf netscape-navigator-9.0.0.6.tar.gz
+2009-07-08T22:45:00.000Z	dakarn	bala	type ls in terminal. does it list your *.tar.gz
+2009-07-08T22:46:00.000Z	dakarn	bala	are you certain that the package is on your desktop. you should type 'pwd' and it will show your current directory
+2009-07-08T22:47:00.000Z	dakarn	bala	cd /home/bala/Desktop
+2009-07-08T22:48:00.000Z	dakarn	bala	type ls  do you see the file?
+2009-07-08T22:49:00.000Z	dakarn	bala	now you need to cd netscape-navigator-9.0.0.6
+2009-07-08T22:50:00.000Z	bala	dakarn	nexxt step
+2009-07-08T22:50:00.000Z	dakarn	bala	then /.configure
+2009-07-08T22:53:00.000Z	dakarn	bala	cd netscape-navigator.9.0.0.6
+2009-07-08T22:54:00.000Z	bala	dakarn	-bash: cd: netscape-navigator.9.0.0.6: No such file or directory
+2009-07-08T22:54:00.000Z	dakarn	bala	what is the output of pwd
+2009-07-08T22:54:00.000Z	dakarn	bala	you should install openssh and let lstarnes or me configure this for you =)
+2009-07-08T22:55:00.000Z	bala	dakarn	how u configure for me?
+2009-07-08T22:55:00.000Z	dakarn	bala	what directory are you in
+2009-07-08T22:56:00.000Z	bala	dakarn	root@bala-desktop:/home/bala/Desktop/navigator#
+2009-07-08T22:56:00.000Z	dakarn	bala	cd ..
+2009-07-08T22:56:00.000Z	dakarn	bala	then type Ls
+2009-07-08T22:56:00.000Z	bala	dakarn	ok i did
+2009-07-08T22:57:00.000Z	dakarn	bala	what's directories are listed?
+2009-07-08T22:57:00.000Z	dakarn	bala	we're looking for a folder
+2009-07-08T22:58:00.000Z	dakarn	bala	type su bala
+2009-07-08T22:59:00.000Z	dakarn	bala	what folder is on your desktop?
+2009-07-08T23:00:00.000Z	bala	dakarn	GoogleEarthLinux.bin  navigator  netscape-navigator-9.0.0.6.tar.gz
+2009-07-08T23:00:00.000Z	dakarn	bala	cd navigator
+2009-07-08T23:01:00.000Z	bala	dakarn	ok entered that
+2009-07-08T23:02:00.000Z	bala	dakarn	tel me nxt step bro
+2009-07-08T23:02:00.000Z	dakarn	bala	type ./configure
+2009-07-08T23:04:00.000Z	bala	dakarn	can u come to remote desktop?
+2009-07-08T23:05:00.000Z	bala	dakarn	lot of files thr
+2009-07-08T23:05:00.000Z	bala	dakarn	which file name u wanna
+2009-07-08T23:05:00.000Z	dakarn	bala	type make
+2009-07-08T23:09:00.000Z	dakarn	bala	you have to download the libraries now
+2009-07-08T23:09:00.000Z	bala	dakarn	how?
+2009-07-08T23:20:00.000Z	dakarn	bala	rm -rf /home/bala/navigator
+2009-07-08T23:20:00.000Z	dakarn	bala	take extreme caution you don't mistype that command
+2009-07-08T23:21:00.000Z	dakarn	bala	/home/bala/Desktop/navigator
+2009-07-08T23:22:00.000Z	dakarn	bala	rm -rf /home/bala/Desktop/navigator
+2009-07-08T23:22:00.000Z	dakarn	bala	rm /home/bala/Desktop/netscape-navigator.9.0.0.6.tar.gz
+2009-07-08T23:24:00.000Z	bala	dakarn	see this http://paste.ubuntu.com/212991/
+2009-07-08T23:27:00.000Z	bala	dakarn	 http://paste.ubuntu.com/212991/
+2009-07-08T23:27:00.000Z	dakarn	bala	sudo rm -rf /home/bala/Desktop/navigator
+2009-07-08T23:28:00.000Z	bala	dakarn	sudo: cannot get working directory
+2009-07-08T23:38:00.000Z	dakarn	bala	type cd ~/Desktop
+2009-07-08T23:30:00.000Z	dakarn	bala	i'm trying to figure that out
+2009-07-08T23:30:00.000Z	bala	dakarn	ok bro
+2009-07-08T23:31:00.000Z	dakarn	bala	sudo rm -rf /home/bala/Desktop/navigator/
+2009-07-08T23:35:00.000Z	bala	dakarn	what that permision?
+2009-07-08T23:37:00.000Z	dakarn	bala	one sec
+2009-07-08T23:37:00.000Z	dakarn	bala	type cd ..
+2009-07-08T23:37:00.000Z	bala	dakarn	no file on my desktop
+2009-07-08T23:37:00.000Z	dakarn	bala	you deleted it already
+2009-07-08T23:38:00.000Z	bala	dakarn	so much of thanks
+2009-07-08T23:38:00.000Z	dakarn	bala	best of luck. probably best to install packages through the package manager tho
+2009-07-08T23:39:00.000Z	bala	dakarn	i need another help installation google earth
+2009-07-08T23:39:00.000Z	dakarn	bala	i don't know about .bin files
+2009-07-08T23:40:00.000Z	bala	dakarn	tGoogleEarthLinux.bin
+2009-07-08T23:40:00.000Z	bala	dakarn	GoogleEarthLinux.bin
+2009-07-08T23:40:00.000Z	bala	dakarn	download from google site

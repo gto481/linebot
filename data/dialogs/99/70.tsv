@@ -1,0 +1,99 @@
+2006-03-24T07:08:00.000Z	dollar		how can i log in as root? when i try putting root and its password, i gotta message sayin it's not allowed
+2006-03-24T07:08:00.000Z	dollar		i need to log as root in order to see my ntfs drives in order to view some files
+2006-03-24T07:09:00.000Z	dollar		so there's no other solution?
+2006-03-24T07:09:00.000Z	dollar		i have kubunto
+2006-03-24T07:10:00.000Z	_mustard	dollar	have you set up your options in /etc/fstab correctly for mounting your ntfs partition?
+2006-03-24T07:12:00.000Z	_mustard	dollar	ok well that quite likely the problem then
+2006-03-24T07:12:00.000Z	_mustard	dollar	hang on while i find something for you to read..
+2006-03-24T07:14:00.000Z	_mustard	dollar	I'm downloading at the same time as I am browsing so give me a minute ..its pretty slow :)
+2006-03-24T07:16:00.000Z	_mustard	dollar	you used the pastebin before?
+2006-03-24T07:49:00.000Z	_mustard	dollar	what is the file format of those that it can't play?
+2006-03-24T07:49:00.000Z	_mustard	dollar	hmm ok
+2006-03-24T07:50:00.000Z	_mustard	dollar	sounds very strange
+2006-03-24T07:53:00.000Z	_mustard	dollar	I gave you instructions on how to fix that earlier
+2006-03-24T07:53:00.000Z	_mustard	dollar	then you left without answerting
+2006-03-24T07:53:00.000Z	_mustard	dollar	its a good idea to ask for more help then
+2006-03-24T07:54:00.000Z	_mustard	dollar	the way you want to do it is not really the best way to go about it
+2006-03-24T07:54:00.000Z	_mustard	dollar	have you used the pastebin before?
+2006-03-24T07:55:00.000Z	_mustard	dollar	open this in your browser then http://paste.ubuntu-nl.org/
+2006-03-24T07:55:00.000Z	_mustard	dollar	now do you know how to open a terminal?
+2006-03-24T07:56:00.000Z	_mustard	dollar	I want to see your partitions..so do this command then paste the contents at that website and hit send..
+2006-03-24T07:56:00.000Z	_mustard	dollar	sudo fdisk -l
+2006-03-24T07:57:00.000Z	_mustard	dollar	after you hit 'send', paste the new URL it creates in here, so I can see the page
+2006-03-24T07:59:00.000Z	_mustard	dollar	ok..
+2006-03-24T08:01:00.000Z	_mustard	dollar	ok now do this command and do a new pastebin with the contents....
+2006-03-24T08:01:00.000Z	_mustard	dollar	cat /etc/fstab
+2006-03-24T08:02:00.000Z	_mustard	dollar	thanks
+2006-03-24T08:04:00.000Z	_mustard	dollar	you have the wrong setting on the line for /dev/hda1 for allowing access to your ntfs drive
+2006-03-24T08:04:00.000Z	_mustard	dollar	I'm going to show you how to edit it
+2006-03-24T08:05:00.000Z	_mustard	dollar	are you on gnome or kde?
+2006-03-24T08:07:00.000Z	_mustard	dollar	what are you on now?
+2006-03-24T08:07:00.000Z	_mustard	dollar	they have different editors
+2006-03-24T08:08:00.000Z	_mustard	dollar	I'm usually on gnome, so hopefully I get this command right :)
+2006-03-24T08:11:00.000Z	_mustard	dollar	won't be long, just working something out
+2006-03-24T08:13:00.000Z	_mustard	dollar	ok...   kdesu kate /etc/fstab
+2006-03-24T08:13:00.000Z	_mustard	dollar	that should open up a text editor with the contents of the file /etc/fstab
+2006-03-24T08:14:00.000Z	_mustard	dollar	tell me when you get it
+2006-03-24T08:15:00.000Z	_mustard	dollar	ok, I'll show you what to change the line for /dev/hda1 to
+2006-03-24T08:16:00.000Z	_mustard	dollar	/dev/hda1 /media/hda1 ntfs umask=0222 0 0
+2006-03-24T08:16:00.000Z	_mustard	dollar	show me what you have done after you finished before saving
+2006-03-24T08:17:00.000Z	_mustard	dollar	in the pastebin
+2006-03-24T08:18:00.000Z	_mustard	dollar	yes..the final line should look exactly as I have it
+2006-03-24T08:18:00.000Z	_mustard	dollar	the other stuff you have needs to go
+2006-03-24T08:21:00.000Z	_mustard	dollar	no..you have too many '0 0's on the end :)
+2006-03-24T08:21:00.000Z	_mustard	dollar	/dev/hda1 /media/hda1 ntfs umask=0222 0 0
+2006-03-24T08:31:00.000Z	_mustard	dollar	sudo umount /dev/hda1
+2006-03-24T08:23:00.000Z	_mustard	dollar	yes please...I'll go over the final edit
+2006-03-24T08:24:00.000Z	_mustard	dollar	k
+2006-03-24T08:24:00.000Z	_mustard	dollar	that would be a good idea
+2006-03-24T08:26:00.000Z	_mustard	dollar	it looks good
+2006-03-24T08:26:00.000Z	_mustard	dollar	more to come yet
+2006-03-24T08:26:00.000Z	_mustard	dollar	save and tell me when your done
+2006-03-24T08:27:00.000Z	_mustard	dollar	k now I'm just going to make sure both those ntfs drives are unmounted so do these next commands
+2006-03-24T08:27:00.000Z	_mustard	dollar	sudo umount /dev/hda1
+2006-03-24T08:27:00.000Z	_mustard	dollar	sudo umount /dev/hda5
+2006-03-24T08:28:00.000Z	_mustard	dollar	any error messages or did they go ok?
+2006-03-24T08:30:00.000Z	_mustard	dollar	I take it you type 'umount'..not 'unmount'?
+2006-03-24T08:32:00.000Z	_mustard	dollar	sudo  not sudu
+2006-03-24T08:34:00.000Z	_mustard	dollar	you worked it out yet or still having problems?
+2006-03-24T08:34:00.000Z	_mustard	dollar	umount not unmount
+2006-03-24T08:35:00.000Z	_mustard	dollar	your not reading what is on the screen :)
+2006-03-24T08:35:00.000Z	_mustard	dollar	look at each letter and think before typing :)
+2006-03-24T08:35:00.000Z	_mustard	dollar	sudo umount /dev/hda1
+2006-03-24T08:37:00.000Z	_mustard	dollar	its a common mistake..dont worry about it
+2006-03-24T08:37:00.000Z	_mustard	dollar	ok..done that first one then?
+2006-03-24T08:38:00.000Z	_mustard	dollar	thats good
+2006-03-24T08:38:00.000Z	_mustard	dollar	thats what I wanted to know
+2006-03-24T08:38:00.000Z	_mustard	dollar	sudo umount /dev/hda5
+2006-03-24T08:39:00.000Z	_mustard	dollar	check the second one with that above command now..for /dev/hda5
+2006-03-24T08:40:00.000Z	_mustard	dollar	k..now this command    sudo mount -a
+2006-03-24T08:40:00.000Z	_mustard	dollar	that command means mount all entries in the /etc/fstab
+2006-03-24T08:41:00.000Z	_mustard	dollar	any errors?
+2006-03-24T08:41:00.000Z	_mustard	dollar	not output is good
+2006-03-24T08:41:00.000Z	_mustard	dollar	thats good
+2006-03-24T08:42:00.000Z	_mustard	dollar	ok..look on your desktop see if you see icons for those drives
+2006-03-24T08:42:00.000Z	_mustard	dollar	oh your on kde..dont worry
+2006-03-24T08:42:00.000Z	_mustard	dollar	browse to those directories and see if you have permission to access them now
+2006-03-24T08:44:00.000Z	_mustard	dollar	yes
+2006-03-24T08:46:00.000Z	_mustard	dollar	yes..the /etc/fstab file handles mounting of drives at startup..so it will be that way each time you start up
+2006-03-24T08:47:00.000Z	_mustard	dollar	try rebooting and coming back if you like :)
+2006-03-24T08:48:00.000Z	_mustard	dollar	thats ok..no problems..don't be afraid to ask questions :)
+2006-03-24T08:48:00.000Z	_mustard	dollar	if you look over the guide now, you should be able to understand what it was trying to tell you to do
+2006-03-24T08:49:00.000Z	_mustard	dollar	heh..well whoever is in here.  you will get the hang of it.  After a bit of setting up there isnt anything much left to configure
+2006-03-24T08:55:00.000Z	dollar	_mustard	it worked man... i got a window screen after i logged in to my user account saying : log in as root and putting the password
+2006-03-24T08:56:00.000Z	_mustard	dollar	I don't understand
+2006-03-24T08:56:00.000Z	_mustard	dollar	did you change the log in to allow root login?
+2006-03-24T08:57:00.000Z	_mustard	dollar	hmm well I'm not sure whats happening then
+2006-03-24T08:57:00.000Z	_mustard	dollar	thats sounds quite strange really :)
+2006-03-24T08:57:00.000Z	_mustard	dollar	 what did you run that asked you to log in as root?
+2006-03-24T08:58:00.000Z	_mustard	dollar	it sounds wierd to me, but I am not used to KDE
+2006-03-24T08:59:00.000Z	_mustard	dollar	ask in #kubuntu
+2006-03-24T08:59:00.000Z	_mustard	dollar	normally you just put your username and user password in...then do all root commands using the 'sudo' command
+2006-03-24T08:59:00.000Z	_mustard	dollar	it depends which one you like the most really
+2006-03-24T09:00:00.000Z	_mustard	dollar	this 'extra' dialog is a mystery to me
+2006-03-24T09:02:00.000Z	_mustard	dollar	join the #kubuntu channel and ask them in there what this thing is that pops up and asks you to log in as root when you first log in
+2006-03-24T09:02:00.000Z	_mustard	dollar	it sounds like something specific to KDE
+2006-03-24T09:03:00.000Z	_mustard	dollar	#kubuntu
+2006-03-24T09:03:00.000Z	_mustard	dollar	no kubunto :)
+2006-03-24T09:18:00.000Z	_mustard	dollar	so what was the name of the program asking for root access?
+2006-03-24T09:22:00.000Z	dollar	_mustard	look man, I'm gonna send u a snsapshot of what's happening when i log in... because i tried not putting the root password and still i could open the ntfs drives

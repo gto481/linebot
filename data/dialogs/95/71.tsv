@@ -1,0 +1,95 @@
+2005-11-05T12:13:00.000Z	robotgeek	penguin_	nope, install another window manager..like fluxbox
+2005-11-05T12:13:00.000Z	penguin_	robotgeek	how do you do that - I wasnt given any options on what to install, it did everything it self... ?
+2005-11-05T12:14:00.000Z	robotgeek	penguin_	press ctrl + alt + f1 (switch to a different console), and login. sudo apt-get install fluxbox from there
+2005-11-05T12:15:00.000Z	penguin_	robotgeek	something has really gotten hozed up here... does ubunto not like reiserfs as the root fs or something? that is the only difference between this install and the laptop (besides the network config)?
+2005-11-05T12:16:00.000Z	penguin_	robotgeek	my keyboard wen tout to lunch again with clicking on the sessions button, and cant click on the reboot button =(
+2005-11-05T12:16:00.000Z	robotgeek	penguin_	i am unsure of the details of the reiserfs, but i am pretty sure that if you got till screen, that's not the issue
+2005-11-05T12:17:00.000Z	penguin_	robotgeek	well, im going to reistall with ext3 (the default), hopefully that is it because something is definatly hozed up here =(
+2005-11-05T13:42:00.000Z	penguin_	robotgeek	and yes, gdm did not come up
+2005-11-05T13:22:00.000Z	robotgeek	penguin_	tried using another window manager?
+2005-11-05T13:23:00.000Z	penguin_	robotgeek	cant select another window manager, when I hit the sessions button - a blank dialog comes up and Iloose the keyboard, need to do a cold reboot at that point =(
+2005-11-05T13:23:00.000Z	robotgeek	penguin_	how about removing gdm, and trying it the good old way? :)
+2005-11-05T13:24:00.000Z	robotgeek	penguin_	i could work with you on that if you are interested :)
+2005-11-05T13:24:00.000Z	robotgeek	penguin_	brb
+2005-11-05T13:25:00.000Z	penguin_	robotgeek	I can try it that way, but 1)what is the gnome window manager app to put in .xinitrc and 2) what in **** could be wrong that would be hozing up gdm so bad?
+2005-11-05T13:32:00.000Z	robotgeek	penguin_	so, u mean to say that you don't get the opportunity to switch to a console at all, at any time?
+2005-11-05T13:33:00.000Z	penguin_	robotgeek	when gdm first pops up yes (im there now), if I login -or- try to choose another session type (nothing listed), it goes out to lunch...
+2005-11-05T13:34:00.000Z	penguin_	robotgeek	im not getting any errors that I can find either...
+2005-11-05T13:35:00.000Z	robotgeek	penguin_	at the screen, just hit ctl + alt + f1. don't do anything that causes it to freeze
+2005-11-05T13:36:00.000Z	penguin_	robotgeek	im at the command line now... been there looking through log files for some kind of clue...
+2005-11-05T13:37:00.000Z	robotgeek	penguin_	the first thing to do is to 'cd /etc/init.d/' and sudo update-rc.d gdm remove
+2005-11-05T13:38:00.000Z	robotgeek	penguin_	that will stop gdm from coming up
+2005-11-05T13:38:00.000Z	penguin_	robotgeek	says saomthing about it existing during rc.d purge, -f to force... force it?
+2005-11-05T13:38:00.000Z	robotgeek	penguin_	:), yep
+2005-11-05T13:39:00.000Z	penguin_	robotgeek	rebooting
+2005-11-05T13:39:00.000Z	robotgeek	penguin_	don't need to
+2005-11-05T13:39:00.000Z	robotgeek	penguin_	sudo /etc/init.d/gdm stop
+2005-11-05T13:40:00.000Z	penguin_	robotgeek	o well, lol... give it a sec... the big thing that worries me here though is if Im having problems already, im more than likely going to have a bunch down the road wont I?
+2005-11-05T13:40:00.000Z	robotgeek	penguin_	nope, not if we get them fixed :)
+2005-11-05T13:40:00.000Z	penguin_	robotgeek	true... =P what now? logged in...
+2005-11-05T13:41:00.000Z	robotgeek	penguin_	gdm did not come up, right. nano ~/.xinitrc
+2005-11-05T13:41:00.000Z	penguin_	robotgeek	put what in xinitrc - gnome-session?
+2005-11-05T13:42:00.000Z	robotgeek	penguin_	put 'exec fluxbox'
+2005-11-05T13:43:00.000Z	penguin_	robotgeek	dont have it yet, what is the package manager command? (newbie to debian/ubunto, sry)
+2005-11-05T13:43:00.000Z	robotgeek	penguin_	then save the file and startx.
+2005-11-05T13:43:00.000Z	robotgeek	penguin_	sudo apt-get install fluxbox
+2005-11-05T13:44:00.000Z	penguin_	robotgeek	E: Countdn't find package fluxbox =(
+2005-11-05T13:45:00.000Z	robotgeek	penguin_	you need to enable the universe repository.
+2005-11-05T13:46:00.000Z	penguin_	robotgeek	that link is for doing in through a gui =( how do you do it from the cmd line?
+2005-11-05T13:47:00.000Z	robotgeek	penguin_	i saw that too, goddamm.(i will add stuff to the wiki later :))
+2005-11-05T13:47:00.000Z	penguin_	robotgeek	lol
+2005-11-05T13:47:00.000Z	robotgeek	penguin_	sudo nano /etc/apt/sources.list
+2005-11-05T13:48:00.000Z	penguin_	robotgeek	just uncomment one of the multiverse/universe ones?
+2005-11-05T13:48:00.000Z	robotgeek	penguin_	uncomment the lines with universe in them.
+2005-11-05T13:49:00.000Z	robotgeek	penguin_	then 'sudo apt-get update'
+2005-11-05T13:50:00.000Z	penguin_	robotgeek	installing fluxbox now... =)
+2005-11-05T13:51:00.000Z	penguin_	robotgeek	argghhh! okay, fluxbox is doing the same thing now =( dont even think it is running, but I cant get back to the cmd line to check... =/ reboting...
+2005-11-05T13:51:00.000Z	robotgeek	penguin_	right click
+2005-11-05T13:52:00.000Z	penguin_	robotgeek	there was nothing... how do I get sshd running on this box so I can get into it from the laptop when it locks up?
+2005-11-05T13:52:00.000Z	robotgeek	penguin_	you mean to say that it locked up again?
+2005-11-05T13:53:00.000Z	robotgeek	penguin_	so, it locked up even with fluxbox? interesting...so the problem is with x, most probably
+2005-11-05T13:54:00.000Z	penguin_	robotgeek	locked up is a bad phrase, X still worked and all (had the mouse cursor), but no keyboard and no windowmanager or anything coming up...
+2005-11-05T13:55:00.000Z	robotgeek	penguin_	with fluxbox, you get nothing to indicate that it's up. right clicking will tell.
+2005-11-05T13:55:00.000Z	penguin_	robotgeek	im assuming that since the laptop is working and has an nvidia card ((same as the desktop) with out the comercail drivers, that it isnt the driver.,..
+2005-11-05T13:56:00.000Z	penguin_	robotgeek	nothing works, right clicking, keyboard nothing... also sshd cant be found to install?
+2005-11-05T13:56:00.000Z	robotgeek	penguin_	look at the files ~/xsession-errors and /var/log/Xorg.log
+2005-11-05T13:58:00.000Z	penguin_	robotgeek	no errors in either that are not common or atleast the same on this laptop...
+2005-11-05T13:58:00.000Z	robotgeek	penguin_	try this one for me? sudo apt-get install xterm. then add xterm & above 'exec fluxbox'
+2005-11-05T13:58:00.000Z	penguin_	robotgeek	kk
+2005-11-05T13:59:00.000Z	penguin_	robotgeek	need to get that sshd installed, but when I try it says sshd cannot be found... is that the right package name?
+2005-11-05T13:59:00.000Z	robotgeek	penguin_	sudo apt-get install openssh-server
+2005-11-05T14:00:00.000Z	penguin_	robotgeek	kk
+2005-11-05T14:03:00.000Z	penguin_	robotgeek	okay this is really strange, nvr encountered this before - both fluxbox and xterm are running (ssh'd in, and ps'd) but neither are being displayed on screen...
+2005-11-05T14:03:00.000Z	robotgeek	penguin_	ctl + alt + f7
+2005-11-05T14:04:00.000Z	penguin_	robotgeek	keyboard doesnt work now =(
+2005-11-05T14:06:00.000Z	penguin_	robotgeek	im trying the binary drivers, maybe the nv driver doesnt like the 6800 or something
+2005-11-05T14:06:00.000Z	penguin_	robotgeek	Ijust killed X and everything locked up =(
+2005-11-05T14:06:00.000Z	robotgeek	penguin_	oh god, it just seems to be getting worse :(
+2005-11-05T14:06:00.000Z	penguin_	robotgeek	lol - yep =-/
+2005-11-05T14:07:00.000Z	penguin_	robotgeek	do I install the drivers from the cmd line, or through apt-get?
+2005-11-05T14:07:00.000Z	robotgeek	penguin_	i am on ppc, so you are on your own there.
+2005-11-05T14:07:00.000Z	robotgeek	penguin_	ask around here though :)
+2005-11-05T14:08:00.000Z	robotgeek	penguin_	even ssh locked up?
+2005-11-05T14:09:00.000Z	robotgeek	penguin_	look at your Xorg log file in /var/log/ , and ~/xsession-errors
+2005-11-05T14:09:00.000Z	penguin_	robotgeek	ummm, cant be sure but I dont think so...
+2005-11-05T14:09:00.000Z	penguin_	robotgeek	no errors
+2005-11-05T14:10:00.000Z	robotgeek	penguin_	is there nothing in ~/xsession-errors also?
+2005-11-05T14:10:00.000Z	penguin_	robotgeek	whats the arg to apt-get to search for pckg names?
+2005-11-05T14:10:00.000Z	robotgeek	penguin_	apt-cache search <whatever>
+2005-11-05T14:11:00.000Z	penguin_	robotgeek	invalid operation?
+2005-11-05T14:12:00.000Z	robotgeek	penguin_	check for spelling errors :) 'search'
+2005-11-05T14:12:00.000Z	penguin_	robotgeek	nvr mind, wrong cmd =P
+2005-11-05T14:14:00.000Z	penguin_	robotgeek	interesting - it is the nv driver that was hozing everything up...
+2005-11-05T14:15:00.000Z	robotgeek	penguin_	use sudo dpkg-reconfigure xerver-xorg to select vesa or whatever :)
+2005-11-05T14:15:00.000Z	penguin_	robotgeek	everything works with the nvidia binary driver, atleast xterm and fluxbox =)
+2005-11-05T14:15:00.000Z	robotgeek	penguin_	neato!
+2005-11-05T14:16:00.000Z	penguin_	robotgeek	going to try gdm now /crossing fingers/
+2005-11-05T14:16:00.000Z	penguin_	robotgeek	what was that rcupdate command to turn gdm off?
+2005-11-05T14:17:00.000Z	robotgeek	penguin_	sudo /etc/init.d/gdm start
+2005-11-05T14:18:00.000Z	penguin_	robotgeek	woohoo!!! its working now =P now, how do I get gdm start from boot again?
+2005-11-05T14:19:00.000Z	robotgeek	penguin_	cd /etc/init.d/ && sudo update-rc.d gdm defaults
+2005-11-05T14:21:00.000Z	penguin_	robotgeek	thx for your help, who would I mention this issue with the nvidia cards to, so they could put it up on the wiki?
+2005-11-05T14:21:00.000Z	robotgeek	penguin_	you can go and all that information yourself.
+2005-11-05T14:22:00.000Z	penguin_	robotgeek	o - cool, i'll check it out then =)
+2005-11-05T14:22:00.000Z	robotgeek	penguin_	cool, have fun with ur box. cya around!
+2005-11-05T14:31:00.000Z	penguin_	robotgeek	hey, there seems to be a version mismatch between the kernel module and the X driver when using the apt-get, should I just install via the bianry drivers from the website?

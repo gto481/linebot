@@ -1,0 +1,95 @@
+2012-02-12T22:04:00.000Z	anderson		someone knows why i can't upgrade 8.04 to 10.04.3 correctly? ever same error: dbus msg
+2012-02-12T22:05:00.000Z	anderson		:(
+2012-02-12T22:05:00.000Z	Chipzzz	anderson	i think you have to do an intermediate upgrade to 9.x... wouldn't swear to it though
+2012-02-12T22:07:00.000Z	Chipzzz	anderson	https://help.ubuntu.com/community/LucidUpgrades
+2012-02-12T22:08:00.000Z	Chipzzz	anderson	evidently you can go straight to 10.04
+2012-02-12T22:09:00.000Z	Chipzzz	anderson	what went wronggggg?
+2012-02-12T22:15:00.000Z	Chipzzz	anderson	what state is the machine in now?... booting, bricked...?
+2012-02-12T22:16:00.000Z	Chipzzz	anderson	cool... I'd go with following the instructions either on the page i linked before or else this one: https://help.ubuntu.com/community/EOLUpgrades
+2012-02-12T22:18:00.000Z	Chipzzz	anderson	good luck :-)
+2012-02-12T22:24:00.000Z	anderson	Chipzzz	how can i boot ubuntu 11 in usb flashdrive? from this version, 8.04?
+2012-02-12T22:25:00.000Z	Chipzzz	anderson	does your machine boot from usb?
+2012-02-12T22:26:00.000Z	anderson	Chipzzz	nope. its already installed. but i want install now the latest version... directly
+2012-02-12T22:27:00.000Z	anderson	Chipzzz	more easy, i wondering...
+2012-02-12T22:28:00.000Z	Chipzzz	anderson	why not just save your home directory (including hidden files), do a fresh install, and replace the home directory?
+2012-02-12T22:28:00.000Z	anderson	Chipzzz	replace to new version?
+2012-02-12T22:28:00.000Z	anderson	Chipzzz	does it work?
+2012-02-12T22:30:00.000Z	anderson	Chipzzz	mmm, seems much risk envolved
+2012-02-12T22:30:00.000Z	Chipzzz	anderson	yes... pretty much all your configuration settings are in your home directory... copy that into a fresh install, apt-get the packages, and they'll come up with the old settings
+2012-02-12T22:32:00.000Z	anderson	Chipzzz	but exist an way to do with flash drive? on 8.04?
+2012-02-12T22:33:00.000Z	anderson	Chipzzz	if i miss something, understand?
+2012-02-12T22:34:00.000Z	Chipzzz	anderson	i suggest a fresh install so that you can rearrange your hard drive in the process... if you create a partition for "/" and another for "/home", then next time you have to upgrade, you won't have to touch your home directory
+2012-02-12T22:36:00.000Z	Chipzzz	anderson	if i understand, the problem is that you don't have 10.04 on a disk from which you can install... is that right?
+2012-02-12T22:38:00.000Z	anderson	Chipzzz	yeah! ever i download using update manager i can't end the installation process...
+2012-02-12T22:39:00.000Z	anderson	Chipzzz	so i think if i install using a flash drive with 11.04 it will work better than refresh...
+2012-02-12T22:40:00.000Z	anderson	Chipzzz	i just want get the latest version
+2012-02-12T22:40:00.000Z	Chipzzz	anderson	because 8.04 is already eol, you can't upgrade using update manager anymore. The clean install is my suggestion... but i would advise setting up your hard drive as described before
+2012-02-12T22:41:00.000Z	Chipzzz	anderson	because that way your subsequent upgrades will be effortless
+2012-02-12T22:43:00.000Z	anderson	Chipzzz	so if can't upgrade, why i just format? do you know? seems much more secure to me, because im very distractive and i just was made this process over than three times...
+2012-02-12T22:44:00.000Z	Chipzzz	anderson	will you lose any important data if you just reformat?
+2012-02-12T22:45:00.000Z	anderson	Chipzzz	nothing... :)
+2012-02-12T22:45:00.000Z	Chipzzz	anderson	then that would be my suggestion
+2012-02-12T22:46:00.000Z	anderson	Chipzzz	much better format, isn't it?
+2012-02-12T22:46:00.000Z	Chipzzz	anderson	the newer versions of ubuntu are much better in many respects than 8.04 :-)
+2012-02-12T22:49:00.000Z	anderson	Chipzzz	i know... so, how can i boot this version from a flash drive?
+2012-02-12T22:49:00.000Z	anderson	Chipzzz	perhaps it doesn't have a way in a eol version
+2012-02-12T22:51:00.000Z	Chipzzz	anderson	download the latest ubuntu from ubuntu.org and on the download page you will find directions for installation from a usb drive
+2012-02-12T22:52:00.000Z	Chipzzz	anderson	basically, you just write out the iso file to the usb drive, run a live usb version, and do an install from that
+2012-02-12T22:53:00.000Z	anderson	Chipzzz	but this version doesn't have startup disk creator
+2012-02-12T22:55:00.000Z	Chipzzz	anderson	no problem... go here: http://www.ubuntu.com/download/ubuntu/download, download the file, go to the bottom of the page and click on "show me how", and you'll be all set :-)
+2012-02-12T22:59:00.000Z	anderson	Chipzzz	ok! im downloading...
+2012-02-12T22:59:00.000Z	Chipzzz	anderson	:-)
+2012-02-12T23:09:00.000Z	anderson	Chipzzz	one more question, this file, .iso, needs to be bootable archive, doesn't it?
+2012-02-12T23:13:00.000Z	Chipzzz	anderson	take a look here: http://www.ubuntu.com/download/ubuntu/download. They show you in 4 steps how to download, make a bootable usb, run the live usb, and install it to your hard disk. Pix and text show you everything you need to know :-)
+2012-02-12T23:15:00.000Z	anderson	Chipzzz	then i found, or i not found, something... as i was wrote, this version haven't startup disk creator... so i can't do a bootable disk...
+2012-02-12T23:18:00.000Z	Chipzzz	anderson	do you have UNetbootin?
+2012-02-12T23:21:00.000Z	anderson	Chipzzz	not, i guess...
+2012-02-12T23:22:00.000Z	Chipzzz	anderson	try this: "sudo apt-get install usb-creator-gtk"
+2012-02-12T23:24:00.000Z	anderson	Chipzzz	i haven't the package
+2012-02-12T23:24:00.000Z	anderson	Chipzzz	where i get that package?
+2012-02-12T23:25:00.000Z	Chipzzz	anderson	it should be in your repos... checking
+2012-02-12T23:26:00.000Z	anderson	Chipzzz	is it just past .iso archive?
+2012-02-12T23:27:00.000Z	Chipzzz	anderson	info about getting usb-creator: http://ubuntuforums.org/showthread.php?t=1635782
+2012-02-12T23:29:00.000Z	anderson	Chipzzz	ok, wait a minute, plz :)
+2012-02-12T23:30:00.000Z	Chipzzz	anderson	don't worry, i'm not going anywhere ;-)
+2012-02-12T23:30:00.000Z	anderson	Chipzzz	permission denied
+2012-02-12T23:30:00.000Z	anderson	Chipzzz	:/
+2012-02-12T23:31:00.000Z	Chipzzz	anderson	what permission?
+2012-02-12T23:31:00.000Z	anderson	Chipzzz	i dont know
+2012-02-12T23:31:00.000Z	Chipzzz	anderson	what did you type that gave you the message?
+2012-02-12T23:32:00.000Z	anderson	Chipzzz	"sudo cat UBUNTU.iso > /dev/sdANDERSON"
+2012-02-12T23:33:00.000Z	Chipzzz	anderson	do it in three commands: first "sudo -i", then "cat UBUNTU.iso > /dev/sdANDERSON", then "exit"
+2012-02-12T23:37:00.000Z	Chipzzz	anderson	yes, you have to specify the iso file... start typing it and use the tab key for completion... it'll save you much typing
+2012-02-12T23:42:00.000Z	Chipzzz	anderson	you probably changed directories when you did the sudo -i... just go to your desktop or wherever the file is and you'll be ok
+2012-02-12T23:51:00.000Z	anderson	Chipzzz	bro, i tyed
+2012-02-12T23:51:00.000Z	anderson	Chipzzz	ops, i tried to install
+2012-02-12T23:51:00.000Z	Chipzzz	anderson	tell me your troubles...
+2012-02-12T23:52:00.000Z	anderson	Chipzzz	unetbootin
+2012-02-12T23:53:00.000Z	anderson	Chipzzz	then this appeared: "error: dependency is not satisfiable: python-central"
+2012-02-12T23:53:00.000Z	Chipzzz	anderson	i'd have gone with the cat suggest by zykotick9... it was simple and effective. You just weren't in the right diectory when you issued the command, that's all
+2012-02-12T23:53:00.000Z	anderson	Chipzzz	but doesn't works...
+2012-02-12T23:56:00.000Z	Chipzzz	anderson	try this: "sudo -i" then "cd /the/directory/where/your/iso/is", then "cat thenameoftheiso.iso > /dev/theusbdevice", and finally, "exit"
+2012-02-13T00:08:00.000Z	Chipzzz	anderson	2gb should be more than enough, why?... did you get an out of disk space error?
+2012-02-13T00:08:00.000Z	anderson	Chipzzz	yeah
+2012-02-13T00:10:00.000Z	Chipzzz	anderson	you're getting really, really close :-)... if you empty format the usb drive first and repeat what you just did, you should be all set :-)
+2012-02-13T00:11:00.000Z	anderson	Chipzzz	how can i format?
+2012-02-13T00:14:00.000Z	Chipzzz	anderson	"mkfs.fat16 /dev/whateverdevicetheusbdriveis"
+2012-02-13T00:16:00.000Z	anderson	Chipzzz	it doesn't work...
+2012-02-13T00:16:00.000Z	Chipzzz	anderson	what's the error message?
+2012-02-13T00:17:00.000Z	anderson	Chipzzz	mkfs.fat16 /dev/sdANDERSON -bash: mkfs.fat16: command not found
+2012-02-13T00:19:00.000Z	Chipzzz	anderson	"mkdosfs /dev/whateverdevicetheusbdriveis"
+2012-02-13T00:23:00.000Z	anderson	Chipzzz	still not working... write error: no space left on device...
+2012-02-13T00:24:00.000Z	Chipzzz	anderson	does your disk manager work?
+2012-02-13T00:26:00.000Z	anderson	Chipzzz	where it is?
+2012-02-13T00:26:00.000Z	anderson	Chipzzz	i just have disk usage analyzer
+2012-02-13T00:27:00.000Z	Chipzzz	anderson	system->disk utility or something like that... not the analyzer
+2012-02-13T00:28:00.000Z	Chipzzz	anderson	type "palimpsest" in a terminal
+2012-02-13T00:30:00.000Z	anderson	Chipzzz	not exist...
+2012-02-13T00:30:00.000Z	Chipzzz	anderson	"rm -rf /dev/theusbdrive"
+2012-02-13T00:31:00.000Z	anderson	Chipzzz	okay.
+2012-02-13T00:31:00.000Z	anderson	Chipzzz	and now?
+2012-02-13T00:32:00.000Z	Chipzzz	anderson	"ls -al /dev/theusbdrive"
+2012-02-13T00:32:00.000Z	Chipzzz	anderson	is it empty?
+2012-02-13T00:33:00.000Z	anderson	Chipzzz	no directory.... i think it is...
+2012-02-13T00:35:00.000Z	anderson	Chipzzz	:/
+2012-02-13T00:36:00.000Z	Chipzzz	anderson	mount /dev/theusbdrive

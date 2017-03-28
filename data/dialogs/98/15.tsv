@@ -1,0 +1,98 @@
+2010-07-07T00:10:00.000Z	ikonia	julianoliver	when you boot into rescure mode, is there .fsck in the root file system
+2010-07-07T00:05:00.000Z	ikonia	julianoliver	what have you customised in it
+2010-07-07T00:06:00.000Z	julianoliver	ikonia	i've added a few packages, it auto boots into my software on reaching userland /home.
+2010-07-07T00:06:00.000Z	ikonia	julianoliver	ok, so nothing actual "custom", just a few config changes
+2010-07-07T00:06:00.000Z	julianoliver	ikonia	nothing in the fstab has been manipulated, neither init or etc
+2010-07-07T00:07:00.000Z	ikonia	julianoliver	is it getting shut down clean ?
+2010-07-07T00:07:00.000Z	julianoliver	ikonia	after the first boot post install it mounted read-only, ever since i've shut it down clean, yes.
+2010-07-07T00:09:00.000Z	julianoliver	ikonia	very oddly, it mounts rw as long as i first boot into rescue mode (errors=remount-ro) and *then* fsck and then select *clean* in the ncurses rescue options. if i boot normally, pull up a prompt, remount rw and fsck, no such luck.
+2010-07-07T00:10:00.000Z	ikonia	julianoliver	sorry /forefsck
+2010-07-07T00:10:00.000Z	ikonia	julianoliver	even sorrier, /forcefsck
+2010-07-07T00:11:00.000Z	julianoliver	ikonia	there is no /forcefsck
+2010-07-07T00:11:00.000Z	ikonia	julianoliver	even more interesting
+2010-07-07T00:11:00.000Z	ikonia	julianoliver	when you fsck it, is it marked as dirty ?
+2010-07-07T00:12:00.000Z	julianoliver	ikonia	no. 0.1 percent discontiguity and then it will continue to boot. it will crash at X (as it needs 'w') but if i 'clean' first it seems to be fine. the clean i need to test one more time however, to be sure that that's necessary. one moment.
+2010-07-07T00:13:00.000Z	ikonia	julianoliver	never seen anything like that
+2010-07-07T00:13:00.000Z	julianoliver	ikonia	it's something of a boring mystery..
+2010-07-07T00:15:00.000Z	julianoliver	ikonia	sadly, i can't tail the logs as /var is ro. dmesg has a buffer limit.
+2010-07-07T00:15:00.000Z	ikonia	julianoliver	is it just / that's getting mounted ro
+2010-07-07T00:15:00.000Z	julianoliver	ikonia	yes
+2010-07-07T00:16:00.000Z	ikonia	julianoliver	what other partitions do you have
+2010-07-07T00:17:00.000Z	julianoliver	ikonia	i have three in total. a bootable /dev/sda1, an extended /dev/sda3 and swap on /dev/sda5
+2010-07-07T00:18:00.000Z	ikonia	julianoliver	what file systems are they / /home etc ?
+2010-07-07T00:19:00.000Z	julianoliver	ikonia	in fact the /dev/sda3 isn't mounted in fstab..
+2010-07-07T00:19:00.000Z	ikonia	julianoliver	if you boot without splash, do you see anything obvious ?
+2010-07-07T00:19:00.000Z	julianoliver	ikonia	yes, endless read-only filesystem reports.
+2010-07-07T00:20:00.000Z	ikonia	julianoliver	how odd
+2010-07-07T00:20:00.000Z	ikonia	julianoliver	it's not an SSD is it ?
+2010-07-07T00:20:00.000Z	julianoliver	ikonia	no
+2010-07-07T00:21:00.000Z	ikonia	julianoliver	I can't think of a reason for this behaviour
+2010-07-07T00:21:00.000Z	julianoliver	ikonia	nor can i. it's quite troubling really.
+2010-07-07T00:21:00.000Z	julianoliver	ikonia	i mean, why is it that an fsck each time will allow me through to a normal boot?
+2010-07-07T00:22:00.000Z	ikonia	julianoliver	more so when it's clean before fsck anyway
+2010-07-07T00:22:00.000Z	julianoliver	ikonia	in fact i just proved that correlation wrong. i booted normally in rescue-mode after fsck and no clean.
+2010-07-07T00:23:00.000Z	ikonia	julianoliver	it's not clean ?
+2010-07-07T00:23:00.000Z	julianoliver	ikonia	i don't know. 'clean' in the Ubuntu rescue-mode ncurses UI relates to freeing up disk space, which i assume == apt-get clean.
+2010-07-07T00:24:00.000Z	ikonia	julianoliver	drop into a rescure shell, rather than ncurses
+2010-07-07T00:24:00.000Z	ikonia	julianoliver	first thing, fsck it see what it reports
+2010-07-07T00:24:00.000Z	julianoliver	ikonia	i have tried that. just 0.1% discontiguity.
+2010-07-07T00:24:00.000Z	ikonia	julianoliver	while I don't doubt you, that "can't" be right
+2010-07-07T00:25:00.000Z	julianoliver	ikonia	let me try one more time to be sure
+2010-07-07T00:25:00.000Z	ikonia	julianoliver	I'm not doubting you at all, I'm just saying it doesn't make sense, it should be dirty
+2010-07-07T00:26:00.000Z	julianoliver	ikonia	hmm when i simply 'fsck /dev/sda1' it reports it clean.
+2010-07-07T00:26:00.000Z	ikonia	julianoliver	ok - he's a test
+2010-07-07T00:26:00.000Z	ikonia	julianoliver	boot it so it's a "problem" again, reboot into recue shell, manually mount the disk without an fsck, what does it say
+2010-07-07T00:28:00.000Z	julianoliver	ikonia	but it already mounts, it errors=remount-ro
+2010-07-07T00:28:00.000Z	ikonia	julianoliver	yup, reboot, recovery shell, mount it rw manually, what does it say/do
+2010-07-07T00:29:00.000Z	julianoliver	ikonia	nothing, as my original question said. alles gut/super.
+2010-07-07T00:29:00.000Z	ikonia	julianoliver	so if you mount it manually, it just mounts fine
+2010-07-07T00:29:00.000Z	julianoliver	ikonia	the system is fine and ready to be used.
+2010-07-07T00:29:00.000Z	julianoliver	ikonia	yep
+2010-07-07T00:29:00.000Z	ikonia	julianoliver	apologies if I've missed part of the conversation
+2010-07-07T00:29:00.000Z	julianoliver	ikonia	no probs
+2010-07-07T00:30:00.000Z	julianoliver	ikonia	it's a very odd problem indeed, not one i've had with a debian machine. i wonder if it's the new Ubuntu UID disk addressing playing up?
+2010-07-07T00:31:00.000Z	ikonia	julianoliver	I strongly doubt it
+2010-07-07T00:52:00.000Z	julianoliver	ikonia	the thread that relates to my problem is here: http://ubuntuforums.org/showthread.php?t=621079
+2010-07-07T00:52:00.000Z	ikonia	julianoliver	looking
+2010-07-07T01:04:00.000Z	julianoliver	ikonia	this ro problem is so odd i'm going for a new partition configuration and full reinstall
+2010-07-07T01:04:00.000Z	ikonia	julianoliver	I'll be interested in knowing what happens
+2010-07-07T01:10:00.000Z	julianoliver	ikonia	no, it still fails.
+2010-07-07T01:10:00.000Z	ikonia	julianoliver	I just can't think of anything that would cause that, beyond the disk being marked as dirty
+2010-07-07T01:11:00.000Z	julianoliver	ikonia	there is no /forcefsck and even when i manually put it there, it never gets to fsck.
+2010-07-07T01:11:00.000Z	julianoliver	ikonia	i simply have to manually fsck at the root prompt and all is well.
+2010-07-07T01:11:00.000Z	ikonia	julianoliver	that's interesting
+2010-07-07T01:12:00.000Z	ikonia	julianoliver	I wonder why /forcefsck is not causing it to check
+2010-07-07T01:12:00.000Z	ikonia	julianoliver	ok - here is a long shot, and I do mean long shot
+2010-07-07T01:12:00.000Z	julianoliver	ikonia	this is something of a clue, perhaps.
+2010-07-07T01:12:00.000Z	ikonia	julianoliver	is your grub uuid the same as the one in your fstab ?
+2010-07-07T01:12:00.000Z	ikonia	julianoliver	I'm wondering if grub mounts it ro then when it parses fstab it's different so can't remount it rw
+2010-07-07T01:13:00.000Z	julianoliver	ikonia	i will check. remember earlier i thought that something fishy could be up with the uuid...
+2010-07-07T01:13:00.000Z	julianoliver	ikonia	i mean this makes /some/ sense.
+2010-07-07T01:13:00.000Z	ikonia	julianoliver	I don't think it's uuid - more so different data
+2010-07-07T01:13:00.000Z	ikonia	julianoliver	I's a LONG shot though
+2010-07-07T01:16:00.000Z	julianoliver	ikonia	the UUID for root= ends with "cc620", as does that in the /boot/grub/menu.lst
+2010-07-07T01:17:00.000Z	ikonia	julianoliver	ok, so that's another theory gone
+2010-07-07T01:17:00.000Z	julianoliver	ikonia	i will see if the manual fsck produces a normal remaining boot on this new install.
+2010-07-07T01:18:00.000Z	ikonia	julianoliver	I'll keep thinking
+2010-07-07T01:30:00.000Z	julianoliver	ikonia	Loshki: with Ubuntu, is there any difference installing at boot or from the desktop (using 'ubiquity' or whatever), from the filesystem perspective?
+2010-07-07T01:31:00.000Z	ikonia	julianoliver	not that I can think of
+2010-07-07T02:08:00.000Z	julianoliver	ikonia	Loshki: i think i confused myself earlier - i can only resume a boot if i choose fsck from from the ncurses menu of the recovery UI. if i fsck -y -f /dev/sda1 i cannot resume a normal boot, the fs is still ro. is this perhaps a clue?
+2010-07-07T02:08:00.000Z	ikonia	julianoliver	what happens if you do fsck -n /dev/sda1 then try to boot
+2010-07-07T02:08:00.000Z	ikonia	julianoliver	that will provide us with a good clue
+2010-07-07T02:08:00.000Z	julianoliver	ikonia	ok, i'll try this next.
+2010-07-07T02:10:00.000Z	julianoliver	ikonia	it just says /dev/sda1: clean, (etc)
+2010-07-07T02:10:00.000Z	julianoliver	ikonia	now attempting a resumed boot.
+2010-07-07T02:10:00.000Z	julianoliver	ikonia	still ro
+2010-07-07T02:10:00.000Z	ikonia	julianoliver	thats good news
+2010-07-07T02:10:00.000Z	ikonia	julianoliver	the problem is %100 the disk is being marked as dirty
+2010-07-07T02:10:00.000Z	julianoliver	ikonia	ahah..
+2010-07-07T02:11:00.000Z	ikonia	julianoliver	something is corrupting the disk's file system integrity
+2010-07-07T02:11:00.000Z	ikonia	julianoliver	any clues based on what your system does ?#
+2010-07-07T02:11:00.000Z	julianoliver	ikonia	interesting. what are my options?
+2010-07-07T02:11:00.000Z	julianoliver	ikonia	i can't see any. i have no scrollback as dmesg is truncated.
+2010-07-07T02:12:00.000Z	ikonia	julianoliver	I'm wondering if here is an application doing it, if the box is not shutting down properly (power off before clean up on the disk)
+2010-07-07T02:12:00.000Z	ikonia	julianoliver	have a look at the parameters set with tune2fs
+2010-07-07T02:12:00.000Z	julianoliver	ikonia	ok, interesting..
+2010-07-07T02:17:00.000Z	julianoliver	ikonia	i will try a full fsck using the recovery UI then a proper shutdown, poweroff and reboot.
+2010-07-07T02:20:00.000Z	julianoliver	ikonia	ahh right. i thought you meant fs corruption carried over from a poor live CD somehow.
+2010-07-07T02:20:00.000Z	julianoliver	ikonia	oops, intended for Loshki

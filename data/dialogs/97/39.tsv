@@ -1,0 +1,97 @@
+2007-04-08T09:46:00.000Z	zYe		i just ran envy, and it has crashed my xserver can someone help me reconfigure my nvidia drivers?
+2007-04-08T09:46:00.000Z	mindblock	zYe	sudo dpkg-reconfigure xserver-xorg
+2007-04-08T09:46:00.000Z	zYe	mindblock	that hasn
+2007-04-08T09:47:00.000Z	zYe	mindblock	i did that, and now i am running on vesa drivers but i need help setting up my card
+2007-04-08T09:47:00.000Z	mindblock	zYe	what kind of card is it
+2007-04-08T09:47:00.000Z	zYe	mindblock	geforce fx 5200 256mb card
+2007-04-08T09:47:00.000Z	zYe	mindblock	i downloaded some nvidia drivers, and turned off xserver and installed thenm, but it still didn't work
+2007-04-08T09:48:00.000Z	mindblock	zYe	https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia have you tried that?
+2007-04-08T09:48:00.000Z	zYe	mindblock	no, i will try this and possibly get back with you, thanks.
+2007-04-08T09:49:00.000Z	mindblock	zYe	no problem
+2007-04-08T09:53:00.000Z	zYe	mindblock	how can i find out what kind of kernal i have installed?
+2007-04-08T09:53:00.000Z	mindblock	zYe	uname -a i think
+2007-04-08T09:53:00.000Z	mindblock	zYe	uname -r
+2007-04-08T10:02:00.000Z	zYe	mindblock	no, that didn't work my xserver crashed again
+2007-04-08T10:02:00.000Z	mindblock	zYe	pastebin a copy of your Xorg log
+2007-04-08T10:03:00.000Z	mindblock	zYe	it should be in /var/log under Xorg.0.log i think
+2007-04-08T10:04:00.000Z	zYe	mindblock	http://paste.ubuntu-nl.org/14509/
+2007-04-08T10:04:00.000Z	mindblock	zYe	one second
+2007-04-08T10:06:00.000Z	mindblock	zYe	have you removed envy then tried to reconfigure x?
+2007-04-08T10:06:00.000Z	zYe	mindblock	no, ive not
+2007-04-08T10:06:00.000Z	mindblock	zYe	remove envy and try to reconfigure again..
+2007-04-08T10:08:00.000Z	zYe	mindblock	would envy not allow me to change my video drivers or something?
+2007-04-08T10:08:00.000Z	mindblock	zYe	i dont know, but it cant help if it already screwed ur x up
+2007-04-08T10:08:00.000Z	mindblock	zYe	doesnt hurt to get rid of what caused the problem in the 1st place
+2007-04-08T10:09:00.000Z	zYe	mindblock	what is sad is that i had already set up all my drivers, but i got a new monitor and i thought envy could possibly fix my resolution problems.
+2007-04-08T10:09:00.000Z	mindblock	zYe	what driver were you using before you installed envy, and what was wrong with ur resolution
+2007-04-08T10:09:00.000Z	zYe	mindblock	but sense im quite new  wasn't sure what i was doing
+2007-04-08T10:10:00.000Z	mindblock	zYe	totally feel u dude, i borked ubuntu so many times before getting it right lol
+2007-04-08T10:10:00.000Z	zYe	mindblock	i was using some nvidia driver i got from the site awhile ago, but my old monitor died that was running 1600x1200
+2007-04-08T10:10:00.000Z	mindblock	zYe	whats wrong with 1024x768? lol
+2007-04-08T10:11:00.000Z	zYe	mindblock	i hate it. i love to have tons of space
+2007-04-08T10:11:00.000Z	mindblock	zYe	ah, well sometimes we have to settle for the best we can get
+2007-04-08T10:11:00.000Z	zYe	mindblock	yea, but this makes windows look like a joke, it was total trash.
+2007-04-08T10:12:00.000Z	mindblock	zYe	try wut i suggested..maybe envy is still messing with your drivers in some way
+2007-04-08T10:12:00.000Z	zYe	mindblock	well i know this monitor can handle these upper resolutions, thats why it was bothering me
+2007-04-08T10:12:00.000Z	zYe	mindblock	kk
+2007-04-08T10:12:00.000Z	zYe	mindblock	should i try reinstalling the drivers, or just restart x?
+2007-04-08T10:13:00.000Z	mindblock	zYe	remove envy, reconfigure X, then restart
+2007-04-08T10:22:00.000Z	zYe	mindblock	well i reinstalled my video drivers, and restarted x, but my xorg.config is still set on vesa drivers, what is the command to reconfigure xorg.conf?
+2007-04-08T10:22:00.000Z	mindblock	zYe	sudo dpkg-reconfigure xserver-xorg
+2007-04-08T10:25:00.000Z	zYe	mindblock	you sir are the man.
+2007-04-08T10:25:00.000Z	mindblock	zYe	:) no problem brah
+2007-04-08T10:25:00.000Z	zYe	mindblock	i be ballinnnnnnnnnnn
+2007-04-08T10:26:00.000Z	mindblock	zYe	do u have the resolution u want?
+2007-04-08T10:26:00.000Z	zYe	mindblock	now help me fix my resolution
+2007-04-08T10:26:00.000Z	mindblock	zYe	u can try to manually add the resolution u want to xorg.conf and then restart X
+2007-04-08T10:26:00.000Z	zYe	mindblock	its finally running at 75 hertz now, while it was running at 50
+2007-04-08T10:27:00.000Z	zYe	mindblock	modes  "1600x1200"  -_-
+2007-04-08T10:27:00.000Z	mindblock	zYe	its already in there?
+2007-04-08T10:28:00.000Z	zYe	mindblock	this monitor could push that res in winxp... sheitttttt
+2007-04-08T10:28:00.000Z	mindblock	zYe	not sure wut to tell you dude, just settle with a lower res on ubuntu or a higher one on winblows,, your choise
+2007-04-08T10:29:00.000Z	zYe	mindblock	WEAKSAUCE!
+2007-04-08T10:29:00.000Z	mindblock	zYe	have u tried manually editing the xorg.conf?
+2007-04-08T10:30:00.000Z	zYe	mindblock	yea ive tried tons of things, next i am going to make the monitor generic and try to push it
+2007-04-08T10:30:00.000Z	zYe	mindblock	because atm i think the hor/vertical sync is too low
+2007-04-08T10:31:00.000Z	mindblock	zYe	that could be it, just try tweaking the xorg.conf a bit, u may have some luck, dont forget to backup first
+2007-04-08T10:44:00.000Z	zYe	mindblock	this is depressing
+2007-04-08T10:44:00.000Z	mindblock	zYe	lol
+2007-04-08T10:44:00.000Z	mindblock	zYe	still no luck?
+2007-04-08T10:44:00.000Z	zYe	mindblock	i successfully crashed my xserver
+2007-04-08T10:44:00.000Z	mindblock	zYe	dude you just had it working
+2007-04-08T10:44:00.000Z	mindblock	zYe	what'd u do
+2007-04-08T10:45:00.000Z	zYe	mindblock	yea its still working, i just tried to make it use 1600x1200, and it was like wtf, so i had to dumb it down to poor res
+2007-04-08T10:46:00.000Z	mindblock	zYe	it sounds like ur stuck @ 1024X768 lol
+2007-04-08T10:46:00.000Z	mindblock	zYe	its not that bad youll get used to it, ive never ran at a higher res than that, and im fine
+2007-04-08T10:46:00.000Z	zYe	mindblock	so far ive got it to, 1280x906
+2007-04-08T10:46:00.000Z	mindblock	zYe	thats decent
+2007-04-08T10:47:00.000Z	zYe	mindblock	yea its much better.
+2007-04-08T10:47:00.000Z	zYe	mindblock	but now my beryl doesn't work anymore..
+2007-04-08T10:48:00.000Z	mindblock	zYe	beryl bites anyway
+2007-04-08T10:49:00.000Z	mindblock	zYe	u might have to add some lil tweaks to ur xorg to get beryl working
+2007-04-08T10:51:00.000Z	zYe	mindblock	yea that shouldn't be so hard to figure out, all i know is envy is a piece of shit.
+2007-04-08T10:51:00.000Z	mindblock	zYe	i agree, .. i dont like those 3rd party driver installation programs
+2007-04-08T11:04:00.000Z	zYe	mindblock	i enabled beryl and it doesn't do anything, sup.
+2007-04-08T11:05:00.000Z	mindblock	zYe	have u tried tweaking ur xorg.conf?
+2007-04-08T11:05:00.000Z	zYe	mindblock	sorta
+2007-04-08T11:05:00.000Z	mindblock	zYe	for beryl doesnt aiglx have to be enabled?
+2007-04-08T11:06:00.000Z	zYe	mindblock	http://paste.ubuntu-nl.org/14529/
+2007-04-08T11:07:00.000Z	mindblock	zYe	wut version of ubuntu r u on
+2007-04-08T11:07:00.000Z	mindblock	zYe	http://doc.gwos.org/index.php/BerylOnEdgy have you checked that out?
+2007-04-08T11:08:00.000Z	zYe	mindblock	nope.
+2007-04-08T11:08:00.000Z	mindblock	zYe	check that site out it may be of some use
+2007-04-08T11:10:00.000Z	zYe	mindblock	nope
+2007-04-08T11:11:00.000Z	mindblock	zYe	maybe try enabling compostie in ur xorg?
+2007-04-08T11:11:00.000Z	mindblock	zYe	im not too familiar with beryl, i tried it once and hated it
+2007-04-08T11:12:00.000Z	mindblock	zYe	i dont need beryl eyecandy to enjoy my wonder ubuntu desktop
+2007-04-08T11:12:00.000Z	mindblock	zYe	yes
+2007-04-08T11:12:00.000Z	zYe	mindblock	it is, BAH
+2007-04-08T11:12:00.000Z	zYe	mindblock	the first time i installed it, everything worked
+2007-04-08T11:13:00.000Z	mindblock	zYe	try reinstalling beryl then, it may still be acting funny because of your previous envy installation
+2007-04-08T11:15:00.000Z	zYe	mindblock	didnt work -_- and task0 what?
+2007-04-08T11:17:00.000Z	zYe	mindblock	you cant be ballin unless you use berly
+2007-04-08T11:18:00.000Z	zYe	mindblock	you must be crazy.
+2007-04-08T11:23:00.000Z	zYe	mindblock	is the man
+2007-04-08T11:23:00.000Z	mindblock	zYe	is beryl working yet
+2007-04-08T11:24:00.000Z	zYe	mindblock	no
+2007-04-08T11:24:00.000Z	mindblock	zYe	then im not the man lol

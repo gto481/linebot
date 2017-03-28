@@ -1,0 +1,97 @@
+2007-11-01T08:55:00.000Z	Evanlec		anyone here try Reiser4 yet?
+2007-11-01T08:55:00.000Z	|xianai|	Evanlec	seems bad
+2007-11-01T08:56:00.000Z	|xianai|	Evanlec	Reiser4 seems to be somewhat slow and buggy
+2007-11-01T08:58:00.000Z	Evanlec	|xianai|	u've tried it?
+2007-11-01T08:58:00.000Z	|xianai|	Evanlec	yeah, about one year ago
+2007-11-01T08:58:00.000Z	Evanlec	|xianai|	one year ago? reiser4 was even available then? thot it was relatively new, its not even merged into the kernel yet...
+2007-11-01T08:59:00.000Z	|xianai|	Evanlec	after that i switch to xfs
+2007-11-01T08:59:00.000Z	Evanlec	|xianai|	maybe it was buggy 1 year ago...
+2007-11-01T08:59:00.000Z	Evanlec	|xianai|	what do u think of xfs in terms of performance?
+2007-11-01T09:00:00.000Z	|xianai|	Evanlec	maybe, but with its main author in jail, what do you expect from it ?
+2007-11-01T09:00:00.000Z	Evanlec	|xianai|	lol yea...only way to get it is to use the -mm patch...which i was about to try
+2007-11-01T09:00:00.000Z	|xianai|	Evanlec	xfs is good in performance
+2007-11-01T09:01:00.000Z	Evanlec	|xianai|	was wondering what fs i sould use, was gonna copy my installation over to a new sofware raid0 partition with xfs or reiser
+2007-11-01T09:02:00.000Z	|xianai|	Evanlec	however, xfs seems still have some problems e.g. I always can repaire out a lot in /lost+founds after a sudden reboot
+2007-11-01T09:02:00.000Z	Evanlec	|xianai|	yea...well i spose any filesystem doesnt like sudden reboots...
+2007-11-01T09:02:00.000Z	Evanlec	|xianai|	but it is journaled right? so there shouldnt be any data loss...
+2007-11-01T09:03:00.000Z	|xianai|	Evanlec	I am currently typing my words on a xfs on a software raid0
+2007-11-01T09:03:00.000Z	Evanlec	|xianai|	sweet, so u would recommend that combination?
+2007-11-01T09:03:00.000Z	|xianai|	Evanlec	so i think its good
+2007-11-01T09:03:00.000Z	Evanlec	|xianai|	cool, well i think i'll do that then
+2007-11-01T09:04:00.000Z	Evanlec	|xianai|	do you have any recommendation about how i can clone my current installation over to the new partition?
+2007-11-01T09:05:00.000Z	|xianai|	Evanlec	well, I followed the benchmarks, and untill now the benchmarks seems not a lie to me, LOL
+2007-11-01T09:06:00.000Z	|xianai|	Evanlec	I think the clone process is rather straight forward using a livecd
+2007-11-01T09:07:00.000Z	Evanlec	|xianai|	well i just wanna copy the entire / partition over to the new partition, i dont have any /home or /boot partitions made yet
+2007-11-01T09:07:00.000Z	|xianai|	Evanlec	mount old, mount new, cp -a old/* new/
+2007-11-01T09:21:00.000Z	|xianai|	Evanlec	as long as your data is here, kernel boot failure is not a panic LOL
+2007-11-01T09:11:00.000Z	|xianai|	Evanlec	go to our private channel
+2007-11-01T09:12:00.000Z	Evanlec	|xianai|	? i msg'd u? what channel?
+2007-11-01T09:13:00.000Z	|xianai|	Evanlec	hen copy the dirs separately
+2007-11-01T09:13:00.000Z	|xianai|	Evanlec	boot with livecd, do with the partitions, copy dirs to where you want and make new kernel install grub and reboot
+2007-11-01T09:13:00.000Z	Evanlec	|xianai|	i need to make a new kernel?
+2007-11-01T09:14:00.000Z	Evanlec	|xianai|	cant i just install the md-raid package and the xfs package on my current install?
+2007-11-01T09:14:00.000Z	|xianai|	Evanlec	you'd better compiled in the raid support if you do not want a complex raid setup in initrd
+2007-11-01T09:15:00.000Z	Evanlec	|xianai|	okay, should i make the new kernel on my current ubuntu?
+2007-11-01T09:15:00.000Z	|xianai|	Evanlec	I am not sure about that , I am a debian user :)
+2007-11-01T09:16:00.000Z	Evanlec	|xianai|	how do i go about making a new kernel from the livecd and copying it over?
+2007-11-01T09:16:00.000Z	|xianai|	Evanlec	And I compiled my own kernel
+2007-11-01T09:16:00.000Z	Evanlec	|xianai|	i have a custom kernel too but...im just wondering how i'd copy it over to the new install...
+2007-11-01T09:16:00.000Z	Evanlec	|xianai|	or the new partition rather
+2007-11-01T09:17:00.000Z	|xianai|	Evanlec	It depends on if your old kernel had already raid support compiled in or it will configure it properly by initrd
+2007-11-01T09:18:00.000Z	|xianai|	Evanlec	I guess the official kernel from ubuntu is ok
+2007-11-01T09:18:00.000Z	Evanlec	|xianai|	raid support needs to be compiled into the kernel, can't be a module?
+2007-11-01T09:18:00.000Z	|xianai|	Evanlec	if it is a module, you do need a initrd
+2007-11-01T09:18:00.000Z	Evanlec	|xianai|	right now im using 2.6.23.1 custom from kernel.org
+2007-11-01T09:18:00.000Z	|xianai|	Evanlec	I hate initrd :)
+2007-11-01T09:19:00.000Z	|xianai|	Evanlec	personally
+2007-11-01T09:20:00.000Z	|xianai|	Evanlec	Then compiled it in, man, or you may need to update your initrd
+2007-11-01T09:20:00.000Z	Evanlec	|xianai|	hmm...this is all complicated
+2007-11-01T09:20:00.000Z	Evanlec	|xianai|	can i modprobe the module in right now so my system detects raid?
+2007-11-01T09:21:00.000Z	Evanlec	|xianai|	true...
+2007-11-01T09:21:00.000Z	|xianai|	Evanlec	NO
+2007-11-01T09:22:00.000Z	Evanlec	|xianai|	im just wondering, where do i compile the kernel? on my current system?
+2007-11-01T09:22:00.000Z	|xianai|	Evanlec	: if you can only modprobe it now, you do need to tell initrd to modprobe BEFORE mounting your root
+2007-11-01T09:22:00.000Z	Evanlec	|xianai|	how do i tell if my current kernel has raid support?
+2007-11-01T09:24:00.000Z	|xianai|	Evanlec	hmmm.... maybe refer to /sys, man,
+2007-11-01T09:24:00.000Z	|xianai|	Evanlec	I am not very sure about that , but you may make menuconfig in your linux/
+2007-11-01T09:25:00.000Z	Evanlec	|xianai|	make menuconfig and look?
+2007-11-01T09:25:00.000Z	|xianai|	Evanlec	yeah, make menuconfig and look your kernel configs
+2007-11-01T09:25:00.000Z	Evanlec	|xianai|	okay...
+2007-11-01T09:26:00.000Z	|xianai|	Evanlec	'cause i forget the /sys entries corresponding to raid/md support
+2007-11-01T09:27:00.000Z	|xianai|	Evanlec	Good luck man :)
+2007-11-01T09:27:00.000Z	Evanlec	|xianai|	thx ;p
+2007-11-01T09:27:00.000Z	Evanlec	|xianai|	is there a package for ubuntu for raid, isnt it called dm-raid or something?
+2007-11-01T09:28:00.000Z	|xianai|	Evanlec	yeah, it seems to be the one by name :)
+2007-11-01T09:28:00.000Z	|xianai|	Evanlec	I am not sure
+2007-11-01T09:28:00.000Z	Evanlec	|xianai|	or mdadm? as here: http://ubuntuforums.org/showthread.php?t=408461
+2007-11-01T09:29:00.000Z	|xianai|	Evanlec	mdadm should be
+2007-11-01T09:29:00.000Z	Evanlec	|xianai|	kk
+2007-11-01T09:30:00.000Z	|xianai|	Evanlec	but I am not using it during the boot time
+2007-11-01T09:30:00.000Z	Evanlec	|xianai|	putting my partition at the end of the disk would be the fastest right? since its on the outside of the platter and thus faster rotation?
+2007-11-01T09:32:00.000Z	|xianai|	Evanlec	usr13: theoretically, it may be different but I wonder it is even observable
+2007-11-01T09:33:00.000Z	Evanlec	|xianai|	yea..
+2007-11-01T09:35:00.000Z	Evanlec	|xianai|	refer to this page...interesting http://www.pcguide.com/ref/cd/constSpindle-c.html
+2007-11-01T09:37:00.000Z	|xianai|	Evanlec	60% what a great number
+2007-11-01T09:38:00.000Z	|xianai|	Evanlec	maybe i should take it for serious !! LOL
+2007-11-01T09:38:00.000Z	Evanlec	|xianai|	60%? where'd u see that?
+2007-11-01T09:39:00.000Z	|xianai|	Evanlec	last line of your recom. page
+2007-11-01T09:40:00.000Z	|xianai|	Evanlec	 you see that number ?
+2007-11-01T09:40:00.000Z	Evanlec	|xianai|	yea
+2007-11-01T09:47:00.000Z	|xianai|	Evanlec	did you cam across that bug?
+2007-11-01T09:47:00.000Z	Evanlec	|xianai|	what bug?
+2007-11-01T09:48:00.000Z	|xianai|	Evanlec	I found that after a mysterious dist-upgrade , my num led does not turn on for ever, do you have that same problem ?
+2007-11-01T09:48:00.000Z	|xianai|	Evanlec	seems like a bug in xorg
+2007-11-01T09:49:00.000Z	Evanlec	|xianai|	my numlock light has never turned on...i dont think i have a numlock light lol
+2007-11-01T09:49:00.000Z	|xianai|	Evanlec	then caps lock led ?
+2007-11-01T09:49:00.000Z	Evanlec	|xianai|	no i dont have any led's apparently lol
+2007-11-01T09:50:00.000Z	|xianai|	Evanlec	all buttons working except the leds
+2007-11-01T09:50:00.000Z	|xianai|	Evanlec	your computer is so cool, LOL
+2007-11-01T09:50:00.000Z	Evanlec	|xianai|	yea...pretty much, there's some whacky buttons for like shortcut keys...i dunno, its a fairly new wireless logitech kb
+2007-11-01T09:52:00.000Z	|xianai|	Evanlec	OH, sounds great, such a sexy kb will definitely confuse me out
+2007-11-01T09:52:00.000Z	|xianai|	Evanlec	LOL
+2007-11-01T09:52:00.000Z	Evanlec	|xianai|	lol...confuses me too
+2007-11-01T09:53:00.000Z	|xianai|	Evanlec	I am going, nice day, bye
+2007-11-01T09:53:00.000Z	|xianai|	Evanlec	;)
+2007-11-01T09:53:00.000Z	Evanlec	|xianai|	okay, later ;)
+2007-11-01T09:53:00.000Z	Evanlec	|xianai|	thanks again
+2007-11-01T09:53:00.000Z	|xianai|	Evanlec	ur welcome

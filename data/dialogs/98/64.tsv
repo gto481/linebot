@@ -1,0 +1,98 @@
+2005-11-06T14:53:00.000Z	stevejesus		hey guys
+2005-11-06T14:55:00.000Z	stevejesus		can anyone help me with nfs mounting?
+2005-11-06T14:56:00.000Z	stevejesus		thanks but i wasnt asking about ntfs.
+2005-11-06T14:56:00.000Z	stevejesus		i was talking about remote nfs shares
+2005-11-06T14:57:00.000Z	mustard5	stevejesus	you talking about network file share?
+2005-11-06T14:58:00.000Z	stevejesus	mustard5	 yes im talking about network file shares
+2005-11-06T14:59:00.000Z	mustard5	stevejesus	paste fstab in pastebin
+2005-11-06T15:01:00.000Z	stevejesus	mustard5	 http://paste.ubuntulinux.nl/3924
+2005-11-06T15:02:00.000Z	stevejesus	mustard5	 i have it set up to mount samba as per ubuntu wiki instructions
+2005-11-06T15:03:00.000Z	stevejesus	mustard5	 i would like to give it read write access from all users on ubuntu machine
+2005-11-06T15:03:00.000Z	mustard5	stevejesus	show bob2...use his name as he migh be in another channel
+2005-11-10T08:54:00.000Z	mustard5	stevejesus	what issues are you having?
+2005-11-10T08:58:00.000Z	mustard5	stevejesus	describe the problem :)
+2005-11-10T09:03:00.000Z	mustard5	stevejesus	just to ask the ovious ..did you sudo nvidia-glx-enable config after installing?
+2005-11-10T09:03:00.000Z	stevejesus	mustard5	 aboslutely
+2005-11-10T09:03:00.000Z	mustard5	stevejesus	k just getting that one out of the way :)
+2005-11-10T09:03:00.000Z	stevejesus	mustard5	 monitor??
+2005-11-10T09:04:00.000Z	mustard5	stevejesus	so your problem is 'low performance' i take it?
+2005-11-10T09:04:00.000Z	stevejesus	mustard5	 just to clarify, the 3d definitely works.  it appears to go about 50-60 frames and then lags an entire second.  then picks up where it left off
+2005-11-10T09:05:00.000Z	mustard5	stevejesus	I'm not to knowledgeable about performance issues soz
+2005-11-10T09:05:00.000Z	stevejesus	mustard5	 well, maybe not an entire second of lag:)  but it enough to where I cant play with my friends tonite
+2005-11-10T09:05:00.000Z	mustard5	stevejesus	someone else might know though
+2005-11-10T09:14:00.000Z	mustard5	stevejesus	there is a link from ubotu to the forum how to for drivers from the nvidia site
+2005-11-10T09:15:00.000Z	mustard5	stevejesus	the second link
+2005-11-10T09:15:00.000Z	stevejesus	mustard5	 thanks but that bot never really helps me.  i am vary familiar with the wiki.  i guess what im asking now is what i can expect from going from the repo drivers to the official drivers.
+2005-11-10T09:16:00.000Z	stevejesus	mustard5	 oh the thread.  sorry.  ill give it a read
+2005-11-10T09:16:00.000Z	mustard5	stevejesus	increased performance one would hope
+2005-11-10T09:16:00.000Z	mustard5	stevejesus	I have no idea if it will be better
+2005-11-10T09:16:00.000Z	mustard5	stevejesus	and I don't know how to uninstall them either :)
+2005-11-10T09:16:00.000Z	mustard5	stevejesus	so proceed with caution I guess
+2005-11-10T09:18:00.000Z	mustard5	stevejesus	hes not talking about the repository drivers
+2005-11-10T09:18:00.000Z	mustard5	stevejesus	he's talklng about the ones from the nvidia site
+2005-11-15T10:55:00.000Z	mustard5	stevejesus	whats the issue?
+2005-11-15T10:56:00.000Z	stevejesus	mustard5	 i just not more than 10 minutes ago added a dvd-rom to my machine to install ut2004.  it doesnt show up in fstab, therefore i dont seem to be able to mount it.
+2005-11-15T10:57:00.000Z	mustard5	stevejesus	hmmmm..I was hoping for an easy question ;)
+2005-11-15T10:57:00.000Z	mustard5	stevejesus	hehe..I'm not immediately sure how to proceed
+2005-11-15T10:57:00.000Z	stevejesus	mustard5	 do you have a dvdrom in your machine?  if so i could grab the info from your fstab and point that towards my respective device
+2005-11-15T10:58:00.000Z	mustard5	stevejesus	I do
+2005-11-15T10:58:00.000Z	mustard5	stevejesus	one tick..I'll get it
+2005-11-15T10:58:00.000Z	stevejesus	mustard5	 it would be most helpful if you could share that with me
+2005-11-15T10:58:00.000Z	stevejesus	mustard5	 by the way, thanks for your help when i stop in.
+2005-11-15T10:59:00.000Z	mustard5	stevejesus	http://paste.ubuntulinux.nl/4289
+2005-11-15T11:01:00.000Z	stevejesus	mustard5	 oh so it looks like the info for a dvdrom is the same as a cdrom.  boy, i guess i could have just copied and pasted another entry and point it a hdd!
+2005-11-15T11:02:00.000Z	mustard5	stevejesus	give it a go anyway ;)
+2005-11-15T11:02:00.000Z	mustard5	stevejesus	you can always remove it or edit it :D
+2005-11-15T11:03:00.000Z	mustard5	stevejesus	I wonder whether sudo fdisk -l will list your dvd
+2005-11-15T11:04:00.000Z	mustard5	stevejesus	naaah.I just tried it :D
+2005-11-15T11:05:00.000Z	stevejesus	mustard5	 more bad luck for me.  you know, fedora always updated the fstab for me.  and i do sort of miss kudzo
+2005-11-15T11:05:00.000Z	mustard5	stevejesus	I've only ever been an ubuntu person...so I'm ignorant of other distros
+2005-11-15T11:06:00.000Z	stevejesus	mustard5	 otherwise ubuntu is being very nice to me.  still not as finetuned as fedora, but apt-get is certainly a better tool than yum, and i am also learning that debs are a lot better managed than roms!  but this is also due to apt-get
+2005-11-15T11:06:00.000Z	stevejesus	mustard5	 not roms "rpms" lol
+2005-11-15T11:07:00.000Z	mustard5	stevejesus	 :)
+2005-11-18T14:01:00.000Z	stevejesus	mustard5	 whats up man
+2005-11-18T14:22:00.000Z	mustard5	stevejesus	what happened to it?
+2005-11-18T14:22:00.000Z	stevejesus	mustard5	 youll laugh but i really screwed it iup
+2005-11-18T14:24:00.000Z	stevejesus	mustard5	 i installed a second disk to use as my homedir...  but i think i went about it all wrong.  there is no homedir with proper permissions.  i can no longer login.
+2005-11-18T14:24:00.000Z	mustard5	stevejesus	I can only imagine :)
+2005-11-18T14:25:00.000Z	stevejesus	mustard5	 if i have to use a live cd thats fine.  i will prolly try and find a smaller livecd distro so that i dont have to waste time dl'ing
+2005-11-18T14:25:00.000Z	mustard5	stevejesus	so recovery mode doesnt drop you into a root prompt I take it?
+2005-11-18T14:25:00.000Z	stevejesus	mustard5	 what i am really concerned about is where my files went!!!
+2005-11-18T14:25:00.000Z	stevejesus	mustard5	 how do i get to recovery mode?  i dont see an option for it on the cd
+2005-11-18T14:26:00.000Z	mustard5	stevejesus	not knowing how you went about it its hard to tell
+2005-11-18T14:26:00.000Z	mustard5	stevejesus	its in the grub menu usually when you boot up
+2005-11-18T14:27:00.000Z	mustard5	stevejesus	I'm on dialup :)
+2005-11-18T14:29:00.000Z	stevejesus	mustard5	 here is the silly thing that i did.  i formatted the drive with ubuntu's (gnome's?)  partitioner and made the access point /home
+2005-11-18T14:30:00.000Z	stevejesus	mustard5	 as soon as the desktop refreshed, it was clear that my current homedir no longer existed.
+2005-11-18T14:31:00.000Z	stevejesus	mustard5	 ive got an idea.  i think i c an fix this
+2005-11-18T14:31:00.000Z	mustard5	stevejesus	ah ok interesting...
+2005-11-18T14:31:00.000Z	mustard5	stevejesus	whats the idea?
+2005-11-18T14:33:00.000Z	stevejesus	mustard5	 well, i suppose that my /home/stevejesus was only showing "lost$found" becuase it was already the new disk.  tahts why i could see my old one!  so im booting into recovery mode to edit my /etc/fstab.  becuase surely the files arent gone. then everything should work.  after that, i should consider doing this correctly. lol
+2005-11-18T14:38:00.000Z	mustard5	stevejesus	sounds feasible :)
+2005-11-18T14:38:00.000Z	stevejesus	mustard5	 its back!
+2005-11-18T14:40:00.000Z	mustard5	stevejesus	sounds good :)
+2005-11-18T14:41:00.000Z	stevejesus	mustard5	 now that i have everything working, you wouldnt happen to know how to move your homedir to a different disk and use it do you?
+2005-11-18T14:43:00.000Z	mustard5	stevejesus	I would create a mountpoint in /mnt with mkdir, mount the drive and cp the files and directories over from /home..
+2005-11-18T14:44:00.000Z	stevejesus	mustard5	 i wish it weere that simple
+2005-11-18T14:44:00.000Z	mustard5	stevejesus	well I think the only mistake you made last time was not having your files from /home on the drive already
+2005-11-18T14:46:00.000Z	stevejesus	mustard5	 true.  also i didnt set the permissions properly.
+2005-11-18T14:47:00.000Z	mustard5	stevejesus	ah ok...
+2005-11-18T14:47:00.000Z	mustard5	stevejesus	what permissions does it need?
+2005-11-18T14:48:00.000Z	mustard5	stevejesus	I'm probably not any better at this than you :)
+2005-11-18T14:48:00.000Z	stevejesus	mustard5	 well its good to have a buddy here im on equal ground with: )
+2005-11-18T14:48:00.000Z	mustard5	stevejesus	hehehe yeah
+2005-11-18T14:51:00.000Z	mustard5	stevejesus	so is it ext3 on that drive now?
+2005-11-18T14:51:00.000Z	stevejesus	mustard5	 yessir
+2005-11-18T14:52:00.000Z	mustard5	stevejesus	so what is your plan? :)
+2005-11-18T14:54:00.000Z	mustard5	stevejesus	have you got the drive mounted on a different mount point?
+2005-11-18T14:55:00.000Z	mustard5	stevejesus	ie make a directory in /mnt call it some random name and mount the drive on that directory?
+2005-11-18T14:56:00.000Z	stevejesus	mustard5	well, i dont want to put it in moutn.  i want the mount point to be /home.  i believe is HAS to be that way in order to work anyhow
+2005-11-18T14:57:00.000Z	stevejesus	mustard5	 so first order of business is to backup my /home
+2005-11-18T14:57:00.000Z	mustard5	stevejesus	eventually yes, but to transfer your $HOME over you will need to mount it on a different point first
+2005-11-18T14:57:00.000Z	stevejesus	mustard5	 ah yes.. thank you.  ill do that noe.  that will make it easier.  doh.  shoulda thought of that
+2005-11-18T14:58:00.000Z	mustard5	stevejesus	if you join #kubuntu-offtopic we can talk about it in a quieter channel :)
+2005-11-18T14:59:00.000Z	mustard5	stevejesus	join #kubuntu-offtopc
+2005-11-18T14:59:00.000Z	stevejesus	mustard5	 k, jus a sec
+2005-11-18T15:00:00.000Z	mustard5	stevejesus	k it's quieter in there ;)
+2005-11-18T15:00:00.000Z	stevejesus	mustard5	 how do i do that.  im not to familiar with irc.
+2005-11-18T15:00:00.000Z	mustard5	stevejesus	/join #kubuntu-offtopic

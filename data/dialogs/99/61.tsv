@@ -1,0 +1,99 @@
+2007-01-12T13:56:00.000Z	corevette		ok i need help
+2007-01-12T13:56:00.000Z	corevette		my ubuntu system won't let me start...so i put in the live cd....how do i access my files now
+2007-01-12T13:58:00.000Z	corevette		how do i access my hard drive from the live cd?
+2007-01-12T13:59:00.000Z	corevette		please i really need help...how do i access my hard drive from the edgy live cd?
+2007-01-12T13:59:00.000Z	fokuslee	corevette	which file system u want to acess?
+2007-01-12T14:00:00.000Z	corevette	fokuslee	i'm on the live cd now and i want to save my files...or is there a way to safe restore so i can fix the boot of ubuntu
+2007-01-12T14:01:00.000Z	fokuslee	corevette	i believe u can fix grub from the live cd
+2007-01-12T14:02:00.000Z	fokuslee	corevette	u want to fix ur mbr rite?
+2007-01-12T14:04:00.000Z	fokuslee	corevette	i see u need to use gparted livecd then something wrong in the boot sector
+2007-01-12T14:04:00.000Z	fokuslee	corevette	 i never seen dat before
+2007-01-12T14:11:00.000Z	fokuslee	corevette	looks like to me u have 2 physical harddisks
+2007-01-12T14:11:00.000Z	fokuslee	corevette	are u saying the sata is 80 gig and its showing up as 16)?
+2007-01-12T14:12:00.000Z	corevette	fokuslee	i figured out that was my usb external drive (so overall i have 2 x 80gb hard drives...and one 160 gb external usb)
+2007-01-12T14:14:00.000Z	fokuslee	corevette	ok so nothing is wrong rite??  i mean the size is not falsely reported rite? but it looks to me from ur fdisk -l or usb is not on
+2007-01-12T14:14:00.000Z	fokuslee	corevette	ok so u are trying to mount the 160 gig serial ata rite?
+2007-01-12T14:15:00.000Z	fokuslee	corevette	hdb bein the windows parititoN?
+2007-01-12T14:25:00.000Z	fokuslee	corevette	i want u to do this
+2007-01-12T14:25:00.000Z	fokuslee	corevette	 fdisk -l | grep linux
+2007-01-12T14:27:00.000Z	fokuslee	corevette	 does ur linux drive show up?
+2007-01-12T14:27:00.000Z	fokuslee	corevette	 fdisk -l | grep Linux
+2007-01-12T14:27:00.000Z	fokuslee	corevette	nothing shows uP?
+2007-01-12T14:28:00.000Z	fokuslee	corevette	ur drive is probably dead then
+2007-01-12T14:28:00.000Z	fokuslee	corevette	so i assume ur drive is dead
+2007-01-12T14:29:00.000Z	fokuslee	corevette	 u can also try df -l
+2007-01-12T14:29:00.000Z	fokuslee	corevette	 better df -t ext3
+2007-01-12T14:31:00.000Z	fokuslee	corevette	 u used fdisk -l
+2007-01-12T14:31:00.000Z	fokuslee	corevette	 and yes dat command will show all the drives/partitiosn
+2007-01-12T14:31:00.000Z	fokuslee	corevette	 and then i asked u to db check with df -t ext3
+2007-01-12T14:32:00.000Z	corevette	fokuslee	ubuntu@ubuntu:~$ df -t ext3
+2007-01-12T14:35:00.000Z	fokuslee	corevette	 so when u fdisk -l | grep Linux something show up rite?
+2007-01-12T14:35:00.000Z	fokuslee	corevette	yeah sudo give u root priveledge
+2007-01-12T14:36:00.000Z	fokuslee	corevette	 just sudo -i
+2007-01-12T14:37:00.000Z	corevette	fokuslee	http://paste.ubuntu-nl.org/1280/
+2007-01-12T14:40:00.000Z	fokuslee	corevette	 yeah i am
+2007-01-12T14:40:00.000Z	fokuslee	corevette	 i just read ur thing
+2007-01-12T14:41:00.000Z	fokuslee	corevette	u want to mount hdb1 rite?
+2007-01-12T14:42:00.000Z	fokuslee	corevette	so ur real problem is that u can't boot into linux anymore rite??
+2007-01-12T14:42:00.000Z	fokuslee	corevette	 what is the eror?
+2007-01-12T14:42:00.000Z	fokuslee	corevette	 and how did this happen?
+2007-01-12T14:43:00.000Z	corevette	fokuslee	its not a grub error
+2007-01-12T14:43:00.000Z	corevette	fokuslee	when i start up ubuntu....it just stops loading...i've waited for a while to see ifi t goes
+2007-01-12T14:44:00.000Z	fokuslee	corevette	did u install a new video driver?
+2007-01-12T14:45:00.000Z	fokuslee	corevette	 u shouldn't reinstall u should check if there is a solution that never happen to me but i can show u how to mount it
+2007-01-12T14:45:00.000Z	fokuslee	corevette	 cd  ~/
+2007-01-12T14:46:00.000Z	corevette	fokuslee	-bash: syntax error near unexpected token `&&'
+2007-01-12T14:47:00.000Z	fokuslee	corevette	oh sorri i meant it in one line but just do mkdir linuxrescue
+2007-01-12T14:49:00.000Z	corevette	fokuslee	its there
+2007-01-12T14:49:00.000Z	fokuslee	corevette	sudo nano -w /etc/fstab
+2007-01-12T14:51:00.000Z	fokuslee	corevette	 above
+2007-01-12T14:53:00.000Z	fokuslee	corevette	 no one line
+2007-01-12T14:55:00.000Z	fokuslee	corevette	 ok now just type sudo mount /dev/hdb1
+2007-01-12T14:56:00.000Z	fokuslee	corevette	(urlogonname) is suppose to be ur own name
+2007-01-12T14:56:00.000Z	fokuslee	corevette	 don't copy it
+2007-01-12T14:57:00.000Z	fokuslee	corevette	change urlogon name to ur name
+2007-01-12T14:58:00.000Z	corevette	fokuslee	mount: mount point /home/ubuntu/linuxrescue does not exist
+2007-01-12T14:58:00.000Z	corevette	fokuslee	root@ubuntu:~# mount: mount point /home/ubuntu/linuxrescue does not exist
+2007-01-12T15:02:00.000Z	fokuslee	corevette	so the linuxrescue folder is there and its saying the folder doesn't exist?
+2007-01-12T15:02:00.000Z	corevette	fokuslee	root@ubuntu:~# mount: mount point /home/ubuntu/linuxrescue does not exist
+2007-01-12T15:04:00.000Z	fokuslee	corevette	 hold on i try to check something for u
+2007-01-12T15:05:00.000Z	fokuslee	corevette	try to make the linuxrescue folder in /mnt/
+2007-01-12T15:07:00.000Z	fokuslee	corevette	u have to change the line in /etc/fstab according ly
+2007-01-12T15:07:00.000Z	fokuslee	corevette	then try mount /dev/hdb1
+2007-01-12T15:11:00.000Z	fokuslee	corevette	 ok sorri i didn't see it
+2007-01-12T15:12:00.000Z	fokuslee	corevette	itz complaining wrong file type
+2007-01-12T15:12:00.000Z	fokuslee	corevette	 can u give me ur pastebin again?
+2007-01-12T15:12:00.000Z	fokuslee	corevette	 newer one
+2007-01-12T15:12:00.000Z	corevette	fokuslee	http://paste.ubuntu-nl.org/1280/
+2007-01-12T15:14:00.000Z	fokuslee	corevette	 did u isntall linux some other file type?
+2007-01-12T15:14:00.000Z	fokuslee	corevette	 can u type df -T
+2007-01-12T15:15:00.000Z	fokuslee	corevette	 cuz i want to check if ur file type is ext3
+2007-01-12T15:16:00.000Z	fokuslee	corevette	 /dev/hdb1     ext3  is it like this??
+2007-01-12T15:16:00.000Z	corevette	fokuslee	http://paste.ubuntu-nl.org/1282/
+2007-01-12T15:18:00.000Z	fokuslee	corevette	 sorri that command only show the file type of a mounted drive
+2007-01-12T15:18:00.000Z	fokuslee	corevette	 the only thin i can think of is try to put auto instead of ext3
+2007-01-12T15:21:00.000Z	fokuslee	corevette	 u mite have installed ur linux with reiserfs
+2007-01-12T15:21:00.000Z	fokuslee	corevette	 try to change the file type from ext3 to reiserfs
+2007-01-12T15:21:00.000Z	fokuslee	corevette	 in /etc/fstab
+2007-01-12T15:21:00.000Z	fokuslee	corevette	sudo nano -w /etc/fstab
+2007-01-12T15:22:00.000Z	fokuslee	corevette	 yeah see where it had ext3 change it to reiserfs
+2007-01-12T15:22:00.000Z	fokuslee	corevette	 copy the last line back to me please
+2007-01-12T15:22:00.000Z	corevette	fokuslee	/dev/hdb1   /mnt/linuxrescue ext3    noatime,umask=000              0 0
+2007-01-12T15:23:00.000Z	fokuslee	corevette	good the part where it says ext3 change it too reiserfs
+2007-01-12T15:24:00.000Z	fokuslee	corevette	 corevette i want u to change it b/c it complaints that the ext3 is a bad file system type
+2007-01-12T15:24:00.000Z	fokuslee	corevette	 if that fails try to put auto inplace of reiserfs to try autodetect
+2007-01-12T15:26:00.000Z	corevette	fokuslee	stop for a sec
+2007-01-12T15:26:00.000Z	fokuslee	corevette	 go ahead
+2007-01-12T15:26:00.000Z	fokuslee	corevette	 try to post ur question on the forum
+2007-01-12T15:30:00.000Z	fokuslee	corevette	 does it matter which harddrive u plug in?
+2007-01-12T15:30:00.000Z	fokuslee	corevette	 the only thing i can think of is your powersupply is not big enuff did u just add a new harddrive?
+2007-01-12T15:30:00.000Z	fokuslee	corevette	 it also mite by ur mobo i had the same problem when i plug in both sata and pata it freezes
+2007-01-12T15:30:00.000Z	fokuslee	corevette	 it could be your mobo
+2007-01-12T15:30:00.000Z	fokuslee	corevette	 soo this mite be a hardware problem did u just get a new drive?
+2007-01-12T15:31:00.000Z	fokuslee	corevette	slave and master shouldn't matter
+2007-01-12T15:31:00.000Z	fokuslee	corevette	 did u just put in a new harddrive?
+2007-01-12T15:33:00.000Z	fokuslee	corevette	 yeah try to ost on the forum
+2007-01-12T15:35:00.000Z	corevette	fokuslee	mountain view
+2007-01-12T15:35:00.000Z	fokuslee	corevette	 im in berkeley
+2007-01-12T15:35:00.000Z	fokuslee	corevette	 cal look at gpa but also alot of extra activity
+2007-01-12T15:35:00.000Z	fokuslee	corevette	 ok good luck

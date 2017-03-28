@@ -1,0 +1,97 @@
+2005-04-21T14:54:00.000Z	elllisd_	ermo	dell e770s
+2005-04-21T14:53:00.000Z	elllisd_	ermo	sure.... (i wouldnt be afraid in xp, why am i now?)
+2005-04-21T14:53:00.000Z	ermo	elllisd_	anyhow: what monitor do you have?
+2005-04-21T14:54:00.000Z	ermo	elllisd_	allright. I'll check the performance of that monitor. Just a sec.
+2005-04-21T14:56:00.000Z	ermo	elllisd_	back. What card do you have?
+2005-04-21T14:56:00.000Z	ermo	elllisd_	your monitor should be able to do 1024x768285Hz
+2005-04-21T14:56:00.000Z	elllisd_	ermo	i think its a cirrus logic- its onboard the intel l440bx mobo..... gimme a sec the specs are on my xp machine
+2005-04-21T14:57:00.000Z	elllisd_	ermo	id be happy w/ that
+2005-04-21T15:06:00.000Z	ermo	elllisd_	did you fire up a gnome-terminal yet?
+2005-04-21T15:06:00.000Z	elllisd_	ermo	ill try
+2005-04-21T15:06:00.000Z	elllisd_	ermo	i found a root terminal will that work
+2005-04-21T15:07:00.000Z	elllisd_	ermo	i got a term up w/ a $ at the end- zat what u mean?
+2005-04-21T15:08:00.000Z	ermo	elllisd_	yup
+2005-04-21T15:08:00.000Z	ermo	elllisd_	there's a nice little notepad-like editor called 'gedit'. start it with super-user (root) privileges with 'sudo gedit'
+2005-04-21T15:09:00.000Z	elllisd_	ermo	i dunno what that means- can i find it in a apps menu?
+2005-04-21T15:11:00.000Z	elllisd_	ermo	k- done
+2005-04-21T15:12:00.000Z	elllisd_	ermo	how do i copy text from the scrolling chat in x-chat?
+2005-04-21T15:13:00.000Z	elllisd_	ermo	etc, then where from there?
+2005-04-21T15:13:00.000Z	ermo	elllisd_	/etc/X11/xorg.conf
+2005-04-21T15:14:00.000Z	elllisd_	ermo	ty- got it to paste, but i cant paste it into the open document part so im in thet ree
+2005-04-21T15:14:00.000Z	elllisd_	ermo	i have a (giant) notepad doc open
+2005-04-21T15:16:00.000Z	ermo	elllisd_	does it look like a configuration file?
+2005-04-21T15:17:00.000Z	elllisd_	ermo	got it
+2005-04-21T15:18:00.000Z	ermo	elllisd_	ok. what does it say?
+2005-04-21T15:18:00.000Z	ermo	elllisd_	is it about 4-5 lines?
+2005-04-21T15:19:00.000Z	elllisd_	ermo	Identifier "Dell E770s"
+2005-04-21T15:21:00.000Z	ermo	elllisd_	HorizSync should be 30-70 and VertRefresh should be 50-160
+2005-04-21T15:22:00.000Z	elllisd_	ermo	just screwed up by not having numlock on- gotta reopen it now- brb
+2005-04-21T15:23:00.000Z	elllisd_	ermo	changed values.... save?
+2005-04-21T15:24:00.000Z	ermo	elllisd_	definitely ;)
+2005-04-21T15:24:00.000Z	ermo	elllisd_	also, go check the 'screen' section.
+2005-04-21T15:24:00.000Z	elllisd_	ermo	oops, closed already
+2005-04-21T15:25:00.000Z	elllisd_	ermo	"Screen"
+2005-04-21T15:26:00.000Z	ermo	elllisd_	ah, stop pasting, please
+2005-04-21T15:27:00.000Z	ermo	elllisd_	ok. The point is that you have the prerequisite stanzas in your config file. Ok.
+2005-04-21T15:27:00.000Z	ermo	elllisd_	did you save already?
+2005-04-21T15:27:00.000Z	elllisd_	ermo	i guess i really do have to reboot for it to work huh
+2005-04-21T15:27:00.000Z	ermo	elllisd_	(and do you have 16, 24 and 32 depth sections)
+2005-04-21T15:27:00.000Z	ermo	elllisd_	not really. Wanna learn a little something?
+2005-04-21T15:28:00.000Z	elllisd_	ermo	absolutely
+2005-04-21T15:29:00.000Z	ermo	elllisd_	ok. You can switch consoles. X is on your console #7
+2005-04-21T15:29:00.000Z	elllisd_	ermo	i have 4 desktops(?) by the clock- zat what u mean?
+2005-04-21T15:30:00.000Z	elllisd_	ermo	not clock, trash
+2005-04-21T15:30:00.000Z	ermo	elllisd_	to change TO a text-mode console from X, use the keys <CTRL>+<ALT>+F1 (that will take you to the first text console). To change back to X, press <ALT>+F7
+2005-04-21T15:30:00.000Z	ermo	elllisd_	try it a few times
+2005-04-21T15:32:00.000Z	ermo	elllisd_	ok. Now, in the text console you reached with alt+f1, try to login
+2005-04-21T15:33:00.000Z	elllisd_	ermo	i switched back to whatever this gui is w/ the x-chat window & theres still no change in resolution choices
+2005-04-21T15:34:00.000Z	ermo	elllisd_	hehe.
+2005-04-21T15:35:00.000Z	ermo	elllisd_	now, your graphical environment is a process, just like the console you just logged into
+2005-04-21T15:35:00.000Z	elllisd_	ermo	right.
+2005-04-21T15:35:00.000Z	ermo	elllisd_	follow me, not FR500 - I'll walk you through it
+2005-04-21T15:37:00.000Z	ermo	elllisd_	now, in your console, you can restart your X (or, rather, your display manager)
+2005-04-21T15:37:00.000Z	elllisd_	ermo	what do i do with the $ prompt in the text
+2005-04-21T15:37:00.000Z	elllisd_	ermo	i can step aside into textland, and restart this gui from there?
+2005-04-21T15:37:00.000Z	ermo	elllisd_	you write 'sudo /etc/init.d/gdm restart' <- that will restart your X-session. Don't press enter yet, though
+2005-04-21T15:37:00.000Z	elllisd_	ermo	hope theres a clipboard there
+2005-04-21T15:38:00.000Z	ermo	elllisd_	precisely. But you need to log out of your graphical shell.
+2005-04-21T15:38:00.000Z	ermo	elllisd_	copy it to a piece of paper instead.
+2005-04-21T15:38:00.000Z	ermo	elllisd_	on a side not, restarting your other system services is done the same way 'sudo /etc/init.d/<servicename> restart'
+2005-04-21T15:38:00.000Z	elllisd_	ermo	quotes?
+2005-04-21T15:39:00.000Z	ermo	elllisd_	no quotes
+2005-04-21T15:39:00.000Z	elllisd_	ermo	typed....
+2005-04-21T15:40:00.000Z	ermo	elllisd_	all right. Log out of your X session, switch to text mode, press enter, go back to X, login ... and voila! you should be set :)
+2005-04-21T15:41:00.000Z	elllisd_	ermo	so the logon screen is part of the shell called x?
+2005-04-21T15:41:00.000Z	ermo	elllisd_	actually, it's a process that connects to X
+2005-04-21T15:44:00.000Z	elllisd_	ermo	dunno if im just used to it but screen looks larger
+2005-04-21T15:45:00.000Z	elllisd_	ermo	nope still cant choose but 8x6
+2005-04-21T15:46:00.000Z	ermo	elllisd_	hehe. try opening /var/log/Xorg.0.log in a gedit
+2005-04-21T15:47:00.000Z	elllisd_	ermo	opened
+2005-04-21T15:48:00.000Z	ermo	elllisd_	search for 1024x768
+2005-04-21T15:48:00.000Z	ermo	elllisd_	(we're checking what the X server says about your resolutions)
+2005-04-21T15:49:00.000Z	elllisd_	ermo	under supported vesa modes
+2005-04-21T15:50:00.000Z	ermo	elllisd_	does it report using the cirrus logic driveR?
+2005-04-21T15:52:00.000Z	elllisd_	ermo	i dont know quite what that indication would look like, but there's the word cirrus at the front of each line in that area
+2005-04-21T15:52:00.000Z	ermo	elllisd_	that's the indication you are looking for :)
+2005-04-21T15:52:00.000Z	elllisd_	ermo	good news.....
+2005-04-21T15:53:00.000Z	ermo	elllisd_	look for something that looks like this: (--) RADEON(0): Virtual size is 1152x864 (pitch 1152)
+2005-04-21T15:55:00.000Z	elllisd_	ermo	i dont see anything like virtual size, but i see a lot of modes it wont use due to insufficient memory & even more cuzza bad clock/interscan
+2005-04-21T15:56:00.000Z	elllisd_	ermo	not using default mode 1024x768 cuzza memory tho
+2005-04-21T15:56:00.000Z	ermo	elllisd_	ok. Change defaultdepth to 16 instead of 24/32
+2005-04-21T15:56:00.000Z	elllisd_	ermo	virtual size is 8x6!!!!
+2005-04-21T15:56:00.000Z	ermo	elllisd_	in your /etc/X11/xorg.conf
+2005-04-21T15:57:00.000Z	ermo	elllisd_	well, there you have it then.
+2005-04-21T15:57:00.000Z	ermo	elllisd_	try changing the virtual size to 1024x768. How much video memory does your card have?
+2005-04-21T15:58:00.000Z	elllisd_	ermo	i dont see where to change the virtual size- -you referring to in the log?
+2005-04-21T15:59:00.000Z	ermo	elllisd_	no, the config file
+2005-04-21T15:59:00.000Z	elllisd_	ermo	video's onboard- id have to look at the mobo to tell what its got, i think it uses the sdram, & theres a G there
+2005-04-22T16:00:00.000Z	elllisd_	ermo	no text virtual in config
+2005-04-22T16:00:00.000Z	ermo	elllisd_	check my pm
+2005-04-22T16:00:00.000Z	elllisd_	ermo	got the depth to 16, tho
+2005-04-22T16:18:00.000Z	elllisd_	ermo	success!!!!!!!
+2005-04-22T16:20:00.000Z	ermo	elllisd_	I told you I could help you ;-)
+2005-04-22T16:21:00.000Z	ermo	elllisd_	and, along the way, you learned a few things too.
+2005-04-22T16:21:00.000Z	elllisd_	ermo	 believed you.... you have the confidence i have in windows in here--- thanks tremendously
+2005-04-22T16:22:00.000Z	elllisd_	ermo	i know there's many more questions raised....
+2005-04-22T16:22:00.000Z	ermo	elllisd_	now, go check out http://tldp.org
+2005-04-22T16:22:00.000Z	ermo	elllisd_	specifically, go check out the HOWTOs relating to the X Window System

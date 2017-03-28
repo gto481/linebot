@@ -1,0 +1,99 @@
+2005-09-06T09:11:00.000Z	LaserLine		Is it normal for Gnome Battery Charge Monitor to take a l-o-n-g time to identify AC Power and Battery power?
+2005-09-06T09:13:00.000Z	Nalioth	LaserLine	that is definitely not right
+2005-09-06T09:23:00.000Z	Nalioth	LaserLine	in the future, dont read ubuntuguide (it can lead you astray)
+2005-09-06T09:24:00.000Z	LaserLine	Nalioth	what do you mean ?
+2005-09-06T09:24:00.000Z	Nalioth	LaserLine	you'll never have to "reinstall" again (unless you catastrophically "learn" something)
+2005-09-06T09:26:00.000Z	LaserLine	Nalioth	but i didn't understand how your answer, answers my question :-/
+2005-09-06T09:27:00.000Z	Nalioth	LaserLine	the u'guide is great for experienced *nix users (who know what the commands do and the pros/cons of using them)
+2005-09-06T09:27:00.000Z	Nalioth	LaserLine	but new *nix users have little experience with the commands in the guide, and usually end up in here needing help to fix their boxen
+2005-09-06T09:27:00.000Z	LaserLine	Nalioth	I learned alot using that guide.... I 'man' every command before using it.
+2005-09-06T09:28:00.000Z	Nalioth	LaserLine	good man!
+2005-09-06T09:28:00.000Z	Nalioth	LaserLine	but still, some of the stuff there is not too good (even if you read the manpage)
+2005-09-06T09:29:00.000Z	LaserLine	Nalioth	I didn't break my system, the problem was that this laptop's harddrive was never wiped. It was fat with Win98SE preinstalled, after that NTFS with XP, and then EXT3, probably got mixed up, so now i'm setting everything out.
+2005-09-06T09:29:00.000Z	LaserLine	Nalioth	I only used the sound troubleshooting, and added me as a sudo'er... and followed what packages of software i liked, and installed.
+2005-09-06T11:43:00.000Z	Nalioth	LaserLine	read your private msgs, dude
+2005-09-06T11:44:00.000Z	LaserLine	Nalioth	thanks, what how do i know what dev is my cdrom ?
+2005-09-06T11:44:00.000Z	Nalioth	LaserLine	you'll have to see that for yourself
+2005-09-06T11:44:00.000Z	LaserLine	Nalioth	How ?
+2005-09-06T11:45:00.000Z	LaserLine	Nalioth	Where do i go to see that ?
+2005-09-06T11:45:00.000Z	Nalioth	LaserLine	put a music cd in the drive and see which one shows you the contents in your file mangler
+2005-09-06T11:45:00.000Z	LaserLine	Nalioth	/media/cdrom0
+2005-09-06T11:46:00.000Z	LaserLine	Nalioth	but what does that mean for me choosing a /dev... ?
+2005-09-06T11:47:00.000Z	Nalioth	LaserLine	/dev/cdrom0 would be a good first choice
+2005-09-06T14:03:00.000Z	Nalioth	LaserLine	do you run windows on the box you want ubuntu on?
+2005-09-06T14:03:00.000Z	LaserLine	Nalioth	- nope, it's a clean Linux box.
+2005-09-06T14:04:00.000Z	Nalioth	LaserLine	2 partitions one root (/) and one swap
+2005-09-07T11:09:00.000Z	Nalioth	LaserLine	waht are you doing?
+2005-09-07T11:10:00.000Z	LaserLine	Nalioth	Trying not to Install Windows XP on my laptop.............
+2005-09-07T11:12:00.000Z	Nalioth	LaserLine	use ext3 (psst, it's ext2 + journaling = ext3)
+2005-09-07T11:13:00.000Z	LaserLine	Nalioth	Reading about that now... But I can't TRUST EXT3 anymore on this laptop... 3 times, the same problems... while every check on UBCD says my drive is good.
+2005-09-07T11:13:00.000Z	Nalioth	LaserLine	chuck the lappy
+2005-09-07T11:13:00.000Z	LaserLine	Nalioth	Even checked the CPU, Memory and IDE controllers.
+2005-09-07T11:13:00.000Z	LaserLine	Nalioth	I was searching EBAY for a Super Elektro-Magnet....... but they are too expensive...
+2005-09-07T11:14:00.000Z	Nalioth	LaserLine	car or truck works good
+2005-09-07T11:14:00.000Z	Nalioth	LaserLine	is the lappy near you and connected to the net right now?
+2005-09-07T11:14:00.000Z	LaserLine	Nalioth	- Yes...
+2005-09-07T11:15:00.000Z	Nalioth	LaserLine	got a livecd?
+2005-09-07T11:16:00.000Z	Nalioth	LaserLine	can you boot the lappy with an ubuntu liveCD and get it online?
+2005-09-07T11:17:00.000Z	LaserLine	Nalioth	- Harddrive is 63% wiping, in 8 minutes I could get it online, but with no data on the drive..
+2005-09-07T11:18:00.000Z	Nalioth	LaserLine	that's fine
+2005-09-07T11:18:00.000Z	Nalioth	LaserLine	let me know when you're online with it
+2005-09-07T11:19:00.000Z	LaserLine	Nalioth	- Thanks..
+2005-09-07T11:22:00.000Z	LaserLine	Nalioth	I'll /Msg you...
+2005-09-07T11:26:00.000Z	LaserLine	Nalioth	Loading the LIVE CD - I /MSG you....
+2005-09-07T11:31:00.000Z	LaserLine	Nalioth	I'm Online
+2005-09-07T11:31:00.000Z	Nalioth	LaserLine	apt-get install smartmontools
+2005-09-07T11:32:00.000Z	LaserLine	Nalioth	from the live CD terminal in Gnome ?
+2005-09-07T11:32:00.000Z	LaserLine	Nalioth	That should be with sudo, right ?
+2005-09-07T11:32:00.000Z	Nalioth	LaserLine	yes, all correct
+2005-09-07T11:33:00.000Z	LaserLine	Nalioth	"couldn't find package"
+2005-09-07T11:34:00.000Z	LaserLine	Nalioth	Got it :D
+2005-09-07T11:34:00.000Z	LaserLine	Nalioth	needet to apt-get update.
+2005-09-07T11:34:00.000Z	LaserLine	Nalioth	(didn't need to enable all the repos, it's in MAIN)
+2005-09-07T11:34:00.000Z	LaserLine	Nalioth	What to do now ?
+2005-09-07T11:35:00.000Z	Nalioth	LaserLine	run (from a terminal) "smartctl"
+2005-09-07T11:35:00.000Z	Nalioth	LaserLine	paste the output to a pastebin in the /topic
+2005-09-07T11:36:00.000Z	Nalioth	LaserLine	yes
+2005-09-07T11:36:00.000Z	LaserLine	Nalioth	nothing happend - I ran "smartctl /dev/hda"
+2005-09-07T11:37:00.000Z	Nalioth	LaserLine	nothing happned at all?
+2005-09-07T11:38:00.000Z	LaserLine	Nalioth	now I wrote smartctl /dev/hda -a
+2005-09-07T11:38:00.000Z	LaserLine	Nalioth	and got output
+2005-09-07T11:39:00.000Z	Nalioth	LaserLine	paste it and show us the link
+2005-09-07T11:42:00.000Z	Nalioth	LaserLine	your HD is fuX0rd
+2005-09-07T11:43:00.000Z	LaserLine	Nalioth	What ?
+2005-09-07T11:43:00.000Z	LaserLine	Nalioth	How do you know that ?
+2005-09-07T11:43:00.000Z	Nalioth	LaserLine	did you not read what the thing output?
+2005-09-07T11:43:00.000Z	Nalioth	LaserLine	the word "Failing" mean anything?
+2005-09-07T11:43:00.000Z	LaserLine	Nalioth	I read... I don't understand all...
+2005-09-07T11:43:00.000Z	LaserLine	Nalioth	It's only on "Load_Cycle_Count"
+2005-09-07T11:44:00.000Z	Nalioth	LaserLine	the program you ran talks to the HD's onboard processor
+2005-09-07T11:44:00.000Z	Nalioth	LaserLine	the onboard processor keeps tabs on the 'health' of the HD
+2005-09-07T11:44:00.000Z	Nalioth	LaserLine	your HD is "failing_now"
+2005-09-07T11:45:00.000Z	Nalioth	LaserLine	as has been pointed out, you have hardware trouble
+2005-09-07T11:46:00.000Z	LaserLine	Nalioth	But only in the "Load_Cycle_Count"... (what that means?)
+2005-09-07T11:48:00.000Z	LaserLine	Nalioth	If I test it ? with -t long or short or offline....?
+2005-09-07T11:48:00.000Z	Nalioth	LaserLine	a hard drive is a precision instrument. if i got this on a production machine, i'd back up the data and buy a new HD
+2005-09-07T11:50:00.000Z	LaserLine	Nalioth	It says the the Overall helth passed....
+2005-09-07T11:52:00.000Z	Nalioth	LaserLine	do as you wish. but hardware ill health WAS confirmed
+2005-09-07T11:52:00.000Z	LaserLine	Nalioth	Ok... (2.5" HD are kinda expensive... already put 250$ for the laptop :( )
+2005-09-07T11:53:00.000Z	Nalioth	LaserLine	it aint the cost of the drive, it's the cost of labor to put it in
+2005-09-07T11:53:00.000Z	LaserLine	Nalioth	no no no... I paid 250$ to get the battery fixed and new ram...
+2005-09-07T11:54:00.000Z	LaserLine	Nalioth	This was supposed to be my laptop for school (starting university)
+2005-09-07T11:55:00.000Z	Nalioth	LaserLine	what part of the country do you live in?
+2005-09-07T11:55:00.000Z	LaserLine	Nalioth	It was my dad's.. It is 1.7KG with the battery (I live in Israel)
+2005-09-07T11:56:00.000Z	Nalioth	LaserLine	then go to your local electronics outlet and get another 20gb HD for it
+2005-09-07T12:00:00.000Z	LaserLine	Nalioth	If the laptop's harddrive is Toshiba MK-1016GAP, What kind of drive should I get ?
+2005-09-07T12:05:00.000Z	Nalioth	LaserLine	you get sorted?
+2005-09-07T12:06:00.000Z	LaserLine	Nalioth	sorted ?
+2005-09-07T12:07:00.000Z	Nalioth	LaserLine	decide what you are gonna do?
+2005-09-07T12:09:00.000Z	LaserLine	Nalioth	- Trying to install with ReiserFS (i;m going the HARD WAY!) if it'll crash i'll look for a new hardrive, could you help me out with the hardrive choise ? I have this drive: http://www3.toshiba.co.jp/storage/english/spec/hdd/mk1016.htm and found a toshiba drive for cheap (under 100$) here: http://www.toshiba-europe.com/storage/products/otherdocs/Brochures/SDDBrochure_02-2005.pdf
+2005-09-07T12:10:00.000Z	LaserLine	Nalioth	the MK4032GAX
+2005-09-07T12:10:00.000Z	LaserLine	Nalioth	I'm don't really know what HD this laptop would take (today it's 4200RPM, with 1MB Buffer 9.5MM)
+2005-09-07T12:11:00.000Z	Nalioth	LaserLine	any 2.5" you find will do, i'm sure
+2005-09-07T12:14:00.000Z	LaserLine	Nalioth	Should I go for 4200 or 5400 ? (now it's 4200)
+2005-09-07T12:14:00.000Z	LaserLine	Nalioth	- It's kind of an old laptop...
+2005-09-07T12:15:00.000Z	Nalioth	LaserLine	whatever is cheaper, keep in mind the heat issues
+2005-09-07T12:17:00.000Z	Nalioth	LaserLine	it is not a "if" it is a "when"
+2005-09-07T12:19:00.000Z	Nalioth	LaserLine	and dont put anything important on it
+2005-09-07T12:20:00.000Z	LaserLine	Nalioth	should I install the Smart Deamon on the laptop ?
+2005-09-07T12:20:00.000Z	Nalioth	LaserLine	it's only gonna count down the inevitable

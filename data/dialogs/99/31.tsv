@@ -1,0 +1,99 @@
+2010-03-25T07:05:00.000Z	daskreech	Izinucs	nvdia-173
+2010-03-25T07:00:00.000Z	Izinucs	daskreech	you have to add the resolution to the sysem using xrandr then use xrandr to change to that newly created system rez.
+2010-03-25T07:02:00.000Z	daskreech	Izinucs	xrandr: screen cannot be larger than 640x480
+2010-03-25T07:02:00.000Z	daskreech	Izinucs	I got that back
+2010-03-25T07:03:00.000Z	Izinucs	daskreech	even after adding the correct rez to the system via xrandr?
+2010-03-25T07:03:00.000Z	daskreech	Izinucs	Yes it's listed and all
+2010-03-25T07:03:00.000Z	Izinucs	daskreech	what card do you have
+2010-03-25T07:04:00.000Z	daskreech	Izinucs	Nvidia Geforce
+2010-03-25T07:04:00.000Z	daskreech	Izinucs	FX 5200
+2010-03-25T07:05:00.000Z	Izinucs	daskreech	did you use the drivers supplied by ubuntu and if so which ones?
+2010-03-25T07:06:00.000Z	daskreech	Izinucs	Though I see I have nvidia-96 an nvidia-185 installed
+2010-03-25T07:06:00.000Z	Izinucs	daskreech	let me check nvidia's site for which driver to use.. it might be a different one. hang on.
+2010-03-25T07:06:00.000Z	daskreech	Izinucs	hold on let me remove those extra ones
+2010-03-25T07:08:00.000Z	Izinucs	daskreech	the 173 driver is correct.. have you tried to run nvidia-xconfig?
+2010-03-25T07:08:00.000Z	daskreech	Izinucs	do I need nvidia-common?
+2010-03-25T07:09:00.000Z	Izinucs	daskreech	you looking in synaptic? I think that's a meta package..
+2010-03-25T07:10:00.000Z	Izinucs	daskreech	nvidia-xconfig should already be installed.. try from a terminal.. also you might install nvidia-settings and try that after
+2010-03-25T07:12:00.000Z	daskreech	Izinucs	xconfig runs with noerrors or output
+2010-03-25T07:12:00.000Z	daskreech	Izinucs	Restart X?
+2010-03-25T07:12:00.000Z	Izinucs	daskreech	is this a newly installed system?
+2010-03-25T07:12:00.000Z	daskreech	Izinucs	No had it about 2 years
+2010-03-25T07:23:00.000Z	Izinucs	daskreech	by the way.. what rez are you trying to get?
+2010-03-25T07:13:00.000Z	Izinucs	daskreech	you could try an X restart.. sudo service gdm restart... but probably won't do anything..
+2010-03-25T07:14:00.000Z	Izinucs	daskreech	9.10?
+2010-03-25T07:14:00.000Z	daskreech	Izinucs	Yes Koala
+2010-03-25T07:14:00.000Z	Izinucs	daskreech	did you install nvidia-settings?
+2010-03-25T07:15:00.000Z	daskreech	Izinucs	Yes I tried that and got xrandr: Configure crtc 0 failed
+2010-03-25T07:15:00.000Z	daskreech	Izinucs	If i generate a xorg.conf and then point Xorg -config to it it ignores the modelines inside it
+2010-03-25T07:16:00.000Z	Izinucs	daskreech	have you check to see if there is a xorg.conf file?  It's not normally there on 9.10 but one may have been created.. if so you could try renaming it to xorg.conf.backup and restart X .. it's in /etc/X11/
+2010-03-25T07:16:00.000Z	daskreech	Izinucs	yep with all the modelines etc in there
+2010-03-25T07:16:00.000Z	Izinucs	daskreech	rename it and restart x
+2010-03-25T07:16:00.000Z	daskreech	Izinucs	Oh wait you are saying remove it?
+2010-03-25T07:17:00.000Z	Izinucs	daskreech	by renaming it that effectively removes it.
+2010-03-25T07:17:00.000Z	daskreech	Izinucs	yeah got you
+2010-03-25T07:21:00.000Z	daskreech	Izinucs	Nope
+2010-03-25T07:22:00.000Z	daskreech	Izinucs	Wait Hooray!! it's 800x600 now :)
+2010-03-25T07:23:00.000Z	Izinucs	daskreech	ah ha.. now type xrandr in a terminal and see what rez's are available.
+2010-03-25T07:23:00.000Z	daskreech	Izinucs	800x600
+2010-03-25T07:23:00.000Z	Izinucs	daskreech	ok.. now use the commands for xrandr to add the rez you want.
+2010-03-25T07:24:00.000Z	daskreech	Izinucs	1280x1024
+2010-03-25T07:24:00.000Z	Izinucs	daskreech	what command are you using?
+2010-03-25T07:25:00.000Z	Izinucs	daskreech	there's a concept that X needs to be at or larger than the resolution you're looking for.. this might be a google solution instead of the ubuntu docs on resolution.. I'll look
+2010-03-25T07:27:00.000Z	Izinucs	daskreech	you only have one monitor .. right?
+2010-03-25T07:27:00.000Z	daskreech	Izinucs	Yep
+2010-03-25T07:28:00.000Z	Izinucs	daskreech	vga or dvi?
+2010-03-25T07:29:00.000Z	daskreech	Izinucs	VGA
+2010-03-25T07:29:00.000Z	Izinucs	daskreech	try this with the right rez inputed if this isn't right.. also change the 75 to 60.  xrandr --output VGA --mode 1024×768 --rate 75
+2010-03-25T07:31:00.000Z	daskreech	Izinucs	I have no clue :-(
+2010-03-25T07:31:00.000Z	Izinucs	daskreech	is this a flat panel or older crt?
+2010-03-25T07:31:00.000Z	daskreech	Izinucs	CRT
+2010-03-25T07:35:00.000Z	Izinucs	daskreech	well.... if you want to go there.. you can always install the nvidia drivers from their site.. the 173's.. during that process it will dynamically create the correct xorg.conf file *if* your monitor reports the settings correctly.. if not then once it's created you can go in and edit it for the right rez.. xorg.conf overrides xrandr when it exists correctly.
+2010-03-25T07:36:00.000Z	daskreech	Izinucs	Not today it doesnt
+2010-03-25T07:36:00.000Z	Izinucs	daskreech	you'll have to disable the current driver and uninstall the preinstalled ubuntu nvidia bits to make it work.
+2010-03-25T07:36:00.000Z	daskreech	Izinucs	I did that already
+2010-03-25T07:36:00.000Z	Izinucs	daskreech	you did? is that the driver you're using now?
+2010-03-25T07:37:00.000Z	daskreech	Izinucs	No not now
+2010-03-25T07:38:00.000Z	Izinucs	daskreech	ok.. you're having conflicts.. disable the ubuntu driver.. uninstall the ubuntu nvidia bits and reinstall the driver direct from nvidia.. the different driver sets don't coexist well.. I've always had that issue.
+2010-03-25T07:38:00.000Z	Izinucs	daskreech	or go through the uninstall process for the nvidia supplied driver and try the ubuntu drivers.
+2010-03-25T07:45:00.000Z	Izinucs	daskreech	you still around?
+2010-03-25T07:46:00.000Z	daskreech	Izinucs	Yeah I was bout to reboot
+2010-03-25T07:46:00.000Z	Izinucs	daskreech	keep me posted
+2010-03-25T07:53:00.000Z	daskreech	Izinucs	Nope
+2010-03-25T07:54:00.000Z	Izinucs	daskreech	hummmm.. did you uninstall the ubuntu stuff and reinstall the nvidia driver? or the other way around?
+2010-03-25T07:56:00.000Z	Izinucs	daskreech	personally I would have done it the first way.. but no matter.. I'm stuck.. you didn't happen to have used .. ah hum.. automatix .. did you?
+2010-03-25T07:58:00.000Z	daskreech	Izinucs	Should i try from nvidia's site?
+2010-03-25T07:59:00.000Z	Izinucs	daskreech	be worth a shot.. I typically use the nvidia drivers just 'cause they are more stable and faster for my system.  however with every kernel upgrade you have to reinstall them.. I believe you also need build-essential so they compile
+2010-03-25T08:00:00.000Z	daskreech	Izinucs	Actually let me see what happens when I jump to the nv driver
+2010-03-25T08:05:00.000Z	daskreech	Izinucs	how do I rerun the kernel modules?
+2010-03-25T08:06:00.000Z	Izinucs	daskreech	to install the nvidia driver?  it'll do that during the install process.. sudo ./NV<tab>
+2010-03-25T08:07:00.000Z	daskreech	Izinucs	No Not that one. I think I got it
+2010-03-25T08:21:00.000Z	Izinucs	daskreech	yea.. some.. horizontal sync is wrong.. still have the manual for the monitor to give you the specs? or will google discover them for you? .. looks like you have some xorg.conf editing to do.. you might look in the old xorg to see what's there and what you might be able to use.
+2010-03-25T08:22:00.000Z	Izinucs	daskreech	what's the make and model of the monitor?
+2010-03-25T08:23:00.000Z	daskreech	Izinucs	Ahmm not sure Generic and Generic ?
+2010-03-25T08:23:00.000Z	Izinucs	daskreech	no brand name on the back near the power cord?
+2010-03-25T08:24:00.000Z	daskreech	Izinucs	Ah Hmm let me see
+2010-03-25T08:28:00.000Z	daskreech	Izinucs	Dell
+2010-03-25T08:28:00.000Z	daskreech	Izinucs	828Fi
+2010-03-25T08:29:00.000Z	Izinucs	daskreech	30-70 is the horizontal range..  http://support.dell.com/support/edocs/monitors/22793/specs.htm
+2010-03-25T08:30:00.000Z	daskreech	Izinucs	Ok what's that mean for my xrandr commands?
+2010-03-25T08:31:00.000Z	Izinucs	daskreech	not with xrandr.. there's an xorg.conf now.. or should be... that's where you need to make a change
+2010-03-25T08:33:00.000Z	Izinucs	daskreech	check the vertical too.. it's really wide
+2010-03-25T08:42:00.000Z	daskreech	Izinucs	What is the vertical?
+2010-03-25T08:42:00.000Z	Izinucs	daskreech	50-100
+2010-03-25T08:45:00.000Z	Izinucs	daskreech	you gettin' there?
+2010-03-25T08:46:00.000Z	daskreech	Izinucs	There was no xorg.conf I'm just putting back the one I had before it had the Horiz and Vert commented out (Way larger than those ranges)
+2010-03-25T08:47:00.000Z	Izinucs	daskreech	ah.. that's weird.. the nvidia install should have asked you to create a xorg.. or maybe that's nvidia-settings that will do that.
+2010-03-25T08:47:00.000Z	daskreech	Izinucs	ok so I've moved it back to the /etc/X11/xorg.conf in theory I should be able to stop the display manager and start it back and X should read from the conf file?
+2010-03-25T08:47:00.000Z	daskreech	Izinucs	nvidia-settings does taht
+2010-03-25T08:47:00.000Z	Izinucs	daskreech	yes
+2010-03-25T09:00:00.000Z	daskreech	Izinucs	Duuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuude
+2010-03-25T09:01:00.000Z	Izinucs	daskreech	yeaaaaaaa?  working?
+2010-03-25T09:01:00.000Z	daskreech	Izinucs	My res is so high that all my fonts look like size 4
+2010-03-25T09:01:00.000Z	Izinucs	daskreech	lol! .. you're there! ..
+2010-03-25T09:02:00.000Z	Izinucs	daskreech	I've done my good deed for the day.. now I can sleep :)
+2010-03-25T09:02:00.000Z	daskreech	Izinucs	I don't beleive it was the horizontal sync the whole time. What on earth made it break
+2010-03-25T09:02:00.000Z	daskreech	Izinucs	Sleep till Saturday
+2010-03-25T09:02:00.000Z	Izinucs	daskreech	wish I could.. no idea what broke it.. but I'd make a copy of that xorg and save it in a safe place..
+2010-03-25T09:03:00.000Z	daskreech	Izinucs	I did already
+2010-03-25T09:03:00.000Z	Izinucs	daskreech	enjoy!  I gotta run/sleep/dream

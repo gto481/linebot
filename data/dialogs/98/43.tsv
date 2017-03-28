@@ -1,0 +1,98 @@
+2008-08-22T21:34:00.000Z	needhelp		Hi, when trying to install a certain required lib, I get this error: http://paste.ubuntu.com/39715/  - how to fix it ?
+2008-08-22T21:35:00.000Z	danbhfive	needhelp	have you checked your sources?
+2008-08-22T21:35:00.000Z	needhelp	danbhfive	no, where and what to look for ?
+2008-08-22T21:36:00.000Z	danbhfive	needhelp	what version are you running?
+2008-08-22T21:36:00.000Z	needhelp	danbhfive	ubuntu 804
+2008-08-22T21:37:00.000Z	danbhfive	needhelp	that version has 264-57, why dont you use the later version?
+2008-08-22T21:38:00.000Z	needhelp	danbhfive	I don't know. It is required by cinelerra. I am unable to install cinelerra because I am missing the lib
+2008-08-22T21:40:00.000Z	danbhfive	needhelp	I dont see that application in ubuntu.  Are you sure that is available for ubuntu?
+2008-08-22T21:41:00.000Z	needhelp	danbhfive	yes, but I had to add a line in Software Sources
+2008-08-22T21:41:00.000Z	danbhfive	needhelp	mk, so, those software sources, that the "sources" that I was refering to earlier
+2008-08-22T21:41:00.000Z	needhelp	danbhfive	this: http://cvs.cinelerra.org/docs/split_manual_en/cinelerra_cv_manual_en_2.html#SEC24
+2008-08-22T21:42:00.000Z	needhelp	danbhfive	the sources seems to appear yes
+2008-08-22T21:43:00.000Z	danbhfive	needhelp	wana pastebin your sources.list?
+2008-08-22T21:45:00.000Z	needhelp	danbhfive	http://paste.ubuntu.com/39725/
+2008-08-22T21:47:00.000Z	danbhfive	needhelp	how about the /etc/apt/sources.list.d/akirad.list
+2008-08-22T21:48:00.000Z	needhelp	danbhfive	http://paste.ubuntu.com/39727/
+2008-08-22T21:49:00.000Z	danbhfive	needhelp	ok, that file is wrong
+2008-08-22T21:49:00.000Z	danbhfive	needhelp	it is setup for gutsy, and you are running hardy
+2008-08-22T21:49:00.000Z	danbhfive	needhelp	try this website:  it might make it allot easier
+2008-08-22T21:49:00.000Z	danbhfive	needhelp	http://akiradproject.net/repository
+2008-08-22T21:58:00.000Z	needhelp	danbhfive	I tried to run the commands as stated on the link you pasted me, but the second command gave me this: http://paste.ubuntu.com/39732/
+2008-08-22T21:59:00.000Z	needhelp	danbhfive	I can't access http://akirad.hfbk.net/ in FireFox either
+2008-08-22T22:01:00.000Z	danbhfive	needhelp	ok, I think I can help you directly
+2008-08-22T22:01:00.000Z	danbhfive	needhelp	remove that package that the webpage suggested
+2008-08-22T22:01:00.000Z	danbhfive	needhelp	remove the file we talked about earlier too
+2008-08-22T22:02:00.000Z	needhelp	danbhfive	which package? It seems it didn't success in installing the package. Also not the lib from earlier
+2008-08-22T22:03:00.000Z	danbhfive	needhelp	sudo aptitude remove --purge addakirad
+2008-08-22T22:05:00.000Z	needhelp	danbhfive	done
+2008-08-22T22:05:00.000Z	danbhfive	needhelp	did you remove that extra source file?
+2008-08-22T22:06:00.000Z	needhelp	danbhfive	you mean akirad.list ?
+2008-08-22T22:06:00.000Z	danbhfive	needhelp	yes: sudo rm ﻿/etc/apt/sources.list.d/akirad.list
+2008-08-22T22:06:00.000Z	needhelp	danbhfive	yes
+2008-08-22T22:07:00.000Z	danbhfive	needhelp	ok, open up your sources.list with an editor, and start by removing the last three lines, something about k9
+2008-08-22T22:07:00.000Z	danbhfive	needhelp	k9copy
+2008-08-22T22:08:00.000Z	needhelp	danbhfive	done
+2008-08-22T22:08:00.000Z	danbhfive	needhelp	add the contents of this webpage to the bottom: http://repository.akirad.net/dists/hardy.list
+2008-08-22T22:09:00.000Z	needhelp	danbhfive	done
+2008-08-22T22:09:00.000Z	danbhfive	needhelp	save, close, and try the install again
+2008-08-22T22:10:00.000Z	needhelp	danbhfive	now it is gone from Synaptic
+2008-08-22T22:10:00.000Z	danbhfive	needhelp	refresh?
+2008-08-22T22:12:00.000Z	danbhfive	needhelp	is it working?
+2008-08-22T22:13:00.000Z	needhelp	danbhfive	reloading... -> http://paste.ubuntu.com/39735/
+2008-08-22T22:14:00.000Z	danbhfive	needhelp	that should be gone, hmmm, try opening up synaptic, and checking your sources there
+2008-08-22T22:15:00.000Z	needhelp	danbhfive	where in synaptic ?
+2008-08-22T22:16:00.000Z	needhelp	danbhfive	i found
+2008-08-22T22:17:00.000Z	needhelp	danbhfive	there is one new there under uiniverse, called "repository.akirad.net/main". Packages: akiradnews. That's the only one.
+2008-08-22T22:17:00.000Z	danbhfive	needhelp	can you pastebin your sources.list again?
+2008-08-22T22:18:00.000Z	needhelp	danbhfive	http://paste.ubuntu.com/39739/
+2008-08-22T22:19:00.000Z	danbhfive	needhelp	mmmm, more problems I see
+2008-08-22T22:20:00.000Z	danbhfive	needhelp	why dont you delete your sources.list, and then use System > Admin > Software Sources to recreate it
+2008-08-22T22:22:00.000Z	danbhfive	needhelp	a general suggestion: make a separate /home partition, and do clean installs rather than upgrades
+2008-08-22T22:28:00.000Z	danbhfive	needhelp	were you able to recreate your sources.list?
+2008-08-22T22:29:00.000Z	needhelp	danbhfive	I removed sources.list, and reloaded in Software Sources with this result: http://paste.ubuntu.com/39741/
+2008-08-22T22:29:00.000Z	danbhfive	needhelp	er, hmmm, is your /etc/apt/soures.list.d empty?
+2008-08-22T22:30:00.000Z	danbhfive	needhelp	we really need to get rid of that source.... or maybe not
+2008-08-22T22:31:00.000Z	needhelp	danbhfive	http://paste.ubuntu.com/39742/
+2008-08-22T22:31:00.000Z	danbhfive	needhelp	can you pastebin your sources.list again?  just so I can check?
+2008-08-22T22:32:00.000Z	danbhfive	needhelp	ahahahaha, ok, lets fix that!       I think its sudo rm /etc/apt/sources.list.d/*
+2008-08-22T22:32:00.000Z	needhelp	danbhfive	http://paste.ubuntu.com/39743/
+2008-08-22T22:33:00.000Z	needhelp	danbhfive	should I delete all files in sources.list.d/ ?
+2008-08-22T22:33:00.000Z	danbhfive	needhelp	yes, and are your sure you completely deleted that sources.list file?  the last couple lines is still out of wack
+2008-08-22T22:34:00.000Z	needhelp	danbhfive	I actually renamed it
+2008-08-22T22:34:00.000Z	danbhfive	needhelp	that should work too
+2008-08-22T22:36:00.000Z	needhelp	danbhfive	  Ok, now I have deleted the file completely + all files in sources.list.d/
+2008-08-22T22:36:00.000Z	danbhfive	needhelp	ok, use the Sources GUI to regenerate it
+2008-08-22T22:36:00.000Z	needhelp	danbhfive	  should I try reloading again in Software Sources ?
+2008-08-22T22:36:00.000Z	needhelp	danbhfive	  ok
+2008-08-22T22:37:00.000Z	danbhfive	needhelp	you can try reloading first.  Hopefully, NO packages show up
+2008-08-22T22:38:00.000Z	needhelp	danbhfive	 under ThirdParty Software? http://repository.akirad.net is here + 8 unchecked
+2008-08-22T22:38:00.000Z	danbhfive	needhelp	are your soureces set?
+2008-08-22T22:39:00.000Z	needhelp	danbhfive	 that akirad is the only of the third-party software that is checked
+2008-08-22T22:39:00.000Z	danbhfive	needhelp	well, make sure everything is unchecked in third party.  You only want the defaults.   Its weird though, how are those third parties getting in there?  I don't know  : (
+2008-08-22T22:40:00.000Z	needhelp	danbhfive	 uncheck, then reload ?
+2008-08-22T22:40:00.000Z	danbhfive	needhelp	are the other ones checked on the other tabs?
+2008-08-22T22:41:00.000Z	needhelp	danbhfive	Ubuntu Software: all checked. Updated: 2 first are checked.
+2008-08-22T22:41:00.000Z	danbhfive	needhelp	great, lets save and exit, and get to a commandline
+2008-08-22T22:43:00.000Z	danbhfive	needhelp	one sec!  first run sudo aptitude install ubuntu-desktop
+2008-08-22T22:45:00.000Z	needhelp	danbhfive	was that for me or stat_cs, that sudo aptitude update... ?
+2008-08-22T22:45:00.000Z	danbhfive	needhelp	just do sudo apt-get install ubuntu-desktop
+2008-08-22T22:45:00.000Z	danbhfive	needhelp	just to make sure
+2008-08-22T22:45:00.000Z	needhelp	danbhfive	done
+2008-08-22T22:46:00.000Z	danbhfive	needhelp	now run sudo aptitude update && sudo aptitude full-upgrade
+2008-08-22T22:47:00.000Z	needhelp	danbhfive	is this a 2 hours command ?
+2008-08-22T22:48:00.000Z	danbhfive	needhelp	only if your computer is really messed up.  If you computer is ok, it will take 30 seconds
+2008-08-22T22:49:00.000Z	needhelp	danbhfive	alright. Finished
+2008-08-22T22:50:00.000Z	danbhfive	needhelp	great!   it was just a check, to make sure you had a working system.  NOW, paste the lines here: http://repository.akirad.net/dists/hardy.list   into your sources.list
+2008-08-22T22:50:00.000Z	danbhfive	needhelp	and try the install again, try try again
+2008-08-22T22:51:00.000Z	needhelp	danbhfive	should there be no 'deb' keyword in front ?
+2008-08-22T22:51:00.000Z	danbhfive	needhelp	you should paste those lines exactly
+2008-08-22T22:51:00.000Z	danbhfive	needhelp	so yes, the deb keyword should be there
+2008-08-22T22:54:00.000Z	needhelp	danbhfive	I reloaded in Synaptic, but still couldnt find cinelerra. In Software Sources->Third-Party, "http://akirad.cinelerra.org/ akirad-hardy main" is the only checked.
+2008-08-22T22:54:00.000Z	needhelp	danbhfive	sources.list http://paste.ubuntu.com/39747/
+2008-08-22T22:55:00.000Z	danbhfive	needhelp	did you reload, or update?
+2008-08-22T22:55:00.000Z	needhelp	danbhfive	 in synaptic, I pressed the "Reload" -button
+2008-08-22T22:56:00.000Z	danbhfive	needhelp	and you are sure its not there?
+2008-08-22T22:56:00.000Z	needhelp	danbhfive	 2sec
+2008-08-22T22:58:00.000Z	needhelp	danbhfive	Found it, and was able to install it! Thank you very much! :D
+2008-08-22T22:59:00.000Z	danbhfive	needhelp	woo!  glad its working

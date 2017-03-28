@@ -1,0 +1,96 @@
+2009-05-02T08:54:00.000Z	BeWop		Sups
+2009-05-02T08:54:00.000Z	BeWop		Hey guys, anyone wanna help a nabcake?
+2009-05-02T08:54:00.000Z	shadeslayer	BeWop	just ask your question
+2009-05-02T08:56:00.000Z	shadeslayer	BeWop	what does sudo fdisk -l show?
+2009-05-02T08:58:00.000Z	shadeslayer	BeWop	um could you link me to that pastebin ??
+2009-05-02T08:59:00.000Z	shadeslayer	BeWop	what??
+2009-05-02T08:59:00.000Z	BeWop	shadeslayer	try the pastebin thing again
+2009-05-02T09:00:00.000Z	BeWop	shadeslayer	http://paste.ubuntu.com/162559/
+2009-05-02T09:01:00.000Z	shadeslayer	BeWop	ok now run mount /dev/sda1 in a terinal
+2009-05-02T09:04:00.000Z	BeWop	shadeslayer	it won't let me mount the partition even by force.
+2009-05-02T09:04:00.000Z	shadeslayer	BeWop	try this : gksu gedit /boot/grub/menu.lst
+2009-05-02T09:04:00.000Z	BeWop	shadeslayer	pastebin the file?
+2009-05-02T09:05:00.000Z	shadeslayer	BeWop	yes please
+2009-05-02T09:06:00.000Z	shadeslayer	BeWop	try this in a terminal sudo mount -t ntfs-3g /dev/sda1 /media/disk -o force
+2009-05-02T09:08:00.000Z	BeWop	shadeslayer	get the pastebin?
+2009-05-02T09:08:00.000Z	shadeslayer	BeWop	now did you pastebin that menu.lst
+2009-05-02T09:08:00.000Z	BeWop	shadeslayer	yeah, here http://paste.ubuntu.com/162565/
+2009-05-02T09:09:00.000Z	shadeslayer	BeWop	lol,windows is lost from grub itself :P
+2009-05-02T09:09:00.000Z	shadeslayer	BeWop	follow the instructions there on adding windows to the menu
+2009-05-02T09:10:00.000Z	BeWop	shadeslayer	k
+2009-05-02T09:10:00.000Z	BeWop	shadeslayer	how do I get permission to edit menu.lst?
+2009-05-02T09:11:00.000Z	shadeslayer	BeWop	same command gksu gedit /boot/grub/menu.lst
+2009-05-02T09:11:00.000Z	BeWop	shadeslayer	k, I'll try that. I'll reboot and if it doesn't work, come back
+2009-05-02T09:11:00.000Z	shadeslayer	BeWop	sure
+2009-05-02T09:12:00.000Z	BeWop	shadeslayer	in the menu, it's it (hd0,0) even if on the thing it's /dev/sda1?
+2009-05-02T09:12:00.000Z	shadeslayer	BeWop	yes
+2009-05-02T09:13:00.000Z	BeWop	shadeslayer	alright
+2009-05-02T09:13:00.000Z	BeWop	shadeslayer	got it. I'll reboot now
+2009-05-02T09:13:00.000Z	shadeslayer	BeWop	best of luck
+2009-05-02T09:17:00.000Z	BeWop	shadeslayer	all it did was flash loading stage 2 for a couple secons
+2009-05-02T09:18:00.000Z	BeWop	shadeslayer	yeah, that didn't work
+2009-05-02T09:19:00.000Z	BeWop	shadeslayer	but you think it's still a problem with that file?
+2009-05-02T09:19:00.000Z	BeWop	shadeslayer	originally, I had ubuntu installed first
+2009-05-02T09:19:00.000Z	shadeslayer	BeWop	and??
+2009-05-02T09:19:00.000Z	BeWop	shadeslayer	well, that worked
+2009-05-02T09:19:00.000Z	BeWop	shadeslayer	but not it's not working
+2009-05-02T09:20:00.000Z	shadeslayer	BeWop	so?? whats the problem now?
+2009-05-02T09:20:00.000Z	BeWop	shadeslayer	It just flashes Loading Stage 2
+2009-05-02T09:20:00.000Z	BeWop	shadeslayer	and doesn't load
+2009-05-02T09:20:00.000Z	BeWop	shadeslayer	maybe because I originally installed ubuntu first, then it's a different thing than (hd0,0) ?
+2009-05-02T09:20:00.000Z	shadeslayer	BeWop	strange worked for me though
+2009-05-02T09:21:00.000Z	BeWop	shadeslayer	what did you install first?
+2009-05-02T09:21:00.000Z	shadeslayer	BeWop	nope i installed ubuntu first too
+2009-05-02T09:21:00.000Z	BeWop	shadeslayer	weird...
+2009-05-02T09:21:00.000Z	shadeslayer	BeWop	did you add it at the bottom
+2009-05-02T09:21:00.000Z	BeWop	shadeslayer	I added it right under where the ubuntu one's were
+2009-05-02T09:22:00.000Z	BeWop	shadeslayer	just add it at the bottem instead?
+2009-05-02T09:22:00.000Z	shadeslayer	BeWop	no!!! add it to the bottom
+2009-05-02T09:22:00.000Z	BeWop	shadeslayer	alright, I'll try that really quick and come back
+2009-05-02T09:25:00.000Z	BeWop	shadeslayer	alright, same result
+2009-05-02T09:25:00.000Z	shadeslayer	BeWop	ok pastebin your menu.lst
+2009-05-02T09:25:00.000Z	BeWop	shadeslayer	is it possible to command it to boot directly from /dev/sda1  ?
+2009-05-02T09:26:00.000Z	shadeslayer	BeWop	never tried that
+2009-05-02T09:27:00.000Z	BeWop	shadeslayer	http://paste.ubuntu.com/162573/
+2009-05-02T09:30:00.000Z	shadeslayer	BeWop	back
+2009-05-02T09:30:00.000Z	BeWop	shadeslayer	k
+2009-05-02T09:30:00.000Z	BeWop	shadeslayer	here's the menu.lst http://paste.ubuntu.com/162573/
+2009-05-02T09:31:00.000Z	shadeslayer	BeWop	looks fine to me
+2009-05-02T09:31:00.000Z	BeWop	shadeslayer	yeah, but it's not working
+2009-05-02T09:32:00.000Z	BeWop	shadeslayer	any other ides?
+2009-05-02T09:32:00.000Z	shadeslayer	BeWop	yeah one sec
+2009-05-02T09:32:00.000Z	BeWop	shadeslayer	mmk
+2009-05-02T09:34:00.000Z	BeWop	shadeslayer	wait, this is all like hda1 and such, mine says sda1. So should I change that thing to (sd0,0)
+2009-05-02T09:34:00.000Z	shadeslayer	BeWop	no,your mount point is /dev/sda
+2009-05-02T09:34:00.000Z	shadeslayer	BeWop	your chainloader is in hd0,0
+2009-05-02T09:34:00.000Z	BeWop	shadeslayer	so the mount point has nothing to do with how it's booted?
+2009-05-02T09:35:00.000Z	BeWop	shadeslayer	got it
+2009-05-02T09:35:00.000Z	shadeslayer	BeWop	can you get the partition to mount by that wiki??
+2009-05-02T09:35:00.000Z	BeWop	shadeslayer	still running through it, give me a sec
+2009-05-02T09:36:00.000Z	BeWop	shadeslayer	nope
+2009-05-02T09:36:00.000Z	BeWop	shadeslayer	tried force mounting it to
+2009-05-02T09:36:00.000Z	BeWop	shadeslayer	that's not working
+2009-05-02T09:37:00.000Z	shadeslayer	BeWop	whats the error??
+2009-05-02T09:37:00.000Z	BeWop	shadeslayer	hold on, let me get it again XD
+2009-05-02T09:38:00.000Z	BeWop	shadeslayer	http://paste.ubuntu.com/162577/
+2009-05-02T09:39:00.000Z	shadeslayer	BeWop	same error with mount /dev/sda1 ??
+2009-05-02T09:39:00.000Z	BeWop	shadeslayer	nope
+2009-05-02T09:39:00.000Z	shadeslayer	BeWop	cannot find..
+2009-05-02T09:39:00.000Z	BeWop	shadeslayer	that one is can't find /dev/sda1 in /ect/fstab or /etc/mtab
+2009-05-02T09:41:00.000Z	BeWop	shadeslayer	here's the chain of events that led me here. 1. Installed ubuntu. 2 Installed XP. 3. Formatted and installed ubuntu. 4. Shut down XP improperly. 5. Formatted ubuntu and installed gOS (mistake). 6. Formatted gOS and installed ubuntu
+2009-05-02T09:41:00.000Z	shadeslayer	BeWop	is it possible for you to reinstall ubuntu
+2009-05-02T09:42:00.000Z	BeWop	shadeslayer	is that possible without losing the files? If I wasn't trying to save my files, then I would have done that by now.
+2009-05-02T09:42:00.000Z	shadeslayer	BeWop	Win XP reinstall ?
+2009-05-02T09:42:00.000Z	BeWop	shadeslayer	Yeah
+2009-05-02T09:43:00.000Z	shadeslayer	BeWop	well you could try a live cd..maybe it can read the partition
+2009-05-02T09:43:00.000Z	BeWop	shadeslayer	an XP live cd?
+2009-05-02T09:43:00.000Z	shadeslayer	BeWop	lol,no ubuntu live cd
+2009-05-02T09:43:00.000Z	BeWop	shadeslayer	how do I get one of those?
+2009-05-02T09:43:00.000Z	BeWop	shadeslayer	oh maybe
+2009-05-02T09:43:00.000Z	BeWop	shadeslayer	I doubt it though, gOS didn't detect it
+2009-05-02T09:43:00.000Z	BeWop	shadeslayer	on it's live cs
+2009-05-02T09:44:00.000Z	shadeslayer	BeWop	well try a ubuntu live CD anyway just to double check
+2009-05-02T09:44:00.000Z	BeWop	shadeslayer	Alright, I'll get back on when I'm done
+2009-05-02T09:57:00.000Z	BeWop	shadeslayer	alright
+2009-05-02T09:57:00.000Z	BeWop	shadeslayer	I'm on the live cd, and that's not really working either
+2009-05-02T09:57:00.000Z	BeWop	shadeslayer	"Failed to start the volume, Invalid arguement"

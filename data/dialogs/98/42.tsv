@@ -1,0 +1,98 @@
+2007-12-15T15:04:00.000Z	zetheroo		if I want to install the latest java in Ubuntu, where should I install it to? /usr/java ?
+2007-12-15T15:05:00.000Z	zetheroo		anyone?
+2007-12-15T15:07:00.000Z	kitofhawaii	zetheroo	not sure where you're getting it from, but usually it's under /usr/local/lib/java
+2007-12-15T15:07:00.000Z	kitofhawaii	zetheroo	if you're installing it yourself and not using a repo
+2007-12-15T15:09:00.000Z	kitofhawaii	zetheroo	otherwise, repo's stick them in /usr/lib/jvm
+2007-12-15T15:09:00.000Z	zetheroo	kitofhawaii	should I first un-install java from Synaptic?
+2007-12-15T15:09:00.000Z	zetheroo	kitofhawaii	basically I need to upgrade to the latest Java ... the Java in the repos is too old
+2007-12-15T15:09:00.000Z	kitofhawaii	zetheroo	no, usually i keep around older versions of java for compatibility. you sure all your stuff is compatible with the new java?
+2007-12-15T15:10:00.000Z	kitofhawaii	zetheroo	a lot of java apps call for a specific version, so having the older ones allows apps that require a specific version of java to run
+2007-12-15T15:10:00.000Z	zetheroo	kitofhawaii	ok... that sounds good... but won't two versions of Java mess the system up?
+2007-12-15T15:10:00.000Z	kitofhawaii	zetheroo	no...whichever one you set as default (if you don't set one as default, it's the last one installed) will be the default for all
+2007-12-15T15:11:00.000Z	kitofhawaii	zetheroo	setting one as default is done by modifying the /usr/bin/java link
+2007-12-15T15:11:00.000Z	zetheroo	kitofhawaii	hmmmm .... I just need the newer Java for one app to run
+2007-12-15T15:11:00.000Z	kitofhawaii	zetheroo	i suggest you check where your /usr/bin/java points to, in case you have to go back
+2007-12-15T15:11:00.000Z	zetheroo		cd /usr/bin
+2007-12-15T15:12:00.000Z	zetheroo		that was meant for the termnal
+2007-12-15T15:12:00.000Z	zetheroo		terminal....
+2007-12-15T15:12:00.000Z	kitofhawaii	zetheroo	mine points to /etc/alternatives/java, which then in points to my current jvm
+2007-12-15T15:12:00.000Z	zetheroo		how do you check it?
+2007-12-15T15:12:00.000Z	kitofhawaii	zetheroo	ls -l java
+2007-12-15T15:13:00.000Z	zetheroo		lrwxrwxrwx 1 root root 22 2007-12-01 00:23 java -> /etc/alternatives/java
+2007-12-15T15:13:00.000Z	zetheroo		thats what I get
+2007-12-15T15:13:00.000Z	zetheroo	kitofhawaii	   ^^
+2007-12-15T15:14:00.000Z	kitofhawaii	zetheroo	yah...in turn, check that link under /etc/alternatives..."ls -l /etc/alternatives/java" that'll tell you where the current jvm is pointed to
+2007-12-15T15:14:00.000Z	kitofhawaii	zetheroo	so just keep that handy, in case you have to go back to the current jvm. you just put back those symbolic links
+2007-12-15T15:15:00.000Z	zetheroo		lrwxrwxrwx 1 root root 34 2007-12-15 20:55 /etc/alternatives/java -> /usr/lib/jvm/java-gcj/jre/bin/java
+2007-12-15T15:15:00.000Z	zetheroo	kitofhawaii	at the end of all this it seems simpler to just live with out that one app
+2007-12-15T15:16:00.000Z	zetheroo	kitofhawaii	but this app was working swell in Feisty
+2007-12-15T15:16:00.000Z	kitofhawaii	zetheroo	you know...the sun java is available from the repo's, you're using the open source one
+2007-12-15T15:16:00.000Z	zetheroo	kitofhawaii	but I already have then installed... I thnk
+2007-12-15T15:17:00.000Z	zetheroo	kitofhawaii	I have sun-java-6 installed
+2007-12-15T15:17:00.000Z	kitofhawaii	zetheroo	your /usr/bin/java's pointed to gcj...
+2007-12-15T15:18:00.000Z	zetheroo	kitofhawaii	do you meant that even though I have it installed already, my system is not using the sun-java packages... and is instead using the os ones?
+2007-12-15T15:18:00.000Z	kitofhawaii	zetheroo	try pointing /etc/alternatives/java to /usr/lib/jvm/java-6-sun/jre/bin/java
+2007-12-15T15:19:00.000Z	kitofhawaii	zetheroo	also confirm that /usr/lib/jvm/java-6-sun/jre/bin/java exists :)
+2007-12-15T15:19:00.000Z	zetheroo		knut.... pastebin!
+2007-12-15T15:19:00.000Z	zetheroo	kitofhawaii	good idea
+2007-12-15T15:21:00.000Z	zetheroo	kitofhawaii	ok I got into /usr/lib/jvm and these are the folder in there ... cacao  java-1.5.0-gcj-4.2-1.5.0.0  java-6-sun  java-6-sun-1.6.0.03  java-gcj
+2007-12-15T15:22:00.000Z	zetheroo	kitofhawaii	what do you rekon?
+2007-12-15T15:23:00.000Z	kitofhawaii	zetheroo	sounds good, so back up your current link "sudo mv /etc/alternatives/java /etc/alternatives/java~" and then "sudo link /usr/lib/jvm/java-6-sun/jre/bin/java /etc/alternatives/java"
+2007-12-15T15:24:00.000Z	kitofhawaii	zetheroo	assuming you don't have any java apps open right now...in which case they'll probably break
+2007-12-15T15:24:00.000Z	zetheroo	kitofhawaii	are those the exact commands I should do?
+2007-12-15T15:25:00.000Z	kitofhawaii	zetheroo	based upon what you showed under your /usr/lib/jvm yes
+2007-12-15T15:26:00.000Z	zetheroo	kitofhawaii	ok i did the 2 commands.....
+2007-12-15T15:26:00.000Z	zetheroo	kitofhawaii	no errors
+2007-12-15T15:27:00.000Z	zetheroo	kitofhawaii	does pidgin use java?
+2007-12-15T15:27:00.000Z	zetheroo		skype?
+2007-12-15T15:27:00.000Z	kitofhawaii	zetheroo	ok from terminal "java -version" will tell you which one you're gonna be using, i don't know what pidgin uses, since i don't use pidgin
+2007-12-15T15:28:00.000Z	zetheroo		java -version
+2007-12-15T15:28:00.000Z	zetheroo		java: error while loading shared libraries: libjli.so: cannot open shared object file: No such file or directory
+2007-12-15T15:28:00.000Z	zetheroo	kitofhawaii	^^
+2007-12-15T15:30:00.000Z	zetheroo	kitofhawaii	you there?.....
+2007-12-15T15:30:00.000Z	kitofhawaii	zetheroo	hmmn. let's switch it back for the moment "sudo rm /etc/alternatives/java" "sudo mv /etc/alternatives/java~ /etc/alternatives/java"
+2007-12-15T15:31:00.000Z	zetheroo	kitofhawaii	ok... did it
+2007-12-15T15:31:00.000Z	kitofhawaii	zetheroo	then "update-java-alternatives -l", and which is the most current sun java listed?
+2007-12-15T15:31:00.000Z	zetheroo		 java -version
+2007-12-15T15:31:00.000Z	zetheroo		java version "1.5.0"
+2007-12-15T15:31:00.000Z	zetheroo		gij (GNU libgcj) version 4.2.1 (Ubuntu 4.2.1-5ubuntu5)
+2007-12-15T15:32:00.000Z	zetheroo		update-java-alternatives -l
+2007-12-15T15:32:00.000Z	zetheroo		java-6-sun 63 /usr/lib/jvm/java-6-sun
+2007-12-15T15:32:00.000Z	zetheroo		java-gcj 1042 /usr/lib/jvm/java-gcj
+2007-12-15T15:32:00.000Z	zetheroo	kitofhawaii	^^^
+2007-12-15T15:32:00.000Z	kitofhawaii	zetheroo	pastebin lol...anyway try "sudo update-java-alternatives -s java-6-sun"
+2007-12-15T15:34:00.000Z	kitofhawaii	zetheroo	and then confirm "java -version" shows "java version "1.6.x_xx"
+2007-12-15T15:34:00.000Z	zetheroo	kitofhawaii	ok I did that and there was a bunch of stuff that happened
+2007-12-15T15:34:00.000Z	kitofhawaii	zetheroo	bunch of stuff is good.
+2007-12-15T15:35:00.000Z	zetheroo		java -version
+2007-12-15T15:35:00.000Z	zetheroo		java version "1.6.0_03"
+2007-12-15T15:35:00.000Z	kitofhawaii	zetheroo	fantastic...go ahead and try your app now
+2007-12-15T15:35:00.000Z	zetheroo	kitofhawaii	^^
+2007-12-15T15:37:00.000Z	zetheroo	kitofhawaii	hey.. your a genius.... its working
+2007-12-15T15:38:00.000Z	kitofhawaii	zetheroo	thanks :) have fun
+2007-12-15T15:38:00.000Z	zetheroo	kitofhawaii	why does the Java version tester still say: Oops! You don't have the recommended Java installed.
+2007-12-15T15:38:00.000Z	zetheroo		 Your Java version is 1.4.2. Please click the button below to get the recommended Java for your computer.   
+2007-12-15T15:39:00.000Z	kitofhawaii	zetheroo	on the www.java.com web page?
+2007-12-15T15:39:00.000Z	zetheroo	kitofhawaii	yes
+2007-12-15T15:40:00.000Z	kitofhawaii	zetheroo	which browser you using?
+2007-12-15T15:40:00.000Z	zetheroo	kitofhawaii	Firefox
+2007-12-15T15:40:00.000Z	zetheroo	kitofhawaii	Firefox 2.0.0.11
+2007-12-15T15:41:00.000Z	kitofhawaii	zetheroo	hang on...reviewing my about:config
+2007-12-15T15:41:00.000Z	zetheroo	kitofhawaii	ok
+2007-12-15T15:43:00.000Z	kitofhawaii	zetheroo	have you closed/restarted firefox?
+2007-12-15T15:43:00.000Z	zetheroo	kitofhawaii	yes... but I think it was open while we were making changes... would that matter?
+2007-12-15T15:43:00.000Z	zetheroo	kitofhawaii	shoudl I restart?
+2007-12-15T15:43:00.000Z	kitofhawaii	zetheroo	it shouldn't...the update-alternatives should've switched over the defaults
+2007-12-15T15:46:00.000Z	kitofhawaii	zetheroo	hang on...reviewing my plugins dir
+2007-12-15T15:46:00.000Z	zetheroo	kitofhawaii	ok
+2007-12-15T15:51:00.000Z	kitofhawaii	zetheroo	"update-alternatives --display firefox-javaplugin.so" which is the best version listed? i just need that part
+2007-12-15T15:52:00.000Z	zetheroo	kitofhawaii	 http://paste.ubuntu-nl.org/48304/
+2007-12-15T15:54:00.000Z	kitofhawaii	zetheroo	ok...good. close firefox, "sudo killall firefox*" and then try the java webpage again
+2007-12-15T15:57:00.000Z	zetheroo	kitofhawaii	when I did that killall command Firefox remained open
+2007-12-15T15:57:00.000Z	zetheroo	kitofhawaii	so I closed it manually
+2007-12-15T15:58:00.000Z	zetheroo	kitofhawaii	should I restart the machine?
+2007-12-15T15:58:00.000Z	kitofhawaii	zetheroo	well, try it again...you might have firefox-bin hanging around
+2007-12-15T15:58:00.000Z	kitofhawaii	zetheroo	yah, that'll flush it :)
+2007-12-15T16:04:00.000Z	zetheroo		ok.. I restarted and its still the same
+2007-12-15T16:05:00.000Z	kitofhawaii	zetheroo	check your about:config, filter java, and make sure you don't have anything hardcoded to a /usr/lib/jvm/1.4???? path
+2007-12-15T16:10:00.000Z	kitofhawaii	zetheroo	and then "sudo update-alternatives --auto firefox-javaplugin.so" but i don't think this is the problem, since your firefox plugin already points to the right version (auto just tells it to use the best)

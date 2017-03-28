@@ -1,0 +1,99 @@
+2010-09-19T21:31:00.000Z	Scottie1		Help please?
+2010-09-19T21:32:00.000Z	Scottie1		I've burned Ubuntu desktop to about seven different CDs, and none of them will install. I've downloaded from two different PCs, from three separate downloads. I'm trying to install on a Toshiba Satellite L355D-S7825
+2010-09-19T21:33:00.000Z	Dr_Willis	Scottie1	 make a bootable flash drive from the iso files perhaps?
+2010-09-19T21:33:00.000Z	Dr_Willis	Scottie1	 do the cd's work on other machines?
+2010-09-19T21:33:00.000Z	Scottie1	Dr_Willis	I tried, once with an external hd, and again with a regular flash, and the first time it straight up told me I couldn't boot from an hd, and when I tried to boot from my stick, it said I had nothing bootable inserted.
+2010-09-19T21:34:00.000Z	Dr_Willis	Scottie1	 how did you make the bootable flash drive?
+2010-09-19T21:34:00.000Z	Scottie1	Dr_Willis	I don't have the opportunity to find out, because I can't erase the other machines...they aren't mine
+2010-09-19T21:35:00.000Z	Scottie1	Dr_Willis	I followed the instructions on the website, and even told it to make it a bootable startup whatever
+2010-09-19T21:35:00.000Z	Dr_Willis	Scottie1	 you could install to your extranal flash drive/usb as a test also.. but do  check the md5's first
+2010-09-19T21:35:00.000Z	Dr_Willis	Scottie1	 also the PenDrivelinux web site has some alteantive tools for making a bootable flash drive.
+2010-09-19T21:35:00.000Z	Dr_Willis	Scottie1	 an addational test is to try virtualbox and see if it can install from the iso to a virutal machine.
+2010-09-19T21:36:00.000Z	Scottie1	Dr_Willis	I'm very grateful.
+2010-09-19T21:42:00.000Z	Dr_Willis	Scottie1	 you do a full/normal isntall via parittions...
+2010-09-19T21:42:00.000Z	Scottie1	Dr_Willis	I don't know what that means.
+2010-09-19T21:43:00.000Z	Dr_Willis	Scottie1	 you may want to read up on some pc/disk fundamentals then.   You normally reparittion your hard drive and isntall ubuntu to one of the partitions. Unless you are using the WUBI method to install INSIDE windwos.
+2010-09-19T21:43:00.000Z	Scottie1	Dr_Willis	but I want FULL Ubuntu...I don't want other partitions
+2010-09-19T21:44:00.000Z	Dr_Willis	Scottie1	 you are backwards.. a FULL install DOES use partitions..
+2010-09-19T21:44:00.000Z	Dr_Willis	Scottie1	 is this machine to be Ubuntu Only? or windows on it also?
+2010-09-19T21:44:00.000Z	Scottie1	Dr_Willis	Then I just purely don't understand.
+2010-09-19T21:44:00.000Z	Dr_Willis	Scottie1	 yep. You dont understand..  but we are here to help
+2010-09-19T21:45:00.000Z	Scottie1	Dr_Willis	My machine wouldn't let me log on, so I Ubuntu'd over it, and erased my windows. Now it has nothing on it.
+2010-09-19T21:45:00.000Z	Dr_Willis	Scottie1	 so basically you start the isntaller and tell it to use the 'whole' disk ?
+2010-09-19T21:45:00.000Z	Scottie1	Dr_Willis	It asks what I want. I tell it to erase and use the whole disk.
+2010-09-19T21:46:00.000Z	Dr_Willis	Scottie1	 and that automatically PARTIONS the hard disk for you.
+2010-09-19T21:46:00.000Z	Dr_Willis	Scottie1	 since you dont want windows. that makes things simpiler.
+2010-09-19T21:46:00.000Z	Scottie1	Dr_Willis	Okay...sorry I made that so difficult. And no, I don't want Windows. I just want my Ubuntu to work. I've used like 7 disks already.
+2010-09-19T21:47:00.000Z	Dr_Willis	Scottie1	 where is your .iso files you used at now? this PC? eternal hd? another pc?
+2010-09-19T21:48:00.000Z	Scottie1	Dr_Willis	One on my mom's, one on my friends. None on this one because every time I use it, I have to use Ubuntu trial, so nothing saves.
+2010-09-19T21:48:00.000Z	Dr_Willis	Scottie1	 If you have an exteranal usb hard drive, or even a pen/flash drive. You can tell the installer to install to that exteranal device.
+2010-09-19T21:48:00.000Z	Dr_Willis	Scottie1	 you may want to go to one or more of the other machines and download a MD5 sum tool to check the iso files.
+2010-09-19T21:48:00.000Z	Scottie1	Dr_Willis	When I tried to tell the ISO to use the hard drive as a boot option, it wouldn't let me. It said that I would not be able to boot from it.
+2010-09-19T21:49:00.000Z	Dr_Willis	Scottie1	 Hard drives are the weakest part of a PC these days. they can die and get errors at any time.
+2010-09-19T21:49:00.000Z	Scottie1	Dr_Willis	Well buying one really isn't an option
+2010-09-19T21:50:00.000Z	Dr_Willis	Scottie1	 check the md5 of the iso files on the other machines. try the Pendrivelinux web site. their 'pendrive generator' tool can also verify the ISO i think.
+2010-09-19T21:50:00.000Z	Dr_Willis	Scottie1	 you can even isntall to a 8gb flash drive if yu have one. :) as a test.
+2010-09-19T21:50:00.000Z	Scottie1	Dr_Willis	I have one. I tried. My computer refused to boot from it.
+2010-09-19T21:51:00.000Z	Dr_Willis	Scottie1	 its possible your hard drive has a bad spot near the middle.
+2010-09-19T21:51:00.000Z	Dr_Willis	Scottie1	 http://en.wikipedia.org/wiki/Disk_partitioning
+2010-09-19T21:52:00.000Z	Scottie1	Dr_Willis	Could you just tell me straight up what to do? Because stuff like this is meaningless to me.
+2010-09-19T21:52:00.000Z	Dr_Willis	Scottie1	 as a dirty work around. they are suggesting you use the 'custome' partioning feature of the installer and make a single parittion at the front of the hard drive of about 20gb or so,
+2010-09-19T21:53:00.000Z	Dr_Willis	Scottie1	 not really. you need to know the basic terms befor  anything we say makes sence..
+2010-09-19T21:53:00.000Z	Scottie1	Dr_Willis	But, like, I don't know what the sectors mean
+2010-09-19T21:53:00.000Z	Dr_Willis	Scottie1	 in short you can try custome partioning layout, and make a 20 gb partiion at the start for '/' and  a 512mb for 'swap' then see if itnstalls.
+2010-09-19T21:53:00.000Z	Scottie1	Dr_Willis	I understand most of what you're saying. It is just meaningless to me because I don't know how to apply it.
+2010-09-19T21:53:00.000Z	Dr_Willis	Scottie1	 but really You SHOULD be checking the cd's for errors also.
+2010-09-19T21:54:00.000Z	Scottie1	Dr_Willis	I didn't know. I don't know how to do any of this. I was just trying to save my stupid computer.
+2010-09-19T21:54:00.000Z	Dr_Willis	Scottie1	 i guess you learn then.
+2010-09-19T21:54:00.000Z	Dr_Willis	Scottie1	 theres proberly videos on youtube of them doing Ubuntu installs also.
+2010-09-19T21:54:00.000Z	Dr_Willis	Scottie1	 its not to hard to parittion the hard drive with the installer.
+2010-09-19T21:55:00.000Z	Scottie1	Dr_Willis	I'm pulling up the installer right now.
+2010-09-19T21:55:00.000Z	Dr_Willis	Scottie1	 because the HD has some bad sectors.. that thing could die at any time..  i would be saving up some $$.
+2010-09-19T21:56:00.000Z	Scottie1	Dr_Willis	Which option am I supposed to choose, regarding the install
+2010-09-19T21:56:00.000Z	Dr_Willis	Scottie1	 custome layout
+2010-09-19T21:56:00.000Z	Dr_Willis	Scottie1	 i dont have the isntaller memoruised.. so you will need to think about what you are doing.
+2010-09-19T21:56:00.000Z	Dr_Willis	Scottie1	 you basically want to make 2 partitions  first one , ext4, mount point of
+2010-09-19T21:56:00.000Z	Dr_Willis	Scottie1	 you basically want to make 2 partitions  first one , ext4, mount point of  '/'    perhaps 20gb in size.
+2010-09-19T21:57:00.000Z	Dr_Willis	Scottie1	 then make a second one. perhaps 1 gb in size. type is 'swap'
+2010-09-19T21:57:00.000Z	Scottie1	Dr_Willis	There's already two there. sda1 and sda5
+2010-09-19T21:57:00.000Z	Scottie1	Dr_Willis	1 is an ext4 and 5 is a swap
+2010-09-19T21:57:00.000Z	Dr_Willis	Scottie1	 so delete them.  thats what the auto partioning tool setup.
+2010-09-19T21:57:00.000Z	Dr_Willis	Scottie1	 you want basically the same thing, only smaller...
+2010-09-19T21:58:00.000Z	Scottie1	Dr_Willis	Okay, now it just says 'free space'
+2010-09-19T21:58:00.000Z	Dr_Willis	Scottie1	 so make a new primary partition, type ext4. mount point /
+2010-09-19T21:59:00.000Z	Dr_Willis	Scottie1	 make it.. 20gb.
+2010-09-19T21:59:00.000Z	Scottie1	Dr_Willis	I click 'new partition table' and nothing happens
+2010-09-19T21:59:00.000Z	Dr_Willis	Scottie1	 not a new table.. a new partitiion
+2010-09-19T21:59:00.000Z	Scottie1	Dr_Willis	I only have the option to make a new table
+2010-09-19T21:59:00.000Z	Scottie1	Dr_Willis	Scratch that. I had the wrong thing highlighted.
+2010-09-19T22:00:00.000Z	Dr_Willis	Scottie1	 I said you have to think. :) heh
+2010-09-19T22:00:00.000Z	Dr_Willis	Scottie1	 so a parimary parittion of about 20gb, ext4, mount point /
+2010-09-19T22:02:00.000Z	Scottie1	Dr_Willis	Done.
+2010-09-19T22:02:00.000Z	Scottie1	Dr_Willis	Wait, wait. Beg or end?
+2010-09-19T22:02:00.000Z	Dr_Willis	Scottie1	 the thing should allready 'format' the ext4 if needed.. you have also made the swap parittion yet? how much ram do you have?
+2010-09-19T22:02:00.000Z	Dr_Willis	Scottie1	 may as well use the beginning. :)
+2010-09-19T22:02:00.000Z	Scottie1	Dr_Willis	3g ram, 250g hd
+2010-09-19T22:03:00.000Z	Scottie1	Dr_Willis	All I've made is the first. Can you repeat the other, please?
+2010-09-19T22:03:00.000Z	Dr_Willis	Scottie1	 so a 1gb swap is proberly plenty. You could make 3gb if you wanted.
+2010-09-19T22:03:00.000Z	Dr_Willis	Scottie1	 afer making the /. make a swap partition perhaps 2gb in size.  its not super critical.
+2010-09-19T22:03:00.000Z	Scottie1	Dr_Willis	On the one I just made, or in the free space?
+2010-09-19T22:04:00.000Z	Dr_Willis	Scottie1	 its a different partiion.. so its in the free space of course..
+2010-09-19T22:04:00.000Z	Dr_Willis	Scottie1	 You are making different 'partitions' :) logical eh?
+2010-09-19T22:04:00.000Z	Scottie1	Dr_Willis	I assumed, but I wanted to be sure. Logical? Beg or end? Mount point?
+2010-09-19T22:04:00.000Z	Dr_Willis	Scottie1	 may as well make it primary,. and again.. the beginning
+2010-09-19T22:04:00.000Z	Scottie1	Dr_Willis	Primary or logical
+2010-09-19T22:05:00.000Z	Dr_Willis	Scottie1	 you can have 4 primary parittions total. You are going to perhaps use 3 for this setup.
+2010-09-19T22:05:00.000Z	Scottie1	Dr_Willis	Alright, done.
+2010-09-19T22:05:00.000Z	Dr_Willis	Scottie1	 Now . for the rest of the hard drive. You can make a 3rd partition. set it to ext4.  and the rest of the hard drive size, and set its mount point to be /home
+2010-09-19T22:05:00.000Z	Dr_Willis	Scottie1	 this way you wil have 200+GB in space for your user to use.
+2010-09-19T22:06:00.000Z	Scottie1	Dr_Willis	Okay, done.
+2010-09-19T22:06:00.000Z	Dr_Willis	Scottie1	 However if the HD is going bad.. hopefully the 'bad' sectors will be in that /home partition.
+2010-09-19T22:06:00.000Z	Scottie1	Dr_Willis	Alright...can I continue now?
+2010-09-19T22:06:00.000Z	Dr_Willis	Scottie1	 now when you continue the installer it 'should' all install to the good part of the hard drive.
+2010-09-19T22:07:00.000Z	Scottie1	Dr_Willis	Alright. I'll let it run and see how it goes.
+2010-09-19T22:07:00.000Z	Dr_Willis	Scottie1	 at least now you now know how to do a custome partitiion
+2010-09-19T22:07:00.000Z	Scottie1	Dr_Willis	I completely appreciate all of this. There is no one computer literate in this town, especially with Linux.
+2010-09-19T22:07:00.000Z	Dr_Willis	Scottie1	 theres bound to be some videos out of doing all this.. but ive never looked :)
+2010-09-19T22:08:00.000Z	Scottie1	Dr_Willis	Honestly, I prefer one on one where I can get MY questions answered. Which is why, as of now, you're a god to me.
+2010-09-19T22:08:00.000Z	Dr_Willis	Scottie1	 and its past my bed time.. if this all fails.. well its possible the HD is on its last legs.. or the cd is badly burnt. but at least you can play with the live cd. and do things...
+2010-09-19T22:09:00.000Z	Scottie1	Dr_Willis	I can. I really appreciate it. Sleep well.

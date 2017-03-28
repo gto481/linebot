@@ -1,0 +1,99 @@
+2008-04-20T05:49:00.000Z	Zeker_	gogeta	yes it's very old :P
+2008-04-20T05:51:00.000Z	gogeta	Zeker_	defently a oldy the package you need is obsoleted
+2008-04-20T05:52:00.000Z	Zeker_	gogeta	it was such a nice card in it's day XD
+2008-04-20T05:52:00.000Z	gogeta	Zeker_	still is
+2008-04-20T05:52:00.000Z	gogeta	Zeker_	its a isa adugy right
+2008-04-20T05:53:00.000Z	Zeker_	gogeta	yes it's an Audigy
+2008-04-20T05:54:00.000Z	gogeta	Zeker_	looks like you can still apt-get install sndconfig
+2008-04-20T05:54:00.000Z	gogeta	Zeker_	that will configure your isa card
+2008-04-20T05:54:00.000Z	Zeker_	gogeta	thank you for the advice
+2008-04-20T05:55:00.000Z	Zeker_	gogeta	will that program you recommend interfere with the alsamixer?
+2008-04-20T05:56:00.000Z	gogeta	Zeker_	no if its a isa like i think it will acully make it work
+2008-04-20T05:57:00.000Z	gogeta	Zeker_	hears a good test sudo modprobe sb
+2008-04-20T05:57:00.000Z	gogeta	Zeker_	that should kick your soundcard on
+2008-04-20T06:00:00.000Z	Zeker_	gogeta	it says it can't find the package sndconfig
+2008-04-20T06:01:00.000Z	gogeta	Zeker_	did  you try sudo modprobe sb
+2008-04-20T06:01:00.000Z	Zeker_	gogeta	yes, it said FATAL: module sb not found
+2008-04-20T06:01:00.000Z	gogeta	Zeker_	 oh
+2008-04-20T06:02:00.000Z	gogeta	Zeker_	the old drivers are not there
+2008-04-20T06:03:00.000Z	Zeker_	gogeta	is there a way to retrieve these older drivers?
+2008-04-20T06:04:00.000Z	gogeta	Zeker_	 sndconfig has em gonna have to dig it up on google
+2008-04-20T06:04:00.000Z	gogeta	Zeker_	looking now
+2008-04-20T06:04:00.000Z	Zeker_	gogeta	and pelo, I deeply appreciate your help
+2008-04-20T06:06:00.000Z	gogeta	Zeker_	odd it says thers one
+2008-04-20T06:07:00.000Z	Zeker_	gogeta	this is my alsa mixer output on everything maybe this will help? : http://pastebin.ca/990168
+2008-04-20T06:07:00.000Z	gogeta	Zeker_	its a old isa right
+2008-04-20T06:07:00.000Z	Zeker_	gogeta	yes it's quite old
+2008-04-20T06:08:00.000Z	gogeta	Zeker_	naa we need to use the old oss isa driver
+2008-04-20T06:08:00.000Z	Zeker_	gogeta	the full name is just Creative Labs SB Audigy
+2008-04-20T06:09:00.000Z	gogeta	Zeker_	one way to make shure
+2008-04-20T06:09:00.000Z	gogeta	Zeker_	lsisa
+2008-04-20T06:10:00.000Z	Zeker_	gogeta	it says command not found.
+2008-04-20T06:10:00.000Z	gogeta	Zeker_	 the card should be in the list or at least a sound device
+2008-04-20T06:10:00.000Z	gogeta	Zeker_	lol man im to old i guess
+2008-04-20T06:10:00.000Z	Zeker_	gogeta	haha hey, there's never too much things to know
+2008-04-20T06:10:00.000Z	Zeker_	gogeta	not in this tech feild
+2008-04-20T06:11:00.000Z	gogeta	Zeker_	weard
+2008-04-20T06:11:00.000Z	gogeta	Zeker_	says its in apt
+2008-04-20T06:11:00.000Z	Zeker_	gogeta	if this helps: i used ubuntu 7.04 before and it worked just fine.
+2008-04-20T06:12:00.000Z	gogeta	Zeker_	it ran your isa
+2008-04-20T06:13:00.000Z	Zeker_	gogeta	pelo had me run lspci and it was listed there
+2008-04-20T06:13:00.000Z	gogeta	Zeker_	a pci adugy
+2008-04-20T06:13:00.000Z	gogeta	Zeker_	could be bridged
+2008-04-20T06:14:00.000Z	Zeker_	gogeta	I believe so, it's listed there along with it's built in firewire port
+2008-04-20T06:14:00.000Z	gogeta	Zeker_	firewire
+2008-04-20T06:14:00.000Z	gogeta	Zeker_	thats not a old adugy
+2008-04-20T06:14:00.000Z	gogeta	Zeker_	probly a ls or sfi
+2008-04-20T06:16:00.000Z	gogeta	Zeker_	 http://ubuntuforums.org/showthread.php?t=675986
+2008-04-20T06:17:00.000Z	Zeker_	gogeta	well I bought it quite a long time ago and it does connect to my pci slot, but it had no other name to it just soundblaster audigy
+2008-04-20T06:17:00.000Z	gogeta	Zeker_	 LOL isa isnt pci now i look dumb
+2008-04-20T06:18:00.000Z	gogeta	Zeker_	 those last 2 letters matter is it a ls or xfi
+2008-04-20T06:19:00.000Z	Zeker_	gogeta	I don't have a box or anything, so is there any way to tell?
+2008-04-20T06:19:00.000Z	gogeta	Zeker_	 should say in lspci
+2008-04-20T06:20:00.000Z	Zeker_	gogeta	this is all the lspci command lists under audigy
+2008-04-20T06:20:00.000Z	gogeta	Zeker_	  red 3
+2008-04-20T06:22:00.000Z	Zeker_	gogeta	is that supported by alsa?
+2008-04-20T06:22:00.000Z	gogeta	Zeker_	yep looks like a easy fix
+2008-04-20T06:22:00.000Z	Zeker_	gogeta	oh thank god!
+2008-04-20T06:23:00.000Z	Zeker_	gogeta	I'm reading the link right this second
+2008-04-20T06:25:00.000Z	gogeta	Zeker_	 thers a few fixes there
+2008-04-20T06:25:00.000Z	gogeta	Zeker_	looks like the sigtal modes can couse issues
+2008-04-20T06:26:00.000Z	Zeker_	gogeta	I just checked the digital output switch and it looks off (its set to zero)
+2008-04-20T06:26:00.000Z	Zeker_	gogeta	I don't know if that's the same as disabling?
+2008-04-20T06:26:00.000Z	gogeta	Zeker_	 sudo apt-get install gnome-alsamixer
+2008-04-20T06:27:00.000Z	Zeker_	gogeta	ok I will get it
+2008-04-20T06:28:00.000Z	Zeker_	gogeta	ok I'm reading
+2008-04-20T06:29:00.000Z	Zeker_	gogeta	I realized that and pushed M for mute :P
+2008-04-20T06:33:00.000Z	gogeta	Zeker_	i gotta go for now but search for  Creative Labs SB Audigy (rev 03)  you will get alot more info for your card then without the rev info :)
+2008-04-20T06:34:00.000Z	Zeker_	gogeta	thank you so much for your help
+2008-04-20T06:34:00.000Z	Zeker_	gogeta	it's still not working, but I'll keep trying
+2008-04-20T07:14:00.000Z	Zeker_	gogeta	good news!  It worked!  Now all I need to do is boost the volume somehow
+2008-04-20T07:14:00.000Z	gogeta	Zeker_	 ? with was it
+2008-04-20T07:15:00.000Z	gogeta	Zeker_	i say max it out in the mixer then crank up the speakers :)
+2008-04-20T07:15:00.000Z	Zeker_	gogeta	there was a whole bunch of switches in both system>preferences>sounds and the alsamixer that had the digital output enabled.  I had to disable those and raise the "center" portion
+2008-04-20T07:16:00.000Z	gogeta	Zeker_	then try raising em more
+2008-04-20T07:16:00.000Z	gogeta	Zeker_	just rember the old settings
+2008-04-20T07:17:00.000Z	Zeker_	gogeta	I raised them up as far as they go and there's still a huge difference.  Besides, I use headphones a little more than the actual speakers.
+2008-04-20T07:17:00.000Z	gogeta	Zeker_	lol check the headphones vulem thwn
+2008-04-20T07:18:00.000Z	gogeta	Zeker_	also check 3d sound any any boost system
+2008-04-20T07:18:00.000Z	Zeker_	gogeta	there is no headphone volume haha everything is all the way up.  It's funny cuz in 7.04, 50% of the volume was more than enough.  Now it's at 100% and it sounds decent
+2008-04-20T07:18:00.000Z	Zeker_	gogeta	all the boosts are enabled as well
+2008-04-20T07:19:00.000Z	gogeta	Zeker_	stupid low tech but check the cable
+2008-04-20T07:19:00.000Z	gogeta	Zeker_	mic lose can sound like low mode
+2008-04-20T07:19:00.000Z	Zeker_	gogeta	haha yup I tried that too
+2008-04-20T07:20:00.000Z	gogeta	Zeker_	at least it works
+2008-04-20T07:20:00.000Z	gogeta	Zeker_	lol have you tryed tunring up your meda player
+2008-04-20T07:20:00.000Z	Zeker_	gogeta	I even switched the speaker plug with the headphone plugs and its low
+2008-04-20T07:20:00.000Z	gogeta	Zeker_	also if you where using xmms is has its own booster
+2008-04-20T07:21:00.000Z	Zeker_	gogeta	i raised the volume on the media players, it's still low
+2008-04-20T07:21:00.000Z	Zeker_	gogeta	I can't wait to replace this junky old system
+2008-04-20T07:21:00.000Z	gogeta	Zeker_	lol
+2008-04-20T07:21:00.000Z	gogeta	Zeker_	cypergaming laptop ;-)
+2008-04-20T07:22:00.000Z	Zeker_	gogeta	oh yes.  I'm thinking about custom making my desktop and as for my laptop... just get a macbook pro
+2008-04-20T07:25:00.000Z	gogeta	Zeker_	gaming laptop repalce desktop :)
+2008-04-20T07:25:00.000Z	Zeker_	gogeta	I'd like an alienware laptop without the alienware price XD
+2008-04-20T07:26:00.000Z	gogeta	Zeker_	i knoe 1
+2008-04-20T07:27:00.000Z	Zeker_	gogeta	you know where I can find a laptop that good but cheap?
+2008-04-20T07:27:00.000Z	Zeker_	gogeta	as good as alienware?
+2008-04-20T07:31:00.000Z	gogeta	Zeker_	hehe get those pms
+2008-04-20T07:32:00.000Z	Zeker_	gogeta	yes I did

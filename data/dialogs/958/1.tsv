@@ -1,0 +1,958 @@
+2005-02-28T13:05:00.000Z	ells	tritium	what is up
+2005-02-28T13:05:00.000Z	tritium	ells	hello :)  Just getting ready to sleep.  You?
+2005-02-28T13:05:00.000Z	ells	tritium	got a quick question
+2005-02-28T13:07:00.000Z	tritium	ells	rm -rf dir/
+2005-02-28T13:08:00.000Z	tritium	ells	use chmod to change the permissions
+2005-02-28T13:31:00.000Z	ells	tritium	my keyboard for my laptop is intermittently doing crazy stuff. Is there a way i can reset the keboard
+2005-02-28T13:32:00.000Z	tritium	ells	you could try "reset"
+2005-02-28T13:57:00.000Z	tritium	ells	wouldn't you rather use the gnome keyboard configuration tool?
+2005-03-02T09:39:00.000Z	ells	tritium	I got a question for you
+2005-03-02T09:39:00.000Z	tritium	ells	ok
+2005-03-02T09:40:00.000Z	ells	tritium	when I hooked up my hard drive to the ribbon, it would not boot, when I unhooked the drive and started it, it went to try to find the drive. of course it didnt, but I was wondering if you know why
+2005-03-02T09:40:00.000Z	ells	tritium	or if you have an idea
+2005-03-02T09:41:00.000Z	tritium	ells	did you hook the drive up correctly?
+2005-03-02T09:42:00.000Z	ells	tritium	honestly, I think so
+2005-03-02T09:43:00.000Z	ells	tritium	could there be something wrong with the board. It just is crazy that the board will boot with nothing hooked up, but wont when the drives are hooked to the ribbons
+2005-03-02T09:44:00.000Z	tritium	ells	is the drive new and possibly unsupported by the mobo?
+2005-03-02T09:46:00.000Z	ells	tritium	the computer wont boot with either the cdrom or hard drive hooked up.
+2005-03-02T09:46:00.000Z	ells	tritium	I am leaning to the mother board somehow being bad
+2005-03-02T09:46:00.000Z	tritium	ells	sounds possible.
+2005-03-02T09:47:00.000Z	ells	tritium	it is unfortunate, I was gonna makek a little network with that old computer
+2005-03-02T09:49:00.000Z	tritium	ells	too bad :(
+2005-03-02T09:49:00.000Z	ells	tritium	yeah, I will try to find a new board this week. hopefully cheap
+2005-03-02T09:54:00.000Z	tritium	ells	I'm taking off.  See you later.
+2005-03-07T10:18:00.000Z	ells	tritium	what is up
+2005-03-07T10:18:00.000Z	tritium	ells	hey there
+2005-03-07T10:18:00.000Z	ells	tritium	I got a question
+2005-03-07T10:19:00.000Z	tritium	ells	ok
+2005-03-07T10:19:00.000Z	ells	tritium	I am trying to do an apt-get on dvdrip
+2005-03-07T10:19:00.000Z	tritium	ells	okay.  That's in multiverse.
+2005-03-07T10:20:00.000Z	tritium	ells	url for what?
+2005-03-07T10:21:00.000Z	tritium	ells	are you using Warty?
+2005-03-07T10:22:00.000Z	tritium	ells	 deb http://archive.ubuntu.com/ubuntu/ warty multiverse
+2005-03-07T10:22:00.000Z	ells	tritium	thanks
+2005-03-07T10:23:00.000Z	ells	tritium	I keep getting the this error The following packages have unmet dependencies:
+2005-03-07T10:24:00.000Z	tritium	ells	transcode is only on ftp.nerim.net
+2005-03-07T10:29:00.000Z	tritium	ells	I'll be back after lunch...
+2005-03-07T10:39:00.000Z	ells	tritium	I tried those sources and it messed up my firestarter. i had to go back. additionally, it still gave me that error
+2005-03-07T10:39:00.000Z	ells	tritium	can you recommend another dvd rip program
+2005-03-09T10:02:00.000Z	tritium	ells	hey there.
+2005-03-09T10:07:00.000Z	ells	tritium	I got my new computer together. the new board has video onboard and doe not play well with linux
+2005-03-09T10:07:00.000Z	ells	tritium	it talks about the frame buffer
+2005-03-09T10:08:00.000Z	tritium	ells	what video chip?
+2005-03-09T10:08:00.000Z	ells	tritium	i believe
+2005-03-09T10:09:00.000Z	ells	tritium	I guess I will be forced to put windows on my new machine
+2005-03-09T10:09:00.000Z	ells	tritium	at least for now.
+2005-03-09T10:10:00.000Z	tritium	ells	you're sure there's no support for that chip?
+2005-03-09T10:10:00.000Z	tritium	ells	what does lspci tell you it is?
+2005-03-09T10:10:00.000Z	ells	tritium	i tried to install ubuntu and it locked up trying to enable the fram buffer or something
+2005-03-09T10:25:00.000Z	ells	tritium	I will probably have to go buy a nice agp card
+2005-03-09T10:26:00.000Z	ells	tritium	my old agp wont fit on this new board
+2005-03-09T10:26:00.000Z	tritium	ells	did you check out lspci output?  what chip is it?
+2005-03-09T10:26:00.000Z	ells	tritium	the slot seems to be different
+2005-03-09T10:26:00.000Z	ells	tritium	I am putting xp on it
+2005-03-09T10:26:00.000Z	ells	tritium	unfortunately
+2005-03-09T10:26:00.000Z	tritium	ells	eww
+2005-03-09T10:27:00.000Z	ells	tritium	I know
+2005-03-09T10:27:00.000Z	ells	tritium	something to do with the frame buffer
+2005-03-09T10:31:00.000Z	ells	tritium	have agp cards changed the way the fit in the slots? just curious
+2005-03-09T10:31:00.000Z	tritium	ells	no
+2005-03-09T10:32:00.000Z	ells	tritium	i got it for my old desktop
+2005-03-09T10:33:00.000Z	ells	tritium	they must have changed the way they fit into the newer boards
+2005-03-09T10:34:00.000Z	tritium	ells	I don't think so, but I haven't bought hardware in a long tie
+2005-03-09T10:34:00.000Z	ells	tritium	that is what I mean. i got this card almost 6 years ago
+2005-03-09T10:35:00.000Z	tritium	ells	they made agp cards six years ago?
+2005-03-09T10:36:00.000Z	tritium	ells	I think you have a standard pci slot and card
+2005-03-09T10:39:00.000Z	ells	tritium	I am certain my card is agp
+2005-03-09T10:40:00.000Z	tritium	ells	your new card, yes.  But I think your mobo has a standard pci slot
+2005-03-09T10:41:00.000Z	tritium	ells	please run lspci
+2005-03-09T10:41:00.000Z	ells	tritium	okay
+2005-03-09T10:42:00.000Z	ells	tritium	will that work within windows
+2005-03-09T10:42:00.000Z	tritium	ells	no
+2005-03-09T10:42:00.000Z	tritium	ells	do you have a live CD?
+2005-03-09T10:43:00.000Z	ells	tritium	yes
+2005-03-09T10:44:00.000Z	tritium	ells	use that live CD.  If you run lspci, you can ascertain if you have AGP
+2005-03-09T10:45:00.000Z	ells	tritium	cool
+2005-03-09T11:00:00.000Z	ells	tritium	I ran it, what am I looking for
+2005-03-09T11:02:00.000Z	tritium	ells	paste it on pastebin?
+2005-03-09T11:02:00.000Z	ells	tritium	paste bin?
+2005-03-09T11:05:00.000Z	ells	tritium	you still there
+2005-03-09T11:07:00.000Z	tritium	ells	yes
+2005-03-09T11:07:00.000Z	tritium	ells	is the slot brown?
+2005-03-09T11:07:00.000Z	ells	tritium	i took my old agp and tried to put it in my new computer
+2005-03-09T11:08:00.000Z	ells	tritium	I really think that agp card slotting has changed
+2005-03-09T11:08:00.000Z	tritium	ells	you might have a PCI Express
+2005-03-09T11:08:00.000Z	ells	tritium	really
+2005-03-09T11:08:00.000Z	ells	tritium	how would one know
+2005-03-09T11:09:00.000Z	tritium	ells	you just bought a new mobo?
+2005-03-09T11:10:00.000Z	ells	tritium	my doc says it has a 8X/4X slot
+2005-03-09T11:10:00.000Z	tritium	ells	don't know without seeing it then
+2005-03-09T11:11:00.000Z	ells	tritium	I took it from my old board and attmpted to put it on my new board, no dice Chicago
+2005-03-09T11:47:00.000Z	ells	tritium	you still there
+2005-03-09T11:48:00.000Z	ells	tritium	I found out that agp card slots have changed
+2005-03-09T11:48:00.000Z	ells	tritium	no problem, can you walk me through remote desktop
+2005-03-09T11:49:00.000Z	ells	tritium	it asks for certain things
+2005-03-09T11:50:00.000Z	tritium	ells	possibly
+2005-03-18T17:36:00.000Z	ells	tritium	I am back
+2005-03-18T17:36:00.000Z	ells	tritium	so far so good with the upgrade
+2005-03-18T17:36:00.000Z	tritium	ells	I'm glad to hear it.
+2005-03-18T17:36:00.000Z	ells	tritium	are you connecting via laptop
+2005-03-18T17:37:00.000Z	tritium	ells	yes
+2005-03-18T17:37:00.000Z	tritium	ells	yeah, netapplet
+2005-03-18T17:38:00.000Z	tritium	ells	yes
+2005-03-19T10:19:00.000Z	ells	tritium	I think that the gnome applet is built into the network connection manage in the applet
+2005-03-19T10:20:00.000Z	tritium	ells	say again?
+2005-03-19T10:22:00.000Z	ells	tritium	I think that the gnome applet is built into the network connection manage in the applet
+2005-03-19T10:22:00.000Z	ells	tritium	for seeing wireless networks
+2005-03-19T10:22:00.000Z	ells	tritium	there is a drop menu when you go in
+2005-03-19T10:23:00.000Z	tritium	ells	I don't know.  I don't use it.  I tried netapplet instead
+2005-03-19T10:23:00.000Z	ells	tritium	thanks
+2005-03-19T10:23:00.000Z	tritium	ells	was there a question?
+2005-03-22T07:53:00.000Z	tritium	ells	I'm uptodate with hoary, don't have that problem
+2005-03-22T07:49:00.000Z	ells	tritium	my audio will not work in hoary for mp3 support, also when I click the mp3 in xmms it locks up
+2005-03-22T07:49:00.000Z	tritium	ells	since when?
+2005-03-22T07:49:00.000Z	ells	tritium	like today or yesterday I think
+2005-03-22T07:49:00.000Z	ells	tritium	it worked in warty
+2005-03-22T07:49:00.000Z	tritium	ells	what has been installed/removed since that time?
+2005-03-22T07:50:00.000Z	ells	tritium	when I double click the mp3 and it goes to totem, it immediately closes
+2005-03-22T07:51:00.000Z	tritium	ells	i'm not having any trouble
+2005-03-22T07:51:00.000Z	ells	tritium	what tools play the mp3
+2005-03-22T07:51:00.000Z	tritium	ells	I typically use rhythmbox
+2005-03-22T07:52:00.000Z	ells	tritium	I can try it, but do you know about the tools
+2005-03-22T07:52:00.000Z	tritium	ells	what tools?
+2005-03-22T07:52:00.000Z	ells	tritium	codecs and such
+2005-03-22T07:53:00.000Z	tritium	ells	yeah, what about them?
+2005-03-22T07:53:00.000Z	ells	tritium	my music acts crazy with all players
+2005-03-22T07:53:00.000Z	ells	tritium	my real player wont open either
+2005-03-22T07:53:00.000Z	ells	tritium	sounds maybe like a gnome issue
+2005-03-22T07:53:00.000Z	tritium	ells	strange
+2005-03-22T07:54:00.000Z	tritium	ells	I just tried your click method in nautilus, and totem works too
+2005-03-22T07:54:00.000Z	ells	tritium	I wont lie, I used hoary last week, worked fine and reinstalled and now crap
+2005-03-22T07:55:00.000Z	tritium	ells	you already had gstreamer0.8-mad, I remember
+2005-03-22T07:55:00.000Z	ells	tritium	now cant play movies either
+2005-03-22T07:55:00.000Z	ells	tritium	kind of messed up that movies wont play either
+2005-03-22T07:55:00.000Z	tritium	ells	if you reinstalled, perhaps you didn't reinstall gstreamer0.8-mad and w32codecs
+2005-03-22T07:55:00.000Z	tritium	ells	why did you reinstall?
+2005-03-22T07:55:00.000Z	ells	tritium	w32 is, but the other, I will check
+2005-03-22T07:56:00.000Z	ells	tritium	I had crossweaver installed in hoary and all kind of errors came up
+2005-03-22T07:58:00.000Z	ells	tritium	gstreamer was not installed, I will now see if my songs work
+2005-03-22T07:59:00.000Z	ells	tritium	naw, it still locks up
+2005-03-22T08:02:00.000Z	ells	tritium	I now can play video but no sound
+2005-03-22T08:02:00.000Z	ells	tritium	any ideas
+2005-03-22T08:05:00.000Z	tritium	ells	did you check out the logfiles in /var/log ?
+2005-03-22T08:05:00.000Z	ells	tritium	naw I can, what will I be looking for
+2005-03-22T08:05:00.000Z	tritium	ells	any errors related to sound ;)
+2005-03-22T08:06:00.000Z	ells	tritium	how will I get in to check
+2005-03-22T08:06:00.000Z	tritium	ells	?
+2005-03-22T08:08:00.000Z	ells	tritium	the sounds work when just clicking on icons and such, but not audion in mp3 or movies
+2005-03-22T08:08:00.000Z	tritium	ells	yeah, I understand
+2005-03-22T08:09:00.000Z	tritium	ells	no
+2005-03-22T08:09:00.000Z	ells	tritium	what are the codecs for audio for mp3 in linux
+2005-03-22T08:09:00.000Z	ells	tritium	I will reinstall them
+2005-03-22T08:09:00.000Z	tritium	ells	you already did:  gstreamer0.8-mad
+2005-03-22T08:10:00.000Z	ells	tritium	do you think I need to restart the computer
+2005-03-22T08:10:00.000Z	tritium	ells	no
+2005-03-22T08:10:00.000Z	ells	tritium	I dont want to, but I may end up reinstalling the distro.......again
+2005-03-22T08:11:00.000Z	ells	tritium	what controls audio in mp3 and movies.....gstreamer?
+2005-03-22T08:11:00.000Z	tritium	ells	it depends on the application
+2005-03-22T08:11:00.000Z	ells	tritium	it seems kind of associated
+2005-03-22T08:12:00.000Z	tritium	ells	gstreamer and xine, for example
+2005-03-22T08:12:00.000Z	tritium	ells	e.g., there's a totem-gstreamer, and a totem-xine
+2005-03-22T08:21:00.000Z	ells	tritium	again you saved the day
+2005-03-22T08:21:00.000Z	tritium	ells	what did I do?
+2005-03-22T08:22:00.000Z	tritium	ells	:)  good deal
+2005-03-22T08:22:00.000Z	ells	tritium	I had a samba question
+2005-03-22T08:23:00.000Z	tritium	ells	okay, but I'm not running samba...
+2005-03-22T08:23:00.000Z	ells	tritium	I am going to be connecting from schoo
+2005-03-22T08:24:00.000Z	tritium	ells	not sure I know what you mean
+2005-03-22T08:24:00.000Z	ells	tritium	well, do I need the actual ip from the school
+2005-03-22T08:24:00.000Z	tritium	ells	at school, or home?
+2005-03-22T08:25:00.000Z	tritium	ells	you might need to enable port forwarding on your wireless router
+2005-03-22T08:25:00.000Z	ells	tritium	will I need the school ip to connect here at home
+2005-03-22T08:25:00.000Z	ells	tritium	the tech guys at dlink were clueless
+2005-03-22T08:26:00.000Z	ells	tritium	here at home, in the network, it is easy
+2005-03-22T08:26:00.000Z	tritium	ells	I don't know enough about connecting to samba servers from remote locations
+2005-03-22T08:26:00.000Z	tritium	ells	I don't have a samba server ;)
+2005-03-22T08:26:00.000Z	ells	tritium	are you running any kind of server
+2005-03-22T08:27:00.000Z	tritium	ells	just apache2 and gnump3d
+2005-03-22T08:27:00.000Z	tritium	ells	apache is just a webserver, gnump3d is my music server
+2005-03-22T08:28:00.000Z	tritium	ells	I can reach those servers from any O.S.
+2005-03-22T08:28:00.000Z	ells	tritium	I want to connect to my computer from school
+2005-03-22T08:28:00.000Z	tritium	ells	I understand
+2005-03-22T08:28:00.000Z	ells	tritium	cool
+2005-03-22T08:28:00.000Z	tritium	ells	but like I said, I'm not familiar with samba
+2005-03-22T08:28:00.000Z	tritium	ells	connect in what way?
+2005-03-22T08:29:00.000Z	tritium	ells	what do you need to be able to do?
+2005-03-22T08:29:00.000Z	ells	tritium	naw, access to files
+2005-03-22T08:29:00.000Z	ells	tritium	pull them across ya know
+2005-03-22T08:29:00.000Z	tritium	ells	if you just need files, why not openssh-server?
+2005-03-22T08:29:00.000Z	ells	tritium	I am even less familiar with that
+2005-03-22T08:29:00.000Z	ells	tritium	can you walk me thru it
+2005-03-22T08:30:00.000Z	tritium	ells	it provides a ssh server, so you can ssh and sftp into your machine
+2005-03-22T08:30:00.000Z	tritium	ells	sudo apt-get install openssh-server
+2005-03-24T12:03:00.000Z	ells	tritium	what is up man
+2005-03-24T12:03:00.000Z	tritium	ells	not much.  You?
+2005-03-24T12:03:00.000Z	ells	tritium	not alot, I got my desktop I built to take linux
+2005-03-24T12:04:00.000Z	tritium	ells	cool
+2005-03-24T12:04:00.000Z	tritium	ells	as opposed to ubuntu?  why/
+2005-03-24T12:04:00.000Z	ells	tritium	i got ubuntu on this laptop
+2005-03-24T12:04:00.000Z	tritium	ells	good.  Did you get your ssh server setup?
+2005-03-24T12:04:00.000Z	ells	tritium	the chipset wont take ubuntu for some reason
+2005-03-24T12:05:00.000Z	tritium	ells	definitely
+2005-03-24T12:05:00.000Z	tritium	ells	so you put debian rather than ubuntu on the desktop?  why?
+2005-03-24T12:05:00.000Z	ells	tritium	the Sis chipset wont take linux (ubuntu)
+2005-03-24T12:05:00.000Z	ells	tritium	it took debian though
+2005-03-24T12:06:00.000Z	tritium	ells	really?  Hoary?  Warty?
+2005-03-24T12:06:00.000Z	ells	tritium	warty
+2005-03-24T12:06:00.000Z	tritium	ells	that's surprising
+2005-03-24T12:06:00.000Z	ells	tritium	tell me bout it
+2005-03-24T12:06:00.000Z	tritium	ells	I would expect Hoary to work
+2005-03-24T12:06:00.000Z	ells	tritium	i had to go back to warty on my laptop
+2005-03-24T12:07:00.000Z	tritium	ells	you did?  why?
+2005-03-24T12:07:00.000Z	ells	tritium	after a few downloads, the gui wouldnt work
+2005-03-24T12:07:00.000Z	tritium	ells	which?  all of gnome?
+2005-03-24T12:07:00.000Z	ells	tritium	I was not happy
+2005-03-24T12:08:00.000Z	ells	tritium	something to do with the config files
+2005-03-24T12:08:00.000Z	tritium	ells	which gui?
+2005-03-24T12:09:00.000Z	ells	tritium	i really miss the netapplet
+2005-03-24T12:09:00.000Z	ells	tritium	for hoary
+2005-03-24T12:09:00.000Z	tritium	ells	but what gui problems did you have?
+2005-03-24T12:09:00.000Z	ells	tritium	aaaahhhhh......none, could not see the screen
+2005-03-24T12:10:00.000Z	tritium	ells	before X loaded, or only after?
+2005-03-24T12:10:00.000Z	ells	tritium	x would not load
+2005-03-24T12:11:00.000Z	tritium	ells	ok, so you could see text mode?
+2005-03-24T12:11:00.000Z	ells	tritium	I even tried debian on my laptop, it worked but did not see my wireless card
+2005-03-24T12:11:00.000Z	ells	tritium	yeap
+2005-03-24T12:11:00.000Z	ells	tritium	kind of pissed ya know
+2005-03-24T12:11:00.000Z	tritium	ells	I wish I was around to help you.  That sounds like you just needed some help configuring xserver-xorg
+2005-03-24T12:12:00.000Z	ells	tritium	I agree
+2005-03-24T12:12:00.000Z	tritium	ells	you know that yesterday there was a kernel bug for a few hours that prevented loading of nvidia and other modules?
+2005-03-24T12:12:00.000Z	tritium	ells	it was only temporary, and got fixed by today
+2005-03-24T12:12:00.000Z	ells	tritium	that was it
+2005-03-24T12:12:00.000Z	tritium	ells	that was temporary :(
+2005-03-24T12:12:00.000Z	ells	tritium	again, you are the man, I can reload hoary then
+2005-03-24T12:12:00.000Z	tritium	ells	you could have booted into one of your old kernel until it was fixed!
+2005-03-24T12:13:00.000Z	tritium	ells	no, you're not
+2005-03-24T12:13:00.000Z	ells	tritium	just kidding
+2005-03-24T12:13:00.000Z	tritium	ells	dang, I wish I was around to forewarn you
+2005-03-24T12:14:00.000Z	ells	tritium	it is all good
+2005-03-24T12:14:00.000Z	tritium	ells	it's entirely up to you at this point
+2005-03-24T12:14:00.000Z	tritium	ells	if you want to upgrade to Hoary or not
+2005-03-24T12:14:00.000Z	ells	tritium	I think I will, I like the netapplet
+2005-03-24T12:15:00.000Z	tritium	ells	if you end up downloading and installing from the preview release CD, you could try it on the desktop too ;)
+2005-03-24T12:15:00.000Z	ells	tritium	well it always worked until those updates, ya know the auto ones
+2005-03-24T12:16:00.000Z	ells	tritium	Like I said, I even tried debian, but it would not recognize my wireless card
+2005-03-24T12:16:00.000Z	tritium	ells	yes.  I had the same problem.  I just booted into an older kernel until it was fixed.  I would have encouraged you to do the same :(
+2005-03-24T12:16:00.000Z	ells	tritium	let me ask you, is an ath0 wireless chipset supported in 2.4
+2005-03-24T12:19:00.000Z	tritium	ells	one moment...sorry
+2005-03-24T12:19:00.000Z	ells	tritium	no problem
+2005-03-24T12:20:00.000Z	tritium	ells	okay, sorry
+2005-03-24T12:20:00.000Z	ells	tritium	how can I set up my NEW linux desktop to access it
+2005-03-24T12:20:00.000Z	tritium	ells	I'm not familiar with that chipset.  Can you give me more info?
+2005-03-24T12:21:00.000Z	ells	tritium	I mean that is the one that has debain on it
+2005-03-24T12:21:00.000Z	tritium	ells	you can msg me if you like
+2005-03-24T12:21:00.000Z	ells	tritium	need to make it act like a file server
+2005-03-24T16:44:00.000Z	ells	tritium	what is up mike
+2005-03-24T16:44:00.000Z	tritium	ells	hey there steve
+2005-03-24T16:44:00.000Z	tritium	ells	okay
+2005-03-24T16:44:00.000Z	ells	tritium	my mp4 wont work o xmms
+2005-03-24T16:45:00.000Z	ells	tritium	since the upgrade
+2005-03-24T16:45:00.000Z	tritium	ells	oh, gosh
+2005-03-24T16:45:00.000Z	ells	tritium	what are the plugins I need
+2005-03-24T16:45:00.000Z	ells	tritium	will check
+2005-03-25T11:40:00.000Z	ells	tritium	what is up Mike
+2005-03-25T11:40:00.000Z	tritium	ells	hey there.  I've been waiting on you :)
+2005-03-25T11:41:00.000Z	ells	tritium	I was hot
+2005-03-25T11:41:00.000Z	tritium	ells	no problem
+2005-03-25T11:41:00.000Z	ells	tritium	I cant beleive I was able to do it in such a short time
+2005-03-25T11:14:00.000Z	tritium	ells	what's going on?
+2005-03-25T11:15:00.000Z	ells	tritium	I cannot connect thru gftp today
+2005-03-25T11:15:00.000Z	tritium	ells	to your desktop?  through ssh?
+2005-03-25T11:15:00.000Z	ells	tritium	what in the heck it worked last night, ssh to desktop
+2005-03-25T11:16:00.000Z	tritium	ells	does your desktop get its IP address via dhcp?  has its IP changed?
+2005-03-25T11:17:00.000Z	ells	tritium	here is what gftp says Error: Could not read from socket: Connection reset by peer
+2005-03-25T11:17:00.000Z	tritium	ells	check your desktop's IP address.
+2005-03-25T11:17:00.000Z	ells	tritium	I do get it from DHCP
+2005-03-25T11:17:00.000Z	ells	tritium	okay
+2005-03-25T11:18:00.000Z	tritium	ells	dhcp is not what you want if you're going to setup port forwarding.  Give your desktop a static IP address
+2005-03-25T11:19:00.000Z	ells	tritium	okay, but the ip is the same, how can I check this one out
+2005-03-26T10:27:00.000Z	ells	tritium	mike what is up. jsgotangco: hoary
+2005-03-26T10:27:00.000Z	tritium	ells	hola
+2005-03-26T10:28:00.000Z	ells	tritium	you too, projects all finish
+2005-03-26T10:28:00.000Z	tritium	ells	congrats.  No progress on my research/dissertation here ;)
+2005-03-26T10:28:00.000Z	ells	tritium	mike you will get it done
+2005-03-26T10:29:00.000Z	tritium	ells	thanks
+2005-03-26T10:29:00.000Z	ells	tritium	yeap no problem
+2005-03-26T10:41:00.000Z	ells	tritium	hey mike I uninstalled to install xmms, it wont play even mp3
+2005-03-26T10:42:00.000Z	tritium	ells	strange...
+2005-03-26T10:42:00.000Z	ells	tritium	tell me bout it
+2005-03-26T10:45:00.000Z	ells	tritium	mike, xmms wont
+2005-03-26T10:45:00.000Z	tritium	ells	I haven't used xmms in a long time.  Do you have your output plugin setup correctly?
+2005-03-26T10:45:00.000Z	ells	tritium	I think so, how can I check for certain
+2005-03-26T10:46:00.000Z	ells	tritium	what plays your music
+2005-03-26T10:46:00.000Z	tritium	ells	I use rhythmbox
+2005-03-26T10:46:00.000Z	ells	tritium	maybe I will try that
+2005-03-27T10:40:00.000Z	ells	tritium	what is up mike
+2005-03-27T10:41:00.000Z	tritium	ells	hey Steve
+2005-03-27T10:41:00.000Z	tritium	ells	oh, what was it?
+2005-03-27T10:41:00.000Z	ells	tritium	it is a library that is updated when I update to hoary
+2005-03-27T10:41:00.000Z	ells	tritium	it wokrs in warty
+2005-03-27T10:41:00.000Z	tritium	ells	oh?  which one?
+2005-03-27T10:41:00.000Z	ells	tritium	I wont be installing any upated libraries
+2005-03-27T10:42:00.000Z	ells	tritium	not sure exactly, I have narrowed to a few
+2005-03-27T10:42:00.000Z	ells	tritium	lots of time invested in fixing this one
+2005-03-27T10:43:00.000Z	tritium	ells	as long as you care enough about xmms to use it instead of another player...
+2005-03-27T10:43:00.000Z	ells	tritium	you will like this one Mike, My partner was trying to fix it and he broke my system, all kernels, had to update, not mad, done it so much , easy
+2005-03-27T10:43:00.000Z	ells	tritium	well Mike I could not play any mp3 at all
+2005-03-27T10:44:00.000Z	ells	tritium	I am reupgrading to hoary as we speak
+2005-03-27T10:44:00.000Z	tritium	ells	okay.  You haven't considered any other players?
+2005-03-27T10:44:00.000Z	ells	tritium	any suggestions
+2005-03-27T10:46:00.000Z	tritium	ells	I thought you were going to switch to the kde media player a-something
+2005-03-27T10:46:00.000Z	ells	tritium	Mike, do you know of any good wireless desktop cards that will work out of the box, well I tried that Amarok, did not work either
+2005-03-27T10:46:00.000Z	ells	tritium	definately some library that was conflicting or something
+2005-03-27T10:46:00.000Z	tritium	ells	have you tried rhythmbox or beep?
+2005-03-27T10:47:00.000Z	ells	tritium	rythm box a few times, beep naw
+2005-03-27T10:47:00.000Z	ells	tritium	until I finish the upgrade, I am listening to my iPod
+2005-03-27T10:48:00.000Z	ells	tritium	I am jamming, ha ha
+2005-03-27T10:48:00.000Z	tritium	ells	well, good luck, whichever you decide to use.
+2005-03-27T10:48:00.000Z	ells	tritium	thanks Mike
+2005-03-27T10:48:00.000Z	ells	tritium	we got a buttload of snow in the last few days man
+2005-03-27T10:49:00.000Z	ells	tritium	hear the same Mike
+2005-03-27T10:49:00.000Z	ells	tritium	your boys ND lost to HOly Cross yesterday
+2005-03-27T10:49:00.000Z	tritium	ells	thanks for reminding me :(
+2005-03-27T10:49:00.000Z	ells	tritium	sorry mike, just tracking em
+2005-03-27T10:50:00.000Z	ells	tritium	Go AAAAARRRRRIIIIIIZZZZZOOOONNNNNAAAA
+2005-03-27T10:50:00.000Z	ells	tritium	somebody has to represent
+2005-03-27T10:51:00.000Z	ells	tritium	hey Mike, do you have any opinion on Debian
+2005-03-27T10:51:00.000Z	ells	tritium	for the laptop
+2005-03-27T10:51:00.000Z	ells	tritium	seems to take more config
+2005-03-27T10:51:00.000Z	tritium	ells	it's fine, I just have a stronger preference for ubuntu
+2005-03-27T10:52:00.000Z	ells	tritium	ubuntu seems to work better out the box
+2005-03-27T10:53:00.000Z	tritium	ells	you're not going to take ubuntu off, are you?
+2005-03-27T10:53:00.000Z	ells	tritium	hey Mike, now that I have upgraded a few times to hoary, my wireless card wont work in Warty, but works fine in Hoary, cannot get an IP in Warty. Naw, Ubuntu all the way
+2005-03-27T10:54:00.000Z	tritium	ells	glad to hear it works for you
+2005-03-27T10:54:00.000Z	ells	tritium	hopefully when I get done upgrading my audio will still work. keep your fingers crossed
+2005-03-27T11:01:00.000Z	ells	tritium	ya know Mike, I think I will stay with Warty, until the stable release of Hoary comes out
+2005-03-27T11:02:00.000Z	tritium	ells	whatever suits you best, buddy
+2005-03-27T11:02:00.000Z	ells	tritium	I like my music, dont want to risk a reinstall or something
+2005-03-27T11:02:00.000Z	tritium	ells	not like you haven't done that umpteen times now ;)
+2005-03-27T11:03:00.000Z	ells	tritium	really, I am install expert
+2005-03-27T11:03:00.000Z	ells	tritium	as a blind man, I could make a good living
+2005-03-28T12:27:00.000Z	ells	tritium	what is up mike
+2005-03-28T12:27:00.000Z	tritium	ells	Hey Steve
+2005-03-28T12:28:00.000Z	ells	tritium	my computer is working.I went ahead and upgraded and am using rhythmbox
+2005-03-28T12:28:00.000Z	tritium	ells	how do you like it?
+2005-03-28T12:29:00.000Z	ells	tritium	not bad mike, kind of reminds me of iTunes
+2005-03-28T12:29:00.000Z	tritium	ells	that's the idea
+2005-03-28T12:29:00.000Z	ells	tritium	that is good, I use iTunes
+2005-03-28T12:30:00.000Z	tritium	ells	does the iPod support in rhythmbox work for you?
+2005-03-28T12:31:00.000Z	ells	tritium	havent tried yet, if you hold on I will let you know real quick
+2005-03-28T12:31:00.000Z	tritium	ells	ok.  I don't have an iPod, so I have no idea...
+2005-03-28T12:31:00.000Z	ells	tritium	we shall see real quick
+2005-03-28T12:35:00.000Z	ells	tritium	will have too look into it, I have mp4 on my ipod, so i think I will need additional codecs
+2005-03-28T12:36:00.000Z	tritium	ells	cool.  I'll be curious to know your results
+2005-03-28T12:36:00.000Z	ells	tritium	will let you know
+2005-03-28T12:37:00.000Z	tritium	ells	cool, thanks
+2005-03-29T15:43:00.000Z	ells	tritium	what is up mike
+2005-03-29T15:44:00.000Z	ells	tritium	got a question. how can i put it in my fstab to automount my usbdrive
+2005-03-29T15:54:00.000Z	tritium	ells	hey, sorry.  I was away.
+2005-03-30T14:07:00.000Z	ells	tritium	mike what is up man
+2005-03-30T14:09:00.000Z	tritium	ells	hey there.  I just wrote a paper.  You?
+2005-03-30T14:11:00.000Z	ells	tritium	sorry mike, i was watching a fight, did some
+2005-03-30T14:11:00.000Z	ells	tritium	will finish in the morning
+2005-03-30T14:11:00.000Z	tritium	ells	cool
+2005-03-30T14:11:00.000Z	ells	tritium	guess what
+2005-03-30T14:12:00.000Z	ells	tritium	I got ubuntu on my desktop
+2005-03-30T14:12:00.000Z	ells	tritium	I used the preview version of hoary
+2005-03-30T14:13:00.000Z	tritium	ells	isn't that what you had the other day when we fixed it?
+2005-03-30T14:13:00.000Z	ells	tritium	my desktop had debian
+2005-03-30T14:13:00.000Z	ells	tritium	I am happy to switch over to ubunut on my desktop
+2005-03-30T14:13:00.000Z	tritium	ells	which did we fix X.org on?
+2005-03-30T14:14:00.000Z	ells	tritium	laptop
+2005-03-30T14:14:00.000Z	tritium	ells	oh
+2005-03-31T13:09:00.000Z	ells	tritium	mike what is up man
+2005-03-31T13:11:00.000Z	ells	tritium	I got good news, I got bad news
+2005-03-31T13:12:00.000Z	ells	tritium	I crashed my desktop, so I am reinstalling, but without windows on it
+2005-03-31T13:12:00.000Z	tritium	ells	how did you do that?
+2005-03-31T13:12:00.000Z	ells	tritium	not quite sure. I was playing around with some installs
+2005-03-31T13:12:00.000Z	tritium	ells	installs?
+2005-03-31T13:13:00.000Z	ells	tritium	yeah, dvdbackup
+2005-03-31T13:13:00.000Z	ells	tritium	and  few others
+2005-03-31T13:13:00.000Z	ells	tritium	lucky me
+2005-03-31T13:13:00.000Z	ells	tritium	hey do you have any experience with dvd backup
+2005-03-31T13:13:00.000Z	tritium	ells	no, I don't have a dvd burner
+2005-03-31T13:14:00.000Z	ells	tritium	i am backing up some files, just dont know how long it takes
+2005-03-31T13:14:00.000Z	ells	tritium	what ya do today
+2005-03-31T13:14:00.000Z	ells	tritium	I finished up a test today
+2005-03-31T13:15:00.000Z	ells	tritium	I can do it, but which file do I need to clear out for ssh for my "new desktop"
+2005-03-31T13:16:00.000Z	tritium	ells	~/.ssh/known_hosts
+2005-04-01T10:40:00.000Z	ells	tritium	mike what is up man
+2005-04-01T10:50:00.000Z	ells	tritium	sorry, i was checking email, what is up man
+2005-04-01T10:51:00.000Z	tritium	ells	not much.  You?
+2005-04-01T10:52:00.000Z	ells	tritium	not alot, just getting home
+2005-04-01T10:52:00.000Z	ells	tritium	hows the paper ocming
+2005-04-01T10:52:00.000Z	tritium	ells	finished it up.
+2005-04-01T10:52:00.000Z	ells	tritium	really, how long is it
+2005-04-01T10:53:00.000Z	tritium	ells	6 pages in IEEEtran.cls LaTeX format
+2005-04-01T10:54:00.000Z	tritium	ells	IEEE Transactions (for publication)
+2005-04-01T10:54:00.000Z	ells	tritium	cool, sounds like alot work
+2005-04-01T10:55:00.000Z	ells	tritium	I am getting that hard drive on tuesday, can I set it up without reformatting or installing
+2005-04-01T10:55:00.000Z	tritium	ells	which one?
+2005-04-01T10:57:00.000Z	tritium	ells	yes, depending on what you want to do with it
+2005-04-01T10:57:00.000Z	ells	tritium	nice, I was hoping to add it to my total space
+2005-04-01T10:57:00.000Z	ells	tritium	if need be, I guess I can do that
+2005-04-01T10:57:00.000Z	ells	tritium	what would be the easiest method to set them up
+2005-04-01T10:57:00.000Z	tritium	ells	you'll have to mount it somewhere
+2005-04-01T10:58:00.000Z	ells	tritium	okay Mike, well, if I reinstall ubuntu it should hook things up for me right
+2005-04-01T10:58:00.000Z	tritium	ells	heh, again?
+2005-04-01T10:59:00.000Z	ells	tritium	rather not, ,but just want to do the easiest way with this hard drive
+2005-04-01T10:59:00.000Z	ells	tritium	can it just be mounted for space
+2005-04-01T10:59:00.000Z	ells	tritium	formatted in ext3 and then used for programs and files
+2005-04-01T10:59:00.000Z	tritium	ells	yes, just pick where you want to mount it
+2005-04-01T11:00:00.000Z	ells	tritium	what would you recommend mike
+2005-04-01T11:00:00.000Z	tritium	ells	it's a personal preference, really, so I'm no tsure.
+2005-04-01T11:00:00.000Z	ells	tritium	cool man
+2005-04-01T11:02:00.000Z	ells	tritium	mike you ever play UT2004
+2005-04-01T11:02:00.000Z	tritium	ells	No, I'm not really a gamer
+2005-04-01T11:02:00.000Z	ells	tritium	I am not really either, ,but the graphics on the laptop are awesome
+2005-04-01T11:05:00.000Z	ells	tritium	well mike,  gotta go,  I am supposed to be moving the desktop
+2005-04-01T11:05:00.000Z	tritium	ells	have a good night.  I'm going to get to bed early myself. :)
+2005-04-01T11:05:00.000Z	ells	tritium	later Mike
+2005-04-02T08:44:00.000Z	ells	tritium	mike, what is up
+2005-04-02T08:47:00.000Z	ells	tritium	what's up Mike
+2005-04-02T08:48:00.000Z	tritium	ells	hey
+2005-04-02T08:48:00.000Z	ells	tritium	hows class man
+2005-04-02T08:48:00.000Z	tritium	ells	I don't have any classes :)  Just research/dissertation
+2005-04-02T08:48:00.000Z	tritium	ells	how about you?
+2005-04-02T08:49:00.000Z	ells	tritium	forgot, not bad, just gonna study for my math final tomorrow
+2005-04-02T08:49:00.000Z	tritium	ells	good luck
+2005-04-02T08:49:00.000Z	ells	tritium	math is okay, but dont understand why they wanna find ways to make it hard
+2005-04-02T08:51:00.000Z	ells	tritium	I got acidrip to rip the movie to avi, but the quality is not all that, slight lag in movie and voice. hoping someone in here knows ho to tweak it, and hopefully it will play on my home player
+2005-04-02T08:52:00.000Z	tritium	ells	not sure...haven't used it
+2005-04-02T08:53:00.000Z	ells	tritium	kind of cool that it worked, just need to find a wiki or some good doc. on it
+2005-04-04T16:36:00.000Z	ells	tritium	what is up mike
+2005-04-04T16:36:00.000Z	ells	tritium	I just put the new drive in
+2005-04-04T16:37:00.000Z	ells	tritium	do you think you could help me get this thing mounted and formatted properly
+2005-04-04T16:37:00.000Z	tritium	ells	perhaps a little later this evening
+2005-04-04T16:37:00.000Z	ells	tritium	cool will catch you after school tonight
+2005-04-04T16:38:00.000Z	tritium	ells	you have class this evening?
+2005-04-04T16:38:00.000Z	ells	tritium	until about 11 Mike
+2005-04-04T16:38:00.000Z	ells	tritium	it is cool
+2005-04-04T16:39:00.000Z	tritium	ells	if I'm awake when you get back ;)
+2005-04-04T16:39:00.000Z	ells	tritium	I am sure you will be,  ha ha
+2005-04-04T16:39:00.000Z	tritium	ells	probably :)
+2005-04-04T16:40:00.000Z	ells	tritium	Mike, I could always reinstall, ,ha ha (inside joke)
+2005-04-04T16:40:00.000Z	ells	tritium	it is all goo Mike
+2005-04-04T16:46:00.000Z	ells	tritium	thru qtparted I think I got it, what should I make its mount point be
+2005-04-04T16:46:00.000Z	tritium	ells	that's entirely up to you
+2005-04-04T16:46:00.000Z	ells	tritium	it is showing up as hdb?
+2005-04-04T16:47:00.000Z	ells	tritium	should I make it primary or extended
+2005-04-04T16:47:00.000Z	tritium	ells	I thought it was usb drive?
+2005-04-04T16:47:00.000Z	ells	tritium	naw, hard drive (ide)
+2005-04-04T16:48:00.000Z	tritium	ells	the whole thing is for linux?  you can make one big primary partition
+2005-04-04T16:48:00.000Z	ells	tritium	and of course format
+2005-04-04T16:49:00.000Z	tritium	ells	yep
+2005-04-04T06:09:00.000Z	ells	tritium	I have returned,......but on my laptop
+2005-04-04T06:10:00.000Z	tritium	ells	ok
+2005-04-04T06:10:00.000Z	tritium	ells	one minute
+2005-04-04T06:10:00.000Z	ells	tritium	I am thinking I will have to reinstall.....okay
+2005-04-04T11:07:00.000Z	tritium	ells	shall we finish up the new hard drive stuff?
+2005-04-04T11:08:00.000Z	ells	tritium	actually, I got this wireless card, and thought I would try to get it working
+2005-04-04T11:08:00.000Z	ells	tritium	feel up to it
+2005-04-04T11:08:00.000Z	tritium	ells	I have the solution for your hard drive I believe
+2005-04-04T11:09:00.000Z	tritium	ells	oh
+2005-04-04T11:09:00.000Z	ells	tritium	at school
+2005-04-04T11:09:00.000Z	ells	tritium	kind of on break
+2005-04-04T11:10:00.000Z	tritium	ells	i see.
+2005-04-04T11:10:00.000Z	ells	tritium	want to try the wireless card, just to see
+2005-04-04T11:10:00.000Z	tritium	ells	ok
+2005-04-04T11:10:00.000Z	ells	tritium	I will put the card in then
+2005-04-04T11:11:00.000Z	tritium	ells	/msg me
+2005-04-05T09:14:00.000Z	ells	tritium	whats up mike
+2005-04-05T09:14:00.000Z	tritium	ells	hi there.  Just working.  You?
+2005-04-05T09:14:00.000Z	ells	tritium	just got back from work for the morning
+2005-04-05T09:14:00.000Z	ells	tritium	got the last class done, 3 A, and 1 B
+2005-04-05T09:15:00.000Z	tritium	ells	cool.  How did the wlan stuff go?  How about migrating your home dir?  Still need some help?
+2005-04-05T09:15:00.000Z	ells	tritium	monday is the day
+2005-04-05T09:15:00.000Z	ells	tritium	almost there
+2005-04-05T09:15:00.000Z	tritium	ells	ok
+2005-04-05T09:15:00.000Z	ells	tritium	maybe you can help me tonight
+2005-04-05T09:15:00.000Z	tritium	ells	ok
+2005-04-05T09:15:00.000Z	ells	tritium	hard to believe, next quarter, starting on the masters
+2005-04-05T09:16:00.000Z	tritium	ells	Way to go, man :)
+2005-04-05T09:16:00.000Z	ells	tritium	trying be like you Mike
+2005-04-05T09:16:00.000Z	tritium	ells	;)  Thanks
+2005-04-05T09:17:00.000Z	ells	tritium	we got quite a bit of snow here
+2005-04-05T09:17:00.000Z	tritium	ells	wow.  Hey - AZ barely pulled it off.  I think the Illini are going to give them trouble.
+2005-04-05T09:17:00.000Z	ells	tritium	I think it will be close
+2005-04-05T09:18:00.000Z	ells	tritium	Stoudimire needs a good game
+2005-04-05T09:18:00.000Z	tritium	ells	we'll see...
+2005-04-05T09:18:00.000Z	ells	tritium	go Arrrrriiiiizzzzzoooonnnaaaa
+2005-04-05T09:19:00.000Z	ells	tritium	Bobby Knight got trounced
+2005-04-05T09:19:00.000Z	tritium	ells	5 points
+2005-04-05T09:19:00.000Z	ells	tritium	yeah, they just missed some critical shots
+2005-04-06T05:58:00.000Z	ells	tritium	what is up mike
+2005-04-06T05:58:00.000Z	tritium	ells	Oh, I've had better days :(  You?
+2005-04-06T05:58:00.000Z	ells	tritium	whats wrong man
+2005-04-06T05:59:00.000Z	tritium	ells	hard disk or ide controller problems.  Not sure which yet...
+2005-04-06T05:59:00.000Z	ells	tritium	sorry to hear that
+2005-04-06T05:59:00.000Z	tritium	ells	thanks
+2005-04-06T05:59:00.000Z	ells	tritium	either way, not a good issue
+2005-04-06T05:59:00.000Z	ells	tritium	whats it doing
+2005-04-06T06:00:00.000Z	tritium	ells	lots of things...
+2005-04-06T06:00:00.000Z	ells	tritium	I had issues with my last board
+2005-04-06T06:00:00.000Z	ells	tritium	not much fun
+2005-04-06T06:00:00.000Z	tritium	ells	yeah, this is my laptop.  I replaced the drive only last November
+2005-04-06T06:01:00.000Z	ells	tritium	that sucks even more
+2005-04-06T06:02:00.000Z	ells	tritium	i am lucky Mike, I have my laptop, wifes laptop, and my desktop
+2005-04-06T06:02:00.000Z	tritium	ells	that's good
+2005-04-06T06:03:00.000Z	ells	tritium	lucky, it is nice to have a backup
+2005-04-06T06:03:00.000Z	tritium	ells	no doubt.
+2005-04-06T06:07:00.000Z	ells	tritium	so, what ya gonna do
+2005-04-06T06:08:00.000Z	tritium	ells	I'm backing up now while I still can
+2005-04-06T06:08:00.000Z	tritium	ells	and shopping around for a replacement
+2005-04-06T06:08:00.000Z	ells	tritium	I hear ya, go and get an ibook
+2005-04-06T06:08:00.000Z	tritium	ells	possibly a powerbook or an amd64 laptop
+2005-04-06T06:08:00.000Z	ells	tritium	powerbook i could see
+2005-04-06T06:09:00.000Z	ells	tritium	I am gonna repartition my drive for my laptop while i am on break
+2005-04-06T06:09:00.000Z	ells	tritium	take windows down to about 20 gig
+2005-04-06T06:09:00.000Z	tritium	ells	cool
+2005-04-06T06:09:00.000Z	ells	tritium	my laptop has 80
+2005-04-06T11:24:00.000Z	ells	tritium	Mike, can you believe Duke lost
+2005-04-06T11:24:00.000Z	tritium	ells	sort of
+2005-04-06T11:24:00.000Z	ells	tritium	Duke was a 1 seed
+2005-04-06T11:25:00.000Z	tritium	ells	I know
+2005-04-06T11:25:00.000Z	ells	tritium	well, I guess Duke can start planning for next season
+2005-04-06T11:26:00.000Z	tritium	ells	so who's it going to be?  Illinois or N.C. ?
+2005-04-06T11:27:00.000Z	tritium	ells	so do you need any help with anything tonight?
+2005-04-06T11:29:00.000Z	ells	tritium	naw, dont think so, I am gonna repartition my drive on the laptop and will try the wireless card after
+2005-04-06T11:29:00.000Z	tritium	ells	okay
+2005-04-06T11:29:00.000Z	ells	tritium	trying to get out from under windows
+2005-04-06T11:29:00.000Z	ells	tritium	a little at a time
+2005-04-06T11:31:00.000Z	ells	tritium	hard to believe I am graduating on Monday
+2005-04-06T11:31:00.000Z	tritium	ells	congratulations
+2005-04-06T11:31:00.000Z	ells	tritium	thanks
+2005-04-06T11:32:00.000Z	ells	tritium	you graduate this summer, right
+2005-04-06T11:32:00.000Z	tritium	ells	yes
+2005-04-06T11:32:00.000Z	ells	tritium	cool
+2005-04-06T11:33:00.000Z	ells	tritium	paging Doctor Mike, paging Doctor Mike
+2005-04-06T11:33:00.000Z	tritium	ells	Mike will be fine :)
+2005-04-06T11:34:00.000Z	ells	tritium	I assume you will be having a big party
+2005-04-06T11:34:00.000Z	tritium	ells	not sure yet.  My wife will probably do something.
+2005-04-06T11:34:00.000Z	ells	tritium	dad is coming and two of my three brothers
+2005-04-06T11:35:00.000Z	ells	tritium	go out after the grad, shoot pool do dinner
+2005-04-06T11:35:00.000Z	tritium	ells	very nice
+2005-04-06T11:35:00.000Z	ells	tritium	My pops will be here later tomorrow night
+2005-04-06T11:36:00.000Z	tritium	ells	awesome :)
+2005-04-06T11:36:00.000Z	ells	tritium	still trying to find an app or way to compress video, dvd shrink wont work for me
+2005-04-06T11:37:00.000Z	ells	tritium	you know what is funny, I am now more comforatable with linux than windows
+2005-04-06T11:37:00.000Z	tritium	ells	that's good.
+2005-04-06T11:37:00.000Z	tritium	ells	did you try dvdrip?
+2005-04-06T11:37:00.000Z	tritium	ells	try dvdrip
+2005-04-06T11:38:00.000Z	ells	tritium	i could make avi, but very choppy
+2005-04-06T11:38:00.000Z	ells	tritium	I used it before, but it made vobs, and could not get them to encode
+2005-04-07T05:02:00.000Z	ells	tritium	I need a little assistance
+2005-04-07T05:02:00.000Z	tritium	ells	what's up?
+2005-04-07T05:03:00.000Z	ells	tritium	I reparitioned and installed and the video card is not set up right
+2005-04-07T05:03:00.000Z	tritium	ells	which one?  I forget what you have.
+2005-04-07T05:03:00.000Z	ells	tritium	nvidia
+2005-04-07T05:04:00.000Z	ells	tritium	I hear ya
+2005-04-07T05:04:00.000Z	tritium	ells	are you having pvoce's problem also?
+2005-04-07T05:04:00.000Z	ells	tritium	whats his problem
+2005-04-07T05:04:00.000Z	tritium	ells	scroll up
+2005-04-07T05:05:00.000Z	ells	tritium	I cant, I just got onhere
+2005-04-07T05:06:00.000Z	ells	tritium	what was his issue
+2005-04-07T05:06:00.000Z	ells	tritium	the resolution seems to be set low or something
+2005-04-07T05:08:00.000Z	ells	tritium	can you help me fix it
+2005-04-07T05:08:00.000Z	tritium	ells	possibly
+2005-04-07T05:08:00.000Z	ells	tritium	what should I do first
+2005-04-07T05:09:00.000Z	tritium	ells	but you can't get into a gnome-session?
+2005-04-07T05:09:00.000Z	ells	tritium	I am logged in, but the resolution seems low
+2005-04-07T05:10:00.000Z	ells	tritium	how can I up the resolution
+2005-04-07T05:11:00.000Z	tritium	ells	I don't suppose you backed up your old xorg.conf ?
+2005-04-07T05:11:00.000Z	ells	tritium	nope, I did a total reinstall, sorry
+2005-04-07T05:11:00.000Z	tritium	ells	you're the reinstall master ;)
+2005-04-07T05:11:00.000Z	ells	tritium	wish I would have though
+2005-04-07T05:12:00.000Z	ells	tritium	this is the lsat
+2005-04-07T05:12:00.000Z	tritium	ells	okay, paste it on pastebin
+2005-04-07T05:12:00.000Z	ells	tritium	sorry to ask, but where is it kep
+2005-04-07T05:12:00.000Z	tritium	ells	/etc/X11/xorg.conf
+2005-04-07T05:13:00.000Z	ells	tritium	pastebin.org?
+2005-04-07T05:13:00.000Z	tritium	ells	please
+2005-04-07T05:13:00.000Z	ells	tritium	okay
+2005-04-07T05:14:00.000Z	tritium	ells	poor AZ has to play Illinois now
+2005-04-07T05:14:00.000Z	ells	tritium	they are playing now
+2005-04-07T05:14:00.000Z	tritium	ells	I know
+2005-04-07T05:15:00.000Z	ells	tritium	it is there
+2005-04-07T05:15:00.000Z	tritium	ells	url?
+2005-04-07T05:17:00.000Z	ells	tritium	did you see the url
+2005-04-07T05:18:00.000Z	tritium	ells	yes, just multitasking ;)
+2005-04-07T05:19:00.000Z	ells	tritium	cool
+2005-04-07T05:19:00.000Z	tritium	ells	8 to 4
+2005-04-07T05:19:00.000Z	tritium	ells	first, you're using the "nv" rather than "nvidia" module
+2005-04-07T05:20:00.000Z	ells	tritium	how to fix
+2005-04-07T05:20:00.000Z	tritium	ells	drop down to a v.c.
+2005-04-07T05:28:00.000Z	ells	tritium	do you want me to let it autodetect
+2005-04-07T05:30:00.000Z	ells	tritium	do you want me to enable the kernel framebuffer
+2005-04-07T05:31:00.000Z	tritium	ells	no
+2005-04-07T05:32:00.000Z	ells	tritium	should I enable the GLCore by default
+2005-04-07T05:32:00.000Z	tritium	ells	no!
+2005-04-07T05:32:00.000Z	ells	tritium	cool
+2005-04-07T05:32:00.000Z	tritium	ells	no GLcore and no dri
+2005-04-07T05:33:00.000Z	ells	tritium	okay
+2005-04-07T05:33:00.000Z	tritium	ells	you need to provide all the resolutions you want, too
+2005-04-07T05:36:00.000Z	tritium	ells	I have only 5 minutes left before I have to get going
+2005-04-07T05:36:00.000Z	ells	tritium	I hear ya
+2005-04-07T05:37:00.000Z	tritium	ells	the important things are documented in /usr/share/doc/nvidia-glx/README.gz
+2005-04-07T05:37:00.000Z	tritium	ells	and http://www.ubuntulinux.org/wiki/BinaryDriverHowto/
+2005-04-07T05:39:00.000Z	ells	tritium	 Write default DRI section to configuration file?
+2005-04-07T05:39:00.000Z	tritium	ells	go for it
+2005-04-07T05:40:00.000Z	tritium	ells	okay.  I'll get going soon.  If I don't see you, take care.
+2005-04-07T05:40:00.000Z	tritium	ells	bookmark that URL!  ;)
+2005-04-07T11:38:00.000Z	tritium	ells	I looked for you when I logged in.
+2005-04-07T11:38:00.000Z	ells	tritium	Mike am I ever having issues
+2005-04-07T11:38:00.000Z	tritium	ells	now what?  nvidia still?
+2005-04-07T11:39:00.000Z	ells	tritium	well nvidia is fixed
+2005-04-07T11:39:00.000Z	ells	tritium	no mp3 playability
+2005-04-07T11:39:00.000Z	tritium	ells	with what player?
+2005-04-07T11:39:00.000Z	tritium	ells	do you have gstreamer0.8-mad?
+2005-04-07T11:39:00.000Z	ells	tritium	fairly certain
+2005-04-07T11:40:00.000Z	tritium	ells	corza double check that you have it
+2005-04-07T11:40:00.000Z	ells	tritium	will do
+2005-04-07T11:42:00.000Z	tritium	ells	so do you have it?
+2005-04-07T11:42:00.000Z	ells	tritium	one sec , checking
+2005-04-07T11:44:00.000Z	tritium	ells	sorry about AZ
+2005-04-07T11:44:00.000Z	ells	tritium	tell me bout it, I was extremeloy pissed
+2005-04-07T11:45:00.000Z	ells	tritium	I had to go and work on my computer. i was way way way pissed
+2005-04-07T11:45:00.000Z	tritium	ells	how do you have your Multimedia Systems Selector setup?
+2005-04-07T11:45:00.000Z	tritium	ells	don't get too worked up about it.  It's not healthy ;)
+2005-04-07T11:45:00.000Z	ells	tritium	not sure, will check that too. I just have to wait a sec, I am installing something
+2005-04-07T11:46:00.000Z	ells	tritium	mplayer wont install, it says broken packages
+2005-04-07T11:46:00.000Z	tritium	ells	no biggie imho
+2005-04-07T11:47:00.000Z	tritium	ells	run gstreamer-properties please
+2005-04-07T11:47:00.000Z	ells	tritium	okay
+2005-04-07T11:48:00.000Z	ells	tritium	okay, what am I looking for
+2005-04-07T11:48:00.000Z	tritium	ells	I just want to know what you have setup
+2005-04-07T11:48:00.000Z	ells	tritium	oss, and esd
+2005-04-07T11:49:00.000Z	tritium	ells	are you running the sound server?  change them both to esd
+2005-04-07T11:49:00.000Z	ells	tritium	did the test and it said failed to connect
+2005-04-07T11:51:00.000Z	tritium	ells	I'm calling in the big guns, if I can...
+2005-04-07T11:51:00.000Z	tritium	ells	what about nvidia?
+2005-04-07T11:52:00.000Z	tritium	ells	that seems like a more fundamental sound problem
+2005-04-07T11:52:00.000Z	ells	tritium	got that one fixed
+2005-04-07T11:52:00.000Z	tritium	ells	good
+2005-04-07T11:52:00.000Z	tritium	ells	with dpkg-reconfigure?
+2005-04-07T11:52:00.000Z	ells	tritium	went to play ut2004, no sound
+2005-04-07T11:52:00.000Z	ells	tritium	just kept tweaking it
+2005-04-07T11:52:00.000Z	tritium	ells	good for you.  Way to go, buddy.
+2005-04-07T11:52:00.000Z	ells	tritium	hey it is fun to get it working
+2005-04-07T11:53:00.000Z	ells	tritium	this sound thing has be stumped
+2005-04-07T11:53:00.000Z	tritium	ells	hold on a second re: the sound
+2005-04-07T11:53:00.000Z	ells	tritium	who me
+2005-04-07T11:53:00.000Z	tritium	ells	yes
+2005-04-07T11:53:00.000Z	ells	tritium	aw, nvidia
+2005-04-07T11:54:00.000Z	tritium	ells	lsmod | grep snd gives you what?
+2005-04-07T11:55:00.000Z	ells	tritium	do you see it
+2005-04-07T11:55:00.000Z	tritium	ells	yes, thanks
+2005-04-07T11:56:00.000Z	tritium	ells	that's very nearly my setup
+2005-04-07T11:56:00.000Z	tritium	ells	is esd running?
+2005-04-07T11:56:00.000Z	tritium	ells	pgrep esd
+2005-04-07T11:56:00.000Z	ells	tritium	okay, how can I check, okay
+2005-04-07T11:57:00.000Z	tritium	ells	big guns have arrived.
+2005-04-07T12:14:00.000Z	tritium	ells	8.0
+2005-04-07T12:14:00.000Z	ells	tritium	okay
+2005-04-07T12:14:00.000Z	tritium	ells	0.8, rather
+2005-04-07T12:15:00.000Z	tritium	ells	okay.  that's what crimsun wanted to know
+2005-04-07T12:15:00.000Z	ells	tritium	should I restart my pc, it still would not play mp3
+2005-04-07T12:17:00.000Z	tritium	ells	give a quick try with rhythmbox again now
+2005-04-07T12:18:00.000Z	ells	tritium	I am jamming now, with my tunes
+2005-04-07T12:18:00.000Z	tritium	ells	super
+2005-04-07T12:18:00.000Z	ells	tritium	as always you guys are the bomb
+2005-04-07T12:18:00.000Z	tritium	ells	it was crimsun this time that helped you
+2005-04-07T12:19:00.000Z	ells	tritium	like any general, you gotta have good partners
+2005-04-07T12:19:00.000Z	tritium	ells	who was the other with a similar problem?
+2005-04-07T12:20:00.000Z	ells	tritium	I forget
+2005-04-07T12:20:00.000Z	tritium	ells	well, if you see him, pass on the knowledge :)
+2005-04-07T12:20:00.000Z	ells	tritium	will do
+2005-04-07T12:20:00.000Z	tritium	ells	okay, so what next?
+2005-04-07T12:21:00.000Z	ells	tritium	well, I am gonna see if the sound will now work on ut2004
+2005-04-07T12:21:00.000Z	ells	tritium	my kids want to play it
+2005-04-07T12:21:00.000Z	tritium	ells	okay.  Isn't that kind of violent for kids?
+2005-04-07T12:21:00.000Z	ells	tritium	be right back
+2005-04-07T12:21:00.000Z	ells	tritium	I turn it down
+2005-04-07T12:21:00.000Z	ells	tritium	they get to shoot, but no blood
+2005-04-07T12:22:00.000Z	ells	tritium	I am like you, I dont want my kids seeing the blood
+2005-04-07T12:22:00.000Z	tritium	ells	cool.  I'm thinking you may need to disable the sound server for the game to have sound, but give it a try
+2005-04-07T12:23:00.000Z	ells	tritium	will try it, be right back
+2005-04-07T12:24:00.000Z	ells	tritium	how can I do that
+2005-04-07T12:25:00.000Z	tritium	ells	System->Preferences->Sound will toggle the setting for future sessions, but you'll have to kill the currently running esd
+2005-04-07T12:25:00.000Z	ells	tritium	okay
+2005-04-07T12:28:00.000Z	tritium	ells	esd -nobeeps
+2005-04-07T12:28:00.000Z	ells	tritium	cool
+2005-04-07T12:28:00.000Z	tritium	ells	just don't change the Sound Preferences settings, and you'll be all set at next login
+2005-04-07T12:29:00.000Z	tritium	ells	don't have to.  You can restart the sound server now
+2005-04-07T12:30:00.000Z	ells	tritium	i did that it acts like it is working, but no sound
+2005-04-07T12:30:00.000Z	ells	tritium	the meter is working, but no sound
+2005-04-07T12:31:00.000Z	tritium	ells	you're kidding
+2005-04-07T12:32:00.000Z	ells	tritium	nope
+2005-04-07T12:32:00.000Z	ells	tritium	I am log out and see what happens
+2005-04-07T12:32:00.000Z	ells	tritium	Mike who was that guy that was in here
+2005-04-07T12:33:00.000Z	ells	tritium	what did he say
+2005-04-07T12:33:00.000Z	tritium	ells	he's still here.  Scroll up.  I don't want to repeat it at all
+2005-04-07T12:33:00.000Z	ells	tritium	will look, thanks
+2005-04-07T12:34:00.000Z	ells	tritium	it isnt there anymore
+2005-04-07T12:35:00.000Z	tritium	ells	yes, it's right above
+2005-04-07T12:42:00.000Z	ells	tritium	mike, my music is back
+2005-04-07T12:42:00.000Z	tritium	ells	super
+2005-04-07T12:42:00.000Z	ells	tritium	i just logged out and came back
+2005-04-07T12:42:00.000Z	tritium	ells	okay
+2005-04-07T12:43:00.000Z	ells	tritium	I am listening to Josh Grobin
+2005-04-07T12:43:00.000Z	tritium	ells	oh, okay
+2005-04-07T12:43:00.000Z	ells	tritium	what ya listen to
+2005-04-07T12:43:00.000Z	ells	tritium	for being the next op
+2005-04-07T12:43:00.000Z	ells	tritium	who will second it
+2005-04-07T12:43:00.000Z	tritium	ells	I listen to so many different things
+2005-04-07T12:44:00.000Z	ells	tritium	me too
+2005-04-07T12:44:00.000Z	ells	tritium	great minds think alike
+2005-04-07T12:45:00.000Z	ells	tritium	I will play ut2004 tomorrow
+2005-04-07T12:45:00.000Z	ells	tritium	just gonna relax now
+2005-04-07T12:45:00.000Z	tritium	ells	going to bed?
+2005-04-07T12:45:00.000Z	ells	tritium	naw ,just relaxing
+2005-04-07T12:45:00.000Z	tritium	ells	grab a drink?
+2005-04-07T12:46:00.000Z	ells	tritium	I am picking up my pops from the airport at 2 in the morning
+2005-04-07T12:46:00.000Z	ells	tritium	coke, yes
+2005-04-07T15:58:00.000Z	ells	tritium	got a question? how can I check how much mem is on my onboard video. yeap, just picked up my brother from denver
+2005-04-07T15:59:00.000Z	tritium	ells	not sure, actually
+2005-04-07T15:59:00.000Z	ells	tritium	just curious to see if it will support ut2004 somehow
+2005-04-08T16:01:00.000Z	tritium	ells	try lspci -vv, and look for your video card info
+2005-04-08T16:01:00.000Z	ells	tritium	cool, thanks
+2005-04-08T16:01:00.000Z	tritium	ells	that'll be some really verbose information.  Hopefully it'll include your video memory info
+2005-04-12T13:26:00.000Z	ells	tritium	What is up Mike
+2005-04-12T13:26:00.000Z	tritium	ells	hey, just running disk-diagnostics on my laptop
+2005-04-12T13:27:00.000Z	ells	tritium	I have beens so busy with graduation and everything
+2005-04-12T13:27:00.000Z	tritium	ells	Congratulations!
+2005-04-12T13:27:00.000Z	ells	tritium	did you find out what was wrong
+2005-04-12T13:27:00.000Z	ells	tritium	thanks again
+2005-04-12T13:27:00.000Z	tritium	ells	not yet, but it's looking like the hardware is okay, so it's likely filesystem
+2005-04-12T13:27:00.000Z	ells	tritium	that will work
+2005-04-14T16:25:00.000Z	ells	tritium	what is up Mike
+2005-04-14T16:25:00.000Z	tritium	ells	hi Steve
+2005-04-14T16:25:00.000Z	ells	tritium	so what ya doing this weekend
+2005-04-14T16:26:00.000Z	tritium	ells	same old.  You?
+2005-04-14T16:26:00.000Z	ells	tritium	I am just hanging out, taking my boys to their soccer games
+2005-04-14T16:26:00.000Z	ells	tritium	I enjoy that kind of stuff
+2005-04-14T16:27:00.000Z	ells	tritium	so did you fix your laptop
+2005-04-14T16:27:00.000Z	tritium	ells	I'm working on that now, actually
+2005-04-14T16:27:00.000Z	ells	tritium	cool
+2005-04-14T16:27:00.000Z	ells	tritium	you were saying before that I should be using the :686 kernel
+2005-04-14T16:28:00.000Z	ells	tritium	what should i do to install that thing
+2005-04-14T16:28:00.000Z	tritium	ells	you don't have to, but you definitely can!
+2005-04-14T16:28:00.000Z	tritium	ells	just install linux-686
+2005-04-14T16:28:00.000Z	ells	tritium	is it worth it
+2005-04-14T16:28:00.000Z	tritium	ells	yeah, give it a try.  it won't uninstall the kernel you have
+2005-04-14T16:30:00.000Z	ells	tritium	all done
+2005-04-14T16:32:00.000Z	tritium	ells	cool
+2005-04-14T16:34:00.000Z	ells	tritium	I think I am gonna restart and see what happens
+2005-04-14T16:34:00.000Z	tritium	ells	see you soon.
+2005-04-14T16:54:00.000Z	tritium	ells	like I said, you "may" notice the difference, you may not
+2005-04-14T16:55:00.000Z	tritium	ells	speed, in general
+2005-04-14T16:55:00.000Z	ells	tritium	will have to montior to see ya know
+2005-04-14T16:55:00.000Z	ells	tritium	what bout game play
+2005-04-14T16:56:00.000Z	tritium	ells	probably so
+2005-04-14T16:56:00.000Z	tritium	ells	sure!
+2005-04-15T12:38:00.000Z	ells	tritium	what is up Mike
+2005-04-15T12:38:00.000Z	tritium	ells	hi Steve.
+2005-04-15T12:38:00.000Z	ells	tritium	hows the laptop
+2005-04-15T12:39:00.000Z	tritium	ells	great!
+2005-04-15T12:39:00.000Z	ells	tritium	what was the problem
+2005-04-15T12:40:00.000Z	tritium	ells	filesystem corruption.
+2005-04-15T12:40:00.000Z	ells	tritium	so how did you fix it
+2005-04-15T12:40:00.000Z	tritium	ells	I went ahead and re-partioned and re-installed.
+2005-04-15T12:41:00.000Z	ells	tritium	really, not you, not reinstall
+2005-04-15T12:41:00.000Z	tritium	ells	the filesystem corruption was too extensive.  it's okay, I wanted to setup my partitions differently anyway
+2005-04-15T12:42:00.000Z	ells	tritium	I got most of my music back from that major reinstall I did a few weeks back
+2005-04-15T12:42:00.000Z	tritium	ells	most, but not all?  How did you lose the rest?
+2005-04-15T12:42:00.000Z	ells	tritium	I just bought a dvd burner tonight from Tiger Direct, 54.99
+2005-04-15T12:43:00.000Z	ells	tritium	I thought I backed it up
+2005-04-15T12:43:00.000Z	tritium	ells	cool :)
+2005-04-15T12:43:00.000Z	ells	tritium	I now have backups on my two systems
+2005-04-15T12:44:00.000Z	tritium	ells	that's good.  What are you using to backup?
+2005-04-15T12:44:00.000Z	ells	tritium	just making dvd backups
+2005-04-15T12:44:00.000Z	ells	tritium	thru k3b
+2005-04-15T13:01:00.000Z	tritium	ells	so what are you up to?
+2005-04-15T13:14:00.000Z	tritium	ells	I'm heading to bed.
+2005-04-16T16:37:00.000Z	tritium	ells	hi ells
+2005-04-16T16:38:00.000Z	ells	tritium	hey what is up Mike
+2005-04-16T16:38:00.000Z	tritium	ells	taking care of my wife.  She's home sick today.
+2005-04-16T16:38:00.000Z	ells	tritium	lucky you
+2005-04-16T16:38:00.000Z	tritium	ells	uh, I guess
+2005-04-16T16:38:00.000Z	ells	tritium	I would really like to be able to compress the dvd so I can copy the thing, any ideas
+2005-04-16T16:39:00.000Z	ells	tritium	I think I asked you before,didnt I
+2005-04-16T16:39:00.000Z	tritium	ells	yeah, is it a data DVD, or a movie?
+2005-04-16T16:39:00.000Z	ells	tritium	movie
+2005-04-16T16:39:00.000Z	ells	tritium	uncompressed, 8.5 gig
+2005-04-16T16:39:00.000Z	tritium	ells	and you looked at transcode?
+2005-04-16T16:39:00.000Z	ells	tritium	not sure exactly how to use it
+2005-04-16T16:40:00.000Z	tritium	ells	I've not used it, really
+2005-04-16T16:40:00.000Z	ells	tritium	I tried dvd shrink again, ,keep getting the ASPI error
+2005-04-16T16:41:00.000Z	tritium	ells	look into dvdrip
+2005-04-16T16:41:00.000Z	ells	tritium	yeah, but it doesnt make the movies copyable to anothre dvd I think
+2005-04-16T16:42:00.000Z	tritium	ells	it should...it uses transcode
+2005-04-16T16:42:00.000Z	ells	tritium	that is the one that makes it into an .avi right
+2005-04-16T16:43:00.000Z	tritium	ells	transcode can convert into several formats
+2005-04-16T16:43:00.000Z	ells	tritium	I think that is the one for me, that would not let me compress on the fly
+2005-04-16T16:43:00.000Z	ells	tritium	yeah mIke, ,and when I went back had the issue of compression. will try again though
+2005-04-16T16:43:00.000Z	tritium	ells	ok
+2005-04-16T16:44:00.000Z	ells	tritium	see you in a bit Mike
+2005-04-16T16:44:00.000Z	tritium	ells	ok
+2005-04-16T05:30:00.000Z	tritium	ells	probably not
+2005-04-16T05:34:00.000Z	tritium	ells	I'm only seeing one, and it's in Marillat's repo
+2005-04-16T11:56:00.000Z	ells	tritium	I have been trying to get the dvd copied with no real luck
+2005-04-16T11:57:00.000Z	ells	tritium	I tried making an iso and then go in to dvd shrink. I tried backing up the dvd and makine an .img file. Tired of messing with it
+2005-04-16T11:57:00.000Z	tritium	ells	sorry to hear you're having trouble
+2005-04-16T11:57:00.000Z	ells	tritium	just tired of messing with it
+2005-04-16T11:58:00.000Z	ells	tritium	I guess, this will be one thing I will keep windows for
+2005-04-16T11:58:00.000Z	tritium	ells	that's too bad it's not working for you.  What's the problem exactly?
+2005-04-16T11:58:00.000Z	ells	tritium	I cannot make an exact compressed copy of a dvd
+2005-04-16T11:59:00.000Z	ells	tritium	to fit on a 4.7g dvd
+2005-04-16T11:59:00.000Z	tritium	ells	what do you mean by exact?  lossless compression?
+2005-04-16T11:59:00.000Z	ells	tritium	trying to make more or less a backup of a dvd. the dvd when backed up is more like 6-8 gig
+2005-04-16T12:00:00.000Z	ells	tritium	that is why I need to compress it to fit a 4.7 gig dvd
+2005-04-16T12:00:00.000Z	tritium	ells	it'll likely by lossy
+2005-04-16T12:01:00.000Z	ells	tritium	what ya mean
+2005-04-16T12:01:00.000Z	tritium	ells	lossy, as in some information is lost in the compression process
+2005-04-16T12:01:00.000Z	ells	tritium	yeap, that would be it
+2005-04-16T12:02:00.000Z	tritium	ells	okay, as long as you can tolerate that.  :)
+2005-04-16T12:02:00.000Z	ells	tritium	i tried making in iso to compress in dvd shrink, but it said the UDF was bad or something
+2005-04-16T12:03:00.000Z	ells	tritium	it is frustrating, but I cannot believe someone has not come up with a solution
+2005-04-16T12:04:00.000Z	tritium	ells	I'll bet we can work out a solution if we put some time into it.  Likely, using dvdrip
+2005-04-16T12:05:00.000Z	ells	tritium	If you have time, maybe you can take a look at it, I can send you some URLs
+2005-04-16T12:06:00.000Z	tritium	ells	I'll see what I can found out, sure...
+2005-04-16T12:06:00.000Z	ells	tritium	thanks Mike
+2005-04-16T12:06:00.000Z	tritium	ells	sure, Steve.
+2005-04-16T12:06:00.000Z	ells	tritium	LIke they say, things that take time are usually worth it
+2005-04-16T12:06:00.000Z	tritium	ells	yep ;)
+2005-04-16T12:07:00.000Z	ells	tritium	I will look on this end
+2005-04-16T12:10:00.000Z	tritium	ells	sorry, I got disconnected.
+2005-04-16T12:10:00.000Z	ells	tritium	no prob Mike
+2005-04-16T12:11:00.000Z	tritium	ells	I didn't see your reply.  Have you seen the dvdrip website's documentation?
+2005-04-16T12:12:00.000Z	ells	tritium	naw, dont think so
+2005-04-16T12:12:00.000Z	tritium	ells	can you take a look at it?  I will too...
+2005-04-16T12:13:00.000Z	ells	tritium	cool
+2005-04-16T12:14:00.000Z	tritium	ells	http://www.exit1.org/dvdrip/
+2005-04-16T12:15:00.000Z	ells	tritium	cool
+2005-04-16T12:21:00.000Z	ells	tritium	check this out http://mightylegends.zapto.org/dvd/dvdauthor_howto.php
+2005-04-16T12:21:00.000Z	tritium	ells	checking...
+2005-04-16T12:22:00.000Z	ells	tritium	what ya think
+2005-04-16T12:23:00.000Z	tritium	ells	need some time to review it
+2005-04-16T12:24:00.000Z	ells	tritium	cool
+2005-04-16T14:00:00.000Z	ells	tritium	Mike you still up
+2005-04-16T14:00:00.000Z	tritium	ells	I'm here
+2005-04-16T14:00:00.000Z	ells	tritium	I think I figured something out
+2005-04-16T14:01:00.000Z	tritium	ells	nice!
+2005-04-16T14:01:00.000Z	ells	tritium	i made an iso using k3b
+2005-04-16T14:01:00.000Z	ells	tritium	then i opened dvd shrink and the file
+2005-04-16T14:01:00.000Z	tritium	ells	I'm glad you found a solution
+2005-04-16T14:01:00.000Z	ells	tritium	just need to figure out how to shrink it down far enough
+2005-04-16T14:05:00.000Z	tritium	ells	I'm off to bed.
+2005-04-16T14:26:00.000Z	ells	tritium	I think I got it, will see really quick
+2005-04-17T09:01:00.000Z	ells	tritium	hey Mike
+2005-04-17T09:02:00.000Z	ells	tritium	I tried compressing the iso I made, but it would not let me compress it below 94 percent or so
+2005-04-17T09:03:00.000Z	tritium	ells	you may not be able to compress it any more
+2005-04-17T09:03:00.000Z	ells	tritium	it wont go far enough to put it on a 4.7g dvd
+2005-04-17T09:03:00.000Z	ells	tritium	It will go down to about 6.7 gig
+2005-04-18T08:20:00.000Z	ells	tritium	hey Mike what is up
+2005-04-18T08:20:00.000Z	tritium	ells	Hi Steve - just working hard.  You?
+2005-04-18T08:21:00.000Z	ells	tritium	just hangin out, took the kids to soccer practice
+2005-04-19T10:19:00.000Z	tritium	ells	hey there.
+2005-04-19T10:19:00.000Z	ells	tritium	hey Mike
+2005-04-19T10:19:00.000Z	ells	tritium	got my dvd burner today
+2005-04-19T10:19:00.000Z	ells	tritium	whats the answer Mike
+2005-04-19T10:19:00.000Z	tritium	ells	nice.  What's the device? /dev/hdb ?
+2005-04-19T10:20:00.000Z	tritium	ells	sudo hdparm -d 1 /dev/hdb, if so
+2005-04-19T10:20:00.000Z	ells	tritium	will that affect it for now on, or just this session
+2005-04-19T10:20:00.000Z	tritium	ells	just for now
+2005-04-19T10:20:00.000Z	ells	tritium	can I make it for all the time
+2005-04-19T10:21:00.000Z	tritium	ells	you can try to enable it in /etc/hdparm.conf, but sometimes the modules are not loaded yet when /etc/init.d/hdparm is called, so it doesn't work for cdroms
+2005-04-19T10:21:00.000Z	ells	tritium	you know mike the dvd does not show in the fstab, but it auto loads
+2005-04-19T10:22:00.000Z	tritium	ells	you'd have to add it to the fstab
+2005-04-19T10:22:00.000Z	ells	tritium	can you help with the syntax
+2005-04-19T10:22:00.000Z	tritium	ells	yes.
+2005-04-19T10:22:00.000Z	ells	tritium	cool Mike
+2005-04-19T10:49:00.000Z	ells	tritium	I am slowly getting the components I need for this desktop, lastly, need a good video card
+2005-04-19T10:49:00.000Z	tritium	ells	that's awesome
+2005-04-19T10:49:00.000Z	ells	tritium	nice having this dvd burner
+2005-04-19T10:49:00.000Z	ells	tritium	54 bucks, that is a steal
+2005-04-19T10:50:00.000Z	tritium	ells	is that still avaiable?
+2005-04-22T09:20:00.000Z	tritium	ells	Hi Steve.  Not much.  You?
+2005-04-22T09:20:00.000Z	ells	tritium	not alot man
+2005-04-22T09:20:00.000Z	ells	tritium	do you know much about video cards
+2005-04-22T09:21:00.000Z	tritium	ells	yes.  Well, nVidia, not ATI.
+2005-04-22T09:21:00.000Z	ells	tritium	yeah, just trying to see what I really should be looking for, the ram or clock speed
+2005-04-22T09:21:00.000Z	ells	tritium	that and the manufacturer
+2005-04-22T09:22:00.000Z	tritium	ells	you mean you're considering purchasing one?
+2005-04-22T09:22:00.000Z	ells	tritium	yeah, I got the onboard video on my desktop I built
+2005-04-22T10:04:00.000Z	ells	tritium	MIke, how fast does your laptop boot up
+2005-04-22T10:04:00.000Z	tritium	ells	I haven't timed it, but probably around 20 seconds into gdm
+2005-04-22T10:04:00.000Z	ells	tritium	does yours lag on wifi
+2005-04-22T10:04:00.000Z	tritium	ells	no, works well
+2005-04-22T10:05:00.000Z	ells	tritium	it lags when it comes to the network interfaces
+2005-04-22T10:06:00.000Z	ells	tritium	any idea of how I can accelerate my boot up
+2005-04-22T10:07:00.000Z	tritium	ells	not beyond what Hoary already does.  That's about the fastest booting distro.
+2005-04-22T10:07:00.000Z	ells	tritium	cool
+2005-04-22T12:41:00.000Z	ells	tritium	what is up Mike
+2005-04-22T12:42:00.000Z	tritium	ells	not much.  You?
+2005-04-22T12:42:00.000Z	ells	tritium	not alot
+2005-04-22T12:48:00.000Z	tritium	ells	what kind of data is in the .iso?
+2005-04-22T13:08:00.000Z	ells	tritium	Mike, I finally found a website that addresses my dvd issue
+2005-04-22T13:08:00.000Z	ells	tritium	http://www.riskable.com/modules.php?op=modload&name=News&file=article&sid=12
+2005-04-22T13:32:00.000Z	ells	tritium	Mike you there
+2005-04-22T14:00:00.000Z	ells	tritium	Mike you there
+2005-04-22T14:26:00.000Z	ells	tritium	Mike you there
+2005-04-23T11:28:00.000Z	ells	tritium	what is up Mike
+2005-04-23T11:29:00.000Z	ells	tritium	do I have something to show you
+2005-04-23T11:29:00.000Z	tritium	ells	hey :)  What is it?
+2005-04-24T09:07:00.000Z	ells	tritium	what is up mike
+2005-04-24T09:08:00.000Z	tritium	ells	Hi Steve.  Getting ready for my trip.
+2005-04-24T09:08:00.000Z	ells	tritium	where ya headed
+2005-04-24T09:09:00.000Z	tritium	ells	Arizona :)
+2005-04-24T09:09:00.000Z	ells	tritium	really, where
+2005-04-24T09:09:00.000Z	tritium	ells	Tucson to visit my sister, and then head up to the U2 concert in Phoenix
+2005-04-24T09:09:00.000Z	ells	tritium	remember, that is where I am from
+2005-04-24T09:10:00.000Z	tritium	ells	I know!
+2005-04-24T09:10:00.000Z	ells	tritium	I hope you enjoy the weather
+2005-04-24T09:10:00.000Z	tritium	ells	yep
+2005-04-24T09:10:00.000Z	ells	tritium	You need to go and get an eegee
+2005-04-24T09:11:00.000Z	ells	tritium	they have awesome sandwiches and fruit slushees
+2005-04-24T09:11:00.000Z	tritium	ells	I've been there, dude :)
+2005-04-24T09:11:00.000Z	ells	tritium	I wish they would franchise out of Arizona
+2005-05-08T13:16:00.000Z	ells	tritium	mike how was your trip
+2005-05-08T13:17:00.000Z	tritium	ells	Hey Steve - good to see you again.  I've been looking for you.  Haven't seen you in a while.  It was outstanding.  U2 rocked!
+2005-05-08T13:17:00.000Z	ells	tritium	I am sure.
+2005-05-15T08:44:00.000Z	ells	tritium	what is up Mike
+2005-05-16T10:36:00.000Z	ells	tritium	mIke, what is up
+2005-05-16T10:37:00.000Z	tritium	ells	hi Steve
+2005-05-16T10:37:00.000Z	ells	tritium	how r things,
+2005-05-18T05:21:00.000Z	ells	tritium	mike, what is up
+2005-05-18T05:21:00.000Z	ells	tritium	MIke, got a question
+2005-05-18T05:21:00.000Z	tritium	ells	okay
+2005-05-18T05:22:00.000Z	ells	tritium	what is this,   *** libdvdread: CHECK_VALUE failed in ifo_read.c:1416 ***
+2005-05-18T05:23:00.000Z	tritium	ells	looks like a failure to read a dvd properly (number of vobs apparently not read correctly, or something)
+2005-05-18T05:24:00.000Z	ells	tritium	it is a dvd I am ripping
+2005-05-18T05:24:00.000Z	ells	tritium	do you want to see the syntax I am using
+2005-05-18T05:25:00.000Z	tritium	ells	it only happens with this particular dvd?
+2005-05-18T05:25:00.000Z	ells	tritium	seems to be with the last two I am doing this too
+2005-05-18T05:25:00.000Z	ells	tritium	I think my syntax is wrong
+2005-05-18T05:25:00.000Z	tritium	ells	I know next to nothing about dvd ripping, but you can paste
+2005-05-18T05:25:00.000Z	ells	tritium	cool, tccat -d 0 -i /dev/dvd -t dvd -P 1 > ~/DVD_Temp/decryp.vob
+2005-05-18T05:27:00.000Z	tritium	ells	no idea
+2005-05-18T05:28:00.000Z	ells	tritium	it says this, then copies the file
+2005-06-03T09:16:00.000Z	ells	tritium	Mike, what is up
+2005-06-03T09:16:00.000Z	tritium	ells	hi Steve.  what's new?
+2005-06-03T09:17:00.000Z	ells	tritium	I got an offer to teach at the school hourse
+2005-06-03T09:17:00.000Z	tritium	ells	I wish the best for you.  I take it you did not hear good news from T?
+2005-06-03T09:17:00.000Z	tritium	ells	congratulations
+2005-09-12T09:29:00.000Z	ells	tritium	hey Mike what is up
+2005-09-12T09:30:00.000Z	tritium	ells	wow, long time no see
+2005-09-12T09:31:00.000Z	tritium	ells	I'm about to reboot (testing stuff).  I'll be back later on or tomorrow, okay?
+2005-09-13T10:21:00.000Z	ells	tritium	hey what is up

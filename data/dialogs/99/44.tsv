@@ -1,0 +1,99 @@
+2007-09-16T14:48:00.000Z	Bossmanbeta	gvsa123	no
+2007-09-16T14:27:00.000Z	Bossmanbeta	gvsa123	sudo apt-get remove gdesklets
+2007-09-16T14:28:00.000Z	gvsa123	Bossmanbeta	but that will uninstall it... i just don't want it to load automatically.
+2007-09-16T14:28:00.000Z	Bossmanbeta	gvsa123	uninstall it, then reinstall it ... that shoudl remove the configs that was autoloading it for you ..
+2007-09-16T14:28:00.000Z	Bossmanbeta	gvsa123	or just remove the .config files
+2007-09-16T14:29:00.000Z	gvsa123	Bossmanbeta	in /home?
+2007-09-16T14:29:00.000Z	Bossmanbeta	gvsa123	aye
+2007-09-16T14:29:00.000Z	Bossmanbeta	gvsa123	remove the .gdesklets folder
+2007-09-16T14:30:00.000Z	gvsa123	Bossmanbeta	you mean delete?
+2007-09-16T14:30:00.000Z	gvsa123	Bossmanbeta	and this should be replaced when i run gdesklets again?
+2007-09-16T14:30:00.000Z	Bossmanbeta	gvsa123	yes -- you can delete it or rename it ..
+2007-09-16T14:31:00.000Z	Bossmanbeta	gvsa123	renaming it will also work if you dont want to delete it
+2007-09-16T14:31:00.000Z	gvsa123	Bossmanbeta	does this also go for any other .xxx folder in /home? i can safely delete these without harming the system and it's associated application?
+2007-09-16T14:32:00.000Z	Bossmanbeta	gvsa123	depends on the application .. generally yes you can delete a .folder or just rename it to something like .folderBAK to remove the configs for that application. Once you RErun the app, it will REcreate the folder with default configs
+2007-09-16T14:32:00.000Z	gvsa123	Bossmanbeta	they are all just config files, that can and will be recreated when i use the application again? that is of course if i don't want to keep any of my settings
+2007-09-16T14:32:00.000Z	Bossmanbeta	gvsa123	yep
+2007-09-16T14:33:00.000Z	Bossmanbeta	gvsa123	apps usually auto-remake the .folder on the next run
+2007-09-16T14:33:00.000Z	gvsa123	Bossmanbeta	the generally yes statement suggest i should rename most of the time... lol
+2007-09-16T14:33:00.000Z	Bossmanbeta	gvsa123	(with default configs)
+2007-09-16T14:33:00.000Z	Bossmanbeta	gvsa123	in the future a better idea to prevent problems is BACKUP the .config file you going to play with BEFORE making changes
+2007-09-16T14:33:00.000Z	gvsa123	Bossmanbeta	got it. thanks.
+2007-09-16T14:34:00.000Z	gvsa123	Bossmanbeta	also a file system related question...
+2007-09-16T14:34:00.000Z	Bossmanbeta	gvsa123	copy the config file to blah.bak (2nd copy) then play with the real one... if you have a problem, erase the real one and rename the .bak to the original n ame
+2007-09-16T14:35:00.000Z	gvsa123	Bossmanbeta	if i want to make archives of whatever personal folder i have, and i want it to be kept in a safe place within my system, can i keep it inside directories that are owned by root, so that viruses or whatever security problems will not be able to get to it?
+2007-09-16T14:36:00.000Z	Bossmanbeta	gvsa123	linux doesn't suffer from viruses really ... what's the goal just a backup copy of data? just write them to a USB drive or DVD
+2007-09-16T14:38:00.000Z	gvsa123	Bossmanbeta	i understand the immunity (is that absolutely true?) yeah just a backup copy. don't have a large external storage at the moment. largest i have is a cd. just wondering whether this could be possible - using the innate security of the linux file system as protection for personal files
+2007-09-16T14:39:00.000Z	Bossmanbeta	gvsa123	the proper way to backup is to different media off the server
+2007-09-16T14:40:00.000Z	gvsa123	Bossmanbeta	but hypothetically, when you keep something within directories owned by root, you keep them safe whenever you are logged in right?
+2007-09-16T14:41:00.000Z	Bossmanbeta	gvsa123	nothing is safe if you assume a system compromize
+2007-09-16T14:44:00.000Z	gvsa123	Bossmanbeta	so it can't be that you offer you files "root protection" when you save them in folders owned by root? or chown root /home/whateverfolder
+2007-09-16T14:44:00.000Z	Bossmanbeta	gvsa123	assuming the system is comprmised, the offender would have root access so files with root-only rights would not be safe
+2007-09-16T14:44:00.000Z	Bossmanbeta	gvsa123	the proper way to back stuff up is get it off the box to something else
+2007-09-16T14:45:00.000Z	gvsa123	Bossmanbeta	but for non-root level compromises, you can offer root protection the way i tried to explain?
+2007-09-16T14:45:00.000Z	gvsa123	Bossmanbeta	i agree...
+2007-09-16T14:45:00.000Z	Bossmanbeta	gvsa123	well... assuming the compromized box did not compromise root, yes -- but that's a super duper hypothetical
+2007-09-16T14:46:00.000Z	Bossmanbeta	gvsa123	if you're looking to stop "prying eyes" -- copy the data and encrypt it
+2007-09-16T14:46:00.000Z	gvsa123	Bossmanbeta	like truecrypt?
+2007-09-16T14:46:00.000Z	Bossmanbeta	gvsa123	yep...
+2007-09-16T14:47:00.000Z	Bossmanbeta	gvsa123	or gpg
+2007-09-16T14:47:00.000Z	gvsa123	Bossmanbeta	i never got forcefield to work though... nor could i open truecrypt volumes created under winxp
+2007-09-16T14:47:00.000Z	gvsa123	Bossmanbeta	which is better? can it handle truecrypt volumes?
+2007-09-16T14:47:00.000Z	gvsa123	Bossmanbeta	GUI?
+2007-09-16T14:48:00.000Z	Bossmanbeta	gvsa123	truecrypt is pretty easy to use... gpg is just as good
+2007-09-16T14:48:00.000Z	gvsa123	Bossmanbeta	gpg can handle truecrypt volumes?
+2007-09-16T14:49:00.000Z	gvsa123	Bossmanbeta	ah... i wanted something i could use between ubuntu and winxp
+2007-09-16T14:49:00.000Z	Bossmanbeta	gvsa123	gpg works under windows
+2007-09-16T14:49:00.000Z	gvsa123	Bossmanbeta	isn't forcefield just a frontend for truecrypt on linux? so it should be able to handle volumes created under xp right?
+2007-09-16T14:50:00.000Z	gvsa123	Bossmanbeta	i see... i'll check out gpg in windows
+2007-09-16T14:50:00.000Z	gvsa123	Bossmanbeta	just the command line for truec?
+2007-09-16T14:50:00.000Z	Bossmanbeta	gvsa123	is that what forcefield is?
+2007-09-16T14:51:00.000Z	gvsa123	Bossmanbeta	i believe so... ill double check
+2007-09-16T14:55:00.000Z	gvsa123	Bossmanbeta	funny. i thought i installed it through synaptics, but it's not there... hmm....
+2007-09-16T14:55:00.000Z	Bossmanbeta	gvsa123	any .deb file installed will show in synaptic
+2007-09-16T14:56:00.000Z	gvsa123	Bossmanbeta	oh i had it with previous installations.. not this one
+2007-09-16T14:56:00.000Z	gvsa123	Bossmanbeta	didn't install it since i couldn't get it to work... :P
+2007-09-16T14:56:00.000Z	Bossmanbeta	gvsa123	i dont think it will show in synaptic if you compile it from scratch "./configure make make install"
+2007-09-16T14:56:00.000Z	Bossmanbeta	gvsa123	gpg is pretty friendly, and simple..
+2007-09-16T14:57:00.000Z	Bossmanbeta	gvsa123	it's geared towards public key things, but it does offer Asymmetric encryption (encrypting files with passwods as opposed to public/private keys)
+2007-09-16T14:57:00.000Z	gvsa123	Bossmanbeta	i see.. thanks.. checking it out right now...
+2007-09-16T14:57:00.000Z	Bossmanbeta	gvsa123	gpg MAY need cygwin...
+2007-09-16T14:58:00.000Z	gvsa123	Bossmanbeta	it's commandline?
+2007-09-16T14:58:00.000Z	Bossmanbeta	gvsa123	it has a gui - but under windows I donno .. it may need cygwin for win32
+2007-09-16T14:58:00.000Z	gvsa123	Bossmanbeta	with frontends
+2007-09-16T14:59:00.000Z	gvsa123	Bossmanbeta	hmmm... i'm kinda satisfied with true on win. maybe better for me to learn to use true via commandline in ubuntu
+2007-09-16T15:00:00.000Z	Bossmanbeta	gvsa123	how many files you thinking of encryopting
+2007-09-16T15:00:00.000Z	gvsa123	Bossmanbeta	right now i have 150MB of encrypted data from xp
+2007-09-16T15:01:00.000Z	Bossmanbeta	gvsa123	hmm 150megs.. you mounting that data from linux?
+2007-09-16T15:02:00.000Z	gvsa123	Bossmanbeta	never got to access it in linux. but the volume is backed up here.
+2007-09-16T15:08:00.000Z	gvsa123	Bossmanbeta	which among the third party software sources should ideally be ticked?
+2007-09-16T15:02:00.000Z	Bossmanbeta	gvsa123	one option is this.............. use windows and trucrypt under windows... then open the data from windows to a drive letter with trucrypt-windows... then SHARE that truecrypt drive letter, then mount it from linux
+2007-09-16T15:03:00.000Z	gvsa123	Bossmanbeta	via a network? but the data never goes to linux end?
+2007-09-16T15:03:00.000Z	Bossmanbeta	gvsa123	mount via "mount -f cifs //win32.ip.address/sharename /local/linux/path -o username=administrator,uid=linux-username"
+2007-09-16T15:03:00.000Z	gvsa123	Bossmanbeta	cifs?
+2007-09-16T15:03:00.000Z	gvsa123	Bossmanbeta	i'll just man it
+2007-09-16T15:03:00.000Z	gvsa123	Bossmanbeta	lol
+2007-09-16T15:04:00.000Z	Bossmanbeta	gvsa123	if you share the windows drive (the truecrypt drive once you enter the password in windows, it will open the encrypted partition to a drive letter) then share it so you can mount it from linux..
+2007-09-16T15:04:00.000Z	Bossmanbeta	gvsa123	you could use smbfs, but thats suhLOW
+2007-09-16T15:04:00.000Z	Bossmanbeta	gvsa123	cifs = common internet filesystem .. bill gates was kind enough to allow the windows kernel to understand that... linux has supported that for some time
+2007-09-16T15:04:00.000Z	gvsa123	Bossmanbeta	samba? i got it to work faster by adding the ip in /etc/hosts i think
+2007-09-16T15:05:00.000Z	gvsa123	Bossmanbeta	i see
+2007-09-16T15:05:00.000Z	Bossmanbeta	gvsa123	dont let the samba thing confuse what i'm suggesting
+2007-09-16T15:05:00.000Z	Bossmanbeta	gvsa123	let windows encrypt it and present the drive letter, you just mount it from linux as a remote resource
+2007-09-16T15:05:00.000Z	Bossmanbeta	gvsa123	 you just have to enter the passwd and open the encrypted partition up prior to mounting from linux
+2007-09-16T15:06:00.000Z	gvsa123	Bossmanbeta	i see... or i can just keep the encrypted volume in my samba share as it is recognized already in ubuntu
+2007-09-16T15:07:00.000Z	gvsa123	Bossmanbeta	different question again...
+2007-09-16T15:07:00.000Z	Bossmanbeta	gvsa123	yes .. the idea is, truecrypt presents the encrypted volume as a regular windows drive once you enter the passwd, that means Linux can mount it like any other drive... this will allow you to keep 1 point for encrypted data that would be accesible by both Winblows and Linux
+2007-09-16T15:08:00.000Z	Bossmanbeta	gvsa123	i tick them all
+2007-09-16T15:09:00.000Z	Bossmanbeta	gvsa123	well i dont have medibuntu checked...
+2007-09-16T15:09:00.000Z	gvsa123	Bossmanbeta	hehe
+2007-09-16T15:09:00.000Z	Bossmanbeta	gvsa123	i mean medibuntu source code
+2007-09-16T15:09:00.000Z	gvsa123	Bossmanbeta	even important security updates (source code)?
+2007-09-16T15:09:00.000Z	Bossmanbeta	gvsa123	there's no harm in ticking them all
+2007-09-16T15:10:00.000Z	gvsa123	Bossmanbeta	what are those with a (source code) beside anyway? i mean how different are they from the "normal"?
+2007-09-16T15:11:00.000Z	gvsa123	Bossmanbeta	but with having the unsupported parts ticked, you run the risk of installing updates that haven't been double checked to not cause problems? is that a fair assumption?
+2007-09-16T15:12:00.000Z	Bossmanbeta	gvsa123	i wouldn't worry about unsupported 3rd party things
+2007-09-16T15:13:00.000Z	Bossmanbeta	gvsa123	that's just to keep cannonical out of harm's way
+2007-09-16T15:13:00.000Z	gvsa123	Bossmanbeta	lol
+2007-09-16T15:19:00.000Z	gvsa123	Bossmanbeta	hey thanks a lot... gotta go..
+2007-09-16T15:19:00.000Z	Bossmanbeta	gvsa123	take care

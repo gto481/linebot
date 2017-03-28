@@ -1,0 +1,95 @@
+2007-08-24T16:04:00.000Z	Whiz2		would it help to know that the program i'm trying to run is executed as an X session????????
+2007-08-24T05:42:00.000Z	Whiz2		anyone here know how to run a program every time X starts, but before kde logs in?
+2007-08-24T05:43:00.000Z	Whiz2		the program in question requires that X starts first
+2007-08-24T05:43:00.000Z	Whiz2		where is xinitrc? does that apply to a dapper release?
+2007-08-24T05:44:00.000Z	Whiz2		where is startx?
+2007-08-24T05:44:00.000Z	Whiz2		no... wait.. X must already be running
+2007-08-24T05:46:00.000Z	Whiz2		I'm trying to run vncserver as me including my environment every time X itself runs
+2007-08-24T05:47:00.000Z	Whiz2		X MUST be running, because vncserver creates an X session
+2007-08-24T05:47:00.000Z	Whiz2		this needs to happen before KDE logs in
+2007-08-24T05:48:00.000Z	kauer	Whiz2	Just tp clarify: You want xloxk to run on a different machine (a remote machine), you want it to run as you, and lock the x server on that remote machine?
+2007-08-24T05:49:00.000Z	kauer	Whiz2	Sorry, wrong guy :-)
+2007-08-24T05:49:00.000Z	Whiz2	kauer	in my linux machine, whenever X server starts, I want vncserver to execute with my credentials, and my environment automatically
+2007-08-24T05:56:00.000Z	kauer	Whiz2	For what it's worth, I think autosharing your desktop is a bad idea, and autologin is a VERY bad idea.
+2007-08-24T05:56:00.000Z	kauer	Whiz2	Could you perhaps tell us why you want the VNC server running before you have even logged in?
+2007-08-24T05:59:00.000Z	kauer	Whiz2	Could you perhaps tell us why you want the VNC server running before you have even logged in? And, when you say "start it manually" how exactly do you do that?
+2007-08-24T06:00:00.000Z	Whiz2	kauer	vnc creates a X desktop session for the purpose od remotely controlling the desktop. I never actually login which is why I want to start it before KDE logs in... by starting manually I mean I have to SSH into the PC, and run it from thecommand line as me
+2007-08-24T06:06:00.000Z	Whiz2	kauer	when the computer starts, it sits at the KDE login screen which would in turn, log me into the KDE desktop... Instead of logging into the KDE desktop, I SSH into the machine (providing a console) login to my user there, and run the command vncserver -geometry 1024x768 this creates an X session (Because X itself is already running) and logs that session into KDE
+2007-08-24T06:12:00.000Z	kauer	Whiz2	Ah, I see! Well, it may not be quite the solution you are expecting but how about this: Write a script on your local machine that logs in and runs the server in a single step. Run that script from a launcher button on your local machine. One click gets you in, with no need to (very insecurely) autolaunch vncserver on the remote. I'm not sure whether vncserver autodetaches, but if it *doesn't*, then the vncserver session will die with ssh, which would b
+2007-08-24T06:13:00.000Z	Whiz2	kauer	not possible
+2007-08-24T06:13:00.000Z	Whiz2	kauer	because the vncserver itself HAS to be running on the remote machine, before I can even use it
+2007-08-24T06:15:00.000Z	kauer	Whiz2	You click on your launcher. The launcher just does what you say you do now manually - it logs into the remote machine and starts vncserver. If you use ssh-agent and passphrases, you won't even have to enter a password. Then you do whatever you would normally do to start up the viewer on your local machine... I get the feeling we are not on the same page here...
+2007-08-24T06:16:00.000Z	kauer	Whiz2	Oooooh - you are using Windows as the client! Then it's your own silly fault :-) Can't help you.
+2007-08-24T06:28:00.000Z	kauer	Whiz2	This is the short, short version: In the directory /etc/rc3.d you will see a link like "S13gdm". The other links in that directory have names like "S20apmd" and "S10acpid". These links point to scripts in /etc/init.d - "S13gdm" points to /etc/init.d/gdm, which is the GDM startup script. The scripts in /etc/rc3.d are run in numeric order, so "S13gdm" happens after "S10acpid" but before "S20apmd". All you need to do to have something load after GDM is to
+2007-08-24T06:29:00.000Z	Whiz2	kauer	i have a script for it sitting in my init.d.................... This might work!
+2007-08-24T06:30:00.000Z	Whiz2	kauer	i would just have to make it the highest number?
+2007-08-24T06:31:00.000Z	kauer	Whiz2	As long as the number is higher than GDM's number, it will start after GDM. The numbers don';t have to be unique, but all progs with the same number will start "at the same time" i.e., in an undefined order.
+2007-08-24T06:32:00.000Z	Whiz2	kauer	rc3.d? there are higher folder numbers... KDM is the one I'mlooking for.. not GDM
+2007-08-24T06:34:00.000Z	Whiz2	kauer	there is a link to my program in rc3.d but the number is low...KDM's number is 99... can i go any higher than 99?
+2007-08-24T06:35:00.000Z	kauer	Whiz2	KDM is GDM for KDE, same thing more or less. Wherever there's a KDM link, put in a vncserver link. You'll see K-links in there as well - where there is a Knnkdm link, put in a Knnvncserver link. Lower K numbers get killed first, just as lower S numbers get started first, so your vncserver kill script link should have a LOWER number than your KDM kill script link. No, you can't go higher than 99 as far as I know. Try it. Alternatively, just rename the K
+2007-08-24T06:35:00.000Z	kauer	Whiz2	Knnkdm = K :-)
+2007-08-24T06:37:00.000Z	Whiz2	kauer	I'mlogged into konqueror as root... i'm just going there, and using the rename option ;-)
+2007-08-24T06:38:00.000Z	kauer	Whiz2	Check the result in a terminal window, then.
+2007-08-24T06:38:00.000Z	Whiz2	kauer	I'll have to reboot thePC in order to see if it's successful
+2007-08-24T06:40:00.000Z	kauer	Whiz2	NO!
+2007-08-24T06:42:00.000Z	Whiz2	kauer	if there's thatmuch risk,i'm just not gonna do it
+2007-08-24T06:42:00.000Z	Whiz2	kauer	I'mlogged into konqueror as root using the rename option (same thing as renaming in console)
+2007-08-24T06:43:00.000Z	kauer	Whiz2	Sorry, I misunderstood you. Those renames are not dangerous - absolute worst case kde wouldn't start. Go for it.
+2007-08-24T06:44:00.000Z	Whiz2	kauer	in rc1.d there are 2 links to my script...should I delete one? that are both k##scriptname and both are higher numbered than KDM
+2007-08-24T06:46:00.000Z	Whiz2	kauer	file managers is how I've done 99% of all the work I've done in kubuntu thus far ;-)
+2007-08-24T06:46:00.000Z	kauer	Whiz2	What are the "two scripts" in rc1.d called?
+2007-08-24T06:47:00.000Z	Whiz2	kauer	k20vncserver.local and k50vncserver.local (and it was actually rc0.d my bad)
+2007-08-24T06:48:00.000Z	Whiz2	kauer	honestly... should i only worry about rc3.d?
+2007-08-24T06:49:00.000Z	kauer	Whiz2	I'd leave them alone, for the simple reasonthat I don't know why they are there, or who put them there. Since they are numbered higher than KDM, they will run AFTER KDM has been killed... actually, could you please paste the output of "ls -la" in that directory to the pastebin?
+2007-08-24T06:49:00.000Z	kauer	Whiz2	I think rc3.d would be enough to see if it works, yes.
+2007-08-24T06:51:00.000Z	Whiz2	kauer	the script itself runs the command su - jason -c "vncserver -geometry 1024x768"
+2007-08-24T06:52:00.000Z	Whiz2	kauer	as requested... http://ubuntu.pastebin.us/39158
+2007-08-24T06:52:00.000Z	Whiz2	kauer	err...nevermind!
+2007-08-24T06:53:00.000Z	kauer	Whiz2	careful. Generally the script is structured to accept command line arguments "start" stop" restart" etc. When run as a K-link, the script is passed "stop", when run as an S-link the script is passed "start".
+2007-08-24T06:53:00.000Z	Whiz2	kauer	vncserver doesn't accept start/stopsin it's command line
+2007-08-24T06:54:00.000Z	kauer	Whiz2	Not vncserver - the script that runs it i.e., /etc/init.d/vncserver. If run with "start" it will start it, if run with "stop" it will stop it etc.
+2007-08-24T06:55:00.000Z	Whiz2	kauer	honnestly, I just wantit to run as if i typed it on the command line
+2007-08-24T06:56:00.000Z	Whiz2	kauer	all the links whether S or K point to the exact same script! can you give me the correct command to put in the script then?
+2007-08-24T06:56:00.000Z	kauer	Whiz2	Eventually, that will happen :-)
+2007-08-24T06:57:00.000Z	kauer	Whiz2	Yes, the links all point to the same script, /etc/init.d/vncserver. Whatthe link is called determines how that one script will be called - whether with "start" or "stop".
+2007-08-24T06:57:00.000Z	kauer	Whiz2	Paste the contents of /etc/init.d/vncserver to the pastebin... let me check it out.
+2007-08-24T06:58:00.000Z	Whiz2	kauer	that script is one line
+2007-08-24T06:58:00.000Z	kauer	Whiz2	Did you write it?
+2007-08-24T06:58:00.000Z	Whiz2	kauer	yes
+2007-08-24T06:58:00.000Z	Whiz2	kauer	su - jason -c "vncserver -geometry 1024x768"
+2007-08-24T06:59:00.000Z	Whiz2	kauer	it has to run as me.it can't be allowed to run as root
+2007-08-24T07:00:00.000Z	kauer	Whiz2	Oh.
+2007-08-24T07:00:00.000Z	Whiz2	kauer	if it runs as root,I'm presented with a blank X desktop instead of myown desktop
+2007-08-24T07:00:00.000Z	kauer	Whiz2	KDE is run as root, but you want vncserver run as you, are you sure?
+2007-08-24T07:00:00.000Z	Whiz2	kauer	yes
+2007-08-24T07:01:00.000Z	Whiz2	kauer	vnc
+2007-08-24T07:01:00.000Z	Whiz2	kauer	KDM/KDE can run as root. I don't care about how they run...but vncserver MUST run as me, or it will not function properly
+2007-08-24T07:02:00.000Z	kauer	Whiz2	Root can run stuff as other users, without a password, using su and sudo, so you can still start something from within the rcX.d structure as another user if you need to. Have you done much scripting? I get the feeling you haven't (no offence)
+2007-08-24T07:03:00.000Z	Whiz2	kauer	no i haven't, but... if I type sudo vncserver -geometry 1024x768 then i am presented with a blank desktop... vncserver createsan X session for the user that executes it
+2007-08-24T07:04:00.000Z	Whiz2	kauer	When i run it, i just type the command itself...no sudo before
+2007-08-24T07:05:00.000Z	Whiz2	kauer	i know i'm being a pain in the butt eh?
+2007-08-24T07:05:00.000Z	kauer	Whiz2	Basically you neeed a simple script that takes a single parameter, "start" or "stop". If it sees "start" it should start vncserver using the command line you gave. If it sees "stop" it should kill the running vncserver. However, you can get away with a start-only script, i.e., one that ignores "stop", but then you should put it only in rc3.d. That should do. Does that sound like something you can have a stab at?
+2007-08-24T07:06:00.000Z	kauer	Whiz2	You'd start vncserver with sudo or su though, so it ran as you.
+2007-08-24T07:06:00.000Z	Whiz2	kauer	if you like, you can private message me, and i can give you the SSH tunnel info, my username, and password, and you can do it for me lol
+2007-08-24T07:06:00.000Z	Whiz2	kauer	then i would just change my password after
+2007-08-24T07:07:00.000Z	Whiz2	kauer	the most i can do is write a windows batch file lol
+2007-08-24T07:07:00.000Z	kauer	Whiz2	You might look at other Linux machines you administer - ifthey start vncserver automatically, they almost certainly do it like this. The other option is to read up on how KDM is configured, because KDM itself can run stuff as it starts.
+2007-08-24T07:08:00.000Z	Whiz2	kauer	the ones that run it automatically are allwindows machines. this is the only linux machine that I have, and it is a web server
+2007-08-24T07:08:00.000Z	kauer	Whiz2	That's too big a responsibility for a stranger, but if you want to I can have a look. I'm not familiar with IRC, so ytr a PM and I'll tell you if it worked ;-)
+2007-08-24T07:08:00.000Z	Whiz2	kauer	did you get  my test PM?
+2007-08-24T07:09:00.000Z	kauer	Whiz2	Yes, did you see my reply?
+2007-08-24T07:09:00.000Z	Whiz2	kauer	no
+2007-08-24T07:09:00.000Z	kauer	Whiz2	PM me the details, I'll get them OK.
+2007-08-24T07:10:00.000Z	Whiz2	kauer	do you have an instant messenger? I'll PM you with my messenger ID and we can collaborate that way ;-)
+2007-08-24T07:10:00.000Z	kauer	Whiz2	I don't know - very new to IRC :-) Suggest smething :-)
+2007-08-24T07:10:00.000Z	Whiz2	kauer	something like yahoo, orMSN messenger
+2007-08-24T07:11:00.000Z	kauer	Whiz2	No. I'm using GAIM. I'll try something, wait....
+2007-08-24T07:11:00.000Z	Whiz2	kauer	join me in #whiz2 lol
+2007-08-24T07:12:00.000Z	kauer	Whiz2	Not very secure for a password exchange :-(
+2007-08-24T07:13:00.000Z	Whiz2	kauer	I PM'd it to you
+2007-08-24T07:14:00.000Z	Whiz2	kauer	did you get it?
+2007-08-24T07:16:00.000Z	Whiz2	kauer	you're on GAIM... that support different IM services... which service are you signed on with?
+2007-08-24T07:31:00.000Z	Whiz2	kauer	did ya login with the info I PM'd you?
+2007-08-24T07:33:00.000Z	kauer	Whiz2	moreinfo in prvate chat.
+2007-08-24T07:34:00.000Z	Whiz2	kauer	I'm not getting any replies in private chat from you
+2007-08-24T07:34:00.000Z	Whiz2	kauer	join me in #whiz2 for now

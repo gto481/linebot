@@ -1,0 +1,97 @@
+2008-02-24T03:00:00.000Z	brambo		speeddemon in here?
+2008-02-24T03:01:00.000Z	brambo		you can type help in the terminal that will give you some commands, there is sudo apt-get sudo apt-install
+2008-02-24T03:01:00.000Z	brambo		im sorta new to it too but i can try to help in any way i can
+2008-02-24T03:02:00.000Z	brambo		does anyone know an application that can adjust the overall bass of my audio?
+2008-02-24T03:02:00.000Z	brambo		i dont have the correct power box for my speakers so i cant have much bass on
+2008-02-24T03:03:00.000Z	brambo		i need to turn down the bass on my whole system
+2008-02-24T03:03:00.000Z	brambo		but i cant my speakers dont have a dial for it
+2008-02-24T03:04:00.000Z	brambo		the equalizer on XMMS isn't very good for me
+2008-02-24T03:04:00.000Z	brambo		System > Preferences > Screen Resolution
+2008-02-24T03:06:00.000Z	brambo		Ctrl Alt + + changes resolution?
+2008-02-24T03:06:00.000Z	usser	brambo	yes
+2008-02-24T03:06:00.000Z	brambo	usser	why does your name appear yellow with certain messages you send ?
+2008-02-24T03:07:00.000Z	usser	brambo	lol, i have no idea
+2008-02-24T03:18:00.000Z	usser	brambo	its lcd right
+2008-02-24T03:18:00.000Z	brambo	usser	what did u do to have ur name come up like that to me?
+2008-02-24T03:19:00.000Z	usser	brambo	u probably will have to dig into xorg.conf and create a modline for your monitor
+2008-02-24T03:19:00.000Z	usser	brambo	oh that well its just that i probably put your name in front so my phrases to you are highlited
+2008-02-24T03:20:00.000Z	brambo	usser	do you see my name in yellow also?
+2008-02-24T03:20:00.000Z	usser	brambo	in red yes
+2008-02-24T03:21:00.000Z	brambo	usser	do you know any good application that I can use to get rid of some applications that don't work, I tryed installing the Kunbuntu desktop but it left me with more applications 88% dont work, i need to clean them out i need my hard drive space...any idea?
+2008-02-24T03:21:00.000Z	usser	brambo	u use kde now?
+2008-02-24T03:22:00.000Z	brambo	usser	I am on Gnome I only use KDE desktop once in a while
+2008-02-24T03:22:00.000Z	usser	brambo	and u dont want it?
+2008-02-24T03:22:00.000Z	brambo	usser	I would like to keep it
+2008-02-24T03:22:00.000Z	brambo	usser	i just odnt need all the junk it left in my menus
+2008-02-24T03:22:00.000Z	usser	brambo	in that case u have to delete those apps one by one
+2008-02-24T03:23:00.000Z	brambo	usser	ouch ok i c
+2008-02-24T03:23:00.000Z	usser	brambo	cause kde comes with a shitload of apps
+2008-02-24T03:23:00.000Z	brambo	usser	yea i noticed
+2008-02-24T03:23:00.000Z	brambo	usser	its cool n all but i like wobbly windows n my desktop cube here under Gnome
+2008-02-24T03:23:00.000Z	usser	brambo	but sudo dpkg --purge appname should let u delete some of it
+2008-02-24T03:24:00.000Z	usser	brambo	u can have the same in kde
+2008-02-24T03:24:00.000Z	brambo	usser	what will that do? search for un needed apps?
+2008-02-24T03:24:00.000Z	usser	brambo	no it removes the appname that u dont need
+2008-02-24T03:25:00.000Z	usser	brambo	or u can open synaptic and look for anything that has kde in it
+2008-02-24T03:25:00.000Z	brambo	usser	I can have wobble windows and desktop cube under KDE in Kubuntu desktop?
+2008-02-24T03:25:00.000Z	usser	brambo	yes sure
+2008-02-24T03:25:00.000Z	brambo	usser	can you accept private messages?
+2008-02-24T03:25:00.000Z	usser	brambo	if it currently works in gnome, then upon loading kde press alt+f2 and type in the run window compiz --replace
+2008-02-24T03:26:00.000Z	usser	brambo	no im not registered
+2008-02-24T03:26:00.000Z	brambo	usser	compiz  --replace just how you typed it?
+2008-02-24T03:26:00.000Z	usser	brambo	yes
+2008-02-24T03:27:00.000Z	brambo	usser	gonna try some things
+2008-02-24T03:27:00.000Z	brambo	usser	am i allowed to put my ym name 4 u in here?
+2008-02-24T03:28:00.000Z	brambo	usser	will you be here much longer if i return soon?
+2008-02-24T03:34:00.000Z	brambo	usser	 ?
+2008-02-24T03:34:00.000Z	usser	brambo	yes
+2008-02-24T03:34:00.000Z	brambo	usser	I put compiz --replace and now I lost my windows where it has minimize close or maximize
+2008-02-24T03:35:00.000Z	brambo	usser	i cant move my windows or minimize / close them im on KDE now
+2008-02-24T03:35:00.000Z	usser	brambo	ok try alt+f2 again and see if it has focus ie if u can type in it
+2008-02-24T03:36:00.000Z	brambo	usser	its a command window, what should i type?
+2008-02-24T03:36:00.000Z	usser	brambo	kwin --replace
+2008-02-24T03:36:00.000Z	brambo	usser	oh okay i have it back now
+2008-02-24T03:36:00.000Z	brambo	usser	i guess i cannot use compiz under KDE on here?
+2008-02-24T03:36:00.000Z	usser	brambo	u may need to install some packages for compiz to work in kde
+2008-02-24T03:37:00.000Z	brambo	usser	yes probably
+2008-02-24T03:37:00.000Z	brambo	usser	certain things for example, ubunut tweak aren't avaliable under this KDE sceen
+2008-02-24T03:37:00.000Z	usser	brambo	in terminal do sudo apt-get install compiz-kde
+2008-02-24T03:38:00.000Z	usser	brambo	whats ubuntu tweak?
+2008-02-24T03:38:00.000Z	brambo	usser	it helps you change some aspects of ubuntu i believe it is on getdeb
+2008-02-24T03:38:00.000Z	usser	brambo	oh its in the section "useless apps" eh :)
+2008-02-24T03:39:00.000Z	brambo	usser	yeah it is kinda useless lol
+2008-02-24T03:39:00.000Z	brambo	usser	ok its getting compiz for kde now
+2008-02-24T03:39:00.000Z	brambo	usser	done, should i try compiz --replace again?
+2008-02-24T03:39:00.000Z	usser	brambo	yes
+2008-02-24T03:40:00.000Z	brambo	usser	now how do i get into setting to turn on wobble windows, etc?
+2008-02-24T03:40:00.000Z	usser	brambo	hm they should be enabled if all went well
+2008-02-24T03:41:00.000Z	brambo	usser	no they aren't...just smoother window moving and when i minimize stuff its nicer looking
+2008-02-24T03:42:00.000Z	usser	brambo	well in terminal type sudo apt-get install ccsm
+2008-02-24T03:42:00.000Z	brambo	usser	and thats for?
+2008-02-24T03:43:00.000Z	usser	brambo	this is advanced compiz config settings manager
+2008-02-24T03:43:00.000Z	usser	brambo	ccsm
+2008-02-24T03:43:00.000Z	brambo	usser	E: Couldn't find package ccsm
+2008-02-24T03:44:00.000Z	usser	brambo	oh sorry sudo apt-get install compizconfig-settings-manager
+2008-02-24T03:45:00.000Z	brambo	usser	compizconfig-settings-manager is already the newest version.
+2008-02-24T03:45:00.000Z	brambo	usser	maybe i have to reboot KDE ?
+2008-02-24T03:45:00.000Z	usser	brambo	oh alt-f2 ccsm
+2008-02-24T03:45:00.000Z	usser	brambo	no
+2008-02-24T03:45:00.000Z	brambo	usser	oh duh sorry, im new in ubuntu but im trying very hard to figure it out cause i love the system and the people :)
+2008-02-24T03:45:00.000Z	usser	brambo	and we love u :P
+2008-02-24T03:49:00.000Z	brambo	usser	great now i have KDE acting like Gnome and looking better :) thx buddy
+2008-02-24T03:49:00.000Z	usser	brambo	oh hey no problem, u should try kde4 its a shiny new release
+2008-02-24T03:49:00.000Z	brambo	usser	how can i do that?
+2008-02-24T03:50:00.000Z	brambo	usser	can i install the new KDE through typing in terminal?
+2008-02-24T03:50:00.000Z	usser	brambo	http://www.cyberciti.biz/tips/install-kde-4.html
+2008-02-24T03:50:00.000Z	usser	brambo	yes u can anything using terminal
+2008-02-24T03:51:00.000Z	usser	brambo	messed up sorry
+2008-02-24T03:51:00.000Z	usser	brambo	4 is the latest
+2008-02-24T03:51:00.000Z	brambo	usser	no problem, just was wondering...okie ill try out 4 :)
+2008-02-24T03:55:00.000Z	brambo	usser	is there another way to do it, say through terminal like how I got Kunbuntu on Ubuntu? this web site gives me a head with how this might not work type this do that...
+2008-02-24T03:56:00.000Z	brambo	usser	headache*
+2008-02-24T03:56:00.000Z	usser	brambo	it will work, its just that its not "officially" supported
+2008-02-24T03:56:00.000Z	usser	brambo	yep
+2008-02-24T03:57:00.000Z	brambo	usser	cool thanks, Im gonna close this for now buddy and look into this ill come back later if i get it working alrighty
+2008-02-24T03:57:00.000Z	brambo	usser	who did what?
+2008-02-24T04:39:00.000Z	usser	brambo	flash is pretty easy in gutsy
+2008-02-24T04:39:00.000Z	usser	brambo	just apt-get install flashplugin-nonfree

@@ -1,0 +1,99 @@
+2006-12-18T12:15:00.000Z	un_operateur1		?
+2006-12-18T12:17:00.000Z	xi5hnik	un_operateur1	This is me again - pr3d4t0r in Russian.
+2006-12-18T12:17:00.000Z	xi5hnik	un_operateur1	I'm going to bounce .28; I added a gateway line to /etc/network/intarfaces for that NIC.
+2006-12-18T12:17:00.000Z	xi5hnik	un_operateur1	pr3d4t0r will be disconnected when I bounce the machine.
+2006-12-18T12:18:00.000Z	xi5hnik	un_operateur1	And I'll use those two minutes to get back to my desk :)
+2006-12-18T12:19:00.000Z	un_operateur1	xi5hnik	pr3d4t0r ok .. let me know when you are done
+2006-12-18T12:58:00.000Z	xi5hnik	un_operateur1	I'm about to reboot .28 once more.  I'm here as xi5hnik.
+2006-12-18T12:59:00.000Z	un_operateur1	xi5hnik	read above ^^
+2006-12-18T12:59:00.000Z	xi5hnik	un_operateur1	Yes.
+2006-12-18T12:59:00.000Z	xi5hnik	un_operateur1	Machines with more than one IP address have more than one NIC, one for each.
+2006-12-18T13:00:00.000Z	un_operateur1	xi5hnik	all this tells me that .26, .27, .28, .29 and .30 are on one physical segment .. and .25 is on its own .. am i correct?
+2006-12-18T13:00:00.000Z	xi5hnik	un_operateur1	Correct.
+2006-12-18T13:01:00.000Z	xi5hnik	un_operateur1	Well, correct in as much as there is separation within the router.
+2006-12-18T13:01:00.000Z	xi5hnik	un_operateur1	I have little visibility into that router.
+2006-12-18T13:01:00.000Z	un_operateur1	xi5hnik	if that is correct -- then .26 and .28 are on the inside and .25 is on the outside -- let's verify that
+2006-12-18T13:01:00.000Z	un_operateur1	xi5hnik	head on over to http://whatismyip.com  .. what is the IP address you see there?
+2006-12-18T13:02:00.000Z	xi5hnik	un_operateur1	Let's say that .26 and .28 are in the "middle".  The inside is the 192.168.0.* network.
+2006-12-18T13:02:00.000Z	xi5hnik	un_operateur1	.26
+2006-12-18T13:02:00.000Z	un_operateur1	xi5hnik	try the other machines -- do you get the same address?
+2006-12-18T13:03:00.000Z	xi5hnik	un_operateur1	I'm about to try.
+2006-12-18T13:04:00.000Z	un_operateur1	xi5hnik	cool :)
+2006-12-18T13:04:00.000Z	xi5hnik	un_operateur1	All the machines with 192.168.0.* will give you .26 because that's their gateway.
+2006-12-18T13:04:00.000Z	xi5hnik	un_operateur1	Let me try .28 but that's a headless machine.
+2006-12-18T13:05:00.000Z	un_operateur1	xi5hnik	so far so good -- that is expected
+2006-12-18T13:05:00.000Z	xi5hnik	un_operateur1	<h1>Your IP Is 74.0.125.28</h1>
+2006-12-18T13:05:00.000Z	xi5hnik	un_operateur1	I fixed it.
+2006-12-18T13:06:00.000Z	xi5hnik	un_operateur1	I know what the problem was.
+2006-12-18T13:06:00.000Z	xi5hnik	un_operateur1	eth0 and eth1 each defined a gateway.
+2006-12-18T13:06:00.000Z	xi5hnik	un_operateur1	I turned eth1 off.
+2006-12-18T13:06:00.000Z	un_operateur1	xi5hnik	:) :))
+2006-12-18T13:06:00.000Z	un_operateur1	xi5hnik	so can i try connecting to .28 now?
+2006-12-18T13:06:00.000Z	xi5hnik	un_operateur1	So the packets were probably running in circles trying to fiture out where to go.
+2006-12-18T13:06:00.000Z	xi5hnik	un_operateur1	Yup.
+2006-12-18T13:06:00.000Z	xi5hnik	un_operateur1	http://74.0.125.28
+2006-12-18T13:07:00.000Z	un_operateur1	xi5hnik	yes, it works :)
+2006-12-18T13:07:00.000Z	xi5hnik	un_operateur1	That was it.
+2006-12-18T13:07:00.000Z	xi5hnik	un_operateur1	I wonder where I ought to submit the bug :)
+2006-12-18T13:07:00.000Z	un_operateur1	xi5hnik	for your reference -- .25 is on the inside eh .. it has to be
+2006-12-18T13:07:00.000Z	xi5hnik	un_operateur1	I think that's a bug in the Kubuntu AMD OEM installer.  That's how that machine wound up with two gateways.
+2006-12-18T13:07:00.000Z	un_operateur1	xi5hnik	the outside interface _must_ have a different IP address for routing to work properly
+2006-12-18T13:08:00.000Z	xi5hnik	un_operateur1	I don't follow.
+2006-12-18T13:08:00.000Z	xi5hnik	un_operateur1	.25 is exposed to the world.
+2006-12-18T13:08:00.000Z	xi5hnik	un_operateur1	How can that be on the inside?
+2006-12-18T13:08:00.000Z	xi5hnik	un_operateur1	.25 - .30 are exposed to the world.
+2006-12-18T13:08:00.000Z	un_operateur1	xi5hnik	.25 is exposed to the world only because there'sa  routing protocol in operation on the router that allows the world access to that subnet
+2006-12-18T13:09:00.000Z	xi5hnik	un_operateur1	Ah, yeah.
+2006-12-18T13:09:00.000Z	xi5hnik	un_operateur1	It's plugged to a different WAN, owned by Covad.
+2006-12-18T13:09:00.000Z	un_operateur1	xi5hnik	if you had .25 on the outside interface -- routing would simply not work
+2006-12-18T13:09:00.000Z	xi5hnik	un_operateur1	So I understand now what you meant by inside/outside.
+2006-12-18T13:09:00.000Z	xi5hnik	un_operateur1	Er...
+2006-12-18T13:09:00.000Z	xi5hnik	un_operateur1	That's how I made it work.
+2006-12-18T13:09:00.000Z	xi5hnik	un_operateur1	By defining .25 as the outside NIC gateway.
+2006-12-18T13:10:00.000Z	xi5hnik	un_operateur1	http://eugeneciurana.com/pastebin/pastebin.php?show=120
+2006-12-18T13:10:00.000Z	un_operateur1	xi5hnik	well, I have a feeling you do not know what your real outisde network interface address is -- your ISP/router might call .25 an outside address but infact it's just like a gatway for the inside network
+2006-12-18T13:11:00.000Z	xi5hnik	un_operateur1	Let me look at the router config.
+2006-12-18T13:13:00.000Z	un_operateur1	xi5hnik	ok
+2006-12-18T13:13:00.000Z	xi5hnik	un_operateur1	I guess what you call "outside" is Covad's WAN, to which I'm connected to.
+2006-12-18T13:13:00.000Z	xi5hnik	un_operateur1	So by connecting to that they route my traffic from wherever to 74.0.125.*
+2006-12-18T13:13:00.000Z	un_operateur1	xi5hnik	by outisde i mean the link that connects to your ISP -- it must have adifferent IP addressing scheme to that of your "inside" network
+2006-12-18T13:13:00.000Z	xi5hnik	un_operateur1	Yes, it does.
+2006-12-18T13:14:00.000Z	xi5hnik	un_operateur1	that's the WAN address I talk about.
+2006-12-18T13:14:00.000Z	xi5hnik	un_operateur1	So now I understand what you meant.
+2006-12-18T13:15:00.000Z	xi5hnik	un_operateur1	Thanks very much for your help.  I'm going to start cleaning up this mess :)
+2006-12-18T13:15:00.000Z	un_operateur1	xi5hnik	usually how routers work is -- the external/WAN interface has a /30 address -- 2 addresses on this subnet connect you and your ISP up together -- your side of the router advertises your "inside" /29 network to the ISP -- and thats how the world gets to know how to get to your network
+2006-12-18T13:15:00.000Z	xi5hnik	un_operateur1	Yeah.
+2006-12-18T13:16:00.000Z	xi5hnik	un_operateur1	I was just confused by your use of "outside" vs. "inside".  I'm (erroneously?) used to thinking of outside == 74.* and inside == 192.168.*
+2006-12-18T13:16:00.000Z	un_operateur1	xi5hnik	theres a law with routers -- 2 or more interfaces cannot have IP addresses in the same IP subnet
+2006-12-18T13:16:00.000Z	xi5hnik	un_operateur1	That's why we had that disconnect.  Plus I know enough about networking without being a router guru :(
+2006-12-18T13:16:00.000Z	un_operateur1	xi5hnik	well, thats convention brought about by SOHO users -- inside/outside can mean anything really
+2006-12-18T13:16:00.000Z	xi5hnik	un_operateur1	:)
+2006-12-18T13:17:00.000Z	un_operateur1	xi5hnik	i suggest you lower the metric on the gateway for 192.168.* on your hosts
+2006-12-18T13:18:00.000Z	xi5hnik	un_operateur1	What do you mean "lower your metric"?
+2006-12-18T13:18:00.000Z	xi5hnik	un_operateur1	Oh, that.  Yes, that's set up that way.
+2006-12-18T13:19:00.000Z	xi5hnik	un_operateur1	There is a separate switch there for internal traffic, etc.  Then I have iptables rules that help with the router in each gateway (.26, .28).
+2006-12-18T13:19:00.000Z	un_operateur1	xi5hnik	each gateway has an IP metric associated with it to suggest to the IP stack the cost for using the parituclar link -- the lower the metric the better the link
+2006-12-18T13:19:00.000Z	xi5hnik	un_operateur1	Yes.
+2006-12-18T13:19:00.000Z	xi5hnik	un_operateur1	That's how the .26 machine is configured.  .28 will eventually be configured that way and replace .26 altogether.
+2006-12-18T13:20:00.000Z	un_operateur1	xi5hnik	what i really meant was -- raise the metrics for those links connected to the 192.168.* network -- thereby making them less suitable
+2006-12-18T13:20:00.000Z	xi5hnik	un_operateur1	Right now there is nothing on .28 - I just wanted the bloody SSH to work :)
+2006-12-18T13:20:00.000Z	un_operateur1	xi5hnik	it ought to work now :)
+2006-12-18T13:20:00.000Z	xi5hnik	un_operateur1	Yeah, it's working fine.
+2006-12-18T13:21:00.000Z	xi5hnik	un_operateur1	Seriously now.  Where do I file a bug report with Kubuntu for the OEM installer?
+2006-12-18T13:21:00.000Z	xi5hnik	un_operateur1	I think this whole issue was caused by the installer allowing two different gateway definitions, one for each NIC.
+2006-12-18T13:21:00.000Z	xi5hnik	un_operateur1	That was the problem.  By removing the second one, everything works like a charm now.
+2006-12-18T13:21:00.000Z	un_operateur1	xi5hnik	errm, when you installed kubuntu-- didnt the installer prompt you for 2 different IP configurations??
+2006-12-18T13:23:00.000Z	xi5hnik	un_operateur1	Yes.
+2006-12-18T13:23:00.000Z	xi5hnik	un_operateur1	That's the problem.
+2006-12-18T13:23:00.000Z	un_operateur1	xi5hnik	well, if you were asked for 2 different gateways (one for each interface) that is perfectly valid and intended -- because you might have a host connected upto 2 different ISPs and then you do need that
+2006-12-18T13:23:00.000Z	xi5hnik	un_operateur1	You can't define two gateways.
+2006-12-18T13:23:00.000Z	un_operateur1	xi5hnik	ohh yes you can and must be able to
+2006-12-18T13:24:00.000Z	un_operateur1	xi5hnik	the reason why this failed here is only because of the metrics and a loop -- if you had the right setup , this wouldnt have happened
+2006-12-18T13:25:00.000Z	xi5hnik	un_operateur1	OKi.
+2006-12-18T13:25:00.000Z	un_operateur1	xi5hnik	I hope you arent filing a bug report -- because this isnt a bug eh :)
+2006-12-18T13:26:00.000Z	xi5hnik	un_operateur1	I will document all this in the morning :)
+2006-12-18T13:26:00.000Z	xi5hnik	un_operateur1	Yeah.
+2006-12-18T13:26:00.000Z	xi5hnik	un_operateur1	I think the bug is in how the questions are asked.
+2006-12-18T13:26:00.000Z	un_operateur1	xi5hnik	:)
+2006-12-18T13:26:00.000Z	un_operateur1	xi5hnik	the bug here is how your network is laid out -- 198.* goes back into the switch and back into 192.* on the other host
+2006-12-18T13:27:00.000Z	un_operateur1	xi5hnik	if your eth1 has a lower metric (which it should) -- the machine is going to try and send all traffic that way -- and that'll never get outside

@@ -1,0 +1,98 @@
+2008-02-07T16:29:00.000Z	frost0		Is it okay for me to run ubuntu w/ less than a gig of storage left?
+2008-02-07T16:29:00.000Z	frost0		like 850mb ?
+2008-02-07T16:30:00.000Z	frost0		it's all i have :(
+2008-02-07T16:30:00.000Z	frost0		not install*
+2008-02-07T16:31:00.000Z	_dml	frost0	how much space is USED .. ? and what filesystem are you using?
+2008-02-07T16:31:00.000Z	frost0	_dml	i've used about 18gb....and not sure which filesystem :(
+2008-02-07T16:31:00.000Z	_dml	frost0	type ` mount `
+2008-02-07T16:32:00.000Z	_dml	frost0	whats it say about \ ?
+2008-02-07T16:32:00.000Z	frost0	_dml	command not found?
+2008-02-07T16:33:00.000Z	_dml	frost0	its usually a bad idea to have less than 10-20 % free space because fragmentation increases nonlinearly as free space decreases
+2008-02-07T16:34:00.000Z	frost0	_dml	i'm not planning on using anymore space....i just cleaned up....and no some apps are runing oddly :(
+2008-02-07T16:34:00.000Z	frost0	_dml	what is the command to check my hd space again?
+2008-02-07T16:34:00.000Z	_dml	frost0	qzio : at the same time ?
+2008-02-07T16:34:00.000Z	_dml	frost0	df -h
+2008-02-07T16:36:00.000Z	frost0	_dml	http://pastebin.com/d1965b636
+2008-02-07T16:37:00.000Z	frost0	_dml	? :)
+2008-02-07T16:37:00.000Z	_dml	frost0	yeah you dont have much free do you ;)
+2008-02-07T16:37:00.000Z	frost0	_dml	it's actually a nice computer...just a tiny hd..
+2008-02-07T16:37:00.000Z	_dml	frost0	just don't let /tmp or /var/log fill up :-0
+2008-02-07T16:37:00.000Z	frost0	_dml	i did yesterday..
+2008-02-07T16:38:00.000Z	frost0	_dml	it was bad...
+2008-02-07T16:38:00.000Z	frost0	_dml	may that be why things were getting messed up?
+2008-02-07T16:38:00.000Z	frost0	_dml	but would the damage be permanent?
+2008-02-07T16:38:00.000Z	frost0	_dml	gnome-rdp says error reading database
+2008-02-07T16:39:00.000Z	frost0	_dml	cant i just reinstall...i tried...but same error :(
+2008-02-07T16:39:00.000Z	_dml	frost0	you might need to purge & reinstall
+2008-02-07T16:39:00.000Z	frost0	_dml	howso? :)
+2008-02-07T16:40:00.000Z	frost0	_dml	i'm really contemplating removing sauerbraten for space..
+2008-02-07T16:41:00.000Z	_dml	frost0	never heard of it .. i'm installing it ;)
+2008-02-07T16:41:00.000Z	frost0	_dml	it's sweet...but about 900mb.
+2008-02-07T16:42:00.000Z	frost0	_dml	assassin edition?
+2008-02-07T16:42:00.000Z	frost0	_dml	wait.....okay..maybe delete my podcasts :)
+2008-02-07T16:42:00.000Z	frost0	_dml	tons of them...
+2008-02-07T16:43:00.000Z	frost0	_dml	is it wise to truecrypt your hard drive?........i have nothing to hid but....it sounds cool.. ..
+2008-02-07T16:43:00.000Z	frost0	_dml	reading about it on downloadsquad.com
+2008-02-07T16:44:00.000Z	_dml	frost0	not unless you need to ... a surprising number of people forget their passwords ...
+2008-02-07T16:44:00.000Z	_dml	frost0	whats assassin edition ?
+2008-02-07T16:44:00.000Z	frost0	_dml	okay....uh....its the newest release i guess.
+2008-02-07T16:44:00.000Z	frost0	_dml	its nice...
+2008-02-07T16:45:00.000Z	frost0	_dml	according to sauerbraten.org
+2008-02-07T16:45:00.000Z	frost0	_dml	okay the package that is giving me trouble is gnome-rdp...
+2008-02-07T16:45:00.000Z	frost0	_dml	how do i purge and reinstall that?
+2008-02-07T16:46:00.000Z	_dml	frost0	aptitude purge gnome-rdp; aptitude install gnome-rdp
+2008-02-07T16:46:00.000Z	frost0	_dml	will this give me a menu item?
+2008-02-07T16:46:00.000Z	frost0	_dml	if i don't use add/remove?
+2008-02-07T16:46:00.000Z	_dml	frost0	i think so
+2008-02-07T16:47:00.000Z	_dml	frost0	the gnome add/remove is just a gtk front end for aptitude / synaptic / apt / dpkg
+2008-02-07T16:47:00.000Z	frost0	_dml	its saying permission denied..
+2008-02-07T16:48:00.000Z	frost0	_dml	i did .... :(
+2008-02-07T16:48:00.000Z	frost0	_dml	doh!..i had synaptic open...
+2008-02-07T16:48:00.000Z	_dml	frost0	it asked you for your password ?
+2008-02-07T16:49:00.000Z	frost0	_dml	think i got it..
+2008-02-07T16:49:00.000Z	frost0	_dml	uh how much room does truecrypt take up?
+2008-02-07T16:49:00.000Z	frost0	_dml	and do i have that room :)
+2008-02-07T16:49:00.000Z	frost0	_dml	i won't but, i like to try new things on this box :)
+2008-02-07T16:49:00.000Z	_dml	frost0	its not going to give you anything
+2008-02-07T16:50:00.000Z	frost0	_dml	http://pastebin.com/d5aad658
+2008-02-07T16:50:00.000Z	frost0	_dml	that is my error with sudo
+2008-02-07T16:51:00.000Z	_dml	frost0	% sudo aptitude purge wossname ;
+2008-02-07T16:52:00.000Z	_dml	frost0	thats an aptitude error not a sudo error ..
+2008-02-07T16:53:00.000Z	frost0	_dml	same problem :)
+2008-02-07T16:53:00.000Z	frost0	_dml	whats this new code?
+2008-02-07T16:53:00.000Z	frost0	_dml	wossname?
+2008-02-07T16:54:00.000Z	_dml	frost0	i couldnt remember the name of your package
+2008-02-07T16:54:00.000Z	frost0	_dml	% sudo aptitude purge gnome-rdp ;
+2008-02-07T16:55:00.000Z	frost0	_dml	that's the code?
+2008-02-07T16:56:00.000Z	frost0	_dml	its removing...w00t
+2008-02-07T16:56:00.000Z	frost0	_dml	sorry easily excited at this early hour :)
+2008-02-07T16:56:00.000Z	_dml	frost0	also try running aptitude with just: sudo aptitude
+2008-02-07T17:00:00.000Z	frost0	_dml	same error
+2008-02-07T17:02:00.000Z	frost0	_dml	potty break?
+2008-02-07T17:02:00.000Z	frost0	_dml	same error
+2008-02-07T17:02:00.000Z	frost0	_dml	sadness
+2008-02-07T17:03:00.000Z	_dml	frost0	try: sudo cat /etc/shadow
+2008-02-07T17:03:00.000Z	_dml	frost0	you see some shit on the screen or what?
+2008-02-07T17:03:00.000Z	frost0	_dml	lots o poo.
+2008-02-07T17:03:00.000Z	_dml	frost0	error with aptitude or the package ?
+2008-02-07T17:04:00.000Z	frost0	_dml	uh pastebin?
+2008-02-07T17:04:00.000Z	frost0	_dml	almost done pastebinning...btw...what is this?
+2008-02-07T17:05:00.000Z	_dml	frost0	just checking if sudo was working ;) thats the system shadow password file
+2008-02-07T17:06:00.000Z	frost0	_dml	so i can't send you this...
+2008-02-07T17:06:00.000Z	frost0	_dml	right?
+2008-02-07T17:07:00.000Z	frost0	_dml	application error?...i'm really sorry...it's sooo early
+2008-02-07T17:07:00.000Z	frost0	_dml	the gnome-rdp error!
+2008-02-07T17:08:00.000Z	frost0	_dml	"error during connection to the database"
+2008-02-07T17:08:00.000Z	_dml	frost0	like this? http://www.google.com.au/url?sa=t&ct=res&cd=1&url=https%3A%2F%2Fbugs.launchpad.net%2Fubuntu%2F%2Bsource%2Fgnome-rdp%2F%2Bbug%2F149542&ei=uvSqR6XeAovApgTgy5m1Cw&usg=AFQjCNH7Vty31yqUVGOmrKTqKBPhtKvSmw&sig2=j9b_TI0kr3BsXmVFGP95EA
+2008-02-07T17:09:00.000Z	_dml	frost0	it says rm ~/.gnome-rdp.db
+2008-02-07T17:09:00.000Z	frost0	_dml	i'll run that
+2008-02-07T17:09:00.000Z	frost0	_dml	then reinstall...or am i fine?
+2008-02-07T17:09:00.000Z	_dml	frost0	then try running it again
+2008-02-07T17:10:00.000Z	_dml	frost0	most apps use "dotfiles" in your home dir to store prefs and data
+2008-02-07T17:10:00.000Z	frost0	_dml	fixed!
+2008-02-07T17:10:00.000Z	frost0	_dml	thank you very very much
+2008-02-07T17:11:00.000Z	_dml	frost0	now i'm gonna play saerkraut
+2008-02-07T17:11:00.000Z	frost0	_dml	sauerbraten? :)
+2008-02-07T17:11:00.000Z	frost0	_dml	it means something like sausage....
+2008-02-07T17:16:00.000Z	frost0	_dml	once again thx
+2008-02-07T17:17:00.000Z	frost0	_dml	any experience with nomachine?

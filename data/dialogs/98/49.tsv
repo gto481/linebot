@@ -1,0 +1,98 @@
+2007-01-27T08:05:00.000Z	LjL	xtknight	perhaps using "hd" would be better if one doesn't want a messed up terminal though
+2007-01-27T08:05:00.000Z	LjL	xtknight	oh there's grep, nevermind
+2007-01-28T07:30:00.000Z	LjL	xtknight	it's easy enough
+2007-01-28T07:30:00.000Z	LjL	xtknight	just use the alternate or the minimal
+2007-01-28T07:34:00.000Z	LjL	xtknight	i'm not entirely sure, however i believe you don't really have to install Server to get a text-mode thing from the textmode CDs
+2007-01-28T07:44:00.000Z	xtknight	LjL	any reason for the PMs?  is that what we should do instead of for example "!real | nickname"?
+2007-01-28T07:45:00.000Z	LjL	xtknight	both have their purposes. if you think a factoid is mostly only of interest for *one* user, use pm -- if you believe if can be useful for the whole channel, or if it's short enough, use |
+2007-01-28T07:46:00.000Z	LjL	xtknight	and note that you don't have to use that awkward syntax of mine, you can just use "!bot factoid > nickname"
+2007-02-04T07:19:00.000Z	LjL	xtknight	don't think so. but it should be easier to enable, probably
+2007-02-04T10:00:00.000Z	xtknight	LjL	did you mean offtopic for vista talk or offtopic for virtualization talk? :O
+2007-02-04T10:00:00.000Z	LjL	xtknight	virtualization is fine, actually i'm trying to push virtualbox myself...
+2007-02-04T10:05:00.000Z	LjL	xtknight	which the qemu author *made*
+2007-02-04T10:11:00.000Z	LjL	xtknight	you need to install linux-headers i suppose
+2007-02-04T10:12:00.000Z	xtknight	LjL	have that as well, and /usr/include/sys/ioctl.h
+2007-02-04T10:12:00.000Z	LjL	xtknight	you used the .deb package i assume?
+2007-02-04T10:13:00.000Z	xtknight	LjL	correct.  guess i missed some dependencies, i'm trying again
+2007-02-04T10:14:00.000Z	LjL	xtknight	i suggest perhaps "strace -e trace=file virtualbox"
+2007-02-04T10:14:00.000Z	xtknight	LjL	im also using linux32 to install virtualbox since i have a 64bit machine..not sure if that's possible or what
+2007-02-04T10:14:00.000Z	LjL	xtknight	so you can check where it's actually looking for that include file
+2007-02-04T10:14:00.000Z	LjL	xtknight	oh. not sure either
+2007-02-04T10:17:00.000Z	xtknight	LjL	hmm.  not sure how i'd trace a dpkg post install script>>
+2007-02-04T10:18:00.000Z	LjL	xtknight	oh it's the postinst? hm. that's annoying quite.
+2007-02-04T10:19:00.000Z	xtknight	LjL	ill try the distro-neutral one.
+2007-02-04T10:19:00.000Z	LjL	xtknight	well you still need to remove the package though, i suppose, or your APT will be broken
+2007-02-04T10:19:00.000Z	xtknight	LjL	yeah, done, i think..purge force all
+2007-02-04T10:20:00.000Z	LjL	xtknight	well, yeah, with gentle manners anything can be obtained :P
+2007-02-04T10:21:00.000Z	xtknight	LjL	errrrr the distro neutral is also a script
+2007-02-04T10:21:00.000Z	xtknight	LjL	i doubt it works on amd64, theres no way it's going to compile a 32bit kernel module on my 64bit kernel
+2007-02-05T15:35:00.000Z	xtknight	LjL	 how do you get definitions for clamav?  (another way i presume?)  aren't universe/multiverse packages not updated for 6 months?
+2007-02-14T10:47:00.000Z	LjL	xtknight	not anymore
+2007-02-14T10:47:00.000Z	LjL	xtknight	the even/odd scheme is deprecated
+2007-02-14T10:48:00.000Z	xtknight	LjL	hmm so what's the deal?  everything's stable now?
+2007-02-14T10:49:00.000Z	LjL	xtknight	don't really know what the current scheme is
+2007-03-25T08:36:00.000Z	LjL	xtknight	how come?
+2007-03-25T08:36:00.000Z	xtknight	LjL	because the kvm instructions do not make it faster, they only do what you say
+2007-03-25T08:36:00.000Z	LjL	xtknight	*if* those instructions are available, they *should* increase performance, since the piece of code that would normally (i.e. under VMWare and friends) be executed by emulation (superuser code, etc) can be executed natively
+2007-03-25T08:37:00.000Z	xtknight	LjL	kqemu (kvm) doesn't have mouse drivers either so it feels slower than VMware ultimately
+2007-03-25T08:37:00.000Z	LjL	xtknight	kqemu = kvm? only if you don't have those instructions, i thought
+2007-03-25T08:38:00.000Z	LjL	xtknight	not necessarily...
+2007-03-25T08:38:00.000Z	xtknight	LjL	the instructions actually decrease performance in most cases
+2007-03-25T08:39:00.000Z	xtknight	LjL	the hardware 'accelerated' VT instructions are in most cases slower than the software equivalents, at least in VMware
+2007-03-25T08:39:00.000Z	LjL	xtknight	nah no need to download a ready made machine, you just need 1) a working config file 2) an empty HD image. easyvmx does that easily, or one can use qemu-image, if they're familiar with the config file syntax
+2007-03-25T08:39:00.000Z	xtknight	LjL	the VT instructions are, right now, to mainly increase flexibility.  you could not run windwos under Xen before due to some kernel limitation i believe.  VT alleviates that
+2007-03-25T08:39:00.000Z	LjL	xtknight	i see, then i suspect they're very poorly implemented in the current breed of CPU...
+2007-03-25T08:39:00.000Z	xtknight	LjL	yup that's exactly the reason
+2007-03-25T08:39:00.000Z	xtknight	LjL	future ones may increase performance
+2007-03-25T08:40:00.000Z	LjL	xtknight	but then you could under VMWare, and i thought Xen's main advantage over VMWare was intended to be... speed ;)
+2007-03-27T08:19:00.000Z	LjL	xtknight	are you sure init N does anything? i've never used it
+2007-03-27T08:19:00.000Z	xtknight	LjL	well in Edgy it does, no clue about feisty
+2007-03-27T08:20:00.000Z	LjL	xtknight	ah right, it says   init is not normally executed by a user process, and expects to have a process id of 1.  If this is not the case, it will actually execute telinit(8) and  pass all arguments to that. 
+2007-03-31T07:49:00.000Z	LjL	xtknight	a place where "mini-sources.lists" can reside. i thought that on Edgy, using Software Sources resulted in files being created in there, instead of just sources.list being edited
+2007-03-31T07:51:00.000Z	xtknight	LjL	ahh i see
+2007-03-31T07:51:00.000Z	LjL	xtknight	i don't either, but then i've never used Software Sources
+2007-03-31T07:52:00.000Z	xtknight	LjL	oh synaptic repository propeties is the same thing isn't it?
+2007-03-31T07:52:00.000Z	LjL	xtknight	see this for an example http://winehq.org/site/download-deb
+2007-03-31T07:52:00.000Z	LjL	xtknight	not sure. it surely has the same purpose, but maybe it does things differently (which is why i don't trust GUIs...)
+2007-03-31T08:18:00.000Z	LjL	xtknight	uhm, wait, that's the one i was thinking about too, but perhaps the bot is right and it's not available on edgy. are you on feisty?
+2007-03-31T08:18:00.000Z	xtknight	LjL	yea
+2007-03-31T08:19:00.000Z	LjL	xtknight	yeah, but it's only broadcast on DVB i think
+2007-03-31T08:20:00.000Z	LjL	xtknight	it's terrestrial digital
+2007-03-31T08:20:00.000Z	LjL	xtknight	probably some commercial name for dtv broadcasts somewhere...
+2007-03-31T13:35:00.000Z	xtknight	LjL	eh what does that do?
+2007-03-31T13:35:00.000Z	LjL	xtknight	^
+2007-03-31T13:35:00.000Z	LjL	xtknight	it's saved in... /etc/readahead?
+2007-03-31T15:31:00.000Z	xtknight	LjL	he's back again
+2007-04-01T09:42:00.000Z	xtknight	LjL	it was a joke that feisty was delayed too i take it?
+2007-04-01T09:42:00.000Z	LjL	xtknight	one that hasn't reached me yet, i guess. if by "delayed" you mean "delayed compared to the april 1 release date", though, i guess not.
+2007-04-01T09:45:00.000Z	LjL	xtknight	missed it. i'm sure it's true
+2007-04-02T14:00:00.000Z	LjL	xtknight	the description claims java is among the supported languages
+2007-04-19T14:25:00.000Z	LjL	xtknight	google "apt-torrent"
+2007-04-20T16:40:00.000Z	xtknight	LjL	do you know off hand if apt-torrent can solve the problem we're having now?
+2007-04-20T16:40:00.000Z	LjL	xtknight	it can't, i guess
+2007-04-20T16:41:00.000Z	LjL	xtknight	(and igadget) however, there *is* a spec to add torrent support to Ubuntu's APT
+2007-04-20T16:41:00.000Z	xtknight	LjL	yeah i saw it the other day.  hope it goes thru
+2007-04-21T05:10:00.000Z	xtknight	LjL	LC_* environment variables (type env for an example)
+2007-04-21T05:10:00.000Z	LjL	xtknight	right, but i mean permanently - where're they supposed to be set?
+2007-04-21T05:11:00.000Z	xtknight	LjL	ah im not sure
+2007-04-21T05:21:00.000Z	LjL	xtknight	among other things, yeah
+2007-04-21T08:10:00.000Z	LjL	xtknight	trying to compile http://crestwiki.abo.fi/confluence/download/attachments/1725/coral-0.9.3.tar.gz
+2007-04-21T08:10:00.000Z	LjL	xtknight	he's on edgy, i'm on feisty, we get slightly different errors, but anyway i suspect it has to do with that program really warning python 2.3 rather than 2.4 (edgy) or 2.5 (feisty). at any rate, it won't compile
+2007-04-21T08:11:00.000Z	xtknight	LjL	ah right from the start it's kinda intimidating..no configure in the root dir
+2007-04-21T08:11:00.000Z	LjL	xtknight	yeah, quite intimidating, try make though, it'll complain about swig, if you install swig, it'll compile quite a few things, and then give python errors
+2007-04-21T08:12:00.000Z	xtknight	LjL	do you know the homepage of that package?
+2007-04-21T08:12:00.000Z	LjL	xtknight	there is a skeleton Debian directory, and if you grep, you'll find the Depends include python >= 2.3 -- greater than or equal, so it says, but
+2007-04-21T08:12:00.000Z	LjL	xtknight	http://crestwiki.abo.fi/confluence/display/CRL/Coral+0.9.3
+2007-04-21T08:13:00.000Z	xtknight	LjL	i was gonna do "dpkg-buildpackage -uc" but that didnt do ti
+2007-04-21T08:14:00.000Z	LjL	xtknight	yeah, i went that route, too. at one point i did get dpkg-buildpackage to start compiling (after tweaking the debian/ files), but it still fails just like "make" anyway
+2007-04-21T08:15:00.000Z	xtknight	LjL	is this the one you got "ls: /usr/lib/python2.5/config/libpython2.5.so: No such file or directory"
+2007-04-21T08:15:00.000Z	xtknight	LjL	first err on make ^
+2007-04-21T08:15:00.000Z	LjL	xtknight	uhm no, never got that one i think. first error before or after installing swig?
+2007-04-21T08:15:00.000Z	LjL	xtknight	(anyway, i do have that file)
+2007-04-21T08:15:00.000Z	xtknight	LjL	just typed 'make' on that coral tar gz (i havent done any swiig stuff)
+2007-04-21T08:18:00.000Z	xtknight	LjL	pjesi it said something about "-classic" i think i saw you guys talking about it earlier.  as we speak stuff is g++ing successfully so far
+2007-04-21T08:18:00.000Z	LjL	xtknight	yeah, g++ runs for a while
+2007-04-21T08:19:00.000Z	LjL	xtknight	right now i'm not very sure anymore whether that -classic thing has any relevancy...
+2007-04-21T08:22:00.000Z	xtknight	LjL	pjesi have you manually compiled swig yet?
+2007-04-21T08:44:00.000Z	xtknight	LjL	we got a little further but stuck at another python error (figures)
+2007-04-30T15:16:00.000Z	LjL	xtknight	damageDOne: Shift+Ctrl+u, keep pressed, enter character code, if memory doesn't fail me. (can't try, only works in GNOME). but still you need to remember the code.s

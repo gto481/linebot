@@ -1,0 +1,99 @@
+2009-05-17T23:20:00.000Z	AVGHelp		Hello I need help with AVG anti virus I downloaded the program and clicked it to install and it installed but it did not show up in applications -- accessories nor can i find it when i click system--- preferences ---Main Menu --- so how do i create an icon for it?
+2009-05-17T23:20:00.000Z	sebsebseb	AVGHelp	ok you don't need an antivirus in Ubuntu
+2009-05-17T23:21:00.000Z	sebsebseb	AVGHelp	all you need is a good password for Ubuntu,  and  a firewall,  say in your router, and you should be fine
+2009-05-17T23:21:00.000Z	AVGHelp	sebsebseb	yes i do and i WANT it
+2009-05-17T23:21:00.000Z	sebsebseb	AVGHelp	you only need an antivirus in  Ubuntu, if your scanning for Windows viruses
+2009-05-17T23:22:00.000Z	AVGHelp	sebsebseb	i do need it
+2009-05-17T23:22:00.000Z	sebsebseb	AVGHelp	why do you think that?
+2009-05-17T23:24:00.000Z	sebsebseb	AVGHelp	Why do you think you need anti virus?  Ubuntu is not Windows,   Linux is not Windows, as a result  about the only computers that run Linux that need antivirus is   mail servers that scan for Windows viruses
+2009-05-17T23:25:00.000Z	AVGHelp	sebsebseb	there are criminnals everywhere in the world i just want more protection
+2009-05-17T23:31:00.000Z	sebsebseb	AVGHelp	probably after a log out, it will show there
+2009-05-17T23:31:00.000Z	AVGHelp	sebsebseb	i tried to log out no luck
+2009-05-17T23:31:00.000Z	sebsebseb	AVGHelp	no luck???
+2009-05-17T23:32:00.000Z	AVGHelp	sebsebseb	i tried to log out but at login it was still not there the button
+2009-05-17T23:35:00.000Z	sebsebseb	AVGHelp	with Linux you should be more concerned about running bad commands, than getting viruses!
+2009-05-17T23:36:00.000Z	AVGHelp	sebsebseb	i am equally concerned with all problems i do not discrimanate any problem all problems are equall to me ;)
+2009-05-17T23:37:00.000Z	sebsebseb	AVGHelp	the only way to  make sure a malicious program is truely  removed, is to re install the OS
+2009-05-17T23:39:00.000Z	AVGHelp	sebsebseb	even better is simply to destroy the computer ;)
+2009-05-17T23:42:00.000Z	sebsebseb	AVGHelp	that's a point,  code that is opensource/freesoftware    is usellay more secure, because they can't  hide bad code in it, and  loads of developers  doing stuff with the code
+2009-05-17T23:44:00.000Z	AVGHelp	sebsebseb	yes that is nice but i want more protection
+2009-05-17T23:44:00.000Z	sebsebseb	AVGHelp	maybe look into OpenBSD or something like that  then, that's meant to be one of the most secure OS's
+2009-05-17T23:44:00.000Z	sebsebseb	AVGHelp	,but that's not for newbies
+2009-05-17T23:44:00.000Z	AVGHelp	sebsebseb	i am a computer newbie
+2009-05-17T23:44:00.000Z	sebsebseb	AVGHelp	that's for expeirenced computer users
+2009-05-17T23:45:00.000Z	sebsebseb	AVGHelp	yes exactly, which is why you think it's so important to have antivirus in  Ubuntu, where as  experiended users such as myself, know it's not needed
+2009-05-17T23:46:00.000Z	sebsebseb	AVGHelp	I have a link that  you may find quite useful
+2009-05-17T23:47:00.000Z	AVGHelp	sebsebseb	i just want to know how to create the button
+2009-05-17T23:49:00.000Z	sebsebseb	AVGHelp	by the way antivirus, and antispyware and such  isn't even needed on Windows, if people know what they are doing :)
+2009-05-17T23:49:00.000Z	sebsebseb	AVGHelp	anyway  Linux is not Windows  http://linux.oneandoneis2.org/LNW.htm
+2009-05-17T23:49:00.000Z	sebsebseb	AVGHelp	now that's a good read :)
+2009-05-17T23:54:00.000Z	sebsebseb	AVGHelp	if your so concerned about security, you may want to check out the Backtrack Live CD, it has many security tools.   I haven't used it yet
+2009-05-17T23:55:00.000Z	AVGHelp	sebsebseb	i just want a button for avg
+2009-05-17T23:56:00.000Z	sebsebseb	AVGHelp	open it from terinal.  whatever it's called and hit enter     make a shortcut on the desktop for it maybe if you know where it installed
+2009-05-18T00:04:00.000Z	sebsebseb	AVGHelp	as far as I know   AVG for Linux only scans for Windows viruses, and Windows viruses won't work on a Linux distro
+2009-05-18T00:04:00.000Z	sebsebseb	AVGHelp	 well they might a litlte bit in Wine if you install that, but otherwise no
+2009-05-18T00:36:00.000Z	AVGHelp	sebsebseb	how do i open it by dubble clicking?
+2009-05-18T00:12:00.000Z	sebsebseb	AVGHelp	you really are in the Windows mindset,  that can casue problems  when it comes to Ubuntu
+2009-05-18T00:12:00.000Z	sebsebseb	AVGHelp	and getting help and such
+2009-05-18T00:13:00.000Z	sebsebseb	AVGHelp	you  can go on  websites that give  Windows useres malware, and laugh when doing it on Linux
+2009-05-18T00:15:00.000Z	sebsebseb	AVGHelp	to get malware installed on  Ubuntu you would have to find some  rare  malware and install it yourself,  or  get your computer broken into it, and then maybe they do it
+2009-05-18T00:16:00.000Z	AVGHelp	sebsebseb	i dissagree bad things always happen to me all the time
+2009-05-18T00:17:00.000Z	sebsebseb	AVGHelp	well that happended a lot with Windows, when it came to a guy I helped with computer,    I got him using Ubuntu, and he is getting on absoutly fine with Ubuntu 8.10
+2009-05-18T00:17:00.000Z	sebsebseb	AVGHelp	in fact Norton used to just piss him off big time in Vista
+2009-05-18T00:17:00.000Z	AVGHelp	sebsebseb	i just want to create a button no more no less
+2009-05-18T00:18:00.000Z	sebsebseb	AVGHelp	and that
+2009-05-18T00:18:00.000Z	sebsebseb	AVGHelp	yes I know uhmmm
+2009-05-18T00:18:00.000Z	sebsebseb	AVGHelp	  you can make launchers for the program, but you need to know where it is installed
+2009-05-18T00:19:00.000Z	AVGHelp	sebsebseb	look at this pastebin of the installation http://pastebin.com/m19d2d070
+2009-05-18T00:19:00.000Z	sebsebseb	AVGHelp	right click on desktop and menu  and create a luancher
+2009-05-18T00:20:00.000Z	AVGHelp	sebsebseb	i do not understand
+2009-05-18T00:20:00.000Z	sebsebseb	AVGHelp	it's called a luancher  here not a button or a shortcut
+2009-05-18T00:20:00.000Z	AVGHelp	sebsebseb	if i right click on the desktop i do not see the word menu
+2009-05-18T00:20:00.000Z	sebsebseb	AVGHelp	right click on the desktop and  make a luancher.  or you can try right clicking on program menu
+2009-05-18T00:21:00.000Z	sebsebseb	AVGHelp	if you right click the menu should appear
+2009-05-18T00:21:00.000Z	AVGHelp	sebsebseb	i am with you
+2009-05-18T00:26:00.000Z	AVGHelp	sebsebseb	it does not show avg
+2009-05-18T00:26:00.000Z	sebsebseb	AVGHelp	ok
+2009-05-18T00:21:00.000Z	AVGHelp	sebsebseb	yes i see
+2009-05-18T00:22:00.000Z	AVGHelp	sebsebseb	i have right clicked on the desktop and selected create launcher which made a small window pop up
+2009-05-18T00:22:00.000Z	sebsebseb	AVGHelp	yes and where it says command
+2009-05-18T00:22:00.000Z	sebsebseb	AVGHelp	that would be the luancher command,  or you can browse for the program
+2009-05-18T00:23:00.000Z	AVGHelp	sebsebseb	i do not know what the program name is
+2009-05-18T00:23:00.000Z	sebsebseb	AVGHelp	yes thought would get this issue
+2009-05-18T00:24:00.000Z	sebsebseb	AVGHelp	if you open synaptic now you can search for AVG and find out the name
+2009-05-18T00:24:00.000Z	AVGHelp	sebsebseb	huh?
+2009-05-18T00:25:00.000Z	sebsebseb	AVGHelp	system > administaration > synaptic package manager
+2009-05-18T00:25:00.000Z	sebsebseb	AVGHelp	then search for AVG
+2009-05-18T00:25:00.000Z	AVGHelp	sebsebseb	ok
+2009-05-18T00:25:00.000Z	sebsebseb	AVGHelp	you got a green icon next to  that?  once you searched for it
+2009-05-18T00:27:00.000Z	sebsebseb	AVGHelp	open up  /opt/avg
+2009-05-18T00:27:00.000Z	sebsebseb	AVGHelp	good job you did that pastebin by the way, because I woudn't have known where it installed
+2009-05-18T00:27:00.000Z	AVGHelp	sebsebseb	yes sometimes i get lucky
+2009-05-18T00:28:00.000Z	sebsebseb	AVGHelp	some where in there should be the program
+2009-05-18T00:28:00.000Z	sebsebseb	AVGHelp	that you want to luanch
+2009-05-18T00:29:00.000Z	AVGHelp	sebsebseb	yes of course but i do not know what the program name is or what the linux version of "exe" file is
+2009-05-18T00:29:00.000Z	sebsebseb	AVGHelp	list the files
+2009-05-18T00:29:00.000Z	sebsebseb	AVGHelp	what type of files do you have?
+2009-05-18T00:30:00.000Z	AVGHelp	sebsebseb	i have many different files in many different folders
+2009-05-18T00:31:00.000Z	sebsebseb	AVGHelp	yes, but in the main AVG folder  should be the program you want to open I think
+2009-05-18T00:32:00.000Z	sebsebseb	AVGHelp	or in the bin folder
+2009-05-18T00:32:00.000Z	AVGHelp	sebsebseb	this are the folders that avg has http://img268.imageshack.us/img268/7226/screenshot2p.png
+2009-05-18T00:33:00.000Z	sebsebseb	AVGHelp	open bin
+2009-05-18T00:33:00.000Z	sebsebseb	AVGHelp	view > list
+2009-05-18T00:33:00.000Z	AVGHelp	sebsebseb	ok
+2009-05-18T00:33:00.000Z	sebsebseb	AVGHelp	and if you press type they will be in alphabetial order by type
+2009-05-18T00:34:00.000Z	sebsebseb	AVGHelp	which type of files you got?
+2009-05-18T00:35:00.000Z	sebsebseb	AVGHelp	This feels like a waste of time to me, because I expect when your more experienced, you will reolize that you don't need AVG
+2009-05-18T00:35:00.000Z	AVGHelp	sebsebseb	this is the screenshot after type
+2009-05-18T00:36:00.000Z	sebsebseb	AVGHelp	try opening avgscan
+2009-05-18T00:37:00.000Z	sebsebseb	AVGHelp	yes double click
+2009-05-18T00:37:00.000Z	sebsebseb	AVGHelp	it will  probably ask you if you want to run it in terminal or something
+2009-05-18T00:38:00.000Z	AVGHelp	sebsebseb	nothing happens when i dubble click it
+2009-05-18T00:38:00.000Z	sebsebseb	AVGHelp	maybe it wasn't quite as simple as I thought
+2009-05-18T00:39:00.000Z	sebsebseb	AVGHelp	plus the whole adding shortcuts  thing in Ubuntu is a bit humm    this is actsually something Windows does better
+2009-05-18T00:39:00.000Z	AVGHelp	sebsebseb	i will just reinstall linux thanks for your time
+2009-05-18T00:39:00.000Z	sebsebseb	AVGHelp	hang on?
+2009-05-18T00:39:00.000Z	sebsebseb	AVGHelp	re install it why?
+2009-05-18T00:40:00.000Z	AVGHelp	sebsebseb	to make certain everything is gone and i can start fresh, with another program ;)
+2009-05-18T00:40:00.000Z	sebsebseb	AVGHelp	why do you think you have virus?
+2009-05-18T00:40:00.000Z	AVGHelp	sebsebseb	 bye and thank you very much for your effort

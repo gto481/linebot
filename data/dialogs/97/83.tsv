@@ -1,0 +1,97 @@
+2005-05-13T15:22:00.000Z	metalsand		How do I make sure my PCMCIA wireless card is working in Ubuntu?
+2005-05-13T15:23:00.000Z	bob2	metalsand	try it and see...
+2005-05-13T15:23:00.000Z	bob2	metalsand	wiki.ubuntu.com/WifiHowto
+2005-05-13T15:24:00.000Z	metalsand	bob2	Is it possible to use WPA in Ubuntu?
+2005-05-13T15:24:00.000Z	bob2	metalsand	yes
+2005-05-13T16:23:00.000Z	metalsand	bob2	how would I enable a .pid file to be written on?
+2005-05-13T16:39:00.000Z	bob2	metalsand	that's not what it says
+2005-05-13T16:39:00.000Z	bob2	metalsand	also, if you're getting an error *like* that, you need to configure kisme to use the card type you have
+2005-05-14T13:30:00.000Z	metalsand	bob2	can you help me out with some troubleshooting?
+2005-05-14T13:30:00.000Z	bob2	metalsand	unless it's very specific, I don't have time atm, sorry
+2005-05-16T16:26:00.000Z	bob2	metalsand	for?
+2005-05-16T16:27:00.000Z	bob2	metalsand	have you asked on the user list?
+2005-05-16T16:29:00.000Z	metalsand	bob2	do you think you can take a stab at my issue
+2005-05-16T16:41:00.000Z	bob2	metalsand	have you asked on the user list yet?
+2005-05-19T10:27:00.000Z	metalsand	bob2	Not for the general user, though - and that is because of GUIs
+2005-05-19T10:27:00.000Z	bob2	metalsand	I think you're jumping to a conclusion with no evidence
+2005-05-19T10:27:00.000Z	metalsand	bob2	Also, things "jsut work"
+2005-05-19T10:28:00.000Z	bob2	metalsand	yes, I think the just work aspect is far more important than silly gui tools
+2005-05-19T10:28:00.000Z	metalsand	bob2	Look at my situation. I'm really laughing here
+2005-05-19T10:28:00.000Z	bob2	metalsand	yes, you're in a small minority
+2005-05-19T10:29:00.000Z	bob2	metalsand	everything on my laptop worked perfectly out of the box with ubuntu
+2005-05-19T10:29:00.000Z	bob2	metalsand	I know you're frustrated, but generalising your experience to everyone's is silly
+2005-05-19T10:29:00.000Z	metalsand	bob2	I'm not, I'm generalising based on data
+2005-05-19T10:29:00.000Z	bob2	metalsand	no, you're not
+2005-05-19T10:29:00.000Z	bob2	metalsand	what evidence do you have that gui tools are what makes windows popular?
+2005-05-19T10:30:00.000Z	bob2	metalsand	again, I had to do nothing to get my wireless to work
+2005-05-19T10:30:00.000Z	bob2	metalsand	you're unlucky in this regard
+2005-05-19T10:30:00.000Z	bob2	metalsand	yes, you have bad hardware
+2005-05-19T10:31:00.000Z	bob2	metalsand	yes, but your video chipset lies about what modes it supports
+2005-05-19T10:31:00.000Z	bob2	metalsand	hence the need to hack around it
+2005-05-19T10:31:00.000Z	bob2	metalsand	it would work under linux, too, if the manufacturer would tell the X people how to get the real resolutions out of it
+2005-05-19T10:31:00.000Z	bob2	metalsand	prism2 is not "top of the line", either
+2005-05-19T10:32:00.000Z	metalsand	bob2	Do you TRUELY believe that a Linux install, any distrobution, is more compatible over ALL hardware than a Windows machine?
+2005-05-19T10:32:00.000Z	bob2	metalsand	did I say that?
+2005-05-19T10:32:00.000Z	bob2	metalsand	please stop putting words into my mouth
+2005-05-19T10:32:00.000Z	metalsand	bob2	It was implied, at least that's what I read
+2005-05-19T10:32:00.000Z	bob2	metalsand	I certainly believe that ubuntu out of the box supports on the same order of magnitude hardware as windows
+2005-05-19T10:34:00.000Z	bob2	metalsand	again, you're making things up
+2005-05-19T10:34:00.000Z	bob2	metalsand	have you actually done a test with this?  or are you assuming again, based on the fact windows is more popular at the present time?
+2005-05-19T10:35:00.000Z	bob2	metalsand	have you tried making use of ubuntu's professional support?
+2005-05-19T10:35:00.000Z	bob2	metalsand	if not, please refrain from commenting on it
+2005-05-19T10:35:00.000Z	metalsand	bob2	I'm talking about being able to call a manufacture, or Windows FREE (Once you've registered your software) support and say this doesn't work
+2005-05-19T10:35:00.000Z	bob2	metalsand	ok!
+2005-05-19T10:36:00.000Z	metalsand	bob2	I can't call Senao and tell them my card doesn't function in Linux. They'd laugh at me
+2005-05-19T10:36:00.000Z	bob2	metalsand	perhaps you should buy from companies that care then
+2005-05-19T10:36:00.000Z	metalsand	bob2	You're being bias again
+2005-05-19T10:36:00.000Z	bob2	metalsand	but, again, remember you're in a tiny minority
+2005-05-19T10:36:00.000Z	metalsand	bob2	I'll give you minority
+2005-05-19T10:37:00.000Z	bob2	metalsand	what?
+2005-05-19T10:37:00.000Z	bob2	metalsand	you're upset and letting that affect your judgement
+2005-05-19T10:37:00.000Z	bob2	metalsand	again, please, I know more about this than you
+2005-05-19T10:38:00.000Z	metalsand	bob2	You know more about Linux, not Windows. You don't need to be condecending.
+2005-05-19T10:38:00.000Z	bob2	metalsand	no, I know more about which hardware works
+2005-05-19T10:38:00.000Z	metalsand	bob2	I agree
+2005-05-19T10:38:00.000Z	bob2	metalsand	the vast majority of people do not have problems.  you are in a small minority.
+2005-05-19T10:41:00.000Z	bob2	metalsand	what email address did you use to write to the list?
+2005-05-19T10:42:00.000Z	metalsand	bob2	Keep in mind 2 people that are stuck in my sitation are crimsun and tritium. It's not like the people that have made an atempt to help me haven't done so "usefully"
+2005-05-19T10:43:00.000Z	bob2	metalsand	your post to the list wasn't very useful
+2005-05-19T10:43:00.000Z	metalsand	bob2	Forgive me
+2005-05-19T10:43:00.000Z	bob2	metalsand	things like "I install it. It didn't work." doesn't give anyone any information to help you with
+2005-05-19T10:44:00.000Z	bob2	metalsand	perhaps you meant "I loaded the module manually, and it succeeded, but according to dmesg no card was found.", or perhaps not.
+2005-05-19T10:45:00.000Z	metalsand	bob2	I'd really apprciate if you used your knowledge to try to see at least what my isssue is.
+2005-05-19T10:46:00.000Z	bob2	metalsand	so, your card is detected then
+2005-05-19T10:47:00.000Z	metalsand	bob2	I rfmod'd the hostap drivers, and started anew from the wlan-ng drivers
+2005-05-19T10:47:00.000Z	bob2	metalsand	well, the card is detected
+2005-05-19T10:47:00.000Z	metalsand	bob2	Yes. But it isn't working. ;)
+2005-05-19T10:48:00.000Z	bob2	metalsand	the card thinks it's out of range of the ap
+2005-05-19T10:49:00.000Z	metalsand	bob2	How do you know this
+2005-05-19T10:50:00.000Z	bob2	metalsand	that's what that message means.  it's trying to associate, but failing because the signal is too week.
+2005-05-19T10:52:00.000Z	metalsand	bob2	I'm literally directly on top of my router (acting AP), and I've connected to my network using this exact setup (Senao NL 2551 Plus Ext + 10 dBi omni direction antenna) houndreds of feet away in Windows
+2005-05-19T10:52:00.000Z	bob2	metalsand	ok!
+2005-05-19T10:52:00.000Z	metalsand	bob2	So why does the card think it's out of range?
+2005-05-19T10:53:00.000Z	bob2	metalsand	no idea
+2005-05-19T10:53:00.000Z	metalsand	bob2	So what do you recommend I do now?
+2005-05-19T10:53:00.000Z	bob2	metalsand	try a different card
+2005-05-19T10:54:00.000Z	bob2	metalsand	because something about the card is probably fucked, it just isn't manifested under windows
+2005-05-19T10:55:00.000Z	bob2	metalsand	try another and prove me wrong
+2005-05-19T10:56:00.000Z	bob2	metalsand	or maybe the linux drivers (all 3 of them) are screwed
+2005-05-19T10:59:00.000Z	metalsand	bob2	I've been here a week, that's a given.
+2005-05-19T11:00:00.000Z	bob2	metalsand	as I've said numerous times, IRC is a terrible medium for everything
+2005-05-19T11:16:00.000Z	bob2	metalsand	gentoo uses whatever you want, just like ubuntu
+2005-05-19T13:54:00.000Z	bob2	metalsand	let me guess, kismet?
+2005-05-19T13:55:00.000Z	metalsand	bob2	Yes
+2005-05-19T13:55:00.000Z	bob2	metalsand	you need to configure it
+2005-05-19T13:55:00.000Z	bob2	metalsand	ie tell it what sort of card you have
+2005-05-19T13:56:00.000Z	metalsand	bob2	where are the config files? I'm in the readme right now, but it'd be nice just to go right to them :P
+2005-05-19T13:56:00.000Z	bob2	metalsand	/etc/kismet/kismet.conf
+2005-05-19T13:56:00.000Z	metalsand	bob2	thanks :)
+2005-05-19T13:56:00.000Z	bob2	metalsand	all config files for non-user thingfgs are in /etc
+2005-05-19T14:05:00.000Z	metalsand	bob2	How do I tell the name of the source?
+2005-05-19T14:06:00.000Z	bob2	metalsand	presumably prism2source
+2005-05-20T13:12:00.000Z	bob2	metalsand	when you start what?
+2005-05-20T13:13:00.000Z	bob2	metalsand	you haven't shown us the error yet
+2005-05-29T09:49:00.000Z	bob2	metalsand	it means what it says, the machine called host.dreamhost.com
+2005-05-29T10:01:00.000Z	bob2	metalsand	if the problem was that openssh wasn't installed, that would be immediately obvious
+2005-05-29T10:02:00.000Z	metalsand	bob2	Okay, thanks
+2005-05-29T10:03:00.000Z	bob2	metalsand	is username your actual username on that machine?

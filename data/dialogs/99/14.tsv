@@ -1,0 +1,99 @@
+2010-04-06T11:05:00.000Z	RP64		BAK GUSY
+2010-04-06T11:05:00.000Z	RP64		GUSY
+2010-04-06T11:05:00.000Z	RP64		GUYS lol
+2010-04-06T11:05:00.000Z	RP64		voss: its 8.10
+2010-04-06T11:05:00.000Z	theadmin	RP64	This means you will have to upgrade from that to 9.04, then to 9.10
+2010-04-06T11:05:00.000Z	RP64	theadmin	in my updates list it says on top "new version 9.10 click here for upgrade" tho wtf?
+2010-04-06T11:13:00.000Z	theadmin	RP64	or?
+2010-04-06T11:14:00.000Z	theadmin	RP64	Depends on the codec
+2010-04-06T11:14:00.000Z	theadmin	RP64	I mean, windows codecs (at least default ones) are a piece of... ahem. Strike that. Are bad.
+2010-04-06T11:15:00.000Z	RP64	theadmin	lols so
+2010-04-06T11:15:00.000Z	RP64	theadmin	so u mean the sound codecs for ubuntu are much better for the stuff thats non WMA
+2010-04-06T11:16:00.000Z	theadmin	RP64	Because billy cares only for money
+2010-04-06T11:16:00.000Z	theadmin	RP64	And Ubuntu is designed for human beings
+2010-04-06T11:19:00.000Z	theadmin	RP64	Shuttleworth is the leader of Ubuntu project... But come on. Ubuntu won't screw you... more likely windows will
+2010-04-06T11:20:00.000Z	theadmin	RP64	Meh, it's not that noticable except for the full circle and the name
+2010-04-06T11:21:00.000Z	theadmin	RP64	Try out Linux Mint. It's Ubuntu-based but has nothing to do with that stuff.
+2010-04-06T11:27:00.000Z	theadmin	RP64	Ever heard of the tab key?
+2010-04-06T11:27:00.000Z	theadmin	RP64	Type first few letters of the nickname and hit TAB, it will insert the full nickname. Like this: foxm + tab = foxmulder881
+2010-04-06T11:28:00.000Z	RP64	theadmin	 OH kool thx
+2010-04-06T11:30:00.000Z	theadmin	RP64	It won't delete if you update it. It might delete some configurations
+2010-04-06T11:30:00.000Z	RP64	theadmin	i dont mean update i mean upgrade
+2010-04-06T11:30:00.000Z	theadmin	RP64	Same thing
+2010-04-06T11:30:00.000Z	RP64	theadmin	 wait but GNEA told me if u update ur VERSION then it deletes everything outside of home folder?!
+2010-04-06T11:31:00.000Z	theadmin	RP64	your home folder is most likely where you keep your stuff, no?
+2010-04-06T11:31:00.000Z	RP64	theadmin	 idono rly i havent used ubuntu for 6 months i forget about where everything is
+2010-04-06T11:32:00.000Z	RP64	theadmin	 that stuffs pro but u need to have stuff super organized and thought out to do that, i am super disorganized
+2010-04-06T11:33:00.000Z	RP64	theadmin	 whats your X
+2010-04-06T11:33:00.000Z	theadmin	RP64	The graphical environment stuff
+2010-04-06T11:33:00.000Z	RP64	theadmin	 oh is that new abreviation i thought thats GFX???
+2010-04-06T11:34:00.000Z	theadmin	RP64	gfx is graphical EFFECTS lol
+2010-04-06T11:34:00.000Z	RP64	theadmin	 LoLS wtf
+2010-04-06T11:34:00.000Z	theadmin	RP64	No idea.
+2010-04-06T22:50:00.000Z	RP64	theadmin	contain that
+2010-04-06T22:44:00.000Z	theadmin	RP64	Hm?
+2010-04-06T22:45:00.000Z	RP64	theadmin	I upgraded from 8.10 to 9.04 and now my laptop's media buttons dont work properly and my login logout sounds / sound theme isn't playing properly
+2010-04-06T22:45:00.000Z	theadmin	RP64	Media buttons...?!
+2010-04-06T22:45:00.000Z	RP64	theadmin	 Do these problems arise from upgrading versions through the software update or is this abnormal
+2010-04-06T22:46:00.000Z	theadmin	RP64	Updates tend to break stuff sometimes. But it's usually not that major.
+2010-04-06T22:46:00.000Z	RP64	theadmin	 yeah like laptops have "play , stop , next song " and stuff, mine all work but the volume control ones don't work properly anymore
+2010-04-06T22:46:00.000Z	RP64	theadmin	 it is major though cus these things are pretty important so how can I fix them?
+2010-04-06T22:46:00.000Z	RP64	theadmin	 why do updates break things anyways? Can it be fixed?
+2010-04-06T22:47:00.000Z	theadmin	RP64	Hah, that. Don't worry, volume stuffs are broken on Jaunty for me too, known problem. Karmic has them working :/
+2010-04-06T22:47:00.000Z	RP64	theadmin	 so wats karmic lols, the newest 1?
+2010-04-06T22:47:00.000Z	theadmin	RP64	Yah, 9.10
+2010-04-06T22:47:00.000Z	RP64	theadmin	 and wat about the sound theme/ login sounds?
+2010-04-06T22:47:00.000Z	theadmin	RP64	As per that. Hm... Do you get any sounds at all?
+2010-04-06T22:48:00.000Z	RP64	theadmin	 yeah sound is working and the sound theme plays normally when I sample play the sounds
+2010-04-06T22:48:00.000Z	theadmin	RP64	Okay, then a few checks, does "System -> Preferences -> Startup apps" contain "GNOME Login Sounds"?
+2010-04-06T22:50:00.000Z	RP64	theadmin	no it doesn't
+2010-04-06T22:50:00.000Z	theadmin	RP64	There is the problem. Click on "add", and put anything as name/comment and the following as "Command": /usr/bin/canberra-gtk-play --id="desktop-login" --description="GNOME Login"
+2010-04-06T22:51:00.000Z	RP64	theadmin	It doesn't lol so wat shuld I dew
+2010-04-06T22:51:00.000Z	RP64	theadmin	Anything as name/ comment?
+2010-04-06T22:51:00.000Z	theadmin	RP64	It asks for 3 things, "Name", "Comment" and "Command". Name and comment do not matter in our case.
+2010-04-06T22:53:00.000Z	RP64	theadmin	OK i added it now what?
+2010-04-06T22:53:00.000Z	theadmin	RP64	K it should work now
+2010-04-06T22:53:00.000Z	RP64	theadmin	Kewl but wat about the log out sound too?
+2010-04-06T22:53:00.000Z	theadmin	RP64	I don't think there is one anymore
+2010-04-06T22:54:00.000Z	RP64	theadmin	WHAT??? why ??
+2010-04-06T22:54:00.000Z	RP64	theadmin	r u sure??
+2010-04-06T22:54:00.000Z	RP64	theadmin	 Cus its option in the sounds list
+2010-04-06T22:54:00.000Z	theadmin	RP64	No idea, but there is no sound on log out for me
+2010-04-06T22:54:00.000Z	RP64	theadmin	Culd u create one using this startup aps thing too or no?
+2010-04-06T22:54:00.000Z	theadmin	RP64	You can do _anything_ in Linux, but you must know how. Unfortunately, I've no idea how.
+2010-04-06T22:55:00.000Z	RP64	theadmin	 BRB im testing login sound
+2010-04-06T22:56:00.000Z	RP64	theadmin	Kewl dawg it werks !! 1 thx man
+2010-04-06T22:57:00.000Z	RP64	theadmin	But do u know anything about the logout sound? Cus my sound theme is so awwwsumm...
+2010-04-06T22:57:00.000Z	RP64	theadmin	IF they removed it why is it in the sounds list still ??
+2010-04-21T09:49:00.000Z	theadmin	RP64	That's some craziness Ubuntu people made up
+2010-04-21T09:49:00.000Z	RP64	theadmin	so what am I supposed to do about using firefox?? download the logo for it again?
+2010-04-21T09:50:00.000Z	theadmin	RP64	If you updated to 3.6 from 3.5 then you probably can't do much
+2010-04-21T09:50:00.000Z	RP64	theadmin	HUH? its from 9.04 to 9.10 ... ???
+2010-04-21T09:50:00.000Z	theadmin	RP64	Ohhh
+2010-04-21T09:50:00.000Z	RP64	theadmin	you mean version of firefox then how can I even tell if it did that?
+2010-04-21T09:50:00.000Z	theadmin	RP64	Lol then you must install firefox-3.5-branding package
+2010-04-21T09:52:00.000Z	theadmin	RP64	well, try this first to tell if branding is installed: dpkg -l | grep 'firefox-3.5-branding'
+2010-04-21T09:52:00.000Z	RP64	theadmin	is that a small L or a 1
+2010-04-21T09:53:00.000Z	theadmin	RP64	Copy-paste if you're unsure :P that's an L
+2010-04-21T09:53:00.000Z	RP64	theadmin	lol well I used ubuntu for 1 year alreadyi just said "hacking" cus the name of the forum post says hack in the title...
+2010-04-21T09:53:00.000Z	RP64	theadmin	im not on ubuntu for this chat this is my windows comp, got my laptop ubuntu on my leftside im double comping it up gangsta style
+2010-04-21T09:54:00.000Z	RP64	theadmin	it responds with information on the package, so i guess its installed
+2010-04-21T09:54:00.000Z	theadmin	RP64	I assume it has "ii" there right
+2010-04-21T09:56:00.000Z	RP64	theadmin	yeah
+2010-04-21T09:56:00.000Z	RP64	theadmin	:D:D
+2010-04-21T09:56:00.000Z	theadmin	RP64	Well, then o_O Hm... good, but you may need to assign the icon manually
+2010-04-21T09:57:00.000Z	RP64	theadmin	lol and in the synaptic it says that firefox 3.5 branding is installed ...
+2010-04-21T09:57:00.000Z	theadmin	RP64	The icon file is /usr/share/pixmaps/firefox-3.5.png
+2010-04-21T09:58:00.000Z	RP64	theadmin	is that the same icon as the one you're referencing? like same size same file?
+2010-04-21T10:07:00.000Z	RP64	theadmin	U never answerd me??? D:
+2010-04-21T10:08:00.000Z	theadmin	RP64	sry, i dunno
+2010-04-21T10:08:00.000Z	RP64	theadmin	is the icon he suggested the same as the one you suggested
+2011-10-02T14:47:00.000Z	theadmin	RP64	Yes, she's a bot, don't bother her.
+2011-10-02T14:48:00.000Z	theadmin	RP64	I beleive some factoid stated ubottu is female.
+2011-10-02T14:48:00.000Z	RP64	theadmin	I happen to know ubottu is a he
+2011-10-02T14:48:00.000Z	RP64	theadmin	He's lying for strategy
+2011-10-02T14:49:00.000Z	theadmin	RP64	Don't be paranoid :/
+2011-10-02T14:49:00.000Z	RP64	theadmin	 I'm not it's obvious
+2011-10-02T14:51:00.000Z	theadmin	RP64	You have to create it
+2011-10-02T14:51:00.000Z	RP64	theadmin	Seriously? But wouldn't you have to download it  how would I create it it has to have something in it right
+2011-10-02T14:53:00.000Z	theadmin	RP64	xorg.conf is honestly no longer required. The missing sections are auto-configured. If all sections are missing (i.e. file is empty or doesn't exist), it autoconfigures, well, everything

@@ -1,0 +1,98 @@
+2006-01-15T09:07:00.000Z	GameOver69		can somene plz help me as none of my internet connections work on my kubuntu pc?
+2006-01-15T09:07:00.000Z	GameOver69		i installed the ndiswrapper and did everything to the point that my external wireless card was working perfectly... when i restarted my pc... that didnt work... nor did my internal wireless card or ethernet
+2006-01-15T09:08:00.000Z	GameOver69		and everytime i click enable in network settings
+2006-01-15T09:08:00.000Z	GameOver69		it quickly goes back to being disabled
+2006-01-15T09:09:00.000Z	GameOver69		but how come none of my internet connections dont work anymore?
+2006-01-15T09:09:00.000Z	GameOver69		i have aim
+2006-01-15T09:09:00.000Z	GameOver69		and yahoo
+2006-01-15T09:11:00.000Z	GameOver69		what do i do to fix it
+2006-01-15T09:13:00.000Z	GameOver69		liable can i IM you so maybe u can help me?
+2006-01-15T09:14:00.000Z	liable	GameOver69	no, keep it in channel. (please)
+2006-01-15T09:15:00.000Z	liable	GameOver69	in your interfaces file?
+2006-01-15T09:16:00.000Z	liable	GameOver69	to come up at boot with dhcp?
+2006-01-15T09:23:00.000Z	liable	GameOver69	you want it load at boot or not?
+2006-01-15T09:19:00.000Z	GameOver69	liable	i dont see aynthing aobut boot in interfaces
+2006-01-15T09:21:00.000Z	GameOver69	liable	i dont see anything about boot in interfaces?
+2006-01-15T09:23:00.000Z	liable	GameOver69	with dhcp?
+2006-01-15T09:24:00.000Z	GameOver69	liable	but i dont see anything of what ur talking about in interfaces
+2006-01-15T09:24:00.000Z	liable	GameOver69	just answer my question and i'll tell you what to add.
+2006-01-15T09:24:00.000Z	GameOver69	liable	yes i want it at boot
+2006-01-15T09:24:00.000Z	liable	GameOver69	/usr/share/doc/ifupdown/examples/network-interfaces.gz
+2006-01-15T09:25:00.000Z	liable	GameOver69	you use dhcp?
+2006-01-15T09:25:00.000Z	liable	GameOver69	whats the iface name? wlan0?
+2006-01-15T09:26:00.000Z	GameOver69	liable	yes
+2006-01-15T09:26:00.000Z	liable	GameOver69	two lines
+2006-01-15T09:26:00.000Z	liable	GameOver69	auto wlan0
+2006-01-15T09:26:00.000Z	liable	GameOver69	ifacw wlan0 inet dhcp
+2006-01-15T09:26:00.000Z	liable	GameOver69	err iface
+2006-01-15T09:27:00.000Z	GameOver69	liable	put this at the end of the document
+2006-01-15T09:28:00.000Z	GameOver69	liable	this all goes at the end of th document?
+2006-01-15T09:29:00.000Z	liable	GameOver69	under the eth0 stuff
+2006-01-15T09:29:00.000Z	liable	GameOver69	doesnt really matter actually
+2006-01-15T09:29:00.000Z	GameOver69	liable	ok i will try now
+2006-01-15T09:29:00.000Z	liable	GameOver69	then paste it
+2006-01-15T09:34:00.000Z	GameOver69	liable	didnt work
+2006-01-15T09:34:00.000Z	liable	GameOver69	buuger, try ifup wlan0 (paste the file)
+2006-01-15T09:35:00.000Z	GameOver69	liable	what do u mean paste the file?
+2006-01-15T09:35:00.000Z	liable	GameOver69	put it on a paster
+2006-01-15T09:35:00.000Z	liable	GameOver69	the contents
+2006-01-15T09:37:00.000Z	GameOver69	liable	i cant find the file you speak of
+2006-01-15T09:37:00.000Z	liable	GameOver69	the interfaces file! where did you write those two lines i gave you?
+2006-01-15T09:38:00.000Z	GameOver69	liable	the interacfe file
+2006-01-15T09:39:00.000Z	liable	GameOver69	paste the contents of your interfaces file
+2006-01-15T09:39:00.000Z	GameOver69	liable	paste it into the command terminal?
+2006-01-15T09:39:00.000Z	liable	GameOver69	^^
+2006-01-15T09:40:00.000Z	GameOver69	liable	im on another computer if u want me to paste it in here for you
+2006-01-15T09:41:00.000Z	liable	GameOver69	ifup wlan0 does nothing?
+2006-01-15T09:42:00.000Z	GameOver69	liable	i put that in interfaces or in the terminal?
+2006-01-15T09:44:00.000Z	liable	GameOver69	terminal, sudo first
+2006-01-15T09:45:00.000Z	GameOver69	liable	says too few paramaters for iface line
+2006-01-15T09:45:00.000Z	GameOver69	liable	ifup: coudlnt read interfaces file
+2006-01-15T09:45:00.000Z	liable	GameOver69	well, i need to see that file
+2006-01-15T09:46:00.000Z	GameOver69	liable	well if we can get any of my 2 wireless connectiosn to work or my ethernet then i can
+2006-01-15T09:46:00.000Z	liable	GameOver69	plug in your ethernet, run ifconfig eth0 up, dhclient eth0
+2006-01-15T09:47:00.000Z	GameOver69	liable	in terminal w/. sudo?
+2006-01-15T09:47:00.000Z	liable	GameOver69	yes
+2006-01-15T09:49:00.000Z	GameOver69	liable	can u give me that command again plz for the ethernet
+2006-01-15T09:50:00.000Z	liable	GameOver69	sudo ifconfig eth0 up && dhclient eth0
+2006-01-15T09:53:00.000Z	GameOver69	liable	two things.... one my wireless light just went on my laptop.. but still doesnt work...s ame problem
+2006-01-15T09:53:00.000Z	GameOver69	liable	and i get this after i did what u told me
+2006-01-15T09:53:00.000Z	GameOver69	liable	no DHCPoffers received
+2006-01-15T09:53:00.000Z	GameOver69	liable	no working leases in persistant database - sleeping
+2006-01-15T09:53:00.000Z	liable	GameOver69	then double check your router has dhcp server running
+2006-01-15T10:05:00.000Z	GameOver69	liable	it works because im on a computer thats running off it now... this
+2006-01-15T10:07:00.000Z	liable	GameOver69	well, its not getting a lease from the server.. try another client
+2006-01-15T10:07:00.000Z	GameOver69	liable	by antoher client what od u mean?
+2006-01-15T10:07:00.000Z	GameOver69	liable	i had no problems yestyerday with my internal wireless card... worked perefectly
+2006-01-15T10:07:00.000Z	liable	GameOver69	i dunno if you have them installed
+2006-01-15T10:08:00.000Z	GameOver69	liable	when i installed the new card... worked perfectly
+2006-01-15T10:08:00.000Z	liable	GameOver69	dunno then sorry
+2006-01-15T10:08:00.000Z	GameOver69	liable	when i restarted.... nothing
+2006-01-15T10:08:00.000Z	GameOver69	liable	is there anyway i can enable it without boot..... i dont understand why it doesnt work anymore
+2006-01-15T10:09:00.000Z	liable	GameOver69	the only thing i can think of is to set a static ip.
+2006-01-15T10:10:00.000Z	GameOver69	liable	how do i do that
+2006-01-15T10:10:00.000Z	liable	GameOver69	with ifconfig and route.
+2006-01-15T10:11:00.000Z	liable	GameOver69	ifconfig 192.168.x.x wlan0 up
+2006-01-15T10:11:00.000Z	liable	GameOver69	route add default gw 192.168.x.1
+2006-01-15T10:12:00.000Z	GameOver69	liable	do u think uninstalling ndiswrapper would help
+2006-01-15T10:13:00.000Z	liable	GameOver69	i dunno. run ifconfig -a and take down all the cards except your wired one (ifconfig eth0 down)
+2006-01-15T10:15:00.000Z	GameOver69	liable	for iconfig it says command not found
+2006-01-15T10:15:00.000Z	liable	GameOver69	sudo
+2006-01-15T10:17:00.000Z	GameOver69	liable	ok it shows a list of my internet connectiosn
+2006-01-15T10:17:00.000Z	liable	GameOver69	ifconfig xxx0 down, except the wired one
+2006-01-15T10:17:00.000Z	liable	GameOver69	and except lo
+2006-01-15T10:19:00.000Z	GameOver69	liable	do i also put "lo" down as well
+2006-01-15T10:19:00.000Z	liable	GameOver69	nope
+2006-01-15T10:19:00.000Z	GameOver69	liable	ok done then
+2006-01-15T10:19:00.000Z	liable	GameOver69	the wired one is still up?
+2006-01-15T10:20:00.000Z	GameOver69	liable	they all still show
+2006-01-15T10:20:00.000Z	liable	GameOver69	with ifconfig -a? or just ifconfig?
+2006-01-15T10:21:00.000Z	GameOver69	liable	with -a
+2006-01-15T10:21:00.000Z	liable	GameOver69	thats ok
+2006-01-15T10:21:00.000Z	GameOver69	liable	so whats next
+2006-01-15T10:21:00.000Z	liable	GameOver69	what iface is left?
+2006-01-15T10:22:00.000Z	GameOver69	liable	if by iface u mean ethernet... the only one i didnt get rid of is eth1
+2006-01-15T10:22:00.000Z	liable	GameOver69	actually, take it down for now
+2006-01-15T10:23:00.000Z	liable	GameOver69	whats your routers ip?
+2006-01-15T10:23:00.000Z	GameOver69	liable	ok took it odwn
+2006-01-15T10:25:00.000Z	liable	GameOver69	sudo ifconfig eth0 up

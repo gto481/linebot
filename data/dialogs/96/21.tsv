@@ -1,0 +1,96 @@
+2009-06-28T18:10:00.000Z	wolf23		Helpers : anyone here use ktorrent?
+2009-06-28T18:10:00.000Z	ActionParsnip	wolf23	used to, wassup
+2009-08-27T14:43:00.000Z	ActionParsnip	wolf23	they all have benfits, try a few see which you prefer
+2009-08-27T14:44:00.000Z	ActionParsnip	wolf23	i use transmission as it talks nicely to my G1 phone :)
+2009-08-27T14:45:00.000Z	wolf23	ActionParsnip	 transmission is good and fast without needing any configuration?
+2009-08-27T14:45:00.000Z	ActionParsnip	wolf23	its as fast as your connection will allow
+2009-08-27T14:45:00.000Z	ActionParsnip	wolf23	just like all other torret clients
+2009-08-27T14:46:00.000Z	wolf23	ActionParsnip	 i didnot have router,and my connection is 2 mb?
+2009-08-27T14:46:00.000Z	ActionParsnip	wolf23	then you will get 250kbps max speed
+2009-08-27T14:48:00.000Z	ActionParsnip	wolf23	sudo apt-get --purge remove ktorrent; sudo apt-get --purge autoremove
+2009-08-27T14:48:00.000Z	ActionParsnip	wolf23	you can also delete the ktorrent files and folders throughout your home folder if you wish
+2009-08-27T14:52:00.000Z	wolf23	ActionParsnip	Error! DKMS tree already contains: openafs-1.4.9
+2009-08-27T14:53:00.000Z	ActionParsnip	wolf23	can you pastebin the whole error as well as the command
+2009-08-27T14:56:00.000Z	wolf23	ActionParsnip	 http://pastebin.com/m26ddaf45
+2009-08-27T14:57:00.000Z	ActionParsnip	wolf23	sudo apt-get --reinstall install openafs-modules-dkms
+2009-08-27T14:59:00.000Z	wolf23	ActionParsnip	 http://pastebin.com/m26d96a7
+2009-08-27T15:00:00.000Z	wolf23	ActionParsnip	 u see i got the same error message
+2009-08-27T15:01:00.000Z	ActionParsnip	wolf23	if you run: cd /var/lib/dkms/
+2009-08-27T15:01:00.000Z	ActionParsnip	wolf23	do you see openafs?
+2009-08-27T15:02:00.000Z	wolf23	ActionParsnip	 yes
+2009-08-27T15:02:00.000Z	wolf23	ActionParsnip	 dkms_dbversion  openafs  vboxdrv  vboxnetadp  vboxnetflt
+2009-08-27T15:02:00.000Z	ActionParsnip	wolf23	great: sudo mv /var/lib/dkms/openafs ~/
+2009-08-27T15:03:00.000Z	wolf23	ActionParsnip	 ok done
+2009-08-27T15:03:00.000Z	ActionParsnip	wolf23	ok so now if you run ls, is the folder there?
+2009-08-27T15:04:00.000Z	wolf23	ActionParsnip	 no
+2009-08-27T15:04:00.000Z	ActionParsnip	wolf23	great,ok: sudo apt-get --reinstall install openafs
+2009-08-27T15:04:00.000Z	ActionParsnip	wolf23	will reinstall it gracefully, you can then rip it out
+2009-08-27T15:05:00.000Z	ActionParsnip	wolf23	or whatever the package name is
+2009-08-27T15:05:00.000Z	wolf23	ActionParsnip	 E: Couldn't find package openafs
+2009-08-27T15:06:00.000Z	ActionParsnip	wolf23	i dont know the exact package name
+2009-08-27T15:09:00.000Z	wolf23	ActionParsnip	 ok,after done how to install transmission completely, and tell me if deluge need to remove it or keep it?
+2009-08-27T15:09:00.000Z	ActionParsnip	wolf23	you can have both installed if you want. I just wouldnt run both. to install transmission run: sudo apt-get install transmission
+2009-08-27T15:10:00.000Z	wolf23	ActionParsnip	 i got this configration on openafs : AFS cell this workstation belongs to:
+2009-08-27T15:11:00.000Z	wolf23	ActionParsnip	 i dont know what is openafs and using for what?
+2009-08-27T15:12:00.000Z	ActionParsnip	wolf23	not sure
+2009-08-27T15:13:00.000Z	wolf23	ActionParsnip	 is it necessary to install openafs?
+2009-08-27T15:13:00.000Z	ActionParsnip	wolf23	i dont know what it is so i couldnt say, have a websearch and se what it is
+2009-08-27T15:17:00.000Z	wolf23	ActionParsnip	 ok thanx too much dude :)
+2009-08-27T15:17:00.000Z	ActionParsnip	wolf23	np ma, let you r system run for a week or so
+2009-08-27T15:17:00.000Z	ActionParsnip	wolf23	if all is well, you can delete the file you copied to your home directory
+2009-08-27T15:18:00.000Z	wolf23	ActionParsnip	 i didnot continue install openafs i close it coz i dont know how to configure it? :(
+2009-08-27T15:19:00.000Z	wolf23	ActionParsnip	 but delete the file copied? which one?
+2009-08-27T15:19:00.000Z	ActionParsnip	wolf23	then i'd find out what it is, if its uneeded, uninstall it
+2009-08-27T15:19:00.000Z	ActionParsnip	wolf23	~/open<whatever it was>
+2009-08-27T15:21:00.000Z	wolf23	ActionParsnip	 yes if it not needed or uneeded tell me plz :)
+2009-08-27T15:23:00.000Z	ActionParsnip	wolf23	sudo apt-get --purge remove openafs-client
+2009-08-27T15:23:00.000Z	ActionParsnip	wolf23	then read the screen, see what is going to ALSO be removed
+2009-08-27T15:24:00.000Z	wolf23	ActionParsnip	 i got this when i do installing transmission --> Building module:
+2009-08-27T15:26:00.000Z	wolf23	ActionParsnip	 Reading state information... Done
+2009-08-27T15:27:00.000Z	ActionParsnip	wolf23	no problem then: simply run: sudo apt-get -f install
+2009-08-27T15:27:00.000Z	ActionParsnip	wolf23	to make sure everything is square
+2009-08-27T15:27:00.000Z	ActionParsnip	wolf23	if you see all 0s you win the prize
+2009-08-27T15:28:00.000Z	wolf23	ActionParsnip	 just paste this sudo apt-get -f install???
+2009-08-27T15:28:00.000Z	ActionParsnip	wolf23	sure if you wish
+2009-08-27T15:29:00.000Z	wolf23	ActionParsnip	 Building dependency tree
+2009-08-27T15:29:00.000Z	ActionParsnip	wolf23	use pastebin again dude
+2009-08-27T15:29:00.000Z	wolf23	ActionParsnip	 oh sorry
+2009-08-27T15:30:00.000Z	wolf23	ActionParsnip	 http://pastebin.com/m63cfc369
+2009-08-27T15:31:00.000Z	ActionParsnip	wolf23	o kyou  are set: sudo apt-get upgrade and you are good to run
+2009-08-27T15:33:00.000Z	wolf23	ActionParsnip	 now i open transmission, is there to edit anything on preference like in yours :)
+2009-08-27T15:34:00.000Z	ActionParsnip	wolf23	its pretty much set, you can enable the web interface if you wish so you can manage the app from another system
+2009-08-27T15:35:00.000Z	wolf23	ActionParsnip	 ok thanx dude :))
+2009-08-27T15:44:00.000Z	wolf23	ActionParsnip	 sorry but a little error, if i try to delete the folder copied from home, it shows : There was an error deleting kernel-2.6.28-15-generic-x86_64. permision denied
+2009-08-27T15:44:00.000Z	ActionParsnip	wolf23	if you are deleting the folder we copied to your home folder you will need to run: gksudo nautilus   then delete it, then close nautilus
+2009-08-27T15:51:00.000Z	wolf23	ActionParsnip	 where can i see transmission in which folder?
+2009-08-27T15:52:00.000Z	ActionParsnip	wolf23	the binary is in /usr/bin the rest of the app is scattered throughout the system
+2009-08-27T15:53:00.000Z	ActionParsnip	wolf23	the default save location is the desktop, you can change this so your system is neater
+2009-08-27T15:53:00.000Z	wolf23	ActionParsnip	 if i open a torrent file it opens with deluge, how could i do with transmission?
+2009-08-27T15:54:00.000Z	ActionParsnip	wolf23	download a .torrent file to the desktop . right click it -> open with ->other program and select transmission and select remember this setting
+2009-08-27T15:54:00.000Z	ActionParsnip	wolf23	you can also change aps in firefox so that it is the default app to use
+2009-08-27T15:55:00.000Z	wolf23	ActionParsnip	 :) ok
+2009-08-27T15:56:00.000Z	wolf23	ActionParsnip	 u can change apps in firefox, where is it :(( sorry but i cant see it
+2009-08-27T16:01:00.000Z	ActionParsnip	wolf23	edit -> perfs -> applications tab
+2009-08-27T16:02:00.000Z	wolf23	ActionParsnip	 ok :) now thanx, and good helper
+2009-09-01T14:53:00.000Z	ActionParsnip	wolf23	wassup
+2009-09-01T14:54:00.000Z	wolf23	ActionParsnip	 i want to help me how to install emerald and make ubuntu looking like windows 7
+2009-09-01T14:55:00.000Z	ActionParsnip	wolf23	you will need to instal compizconfig-settings-manager and emerald
+2009-09-01T14:55:00.000Z	ActionParsnip	wolf23	you will also need to have full 3d drivers installed and running
+2009-09-01T14:57:00.000Z	wolf23	ActionParsnip	 thanx, dude
+2012-01-05T08:29:00.000Z	ActionParsnip	wolf23	does the OS eventually load OK
+2012-01-05T08:30:00.000Z	wolf23	ActionParsnip	 yes
+2012-01-05T08:31:00.000Z	ActionParsnip	wolf23	do you use nvidia or ati gpu with proprietary driver?
+2012-01-05T08:31:00.000Z	wolf23	ActionParsnip	 yes nvidia
+2012-01-05T08:32:00.000Z	ActionParsnip	wolf23	the nvidia driver doesn't load in time to give a boot splash, that's why you get the issue. Its nothing bad as the OS does load
+2012-01-05T08:33:00.000Z	wolf23	ActionParsnip	 so keep it with showing everytime when booting the syc message?
+2012-01-05T08:34:00.000Z	ActionParsnip	wolf23	yes, there is a hack or two you can do if you are really bothered
+2012-01-05T08:35:00.000Z	wolf23	ActionParsnip	 give me your opinion
+2012-01-05T08:35:00.000Z	ActionParsnip	wolf23	of what?
+2012-01-05T08:36:00.000Z	wolf23	ActionParsnip	 what can i do to show me the ubuntu screen image loading?
+2012-01-05T08:36:00.000Z	ActionParsnip	wolf23	personally I wouldn't bother as the OS boots, its just a looks thing and the OS boots quick so its not really worth faffing around
+2012-01-05T08:36:00.000Z	ActionParsnip	wolf23	if you really want: http://idyllictux.wordpress.com/2010/04/26/lucidubuntu-10-04-high-resolution-plymouth-virtual-terminal-for-atinvidia-cards-with-proprietaryrestricted-driver/
+2012-01-05T08:40:00.000Z	wolf23	ActionParsnip	 thanx but whats that?
+2012-01-05T08:41:00.000Z	ActionParsnip	wolf23	it makes the system use the fb driver which loads fast and will show the splash, when the X server loads the nvidia driver will load
+2012-01-05T08:42:00.000Z	wolf23	ActionParsnip	 ah ok thanx
+2012-01-05T08:43:00.000Z	ActionParsnip	wolf23	its a bit of messing around but if a pretty boot splash is THAT important to you then go ahead and fill your boots. Personaly I'd not bother
+2012-01-05T08:49:00.000Z	wolf23	ActionParsnip	 thank you friend so i keep it if not necessary

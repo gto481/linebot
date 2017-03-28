@@ -1,0 +1,95 @@
+2006-07-12T07:34:00.000Z	cwillu		yippee
+2006-07-12T07:35:00.000Z	cwillu		did anything change on port mapper -> dapper?
+2006-07-12T07:36:00.000Z	coucho	cwillu	sure
+2006-07-12T07:20:00.000Z	coucho	cwillu	i can't vnc into linux
+2006-07-12T07:21:00.000Z	cwillu	coucho	what are you trying to do?
+2006-07-12T07:22:00.000Z	cwillu	coucho	does it work loopback?  i.e., can you vncviewer from the linux box to the same box?
+2006-07-12T07:22:00.000Z	coucho	cwillu	vnc viewer says "server closed connection unexpectedly"
+2006-07-12T07:25:00.000Z	coucho	cwillu	does nothing really
+2006-07-12T07:25:00.000Z	cwillu	coucho	does nothing in what sense?
+2006-07-12T07:26:00.000Z	coucho	cwillu	i type "localhost" or "127.0.0.1", but i get nothing
+2006-07-12T07:26:00.000Z	cwillu	coucho	one sec
+2006-07-12T07:27:00.000Z	cwillu	coucho	which vnc server did you install?
+2006-07-12T07:28:00.000Z	coucho	cwillu	i think vnc4server
+2006-07-12T07:28:00.000Z	cwillu	coucho	running gnome/normal ubuntu?
+2006-07-12T07:28:00.000Z	coucho	cwillu	yup
+2006-07-12T07:28:00.000Z	coucho	cwillu	still 5.10 though
+2006-07-12T07:28:00.000Z	cwillu	coucho	look at vino
+2006-07-12T07:29:00.000Z	coucho	cwillu	vino?
+2006-07-12T07:29:00.000Z	cwillu	coucho	by which I mean, install that and uninstall the other package
+2006-07-12T07:29:00.000Z	coucho	cwillu	k, hold on
+2006-07-12T07:30:00.000Z	cwillu	coucho	that's what the remote desktop access in system|prefs should be controlling
+2006-07-12T07:30:00.000Z	coucho	cwillu	remote desktop uses vino?
+2006-07-12T07:30:00.000Z	coucho	cwillu	already newest version
+2006-07-12T07:31:00.000Z	cwillu	coucho	okay, next, how is remote-desktop configured?
+2006-07-12T07:31:00.000Z	coucho	cwillu	what exactly do you mean?
+2006-07-12T07:32:00.000Z	cwillu	coucho	allow other users to view your desktop is enabled, right?
+2006-07-12T07:32:00.000Z	coucho	cwillu	yes, and control too, and it demands a passwd
+2006-07-12T07:32:00.000Z	cwillu	coucho	does ps -A|grep vino show vino-server running?
+2006-07-12T07:33:00.000Z	coucho	cwillu	yup it does
+2006-07-12T07:35:00.000Z	coucho	cwillu	so vino-server is running, any idea what next?
+2006-07-12T07:35:00.000Z	cwillu	coucho	which version of ubuntu did you say you were running?
+2006-07-12T07:35:00.000Z	coucho	cwillu	aka breezy
+2006-07-12T07:36:00.000Z	cwillu	coucho	one sec
+2006-07-12T07:38:00.000Z	cwillu	coucho	does sudo netstat -p -l|grep vino show anything?
+2006-07-12T07:38:00.000Z	coucho	cwillu	yes
+2006-07-12T07:38:00.000Z	cwillu	coucho	specifically, tcp?
+2006-07-12T07:38:00.000Z	cwillu	coucho	I'm looking for a line that starts with tcp, and has something like *:5900 in it
+2006-07-12T07:39:00.000Z	coucho	cwillu	it's there
+2006-07-12T07:39:00.000Z	coucho	cwillu	only it says 5901
+2006-07-12T07:39:00.000Z	cwillu	coucho	one more sec, but that's the problem
+2006-07-12T07:39:00.000Z	coucho	cwillu	tcp        0      0 *:5901
+2006-07-12T07:40:00.000Z	cwillu	coucho	does vncviewer localhost:0:5901 work?
+2006-07-12T07:40:00.000Z	coucho	cwillu	no it doesn't
+2006-07-12T07:41:00.000Z	coucho	cwillu	again end of stream
+2006-07-12T07:42:00.000Z	cwillu	coucho	I think you've got more than one vnc server running
+2006-07-12T07:42:00.000Z	cwillu	coucho	in the remote desktop control panel, what command line does it suggest you use to connect?
+2006-07-12T07:43:00.000Z	cwillu	coucho	okay, remove the vnc servers you installed, and then disable and reenable the remote connections
+2006-07-12T07:43:00.000Z	coucho	cwillu	hold on
+2006-07-12T07:44:00.000Z	coucho	cwillu	i don't know what vnc servers i installed
+2006-07-12T07:45:00.000Z	cwillu	coucho	you installed something like vnc4server or something?
+2006-07-12T07:45:00.000Z	coucho	cwillu	already removed vncserver, vnc4server and x11vnc
+2006-07-12T07:45:00.000Z	cwillu	coucho	okay, disable and renable it then, and it should get back to 5900
+2006-07-12T07:46:00.000Z	cwillu	coucho	_might_ need to reboot, but that's only because I don't know exactly which service needs to be reset
+2006-07-12T07:46:00.000Z	coucho	cwillu	k i'll try
+2006-07-12T07:48:00.000Z	coucho	cwillu	still 5901
+2006-07-12T07:48:00.000Z	coucho	cwillu	reboot?
+2006-07-12T07:48:00.000Z	cwillu	coucho	:/
+2006-07-12T07:48:00.000Z	coucho	cwillu	vnc-common is still installed though, remove it?
+2006-07-12T07:48:00.000Z	cwillu	coucho	no
+2006-07-12T07:49:00.000Z	cwillu	coucho	could try rebooting;  there may be a config file somewhere that needs tweaking;  not a huge deal, just a little thing that's nonstandard otherwise (you'd have to always specify the port if it's not 5900)
+2006-07-12T07:49:00.000Z	coucho	cwillu	ok i'll reboot
+2006-07-12T07:55:00.000Z	coucho	cwillu	still 5901 :/
+2006-07-12T07:56:00.000Z	cwillu	coucho	well, it works at least;  I'd google around for how to set which port vino listens on
+2006-07-12T07:56:00.000Z	coucho	cwillu	ok i'll try
+2006-07-12T07:56:00.000Z	coucho	cwillu	thanks a lot!!
+2006-07-12T07:56:00.000Z	cwillu	coucho	np
+2006-07-12T08:01:00.000Z	coucho	cwillu	running a different vnc server wouldn't be an option?
+2006-07-12T08:01:00.000Z	cwillu	coucho	it would, and there's neat and wonderful things you can do by doing that, but as far as just getting your gnome session shared, I'd stick with the ubuntu recommended way
+2006-07-12T08:02:00.000Z	coucho	cwillu	ok, it's just that i can't find anything on my box that looks like vino settings
+2006-07-12T08:04:00.000Z	coucho	cwillu	http://www.ubuntuforums.org/archive/index.php/t-8742.html :'(
+2006-07-12T08:05:00.000Z	cwillu	coucho	that's funny
+2006-07-12T08:06:00.000Z	coucho	cwillu	i think it sucks :P
+2006-07-12T08:06:00.000Z	cwillu	coucho	what shows up if you do:  sudo netstat -p -l|grep ":59" ?
+2006-07-12T08:07:00.000Z	coucho	cwillu	it says that inetd is listening on port 5900?!
+2006-07-12T08:07:00.000Z	cwillu	coucho	heh
+2006-07-12T08:08:00.000Z	cwillu	coucho	you know what that implies?
+2006-07-12T08:08:00.000Z	coucho	cwillu	i have no friggin clue
+2006-07-12T08:09:00.000Z	cwillu	coucho	I believe /etc/inetd.conf will enlighten you a bit :)
+2006-07-12T08:09:00.000Z	coucho	cwillu	i'll take a look
+2006-07-12T08:10:00.000Z	cwillu	coucho	also check the man pages for that file
+2006-07-12T08:10:00.000Z	coucho	cwillu	i think i found it
+2006-07-12T08:10:00.000Z	coucho	cwillu	someone else who was helping me with the same problem told me to add a listening port for xvnc4
+2006-07-12T08:11:00.000Z	cwillu	coucho	yep, that'll be it
+2006-07-12T08:12:00.000Z	coucho	cwillu	how do i restart inetd?
+2006-07-12T08:12:00.000Z	coucho	cwillu	i'll take a look
+2006-07-12T08:18:00.000Z	coucho	cwillu	IT WORKS!!
+2006-07-12T08:18:00.000Z	cwillu	coucho	heh :)
+2006-07-12T08:18:00.000Z	coucho	cwillu	had to reboot, but it works
+2006-07-12T08:19:00.000Z	cwillu	coucho	I just called a ****, because I support people for free and take the business away from the people who get paid for it
+2006-07-12T08:19:00.000Z	coucho	cwillu	that's nasty
+2006-07-12T08:20:00.000Z	coucho	cwillu	tell em to come see me, i'll make em change their minds
+2006-07-12T08:20:00.000Z	cwillu	coucho	kinda a freelove vs corporate domination thing
+2006-07-12T08:20:00.000Z	coucho	cwillu	yeah it's fuxored
+2006-07-12T08:21:00.000Z	coucho	cwillu	what are those people doing here anyway?
+2006-07-12T08:23:00.000Z	coucho	cwillu	anyway, again, thanks a lot, without people like you people like me would be very much screwed :P

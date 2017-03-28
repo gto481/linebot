@@ -1,0 +1,96 @@
+2008-03-16T20:59:00.000Z	yowshi		anyone know how to shut down a stuck flash object?
+2008-03-16T20:59:00.000Z	yowshi		i have a flash thingy tat didnt close with firefox and now i have a giant blank square in the middle of my screen
+2008-03-16T21:00:00.000Z	jrib	yowshi	are you on amd64?
+2008-03-16T21:01:00.000Z	jrib	yowshi	ps -ef | grep npviewer    then kill the process
+2008-03-16T21:01:00.000Z	jrib	yowshi	if xkill doesn't work
+2008-03-20T17:01:00.000Z	jrib	yowshi	what are you trying to do?
+2008-03-20T17:04:00.000Z	jrib	yowshi	create a directory to mount it, then issue 'sudo mount -t TYPE /dev/blah /mount/point/you/created
+2008-08-14T10:09:00.000Z	yowshi	jrib	i am talkng about what application loads when you do somehting like put a video dvd in the dvd drive
+2008-08-14T10:09:00.000Z	jrib	yowshi	edit -> preferences -> media  in nautilus
+2008-08-14T10:10:00.000Z	jrib	yowshi	file a bug agains vlc's .desktop file
+2008-08-14T10:11:00.000Z	yowshi	jrib	i dont know what that file is and nor do i know whom where or how to file a bug.
+2008-08-14T10:12:00.000Z	jrib	yowshi	you just state the problem you just had.  Want to set vlc as default for dvd but is not an option.  Search to make sure the bug does not already exist
+2008-09-26T08:28:00.000Z	jrib	yowshi	pastebin what happens when you try?
+2008-09-26T08:29:00.000Z	yowshi	jrib	i made the atempt form the add remove programmes thing in the applications menu
+2008-09-26T08:29:00.000Z	jrib	yowshi	try with apt-get install
+2008-09-26T08:29:00.000Z	yowshi	jrib	hmmm it says that the package is not avilable but is reffered to by some other package
+2008-09-26T08:30:00.000Z	jrib	yowshi	pastebin your /etc/apt/sources.list
+2008-09-26T08:31:00.000Z	yowshi	jrib	http://pastebin.com/f780a2344
+2008-09-26T08:33:00.000Z	jrib	yowshi	what is the output of 'uname -m'?
+2008-09-26T08:34:00.000Z	yowshi	jrib	you co0uld have just asked X86_64. but then i alreayd knew i was running a 64 bit system
+2008-09-26T08:34:00.000Z	jrib	yowshi	zsnes isn't available on 64 bit
+2008-09-26T08:35:00.000Z	yowshi	jrib	ok so then hw do i install this from source. i presume i am going to need to do some work around
+2008-09-26T08:38:00.000Z	yowshi	jrib	bugger i can just wine it
+2008-12-04T08:16:00.000Z	jrib	yowshi	are you on intrepid?
+2008-12-04T08:16:00.000Z	yowshi	jrib	yes
+2008-12-04T08:17:00.000Z	jrib	yowshi	it's supposed to restart on its own.  I think you just reload the page
+2008-12-04T08:17:00.000Z	yowshi	jrib	that hasnt been working
+2008-12-04T08:17:00.000Z	yowshi	jrib	 used to work but now it isnt
+2008-12-04T08:18:00.000Z	jrib	yowshi	don't know, I haven't had it crash on me since upgrading to intrepid.  It would crash for me every 15 minutes like you describe on hardy
+2008-12-04T08:19:00.000Z	yowshi	jrib	how do i find out if i am running the intrepid kernelk. the hardy kernel options still remained in my boot thingy so i may have loaded that by accident
+2008-12-04T08:19:00.000Z	yowshi	jrib	though i doubt it
+2008-12-04T08:19:00.000Z	jrib	yowshi	uname -r, it wouldn't matter though
+2008-12-04T08:20:00.000Z	jrib	yowshi	yes, that's intrepid.  Are you using proposed?
+2008-12-04T08:20:00.000Z	yowshi	jrib	what the heck is proposed?
+2008-12-04T08:20:00.000Z	jrib	yowshi	repository
+2008-12-04T08:21:00.000Z	yowshi	jrib	???
+2008-12-04T08:21:00.000Z	yowshi	jrib	full sentences please
+2008-12-04T08:21:00.000Z	jrib	yowshi	are you using the intrepid-proposed repository?  Pastebin your /etc/apt/sources.list if you aren't sure
+2008-12-04T08:22:00.000Z	yowshi	jrib	 http://pastebin.com/f45849fe2
+2008-12-04T08:23:00.000Z	jrib	yowshi	you are using intrepid-proposed.  That's where packages go in for testing.  You shouldn't be using that repository really
+2008-12-04T08:24:00.000Z	yowshi	jrib	heh i see. well hmmmmm how do i do something about that
+2008-12-04T08:25:00.000Z	jrib	yowshi	you could downgrade (can't walk you through that right now) or just disable them and wait for the main repositories to catch up.
+2008-12-04T08:26:00.000Z	yowshi	jrib	well i dont want to downgrade i grabbed intrepid as fast as i could and was a pain to upgrade to
+2008-12-04T08:26:00.000Z	jrib	yowshi	I meant downgrade the -proposed packages
+2008-12-04T08:27:00.000Z	yowshi	jrib	ah well i would have to do both downgrade and not use the propposed packages to fix it rigt wouldnt i?
+2008-12-04T08:28:00.000Z	jrib	yowshi	yes.  And I'm not saying this is certainly why your flash doesn't work like you expect it to, but in any case it doesn't make sense for you to have -proposed enabled
+2008-12-04T08:29:00.000Z	yowshi	jrib	well yeah since i am not a beta tester. how did it wind up enabled in the first place is a good question i think. since i didnt manually do it
+2008-12-04T08:29:00.000Z	jrib	yowshi	they aren't enabled by default
+2008-12-04T08:29:00.000Z	yowshi	jrib	*shrugs*
+2008-12-04T08:30:00.000Z	yowshi	jrib	so how do i disable them
+2008-12-04T08:30:00.000Z	jrib	yowshi	you could downgrade (can't walk you through that right now) or just disable them (using Software Sources) and wait for the main repositories to catch up.
+2008-12-04T08:31:00.000Z	yowshi	jrib	intrepid proposed isnt listed in software sources i just checked
+2008-12-04T08:31:00.000Z	jrib	yowshi	then delete the -proposed lines from /etc/apt/sources.list and run 'sudo apt-get update'
+2008-12-04T08:35:00.000Z	yowshi	jrib	only prposed packahges i seem to have deal with the snmp well those are the only ones that updated after remoing proposed packages
+2008-12-04T08:35:00.000Z	jrib	yowshi	that's not how it works
+2008-12-04T08:35:00.000Z	jrib	yowshi	your packages won't be automatically downgraded after disabling -proposed
+2008-12-04T08:35:00.000Z	yowshi	jrib	oh heh
+2008-12-04T08:36:00.000Z	yowshi	jrib	well meh gotta jet thanks for the help
+2008-12-04T08:37:00.000Z	jrib	yowshi	cya
+2009-02-22T06:04:00.000Z	jrib	yowshi	system -> administration -> hardware drivers
+2009-02-22T06:05:00.000Z	yowshi	jrib	tried that didnt work
+2009-02-22T06:05:00.000Z	jrib	yowshi	then you might want to be more specific
+2009-02-22T06:06:00.000Z	yowshi	jrib	i have tried the hardware driver option. i tried going into synaptic and reinstalling all the drivers but for some reason i can get opengl to work which is needed for some games i play on wine. this probably isnt a ine problem though sincxe they worked before i started altering my xorg.conf file as per ecomendations to get my usb mouse working
+2009-02-22T06:19:00.000Z	jrib	yowshi	pastebin your /etc/X11/xorg.conf
+2009-02-22T06:20:00.000Z	yowshi	jrib	 http://pastebin.com/f16f421fa
+2009-02-22T06:20:00.000Z	jrib	yowshi	you aren't using the nvidia driver
+2009-02-22T06:21:00.000Z	yowshi	jrib	yeah that might be the problem the question is why isnt it being used when i have tried both methods to reinstall it
+2009-02-22T06:21:00.000Z	jrib	yowshi	it's not setup to be used in xorg.conf.  Hardware Drivers does this when you enable the driver
+2009-02-22T06:22:00.000Z	yowshi	jrib	but i tried the deactive driver reactivate driver thing first
+2009-02-22T06:22:00.000Z	jrib	yowshi	you did that now?  before pastebinning your xorg.conf?
+2009-02-22T06:23:00.000Z	yowshi	jrib	yeah before pastebining it like an hour ago maybe a little less
+2009-02-22T06:23:00.000Z	jrib	yowshi	so Hardware Drivers says the driver is enabled?
+2009-02-22T06:23:00.000Z	yowshi	jrib	when that failed i went to synaptic and marked it for reinstallation
+2009-02-22T06:24:00.000Z	yowshi	jrib	yes itg says it is active and currently in use
+2009-02-22T06:24:00.000Z	jrib	yowshi	what package are you using for the driver?
+2009-02-22T06:24:00.000Z	yowshi	jrib	???
+2009-02-22T06:24:00.000Z	jrib	yowshi	what version of ubuntu are you using?
+2009-02-22T06:24:00.000Z	yowshi	jrib	8.10
+2009-02-22T06:25:00.000Z	jrib	yowshi	aptitude search '~i~nnvidia-glx'
+2009-02-22T06:25:00.000Z	yowshi	jrib	i   nvidia-glx-177                                                         - NVIDIA binary Xorg driver
+2009-02-22T06:26:00.000Z	jrib	yowshi	lsmod | grep nvidia
+2009-02-22T06:26:00.000Z	yowshi	jrib	a number of entires
+2009-02-22T06:27:00.000Z	jrib	yowshi	so the "nvidia" module is loaded?
+2009-02-22T06:27:00.000Z	yowshi	jrib	one of them is nvidia
+2009-02-22T06:27:00.000Z	jrib	yowshi	ok, use http://paste.ubuntu.com/121269/ as your xorg.conf
+2009-02-22T06:27:00.000Z	yowshi	jrib	if it's nvidia in the output of that command then yes
+2009-02-22T06:28:00.000Z	yowshi	jrib	*sighs* alright breaking my system again
+2009-02-22T06:28:00.000Z	jrib	yowshi	if it breaks, pastebin the /var/log/Xorg.0.log
+2009-02-22T06:29:00.000Z	yowshi	jrib	could i just paste it into my xorg.conf?
+2009-02-22T06:29:00.000Z	jrib	yowshi	replace what is currently in yours with the pastebin, yes
+2009-02-22T06:30:00.000Z	yowshi	jrib	full reboot now or just restart x?
+2009-02-22T06:30:00.000Z	jrib	yowshi	either
+2009-02-22T06:31:00.000Z	yowshi	jrib	thanks that seems to have fixed it
+2009-02-22T06:32:00.000Z	jrib	yowshi	no problem
+2009-02-22T09:28:00.000Z	yowshi	jrib	what would cause a usb mouse to work only with mouse buttons activated but then only as long as none of the mouse buttons were acxtually touched?
+2009-02-22T09:28:00.000Z	yowshi	jrib	and how do i fix that

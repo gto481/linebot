@@ -1,0 +1,97 @@
+2005-09-27T13:40:00.000Z	j-linux		is it just me or is ubuntuguide.org down?
+2005-09-27T13:40:00.000Z	ompaul	j-linux	 it has gone away to be replaced by faq afik
+2005-09-27T13:42:00.000Z	j-linux	ompaul	got it... I keep seeing links to ubuntuguide.org online so I thought it might be a resource
+2005-12-30T17:22:00.000Z	ompaul	j-linux	yes
+2005-12-30T17:15:00.000Z	ompaul	j-linux	what size is the hard drive?
+2005-12-30T17:16:00.000Z	ompaul	j-linux	I take it you are on the live CD now?
+2005-12-30T17:17:00.000Z	j-linux	ompaul	I'm on a Windows machine next to my laptop... chatzilla...
+2005-12-30T17:17:00.000Z	ompaul	j-linux	okay is the machine booted with the live CD?
+2005-12-30T17:17:00.000Z	j-linux	ompaul	my laptop is frozen after reboot on the installing packages part
+2005-12-30T17:17:00.000Z	j-linux	ompaul	The ThinkPad doesn't have the ubuntu disk in it anymore (the install one) because it told me to remove it after installation.
+2005-12-30T17:18:00.000Z	ompaul	j-linux	ehh have you got a live cd?
+2005-12-30T17:18:00.000Z	j-linux	ompaul	should I boot one up?
+2005-12-30T17:19:00.000Z	ompaul	j-linux	ubuntu if you want or knoppix please do
+2005-12-30T17:19:00.000Z	ompaul	j-linux	actually try it with the install CD
+2005-12-30T17:19:00.000Z	j-linux	ompaul	 ok...  put the install CD in?
+2005-12-30T17:19:00.000Z	ompaul	j-linux	lets just try that
+2005-12-30T17:20:00.000Z	j-linux	ompaul	ok, rebooting with the install CD.  there is something strange about the ThinkPad harddrive, I think....
+2005-12-30T17:20:00.000Z	j-linux	ompaul	type "ubuntu" ?
+2005-12-30T17:21:00.000Z	j-linux	ompaul	it's just a prompt that says "boot:"
+2005-12-30T17:21:00.000Z	ompaul	j-linux	do that
+2005-12-30T17:22:00.000Z	ompaul	j-linux	can you give me a minute I want to get some coffee installed to myself
+2005-12-30T17:22:00.000Z	j-linux	ompaul	no problem... should I select the languages?
+2005-12-30T17:22:00.000Z	ompaul	j-linux	sorry was that screen the one that offers "server" as an option/
+2005-12-30T17:23:00.000Z	ompaul	j-linux	the first screen?
+2005-12-30T17:23:00.000Z	j-linux	ompaul	tes
+2005-12-30T17:23:00.000Z	ompaul	j-linux	lets reboot and choose server
+2005-12-30T17:23:00.000Z	ompaul	j-linux	back in a sec kettle and coffee :)
+2005-12-30T17:23:00.000Z	j-linux	ompaul	no problem, thanks for your help.
+2005-12-30T17:28:00.000Z	ompaul	j-linux	how far have you gotten?
+2005-12-30T17:28:00.000Z	j-linux	ompaul	I'm at the configure the network... I have to type in the static IP
+2005-12-30T17:29:00.000Z	ompaul	j-linux	able to - sorry I am not able to keep my brain together enough to put a full sentence on the one line :-/
+2005-12-30T17:29:00.000Z	j-linux	ompaul	ok... no problem... maybe time for some sleep?
+2005-12-30T17:30:00.000Z	ompaul	j-linux	it is 11:30 am, so sleep na, I just worked so many hours coming up to christmas, I am slowly waking today :)
+2005-12-30T17:31:00.000Z	j-linux	ompaul	  you must be in Europe?  I'm in Hawaii... 1:30am... :S
+2005-12-30T17:32:00.000Z	ompaul	j-linux	the most westerly side of europe :)
+2005-12-30T17:35:00.000Z	j-linux	ompaul	what is your idea for the server thing?  Just install the server?
+2005-12-30T17:35:00.000Z	ompaul	j-linux	yes then on the command line you can install the x stuff
+2005-12-30T17:36:00.000Z	j-linux	ompaul	ok... I'll try going through it.  I'll delete all my partitions except the 4.2 GB factory restore one at the end of the disk...
+2005-12-30T17:37:00.000Z	ompaul	j-linux	yeap
+2005-12-30T17:42:00.000Z	ompaul	j-linux	how is it going
+2005-12-30T17:43:00.000Z	j-linux	ompaul	 It's doing the time zone configuration thing...  Still working...
+2005-12-30T17:44:00.000Z	j-linux	ompaul	it usually gets through most of the installation and even the reboot (although with errors)...
+2005-12-30T17:44:00.000Z	ompaul	j-linux	well lets try this - shall we :)
+2005-12-30T17:44:00.000Z	j-linux	ompaul	 I hope it works :)
+2005-12-30T17:45:00.000Z	ompaul	j-linux	well I have had failures before and it worked where a straight install did not
+2005-12-30T17:45:00.000Z	j-linux	ompaul	 it's a great idea... thanks.
+2005-12-30T17:45:00.000Z	j-linux	ompaul	 it is just starting to have errors.  A screen says that it detects XP on the drive... but I deleted it several installation ago!
+2005-12-30T17:46:00.000Z	ompaul	j-linux	 that is that last partition you did not delete
+2005-12-30T17:46:00.000Z	j-linux	ompaul	should I install GRUB to the MBR?
+2005-12-30T17:46:00.000Z	ompaul	j-linux	yes
+2005-12-30T17:46:00.000Z	j-linux	ompaul	ok... here goes...
+2005-12-30T17:47:00.000Z	j-linux	ompaul	nice... it skipped the part that always breaks it... and rebooted.
+2005-12-30T17:47:00.000Z	ompaul	j-linux	that was the plan :-)
+2005-12-30T17:47:00.000Z	j-linux	ompaul	now it's in GRUB, says there is Windows but just booted into Ubuntu..
+2005-12-30T17:48:00.000Z	ompaul	j-linux	did you want to install xp on this box ever?
+2005-12-30T17:48:00.000Z	j-linux	ompaul	is there a way to later shrink the ext3 partition that has ubuntu and install XP?  I have a feeling the 6 CDs that IBM provides won't do it...
+2005-12-30T17:48:00.000Z	j-linux	ompaul	yes... I would like to... just for work that other people give me.
+2005-12-30T17:48:00.000Z	ompaul	j-linux	no you should install XP first
+2005-12-30T17:48:00.000Z	ompaul	j-linux	then install ubuntu
+2005-12-30T17:49:00.000Z	ompaul	j-linux	create a partition if 10 or so gigs for windows install it and then install ubuntu
+2005-12-30T17:49:00.000Z	j-linux	ompaul	I will at least finish this install to see if I can even get Linux on this machine... no luck with 3 installs yet,.....  The problem with XP is that I can't shrink the NTFS partition for some reason.
+2005-12-30T17:49:00.000Z	ompaul	j-linux	well you can choose not to give it the full disk at the install stage
+2005-12-30T17:49:00.000Z	j-linux	ompaul	I posted an earlier part of my story here: http://www.rafb.net/paste/results/kLYuMv12.html
+2005-12-30T17:50:00.000Z	j-linux	ompaul	looks like Linux server is on the laptop...
+2005-12-30T17:50:00.000Z	ompaul	j-linux	that post is why this conversation is taking place
+2005-12-30T17:50:00.000Z	j-linux	ompaul	I'm logged in... great so far.
+2005-12-30T17:51:00.000Z	ompaul	j-linux	now do this >>sudo apt-get install ubuntu-desktop gdm xserver-xorg<<
+2005-12-30T17:51:00.000Z	j-linux	ompaul	ok..
+2005-12-30T17:51:00.000Z	ompaul	j-linux	write this down I won't be here for you when the end part takes place
+2005-12-30T17:52:00.000Z	ompaul	j-linux	do this and then reboot :)  >>>sudo dpkg-reconfigure xserver-xorg<<<
+2005-12-30T17:52:00.000Z	ompaul	j-linux	that will give you a basic ubuntu install
+2005-12-30T17:53:00.000Z	ompaul	j-linux	and so it is that I have to head off
+2005-12-30T17:53:00.000Z	ompaul	j-linux	enjoy it
+2005-12-30T17:53:00.000Z	j-linux	ompaul	thanks for your help!
+2005-12-30T17:54:00.000Z	ompaul	j-linux	as I said enjoy
+2005-12-30T08:01:00.000Z	ompaul	j-linux	how did you get on?
+2005-12-30T08:02:00.000Z	j-linux	ompaul	 great... thanks.  It works now.
+2005-12-30T08:02:00.000Z	ompaul	j-linux	:-)
+2005-12-30T08:02:00.000Z	j-linux	ompaul	 Still not a dual boot, but I know it is possible now.
+2005-12-30T08:03:00.000Z	ompaul	j-linux	well if you wanted to do that the time to install that other thing is now :-) before you get too much installed and end up giving yourself problems
+2005-12-30T08:04:00.000Z	ompaul	j-linux	but know this first, I have spent 10 years without that company providing my home operating system
+2005-12-30T08:04:00.000Z	j-linux	ompaul	I was going to delete the Ubuntu and start from scratch.. with Windows installed first.
+2005-12-30T08:04:00.000Z	ompaul	j-linux	what kind of work do you do
+2005-12-30T08:05:00.000Z	ompaul	j-linux	so you can do all that on ubuntu :) you just need to find out what applications work for you to do the same job as in that other platform
+2005-12-30T08:06:00.000Z	ompaul	j-linux	you can even do the DB stuff on the box and show people what it would look like as they interacted with the interweb
+2005-12-30T08:11:00.000Z	j-linux	ompaul	looks like Wine is improving.  Will probably get Crossover Office soon.
+2005-12-30T08:11:00.000Z	ompaul	j-linux	it is great :)
+2005-12-30T08:12:00.000Z	ompaul	j-linux	but native is better
+2005-12-30T08:13:00.000Z	ompaul	j-linux	if you ever get a situation where the machine does not let you in and proclaims your session was less than 10 seconds then that command works :)
+2005-12-30T08:13:00.000Z	j-linux	ompaul	I would prefer to get rid of Windows... maybe if I can fix my other laptop I will just put windows on that one only.  Keep this new one Linux-only.
+2005-12-30T08:13:00.000Z	ompaul	j-linux	now your thinking :)
+2005-12-30T08:17:00.000Z	j-linux	ompaul	thanks again... took two days to get this far... :S
+2005-12-30T08:18:00.000Z	ompaul	j-linux	some times it takes a little help
+2005-12-30T08:18:00.000Z	ompaul	j-linux	it took you about 2 hours all in by the time you got to me :)
+2005-12-30T08:18:00.000Z	ompaul	j-linux	and tjhat is well too much time
+2005-12-30T08:19:00.000Z	j-linux	ompaul	 Two hours is ok to fix a problem... Actually, from breakdown of my Toshiba it has taken me over 3 weeks to get this running.  Will be about a month by the time everything is reinstalled.
+2005-12-30T08:20:00.000Z	ompaul	j-linux	well I only became aware of it today :)

@@ -1,0 +1,97 @@
+2005-09-10T15:12:00.000Z	fatejudger		I'm trying to mount a network drive using the fstab
+2005-09-10T15:12:00.000Z	fatejudger		for some reason
+2005-09-10T15:12:00.000Z	fatejudger		I can manually mount it
+2005-09-10T15:12:00.000Z	fatejudger		but when I try and mount it using the fstab it asks me for a password on reboot
+2005-09-10T15:12:00.000Z	fatejudger		and then the says access denied
+2005-09-10T15:14:00.000Z	fatejudger		does anyone know how to mount these network drives using fstab?
+2005-09-10T15:15:00.000Z	Seveas	fatejudger	samba things?
+2005-09-10T15:16:00.000Z	Seveas	fatejudger	the 'easy' way is running a simple script I created -> ubuntulinux.nl/files/addsamba
+2005-09-10T15:17:00.000Z	Seveas	fatejudger	it adds it to fstab
+2005-09-10T15:19:00.000Z	Seveas	fatejudger	it is if you want to get it right
+2005-09-10T15:20:00.000Z	Seveas	fatejudger	download it and run: sudo bash addsamba
+2005-09-10T15:21:00.000Z	Seveas	fatejudger	tell me more
+2005-09-10T15:22:00.000Z	Seveas	fatejudger	hmm
+2005-09-10T15:22:00.000Z	fatejudger	Seveas	you're missing quotes I think
+2005-09-10T15:22:00.000Z	fatejudger	Seveas	on the line above
+2005-09-10T15:22:00.000Z	Seveas	fatejudger	the line above has only the word exit
+2005-09-10T15:24:00.000Z	Seveas	fatejudger	anyway, install smbfs
+2005-09-10T15:25:00.000Z	fatejudger	Seveas	I do have it installed
+2005-09-10T15:26:00.000Z	Seveas	fatejudger	please re-download
+2005-09-10T15:26:00.000Z	fatejudger	Seveas	what was it?
+2005-09-10T15:27:00.000Z	Seveas	fatejudger	brainfart of mine
+2005-09-10T15:27:00.000Z	fatejudger	Seveas	yeah, but what was the error?
+2005-09-10T15:27:00.000Z	fatejudger	Seveas	was it that "then"
+2005-09-10T15:29:00.000Z	fatejudger	Seveas	ERROR: Unable to open credentials file!
+2005-09-10T15:30:00.000Z	fatejudger	Seveas	I did run it as root
+2005-09-10T15:30:00.000Z	Seveas	fatejudger	then you found a bug
+2005-09-10T15:34:00.000Z	fatejudger	Seveas	do I have to restart for it to take effect?
+2005-09-10T15:34:00.000Z	Seveas	fatejudger	no, please paste your fstab on paste.ubuntulinux.nl - you have found a bug
+2005-09-10T15:37:00.000Z	fatejudger	Seveas	http://pastebin.com/355076
+2005-09-10T15:38:00.000Z	fatejudger	Seveas	it looks right
+2005-09-10T15:38:00.000Z	fatejudger	Seveas	I don't see why your script gave me an error
+2005-09-10T15:38:00.000Z	Seveas	fatejudger	have you pasted it already?
+2005-09-10T15:38:00.000Z	fatejudger	Seveas	yeah, I already gave you the link
+2005-09-10T15:39:00.000Z	fatejudger	Seveas	http://pastebin.com/355076
+2005-09-10T15:39:00.000Z	Seveas	fatejudger	ah ok, missed that
+2005-09-10T15:39:00.000Z	Seveas	fatejudger	you said that you do not need authentication?
+2005-09-10T15:39:00.000Z	fatejudger	Seveas	I don't
+2005-09-10T15:39:00.000Z	Seveas	fatejudger	the script thinks you do
+2005-09-10T15:40:00.000Z	fatejudger	Seveas	well then that's the bug
+2005-09-10T15:41:00.000Z	Seveas	fatejudger	http://pastebin.com/355079
+2005-09-10T15:42:00.000Z	fatejudger	Seveas	no credentials, guest login
+2005-09-10T15:42:00.000Z	fatejudger	Seveas	wow, this "bash" code is extremely hard to read
+2005-09-10T15:43:00.000Z	Seveas	fatejudger	yeah, bash is crap to read
+2005-09-10T15:43:00.000Z	fatejudger	Seveas	why not program something like this in C++?
+2005-09-10T15:43:00.000Z	fatejudger	Seveas	it can do everything and more
+2005-09-10T15:44:00.000Z	Seveas	fatejudger	because this is easier to do in bash
+2005-09-10T15:44:00.000Z	fatejudger	Seveas	I think I see the bug
+2005-09-10T15:44:00.000Z	Seveas	fatejudger	i fixed it already
+2005-09-10T15:44:00.000Z	fatejudger	Seveas	ah
+2005-09-10T15:44:00.000Z	fatejudger	Seveas	was it the 4th to the last line?
+2005-09-10T15:44:00.000Z	fatejudger	Seveas	it always sets the credential dir
+2005-09-10T15:45:00.000Z	fatejudger	Seveas	I need to learn this "bash"
+2005-09-10T15:45:00.000Z	Seveas	fatejudger	www.tldp.org has nice guides
+2005-09-10T15:45:00.000Z	fatejudger	Seveas	ok, thanks
+2005-09-10T15:46:00.000Z	fatejudger	Seveas	is "bash" pretty flexible?
+2005-09-10T15:46:00.000Z	fatejudger	Seveas	for example, can I end each line with a semicolon?
+2005-09-10T15:46:00.000Z	fatejudger	Seveas	or can I wrap echo statements in quotes
+2005-09-10T15:46:00.000Z	Seveas	fatejudger	I suggest you read the intro docs, this is a bit off-topic in here
+2005-09-10T15:47:00.000Z	fatejudger	Seveas	yeah, sorry
+2005-09-10T15:49:00.000Z	fatejudger	Seveas	the tutorial doesn't show what types of commenting are acceptable
+2005-09-10T15:49:00.000Z	fatejudger	Seveas	obviously # is
+2005-09-10T16:07:00.000Z	Seveas	fatejudger	not :)
+2005-09-10T16:02:00.000Z	Seveas	fatejudger	rofl
+2005-09-10T16:03:00.000Z	Seveas	fatejudger	no matter if it's fine or not, this is not the place to discuss...
+2005-09-10T16:04:00.000Z	fatejudger	Seveas	that fstab line doesn't work
+2005-09-10T16:04:00.000Z	fatejudger	Seveas	I restarted and it said it couldn't connect
+2005-09-10T16:04:00.000Z	fatejudger	Seveas	access denied or something
+2005-09-10T16:04:00.000Z	Seveas	fatejudger	without a complete error I can't help
+2005-09-10T16:05:00.000Z	fatejudger	Seveas	well I can't save the damn error
+2005-09-10T16:05:00.000Z	fatejudger	Seveas	it goes by the screen too fast
+2005-09-10T16:05:00.000Z	Seveas	fatejudger	in a terminal: sudo mount -a
+2005-09-10T16:05:00.000Z	fatejudger	Seveas	no errors
+2005-09-10T16:05:00.000Z	Seveas	fatejudger	right.....
+2005-09-10T16:05:00.000Z	fatejudger	Seveas	well wtf
+2005-09-10T16:05:00.000Z	fatejudger	Seveas	there was an error!
+2005-09-10T16:06:00.000Z	Seveas	fatejudger	I believe you :)
+2005-09-10T16:06:00.000Z	fatejudger	Seveas	yes, it works now
+2005-09-10T16:06:00.000Z	Seveas	fatejudger	guess so...
+2005-09-10T16:06:00.000Z	fatejudger	Seveas	what's the error then?
+2005-09-10T16:07:00.000Z	Seveas	fatejudger	not letting it automount will work
+2005-09-10T16:07:00.000Z	fatejudger	Seveas	how do I make sure that it doesn't mount before the network is up?
+2005-09-10T16:07:00.000Z	fatejudger	Seveas	are you serious?
+2005-09-10T16:07:00.000Z	fatejudger	Seveas	I have to mount everything manually?
+2005-09-10T16:07:00.000Z	Seveas	fatejudger	hang on
+2005-09-10T16:10:00.000Z	Seveas	fatejudger	sudo ln -s /etc/init.d/mountall.sh /etc/rcS.d/S50mountall.sh
+2005-09-10T16:10:00.000Z	fatejudger	Seveas	what exactly does that command do?
+2005-09-10T16:10:00.000Z	fatejudger	Seveas	ok
+2005-09-10T16:11:00.000Z	fatejudger	Seveas	oh great, so more boot time
+2005-09-10T16:11:00.000Z	fatejudger	Seveas	wouldn't it be easier just to run a script at boottime with KDE?
+2005-09-10T16:11:00.000Z	Seveas	fatejudger	whatever you want
+2005-09-10T16:12:00.000Z	fatejudger	Seveas	well how do I undo that command you gave me?
+2005-09-10T16:13:00.000Z	Seveas	fatejudger	rm /etc/rcS.d/50mountall.sh
+2005-09-10T16:13:00.000Z	fatejudger	Seveas	oh I see what you did
+2005-09-10T16:13:00.000Z	fatejudger	Seveas	you stuck some file in the startup folder
+2005-09-10T16:13:00.000Z	fatejudger	Seveas	ok, I get it
+2005-09-10T16:14:00.000Z	fatejudger	Seveas	why would running it twice make any difference though?
+2005-09-10T16:14:00.000Z	Seveas	fatejudger	the second time it runs networking is up

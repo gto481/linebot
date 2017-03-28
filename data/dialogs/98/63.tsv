@@ -1,0 +1,98 @@
+2005-11-21T10:47:00.000Z	blanky		which supports wider systems, kde or gnome
+2005-11-21T10:47:00.000Z	blanky		as in, more systems
+2005-11-21T10:49:00.000Z	blanky		everything in my KDE is big despite my high resolution, anyway I can make it smaller?
+2005-11-21T10:50:00.000Z	blanky		maaan..I think it installed everything again, my gaim doesn't have my old account info from gnome
+2005-11-21T10:50:00.000Z	blanky		yeah, same account on ubuntu, just I'm using kde instead of gnome
+2005-11-21T10:51:00.000Z	blanky		yeah I like gaim :)
+2005-11-21T10:51:00.000Z	blanky		my bookmarks are still there in firefox, so I guess it's okay
+2005-11-21T10:51:00.000Z	blanky		lol
+2005-11-21T10:52:00.000Z	blanky		lol
+2005-11-21T10:52:00.000Z	blanky		http://blank.cjb.cc/pics/Natalie_Wallpaper2.JPG <--rate that picture
+2005-11-21T10:53:00.000Z	cafuego	blanky	"frightening"
+2005-11-21T11:05:00.000Z	cafuego	blanky	That's perhaps more of a #kubuntu question.
+2005-11-21T11:07:00.000Z	cafuego	blanky	More likely fixing problems with their kde install ;-)
+2005-11-21T11:41:00.000Z	cafuego	blanky	Try #kubuntu
+2005-11-21T11:41:00.000Z	cafuego	blanky	Please don't use capslock.
+2005-11-22T09:30:00.000Z	cafuego	blanky	apache2-mpm-prefork, mysql-server, libapache2-mod-php4, php4-mysql
+2005-11-22T09:33:00.000Z	blanky	cafuego	should I install them in all at once or one after the other in taht order
+2005-11-23T16:10:00.000Z	cafuego	blanky	'ps aux' or 'top'
+2005-11-23T16:18:00.000Z	cafuego	blanky	No, it will only remote itself, the virtual package.
+2005-11-23T16:18:00.000Z	blanky	cafuego	So...it wont uninstall the packages it installed and what not
+2005-11-23T16:18:00.000Z	cafuego	blanky	indeed
+2005-11-24T17:23:00.000Z	cafuego	blanky	--purge, two dashes
+2005-11-24T17:23:00.000Z	blanky	cafuego	you speak any other languages?
+2005-11-24T17:24:00.000Z	cafuego	blanky	Oui, en peux d'allemand, hollndisch und flink wat duits.
+2005-11-24T17:34:00.000Z	cafuego	blanky	Like we said an hour ago, removing 'kubuntu-desktop' only removed the virtual package, NOT kde itself.
+2005-11-24T17:35:00.000Z	blanky	cafuego	I know, someone else told me to do it anyways
+2005-11-24T17:35:00.000Z	cafuego	blanky	You can install and run 'debfoster', then step through packages and purge as desired.
+2005-11-24T17:36:00.000Z	blanky	cafuego	debfoster?
+2005-11-24T17:36:00.000Z	cafuego	blanky	debfoster
+2005-11-24T17:45:00.000Z	blanky	cafuego	I'm done running debfoster, I try to run it again and nothing happens
+2005-11-24T17:46:00.000Z	cafuego	blanky	Did you hit 'p' for all the KDE related packages it asked about?
+2005-11-24T17:46:00.000Z	cafuego	blanky	'p' for purge. When dione, hit 'x'.
+2005-11-24T17:47:00.000Z	cafuego	blanky	'sudo debfoster -n' - try again.
+2005-11-24T17:49:00.000Z	blanky	cafuego	I mean, I put N for each one, since it asked me if I wanted to keep it or remove it
+2005-11-24T17:49:00.000Z	blanky	cafuego	so I put p instead of n now?
+2005-11-24T17:49:00.000Z	cafuego	blanky	For the KDE stuff, hit 'p' to purge it and related files.
+2005-11-24T15:08:00.000Z	cafuego	blanky	Journalists are morons.
+2005-11-24T15:09:00.000Z	cafuego	blanky	Thn again, KDE is installable via the repositories.
+2005-11-24T16:21:00.000Z	cafuego	blanky	Backingstore
+2005-11-24T16:21:00.000Z	cafuego	blanky	it makes *re*drawing faster
+2005-11-24T16:21:00.000Z	blanky	cafuego	how can I set that bud
+2005-11-24T16:22:00.000Z	cafuego	blanky	in /etc/X11
+2005-11-24T16:24:00.000Z	blanky	cafuego	backingstore? where can I set that entry bud
+2005-11-24T16:25:00.000Z	blanky	cafuego	where can I set Backingstore
+2005-11-24T16:27:00.000Z	blanky	cafuego	is the only one that knows about Backingstore and he ditches me before he tells me about it
+2005-12-27T09:06:00.000Z	cafuego	blanky	No.
+2005-12-27T09:06:00.000Z	cafuego	blanky	xubuntu uses xfce4
+2005-12-27T09:06:00.000Z	blanky	cafuego	okay
+2006-03-17T11:38:00.000Z	cafuego	blanky	fglrx if you have a newish radeon
+2006-03-17T11:39:00.000Z	cafuego	blanky	i386
+2006-03-17T11:42:00.000Z	blanky	cafuego	pwetty pweeze can you tell me which arch i use for https://wiki.ubuntu.com/BinaryDriverHowto/ATI , i tried 386 and i386 and neither work
+2006-03-17T11:43:00.000Z	cafuego	blanky	Ok, k7
+2006-03-17T11:45:00.000Z	blanky	cafuego	:'( i keep getting this error
+2006-03-17T11:45:00.000Z	cafuego	blanky	Insert your Ubuntu cd
+2006-03-17T11:45:00.000Z	blanky	cafuego	do i neeeed to :(
+2006-03-17T11:45:00.000Z	cafuego	blanky	Not if you delete the apt-cdrom line from osurces.list
+2006-03-17T11:46:00.000Z	blanky	cafuego	oooo
+2006-03-17T11:47:00.000Z	blanky	cafuego	I installed a program and I got that warning, but when i go to install it again it says '0 installed, 0 upgraded' and all that stuff
+2006-03-17T11:58:00.000Z	blanky	cafuego	!!! you there
+2006-03-17T11:59:00.000Z	cafuego	blanky	no, I ran away
+2006-11-26T13:28:00.000Z	blanky	cafuego	are you there?
+2007-04-18T05:43:00.000Z	cafuego	blanky	Release is tomorrow, afaik.
+2007-04-18T05:43:00.000Z	cafuego	blanky	So until then you can yell at feisty users ;-)
+2007-04-18T05:43:00.000Z	blanky	cafuego	>=O
+2007-04-18T05:47:00.000Z	blanky	cafuego	what day is it? here it's still tuesday
+2007-04-18T05:48:00.000Z	cafuego	blanky	Well into wednesday here
+2007-04-18T05:48:00.000Z	blanky	cafuego	no wonder haha
+2007-07-31T08:03:00.000Z	cafuego	blanky	Yes, with Gnome, an extra 512Mb ram would be good.
+2007-08-10T16:02:00.000Z	cafuego	blanky	It should work fine with the 'nvidia-glx-new' driver surely...
+2007-08-10T16:03:00.000Z	blanky	cafuego	oh, okay, in the nvidia binary driver howto it said it wasn't supported
+2007-08-10T16:03:00.000Z	cafuego	blanky	I'm having a look in the docs now.
+2007-08-10T16:03:00.000Z	blanky	cafuego	thanks, I feel betrated
+2007-08-10T16:04:00.000Z	cafuego	blanky	What did you have again?
+2007-08-10T16:04:00.000Z	blanky	cafuego	8600 GT
+2007-08-10T16:05:00.000Z	cafuego	blanky	Hrm. it's not mentioned in the README :-/
+2007-08-10T16:05:00.000Z	blanky	cafuego	:'( I feel backstabbed, I just switched from ATI with better hopes, total dissappointment
+2007-08-10T16:06:00.000Z	cafuego	blanky	it'll be fine with the driver from nvidia.com
+2007-08-10T16:06:00.000Z	blanky	cafuego	will there ever be a package of it?
+2007-08-10T16:06:00.000Z	cafuego	blanky	... which will work far better then any (closed) ati driver anyway.
+2007-08-10T16:06:00.000Z	cafuego	blanky	Sure, for the next Ubuntu version undoubtedly.
+2007-08-10T16:07:00.000Z	cafuego	blanky	Thing with the latest hardware is that support usually needs to catch up.
+2007-08-10T16:07:00.000Z	blanky	cafuego	wow, until then...*sigh*, okay I'll try to use the driver from their site
+2007-08-10T16:07:00.000Z	blanky	cafuego	so there should be no problem using their driver right?
+2007-08-10T16:07:00.000Z	cafuego	blanky	it's an easy setup
+2007-08-10T16:08:00.000Z	cafuego	blanky	Just make sure you install 'build-essential' and 'linux-headers-$(uname -r)'
+2007-08-10T16:08:00.000Z	blanky	cafuego	oh okay
+2007-08-10T16:08:00.000Z	cafuego	blanky	Their installer has an ncurses interface and is pretty much automagic.
+2007-08-10T16:08:00.000Z	blanky	cafuego	so just download that and run it, right, not like with ati where I have to do kernel things and modules and what not?
+2007-08-10T16:09:00.000Z	cafuego	blanky	The installer will do kernel and X driver stuff for you
+2007-08-10T16:09:00.000Z	blanky	cafuego	sweeet, thanks!
+2007-08-10T16:28:00.000Z	blanky	cafuego	you therE?
+2007-08-10T16:29:00.000Z	blanky	cafuego	would the drivers happen to be in backports? just wondering
+2007-08-10T16:29:00.000Z	cafuego	blanky	About to run off
+2007-08-10T16:29:00.000Z	blanky	cafuego	if not, I'm about to install it the manual way
+2007-08-10T16:29:00.000Z	cafuego	blanky	I doubt it, they must be in sync with the kernel version.
+2007-08-10T16:29:00.000Z	cafuego	blanky	So you'd need a backported kernel as well as a backported nvidia driver.
+2007-08-10T16:29:00.000Z	blanky	cafuego	oh okay, thanks then, bye
+2007-08-10T16:29:00.000Z	blanky	cafuego	ohh okay

@@ -1,0 +1,98 @@
+2005-09-02T13:55:00.000Z	kamikazesponge		ok
+2005-09-02T13:56:00.000Z	topyli	kamikazesponge	it doesn't after a clean install. neither does the init script IIRC
+2005-09-03T11:43:00.000Z	topyli	kamikazesponge	rc.local is an init script, sorry
+2005-09-03T11:43:00.000Z	kamikazesponge	topyli	maybe, but it worked a lot easyer then a full-fledged init script
+2005-09-03T11:44:00.000Z	topyli	kamikazesponge	that's what it is. write one for your ubuntu box too
+2005-09-03T11:44:00.000Z	kamikazesponge	topyli	you mean i can just put a rc.local script in /etc/init.d and it'll execute those commands after everything else has booted?
+2005-09-03T11:45:00.000Z	topyli	kamikazesponge	sure. then make a link to it for /etc/rc2.d
+2005-09-03T11:46:00.000Z	kamikazesponge	topyli	not 3?
+2005-09-03T11:46:00.000Z	topyli	kamikazesponge	no, this is debian :)
+2005-09-03T11:46:00.000Z	kamikazesponge	topyli	ok, thanks. i know i'm being a pain in the .. well, you know
+2005-09-03T11:47:00.000Z	topyli	kamikazesponge	nah, you've been using a different system that's all
+2005-09-03T11:47:00.000Z	kamikazesponge	topyli	if you say so :)
+2005-09-03T11:49:00.000Z	kamikazesponge	topyli	and a symbolic link or a hard link?
+2005-09-03T11:49:00.000Z	topyli	kamikazesponge	symlink
+2005-09-03T11:49:00.000Z	kamikazesponge	topyli	uhh.. ok, time for man ln :P
+2005-09-03T11:50:00.000Z	topyli	kamikazesponge	ln -s :)
+2005-09-03T11:50:00.000Z	kamikazesponge	topyli	so symbolic link..
+2005-09-03T11:50:00.000Z	topyli	kamikazesponge	yes
+2005-09-03T11:53:00.000Z	kamikazesponge	topyli	like this? root@warlock:/etc/init.d # ln -s rc.local /etc/rc2.d/S99others
+2005-09-03T11:54:00.000Z	topyli	kamikazesponge	i guess. make sure the script is executable too
+2005-09-03T11:55:00.000Z	kamikazesponge	topyli	thx, nearly forgot
+2005-09-03T12:00:00.000Z	kamikazesponge	topyli	maybe i just did something stupid, but openvpn wasn't started on boot
+2005-09-03T12:01:00.000Z	topyli	kamikazesponge	oh, openvpn. i'm fighting with it too. mine tries to start though :)
+2005-09-03T12:02:00.000Z	topyli	kamikazesponge	so your script is ok, starts with #!/bin/sh and all that?
+2005-09-03T12:02:00.000Z	kamikazesponge	topyli	mine doesn't even moan (actually it shows nothing at all)
+2005-09-03T12:02:00.000Z	kamikazesponge	topyli	err.. no >.<
+2005-09-03T12:02:00.000Z	topyli	kamikazesponge	no shell takes responsibility for it :)
+2005-09-03T12:03:00.000Z	kamikazesponge	topyli	but can you manually run openvpn? i can make it run manually
+2005-09-03T12:03:00.000Z	topyli	kamikazesponge	yes i can. i only have authentication problems with my university
+2005-09-03T12:03:00.000Z	kamikazesponge	topyli	is the port forwarded at the university? (or wherever the client is)
+2005-09-03T12:04:00.000Z	topyli	kamikazesponge	this is the client. all i did was make a hole in my firewall...
+2005-09-03T12:20:00.000Z	kamikazesponge	topyli	waah, it doesn't even look like mine :P
+2005-09-03T12:05:00.000Z	topyli	kamikazesponge	i think i have it, hand-tailored from source from openvpn site, as per instructions by the university staff
+2005-09-03T12:06:00.000Z	kamikazesponge	topyli	and your university provided you with ca.crt, client.crt and client.key?
+2005-09-03T12:07:00.000Z	topyli	kamikazesponge	they gave me openvpn.conf, and "openvpn-hy.txt" which has a key
+2005-09-03T12:08:00.000Z	kamikazesponge	topyli	for as far as i know you need three files, whatever name they may have, names can be set in the conf, but they once had to be <you>.conf <you>.crt, <you>.key and ca.crt
+2005-09-03T12:09:00.000Z	topyli	kamikazesponge	i'll re-read the instructions =)
+2005-09-03T12:09:00.000Z	kamikazesponge	topyli	ok
+2005-09-03T12:09:00.000Z	topyli	kamikazesponge	then i'll bother their IT staff. after all it was them who lured me into trying this ;)
+2005-09-03T12:10:00.000Z	kamikazesponge	topyli	lol
+2005-09-03T12:12:00.000Z	kamikazesponge	topyli	still not working.. is there a way i can test if the script is actually runned?
+2005-09-03T12:13:00.000Z	topyli	kamikazesponge	i don't think so. obviously it has failed though. mine starts with #!/bin/sh -e for some reason
+2005-09-03T12:14:00.000Z	kamikazesponge	topyli	shouldn't it be /bin/bash or something? (just a random thought, not that i know what i'm saying..)
+2005-09-03T12:14:00.000Z	kamikazesponge	topyli	ok. and what does the -e option do?
+2005-09-03T12:20:00.000Z	topyli	kamikazesponge	i made a test script with webmin, with only one command /bin/false. use that as a skeleton: http://siltala.net/comp/test
+2005-09-03T12:20:00.000Z	kamikazesponge	topyli	ok
+2005-09-03T12:21:00.000Z	topyli	kamikazesponge	it's professionally forged by a machine, my scripts don't look like that either =)
+2005-09-03T12:21:00.000Z	kamikazesponge	topyli	lol :P
+2005-09-03T12:21:00.000Z	topyli	kamikazesponge	webmin makes init scripts for whatever commands you like :)
+2005-09-03T12:21:00.000Z	kamikazesponge	topyli	then i guess i'd better get webmin..
+2005-09-03T12:22:00.000Z	topyli	kamikazesponge	it's a nice tool for some things
+2005-09-03T12:22:00.000Z	kamikazesponge	topyli	so i've heard
+2005-09-03T12:22:00.000Z	kamikazesponge	topyli	can it just be installed with apt-get?
+2005-09-03T12:22:00.000Z	kamikazesponge	topyli	waah, never mind..
+2005-09-03T12:23:00.000Z	topyli	kamikazesponge	yes. search for it in synaptic and you get a long list of modules
+2005-09-03T12:23:00.000Z	kamikazesponge	topyli	i did apt-cache search but it wouldn't show anything for a long time.. didn't think there were so many things
+2005-09-03T12:24:00.000Z	topyli	kamikazesponge	webmin, webmin-core and a kazillion module packages
+2005-09-03T12:25:00.000Z	topyli	kamikazesponge	webmin-core has the essential system stuff
+2005-09-03T12:25:00.000Z	kamikazesponge	topyli	i just did webmin
+2005-09-03T12:25:00.000Z	kamikazesponge	topyli	but on what port is it..?
+2005-09-03T12:25:00.000Z	topyli	kamikazesponge	that's enough to configure webmin
+2005-09-03T12:26:00.000Z	kamikazesponge	topyli	i have that enabled by default (i know it's not all too safe..)
+2005-09-03T12:27:00.000Z	kamikazesponge	topyli	uhm.. i get access denied :S
+2005-09-03T12:27:00.000Z	topyli	kamikazesponge	do you get to the login page?
+2005-09-03T12:28:00.000Z	kamikazesponge	topyli	nope
+2005-09-03T12:28:00.000Z	topyli	kamikazesponge	it's probably not running. /etc/init.d/webmin start
+2005-09-03T12:28:00.000Z	kamikazesponge	topyli	think it is, when i went to it with http:// it whined about ssl and that i had to use https
+2005-09-03T12:29:00.000Z	topyli	kamikazesponge	ah of course
+2005-09-03T12:29:00.000Z	kamikazesponge	topyli	uhh.. i still don't get it :P
+2005-09-03T12:30:00.000Z	topyli	kamikazesponge	perhaps you don't have any modules because you didn't install webmin-core
+2005-09-03T12:30:00.000Z	kamikazesponge	topyli	think it is because the config only allowed localhost ^^;;
+2005-09-03T12:30:00.000Z	topyli	kamikazesponge	localhost yes. you're doing this remotely?
+2005-09-03T12:31:00.000Z	kamikazesponge	topyli	of course, it's a server, lynx won't do much good with all those tables
+2005-09-03T12:31:00.000Z	topyli	kamikazesponge	hrm. you have to get it to accept your network's clients
+2005-09-03T12:32:00.000Z	kamikazesponge	topyli	already managed to do that, i'm struggling with modules now :P
+2005-09-03T12:35:00.000Z	kamikazesponge	topyli	what module do i need for install scripts?
+2005-09-03T12:36:00.000Z	topyli	kamikazesponge	just webmin-core
+2005-09-03T12:56:00.000Z	kamikazesponge	topyli	when i looked in my rc2.d folder i noticed something; the link i made to my rc.local file is red, and when i make a hard link it turns green. all other links are cyan, does that mean something?
+2005-09-03T12:57:00.000Z	topyli	kamikazesponge	erm. init.d has scripts, rc2.d has links
+2005-09-03T12:57:00.000Z	kamikazesponge	topyli	yes, that's what i said didn't i?
+2005-09-03T12:58:00.000Z	topyli	kamikazesponge	nothing wrong with that then :)
+2005-09-03T12:58:00.000Z	kamikazesponge	topyli	just that the color of my link is different from all the others
+2005-09-03T12:59:00.000Z	topyli	kamikazesponge	could be they're hard links after all :\
+2005-09-03T13:00:00.000Z	kamikazesponge	topyli	hard links are green, i tested it
+2005-09-03T13:00:00.000Z	topyli	kamikazesponge	it's the name improvization you did
+2005-09-03T13:02:00.000Z	kamikazesponge	topyli	Ng, it's now the right color (don't know why though)
+2005-09-05T14:21:00.000Z	topyli	kamikazesponge	if you're lazy, you got the right system now :)
+2005-09-05T14:22:00.000Z	kamikazesponge	topyli	i know ^^, i got so used to it that i tried to apt-cache search html on windows this morning..
+2005-09-05T14:22:00.000Z	topyli	kamikazesponge	that is one system NOT for lazy admins :)
+2005-09-05T14:23:00.000Z	topyli	kamikazesponge	i can't believe how much work i have done on those
+2005-09-05T14:23:00.000Z	kamikazesponge	topyli	i know, i've tried to install apache/mysql/php on it.. i gave up after 3 WEEKS
+2005-09-05T14:24:00.000Z	kamikazesponge	topyli	i'm only working with linux for about 6 months now.. first only server but now i'm thinking about installing ubuntu on my "main" pc too
+2005-09-05T14:24:00.000Z	topyli	kamikazesponge	lazy. give it 3 months and it will work for a while
+2005-09-05T14:24:00.000Z	kamikazesponge	topyli	<rofl>
+2005-09-05T14:25:00.000Z	topyli	kamikazesponge	dig LasseL's sage advice
+2005-09-05T14:26:00.000Z	topyli	kamikazesponge	no, LasseL is seriously right. cygwin will genuinely make your life on windows a lot easier
+2005-09-05T14:26:00.000Z	kamikazesponge	topyli	ok
+2005-09-05T14:32:00.000Z	topyli	kamikazesponge	wesnoth is a bit like heroes

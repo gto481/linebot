@@ -1,0 +1,99 @@
+2011-07-16T18:09:00.000Z	daGrevis		Hello, guys. Maybe you can take a look at http://askubuntu.com/questions/53327/screen-is-going-crazy-after-connecting-to-wi-fi-network and help me? Please.
+2011-07-16T18:09:00.000Z	daGrevis		I can stand Windoze!
+2011-07-16T18:09:00.000Z	daGrevis		*cant
+2011-07-16T18:10:00.000Z	daGrevis		damn, ´ this doesnt work
+2011-07-16T18:10:00.000Z	daGrevis		ironic, huh?
+2011-07-16T18:12:00.000Z	daGrevis		it recognize my device, but when  try to connect... it just doesnt do anything. just tried and thats all. fater few minutes it asks psw again/
+2011-07-16T18:12:00.000Z	daGrevis		any1 else?
+2011-07-16T18:12:00.000Z	edbian	daGrevis	Are you logging into unity or ubuntu classic or ubuntu classic no-effects
+2011-07-16T18:13:00.000Z	daGrevis	edbian	xubuntu - xfce.
+2011-07-16T18:13:00.000Z	edbian	daGrevis	Do you have desktop effects running?
+2011-07-16T18:14:00.000Z	daGrevis	edbian	what do u mean with that? There arent such mega effects in xfce. just simple desktop. and it works, ye.
+2011-07-16T18:15:00.000Z	edbian	daGrevis	What wifi card do you have?  What driver are you using?  What video card do you have. what driver are you using for that?
+2011-07-16T18:17:00.000Z	daGrevis	edbian	i have linksys wusb60n stick. i did all like in this tut - http://www.linuxquestions.org/questions/linux-wireless-networking-41/linksys-wusb600n-driver-and-dlink-dwl-ag132-driver-622449/ . i dont know what v0car i have, but its on-board. and no drivers for it. just native for linux.
+2011-07-16T18:19:00.000Z	edbian	daGrevis	reading...
+2011-07-16T18:21:00.000Z	edbian	daGrevis	What driver are you using right now then?  does lspci show the device??
+2011-07-16T18:22:00.000Z	daGrevis	edbian	can u tell me how to now what driver am i using? im new to linux. what info do u need and how can I get it?
+2011-07-16T18:23:00.000Z	edbian	daGrevis	sure, sudo lspci -k    Does that output show the device?  (if yes it will list the driver)  It is long.  You can use paste.ubuntu.com for me to read it if you like.
+2011-07-16T18:23:00.000Z	daGrevis	edbian	ty. gonna paste link to output after few mins.
+2011-07-16T18:24:00.000Z	edbian	daGrevis	ok
+2011-07-16T18:24:00.000Z	edbian	daGrevis	I am quite sure it won't show up there because it's a USB device.  But I wanted you to look to be sure
+2011-07-16T18:41:00.000Z	daGrevis	edbian	it gives me nothing. ;(
+2011-07-16T18:29:00.000Z	daGrevis	edbian	http://paste.ubuntu.com/645410/
+2011-07-16T18:30:00.000Z	edbian	daGrevis	(it is not there) Does the device show up in lsusb  ?  (this one is shorter)
+2011-07-16T18:31:00.000Z	daGrevis	edbian	ye, i do shows up in lsusb.
+2011-07-16T18:32:00.000Z	edbian	daGrevis	what is the output of sudo lsmod | grep rt28    ?
+2011-07-16T18:39:00.000Z	daGrevis	edbian	give a a sec.
+2011-07-16T18:39:00.000Z	edbian	daGrevis	sure
+2011-07-16T18:41:00.000Z	edbian	daGrevis	I was afraid of that.  Hang on
+2011-07-16T18:42:00.000Z	edbian	daGrevis	Can you sudo modprobe rt2800usb
+2011-07-16T18:42:00.000Z	daGrevis	edbian	sure
+2011-07-16T18:42:00.000Z	edbian	daGrevis	then do sudo lsmod | grep rt28  and see if it returns something (it should now)
+2011-07-16T18:43:00.000Z	daGrevis	edbian	k. but 2800 wasnt for v1? i have v2 and the numbers are different.
+2011-07-16T18:44:00.000Z	edbian	daGrevis	This website is the most up to date most reliable source:  http://linuxwireless.org/en/users/Devices/USB
+2011-07-16T18:44:00.000Z	edbian	daGrevis	It lists rt2800usb for all versions (it's for down on the list)
+2011-07-16T18:47:00.000Z	daGrevis	edbian	http://paste.ubuntu.com/645417/
+2011-07-16T18:48:00.000Z	edbian	daGrevis	can you get on a wifi network?
+2011-07-16T18:50:00.000Z	daGrevis	edbian	u mean.. connect? before i saw that there r no firmware for it. then i compile drivers, add something to blacklist and other stuff (not sure) - as said in that tut. and then it didnt show that there are no firmware. i can see all networks and when i try to connect my network... it asks for psw. i enter it... it tries to connect and after few minutes it ask for psw again.
+2011-07-16T18:50:00.000Z	edbian	daGrevis	That is the state of things right now?  You're confusing me a bit.
+2011-07-16T18:51:00.000Z	daGrevis	edbian	ask me if you arent clear about something. i will try to explain.
+2011-07-16T18:51:00.000Z	edbian	daGrevis	Are you getting errors about missing firmware right now?
+2011-07-16T18:52:00.000Z	daGrevis	edbian	no. all seems to be working. just i cant connect to my network.
+2011-07-16T18:52:00.000Z	edbian	daGrevis	alright hang on a second...
+2011-07-16T18:52:00.000Z	daGrevis	edbian	sure.
+2011-07-16T18:53:00.000Z	edbian	daGrevis	What is your card listed as in lsusb ?
+2011-07-16T18:57:00.000Z	daGrevis	edbian	http://paste.ubuntu.com/645419/ . wusn60n
+2011-07-16T19:00:00.000Z	edbian	daGrevis	run dmesg and look at the last 20 or so lines.  Does it say anything about missing firmware ?
+2011-07-16T19:02:00.000Z	edbian	daGrevis	I'm not really sure why that driver isn't working.  The site I linked does not list any documenation so I'm guessing the driver is incomplete.  Have a look at rt2x00 it's some graphical tool for the driver we modprobed.  If you restart the machine it will be back to how it was before I ran any commands. All we did was insert the rt2800 module and look around a bit.
+2011-07-16T19:03:00.000Z	daGrevis	edbian	gere r full output I got from dmesg. it seems that there arent a lot of drivers... ;( i really appreciate ur help... http://paste.ubuntu.com/645425/
+2011-07-16T19:04:00.000Z	edbian	daGrevis	whoa, those are all your radion driver freaking out.
+2011-07-16T19:04:00.000Z	edbian	daGrevis	It's incomplete so not very useful
+2011-07-16T19:04:00.000Z	daGrevis	edbian	im glad that it isnt my linksys.. =D
+2011-07-16T19:05:00.000Z	daGrevis	edbian	its all that i got from that cmd. or no?
+2011-07-16T19:05:00.000Z	edbian	daGrevis	Ahh, it's probably left over from last time it happened.  How did you get your graphics back after it freaked out?
+2011-07-16T19:06:00.000Z	daGrevis	edbian	last time? i installed linux today.
+2011-07-16T19:06:00.000Z	edbian	daGrevis	Last time that the grahpics freaked
+2011-07-16T19:07:00.000Z	daGrevis	edbian	hmm. i just unplugged computer from electricity. and thats all. all seems to worked.
+2011-07-16T19:07:00.000Z	edbian	daGrevis	what?
+2011-07-16T19:09:00.000Z	daGrevis	edbian	my computers screen wnt like in these images... http://askubuntu.com/questions/53327/screen-is-going-crazy-after-connecting-to-wi-fi-network and then i just plugged out my computer from electricity.
+2011-07-16T19:09:00.000Z	edbian	daGrevis	So it worked fine on battery power?
+2011-07-16T19:10:00.000Z	daGrevis	edbian	what battery power? its desktop. not laptop. i plugged out it and it shutted down. no electicity - its off. then i plugged electricity again and all worked.
+2011-07-16T19:11:00.000Z	edbian	daGrevis	I'm not sure what the problem is then :(
+2011-07-16T19:11:00.000Z	daGrevis	edbian	maybe its ebecause of 64 bits I have? in that topic... they say that it works only wth 32 bits. What do u think?
+2011-07-16T19:12:00.000Z	edbian	daGrevis	That sounds extremely likely to me
+2011-07-16T19:13:00.000Z	daGrevis	edbian	i dont like out-dated architetures, but I wiould better use 32 bits linux then 64 bits windoze. ;(
+2011-07-16T19:14:00.000Z	edbian	daGrevis	32 bits isn't outdated yet!
+2011-07-16T19:14:00.000Z	edbian	daGrevis	:D
+2011-07-16T19:15:00.000Z	daGrevis	edbian	eh.. gonna try 32 bits.
+2011-07-16T19:16:00.000Z	edbian	daGrevis	good luck friend!
+2011-07-16T19:16:00.000Z	daGrevis	edbian	thanks. if u need web page... contact me. im pro at that. ;)
+2011-07-16T19:16:00.000Z	edbian	daGrevis	Ha, I make websites too actually :)  Probably not as good as you though
+2011-07-16T19:17:00.000Z	daGrevis	edbian	its my official job. =P php, sql, html, css, js... kohana and jquery <3. u name it ;)
+2011-07-16T19:17:00.000Z	edbian	daGrevis	awesome
+2011-07-16T19:17:00.000Z	daGrevis	edbian	just in linux i suck. kinda =D
+2011-07-16T19:17:00.000Z	edbian	daGrevis	You'll learn.
+2011-07-16T19:18:00.000Z	daGrevis	edbian	if i will set up my computer. somehow. =D
+2011-07-17T18:21:00.000Z	edbian	daGrevis	Yes very likely.  What are you trying to get working?
+2011-07-17T18:22:00.000Z	daGrevis	edbian	hi. remember me? =D
+2011-07-17T18:22:00.000Z	daGrevis	edbian	you helped me yesterday with xubuntu.
+2011-07-17T18:22:00.000Z	edbian	daGrevis	I do remember
+2011-07-17T18:22:00.000Z	daGrevis	edbian	i get it working with 32 bits xubuntu. my wireless.
+2011-07-17T18:22:00.000Z	edbian	daGrevis	I don't remember the problem though.
+2011-07-17T18:22:00.000Z	edbian	daGrevis	OH yeah?  It works now?  Yay!
+2011-07-17T18:23:00.000Z	daGrevis	edbian	the bad news: i dont like xubuntu. im migrating to ubuntu 10.04.2 lts, 64 bits. i guess module dont like that 64 bits. dammit
+2011-07-17T18:25:00.000Z	edbian	daGrevis	I would stick with 32 bits in general for a while :)
+2011-07-17T18:25:00.000Z	edbian	daGrevis	At least it's clear what to do.
+2011-07-17T18:25:00.000Z	daGrevis	edbian	I will try last thing that could work. if it fails, i reinstall to 32 bits.
+2011-07-17T18:26:00.000Z	edbian	daGrevis	Yes, that should work.
+2011-07-17T18:26:00.000Z	daGrevis	edbian	can u stay here for a whi;e? I could need ur help. ^_^
+2011-07-17T18:27:00.000Z	edbian	daGrevis	I'm here.
+2011-07-17T18:31:00.000Z	daGrevis	edbian	it failed.
+2011-07-17T18:31:00.000Z	edbian	daGrevis	What did?
+2011-07-17T18:31:00.000Z	daGrevis	edbian	to install that driver for 64bits. now i gonna install 32 bits os.
+2011-07-17T18:32:00.000Z	edbian	daGrevis	yeah do that
+2011-07-17T18:32:00.000Z	daGrevis	edbian	why do they recomend 32 bits?
+2011-07-17T18:33:00.000Z	edbian	daGrevis	They wrote the driver, ask them.
+2011-07-17T18:35:00.000Z	daGrevis	edbian	no, i thought: wht do Ubuntu recomends 32 bits over 64 bits?
+2011-07-17T18:36:00.000Z	edbian	daGrevis	Because 64 bits is not mature yet and problems like yours arise still.
+2011-07-17T19:31:00.000Z	daGrevis	edbian	im back. It failed on 32 bits too.
+2011-07-22T20:55:00.000Z	daGrevis	edbian	my man. Im the guy who had problems with wi-fi. ;) http://askubuntu.com/questions/54152/how-to-configure-my-graphics-card

@@ -1,0 +1,95 @@
+2007-08-02T09:08:00.000Z	MajorPayne	dormedas	Is the partition mounted?
+2007-08-02T09:08:00.000Z	dormedas	MajorPayne	I've tried it mounted or not, neither appears to work though. Do you wish me to re-try?
+2007-08-02T09:09:00.000Z	MajorPayne	dormedas	Duno.  It was just an idea.  You can't do it when the partition is mounted.
+2007-08-02T09:10:00.000Z	dormedas	MajorPayne	I know this, although I'm tempted to re-try for your sake to see if you can be of any help..
+2007-08-02T09:10:00.000Z	dormedas	MajorPayne	I'm going to go put in the Live CD and try again I suppose.
+2007-08-02T09:10:00.000Z	MajorPayne	dormedas	The live cd is the best way to go.
+2007-08-02T09:11:00.000Z	dormedas	MajorPayne	that's how I've been trying it though..
+2007-08-02T09:11:00.000Z	MajorPayne	dormedas	Is the free space at the begining or end of the partition?
+2007-08-02T09:12:00.000Z	dormedas	MajorPayne	neither, it's not allocated to any partition, I need to allocate it to the hda4 partition (linux)
+2007-08-02T09:12:00.000Z	MajorPayne	dormedas	I thought you said you wanted to make a partition grow.  IS that true?
+2007-08-02T09:13:00.000Z	dormedas	MajorPayne	I guess I used the wrong terminology, that's what I thought it was. Anyways, I need to add 5 GB of free space to a partition
+2007-08-02T09:13:00.000Z	MajorPayne	dormedas	Ok.  And is the free space come before or after the partition you want to add it to?
+2007-08-02T09:13:00.000Z	dormedas	MajorPayne	before..
+2007-08-02T09:14:00.000Z	MajorPayne	dormedas	That's your problem.  You can only move the end of a partition.
+2007-08-02T09:14:00.000Z	dormedas	MajorPayne	now, to move it
+2007-08-02T09:14:00.000Z	MajorPayne	dormedas	Ahh.  I don't know anything about moving a partition, sorry.
+2007-08-02T09:17:00.000Z	MajorPayne	dormedas	How large is your ext3 partition right now?
+2007-08-02T09:18:00.000Z	dormedas	MajorPayne	a lowly 3.8 GB
+2007-08-02T09:18:00.000Z	MajorPayne	dormedas	That's not Windows swap space.
+2007-08-02T09:18:00.000Z	MajorPayne	dormedas	That's Ubuntu swap space.
+2007-08-02T09:18:00.000Z	dormedas	MajorPayne	there were two Swap partitions when I partitioned
+2007-08-02T09:18:00.000Z	MajorPayne	dormedas	You say you have 5 GB of free space?
+2007-08-02T09:18:00.000Z	dormedas	MajorPayne	correct
+2007-08-02T09:23:00.000Z	dormedas	MajorPayne	so then, I shall shave some more off of Windows and give my new partition a big 10 GB for now
+2007-08-02T09:24:00.000Z	MajorPayne	dormedas	Ahh, who needs Windows anyway?  Just remove the whole thing.  I did that a year ago and never looked back.
+2007-08-02T09:24:00.000Z	dormedas	MajorPayne	hehehe, not a bad idea there
+2007-08-02T09:24:00.000Z	dormedas	MajorPayne	I still have some files I'll need to grab off of that sinking ship (it wont boot anyways)
+2007-08-02T09:25:00.000Z	MajorPayne	dormedas	If it is a new install of Ubuntu, it might almost be faster just to redo the whole thing after you get all the free space you think you will need.
+2007-08-02T09:25:00.000Z	MajorPayne	dormedas	And yes, backup data before partitioning.
+2007-08-02T09:25:00.000Z	dormedas	MajorPayne	I have had Ubuntu for about a month now, and I don't wish to rid of all the programs and whatnot
+2007-08-02T09:25:00.000Z	MajorPayne	dormedas	Ahh.  Ok.  I wouldn't either.  Goodluck.
+2007-08-02T09:26:00.000Z	dormedas	MajorPayne	alright, I'll be finding my files and moving them so I may not respond for a while. I just need to pick up a few stragglers, I got 6 Gb of Windows fragmented stuff on my secondary drive anyways
+2007-08-02T09:27:00.000Z	MajorPayne	dormedas	I don't know if I will be here when you get back.  But if you have any more questions just ask anyway.
+2007-08-02T09:35:00.000Z	dormedas	MajorPayne	I HAVE LIBERATED MYSELF FROM WINDOWS !!! HAHAHAHA ... I feel so ALIVE
+2007-08-02T09:36:00.000Z	MajorPayne	dormedas	Heh, congrats.  Goodluck.
+2007-08-02T09:38:00.000Z	dormedas	MajorPayne	Now I wait for my copy to finish.
+2007-08-02T09:39:00.000Z	dormedas	MajorPayne	I had this realization before I hit apply to delete 32 GB worth of windows Partition of all the stuff I'm losing, but then I'm like Oh whatever, it's just windows! and clicked Apply
+2007-08-02T09:54:00.000Z	dormedas	MajorPayne	GParted is finishing the copy (almost) so I will soon see if my liberation is a success
+2007-08-02T09:55:00.000Z	MajorPayne	dormedas	Ok.  I am not sure, but you may have to change some grub stuff.
+2007-08-02T09:55:00.000Z	MajorPayne	dormedas	Don't remove the old partition right away.
+2007-08-02T09:56:00.000Z	dormedas	MajorPayne	Hell no, I'll try to boot into it first :P
+2007-08-02T09:56:00.000Z	MajorPayne	dormedas	Yea, you may have to tell grub to boot into the new partition.
+2007-08-02T09:56:00.000Z	dormedas	MajorPayne	"All Operations completed successfully!!!!!!!!"
+2007-08-02T09:58:00.000Z	dormedas	MajorPayne	Now i need to find out which "ubuntu" on GRUB is the real deal
+2007-08-02T09:59:00.000Z	dormedas	MajorPayne	how will I know which Ubuntu is the correct one?
+2007-08-02T10:00:00.000Z	MajorPayne	dormedas	Humm.  df if you know what partition is what.
+2007-08-02T10:00:00.000Z	MajorPayne	dormedas	See what is mounted at /
+2007-08-02T10:00:00.000Z	dormedas	MajorPayne	my first one which is old is mounted on sda4.. the new one is sda1
+2007-08-02T10:01:00.000Z	MajorPayne	dormedas	Ok, df will tell you what one you are using.  It should show it mounted as /.
+2007-08-02T10:02:00.000Z	MajorPayne	dormedas	It is a command line tool.  Just open a terminal and type df.
+2007-08-02T10:02:00.000Z	dormedas	MajorPayne	alright.. the  correct one will most likely be the one I can boot into
+2007-08-02T10:03:00.000Z	dormedas	MajorPayne	ill try both if just df isnt enough
+2007-08-02T10:03:00.000Z	dormedas	MajorPayne	I suppose I will now boot off the live CD and go see my success
+2007-08-02T10:07:00.000Z	dormedas	MajorPayne	BTW GRUB still finds Windows XP and thats not good
+2007-08-02T10:07:00.000Z	MajorPayne	dormedas	Grub doesn't find it, it's still in your menu.lst file.
+2007-08-02T10:08:00.000Z	MajorPayne	dormedas	That's the least of your worrys right now.
+2007-08-02T10:08:00.000Z	dormedas	MajorPayne	good thig to say beforehand huh?
+2007-08-02T10:09:00.000Z	dormedas	MajorPayne	so how would I go about booting into my sda1 partition without GRUB finding it?
+2007-08-02T10:10:00.000Z	dormedas	MajorPayne	grrr. Not cool. I can't boot into Ubuntu because of the GDM thing and ... GRUB cant find my newly copied Ubuntu
+2007-08-02T10:10:00.000Z	MajorPayne	dormedas	Go into your old partition, open /boot/grub/menu.lst in a text editor.
+2007-08-02T10:11:00.000Z	dormedas	MajorPayne	I'll do that by command line then
+2007-08-02T10:11:00.000Z	MajorPayne	dormedas	I am not sure what you mean by GDM thing.
+2007-08-02T10:12:00.000Z	dormedas	MajorPayne	"cannot write to the GDM Administration file due to lack of free space" or something. Meaning I can never open GDM
+2007-08-02T10:12:00.000Z	dormedas	MajorPayne	the stem reason for all of this Partition editing and whatnot
+2007-08-02T10:14:00.000Z	dormedas	MajorPayne	im going to open that up in Nano, just tell me what to edit where
+2007-08-02T10:15:00.000Z	MajorPayne	dormedas	Nevermind about editing the old one, you will want to edit the new one.
+2007-08-02T10:15:00.000Z	MajorPayne	dormedas	Do you have the new partition mounted?  df or mount will tell you that.
+2007-08-02T10:16:00.000Z	dormedas	MajorPayne	I will see
+2007-08-02T10:17:00.000Z	dormedas	MajorPayne	it appears sda1 IS mounted ... but 100% full?!?!?!?
+2007-08-02T10:17:00.000Z	dormedas	MajorPayne	how the hell did that happen?!
+2007-08-02T10:19:00.000Z	MajorPayne	dormedas	I am not sure, I don't known how the partition tool copyed the partition.
+2007-08-02T10:19:00.000Z	dormedas	MajorPayne	umm, it uses "dd" to copy..
+2007-08-02T10:20:00.000Z	MajorPayne	dormedas	Humm.  Is it the same size as your old one?
+2007-08-02T10:20:00.000Z	dormedas	MajorPayne	no sir, it's 32 GB .. not 3
+2007-08-02T10:21:00.000Z	MajorPayne	dormedas	Ohh.  Humm.
+2007-08-02T10:22:00.000Z	MajorPayne	dormedas	Don't be too worryed.  Your data is all still on your old partition right?
+2007-08-02T10:22:00.000Z	dormedas	MajorPayne	heck yes
+2007-08-02T10:23:00.000Z	dormedas	MajorPayne	technically, it's all still on the new Partition as well
+2007-08-02T10:24:00.000Z	MajorPayne	dormedas	Maybe a re-install is not a bad idea if the partition tool did not work your you.  Just make sure you don't remove the old partition.  When you are done you can then copy the data over to the new partition.
+2007-08-02T10:25:00.000Z	dormedas	MajorPayne	as in install a fresh ubuntu onto the SDA1.. then just reinstall my programs and whatnot?
+2007-08-02T10:25:00.000Z	dormedas	MajorPayne	not a bad idea at all. Thanks!
+2007-08-02T10:25:00.000Z	MajorPayne	dormedas	Yea, as long as you keep your old partition intact you can just copy over all the data over after the install.
+2007-08-02T10:26:00.000Z	dormedas	MajorPayne	I'll go ahead and get the Live CD in then start the install
+2007-08-02T10:26:00.000Z	dormedas	MajorPayne	thanks for helping me for so long
+2007-08-02T10:26:00.000Z	MajorPayne	dormedas	Ok, just becareful when it comes time to partition.  Don't remove your old partition if you want to be able to use the data.
+2007-08-02T10:27:00.000Z	MajorPayne	dormedas	No problem.  Sorry I couldn't help you avoid a re-install.  You are doing something quite major.
+2007-08-02T10:27:00.000Z	dormedas	MajorPayne	Hey, nothing more major than deleting windows
+2007-08-02T10:28:00.000Z	dormedas	MajorPayne	I've had Ubuntu for about a month now hehehe. I love it so much I decided to delete Windows, that's quite a leap
+2007-08-02T10:28:00.000Z	dormedas	MajorPayne	now I NEED to get Cedega if I wish to use all my Windows Games hehe
+2007-08-02T10:28:00.000Z	MajorPayne	dormedas	Yea.  It should go fine, as long as you are not attached to some Windows only apps.
+2007-08-02T10:30:00.000Z	MajorPayne	dormedas	You may want to create 2 main partitions.  So you can remove one later if you feel you need Windows for your games but still keep Ubuntu.
+2007-08-02T10:30:00.000Z	dormedas	MajorPayne	I feel that I have the essential games that I like running on Ubuntu natively. So I should be set
+2007-08-02T10:36:00.000Z	dormedas	MajorPayne	Up and installing :D
+2007-08-02T10:37:00.000Z	MajorPayne	dormedas	Ahh, goodluck.  I am going for a bit.
+2007-08-02T10:38:00.000Z	dormedas	MajorPayne	ok then

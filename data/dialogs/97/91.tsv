@@ -1,0 +1,97 @@
+2005-03-19T08:51:00.000Z	ells		anyone familiar with qparted
+2005-03-19T08:51:00.000Z	ells		anyone familiar with qparted
+2005-03-19T08:52:00.000Z	back_east	ells	fairly.  What's the question.
+2005-03-19T08:52:00.000Z	ells	back_east	I can open it but it wont let me resize
+2005-03-19T08:53:00.000Z	back_east	ells	what's the format of the partition you are trying to resize?
+2005-03-19T08:54:00.000Z	ells	back_east	the windows side
+2005-03-19T08:54:00.000Z	ells	back_east	also, it wont let me do any linux partitions either
+2005-03-19T08:55:00.000Z	back_east	ells	and does it give you an error message?
+2005-03-19T08:57:00.000Z	back_east	ells	is that hoary or warty?
+2005-03-19T08:57:00.000Z	ells	back_east	hoary
+2005-03-19T08:57:00.000Z	back_east	ells	oh
+2005-03-19T08:58:00.000Z	ells	back_east	do you think I need to set the permissions in fstab
+2005-03-19T08:58:00.000Z	back_east	ells	I don't know if I'll be able to help you with that.
+2005-03-19T08:59:00.000Z	back_east	ells	on warty when you try to start it as a normal user it says it can't find any disks.
+2005-03-19T08:59:00.000Z	ells	back_east	I cant believe it wont let me resize the partitions
+2005-03-19T09:00:00.000Z	back_east	ells	Have you checked the ubuntu forums?
+2005-03-19T09:03:00.000Z	back_east	ells	If you select a partition the resize option stays disabled?
+2005-03-19T09:04:00.000Z	ells	back_east	yes
+2005-03-19T09:04:00.000Z	back_east	ells	is the partition in question mounted?
+2005-03-19T09:05:00.000Z	back_east	ells	no, they shouldn't be
+2005-03-19T09:06:00.000Z	back_east	ells	Try unmounting the partitions and running qtparted again.
+2005-03-19T09:06:00.000Z	ells	back_east	the windows one, just checked is mounted so I can view in linux
+2005-03-19T09:06:00.000Z	ells	back_east	okay
+2005-03-19T09:06:00.000Z	back_east	ells	that's the problem
+2005-03-19T09:07:00.000Z	back_east	ells	umount
+2005-03-19T09:07:00.000Z	back_east	ells	no, just not as experienced.
+2005-03-19T09:08:00.000Z	ells	back_east	true
+2005-03-19T09:08:00.000Z	ells	back_east	check this outroot@steveslaptop:/media/windows # umount /media/windows
+2005-03-19T09:09:00.000Z	back_east	ells	do you have a file from that disk open?
+2005-03-19T09:09:00.000Z	back_east	ells	crimsun got it
+2005-03-19T09:10:00.000Z	ells	back_east	I went back into to resize the partition and still the same
+2005-03-19T09:10:00.000Z	ells	back_east	still not able to click on the icon to resize it
+2005-03-19T09:11:00.000Z	back_east	ells	did you start qtparted up fresh?
+2005-03-19T09:11:00.000Z	ells	back_east	yeap, the only icons able to click are delete, format, and set active
+2005-03-19T09:13:00.000Z	back_east	ells	well I don't know what to tell you.
+2005-03-19T09:16:00.000Z	back_east	ells	http://gparted.sourceforge.net/screenshots.php
+2005-03-19T09:16:00.000Z	back_east	ells	is that in the hoary repos?
+2005-03-19T09:17:00.000Z	back_east	ells	it might be worth a shot.
+2005-03-19T09:17:00.000Z	ells	back_east	qtparted, yes
+2005-03-19T09:18:00.000Z	ells	back_east	I am getting gparted now
+2005-03-19T09:18:00.000Z	back_east	ells	It's worth a shot
+2005-03-19T09:18:00.000Z	ells	back_east	true
+2005-03-19T09:21:00.000Z	ells	back_east	still wont let me resize it. I must be missing some tool
+2005-03-19T09:21:00.000Z	back_east	ells	ntfsresize?
+2005-03-19T09:21:00.000Z	ells	back_east	will check
+2005-03-19T09:22:00.000Z	ells	back_east	I did aptget and it did not have ntfsresize
+2005-03-19T09:23:00.000Z	back_east	ells	try an apt-cache search ntfs
+2005-03-19T09:23:00.000Z	ells	back_east	okay
+2005-03-19T09:33:00.000Z	back_east	ells	any luck?
+2005-03-19T09:34:00.000Z	ells	back_east	good to go my man
+2005-03-19T09:34:00.000Z	back_east	ells	Ha
+2005-03-19T09:34:00.000Z	back_east	ells	you win.
+2005-03-19T09:35:00.000Z	back_east	ells	Glad to help.
+2005-03-19T09:35:00.000Z	ells	back_east	thanks
+2005-03-19T09:35:00.000Z	ells	back_east	any knowledge of internal sd card readers
+2005-03-19T09:36:00.000Z	back_east	ells	Sorry
+2005-03-19T09:37:00.000Z	back_east	ells	still trying to get mine to work on my laptop.;
+2005-03-19T09:37:00.000Z	ells	back_east	that adn I installed netapplet to find networks and it did not work: what kind of laptop
+2005-03-19T09:37:00.000Z	back_east	ells	Asus M6N
+2005-03-19T09:38:00.000Z	ells	back_east	any info on netapplet
+2005-03-19T09:38:00.000Z	back_east	ells	You know about http://www.linux-laptop.net/ and http://www.tuxmobil.org/
+2005-03-19T09:39:00.000Z	ells	back_east	will check it out, also netapplet is installed, but wont work
+2005-03-19T09:43:00.000Z	ells	back_east	what are you putting OS 9 on
+2005-03-19T09:43:00.000Z	back_east	ells	Nothing, it's just an hfs CD I'm using to test hfs mounting
+2005-03-19T09:44:00.000Z	ells	back_east	cool, do you have any info on netapplet
+2005-03-19T09:44:00.000Z	back_east	ells	What do you want to know?
+2005-03-19T09:44:00.000Z	ells	back_east	I installed it and I cannot get it to come up and work
+2005-03-19T09:45:00.000Z	ells	back_east	are you using it
+2005-03-19T09:46:00.000Z	back_east	ells	no, I use the network monitor applet
+2005-03-19T09:48:00.000Z	back_east	ells	is that the gnome-netstatus-applet?
+2005-03-19T09:48:00.000Z	back_east	ells	or what package is that?
+2005-03-19T09:50:00.000Z	ells	back_east	that is installed too, still no dice chicago
+2005-03-19T09:51:00.000Z	ells	back_east	I would have thought there would be a gui for using the netapplet
+2005-03-19T09:52:00.000Z	back_east	ells	oh that's the new one
+2005-03-19T09:52:00.000Z	back_east	ells	that shows the wireless networks
+2005-03-19T09:52:00.000Z	back_east	ells	right?
+2005-03-19T09:55:00.000Z	ells	back_east	check this out root@steveslaptop:/usr/lib/netapplet # ls
+2005-03-19T09:56:00.000Z	ells	back_east	I dont see it nowhere
+2005-03-19T09:56:00.000Z	back_east	ells	You should be able to add it to the panel using the "Add to panel" menu
+2005-03-19T09:56:00.000Z	ells	back_east	will try
+2005-03-19T09:56:00.000Z	back_east	ells	it isn't in there?
+2005-03-19T09:56:00.000Z	ells	back_east	nope
+2005-03-19T09:57:00.000Z	back_east	ells	weird
+2005-03-19T09:57:00.000Z	ells	back_east	how can I add to panel
+2005-03-19T09:57:00.000Z	ells	back_east	found it
+2005-03-19T09:57:00.000Z	back_east	ells	ok
+2005-03-19T10:00:00.000Z	ells	back_east	added it and nothing
+2005-03-19T10:00:00.000Z	back_east	ells	is your wireless card in?
+2005-03-19T10:01:00.000Z	ells	back_east	yeap, that is what i am using,but I have to put in the location when I change networks
+2005-03-19T10:03:00.000Z	back_east	ells	I really need to get hoary
+2005-03-19T10:03:00.000Z	ells	back_east	that is what I am running
+2005-03-19T10:05:00.000Z	back_east	ells	What wireless card do you have?
+2005-03-19T10:06:00.000Z	back_east	ells	Does that support scanning?
+2005-03-19T10:09:00.000Z	back_east	ells	Well I'm all out of ideas
+2005-03-19T10:09:00.000Z	back_east	ells	My card won't scan, so it can't use netapplet anyway
+2005-03-19T10:09:00.000Z	ells	back_east	appreciate it, will try to fix
+2005-03-19T10:11:00.000Z	back_east	ells	good luck

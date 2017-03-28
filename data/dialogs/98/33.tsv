@@ -1,0 +1,98 @@
+2008-04-26T05:26:00.000Z	Roshane		like terminal...
+2008-04-26T05:27:00.000Z	Roshane		thats a term i've been trying to understand
+2008-04-26T05:27:00.000Z	Roshane		well, thats gonna take forever
+2008-04-26T05:28:00.000Z	Roshane		thats something i'm trying to avoid
+2008-04-26T05:28:00.000Z	Roshane		i want to know how to install my video drivers
+2008-04-26T05:29:00.000Z	Roshane		yeah, picked up on alot of things..thats the main problem i was havinf
+2008-04-26T05:29:00.000Z	Roshane		did that...
+2008-04-26T05:29:00.000Z	Roshane		found the right drivers and it didnt work
+2008-04-26T05:30:00.000Z	Roshane		whats modprobe?
+2008-04-26T05:32:00.000Z	Roshane		o ok..wish i could get some one on one assistance
+2008-04-26T05:32:00.000Z	Pelo	Roshane	it's a busy night,  just ask your question and hope to get noticed
+2008-04-26T05:37:00.000Z	Pelo	Roshane	we can't help you with your problems on ubuntu if you don'T knowthem , just ask a question and we'll try to hlep  , it would be better if you were runing ubuntu while you are here so you can try the advice
+2008-04-26T05:40:00.000Z	Pelo	Roshane	 depending on your video card,   for most you can edit the /etc/X11/xorg.conf file and add the extra resolution you need manualy
+2008-04-26T05:43:00.000Z	Pelo	Roshane	use the naem of the person you are talking to in each line , it helps us keep track
+2008-04-26T05:43:00.000Z	Pelo	Roshane	 you cant have any idea of what we are talking about becaue you are on windows adn you can'T check as we give you advice
+2008-04-26T05:44:00.000Z	Pelo	Roshane	just type my name at the begining of each line ,  it iwll highlight the text for me
+2008-04-26T05:44:00.000Z	Roshane	Pelo	ok
+2008-04-26T05:44:00.000Z	Pelo	Roshane	yeah like that
+2008-04-26T05:45:00.000Z	Roshane	Pelo	this is what i'm gonna do, i'm gonna put it back on
+2008-04-26T05:45:00.000Z	Pelo	Roshane	 best idea
+2008-04-26T05:47:00.000Z	Roshane	Pelo	thats alot, will be back in a few hours..its a pity u might be here
+2008-04-26T05:47:00.000Z	Roshane	Pelo	u were of great help
+2008-04-26T05:49:00.000Z	Roshane	Pelo	can i upgrade 7.04 to 8.04
+2008-04-26T05:59:00.000Z	Pelo	Roshane	 you'll get linux alternatives to do the same job
+2008-04-26T06:00:00.000Z	Roshane	Pelo	but that would mean that i have to learn the alternatives as well
+2008-04-26T06:01:00.000Z	Roshane	Pelo	really running away from learning more things, now is my last 6 days of university, think i have do enough stressful learning
+2008-04-26T06:02:00.000Z	Pelo	Roshane	focus on your study come back when you are done with your exams
+2008-04-26T06:02:00.000Z	Roshane	Pelo	Xara Xtreme, Office Suite, Photoshop...that sorta thing
+2008-04-26T06:02:00.000Z	Pelo	Roshane	you wont have much to learn on using apps anyway,  it,s all gui stuff , very similar to what you arelady know
+2008-04-26T06:03:00.000Z	Pelo	Roshane	 donT, know what the first two are,   office you'll have openoffice.org, and photoshop you'll have the gimp
+2008-04-26T06:03:00.000Z	Roshane	Pelo	i wanna start tonight, so i'm gonna install ubuntu now, thnks for the advices and support
+2008-04-26T06:04:00.000Z	Pelo	Roshane	best of luck
+2008-04-26T23:13:00.000Z	Pelo	Roshane	you said you were installing it yesterday before I left,
+2008-04-26T23:14:00.000Z	Pelo	Roshane	 we can help you fix them  one at a time,  start with the first
+2008-04-26T23:14:00.000Z	Roshane	Pelo	the video drivers worked but i am not getting the resolution i want
+2008-04-26T23:14:00.000Z	Pelo	Roshane	what video card ?
+2008-04-26T23:15:00.000Z	Roshane	Pelo	Nvidia nx6200TC 256mb
+2008-04-26T23:15:00.000Z	Pelo	Roshane	 check in menu > system > admin > restricted driver see if there is a driver and if it is being used
+2008-04-26T23:17:00.000Z	Roshane	Pelo	its saying that its not in use
+2008-04-26T23:17:00.000Z	Pelo	Roshane	check the box and restart X ,   crtl alt backspace,  you'll get disconnected, save work if you have anything openeed
+2008-04-26T23:18:00.000Z	Roshane	Pelo	the box is checked but the status is saying not in use
+2008-04-26T23:18:00.000Z	Pelo	Roshane	did you manualy install another nvidia driver ?
+2008-04-26T23:18:00.000Z	Roshane	Pelo	no
+2008-04-26T23:19:00.000Z	Pelo	Roshane	ok try this, open a terminal and type  sudo dpkg-reconfigure xserver-xorg ,  and just answer the questions,   leave the default answers if you donT' know better,  then restart X
+2008-04-26T23:21:00.000Z	Roshane	Pelo	i'm afraid to answer the wrong thing
+2008-04-26T23:22:00.000Z	Pelo	Roshane	you will only be asked about our keyboard and mouse I 'm told , the video card will get detected automaticaly
+2008-04-26T23:22:00.000Z	Roshane	Pelo	use kernel framebuffer device interface?
+2008-04-26T23:22:00.000Z	Pelo	Roshane	no
+2008-04-26T23:22:00.000Z	Pelo	Roshane	 or just leave the asnwer that is selected for you
+2008-04-26T23:23:00.000Z	Roshane	Pelo	emulate 3 button mouse? i have one, say yes?
+2008-04-26T23:24:00.000Z	Pelo	Roshane	yes ,  aer you running this on a mac ?
+2008-04-26T23:24:00.000Z	Pelo	Roshane	 never mind my last questtion
+2008-04-26T23:24:00.000Z	Roshane	Pelo	no, pc..lol
+2008-04-26T23:25:00.000Z	Roshane	Pelo	restart now right?
+2008-04-26T23:25:00.000Z	Pelo	Roshane	jsut restar X  crtl alt backspace
+2008-04-26T23:26:00.000Z	Roshane	Pelo	while its starting, another prob is that i dont have my button on top of each window, like max, min and close
+2008-04-26T23:27:00.000Z	Pelo	Roshane	do you have the title bars ?
+2008-04-26T23:28:00.000Z	Roshane	Pelo	after restarting they are back
+2008-04-26T23:28:00.000Z	Pelo	Roshane	you ahve them back now ? great how is your resolution can you get ti to where you want it ?
+2008-04-26T23:29:00.000Z	Roshane	Pelo	i have the right resolution now...you are a genuis..
+2008-04-26T23:30:00.000Z	Pelo	Roshane	not a genious , just an old hand at this,  what's the next problem?
+2008-04-26T23:31:00.000Z	Roshane	Pelo	the next prob is getting and installing java runtime so i can watch things online and even have this chat
+2008-04-26T23:31:00.000Z	Pelo	Roshane	ok  goto menu > system > admin < software sources,   check all the boxes on the top half of the 1st and 3rd tab , then reload , let me know when this is done
+2008-04-26T23:33:00.000Z	Roshane	Pelo	the tabs are software and update right?
+2008-04-26T23:33:00.000Z	Pelo	Roshane	yes I think so ,
+2008-04-26T23:33:00.000Z	Roshane	Pelo	ok its donw
+2008-04-26T23:33:00.000Z	Roshane	Pelo	its finished
+2008-04-26T23:34:00.000Z	Pelo	Roshane	ok  go in menu < system > admin < synaptic  package manager,   do a search for   java , install  sun-java6-jre , -bin , -plugin
+2008-04-26T23:34:00.000Z	Pelo	Roshane	while you are in there also check for  flashplugin-nonfree and install that
+2008-04-26T23:37:00.000Z	Roshane	Pelo	i'm not seeing ,-plugin
+2008-04-26T23:37:00.000Z	Roshane	Pelo	but i checked the other 2
+2008-04-26T23:37:00.000Z	Pelo	Roshane	 sun-java6-plugin
+2008-04-26T23:38:00.000Z	Pelo	Roshane	hmmm, hold on
+2008-04-26T23:39:00.000Z	Pelo	Roshane	I see it here just below the sun-java6-jre one
+2008-04-26T23:40:00.000Z	Roshane	Pelo	just after that for me is the source one
+2008-04-26T23:41:00.000Z	Pelo	Roshane	ok  ignore ti then just install those you have , let's hope it works
+2008-04-26T23:42:00.000Z	Roshane	Pelo	downloading and installing now
+2008-04-26T23:42:00.000Z	Pelo	Roshane	;-)
+2008-04-26T23:44:00.000Z	Roshane	Pelo	its still not working, whenever i choose a video it says that i need the suitable codec
+2008-04-26T23:46:00.000Z	Pelo	Roshane	are we talking about flash video or other kind &?
+2008-04-26T23:47:00.000Z	Roshane	Pelo	i got that problem fixed, i allowed it to search to the appropriate codec, it found 2 and i installed them...videos on youtube are not working
+2008-04-26T23:47:00.000Z	Pelo	Roshane	did you install flashplugin-nonfree while you were in syanaptic ?
+2008-04-26T23:48:00.000Z	Roshane	Pelo	yes i did
+2008-04-26T23:48:00.000Z	Pelo	Roshane	hmmm, close firefox and reopen it
+2008-04-26T23:50:00.000Z	Roshane	Pelo	when i go back to the site after reopening it, its saying that the site wants to add an applet
+2008-04-26T23:50:00.000Z	Pelo	Roshane	wht applet is that ?
+2008-04-26T23:50:00.000Z	Pelo	Roshane	go back in synaptic and check that flash is installed
+2008-04-26T23:52:00.000Z	Roshane	Pelo	flashplugin-nonfree installed version 9.0.124...
+2008-04-26T23:53:00.000Z	Pelo	Roshane	ok I know some ppl have problems with flash atm , let me get you a link but I havn'T tried it , so I can'T garanty it will work  http://markusthielmann.com/blog/defusing_one_most_annoying_bugs_ubuntu_hardy_heron_stop_flash_killing_firefox
+2008-04-26T23:57:00.000Z	Roshane	Pelo	i'm checking it out..brb
+2008-04-27T00:06:00.000Z	Roshane	Pelo	i read the thing u sent but i'm not really having those problems...
+2008-04-27T00:13:00.000Z	Pelo	Roshane	how are we getting on ?
+2008-04-27T00:14:00.000Z	Roshane	Pelo	where u went man? not so good
+2008-04-27T00:14:00.000Z	Roshane	Pelo	i wanna forget all of that for now
+2008-04-27T00:14:00.000Z	Pelo	Roshane	 I needed to take down my lanudry before it started to rani
+2008-04-27T00:15:00.000Z	Pelo	Roshane	ok skip the flash issue for now , what next ?
+2008-04-27T00:20:00.000Z	Roshane	Pelo	http://youtube.com/watch?v=o01m7uLaoHg i want those think of effects on my system
+2008-04-27T00:21:00.000Z	Pelo	Roshane	ok you need to go and ask in #compiz on enabling those

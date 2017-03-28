@@ -1,0 +1,95 @@
+2008-07-21T14:59:00.000Z	Blaise		hello, I've a problem with my ati driver, can someone help please?
+2008-07-21T15:00:00.000Z	DistroJockey	Blaise	depends what the problem is
+2008-07-21T15:01:00.000Z	Blaise	DistroJockey	Synaptic just installed an fglrx-ati-kernal-envy thing and it screwed my display
+2008-07-21T15:03:00.000Z	DistroJockey	Blaise	I take it you've used envy or envyng previously then?
+2008-07-21T15:05:00.000Z	DistroJockey	Blaise	only suggestion is to remove/purge envy stuff (never used envy/ng so not sure how exactly)
+2008-07-21T15:05:00.000Z	DistroJockey	Blaise	can you pastebin your   /etc/X11xorg.conf   please?
+2008-07-21T15:06:00.000Z	DistroJockey	Blaise	can you pastebin your   /etc/X11/xorg.conf   please?  ^^^
+2008-07-21T15:08:00.000Z	DistroJockey	Blaise	what Ubuntu version you running?
+2008-07-21T15:09:00.000Z	DistroJockey	Blaise	here's mine as a comparison:  Ubuntu intrepid (development branch), kernel Last successful boot (recovery mode)
+2008-07-21T15:09:00.000Z	DistroJockey	Blaise	http://pastebin.com/f7c3f3d9e
+2008-07-21T15:11:00.000Z	DistroJockey	Blaise	indeed :)
+2008-07-21T15:12:00.000Z	DistroJockey	Blaise	change  <  Device          "Configured Video Device"  >  to  < Device          "device1" >   maybe
+2008-07-21T15:12:00.000Z	DistroJockey	Blaise	make a backup first
+2008-07-21T15:13:00.000Z	DistroJockey	Blaise	that's at line 61 in the Screen section
+2008-07-21T15:13:00.000Z	DistroJockey	Blaise	ls -al
+2008-07-21T15:14:00.000Z	DistroJockey	Blaise	yeah, if you have a known working one, just  mv  it to  /etc/X11/xorg.conf
+2008-07-21T15:36:00.000Z	Blaise	DistroJockey	so it half worked changing my xorg.conf
+2008-07-21T15:37:00.000Z	DistroJockey	Blaise	well, that's a start I guess
+2008-07-21T15:39:00.000Z	DistroJockey	Blaise	what does you current xorg.conf look like?
+2008-07-21T15:40:00.000Z	Blaise	DistroJockey	http://pastebin.com/m1a8b60e7
+2008-07-21T15:44:00.000Z	DistroJockey	Blaise	I'd comment out    Load  "glx"
+2008-07-21T15:45:00.000Z	DistroJockey	Blaise	still looks a bit odd, especially line 25
+2008-07-21T15:45:00.000Z	Blaise	DistroJockey	also can I just restart X to see the results, or do I need to reboot
+2008-07-21T15:45:00.000Z	DistroJockey	Blaise	yep, restarting X should be enough
+2008-07-21T15:46:00.000Z	Blaise	DistroJockey	what does the Server Layout section do?
+2008-07-21T15:49:00.000Z	Blaise	DistroJockey	ok, that didn't have any effect :(
+2008-07-21T15:49:00.000Z	DistroJockey	Blaise	maybe try my nice clean xorg.conf ?
+2008-07-21T15:50:00.000Z	Blaise	DistroJockey	ok, yes, can you resend again please?
+2008-07-21T15:50:00.000Z	DistroJockey	Blaise	http://pastebin.com/f7c3f3d9e
+2008-07-21T15:51:00.000Z	Blaise	DistroJockey	now what exactly do I need to change in order to make it work? are your Identifier lines, just placeholders?
+2008-07-21T15:52:00.000Z	DistroJockey	Blaise	I'd start by just using what I have (i.e. replace all in xorg.conf with that) and know how to restore your backup from a terminal if it breaks xserver
+2008-07-21T15:53:00.000Z	Blaise	DistroJockey	I assume I'll just use the mv command to replace
+2008-07-21T15:53:00.000Z	DistroJockey	Blaise	cp would be better
+2008-07-21T15:53:00.000Z	DistroJockey	Blaise	that way you keep the backup file also
+2008-07-21T15:54:00.000Z	Blaise	DistroJockey	understood
+2008-07-21T15:54:00.000Z	DistroJockey	Blaise	*crosses fingers*
+2008-07-21T16:00:00.000Z	DistroJockey	Blaise	that took a while. Guess it didn't go too well
+2008-07-21T16:01:00.000Z	DistroJockey	Blaise	maybe try:   sudo dpkg-reconfigure -phigh xserver-xorg
+2008-07-21T16:01:00.000Z	DistroJockey	Blaise	says at the top off xorg.conf : #If you have edited this file but would like it to be automatically updated again, run the following command
+2008-07-21T16:03:00.000Z	Blaise	DistroJockey	ok I've reset to default, I will restart X again
+2008-07-21T16:03:00.000Z	DistroJockey	Blaise	k
+2008-07-21T16:06:00.000Z	Blaise	DistroJockey	ok, not there yet, it loaded up an empty desktop again, and when I opened terminal the screen went white again (no 3D rendering) the cube was still there, I've had to return to failsafe again
+2008-07-21T16:07:00.000Z	DistroJockey	Blaise	:(
+2008-07-21T16:08:00.000Z	DistroJockey	Blaise	ok, lets see xorg.conf again please?
+2008-07-21T16:09:00.000Z	Blaise	DistroJockey	http://pastebin.com/m1893c064
+2008-07-21T16:11:00.000Z	DistroJockey	Blaise	and what vedio card have you got again?
+2008-07-21T16:11:00.000Z	Blaise	DistroJockey	Ati Radeon X1900
+2008-07-21T16:12:00.000Z	Blaise	DistroJockey	can't work out why I've lots my gnome desktop though :S
+2008-07-21T16:14:00.000Z	DistroJockey	Blaise	this may be worth a browse while I check a couple of things:  http://wiki.cchtml.com
+2008-07-21T16:14:00.000Z	Blaise	DistroJockey	 yes, I was just thinking about reinstalling the drivers, how tiresome
+2008-07-21T16:14:00.000Z	Blaise	DistroJockey	I think it's more than just getting the right xorg,conf
+2008-07-21T16:15:00.000Z	DistroJockey	Blaise	do you have anything in Hardware Drivers ?
+2008-07-21T16:15:00.000Z	Blaise	DistroJockey	how can I check them?
+2008-07-21T16:15:00.000Z	DistroJockey	Blaise	System - Administration - Hardware Drivers
+2008-07-21T16:15:00.000Z	Blaise	DistroJockey	yes but I no longer have my Gnome toolbar
+2008-07-21T16:16:00.000Z	Blaise	DistroJockey	all my gnome panels have vanished :s
+2008-07-21T16:16:00.000Z	DistroJockey	Blaise	ahh, yeah. Try   sudo killall gnome-panel
+2008-07-21T16:17:00.000Z	Blaise	DistroJockey	didn't seem to do anything, do I need to load them?
+2008-07-21T16:17:00.000Z	Blaise	DistroJockey	ah running gnome-panel brought it back
+2008-07-21T16:17:00.000Z	DistroJockey	Blaise	usually it relaods automatically, but try  gnome-panel
+2008-07-21T16:17:00.000Z	Blaise	DistroJockey	ok No proprietry drivers are in use on this system
+2008-07-21T16:17:00.000Z	DistroJockey	Blaise	yeah :)
+2008-07-21T16:18:00.000Z	Blaise	DistroJockey	that's not good, I'm going ot reinstall teh drivers then
+2008-07-21T16:18:00.000Z	DistroJockey	Blaise	mainly means Ubuntu doesn't have a nice package for them. Worth a try, yeah
+2008-07-21T16:19:00.000Z	DistroJockey	Blaise	how are you going to do that btw?
+2008-07-21T16:19:00.000Z	Blaise	DistroJockey	manually using this http://wiki.cchtml.com/index.php/Ubuntu_Hardy_Installation_Guide
+2008-07-21T16:20:00.000Z	Blaise	DistroJockey	it's what I used originally when I had everything working
+2008-07-21T16:20:00.000Z	DistroJockey	Blaise	k, not used it as I just run the xorg drivers. Good luck
+2008-07-21T16:43:00.000Z	Blaise	DistroJockey	So, it finally worked, I'm back to where I was at 11:00 this morning *sigh*
+2008-07-21T16:44:00.000Z	Blaise	DistroJockey	I basically reinstalled the ati drivers manually according to that wiki. Thanks for helping me out, it got me off in the right direction
+2008-07-21T16:44:00.000Z	DistroJockey	Blaise	well, that's good and bad I guess
+2008-07-21T16:44:00.000Z	DistroJockey	Blaise	you're most welcome.
+2008-07-21T16:44:00.000Z	Blaise	DistroJockey	Well it's good because everything was working at 11 :D, I find Linux quite taxing when an update screws up soimething
+2008-07-21T16:45:00.000Z	DistroJockey	Blaise	ahh :)
+2008-07-21T16:45:00.000Z	DistroJockey	Blaise	maybe try updating less frequently than daily
+2008-07-21T16:46:00.000Z	Blaise	DistroJockey	that's a good point, I'm thinking though that it's likely to do with having unused and old software installed for my drivers that caused this mistake
+2008-07-21T16:47:00.000Z	DistroJockey	Blaise	weekly is a better time frame (gives them time to catch bugs) :) Just a theory I have not tried
+2008-07-21T16:47:00.000Z	DistroJockey	Blaise	possible
+2008-08-12T14:58:00.000Z	DistroJockey	Blaise	IndyGunFreak, alraune : couldn't play that mov until I installed  gstreamer ffmpeg and ugly
+2008-08-12T15:01:00.000Z	Blaise	DistroJockey	I think I have those plugins installed, how can I check?
+2008-08-12T15:01:00.000Z	Blaise	DistroJockey	I think it may be a graphics card or compiz issue
+2008-08-12T15:02:00.000Z	DistroJockey	Blaise	trying to install them again is a reasonable check (may be a better way)
+2008-08-12T15:02:00.000Z	DistroJockey	Blaise	using Firefox 3.01?
+2008-08-12T15:03:00.000Z	DistroJockey	Blaise	I have ATI, but I don't use fglrx
+2008-08-12T15:03:00.000Z	Blaise	DistroJockey	ah, I do
+2008-08-12T15:03:00.000Z	DistroJockey	Blaise	still shouldn't matter really me thinks
+2008-08-12T15:04:00.000Z	DistroJockey	Blaise	am running compiz also
+2008-08-12T15:05:00.000Z	Blaise	DistroJockey	IndyGunFreak: already had those plugins installed
+2008-08-12T15:06:00.000Z	DistroJockey	Blaise	well, the site is dead now (guess we hit it too much)
+2008-08-12T15:07:00.000Z	DistroJockey	Blaise	Australia here :)
+2008-08-12T15:07:00.000Z	Blaise	DistroJockey	Do you know how to change my default media player in Firefox?
+2008-08-12T15:07:00.000Z	DistroJockey	Blaise	did work when the site was up though, I swear
+2008-08-12T15:08:00.000Z	DistroJockey	Blaise	not really sorry (bar disabling add-ons)
+2008-08-12T15:09:00.000Z	Blaise	DistroJockey	I've found it in options, under Applications
+2008-08-12T15:09:00.000Z	DistroJockey	Blaise	ahh cool. Never really looked as mine usually just works :)

@@ -1,0 +1,97 @@
+2011-03-07T21:42:00.000Z	sipior	Roasted_	can you pastebin the contents of your .bashrc? (or repost the link if you have done already)
+2011-03-07T21:46:00.000Z	sipior	Roasted_	the issue was setting $PS1? can you pastebin the contents of your .bashrc?
+2011-03-07T22:17:00.000Z	sipior	Roasted_	it is good practise, indeed.
+2011-03-07T22:17:00.000Z	Roasted_	sipior	you were asking me about the bashrc thing earlier, right
+2011-03-07T22:17:00.000Z	sipior	Roasted_	was i?
+2011-03-07T22:17:00.000Z	Roasted_	sipior	well, helping me at least.
+2011-03-07T22:17:00.000Z	Roasted_	sipior	I think?
+2011-03-07T22:18:00.000Z	sipior	Roasted_	probably, i forget. was this about setting the prompt?
+2011-03-07T22:18:00.000Z	Roasted_	sipior	anyway, I just logged on to another ubuntu system, totally different from before, and I have the $ path there too in terminal, so something changed at the domain level.
+2011-03-07T22:18:00.000Z	Roasted_	sipior	yes.
+2011-03-07T22:18:00.000Z	Roasted_	sipior	its only my account tho, but I find it odd its not just this computer or a setting on it.
+2011-03-07T22:18:00.000Z	sipior	Roasted_	you don't share a home directory across these two machines?
+2011-03-07T22:19:00.000Z	Roasted_	sipior	no, both of these machines are fresh installs of 10.04.2 that I added to the windows domain.
+2011-03-07T22:19:00.000Z	Roasted_	sipior	I just fired up this laptop and logged in as myself and bingo - still got the $ in terminal.
+2011-03-07T22:20:00.000Z	sipior	Roasted_	and how are you setting the prompt in .bashrc?
+2011-03-07T22:20:00.000Z	Roasted_	sipior	I'm not.
+2011-03-07T22:20:00.000Z	Roasted_	sipior	I ran a command, gvfs-mount smb://blah.blah.blah and it changed me to a $ on the desktop
+2011-03-07T22:21:00.000Z	Roasted_	sipior	then I couldnt set it back. I had no clue how to reverse it. On a hunch I went on this laptop and blam, its there too.
+2011-03-07T22:21:00.000Z	Roasted_	sipior	so clearly something changed at the domain level, and I'm curious on what. These are the things I need to be aware of if we're going to put linux in the classroom.
+2011-03-07T22:22:00.000Z	sipior	Roasted_	does "df" show your samba share?
+2011-03-07T22:22:00.000Z	Roasted_	sipior	no, just root, dev, dev/shm, /var/run, /var/lock/, and /lib/init/rw
+2011-03-07T22:23:00.000Z	sipior	Roasted_	and "gvfs-mount -l"?
+2011-03-07T22:23:00.000Z	Roasted_	sipior	Drive(0):CD/DVD Drive. Type: GProxyDrive (GProxyVolumeMonitorGdu)
+2011-03-07T22:24:00.000Z	sipior	Roasted_	no other entries?
+2011-03-07T22:24:00.000Z	Roasted_	sipior	nada
+2011-03-07T22:25:00.000Z	sipior	Roasted_	look, no need to stir up trouble here.
+2011-03-07T22:26:00.000Z	Roasted_	sipior	not stirring anything up.
+2011-03-07T22:26:00.000Z	Roasted_	sipior	just trying to help out here for the sake of other users.
+2011-03-07T22:26:00.000Z	Roasted_	sipior	any idea what could have happened?
+2011-03-07T22:26:00.000Z	Roasted_	sipior	I just find it odd it changed something at the domain level.
+2011-03-07T22:27:00.000Z	sipior	Roasted_	not sure what you mean by "at the domain level". the shell sets its prompt from an environmental variable. can you try starting a shell with "bash -l"?
+2011-03-07T22:29:00.000Z	Roasted_	sipior	if I do that, it lists my_name@computername:~$
+2011-03-07T22:29:00.000Z	Roasted_	sipior	but if I hit exit, it bounces back to $
+2011-03-07T22:29:00.000Z	sipior	Roasted_	that's promising.
+2011-03-07T22:29:00.000Z	sipior	Roasted_	you're logged into this host via ssh, i guess?
+2011-03-07T22:29:00.000Z	Roasted_	sipior	nope. This ubuntu system is on our domain. I just logged in at the login screen as domain\my_username.
+2011-03-07T22:30:00.000Z	sipior	Roasted_	what is the value of "echo ${HOME}"?
+2011-03-07T22:32:00.000Z	Roasted_	sipior	/home/local/DOMAIN/My_User
+2011-03-07T22:35:00.000Z	sipior	Roasted_	at this point, the "INVOCATION" section of the bash man page is helpful. do you have the files /etc/bash.bashrc or $HOME/.bashrc?
+2011-03-07T22:37:00.000Z	Roasted_	sipior	I have .bashrc in my home dir + /etc/bash.bashrc
+2011-03-07T22:38:00.000Z	sipior	Roasted_	is PS1 set in either of those files?
+2011-03-07T22:38:00.000Z	Roasted_	sipior	I didnt intentionally set PS1 at any point in time. Am I to look for a PS1 entry somewhere?
+2011-03-07T22:39:00.000Z	sipior	Roasted_	yes.
+2011-03-07T22:40:00.000Z	Roasted_	sipior	want me to just pastebin these? I'm not entirely sure what I'm after here.
+2011-03-07T22:41:00.000Z	sipior	Roasted_	if you haven't modified those, let's assume they're the same as on my system.
+2011-03-07T22:41:00.000Z	sipior	Roasted_	so that PS1 should be set in /etc/bash.bashrc, and invoked in an interactive shell that is not a login shell.
+2011-03-07T22:41:00.000Z	Roasted_	sipior	I personally havent modified it, but Im not sure if anything did in the background.
+2011-03-07T22:41:00.000Z	sipior	Roasted_	when you issued that gvfs-volume command, where did that filesystem get mounted?
+2011-03-07T22:42:00.000Z	Roasted_	sipior	it was to a network resource. I saw a link on the desktop (and nautilus) with a link to smb://fileserver/users
+2011-03-07T22:42:00.000Z	Roasted_	sipior	but the full command was like
+2011-03-07T22:42:00.000Z	Roasted_	sipior	gvfs-mount smb://fileserver/users/$()
+2011-03-07T22:42:00.000Z	sipior	Roasted_	one quick way to solve the problem should be to make gnome-terminal start every shell as a login shell.
+2011-03-07T22:43:00.000Z	Roasted_	sipior	as I was trying to set a wildcard for it to detect my user and auto link me. I was testing this to get domain users to auto link to their folder share automatically.
+2011-03-07T22:46:00.000Z	Roasted_	sipior	any thoughts?
+2011-03-07T22:47:00.000Z	sipior	Roasted_	it's difficult to say without being able to inspect the machine directly. it would be interesting to see if other logins experienced the same problem.
+2011-03-07T22:47:00.000Z	Roasted_	sipior	well the other login account I used didn't exhibit the problem, but Ia lso didn't run that darn command on it either.
+2011-03-07T22:48:00.000Z	sipior	Roasted_	do you have any entries in $HOME/.gvfs?
+2011-03-07T22:48:00.000Z	Roasted_	sipior	.gvfs is empty.
+2011-03-07T22:49:00.000Z	sipior	Roasted_	using ls -a?
+2011-03-07T22:49:00.000Z	Roasted_	sipior	no, nautilus with hidden folders shown. sec Ill go into term and hceck
+2011-03-07T22:49:00.000Z	Roasted_	sipior	just . and ..
+2011-03-07T22:49:00.000Z	sipior	Roasted_	also, does this behaviour survive a reboot?
+2011-03-07T22:50:00.000Z	Roasted_	sipior	yup. reboot, log out, different ubuntu machines on the domain, etc.
+2011-03-07T22:50:00.000Z	Roasted_	sipior	its STUCK to my account, from what I can see.
+2011-03-07T22:50:00.000Z	sipior	Roasted_	you're authenticating against a windows domain?
+2011-03-07T22:51:00.000Z	Roasted_	sipior	yes
+2011-03-07T22:51:00.000Z	sipior	Roasted_	i'm not terribly familiar with the breed, but have you checked to see what has changed in that entry?
+2011-03-07T22:52:00.000Z	Roasted_	sipior	what entry are you referring to?
+2011-03-07T22:52:00.000Z	sipior	Roasted_	the directory entry corresponding to your login.
+2011-03-07T22:52:00.000Z	Roasted_	sipior	I'm not sure I follow. are you referring to the network resource I tried to link to when this all happened?
+2011-03-07T22:53:00.000Z	sipior	Roasted_	i'm referring to the account information which is currently stored in the windows domain controller.
+2011-03-07T22:54:00.000Z	sipior	Roasted_	it should know something about the location of your home directory, for example.
+2011-03-07T22:54:00.000Z	Roasted_	sipior	within AD?
+2011-03-07T22:55:00.000Z	sipior	Roasted_	yep.
+2011-03-07T22:55:00.000Z	Roasted_	sipior	let me check
+2011-03-07T22:58:00.000Z	Roasted_	sipior	well I just looked through it. everything looks spot-on normal.
+2011-03-07T23:01:00.000Z	sipior	Roasted_	hmm. bit of a head-scratcher. unfortunately, i need to be on my way. i would say the thing to do is to create a series of test accounts, and check their login environments with "printenv", both before and after running a gvfs-mount.
+2011-03-07T23:01:00.000Z	Roasted_	sipior	appreciate it bro
+2011-03-24T22:16:00.000Z	sipior	Roasted_	candyban: it would perhaps be best to continue this in #ubuntu-offtopic.
+2011-03-24T22:16:00.000Z	Roasted_	sipior	we're on topic. bonding interfaces, etc. thanks.
+2011-03-24T22:17:00.000Z	sipior	Roasted_	funny, the discussion of school budgets must have been a pedagogical exercise.
+2011-04-07T23:10:00.000Z	sipior	Roasted_	try using dig to resolve an internal host, and see what comes back.
+2011-04-07T23:11:00.000Z	Roasted_	sipior	never heard of dig. do I just run dig *hostnameofserver* ?
+2011-04-07T23:11:00.000Z	sipior	Roasted_	yep
+2011-04-07T23:11:00.000Z	Roasted_	sipior	whats the golden ticket here that I need to look for?
+2011-04-07T23:12:00.000Z	Roasted_	sipior	if I dig google or other news sites, they get IPs. But not our internal servers.
+2011-04-07T23:12:00.000Z	sipior	Roasted_	pastebin the response for the internal machine, if you could.
+2011-04-07T23:13:00.000Z	Roasted_	sipior	I did one of our file servers as well as google in this paste - http://tinypaste.com/ab1d03
+2011-04-07T23:13:00.000Z	sipior	Roasted_	try specifying the FQDN of the internal machine
+2011-04-07T23:14:00.000Z	Roasted_	sipior	bingo. IP found.
+2011-04-07T23:14:00.000Z	Roasted_	sipior	so what does that mean?
+2011-04-07T23:14:00.000Z	sipior	Roasted_	can you pastebin the contents of /etc/resolv.conf?
+2011-04-07T23:14:00.000Z	Roasted_	sipior	I dont need this on my other ubuntu server...
+2011-04-07T23:14:00.000Z	Roasted_	sipior	Ill just type it, as its only 2 lines
+2011-04-07T23:15:00.000Z	sipior	Roasted_	try adding a "domain" entry. actually, just use the same resolv.conf as the working ubuntu box.
+2011-04-07T23:16:00.000Z	Roasted_	sipior	thanks! got it working!
+2011-04-07T23:16:00.000Z	sipior	Roasted_	great

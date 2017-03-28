@@ -1,0 +1,97 @@
+2007-12-28T12:57:00.000Z	bazhang		does a #vmware exist?
+2007-12-28T12:57:00.000Z	Gnea	bazhang	what happens if you join it?
+2007-12-28T12:57:00.000Z	bazhang	Gnea	you first :}
+2007-12-28T12:58:00.000Z	Gnea	bazhang	lol i'm not the one who wants to know
+2007-12-28T12:58:00.000Z	bazhang	Gnea	haha
+2008-04-01T11:16:00.000Z	Gnea	bazhang	and they all have apt-get ;)
+2008-05-03T14:26:00.000Z	Gnea	bazhang	he's trying to switch to consoles from X using ctrl-alt-f[1-6] and it won't switch at all
+2008-06-24T06:35:00.000Z	Gnea	bazhang	oh, you misinterpretted. that wasn't meant in a disrespectful way. people use it to look at such things all of the time. but sorry, it won't happen again.
+2008-06-24T06:35:00.000Z	bazhang	Gnea	thanks
+2008-08-03T11:55:00.000Z	Gnea	bazhang	if you read it, it has a link to the original ;)
+2008-08-03T11:59:00.000Z	bazhang	Gnea	he quit
+2008-08-03T11:59:00.000Z	Gnea	bazhang	obviously.
+2008-08-06T08:38:00.000Z	Gnea	bazhang	i think we're past that stage now.
+2008-08-13T05:48:00.000Z	bazhang	Gnea	indeed.
+2008-08-14T11:19:00.000Z	bazhang	Gnea	that is not what he is proposing
+2008-08-14T11:20:00.000Z	Gnea	bazhang	i know what he said.
+2008-08-14T11:20:00.000Z	bazhang	Gnea	it is offtopic here.
+2008-08-14T11:24:00.000Z	bazhang	Gnea	what is it.
+2008-08-14T11:25:00.000Z	Gnea	bazhang	may i please pm you?
+2008-08-14T11:25:00.000Z	bazhang	Gnea	sure
+2008-08-14T21:08:00.000Z	Gnea	bazhang	hwilde is freaking out over something
+2008-08-14T21:10:00.000Z	Gnea	bazhang	as i pointed out to hwilde, the .gvfs is mounted, and the only way to get it unmounted, is to reboot
+2008-08-15T19:40:00.000Z	bazhang	Gnea	what is the problem
+2008-08-15T19:48:00.000Z	bazhang	Gnea	please /msg ubottu in private for fun if you wish
+2008-08-15T23:53:00.000Z	Gnea	bazhang	not sure whether to thank you or not
+2008-08-15T23:54:00.000Z	bazhang	Gnea	he would not listen after many attempts
+2008-08-15T23:54:00.000Z	Gnea	bazhang	thank you.
+2008-08-16T08:14:00.000Z	bazhang	Gnea	that is in proposed, correct?
+2008-08-16T08:15:00.000Z	Gnea	bazhang	errah.. how would i figure that?
+2008-08-16T08:16:00.000Z	bazhang	Gnea	check if you have proposed enabled
+2008-08-16T08:17:00.000Z	Gnea	bazhang	heh, yup, got 'em all checked
+2008-08-16T08:18:00.000Z	Gnea	bazhang	got used to having newer stuff when i used to run debian sid - i like the proposed because they're not quite as fragile
+2008-08-16T08:51:00.000Z	Gnea	bazhang	already did.
+2008-08-16T08:52:00.000Z	bazhang	Gnea	merci
+2008-08-18T21:18:00.000Z	Gnea	bazhang	what I'd like to know is, what's the name of the program he's trying to install.
+2008-08-18T21:18:00.000Z	bazhang	Gnea	for ruby?
+2008-08-18T21:19:00.000Z	Gnea	bazhang	yeah, the webserver-whateveritis
+2008-08-28T22:18:00.000Z	Gnea	bazhang	yeah, they sort of skewed it a bit
+2008-08-28T22:17:00.000Z	Gnea	bazhang	have you ever installed wubi? i did, and it set the NTFSloader up to dual-boot
+2008-08-28T22:18:00.000Z	bazhang	Gnea	I have; thought a dual boot to be better. thus the imo :)
+2008-08-29T11:36:00.000Z	Gnea	bazhang	i know what a mirror is
+2008-11-13T19:57:00.000Z	Gnea	bazhang	i'm guessing that his local info from the older version is interferring with the newer version - he did hop 4 distro versions in 1 day
+2008-11-13T19:58:00.000Z	bazhang	Gnea	agreed; just wanted to see if it worked here
+2008-12-02T21:16:00.000Z	Gnea	bazhang	he's dual-booted
+2008-12-22T19:56:00.000Z	Gnea	bazhang	update your video driver.
+2008-12-22T19:56:00.000Z	bazhang	Gnea	hehe
+2008-12-22T19:57:00.000Z	Gnea	bazhang	he's already been warned/removed.
+2008-12-30T22:54:00.000Z	Gnea	bazhang	he's on dialup
+2009-01-23T00:50:00.000Z	bazhang	Gnea	what app
+2009-01-23T00:50:00.000Z	Gnea	bazhang	k3b
+2009-01-23T00:50:00.000Z	bazhang	Gnea	data dvd or other
+2009-01-23T00:51:00.000Z	Gnea	bazhang	tritium: this is what happens when I plug the device into the USB port with a blank disk in it.. the same errors occur whether it's inserted or not: http://pastebin.com/d1481552a
+2009-01-23T00:53:00.000Z	Gnea	bazhang	tritium: and, this is what happens when k3b tries to detect that there's a blank DVDR in the drive: http://pastebin.com/d5dc07499
+2009-01-23T00:55:00.000Z	Gnea	bazhang	tritium: I have tried booting with all_generic_ide=1 to no avail
+2009-01-23T01:00:00.000Z	bazhang	Gnea	does this occur with non k3b apps
+2009-01-23T01:00:00.000Z	bazhang	Gnea	ie the built in gnome cd/dvd creator
+2009-01-23T01:01:00.000Z	Gnea	bazhang	I'll give it a shot..
+2009-01-23T01:01:00.000Z	bazhang	Gnea	may also have to fiddle the settings in k3b iirc
+2009-01-23T01:04:00.000Z	Gnea	bazhang	HRM.
+2009-01-23T01:07:00.000Z	Gnea	bazhang	the gnome creator *worked*
+2009-01-23T01:07:00.000Z	bazhang	Gnea	okay so it is k3b
+2009-01-23T01:07:00.000Z	bazhang	Gnea	either the settings or a bug
+2009-01-23T01:07:00.000Z	Gnea	bazhang	yup. i'm gonna see what's up with that.
+2009-01-23T01:08:00.000Z	bazhang	Gnea	do you have k3b set to verify or not? I found with verify it would sometimes choke
+2009-01-23T01:15:00.000Z	Gnea	bazhang	specifically, when k3b is running, and a blank is inserted, it detects it and says 'Empty DVD-R Medium.' for about 5 seconds, then 'forgets' that it's there, going back to 'No Medium Present.' The kernel proceeds to also forget that it's there and re-scans the device, finding the DVD-R again, finding the disk, keeping it at 'Empty DVD-R Medium.', only to NOT have it show up when clicking on an ISO before, during, and after the md5sum is generated. I
+2009-01-23T01:15:00.000Z	Gnea	bazhang	I'm beginning to think that it's a kde issue
+2009-01-23T01:16:00.000Z	bazhang	Gnea	that is odd, perhaps launchpad has more on that (suspect its k3b issue)
+2009-01-23T01:16:00.000Z	bazhang	Gnea	I dont use k3b largely because of many issues with it in the past
+2009-01-23T01:16:00.000Z	Gnea	bazhang	up until intrepid, k3b has always been 100% reliable
+2009-01-23T01:17:00.000Z	bazhang	Gnea	I stopped using it in Gutsy so no idea sorry
+2009-01-23T01:20:00.000Z	Gnea	bazhang	that's okay, thanks for the suggestion, as it worked, I at least have an excuse not to reinstall now :)
+2009-03-28T14:04:00.000Z	Gnea	bazhang	let's find out
+2009-08-25T19:08:00.000Z	bazhang	Gnea	got him thanks :)
+2009-08-25T19:08:00.000Z	Gnea	bazhang	sorry, just saw that lol
+2009-09-07T11:15:00.000Z	Gnea	bazhang	he's in XFCE
+2010-08-19T11:32:00.000Z	Gnea	bazhang	do you have any experience with building a .deb?
+2010-08-19T11:33:00.000Z	bazhang	Gnea	sorry a bit busy atm
+2010-08-19T11:34:00.000Z	Gnea	bazhang	okay
+2010-08-28T14:15:00.000Z	Gnea	bazhang	? 7 string is a type of guitar, you know...
+2010-10-02T01:15:00.000Z	Gnea	bazhang	pm?
+2010-10-02T01:15:00.000Z	bazhang	Gnea	of course
+2010-10-23T13:54:00.000Z	bazhang	Gnea	you too please
+2010-10-23T13:54:00.000Z	Gnea	bazhang	yeah sure
+2010-11-20T17:53:00.000Z	bazhang	Gnea	:)
+2011-01-26T19:14:00.000Z	Gnea	bazhang	have you had this problem or know someone that has? metacity won't load anymore, need to get it to load again
+2011-01-29T14:32:00.000Z	Gnea	bazhang	pretty sure BuMpIc was asking about a problem with ubuntu, not bt
+2011-01-29T14:32:00.000Z	bazhang	Gnea	he said "I have backtrack"
+2011-01-29T14:32:00.000Z	Gnea	bazhang	see what he said before that.
+2011-01-31T15:03:00.000Z	bazhang	Gnea	lets move on please
+2011-01-31T15:03:00.000Z	Gnea	bazhang	no problem
+2011-02-04T20:15:00.000Z	Gnea	bazhang	that's the URL I gave him originally
+2011-02-04T20:16:00.000Z	bazhang	Gnea	sorry I missed that, I was on forums :)
+2011-02-04T20:17:00.000Z	Gnea	bazhang	haha that's okay, you're obviously not the only one that missed it ;)
+2011-02-04T20:17:00.000Z	bazhang	Gnea	true :)
+2011-02-04T21:00:00.000Z	bazhang	Gnea	lets move on
+2012-04-22T00:20:00.000Z	bazhang	Gnea	lets move on please
+2012-11-22T22:47:00.000Z	Gnea	bazhang	thank you

@@ -1,0 +1,99 @@
+2009-02-16T06:07:00.000Z	Myx0x3		can someone recomend a IRC klient that i can run from Putty? :P
+2009-02-16T06:07:00.000Z	Scunizi	Myx0x3	you mean from termial?
+2009-02-16T06:07:00.000Z	Myx0x3	Scunizi	yes :)
+2009-02-16T06:07:00.000Z	Scunizi	Myx0x3	irssi
+2009-02-16T06:08:00.000Z	Scunizi	Myx0x3	screen and irssi works great together..
+2009-02-16T06:08:00.000Z	Myx0x3	Scunizi	whats screen? :P
+2009-02-16T06:09:00.000Z	Scunizi	Myx0x3	magic for the console..:). once you putty into a linux machine then sudo apt-get install screen .. after install type screen and you'll get a disclaimer screen .. hit enter.. and you back to a console prompt
+2009-02-16T06:10:00.000Z	Myx0x3	Scunizi	okey? but what is it? :P
+2009-02-16T06:10:00.000Z	Scunizi	Myx0x3	from that point you don't have to open different ssh or putty sessions to do different things on that box.. and you can "disconnect" from that screen session and putty connection and come back later to resume right where you left off.
+2009-02-16T06:10:00.000Z	Scunizi	Myx0x3	are you putty'd into a machine now?
+2009-02-16T06:11:00.000Z	Myx0x3	Scunizi	 yes :)
+2009-02-16T06:11:00.000Z	Scunizi	Myx0x3	I'll walk you through some of the tricks.. sudo apt-get install screen irssi
+2009-02-16T06:12:00.000Z	Myx0x3	Scunizi	WHAA X) i started irssi how do i get out of it? :P
+2009-02-16T06:12:00.000Z	Scunizi	Myx0x3	wait.. did you also start screen?
+2009-02-16T06:13:00.000Z	Myx0x3	Scunizi	no :P i started irssi before you told me to get screen :P
+2009-02-16T06:13:00.000Z	Scunizi	Myx0x3	/quit will exit irssi and dump any connections
+2009-02-16T06:13:00.000Z	Myx0x3	Scunizi	ooh, i tried /exit hehe :P
+2009-02-16T06:14:00.000Z	Scunizi	Myx0x3	once you exit type screen
+2009-02-16T06:14:00.000Z	Myx0x3	Scunizi	yes*
+2009-02-16T06:14:00.000Z	Scunizi	Myx0x3	ok.. now type irssi
+2009-02-16T06:14:00.000Z	Myx0x3	Scunizi	yeah :)
+2009-02-16T06:15:00.000Z	Scunizi	Myx0x3	you now have irssi loaded in "window" number 0.. push ctrl+a (small a)
+2009-02-16T06:15:00.000Z	Scunizi	Myx0x3	now push c
+2009-02-16T06:15:00.000Z	Scunizi	Myx0x3	did it take you back to a console prompt?
+2009-02-16T06:16:00.000Z	Myx0x3	Scunizi	yes :)
+2009-02-16T06:17:00.000Z	Myx0x3	Scunizi	how do i connect freenode (this irc server? :P)
+2009-02-16T06:17:00.000Z	Scunizi	Myx0x3	you are now in window number 1.. lets split the screen  push ctrl+a shift+s (to give you a capital S)
+2009-02-16T06:17:00.000Z	Myx0x3	Scunizi	dont remember how i did
+2009-02-16T06:18:00.000Z	Myx0x3	Scunizi	huh ?:P
+2009-02-16T06:18:00.000Z	Scunizi	Myx0x3	 did it split?
+2009-02-16T06:18:00.000Z	Myx0x3	Scunizi	did not understand that sorry :P
+2009-02-16T06:19:00.000Z	Scunizi	Myx0x3	ctrl+a shift+s
+2009-02-16T06:20:00.000Z	Myx0x3	Scunizi	yes now, set title window to bash or somthing :P
+2009-02-16T06:20:00.000Z	Scunizi	Myx0x3	ok.. is irssi in the top or bottom?
+2009-02-16T06:21:00.000Z	Myx0x3	Scunizi	top :P
+2009-02-16T06:22:00.000Z	Scunizi	Myx0x3	ok.. and the cursor is blinkin in the "entry" line for irssi?
+2009-02-16T06:23:00.000Z	Myx0x3	Scunizi	yes*
+2009-02-16T06:23:00.000Z	Myx0x3	Scunizi	or its green :P
+2009-02-16T06:23:00.000Z	Scunizi	Myx0x3	now ctrl+a TAB to shift to the lower half that is empty.. now ctrl+a c
+2009-02-16T06:23:00.000Z	Myx0x3	Scunizi	but i can enter text there
+2009-02-16T06:23:00.000Z	Myx0x3	Scunizi	aha nice! :(
+2009-02-16T06:23:00.000Z	Myx0x3	Scunizi	:)*
+2009-02-16T06:24:00.000Z	Myx0x3	Scunizi	how do i make itlook like this: [_] [_]    if you understand :P
+2009-02-16T06:24:00.000Z	Scunizi	Myx0x3	it gets better.. you're catching on that ctrl+a is always teh preface for any other command
+2009-02-16T06:25:00.000Z	Scunizi	Myx0x3	not sure I understand
+2009-02-16T06:25:00.000Z	Myx0x3	Scunizi	hmm... now they are horisontal
+2009-02-16T06:25:00.000Z	Myx0x3	Scunizi	i want it ehm, whats the others name? XD
+2009-02-16T06:26:00.000Z	Scunizi	Myx0x3	not sure I'm following..
+2009-02-16T06:26:00.000Z	Scunizi	Myx0x3	side by side? or one on top of the other?
+2009-02-16T06:27:00.000Z	Myx0x3	Scunizi	i want the fields to be Vertikal
+2009-02-16T06:27:00.000Z	Myx0x3	Scunizi	yeah side by side
+2009-02-16T06:27:00.000Z	Scunizi	Myx0x3	that would be a verticle split.. sorry it doesn't do that from what I've been reading..
+2009-02-16T06:27:00.000Z	Myx0x3	Scunizi	oooh :(
+2009-02-16T06:28:00.000Z	Scunizi	Myx0x3	now if you want to experiment a little .. try ctrl+a c in either window or split half
+2009-02-16T06:28:00.000Z	Myx0x3	Scunizi	heh, okej ^^
+2009-02-16T06:28:00.000Z	Scunizi	Myx0x3	now sudo apt-get install surfraw elinks
+2009-02-16T06:28:00.000Z	Myx0x3	Scunizi	whats that? ^^
+2009-02-16T06:29:00.000Z	Scunizi	Myx0x3	elinks is a terminal browser for the internet and surfraw is something that allows searching the net FAST before loading the browser
+2009-02-16T06:30:00.000Z	Myx0x3	Scunizi	okey? ^^ but ill use firefox in Windows if i need anything, i dont have the fastest internet connection :P
+2009-02-16T06:31:00.000Z	Scunizi	Myx0x3	terminal searching is quick because there's no graphics involved.. did you load it?
+2009-02-16T06:31:00.000Z	Scunizi	Myx0x3	or install it??
+2009-02-16T06:31:00.000Z	Myx0x3	Scunizi	sorry no :P but i dont think ill need it hehe :P
+2009-02-16T06:32:00.000Z	Scunizi	Myx0x3	ok.. one thing you need to learn is how to detach and reattach to screen..
+2009-02-16T06:32:00.000Z	Myx0x3	Scunizi	heh, okej ? :P
+2009-02-16T06:33:00.000Z	Scunizi	Myx0x3	to detach ctrl+a d ... try it.. everything will disappear
+2009-02-16T06:33:00.000Z	Myx0x3	Scunizi	okej :P did i kill irssi?
+2009-02-16T06:33:00.000Z	Myx0x3	Scunizi	or is it still running?
+2009-02-16T06:33:00.000Z	Scunizi	Myx0x3	nope that's part of the magick..
+2009-02-16T06:33:00.000Z	Myx0x3	Scunizi	oooh ;)
+2009-02-16T06:34:00.000Z	Scunizi	Myx0x3	you could even close the putty session and it would continue to run
+2009-02-16T06:34:00.000Z	Myx0x3	Scunizi	heh okej :P but how do i get it back? :P
+2009-02-16T06:34:00.000Z	Scunizi	Myx0x3	to reattach you need to know what the screen number is.. so now type screen -ls
+2009-02-16T06:35:00.000Z	Scunizi	Myx0x3	the line that is shown has a 4 digit number at the beginning of it.  to reattach type screen -r <number>
+2009-02-16T06:35:00.000Z	Myx0x3	Scunizi	okej :)
+2009-02-16T06:35:00.000Z	Myx0x3	Scunizi	how do i remove the others?
+2009-02-16T06:35:00.000Z	Myx0x3	Scunizi	i have 5 here XD ill bet i did something :P
+2009-02-16T06:36:00.000Z	Scunizi	Myx0x3	yep.. you typed screen 5 times just after you loaded it.. so you have to attach to one at a time and see if there's nothing there then /exit
+2009-02-16T06:38:00.000Z	Myx0x3	Scunizi	hmmm :P
+2009-02-16T06:38:00.000Z	Myx0x3	Scunizi	/exit does not work :S
+2009-02-16T06:38:00.000Z	Scunizi	Myx0x3	hang on
+2009-02-16T06:39:00.000Z	Myx0x3	Scunizi	bash: /exit: No such file or directory :S
+2009-02-16T06:40:00.000Z	Scunizi	Myx0x3	/quit  maybe
+2009-02-16T06:41:00.000Z	Scunizi	Myx0x3	I knew it was something like that :/
+2009-02-16T06:41:00.000Z	Myx0x3	Scunizi	hehe nps :P
+2009-02-16T06:41:00.000Z	Myx0x3	Scunizi	if i dont want screen anymore? how do i remove it=? i bet it takes some process :P...
+2009-02-16T06:42:00.000Z	Scunizi	Myx0x3	you mean close it entirely?  you can "exit" all the screens and they won't be running.. on reboot of the remote machine will also close screeen and it won't restart on reboot without you typing screen
+2009-02-16T06:43:00.000Z	Myx0x3	Scunizi	yeah close entirely :P whitout reboot
+2009-02-16T06:44:00.000Z	Myx0x3	Scunizi	is there a "short" commant to exit all at the same time? or do i have to "go into" everone and type exit? :/
+2009-02-16T06:44:00.000Z	Scunizi	Myx0x3	just exit as the other nick suggested.. to close the split ctrl+a shift+x
+2009-02-16T06:45:00.000Z	Scunizi	Myx0x3	each one is running independantly.. so yes you have to go into each one as far as I know..
+2009-02-16T06:45:00.000Z	Myx0x3	Scunizi	okey :/
+2009-02-16T06:45:00.000Z	Myx0x3	Scunizi	well, i have to go to bed now :P im realy tired as you maybe can recognize XD
+2009-02-16T06:46:00.000Z	Scunizi	Myx0x3	np.. :)
+2009-02-16T06:47:00.000Z	Myx0x3	Scunizi	tnx for the help im realy glad that you helped me :)
+2009-02-16T06:47:00.000Z	Myx0x3	Scunizi	now i feel like a pro whit linux ;) just kidding ;)
+2009-02-16T06:48:00.000Z	Scunizi	Myx0x3	I've been learning this for 3 yrs. just in the last couple weeks I've tried to live at terminal as much as possible.. just for fun and experience.
+2009-02-16T06:49:00.000Z	Myx0x3	Scunizi	yeah :) and i realy have to learn Linux to get a well paid work ^^ im just at school now but i realy would like to manage linux :P
+2009-02-16T06:49:00.000Z	Scunizi	Myx0x3	me too but I'm almost 50.. little age descrimination when you're competing with 25 yr olds. :(
+2009-02-16T06:50:00.000Z	Myx0x3	Scunizi	hehe, nhaa i hope im done when im 19 ^^ im 18 now XD

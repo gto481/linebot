@@ -1,0 +1,97 @@
+2006-12-27T11:05:00.000Z	arrenlex	Red_Death	You are trying to restart alsa?
+2006-12-27T11:05:00.000Z	Red_Death	arrenlex	yes, what's the command
+2006-12-27T11:06:00.000Z	arrenlex	Red_Death	/etc/init.d/alsa-utils force-reload
+2006-12-27T11:08:00.000Z	Red_Death	arrenlex	are you familiar with that flash error where it mucks up the sound?
+2006-12-27T11:08:00.000Z	arrenlex	Red_Death	No. Is this Flash 7 or 9? What would happen if you ran http://arrenlex.diff.be/alsaconf ?
+2006-12-27T11:08:00.000Z	Red_Death	arrenlex	9
+2006-12-27T11:09:00.000Z	arrenlex	Red_Death	I havem
+2006-12-27T11:09:00.000Z	arrenlex	Red_Death	What symptoms? Other than no sound?
+2006-12-27T11:10:00.000Z	Red_Death	arrenlex	how would I run that?
+2006-12-27T11:10:00.000Z	arrenlex	Red_Death	It's a script. Download it and run it with sudo.
+2006-12-27T11:10:00.000Z	arrenlex	Red_Death	sudo bash alsaconf is the easiest way.
+2006-12-27T11:11:00.000Z	Red_Death	arrenlex	ok, did it, worked fine, but now cat /dev/urandom > /dev/dsp doesn't work, says permission denied
+2006-12-27T11:13:00.000Z	arrenlex	Red_Death	apt-get install alsa-oss
+2006-12-27T11:14:00.000Z	Red_Death	arrenlex	just installed that, now what?
+2006-12-27T11:14:00.000Z	arrenlex	Red_Death	Does it exist now?
+2006-12-27T11:15:00.000Z	Red_Death	arrenlex	nope, still nonexistent
+2006-12-27T11:16:00.000Z	arrenlex	Red_Death	sudo mknod /dev/dsp c 14 3
+2006-12-27T11:16:00.000Z	Red_Death	arrenlex	then try it?
+2006-12-27T11:16:00.000Z	arrenlex	Red_Death	Does it exist yet?
+2006-12-27T11:17:00.000Z	Red_Death	arrenlex	nope
+2006-12-27T11:17:00.000Z	arrenlex	Red_Death	...I don't think that's possible.
+2006-12-27T11:17:00.000Z	arrenlex	Red_Death	What's the output of "file /dev/dsp" ?
+2006-12-27T11:17:00.000Z	arrenlex	Red_Death	Then it, uh, exists. xD
+2006-12-27T11:18:00.000Z	Red_Death	arrenlex	it's just showing up now... wtf
+2006-12-27T11:18:00.000Z	arrenlex	Red_Death	Well, glad it fixed itself.
+2006-12-27T11:18:00.000Z	Red_Death	arrenlex	anyways, why doesn't urandom work on dsp yet?
+2006-12-27T11:18:00.000Z	arrenlex	Red_Death	Define "doesn't work"
+2006-12-27T11:19:00.000Z	Red_Death	arrenlex	there's no sound, it shows up in alsamixer, is unmuted, everything is plugged in, no headphones...
+2006-12-27T11:20:00.000Z	arrenlex	Red_Death	Could I ask you to install "mplayer-nogui" temporarily? It makes things really easy to troubleshoot...
+2006-12-27T11:21:00.000Z	Red_Death	arrenlex	I can't get it on it's own...
+2006-12-27T11:21:00.000Z	arrenlex	Red_Death	You'd need the multiverse repository.
+2006-12-27T11:21:00.000Z	Red_Death	arrenlex	ok, lemme go fix that
+2006-12-27T11:23:00.000Z	Red_Death	arrenlex	installed mplayer-nogui, now what?
+2006-12-27T11:23:00.000Z	arrenlex	Red_Death	Run it from the command line on a sound file of some sort, like an mp3 or ogg or wav. Pastebin all the output.
+2006-12-27T11:23:00.000Z	arrenlex	Red_Death	Command is "mplayer"
+2006-12-27T11:23:00.000Z	Red_Death	arrenlex	can i do it for a cd?
+2006-12-27T11:23:00.000Z	arrenlex	Red_Death	Uh... it would get complicated. You've nothing else?
+2006-12-27T11:23:00.000Z	Red_Death	arrenlex	nothing xD fresh install
+2006-12-27T11:24:00.000Z	Red_Death	arrenlex	one sec i'll just extract one track
+2006-12-27T11:25:00.000Z	arrenlex	Red_Death	http://arrenlex.diff.be/cgnu_fightsong.mp3
+2006-12-27T11:25:00.000Z	arrenlex	Red_Death	Shortest clip I have....
+2006-12-27T11:25:00.000Z	arrenlex	Red_Death	Hope you don't mind homestar.
+2006-12-27T11:25:00.000Z	Red_Death	arrenlex	i'll just ip this stuff really quick, 3 minutes left :P
+2006-12-27T11:25:00.000Z	arrenlex	Red_Death	The file is only 250kb xD
+2006-12-27T11:25:00.000Z	Red_Death	arrenlex	but it's ew
+2006-12-27T11:26:00.000Z	arrenlex	Red_Death	What's ew?
+2006-12-27T11:26:00.000Z	Red_Death	arrenlex	that song
+2006-12-27T11:26:00.000Z	arrenlex	Red_Death	-__-
+2006-12-27T11:26:00.000Z	Red_Death	arrenlex	:D
+2006-12-27T11:31:00.000Z	Red_Death	arrenlex	http://pastebin.com/845584
+2006-12-27T11:32:00.000Z	arrenlex	Red_Death	I strongly suggest you try using the correct filename ;)
+2006-12-27T11:32:00.000Z	Red_Death	arrenlex	i just did sat<tab>, to play the folder, wouldn't that work?
+2006-12-27T11:33:00.000Z	arrenlex	Red_Death	Because you have several files that start with Saturday\ Night\ Wrist/ in that folder.
+2006-12-27T11:33:00.000Z	arrenlex	Red_Death	It went as far as it could and needs a few more letters now.
+2006-12-27T11:34:00.000Z	arrenlex	Red_Death	....pastebin?
+2006-12-27T11:34:00.000Z	Red_Death	arrenlex	about to
+2006-12-27T11:36:00.000Z	Red_Death	arrenlex	http://pastebin.com/845587
+2006-12-27T11:37:00.000Z	arrenlex	Red_Death	No sound?
+2006-12-27T11:37:00.000Z	Red_Death	arrenlex	none
+2006-12-27T11:37:00.000Z	arrenlex	Red_Death	Pastebin the output of "amixer".
+2006-12-27T11:37:00.000Z	Red_Death	arrenlex	how do I get the output?
+2006-12-27T11:38:00.000Z	arrenlex	Red_Death	Also, what happens if you run mplayer -ao oss 01\ -\ Hole\ In\ The\ Earth.ogg
+2006-12-27T11:38:00.000Z	arrenlex	Red_Death	Type in "amixer" and it gives you output.
+2006-12-27T11:39:00.000Z	Red_Death	arrenlex	http://pastebin.com/845589
+2006-12-27T11:40:00.000Z	arrenlex	Red_Death	Also, what happens if you run mplayer -ao oss 01\ -\ Hole\ In\ The\ Earth.ogg
+2006-12-27T11:41:00.000Z	Red_Death	arrenlex	[AO OSS]  audio_setup: Can't open audio device /dev/dsp: Permission denied
+2006-12-27T11:43:00.000Z	arrenlex	Red_Death	What's the output of "groups hexy" and "ls -l /dev/dsp"?
+2006-12-27T11:43:00.000Z	Red_Death	arrenlex	there ^^^
+2006-12-27T11:44:00.000Z	arrenlex	Red_Death	run "sudo chown root:audio /dev/dsp"
+2006-12-27T11:44:00.000Z	arrenlex	Red_Death	And then run ls -l /dev/dsp again
+2006-12-27T11:44:00.000Z	Red_Death	arrenlex	crw-r--r-- 1 root audio 14, 3 2006-12-27 00:16 /dev/dsp
+2006-12-27T11:45:00.000Z	arrenlex	Red_Death	Now try mplayer -ao oss 01\ -\ Hole\ In\ The\ Earth.ogg again
+2006-12-27T11:45:00.000Z	Red_Death	arrenlex	[AO OSS]  audio_setup: Can't open audio device /dev/dsp: Permission denied
+2006-12-27T11:45:00.000Z	arrenlex	Red_Death	Oh, hold on.
+2006-12-27T11:47:00.000Z	arrenlex	Red_Death	Run "sudo chmod 660 /dev/dsp" and ls -l /dev/dsp again
+2006-12-27T11:47:00.000Z	Red_Death	arrenlex	crw-rw---- 1 root audio 14, 3 2006-12-27 00:16 /dev/dsp
+2006-12-27T11:48:00.000Z	arrenlex	Red_Death	And does mplayer -ao oss 01\ -\ Hole\ In\ The\ Earth.ogg work yet? *fingercross*
+2006-12-27T11:48:00.000Z	arrenlex	Red_Death	Because I'm out of ideas. xD
+2006-12-27T11:48:00.000Z	Red_Death	arrenlex	works, no sound though :P
+2006-12-27T11:48:00.000Z	arrenlex	Red_Death	Yay and crap.
+2006-12-27T11:49:00.000Z	Red_Death	arrenlex	apparently there is some easy fix for this stupid flash error but the guy that knew it left before telling me >:E
+2006-12-27T11:49:00.000Z	arrenlex	Red_Death	Really.
+2006-12-27T11:49:00.000Z	Red_Death	arrenlex	really.
+2006-12-27T11:49:00.000Z	arrenlex	Red_Death	If you ever do hear this magical fix, let me know.
+2006-12-27T11:49:00.000Z	Red_Death	arrenlex	indeed, it's probobly some niche error that has been happening randomly to people
+2006-12-27T11:50:00.000Z	arrenlex	Red_Death	The last suggestion I have is "sudo wget http://arrenlex.diff.be/asound.conf -O/etc/asound.conf && sudo /etc/init.d/alsa force-reload" and see if that helps matters.
+2006-12-27T11:51:00.000Z	arrenlex	Red_Death	If not, "sudo rm /etc/asound.conf" and I don't know how to help you  = /
+2006-12-27T11:51:00.000Z	Red_Death	arrenlex	that doesn't work
+2006-12-27T11:51:00.000Z	arrenlex	Red_Death	What doesn't work?
+2006-12-27T11:51:00.000Z	Red_Death	arrenlex	that script
+2006-12-27T11:51:00.000Z	arrenlex	Red_Death	"doesn't work"?
+2006-12-27T11:51:00.000Z	Red_Death	arrenlex	hexy@Fail:~/Deftones/Saturday Night Wrist$ sudo bash asound.conf
+2006-12-27T11:52:00.000Z	arrenlex	Red_Death	...really. o_O
+2006-12-27T11:52:00.000Z	arrenlex	Red_Death	Uh, that shouldn't happen. So I don't know... sorry. = /
+2006-12-27T11:52:00.000Z	Red_Death	arrenlex	fuck, alright, thansk
+2006-12-27T12:03:00.000Z	Red_Death	arrenlex	nice
+2006-12-27T12:04:00.000Z	Red_Death	arrenlex	rebooting, brbb

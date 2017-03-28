@@ -1,0 +1,97 @@
+2004-09-17T07:04:00.000Z	debianist		any fixes from the one built on saturday ?
+2004-09-17T07:04:00.000Z	Kamion	debianist	totally different kernel? :)
+2004-09-17T07:18:00.000Z	Kamion	debianist	we don't really have a translation infrastructure at the moment; we will eventually
+2004-09-17T07:19:00.000Z	debianist	Kamion	: Well, I'll start the hebrew, when the infrastructre realized, it would be ready 
+2004-09-17T07:22:00.000Z	debianist	Kamion	: please explain "branding" ?
+2004-09-17T07:26:00.000Z	debianist	Kamion	: most of hebrew strings for ubuntu already exist?
+2004-09-17T07:28:00.000Z	Kamion	debianist	should do
+2004-09-17T07:29:00.000Z	debianist	Kamion	: you mean take them from sarge's d-i? something like that?
+2004-09-17T07:37:00.000Z	debianist	Kamion	: where lies the list of changes between daily builds?
+2004-09-17T07:39:00.000Z	Kamion	debianist	there's none in that exact form; there's a warty-changes list (no idea if it's generally readable)
+2004-09-17T07:39:00.000Z	debianist	Kamion	: basically, there are locale strings for each language right? All I have to do is take the english translation and replace the strings
+2004-09-17T07:40:00.000Z	Kamion	debianist	if you're not already familiar with gettext-based translation, look for documentation elsewhere on that; there's plenty in any number of free software projects
+2004-09-17T07:43:00.000Z	debianist	Kamion	: ok, google is my best freind :)
+2004-09-17T07:43:00.000Z	debianist	Kamion	: BTW any success with using gnome-volume-manager and dbus-1 under ubuntu?
+2004-09-17T07:47:00.000Z	Kamion	debianist	dunno, I'm just the installer guy ...
+2004-09-17T07:48:00.000Z	debianist	Kamion	: installer guy? you make the installer?
+2004-09-17T07:48:00.000Z	Kamion	debianist	I lead the Ubuntu work on debian-installer and CD image production, yes.
+2004-09-17T07:52:00.000Z	debianist	Kamion	: oh right. reagrding CD image production, I'm offering my help in making the live CD, I said that before right? :)
+2004-09-17T07:52:00.000Z	Kamion	debianist	you'll have to talk to Alex de Landgraaf about that, he's the live CD guy ...
+2004-09-17T07:57:00.000Z	debianist	Kamion	: hmm, so ubuntu is targated at being an employed only distro?  :(
+2004-09-17T07:58:00.000Z	debianist	Kamion	:  Alex de Landgraaf has an email address ? something of that sort?
+2004-09-17T08:01:00.000Z	Kamion	debianist	not at all; just certain bits are still hard to do community cooperation on, because we haven't quite got ourselves set up for it yet
+2004-09-17T08:04:00.000Z	debianist	Kamion	: oh i see. say kamion, what would you think would be the criteria for future hiring by Canonical?
+2004-09-17T08:20:00.000Z	debianist	Kamion	: this is PowerPC firmware support?
+2004-09-17T08:51:00.000Z	debianist	Kamion	: are you talking about code documentation or task ?
+2004-09-17T09:02:00.000Z	Kamion	debianist	the splash screen changes actually didn't make it into warty; they've been postponed until the next release
+2004-09-17T09:03:00.000Z	debianist	Kamion	: oh, having seen this on the ubuntu live cd made me think this how the boot looks
+2004-09-17T15:40:00.000Z	Kamion	debianist	partman can do that
+2004-09-17T15:40:00.000Z	debianist	Kamion	: meaning we might include such an option for user for instance, wanting to resize their ntfs or fat32 paritions for ubuntu install?
+2004-09-17T15:40:00.000Z	Kamion	debianist	not until parted supports those
+2004-09-17T15:45:00.000Z	debianist	Kamion	: what about my already installed grub on the system? would it be overwritten with ubuntu's version?
+2004-09-17T15:45:00.000Z	Kamion	debianist	yes; the installer will pick up entries from the menu.lst in your already-installed grub, though
+2004-09-17T15:47:00.000Z	debianist	Kamion	: are you implying that grub stores the meun.lst somewhere to boot block region?
+2004-09-17T15:48:00.000Z	debianist	Kamion	: or how would d-i from ubuntu know to take the .lst file from my other installment?
+2004-09-17T15:49:00.000Z	debianist	Kamion	: it does so automagically ? ( mount other partition, read file)
+2004-09-18T05:38:00.000Z	Kamion	debianist	*your* password, not root's
+2004-09-18T06:31:00.000Z	debianist	Kamion	: there is such servce?
+2004-09-18T09:50:00.000Z	debianist	Kamion	: tag it under parted, or partman ?
+2004-09-18T09:50:00.000Z	Kamion	debianist	partman
+2004-09-18T09:50:00.000Z	debianist	Kamion	: what shall I use in perioriy?
+2004-09-18T09:50:00.000Z	debianist	Kamion	: what shall I use in priority?
+2004-09-18T09:51:00.000Z	Kamion	debianist	normal will do for now
+2004-09-18T10:06:00.000Z	Kamion	debianist	what eject button? :)
+2004-09-18T10:06:00.000Z	debianist	Kamion	: mdz has answered me 
+2004-09-18T10:06:00.000Z	debianist	Kamion	: I meant the eject buttons on the CD rom itself
+2004-09-18T10:06:00.000Z	Kamion	debianist	merely observing that not all CD drives have such a button
+2004-09-18T10:07:00.000Z	debianist	Kamion	: right, idea dropped
+2004-09-18T10:07:00.000Z	debianist	Kamion	: :)
+2004-09-18T10:36:00.000Z	Kamion	debianist	the 20040907 daily is broken, please leave it for a bit
+2004-09-18T10:36:00.000Z	debianist	Kamion	: k
+2004-09-18T11:00:00.000Z	debianist	Kamion	: woody -> warty upgrades? we want that?
+2004-09-18T11:00:00.000Z	Kamion	debianist	er, yeah, that's why we had that long discussion above about an upgrade tool
+2004-09-18T11:01:00.000Z	debianist	Kamion	: sarge -> warty looked more reasonable :)
+2004-09-18T11:24:00.000Z	debianist	Kamion	: the partitioner bug. 
+2004-09-18T11:25:00.000Z	Kamion	debianist	yep, that's another open issue
+2004-09-18T11:27:00.000Z	debianist	Kamion	: also, the fact d-i advances to installation although no root filesystem has been setup. Maybe block the next stage with a flag untill a partition is created?
+2004-09-18T11:44:00.000Z	debianist	Kamion	: a new image is ready and fixed?
+2004-09-18T11:44:00.000Z	Kamion	debianist	no
+2004-09-18T11:45:00.000Z	debianist	Kamion	: you said it was fixed on the meeting, or was it me helusinating?
+2004-09-18T11:45:00.000Z	Kamion	debianist	fixed in the archive
+2004-09-18T11:45:00.000Z	debianist	Kamion	: when would an image be ready?
+2004-09-18T11:46:00.000Z	debianist	Kamion	: just though of letting it rsync while I eat :) sorry, not meant to nag you
+2004-09-18T11:47:00.000Z	Kamion	debianist	I don't know.
+2004-09-18T15:35:00.000Z	Kamion	debianist	don't think the X guys are around right now, probably best to mention it in the installation report and say what graphics hardware you've got, then they'll be able to look at it
+2004-09-19T14:00:00.000Z	debianist	Kamion	: i am testing again #1707 seems that it still won't accept my changes on partman
+2004-09-19T14:00:00.000Z	debianist	Kamion	: under QEMU
+2004-09-19T14:02:00.000Z	debianist	Kamion	: that's the sounder8
+2004-09-20T16:50:00.000Z	Kamion	debianist	re #1071, dude, I do not own a time machine and therefore cannot retrospectively fix bugs in software I'd already released
+2004-09-20T16:50:00.000Z	Kamion	debianist	Sounder 8 was released before I fixed that bug
+2004-09-20T16:53:00.000Z	debianist	Kamion	: ok, was already close by mdz i think
+2004-09-22T15:38:00.000Z	debianist	Kamion	: cool
+2004-09-22T15:38:00.000Z	debianist	Kamion	: any how on the wiki for installing? (I reckon it'd be good idead for the new users to have one there)
+2004-09-22T15:39:00.000Z	Kamion	debianist	not on the public wiki yet; it's part of the preparation for the preview-release launch
+2004-09-22T15:41:00.000Z	debianist	Kamion	: kool , i'll try install them now :) 
+2004-09-22T08:09:00.000Z	Kamion	debianist	look at the version number and drop ubuntu*; download the two source packages, run debdiff (from the devscripts package)
+2004-09-22T08:10:00.000Z	debianist	Kamion	: thank you :)
+2004-09-22T13:41:00.000Z	debianist	Kamion	: however I had problem umounting it. couldn't find it's mount point, and nothing on the desktop to handle it :(
+2004-09-23T16:48:00.000Z	debianist	Kamion	: darn, i wanted to test on the 8200 inspiron ;-)
+2004-09-23T16:49:00.000Z	Kamion	debianist	use 20040911 then
+2004-09-23T06:46:00.000Z	debianist	Kamion	: do we have bind in warty? (couldn't find on the package lists)
+2004-09-23T06:52:00.000Z	debianist	Kamion	: bind9 is different from bind ?
+2004-09-23T06:52:00.000Z	Kamion	debianist	version 9
+2004-09-23T06:52:00.000Z	Kamion	debianist	the bind package in Debian is version 8
+2004-09-23T06:53:00.000Z	debianist	Kamion	: that's why it's only "bind" on p.d.o ?
+2004-09-23T06:53:00.000Z	Kamion	debianist	(you could use 'apt-cache show bind9', you know ...)
+2004-09-23T06:53:00.000Z	debianist	Kamion	: (k)
+2004-09-23T07:06:00.000Z	debianist	Kamion	: bind8 is in univ/net for backward compatibilty?
+2004-09-23T07:19:00.000Z	Kamion	debianist	*everything* in Debian is in universe, assuming it built
+2004-09-23T07:20:00.000Z	Kamion	debianist	we exercise essentially no quality control there
+2004-09-24T16:34:00.000Z	Kamion	debianist	hm, to my knowledge there was nothing about broken grub in the 20040912 brokenness
+2004-09-24T16:35:00.000Z	debianist	Kamion	: i guess it was something to do with the special bios functio he used.
+2004-09-24T16:36:00.000Z	Kamion	debianist	yes, read that
+2004-09-24T07:38:00.000Z	debianist	Kamion	: here?
+2004-09-24T16:26:00.000Z	debianist	Kamion	fried himself a warty before he went to sleep last night ;-)
+2004-09-25T06:43:00.000Z	Kamion	debianist	wiki> no
+2004-09-25T06:48:00.000Z	Kamion	debianist	jdub is the GNOME release manager, he probably knows what's going on here ... :)
+2004-09-25T06:54:00.000Z	debianist	Kamion	: I guess it's ok now to inform my local glu and some israeli websites?

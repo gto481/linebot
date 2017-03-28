@@ -1,0 +1,96 @@
+2008-08-05T09:03:00.000Z	wols		!info rcconf
+2008-08-05T09:05:00.000Z	wols		*is it
+2008-08-05T09:07:00.000Z	dexikiix	wols	i ran that lspci -nn  (bcm43xg)
+2008-08-05T09:10:00.000Z	wols	dexikiix	what is the problem with your ndiswrapper?
+2008-08-05T09:11:00.000Z	wols	dexikiix	why do you do that when ubuntu has a package for it?
+2008-08-05T09:12:00.000Z	wols	dexikiix	install ndisgtk
+2008-08-05T09:13:00.000Z	dexikiix	wols	im a linux baby
+2008-08-05T09:13:00.000Z	wols	dexikiix	then rule #1: never ever compile. ALWAYS use synaptic to install stuff
+2008-08-05T09:14:00.000Z	dexikiix	wols	is that "sudo apt-got install ndisgtk"
+2008-08-05T09:15:00.000Z	wols	dexikiix	among others yes. do you have a GUI or not?
+2008-08-05T09:15:00.000Z	wols	dexikiix	don't believe. CHECK
+2008-08-05T09:19:00.000Z	dexikiix	wols	i have no idea what you wanted me to check lol if i have gui?
+2008-08-05T09:19:00.000Z	wols	dexikiix	do you have a gui or text mode only?
+2008-08-05T09:20:00.000Z	wols	dexikiix	install said CD first
+2008-08-05T09:20:00.000Z	wols	dexikiix	then I ask you a LAST time: do you have a working GUI?
+2008-08-05T09:21:00.000Z	wols	dexikiix	ok, the ndisgtk should work fine. have fun
+2008-08-05T09:21:00.000Z	dexikiix	wols	i dont even know what ndisgtk is... lol
+2008-08-05T09:21:00.000Z	wols	dexikiix	the name of a ubuntu package
+2008-08-05T09:22:00.000Z	wols	dexikiix	I corrected myself. read up
+2008-08-05T09:24:00.000Z	dexikiix	wols	same error. i have no wired connection either
+2008-08-05T09:25:00.000Z	wols	dexikiix	http://packages.ubuntu.com/search?keywords=ndis&searchon=names&suite=hardy&section=all
+2008-08-05T09:25:00.000Z	wols	dexikiix	download all packages there except the one ndisc6 one. then copy them over to the ubuntu install
+2008-08-05T09:26:00.000Z	dexikiix	wols	should i get that and move it over with a flash drive?
+2008-08-05T09:26:00.000Z	wols	dexikiix	yes. you need the .deb files
+2008-08-05T09:32:00.000Z	wols	dexikiix	all 3?
+2008-08-05T09:34:00.000Z	wols	dexikiix	that's nice but I told you to download 3 of the 4 packages listed on that page I gave you
+2008-08-05T09:35:00.000Z	wols	dexikiix	yes
+2008-08-05T09:39:00.000Z	wols	dexikiix	sudo dpkg <names of all 3 packages in a row"
+2008-08-05T09:39:00.000Z	wols	dexikiix	either you then have ndisgtk installed, or there is an error. if there is an error, please pastebin the FULL output
+2008-08-05T09:40:00.000Z	wols	dexikiix	filenames of all 3 packages that is
+2008-08-05T09:41:00.000Z	dexikiix	wols	with quotes, and file extensions is what i meant to be asking
+2008-08-05T09:43:00.000Z	dexikiix	wols	it needs an action
+2008-08-05T09:43:00.000Z	wols	dexikiix	what action?
+2008-08-05T09:44:00.000Z	wols	dexikiix	dpkg -i
+2008-08-05T09:46:00.000Z	dexikiix	wols	ok dpkg is done
+2008-08-05T09:46:00.000Z	wols	dexikiix	so now you have it installed
+2008-08-05T09:50:00.000Z	dexikiix	wols	do i now do ndiswrapper -i mn720.inf?
+2008-08-05T09:52:00.000Z	wols	dexikiix	you can't. use sudo. as in sudo <command>
+2008-08-05T09:53:00.000Z	wols	dexikiix	doubtful :)
+2008-08-05T09:54:00.000Z	dexikiix	wols	yeah i know
+2008-08-05T09:54:00.000Z	wols	dexikiix	you need a windows driver. ndiswrapper is a tool to use windows drivers in linux
+2008-08-05T09:57:00.000Z	dexikiix	wols	is there anything i have to do after ndiswrapper -i
+2008-08-05T09:58:00.000Z	wols	dexikiix	iwconfig. if it went well your wlan device shows up there
+2008-08-05T09:58:00.000Z	wols	dexikiix	then you can configure it with gnome network manager for example
+2008-08-05T09:59:00.000Z	wols	dexikiix	wlan0 IS your device
+2008-08-05T10:24:00.000Z	dexikiix	wols	i think i need a firmware file
+2008-08-05T10:27:00.000Z	dexikiix	wols	http://paste.ubuntu.com/34298/
+2008-08-05T10:27:00.000Z	wols	dexikiix	you miss the firmware as the error said
+2008-08-05T10:28:00.000Z	dexikiix	wols	whats 8.04's kernel?
+2008-08-05T10:29:00.000Z	wols	dexikiix	2.6.24-20 or so
+2008-08-05T10:30:00.000Z	dexikiix	wols	so firmware cutter version 11 is what i need?
+2008-08-05T10:30:00.000Z	wols	dexikiix	probably
+2008-08-05T10:31:00.000Z	dexikiix	wols	I belive binasco is trying to show the other guy out
+2008-08-05T10:33:00.000Z	dexikiix	wols	http://linuxwireless.org/en/users/Drivers/b43#fw-b43-old, halfway down... it looks like i HAVE to compile it myself?
+2008-08-05T10:33:00.000Z	wols	dexikiix	there is a .deb somewhere
+2008-08-05T10:34:00.000Z	wols	dexikiix	http://packages.ubuntu.com/search?keywords=fwcutter&searchon=names&suite=hardy&section=all
+2008-08-05T10:36:00.000Z	dexikiix	wols	same comand as ndiswrapper? sudo dpkg fwcutterfilename.deb
+2008-08-05T10:36:00.000Z	wols	dexikiix	dpkg -i
+2008-08-05T10:40:00.000Z	dexikiix	wols	the deb is there, but the terminal doesnt see it
+2008-08-05T10:47:00.000Z	dexikiix	wols	the fwcutter deb is invisible in the terminal
+2008-08-05T10:47:00.000Z	wols	dexikiix	unpossible!
+2008-08-05T10:47:00.000Z	dexikiix	wols	i put it in "Documents" i cd's to Documents, i typed "dir" it didnt show up
+2008-08-05T10:48:00.000Z	dexikiix	wols	can i just do "Open with Gdebi package installer"?
+2008-08-05T10:50:00.000Z	dexikiix	wols	Is this not good enough? <dexikiix> wols: i put it in "Documents" i cd's to Documents, i typed "dir" it didnt show up
+2008-08-05T10:51:00.000Z	wols	dexikiix	if it doesn't show up, then no. make it show up
+2008-08-05T10:51:00.000Z	dexikiix	wols	can i just do "Open with Gdebi package installer"?
+2008-08-05T10:51:00.000Z	wols	dexikiix	if you find the deb: yes
+2008-08-05T10:53:00.000Z	dexikiix	wols	i see the deb in the gui but not in the terminal
+2008-08-05T10:55:00.000Z	wols	dexikiix	then you did something wrong, very wrong. permissions or such
+2008-08-05T10:57:00.000Z	dexikiix	wols	crap! fwcutter is trying to get firmware from the web... :(
+2008-08-05T11:02:00.000Z	dexikiix	wols	fwcutter is trying to access web as part of its install... :(
+2008-08-05T11:51:00.000Z	wols	dexikiix	+7EUR difference
+2008-08-05T11:56:00.000Z	wols	dexikiix	still the fwcutter issue?
+2008-08-05T11:57:00.000Z	wols	dexikiix	which fwcutter package exactly did you try to download?
+2008-08-05T11:57:00.000Z	wols	dexikiix	uname -a  to get the kernel version
+2008-08-05T11:59:00.000Z	dexikiix	wols	yes
+2008-08-05T11:59:00.000Z	dexikiix	wols	one secong i need to read
+2008-08-05T11:59:00.000Z	dexikiix	wols	2.6.24-19-generic
+2008-08-05T12:00:00.000Z	wols	dexikiix	I didn't ask. debCarlos did
+2008-08-05T12:00:00.000Z	wols	dexikiix	locate b43
+2008-08-05T12:01:00.000Z	wols	dexikiix	does b43.ko exist?
+2008-08-05T12:01:00.000Z	wols	dexikiix	I meant the kernel version
+2008-08-05T12:01:00.000Z	dexikiix	wols	how do i find out?
+2008-08-05T12:01:00.000Z	wols	dexikiix	locate b43.ko
+2008-08-05T12:02:00.000Z	wols	dexikiix	modprobe it
+2008-08-05T12:02:00.000Z	wols	dexikiix	oh, first, uninstall ndiswrapper
+2008-08-05T12:03:00.000Z	wols	dexikiix	no
+2008-08-05T12:04:00.000Z	wols	dexikiix	b43 should work just fine wih yout card. not even ndiswrapper necessary
+2008-08-05T12:04:00.000Z	wols	dexikiix	and all of broadcom has only this firmware?
+2008-08-05T12:34:00.000Z	wols	dexikiix	file <file you want to know about>
+2008-08-05T12:35:00.000Z	wols	dexikiix	gunzip <file>
+2008-08-05T12:36:00.000Z	wols	dexikiix	then run file on the resulting file again
+2008-08-05T12:36:00.000Z	wols	dexikiix	happens when the browser bokrs
+2008-08-05T12:37:00.000Z	dexikiix	wols	gunzip output "unknown suffix"
+2008-08-05T12:37:00.000Z	wols	dexikiix	yes.
+2008-08-05T13:46:00.000Z	wols	dexikiix	/lib/firmware/

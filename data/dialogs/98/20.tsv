@@ -1,0 +1,98 @@
+2009-01-16T22:38:00.000Z	ArcSighter		anyone has solved the ubuntu intrepid slowdown problems?
+2009-01-16T22:38:00.000Z	ikonia	ArcSighter	I'm not aware of any problem with "slow down"
+2009-02-10T19:38:00.000Z	ikonia	ArcSighter	squid+kerberos/ldap intergration
+2009-02-10T19:39:00.000Z	ArcSighter	ikonia	you mean I should install a kerberos provider then squid, and its possible to integrate squid access control list with active directory users groups?
+2009-02-10T19:39:00.000Z	ikonia	ArcSighter	I believe so
+2009-02-10T19:40:00.000Z	ArcSighter	ikonia	do you have some experience? or recommendations about such setup?
+2009-02-10T19:40:00.000Z	ikonia	ArcSighter	never done it with squid - but I've used pam to auth it against mysql, and pam has a module for ldap
+2009-02-10T19:41:00.000Z	ArcSighter	ikonia	but that ldap module it's compatible with propietary ms active directory???
+2009-02-10T19:41:00.000Z	ikonia	ArcSighter	totally
+2009-02-10T19:42:00.000Z	ArcSighter	ikonia	then I could install a mysql server, then this ldap module for active directory user dumping, and integrate squid with it, it's that your point?
+2009-02-10T19:43:00.000Z	ikonia	ArcSighter	no - just install squid and pam - intergrate it with ldap/kerboers as ldap/kerbors with sync with AD
+2009-02-10T19:43:00.000Z	ikonia	ArcSighter	you don't need AD
+2009-02-10T19:43:00.000Z	ikonia	ArcSighter	sorry - you don't need squid
+2009-02-10T19:44:00.000Z	ArcSighter	ikonia	yes I know I don't but the network is w2k3 DC so the users are already there
+2009-02-10T19:44:00.000Z	ArcSighter	ikonia	do you have any reference about what you're talking about?
+2009-02-10T19:44:00.000Z	ikonia	ArcSighter	it doesn't matter if the users are there, ldap/kerberos will sync with AD
+2009-02-10T19:45:00.000Z	ArcSighter	ikonia	thanks, but as I've asked, do you have any reference that I could follow up?
+2009-02-10T19:45:00.000Z	ikonia	ArcSighter	well as I've said I've never done what you asked, no
+2009-02-10T19:46:00.000Z	ikonia	ArcSighter	if your talking about ldap/AD then there are tons of guides on the net
+2009-02-10T19:47:00.000Z	ArcSighter	ikonia	ok, your help seem to be very useful. Thanks a lot.
+2009-02-10T19:47:00.000Z	ikonia	ArcSighter	no problem
+2009-02-10T19:47:00.000Z	ikonia	ArcSighter	if you have specific questions, please shout
+2009-02-10T19:49:00.000Z	ArcSighter	ikonia	I think you basically pointed me to the path. I have a Windows PDC and BDC and a ISA Server proxy, I need to migrate the proxy server to debian/ubuntu given the slowdowns issues experience in the windows proxy. So, I needed to integrate the users information and access control from that server which is based in AD groups into Squid ACLs
+2009-02-10T21:05:00.000Z	ArcSighter	ikonia	About the ADS issue I was following http://tecnoticias.info/tips-comentarios/aplicaciones-varias/autentificacion-de-squid-contra-active-directory.html but I got this error when trying to connect: [2009/02/10 10:56:06, 0] utils/net_ads.c:ads_startup(289)
+2009-03-10T21:08:00.000Z	ikonia	ArcSighter	I've only been half following, could you give a quick two line summary to your issue ?
+2009-03-10T21:10:00.000Z	ikonia	ArcSighter	hello ?
+2009-03-10T21:16:00.000Z	ikonia	ArcSighter	please do
+2009-03-10T21:17:00.000Z	ArcSighter	ikonia	Ok here's the thing, let's assume that 2 machines worked well with hardy, because they did. When using intrepid or jaunty on those machines I got terrible slowdowns and high loadavgs
+2009-03-10T21:18:00.000Z	ikonia	ArcSighter	ok, nice summary , is the load average from start ? or do you need to do something ? are these clean installs or upgrades ?
+2009-03-10T21:19:00.000Z	ArcSighter	ikonia	in the case of intrepid they were cleans, jaunty is upgraded, and no it's not from start, when I do daily tasks such as browsing, im, mail, etc, gets a moment where mouse freeze and I cant work, checking top has given me loadavgs over 8 and iotop now is 3 mb
+2009-03-10T21:19:00.000Z	ikonia	ArcSighter	one quick question, what video card is in these machines ?
+2009-03-10T21:20:00.000Z	ArcSighter	ikonia	on board video on one, and ati on the other
+2009-03-10T21:20:00.000Z	ikonia	ArcSighter	is the onboard ati too ?
+2009-03-10T21:20:00.000Z	ArcSighter	ikonia	no, hold a second
+2009-03-10T21:20:00.000Z	ikonia	ArcSighter	just nice to get a ful picture
+2009-03-10T21:22:00.000Z	ArcSighter	ikonia	onboard intel
+2009-03-10T21:22:00.000Z	ikonia	ArcSighter	mega, thank you, and how much ram in each ?
+2009-03-10T21:23:00.000Z	ArcSighter	ikonia	here, 256, there (on the onboard video) 512
+2009-03-10T21:23:00.000Z	ArcSighter	ikonia	and yes I know little ram, but hardy worked pretty well, even without restricted video drivers
+2009-03-10T21:23:00.000Z	ikonia	ArcSighter	sorry, I meant how much ram - not on board video ram
+2009-03-10T21:23:00.000Z	ArcSighter	ikonia	I just gave you RAM
+2009-03-10T21:23:00.000Z	ikonia	ArcSighter	ahh that was the ram
+2009-03-10T21:24:00.000Z	ikonia	ArcSighter	which one of the machines has the ati card (the 256 or the 512)
+2009-03-10T21:24:00.000Z	ArcSighter	ikonia	yes, and as just said, hardy no probs, then intrepid and jaunty freeze
+2009-03-10T21:24:00.000Z	ArcSighter	ikonia	the 512
+2009-03-10T21:24:00.000Z	ikonia	ArcSighter	perfect, got a clear picture now
+2009-03-10T21:24:00.000Z	ikonia	ArcSighter	I assume you've got desktop effects turned off on both
+2009-03-10T21:24:00.000Z	ikonia	ArcSighter	ok
+2009-03-10T21:25:00.000Z	ArcSighter	ikonia	yes compiz down for both of them
+2009-03-10T21:26:00.000Z	ikonia	ArcSighter	perfect, so can we do a few debugging tests ?
+2009-03-10T21:26:00.000Z	ArcSighter	ikonia	sure
+2009-03-10T21:27:00.000Z	ikonia	ArcSighter	can we concentrate on the intel (512ram) box only for the moment
+2009-03-10T21:27:00.000Z	ArcSighter	ikonia	wow, we got a little problem, I downgraded to hardy there this morning
+2009-03-10T21:27:00.000Z	ikonia	ArcSighter	ok - so lets work on the other then
+2009-03-10T21:27:00.000Z	ArcSighter	ikonia	I can install intrepid if you like, but well, time consuming
+2009-03-10T21:27:00.000Z	ikonia	ArcSighter	no no, we'll work with the other
+2009-03-10T21:27:00.000Z	ArcSighter	ikonia	sure? ok
+2009-03-10T21:30:00.000Z	ikonia	ArcSighter	can you open an xterm from a clean boot up and do "vmstat 5" and pastebin the output - nothing else running just that, (leave it running for say 60 seconds)
+2009-03-10T21:30:00.000Z	ArcSighter	ikonia	clean bootup you mean disabling startup services?
+2009-03-10T21:31:00.000Z	ikonia	ArcSighter	nope - just reboot - don't do anything else, just open an xterm and do the vmstat command for me
+2009-03-10T21:32:00.000Z	ikonia	ArcSighter	ok
+2009-03-10T21:49:00.000Z	ArcSighter	ikonia	http://paste.ubuntu.com/129433/
+2009-03-10T21:49:00.000Z	ikonia	ArcSighter	ok
+2009-03-10T21:51:00.000Z	ikonia	ArcSighter	just looking over it
+2009-03-10T21:51:00.000Z	ArcSighter	ikonia	I assumed that, thanks
+2009-03-10T21:53:00.000Z	ikonia	ArcSighter	ok can you please do the same again but open a few apps, the ones that make it slow down please.
+2009-03-10T21:53:00.000Z	ikonia	ArcSighter	so we can see the same vmstate output but while it's having a problem
+2009-03-10T22:05:00.000Z	ArcSighter	ikonia	So, what about my "vmstat", anything interesting?
+2009-03-10T22:05:00.000Z	ikonia	ArcSighter	yup lots, did you not get the message asking for another vmsat output
+2009-03-10T22:05:00.000Z	ikonia	ArcSighter	ok can you please do the same again but open a few apps, the ones that make it slow down please.
+2009-03-10T22:06:00.000Z	ArcSighter	ikonia	sorry I haven't read you , if you can please direct the message directly when you reply, ok I'll do it now
+2009-03-10T22:06:00.000Z	ikonia	ArcSighter	I did direct the message to you
+2009-03-10T22:06:00.000Z	ArcSighter	ikonia	running vmstat now, 5 mins again?
+2009-03-10T22:14:00.000Z	ArcSighter	ikonia	http://paste.ubuntu.com/129441/
+2009-03-10T22:17:00.000Z	ArcSighter	ikonia	ok you check it? http://paste.ubuntu.com/129441/
+2009-03-10T22:23:00.000Z	ArcSighter	ikonia	sorry, but I got no reply, you're on it?
+2009-03-11T16:26:00.000Z	ArcSighter	ikonia	hi, you left me hanging yesterday
+2009-03-11T17:26:00.000Z	ArcSighter	ikonia	what about our tests on ubuntu, you left me hanging dude ;)
+2009-03-11T17:26:00.000Z	ikonia	ArcSighter	ahh had to drive home
+2009-03-11T17:26:00.000Z	ikonia	ArcSighter	do you have the vmstat output still ?
+2009-03-11T17:36:00.000Z	ArcSighter	ikonia	yesterday you were guiding to me to do some tests about my intrepid slowdown issues, are you there?
+2009-03-11T17:37:00.000Z	ikonia	ArcSighter	yes, I asked you 10 minutes ago if you had the vmstat output I asked for yesterday
+2009-03-11T17:39:00.000Z	ArcSighter	ikonia	wait
+2009-03-11T17:47:00.000Z	ArcSighter	ikonia	the vmstat output http://paste.ubuntu.com/129768/
+2009-03-11T17:49:00.000Z	ArcSighter	ikonia	is the one you requested , right?
+2009-03-11T17:49:00.000Z	ikonia	ArcSighter	you've not shown me one yet
+2009-03-11T17:50:00.000Z	ikonia	ArcSighter	I saw one yesterday, and then asked for another one
+2009-03-11T17:50:00.000Z	ikonia	ArcSighter	I need the other one
+2009-03-11T17:50:00.000Z	ArcSighter	ikonia	I just did: http://paste.ubuntu.com/129768/
+2009-03-11T17:51:00.000Z	ikonia	ArcSighter	thats of a "busy" or "slow" box, yes ?
+2009-03-11T17:52:00.000Z	ArcSighter	ikonia	yes I've opened the apps that normally make it slow and after some time the system became sluggish
+2009-03-11T17:52:00.000Z	ikonia	ArcSighter	ok, let me compare and have a think
+2009-03-11T17:53:00.000Z	ArcSighter	ikonia	ok pal I'm waiting...
+2009-03-11T18:57:00.000Z	ArcSighter	ikonia	ok , no news?
+2009-03-11T18:57:00.000Z	ikonia	ArcSighter	just a little busy at the moment
+2009-03-11T18:59:00.000Z	ArcSighter	ikonia	ok, let me know when you're up to it
+2009-03-12T19:38:00.000Z	ArcSighter	ikonia	hello what about my second vmstat?
+2009-03-12T19:52:00.000Z	ArcSighter	ikonia	ok let me know then

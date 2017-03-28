@@ -1,0 +1,96 @@
+2006-03-21T08:56:00.000Z	petaruwaru		Can anyone help me fix my Opera Browser? I installed it, and it worked fine for awile, but now I click on the icon and nothing happens
+2006-03-21T08:58:00.000Z	petaruwaru		Can somone help me get a program working? It was working up until today, now it wont run
+2006-03-21T08:59:00.000Z	petaruwaru		anybody lend a n00b a hand?
+2006-03-21T09:00:00.000Z	petaruwaru		anyone help a n00b get a program working?
+2006-03-21T09:02:00.000Z	petaruwaru		can somebody give me some help? My Opera web browser stopped working recently, it won't start.
+2006-03-21T09:03:00.000Z	petaruwaru		can somone tell me how to fix it, or even how to just delete it so I can reinstall it?
+2006-03-21T09:04:00.000Z	oblib	petaruwaru	did you install it with synaptic?
+2006-03-21T09:04:00.000Z	petaruwaru	oblib	no, from the package on the website
+2006-03-21T09:05:00.000Z	oblib	petaruwaru	opera
+2006-03-21T09:05:00.000Z	oblib	petaruwaru	does it have you run an install script, or do you compile it?
+2006-03-21T09:06:00.000Z	petaruwaru	oblib	it's already installed, I ran dpkg, if that tells you anything
+2006-03-21T09:06:00.000Z	petaruwaru	oblib	I'm not entirely familier with all the linux terminology yet
+2006-03-21T09:06:00.000Z	oblib	petaruwaru	oh, it's a dpkg package
+2006-03-21T09:06:00.000Z	petaruwaru	oblib	no I just want to get it working again, it stopped working
+2006-03-21T09:07:00.000Z	oblib	petaruwaru	what does it say if you try to run it from a command prompt
+2006-03-21T09:08:00.000Z	petaruwaru	oblib	I feel like a huge n00b for asking this, but... how do you run it from the command prompt?
+2006-03-21T09:08:00.000Z	petaruwaru	oblib	just "run opera"?
+2006-03-21T09:08:00.000Z	petaruwaru	oblib	I know how to get to terminal, just not how to use half of it >.<
+2006-03-21T09:09:00.000Z	oblib	petaruwaru	then try 'opera' then enter
+2006-03-21T09:09:00.000Z	petaruwaru	oblib	alright, it just gave me an error
+2006-03-21T09:09:00.000Z	oblib	petaruwaru	a long one?
+2006-03-21T09:09:00.000Z	petaruwaru	oblib	ERROR: ld.so: object 'libjvm.so' from LD_PRELOAD cannot be preloaded: ignored.
+2006-03-21T09:10:00.000Z	petaruwaru	oblib	yea, just a bit
+2006-03-21T09:10:00.000Z	oblib	petaruwaru	and it used to work?
+2006-03-21T09:10:00.000Z	petaruwaru	oblib	yes
+2006-03-21T09:10:00.000Z	petaruwaru	oblib	although, it used to give me a weird error message whenever I ran it
+2006-03-21T09:10:00.000Z	oblib	petaruwaru	looks like you hosed something on accident, any idea what you have been doing that would mess things up?
+2006-03-21T09:11:00.000Z	petaruwaru	oblib	nothing I can think of, the only thing that I've done since then is mess with my gnome theme and try to find a package to make quicktime files play in firefox
+2006-03-21T09:12:00.000Z	oblib	petaruwaru	have you installed java?
+2006-03-21T09:12:00.000Z	petaruwaru	oblib	don't think so
+2006-03-21T09:12:00.000Z	oblib	petaruwaru	"find a package to make quicktime files play in firefox" could maybe mess things up
+2006-03-21T09:12:00.000Z	oblib	petaruwaru	both of those .so files are related to java
+2006-03-21T09:12:00.000Z	petaruwaru	oblib	how so? I just used synaptic
+2006-03-21T09:13:00.000Z	petaruwaru	oblib	k, so what should I do, try installing java to get those two files?
+2006-03-21T09:13:00.000Z	oblib	petaruwaru	https://wiki.ubuntu.com/RestrictedFormats?action=show&redirect=Java
+2006-03-21T09:13:00.000Z	oblib	petaruwaru	that has intructions to install java
+2006-03-21T09:14:00.000Z	oblib	petaruwaru	maybe try reinstalling first
+2006-03-21T09:14:00.000Z	oblib	petaruwaru	are you tehre?
+2006-03-21T09:14:00.000Z	petaruwaru	oblib	yea
+2006-03-21T09:15:00.000Z	petaruwaru	oblib	try reinstalling opera you mean?
+2006-03-21T09:15:00.000Z	oblib	petaruwaru	yeah
+2006-03-21T09:15:00.000Z	oblib	petaruwaru	how did you install it? did you get a .deb file?
+2006-03-21T09:15:00.000Z	petaruwaru	oblib	yes
+2006-03-21T09:16:00.000Z	oblib	petaruwaru	then from the command prompt you should be able to remove it with 'sudo dpkg -P name-of-package"
+2006-03-21T09:16:00.000Z	oblib	petaruwaru	the name of t he package is probably just opera
+2006-03-21T09:17:00.000Z	petaruwaru	oblib	kk
+2006-03-21T09:20:00.000Z	petaruwaru	oblib	just reinstalled, still not working
+2006-03-21T09:21:00.000Z	oblib	petaruwaru	you removed it and then installed it again?
+2006-03-21T09:21:00.000Z	oblib	petaruwaru	no errors?
+2006-03-21T09:21:00.000Z	petaruwaru	oblib	yes
+2006-03-21T09:22:00.000Z	oblib	petaruwaru	then my only other recommendation besides installing java is to uninstall it again, and then install it with apt-get as explained in the wiki
+2006-03-21T09:22:00.000Z	petaruwaru	oblib	I tried to install Blackdown Java from apt-get and it won't work
+2006-03-21T09:22:00.000Z	oblib	petaruwaru	I don't konw what that it
+2006-03-21T09:23:00.000Z	petaruwaru	oblib	thats the java version it has in the wiki, besides sun
+2006-03-21T09:23:00.000Z	oblib	petaruwaru	the java you need is not listed because it's proprietary (unrestricted)
+2006-03-21T09:24:00.000Z	petaruwaru	oblib	damnit the installation instructions are a bitch though >.<
+2006-03-21T09:24:00.000Z	oblib	petaruwaru	yeah, they're pretty good
+2006-03-21T09:25:00.000Z	oblib	petaruwaru	when you say you tried blakcdown java and it doesn't work does that mean opera doesn't work or blackdown?
+2006-03-21T09:26:00.000Z	petaruwaru	oblib	blackdown java
+2006-03-21T09:26:00.000Z	oblib	petaruwaru	to rename like Madpilot says, 'mv .opera .opera_old'
+2006-03-21T09:26:00.000Z	petaruwaru	oblib	gives me an error when I tryed to apt-get it
+2006-03-21T09:26:00.000Z	oblib	petaruwaru	so it wouldn't install?
+2006-03-21T09:26:00.000Z	petaruwaru	oblib	yea
+2006-03-21T09:26:00.000Z	oblib	petaruwaru	dependency?
+2006-03-21T09:27:00.000Z	oblib	petaruwaru	try renaming your .opera file and see if that fixes it
+2006-03-21T09:28:00.000Z	petaruwaru	oblib	trying to find it now
+2006-03-21T09:33:00.000Z	petaruwaru	oblib	alright, I can't rename it, the option is unselectable. It's cause I'm not in root right?
+2006-03-21T09:33:00.000Z	petaruwaru	oblib	or not running sudo
+2006-03-21T09:33:00.000Z	oblib	petaruwaru	hmm it shouldn't be
+2006-03-21T09:33:00.000Z	oblib	petaruwaru	did you try from a command line?
+2006-03-21T09:34:00.000Z	petaruwaru	oblib	no
+2006-03-21T09:34:00.000Z	oblib	petaruwaru	type 'ls -l opera' from the command line and tell me the permissions
+2006-03-21T09:34:00.000Z	petaruwaru	oblib	...it says "no such file or directory"
+2006-03-21T09:35:00.000Z	petaruwaru	oblib	gives me a realy long list of stuff
+2006-03-21T09:36:00.000Z	oblib	petaruwaru	yeah just realized that. lets just try renaming it -- mv .opera .opera_old
+2006-03-21T09:37:00.000Z	petaruwaru	oblib	alright, now what?
+2006-03-21T09:37:00.000Z	oblib	petaruwaru	no errors? Then try running opera
+2006-03-21T09:38:00.000Z	oblib	petaruwaru	you didn't have to 'sudo' it right?
+2006-03-21T09:38:00.000Z	petaruwaru	oblib	no I didn
+2006-03-21T09:38:00.000Z	petaruwaru	oblib	ran again, got the same error
+2006-03-21T09:38:00.000Z	petaruwaru	oblib	opera again that is
+2006-03-21T09:39:00.000Z	petaruwaru	oblib	should I just try and do java now? do you think that would solve my problem?
+2006-03-21T09:40:00.000Z	oblib	petaruwaru	that means it is something wrong with the system. It's segmentation fault that is killing you, not necessarily the java errors
+2006-03-21T09:40:00.000Z	petaruwaru	oblib	so what can I do about that?
+2006-03-21T09:40:00.000Z	petaruwaru	oblib	k
+2006-03-21T09:40:00.000Z	petaruwaru	oblib	what about my system problems?
+2006-03-21T09:40:00.000Z	oblib	petaruwaru	good luck
+2006-03-21T09:41:00.000Z	petaruwaru	oblib	k, thanks for all the help
+2006-03-21T09:41:00.000Z	oblib	petaruwaru	not sure -- still just something affecting opera
+2006-03-21T09:41:00.000Z	oblib	petaruwaru	keep trying here (I don't know that much)
+2006-03-21T09:41:00.000Z	petaruwaru	oblib	k, I guess I'll figure it out eventually
+2006-03-21T09:41:00.000Z	petaruwaru	oblib	you know more than I do
+2006-03-21T09:41:00.000Z	oblib	petaruwaru	and use firefox until then?  :)
+2006-03-21T09:41:00.000Z	petaruwaru	oblib	yea
+2006-03-21T09:41:00.000Z	petaruwaru	oblib	guess I'll split to then
+2006-03-21T09:42:00.000Z	oblib	petaruwaru	all it takes to learn what I know is to try to set up MythTV. Whew

@@ -1,0 +1,96 @@
+2010-05-25T09:38:00.000Z	mixxit		hey all trying to install ubuntu from windows here and i have unetbootin on my grub list but am unsure how to create an ext2/3 partition from windows
+2010-05-25T09:39:00.000Z	Jordan_U	mixxit	Can you explain what you mean by "i have unetbootin on my grub list" ?
+2010-05-25T12:52:00.000Z	Jordan_U	mixxit	Are you still trying to install Ubuntu from windows?
+2010-05-25T13:14:00.000Z	Jordan_U	mixxit	https://help.ubuntu.com/6.10/ubuntu/installation-guide/i386/linux-upgrade.html should let you install Ubuntu from your suse disk.
+2010-05-25T13:23:00.000Z	Jordan_U	mixxit	If grub4dos is still working I think I can get you booting from your netinstall iso.
+2010-05-25T13:24:00.000Z	mixxit	Jordan_U	there is no netinstall iso
+2010-05-25T13:24:00.000Z	Jordan_U	mixxit	What kernel where you trying to load?
+2010-05-25T13:25:00.000Z	Jordan_U	mixxit	Which is?
+2010-05-25T13:25:00.000Z	Jordan_U	mixxit	Or rather, which is supposed to be used to boot what?
+2010-05-25T13:26:00.000Z	mixxit	Jordan_U	it was in unet 10.4 netinst
+2010-05-25T13:26:00.000Z	mixxit	Jordan_U	it put some files in to the c: drive and then modified the boot.ini
+2010-05-25T13:27:00.000Z	mixxit	Jordan_U	here's what i have to work with - a blank drive and a very basic shell
+2010-05-25T13:27:00.000Z	mixxit	Jordan_U	but it does have tcp
+2010-05-25T13:27:00.000Z	Jordan_U	mixxit	Can you download this: http://prdownload.berlios.de/supergrub/super_grub_disk_hybrid-1.98s1.iso and copy it to your hard drive?
+2010-05-25T13:27:00.000Z	mixxit	Jordan_U	and curl
+2010-05-25T13:28:00.000Z	mixxit	Jordan_U	no partitions atm what can i use? i tried looking for fdisk and cfdisk but its not on this cd
+2010-05-25T13:29:00.000Z	Jordan_U	mixxit	No partitions? Where is grub4dos installed?
+2010-05-25T13:29:00.000Z	mixxit	Jordan_U	its trashed now im on a suse install cd in f9
+2010-05-25T13:30:00.000Z	Jordan_U	mixxit	:( That makes things harder, though not impossible.
+2010-05-25T13:30:00.000Z	mixxit	Jordan_U	yay!
+2010-05-25T13:30:00.000Z	Jordan_U	mixxit	How did you trash it though?
+2010-05-25T13:31:00.000Z	mixxit	Jordan_U	something happened with windows and it couldnt find hal.dll anymore
+2010-05-25T13:31:00.000Z	mixxit	Jordan_U	i think it was when we swapped the partitions around
+2010-05-25T13:32:00.000Z	Jordan_U	mixxit	grub4dos should still work even without windows being bootable.
+2010-05-25T13:32:00.000Z	mixxit	Jordan_U	windows is not setactive atm so it just says insert disk etc..
+2010-05-25T13:33:00.000Z	mixxit	Jordan_U	not sure if this cd has grub or lilo ill check
+2010-05-25T13:33:00.000Z	Jordan_U	mixxit	And you don't have any floppies? That would make things much simpler.
+2010-05-25T13:33:00.000Z	mixxit	Jordan_U	no external media
+2010-05-25T13:34:00.000Z	mixxit	Jordan_U	what can we do from this suse shell?
+2010-05-25T13:35:00.000Z	Jordan_U	mixxit	Ok, I have a crazy idea as a start, but it will destroy the partition table on your hard drive.
+2010-05-25T13:35:00.000Z	mixxit	Jordan_U	ok thats not a problem
+2010-05-25T13:35:00.000Z	Jordan_U	mixxit	Download this image and dd it to your hard drive: http://prdownload.berlios.de/supergrub/super_grub_disk_hybrid-1.98s1.iso
+2010-05-25T13:35:00.000Z	mixxit	Jordan_U	dd?
+2010-05-25T13:36:00.000Z	mixxit	Jordan_U	i dont have a partition to download it to
+2010-05-25T13:37:00.000Z	mixxit	Jordan_U	some memory space?
+2010-05-25T13:37:00.000Z	Jordan_U	mixxit	"dd if=/path/to/super_grub_disk_hybrid-1.98s1.iso of=/dev/sda" (but be *very* carefull, if /dev/sda is your flash drive rather than your hard drive then it will destroy the partition table (and some data) on the flash drive)
+2010-05-25T13:39:00.000Z	Jordan_U	mixxit	Just put it in /tmp, that should store it in RAM.
+2010-05-25T13:39:00.000Z	mixxit	Jordan_U	dd command not found
+2010-05-25T13:39:00.000Z	Jordan_U	mixxit	Oh no, you're just at an initramfs shell :(
+2010-05-25T13:39:00.000Z	mixxit	Jordan_U	managed to curl it down
+2010-05-25T13:40:00.000Z	Jordan_U	mixxit	Well, I guess cat is just as good for our purposes, "cat /path/to/super_grub_disk_hybrid-1.98s1.iso > /dev/sda"
+2010-05-25T13:41:00.000Z	mixxit	Jordan_U	done it to both, reboot?
+2010-05-25T13:42:00.000Z	Jordan_U	mixxit	Yes.
+2010-05-25T13:42:00.000Z	mixxit	Jordan_U	boot failure
+2010-05-25T13:43:00.000Z	Jordan_U	mixxit	From the hard drive?
+2010-05-25T13:43:00.000Z	mixxit	Jordan_U	yeah it tried all devices
+2010-05-25T13:44:00.000Z	mixxit	Jordan_U	back into suse?
+2010-05-25T13:44:00.000Z	Jordan_U	mixxit	Yes.
+2010-05-25T13:44:00.000Z	mixxit	Jordan_U	might be able to get a full rescue system up just asking the guys in suse a sec
+2010-05-25T13:45:00.000Z	Jordan_U	mixxit	The cat command gave you no errors? Did you have the external drive connected?
+2010-05-25T13:46:00.000Z	mixxit	Jordan_U	no external and no errors
+2010-05-25T13:47:00.000Z	Jordan_U	mixxit	Ok, are you at the Suse shell again?
+2010-05-25T13:48:00.000Z	Jordan_U	mixxit	I see you're getting a lot of great help in #suse ;)
+2010-05-25T13:48:00.000Z	mixxit	Jordan_U	lol yeah.. crayz!
+2010-05-25T13:49:00.000Z	Jordan_U	mixxit	I may need to leave soon.
+2010-05-25T13:50:00.000Z	mixxit	Jordan_U	me too in about 30-40 minutes or so but thanks incase you shoot off
+2010-05-25T13:52:00.000Z	Jordan_U	mixxit	Is the error you got booting different since you ran the cat command?
+2010-05-25T13:53:00.000Z	mixxit	Jordan_U	im not sure i think so
+2010-05-25T13:53:00.000Z	mixxit	Jordan_U	the web install of rescue froze so im heading to the init shell
+2010-05-25T13:53:00.000Z	Jordan_U	mixxit	Are you sure you wrote to /dev/sda and not /dev/sda1 ?
+2010-05-25T13:53:00.000Z	mixxit	Jordan_U	sda and hda
+2010-05-25T13:54:00.000Z	mixxit	Jordan_U	would you like me to try it again?
+2010-05-25T13:54:00.000Z	Jordan_U	mixxit	Sure.
+2010-05-25T13:55:00.000Z	mixxit	Jordan_U	okies
+2010-05-25T13:55:00.000Z	mixxit	Jordan_U	cat test.iso > /dev/sda ?
+2010-05-25T13:56:00.000Z	mixxit	Jordan_U	ok done, should i try to mount sda or something?
+2010-05-25T13:58:00.000Z	Jordan_U	mixxit	Yes, "mount /dev/sda /mnt" (normally you'd mount a partititon like sda but this is a special case)
+2010-05-25T14:01:00.000Z	Jordan_U	mixxit	Then it probably didn't work, you can try iso9660 but it probably won't work.
+2010-05-25T14:01:00.000Z	Jordan_U	mixxit	Yes
+2010-05-25T14:02:00.000Z	mixxit	Jordan_U	wrong fs type
+2010-05-25T14:02:00.000Z	Jordan_U	mixxit	The image wasn't written correctly, did you check the md5sum of the image?
+2010-05-25T14:04:00.000Z	mixxit	Jordan_U	rescue system is coming down now!
+2010-05-25T14:04:00.000Z	mixxit	Jordan_U	24mb though and im on hsdpa
+2010-05-25T14:04:00.000Z	Jordan_U	mixxit	?
+2010-05-25T14:04:00.000Z	mixxit	Jordan_U	(suse rescue)
+2010-05-25T14:05:00.000Z	Jordan_U	mixxit	I don't understand.
+2010-05-25T14:05:00.000Z	mixxit	Jordan_U	should have dd and such
+2010-05-25T14:05:00.000Z	mixxit	Jordan_U	cfdisk
+2010-05-25T14:08:00.000Z	mixxit	Jordan_U	it's booting !
+2010-05-25T14:09:00.000Z	Jordan_U	mixxit	Which, super grub2 disk or suse?
+2010-05-25T14:09:00.000Z	mixxit	Jordan_U	suse, but its being evil - 'error in service module'
+2010-05-25T14:13:00.000Z	Jordan_U	mixxit	Ok, if you get super grub2 disk dd'd to the hard drive you have two possabilies. 1: If you are really lucky and the option "Enable GRUB2's USB support *experimental*" doesn't just freeze your computer, then you can just stick an Ubuntu iso in /boot-isos/ on your flash drive and choose "Detect loop bootable isos (in /boot-isos or /boot/boot-isos)". Then just bask in your amazing luck while Ubuntu boots and you install as
+2010-05-25T14:14:00.000Z	Jordan_U	mixxit	There is only about a 1 in 4 chance that the USB support will work, it's labeled experimental for a reason :)
+2010-05-25T14:17:00.000Z	Jordan_U	mixxit	Option 2: Create a new partition on the hard drive (don't change anything with the first partition, while you can't mount it it's where super grub disk is stored) and put the iso in /boot-isos/ on this new partition. Super grub2 disk will almost certainl let you boot from this iso but I'm not sure if you'll be able to install from it since a partition on the hard drive will not be able to be unmounted since that's where
+2010-05-25T14:19:00.000Z	Jordan_U	mixxit	And this all depends on dd working from suse.
+2010-05-25T14:27:00.000Z	Jordan_U	mixxit	Still stuck trying to get a rescue shell from the suse disk?
+2010-05-25T14:28:00.000Z	Jordan_U	mixxit	I figured that, can you get enough of a system for dd with "init=/bin/bash" ?
+2010-05-25T14:32:00.000Z	Jordan_U	mixxit	What drives are listed by "ls /dev/sd* /dev/hd*" ?
+2010-05-25T14:35:00.000Z	Jordan_U	mixxit	It's probably a broken symlink. I just realized that the reason the cat seemed to work is that it just created a new regular file in /dev/ that just happened to be named /dev/hda.
+2010-05-25T14:36:00.000Z	Jordan_U	mixxit	"ls -l /dev/sda", is it a symlink?
+2010-05-25T14:38:00.000Z	mixxit	Jordan_U	brb 15 mins bud need to shoot into town
+2010-05-25T14:39:00.000Z	Jordan_U	mixxit	Then I unfortunately need to leave, you may want to write down my instructions in case you can get access to your hard drive to dd the image.
+2010-05-25T14:44:00.000Z	Jordan_U	mixxit	Which are, in short: dd http://prdownload.berlios.de/supergrub/super_grub_disk_hybrid-1.98s1.iso to your hard drive, boot from it and try enabling USB support. If it works then put an Ubunntu iso (standard "Desktop" CD is best) in /boot-iso/ on the flash drive and use "Detect loop bootable isos (in /boot-isos or /boot/boot-isos)" to boot from the iso. If enabling USB does not work then create a *new* partitioin (leaving
+2010-05-25T14:51:00.000Z	Jordan_U	mixxit	Gahh, the message was cut off. Here are the instructions in a pastebin: http://paste.debian.net/74752/
+2010-05-25T14:58:00.000Z	mixxit	Jordan_U	thanks bud
+2010-05-25T15:10:00.000Z	mixxit	Jordan_U	no dd

@@ -1,0 +1,99 @@
+2006-10-19T13:06:00.000Z	leftjustified		aha! "Error opening /dev/wacom" <-- so perhaps I should apt-get remove wacom drivers?
+2006-10-19T13:06:00.000Z	chuckyp	leftjustified	removing those would get rid of ubuntu-desktop
+2006-10-19T13:06:00.000Z	chuckyp	leftjustified	is that in your x log?
+2006-10-19T13:06:00.000Z	leftjustified	chuckyp	yes
+2006-10-19T13:07:00.000Z	chuckyp	leftjustified	you can stop the drivers from loading by editing the xorg.conf and removing the stylus and eraser and wacom if you don't need them.   Also you have to delete those out of the screen section as well.
+2006-10-19T13:07:00.000Z	chuckyp	leftjustified	oh well if you need them then no.
+2006-10-19T13:08:00.000Z	chuckyp	leftjustified	cat /etc/X11/xorg.conf | grep EE
+2006-10-19T13:09:00.000Z	leftjustified	chuckyp	variant: no results from the grep
+2006-10-19T13:12:00.000Z	chuckyp	leftjustified	what type of card do you have?
+2006-10-19T13:13:00.000Z	leftjustified	chuckyp	nvidia geforce 6600 GT -- perhaps I should remove all the nvidia drivers
+2006-10-19T13:15:00.000Z	chuckyp	leftjustified	are you using drivers from nvidia.com or nvidia-glx package?
+2006-10-19T13:15:00.000Z	leftjustified	chuckyp	no idea, just ticked a box in synaptic :(
+2006-10-19T13:16:00.000Z	chuckyp	leftjustified	Can you post the x log to pastebin
+2006-10-19T13:16:00.000Z	leftjustified	chuckyp	actually, I can't post anything from that machine as it's restricted to command line :-/
+2006-10-19T13:17:00.000Z	chuckyp	leftjustified	if you are trying to remove the wacom stuff there are two places you need to do it.
+2006-10-19T13:17:00.000Z	chuckyp	leftjustified	arghg is there any other errors besides wacom?
+2006-10-19T13:17:00.000Z	chuckyp	leftjustified	okay did the system ever work?
+2006-10-19T13:18:00.000Z	chuckyp	leftjustified	and after rebooting you cant start X ?  What happened when you tried to "startx" ?
+2006-10-19T13:18:00.000Z	leftjustified	chuckyp	black screen and lockup, no HDD activity
+2006-10-19T13:19:00.000Z	chuckyp	leftjustified	okay try lsmod | grep nvidia
+2006-10-19T13:20:00.000Z	leftjustified	chuckyp	nvidia, i2c_core, agpgart
+2006-10-19T13:20:00.000Z	chuckyp	leftjustified	okay which driver do you have specified in xorg.conf?
+2006-10-19T13:30:00.000Z	chuckyp	leftjustified	hrm....
+2006-10-19T13:21:00.000Z	leftjustified	chuckyp	Driver: nvidia  Identifier "NVIDIA Corporation NV43"
+2006-10-19T13:22:00.000Z	chuckyp	leftjustified	hrm...
+2006-10-19T13:22:00.000Z	chuckyp	leftjustified	and did you use automatix or easyubuntu?  Or just installed nvidia-glx via synaptic?
+2006-10-19T13:22:00.000Z	leftjustified	chuckyp	automatix
+2006-10-19T13:22:00.000Z	chuckyp	leftjustified	hrm....
+2006-10-19T13:23:00.000Z	chuckyp	leftjustified	automatix is not recomended for this stuff.
+2006-10-19T13:23:00.000Z	leftjustified	chuckyp	doh!
+2006-10-19T13:23:00.000Z	leftjustified	chuckyp	how can I undo the evil?
+2006-10-19T13:24:00.000Z	chuckyp	leftjustified	yeah try nv first .  Removing the wacom stuff shouldn't really effect the issue.  I would be its an issue with your driver.
+2006-10-19T13:24:00.000Z	chuckyp	leftjustified	yeah there's still some wacom stuff you forgot in the one part
+2006-10-19T13:25:00.000Z	chuckyp	leftjustified	Section "ServerLayout"  There is more wacom and stylus stuff down there.
+2006-10-19T13:28:00.000Z	chuckyp	leftjustified	hrm...  well sudo rmmod nvidia  then try startx with "nv" driver
+2006-10-19T13:29:00.000Z	leftjustified	chuckyp	startx with nv causes total visual freakout
+2006-10-19T13:29:00.000Z	chuckyp	leftjustified	what do you mean visual freakout?
+2006-10-19T13:29:00.000Z	leftjustified	chuckyp	blocks and lines, frozen
+2006-10-19T13:29:00.000Z	chuckyp	leftjustified	do you have another os on this system?
+2006-10-19T13:30:00.000Z	leftjustified	chuckyp	nope, clean install of ubuntu only
+2006-10-19T13:30:00.000Z	chuckyp	leftjustified	alright try locate NVIDIA
+2006-10-19T13:30:00.000Z	chuckyp	leftjustified	yeah
+2006-10-19T13:31:00.000Z	chuckyp	leftjustified	I was saying the only other thing to maybe try would be to remove the driver automatix installed.  Then give it a go.  But I'm betting your video card is probably having some issues on a hardware level.  Because I just had this happen to me the other day and my video memeory was shot.
+2006-10-19T13:32:00.000Z	leftjustified	chuckyp	the card is only ~3 months old
+2006-10-19T13:32:00.000Z	chuckyp	leftjustified	mine was only 2 months old
+2006-10-19T13:32:00.000Z	chuckyp	leftjustified	evga 7600GS
+2006-10-19T13:32:00.000Z	chuckyp	leftjustified	but I would try a live cd and see if you get lockups etc...
+2006-10-19T13:36:00.000Z	chuckyp	leftjustified	well I wonder if it keeps a log  check in /var/log/  for automatix
+2006-10-19T13:36:00.000Z	leftjustified	chuckyp	will check it out...
+2006-10-19T13:37:00.000Z	chuckyp	leftjustified	Do you still have the install cd?
+2006-10-19T13:37:00.000Z	chuckyp	leftjustified	well try booting that livecd up and make sure that you don't have like artifacts or anything goofy going on.
+2006-10-19T13:37:00.000Z	leftjustified	chuckyp	oh crap, my machine just reboot when I chose "recovery mode" :-/ hahaa
+2006-10-19T13:38:00.000Z	chuckyp	leftjustified	Yeah definatelly hardware related now.
+2006-10-19T13:38:00.000Z	chuckyp	leftjustified	err.  well Atleast try the livecd to make sure.
+2006-10-19T13:38:00.000Z	leftjustified	chuckyp	ok, liveCD in now... *crosses fingers*
+2006-10-19T13:39:00.000Z	chuckyp	leftjustified	yeah see if it reboots or locks up brb need a smoke.
+2006-10-19T13:43:00.000Z	chuckyp	leftjustified	any luck with the livecd?
+2006-10-19T13:43:00.000Z	leftjustified	chuckyp	both the live CD and the cigarette worked fine ;)
+2006-10-19T13:43:00.000Z	chuckyp	leftjustified	hrm.... now to figure out what got borked.
+2006-10-19T13:44:00.000Z	chuckyp	leftjustified	you can't even boot to recovery mode?
+2006-10-19T13:44:00.000Z	leftjustified	chuckyp	nope
+2006-10-19T13:44:00.000Z	chuckyp	leftjustified	hrm...  Due you have data you are worried about?
+2006-10-19T13:44:00.000Z	leftjustified	chuckyp	can't mount drive either -- "error device /dev/sda1 is not removable .. could not execute pmount"
+2006-10-19T13:45:00.000Z	leftjustified	chuckyp	only the 1GB+ of d/l'ed packages
+2006-10-19T13:45:00.000Z	leftjustified	chuckyp	luckily my data is on another drive that isn't plugged in
+2006-10-19T13:46:00.000Z	chuckyp	leftjustified	are you mounting with sudo?
+2006-10-19T13:46:00.000Z	leftjustified	chuckyp	nope, just Places > COmputer
+2006-10-19T13:47:00.000Z	leftjustified	chuckyp	just trying to switch to ubuntu for my main machine after my XP sys ended in this: http://flickr.com/photos/andrew_k/272195356/
+2006-10-19T13:48:00.000Z	chuckyp	leftjustified	ouch
+2006-10-19T13:48:00.000Z	chuckyp	leftjustified	hrm... Well this is why I don't like automatix
+2006-10-19T13:49:00.000Z	chuckyp	leftjustified	the only thing to try might be to ask in #automatix
+2006-10-19T13:49:00.000Z	chuckyp	leftjustified	other than that I would maybe try reinstalling and adding software the normal way
+2006-10-19T13:50:00.000Z	leftjustified	chuckyp	indeed. I had none of these problems using apt-get to install everything on my lappy :(
+2006-10-19T13:50:00.000Z	chuckyp	leftjustified	but they may no a way to undo stuff.
+2006-10-19T13:51:00.000Z	leftjustified	chuckyp	there are only 4 ppl in there. heh
+2006-10-19T13:51:00.000Z	chuckyp	leftjustified	hrm... :(
+2006-10-19T13:52:00.000Z	chuckyp	leftjustified	heres a usefull link http://getautomatix.com/wiki/index.php?title=Uninstalling_Software
+2006-10-19T13:52:00.000Z	chuckyp	leftjustified	for removing software that automatix installed from terminal
+2006-10-19T14:01:00.000Z	chuckyp	leftjustified	you need to burn something from command line?
+2006-10-19T14:02:00.000Z	leftjustified	chuckyp	there's a 101MB tar.gz on my desktop I'd like to grab...
+2006-10-19T14:02:00.000Z	leftjustified	chuckyp	I've already used 15% of my monthly quota in a day... every bit counts ;)
+2006-10-19T14:02:00.000Z	chuckyp	leftjustified	yeah use cdrecord
+2006-10-19T14:11:00.000Z	chuckyp	leftjustified	because automatix did a such a wonderfull job I would just reinstall.  use cdrecord to backup your vmware if you want.
+2006-10-19T14:11:00.000Z	chuckyp	leftjustified	but i'm sure its fixable if you got a hold of someone at #automatix
+2006-10-19T14:12:00.000Z	chuckyp	leftjustified	or someone with more knowledge.
+2006-10-19T14:12:00.000Z	leftjustified	chuckyp	that may be the only option... I wish I hadn't configured apache+postgres+sqlite2+mysql5+mod_python+subversion+trac + shitloads of stuff first though ;)
+2006-10-19T14:13:00.000Z	chuckyp	leftjustified	well one thing you may want to consider is making a seperate /home or /etc partition that way most your configurations would be saved.
+2006-10-19T14:13:00.000Z	leftjustified	chuckyp	yes, I think a seperate partition for /etc would be most advantagous
+2006-10-19T14:19:00.000Z	chuckyp	leftjustified	where did you get that error?
+2006-10-19T14:20:00.000Z	leftjustified	chuckyp	I was manully trawling through X's log file
+2006-10-19T14:20:00.000Z	chuckyp	leftjustified	if you commented out module "glx" in the xorg.conf that should get rid of that.
+2006-10-19T14:30:00.000Z	chuckyp	leftjustified	what happened?
+2006-10-19T14:30:00.000Z	leftjustified	chuckyp	apt-get removed anything remotely related to nvidia, commented out that line in xorg.conf that was throwing the error I posted and reconfigured X11 again
+2006-10-19T14:31:00.000Z	chuckyp	leftjustified	cool now you are partially working.   If you want 3d support install the nvidia-glx package or the drivers from nvidia.com but stay away from automatix.
+2006-10-19T14:31:00.000Z	leftjustified	chuckyp	I don't need 3D, I'm just a coder monkey :)
+2006-10-19T14:32:00.000Z	chuckyp	leftjustified	ahh then you should be find with the nv driver.
+2006-10-19T14:32:00.000Z	leftjustified	chuckyp	but I do need dual moniters.. that'll be the next thing I tackle
+2006-10-19T14:33:00.000Z	chuckyp	leftjustified	some google searching will show you how to get that going.  Or on the forums.
+2006-10-19T14:34:00.000Z	leftjustified	chuckyp	yup, I've got a heap of TwinView howto's already bookmarked, thanks :)

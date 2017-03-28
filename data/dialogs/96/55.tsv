@@ -1,0 +1,96 @@
+2006-10-11T16:41:00.000Z	oskude	sykes^	yup
+2006-10-11T16:41:00.000Z	sykes^	oskude	Ok, brb
+2006-10-11T16:33:00.000Z	oskude	sykes^	well, ive used ps/2 and usb mouses/keyboards and they work out-of-the-box... are those some weird hardware ?
+2006-10-11T16:34:00.000Z	oskude	sykes^	well, does the manufacturer have linux drivers ?
+2006-10-11T16:36:00.000Z	oskude	sykes^	then i would suggest to google (or wait for someone here to have the same hardware working)
+2006-10-11T16:36:00.000Z	oskude	sykes^	1st hit :/ http://adterrasperaspera.com/blog/2006/06/20/logitech-g5-review-under-linux/
+2006-10-11T16:36:00.000Z	sykes^	oskude	checking
+2006-10-11T16:37:00.000Z	sykes^	oskude	Thought that only was a reviw
+2006-10-11T16:38:00.000Z	oskude	sykes^	did you scroll to the xorg.conf file ? :/
+2006-10-11T16:38:00.000Z	sykes^	oskude	No I'm still 97% noob on linux, but gonna check it now
+2006-10-11T16:41:00.000Z	sykes^	oskude	I have to reload X after I change the xorg.conf, right?
+2006-10-11T06:32:00.000Z	sykes^	oskude	Yeah but theres a problem: I dunno what to type
+2006-10-11T06:24:00.000Z	oskude	sykes^	you delete them and create new partitions. or you change to type of the partitions and format over them
+2006-10-11T06:24:00.000Z	sykes^	oskude	Yeah, but where do I do that?
+2006-10-11T06:25:00.000Z	oskude	sykes^	you could ask ati, they made the driver ;)
+2006-10-11T06:25:00.000Z	sykes^	oskude	Um, for my harddrive? o.O
+2006-10-11T06:26:00.000Z	oskude	sykes^	sorry ment arepie
+2006-10-11T06:26:00.000Z	sykes^	oskude	 ok :P
+2006-10-11T06:27:00.000Z	sykes^	oskude	How do I delete and create partitions then?
+2006-10-11T06:28:00.000Z	oskude	sykes^	i mostly use cfdisk
+2006-10-11T06:28:00.000Z	sykes^	oskude	*waves* im a noob *waves* :P
+2006-10-11T06:30:00.000Z	sykes^	oskude	If I want to delete and hda1 and hda5 and create then in one big linux partition, how do I do that?
+2006-10-11T06:31:00.000Z	oskude	sykes^	just like you said :) delete those partitions and make a new one
+2006-10-11T06:32:00.000Z	oskude	sykes^	ah, sec
+2006-10-11T06:32:00.000Z	oskude	sykes^	83 for ext3
+2006-10-11T06:33:00.000Z	oskude	sykes^	 83 for ext3
+2006-10-11T06:33:00.000Z	sykes^	oskude	um
+2006-10-11T06:34:00.000Z	oskude	sykes^	you asked about type, so 83 (linux) is the type for ext3 partitions
+2006-10-11T06:34:00.000Z	sykes^	oskude	no, I asked "what" to type, I have no idea :P
+2006-10-11T06:34:00.000Z	oskude	sykes^	oh... do you have only one hd ?
+2006-10-11T06:35:00.000Z	sykes^	oskude	No, I got 2 x 80 gb
+2006-10-11T06:35:00.000Z	oskude	sykes^	ok, and where is the disk you want to partition ?
+2006-10-11T06:36:00.000Z	sykes^	oskude	err, gonna try to find that out, hang on
+2006-10-11T06:36:00.000Z	oskude	sykes^	you can allso say on which ide bus and if master or slave
+2006-10-11T06:36:00.000Z	oskude	sykes^	but you can look with "sudo fdisk -l"
+2006-10-11T06:36:00.000Z	sykes^	oskude	Talk to me like I'm a 3 year old please :P
+2006-10-11T06:37:00.000Z	sykes^	oskude	ok
+2006-10-11T06:37:00.000Z	oskude	sykes^	hello my dear, wanna lolly ? :P
+2006-10-11T06:37:00.000Z	sykes^	oskude	lol
+2006-10-11T06:37:00.000Z	oskude	sykes^	i think "sudo fdisk -l" should print all your disks and partitions
+2006-10-11T06:37:00.000Z	sykes^	oskude	Yeah hang on
+2006-10-11T06:38:00.000Z	sykes^	oskude	http://paste.ubuntu-nl.org/26296/
+2006-10-11T06:38:00.000Z	oskude	sykes^	hmm, it shows only one hd...
+2006-10-11T06:39:00.000Z	oskude	sykes^	but is that the hd you want to repartition ?
+2006-10-11T06:39:00.000Z	sykes^	oskude	I have 2, and they worked in windows
+2006-10-11T06:39:00.000Z	sykes^	oskude	Yeah
+2006-10-11T06:39:00.000Z	sykes^	oskude	But I need to finish copying the music from the NTFS partition first, takes like 20 more min :P
+2006-10-11T06:40:00.000Z	oskude	sykes^	ok... when its ready, you can do "sudo cfdisk /dev/hda" to start play with the partitions, but dont fear, all changes you make in cfdisk, are only then active when you press [ Write ] 
+2006-10-11T06:41:00.000Z	sykes^	oskude	Ok, and I should make it to ext3, right?
+2006-10-11T06:42:00.000Z	oskude	sykes^	forgot what you wanted to do with the partition... (but there are allso drivers for windows to read and write ext3 partitions)
+2006-10-11T06:42:00.000Z	sykes^	oskude	 I want to delete the NTFS parts and make it into 1 linux part
+2006-10-11T06:43:00.000Z	oskude	sykes^	yup, then i would recommend ext3
+2006-10-11T06:43:00.000Z	sykes^	oskude	Ok, ill be back in 20 min. But can I talk to you again if I need some help?
+2006-10-11T06:43:00.000Z	oskude	sykes^	but wait, you cant make those 2 ntfs partitions to 1 partition (without deleting all partitions)
+2006-10-11T06:43:00.000Z	sykes^	oskude	Ok, so 2 ext3 then?
+2006-10-11T06:44:00.000Z	oskude	sykes^	yes, cause the one ntfs is a primary partitiona and the other one is a logical partition
+2006-10-11T06:44:00.000Z	sykes^	oskude	Ah ok. Ill be back in 20 min to fix that, and ill bug you if I need help :P
+2006-10-11T06:44:00.000Z	sykes^	oskude	Thanks btw
+2006-10-11T06:45:00.000Z	oskude	sykes^	roger, youre welcome
+2006-10-11T07:04:00.000Z	sykes^	oskude	Ok done now, what did you say I should do?
+2006-10-11T07:05:00.000Z	oskude	sykes^	sudo cfdisk /dev/hda
+2006-10-11T07:05:00.000Z	sykes^	oskude	Hang on, found something here.. ill show you
+2006-10-11T07:05:00.000Z	sykes^	oskude	http://paste.ubuntu-nl.org/26299/ check there now
+2006-10-11T07:06:00.000Z	sykes^	oskude	hdb1 is NTFS right now, right?
+2006-10-11T07:06:00.000Z	oskude	sykes^	yup
+2006-10-11T07:06:00.000Z	sykes^	oskude	Ok, I want to make that ext3 too
+2006-10-11T07:07:00.000Z	sykes^	oskude	I get a error when I type  sudo cfdisk /dev/hda
+2006-10-11T07:07:00.000Z	oskude	sykes^	then on that drive you do "sudo cfdisk /dev/hdb" (but you can allso use System>Administration>Disks"
+2006-10-11T07:09:00.000Z	oskude	sykes^	mind pastenbin the error (with command)
+2006-10-11T07:09:00.000Z	sykes^	oskude	the error is on Swedish
+2006-10-11T07:09:00.000Z	oskude	sykes^	sec
+2006-10-11T07:10:00.000Z	oskude	sykes^	you can get errors temporarly in eglish too, but i forgot...
+2006-10-11T07:10:00.000Z	sykes^	oskude	Oh, and I tried to formate hda1 with the Disk thing, but I can aktivate it now
+2006-10-11T07:12:00.000Z	sykes^	oskude	http://paste.ubuntu-nl.org/26300/
+2006-10-11T07:12:00.000Z	oskude	sykes^	omg it worked ?
+2006-10-11T07:13:00.000Z	oskude	sykes^	darn, that doesnt sound good :(
+2006-10-11T07:13:00.000Z	oskude	sykes^	what was the last think you did with that partition table ?
+2006-10-11T07:13:00.000Z	sykes^	oskude	I formated hda5 with the admin > disk thing, but I cant aktivate it after
+2006-10-11T07:14:00.000Z	sykes^	oskude	um, I think I messed around in it when I installed Ubuntu
+2006-10-11T07:14:00.000Z	oskude	sykes^	did you delete and create partitions ? did you reboot after that ? its recommended to reboot after modifying partitions...
+2006-10-11T07:14:00.000Z	sykes^	oskude	I think so
+2006-10-11T07:15:00.000Z	sykes^	oskude	But we can delete all parts except hda3 (where ubuntu is), it doesnt matter
+2006-10-11T07:15:00.000Z	oskude	sykes^	well, then :) but, hmm...
+2006-10-11T07:17:00.000Z	oskude	sykes^	sorrym ment again ra21vi: i lost your fdisk -l output...
+2006-10-11T07:18:00.000Z	oskude	sykes^	nvm, found it
+2006-10-11T07:19:00.000Z	sykes^	oskude	gonna try to reboot, brb
+2006-10-11T07:27:00.000Z	oskude	sykes^	so, you want only ubuntu on hda ? is that a fresh install ? as i would suggest deleting all aprtitions... as it looks ver weird and has a windows extended partition...
+2006-10-11T07:28:00.000Z	sykes^	oskude	ok I'lldo that, but I have fixed som resolution stuff in this installation, so ill have to ask for help again
+2006-10-11T07:28:00.000Z	oskude	sykes^	you could format hdb1 first and backup your data and config files there
+2006-10-11T07:29:00.000Z	sykes^	oskude	I mean hdb3
+2006-10-11T07:29:00.000Z	sykes^	oskude	a screw it, I can get new music if I need it
+2006-10-11T07:29:00.000Z	oskude	sykes^	the last info i have is only hdb1 http://paste.ubuntu-nl.org/26299/
+2006-10-11T07:29:00.000Z	sykes^	oskude	rebooting now and gonna clean both hdds and make a clean install on hda
+2006-10-11T07:30:00.000Z	sykes^	oskude	What size should I take on the swap?
+2006-10-11T07:30:00.000Z	oskude	sykes^	never more than 1gb
+2006-10-11T07:30:00.000Z	oskude	sykes^	i gotta go home in 30min, ill be maybe later on, or tomorrow

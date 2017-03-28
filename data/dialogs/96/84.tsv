@@ -1,0 +1,96 @@
+2005-06-01T10:19:00.000Z	shad0w1e		crumsun_ amixer ???
+2005-06-01T10:19:00.000Z	crimsun_	shad0w1e	yes
+2005-06-01T10:20:00.000Z	crimsun_	shad0w1e	... what did you do to your alsa-utils?
+2005-06-01T10:20:00.000Z	crimsun_	shad0w1e	um?
+2005-06-01T10:20:00.000Z	shad0w1e	crimsun_	I deleted alsa and put in a newer version
+2005-06-01T10:20:00.000Z	crimsun_	shad0w1e	but why would you have touched alsa-utils?
+2005-06-01T10:21:00.000Z	shad0w1e	crimsun_	because removing alsa-base required it
+2005-06-01T10:22:00.000Z	crimsun_	shad0w1e	yeah that was a bad idea
+2005-06-01T10:23:00.000Z	crimsun_	shad0w1e	did you also install a newer version of alsa-lib?
+2005-06-01T10:23:00.000Z	shad0w1e	crimsun_	NO
+2005-06-01T10:23:00.000Z	crimsun_	shad0w1e	did you remove libasound2* ?
+2005-06-01T10:26:00.000Z	shad0w1e	crimsun_	when I run alsamixer, it works
+2005-06-01T10:26:00.000Z	crimsun_	shad0w1e	ok good. And amixer?
+2005-06-01T10:26:00.000Z	shad0w1e	crimsun_	http://cpp.sourceforge.net/?show=6122
+2005-06-01T10:27:00.000Z	crimsun_	shad0w1e	unmute Master, PCM, and SB Live Analog/Digital Output Jack
+2005-06-01T10:27:00.000Z	shad0w1e	crimsun_	none of the gui progs are working
+2005-06-01T10:28:00.000Z	crimsun_	shad0w1e	that's fine, we'll get to them
+2005-06-01T10:28:00.000Z	crimsun_	shad0w1e	press 'm'
+2005-06-01T10:29:00.000Z	shad0w1e	crimsun_	: done
+2005-06-01T10:30:00.000Z	crimsun_	shad0w1e	now try playing something with aplay
+2005-06-01T10:30:00.000Z	crimsun_	shad0w1e	( of course you need to adjust the Master and PCM volumes )
+2005-06-01T10:30:00.000Z	crimsun_	shad0w1e	is your current user in the audio group?
+2005-06-01T10:32:00.000Z	shad0w1e	crimsun_	: whats the best way to add my user to all the normal groops
+2005-06-01T10:36:00.000Z	crimsun_	shad0w1e	for i in adm dialout cdrom floppy audio video plugdev lpadmin; do sudo adduser $USER $i; done
+2005-06-01T10:39:00.000Z	shad0w1e	crimsun_	How do I restart the audio server?
+2005-06-01T10:49:00.000Z	crimsun_	shad0w1e	are you using gnome? kde? Xfce?
+2005-06-01T10:39:00.000Z	crimsun_	shad0w1e	which audio server?
+2005-06-01T10:40:00.000Z	crimsun_	shad0w1e	so log out and back in
+2005-06-01T10:40:00.000Z	shad0w1e	crimsun_	ahh
+2005-06-01T10:46:00.000Z	shad0w1e	crimsun_	my sound still doesnt seem to work
+2005-06-01T10:48:00.000Z	crimsun_	shad0w1e	what sound server are you using?
+2005-06-01T10:48:00.000Z	shad0w1e	crimsun_	no idea
+2005-06-01T10:53:00.000Z	crimsun_	shad0w1e	aplay
+2005-06-01T10:53:00.000Z	shad0w1e	crimsun_	thanks
+2005-06-01T10:53:00.000Z	crimsun_	shad0w1e	so you're using arts?
+2005-06-01T10:54:00.000Z	shad0w1e	crimsun_	no way of knowing
+2005-06-01T10:55:00.000Z	crimsun_	shad0w1e	static is better than nothing :)
+2005-06-01T10:55:00.000Z	crimsun_	shad0w1e	so make sure you've set arts to release the sound device after 2 seconds idle
+2005-06-01T10:55:00.000Z	crimsun_	shad0w1e	in KDE's control panel/center
+2005-06-01T10:57:00.000Z	crimsun_	shad0w1e	yes, set it to 1 or 2 seconds
+2005-06-01T10:58:00.000Z	shad0w1e	crimsun_	: That mean anything?
+2005-06-01T10:58:00.000Z	crimsun_	shad0w1e	with aplay? That would be very odd...
+2005-06-01T10:59:00.000Z	crimsun_	shad0w1e	set it to use alsa, not oss
+2005-06-01T11:01:00.000Z	crimsun_	shad0w1e	is that what happens when you use alsa for arts's backend?
+2005-06-01T11:01:00.000Z	shad0w1e	crimsun_	not sure: In KDE's sound optins I selected alsa
+2005-06-01T11:02:00.000Z	crimsun_	shad0w1e	ok what happens when you use aplay -Dplughw:0,0 foo.wav ?
+2005-06-01T11:03:00.000Z	shad0w1e	crimsun_	I was playing an mp3
+2005-06-01T11:03:00.000Z	crimsun_	shad0w1e	aplay accepts wavs not mp3s
+2005-06-01T11:04:00.000Z	shad0w1e	crimsun_	works like a charm now
+2005-06-01T11:04:00.000Z	crimsun_	shad0w1e	even through arts, or just aplay?
+2005-06-01T11:05:00.000Z	crimsun_	shad0w1e	ok. In your arts configuration in KDE's control panel/center, can you specify an ALSA device?
+2005-06-01T11:05:00.000Z	shad0w1e	crimsun_	: no
+2005-06-01T11:06:00.000Z	crimsun_	shad0w1e	it should also give you a place to enter an ALSA device
+2005-06-01T11:07:00.000Z	shad0w1e	crimsun_	NOpe, dont see
+2005-06-01T11:09:00.000Z	crimsun_	shad0w1e	you can't even select hw:0,0 ?
+2005-06-01T11:09:00.000Z	shad0w1e	crimsun_	care for a screen shot?
+2005-06-01T11:09:00.000Z	crimsun_	shad0w1e	yes please
+2005-06-01T11:14:00.000Z	shad0w1e	crimsun_	: http://clubcorruption.net/snapshot1.png
+2005-06-01T11:14:00.000Z	crimsun_	shad0w1e	actually you can
+2005-06-01T11:14:00.000Z	crimsun_	shad0w1e	see the override device location?
+2005-06-01T11:15:00.000Z	crimsun_	shad0w1e	specify plughw:0,0
+2005-06-01T11:15:00.000Z	crimsun_	shad0w1e	(language please)
+2005-06-01T11:15:00.000Z	shad0w1e	crimsun_	wil do
+2005-06-01T11:16:00.000Z	shad0w1e	crimsun_	I got the same permission denied
+2005-06-01T11:18:00.000Z	shad0w1e	crimsun_	: aplay worked without anything special
+2005-06-01T11:19:00.000Z	crimsun_	shad0w1e	ok, how about using OSS?
+2005-06-01T11:19:00.000Z	shad0w1e	crimsun_	NOW i get a no such file or directory
+2005-06-01T11:19:00.000Z	crimsun_	shad0w1e	using OSS?
+2005-06-01T11:19:00.000Z	crimsun_	shad0w1e	wait are you using plughw:0,0 with OSS?
+2005-06-01T11:19:00.000Z	shad0w1e	crimsun_	yes
+2005-06-01T11:19:00.000Z	crimsun_	shad0w1e	you should only use plughw:0,0 with ALSA
+2005-06-01T11:20:00.000Z	shad0w1e	crimsun_	gotit
+2005-06-01T11:20:00.000Z	shad0w1e	crimsun_	now its back to the same old permission denied error
+2005-06-01T11:20:00.000Z	crimsun_	shad0w1e	lsof /dev/dsp* /dev/snd/*
+2005-06-01T11:26:00.000Z	shad0w1e	crimsun_	:  lsof /dev/dsp* /dev/snd/*   returns NOTHING
+2005-06-01T11:27:00.000Z	crimsun_	shad0w1e	ok. Try removing plughw:0,0 from overridden device options and putting it in the space below
+2005-06-01T11:27:00.000Z	shad0w1e	crimsun_	: using alsa, right?
+2005-06-01T11:27:00.000Z	crimsun_	shad0w1e	yes
+2005-06-01T11:28:00.000Z	shad0w1e	crimsun_	same permission denied error
+2005-06-01T11:28:00.000Z	crimsun_	shad0w1e	ok. What options do you have for sound servers in that menu?
+2005-06-01T11:37:00.000Z	shad0w1e	crimsun_	: why would aplay work and not anything else?
+2005-06-01T11:38:00.000Z	crimsun_	shad0w1e	arts is a bit odd
+2005-06-01T11:39:00.000Z	crimsun_	shad0w1e	does gnome exhibit the same problems?
+2005-06-01T11:39:00.000Z	crimsun_	shad0w1e	what does /proc/asound/version contain?
+2005-06-01T11:40:00.000Z	crimsun_	shad0w1e	ok.
+2005-06-01T11:40:00.000Z	crimsun_	shad0w1e	you see the only problem with using 1.0.9rc4{a} is that you must have a matching alsa-libs
+2005-06-01T11:41:00.000Z	shad0w1e	crimsun_	so how do I back it out
+2005-06-01T11:41:00.000Z	crimsun_	shad0w1e	because a _lot_ has changed between 1.0.8 and 1.0.9rc4
+2005-06-01T11:43:00.000Z	crimsun_	shad0w1e	if you have the compiled upstream source, then sudo make uninstall
+2005-06-01T11:43:00.000Z	crimsun_	shad0w1e	otherwise you need to upgrade alsa-utils and alsa-lib to 1.0.9rc4{a}
+2005-06-01T11:48:00.000Z	shad0w1e	crimsun_	what is the equivalent of what I just took out, do I have to put in now using synaptic?
+2005-06-01T11:48:00.000Z	crimsun_	shad0w1e	alsa-source from universe
+2005-06-01T11:48:00.000Z	crimsun_	shad0w1e	you'll need to recompile it, which means you need linux-headers-$(uname -r), too
+2005-06-01T11:50:00.000Z	shad0w1e	crimsun_	: okay I installed it... do I need to compile now? If so, how?
+2005-06-01T11:53:00.000Z	shad0w1e	crimsun_	I have linux headers... how do i recompile?
+2005-06-01T12:25:00.000Z	shad0w1e	crimsun_	: thanks for youre help, its still not working (I put in 0.8 , compiled and installed....) But im callin it quits for tonight. I DO apprecaigte your help

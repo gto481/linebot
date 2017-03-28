@@ -1,0 +1,98 @@
+2012-01-11T21:32:00.000Z	skel	diverdude	in those situations I boot off a livecd like sysresccd.org and just mount my drives and copy them over the network to somewhere else
+2012-01-11T21:32:00.000Z	diverdude	skel	good idea
+2012-01-11T21:32:00.000Z	skel	diverdude	instead of attempting any data rescue from the borked system
+2012-01-11T21:41:00.000Z	diverdude	skel	do you know?
+2012-01-11T21:41:00.000Z	skel	diverdude	I don't see why not. as long as you make detailed notes of what disk / partition ubuntu is on
+2012-01-11T21:42:00.000Z	diverdude	skel	or can i somehow repair the old one?
+2012-01-11T21:42:00.000Z	skel	diverdude	when it gets to the partition segment of the install, you'd need to do an advanced install
+2012-01-11T21:42:00.000Z	skel	diverdude	whats the symptom you're having?
+2012-01-11T21:43:00.000Z	diverdude	skel	ubuntu 11.10
+2012-01-11T21:44:00.000Z	skel	diverdude	what symptom are you seeing that you want remedied ?
+2012-01-11T21:45:00.000Z	diverdude	skel	^
+2012-01-11T21:45:00.000Z	skel	diverdude	whats the message on startup that indicates failure?
+2012-01-11T21:48:00.000Z	diverdude	skel	until i press the powerbutton
+2012-01-11T21:48:00.000Z	diverdude	skel	then it writes more stuff
+2012-01-11T21:49:00.000Z	skel	diverdude	have you tried modifying the grub boot line to turn acpi=off ?
+2012-01-11T21:49:00.000Z	skel	diverdude	when did this start happening?
+2012-01-11T21:50:00.000Z	diverdude	skel	i had screen problems (hardware) and rebooted some times to figure out what was wrong and suddently it came this
+2012-01-11T21:50:00.000Z	diverdude	skel	now i got a new display
+2012-01-11T21:51:00.000Z	skel	diverdude	hmm its difficult to diagnose when you can't get online and access logs to paste etc
+2012-01-11T21:51:00.000Z	skel	diverdude	is your windows 7 install on the same drive?
+2012-01-11T21:52:00.000Z	diverdude	skel	moment im uploading image of screen
+2012-01-11T21:52:00.000Z	diverdude	skel	yes
+2012-01-11T21:55:00.000Z	diverdude	skel	ok this is the screen: http://imagebin.org/193078
+2012-01-11T21:55:00.000Z	skel	diverdude	looking
+2012-01-11T21:55:00.000Z	diverdude	skel	in the other side of the screen it says ok
+2012-01-11T21:56:00.000Z	skel	diverdude	and this is 11.10 ? or 11.04
+2012-01-11T21:56:00.000Z	diverdude	skel	11.10
+2012-01-11T21:58:00.000Z	diverdude	skel	do you know what could be wrong?
+2012-01-11T21:58:00.000Z	diverdude	skel	it just hangs there
+2012-01-11T21:58:00.000Z	skel	diverdude	I see that /dev/sdb fails to mount, whats on that drive?
+2012-01-11T21:58:00.000Z	diverdude	skel	hmm it might be my external HDD. ill try to remove it and reboot
+2012-01-11T21:58:00.000Z	skel	diverdude	forums and various bug reports say that gnome-power-manager will hang on disks with insufficient space
+2012-01-11T21:59:00.000Z	skel	diverdude	if its got nothing from the OS perspective on it, then its probably fine
+2012-01-11T21:59:00.000Z	skel	diverdude	just didn't know if you put some ubuntu partitions on it
+2012-01-11T21:59:00.000Z	diverdude	skel	there should be plenty of space on the main disk
+2012-01-11T21:59:00.000Z	diverdude	skel	if ~ 300GB is ok at least
+2012-01-11T22:00:00.000Z	diverdude	skel	getting you another picture
+2012-01-11T22:01:00.000Z	skel	diverdude	I believe you, you don't need to take a pic :)  I'm just reading through some bug reports and threads
+2012-01-11T22:02:00.000Z	skel	diverdude	when it boots like that, can you do ctrl-atl-f2 and get to another console where you can login to shell ?
+2012-01-11T22:02:00.000Z	skel	diverdude	some people suggest re-installing gnome-power manager
+2012-01-11T22:03:00.000Z	diverdude	skel	here i have booted without the disk connected: it looks slightly different: http://imagebin.org/193080
+2012-01-11T22:04:00.000Z	skel	diverdude	try the last solution on this page: http://superuser.com/questions/303343/ubuntu-11-04-hangs-at-checking-battery-state-while-booting
+2012-01-11T22:04:00.000Z	skel	diverdude	the one where he switches to a console, and runs startx manually
+2012-01-11T22:05:00.000Z	skel	diverdude	its probably not power related at all, thats just the last successful message before X fails to load
+2012-01-11T22:05:00.000Z	skel	diverdude	brb
+2012-01-11T22:05:00.000Z	diverdude	skel	it would make a lot of sense if it was due to graphic drivers
+2012-01-11T22:06:00.000Z	skel	diverdude	yeah, its probably trying to use your old monitor config for the new one and its different vertical and horiz sync
+2012-01-11T22:07:00.000Z	skel	diverdude	if startx doesn't work try X -configure
+2012-01-11T22:08:00.000Z	diverdude	skel	it says number of created screens does not match number of detected devices. Configuration failed
+2012-01-11T22:08:00.000Z	skel	diverdude	hmm ok one sec
+2012-01-11T22:12:00.000Z	diverdude	skel	ohh it also says failed to load module "vmwgfx" (module does not exist)
+2012-01-11T22:13:00.000Z	skel	diverdude	I haven't been keeping up with xorg changes and it looks like they modularized the config, I'm searching around for the best way to reconfigure. thats probably it.
+2012-01-11T22:13:00.000Z	diverdude	skel	heh ok and below it says please ignore the above warnings about not being able to load module/driver wmwgfx
+2012-01-11T22:16:00.000Z	skel	diverdude	I've reached my limit of knowledge on Xorg config issues, unless you can find someone who can direct you on reconfiguring it to support your new monitor, I'd say try a re-install
+2012-01-11T22:16:00.000Z	diverdude	skel	maybe i need to reinstall nvidia drivers?
+2012-01-11T22:17:00.000Z	skel	diverdude	I would just go back to generic ubuntu drivers to start
+2012-01-11T22:17:00.000Z	diverdude	skel	its the same monitor...just a new version...he just changed the broken display to another that works
+2012-01-11T22:17:00.000Z	skel	diverdude	if you can. that'll at least get you to a working X session
+2012-01-11T22:17:00.000Z	diverdude	skel	maybe if i remove old nvidia drivers first?
+2012-01-11T22:18:00.000Z	skel	diverdude	so did this happen after the monitor fix or the system upgrade?
+2012-01-11T22:18:00.000Z	skel	diverdude	can't hurt to try
+2012-01-11T22:18:00.000Z	diverdude	skel	no. before
+2012-01-11T22:19:00.000Z	diverdude	skel	it happened after the display broke but before the fix
+2012-01-11T22:19:00.000Z	diverdude	skel	how do i remove nvidia drivers from a terminal?
+2012-01-11T22:20:00.000Z	skel	diverdude	if they were installed via package system, you could use apt-get --purge remove <package-name>
+2012-01-11T22:20:00.000Z	skel	diverdude	but the X config is still going to reference them
+2012-01-11T22:27:00.000Z	diverdude	skel	i removed it
+2012-01-11T22:27:00.000Z	diverdude	skel	and now the screen is just black when i restart
+2012-01-11T22:28:00.000Z	skel	diverdude	ctrl-alt-f1 and try X -configure again
+2012-01-11T22:29:00.000Z	diverdude	skel	ctrl+alt+f1 dont work :(
+2012-01-11T22:30:00.000Z	diverdude	skel	do you think it would be difficult to just remove the entire old ubuntu installation and replace it with a new?
+2012-01-11T22:31:00.000Z	skel	diverdude	no, I think you can do it pretty easily via the installer
+2012-01-11T22:31:00.000Z	skel	diverdude	when you go to install it'll show you what partitions you've got and ask which you want to use
+2012-01-11T22:31:00.000Z	skel	diverdude	so you could just pick your existing ubuntu partition and tell it to use that and wipe it out
+2012-01-11T22:32:00.000Z	diverdude	skel	ill do that instead
+2012-01-11T22:33:00.000Z	skel	diverdude	I gotta run to a meeting, I'll be back in about an hour.
+2012-01-11T22:35:00.000Z	diverdude	skel	are you still there?
+2012-01-11T23:20:00.000Z	skel	diverdude	any luck?
+2012-01-11T23:21:00.000Z	diverdude	skel	hey....i have booted on a new live disk and now im trying to install a new ubuntu alongside windows and my old ubuntu
+2012-01-11T23:22:00.000Z	diverdude	skel	i figured it would be safer this way and then try to delete the old ubuntu after
+2012-01-11T23:22:00.000Z	skel	diverdude	ah gotcha. then if the new one works you can just delete the old and resize
+2012-01-11T23:23:00.000Z	diverdude	skel	yes exatly. Now i am waiting for the new ubuntu install program to finish its partition resizing...hoping that nothing goes wrong
+2012-01-11T23:23:00.000Z	diverdude	skel	the fragile part is the windows installation....i would really like to keep this one since the kids sometimes use if for their videogames
+2012-01-11T23:25:00.000Z	skel	diverdude	if you ever have to completely wipe, maybe consider windows inside a vm using kvm or virtualbox
+2012-01-11T23:26:00.000Z	diverdude	skel	yeah...but i dont know how well games perform in a vbox
+2012-01-11T23:27:00.000Z	skel	diverdude	that way if you ever have to re-image ubuntu, you can just copy the virtual disk image of windows somewhere else and then re-install your box and re-import it
+2012-01-11T23:27:00.000Z	skel	diverdude	yeah, you have to have enough resources. but I know virtualbox supports opengl direct3d etc
+2012-01-11T23:55:00.000Z	diverdude	skel	the new ubuntu installation works fine
+2012-01-11T23:56:00.000Z	diverdude	skel	i think ill just forget about the old for now...
+2012-01-11T23:56:00.000Z	skel	diverdude	awesome :)
+2012-01-11T23:56:00.000Z	diverdude	skel	gawd...now back to try and figuring out how to install gitorious
+2012-01-11T23:57:00.000Z	skel	diverdude	you can always use something like gparted to remove the old ubuntu install and resize the partitions (do it from a livecd or something)
+2012-01-11T23:57:00.000Z	diverdude	skel	yeah...but i was just worried about where the grub loader was located...i wouldnt wanna delete that one
+2012-01-11T23:58:00.000Z	skel	diverdude	ah yeah
+2012-01-12T00:07:00.000Z	skel	diverdude	I know aptitude will help you do things like remove unused packages (ie. you installed something that needed a bunch of deps but then uninstalled it)
+2012-01-12T00:20:00.000Z	diverdude	skel	but is there a difference between apt-get install and aptitude install ?
+2012-01-12T00:21:00.000Z	skel	diverdude	I think the only difference is how each tool analyzes the metadata about the package its installing
+2012-01-12T00:21:00.000Z	skel	diverdude	I think aptitude is more flexible / diverse in that way

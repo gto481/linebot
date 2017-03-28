@@ -1,0 +1,98 @@
+2005-12-11T08:31:00.000Z	dooglus	xiaogil	netcat is lower level.  what do you mean by efficient?
+2005-12-11T08:32:00.000Z	xiaogil	dooglus	i mean a command that downloads the same web page as firefox do
+2005-12-11T08:32:00.000Z	dooglus	xiaogil	firefox can do that
+2005-12-11T08:32:00.000Z	xiaogil	dooglus	can i use firefox as a command line ?
+2005-12-11T08:32:00.000Z	dooglus	xiaogil	you can run firefox from the command line, yes.
+2005-12-11T08:33:00.000Z	dooglus	xiaogil	what don't you like about wget?
+2005-12-11T08:35:00.000Z	xiaogil	dooglus	my problem is that when i wget a web page (http://ndweb.iis.sinica.edu.tw/archaeo2_public/Include/GetImage_FileName.jsp?filename=R024974ccwa&type=3), i get a small jpeg image, and when i download the same page using firefox, i get a the same image in a bigger resolution. I'd like to be able to download that image with a command line, but there's no way to do it with wget.
+2005-12-11T08:46:00.000Z	xiaogil	dooglus	don't you have a solution for my problem ?
+2005-12-11T08:46:00.000Z	dooglus	xiaogil	I can't remember what your problem was.
+2005-12-11T08:48:00.000Z	dooglus	xiaogil	you want to specific a user-agent when using wget?  that's done with the --user-agent flag...
+2005-12-11T08:48:00.000Z	dooglus	xiaogil	there's a man page for wget
+2005-12-11T08:49:00.000Z	xiaogil	dooglus	i tried it already with the following command that changed nothing: wget --user-agent="Mozilla/5.0 (X11; U; Linux i686; zh-CN; rv:1.7.12) Gecko/20051010 Firefox/1.0.7 (Ubuntu package 1.0.7)"  http://ndweb.iis.sinica.edu.tw/archaeo2_public/Include/GetImage_FileName.jsp?filename=R024974ccwa&type=3
+2005-12-11T08:51:00.000Z	dooglus	xiaogil	I can't resolve that address
+2005-12-11T08:52:00.000Z	xiaogil	dooglus	sometimes it works bad, but usually it works fine
+2005-12-11T08:58:00.000Z	xiaogil	dooglus	it should work if you try again now
+2005-12-11T08:59:00.000Z	dooglus	xiaogil	I used wget without specifying a user agent and it got my a 178Kb image file
+2005-12-11T09:03:00.000Z	xiaogil	dooglus	i know... it works for me too now that I have added " "
+2005-12-11T09:03:00.000Z	dooglus	xiaogil	added what?  oh - you quoted the url?
+2005-12-11T09:03:00.000Z	xiaogil	dooglus	yes :)
+2005-12-11T09:04:00.000Z	xiaogil	dooglus	thanks for your help
+2005-12-11T09:04:00.000Z	xiaogil	dooglus	did you quote it too ?
+2005-12-11T09:04:00.000Z	dooglus	xiaogil	the problem was the '&' in the URL.  if the shell sees a "&", it thinks that's the end of the command.
+2005-12-11T09:05:00.000Z	dooglus	xiaogil	you could stick a '\' in front of the & instead of quoting the URL - that should work too
+2005-12-11T09:13:00.000Z	xiaogil	dooglus	for me, the image can only be watched with evince (pdf), do you know how to watch it with any picture application ?
+2005-12-11T09:14:00.000Z	dooglus	xiaogil	I'm too scared to open the image.  I suspect you're trying to hax0r my box0r
+2005-12-11T09:14:00.000Z	xiaogil	dooglus	?
+2005-12-11T09:14:00.000Z	dooglus	xiaogil	never mind.
+2005-12-11T09:16:00.000Z	dooglus	xiaogil	according to 'file', it's a "DjVu Image file", whatever that is.  I'd just be happy that evince can open it if I was you...  :)
+2005-12-11T09:16:00.000Z	xiaogil	dooglus	but i need to re-use it, it's amazing that Gimp can't open it
+2005-12-11T09:17:00.000Z	dooglus	xiaogil	you can open it in evince and then take a screenshot with the PrtSc key
+2005-12-11T09:19:00.000Z	xiaogil	dooglus	unfortunately, the picture is bigger than my screen
+2005-12-11T09:20:00.000Z	dooglus	xiaogil	are you sure?  it's only about 500 pixels high, and less wide.
+2005-12-11T09:20:00.000Z	dooglus	xiaogil	zoom to "100%"
+2005-12-11T09:20:00.000Z	xiaogil	dooglus	i'll loose all the quality of the image
+2005-12-11T09:20:00.000Z	dooglus	xiaogil	zooming to 100% loses qualityy?
+2005-12-11T09:20:00.000Z	xiaogil	dooglus	and i'll need to do that with many images
+2005-12-11T09:21:00.000Z	xiaogil	dooglus	they're should be a command to get this image
+2005-12-11T09:21:00.000Z	xiaogil	dooglus	in a clean way
+2005-12-11T09:21:00.000Z	dooglus	xiaogil	did you check out the 'djvulibre-bin' package?  I've not, but maybe that can convert it to something more common
+2005-12-11T09:23:00.000Z	xiaogil	dooglus	i'll try it right now
+2005-12-11T09:27:00.000Z	xiaogil	dooglus	djvuextract should do the job, but nothing happens when i execute : djvuextract "/home/gilles/GetImage_FileName.jsp?filename=R024974ccwa&type=3"
+2005-12-11T09:37:00.000Z	xiaogil	dooglus	are you still there ?
+2005-12-11T09:39:00.000Z	dooglus	xiaogil	yes.
+2005-12-11T09:39:00.000Z	dooglus	xiaogil	I extracted the .IFF content, using: djvuextract ./image.djvu BG44=image.iff
+2005-12-11T09:40:00.000Z	dooglus	xiaogil	run "djvudump <file>" to get the name "BG44" to use
+2005-12-11T09:40:00.000Z	dooglus	xiaogil	but then - The Gimp doesn't want to open the .iff file anyway...
+2005-12-11T09:40:00.000Z	xiaogil	dooglus	I tried the command : djvuextract "/home/gilles/GetImage_FileName.jsp?filename=R024974ccwa&type=3" BG44=myimage which returnsa file which has the same size a the image but that is readable by nothing
+2005-12-11T09:41:00.000Z	dooglus	xiaogil	me too...  we now need to work out how to use .iff files...
+2005-12-11T09:42:00.000Z	xiaogil	dooglus	why did you name it .tiff, it seems the result is exactly the same when naming it .jpg
+2005-12-11T09:42:00.000Z	dooglus	xiaogil	it's in .iff format...
+2005-12-11T09:43:00.000Z	dooglus	xiaogil	run "file" on it to see that.
+2005-12-11T09:43:00.000Z	dooglus	xiaogil	Useful conversion programs: iff2pgm, pgm2iff, iff2ps, convert_format (in nelson's bin)
+2005-12-11T09:43:00.000Z	xiaogil	dooglus	you know so much...
+2005-12-11T09:44:00.000Z	dooglus	xiaogil	I don't know anything about this, but I know how to google...
+2005-12-11T09:44:00.000Z	dooglus	xiaogil	the problem is, I can't find iff2pgm.  The Gimp can almost certainly open pgm files, so that's all we'd need
+2005-12-11T09:46:00.000Z	dooglus	xiaogil	a google search for "iff2pgm" only returns 2 hits - neither offers a copy of the program.
+2005-12-11T09:47:00.000Z	dooglus	xiaogil	http://freshmeat.net/projects/gimpiffplugin/ looks promising
+2005-12-11T09:47:00.000Z	xiaogil	dooglus	what about netpbm ?
+2005-12-11T09:47:00.000Z	dooglus	xiaogil	does that do IFF?  if so, why not...
+2005-12-11T09:48:00.000Z	dooglus	xiaogil	netpbm seems to handle TIFF but not IFF
+2005-12-11T09:52:00.000Z	xiaogil	dooglus	could it be iff ilbm images ?
+2005-12-11T09:54:00.000Z	xiaogil	dooglus	netpbm doesn't work, thr image is not recognized by ilbmtopbm
+2005-12-11T09:55:00.000Z	dooglus	xiaogil	you could try http://linux.softpedia.com/progDownload/XnView-Download-4612.html - that claims to be able to open and convert .IFF files...
+2005-12-11T09:58:00.000Z	xiaogil	dooglus	xnview can't read it too
+2005-12-11T09:58:00.000Z	dooglus	xiaogil	then I'm sorry, but I give up!
+2005-12-11T09:59:00.000Z	xiaogil	dooglus	okay, thanks for your help!
+2005-12-11T09:59:00.000Z	dooglus	xiaogil	if you really care, the next step would be to delve into evince and see exactly how it's managing to open the image.  but that could get messy.
+2005-12-11T10:00:00.000Z	dooglus	xiaogil	clearly there's some free software which can read the format, so your problem does have a solution.
+2005-12-11T10:00:00.000Z	xiaogil	dooglus	i'll have to find it, but i guess that won't be easy
+2005-12-11T10:09:00.000Z	dooglus	xiaogil	still there?
+2005-12-11T10:09:00.000Z	xiaogil	dooglus	yes, sure
+2005-12-11T10:09:00.000Z	xiaogil	dooglus	the iff image is readble by djview
+2005-12-11T10:10:00.000Z	dooglus	xiaogil	ok...  is that enough?
+2005-12-11T10:10:00.000Z	xiaogil	dooglus	no, unfortunately
+2005-12-11T10:10:00.000Z	xiaogil	dooglus	i'd like it to be in jpeg
+2005-12-11T10:10:00.000Z	dooglus	xiaogil	here's the answer: ddjvu -format=pnm image.djvu image.pnm
+2005-12-11T10:11:00.000Z	dooglus	xiaogil	once you've got .pnm, you can convert that to whatever you like
+2005-12-11T10:12:00.000Z	xiaogil	dooglus	you're fantastic! thanks a lot!...
+2005-12-11T10:12:00.000Z	dooglus	xiaogil	i know :)  you're welcome!
+2005-12-11T10:12:00.000Z	xiaogil	dooglus	how did you find that ?
+2005-12-11T10:12:00.000Z	dooglus	xiaogil	I read all the man pages in that package
+2005-12-11T10:13:00.000Z	dooglus	xiaogil	I ran this command to step through the man pages until I found something interesting: for i in $(dpkg -L djvulibre-bin | grep /man/man1/ | cut -c21- | sed 's/.1.gz//'); do man $i; done
+2005-12-11T10:13:00.000Z	xiaogil	dooglus	i was just having a look at the djvu's homepage http://djvulibre.djvuzone.org/features.html
+2005-12-11T10:13:00.000Z	dooglus	xiaogil	there's possibly a better way to do it, but that worked for me
+2005-12-11T10:15:00.000Z	dooglus	xiaogil	that page would have led you to ddjvu very quickly...
+2005-12-11T10:16:00.000Z	xiaogil	dooglus	yes, but still you were definetely much more quicker than me
+2005-12-11T10:17:00.000Z	xiaogil	dooglus	do you think that converting those images into jpeg will alterate the quality ?
+2005-12-11T10:17:00.000Z	dooglus	xiaogil	yes.  jpeg is 'lossy'.  if you use pnm instead you'll lose nothing.
+2005-12-11T10:19:00.000Z	xiaogil	dooglus	7.4 MB for the PNM image!! that's amazing...
+2005-12-11T10:22:00.000Z	dooglus	xiaogil	pnm is a text-based format - take a look at the file with "head -100 file.pnm" and you'll see it looks like C source code.
+2005-12-11T10:23:00.000Z	dooglus	xiaogil	sorry - don't.  it's not ascii and it'll mess up your terminal...
+2005-12-11T10:25:00.000Z	dooglus	xiaogil	using -format=rle makes a very small file - but the gimp won't open it...
+2005-12-11T10:29:00.000Z	dooglus	xiaogil	saving as a .pnm and then running "convert image.pnm image.png" makes a smaller file, losslessly. (1.9Mb).
+2005-12-11T10:29:00.000Z	xiaogil	dooglus	thanks!!
+2005-12-11T10:32:00.000Z	xiaogil	dooglus	do you have a suggestion for the pnm/png conversion tool ?
+2005-12-11T10:32:00.000Z	dooglus	xiaogil	"convert"
+2005-12-11T10:32:00.000Z	dooglus	xiaogil	part of image magick
+2005-12-11T10:34:00.000Z	xiaogil	dooglus	excellent!

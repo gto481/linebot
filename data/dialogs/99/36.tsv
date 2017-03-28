@@ -1,0 +1,99 @@
+2008-03-10T09:44:00.000Z	mt330404		in synaptic
+2008-03-10T09:44:00.000Z	prince_jammys	mt330404	flash-plugin-nonfree
+2008-03-10T09:45:00.000Z	prince_jammys	mt330404	that's it
+2008-03-10T09:46:00.000Z	prince_jammys	mt330404	exit synaptic. you can't use apt-get and synaptic at the same time. use one or the other
+2008-03-10T09:48:00.000Z	prince_jammys	mt330404	ok, that means it's already installed
+2008-03-10T09:50:00.000Z	prince_jammys	mt330404	this is to view flash in a web site, correct?
+2008-03-10T09:51:00.000Z	prince_jammys	mt330404	you can autocomplete my nickname by hitting the tab key after the first few characters (prin<tab>)
+2008-03-10T09:51:00.000Z	prince_jammys	mt330404	that way your response gets highlighted on my end
+2008-03-10T09:51:00.000Z	mt330404	prince_jammys	didnt know that, also new to the IRC chatrooms.. haha. thanks
+2008-03-10T09:52:00.000Z	prince_jammys	mt330404	much better :)
+2008-03-10T09:52:00.000Z	mt330404	prince_jammys	just trying to view flash videos in opera, did all the basic stuff which doesnt seem to work
+2008-03-10T09:53:00.000Z	prince_jammys	mt330404	ok, i'm going to look in the web to see if there's any special requirements for opera. does flash work in firefox?
+2008-03-10T09:54:00.000Z	prince_jammys	mt330404	if you have firefox installed, see if you can play a flash video in there.
+2008-03-10T09:55:00.000Z	mt330404	prince_jammys	flash doesnt work for firefox
+2008-03-10T09:55:00.000Z	prince_jammys	mt330404	ok, and flashplugin-nonfree is installed, correct?
+2008-03-10T09:57:00.000Z	mt330404	prince_jammys	yeah it's installed, i dont understand where the disconnect is
+2008-03-10T09:59:00.000Z	mt330404	prince_jammys	what browser do you use that works with flash
+2008-03-10T10:01:00.000Z	prince_jammys	mt330404	firefox. i'm looking around the web to see what could be the problem
+2008-03-10T10:02:00.000Z	prince_jammys	mt330404	in the meantime, try the following:  sudo apt-get install --reinstall flashplugin-nonpfree
+2008-03-10T10:02:00.000Z	mt330404	prince_jammys	i appreciate the help
+2008-03-10T10:02:00.000Z	prince_jammys	mt330404	paste that command into a terminal and let me know if there's any errors
+2008-03-10T10:02:00.000Z	prince_jammys	mt330404	there's a typo, it's  flashplugin-nonfree
+2008-03-10T10:03:00.000Z	mt330404	prince_jammys	e: couldn't find package flashplugin-nonpfree
+2008-03-10T10:03:00.000Z	prince_jammys	mt330404	tip: you can also use the tab key to autocomplete package names.  i made a typo, there's an extra "p" in the package name. look
+2008-03-10T10:04:00.000Z	mt330404	prince_jammys	not seeing your typo
+2008-03-10T10:05:00.000Z	prince_jammys	mt330404	flashplugin-nonfree (i wrote flashplugin-nonpfree with a "p" before free)
+2008-03-10T10:05:00.000Z	mt330404	prince_jammys	oh ok lemme try
+2008-03-10T10:06:00.000Z	prince_jammys	mt330404	just type flashplugin-(tab key) and it will complete it for you
+2008-03-10T10:09:00.000Z	mt330404	prince_jammys	still no result although i installed something i evidently didnt have before. does this require a system restart?
+2008-03-10T10:10:00.000Z	prince_jammys	mt330404	no, it shouldn't. but you should restart the browsers, if you haven't
+2008-03-10T10:10:00.000Z	mt330404	prince_jammys	i did
+2008-03-10T10:11:00.000Z	prince_jammys	mt330404	strange
+2008-03-10T10:11:00.000Z	prince_jammys	mt330404	is this is a new ubuntu install? i mean were you ever able to see flash in ubuntu?
+2008-03-10T10:11:00.000Z	mt330404	prince_jammys	no
+2008-03-10T10:12:00.000Z	mt330404	prince_jammys	installed ubuntu gutsy about a week ago, no probs til now but never able to see flash
+2008-03-10T10:13:00.000Z	mt330404	prince_jammys	running a sony vaio laptop VGN-A150 if that matters
+2008-03-10T10:17:00.000Z	mt330404	prince_jammys	i386
+2008-03-10T10:18:00.000Z	mt330404	prince_jammys	ok never knew that but its good to know now
+2008-03-10T10:28:00.000Z	prince_jammys	mt330404	do you have any special personal firefox settings?
+2008-03-10T10:28:00.000Z	mt330404	prince_jammys	i dont even use firefox, i use opera, but i guess all firefox settings are default, i never use it
+2008-03-10T10:29:00.000Z	prince_jammys	mt330404	do you have any personal bookmarks in firefox?
+2008-03-10T10:29:00.000Z	mt330404	prince_jammys	no
+2008-03-10T10:29:00.000Z	prince_jammys	mt330404	last question: do you use mozilla thunderbird?
+2008-03-10T10:30:00.000Z	mt330404	prince_jammys	no
+2008-03-10T10:30:00.000Z	prince_jammys	mt330404	ok, since we're stuck, try this: first, close firefox if it's open. then, open a terminal and do:  mv .mozilla mozilla-backup
+2008-03-10T10:31:00.000Z	prince_jammys	mt330404	that command will move your personal firefox settings, so firefox won't see them
+2008-03-10T10:31:00.000Z	mt330404	prince_jammys	firefox hasnt been open in forever but i will do what you say
+2008-03-10T10:32:00.000Z	prince_jammys	mt330404	the folder will be recreated when you start firefox again
+2008-03-10T10:32:00.000Z	prince_jammys	mt330404	note that there is a DOT before mozilla in the first "mozilla" :: mv .mozilla mozilla-backup
+2008-03-10T10:33:00.000Z	mt330404	prince_jammys	no such file or directory
+2008-03-10T10:33:00.000Z	prince_jammys	mt330404	you did it with the dot, right?
+2008-03-10T10:36:00.000Z	mt330404	prince_jammys	yes
+2008-03-10T10:38:00.000Z	prince_jammys	mt330404	so if you do: ls .mozilla       you get an error?
+2008-03-10T10:39:00.000Z	mt330404	prince_jammys	no such file or directory
+2008-03-10T10:40:00.000Z	prince_jammys	mt330404	is there a mozilla-backup directory now in your home folder?
+2008-03-10T10:40:00.000Z	mt330404	prince_jammys	i dont have mozilla, i untinstalled it a while ago, is it necesssary for flash operation in opera?
+2008-03-10T10:41:00.000Z	prince_jammys	mt330404	no, but i wanted to test with mozilla firefox
+2008-03-10T10:41:00.000Z	mt330404	prince_jammys	whats the sudo install lingo for that?
+2008-03-10T10:41:00.000Z	prince_jammys	mt330404	you don't have firefox? i thought you did
+2008-03-10T10:42:00.000Z	prince_jammys	mt330404	firefox and mozilla firefox are the same thing
+2008-03-10T10:42:00.000Z	mt330404	prince_jammys	i used to, and i thought i reinstalled it a couple days ago but its not showing up in my apps>internet shit
+2008-03-10T10:42:00.000Z	mt330404	prince_jammys	i know
+2008-03-10T10:43:00.000Z	prince_jammys	mt330404	sudo apt-get install firefox
+2008-03-10T10:43:00.000Z	prince_jammys	mt330404	let's see if it says that it's already installed
+2008-03-10T10:45:00.000Z	mt330404	prince_jammys	 no firefox running
+2008-03-10T10:46:00.000Z	prince_jammys	mt330404	ok in a terminal type: firefox
+2008-03-10T10:46:00.000Z	mt330404	prince_jammys	interesting, firefox starts
+2008-03-10T10:47:00.000Z	mt330404	prince_jammys	NICE it works in firefox
+2008-03-10T10:47:00.000Z	prince_jammys	mt330404	ok now for opera
+2008-03-10T10:47:00.000Z	mt330404	prince_jammys	yes plz
+2008-03-10T10:47:00.000Z	prince_jammys	mt330404	now we know the problem is with opera, that helps
+2008-03-10T10:48:00.000Z	prince_jammys	mt330404	by the way, i don't know why firefox doesn't show up in your menu, but that's ok. if you want it there you can look in Preferences->Menu Editor
+2008-03-10T10:49:00.000Z	mt330404	prince_jammys	thanks for the tip
+2008-03-10T10:50:00.000Z	mt330404	prince_jammys	checked opera and still no flash capabilities
+2008-03-10T10:51:00.000Z	prince_jammys	mt330404	yeah i'm looking around for that. it's good to know that it's opera-specific
+2008-03-10T10:51:00.000Z	mt330404	prince_jammys	your help is very much appreciated
+2008-03-10T10:53:00.000Z	prince_jammys	mt330404	sudo ln /usr/lib/flashplugin-nonfree/libflashplayer.so /usr/lib/opera/plugins/
+2008-03-10T10:54:00.000Z	mt330404	prince_jammys	 all that in one terminal entry?
+2008-03-10T10:54:00.000Z	prince_jammys	mt330404	yes
+2008-03-10T10:54:00.000Z	mt330404	prince_jammys	"file exists"
+2008-03-10T10:54:00.000Z	prince_jammys	mt330404	interesting, so that's not a problem
+2008-03-10T10:55:00.000Z	mt330404	prince_jammys	i read in some places that theres a problem betwen linking the firefox and opera plugins, could that be an issue here?
+2008-03-10T10:55:00.000Z	prince_jammys	mt330404	something like that. frankly, i don't understand the problem. i'm searching the internet
+2008-03-10T10:59:00.000Z	prince_jammys	mt330404	when you play flash in firefox, do you get sound?
+2008-03-10T11:03:00.000Z	prince_jammys	mt330404	i found your problem online, but not a solution yet (except for installing the beta version of Opera 9.50)
+2008-03-10T11:05:00.000Z	prince_jammys	mt330404	https://answers.launchpad.net/ubuntu/+question/22063
+2008-03-10T11:06:00.000Z	prince_jammys	mt330404	someone there claims that installing the newer (but beta version) of opera works. that can be done here http://www.opera.com/download/?ver=9.50b  (keep in mind this is a beta version, so not fully stable but still usable)
+2008-03-10T11:07:00.000Z	prince_jammys	mt330404	read the whole bug thread, and see if there's any fix there. otherwise you can try the newer opera.  beyond that, i don't know
+2008-03-10T11:11:00.000Z	mt330404	prince_jammys	 thanks for all your help, i'll try the beta
+2008-03-10T11:11:00.000Z	prince_jammys	mt330404	let me know if it works
+2008-03-10T11:16:00.000Z	mt330404	prince_jammys	VERY choppy but it finally works
+2008-03-10T11:16:00.000Z	mt330404	prince_jammys	i mean VERY VERY VERY choppy
+2008-03-10T11:16:00.000Z	prince_jammys	mt330404	heh. looks like you might be stuck using firefox for flash, unless you dig up a solution from that bug page
+2008-03-10T11:17:00.000Z	mt330404	prince_jammys	either way i appreciate your help.. seems to me that if Opera wants to be as badass as they say they are, they need to have better linux support
+2008-03-10T11:21:00.000Z	mt330404	prince_jammys	yeah man at least youtube now plays, but it is sooooo choppy its not worth watching]
+2008-03-10T11:21:00.000Z	prince_jammys	mt330404	even in firefox?
+2008-03-10T11:22:00.000Z	mt330404	prince_jammys	firefox is good for flash
+2008-03-10T11:23:00.000Z	mt330404	prince_jammys	but opera remains to be seen.. your help has at least made flash in firefox work
+2008-03-10T11:23:00.000Z	prince_jammys	mt330404	ask bazhang, he has a link

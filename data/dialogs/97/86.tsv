@@ -1,0 +1,97 @@
+2007-10-07T12:31:00.000Z	Dr_willis	nickrud	 largest yovue done on purpose. :)
+2007-10-07T12:31:00.000Z	nickrud	Dr_willis	true :)
+2007-10-07T12:37:00.000Z	nickrud	Dr_willis	I remember you recommending some reading about samba last night, but not what it was (was focused elsewhere). Could you repeat it, please?
+2007-10-07T12:37:00.000Z	Dr_willis	nickrud	 the samba-doc package has 'using samba' and 2 other books.
+2007-10-19T11:08:00.000Z	Dr_willis	nickrud	 because i treat her like a LADY.... :) for i am The Dr of Love.
+2007-10-19T21:51:00.000Z	Dr_willis	nickrud	 thats part of the default options for an entry setting. :) about mid way through
+2007-10-19T21:52:00.000Z	nickrud	Dr_willis	I must be blind, but I see not ref to quiet anywhere
+2007-10-19T21:53:00.000Z	Dr_willis	nickrud	 # defoptions=quiet nosplash
+2007-10-19T21:53:00.000Z	nickrud	Dr_willis	ah, that's why. I removed them, but didn't document it. Off to do that now :)
+2007-10-26T10:11:00.000Z	nickrud	Dr_willis	you do good work when you're sleeping, keep it up ;)
+2007-12-08T11:48:00.000Z	nickrud	Dr_willis	no, I moved, and somehow it didn't get packed
+2007-12-08T11:49:00.000Z	Dr_willis	nickrud	 i bet its in that big box in the garrage labeled 'underware' :)
+2007-12-08T11:49:00.000Z	Dr_willis	nickrud	 i lost thekeyboard to my serial terminal.. for 10 years.. then i tossed out the terminal and fond the keyboard the NEXT day! :)
+2007-12-08T11:50:00.000Z	nickrud	Dr_willis	lol, that happened with my best pair of running shoes
+2007-12-08T11:52:00.000Z	Dr_willis	nickrud	 amazing what some people say eh.. :)
+2007-12-08T11:53:00.000Z	Dr_willis	nickrud	 did ya write Stupid on a Paper, and hand it to him saying 'heres your sign'
+2007-12-08T11:53:00.000Z	nickrud	Dr_willis	I couldn't, it was a donor ;(
+2007-12-08T11:53:00.000Z	Dr_willis	nickrud	 organ donor?
+2007-12-08T11:54:00.000Z	Dr_willis	nickrud	 i saw a letter in a pc mag stating that OS-X was 'openBSD Linux'
+2007-12-08T11:54:00.000Z	nickrud	Dr_willis	no, the prez was walking her through our offices, introduced me as the 'IT Department' (oxymoron when applied to me) and I mentioned I was shifting a lot of stuff to linux, and that was the response
+2007-12-08T11:55:00.000Z	nickrud	Dr_willis	heh. PC Mag, what do you expect? It's not Compute
+2007-12-08T11:55:00.000Z	Dr_willis	nickrud	 the editors could  of at least corrected the mistake in the comments. :)
+2007-12-15T11:40:00.000Z	nickrud	Dr_willis	you'd have to send me back to school, I never learned event driven programming, it came after I retired
+2007-12-15T11:41:00.000Z	Dr_willis	nickrud	 i learned programing on C64's
+2007-12-15T11:42:00.000Z	nickrud	Dr_willis	I larned on ibm 360's (well, I exaggerate, I did a little fortran there, learned on a sinclair)
+2007-12-15T11:42:00.000Z	Dr_willis	nickrud	 i got a sinclare 1000 hanging on the wall. :P
+2007-12-15T11:42:00.000Z	nickrud	Dr_willis	you are a packrat
+2007-12-15T11:43:00.000Z	Dr_willis	nickrud	 found it at a flea market for $1 :)
+2007-12-16T22:39:00.000Z	Dr_willis	nickrud	 just a front end to ssh from what ive seen.. looks/acts like the windows putty.
+2007-12-16T22:58:00.000Z	nickrud	Dr_willis	good god, you must really be a Doctor
+2007-12-24T01:38:00.000Z	nickrud	Dr_willis	seems to be opera and konq problems are holding up the fix
+2007-12-24T01:38:00.000Z	Dr_willis	nickrud	 interesting...
+2007-12-24T01:39:00.000Z	Dr_willis	nickrud	 and here i was thinking the fix was just the changing of a filename in the installer script
+2007-12-24T01:40:00.000Z	nickrud	Dr_willis	you can read https://bugs.launchpad.net/ubuntu/gutsy/+source/flashplugin-nonfree/+bug/173890 if you  have an hour to spare :)
+2007-12-24T08:19:00.000Z	nickrud	Dr_willis	aren't you being a bit conservative?
+2007-12-24T08:19:00.000Z	Dr_willis	nickrud	 it will get MUCH worse when theres a new release. :)
+2007-12-25T04:57:00.000Z	nickrud	Dr_willis	if you mean the libdvdread3 one, it installs 1.2.5 , when medibuntu has 1.2.9
+2007-12-25T04:58:00.000Z	Dr_willis	nickrud	 no idea. :) i rarely watch actual dvds
+2007-12-25T04:58:00.000Z	nickrud	Dr_willis	and I've seen no diff, but ...
+2007-12-25T04:59:00.000Z	Dr_willis	nickrud	 i havent either. :) if one can read the dvd.. what can the other do thats so much better? Perhaps just bug fix's
+2007-12-25T04:59:00.000Z	nickrud	Dr_willis	I read the changelog, and the changes were pretty trivial
+2007-12-25T08:13:00.000Z	nickrud	Dr_willis	that's why swap needs to be BIG
+2007-12-29T02:06:00.000Z	nickrud	Dr_willis	vmware is also, it's in deb http://archive.canonical.com/ubuntu gutsy partner
+2007-12-29T06:16:00.000Z	nickrud	Dr_willis	nic alliteration, but too many flames :)
+2007-12-29T06:17:00.000Z	Dr_willis	nickrud	 i couldent spell flautlance right. :)
+2008-01-07T01:32:00.000Z	nickrud	Dr_willis	add   deb http://archive.canonical.com/ubuntu gutsy partner   to your sources.list, and install vmware-server  (add it to your text replace :)
+2008-01-07T01:33:00.000Z	Dr_willis	nickrud	 we need that info in the !vmware factoid. :)
+2008-01-07T01:33:00.000Z	nickrud	Dr_willis	you know how to do that?
+2008-01-07T01:34:00.000Z	Dr_willis	nickrud	 nope.
+2008-01-14T10:52:00.000Z	nickrud	Dr_willis	it's a bad gnash
+2008-01-14T23:19:00.000Z	nickrud	Dr_willis	is miner 49'er available? My all time favorite old time game
+2008-01-14T23:20:00.000Z	Dr_willis	nickrud	 proberly is.. 'somewhere' :)
+2008-01-15T05:55:00.000Z	nickrud	Dr_willis	the chutzpah
+2008-01-16T07:44:00.000Z	nickrud	Dr_willis	that's an ntfs partition?
+2008-01-16T07:45:00.000Z	Dr_willis	nickrud	 actually its using ntfs-3g :)
+2008-01-16T07:45:00.000Z	nickrud	Dr_willis	you can't change ntfs partition permissions I don't think
+2008-01-16T07:45:00.000Z	nickrud	Dr_willis	it's a mount time parameter
+2008-01-16T07:45:00.000Z	Dr_willis	nickrud	 i dont think it works for any other fylesystem either.. i just dont have any other  to test to prove the point. :)
+2008-01-16T07:46:00.000Z	nickrud	Dr_willis	I'll mess with my i386 partition
+2008-01-16T07:48:00.000Z	nickrud	Dr_willis	ok, I had /i386 in as root:root.  Mounted a partition there, it was root:root . chowned to rich:rich.   unmounted, /i386 was root:root.  Mounted again, it was rich:rich
+2008-01-19T07:43:00.000Z	nickrud	Dr_willis	you do, it's payable in contentment
+2008-01-19T07:43:00.000Z	Dr_willis	nickrud	 i need cash to pay for my Wii Habbit. :P
+2008-01-19T07:44:00.000Z	nickrud	Dr_willis	start a paypal account, dun people in pm's ;-}
+2008-02-09T08:52:00.000Z	nickrud	Dr_willis	loss of scrollback when closing the terminal
+2008-02-09T08:53:00.000Z	Dr_willis	nickrud	 yep.. its gone :) as far as i know.. Unless gnome-terminal has some fancy settings.
+2008-02-09T08:53:00.000Z	nickrud	Dr_willis	nope, it's gone
+2008-02-09T09:14:00.000Z	Dr_willis	nickrud	 shot gun method of grabbing dev packages. ;)
+2008-02-09T09:24:00.000Z	nickrud	Dr_willis	I've been thinking, with that many dev packages installed you oughta spend a couple hours learning to make a deb with cdbs ;)
+2008-02-09T09:25:00.000Z	Dr_willis	nickrud	 i would just be happy if i coulf figure out a nice simple way to get all the dev files needed for a given source package easially. :)
+2008-02-09T09:26:00.000Z	nickrud	Dr_willis	if you're recompiling a known package , apt-get build-deb <package> (or a similar package gets lots)
+2008-02-09T09:26:00.000Z	nickrud	Dr_willis	but doh, you already knew that ;(
+2008-02-09T09:26:00.000Z	Dr_willis	nickrud	 :) yep..  but if its  a known package.. i just use the debs heh.
+2008-02-10T12:38:00.000Z	nickrud	Dr_willis	you don't live in the usa, you live on the east coast
+2008-02-10T12:40:00.000Z	Dr_willis	nickrud	 we have some Counties in this state that change,, and some that dont.. and some that change the other way....
+2008-02-10T12:40:00.000Z	Dr_willis	nickrud	 you dont want to know  the details of that.. heh. :)
+2008-02-10T12:40:00.000Z	nickrud	Dr_willis	yeah, I could never keep them straight
+2008-02-10T12:40:00.000Z	nickrud	Dr_willis	I've learned to ask people in indiana to tell me, not the time to call but +hours to call :)
+2008-02-11T04:41:00.000Z	nickrud	Dr_willis	there's a fix in the git repo already i read
+2008-02-11T04:41:00.000Z	Dr_willis	nickrud	 since im the only user - :) i aint been too worried about it.
+2008-02-11T04:42:00.000Z	nickrud	Dr_willis	likewise, and I promised myself I wouldn't try it on the servers I have access to :)
+2008-02-13T07:31:00.000Z	nickrud	Dr_willis	if you have a sec, could you look at http://paste.ubuntu-nl.org/55821/ , I don't like the looks of the start blocks
+2008-02-13T07:33:00.000Z	Dr_willis	nickrud	 ive seen that happen  at times if you partition the disks oddly.
+2008-02-14T07:03:00.000Z	nickrud	Dr_willis	maybe in your income class
+2008-02-14T07:04:00.000Z	Dr_willis	nickrud	 its in the high-end macs now. :)   I rember when  lcd's were 1000$+ now look at them.
+2008-03-03T05:26:00.000Z	nickrud	Dr_willis	yeah, they shouldn't have hidden it below those triangles
+2008-04-20T08:05:00.000Z	Dr_willis	nickrud	 heh :) ok. off to work on my wiki.
+2008-04-20T08:05:00.000Z	nickrud	Dr_willis	see you around
+2009-01-10T04:05:00.000Z	Dr_willis	nickrud	 that way windows is always 0, and ubuntu 1 :) for when i set the defaults
+2009-01-19T10:34:00.000Z	nickrud	Dr_willis	that by no stretch of the imagination approaches best :)
+2009-01-19T10:34:00.000Z	Dr_willis	nickrud	 depends on the tasks :)
+2009-01-31T08:55:00.000Z	nickrud	Dr_willis	there is? What's it's home?
+2009-01-31T08:56:00.000Z	Dr_willis	nickrud	 it dosent have a 'home' its a special semi-account
+2009-01-31T08:57:00.000Z	nickrud	Dr_willis	ah, thanks.
+2009-02-08T10:23:00.000Z	nickrud	Dr_willis	/etc/modules
+2009-02-08T10:26:00.000Z	Dr_willis	nickrud	 often it seems.. eithr it works from the start... or is totally unsupported/wont work.. :(  Ive been lucky heh
+2009-02-08T10:26:00.000Z	nickrud	Dr_willis	I'm sure you
+2009-02-09T01:00:00.000Z	nickrud	Dr_willis	there was a day that I wish I'd known about sux though

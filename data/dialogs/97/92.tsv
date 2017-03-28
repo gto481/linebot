@@ -1,0 +1,97 @@
+2005-05-08T11:56:00.000Z	thechitowncubs		Is there any way to search in Beep-Media-Player
+2005-05-08T11:56:00.000Z	bob2	thechitowncubs	j?
+2005-05-08T11:56:00.000Z	bob2	thechitowncubs	the j key...
+2005-05-08T11:57:00.000Z	thechitowncubs	bob2	wow, that really makes a difference!
+2005-05-08T11:58:00.000Z	bob2	thechitowncubs	hrm?
+2005-05-08T12:00:00.000Z	thechitowncubs	bob2	what do you mean by hrm?
+2005-05-08T12:53:00.000Z	thechitowncubs	bob2	you're smart =D, how can i seperate my kde application menu icons from my gnome menus
+2005-05-08T12:54:00.000Z	bob2	thechitowncubs	no idea, I don't use menus
+2005-05-12T10:15:00.000Z	bob2	thechitowncubs	dpkg-reconfigure xserver-xorg
+2005-05-12T10:17:00.000Z	thechitowncubs	bob2	will that create a new xorg.conf if the one its using now is borked?
+2005-05-12T10:25:00.000Z	thechitowncubs	bob2	if he reboots with the xorg.conf not there will it regenerate one?
+2005-05-12T10:25:00.000Z	bob2	thechitowncubs	nope
+2005-05-12T10:25:00.000Z	bob2	thechitowncubs	deleting it is the worst thing you can do
+2005-05-12T10:25:00.000Z	bob2	thechitowncubs	sure, read the top of the file
+2005-05-12T10:27:00.000Z	thechitowncubs	bob2	it says it can be manually updated again... does that mean it will remake it with the correct values?
+2005-05-12T10:27:00.000Z	bob2	thechitowncubs	I don't know what "it" is
+2005-05-12T10:28:00.000Z	bob2	thechitowncubs	it means it will autodetect it
+2005-05-13T09:41:00.000Z	bob2	thechitowncubs	not really
+2005-05-13T09:41:00.000Z	bob2	thechitowncubs	it restarts X, yes
+2005-05-13T09:46:00.000Z	bob2	thechitowncubs	not too much in general, it depends on how complicated the app is (e.g. if it has custom widgets, that's a pain in the ass to port)
+2005-05-15T14:43:00.000Z	bob2	thechitowncubs	when did you last run k3b?
+2005-05-15T14:43:00.000Z	bob2	thechitowncubs	there you go.  delete that file and relogin again.
+2005-05-15T14:45:00.000Z	thechitowncubs	bob2	why did that happen?
+2005-05-15T14:47:00.000Z	bob2	thechitowncubs	because that's one of the easiest mistakes to make in C
+2005-05-28T11:29:00.000Z	bob2	thechitowncubs	what are you trying to do?
+2005-06-06T10:41:00.000Z	bob2	thechitowncubs	no
+2005-06-06T10:41:00.000Z	thechitowncubs	bob2	any gui's that can do that?
+2005-06-06T10:42:00.000Z	bob2	thechitowncubs	don't think so
+2005-06-06T11:30:00.000Z	bob2	thechitowncubs	I wouldn't bother
+2005-06-13T10:34:00.000Z	bob2	thechitowncubs	I believe parted can do that
+2005-06-14T12:28:00.000Z	bob2	thechitowncubs	does gphoto see it if you run it manually?
+2005-06-14T12:29:00.000Z	bob2	thechitowncubs	"gphoto" from a terminal...
+2005-06-14T12:30:00.000Z	thechitowncubs	bob2	command not found :/
+2005-06-14T12:31:00.000Z	bob2	thechitowncubs	gphoto2 then
+2005-06-14T12:31:00.000Z	bob2	thechitowncubs	well, install it then
+2005-06-14T12:31:00.000Z	bob2	thechitowncubs	it's in the gphoto2 package
+2005-06-14T12:32:00.000Z	thechitowncubs	bob2	is that installed on a default install?
+2005-06-14T12:33:00.000Z	bob2	thechitowncubs	I'd have thought so
+2005-06-18T11:52:00.000Z	bob2	thechitowncubs	entirely subjective
+2005-06-18T11:54:00.000Z	bob2	thechitowncubs	because there's little need to
+2005-06-18T11:55:00.000Z	bob2	thechitowncubs	linux orbwsers have the most important bits of the google toolbar by default
+2005-06-18T11:55:00.000Z	bob2	thechitowncubs	there are other gmail applets on linux
+2005-06-18T11:55:00.000Z	thechitowncubs	bob2	im talking about software such as Hello
+2005-06-18T11:55:00.000Z	bob2	thechitowncubs	which is?
+2005-06-19T10:41:00.000Z	bob2	thechitowncubs	that's app/toolkit specific
+2005-06-22T11:01:00.000Z	bob2	thechitowncubs	yeah
+2005-06-22T11:03:00.000Z	bob2	thechitowncubs	boot.  go through to the partition stage of the installer. go to the terminal and chroot into your hard disk.  run grub-install.
+2005-06-22T11:07:00.000Z	thechitowncubs	bob2	thanks, worked perfectly :)
+2005-06-22T11:07:00.000Z	bob2	thechitowncubs	np
+2005-06-29T10:17:00.000Z	bob2	thechitowncubs	what patch?
+2005-06-29T10:17:00.000Z	thechitowncubs	bob2	Smart Battery
+2005-06-29T10:18:00.000Z	bob2	thechitowncubs	and linux-source-2.6.10, kernel-package, fakeroot and build-essential
+2005-06-29T10:19:00.000Z	thechitowncubs	bob2	thanks, I'll let you know how it goes
+2005-06-29T10:25:00.000Z	thechitowncubs	bob2	if i copy my current config into /usr/src/linux/.config and do make oldconfig after i apply the patch will that configure the kernel how the previous one was?
+2005-06-29T10:25:00.000Z	bob2	thechitowncubs	yes
+2005-06-29T10:25:00.000Z	bob2	thechitowncubs	but then you need to build it with make-kpkg --initrd
+2005-06-29T10:26:00.000Z	bob2	thechitowncubs	because the default config makes things like ext2 modular, so you won't be able to boot if you don't have an initrd
+2005-06-29T10:31:00.000Z	bob2	thechitowncubs	er, that's whack
+2005-06-29T10:32:00.000Z	bob2	thechitowncubs	where's this patch from?
+2005-06-29T10:35:00.000Z	bob2	thechitowncubs	this is getting into heavy hackery
+2005-06-29T10:36:00.000Z	thechitowncubs	bob2	hehe, It doesn't seem that complex, if only i can get iasl compiler
+2005-06-29T10:36:00.000Z	thechitowncubs	bob2	I'm keeping a backup kernel just in case
+2005-06-29T10:36:00.000Z	bob2	thechitowncubs	it's not complex, but dsdt is kinda part of your bios, and this thing wants to patch it
+2005-06-29T10:37:00.000Z	thechitowncubs	bob2	right...
+2005-06-29T10:37:00.000Z	thechitowncubs	bob2	as long as i have a backup it doesn't scare me
+2005-06-29T10:37:00.000Z	bob2	thechitowncubs	you have a backup of your bios?
+2005-06-29T10:38:00.000Z	bob2	thechitowncubs	http://developer.intel.com/technology/iapc/acpi/downloads.htm
+2005-06-29T10:38:00.000Z	bob2	thechitowncubs	anyway, that's where you can get iasl from
+2005-06-29T10:39:00.000Z	thechitowncubs	bob2	I know, i've been trying to compile it... i'll keep trying but..
+2005-06-29T10:41:00.000Z	bob2	thechitowncubs	ok, according to someone who knows entirely too much about ACPI, it's a terrible hack
+2005-06-29T10:41:00.000Z	thechitowncubs	bob2	can you ask that person if anything special is needed to compile the IASL compiler
+2005-06-29T10:42:00.000Z	bob2	thechitowncubs	is opinion of modifying the dsdt at all (which is what you're doing) is "fucking stupid", so I don't think he's done it before :-)
+2005-06-29T10:55:00.000Z	bob2	thechitowncubs	the patch is not for your kernel version
+2005-06-29T10:56:00.000Z	thechitowncubs	bob2	haha, thanks, simple mistake
+2005-06-29T10:56:00.000Z	thechitowncubs	bob2	oh wait, so do I have to downgrade?
+2005-06-29T10:57:00.000Z	bob2	thechitowncubs	how much do you care about this patch?
+2005-06-29T10:58:00.000Z	thechitowncubs	bob2	well, i guess i just wanted to try to get it working, but its not really necessary
+2005-07-15T12:03:00.000Z	bob2	thechitowncubs	http://mail.gnome.org/archives/release-team/2005-June/msg00016.html
+2005-07-25T12:56:00.000Z	bob2	thechitowncubs	it's trivial, but stupid
+2005-07-25T12:57:00.000Z	bob2	thechitowncubs	using apt is a far better way to get coherent stuff that works well together
+2005-07-25T12:57:00.000Z	bob2	thechitowncubs	the easy way is to get it in the repositories!
+2005-07-25T12:58:00.000Z	bob2	thechitowncubs	so, they shouldn't download it fro mthere
+2005-07-25T12:58:00.000Z	thechitowncubs	bob2	how should one go about getting a new release of firefox?
+2005-07-25T12:59:00.000Z	bob2	thechitowncubs	by not getting it
+2005-07-25T12:59:00.000Z	bob2	thechitowncubs	and waiting for the next release of ubuntu to come out
+2005-07-25T12:59:00.000Z	bob2	thechitowncubs	or by running the development version
+2005-07-25T12:59:00.000Z	thechitowncubs	bob2	well i think the user should be able to do it
+2005-07-25T13:00:00.000Z	bob2	thechitowncubs	and I'd like wings so I could fly
+2005-07-25T13:00:00.000Z	bob2	thechitowncubs	it's trivial if you want it, setup firefox to install .debs when you click on them, or use autopackage
+2005-07-25T13:00:00.000Z	bob2	thechitowncubs	but it's a terrible idea, since it encourages people to install random, broken junk
+2005-07-25T13:01:00.000Z	bob2	thechitowncubs	things are in ubuntu (main) because they're tested and stable
+2005-07-25T13:01:00.000Z	thechitowncubs	bob2	i understand that
+2005-07-25T13:03:00.000Z	bob2	thechitowncubs	they have freedom
+2005-07-25T13:04:00.000Z	bob2	thechitowncubs	if people really want it, they can configure firefox to install .debs when they click on them.  but it's a bad bad idea.
+2005-07-25T13:05:00.000Z	thechitowncubs	bob2	is there an extension or something?
+2005-07-25T13:05:00.000Z	bob2	thechitowncubs	no, you just associate .deb with "sudo dpkg -i"
+2005-10-14T13:27:00.000Z	bob2	thechitowncubs	/msg ubotu whatever

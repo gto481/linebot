@@ -1,0 +1,99 @@
+2005-04-05T11:28:00.000Z	sono		the link worked, but nothing more...
+2005-04-05T11:29:00.000Z	sono		crimsun... could you please tell us how to route gstreamer/gnome default sound output to a USB audio device?
+2005-04-05T11:30:00.000Z	crimsun	sono	err...do you have multiple sound cards?
+2005-04-05T11:31:00.000Z	crimsun	sono	I presume the internal one is card0, and the m-audio is card1?
+2005-04-05T11:31:00.000Z	crimsun	sono	then simply tell alsa to prefer all other cards before the internal one.  Which driver does it use?
+2005-04-05T11:32:00.000Z	sono	crimsun	see friend... gnome is using the ESD driver
+2005-04-05T11:32:00.000Z	crimsun	sono	cat /proc/asound/modules, please.
+2005-04-05T11:33:00.000Z	sono	crimsun	oh I see... 0 snd_via82xx (yuck!!!) & 1 snd_usb_audio
+2005-04-05T11:33:00.000Z	crimsun	sono	echo "options snd-via82xx index=-2" | sudo tee -a /etc/modprobe.d/alsa-base
+2005-04-05T11:34:00.000Z	crimsun	sono	after you reboot, it will work
+2005-04-05T11:36:00.000Z	crimsun	sono	np
+2005-04-05T11:57:00.000Z	sono	crimsun	hi again. I did what you told me. Was the usb card which produced the GDM drums... but...
+2005-04-05T11:58:00.000Z	crimsun	sono	describe "corrupt"
+2005-04-05T11:59:00.000Z	sono	crimsun	only noise is coming out...
+2005-04-05T11:59:00.000Z	sono	crimsun	noise everytime a sound is produced
+2005-04-05T12:00:00.000Z	sono	crimsun	very peculiar noise, as if the bitrate were wrongly interpreted by the card...
+2005-04-05T12:01:00.000Z	sono	crimsun	could it be a gconf2 related issue? as the sound works perfectly at gdm?
+2005-04-05T12:03:00.000Z	crimsun	sono	doubt it has anything to do with gconf
+2005-04-05T12:03:00.000Z	crimsun	sono	pgrep esd
+2005-04-05T12:03:00.000Z	sono	crimsun	i see
+2005-04-05T12:03:00.000Z	sono	crimsun	9684
+2005-04-05T12:04:00.000Z	crimsun	sono	ok, please pkill esd
+2005-04-05T12:04:00.000Z	crimsun	sono	got a mp3/ogg vorbis/wav file handy?
+2005-04-05T12:05:00.000Z	crimsun	sono	ok, for an mp3, you'd do: mpg123 -s foo.mp3 | aplay -Dplughw:0,0 -f cd -
+2005-04-05T12:06:00.000Z	crimsun	sono	ogg123 -dwav -f- -- foo.ogg | aplay -Dplug:hw0,0 -f cd -
+2005-04-05T12:06:00.000Z	crimsun	sono	ack, that'd be -Dplughw:0,0
+2005-04-05T12:10:00.000Z	crimsun	sono	do either/both work?
+2005-04-05T12:12:00.000Z	sono	crimsun	ok.  it is working pretty good
+2005-04-05T12:13:00.000Z	sono	crimsun	I mean, with the ogg streaming directly
+2005-04-05T12:13:00.000Z	crimsun	sono	ok, so the card is fine, and alsa's fine, so something in esd is causing issues
+2005-04-05T12:14:00.000Z	crimsun	sono	ok, try starting esd manually, and in another Terminal, execute: mpg123 -o esd foo.mp3
+2005-04-05T12:22:00.000Z	crimsun	sono	any luck?
+2005-04-05T12:25:00.000Z	sono	crimsun	hmmm... the mpg123 -o esd /home/sono/rec/mp3/02.mp3 reports esd as an unknown argument...
+2005-04-05T12:26:00.000Z	crimsun	sono	hmm, what about ogg123 foo.ogg ?
+2005-04-05T12:27:00.000Z	sono	crimsun	working! hmmm
+2005-04-05T12:27:00.000Z	sono	crimsun	working with the esd manual start
+2005-04-05T12:28:00.000Z	crimsun	sono	under Preferences>Sound, is "Enable sound server startup" selected?
+2005-04-05T12:29:00.000Z	crimsun	sono	fresh install of Hoary or dist-upgrade?
+2005-04-05T12:29:00.000Z	sono	crimsun	oops... dist-upgrade...
+2005-04-05T12:30:00.000Z	crimsun	sono	from what?
+2005-04-05T12:34:00.000Z	crimsun	sono	no, no need to dpkg-reconfigure
+2005-04-05T12:34:00.000Z	crimsun	sono	you seem to be triggering an obscure session issue
+2005-04-05T12:34:00.000Z	crimsun	sono	unfortunately I'm leaving work now, but I'll be back in 30 mins
+2005-04-05T12:35:00.000Z	crimsun	sono	yes, it doesn't happen with fresh installs, only with dist-upgrades from another non-Hoary distro
+2005-04-05T12:35:00.000Z	sono	crimsun	its ok.  i'll try to be here 30 more minutes, but its late in my country...
+2005-04-05T12:35:00.000Z	crimsun	sono	feel free to shoot me an email (crimsun at fungus dot sh dot nu)
+2005-04-05T12:37:00.000Z	crimsun	sono	great, thanks.
+2005-04-05T13:39:00.000Z	crimsun	sono	ping
+2005-04-05T13:39:00.000Z	crimsun	sono	hi
+2005-04-05T13:40:00.000Z	crimsun	sono	ok, what's up?
+2005-04-05T13:40:00.000Z	sono	crimsun	if I stop esd, restart manually and operate apps normally, everything works perfectly
+2005-04-05T13:41:00.000Z	crimsun	sono	right.
+2005-04-05T13:41:00.000Z	sono	crimsun	but, when I open the gnome volume control (non sense I know)... BLAM! The sound stream get's corrupted with this 2-bits like distortion
+2005-04-05T13:42:00.000Z	crimsun	sono	aha!  I experience that issue as well.  I will have to test that in the morning.
+2005-04-05T13:43:00.000Z	crimsun	sono	no
+2005-04-05T13:44:00.000Z	crimsun	sono	what are the contents of /proc/asound/modules ?
+2005-04-05T13:45:00.000Z	sono	crimsun	0 snd_usb_audio    1 snd_via82xx
+2005-04-05T13:45:00.000Z	crimsun	sono	ok.
+2005-04-05T13:46:00.000Z	sono	crimsun	which makes sense after the options snd-via82xx index=-2
+2005-04-05T13:47:00.000Z	crimsun	sono	right.
+2005-04-05T13:47:00.000Z	crimsun	sono	ls /tmp|egrep 'esd|polyp'
+2005-04-05T13:48:00.000Z	crimsun	sono	and esd is running?
+2005-04-05T13:48:00.000Z	crimsun	sono	odd!
+2005-04-05T13:49:00.000Z	sono	crimsun	yep, esd running
+2005-04-05T13:49:00.000Z	sono	crimsun	the default conffile?
+2005-04-05T13:50:00.000Z	crimsun	sono	ok, one final check.  In Preferences>Sound, deselect the "Enable sound server startup" box.
+2005-04-05T13:50:00.000Z	crimsun	sono	Then log out and save the session.
+2005-04-05T13:50:00.000Z	sono	crimsun	here we go
+2005-04-05T13:55:00.000Z	crimsun	sono	ok, now reenable the sound server startup option in Preferences>Sound
+2005-04-05T13:55:00.000Z	sono	crimsun	hi again crim.  OK, back again here with no sound since the esd server wasn't started.
+2005-04-05T13:56:00.000Z	crimsun	sono	sound works now, correct?
+2005-04-05T13:56:00.000Z	crimsun	sono	as in repeating, or...?
+2005-04-05T13:58:00.000Z	crimsun	sono	oh ok.
+2005-04-05T13:58:00.000Z	crimsun	sono	good.
+2005-04-05T13:58:00.000Z	sono	crimsun	heh sorry for not being clear in my answers.
+2005-04-05T13:58:00.000Z	crimsun	sono	and others (like xmms) that can be configured to use esound output work, too, correct?
+2005-04-05T14:00:00.000Z	sono	crimsun	as longer as I leave the gnome mixer alone hehe
+2005-04-05T14:06:00.000Z	crimsun	sono	I don't know offhand what's causing that issue, but it's known for the esd->polypaudio transition (which has been backed out for Hoary).  Not sure why it's still occuring for you, though.
+2005-04-05T14:08:00.000Z	crimsun	sono	it is (again).
+2005-04-05T14:10:00.000Z	sono	crimsun	hehe ok... so ESD is back on the road again.  I'll try to skim trhough the esd's configure scripts at the packages... maybe at the gnome mixer as well... even reconfiguring them... could be a dist-upgrade from warty problem as you said...
+2005-04-05T14:13:00.000Z	crimsun	sono	only in the past two weeks
+2005-04-05T14:14:00.000Z	sono	crimsun	ok...
+2005-04-05T14:26:00.000Z	sono	crimsun	hmm... should we place this as a bug report? we can recreate it...
+2005-04-05T14:26:00.000Z	crimsun	sono	please search bugzilla.ubuntu.com; I believe it has been reported already
+2005-04-05T14:27:00.000Z	crimsun	sono	np, thank you.
+2005-04-05T14:28:00.000Z	sono	crimsun	good nite... and bye everyone!
+2005-04-05T14:28:00.000Z	crimsun	sono	see ya
+2005-04-22T07:52:00.000Z	sono	crimsun	hello.  A lil question: is there a ready implementation for m-audio's usb midi hardware @ ubuntu's kernel?
+2005-04-22T07:53:00.000Z	crimsun	sono	it relies on the standard ALSA midi, so it should work.
+2005-04-22T07:53:00.000Z	crimsun	sono	I haven't tested midi in quite some time, but I'm certainly interested in one's progress.
+2005-04-22T07:54:00.000Z	sono	crimsun	out of the box? I made it work with a debian woody last year, by uploading the m-audio firmware image
+2005-04-22T07:54:00.000Z	crimsun	sono	then it will work with Ubuntu Hoary.
+2005-04-22T07:55:00.000Z	crimsun	sono	for instance, my Transit USB works great with Warty and Hoary.
+2005-04-22T07:55:00.000Z	sono	crimsun	but that's the exact procedure I followed then to make my M-audio Duo interface work.  And now, warty and hoary support the duo out of the box.
+2005-04-22T07:58:00.000Z	sono	crimsun	right crim, both comply with the usb audio kernel's module, but when I used my m-audio keystation, I was using the agnula kernel which today is pretty outdated.
+2005-04-22T07:58:00.000Z	sono	crimsun	and even with that kernel, I had to upload the firmware with a hotplug script.
+2005-04-22T07:59:00.000Z	crimsun	sono	I still do use that same script
+2005-04-22T07:59:00.000Z	sono	crimsun	oh ok. So we are on the right track.  I will let you know if I succeed making this keystation work.
+2005-04-22T08:00:00.000Z	crimsun	sono	great

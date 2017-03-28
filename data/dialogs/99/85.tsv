@@ -1,0 +1,99 @@
+2005-07-31T15:11:00.000Z	salil		hello
+2005-07-31T15:11:00.000Z	salil		i need help.. can anyone help me
+2005-07-31T15:11:00.000Z	salil		PLEASE
+2005-07-31T15:12:00.000Z	salil		hey.. Mr. Ubuntu users.. PLEASE HELP ME
+2005-07-31T15:12:00.000Z	salil		i am having problems with my internet connection in ubuntu
+2005-07-31T15:12:00.000Z	salil		its very slow.. if i use windows, then.. there's no problem..
+2005-07-31T15:12:00.000Z	salil		its a dialup connection.. 56K
+2005-07-31T15:12:00.000Z	Seveas	salil	is browsing slow?
+2005-07-31T15:13:00.000Z	Seveas	salil	Open firefox and go to about:config. Now search for network.dns.disableIPV6 and set that value to true. Restart Firefox to see the effect.
+2005-07-31T15:14:00.000Z	Seveas	salil	it's an address you have to enter in the firefox address bar
+2005-08-01T12:25:00.000Z	Seveas	salil	gtk-gnutella
+2005-08-01T12:35:00.000Z	Seveas	salil	there is some info about that on wiki.ubuntu.com
+2005-08-02T10:39:00.000Z	Seveas	salil	it's installed by default
+2005-08-02T10:41:00.000Z	Seveas	salil	install libxml-parser-perl
+2005-08-07T11:53:00.000Z	Seveas	salil	lsusb
+2005-08-07T11:53:00.000Z	salil	Seveas	thanks
+2005-08-07T11:54:00.000Z	salil	Seveas	is there any other command..?? this one isn't showing anything..
+2005-08-07T11:55:00.000Z	salil	Seveas	i have a usb bluetooth adapter installed..and i need to find its address..
+2005-08-07T11:56:00.000Z	Seveas	salil	if lsusb doesn't show it there are no drivers installed
+2005-08-07T11:56:00.000Z	Seveas	salil	check dmesg for details
+2005-08-07T11:58:00.000Z	salil	Seveas	thanks.. dmesg worked..
+2005-08-09T15:17:00.000Z	Seveas	salil	you can change the theme
+2005-08-09T15:17:00.000Z	Seveas	salil	system -> prefs -> theme
+2005-08-09T15:17:00.000Z	salil	Seveas	i jsut want to change the icons only
+2005-08-09T15:18:00.000Z	Seveas	salil	art.gnome.org/faq.php can give you more details than I can :)
+2005-08-09T15:47:00.000Z	Seveas	salil	run it via cron
+2005-08-09T15:48:00.000Z	salil	Seveas	corn..??
+2005-08-09T15:48:00.000Z	Seveas	salil	cron
+2005-08-09T15:49:00.000Z	salil	Seveas	cron: can't lock /var/run/crond.pid, otherpid may be 7494: Resource temporarily unavailable........i get this message
+2005-08-09T15:49:00.000Z	salil	Seveas	what does that mean..?
+2005-08-09T15:50:00.000Z	Seveas	salil	type in a terminal man crontab
+2005-08-09T15:52:00.000Z	salil	Seveas	what are crontab files..??
+2005-08-09T15:55:00.000Z	salil	Seveas	i just need the "poff" command to work after say.. 2 hrs.. how do i do that..??
+2005-08-09T15:59:00.000Z	salil	Seveas	when i use crontab .. then it says bad minute.. can't install.. what does that mean.?
+2005-08-09T15:59:00.000Z	Seveas	salil	it means that you specified your command wrong
+2005-08-09T16:00:00.000Z	salil	Seveas	this is what i wrote... crontab -u username /usr/bin/poff
+2005-08-10T16:00:00.000Z	salil	Seveas	 is that command wrong..?
+2005-08-10T16:00:00.000Z	Seveas	salil	that's not how you use it...
+2005-08-10T16:00:00.000Z	salil	Seveas	can you show me ?
+2005-08-10T16:01:00.000Z	Seveas	salil	not right now since i'm going to sleep. Maybe the manpage can help you a bit more
+2005-08-10T16:01:00.000Z	salil	Seveas	 i tried.. but i'm not getting any thing from it.
+2005-08-10T16:14:00.000Z	Seveas	salil	type sudo gedit /etc/crontab
+2005-08-10T16:15:00.000Z	salil	Seveas	what do i do there..?
+2005-08-10T16:15:00.000Z	Seveas	salil	you enter a timestamp in the format described there and the command you want to run
+2005-08-10T16:18:00.000Z	salil	Seveas	what do i give for minutely..??
+2005-08-10T16:18:00.000Z	Seveas	salil	to run something at 10am you type:
+2005-08-10T16:19:00.000Z	salil	Seveas	i mean.. for minutes.. like in cron.weekly and cron.hourly.. for minutes what do i give..?
+2005-08-10T16:19:00.000Z	Seveas	salil	the point in time you want to run it
+2005-08-10T16:20:00.000Z	Seveas	salil	if you be a bit more specific in what you want to run and when, I can give you a pre-coooked example
+2005-08-10T16:21:00.000Z	Seveas	salil	0 7 * * * root /usr/bin/poff
+2005-08-10T16:23:00.000Z	salil	Seveas	thanks a lot
+2005-08-10T16:31:00.000Z	salil	Seveas	it worked for the first time.. now its not working again..
+2005-08-10T16:35:00.000Z	salil	Seveas	44 4 5 * *   salil /usr/bin/poff................ this is it no..??
+2005-08-10T16:35:00.000Z	Seveas	salil	that would only work on 4:44 am on the 5th of every mothn
+2005-08-10T16:36:00.000Z	salil	Seveas	 yes.. that is what i want.. but its is not working..
+2005-08-10T16:36:00.000Z	salil	Seveas	it should work rite now on my computer .. but its not working.
+2005-08-10T16:36:00.000Z	Seveas	salil	it's :36 now, not :44 :)
+2005-08-10T16:37:00.000Z	salil	Seveas	in my computer.. its 46 now..
+2005-08-10T16:37:00.000Z	Seveas	salil	odd
+2005-08-10T16:37:00.000Z	salil	Seveas	how come..?
+2005-08-10T16:38:00.000Z	salil	Seveas	i'm trying with 50
+2005-08-10T16:38:00.000Z	salil	Seveas	btw.. how to you know what time it is here...?
+2005-08-10T16:39:00.000Z	Seveas	salil	my clock is synchronized to a timeserver
+2005-08-10T16:39:00.000Z	salil	Seveas	mine.. is not.. mine is my home time..
+2005-08-10T16:39:00.000Z	salil	Seveas	it is 4 in the afternoon..?
+2005-08-10T16:40:00.000Z	Seveas	salil	I said nothing about the hour :0
+2005-08-10T16:40:00.000Z	salil	Seveas	ooh.. okay..
+2005-08-10T16:40:00.000Z	Seveas	salil	4 in the afternoon is 16, not 4!
+2005-08-10T16:40:00.000Z	salil	Seveas	yes.. its 4 in the  morning here.. i thought it was 4 in the afternoon at your place..
+2005-08-10T16:41:00.000Z	Seveas	salil	no it's 00:40 here :)
+2005-08-10T16:41:00.000Z	salil	Seveas	 okay
+2005-08-10T16:41:00.000Z	salil	Seveas	its still not working..
+2005-08-10T16:42:00.000Z	salil	Seveas	i don't know.. what is wrong
+2005-08-10T16:42:00.000Z	salil	Seveas	when i hit gedit /etc/crontab.. then i get some warnings..
+2005-08-10T16:42:00.000Z	Seveas	salil	copy your crontab on the pastebin please
+2005-08-10T16:42:00.000Z	salil	Seveas	what is a paste bin??
+2005-08-10T16:43:00.000Z	Seveas	salil	http://paste.ubuntulinux.nl
+2005-08-10T16:43:00.000Z	salil	Seveas	ooh :)
+2005-08-10T16:44:00.000Z	salil	Seveas	i did it..
+2005-08-10T16:46:00.000Z	salil	Seveas	i posted it in the pastebin
+2005-08-10T16:46:00.000Z	Seveas	salil	looks right to me
+2005-08-10T16:46:00.000Z	Seveas	salil	what is the warning you get?
+2005-08-10T16:46:00.000Z	salil	Seveas	shall i post that too??
+2005-08-10T16:46:00.000Z	Seveas	salil	please do
+2005-08-10T16:47:00.000Z	salil	Seveas	 okay
+2005-08-10T16:48:00.000Z	salil	Seveas	can you make anything out of that..?
+2005-08-10T16:49:00.000Z	Seveas	salil	irrelevant error, has nothing to do with this
+2005-08-10T16:49:00.000Z	salil	Seveas	okay... . so what do you think i should do ..?
+2005-08-10T16:49:00.000Z	Seveas	salil	no idea really....
+2005-08-10T16:50:00.000Z	salil	Seveas	yes.. its just as it says in the pastebin..
+2005-08-10T16:50:00.000Z	Seveas	salil	also: do you get any info from /var/log/messages about it?
+2005-08-10T16:50:00.000Z	salil	Seveas	no..
+2005-08-21T14:16:00.000Z	Seveas	salil	take mplayer-686 (or -k7 is on amd)
+2005-08-21T14:16:00.000Z	salil	Seveas	thanks.. i'll try
+2005-08-21T14:17:00.000Z	salil	Seveas	do i get gui with that..?
+2005-08-21T14:20:00.000Z	salil	Seveas	can you tell me how to check my internet connection rate..??
+2005-08-21T14:20:00.000Z	Seveas	salil	bwm
+2005-08-21T14:21:00.000Z	salil	Seveas	command not found
+2005-08-21T15:58:00.000Z	salil	Seveas	i d'loaded mplayer .. and it d'loaded xmms.. but.. how do i play dvds..?

@@ -1,0 +1,95 @@
+2006-07-10T08:07:00.000Z	ketethatooblack		help me
+2006-07-10T08:07:00.000Z	ketethatooblack		i really need help
+2006-07-10T08:07:00.000Z	ketethatooblack		hahha
+2006-07-10T08:07:00.000Z	ketethatooblack		im not understanding ilnux
+2006-07-10T08:07:00.000Z	ketethatooblack		LINUX
+2006-07-10T08:07:00.000Z	ketethatooblack		its cool and all but downloading things on this computer is a paint in the ass
+2006-07-10T08:07:00.000Z	ketethatooblack		ok i have a sudoku game and its in the archives manager
+2006-07-10T08:08:00.000Z	ketethatooblack		i dont know what to do after this step
+2006-07-10T08:10:00.000Z	ketethatooblack		DOES ANY ONE KNOW HOW TO DOWNLOAD THINGS ON THIS COMPUTER SUCH AS A GAME
+2006-07-10T08:10:00.000Z	Warbo	ketethatooblack	Add/Remove Applications maybe?
+2006-07-10T08:11:00.000Z	Warbo	ketethatooblack	If you want to install your Sudoku game then right click on it in the file manager and go "Extract Here", then open up the folder it makes
+2006-07-10T08:12:00.000Z	Warbo	ketethatooblack	Go on "Extract" and choose to extract it into your Home folder
+2006-07-10T08:13:00.000Z	Warbo	ketethatooblack	Open a terminal (in accessories)
+2006-07-10T08:14:00.000Z	Warbo	ketethatooblack	If the folder is in your home folder then type "cd thenameofthefolder" and press enter
+2006-07-10T08:16:00.000Z	Warbo	ketethatooblack	The terminal is already in your home folder by default (the ~ means your home) type in "cd thenameofthefolderyouextracted"
+2006-07-10T08:16:00.000Z	Warbo	ketethatooblack	The ~ should change to ~/foldername
+2006-07-10T08:17:00.000Z	Warbo	ketethatooblack	Does the folder you extracted contain a file called "configure"?
+2006-07-10T08:18:00.000Z	Warbo	ketethatooblack	OK, but you mentaioned "Makefile"
+2006-07-10T08:19:00.000Z	Warbo	ketethatooblack	OK, try typing "sudo apt-get install build-essential"
+2006-07-10T08:20:00.000Z	Warbo	ketethatooblack	Type your regular password. It won't show up for security reasons, but it is going in
+2006-07-10T08:20:00.000Z	Warbo	ketethatooblack	I said it doesn't show up for security reasons
+2006-07-10T08:22:00.000Z	Warbo	ketethatooblack	It needs a load of crap installed. Say yes
+2006-07-10T08:24:00.000Z	Warbo	ketethatooblack	That's because you don't really need to do all of this. That "apt-get" thing? It contains a load of games by default, you just need to tell it what you want to install
+2006-07-10T08:25:00.000Z	Warbo	ketethatooblack	OK, when it has all installed type "make"
+2006-07-10T08:27:00.000Z	Warbo	ketethatooblack	Usually source code (which is what you downloaded) follows a procedure of configure, build then install. Since yours doesn't have the configure bit it is likely to have errors. Try going in System>Administration>Synaptic Package Manager and looking in Games
+2006-07-10T08:28:00.000Z	Warbo	ketethatooblack	Also there are some huge archives of stuff available.......
+2006-07-10T08:28:00.000Z	Warbo	ketethatooblack	Too bad that game you got didn't build (configure would have told you what the problem was and what you needed to do about it)
+2006-07-10T08:29:00.000Z	Warbo	ketethatooblack	Try to stick to packages in Synaptic
+2006-07-10T08:29:00.000Z	Warbo	ketethatooblack	the actual procedure is usually "./configure ", "make", "sudo checkinstall"
+2006-07-10T14:29:00.000Z	Warbo	ketethatooblack	Hello
+2006-07-10T14:39:00.000Z	Warbo	ketethatooblack	Read that to get access to MP3 stuff
+2006-07-10T14:39:00.000Z	Warbo	ketethatooblack	No way!
+2006-07-10T14:40:00.000Z	Warbo	ketethatooblack	That is for source code, packages are damn easy
+2006-07-10T14:42:00.000Z	Warbo	ketethatooblack	Are you in Dapper or Breezy?
+2006-07-10T14:46:00.000Z	Warbo	ketethatooblack	Any software you want is probably already in Ubuntu, don't go downloading stuff off web pages
+2006-07-10T14:58:00.000Z	Warbo	ketethatooblack	"apt-cache search gstreamer0.8-mad"
+2006-07-10T14:59:00.000Z	Warbo	ketethatooblack	Yes
+2006-07-10T15:00:00.000Z	Warbo	ketethatooblack	Just follow the links to do with universe
+2006-07-10T15:43:00.000Z	Warbo	ketethatooblack	Only one program can change packages at a time (to prevent conflicts). Close any update managers, synaptics, apt-gets, aptitudes, adepts or anything else which uses APT
+2006-07-10T15:44:00.000Z	Warbo	ketethatooblack	No, just only use one APT program at a time
+2006-07-10T15:52:00.000Z	Warbo	ketethatooblack	Visit the Wiki. It tells you pretty much everything you could want
+2006-07-10T15:53:00.000Z	Warbo	ketethatooblack	Are you saying you prefer a text-mode console? :)
+2006-07-10T15:54:00.000Z	Warbo	ketethatooblack	Repeat this to me: "To get into grahics, I will press ctrl-alt-f7"
+2006-07-10T15:54:00.000Z	Warbo	ketethatooblack	OK, now press ctrl-alt-f1
+2006-07-10T15:55:00.000Z	Warbo	ketethatooblack	Go into a text-mode console
+2006-07-10T15:55:00.000Z	Warbo	ketethatooblack	(that is what it will do, not an instruction :) )
+2006-07-10T15:59:00.000Z	Warbo	ketethatooblack	What did I tell you to repeat?
+2006-07-10T16:00:00.000Z	Warbo	ketethatooblack	"sudo apt-get dist-upgrade"
+2006-07-11T16:08:00.000Z	Warbo	ketethatooblack	I'm back. What are you up to?
+2006-07-11T16:10:00.000Z	Warbo	ketethatooblack	All of your personal files and stuff will be, as well as your preferences
+2006-07-11T16:11:00.000Z	Warbo	ketethatooblack	The setup takes a while (after it has finished the download)
+2006-07-11T16:14:00.000Z	Warbo	ketethatooblack	Did gnomefreak get you to delete the "#"s from the lines in /etc/apt/sources.list?
+2006-07-11T16:14:00.000Z	Warbo	ketethatooblack	OK, then yes you should just look for gstreamer
+2006-07-11T16:16:00.000Z	Warbo	ketethatooblack	yes. once you have univese and multiverse enabled (the "#" tells apt not to use the line, so you enabled them by removing the "#") you can find pretty much everything you need in Synaptic
+2006-07-11T16:16:00.000Z	Warbo	ketethatooblack	Open another terminal for a second...
+2006-07-11T16:17:00.000Z	Warbo	ketethatooblack	Type "cat /boot/vmlinuz"
+2006-07-11T16:18:00.000Z	Warbo	ketethatooblack	"cat /boot/vmlinuz*" then
+2006-07-11T16:19:00.000Z	Warbo	ketethatooblack	You said Linux looks nice
+2006-07-11T16:20:00.000Z	Warbo	ketethatooblack	That is what Linux looks like :)
+2006-07-11T16:20:00.000Z	Warbo	ketethatooblack	You can stop it with ctrl-c
+2006-07-11T16:20:00.000Z	Warbo	ketethatooblack	Linux is the kernel. Ubuntu is the OS
+2006-07-11T16:21:00.000Z	Warbo	ketethatooblack	Better :)
+2006-07-11T16:21:00.000Z	Warbo	ketethatooblack	Oh yeah, you want to know how Linux sounds?
+2006-07-11T16:21:00.000Z	Warbo	ketethatooblack	The kernel is the thing which connects the hardware and the software
+2006-07-11T16:22:00.000Z	Warbo	ketethatooblack	"cat /boot/vmlinuz* > /dev/dsp"
+2006-07-11T16:24:00.000Z	Warbo	ketethatooblack	press ctrl-c
+2006-07-11T16:25:00.000Z	Warbo	ketethatooblack	You only get recognisable sound with uncompressed WAVs or AIFFs
+2006-07-11T16:26:00.000Z	Warbo	ketethatooblack	Not at the moment, I'm trying to install Breezy inside Dapper.....
+2006-07-11T16:27:00.000Z	Warbo	ketethatooblack	VERY trivial problem, pyvnc2swf hangs in Dapper
+2006-07-11T16:28:00.000Z	Warbo	ketethatooblack	I am trying to record my screen activity to a Flash file, but it doesn't work in Dapper (it did in Breezy), so I am installing Breezy in a directory so I can run commands in it
+2006-07-11T16:30:00.000Z	Warbo	ketethatooblack	2 years
+2006-07-11T16:31:00.000Z	Warbo	ketethatooblack	A bit. From 2001-2004 I used 3.1,95,98,NT4,ME,2000,XP
+2006-07-11T16:32:00.000Z	Warbo	ketethatooblack	It depends on the IRC client you are using. Look in it's preferences
+2006-07-11T16:35:00.000Z	Warbo	ketethatooblack	For random chatter join #ubuntu-offtopic
+2006-07-11T16:43:00.000Z	Warbo	ketethatooblack	I don't understand you
+2006-07-11T16:44:00.000Z	Warbo	ketethatooblack	You can still carry on doing stuff (though it may go a bit slower)
+2006-07-11T16:45:00.000Z	Warbo	ketethatooblack	Downloaded or installed? (it downloads, selects, unpacks then sets up)
+2006-07-11T16:46:00.000Z	Warbo	ketethatooblack	Yes. Look in the System Tools menu (in Applications) is there a "New Login" option?
+2006-07-11T16:47:00.000Z	Warbo	ketethatooblack	Is there a "nested window" one too?
+2006-07-11T16:48:00.000Z	Warbo	ketethatooblack	OK, well the New Login will start a new X session (X is the graphics server) and start GDM (the GNOME Display Manager) in it. You can get back to your old graphics session with ctrl-alt-f7
+2006-07-11T16:49:00.000Z	Warbo	ketethatooblack	Give you a login screen (X by itself is just a blank screen with a pointer. Completely useless)
+2006-07-11T16:52:00.000Z	Warbo	ketethatooblack	What package is being set up?
+2006-07-11T16:53:00.000Z	Warbo	ketethatooblack	A package is being updated, and the update contains a new configuration. Since you may have reconfigured the package yourself it is asking if you want to replace your current config with the new one
+2006-07-11T16:54:00.000Z	Warbo	ketethatooblack	You should probably say yes to them
+2006-07-11T16:54:00.000Z	Warbo	ketethatooblack	WAIT
+2006-07-11T16:54:00.000Z	Warbo	ketethatooblack	I mean use the new one
+2006-07-11T16:54:00.000Z	Warbo	ketethatooblack	Yes, it is only config files
+2006-07-11T16:54:00.000Z	Warbo	ketethatooblack	Yes, use the new one (it has probably been updated for a reason)
+2006-07-11T16:58:00.000Z	Warbo	ketethatooblack	Y
+2006-07-11T08:23:00.000Z	Warbo	ketethatooblack	Get the ones already in Ubuntu
+2006-07-11T08:23:00.000Z	Warbo	ketethatooblack	"sudo apt-get install sun-java5-bin"
+2006-07-11T08:25:00.000Z	Warbo	ketethatooblack	Or Frostwire
+2006-07-11T08:25:00.000Z	Warbo	ketethatooblack	Apparently (I don't like it or Limewire personally)
+2006-07-11T08:26:00.000Z	Warbo	ketethatooblack	You may also want to look at gtk-gnutella ("sudo apt-get install gtk-gnutella") which doesn't need Java
+2006-07-11T08:27:00.000Z	Warbo	ketethatooblack	It has no media player or library or stuff, it just downloads stuff

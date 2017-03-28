@@ -1,0 +1,97 @@
+2006-08-05T15:52:00.000Z	nicholaspaul		Anyone have experience using 'grub' at the root terminal?
+2006-08-05T15:53:00.000Z	nicholaspaul		i'm trying to install grub
+2006-08-05T15:53:00.000Z	nicholaspaul		no, its a new drive that i copied the old system to. I'm upgrading to a bigger HD
+2006-08-05T15:53:00.000Z	sparkleytone	nicholaspaul	you need hd0,3
+2006-08-05T15:54:00.000Z	sparkleytone	nicholaspaul	do a 'cat /boot/grub/device.map' and make sure that /dev/hda is seen as hd0
+2006-08-05T15:55:00.000Z	sparkleytone	nicholaspaul	as long as you did cp -af or something similar, yeah should work
+2006-08-05T15:55:00.000Z	sparkleytone	nicholaspaul	or dd ;)
+2006-08-05T15:56:00.000Z	nicholaspaul	sparkleytone	yea i did, cp -afx / /new_drive
+2006-08-05T15:56:00.000Z	nicholaspaul	sparkleytone	so yea, hda is hd0
+2006-08-05T15:56:00.000Z	sparkleytone	nicholaspaul	you could also do a 'dd bs=512 count=1 if=/dev/olddrive of=/dev/newdrive'
+2006-08-05T15:57:00.000Z	sparkleytone	nicholaspaul	that will copy the boot sector...then you just have to make sure the new drive is in the same 'place' as the old drive used to be and it should boot
+2006-08-05T15:57:00.000Z	nicholaspaul	sparkleytone	whoa. Simple is good :) .... so now, root (hd0,3) gives me "Error21: selected disk does not exist"
+2006-08-05T15:58:00.000Z	sparkleytone	nicholaspaul	just use the old grub configuration file
+2006-08-05T15:58:00.000Z	sparkleytone	nicholaspaul	revert to the way it was when it was copied
+2006-08-05T15:59:00.000Z	nicholaspaul	sparkleytone	by copying /boot over? i think i tried that...
+2006-08-05T15:59:00.000Z	sparkleytone	nicholaspaul	ya, but you didn't copy the bootsector before ;)
+2006-08-06T16:01:00.000Z	sparkleytone	nicholaspaul	& Jack_Sparrow i think its disk-free
+2006-08-06T16:02:00.000Z	nicholaspaul	sparkleytone	oh. How do i copy the bootsector?
+2006-08-06T16:02:00.000Z	sparkleytone	nicholaspaul	that's the dd command i gave you...scroll up
+2006-08-06T16:03:00.000Z	nicholaspaul	sparkleytone	aaaaahhh! so does that copy jsut the boot sector, or the whole shabang again?
+2006-08-06T16:04:00.000Z	sparkleytone	nicholaspaul	count=1 means it only copies one 512byte sector
+2006-08-06T16:05:00.000Z	nicholaspaul	sparkleytone	gotcha.
+2006-08-06T16:05:00.000Z	sparkleytone	nicholaspaul	& EpP: another, sometimes better way is to just add a new hard drive wherever you need space
+2006-08-06T16:06:00.000Z	sparkleytone	nicholaspaul	& EpP: instead of replacing your root, you can find what is taking up the space...format the new drive and cp -af the directory contents...then mount the new drive with that directory as the mountpoint
+2006-08-06T16:29:00.000Z	nicholaspaul	sparkleytone	i did the dd count=1 bit, but it still doesnt start up with grub. How can i check it?
+2006-08-06T16:29:00.000Z	sparkleytone	nicholaspaul	do you get an error?
+2006-08-06T16:30:00.000Z	nicholaspaul	sparkleytone	and it freezes with GRUB sitting there.
+2006-08-06T16:30:00.000Z	sparkleytone	nicholaspaul	you should probably do what i was telling eleazar123 to do.  boot to your working install...mount your new hd and chroot into it, mount proc into it...then grub-install
+2006-08-06T16:31:00.000Z	nicholaspaul	sparkleytone	sorry i wasnt paying attention :D mounting the new dr. is ok. How do i chroot into it and mountproc into it?
+2006-08-06T16:32:00.000Z	sparkleytone	nicholaspaul	after mounting the drive...then 'mount -o bind /proc /path/to/newdrive/proc'
+2006-08-06T16:32:00.000Z	sparkleytone	nicholaspaul	then do 'chroot /path/to/newdrive /bin/bash' , then grub-install /dev/newdrive
+2006-08-06T16:33:00.000Z	nicholaspaul	sparkleytone	k, i'm just restarting it.
+2006-08-06T16:33:00.000Z	sparkleytone	nicholaspaul	you should really think about reformatting the drive and simply mounting it where you need space
+2006-08-06T16:33:00.000Z	sparkleytone	nicholaspaul	that would simplify the process immensely
+2006-08-06T16:34:00.000Z	nicholaspaul	sparkleytone	well, the prob is my sys drive is filling up.
+2006-08-06T16:34:00.000Z	sparkleytone	nicholaspaul	i doubt your / is filling up
+2006-08-06T16:34:00.000Z	sparkleytone	nicholaspaul	its probably either your /home or your /usr dirs
+2006-08-06T16:34:00.000Z	nicholaspaul	sparkleytone	on a 6Gb drive its getting there.
+2006-08-06T16:35:00.000Z	sparkleytone	nicholaspaul	again... / is ... its just a symbol really.  everything is in a directory
+2006-08-06T16:36:00.000Z	sparkleytone	nicholaspaul	you probably want to create 2 partitions on the new drive, format them and cp all your /home/* and /usr/* into each respective one.  then you can just change your fstab to mount the partitions into /home and /usr
+2006-08-06T16:36:00.000Z	sparkleytone	nicholaspaul	if your current drive isn't failing, there's not a huge incentive to replace it
+2006-08-06T16:37:00.000Z	nicholaspaul	sparkleytone	ok
+2006-08-06T16:37:00.000Z	sparkleytone	nicholaspaul	it sounds more difficult, but it really isn't.  it just goes against the way most of us are taught to think of how "drives" work
+2006-08-06T16:38:00.000Z	nicholaspaul	sparkleytone	ok i get it. so the home dir. just lives somewhere other than /home?
+2006-08-06T16:39:00.000Z	sparkleytone	nicholaspaul	/home is just a metaphor.  it has nothing to do with 'where' it is.  its just an organizational unit for human understanding
+2006-08-06T16:39:00.000Z	nicholaspaul	sparkleytone	aaah. i see.
+2006-08-06T16:40:00.000Z	sparkleytone	nicholaspaul	real OS's don't care "where" folders are physically.  so you can have /home on sdc4 and /usr on sdb1 and / on hda...whatever
+2006-08-06T16:40:00.000Z	nicholaspaul	sparkleytone	just like In OSX where you can move stuff around and it doesnt care!
+2006-08-06T16:40:00.000Z	sparkleytone	nicholaspaul	kind of but not really.
+2006-08-06T16:41:00.000Z	sparkleytone	nicholaspaul	OS X is full of magic :)
+2006-08-06T16:42:00.000Z	nicholaspaul	sparkleytone	oh yes. it is one big shining star alright ;)
+2006-08-06T16:45:00.000Z	nicholaspaul	sparkleytone	when i 'grub-install /dev/hdd' it says its not found or not a block device.
+2006-08-06T16:45:00.000Z	nicholaspaul	sparkleytone	i already did the other commands too.
+2006-08-06T16:45:00.000Z	sparkleytone	nicholaspaul	then its not /dev/hdd ;)
+2006-08-06T16:45:00.000Z	nicholaspaul	sparkleytone	lol hdd1 ?
+2006-08-06T16:46:00.000Z	sparkleytone	nicholaspaul	no...it should def be to the entire device
+2006-08-06T16:46:00.000Z	nicholaspaul	sparkleytone	but thats what DIsks manager says the drive is.
+2006-08-06T16:46:00.000Z	sparkleytone	nicholaspaul	what does 'fdisk -l /dev/hdd' say?
+2006-08-06T16:47:00.000Z	nicholaspaul	sparkleytone	cant open it, and fdisk -l returns nothing.
+2006-08-06T16:50:00.000Z	sparkleytone	nicholaspaul	what drive did you mount and chroot to?
+2006-08-06T16:51:00.000Z	nicholaspaul	sparkleytone	/media/rothko
+2006-08-06T16:51:00.000Z	nicholaspaul	sparkleytone	should that have been /dev/hdd ?
+2006-08-06T16:52:00.000Z	sparkleytone	nicholaspaul	what does 'mount' say the device is for /media/rothko ?
+2006-08-06T16:52:00.000Z	nicholaspaul	sparkleytone	/dev/hdd1
+2006-08-06T16:53:00.000Z	sparkleytone	nicholaspaul	you are chrooted now or out of it?
+2006-08-06T16:54:00.000Z	nicholaspaul	sparkleytone	oh i'm out of it now. should i do the chroot command again?
+2006-08-06T16:54:00.000Z	sparkleytone	nicholaspaul	pastebin your /media/rothko/etc/fstab
+2006-08-06T16:55:00.000Z	nicholaspaul	sparkleytone	ok.
+2006-08-06T16:55:00.000Z	sparkleytone	nicholaspaul	^^
+2006-08-06T16:56:00.000Z	nicholaspaul	sparkleytone	k
+2006-08-06T16:56:00.000Z	sparkleytone	nicholaspaul	what's the link?
+2006-08-06T16:58:00.000Z	nicholaspaul	sparkleytone	one sec
+2006-08-06T16:59:00.000Z	nicholaspaul	sparkleytone	http://paste.ubuntu-nl.org/19837
+2006-08-06T05:00:00.000Z	sparkleytone	nicholaspaul	you need to change your hda's to hdd's, then comment out the hdd1 line
+2006-08-06T05:01:00.000Z	sparkleytone	nicholaspaul	then "chroot /media/rothko /bin/bash" and try again
+2006-08-06T05:02:00.000Z	nicholaspaul	sparkleytone	will that still work when i swap my drives over?
+2006-08-06T05:02:00.000Z	sparkleytone	nicholaspaul	if you switch them out...no.
+2006-08-06T05:02:00.000Z	sparkleytone	nicholaspaul	before you swap them out...change them back
+2006-08-06T05:02:00.000Z	nicholaspaul	sparkleytone	oh. i seeeeeeeeee!
+2006-08-06T05:03:00.000Z	nicholaspaul	sparkleytone	ok, i'm going in...
+2006-08-06T05:08:00.000Z	nicholaspaul	sparkleytone	 it now says /dev/hda: Not found or not a block device.
+2006-08-06T05:09:00.000Z	sparkleytone	nicholaspaul	you did 'grub-install /dev/hdd' ?
+2006-08-06T05:09:00.000Z	nicholaspaul	sparkleytone	and hda , said the same thing both times
+2006-08-06T05:11:00.000Z	sparkleytone	nicholaspaul	it should be hdd
+2006-08-06T05:11:00.000Z	sparkleytone	nicholaspaul	try again with hdd
+2006-08-06T05:11:00.000Z	nicholaspaul	sparkleytone	same thing. Shouldnt 'mount -a ' mount whats in fstab?
+2006-08-06T05:11:00.000Z	nicholaspaul	sparkleytone	cos i dont get any response...
+2006-08-06T05:11:00.000Z	sparkleytone	nicholaspaul	not in a chroot
+2006-08-06T05:15:00.000Z	nicholaspaul	sparkleytone	how can i remount fstab then?
+2006-08-06T05:16:00.000Z	sparkleytone	nicholaspaul	you don't have to.  you just needed to change that in order to boot and i don't remember if grub reads it
+2006-08-06T05:16:00.000Z	nicholaspaul	sparkleytone	oh ok .
+2006-08-06T05:17:00.000Z	sparkleytone	nicholaspaul	in the chroot, rm /boot/grub/device.map and try again
+2006-08-06T05:18:00.000Z	nicholaspaul	sparkleytone	i keep getting the same thing.
+2006-08-06T05:19:00.000Z	sparkleytone	nicholaspaul	if you HAVE to replace the old drive...here's what you SHOULD do...repartition that drive with a partition the EXACT same size as your old HD's partition and the rest just unpartitioned.  then 'dd bs=1M if=/dev/hda1 of=/dev/hdd1' ... then 'dd bs=512 count=1 if=/dev/hda of=/dev/hdd' ... then shut down and switch out the drives....then reboot
+2006-08-06T05:20:00.000Z	sparkleytone	nicholaspaul	that WILL work...then you'll need to parted to resize the paritition
+2006-08-06T05:20:00.000Z	sparkleytone	nicholaspaul	i need to go
+2006-08-06T05:20:00.000Z	nicholaspaul	sparkleytone	ok i'll give that a try. Thanks for your help, and patience;)

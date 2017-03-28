@@ -1,0 +1,95 @@
+2009-07-09T02:16:00.000Z	Seven-7		I followed the steps on https://help.ubuntu.com/community/Internet/ConnectionSharing and it isn't working.
+2009-07-09T02:16:00.000Z	Seven-7		ping google.com returns "host not found"
+2009-07-09T02:16:00.000Z	ikonia	Seven-7	no dns
+2009-07-09T02:16:00.000Z	Seven-7	ikonia	I set it up for OpenDNS just like it said.
+2009-07-09T02:16:00.000Z	ikonia	Seven-7	not setup correctly
+2009-07-09T02:17:00.000Z	Seven-7	ikonia	No step was missed or done incorrectly.
+2009-07-09T02:17:00.000Z	ikonia	Seven-7	clearly it was, or it would be working
+2009-07-09T02:20:00.000Z	ikonia	Seven-7	no network gateway
+2009-07-09T02:20:00.000Z	Seven-7	ikonia	Man, you know what would be awesome? A little more detail.
+2009-07-09T02:21:00.000Z	ikonia	Seven-7	check your defailt gateway
+2009-07-09T02:21:00.000Z	Seven-7	ikonia	How?
+2009-07-09T02:21:00.000Z	ikonia	Seven-7	what ever tool you used to configure your IP - or netstat -rn
+2009-07-09T02:22:00.000Z	Seven-7	ikonia	You're talking greek to me. I followed the wiki page, that's about as far as I understand.
+2009-07-09T02:22:00.000Z	ikonia	Seven-7	I've just given you the exact command to check it
+2009-07-09T02:35:00.000Z	Seven-7	ikonia	You're a paragon of people that makes Ubuntu support a hell.
+2009-07-09T02:38:00.000Z	ikonia	Seven-7	http://www.cyberciti.biz/faq/linux-setup-default-gateway-with-route-command/
+2009-07-09T02:39:00.000Z	Seven-7	ikonia	I just read and followed that.
+2009-07-09T02:39:00.000Z	ikonia	Seven-7	so what's the issue ?
+2009-07-09T02:40:00.000Z	Seven-7	ikonia	I just said, "sudo route add default gw 192.168.1.1 eth0" --> SIOCARRDT: No Process
+2009-07-09T02:40:00.000Z	ikonia	Seven-7	pastebin the output of "ifconfig -a" and "netstat -rn" please
+2009-07-09T02:40:00.000Z	Seven-7	ikonia	That'd be pretty easy to do...if I could connect to the internet from that machine.
+2009-07-09T02:40:00.000Z	ikonia	Seven-7	put it to a file on a disk/usb and do it from another machine
+2009-07-09T02:46:00.000Z	Seven-7	ikonia	http://pastie.org/539297
+2009-07-09T02:47:00.000Z	ikonia	Seven-7	you have a default gateway
+2009-07-09T02:47:00.000Z	ikonia	Seven-7	192.168.1.254
+2009-07-09T02:47:00.000Z	Seven-7	ikonia	So you were wrong when you told me no default gateway.
+2009-07-09T02:48:00.000Z	ikonia	Seven-7	I'll rephrase then "no working default gateway"
+2009-07-09T02:48:00.000Z	Seven-7	ikonia	So the gateway (My laptop) is the problem.
+2009-07-09T02:49:00.000Z	ikonia	Seven-7	is 192.168.1.254 your laptop ?
+2009-07-09T02:49:00.000Z	Seven-7	ikonia	Pretty sure, how would I find out?
+2009-07-09T02:49:00.000Z	ikonia	Seven-7	just to be clear is it your laptop that is having the problem ?
+2009-07-09T02:50:00.000Z	Seven-7	ikonia	THe pastie was the client (The tower), you said it was a problem the default gateway. The gateway is the laptop.
+2009-07-09T02:51:00.000Z	ikonia	Seven-7	I don't think .254 is the laptop, the only reason I say this is .1 or .254 is normally reserverd for the gateway issued by the device giving out dhcp addresses
+2009-07-09T02:52:00.000Z	ikonia	Seven-7	you could always login to the laptop and check it's ip address
+2009-07-09T02:52:00.000Z	Seven-7	ikonia	 Via?
+2009-07-09T02:52:00.000Z	ikonia	Seven-7	the laptop won't work as a gateway / router unles you have set it up as a router
+2009-07-09T02:52:00.000Z	ikonia	Seven-7	via opening the lid and logging in
+2009-07-09T02:52:00.000Z	ikonia	Seven-7	I understand you can't access it on the network
+2009-07-09T02:52:00.000Z	Seven-7	ikonia	Opening the lid and logging in wont tell me the IP.
+2009-07-09T02:52:00.000Z	ikonia	Seven-7	you could also ping the address to see if it responds
+2009-07-09T02:53:00.000Z	ikonia	Seven-7	the network administrator gui will
+2009-07-09T02:53:00.000Z	ikonia	Seven-7	you must have set the ip up to make laptop act as a router
+2009-07-09T02:53:00.000Z	Seven-7	ikonia	Pretty sure I did that according to the Wiki.
+2009-07-09T02:54:00.000Z	ikonia	Seven-7	can you ping that address ?
+2009-07-09T02:54:00.000Z	Seven-7	ikonia	Ok, there's a grey area here. Can I ping (what) address from (Where)?
+2009-07-09T02:55:00.000Z	ikonia	Seven-7	can you ping the 254 address from the tower
+2009-07-09T02:55:00.000Z	Seven-7	ikonia	Yes, and I get responses.
+2009-07-09T02:55:00.000Z	ikonia	Seven-7	ok - so that means it's not acting as a router
+2009-07-09T02:55:00.000Z	ikonia	Seven-7	so the problem is your laptop not acting as a router
+2009-07-09T02:55:00.000Z	Seven-7	ikonia	Oh. I know what .254 is, it's the switch.
+2009-07-09T02:56:00.000Z	ikonia	Seven-7	assuming .254 is the router
+2009-07-09T02:56:00.000Z	ikonia	Seven-7	ahhh so thats why what won't let you go anywhere
+2009-07-09T02:56:00.000Z	Seven-7	ikonia	You know what? Gimmia a sec, make this easier.
+2009-07-09T02:57:00.000Z	ikonia	Seven-7	no problem
+2009-07-09T03:04:00.000Z	Seven-7	ikonia	http://docs.google.com/Presentation?id=dhpg742z_17hc6r9qcz
+2009-07-09T03:05:00.000Z	Seven-7	ikonia	There.
+2009-07-09T03:05:00.000Z	ikonia	Seven-7	looking
+2009-07-09T03:06:00.000Z	ikonia	Seven-7	ok - so from that diagram your laptop neets to be the default gateway and act as a router with ipforwarding
+2009-07-09T03:06:00.000Z	Seven-7	ikonia	I'm pretty sure I followed every step in the wiki. I'll try again.
+2009-07-09T03:06:00.000Z	ikonia	Seven-7	hang on
+2009-07-09T03:07:00.000Z	ikonia	Seven-7	you've got the switch set as the gateway, that can't route - so there is problem 1. problem 2 is that your laptop needs to be setup as a router, you said you've done this, and this may work, but you won't know until you tell the tower that the laptop's ip is the default gateway
+2009-07-09T03:07:00.000Z	Seven-7	ikonia	Ok, so based on the netstat/stuff I sent you, which IP should I use?
+2009-07-09T03:08:00.000Z	ikonia	Seven-7	the laptops
+2009-07-09T03:08:00.000Z	ikonia	Seven-7	but as majnoon pointed out, having a .254 address on the switch is unusual as thats normally a network gateway address
+2009-07-09T03:09:00.000Z	Seven-7	ikonia	Ok, I'm on the laptop and looking at the Network Tools. How do I find the Laptop's IP?
+2009-07-09T03:10:00.000Z	ikonia	Seven-7	do an ifconfig eth0
+2009-07-09T03:10:00.000Z	ikonia	Seven-7	or "sudo ifconfig eth0"
+2009-07-09T03:11:00.000Z	Seven-7	ikonia	http://pastie.org/539332
+2009-07-09T03:11:00.000Z	ikonia	Seven-7	no ip
+2009-07-09T03:11:00.000Z	ikonia	Seven-7	I think we are in a bit of a mess here
+2009-07-09T03:11:00.000Z	ikonia	Seven-7	can we walk this through a step at a time
+2009-07-09T03:11:00.000Z	Seven-7	ikonia	Sure.
+2009-07-09T03:12:00.000Z	ikonia	Seven-7	ok - lets deal with the switch first
+2009-07-09T03:12:00.000Z	ikonia	Seven-7	are you %100 sure that has an IP ?
+2009-07-09T03:12:00.000Z	ikonia	Seven-7	the reason I ask is switches don't normally have IP's
+2009-07-09T03:12:00.000Z	ikonia	Seven-7	are you sure it's a switch and not a router with a switch in it
+2009-07-09T03:12:00.000Z	Seven-7	ikonia	Asking now.
+2009-07-09T03:13:00.000Z	ikonia	Seven-7	not doubting you but it is very unusual
+2009-07-09T03:13:00.000Z	Seven-7	ikonia	Ugh, it's a router with a switch. Potheads don't make the best details.
+2009-07-09T03:13:00.000Z	ikonia	Seven-7	ok - so this is problem one
+2009-07-09T03:13:00.000Z	ikonia	Seven-7	your "switch" is giving out dhcp information as if it was THE gateway to the internet
+2009-07-09T03:13:00.000Z	Seven-7	ikonia	Ah-ha!
+2009-07-09T03:13:00.000Z	ikonia	Seven-7	unless you can disable the "router" functionality of this device you'll get no-where
+2009-07-09T03:14:00.000Z	ikonia	Seven-7	you need it to be a dumb switch
+2009-07-09T03:14:00.000Z	Seven-7	ikonia	I can do that, sec.
+2009-07-09T03:15:00.000Z	ikonia	Seven-7	you know it
+2009-07-09T03:15:00.000Z	Seven-7	ikonia	Yeah, but the real router (The internet one) is also .254.
+2009-07-09T03:15:00.000Z	ikonia	Seven-7	ahh ip conflict
+2009-07-09T03:16:00.000Z	ikonia	Seven-7	from the tower .254 will be switch
+2009-07-09T03:19:00.000Z	Seven-7	ikonia	Arlight, I disabled the device's LAN DHCP settings, changed it to .251
+2009-07-09T03:20:00.000Z	ikonia	Seven-7	that's not really disabling the routers routing functionality, that's just dhcp
+2009-07-09T03:20:00.000Z	ikonia	Seven-7	you need to disable it's routing ability
+2009-07-09T03:21:00.000Z	ikonia	Seven-7	each packet that goes through it, it will try to route - which will go nowhere, unless you disable the routing side of it
+2009-07-09T03:21:00.000Z	ikonia	Seven-7	does what I'm saying make sense to you ?
+2009-07-16T01:27:00.000Z	ikonia	Seven-7	in root ?

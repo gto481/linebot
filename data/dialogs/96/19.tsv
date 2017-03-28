@@ -1,0 +1,96 @@
+2009-07-10T02:18:00.000Z	Bookman		Is there no way to specify NFS as the share method for a directory in Nautilus?
+2009-07-10T02:20:00.000Z	edbian	Bookman	deany NFS is set up with config files and then just works seamlessly (like a hardcore native linux app usually does).
+2009-07-11T05:54:00.000Z	edbian	Bookman	I have opera!
+2009-07-11T05:54:00.000Z	Bookman	edbian	how did you install?  Which version of Opera/Ubuntu?
+2009-07-11T05:55:00.000Z	edbian	Bookman	opera 10.0 beta Ubuntu 9.04.  Just grab the .dev package from the site my friend!
+2009-07-11T05:55:00.000Z	edbian	Bookman	I'll get a link.  Do you know how to install a .deb?
+2009-07-11T05:55:00.000Z	Bookman	edbian	I tried, it just errors out.
+2009-07-11T05:55:00.000Z	edbian	Bookman	So you have the .deb package.  What command did you run to install it?
+2009-07-11T05:57:00.000Z	Bookman	edbian	Why a command?  Package Installer GUI
+2009-07-11T05:58:00.000Z	edbian	Bookman	I'm actually a little confused about the version myself.  When I look at about opera I get that I am version 10.0 but lmy browser ID is 9.8 and the page lists that 9.64 is available for linux.  So IDK
+2009-07-11T05:58:00.000Z	edbian	Bookman	I like the CLI
+2009-07-11T05:58:00.000Z	Bookman	edbian	yeah, it is all confusing.
+2009-07-11T05:58:00.000Z	edbian	Bookman	Are you willing to run a command I give you to install the package?  I don't have much / any experience with a GUI for installing .deb
+2009-07-11T05:59:00.000Z	Bookman	edbian	yes, but this calls for another beer
+2009-07-11T05:59:00.000Z	edbian	Bookman	ted__:  Computing and Drinking don't go well.
+2009-07-11T06:00:00.000Z	edbian	Bookman	How about running a command so we get some errors to work with?  Just say no if you don't want to.
+2009-07-11T06:01:00.000Z	Bookman	edbian	hold on here....I have errors to throw at you.
+2009-07-11T06:01:00.000Z	edbian	Bookman	Ted__ Maybe that's the issue!  Temp file?
+2009-07-11T06:01:00.000Z	edbian	Bookman	Yay!  Errors!
+2009-07-11T06:03:00.000Z	edbian	Bookman	What are the errors?
+2009-07-11T06:04:00.000Z	Bookman	edbian	dpkg:  parse error, in file '/var/lib/dpkg/available' near line 14720 package 'update-manager-core':
+2009-07-11T06:04:00.000Z	Bookman	edbian	and it carries on
+2009-07-11T06:05:00.000Z	edbian	Bookman	Sounds like a problem with the code in the package.
+2009-07-11T06:05:00.000Z	Bookman	edbian	See, never say beer is bad for computing to a Canadian!
+2009-07-11T06:05:00.000Z	edbian	Bookman	sorry llol
+2009-07-11T06:07:00.000Z	edbian	Bookman	Where did you get the package?
+2009-07-11T06:07:00.000Z	Bookman	edbian	From the Opera website
+2009-07-11T06:08:00.000Z	edbian	Bookman	So that's reliable...
+2009-07-11T06:08:00.000Z	Bookman	edbian	http://www.opera.com/browser/download/
+2009-07-11T06:08:00.000Z	Bookman	edbian	Could you try to install it on your end?
+2009-07-11T06:09:00.000Z	edbian	Bookman	Well.  I'm actually running debian 5 right now.  I'll try the ubuntu package hang on.
+2009-07-11T06:09:00.000Z	Bookman	edbian	thanks for the effort here.
+2009-07-11T06:09:00.000Z	edbian	Bookman	Do you see on the site where you choose your distro??  Try choosing debian and see if maybe the current ubuntu package is just faulty.
+2009-07-11T06:10:00.000Z	edbian	Bookman	my pleasure!
+2009-07-11T06:11:00.000Z	edbian	Bookman	That was silly of you.  Obviously if the package was in the repos you wouldn't be at the website.
+2009-07-11T06:12:00.000Z	Bookman	edbian	Ubuntu/Debian are the same package. Same errors and filenames
+2009-07-11T06:13:00.000Z	edbian	Bookman	They might seem that way but they definitely are not.  Ubuntu is opera-static (don't know what that means so don't ask) but it has a slightly different GUI and it reports as version 9.64.
+2009-07-11T06:14:00.000Z	edbian	Bookman	Also it installed fine via command line
+2009-07-11T06:15:00.000Z	Bookman	edbian	ok, what is the command line to install it?  I'll give that a shot, thanks.
+2009-07-11T06:16:00.000Z	edbian	Bookman	cd to the directory of the package.  "sudo dpkg -i <packagename.deb>"
+2009-07-11T06:18:00.000Z	edbian	Bookman	What is the output of the dpkg line??
+2009-07-11T06:18:00.000Z	Bookman	edbian	exact same errors as the GUI
+2009-07-11T06:19:00.000Z	edbian	Bookman	That is very strange.  I am thinking that the new dpkg is the issue (newer in ubuntu than in debian).  I can't think of anything else.
+2009-07-11T06:19:00.000Z	Bookman	edbian	http://pastebin.ca/1491378
+2009-07-11T06:20:00.000Z	edbian	Bookman	Yeah see character "!" not allowed
+2009-07-11T06:21:00.000Z	edbian	Bookman	Perhaps go into the file and remove it?  It even tells you the line.  Totally uncharted territory for me though.  Goodl luck if you attempt that.
+2009-07-11T06:21:00.000Z	Bookman	edbian	Beer+Computers=Nerves of Steel
+2009-07-11T06:22:00.000Z	edbian	Bookman	I have a great idea!  Just above the green button on the opera site is "check out the new opera 10 beta"  You should try it out (as it were)
+2009-07-11T06:22:00.000Z	Bookman	edbian	Already done that.  Same exact error.
+2009-07-11T06:23:00.000Z	edbian	Bookman	It's gotta be your dpkg.  Now it's doing it on multiple different packages.
+2009-07-11T06:23:00.000Z	Bookman	edbian	It could very well be.  We'd need someone else with 9.04 to try the install using the same methods (hint, hint)
+2009-07-11T06:24:00.000Z	edbian	Bookman	Yeah yeah.  My ubuntu install is messed up right now!  I confess!  You caught me!
+2009-07-11T06:24:00.000Z	edbian	Bookman	I can't test it for you :(
+2009-07-11T06:25:00.000Z	Bookman	edbian	hahahahahah
+2009-07-11T06:25:00.000Z	Bookman	edbian	Now that is funny.  You made my night.  Thanks.
+2009-07-11T06:26:00.000Z	edbian	Bookman	I accidentally purged dpkg (it was a copy / paste typo).  I have to reinstall and haven't gotten around to it yet.
+2009-07-11T06:27:00.000Z	Bookman	edbian	ok, corrected, lets see what happens now!
+2009-07-11T06:28:00.000Z	edbian	Bookman	corrected?
+2009-07-11T06:29:00.000Z	Bookman	edbian	Bob's your uncle!
+2009-07-11T06:29:00.000Z	Bookman	edbian	wonderful.
+2009-07-11T06:30:00.000Z	Bookman	edbian	Thank you for you tolerance.
+2009-07-11T06:30:00.000Z	edbian	Bookman	NP!
+2009-07-11T06:30:00.000Z	edbian	Bookman	I don't know what else to try besides getting a different version of dpkg (not even sure that's possible)
+2009-07-11T06:31:00.000Z	Bookman	edbian	I fixed it.
+2009-07-11T06:31:00.000Z	Bookman	edbian	corrected the '!' for a 'a'
+2009-07-11T06:31:00.000Z	Bookman	edbian	You were right, just read and it says what the problem was and on what line
+2009-07-11T06:31:00.000Z	edbian	Bookman	You edited the file!!!
+2009-07-11T06:31:00.000Z	Bookman	edbian	You bet.....Thank you beer muscles
+2009-07-11T06:32:00.000Z	edbian	Bookman	Good job man!  I'm impressed!  Was it just an extraneous "!"  ??
+2009-07-11T06:32:00.000Z	Bookman	edbian	an 'a' was replaced with a '!' for whatever reason.  Easy Peasy
+2009-07-11T06:33:00.000Z	edbian	Bookman	I would feel pretty un-touchable in your situation
+2009-07-11T06:33:00.000Z	Bookman	edbian	Lucky....but fun!
+2009-07-11T06:33:00.000Z	edbian	Bookman	You should make a forum thread or something.  A quick how-to to get the word out.
+2009-07-11T06:34:00.000Z	edbian	Bookman	I need to go but good job again!  :)
+2009-07-11T06:35:00.000Z	Bookman	edbian	Thanks again.  It was your pointing the error out.....nice.
+2009-07-11T19:59:00.000Z	edbian	Bookman	Then they reconnected right away apparently.
+2009-07-11T20:00:00.000Z	edbian	Bookman	Perhaps the server that went down was in a server farm and things weren't quite as seemless as they should have been.
+2009-07-11T20:08:00.000Z	Bookman	edbian	maybe you misunderstood my issue. Mine was just a RAM problem
+2009-07-11T20:09:00.000Z	edbian	Bookman	*Bashful* I don't recall your issue
+2009-07-11T20:10:00.000Z	Bookman	edbian	no worries, I seem to be running just fine now.
+2009-08-11T08:44:00.000Z	edbian	Bookman	There is a transmission-cli package
+2009-08-11T08:46:00.000Z	Bookman	edbian	Yeah, I came across the transmission-cli in my research, but I never found out if it can "take over" downloading a current partial torrent
+2009-08-11T08:46:00.000Z	edbian	Bookman	Yeah I have no idea about that.  I don't it.
+2009-08-11T08:46:00.000Z	edbian	Bookman	Perhaps you could seed yourself?
+2010-06-06T09:41:00.000Z	edbian	Bookman	No no, you def can run .jar files on linux
+2010-06-06T09:41:00.000Z	edbian	Bookman	The point of java is that it is platform independent.  Hence the whole stupid java virutal machine
+2010-06-06T09:41:00.000Z	edbian	Bookman	or JRE (jave runtime envo)
+2010-06-06T09:41:00.000Z	Bookman	edbian	I have openjdk
+2010-06-06T09:42:00.000Z	edbian	Bookman	That's the java develpment kit which should have the jre
+2010-06-06T09:42:00.000Z	edbian	Bookman	I'm not sure how to fix it.  I just wanted to let you know it's def. possibly
+2010-06-06T09:42:00.000Z	Bookman	edbian	ok, if anyone knows how, it would be great to learn.
+2010-06-06T09:47:00.000Z	edbian	Bookman	no.  They should be written platform ind.  What the people are brining up here is people that have written their app in a nasty way.  It actually checks the host OS and performs poorly if on a certain OS
+2010-06-06T09:47:00.000Z	edbian	Bookman	That is not the intention of Java or, dare I say, most java developers
+2010-06-06T09:48:00.000Z	Bookman	edbian	So I'm assuming that ubuntu just does not have the correct drivers to run this one particular program.
+2010-06-06T09:49:00.000Z	edbian	Bookman	drivers run hardware.  In linux they're called kernel modules
+2011-08-09T02:00:00.000Z	edbian	Bookman	that stupid gui is very buggy

@@ -1,0 +1,95 @@
+2005-07-12T11:21:00.000Z	vladuz976		does anybody know to what directory i have to copy new fonts? if i wanna install more?
+2005-07-12T11:22:00.000Z	The_Vox	vladuz976	~/.fonts should work, IIRC
+2005-07-12T11:24:00.000Z	vladuz976	The_Vox	i copied them in there, but it seems that those are the only ones in there now. i don't see the rest of my fonts there
+2005-07-12T11:25:00.000Z	The_Vox	vladuz976	the system-wide fonts are somewhere under /usr
+2005-07-12T11:26:00.000Z	vladuz976	The_Vox	meaning i can only use the new ones for limited
+2005-07-12T11:26:00.000Z	The_Vox	vladuz976	/usr/share/fonts actually
+2005-07-12T11:26:00.000Z	vladuz976	The_Vox	so where is it best to copy them
+2005-07-12T11:27:00.000Z	The_Vox	vladuz976	if you want the new fonts to be usable by every user in the system, they have to go in /usr/share/fonts/truetype
+2005-07-12T11:27:00.000Z	The_Vox	vladuz976	if you only have one user, it won't make a difference if you stick them in ~/.fonts or /usr/share/fonts/truetype
+2005-07-12T11:27:00.000Z	The_Vox	vladuz976	if you have more than one user, then it's better to stick them in /usr/share/fonts/truetype
+2005-07-12T11:28:00.000Z	vladuz976	The_Vox	thanks i'll try
+2005-07-12T11:28:00.000Z	vladuz976	The_Vox	need to log out and back in to make show up>
+2005-07-12T11:28:00.000Z	The_Vox	vladuz976	uhm...are you using gnome or kde?
+2005-07-12T11:29:00.000Z	vladuz976	The_Vox	gnome
+2005-07-12T11:29:00.000Z	The_Vox	vladuz976	I'm not sure, but you probably need to log out and back in.
+2005-07-12T11:29:00.000Z	vladuz976	The_Vox	thanks see ya
+2005-07-12T11:29:00.000Z	The_Vox	vladuz976	but I can't tell you for sure...haven't used gnome since...uhm...since Miguel moved to the US lol!
+2005-07-12T11:36:00.000Z	vladuz976	The_Vox	hey that didn't work
+2005-07-12T11:36:00.000Z	vladuz976	The_Vox	the fonts
+2005-07-12T11:36:00.000Z	The_Vox	vladuz976	uhm...dump them in /usr/share/fonts/truetype then
+2005-07-12T11:37:00.000Z	vladuz976	The_Vox	i put them in both
+2005-07-12T11:38:00.000Z	The_Vox	vladuz976	uhm...log out, once you are in the login screen, hit CTL-ALT-Backspace and wait for X to restart, then check again
+2005-07-12T11:48:00.000Z	vladuz976	The_Vox	hey i logged out of X now i can't log in anymore, the screen just turns black when it gets to login manager
+2005-07-12T11:48:00.000Z	vladuz976	The_Vox	maybe the resolution is too high, is there any way that i can change before log in?
+2005-07-12T11:49:00.000Z	The_Vox	vladuz976	uhm...take a look at ~/.xsessionerrors and at /var/log/X.org.log and see if you can find the error
+2005-07-12T11:49:00.000Z	vladuz976	The_Vox	hhow with a black screen?
+2005-07-12T11:50:00.000Z	The_Vox	vladuz976	hit CTRL-ALT-F1
+2005-07-12T11:50:00.000Z	The_Vox	vladuz976	login as your user there
+2005-07-12T11:51:00.000Z	The_Vox	vladuz976	do "less ~/.xsessionerrors" and scroll to the end and see if there's anything there...if not, hit q to exit and then do "less /var/log/X.org.log" and scroll down
+2005-07-12T11:52:00.000Z	vladuz976	The_Vox	when do i need to hit contrl alt f1?
+2005-07-12T11:52:00.000Z	The_Vox	vladuz976	at the black screen
+2005-07-12T11:52:00.000Z	vladuz976	The_Vox	doesn't give me command line
+2005-07-12T11:53:00.000Z	The_Vox	vladuz976	uhm...nvidia card?
+2005-07-12T11:53:00.000Z	vladuz976	The_Vox	oh finally
+2005-07-12T11:54:00.000Z	vladuz976	The_Vox	i don't know how to read that file
+2005-07-12T11:54:00.000Z	The_Vox	vladuz976	do "less ~/.xsessionerrors" and scroll to the end and see if there's anything there...if not, hit q to exit and then do "less /var/log/X.org.log" and scroll down
+2005-07-12T11:55:00.000Z	vladuz976	The_Vox	says stuff like lost connection to display
+2005-07-12T11:56:00.000Z	The_Vox	vladuz976	scroll back a bit and see why it lost it
+2005-07-12T11:56:00.000Z	vladuz976	The_Vox	X connection broken (explicit kill or server shutdown
+2005-07-12T11:57:00.000Z	The_Vox	vladuz976	uhm..where are you seeing that? in ~/.xsession-errors? or in X.org.log?
+2005-07-12T11:58:00.000Z	vladuz976	The_Vox	in ~/.xsession-errors
+2005-07-12T11:58:00.000Z	The_Vox	vladuz976	check in /var/log/X.org.log
+2005-07-12T12:01:00.000Z	vladuz976	The_Vox	 last thing it says there is a few times this: warning: font renderer for ".pcf" already registered at priority 0. then it says:"could not init font path element unix/:7100, removing from list!
+2005-07-12T12:02:00.000Z	The_Vox	vladuz976	look a few lines before that, see if there's a line with EE at the start
+2005-07-12T12:03:00.000Z	vladuz976	The_Vox	yes, says, "(EE) Failed to initialize GLX extension (NVIDIA X driver not found)
+2005-07-12T12:03:00.000Z	The_Vox	vladuz976	uhm...your nvidia driver is broken
+2005-07-12T12:03:00.000Z	vladuz976	The_Vox	i installed vesa
+2005-07-12T12:04:00.000Z	vladuz976	The_Vox	after i installed nvidia, never logged out since
+2005-07-12T12:04:00.000Z	vladuz976	The_Vox	do you know how i can fix it?
+2005-07-12T12:05:00.000Z	The_Vox	vladuz976	you installed the nvidia driver and didn't restart X?
+2005-07-12T12:06:00.000Z	vladuz976	The_Vox	possible i don't remember, i had an issue with my resolution and tried many things until it finally worked
+2005-07-12T12:06:00.000Z	vladuz976	The_Vox	can i redo it now? with apt-get, should i try vesa or nvidia?
+2005-07-12T12:08:00.000Z	The_Vox	vladuz976	do "lsmod nvidia" and tell me if it answers anything
+2005-07-12T12:08:00.000Z	vladuz976	The_Vox	only "usage: lsmod
+2005-07-12T12:09:00.000Z	The_Vox	vladuz976	duh..."lsmod | grep nvidia"
+2005-07-12T12:09:00.000Z	vladuz976	The_Vox	yes getting
+2005-07-12T12:10:00.000Z	vladuz976	The_Vox	getting something, nvidia and some numbersl and next line agpgart
+2005-07-12T12:10:00.000Z	The_Vox	vladuz976	ok, the nvidia kernel module is loaded...now do "cat /etc/X11/xorg.conf | grep nvidia" and tell me if it answers anything
+2005-07-12T12:11:00.000Z	vladuz976	The_Vox	nothing
+2005-07-12T12:11:00.000Z	The_Vox	vladuz976	ok, type this: emacs /etc/X11/xorg.conf
+2005-07-12T12:11:00.000Z	The_Vox	vladuz976	once that opens, type ctrl-s nv
+2005-07-12T12:12:00.000Z	vladuz976	The_Vox	not working
+2005-07-12T12:12:00.000Z	vladuz976	The_Vox	i'll use vim
+2005-07-12T12:12:00.000Z	vladuz976	The_Vox	is ctrl-s for search? i couldn't find nv
+2005-07-12T12:13:00.000Z	The_Vox	vladuz976	ok, find the Section "Device" and change the Driver "nv" to Driver "nvidia"
+2005-07-12T12:13:00.000Z	The_Vox	vladuz976	in emacs ctrl-s is for search, yes
+2005-07-12T12:13:00.000Z	vladuz976	The_Vox	 i'm using vim. i am finding vesa but not nv or nvidia
+2005-07-12T12:13:00.000Z	The_Vox	vladuz976	but on vim I have no clue lol! I avoid vi and its cousins like the plague they are ;)
+2005-07-12T12:14:00.000Z	vladuz976	The_Vox	i know how to search with vim i found it. it says vesa now. change to nvidia?
+2005-07-12T12:16:00.000Z	vladuz976	The_Vox	ok i replaced vesa by nvidia. save and log in? or restart?
+2005-07-12T12:16:00.000Z	The_Vox	vladuz976	save and then do "sudo /etc/init.d/gdm start" or "sudo /etc/init.d/dm start" whichever you find in there
+2005-07-12T12:18:00.000Z	vladuz976	The_Vox	it says starting gnome displayb manger failed
+2005-07-12T12:19:00.000Z	The_Vox	vladuz976	uhm...check /var/log/messages and /var/log/Xorg.0.log
+2005-07-12T12:19:00.000Z	The_Vox	vladuz976	uhm...wait
+2005-07-12T12:19:00.000Z	The_Vox	vladuz976	try "sudo /etc/init.d/gdm restart" it may be locked
+2005-07-12T12:19:00.000Z	vladuz976	The_Vox	worked
+2005-07-12T12:19:00.000Z	The_Vox	vladuz976	good
+2005-07-12T12:20:00.000Z	vladuz976	The_Vox	dude, thanks a lot for your help
+2005-07-12T12:20:00.000Z	The_Vox	vladuz976	np
+2005-07-12T12:21:00.000Z	vladuz976	The_Vox	but back to the originnal problem the fonts are still not htere?
+2005-07-12T12:21:00.000Z	The_Vox	vladuz976	rotfl!
+2005-07-12T12:22:00.000Z	vladuz976	The_Vox	sorry they are
+2005-07-12T12:22:00.000Z	The_Vox	vladuz976	even better :)
+2005-07-12T12:22:00.000Z	vladuz976	The_Vox	how do you know those details?
+2005-07-12T12:23:00.000Z	The_Vox	vladuz976	been using linux for 10 years, *NIX for 15, computers for 25 :)
+2005-07-12T12:24:00.000Z	vladuz976	The_Vox	shooooot that is a hell of a long time. i've been on ubuntu linux since yesterday
+2005-07-12T12:25:00.000Z	The_Vox	vladuz976	I've been on kubuntu for 4 days...I've used almost every other distro there is lol! but mandriva/mandrake for the last 5 years or so
+2005-07-12T12:25:00.000Z	vladuz976	The_Vox	so do you like ubuntu better? and why?
+2005-07-12T12:28:00.000Z	The_Vox	vladuz976	depends on the use you are going to give it...I prefer mandriva for user desktops...it's more polished than [k] ubuntu for the normal mortal user, IMNSHO...but I'm liking kubuntu for my own desktop.
+2005-07-12T12:29:00.000Z	The_Vox	vladuz976	for servers...it depends what kind of server and who is actually going to admin it (I'm a consultant, so I don't always admin the servers I install)...if it's me, I don't really care, I can deal with any distro...if it's somebody else, I install mandriva, for the same reason as on the normal user desktop
+2005-07-12T12:30:00.000Z	vladuz976	The_Vox	but why do you like ubuntu better for your own desktop?
+2005-07-12T12:31:00.000Z	The_Vox	vladuz976	easier to update to the bleeding edge, mainly.
+2005-07-12T12:31:00.000Z	The_Vox	vladuz976	cooker (mandriva's unstable distro) is *really* unstable at times, so it's not really usable for desktop-on-the-bleeding-edge
+2005-07-12T12:45:00.000Z	The_Vox	vladuz976	in the gnome control center there must be a something to do that
+2005-07-12T12:48:00.000Z	vladuz976	The_Vox	yeah for add adding keycombos to commands, but what ifi wanna add a command to a keycombo

@@ -1,0 +1,95 @@
+2009-05-19T20:38:00.000Z	thuglife222		i need a help
+2009-05-19T20:38:00.000Z	thuglife222		download manager is messed   up
+2009-05-19T20:39:00.000Z	thuglife222		and when i hit update it returns in to this error http://paste.ubuntu.com/175735/
+2009-05-19T20:39:00.000Z	thuglife222		ooh hi whatvn
+2009-05-19T20:39:00.000Z	thuglife222		nice to see you here thanks god now i am hopeful to get a help
+2009-05-19T20:40:00.000Z	durt	thuglife222	did you edit your sources.list?
+2009-05-19T20:40:00.000Z	thuglife222	durt	yup
+2009-05-19T20:48:00.000Z	durt	thuglife222	thats sources.list
+2009-05-19T20:52:00.000Z	durt	thuglife222	line 6 has a spelling mistake for your first problem you mentioned.
+2009-05-19T20:53:00.000Z	thuglife222	durt	what do you mean?
+2009-05-19T20:53:00.000Z	thuglife222	durt	i just pasted you the result of terminal
+2009-05-19T20:53:00.000Z	durt	thuglife222	missing an e on mulitverse, cause the first error message you pastebined
+2009-05-19T20:54:00.000Z	thuglife222	durt	 what was the syntax of that command let me try it again in terminal
+2009-05-19T20:55:00.000Z	durt	thuglife222	the error is in /etc/apt/sources.list not in your command
+2009-05-19T20:58:00.000Z	durt	thuglife222	backup the original first :)
+2009-05-19T21:42:00.000Z	durt	thuglife222	open /etc/apt/sources.list in 'sudo gedit' (hit F2)
+2009-05-19T21:41:00.000Z	durt	thuglife222	have you added the missing 'e' to the misspelled multiverse line in your sources.list?
+2009-05-19T21:41:00.000Z	thuglife222	durt	no
+2009-05-19T21:41:00.000Z	durt	thuglife222	that will solve your error message
+2009-05-19T21:41:00.000Z	thuglife222	durt	how to add it
+2009-05-19T21:43:00.000Z	thuglife222	durt	i meant i know it is opened but where to fix that line error
+2009-05-19T21:43:00.000Z	durt	thuglife222	it's in line 5 or 6 near the top.
+2009-05-19T21:43:00.000Z	durt	thuglife222	end of the line.
+2009-05-19T21:46:00.000Z	thuglife222	durt	http://paste.ubuntu.com/175794/
+2009-05-19T21:46:00.000Z	thuglife222	durt	you said miss spelling i am not able to understand where is miss spelling i posted you top 6 lines
+2009-05-19T21:46:00.000Z	thuglife222	durt	where do you see error please post it back
+2009-05-19T21:47:00.000Z	durt	thuglife222	line 5 add an 'e' at the end of 'multivers'
+2009-05-19T21:47:00.000Z	thuglife222	durt	 line 5 is --> deb-src http://archive.ubuntu.com/ubuntu intrepid universe multivers e
+2009-05-19T21:48:00.000Z	durt	thuglife222	multiverse
+2009-05-19T21:48:00.000Z	thuglife222	durt	 intrepid universe multivers e
+2009-05-19T21:48:00.000Z	thuglife222	durt	 is that you mean????
+2009-05-19T21:48:00.000Z	durt	thuglife222	are you trolling?
+2009-05-19T21:49:00.000Z	durt	thuglife222	multiverse
+2009-05-19T21:50:00.000Z	durt	thuglife222	fwew, I was gonna lose it there
+2009-05-19T21:52:00.000Z	durt	thuglife222	so update completed?
+2009-05-19T21:53:00.000Z	thuglife222	durt	will now i be able to get back my office from add/remove?
+2009-05-19T21:53:00.000Z	durt	thuglife222	try it
+2009-05-19T21:54:00.000Z	thuglife222	durt	office giving error
+2009-05-19T21:54:00.000Z	thuglife222	durt	; can't install open office.org-writer"
+2009-05-19T21:55:00.000Z	thuglife222	durt	 this is the error i get from add/remove program
+2009-05-19T22:09:00.000Z	thuglife222	durt	 man tell me how to reintall openoffice from cd?
+2009-05-19T22:09:00.000Z	durt	thuglife222	from what cd?
+2009-05-19T22:10:00.000Z	thuglife222	durt	 my open office has gone........ can't install it from add/remove programs so the last thing left is to install it from ubuntu8.10 cd
+2009-05-19T22:10:00.000Z	thuglife222	durt	 but i am new to ubuntu not expert with commands that's why i am asking you
+2009-05-19T22:11:00.000Z	durt	thuglife222	what was the error when trying to install oo.o
+2009-05-19T22:12:00.000Z	thuglife222	durt	 let me write you the whole error message
+2009-05-19T22:15:00.000Z	thuglife222	durt	 you got it now
+2009-05-19T22:17:00.000Z	durt	thuglife222	you have another version of oo.o installed? newer version perhaps?
+2009-05-19T22:17:00.000Z	thuglife222	durt	 its koffice workspace somg thing like that
+2009-05-19T22:18:00.000Z	durt	thuglife222	you using kubuntu?
+2009-05-19T22:18:00.000Z	thuglife222	durt	 nops its ubuntu8.10
+2009-05-19T22:19:00.000Z	durt	thuglife222	give a crap if koffice goes?
+2009-05-19T22:19:00.000Z	thuglife222	durt	 its ubuntu8.10
+2009-05-19T22:20:00.000Z	thuglife222	durt	 how can i remove this koffice... uninstall it ........ ? terminal  if yes command?
+2009-05-19T22:20:00.000Z	durt	thuglife222	ok, if you don't care about koffice, close add/remove and open synaptic from system tools and try to install from there.
+2009-05-19T22:21:00.000Z	durt	thuglife222	takes a few secs
+2009-05-19T22:22:00.000Z	thuglife222	durt	 when i type in search openoffice it gives hell of open office references which one shall i install now?
+2009-05-19T22:22:00.000Z	durt	thuglife222	gimme a sec
+2009-05-19T22:25:00.000Z	durt	thuglife222	openoffice.org is the name of the meta-package that should install everything you need.
+2009-05-19T22:26:00.000Z	thuglife222	durt	 i see and one thing more i need to know from you
+2009-05-19T22:27:00.000Z	durt	thuglife222	hopefully synaptic will let you choose to uninstall koffice. If not we can do that manually.
+2009-05-19T22:28:00.000Z	thuglife222	durt	 now when i check the openoffice .org for installation it further asks me thing for mark
+2009-05-19T22:28:00.000Z	durt	thuglife222	mark for install, then hit apply.
+2009-05-19T22:30:00.000Z	thuglife222	durt	 when i only hit mark for install it returns error
+2009-05-19T22:30:00.000Z	durt	thuglife222	which package conflicts?
+2009-05-19T22:33:00.000Z	thuglife222	durt	 http://paste.ubuntu.com/175817/
+2009-05-19T22:33:00.000Z	thuglife222	durt	 this is the error message i get in small window
+2009-05-19T22:35:00.000Z	durt	thuglife222	ok, search for koffice, mark it remove and apply, retry to install oo.o
+2009-05-19T22:36:00.000Z	durt	thuglife222	you accidentally erase some lines from /etc/apt/sources.list?
+2009-05-19T22:37:00.000Z	durt	thuglife222	actually I can't remember any main repos in your sources. Wanna check that?
+2009-05-19T22:38:00.000Z	durt	thuglife222	with a text editor of your choice. open '/etc/apt/sources.list'
+2009-05-19T22:43:00.000Z	thuglife222	durt	http://paste.ubuntu.com/175830/
+2009-05-19T22:46:00.000Z	thuglife222	durt	?????
+2009-05-19T22:46:00.000Z	thuglife222	durt	finally i got removed that koffice from add/remove programs but still when i click on openoffice to install it the same error repeates
+2009-05-19T22:48:00.000Z	durt	thuglife222	you're missing two lines in this file.
+2009-05-19T22:48:00.000Z	thuglife222	durt	 which 1
+2009-05-19T22:49:00.000Z	durt	thuglife222	gimme a sec
+2009-05-19T22:50:00.000Z	durt	thuglife222	 First line to add: 'deb http://pk.archive.ubuntu.com/ubuntu/ intrepid main restricted', remove the quotes.
+2009-05-19T22:51:00.000Z	thuglife222	durt	 there are few folders which 1 to install
+2009-05-19T22:52:00.000Z	durt	thuglife222	second line to add: 'deb-src http://pk.archive.ubuntu.com/ubuntu/ intrepid main restricted'
+2009-05-19T22:52:00.000Z	durt	thuglife222	what do you mean?
+2009-05-19T22:52:00.000Z	thuglife222	durt	when you type that line it appears in the some link form
+2009-05-19T22:53:00.000Z	durt	thuglife222	no copy it with ctrl-c or 'copy' after highlight.
+2009-05-19T22:54:00.000Z	thuglife222	durt	 this is the first line right???? deb http://pk.archive.ubuntu.com/ubuntu/ intrepid main restricted', remove the quotes
+2009-05-19T22:56:00.000Z	thuglife222	durt	 can you paste bin it to me plz
+2009-05-19T22:56:00.000Z	thuglife222	durt	if you send me those two lines to add etc in pastebin i will be much happy would  yew
+2009-05-19T22:57:00.000Z	durt	thuglife222	you know what, It's in there I just missed it. That file is pretty messed up. Let me fix it up for you and paste the whole thing in a pastebin.
+2009-05-19T22:58:00.000Z	thuglife222	durt	 at my side light will go any sec coz its load shedding here ....... it will come back after 1 hour
+2009-05-19T23:00:00.000Z	durt	thuglife222	I'll be connected, if not in front of the computer.
+2009-05-19T23:00:00.000Z	thuglife222	durt	 but do fix it okay
+2009-05-19T23:00:00.000Z	thuglife222	durt	you got me????
+2009-05-19T23:00:00.000Z	durt	thuglife222	I'll try no promises.
+2009-05-19T23:01:00.000Z	thuglife222	durt	sure add those missing lines for me and then send it to me through pastebin
+2009-05-19T23:01:00.000Z	durt	thuglife222	thats the plan, or I'll dcc it to you.
+2009-05-19T23:15:00.000Z	durt	thuglife222	take a look, http://pastebin.com/m4ef23494

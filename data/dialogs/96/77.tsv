@@ -1,0 +1,96 @@
+2006-02-19T13:53:00.000Z	Fleischlego		I got a quite strange problem. I blew up my system today. No kernel is booting, so I booted a live CD and did a chroot into my damaged system. The partition is mounted rw but I always get a 'permission denied' on /dev/null. id says I am full root. Anyone knows this problem? :)
+2006-02-19T13:55:00.000Z	soundray	Fleischlego	what did you do to blow it up?
+2006-02-19T13:57:00.000Z	Fleischlego	soundray	I installed a dapper kernel. :)
+2006-02-19T13:57:00.000Z	soundray	Fleischlego	oops! InnerF|RE, did you hear that?
+2006-02-19T13:58:00.000Z	soundray	Fleischlego	I suggest you come out of the chroot and run fsck on your root partition first.
+2006-02-19T13:59:00.000Z	soundray	Fleischlego	can you still boot to the grub menu?
+2006-02-19T13:59:00.000Z	Fleischlego	soundray	Yes.
+2006-02-19T14:00:00.000Z	soundray	Fleischlego	and you didn't smell any burning cables? It's not so bad then :)
+2006-02-19T14:02:00.000Z	soundray	Fleischlego	fsck making sense?
+2006-02-19T14:03:00.000Z	Fleischlego	soundray	I'm kinda hugging with /dev and /proc right now. :)
+2006-02-19T14:04:00.000Z	soundray	Fleischlego	still in chroot?
+2006-02-19T14:38:00.000Z	Fleischlego	soundray	Ok, gave up with /proc at the moment, fsck running.
+2006-02-19T14:40:00.000Z	Fleischlego	soundray	2 found corruptions can be fixed when running with --fix-fixable <- BAH
+2006-02-19T14:41:00.000Z	soundray	Fleischlego	so do it -- is there a problem with that?
+2006-02-19T14:46:00.000Z	Fleischlego	soundray	Okay, fsck done, what should I do now_
+2006-02-19T14:46:00.000Z	soundray	Fleischlego	burn some incense, slaughter a lamb, pray and reboot.
+2006-02-19T14:53:00.000Z	Fleischlego	soundray	No change, smame problem exists.
+2006-02-19T14:55:00.000Z	soundray	Fleischlego	are you back on the live CD?
+2006-02-19T14:55:00.000Z	Fleischlego	soundray	Booting.
+2006-02-19T14:57:00.000Z	Fleischlego	soundray	Back on line. :)
+2006-02-19T15:00:00.000Z	soundray	Fleischlego	does grub give you any errors?
+2006-02-19T15:00:00.000Z	Fleischlego	soundray	It's initrd giving errors.
+2006-02-19T15:01:00.000Z	Fleischlego	soundray	My devices are not created by udev but I don't know why.
+2006-02-19T15:01:00.000Z	soundray	Fleischlego	what errors? Paste on http://paste.ubuntu-nl.org if there's a lot.
+2006-02-19T15:02:00.000Z	Fleischlego	soundray	Just ALERT! /dev/sda3 does not exist. Dropping into a shell, blah.
+2006-02-19T15:02:00.000Z	soundray	Fleischlego	is that the breezy or dapper kernel, or both?
+2006-02-19T15:02:00.000Z	Fleischlego	soundray	Ah, and some framebuffer modules with version conflict stuff.
+2006-02-19T15:04:00.000Z	soundray	Fleischlego	give me a minute to test that plugin for Buxexa. In the meantime, see if you can unpack a kernel package from /var/cache/apt/archives and copy the initrd to /boot/ in case it's corrupted.
+2006-02-19T15:04:00.000Z	Fleischlego	soundray	Okay.
+2006-02-19T15:07:00.000Z	Fleischlego	soundray	It seems I did a apt clean. :)
+2006-02-19T15:08:00.000Z	soundray	Fleischlego	http://archive.ubuntu.com/ubuntu/pool/main/l/linux-source-2.6.12/ ?
+2006-02-19T15:13:00.000Z	soundray	Fleischlego	which dapper kernel did you install?
+2006-02-19T15:18:00.000Z	soundray	Fleischlego	I'm off, hope you can fix it. Viel Glueck...
+2006-02-19T15:18:00.000Z	Fleischlego	soundray	2.6.15-15-k7
+2006-02-19T15:18:00.000Z	soundray	Fleischlego	okay...
+2006-02-19T15:18:00.000Z	Fleischlego	soundray	if I could fix it I would not sit in this chan. :)
+2006-02-19T15:20:00.000Z	soundray	Fleischlego	there are probably more competent people around then me. But I'll give it another go...
+2006-02-19T15:21:00.000Z	soundray	Fleischlego	were you able to replace your initrd?
+2006-02-19T15:24:00.000Z	soundray	Fleischlego	still there?
+2006-02-19T15:24:00.000Z	soundray	Fleischlego	no progress?
+2006-02-19T15:25:00.000Z	soundray	Fleischlego	I see, that wasn't a good hint then.
+2006-02-19T15:26:00.000Z	soundray	Fleischlego	did you put that dapper kernel into a running breezy system?
+2006-02-19T15:26:00.000Z	Fleischlego	soundray	Yes, call me a dork. :/
+2006-02-19T15:27:00.000Z	soundray	Fleischlego	I'm fully focussed on solving your problem, not assigning blame :)
+2006-02-19T15:27:00.000Z	Fleischlego	soundray	Well, someone told me that he did and it worked.
+2006-02-19T15:27:00.000Z	soundray	Fleischlego	have you got a single-partition setup, or is your /home separate?
+2006-02-19T15:28:00.000Z	Fleischlego	soundray	System is on one partition, other stuff is data-store.
+2006-02-19T15:28:00.000Z	soundray	Fleischlego	I am guilty of dishing out that kind of advice... It worked for me once.
+2006-02-19T15:28:00.000Z	Fleischlego	soundray	LOL! :)
+2006-02-19T15:28:00.000Z	soundray	Fleischlego	I was going to suggest you go all the way to dapper and upgrade the whole system.
+2006-02-19T15:28:00.000Z	Fleischlego	soundray	Tried that.
+2006-02-19T15:29:00.000Z	soundray	Fleischlego	still no go?
+2006-02-19T15:29:00.000Z	Fleischlego	soundray	Downloads succeded. But I have still the /dev/null problem.
+2006-02-19T15:29:00.000Z	Fleischlego	soundray	/dev/null is not writable, that kills the package installing.
+2006-02-19T15:29:00.000Z	soundray	Fleischlego	flatten the root partition and do a fresh install then :(
+2006-02-19T15:30:00.000Z	soundray	Fleischlego	you could just as well reinstall breezy in that case.
+2006-02-19T15:30:00.000Z	Fleischlego	soundray	huah
+2006-02-19T15:30:00.000Z	Fleischlego	soundray	No good news.
+2006-02-19T15:30:00.000Z	soundray	Fleischlego	have you got a reasonably fast way of backing up?
+2006-02-19T15:31:00.000Z	soundray	Fleischlego	you don't seem inclined...
+2006-02-19T15:33:00.000Z	soundray	Fleischlego	if you think that something is wrong with your devices...
+2006-02-19T15:33:00.000Z	soundray	Fleischlego	have you tried to remake them?
+2006-02-19T15:34:00.000Z	soundray	Fleischlego	do you know about mknod?
+2006-02-19T15:34:00.000Z	Fleischlego	soundray	How remaking?
+2006-02-19T15:34:00.000Z	Fleischlego	soundray	Oh, well... No. :/
+2006-02-19T15:35:00.000Z	soundray	Fleischlego	'sudo mknod /mnt/dev/null c 1 3' from the live CD for example.
+2006-02-19T15:36:00.000Z	soundray	Fleischlego	or look at /sbin/MAKEDEV -- perhaps you can remake all devices with a customized version of that script.
+2006-02-19T15:36:00.000Z	Fleischlego	soundray	Well, "/dev: file exists" :)
+2006-02-19T15:38:00.000Z	soundray	Fleischlego	make sure you make the device on the mounted root of your wrecked installation. If it's mounted on /mnt, that's /mnt/dev/null . Delete it first if necessary.
+2006-02-19T15:40:00.000Z	Fleischlego	soundray	Ok, tried now. Same problem. It's not writeable.
+2006-02-19T15:40:00.000Z	soundray	Fleischlego	sudo ?
+2006-02-19T15:43:00.000Z	Fleischlego	soundray	You really think the /dev/null thing is such a big problem that it is easier to complete reinstall?
+2006-02-19T15:44:00.000Z	soundray	Fleischlego	no. I think that it's a symptom of more serious trouble that will be difficult to fix, especially if you don't know why it happened.
+2006-02-19T15:45:00.000Z	soundray	Fleischlego	are you on a reasonably fast connection?
+2006-02-19T15:45:00.000Z	Fleischlego	soundray	130kb/s downstream.
+2006-02-19T15:46:00.000Z	soundray	Fleischlego	if you leave it overnight to download packages, the net time investment of reinstalling is probably an hour or so.
+2006-02-19T15:47:00.000Z	soundray	Fleischlego	I could be wrong, of course.
+2006-02-19T15:47:00.000Z	Fleischlego	soundray	Hell, yeah, propably you are right.
+2006-02-19T15:48:00.000Z	soundray	Fleischlego	but I really want to go now. If you still want to fix it, I think twb might be your man.
+2006-02-19T15:48:00.000Z	Fleischlego	soundray	Just one more question... Theoretically I could backup dirs like /etc, /usr, /home etc. and copy them back later, right?
+2006-02-19T15:48:00.000Z	soundray	Fleischlego	you could, but it only makes sense if you stick with breezy.
+2006-02-19T15:49:00.000Z	Fleischlego	soundray	there's quite a lot of configuration work on this system. This is why I ask. :)
+2006-02-19T15:49:00.000Z	Fleischlego	soundray	Well, copy it back, then upgrade to dapper, if you want it that way. :)
+2006-02-19T15:50:00.000Z	soundray	Fleischlego	saving etc is a good idea if you put a lot of work into it.  Even if you end up using it as a reference.
+2006-02-19T15:50:00.000Z	soundray	Fleischlego	I did that when I upgraded from Debian to Warty.
+2006-02-19T15:52:00.000Z	soundray	Fleischlego	okay?
+2006-02-19T15:52:00.000Z	Fleischlego	soundray	Ok. /var /etc /home then. :)
+2006-02-19T15:53:00.000Z	Fleischlego	soundray	reinstall. copy it back, dist-upgrade
+2006-02-19T15:53:00.000Z	soundray	Fleischlego	what were you trying to fix by upgrading the kernel?
+2006-02-19T15:54:00.000Z	Fleischlego	soundray	Some weird version conflict module problem
+2006-02-19T15:55:00.000Z	Fleischlego	soundray	My soundcards were not detected anymore and the snd-* modules were not loadable.
+2006-02-19T15:55:00.000Z	Fleischlego	soundray	A reset of the kernel to it original state via apt did not work
+2006-02-19T15:56:00.000Z	soundray	Fleischlego	by then, your system was messed up...
+2006-02-19T15:58:00.000Z	soundray	Fleischlego	good luck, and get yourself a less disgusting nick :)
+2006-02-19T15:59:00.000Z	Fleischlego	soundray	LOL.
+2006-02-19T15:59:00.000Z	Fleischlego	soundray	Thanks much for help. :)

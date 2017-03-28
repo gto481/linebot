@@ -1,0 +1,97 @@
+2005-02-20T15:39:00.000Z	Xappe		are there any good studio software for linux (something similar to soundforge or such programs)
+2005-02-20T15:39:00.000Z	tritium	Xappe	have you looked at audacity?
+2005-02-20T15:40:00.000Z	Xappe	tritium	no, but i'll check it out
+2005-02-20T15:41:00.000Z	tritium	Xappe	this new live CD is based on ubuntu: http://distrowatch.com/table.php?distribution=demudi
+2005-02-20T15:42:00.000Z	Xappe	tritium	ah, nice
+2005-02-21T10:06:00.000Z	tritium	Xappe	I hope you don't let packages get removed when dependencies aren't met if you update that frequently.
+2005-02-23T10:29:00.000Z	tritium	Xappe	perhaps run it in the background
+2005-02-23T10:29:00.000Z	Xappe	tritium	well, yes. but that doesn't really matter, it will keep running even if you close the terminal
+2005-02-23T10:44:00.000Z	Xappe	tritium	hehe
+2005-02-23T12:08:00.000Z	tritium	Xappe	heh
+2005-02-26T09:44:00.000Z	Xappe	tritium	do you have any tricks or tips for polypaudio?
+2005-02-26T09:44:00.000Z	tritium	Xappe	no, not yet.  I'm looking at it now.  Obviously, polypaudio is not the drop-in replacement it's claimed to be!
+2005-02-26T09:45:00.000Z	Xappe	tritium	well maybe it needs some days before totally integrated with ubuntu
+2005-02-26T09:45:00.000Z	tritium	Xappe	perhaps
+2005-02-26T10:26:00.000Z	Xappe	tritium	i'll check
+2005-02-26T10:29:00.000Z	Xappe	tritium	yes, seems to be some problems loading modules and so on...
+2005-02-26T10:30:00.000Z	tritium	Xappe	yeah
+2005-02-26T10:31:00.000Z	Xappe	tritium	hope they'll fix it soon. don't think regular users want to edit tons of conf. files to make the sound work properly
+2005-02-26T10:32:00.000Z	Xappe	tritium	and i'm a regular user :)
+2005-02-26T10:32:00.000Z	tritium	Xappe	yeah, I couldn't even get it working by editing my configuration files.
+2005-02-26T15:10:00.000Z	tritium	Xappe	no, not so far.
+2005-02-26T15:11:00.000Z	Xappe	tritium	semms like people haven't noticed yet. only 35 ppl have read my post on the Hoary forum
+2005-02-26T15:12:00.000Z	tritium	Xappe	it'll probably take a little time
+2005-02-26T15:18:00.000Z	tritium	Xappe	what are you trying to run in wine?
+2005-02-26T15:20:00.000Z	Xappe	tritium	nothing right now, but I've had huge amounts of trouble and instability trying to get dc++ to run
+2005-02-26T15:20:00.000Z	tritium	Xappe	did you try wine and winetools .deb from winehq.com ?
+2005-02-26T15:22:00.000Z	Xappe	tritium	yes and no. I added the wine repo to get the latest, but winetools i've never even heard of
+2005-02-26T15:22:00.000Z	tritium	Xappe	winetools is setup to allow you to install DC++, whatever that is.
+2005-02-26T15:22:00.000Z	tritium	Xappe	winetools is awesome.
+2005-02-26T15:22:00.000Z	Xappe	tritium	a dc client. but now a port of it is in progress
+2005-02-26T15:22:00.000Z	tritium	Xappe	dc?
+2005-02-26T15:22:00.000Z	Xappe	tritium	direct connect
+2005-02-26T15:23:00.000Z	tritium	Xappe	what is it used for?  Here's the url: http://www.winehq.com/site/download-deb
+2005-02-26T15:24:00.000Z	tritium	Xappe	here's winetools (available in .deb from winehq.com repos): http://www.von-thadden.de/Joachim/WineTools/
+2005-02-26T15:25:00.000Z	Xappe	tritium	I'll check it out
+2005-02-26T15:25:00.000Z	tritium	Xappe	cool.
+2005-02-27T08:11:00.000Z	tritium	Xappe	I tried to point it out, and got my hand slapped
+2005-02-27T08:11:00.000Z	tritium	Xappe	we had best be patient.
+2005-02-27T08:12:00.000Z	Xappe	tritium	ok...i'll go without soundserver for a while then
+2005-02-27T08:12:00.000Z	tritium	Xappe	you decided not to drop back to esound?
+2005-02-27T08:15:00.000Z	tritium	Xappe	because of the freeze?
+2005-02-27T08:16:00.000Z	Xappe	tritium	something like that. i mean, hoary will not be a good release without a somewhat working soundserver
+2005-02-27T08:17:00.000Z	tritium	Xappe	what I don't get is how an untested sound server that isn't working made it into Hoary after the feature freeze of Feb. 7th
+2005-02-27T08:19:00.000Z	Xappe	tritium	well, you got a point there. but since hoary still is under development I guess one can't cry out too loud about it...
+2005-02-27T08:20:00.000Z	tritium	Xappe	I agree, but it's odd
+2005-02-27T08:21:00.000Z	Xappe	tritium	yepp
+2005-02-27T08:27:00.000Z	Xappe	tritium	do you have any tips for buying a cheap soundcard with hardware mixing?
+2005-02-27T08:28:00.000Z	tritium	Xappe	no, I've been using a laptop exclusively for 3 years now.  Sorry.
+2005-02-27T08:29:00.000Z	Xappe	tritium	ok. think i'll try to get one, so I can turn off my built in ac97
+2005-02-27T08:29:00.000Z	tritium	Xappe	good luck
+2005-02-27T10:22:00.000Z	tritium	Xappe	you're getting the same thing, correct?
+2005-02-27T10:26:00.000Z	tritium	Xappe	buddy, where are you?
+2005-02-27T10:26:00.000Z	Xappe	tritium	last time i checked there were some polypaudio modules not loading and so on and forth
+2005-02-27T10:27:00.000Z	tritium	Xappe	so, you no longer have the same messages in /var/log/messages?
+2005-02-27T10:28:00.000Z	Xappe	tritium	i'll check, hold on
+2005-02-27T10:30:00.000Z	Xappe	tritium	lots of "protocol-esound.c: read() failed: EOF "
+2005-02-28T11:35:00.000Z	Xappe	tritium	have you got polypaudio to work properly now?
+2005-02-28T11:35:00.000Z	tritium	Xappe	sure do
+2005-02-28T11:36:00.000Z	tritium	Xappe	you?
+2005-02-28T11:36:00.000Z	Xappe	tritium	no :/ what did you do (you can tell me in a query if you wish)
+2005-02-28T11:36:00.000Z	tritium	Xappe	try this:  http://lists.ubuntu.com/archives/ubuntu-users/2005-February/022862.html
+2005-02-28T11:36:00.000Z	Xappe	tritium	ok, will do
+2005-03-01T09:42:00.000Z	tritium	Xappe	hey
+2005-03-01T09:46:00.000Z	Xappe	tritium	hello
+2005-03-01T09:46:00.000Z	tritium	Xappe	how are you?
+2005-03-01T09:48:00.000Z	Xappe	tritium	well, i'm fine but the "winter vomit desease" is spreading at work...eeek...
+2005-03-03T10:42:00.000Z	tritium	Xappe	hey there
+2005-03-03T10:53:00.000Z	tritium	Xappe	what's new?
+2005-03-03T10:58:00.000Z	Xappe	tritium	well, not much. still fighting with polypaudio...
+2005-03-03T10:59:00.000Z	tritium	Xappe	me too...I'm not even bothering with it for now.
+2005-03-03T11:00:00.000Z	Xappe	tritium	no, feels like it's not worth the effort. thin i'll buy a cheap sound card capable of hardware mixing instead
+2005-03-03T11:01:00.000Z	tritium	Xappe	I'm building a mythtv box this week.
+2005-03-03T11:04:00.000Z	Xappe	tritium	mythtv box?
+2005-03-03T11:05:00.000Z	tritium	Xappe	PVR
+2005-03-03T11:05:00.000Z	Xappe	tritium	ah, so you'll have a standalone tuner box?
+2005-03-03T11:05:00.000Z	tritium	Xappe	yes.  It should be fun
+2005-03-03T11:06:00.000Z	Xappe	tritium	mhm
+2005-03-07T07:53:00.000Z	tritium	Xappe	is your polypaudio behaving now without the #define MAX_CONNECTIONS 10
+2005-03-07T08:06:00.000Z	tritium	Xappe	did you see the update to polypaudio?
+2005-03-07T08:15:00.000Z	Xappe	tritium	yes...but I still have the same problems I think...
+2005-03-07T08:15:00.000Z	tritium	Xappe	oh...it's working for me.
+2005-03-07T08:17:00.000Z	Xappe	tritium	it probably is my nforce2 onboard sound card
+2005-03-07T08:19:00.000Z	tritium	Xappe	possbile.  I actually have no errors in /var/log/messages now.
+2005-03-13T08:39:00.000Z	tritium	Xappe	what's up?
+2005-03-15T09:46:00.000Z	Xappe	tritium	I use one for NAT:ing purposes
+2005-03-15T09:47:00.000Z	Xappe	tritium	only two MAC addresses allowed / student apartment here
+2005-03-15T09:48:00.000Z	tritium	Xappe	cool, I do mac filtering with my wireless AP/router
+2005-03-18T10:36:00.000Z	tritium	Xappe	and a mountpoint ;)
+2005-03-27T10:23:00.000Z	Xappe	tritium	is that bug fixed yet?
+2005-03-27T10:23:00.000Z	tritium	Xappe	it appears to be, yes.
+2005-03-27T10:23:00.000Z	Xappe	tritium	ah, lookie...the recent documents is cleared
+2005-03-27T10:24:00.000Z	tritium	Xappe	;)
+2005-05-18T07:45:00.000Z	Xappe	tritium	so, are you running breezy yet? I find it really hard to resist the part of my linux brain that want's to upgrade, but I guess i'll only find myself in a hell of breakage if i do :)
+2005-05-18T07:46:00.000Z	tritium	Xappe	no, I'm not, actually.  I'm likely going to setup a breezy chroot on an hoary installation.
+2005-05-18T07:50:00.000Z	tritium	Xappe	you've seen the topic?
+2005-05-18T07:51:00.000Z	Xappe	tritium	of course
+2005-05-18T07:52:00.000Z	Xappe	tritium	Nermal: I just want to make sure I won't upgrade :P

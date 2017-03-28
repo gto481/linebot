@@ -1,0 +1,95 @@
+2007-12-23T01:45:00.000Z	reviewsaurus		can someone help me with Wine ?
+2007-12-23T01:47:00.000Z	reviewsaurus		hello guys, can you please help me with Wine. As soon as I'm opening Wine...computer hangs
+2007-12-23T01:49:00.000Z	reviewsaurus		hello guys, can you please help me with Wine. As soon as I'm opening Wine...computer hangs
+2007-12-23T01:50:00.000Z	thor	reviewsaurus	you don't open wine....it should only be called with an exe file on the command line. Wine won't run by itself
+2007-12-23T02:33:00.000Z	thor	reviewsaurus	what command are you using...what exactly do you mean by 'run wine'?
+2007-12-23T02:34:00.000Z	thor	reviewsaurus	you need a full path....wine won't even recognize ~ you have to use /home/user/...
+2007-12-23T02:35:00.000Z	thor	reviewsaurus	and remember, windows will assume snagit.exe is in the directory you are in, but linux makes no such assumption
+2007-12-23T02:35:00.000Z	thor	reviewsaurus	nope..you can't do it that way....like I said you have to supply a full path.../home/user/Desktop/snagit.exe
+2007-12-23T03:36:00.000Z	thor	reviewsaurus	that path thing didn't help?
+2007-12-23T03:37:00.000Z	thor	reviewsaurus	did you run wine-cfg and set everything up?
+2007-12-23T03:38:00.000Z	thor	reviewsaurus	that's winecfg...no hyphen...sorry bout that
+2007-12-23T03:38:00.000Z	thor	reviewsaurus	until you get things going I would suggest running things from a terminal. That way, if they fail, you might get some indication of what is going wrong
+2007-12-23T03:39:00.000Z	thor	reviewsaurus	yeah...let me know how it goes
+2007-12-23T03:40:00.000Z	thor	reviewsaurus	is mayank your user id?
+2007-12-23T03:41:00.000Z	thor	reviewsaurus	then in your home directory...do 'ls -l /home/mayank/.wine' and see who owns it <smile>
+2007-12-23T03:41:00.000Z	thor	reviewsaurus	 oops....do ls -l /home/mayank to see the .wine ownership
+2007-12-23T03:42:00.000Z	thor	reviewsaurus	 oops again! ls -al /home/mayank
+2007-12-23T03:42:00.000Z	thor	reviewsaurus	 must be getting late
+2007-12-23T03:43:00.000Z	thor	reviewsaurus	it should show that .wine is owned by mayank and group users
+2007-12-23T03:43:00.000Z	thor	reviewsaurus	 or mayank:mayank in ubuntu I guess
+2007-12-23T03:44:00.000Z	thor	reviewsaurus	hence the problem. First...the rest of the stuff in your home, is the group mayank or users?
+2007-12-23T03:44:00.000Z	reviewsaurus	thor	: I didn't get your last thing : drwxr-xr-x  4 root   root      4096 2007-12-23 04:00 .wine
+2007-12-23T03:45:00.000Z	thor	reviewsaurus	in the terminal type this......sudo chown mayank:mayank /home/mayank/.wine
+2007-12-23T03:46:00.000Z	thor	reviewsaurus	yup...give it a go
+2007-12-23T03:52:00.000Z	thor	reviewsaurus	I didn't get to you fast enough...I blew it...sorry...you need to change everything under that directory....sudo chown -R mayank:mayank /home/mayank/.wine
+2007-12-23T03:52:00.000Z	thor	reviewsaurus	did you get any error indication in the terminal? Still ownership issue I bet
+2007-12-23T03:53:00.000Z	thor	reviewsaurus	then try winecfg and see if you can't get it running
+2007-12-23T03:53:00.000Z	thor	reviewsaurus	I know it is aggravating, but don't know what else to do since we get no errors
+2007-12-23T03:54:00.000Z	thor	reviewsaurus	you might look under .wine and make sure everything is now mayank:mayank
+2007-12-23T03:55:00.000Z	thor	reviewsaurus	right...and they should all be owned by you
+2007-12-23T03:56:00.000Z	thor	reviewsaurus	might be I guess. I have never had much trouble with wine...it usually runs out of the box OK
+2007-12-23T03:56:00.000Z	thor	reviewsaurus	let's get brave and try winecfg...see if it runs now
+2007-12-23T04:00:00.000Z	thor	reviewsaurus	no good, huh?
+2007-12-23T04:00:00.000Z	thor	reviewsaurus	looking in google...the only reference I found was this....http://groups.google.com/group/linux.debian.bugs.dist/browse_thread/thread/f07ba3d906249bb6
+2007-12-23T04:03:00.000Z	thor	reviewsaurus	might want to look at this too....http://news.softpedia.com/news/Ubuntu-Windows-and-VirtualBox-equals-Power-in-Your-Hands-48173.shtml
+2007-12-23T04:04:00.000Z	thor	reviewsaurus	I have no personal experience with virtual box, but one of the google items was a thread about crashes like yours, and they said virtual box solved the problem.
+2007-12-23T04:05:00.000Z	thor	reviewsaurus	ah...virtual box is a vm....haven't tried those yet <smile>. My needs are much simpler!
+2007-12-23T04:05:00.000Z	reviewsaurus	thor	..I hope this works for me :)
+2007-12-23T04:05:00.000Z	thor	reviewsaurus	are you using compiz or beryl or some such?
+2007-12-23T04:06:00.000Z	thor	reviewsaurus	the latest and greatest fancy graphics...but also the easiest way to cause yourself problems
+2007-12-23T04:07:00.000Z	thor	reviewsaurus	 if that is all you want check out gkrellm...it has a plugin for screen shots that is great
+2007-12-23T04:07:00.000Z	thor	reviewsaurus	and as a bonus you get tons of info on system performance. I run gkrellm on all my systems all the time
+2007-12-23T04:10:00.000Z	thor	reviewsaurus	yeah..check out gkrellm and the plugin gkrellshoot
+2007-12-23T04:14:00.000Z	reviewsaurus	thor	installing gkrellm
+2007-12-23T04:14:00.000Z	thor	reviewsaurus	you might consider doing things a little differently. I map the home folder for my server in texas to my laptop here in VA, and can do my screen captures directly to the server...it looks like it is saving the files locally and they are being transferred via sshfs
+2007-12-23T04:15:00.000Z	thor	reviewsaurus	and I have gkrellshoot compiled for 7.10 if you need it...it is a separate add-on
+2007-12-23T04:15:00.000Z	reviewsaurus	thor	that will be great
+2007-12-23T04:16:00.000Z	thor	reviewsaurus	give me a minute to put it wher eyou can get it.
+2007-12-23T04:17:00.000Z	reviewsaurus	thor	i install gkrellm through apt-get
+2007-12-23T04:19:00.000Z	thor	reviewsaurus	ok....go to searcher.myvnc.com and in the top right corner....
+2007-12-23T04:19:00.000Z	thor	reviewsaurus	put that file in the ~/.gkrellm2/plugins folder
+2007-12-23T04:20:00.000Z	thor	reviewsaurus	then restart gkrellm
+2007-12-23T04:20:00.000Z	reviewsaurus	thor	that's ur website?
+2007-12-23T04:20:00.000Z	thor	reviewsaurus	yup
+2007-12-23T04:21:00.000Z	thor	reviewsaurus	runs ubuntu on an old compaq laptop
+2007-12-23T04:21:00.000Z	reviewsaurus	thor	check out mine too :D
+2007-12-23T04:22:00.000Z	thor	reviewsaurus	and before I forget you will want to check out the skins for gkrellm on the gkrellm homepage
+2007-12-23T04:22:00.000Z	reviewsaurus	thor	here's what I've done
+2007-12-23T04:23:00.000Z	thor	reviewsaurus	run gkrellm and it will create .gkrellm2 in your home directory
+2007-12-23T04:24:00.000Z	thor	reviewsaurus	then you can put that file in ~/.gkrellm2/plugins....gkrellm will create it when run the first time
+2007-12-23T04:24:00.000Z	thor	reviewsaurus	then you need to quit gkrellm and restart it so it sees the plugin
+2007-12-23T04:25:00.000Z	reviewsaurus	thor	did as you said
+2007-12-23T04:26:00.000Z	thor	reviewsaurus	ok...so now gkrellm is running, right?
+2007-12-23T04:26:00.000Z	reviewsaurus	thor	yes it is and I ran the plugin too
+2007-12-23T04:27:00.000Z	thor	reviewsaurus	ok...then in the gkrellm stack you should see a little 'bar' with the words lock and shoot
+2007-12-23T04:27:00.000Z	thor	reviewsaurus	right click shoot....and see what the options are
+2007-12-23T04:27:00.000Z	reviewsaurus	thor	clicked shoot and nothing happened
+2007-12-23T04:27:00.000Z	thor	reviewsaurus	RIGHT click
+2007-12-23T04:28:00.000Z	thor	reviewsaurus	should open a window with options
+2007-12-23T04:28:00.000Z	reviewsaurus	thor	yes
+2007-12-23T04:28:00.000Z	thor	reviewsaurus	ok...see the Save Location at the top? and the choice to grab a window, area, or entire desktop
+2007-12-23T04:28:00.000Z	reviewsaurus	thor	got it
+2007-12-23T04:28:00.000Z	thor	reviewsaurus	and with or without the window frame....
+2007-12-23T04:29:00.000Z	thor	reviewsaurus	and Image Format in the bottom right
+2007-12-23T04:29:00.000Z	reviewsaurus	thor	yes :)
+2007-12-23T04:29:00.000Z	thor	reviewsaurus	ok...when you click on the shoot button it will create a file in the Save Location. If you choose to capture a window or area, the cursor will change and you either click on the window or click and hold to mark an area
+2007-12-23T04:30:00.000Z	thor	reviewsaurus	once you use it once or twice you find it is really easy and versatilve
+2007-12-23T04:30:00.000Z	thor	reviewsaurus	I fhink anyway <smile>
+2007-12-23T04:30:00.000Z	reviewsaurus	thor	:) even I hope this works the way I want
+2007-12-23T04:31:00.000Z	reviewsaurus	thor	did you check my website ?
+2007-12-23T04:31:00.000Z	thor	reviewsaurus	then look at sshfs to map remote folders instead of using ftp.
+2007-12-23T04:31:00.000Z	thor	reviewsaurus	didn't get the url
+2007-12-23T04:31:00.000Z	reviewsaurus	thor	just google my reviewsaurus name
+2007-12-23T04:31:00.000Z	thor	reviewsaurus	you have to excuse mine...just put it up
+2007-12-23T04:32:00.000Z	reviewsaurus	thor	if at all you ever need help with websites...you can contact me :)
+2007-12-23T04:32:00.000Z	thor	reviewsaurus	impressive...I could use some lessons <smile>
+2007-12-23T04:33:00.000Z	reviewsaurus	thor	anytime :) and thanks for the compliment :)
+2007-12-23T04:33:00.000Z	reviewsaurus	thor	that's my bread and butter. I've got these two blogs and I make money from that :)
+2007-12-23T04:34:00.000Z	thor	reviewsaurus	you might want to google for gkrellm plugins also...there are a number of them. I use the wireless and wifi plugins and the weather.
+2007-12-23T04:34:00.000Z	reviewsaurus	thor	you've given me another software to review :D
+2007-12-23T04:35:00.000Z	thor	reviewsaurus	gkrellm is an older package, but I consider it one of the greatest treasures I ever found
+2007-12-23T04:36:00.000Z	reviewsaurus	thor	sent you a PM did you get it ?
+2007-12-23T04:37:00.000Z	thor	reviewsaurus	I use pidgin...don't think it supports them
+2007-12-23T04:37:00.000Z	thor	reviewsaurus	can be reached on yahoo im....spnye
+2007-12-23T04:41:00.000Z	reviewsaurus	thor	added

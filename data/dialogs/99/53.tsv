@@ -1,0 +1,99 @@
+2007-02-04T10:25:00.000Z	SecrethX		Okay, CUPS cant find my printer, nor can hplip toolbox, lsusb shows it as connected, dmesg also shows it as connected, and I dont know what to do!
+2007-02-04T10:26:00.000Z	xtknight	SecrethX	maybe you need to load the ppdev kernel module, or change the Version in pnm2ppa.conf
+2007-02-04T10:27:00.000Z	SecrethX	xtknight	where is the conf located?
+2007-02-04T10:28:00.000Z	xtknight	SecrethX	/etc/pnm2ppa.conf
+2007-02-04T10:29:00.000Z	SecrethX	xtknight	im a noob :(
+2007-02-04T10:30:00.000Z	xtknight	SecrethX	what printer do you have
+2007-02-04T10:30:00.000Z	SecrethX	xtknight	an Epson Stylus Photo 870
+2007-02-04T10:31:00.000Z	xtknight	SecrethX	if it's epson you probably don't need to edit pnm2ppa.  but hplip wont work for epson printers either
+2007-02-04T10:32:00.000Z	SecrethX	xtknight	well yea, but even CUPS doesnt recognize my printer
+2007-02-04T10:32:00.000Z	xtknight	SecrethX	try `sudo modprobe ppdev` in the terminal, and then try using CUPS config (or 'install my printer') to detect your printer
+2007-02-04T10:33:00.000Z	SecrethX	xtknight	"no printers detected"
+2007-02-04T10:34:00.000Z	xtknight	SecrethX	are you sure your printer is supported?
+2007-02-04T10:34:00.000Z	SecrethX	xtknight	yes, by gutenprint
+2007-02-04T10:35:00.000Z	SecrethX	xtknight	printconf gives me this error; (ill pastebin it)
+2007-02-04T10:35:00.000Z	SecrethX	xtknight	http://paste.ubuntu-nl.org/4129/
+2007-02-04T10:37:00.000Z	xtknight	SecrethX	interesting..
+2007-02-04T10:37:00.000Z	xtknight	SecrethX	try reinstalling gutenprint?
+2007-02-04T10:37:00.000Z	SecrethX	xtknight	already done that 4 times
+2007-02-04T10:38:00.000Z	xtknight	SecrethX	with --purge (remove conf)?
+2007-02-04T10:39:00.000Z	SecrethX	xtknight	ehh.. if I remove libgutenprint2 it will remove ubuntu-desktop too
+2007-02-04T10:40:00.000Z	xtknight	SecrethX	use `sudo dpkg --purge --force-all libgutenprint2`
+2007-02-04T10:41:00.000Z	SecrethX	xtknight	no difference, output of printconf is still the same, CUPS still cant detect my printer
+2007-02-04T10:41:00.000Z	xtknight	SecrethX	odd.  guess your only solution left is google, sorry
+2007-02-04T10:42:00.000Z	SecrethX	xtknight	I already tried googling the errors printconf gave me, no results :x
+2007-02-04T10:42:00.000Z	xtknight	SecrethX	does "/usr/share/foomatic/db/source/driver/gutenprint.xml" exist?
+2007-02-04T10:43:00.000Z	SecrethX	xtknight	no,
+2007-02-04T10:43:00.000Z	xtknight	SecrethX	what about this http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg261392.html
+2007-02-04T10:43:00.000Z	xtknight	SecrethX	never mind, no answer there i
+2007-02-04T10:45:00.000Z	xtknight	SecrethX	all i can suggest is compiling a new version of gutenprint :O
+2007-02-04T10:45:00.000Z	SecrethX	xtknight	interesting if I knew how :P
+2007-02-04T10:45:00.000Z	xtknight	SecrethX	i'll walk you through it
+2007-02-04T10:46:00.000Z	SecrethX	xtknight	okay, first im gonna find the tarballs
+2007-02-04T10:46:00.000Z	xtknight	SecrethX	link me to the tar bz2/gz you get
+2007-02-04T10:47:00.000Z	SecrethX	xtknight	http://sourceforge.net/project/showfiles.php?group_id=1537&package_id=143930&release_id=435706
+2007-02-04T10:48:00.000Z	xtknight	SecrethX	gotcha.  i guess we will just install over the deb package to avoid package manager issues.  bit messy but what the heck
+2007-02-04T10:48:00.000Z	SecrethX	xtknight	okay :) I already extracted the files
+2007-02-04T10:49:00.000Z	xtknight	SecrethX	ok lets see if we need any configure options for the epson
+2007-02-04T10:50:00.000Z	xtknight	SecrethX	type "./configure" and paste the output on pastebin if there are no errors
+2007-02-04T10:51:00.000Z	xtknight	SecrethX	mine personally says " Build EPSON Stylus utility:                 yes
+2007-02-04T10:51:00.000Z	SecrethX	xtknight	ok, configuring now
+2007-02-04T10:52:00.000Z	SecrethX	xtknight	http://paste.ubuntu-nl.org/4134/
+2007-02-04T10:53:00.000Z	xtknight	SecrethX	could you post the log prior to that?  seems that on your system CUPS will not be built
+2007-02-04T10:54:00.000Z	SecrethX	xtknight	hold on, the pastebin thinks im spamming
+2007-02-04T10:55:00.000Z	xtknight	SecrethX	lol
+2007-02-04T10:55:00.000Z	xtknight	SecrethX	well just see why cups didnt get automatically selected for building
+2007-02-04T10:55:00.000Z	xtknight	SecrethX	was cups-config not found or something?
+2007-02-04T10:56:00.000Z	SecrethX	xtknight	ill do grep cups, that makes it easier
+2007-02-04T10:56:00.000Z	xtknight	SecrethX	do grep -i cups  actually so it's case insensitive
+2007-02-04T11:00:00.000Z	SecrethX	xtknight	http://pastebin.ca/340203
+2007-02-04T11:01:00.000Z	xtknight	SecrethX	`sudo apt-get install libcupsys2-dev` then do ./configure again
+2007-02-04T11:01:00.000Z	xtknight	SecrethX	and verify cups is getting configured this time
+2007-02-04T11:02:00.000Z	SecrethX	xtknight	ill do it again with grep :)
+2007-02-04T11:02:00.000Z	xtknight	SecrethX	sounds goood
+2007-02-04T11:03:00.000Z	SecrethX	xtknight	http://pastebin.ca/340207
+2007-02-04T11:03:00.000Z	xtknight	SecrethX	looks good to me. type `make` now
+2007-02-04T11:03:00.000Z	SecrethX	xtknight	ok doing make now
+2007-02-04T11:05:00.000Z	SecrethX	xtknight	got an error
+2007-02-04T11:05:00.000Z	xtknight	SecrethX	was it about -lcupsimage?
+2007-02-04T11:05:00.000Z	SecrethX	xtknight	yes
+2007-02-04T11:05:00.000Z	xtknight	SecrethX	hold up, trying to fix that myself
+2007-02-04T11:05:00.000Z	SecrethX	xtknight	ok ok :)
+2007-02-04T11:07:00.000Z	xtknight	SecrethX	"sudo apt-get install libcupsimage2-dev"  then 'make' will continue where it left off
+2007-02-04T11:08:00.000Z	SecrethX	xtknight	ok doing make again
+2007-02-04T11:11:00.000Z	SecrethX	xtknight	its done
+2007-02-04T11:12:00.000Z	xtknight	SecrethX	'sudo make install'
+2007-02-04T11:13:00.000Z	SecrethX	xtknight	done, now try printconf again?
+2007-02-04T11:13:00.000Z	xtknight	SecrethX	hmm.  what is printconf a part of?  gutenprint?
+2007-02-04T11:14:00.000Z	SecrethX	xtknight	i dunno, it was in synaptic, while i was searching for gutenprint
+2007-02-04T11:15:00.000Z	xtknight	SecrethX	we need to use the new gutenprint somehow, it's in /usr/local/
+2007-02-04T11:15:00.000Z	SecrethX	xtknight	and how do we do that then? :o
+2007-02-04T11:15:00.000Z	xtknight	SecrethX	im really not sure how to do that, though.  you might have to recompile cups too ;)
+2007-02-04T11:16:00.000Z	SecrethX	xtknight	I just love to break thing :)
+2007-02-04T11:17:00.000Z	SecrethX	xtknight	printconf is just the same, cups still doesnt recognize my printer :p
+2007-02-04T11:17:00.000Z	xtknight	SecrethX	same gutenprint error though?
+2007-02-04T11:17:00.000Z	SecrethX	xtknight	yes
+2007-02-04T11:18:00.000Z	xtknight	SecrethX	woohoo!  we get to recompile cups now :P
+2007-02-04T11:18:00.000Z	SecrethX	xtknight	lol :D
+2007-02-04T11:18:00.000Z	SecrethX	xtknight	ok how to do that ? :D
+2007-02-04T11:18:00.000Z	xtknight	SecrethX	well it should be self explanatory from here
+2007-02-04T11:18:00.000Z	xtknight	SecrethX	download tarball, configure, make, sudo make install
+2007-02-04T11:18:00.000Z	SecrethX	xtknight	oh ok :p
+2007-02-04T11:18:00.000Z	SecrethX	xtknight	not following me now? :D
+2007-02-04T11:19:00.000Z	xtknight	SecrethX	pretty much same for everything.  just make sure you ./configure cups with the right options.  well i would follow you but im compiling something and its taking 100% cpu at the moment so it's hard me to do aynthing
+2007-02-04T11:19:00.000Z	SecrethX	xtknight	oh ok :p
+2007-02-04T11:19:00.000Z	xtknight	SecrethX	you might need to ./configure cups with some epson driver.  or maybe not
+2007-02-04T11:20:00.000Z	SecrethX	xtknight	ill check it out
+2007-02-04T11:32:00.000Z	SecrethX	xtknight	that didnt work either
+2007-02-04T11:34:00.000Z	xtknight	SecrethX	it compiled fine though? and installed file?
+2007-02-04T11:34:00.000Z	SecrethX	xtknight	it did install and compile fine, but it didnt install the missing file
+2007-02-04T11:34:00.000Z	SecrethX	xtknight	gnome-cups-add in console return a whole bunch of errors like this:
+2007-02-04T11:35:00.000Z	SecrethX	xtknight	http://paste.ubuntu-nl.org/4141/
+2007-02-04T11:36:00.000Z	xtknight	SecrethX	argh
+2007-02-04T11:36:00.000Z	xtknight	SecrethX	 i dont know.  apparently epson printers are hell under linux.  those dont really look like errors though
+2007-02-04T11:37:00.000Z	SecrethX	xtknight	no they are warnings :p apparently I have gutenprint5.1 installed, whilest I just compiled 5.0
+2007-02-04T11:37:00.000Z	xtknight	SecrethX	lol that sucks
+2007-02-04T11:37:00.000Z	SecrethX	xtknight	well, yea :P
+2007-02-04T11:37:00.000Z	SecrethX	xtknight	how can I remove one of the two?
+2007-02-04T11:39:00.000Z	xtknight	SecrethX	:/
+2007-02-04T11:39:00.000Z	xtknight	SecrethX	remove the gutenprint in /usr/local/ i guess...im not sure

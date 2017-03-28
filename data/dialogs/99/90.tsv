@@ -1,0 +1,99 @@
+2005-02-13T13:27:00.000Z	thoreauputic		alsactl seems to exist in ubuntu - just typed whereis alsactland it showed up
+2005-02-13T13:29:00.000Z	thoreauputic		I'm on PPC though
+2005-02-13T13:29:00.000Z	Dreamer3	thoreauputic	system specs?
+2005-02-13T13:30:00.000Z	Dreamer3	thoreauputic	hmmm... did you try OSX?
+2005-02-13T13:31:00.000Z	thoreauputic	Dreamer3	yep. Nice but I prefer Ubuntu :)
+2005-02-13T13:31:00.000Z	Dreamer3	thoreauputic	i see
+2005-02-13T13:31:00.000Z	thoreauputic	Dreamer3	I have fink installedetc, but it's alot of hassle
+2005-02-13T13:32:00.000Z	Dreamer3	thoreauputic	thinking of getting a dual g5 for graphics at work
+2005-02-13T13:32:00.000Z	thoreauputic	Dreamer3	OS X is very good but I'm used to the *nix way of doing things and OS X kind of hides things where you have to dig for them
+2005-02-13T13:33:00.000Z	thoreauputic	Dreamer3	also Ubuntu is faster on this machine
+2005-02-13T13:34:00.000Z	Dreamer3	thoreauputic	rofl
+2005-02-13T13:34:00.000Z	Dreamer3	thoreauputic	i fell in love with xfce the other day
+2005-02-13T13:35:00.000Z	thoreauputic	Dreamer3	yeah, nice - but I'm a flux fanboy <grin>
+2005-02-13T13:35:00.000Z	thoreauputic	Dreamer3	I'm dual booting - so: best of both worlds :)
+2005-02-13T13:38:00.000Z	thoreauputic	Dreamer3	the latest flux is far from minimal and has some nice eye-candy like transparency and so on - also gnome notification areas work
+2005-02-13T13:38:00.000Z	Dreamer3	thoreauputic	oh yeah? are there screen shots, do you have a good one perhaps?
+2005-02-13T13:39:00.000Z	thoreauputic	Dreamer3	hmm... hang on- I'm on dialupbut I can try to upload something to my web server
+2005-02-13T14:13:00.000Z	thoreauputic	Dreamer3	better late than never - current flux desktop  http://interlink.webhop.org/fluxshot.png
+2005-02-13T14:13:00.000Z	thoreauputic	Dreamer3	and no, it isn't Debian - I just like the colours ;)
+2005-02-13T14:14:00.000Z	Dreamer3	thoreauputic	downloading
+2005-02-13T14:17:00.000Z	Dreamer3	thoreauputic	not me, i think i outgrew flux
+2005-02-13T14:18:00.000Z	thoreauputic	Dreamer3	heh...well I'm still  a baby I guess ;)
+2005-02-13T14:19:00.000Z	Dreamer3	thoreauputic	*laughs*
+2005-02-13T14:19:00.000Z	Dreamer3	thoreauputic	just not me anymore :)
+2005-02-13T14:19:00.000Z	Dreamer3	thoreauputic	i like the glitz of xfce :)
+2005-02-13T14:20:00.000Z	thoreauputic	Dreamer3	fair enough - I like them all in different ways: I just find flux is best for the way I like to work
+2005-02-13T14:20:00.000Z	Dreamer3	thoreauputic	maybe the way i work just changed? :)
+2005-02-13T14:21:00.000Z	thoreauputic	Dreamer3	yeah, or you had a frontal lobotomy ;)
+2005-02-13T14:29:00.000Z	Dreamer3	thoreauputic	why?
+2005-02-13T14:29:00.000Z	Dreamer3	thoreauputic	my pc in the floor already does that, but i don't use it... and it's only 700mhz :)
+2005-02-13T14:30:00.000Z	thoreauputic	Dreamer3	you poor chap - my biggest monitor is 17" :(
+2005-02-13T14:30:00.000Z	Dreamer3	thoreauputic	sorry :)
+2005-02-13T14:30:00.000Z	thoreauputic	Dreamer3	and 56k dialup
+2005-02-13T14:30:00.000Z	Dreamer3	thoreauputic	i'm on dial-up too
+2005-02-14T16:05:00.000Z	thoreauputic	Dreamer3	I installed gstreamer0.8-mad, from memeory
+2005-02-14T16:07:00.000Z	Dreamer3	thoreauputic	i can't get xmms to do anything with it
+2005-02-14T16:08:00.000Z	Dreamer3	thoreauputic	what am i missing
+2005-02-14T16:08:00.000Z	thoreauputic	Dreamer3	dunno - mine is fine with just gstreamer0.8-mad
+2005-02-14T16:09:00.000Z	thoreauputic	Dreamer3	try putting a .pls extension on the playlist
+2005-02-14T16:09:00.000Z	Dreamer3	thoreauputic	they are on a webserver
+2005-02-14T16:12:00.000Z	Dreamer3	thoreauputic	hmmm
+2005-02-14T16:13:00.000Z	Dreamer3	thoreauputic	hmmmmmmmmm
+2005-03-22T08:32:00.000Z	thoreauputic	Dreamer3	which file?
+2005-03-22T08:33:00.000Z	Dreamer3	thoreauputic	rails application i'm working on, or website files... doesn't seem to matter
+2005-03-22T08:33:00.000Z	thoreauputic	Dreamer3	you probably opened read-only files
+2005-03-22T08:33:00.000Z	Dreamer3	thoreauputic	um no, they save fine... i'm looking at them in my browser
+2005-03-22T08:34:00.000Z	thoreauputic	Dreamer3	and if you edit them with vi or nano or whatever, same thing happens?
+2005-03-22T08:34:00.000Z	Dreamer3	thoreauputic	i don't know, i don't use vi or nano
+2005-03-22T08:34:00.000Z	Dreamer3	thoreauputic	you're saying gedit would remember the old file and randomly saver it later over the new one?
+2005-03-22T08:35:00.000Z	thoreauputic	Dreamer3	then it might not be gedit
+2005-03-22T08:35:00.000Z	thoreauputic	Dreamer3	choice of editor shouldn't matter, no
+2005-04-14T07:48:00.000Z	thoreauputic	Dreamer3	 I'm on Warty and the *picture* was not part of the updates ;-)
+2005-04-14T07:49:00.000Z	Dreamer3	thoreauputic	yeah :)
+2005-04-14T07:49:00.000Z	thoreauputic	Dreamer3	the people using hoary are not corporate types :)
+2005-04-14T07:50:00.000Z	Dreamer3	thoreauputic	says who? :)
+2005-04-14T07:51:00.000Z	thoreauputic	Dreamer3	heh, well I guess some are :)
+2005-04-14T07:51:00.000Z	Dreamer3	thoreauputic	thoguht i agree anyone actively deploying is a little ahead of the game...
+2005-04-14T08:08:00.000Z	Dreamer3	thoreauputic	he's wanting to put a ubuntu sticker in it's place...
+2005-04-14T08:27:00.000Z	thoreauputic	Dreamer3	or just specify it in the script
+2005-04-14T08:27:00.000Z	Dreamer3	thoreauputic	?
+2005-04-14T08:27:00.000Z	Dreamer3	thoreauputic	i'm wanting to change the default editor that crontab uses to edit files
+2005-04-14T08:27:00.000Z	thoreauputic	Dreamer3	I see - I thought you just wanted it for a script
+2005-04-14T08:28:00.000Z	Dreamer3	thoreauputic	ok, added it to .bashrc
+2005-04-14T08:28:00.000Z	thoreauputic	Dreamer3	what about update-alternatives
+2005-04-14T08:29:00.000Z	Dreamer3	thoreauputic	nah, that changes it for everyone :)
+2005-04-14T08:29:00.000Z	Dreamer3	thoreauputic	but thanks, i didn't know that worked also :)
+2005-04-14T08:29:00.000Z	thoreauputic	Dreamer3	yes that's a global setting
+2005-04-14T08:31:00.000Z	thoreauputic	Dreamer3	update-alternatives shows  "editor" pointing to vim anyway :/
+2005-04-14T08:32:00.000Z	Dreamer3	thoreauputic	oh, well, that's not it then
+2005-04-14T08:47:00.000Z	Dreamer3	thoreauputic	um no :)
+2005-04-14T08:47:00.000Z	Dreamer3	thoreauputic	i installed it on 64mb just fine :)
+2005-04-14T08:48:00.000Z	thoreauputic	Dreamer3	well, 128 is recommended
+2005-04-14T08:48:00.000Z	Dreamer3	thoreauputic	agreed :)
+2005-04-14T08:48:00.000Z	Dreamer3	thoreauputic	i just don't think 32mb is really enough for the installer to function
+2005-04-14T08:49:00.000Z	thoreauputic	Dreamer3	i personally would install Debian on that machine - I have a pentium 200 running Debian Woody and fluxbox
+2005-04-14T09:06:00.000Z	thoreauputic	Dreamer3	scite is nice, too
+2005-04-14T09:07:00.000Z	Dreamer3	thoreauputic	is there a gtk 1.2 version of scite?
+2005-04-14T09:07:00.000Z	Dreamer3	thoreauputic	if so i'll get it and compile it and check it out
+2005-04-14T09:08:00.000Z	thoreauputic	Dreamer3	I'm not sure - I think it uses gtk2 but I may be wrong
+2005-04-14T09:08:00.000Z	Dreamer3	thoreauputic	it does currently, i just wonder if there is an older version
+2005-04-15T11:22:00.000Z	thoreauputic	Dreamer3	I use NFS, but I use Warty
+2005-04-15T11:23:00.000Z	Dreamer3	thoreauputic	can you rename a file on NFS from nautilus in list view mode?
+2005-04-15T11:23:00.000Z	Dreamer3	thoreauputic	on my hoary system it goes to "rename mode" for like 1 second, then reverts back without giving me a change to type in anything
+2005-04-15T11:24:00.000Z	Dreamer3	thoreauputic	works fine in icon mode
+2005-04-15T11:24:00.000Z	thoreauputic	Dreamer3	I don't know - i use rox filer
+2005-04-15T11:24:00.000Z	Dreamer3	thoreauputic	do you have nautlius installed to test?
+2005-04-16T08:15:00.000Z	Dreamer3	thoreauputic	are you using transparency reliably?
+2005-04-16T08:16:00.000Z	thoreauputic	Dreamer3	heh - different meaning of "transparent" ;)
+2005-04-16T08:16:00.000Z	Dreamer3	thoreauputic	oh, ok :)
+2005-04-16T08:16:00.000Z	Dreamer3	thoreauputic	i couldn't get it working solid :)
+2005-04-16T08:16:00.000Z	Dreamer3	thoreauputic	though i had good luck with transparency alone... and might not have even been a problem but i didn't try it without renderaccel, which seems quite unstable here
+2005-04-16T10:28:00.000Z	Dreamer3	thoreauputic	huh, debian has a community?
+2005-04-20T15:26:00.000Z	thoreauputic	Dreamer3	Moz Foundation copyright issues
+2005-04-20T15:26:00.000Z	Dreamer3	thoreauputic	everyone else can use it but ubuntu?
+2005-04-20T15:26:00.000Z	thoreauputic	Dreamer3	I don't know - you'd need to ask the devs I guess
+2005-04-20T15:27:00.000Z	thoreauputic	Dreamer3	if you get one from the mozilla.org page , you could probably substitute it with a bit of hacking and renaming
+2005-04-20T15:28:00.000Z	Dreamer3	thoreauputic	perhaps, but it's prolly not as fast as the ubuntu one :)
+2005-04-29T13:10:00.000Z	Dreamer3	thoreauputic	it's for your own good, accept it ;-)
+2005-04-29T13:11:00.000Z	thoreauputic	Dreamer3	haha - of course, I forgot - how stupid of me ;)

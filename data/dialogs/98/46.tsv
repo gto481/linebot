@@ -1,0 +1,98 @@
+2007-07-17T12:15:00.000Z	telexicon		who needs help?
+2007-07-17T12:16:00.000Z	shiester_miester	telexicon	me :P
+2007-07-17T12:16:00.000Z	telexicon	shiester_miester	whats the problem?
+2007-07-17T12:17:00.000Z	telexicon	shiester_miester	can you pastebin the output if ifconfig
+2007-07-17T12:17:00.000Z	shiester_miester	telexicon	the thing is, its working fine now.  will it still be helpful?
+2007-07-17T12:17:00.000Z	telexicon	shiester_miester	just to get a general sense
+2007-07-17T12:18:00.000Z	telexicon	shiester_miester	what type of router?
+2007-07-17T12:18:00.000Z	shiester_miester	telexicon	its an adsl modem/router thingy.  its an alcatel speedtouch 530
+2007-07-17T12:18:00.000Z	shiester_miester	telexicon	http://pastebin.com/m52569f1
+2007-07-17T12:19:00.000Z	telexicon	shiester_miester	ugh, complicated
+2007-07-17T12:19:00.000Z	telexicon	shiester_miester	hehe ok, so how many physical ethernet ports does your computer have?
+2007-07-17T12:20:00.000Z	telexicon	shiester_miester	2?
+2007-07-17T12:20:00.000Z	shiester_miester	telexicon	uhh...2 i think
+2007-07-17T12:20:00.000Z	shiester_miester	telexicon	2 of them are plugged in
+2007-07-17T12:20:00.000Z	telexicon	shiester_miester	so you are on 2 networks?
+2007-07-17T12:20:00.000Z	telexicon	shiester_miester	can you pastebin the output of 'cat /etc/network/interfaces'
+2007-07-17T12:21:00.000Z	shiester_miester	telexicon	no, the second one isnt really being used, since I can't get ubuntu > windows networking happening
+2007-07-17T12:21:00.000Z	telexicon	shiester_miester	is this computer acting as a router?
+2007-07-17T12:21:00.000Z	shiester_miester	telexicon	http://pastebin.com/m3b6a2ac0
+2007-07-17T12:21:00.000Z	shiester_miester	telexicon	nope
+2007-07-17T12:22:00.000Z	shiester_miester	telexicon	I'm trying to get a little home network set up but thats unrelated to this problem and none of it is working anyway, except for this computer's internet connection
+2007-07-17T12:22:00.000Z	telexicon	shiester_miester	are both the cables plugged into the router thing?
+2007-07-17T12:22:00.000Z	shiester_miester	telexicon	no, just one
+2007-07-17T12:23:00.000Z	telexicon	shiester_miester	and the other one is plugged into a switch somewhere else?
+2007-07-17T12:23:00.000Z	shiester_miester	telexicon	no, its plugged into another computer downstairs which isn't turned on at the moment
+2007-07-17T12:23:00.000Z	shiester_miester	telexicon	i dont have any fancy network hardware ;) all i have is my adsl modem, 3 computers and 3 crossover cables
+2007-07-17T12:23:00.000Z	telexicon	shiester_miester	ok
+2007-07-17T12:24:00.000Z	telexicon	shiester_miester	why the static ip address?
+2007-07-17T12:24:00.000Z	shiester_miester	telexicon	thats for the one not plugged into the modem.  apparently I need to use a static IP to be able to network with the other computer and use internet connection sharing
+2007-07-17T12:25:00.000Z	telexicon	shiester_miester	which eth is plugged into the modem and which to the other comp?
+2007-07-17T12:25:00.000Z	shiester_miester	telexicon	the one that doesnt have a static IP is plugged into the modem, otherwise I wouldn't be online right now ;)
+2007-07-17T12:25:00.000Z	shiester_miester	telexicon	i think its ETH1
+2007-07-17T12:25:00.000Z	telexicon	shiester_miester	good point
+2007-07-17T12:26:00.000Z	telexicon	shiester_miester	type: sudo ifdown eth1
+2007-07-17T12:26:00.000Z	telexicon	shiester_miester	er, eth0
+2007-07-17T12:27:00.000Z	shiester_miester	telexicon	how will turning off the other device help?
+2007-07-17T12:27:00.000Z	telexicon	shiester_miester	it makes things simpler
+2007-07-17T12:27:00.000Z	telexicon	shiester_miester	it removes variables
+2007-07-17T12:27:00.000Z	shiester_miester	telexicon	done
+2007-07-17T12:27:00.000Z	telexicon	shiester_miester	whats the ip of the router?
+2007-07-17T12:27:00.000Z	telexicon	shiester_miester	pastebin 'route -n'
+2007-07-17T12:28:00.000Z	telexicon	shiester_miester	and 'cat /etc/resolv.conf'
+2007-07-17T12:28:00.000Z	telexicon	shiester_miester	and ethtool eth1
+2007-07-17T12:29:00.000Z	shiester_miester	telexicon	http://pastebin.com/m25f7e9b1
+2007-07-17T12:30:00.000Z	shiester_miester	telexicon	the first part is from route -n
+2007-07-17T12:30:00.000Z	telexicon	shiester_miester	dang, i hate it when ISP give out lame private IPs
+2007-07-17T12:30:00.000Z	telexicon	shiester_miester	im sorry
+2007-07-17T12:30:00.000Z	shiester_miester	telexicon	eh?
+2007-07-17T12:31:00.000Z	telexicon	shiester_miester	oh maybe its your router/modem
+2007-07-17T12:32:00.000Z	telexicon	shiester_miester	well, now the only problem is, i need all this information again when its not working
+2007-07-17T12:32:00.000Z	shiester_miester	telexicon	it can't be, because I just turn it on and don't touch it.  the lights on it report a working connection, its only ubuntu that doesn't do it for some reason, and if i restart once or twice it usually works (again, without touching the modem at all)
+2007-07-17T12:33:00.000Z	shiester_miester	telexicon	if it was a problem with the modem then restarting ubuntu certainly wouldn't make any difference, since the modem has it's own connection altogether
+2007-07-17T12:33:00.000Z	telexicon	shiester_miester	i understand
+2007-07-17T12:34:00.000Z	telexicon	shiester_miester	it would be interesting to see if these things worked, ping 10.0.0.1, ping 10.0.0.138, ping 72.14.207.99... when the connection isnt working
+2007-07-17T12:34:00.000Z	shiester_miester	telexicon	ok then
+2007-07-17T12:34:00.000Z	telexicon	shiester_miester	as well as all the other information you sent me :)
+2007-07-17T12:34:00.000Z	shiester_miester	telexicon	what other information was it again?
+2007-07-17T12:34:00.000Z	telexicon	shiester_miester	you can press tab to autocomplete names :)
+2007-07-17T12:35:00.000Z	shiester_miester	telexicon	yes i know, i just forgot to
+2007-07-17T12:35:00.000Z	telexicon	shiester_miester	cat /etc/network/interfaces, cat /etc/resolv.conf, ifconfig, ethtool eth1
+2007-07-17T12:39:00.000Z	shiester_miester	telexicon	I'll restart and do those commands when the connection isnt working
+2007-07-17T12:39:00.000Z	telexicon	shiester_miester	ok
+2007-07-17T12:52:00.000Z	shiester_miester	telexicon	http://pastebin.com/m5110f799
+2007-07-17T12:53:00.000Z	telexicon	shiester_miester	aha!
+2007-07-17T12:53:00.000Z	telexicon	shiester_miester	so is this on feisty?
+2007-07-17T12:53:00.000Z	shiester_miester	telexicon	i was thinking that those "operation not permitted" in the pings might be a symptom of the same cause
+2007-07-17T12:53:00.000Z	shiester_miester	telexicon	yes it is
+2007-07-17T12:53:00.000Z	telexicon	shiester_miester	the cause is, the router isnt giving your computer an IP Address
+2007-07-17T12:54:00.000Z	shiester_miester	telexicon	ok, so why not? :/
+2007-07-17T12:54:00.000Z	telexicon	shiester_miester	well... /etc/init.d/networking restart ... shouldve worked
+2007-07-17T12:54:00.000Z	shiester_miester	telexicon	tried it, it doesnt work.  ubuntu does a few DHCP DISCOVER broadcasts and nothing happens
+2007-07-17T12:55:00.000Z	telexicon	shiester_miester	well its the routers job to respond
+2007-07-17T12:55:00.000Z	shiester_miester	telexicon	so why is it that it often works fine after I restart?
+2007-07-17T12:55:00.000Z	telexicon	shiester_miester	im not sure
+2007-07-17T12:56:00.000Z	telexicon	shiester_miester	sudo /etc/network/interfaces and put a # in front of the two lines after iface eth1 inet dhcp
+2007-07-17T12:58:00.000Z	shiester_miester	telexicon	what are those 2 lines doing there :/ is that assigning a static IP to ETH1?
+2007-07-17T12:58:00.000Z	telexicon	shiester_miester	well it should be ignoring those lines, but it might be deciding to ignore dhcp.. i dunno
+2007-07-17T12:58:00.000Z	telexicon	shiester_miester	because it says... eth1 inet dhcp.. (dhcp means not static)
+2007-07-17T12:59:00.000Z	shiester_miester	telexicon	ok then.  I'll turn off the adsl router and restart ubuntu and try it again
+2007-07-17T12:59:00.000Z	telexicon	shiester_miester	um
+2007-07-17T12:59:00.000Z	telexicon	shiester_miester	use the network manager too
+2007-07-17T12:59:00.000Z	telexicon	shiester_miester	you are on feisty right?
+2007-07-17T12:59:00.000Z	shiester_miester	telexicon	yes
+2007-07-17T12:59:00.000Z	telexicon	shiester_miester	see what it is doing in the corner
+2007-07-17T12:59:00.000Z	telexicon	shiester_miester	while its trying to connect
+2007-07-17T12:59:00.000Z	telexicon	shiester_miester	try doing reconnect or whatever options it has
+2007-07-17T13:00:00.000Z	shiester_miester	telexicon	do you mean the "Manual Network Configuration" icon in the notification area?
+2007-07-17T13:00:00.000Z	telexicon	shiester_miester	yea, that
+2007-07-17T13:01:00.000Z	shiester_miester	telexicon	something just occurred to me...the only option it has is "manual configuration", so could that mean that its just assuming that I'll give it the correct configuration for everything and not configuring itself
+2007-07-17T13:01:00.000Z	telexicon	shiester_miester	well you have 1 static ip configured
+2007-07-17T13:02:00.000Z	shiester_miester	telexicon	although I don't even need that since I can't get networking happening through there anyway
+2007-07-17T13:03:00.000Z	shiester_miester	telexicon	any other ideas?
+2007-07-17T13:04:00.000Z	shiester_miester	telexicon	or just restart and see?
+2007-07-17T13:04:00.000Z	telexicon	shiester_miester	im kinda out of ideas to make it work
+2007-07-17T13:25:00.000Z	telexicon	shiester_miester	did it work?
+2007-07-17T13:26:00.000Z	shiester_miester	telexicon	I actually haven't restarted yet ;)
+2007-07-17T13:26:00.000Z	shiester_miester	telexicon	I'll do it now
+2007-07-17T13:26:00.000Z	telexicon	shiester_miester	ok sorry i was helping my friend

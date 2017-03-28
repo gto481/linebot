@@ -1,0 +1,99 @@
+2007-09-22T08:39:00.000Z	Scunizi	Zombine	I don't know if anyone answered you.. but the syntax you describe looks like grub only.
+2007-09-22T08:40:00.000Z	Scunizi	Zombine	hd? is usually an ide disk, sd? is usually a SATA disk, sda1 is the first partition on the SATA disk etc.
+2007-09-22T08:40:00.000Z	Scunizi	Zombine	hda is the first ide disk, hdb is the second etc.
+2007-09-22T08:41:00.000Z	Scunizi	Zombine	mounting requires some steps.. let me see if ubotu knows..
+2007-09-22T08:42:00.000Z	Scunizi	Zombine	that's not a very good response.
+2007-09-22T08:43:00.000Z	Scunizi	Zombine	ok.. it's easier to see your posts in the noise if you use my nick.. it get's highlighted.. type the first few letters then hit TAB to complete
+2007-09-22T08:45:00.000Z	Zombine	Scunizi	I see.
+2007-09-22T08:46:00.000Z	Zombine	Scunizi	So anyway, its a FAT32 drive, its fornatted and partitoned, and all Im looking to do is view files on it
+2007-09-22T08:46:00.000Z	Scunizi	Zombine	that's it!... you can find what the system currently recoginzed by looking at fstab. type gksudo gedit /etc/fstab and you'll get the text control file for the system.. don't edit anything yet.
+2007-09-22T08:48:00.000Z	Zombine	Scunizi	It shows the linux root drive and another partition of that drive...
+2007-09-22T08:48:00.000Z	Scunizi	Zombine	my vfat fstab line looks like this.. however my sys doesn't use uuid.. /dev/sdc1 /media/sdc1 vfat user,noauto,umask=000 0 0
+2007-09-22T08:49:00.000Z	Scunizi	Zombine	you won't use the /dev/sdc1.  It will have to be replaced with the uuid of the drive/partition.
+2007-09-22T08:52:00.000Z	Zombine	Scunizi	So.... I should add a line for my drive, hda0.... its the master IDE drive and it has only one partition
+2007-09-22T08:52:00.000Z	Scunizi	Zombine	after finding the uuid the remaining part of the line should work.  You'll have to create a directory in /media for it to mount to.  sudo mkdir /media/"name of drive" like sda1 or hda1 etc.  Not hda0
+2007-09-22T08:53:00.000Z	Scunizi	Zombine	use the other drive uuid formats to formulate the correct beginning of the line.
+2007-09-22T08:55:00.000Z	Zombine	Scunizi	Okay.... Here goes...
+2007-09-22T08:56:00.000Z	Scunizi	Zombine	when your done copy and paste your fstab to http://paste.ubuntu-nl.org then post the new address to it.
+2007-09-22T08:56:00.000Z	Zombine	Scunizi	does whitspace matter?
+2007-09-22T08:56:00.000Z	Scunizi	Zombine	some  you should have at least a space between the sections..
+2007-09-22T08:56:00.000Z	Scunizi	Zombine	you don't want to run it all together.
+2007-09-22T08:57:00.000Z	Zombine	Scunizi	As long as there is at least one space so it can do its tokenizer thing?
+2007-09-22T08:57:00.000Z	Scunizi	Zombine	yep
+2007-09-22T09:01:00.000Z	Scunizi	Zombine	how's it going?
+2007-09-22T09:01:00.000Z	Zombine	Scunizi	Its there now...
+2007-09-22T09:02:00.000Z	Scunizi	Zombine	can you paste your fstab to http://paste.ubuntu-nl.org
+2007-09-22T09:02:00.000Z	Zombine	Scunizi	I have... As Zombine...
+2007-09-22T09:02:00.000Z	Zombine	Scunizi	5:01 GMT....
+2007-09-22T09:03:00.000Z	Scunizi	Zombine	after you hit paste the address line changed. can you paste that here.
+2007-09-22T09:03:00.000Z	Zombine	Scunizi	/38200
+2007-09-22T09:03:00.000Z	Scunizi	Zombine	got it.
+2007-09-22T09:04:00.000Z	Zombine	Scunizi	so... does it look okay?
+2007-09-22T09:05:00.000Z	Scunizi	Zombine	ok.. you're missing user,noauto,umask=000 before the two 0's. Also did you create CDrive in /media?
+2007-09-22T09:05:00.000Z	Zombine	Scunizi	I did
+2007-09-22T09:06:00.000Z	Scunizi	Zombine	it isn't showing in the fstab you pasted..
+2007-09-22T09:06:00.000Z	Zombine	Scunizi	I meant that I made the direcroy
+2007-09-22T09:06:00.000Z	Zombine	Scunizi	 The new FStab is upthere
+2007-09-22T09:07:00.000Z	Scunizi	Zombine	ah ok.. what's the address?  it changes all the time.
+2007-09-22T09:07:00.000Z	Zombine	Scunizi	 38201
+2007-09-22T09:08:00.000Z	Scunizi	Zombine	good.. now you might be able to get away with sudo mount -a
+2007-09-22T09:08:00.000Z	Zombine	Scunizi	Alright.... Do I want to use the -t that the man page has as tyical?
+2007-09-22T09:08:00.000Z	Zombine	Scunizi	Or any other arguments for hat matter?
+2007-09-22T09:09:00.000Z	Scunizi	Zombine	not sure .. let me look at the man page..  typically just -a
+2007-09-22T09:10:00.000Z	Scunizi	Zombine	naw.. just -a should work
+2007-09-22T09:10:00.000Z	Zombine	Scunizi	Saved mt fstab... trying to mount...
+2007-09-22T09:11:00.000Z	Zombine	Scunizi	No output... dunno if that is encouraging or not xD.  Lets see if it showed up...
+2007-09-22T09:12:00.000Z	Scunizi	Zombine	type gksudo gedit /etc/mtab and in there add /dev/hda0 /media/CDrive vfat user,noauto,umask=000  0 0
+2007-09-22T09:12:00.000Z	Scunizi	Zombine	then try again to mount.
+2007-09-22T09:14:00.000Z	Zombine	Scunizi	no luck...
+2007-09-22T09:15:00.000Z	Scunizi	Zombine	hummm... in looking at your fstab it shows hda0,,, it should be hda1.. I'm assuming you installed windows first then ubuntu right?
+2007-09-22T09:15:00.000Z	Zombine	Scunizi	This is correct...
+2007-09-22T09:15:00.000Z	Scunizi	Zombine	and you only have one drive?
+2007-09-22T09:16:00.000Z	Zombine	Scunizi	Nope.  Two.  One is all one partition and one is my ubuntu/swap/extra storage drive
+2007-09-22T09:16:00.000Z	Scunizi	Zombine	change referances of hda0 to hda1 in both fstab and mtab
+2007-09-22T09:17:00.000Z	Zombine	Scunizi	And retry the mount?
+2007-09-22T09:17:00.000Z	Scunizi	Zombine	yes
+2007-09-22T09:17:00.000Z	Scunizi	Zombine	don't forget to save.
+2007-09-22T09:20:00.000Z	Zombine	Scunizi	No luck... 38204 is my new pastedump....
+2007-09-22T09:21:00.000Z	Scunizi	Zombine	you might need to use the uuid of the drive instead of the /dev reference.. you can find out what that is by typing sudo blkid
+2007-09-22T09:22:00.000Z	Scunizi	Zombine	cool
+2007-09-22T09:22:00.000Z	Zombine	Scunizi	Will I change that in mtab as well as fstab?
+2007-09-22T09:22:00.000Z	Scunizi	Zombine	yes
+2007-09-22T09:24:00.000Z	Zombine	Scunizi	And the line will look the same except for the UUID replaces the /dev reference?
+2007-09-22T09:24:00.000Z	Scunizi	Zombine	yes.. I'll be right back. 90 seconds..
+2007-09-22T09:29:00.000Z	Scunizi	Zombine	back.. I'm trying to get my son's windows machine to recoginze the wireless connection.. for some reason it just went out.
+2007-09-22T09:31:00.000Z	Zombine	Scunizi	Love when that happens... All the time with my schools wireless
+2007-09-22T09:32:00.000Z	Scunizi	Zombine	it's a pain.. I have it shut down at a specific time every night to limit thing.. then it doesn't come back up.. Anyway.. did you get the changes made?
+2007-09-22T09:32:00.000Z	Zombine	Scunizi	Would I need to change the options to match the ones of hdb1?
+2007-09-22T09:32:00.000Z	Zombine	Scunizi	Didnt mount...
+2007-09-22T09:33:00.000Z	Scunizi	Zombine	no.. vfat is written differently.. You wanna try rebooting?  I"ll be here.
+2007-09-22T09:34:00.000Z	Zombine	Scunizi	Its on a different comp anyway
+2007-09-22T09:34:00.000Z	Scunizi	Zombine	ah cool
+2007-09-22T09:34:00.000Z	Zombine	Scunizi	But yeah its rebooting
+2007-09-22T09:34:00.000Z	Scunizi	Zombine	is this your first shot with linux or ubuntu?
+2007-09-22T09:35:00.000Z	Zombine	Scunizi	In years.... And before I got just about far enough to give up on u64 because my BIOS needed updated and wouldn boot XP.  Its why I switched over.  Then I flashed my BIOS and lost all my Ubuntu CDs xD
+2007-09-22T09:36:00.000Z	Scunizi	Zombine	sounds like you've been around compts abt as long as me.
+2007-09-22T09:37:00.000Z	Zombine	Scunizi	I make no claim to great knowledge or talent, but I have spent about 12 of my 19 years around them :D
+2007-09-22T09:39:00.000Z	Scunizi	Zombine	ah.. got you beat.. 27 years around them.. doesn't mean much though.. I'm considered a guru to friends, associates some businesses (on windows) but I know less than what I don't know.. not a guru to a guru.. if you know what i mean.
+2007-09-22T09:39:00.000Z	Scunizi	Zombine	ok.. did it reboot?
+2007-09-22T09:40:00.000Z	Zombine	Scunizi	lol there always someone smarter, eh?
+2007-09-22T09:40:00.000Z	Scunizi	Zombine	you betcha.. it can be humbling.
+2007-09-22T09:40:00.000Z	Zombine	Scunizi	 also, yeah it rebooted and now no C Drive still...
+2007-09-22T09:40:00.000Z	Scunizi	Zombine	where are you looking
+2007-09-22T09:41:00.000Z	Zombine	Scunizi	/media
+2007-09-22T09:41:00.000Z	Zombine	Scunizi	Well /media/CDrive
+2007-09-22T09:41:00.000Z	Scunizi	Zombine	try ls /media/CDrive  .. remember caps make a difference.
+2007-09-22T09:42:00.000Z	Zombine	Scunizi	shows nothing.... ls=dir?
+2007-09-22T09:42:00.000Z	Scunizi	Zombine	yes
+2007-09-22T09:44:00.000Z	Scunizi	Zombine	check out this link https://help.ubuntu.com/community/AutomaticallyMountPartitions?highlight=%28mount%29
+2007-09-22T09:45:00.000Z	Zombine	Scunizi	Automatically mount partitions... I like the sound of that :D
+2007-09-22T09:45:00.000Z	Scunizi	Zombine	that's the one..
+2007-09-22T09:46:00.000Z	Zombine	Scunizi	Automatic... reminds me of my old windows days... Seems like it was only yesterday.... :P
+2007-09-22T09:46:00.000Z	Scunizi	Zombine	/dev/hda1   /media/CDrive   vfat   user,fmask=0111,dmask=0000   0   0 .. and replace /dev/hda1 with the uuid stuff.
+2007-09-22T09:47:00.000Z	Zombine	Scunizi	 kay.
+2007-09-22T09:49:00.000Z	Zombine	Scunizi	brb
+2007-09-22T09:49:00.000Z	Scunizi	Zombine	k
+2007-09-22T09:52:00.000Z	Zombine	Scunizi	Oh shit...
+2007-09-22T09:52:00.000Z	Scunizi	Zombine	what?
+2007-09-22T09:54:00.000Z	Zombine	Scunizi	Thanks for the help, but I gotta go try to pass soc 200 now
+2007-09-22T09:54:00.000Z	Scunizi	Zombine	ok.. good luck!

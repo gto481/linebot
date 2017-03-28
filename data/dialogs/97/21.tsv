@@ -1,0 +1,97 @@
+2010-11-02T10:46:00.000Z	Dr_Willis		hit escape a few dozen times, then try :help
+2010-11-02T10:47:00.000Z	Dr_Willis		^ = ctrl key.
+2010-11-02T10:48:00.000Z	Dr_Willis		I found some consoel based editor ages ago that was basically like the old dos edit. with menus.. but i forget its name..
+2010-11-02T10:48:00.000Z	Dr_Willis		nano uses the ctrl-stuff all the time.
+2010-11-02T10:48:00.000Z	Dr_Willis		nano has the ctrl-coded at the bottom of the screen.. its just that beginners often dont realize theat ^ = ctrl.
+2010-11-02T10:49:00.000Z	Dr_Willis		In nano -->  ^O WriteOut
+2010-11-02T10:49:00.000Z	Dr_Willis		in vi -   <esc>:wq
+2010-11-02T10:49:00.000Z	Dr_Willis		in emacs... I forget.. :)
+2010-11-02T10:50:00.000Z	Dr_Willis		mcedit - F2
+2010-11-02T10:50:00.000Z	Dr_Willis		I dont even recall what you are editing...
+2010-11-02T10:51:00.000Z	sosaited	Dr_Willis	crontab
+2010-11-02T10:52:00.000Z	sosaited	Dr_Willis	He said he used that command.. Yeah I said that as well. that he can use nano by selecting it from the option
+2010-11-02T10:54:00.000Z	Dr_Willis	sosaited	 there are some sites that sell Linux preinstalled laptops..   theres so many laptops out.. the best you can proberly do is find linux laptop reviews and look for ones with the fewest probpeklsm
+2010-11-02T10:55:00.000Z	Dr_Willis	sosaited	 even then.. its always possible theres some bug/quirk/issues with the next OS releases
+2010-11-02T10:55:00.000Z	sosaited	Dr_Willis	small bugs I will be able to fix/work around via RDP. but people couldn't even boot on <10.04 on that laptop
+2010-11-02T10:56:00.000Z	Dr_Willis	sosaited	 with the move to plymouth. for my Nvidia machines I have to use the 'nomodeset' option to get a working GUI to install from. and boot from, Untill i get the nvidia-drivers installed.
+2010-11-02T10:57:00.000Z	sosaited	Dr_Willis	I think Dell used to sell a lot of laptops with preinstalled Ubuntu, but apparently they discontinued that?
+2010-11-02T10:57:00.000Z	Dr_Willis	sosaited	 theres other sites  that still do. System76 i recall is one.
+2010-11-02T10:58:00.000Z	Dr_Willis	sosaited	 i think dell still does.. but havent looked into them,
+2010-11-02T11:04:00.000Z	Dr_Willis	sosaited	 i always use 64bit OS on sysmtes that are 64bit.
+2010-11-02T11:05:00.000Z	sosaited	Dr_Willis	I just read on forums that its better to install 32-bit if you dont have AMD processor. Though that might have been just one mans experience/opinion
+2010-11-02T11:06:00.000Z	Dr_Willis	sosaited	 ive used 64bit on amd and intel.. - with no real issues for  quite some time now.
+2010-11-02T11:07:00.000Z	sosaited	Dr_Willis	Hmm. Notebook or desktop?
+2010-11-02T11:07:00.000Z	Dr_Willis	sosaited	 Yes :) both..
+2010-11-02T11:07:00.000Z	Dr_Willis	sosaited	 i have 1 machine now that 32bit. thats the netbook...
+2010-11-02T11:08:00.000Z	sosaited	Dr_Willis	Hmm. Not even Hibernate/suspend or ACPI problems on Laptops?
+2010-11-02T11:09:00.000Z	Dr_Willis	sosaited	 i rarely use that feature. I rarely use that feature under windows either.. It can be problamatic depending on your hardware setup. I notice it did work on my new X505 laptop the other day.. but i rarely use it.
+2010-11-02T11:16:00.000Z	sosaited	Dr_Willis	DId you ever need to use ia32-libs to use some 32-bit apps?
+2010-11-02T11:20:00.000Z	Dr_Willis	sosaited	 Proberly have. but they got installed automatically for flash i belive.
+2010-11-02T11:20:00.000Z	Dr_Willis	sosaited	 so ive never had to worry about it.
+2010-11-02T11:22:00.000Z	Dr_Willis	sosaited	 i can only think of a few programs there were 32bit only. and that was some old apps.
+2010-11-02T11:25:00.000Z	sosaited	Dr_Willis	They work fine ?
+2010-11-02T11:28:00.000Z	sosaited	Dr_Willis	You use something else instead of zsnes now? or compiled it with ia32-libs ? I have absolutely no experience with 64-bit so I need to be prepared when I'll need to set up one for someone else. Especially when you are trying to prove that Ubuntu is better than Windows .:)
+2010-11-02T11:29:00.000Z	Dr_Willis	sosaited	 I imagine you could install the 64bit version of Ubuntu.. and just go... i doubt if you will encounter any issues.
+2010-11-02T14:53:00.000Z	sosaited	Dr_Willis	Do you know where can I enable PCM recording in Ubuntu Lucid?
+2010-11-02T14:53:00.000Z	Dr_Willis	sosaited	 not really. ive rarely messed with recording. Proberly some pulse config tools
+2010-11-03T22:38:00.000Z	Dr_Willis	sosaited	 unetbootin may not be updated with the changes in 10.10. unetbootin does not do a normal install to hard drive eitehr. it does a 'live cd' type install. same as it would to a flash drive.
+2010-11-03T22:41:00.000Z	sosaited	Dr_Willis	What is the best way to install Maverick then without a CD?
+2010-11-03T22:41:00.000Z	Dr_Willis	sosaited	  I alwyas install from flash drives. - Theres tools besides unetbootin that can make them.
+2010-11-03T22:41:00.000Z	sosaited	Dr_Willis	Any that you have used to install 64-bit maverick on a laptop?
+2010-11-03T22:43:00.000Z	Dr_Willis	sosaited	 i only use 64bit.. and yes. i installed 64bit 10.10 via flash drive that i generated via the usb-disk-creator tool. and via a flash drive i set up with grub2 to boot the iso files.. also did it via grub2 booting an iso file from an internal sata drive. (That was FAST)
+2010-11-03T22:44:00.000Z	sosaited	Dr_Willis	But I want something that will create in Windows 7
+2010-11-03T22:45:00.000Z	Dr_Willis	sosaited	 check the pendrivelinux web site.. they have several tool.
+2010-11-03T22:45:00.000Z	Dr_Willis	sosaited	 unetbootin is NOT the only one.
+2010-11-03T22:48:00.000Z	sosaited	Dr_Willis	It seems that Universal USB creator is the one. Though they suggest to use the desktop release, and I download the alternate one.
+2010-11-03T22:49:00.000Z	Dr_Willis	sosaited	 the alt should work.   they also have a 'multi disrto' creator tool that can use the altcd.
+2010-11-07T18:37:00.000Z	Dr_Willis	sosaited	 i set up grub2 to boot an ISO file from an internal sata hd. :) that was a faaast install..
+2010-11-07T18:39:00.000Z	sosaited	Dr_Willis	Any way to do that in Windows 7?. I tried following a guide.. but the command listed there .. bcedit something.. wasnt working. And there was just one file in casper folder
+2010-11-07T18:39:00.000Z	Dr_Willis	sosaited	 i just used a mini live cd once..  ther may be a way to do it from windows.. but ive never tried.
+2010-11-07T18:40:00.000Z	Dr_Willis	sosaited	 check the pendrivelinux web site and http://delicious.com/dr_willis/grub2
+2010-11-07T18:40:00.000Z	sosaited	Dr_Willis	Or unetbootin or Ubuntu Install specfic channel?
+2010-11-07T18:41:00.000Z	Dr_Willis	sosaited	 never noticed any. Never needed them. :)
+2010-11-07T18:41:00.000Z	Dr_Willis	sosaited	 ive only used uinetbootin to put ubuntu on flash drives.. pendrivelinux web site has alterantive tools to unetbootin also.
+2010-11-07T18:42:00.000Z	sosaited	Dr_Willis	I tried there Multi Iso one. But it wouldn't allow to select the ISO .. Maybe because I had 1GB usb
+2010-11-08T22:32:00.000Z	Dr_Willis	sosaited	 avi is a container.. it depends on the codec  the avi is using.
+2010-11-08T22:35:00.000Z	Dr_Willis	sosaited	 for legal reasons.. they cant.. there is a check box/option at the start of the installer.
+2010-11-08T22:35:00.000Z	Dr_Willis	sosaited	 that installs a lot of the extras.
+2010-11-08T22:35:00.000Z	sosaited	Dr_Willis	. I finally got the 10.10 installed on that persons laptop then. But she doesn't have internet today, so I was wondering if she will be able to play mp3 or not
+2010-11-08T22:35:00.000Z	Dr_Willis	sosaited	 by default. no
+2010-11-08T22:35:00.000Z	sosaited	Dr_Willis	I don't think there came any option for that. Not in the alternate one anyway
+2010-11-08T22:36:00.000Z	Dr_Willis	sosaited	 one of the first screens of the installer it asked to enable 3rd party repos/tools I think. and install/download updates.
+2010-11-08T22:37:00.000Z	sosaited	Dr_Willis	It did ask to setup dhcp/internet, but as that couldn't be done in that case,.. I guess it didn't give the other option you mentioned.
+2010-11-08T22:38:00.000Z	sosaited	Dr_Willis	Its ok. I am gonna RDP into that anyway to set up everything else.
+2010-11-08T22:38:00.000Z	Dr_Willis	sosaited	 no idea on the alternat installer cd..  it did ont he desktop cd.
+2010-11-08T22:39:00.000Z	sosaited	Dr_Willis	It asked before connecting to internet?
+2010-11-08T22:39:00.000Z	Dr_Willis	sosaited	 yes. i belive so.
+2010-11-08T22:40:00.000Z	sosaited	Dr_Willis	That is the reason then. As I said, not ethernet/dsl connection in that case.
+2010-11-12T03:56:00.000Z	sosaited	Dr_Willis	He man. I messed up my 10.10 in trying to make it perfect :(. I uninstalled ubuntu-desktop package while removing pulseaudio, and now I can't log in :(. Can you help
+2010-11-15T01:43:00.000Z	Dr_Willis	sosaited	 it was easy to install.. but it dident seem to work like it was supposed to on my nvidia system
+2010-11-15T01:43:00.000Z	Dr_Willis	sosaited	 i followed a guide at webupd8, or perhaps it was omgbuntu web site.
+2010-11-15T01:44:00.000Z	sosaited	Dr_Willis	I am following the same guide. But there is no mention of this screen
+2010-11-15T01:45:00.000Z	Dr_Willis	sosaited	 i installed some 'burg installer script/tool' mentioned last week at omgubuntu and it did it all..
+2010-11-15T01:46:00.000Z	Dr_Willis	sosaited	 seems omgubuntu has a new artical on it :)   http://www.sourceslist.eu/burg-2/burg-manager/burg-manager-1-0-0-released/
+2010-11-15T01:48:00.000Z	sosaited	Dr_Willis	That includes the themes and main burg, or is it just a manager?
+2010-11-15T01:49:00.000Z	Dr_Willis	sosaited	 it can install burg and downlaod/install themes.. or so it says. I installed burg. that worked.. installed some themes.. but the BURG  boot thing never looked different. it was using burg not grub.. but no themes
+2010-11-15T01:52:00.000Z	sosaited	Dr_Willis	I finished the Burg install, but now I would rather uninstall it and install burg-manager. But will just a apt-get remove work for it? I don't want my grub to be *ucke up completely
+2010-11-15T01:52:00.000Z	Dr_Willis	sosaited	 burg manager  dosent need burg unonstalled i imagine...
+2010-11-15T01:52:00.000Z	Dr_Willis	sosaited	 install burg manager and it should install burg if needed.
+2010-11-15T01:57:00.000Z	sosaited	Dr_Willis	Btw how is opensuse able to use graphical menus while using older grub, and the new grub2 doesn't
+2010-11-15T01:59:00.000Z	sosaited	Dr_Willis	BUC's install is in some other language :s
+2010-11-15T02:00:00.000Z	Dr_Willis	sosaited	 yea i noticed that also.
+2010-11-15T02:02:00.000Z	sosaited	Dr_Willis	When you installed BUC, did it give a window in some other language with a button, and after pressing a button it gives some error about user sharing or something.
+2010-11-15T02:02:00.000Z	Dr_Willis	sosaited	 i think it poped up some dialog that said 'buc installed suceesully' in some other language
+2010-11-15T02:05:00.000Z	sosaited	Dr_Willis	How can I check to which partition grub2 is currently installed?
+2010-11-15T02:06:00.000Z	Dr_Willis	sosaited	 normally grub is on  /dev/sda   unless you told it to go elsewhere.. it can be on several drives' mbrs and partitions mbrs at the same time.
+2010-11-15T02:06:00.000Z	sosaited	Dr_Willis	It was a really long time ago, when I first install Karmic, so I don't remember. No way to check it?
+2010-11-15T02:07:00.000Z	Dr_Willis	sosaited	 'sudo dpkg-reconfigure grub' MIGHT show you..
+2010-11-15T02:08:00.000Z	sosaited	Dr_Willis	Package `grub' is not installed and no info is available. :| Should it be grub-pc? Cause grub2 gives the same
+2010-11-15T02:08:00.000Z	Dr_Willis	sosaited	 grub2 is 'grub-pc' yes...
+2010-11-15T02:09:00.000Z	sosaited	Dr_Willis	Oh damn. I got the same screen which started all this (the one I got in Burg installtion) The following linux command line............
+2010-11-15T02:13:00.000Z	sosaited	Dr_Willis	Is there any disadvantage of installing grub in the root partition, and not a hard drive?
+2010-11-15T02:14:00.000Z	sosaited	Dr_Willis	Found it. It is installed in sdb, the hard drive where my root is. It is sdb atm because i added a new drive a few days ago
+2010-11-15T02:15:00.000Z	Dr_Willis	sosaited	 i always isntall grub to the MBR of the HD i want to be booting fro,
+2010-11-15T02:15:00.000Z	sosaited	Dr_Willis	Will the probe-os and update-grub commands work with Burg?. I have installed opensuse and I didn't install its bootloader, so I relied on the mentioned command to add it to the grub menu
+2010-11-15T02:15:00.000Z	Dr_Willis	sosaited	 no idea on suse.. and i only toyed with burg. it dident give me a theme.. so i removed it..
+2010-11-15T02:16:00.000Z	Dr_Willis	sosaited	 check teh burg docs.
+2010-11-16T19:37:00.000Z	sosaited	Dr_Willis	Hey man. I tried Burg Manager. Luckily I had installed Grub2 on mbr of another drive, while after that I had installed another drive, which was now sda1, so it installed on that. I can boot from that drive to get the Burg screen/loader. And it works fine. The only problem is that I wanted a theme which displayed just the OS name with the image and not the whole line.

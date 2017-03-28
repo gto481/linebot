@@ -1,0 +1,96 @@
+2006-01-17T14:02:00.000Z	ScreaminIke		i have an ntfs partition...
+2006-01-17T14:02:00.000Z	ScreaminIke		and...
+2006-01-17T14:02:00.000Z	ScreaminIke		is there any way to make it ext2 and merge it (same disk) with my ext2 partition?
+2006-01-17T14:03:00.000Z	ScreaminIke		or just reformat it?
+2006-01-17T14:03:00.000Z	ScreaminIke		and mount it?
+2006-01-17T14:04:00.000Z	ScreaminIke		hello?
+2006-01-17T14:04:00.000Z	ScreaminIke		how do i reformat it?
+2006-01-17T14:05:00.000Z	ScreaminIke		can you give me a line-by-line walkthrough?
+2006-01-17T14:05:00.000Z	ScreaminIke		i don't want to mess it up...
+2006-01-17T14:05:00.000Z	ScreaminIke		fdisk (like chmod) i have learned is NOT a toy
+2006-01-17T14:05:00.000Z	robertbb	ScreaminIke	what do you need to do?
+2006-01-17T14:07:00.000Z	ScreaminIke		i need to make hdb1 ext2
+2006-01-17T14:07:00.000Z	ScreaminIke		:)
+2006-01-17T14:07:00.000Z	ScreaminIke		it is currently ntfs
+2006-01-17T14:07:00.000Z	ScreaminIke		which is annoying to say the least
+2006-01-17T14:08:00.000Z	ScreaminIke	robertbb	you there?
+2006-01-17T14:08:00.000Z	robertbb	ScreaminIke	Yes
+2006-01-17T14:09:00.000Z	robertbb	ScreaminIke	But I will be gone soon, so hurry up and ask your question.
+2006-01-17T14:09:00.000Z	ScreaminIke	robertbb	k. :)
+2006-01-17T14:09:00.000Z	ScreaminIke	robertbb	i have hdb1 as ntfs i need it to be ext2
+2006-01-17T14:09:00.000Z	robertbb		sudo fdisk /dev/hdb
+2006-01-17T14:09:00.000Z	ScreaminIke		(/dev/hdb1)
+2006-01-17T14:10:00.000Z	ScreaminIke		gotcha
+2006-01-17T14:10:00.000Z	ScreaminIke		now?
+2006-01-17T14:10:00.000Z	robertbb		Then within fdisk, hit 'p' and paste what it prints (perhaps in a pm). I will help you in channel though, so others will see.
+2006-01-17T14:10:00.000Z	ScreaminIke		Disk /dev/hdb: 60.0 GB, 60022480896 bytes
+2006-01-17T14:10:00.000Z	ScreaminIke		16 heads, 63 sectors/track, 116301 cylinders
+2006-01-17T14:10:00.000Z	ScreaminIke		Units = cylinders of 1008 * 512 = 516096 bytes
+2006-01-17T14:10:00.000Z	ScreaminIke		   Device Boot      Start         End      Blocks   Id  System
+2006-01-17T14:10:00.000Z	ScreaminIke		/dev/hdb1               1      104670    52753648+   7  HPFS/NTFS
+2006-01-17T14:10:00.000Z	ScreaminIke		/dev/hdb2          104671      105654      495905    f  W95 Ext'd (LBA)
+2006-01-17T14:10:00.000Z	ScreaminIke		/dev/hdb3   *      105655      116301     5366088   83  Linux
+2006-01-17T14:10:00.000Z	ScreaminIke		/dev/hdb5          104671      105654      495904+  82  Linux swap / Solaris
+2006-01-17T14:11:00.000Z	robertbb		You want to change hdb1 to Linux?
+2006-01-17T14:11:00.000Z	ScreaminIke		yea
+2006-01-17T14:11:00.000Z	robertbb	ScreaminIke	Is the bootloader in the MBR, do you need a second-level bootloader in the superblock of the NTFS partition?
+2006-01-17T14:12:00.000Z	robertbb		(If you don't know, the answer is probably "no")
+2006-01-17T14:12:00.000Z	ScreaminIke		the bootloader (grub) is ON hdb3
+2006-01-17T14:12:00.000Z	ScreaminIke		but it's written on the mbr of hda
+2006-01-17T14:12:00.000Z	robertbb		OK, too easy. So, in fdisk, type "T"
+2006-01-17T14:13:00.000Z	ScreaminIke		Command (m for help): t
+2006-01-17T14:13:00.000Z	ScreaminIke		Partition number (1-5):
+2006-01-17T14:13:00.000Z	robertbb		Then '1', for partition 1..
+2006-01-17T14:13:00.000Z	ScreaminIke		Partition number (1-5): 1
+2006-01-17T14:13:00.000Z	ScreaminIke		Hex code (type L to list codes):
+2006-01-17T14:13:00.000Z	robertbb		Then, ID 7
+2006-01-17T14:13:00.000Z	ScreaminIke		wait
+2006-01-17T14:13:00.000Z	ScreaminIke		id 7
+2006-01-17T14:13:00.000Z	robertbb		Sorry.. 83
+2006-01-17T14:13:00.000Z	ScreaminIke		so i type?
+2006-01-17T14:13:00.000Z	robertbb		ID 7 is NTFS..
+2006-01-17T14:14:00.000Z	robertbb		You type 83, and hit enter.
+2006-01-17T14:14:00.000Z	robertbb		then hit 'p
+2006-01-17T14:14:00.000Z	robertbb		And it should have changed..
+2006-01-17T14:14:00.000Z	ScreaminIke		so...
+2006-01-17T14:14:00.000Z	ScreaminIke		w
+2006-01-17T14:14:00.000Z	ScreaminIke		?
+2006-01-17T14:14:00.000Z	robertbb		Wait a second, show me what it prints..
+2006-01-17T14:14:00.000Z	ScreaminIke		Disk /dev/hdb: 60.0 GB, 60022480896 bytes
+2006-01-17T14:14:00.000Z	ScreaminIke		16 heads, 63 sectors/track, 116301 cylinders
+2006-01-17T14:14:00.000Z	ScreaminIke		Units = cylinders of 1008 * 512 = 516096 bytes
+2006-01-17T14:14:00.000Z	ScreaminIke		   Device Boot      Start         End      Blocks   Id  System
+2006-01-17T14:14:00.000Z	ScreaminIke		/dev/hdb1               1      104670    52753648+  83  Linux
+2006-01-17T14:14:00.000Z	ScreaminIke		/dev/hdb2          104671      105654      495905    f  W95 Ext'd (LBA)
+2006-01-17T14:14:00.000Z	ScreaminIke		/dev/hdb3   *      105655      116301     5366088   83  Linux
+2006-01-17T14:14:00.000Z	ScreaminIke		/dev/hdb5          104671      105654      495904+  82  Linux swap / Solaris
+2006-01-17T14:14:00.000Z	robertbb		OK, should be OK then. Be aware you will lose data on the disk. If you are happy.. 'w' it.
+2006-01-17T14:15:00.000Z	ScreaminIke		yea
+2006-01-17T14:15:00.000Z	robertbb		Then, mkfs.ext3 /dev/hdb1
+2006-01-17T14:15:00.000Z	ScreaminIke		The partition table has been altered!
+2006-01-17T14:15:00.000Z	ScreaminIke		Calling ioctl() to re-read partition table.
+2006-01-17T14:15:00.000Z	ScreaminIke		WARNING: Re-reading the partition table failed with error 16: Device or resource busy.
+2006-01-17T14:15:00.000Z	ScreaminIke		The kernel still uses the old table.
+2006-01-17T14:15:00.000Z	ScreaminIke		The new table will be used at the next reboot.
+2006-01-17T14:15:00.000Z	robertbb		(as root, or using sudo)
+2006-01-17T14:15:00.000Z	ScreaminIke		Syncing disks.
+2006-01-17T14:15:00.000Z	ScreaminIke		how do i make the kernel use the new root?
+2006-01-17T14:15:00.000Z	robertbb		Reboot.
+2006-01-17T14:15:00.000Z	ScreaminIke		*nod*
+2006-01-17T14:15:00.000Z	robertbb		Make sure you update /etc/fstab
+2006-01-17T14:15:00.000Z	robertbb		btw.
+2006-01-17T14:16:00.000Z	ScreaminIke		how do i update THAT?
+2006-01-17T14:16:00.000Z	robertbb		With a text editor :-)
+2006-01-17T14:16:00.000Z	ScreaminIke		and can i mount it to "/home/<usr>/<folder>"?
+2006-01-17T14:16:00.000Z	robertbb		Yeah, use vi. But if you don't know vi, use that pico clone.. umm...
+2006-01-17T14:16:00.000Z	robertbb		nano.. that's it.
+2006-01-17T14:17:00.000Z	robertbb		:-)
+2006-01-17T14:17:00.000Z	robertbb	ScreaminIke	You can use whatever you like :-)
+2006-01-17T14:17:00.000Z	robertbb		Yeah, paste the big stuff to me in pm as I asked :-)
+2006-01-17T14:18:00.000Z	robertbb		NivkZA: At a guess, /var/www/
+2006-01-17T14:18:00.000Z	ScreaminIke		sorry about the large blocks of text...
+2006-01-17T14:18:00.000Z	ScreaminIke		so...
+2006-01-17T14:18:00.000Z	robertbb		Somewhere below there.
+2006-01-17T14:18:00.000Z	ScreaminIke		this should all be good?
+2006-01-17T14:18:00.000Z	ScreaminIke		just... reboot?
+2006-01-17T14:18:00.000Z	robertbb	ScreaminIke	Have you edited /etc/fstab?

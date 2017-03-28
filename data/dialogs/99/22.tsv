@@ -1,0 +1,99 @@
+2009-04-28T23:56:00.000Z	koolkartik		need help guys unable to play any video
+2009-04-28T23:57:00.000Z	koolkartik		:(
+2009-04-28T23:57:00.000Z	PolitikerNEU	koolkartik	Do you have medibuntu included and installed w[32|64]codecs?
+2009-04-28T23:58:00.000Z	koolkartik	PolitikerNEU	yes
+2009-04-28T23:59:00.000Z	PolitikerNEU	koolkartik	Strange - what happenes if you open the video in vlc, mplayer or something
+2009-04-28T23:59:00.000Z	koolkartik	PolitikerNEU	it close at the same istant
+2009-04-29T00:00:00.000Z	koolkartik	PolitikerNEU	movie player says no codecs n starts searching
+2009-04-29T00:00:00.000Z	PolitikerNEU	koolkartik	So - which video is it
+2009-04-29T00:00:00.000Z	PolitikerNEU	koolkartik	If it is a dvd, you need libdvdcss2 too
+2009-04-29T00:01:00.000Z	koolkartik	PolitikerNEU	its no i hav tried .dat, .mp4, .mpeg but same result
+2009-04-29T00:01:00.000Z	PolitikerNEU	koolkartik	Try some small ogg-video. For that video, a codec should be provided by default, if the message still appears, it is very strange
+2009-04-29T00:02:00.000Z	koolkartik	PolitikerNEU	k lemme check
+2009-04-29T00:03:00.000Z	koolkartik	PolitikerNEU	huh i dont hav any ogg file
+2009-04-29T00:04:00.000Z	PolitikerNEU	koolkartik	Try e.g. this video: http://commons.wikimedia.org/wiki/File:F-18A_Active_Aeroelastic_Wing_flight_test.ogg
+2009-04-29T00:04:00.000Z	PolitikerNEU	koolkartik	It's about 30 seconds long
+2009-04-29T00:04:00.000Z	koolkartik	PolitikerNEU	ok
+2009-04-29T00:07:00.000Z	koolkartik	PolitikerNEU	nothing happens it is as it is not playing and even when i open youtube then also video on that comes in very small frames n very slow
+2009-04-29T00:08:00.000Z	PolitikerNEU	koolkartik	Strange - could be you have a driver issue, I think I had a similar problem when my installed nvidia driver did not match the kernel I have it installed in - do you have more than 1 kernel to choose from at bootup?
+2009-04-29T00:09:00.000Z	koolkartik	PolitikerNEU	one for recovery dats it
+2009-04-29T00:09:00.000Z	koolkartik	PolitikerNEU	neither my desktop effects are working
+2009-04-29T00:10:00.000Z	PolitikerNEU	koolkartik	ok - try reinstalling the nvidia-kernel; yeah, these effects could all come from having a "wrong" driver installed
+2009-04-29T00:10:00.000Z	PolitikerNEU	koolkartik	maybe the package was sudo apt-get reinstall nvidia-glx-new ?
+2009-04-29T00:10:00.000Z	koolkartik	PolitikerNEU	btw wat is the min configuration that ubuntu 9.04 demands
+2009-04-29T00:11:00.000Z	PolitikerNEU	koolkartik	It has problems with older ati-cards (but you got a nvidia), so I'd guess it is not much higher than 8.04
+2009-04-29T00:11:00.000Z	PolitikerNEU	koolkartik	And in opposite to 8.10, it is working fine - at least for me
+2009-04-29T00:12:00.000Z	PolitikerNEU	koolkartik	So why have you downgraded to 8.04?
+2009-04-29T00:13:00.000Z	koolkartik	PolitikerNEU	it saysPackage nvidia-glx-new has no installation candidate
+2009-04-29T00:13:00.000Z	koolkartik	PolitikerNEU	i hav not downgraded infact i ma using 9.04
+2009-04-29T00:14:00.000Z	koolkartik	PolitikerNEU	what shall i do now?
+2009-04-29T00:14:00.000Z	PolitikerNEU	koolkartik	Ok - momsudo aptitude install nvidia-glx-180
+2009-04-29T00:17:00.000Z	PolitikerNEU	koolkartik	I thought they'd play, but slow - if they are not playing, install flashplugin-nonfree after enabling the restricted repositories
+2009-04-29T00:18:00.000Z	PolitikerNEU	koolkartik	Then a new driver should help
+2009-04-29T00:19:00.000Z	koolkartik	PolitikerNEU	will this new driver be able to help with the desktop effects too
+2009-04-29T00:19:00.000Z	PolitikerNEU	koolkartik	If it will be installed correctly (as your current driver isn't installed correctly), yes
+2009-04-29T00:20:00.000Z	koolkartik	PolitikerNEU	ok lets see wat happens
+2009-04-29T00:21:00.000Z	PolitikerNEU	koolkartik	You have to at least log in and log out, maybe even restart
+2009-04-29T00:37:00.000Z	PolitikerNEU	koolkartik	Hmm ... strange
+2009-04-29T00:37:00.000Z	koolkartik	PolitikerNEU	i tried that also
+2009-04-29T00:38:00.000Z	PolitikerNEU	koolkartik	What did you try?
+2009-04-29T00:38:00.000Z	koolkartik	PolitikerNEU	 new driver nvidia
+2009-04-29T00:38:00.000Z	koolkartik	PolitikerNEU	infact i checked for another kernel still same prob
+2009-04-29T00:39:00.000Z	PolitikerNEU	koolkartik	not very good - as I said: try to look for errors when starting with xinit from terminal while no x server is active
+2009-04-29T00:40:00.000Z	koolkartik	PolitikerNEU	 so now what shall i do as this 9.04 is giving me so many problems
+2009-04-29T00:40:00.000Z	PolitikerNEU	koolkartik	Hmm ... 1) uninstall the nvidia-driver 2) reinstall another nvidia-driver-version like nvidia-glx-173
+2009-04-29T00:41:00.000Z	koolkartik	PolitikerNEU	is the problem is with the driver
+2009-04-29T00:41:00.000Z	PolitikerNEU	koolkartik	At least I think so
+2009-04-29T00:42:00.000Z	PolitikerNEU	koolkartik	It remembers me of a problem I had - and for me it was a mismatching driver
+2009-04-29T00:42:00.000Z	koolkartik	PolitikerNEU	hope it works for me too:)
+2009-04-29T00:43:00.000Z	koolkartik	PolitikerNEU	btw does 9.04 require higher configuration than 8.10?
+2009-04-29T00:43:00.000Z	koolkartik	PolitikerNEU	I mean ram etc
+2009-04-29T00:44:00.000Z	PolitikerNEU	koolkartik	I don't think so - the only thing I know is the new fglrx-driver doesn't work with older chips any longer
+2009-04-29T00:44:00.000Z	PolitikerNEU	koolkartik	Sorry, all the computers I run ubuntu on have at least 1 GB ram (and ubuntu works good there) - so I don't know if the min. config. has changed
+2009-04-29T00:45:00.000Z	koolkartik	PolitikerNEU	actually mine is 768 mb of ram :P
+2009-04-29T00:45:00.000Z	koolkartik	PolitikerNEU	okies
+2009-04-29T00:46:00.000Z	PolitikerNEU	koolkartik	Currently I use 1GB ram - but I have triple gnome, kde3 and kde4 applications open
+2009-04-29T00:47:00.000Z	koolkartik	PolitikerNEU	i guess then my ram will not be an issue
+2009-04-29T00:48:00.000Z	PolitikerNEU	koolkartik	Hmm ... so it could be a different problem because I had the problem with 8.10 or so
+2009-04-29T00:48:00.000Z	koolkartik	PolitikerNEU	but i guess this problem is quite common now for 9.04
+2009-04-29T00:49:00.000Z	PolitikerNEU	koolkartik	I have reinstalled ubuntu from scratch - the only problem I experienced was that initially my screen only had 800x600 - but this problem disappeared after installing nvidia-glx-180
+2009-04-29T00:49:00.000Z	koolkartik	PolitikerNEU	it is installed so shall i log out n then log in again
+2009-04-29T00:50:00.000Z	PolitikerNEU	koolkartik	Yeah - but maybe you should log in into a terminal and try to start xinit there to see if you get any warnings/error messages
+2009-04-29T00:51:00.000Z	PolitikerNEU	koolkartik	Like e.g. a wrong kernel module version
+2009-04-29T00:51:00.000Z	koolkartik	PolitikerNEU	start: Unknown job: xinit
+2009-04-29T00:52:00.000Z	koolkartik	PolitikerNEU	this is the msg that m getting
+2009-04-29T00:52:00.000Z	PolitikerNEU	koolkartik	no, not start xinit but just xinit
+2009-04-29T00:53:00.000Z	koolkartik	PolitikerNEU	warning set to 1 instead of 0
+2009-04-29T00:53:00.000Z	koolkartik	PolitikerNEU	Fatal server error:
+2009-04-29T00:54:00.000Z	PolitikerNEU	koolkartik	yeah, like I said: You have to close your current xserver or add some enviroment-variable (mom, I'm searching for it)
+2009-04-29T00:55:00.000Z	koolkartik	PolitikerNEU	i didnt get it
+2009-04-29T00:55:00.000Z	PolitikerNEU	koolkartik	try export DISPLAY=127.0.0.1:1 before starting xinit
+2009-04-29T00:56:00.000Z	PolitikerNEU	koolkartik	hmm ... doesn't help
+2009-04-29T00:56:00.000Z	koolkartik	PolitikerNEU	same warnings
+2009-04-29T00:57:00.000Z	PolitikerNEU	koolkartik	I know, this doesn't work as expected - like I have said
+2009-04-29T00:57:00.000Z	PolitikerNEU	koolkartik	xinit -- :1
+2009-04-29T00:58:00.000Z	PolitikerNEU	koolkartik	If you switch back to terminal 1 then, you get a list of error messages (I, for example, get an error message about two unknown modules - maybe because I imported the xorg.conf from some other distribution ?)
+2009-04-29T00:59:00.000Z	koolkartik	PolitikerNEU	hey my monitor restart and terminal comes in a corner very small and rest is black screen
+2009-04-29T01:00:00.000Z	PolitikerNEU	koolkartik	yeah, that's ok - the question is that in the terminal where you started xinit -- :1 some messages should have appeard.
+2009-04-29T01:00:00.000Z	PolitikerNEU	koolkartik	and if there are some error messages, I'd like to know which ones
+2009-04-29T01:02:00.000Z	koolkartik	PolitikerNEU	no error messages
+2009-04-29T01:03:00.000Z	PolitikerNEU	koolkartik	Then everything should be OK - try to watch some videos and try to enable compiz --replace in your second xserver (where you only had the xterm)
+2009-04-29T01:03:00.000Z	koolkartik	PolitikerNEU	how
+2009-04-29T01:04:00.000Z	PolitikerNEU	koolkartik	type compiz --replace& in the xterm. At first you have to click in the window at the left upper corner (that's xterm)
+2009-04-29T01:04:00.000Z	PolitikerNEU	koolkartik	Otherwise, just log out and log in
+2009-04-29T01:06:00.000Z	koolkartik	PolitikerNEU	videos are playing in youtube perfectly
+2009-04-29T01:06:00.000Z	koolkartik	PolitikerNEU	let me check the desktop effects
+2009-04-29T01:07:00.000Z	koolkartik	PolitikerNEU	but vlc still crashes
+2009-04-29T01:08:00.000Z	koolkartik	PolitikerNEU	and same prob with desktpo effects
+2009-04-29T01:09:00.000Z	PolitikerNEU	koolkartik	hmm .. if you run compiz --replace in a terminal, what error message appears?
+2009-04-29T01:10:00.000Z	koolkartik	PolitikerNEU	Window manager error: Unable to open X display 127.0.0.1:1
+2009-04-29T01:10:00.000Z	PolitikerNEU	koolkartik	what the hell - so my DISPLAY-command seems to be totally wrong
+2009-04-29T01:10:00.000Z	PolitikerNEU	koolkartik	ignore it and log in and out, please
+2009-04-29T01:14:00.000Z	koolkartik	PolitikerNEU	huh same prob :(
+2009-04-29T01:15:00.000Z	PolitikerNEU	koolkartik	:-( - what is the error message now if you run compiz --replace in a terminal?
+2009-04-29T01:19:00.000Z	koolkartik	PolitikerNEU	 http://ubuntu.pastebin.com/mf8e3ac
+2009-04-29T01:20:00.000Z	koolkartik	PolitikerNEU	 http://paste.ubuntu.com/160209/
+2009-04-29T01:20:00.000Z	PolitikerNEU	koolkartik	strange - but still seems to be a driver issue http://forum.ubuntuusers.de/topic/compiz-segmentation-fault-beim-starten/
+2009-04-29T01:20:00.000Z	PolitikerNEU	koolkartik	try sudo compiz --replace
+2009-04-29T01:22:00.000Z	PolitikerNEU	koolkartik	Maybe this could help too: http://forum.ubuntuusers.de/topic/nvidia-hardy-problemloesung/
+2009-04-29T01:22:00.000Z	PolitikerNEU	koolkartik	sorry, no, It cannot

@@ -1,0 +1,96 @@
+2009-08-20T23:07:00.000Z	mogi22		how do u tell what device to use for your dvd?
+2009-08-20T23:07:00.000Z	mogi22		sorry dvd-ram
+2009-08-20T23:07:00.000Z	jordanwb	mogi22	its usually /dev/sr0
+2009-08-20T23:09:00.000Z	mogi22	jordanwb	if mount fails on that dev, is it just not installed or something?
+2009-08-20T23:09:00.000Z	jordanwb	mogi22	the cd/dvd should automount when you put a disk in
+2009-08-20T23:10:00.000Z	jordanwb	mogi22	are you on a server?
+2009-08-20T23:10:00.000Z	mogi22	jordanwb	no its a desktop and it didnt automount
+2009-08-20T23:11:00.000Z	mogi22	jordanwb	so makes me wonder if all is ok.  odd b/c the cd and dvd drive do automount, the dvd-ram doesnt
+2009-08-20T23:11:00.000Z	jordanwb	mogi22	in a terminal, run "dir /etc", look for sr0
+2009-08-20T23:13:00.000Z	mogi22	jordanwb	nope not in there
+2009-08-20T23:14:00.000Z	mogi22	jordanwb	but cdrom and cdrom1 are not in there either (those are the devices for my cdrom and dvd drives)
+2009-08-20T23:14:00.000Z	jordanwb	mogi22	Right now, if you were to put a regular CD or DVD in, does it automount?
+2009-08-20T23:14:00.000Z	mogi22	jordanwb	yes the cd and dvd do but only in those drives (i have 3 drives)
+2009-08-20T23:14:00.000Z	mogi22	jordanwb	anything in the dvdram doesnt mount
+2009-08-20T23:15:00.000Z	mogi22	jordanwb	auto or by guessing the mount /dev/? /mnt cmnd
+2009-08-20T23:15:00.000Z	jordanwb	mogi22	I'm confused, you have 3 optical drives, 2 of which work no problem.
+2009-08-20T23:15:00.000Z	mogi22	jordanwb	yes
+2009-08-20T23:15:00.000Z	mogi22	jordanwb	but those 2 dont write, i need the dvd-r
+2009-08-20T23:15:00.000Z	jordanwb	mogi22	I'm not sure if Linux supports RAM drives
+2009-08-20T23:16:00.000Z	mogi22	jordanwb	nope not even that
+2009-08-20T23:16:00.000Z	jordanwb	mogi22	I think your drive is fried, or not connected properly
+2009-08-20T23:16:00.000Z	mogi22	jordanwb	also i may be wrong on my terminology dvd-ram.  its just a regular dvd writable drive
+2009-08-20T23:16:00.000Z	jordanwb	mogi22	how does your drive connect to the motherboard?
+2009-08-20T23:16:00.000Z	mogi22	jordanwb	 hmmm ok, its new though
+2009-08-20T23:17:00.000Z	mogi22	jordanwb	its a master
+2009-08-20T23:17:00.000Z	jordanwb	mogi22	is there anything connected to slave?
+2009-08-20T23:17:00.000Z	mogi22	jordanwb	hmmm can i check w/o opening it?
+2009-08-20T23:17:00.000Z	mogi22	jordanwb	any cmnds
+2009-08-20T23:17:00.000Z	jordanwb	mogi22	only if you have x-ray vision or a clear case
+2009-08-20T23:18:00.000Z	mogi22	jordanwb	hehe ok hold on
+2009-08-20T23:18:00.000Z	mogi22	jordanwb	ok nope
+2009-08-20T23:18:00.000Z	mogi22	jordanwb	i've got hd master1 w/ cdrom slave1 and dvd-r as master2
+2009-08-20T23:19:00.000Z	mogi22	jordanwb	funny thing is i have the same desktop in another room and it loaded an old dvd-r just fine
+2009-08-20T23:19:00.000Z	jordanwb	mogi22	okay, so it may be that you haven't set the jumpers properly on the DVD-r drive
+2009-08-20T23:19:00.000Z	mogi22	jordanwb	ok let me know finangle w/ it.  hold on sec
+2009-08-20T23:25:00.000Z	mogi22	jordanwb	ok its a sata drive!
+2009-08-20T23:26:00.000Z	jordanwb	mogi22	the tray opens when you push the button?
+2009-08-20T23:27:00.000Z	mogi22	jordanwb	yup has power
+2009-08-20T23:27:00.000Z	jordanwb	mogi22	If you can, go into the BIOS and see if the computer itself detects the drive
+2009-08-20T23:28:00.000Z	mogi22	jordanwb	drive has 3 pins but no jumpers, just ignore?
+2009-08-20T23:28:00.000Z	jordanwb	mogi22	yes, SATA drives do not have jumpers
+2009-08-20T23:29:00.000Z	jordanwb	mogi22	if the bios does not list the drive, try setting it to auto detect
+2009-08-20T23:35:00.000Z	mogi22	jordanwb	u know that feeling when the simplest solution that you already knew is exactly what u overlooked?  yeah i'm there right about now.  bios didnt have sata1 set to on.
+2009-08-20T23:36:00.000Z	jordanwb	mogi22	we al have those moments
+2009-08-20T23:36:00.000Z	mogi22	jordanwb	it shows as a dvd-ram writer under lshw btw.  but it has 4 logical names, which should i use?  does it even matter
+2009-08-20T23:37:00.000Z	jordanwb	mogi22	It has 4 logical names?
+2009-08-20T23:38:00.000Z	mogi22	jordanwb	yup dvd1 scd1 cdrom0 scd0
+2009-08-20T23:38:00.000Z	jordanwb	mogi22	I have those too
+2009-08-20T23:39:00.000Z	mogi22	jordanwb	hmm it didnt mount however, said wrong fs type bad superblock etc etc
+2009-08-20T23:39:00.000Z	jordanwb	mogi22	I'm not sure about that
+2009-08-20T23:40:00.000Z	mogi22	jordanwb	syslog says grow-buffers out of range block for device sr1
+2009-08-20T23:40:00.000Z	mogi22	jordanwb	wtf its sr1 as well?
+2009-08-20T23:40:00.000Z	jordanwb	mogi22	since you have two optical drives, one is sr0 and the other is sr1
+2009-08-20T23:41:00.000Z	mogi22	jordanwb	so is the disc bad too?  since it couldnt mount it still?
+2009-08-20T23:41:00.000Z	jordanwb	mogi22	it could be only the disk being bad
+2009-08-20T23:43:00.000Z	mogi22	jordanwb	its not in my fstab either, so automount magic wont occur will it?
+2009-08-20T23:44:00.000Z	jordanwb	mogi22	You may see /dev/scd0 listed there
+2009-08-20T23:45:00.000Z	mogi22	jordanwb	i wonder what  those 3 pins were for if not m/s selection.
+2009-08-20T23:45:00.000Z	jordanwb	mogi22	no clue
+2009-08-20T23:45:00.000Z	mogi22	jordanwb	i think its not in fstab b/c i didnt have sata on during install
+2009-08-20T23:46:00.000Z	mogi22	jordanwb	ready for another twist?  i just put the dvd into my old dvd-ram on another pc, and it did load and mount!
+2009-08-20T23:46:00.000Z	jordanwb	mogi22	possibly, change /dev/scd0 to /dev/scd1 if that exists
+2009-08-20T23:48:00.000Z	mogi22	jordanwb	no i'm not worried about automount, i mean the disc mounted just fine on another older dvd-ram drive, but this newer one couldnt mount it?  how is that possible?
+2009-08-20T23:49:00.000Z	mogi22	jordanwb	or are u saying do something else to make disc work on the newer sata drive?
+2009-08-20T23:49:00.000Z	mogi22	jordanwb	the sata drive is dual layer capable btw
+2009-08-20T23:49:00.000Z	mogi22	jordanwb	not sure if that matters
+2009-08-20T23:49:00.000Z	jordanwb	mogi22	I'm not sure what to do, I've never had two optical drives in one computer before. Try removing the other one and see what happenes
+2009-08-20T23:50:00.000Z	mogi22	jordanwb	no the older dvdram is in another but identical pc
+2009-08-20T23:50:00.000Z	mogi22	jordanwb	they're not in same pc
+2009-08-20T23:50:00.000Z	jordanwb	mogi22	Oh
+2009-08-20T23:51:00.000Z	mogi22	jordanwb	its just weird that both drives work now (can see them in lshw) but only one can mount the disc and its the older one?!
+2009-08-20T23:52:00.000Z	jordanwb	mogi22	I don't know how Ubuntu automounts devices
+2009-08-20T23:54:00.000Z	mogi22	jordanwb	but its not automount i care about.  i cant manually mount on the new drive but i can on  the old
+2009-08-20T23:54:00.000Z	mogi22	jordanwb	i dont get why the new one just cant read the disc
+2009-08-20T23:54:00.000Z	jordanwb	mogi22	try a different disk
+2009-08-20T23:55:00.000Z	mogi22	jordanwb	what is it today?  i just dont consider the obvious things.  hold on
+2009-08-20T23:58:00.000Z	mogi22	jordanwb	 ok everythign just got weirder, not only did it automount the other disc, it did it to the parent dir that normal mounts are in?!  but there is nothing in fstab about this dev!
+2009-08-20T23:59:00.000Z	jordanwb	mogi22	so where did it mount to?
+2009-08-21T00:00:00.000Z	mogi22	jordanwb	to /media when normally its /media/cdrom0
+2009-08-21T00:00:00.000Z	jordanwb	mogi22	That's not right
+2009-08-21T00:00:00.000Z	mogi22	jordanwb	i put the problem disc back in the sata drive and still no mount when it just mounted a similar disc seconds ago!
+2009-08-21T00:00:00.000Z	mogi22	jordanwb	this is so fried
+2009-08-21T00:01:00.000Z	jordanwb	mogi22	So there seems to be nothing wrong with the drive itself, but rather the automounter, which I believe it hal
+2009-08-21T00:01:00.000Z	mogi22	jordanwb	no i cant manually mount the disc either
+2009-08-21T00:02:00.000Z	mogi22	jordanwb	and the the drive automounted the other disc just fine ... well to the wrong dir but still mounted
+2009-08-21T00:02:00.000Z	jordanwb	mogi22	so you can't do "sudo mount /dev/sr0 /mount/point"?
+2009-08-21T00:03:00.000Z	mogi22	jordanwb	exactly
+2009-08-21T00:03:00.000Z	mogi22	jordanwb	but i can w/ the other disc
+2009-08-21T00:08:00.000Z	mogi22	jordanwb	except that the "bad" disc does mount just fine in the old dvd-ram
+2009-08-21T00:08:00.000Z	jordanwb	mogi22	That's odd
+2009-08-21T00:09:00.000Z	mogi22	jordanwb	u r telling me
+2009-08-21T00:09:00.000Z	mogi22	jordanwb	i'm beyond baffled
+2009-08-21T00:09:00.000Z	mogi22	jordanwb	its like it works and doesnt work!  damn glad i didnt toss the old dvd-ram
+2009-08-21T00:10:00.000Z	jordanwb	mogi22	I can't help you any furthur
+2009-08-21T00:10:00.000Z	mogi22	jordanwb	hehe no worries, u did wonderfully thus far.  time to pay it fwd i guess
+2009-08-21T00:10:00.000Z	jordanwb	mogi22	You may want to try the ubuntu forums

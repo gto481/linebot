@@ -1,0 +1,96 @@
+2006-11-23T15:39:00.000Z	DreamerHxC1		can somebody help me to install fglrx with my ATI? i can't make it work
+2006-11-23T15:39:00.000Z	DreamerHxC1		hi
+2006-11-23T15:39:00.000Z	slavik	DreamerHxC1	did you follow the wiki page?
+2006-11-23T15:39:00.000Z	DreamerHxC1	slavik	yes
+2006-11-23T15:39:00.000Z	slavik	DreamerHxC1	on edgy?
+2006-11-23T15:40:00.000Z	slavik	DreamerHxC1	did you blacklist the fglrx module that comes from restricted drivers?
+2006-11-23T15:41:00.000Z	slavik	DreamerHxC1	have you tried 'sudo modprobe fglrx' (to load the fglrx module)
+2006-11-23T15:42:00.000Z	slavik	DreamerHxC1	does it load or give any errors?
+2006-11-23T15:43:00.000Z	DreamerHxC1	slavik	it says: /etc/modprobe.d/blacklist: ignoring bad line starting with ati-agp (which I wrote). FATAL: Module fglrx not found
+2006-11-23T15:43:00.000Z	slavik	DreamerHxC1	tell me what 'lsmod | sort | grep fglrx' prints
+2006-11-23T15:45:00.000Z	slavik	DreamerHxC1	pastebin your /etc/X11/xorg.conf please
+2006-11-23T15:47:00.000Z	DreamerHxC1	slavik	I cant paste because im at other PC but I can write it manually
+2006-11-23T15:49:00.000Z	slavik	DreamerHxC1	your Ubuntu system, does it have any graphics whatso ever?
+2006-11-23T15:50:00.000Z	DreamerHxC1	slavik	do I have to install module-assistant build-essential in order to get fglrx to work?
+2006-11-23T15:50:00.000Z	slavik	DreamerHxC1	to build kernel modules, yes
+2006-11-23T15:56:00.000Z	slavik	DreamerHxC1	hold on, I am about to write a better how to ...
+2006-11-23T16:08:00.000Z	DreamerHxC1	slavik	did u finished?
+2006-11-23T16:10:00.000Z	slavik	DreamerHxC1	not yet ...
+2006-11-23T16:19:00.000Z	slavik	DreamerHxC1	about to post it :)
+2006-11-23T16:23:00.000Z	slavik	DreamerHxC1	PM me your email, since the HOWTO forums requires and admin approval before it shows up ...
+2006-11-23T16:30:00.000Z	DreamerHxC1	slavik	what happened?
+2006-11-23T16:30:00.000Z	slavik	DreamerHxC1	pm me your e-mail
+2006-11-23T16:31:00.000Z	slavik	DreamerHxC1	are you registered?
+2006-11-23T16:31:00.000Z	slavik	DreamerHxC1	I meant on IRC
+2006-11-23T16:32:00.000Z	slavik	DreamerHxC1	and slicky, join #slavik
+2006-11-23T16:45:00.000Z	DreamerHxC1	slavik	[code] chmod ati-driver-installer-8.31.5-x86.x86_64.run[/code]  ==> chmod +x or what?
+2006-11-23T16:45:00.000Z	slavik	DreamerHxC1	to make it executable (look into next step)
+2006-11-23T16:46:00.000Z	slavik	DreamerHxC1	that's why there is a +x
+2006-11-23T16:46:00.000Z	slavik	DreamerHxC1	add +x between chmod and ati-installer
+2006-11-23T16:46:00.000Z	slavik	DreamerHxC1	chmod +x ati-driver-installer-8.31.5-x86.x86_64.run
+2006-11-23T16:48:00.000Z	slavik	DreamerHxC1	and?
+2006-11-23T16:49:00.000Z	slavik	DreamerHxC1	what step are you on?
+2006-11-23T16:49:00.000Z	slavik	DreamerHxC1	you will probably have to do the code in the troubleshooting step 1 ...
+2006-11-23T16:50:00.000Z	slavik	DreamerHxC1	that installs the packages (source code, driver, etc.)
+2006-11-23T16:50:00.000Z	slavik	DreamerHxC1	pastebin the output after the command
+2006-11-23T16:54:00.000Z	slavik	DreamerHxC1	go on
+2006-11-23T16:55:00.000Z	slavik	DreamerHxC1	looks like
+2006-11-23T16:56:00.000Z	slavik	DreamerHxC1	there should be a single line in that file that doesn't start with a #, it should say DISABLED_MODULES="fglrx"
+2006-11-23T16:57:00.000Z	slavik	DreamerHxC1	means it is loaded, you should see it when you do 'lsmod | grep fglrx'
+2006-11-23T16:57:00.000Z	slavik	DreamerHxC1	do 'fglrxinfo'
+2006-11-23T17:01:00.000Z	slavik	DreamerHxC1	put a # in beginning of every line for that Section
+2006-11-24T17:03:00.000Z	slavik	DreamerHxC1	why not use the ati driver?
+2006-11-24T17:04:00.000Z	slavik	DreamerHxC1	I need the Section "ServerLayout"
+2006-11-24T17:07:00.000Z	DreamerHxC1	slavik	http://paste.ubuntu-nl.org/33554/
+2006-11-24T17:07:00.000Z	slavik	DreamerHxC1	ok ... gimme a sec
+2006-11-24T17:08:00.000Z	DreamerHxC1	slavik	ok
+2006-11-24T17:08:00.000Z	slavik	DreamerHxC1	http://paste.ubuntu-nl.org/33556/
+2006-11-24T17:09:00.000Z	slavik	DreamerHxC1	actually, instead of fglrx in the end, use ati, fglrx doesn't support your card anymore ... (unless you get the 8.28.8 driver)
+2006-11-24T17:10:00.000Z	slavik	DreamerHxC1	scratch everything for now
+2006-11-24T17:10:00.000Z	slavik	DreamerHxC1	change the section with ati to this: http://paste.ubuntu-nl.org/33557/
+2006-11-24T17:10:00.000Z	slavik	DreamerHxC1	and remove the fglrx section
+2006-11-24T17:11:00.000Z	slavik	DreamerHxC1	new fglrx doesn't support older ati cards (only X series cards)
+2006-11-24T17:11:00.000Z	slavik	DreamerHxC1	the fglrx section, remove it
+2006-11-24T17:12:00.000Z	slavik	DreamerHxC1	fglrx does not support your video card
+2006-11-24T17:13:00.000Z	slavik	DreamerHxC1	change the identifier to the one from the fglrx section
+2006-11-24T17:16:00.000Z	DreamerHxC1	slavik	problems with X
+2006-11-24T17:19:00.000Z	slavik	DreamerHxC1	hmm ... try a reboot
+2006-11-24T17:20:00.000Z	DreamerHxC1	slavik	it worked, Im now in at the desktop but I know that if I reboot, it won't work again
+2006-11-24T17:20:00.000Z	slavik	DreamerHxC1	what won't work again?
+2006-11-24T17:21:00.000Z	slavik	DreamerHxC1	try to reboot again then
+2006-11-24T17:22:00.000Z	slavik	DreamerHxC1	what error does it give?
+2006-11-24T17:27:00.000Z	DreamerHxC1	slavik	this files has many suspicious lines...
+2006-11-24T17:27:00.000Z	slavik	DreamerHxC1	like what?
+2006-11-24T17:28:00.000Z	slavik	DreamerHxC1	that is fine
+2006-11-24T17:28:00.000Z	slavik	DreamerHxC1	less the file
+2006-11-24T17:30:00.000Z	slavik	DreamerHxC1	those are usual, look for something that is screen not found or such
+2006-11-24T17:34:00.000Z	slavik	DreamerHxC1	yes it does
+2006-11-24T17:34:00.000Z	slavik	DreamerHxC1	scroll through it, see if anything looks weird
+2006-11-24T17:34:00.000Z	slavik	DreamerHxC1	keep going
+2006-11-24T17:36:00.000Z	slavik	DreamerHxC1	change the ati driver to radeon in xorg.conf
+2006-11-24T17:39:00.000Z	DreamerHxC1	slavik	not working
+2006-11-24T17:40:00.000Z	slavik	DreamerHxC1	the logfile :)
+2006-11-24T17:42:00.000Z	slavik	DreamerHxC1	fair enough
+2006-11-24T17:42:00.000Z	slavik	DreamerHxC1	check /etc/X11 there should be another xorg.conf.something file ...
+2006-11-24T17:43:00.000Z	slavik	DreamerHxC1	gimmie the names of all of them
+2006-11-24T17:46:00.000Z	slavik	DreamerHxC1	I don't like ATI either ... but for other reasons
+2006-11-24T17:46:00.000Z	slavik	DreamerHxC1	we want to create a 'default' (not really) xorg.conf
+2006-11-24T17:48:00.000Z	slavik	DreamerHxC1	yes
+2006-11-24T17:49:00.000Z	slavik	DreamerHxC1	all default
+2006-11-24T17:50:00.000Z	DreamerHxC1	slavik	restarting x is not working
+2006-11-24T17:50:00.000Z	slavik	DreamerHxC1	and the log file?
+2006-11-24T17:50:00.000Z	slavik	DreamerHxC1	that sound is amde by GDM
+2006-11-24T17:53:00.000Z	slavik	DreamerHxC1	in Server Layout section, add a line: Option "AIGLX" "Disabled"
+2006-11-24T17:54:00.000Z	slavik	DreamerHxC1	in very bottom of xorg.cong
+2006-11-24T17:57:00.000Z	slavik	DreamerHxC1	change the driver to vesa ... that should definitely work ...
+2006-11-24T17:58:00.000Z	slavik	DreamerHxC1	only one way to find out ;)
+2006-11-24T17:59:00.000Z	DreamerHxC1	slavik	could be my monitor?
+2006-11-24T17:59:00.000Z	slavik	DreamerHxC1	shouldn't be your monitor
+2006-11-24T17:59:00.000Z	slavik	DreamerHxC1	check the log file ...
+2006-11-24T17:59:00.000Z	slavik	DreamerHxC1	did it ever work?
+2006-11-24T06:00:00.000Z	DreamerHxC1	slavik	yes
+2006-11-24T06:02:00.000Z	DreamerHxC1	slavik	so?
+2006-11-24T06:02:00.000Z	slavik	DreamerHxC1	what does the log say?
+2006-11-24T06:03:00.000Z	slavik	DreamerHxC1	are you trying to get compiz/beryl to work?
+2006-11-24T06:04:00.000Z	DreamerHxC1	slavik	log doesn't says anything more about graphic or screen
+2006-11-24T06:05:00.000Z	slavik	DreamerHxC1	no always

@@ -1,0 +1,95 @@
+2005-06-02T16:14:00.000Z	dooglus		I'd like to second that, Spug.  This channel is so much friendlier than the Mandrake channel I used to have to use.  None of the big egos and bad attitudes.
+2005-06-02T16:15:00.000Z	dooglus		hrm.  'enemy territory' wants to know my root password.  i don't even know it, if there even is one.
+2005-06-02T16:17:00.000Z	Blissex	dooglus	thats highly suspicious to say the least...
+2005-06-02T16:17:00.000Z	Blissex	dooglus	a game might need to be run as 'root', but not by asking your root password, unless it is because it is run using 'su'
+2005-09-12T13:43:00.000Z	Blissex	dooglus	thats pretty diplomatic
+2005-09-12T13:44:00.000Z	dooglus	Blissex	is that sarcasm?
+2005-09-12T13:45:00.000Z	Blissex	dooglus	no, it is for a chance entirely serious. I would have said something a bit stronger like ''Only !"$% lazy "I*^% who don't read the shell docs think .bashrc is a good place for env var settings'' :-)
+2005-09-12T13:46:00.000Z	dooglus	Blissex	even .bash_profile is no good if you want all your apps to see it.
+2005-09-12T13:46:00.000Z	Blissex	dooglus	depends on what you mean by all your apps :-)
+2005-09-12T13:47:00.000Z	dooglus	Blissex	I mean if I select "steam" from the applications menu, I want it to have LANG set.
+2005-09-12T13:48:00.000Z	dooglus	Blissex	in that case, it won't source .bashrc or .bash_profile
+2005-09-12T13:48:00.000Z	Blissex	dooglus	but '~/.bash_profile' will have been executed at log in, so any exported env var will be in the env for that too.
+2005-09-12T13:49:00.000Z	Blissex	dooglus	the essential thing with env var is that you can export them so they get inherited by any descendant process, thus you only need to set them in the login shell.
+2005-09-12T13:49:00.000Z	dooglus	Blissex	"at log in"?  even if I use gdm to log in?
+2005-09-12T13:49:00.000Z	Blissex	dooglus	yes sure, GDM starts your log in shell in log in mode.
+2005-09-12T13:51:00.000Z	dooglus	Blissex	GDM doesn't run bash for me at all
+2005-09-12T13:51:00.000Z	Blissex	dooglus	it does... to execute ~/.xsession
+2005-09-12T13:53:00.000Z	dooglus	Blissex	hmmm.  interesting.  let me try that.
+2005-09-12T13:57:00.000Z	dooglus	Blissex	I just did a little experiment to see what gets into my environment:
+2005-09-12T13:57:00.000Z	Blissex	dooglus	....
+2005-09-12T13:57:00.000Z	dooglus	Blissex	I added a line to ~/.bashrc saying "export mybashrc=sourced".  and I added similar lines to .bash_profile and .gnomerc.
+2005-09-12T13:57:00.000Z	dooglus	Blissex	then I logged and and logged back in again.
+2005-09-12T13:57:00.000Z	Blissex	dooglus	thats a rather demented way to do that.
+2005-09-12T13:58:00.000Z	dooglus	Blissex	it is to be able to tell what stays in the environment
+2005-09-12T13:58:00.000Z	Blissex	dooglus	no, that does not work because you don't really get what gets sourced then...
+2005-09-12T13:58:00.000Z	dooglus	Blissex	I then removed the lines and ran a terminal, and looked in the environment to see which variables were present
+2005-09-12T13:59:00.000Z	Blissex	dooglus	also you should have checked '~/.xsession' instead of '~/.gnomerc'
+2005-09-12T13:59:00.000Z	dooglus	Blissex	the only one that was present was the .gnomerc:
+2005-09-12T13:59:00.000Z	dooglus	Blissex	I'll try .xsession too
+2005-09-12T13:59:00.000Z	dooglus	Blissex	but note that .bash_profile's settings weren't there
+2005-09-12T13:59:00.000Z	Blissex	dooglus	what about 'man bash' and reading about these things...
+2005-09-12T14:00:00.000Z	dooglus	Blissex	because this has nothing to do with bash.
+2005-09-12T14:00:00.000Z	dooglus	Blissex	I know if I run bash then my .bashrc is sourced.  but what if I use the gnome menu to run something?
+2005-09-12T14:00:00.000Z	Blissex	dooglus	the rules are actally complicated but they work more or less like this...
+2005-09-12T14:01:00.000Z	Blissex	dooglus	'~/.bashrc' is sourced every time a shell start. So it should contain only things that cannot or should not be inherited by way of the nvironment.
+2005-09-12T14:02:00.000Z	Blissex	dooglus	'~/.bash_profile' is sourced once at login, in alternative to '~/.bashrc'. So it should contain all environment settings.
+2005-09-12T14:03:00.000Z	dooglus	Blissex	but what if my processes are started from the GNOME menu, and therefore have no bash process as an ancestor?
+2005-09-12T14:03:00.000Z	Blissex	dooglus	then '~/.xsession' is sourced to initialize an X session. Sometimes in alternative to '~/.bash_login'.
+2005-09-12T14:03:00.000Z	dooglus	Blissex	I just added an enviroment variable to my ~/.xsession.  It isn't in my environment
+2005-09-12T14:04:00.000Z	Blissex	dooglus	then recent versions of GNOME do very very strange things.
+2005-09-12T14:04:00.000Z	dooglus	Blissex	should it perhaps have a capital X or something?  (the file didn't exist - I created it)
+2005-09-12T14:04:00.000Z	dooglus	Blissex	metacity
+2005-09-12T14:05:00.000Z	Blissex	dooglus	then the correct thing to do is to put '. "$HOME/.xession"' in '~/.gnomerc'
+2005-09-12T14:06:00.000Z	dooglus	Blissex	that'll probably work.  Just a mo - I'll log in again and try it.
+2005-09-12T14:09:00.000Z	dooglus	Blissex	that worked.  now exports in ~/.xsession and ~/.gnomerc get into my environment and those in .bashrc and .bash_profile don't.
+2005-09-12T14:09:00.000Z	dooglus	Blissex	note that even if I run a gnome-terminal from the gnome menu, .bash_profile *still* isn't sourced.
+2005-09-12T14:09:00.000Z	Blissex	dooglus	that means that sadly GNOME does not log you in when you start. Sad.
+2005-09-12T14:09:00.000Z	dooglus	Blissex	it only seems to be sourced if I use a VT to login
+2005-09-12T14:10:00.000Z	Blissex	dooglus	in theory the same things should happen no matter how you log in -- I hate special casing.
+2005-09-12T14:10:00.000Z	dooglus	Blissex	I guess I could put ". ~/.bash_profile" in ~/.gnomerc (or ~/.xsession, not that .gnomerc sources .xsession) if I wanted it to
+2005-09-12T14:11:00.000Z	Blissex	dooglus	the idea is that in theory the Display Manager like GDM is the X replacement of 'getty'. So it should initialize a shell in login mode.
+2005-09-12T14:11:00.000Z	dooglus	Blissex	I guess it's a configuration for gdm
+2005-09-12T14:12:00.000Z	Blissex	dooglus	in theory there should not be three cases, but a cascade of cases...
+2005-09-12T14:12:00.000Z	Blissex	dooglus	as in: you log in, '~/.bash_profile' gets executed, if it is also an X login, ~/.xsession' gets executed, and if it is a GNOME X session, '~/.gnomerc' gets executed.
+2005-09-12T14:13:00.000Z	Blissex	dooglus	as in: you log in, '~/.bash_profile' gets executed, if it is also an X login, ~/.xsession' gets executed, and if it is a GNOME X session too, '~/.gnomerc' gets executed too.
+2005-09-12T14:13:00.000Z	dooglus	Blissex	I just looked at the gdm config.  There's lines saying:
+2005-09-12T14:13:00.000Z	Blissex	dooglus	yes, that sounds sensible. The login profile scripts I guess.
+2005-09-12T14:14:00.000Z	dooglus	Blissex	I often see people here asking "how do I change my path"
+2005-09-12T14:14:00.000Z	Blissex	dooglus	the idea is that you initialize your per-user environment in '~/.bash_profile' (e.g.: PATH="$HOME/bin:$PATH")
+2005-09-12T14:14:00.000Z	dooglus	Blissex	the answer seems to be to edit /etc/gdm/gdm.conf - because editing .bash_profile doesn't do it
+2005-09-12T14:14:00.000Z	Blissex	dooglus	then you initialize your X environment in '~/.xsession' (e.g. 'xsetroot -solid grey30').
+2005-09-12T14:14:00.000Z	dooglus	Blissex	I wonder if this is a ubuntu bug, or a more general GNOME bug?
+2005-09-12T14:15:00.000Z	Blissex	dooglus	I doubt it is a ''bug'', it is probably a ''feature''.
+2005-09-12T14:15:00.000Z	dooglus	Blissex	ah, ok.  but like you say, it's annoying that I don't get my environment set up inside gnome
+2005-09-12T14:16:00.000Z	Blissex	dooglus	that should happen in '~/.gnomerc' according to Seveas.
+2005-09-12T14:18:00.000Z	Blissex	dooglus	that does happen here, but then I use KDE and start X using 'xinit', not a DM.
+2005-09-12T14:21:00.000Z	dooglus	Blissex	if you use 'startx' from a bash shell, then of course your environment will be inherited.
+2005-09-12T14:21:00.000Z	dooglus	Blissex	that would be the case for GNOME, too.
+2005-09-12T14:21:00.000Z	dooglus	Blissex	it's gdm that's acting weird.
+2005-09-12T14:21:00.000Z	Blissex	dooglus	yes, but it should inherit from the DM too.
+2005-09-12T14:22:00.000Z	Blissex	dooglus	again, a DM is (or should be) nothing but a 'getty' under X.
+2005-09-12T14:22:00.000Z	dooglus	Blissex	what's funny is that .bashrc isn't sourced at all during login - not even by the bash which parses ~/.xsession
+2005-09-12T14:23:00.000Z	Blissex	dooglus	you see, the extremely annoying rules for BASH are that if a shell is executed in 'login' mode, it executes _only_ '~/.bash_profile' and not '~/.bashrc'
+2005-09-12T14:23:00.000Z	dooglus	Blissex	it doesn't source .bash_profile either.
+2005-09-12T14:24:00.000Z	Blissex	dooglus	so if it does not executed '~/.bashrc', it must be executing '~/.bash_profile', or perhaps does so in a subshell.
+2005-09-12T14:24:00.000Z	dooglus	Blissex	it sources neither .bashrc nor .bash_profile.  honest.
+2005-09-12T14:24:00.000Z	Blissex	dooglus	it may be doing it, but in a subshell, so the env gets lost.
+2005-09-12T14:25:00.000Z	dooglus	Blissex	it isn't.  my .bashrc and .bash_profile both modify a file when sourced.  that file isn't being modified.
+2005-09-12T14:25:00.000Z	Blissex	dooglus	BTW, when I use a DM I use the original XDM, which is a lot semantically simplers (the config files are mad though).
+2005-10-23T06:42:00.000Z	Blissex	dooglus	yes, but that is part of the automount/hotplug stuff IIRC. Since I ahve them disabled totally, cannot say which tweak disableds just that.
+2006-06-10T10:21:00.000Z	Blissex	dooglus	list the files in '/var/lib/dpkg/'
+2006-06-10T10:21:00.000Z	dooglus	Blissex	that gives "alternatives available available-old cmethopt diversions diversions-old info lock methods parts statoverride statoverride-old status status-old updates"
+2006-06-10T10:22:00.000Z	Blissex	dooglus	a bit of initiative, look under those subdirs, e.g. for all files '/var/lib/dpkg/info/*.list'
+2006-07-29T11:56:00.000Z	Blissex	dooglus	putting options trailing is a very mad idea.
+2006-07-29T11:57:00.000Z	dooglus	Blissex	why?
+2006-07-29T11:57:00.000Z	Blissex	dooglus	because most programs scan options and arguments left to right... and you never know which one does and which one does not.
+2006-07-29T11:57:00.000Z	dooglus	Blissex	tar is different
+2006-07-29T11:58:00.000Z	dooglus	Blissex	for example, "tar --wildcards '*.flf' xf file.tar.gz" doesn't work
+2006-07-29T11:58:00.000Z	Blissex	dooglus	because you haven't read the manual...
+2006-07-29T11:59:00.000Z	dooglus	Blissex	"tar --wildcards '*.flf' xf file.tar.gz" doesn't work whether I have read the manual or not
+2006-07-29T11:59:00.000Z	Blissex	dooglus	yes, but that is incorrect syntax...
+2006-07-29T12:00:00.000Z	dooglus	Blissex	incidentally, do you know which package the texinfo tar manual has been moved to?
+2006-07-29T12:01:00.000Z	Blissex	dooglus	that should be in 'tar' itself, '/usr/share/info/tar.info.gz'
+2006-07-29T12:02:00.000Z	Blissex	dooglus	the problem with that syntax is that you cannot really mix no-dash options and dash/double-dash option styles.
+2006-07-29T12:02:00.000Z	Blissex	dooglus	so one one should do 'tar -x --wildcards "...." -f ....'

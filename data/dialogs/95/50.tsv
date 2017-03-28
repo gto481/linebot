@@ -1,0 +1,95 @@
+2007-05-13T09:54:00.000Z	premier	chamunks	where are you stuck changing res?
+2007-05-13T09:55:00.000Z	chamunks	premier	well the gui for screen resolutions doesent go past 1024x768  wich totally upsets my 22inch hd lcd
+2007-05-13T09:56:00.000Z	premier	chamunks	ok, what card you have? nvidia or ati? have you checked these?
+2007-05-13T09:57:00.000Z	chamunks	premier	nvidia geforce 6600 sli
+2007-05-13T09:57:00.000Z	chamunks	premier	but not sli'd
+2007-05-13T09:57:00.000Z	premier	chamunks	https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia have you installed nvidia driver?
+2007-05-13T09:58:00.000Z	chamunks	premier	im pretty sure but ill run that tutorial and get back to you in 5 ok thanks
+2007-05-13T10:00:00.000Z	chamunks	premier	actually the restricted drivers page says in its list   NVIDIA accelerated graphics driver [enabled]  and In Use
+2007-05-13T10:00:00.000Z	premier	chamunks	ok, then you need to reboot, after you have installed them, if you havent done that already
+2007-05-13T10:01:00.000Z	premier	chamunks	cause in my own system i have noticed an X logout want enough to set nvidia drivers to actually run
+2007-05-13T10:01:00.000Z	chamunks	premier	i've been running that driver for weeks and i still have no larger screen res's than the 1024x768
+2007-05-13T10:02:00.000Z	premier	chamunks	ok, then read this guide https://help.ubuntu.com/community/FixVideoResolutionHowto
+2007-05-13T10:02:00.000Z	chamunks	premier	i've been told that editing an xorg conf file somewhere would help but i couldent figure out where exactly to add lines for resolutions or whether or not i had to add the resolutions in between
+2007-05-13T10:03:00.000Z	premier	chamunks	the file is in /etc/X11/ and yes it needs editing, i guess you have the monitor connected to card installed in pci-e 16x primary slot
+2007-05-13T10:03:00.000Z	chamunks	premier	yep :)
+2007-05-13T10:04:00.000Z	premier	chamunks	read that guide.. if you get stuck at some point, ask me
+2007-05-13T10:04:00.000Z	chamunks	premier	going through sudo dpkg-reconfigure xserver-xorg  atm
+2007-05-13T10:05:00.000Z	premier	chamunks	yeah, at some point it will prompt for X server resolutions to use. make sure you add the res you want. if it doesnt appear there, you need to edit xorg.conf
+2007-05-13T10:06:00.000Z	chamunks	premier	ok, im at Video card's bus ident   and it has the entry field with PCI:5:0:0   (is that auto detected?)
+2007-05-13T10:07:00.000Z	premier	chamunks	ok, then find the manual of the 22" lcd monitor, and find out what the horizontal and vertical refresh ranges are. or use the dccprobe option
+2007-05-13T10:07:00.000Z	chamunks	premier	ok nvm it was autodetected i ran "lspci"  and figured it out
+2007-05-13T10:08:00.000Z	premier	chamunks	cause you have two cards, they are differentiated by pci:x.x.x values... trying to find out what the primary card values should be like in my system
+2007-05-13T10:08:00.000Z	chamunks	premier	i have the ability to have two cards i havent even experimented with the sli just yet lol
+2007-05-13T10:09:00.000Z	premier	chamunks	yes, pci:5.0.0 is the value for my card. 6600gt single
+2007-05-13T10:09:00.000Z	chamunks	premier	thats still a bit to bold of a move for me :P just yet
+2007-05-13T10:10:00.000Z	chamunks	premier	should i enable the kernel framebuffer device interface?
+2007-05-13T10:11:00.000Z	premier	chamunks	just press enter all the time to install default options in dpkg-reconfigure
+2007-05-13T10:11:00.000Z	premier	chamunks	with tab you can go to OK and press enter to advance into it
+2007-05-13T10:12:00.000Z	chamunks	premier	yep yep i've just never seen this conf before so im just exploring rly
+2007-05-13T10:13:00.000Z	premier	chamunks	just beware if you want to have multiple keyboard layouts like eg us and de etc. there you might want to add them both. i dont know how thats done, i edited xorg.conf for that
+2007-05-13T10:13:00.000Z	chamunks	premier	naw i just wish i could figure out how to enable all the nice toys in my g15 keyboard :S
+2007-05-13T10:14:00.000Z	premier	chamunks	in all other cases, apart where you change res, just press enter to advance
+2007-05-13T10:14:00.000Z	chamunks	premier	i havent been able to do that since windows but thats not enough to get me to switch back to windows
+2007-05-13T10:15:00.000Z	premier	chamunks	dont worry, theres a way i am sure. i once had an ms office kb and i have managed to add lots of its extra keys to good use, and in past time, where it was more difficult to setup
+2007-05-13T10:15:00.000Z	chamunks	premier	well i say gooday :)
+2007-05-13T10:15:00.000Z	chamunks	premier	linux is too much fun to learn once you have the basics down i tells ya
+2007-05-13T10:17:00.000Z	premier	chamunks	google is your friend. there isnt much you want to do thats not been done before and described
+2007-05-13T10:17:00.000Z	chamunks	premier	nodds though sometimes google can be a bit unforgiving to someone who has no idea where to start so i come bug ppl here till i know a bit more than i go a googelin :D
+2007-05-13T10:24:00.000Z	premier	chamunks	sudo ddcprobe | grep monitorrange run this command
+2007-05-13T10:24:00.000Z	premier	chamunks	just read https://help.ubuntu.com/community/FixVideoResolutionHowto in undetected monitor range part
+2007-05-13T10:24:00.000Z	chamunks	premier	ddcprobe not found
+2007-05-13T10:25:00.000Z	chamunks	premier	k ill check into it in a min
+2007-05-13T10:25:00.000Z	premier	chamunks	sudo apt-get install xresprobe
+2007-05-13T10:25:00.000Z	chamunks	premier	it just went back to ~$ after i ran that cmd
+2007-05-13T10:26:00.000Z	premier	chamunks	sudo ddcprobe | grep monitorrange run this command now
+2007-05-13T10:26:00.000Z	chamunks	premier	it just went back to ~$ after i ran "sudo ddcprobe | grep monitorrange"
+2007-05-13T10:27:00.000Z	premier	chamunks	ok, the output of this command paste it in http://paste.ubuntu-nl.org and state the url here
+2007-05-13T10:28:00.000Z	chamunks	premier	there was no output :S  but it stopped giving me the error for ddcprobe
+2007-05-13T10:30:00.000Z	premier	chamunks	in my case it outputs monitorrange: 30-98, 50-160
+2007-05-13T10:31:00.000Z	premier	chamunks	dont you get such a line?
+2007-05-13T10:31:00.000Z	chamunks	premier	nope just goes back to my initial blank line
+2007-05-13T10:32:00.000Z	chamunks	premier	its rather strange
+2007-05-13T10:32:00.000Z	premier	chamunks	the output is one line above the new cursor line
+2007-05-13T10:32:00.000Z	chamunks	premier	does this screen range have a huge impact on what happens after i reboot kus i added the resolutions but
+2007-05-13T10:33:00.000Z	chamunks	premier	right i know that but its not outputting anything
+2007-05-13T10:33:00.000Z	chamunks	premier	not even the error saying that ddcprobe command not found
+2007-05-13T10:33:00.000Z	premier	chamunks	its a huge impact because if the x server doesnt recognize the full range of your monitor, it will fall back to lower res
+2007-05-13T10:33:00.000Z	chamunks	premier	ok as long as i can still get my gui lol
+2007-05-13T10:34:00.000Z	premier	chamunks	anyhow, then you need to edit xorg.conf
+2007-05-13T10:34:00.000Z	chamunks	premier	ok ill open it up
+2007-05-13T10:34:00.000Z	premier	chamunks	find the manual of the monitor in the specifications section it should have the horizontal and vertical ranges
+2007-05-13T10:35:00.000Z	chamunks	premier	kk 2 mins
+2007-05-13T10:38:00.000Z	chamunks	premier	after a bit of googleing Horizontal: 30-82 kHz Vertical: 50-85 Hz
+2007-05-13T10:40:00.000Z	premier	chamunks	whats the monitor? those ranges are pretty low.. eg in my case on this system its a 19" crt monitor running at 1600x1200@65 and horizontal range is 30-98
+2007-05-13T10:41:00.000Z	chamunks	premier	ViewSonic VX2235wm  22" HD Wide Multimedia LCD
+2007-05-13T10:41:00.000Z	premier	chamunks	and i guess its native res is 1680x1050?
+2007-05-13T10:42:00.000Z	chamunks	premier	i would suppose
+2007-05-13T10:42:00.000Z	chamunks	premier	that sounds like what i was running in xp
+2007-05-13T10:43:00.000Z	chamunks	premier	after further inspection of the box the screen came in yeah thats the res it likes best
+2007-05-13T10:44:00.000Z	premier	chamunks	anyhow, i have never used lcd monitors, maybe because they use low vertical ranges they dont need high horizontal ranges. add the ranges in xorg.conf https://help.ubuntu.com/community/FixVideoResolutionHowto
+2007-05-13T10:44:00.000Z	premier	chamunks	in section Undetected Monitor Specs
+2007-05-13T10:45:00.000Z	chamunks	premier	ok ill ping you back if i get confused
+2007-05-13T10:45:00.000Z	premier	chamunks	from "The second way is to simply add those values to our /etc/X11/xorg.conf ..." and downwards
+2007-05-13T10:46:00.000Z	chamunks	premier	im actually currently in /etc/X11/xorg.conf   i figure that would be way easier
+2007-05-13T10:47:00.000Z	chamunks	premier	skipping all the other stuff but the one configuration thing we did earlier added all the resolutions i wanted to add but this hsync and vsync is the confusing bit to me
+2007-05-13T10:47:00.000Z	premier	chamunks	its all in the section of the guide i directed you to
+2007-05-13T10:48:00.000Z	chamunks	premier	i seem to have lost the page in my mess of firefox tabs can you relink me pls pls
+2007-05-13T10:48:00.000Z	chamunks	premier	ok nevermind i found it
+2007-05-13T10:51:00.000Z	chamunks	premier	soo thats all done
+2007-05-13T10:52:00.000Z	premier	chamunks	added the "1680x1050" res in display section of xorg.conf in all bitdepths?
+2007-05-13T10:53:00.000Z	chamunks	premier	this is what my xorg.conf file currently looks like is this good??  http://paste.ubuntu-nl.org/20667/
+2007-05-13T10:54:00.000Z	premier	chamunks	seems ok. ctrl+alt+backspase to reload X server. if that doesnt work, reboot. if even that fails, come back here to check it ;-)
+2007-05-13T10:56:00.000Z	chamunks	premier	ok beautiful :D thanks a tonne this is about my 4th visit to #ubuntu to find someone who could link me / talk me thru this process
+2007-05-13T10:57:00.000Z	chamunks	premier	if you see me back in here in a few mins we did a good job lol if not im stuck in a terminal somewhere and am scrambeling for my laptop lol
+2007-05-13T11:00:00.000Z	chamunks	premier	ok well my resolution is where it should be.... but... umm... my window decorator isn't loading properly :S
+2007-05-13T11:00:00.000Z	premier	chamunks	window decorator?
+2007-05-13T11:01:00.000Z	chamunks	premier	beryl/emerald isnt loading my gnome skins properly :S
+2007-05-13T11:01:00.000Z	premier	chamunks	about beryl i dont know much, havent used it yet
+2007-05-13T11:02:00.000Z	chamunks	premier	lol thats ok but i have no close / minimize / maximize buttons :'( its ok ill figure that out in time lol
+2007-05-13T11:02:00.000Z	premier	chamunks	maybe you want to try in #ubuntu-effects
+2007-05-13T11:03:00.000Z	chamunks	premier	i dont mind just disabling beryl alltogether its just fancy i just like showing off my linux skills to my windows friends lol
+2007-05-13T11:04:00.000Z	chamunks	premier	you wouldent happen to know how i would go by launching a command via a hotkey binding would you?
+2007-05-13T11:05:00.000Z	premier	chamunks	http://wiki.beryl-project.org/wiki/Troubleshooting_nVidia#My_windows_don.27t_have_any_decorations_.28title_bar.2C_resize_handles.2C_minimize.2Fmaximize.2Fclose_buttons.29
+2007-05-13T11:08:00.000Z	premier	chamunks	system>preferences>keyboard shortcuts probably
+2007-05-13T11:09:00.000Z	chamunks	premier	thanks for everything

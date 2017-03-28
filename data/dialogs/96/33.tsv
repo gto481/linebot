@@ -1,0 +1,96 @@
+2008-06-22T07:55:00.000Z	unavailable		anyone got the   timer not connected to io apic problem?
+2008-06-22T07:57:00.000Z	unavailable		is the "timer not connected to io-apic" connected to the "your system failed to hibernate correctly"?
+2008-06-22T07:58:00.000Z	unavailable		is the "timer not connected to io-apic" connected to the "your system failed to hibernate correctly"?
+2008-06-22T08:00:00.000Z	dmsuperman	unavailable	no, we can.t
+2008-06-22T08:01:00.000Z	unavailable	dmsuperman	was just wondering bcuz ive asked about the io-apic and didnt get any reply
+2008-06-22T08:02:00.000Z	dmsuperman	unavailable	if nobody knows about your problem they just don't respond...usually keep askign every few minutes (roughly 3-5) and you'll eventually get help from somebody who does know
+2008-06-22T08:07:00.000Z	dmsuperman	unavailable	but that's not multi-screen, that's workspaces
+2008-06-22T08:08:00.000Z	dmsuperman	unavailable	multi-screen is usually synonymous with dual monitor/dual head
+2008-06-22T08:21:00.000Z	dmsuperman	unavailable	where did you hear that?
+2008-06-22T08:21:00.000Z	unavailable	dmsuperman	in here a while back
+2008-06-22T08:22:00.000Z	unavailable	dmsuperman	some random nobody said it i bet
+2008-06-22T08:43:00.000Z	unavailable	dmsuperman	now in gparted swapoff is only per session?
+2008-06-22T08:44:00.000Z	dmsuperman	unavailable	no clue, i never used gparted
+2008-06-22T08:44:00.000Z	dmsuperman	unavailable	agreed. supreme commander is the sole purpose of windows on my machine
+2008-06-22T08:45:00.000Z	dmsuperman	unavailable	I think he's in a TTY, not sure if that shortcut works there
+2008-06-22T08:47:00.000Z	unavailable	dmsuperman	 voice?
+2008-06-22T08:47:00.000Z	dmsuperman	unavailable	I know that, I was wondering his reasons though because if not for voice/video I always recommend pidgin over trying to get their clients to work :P
+2008-06-22T09:10:00.000Z	dmsuperman	unavailable	stumble upon extension for firefox
+2008-06-22T10:10:00.000Z	dmsuperman	unavailable	so did i, but i've seen nothing but problems for many people
+2008-06-22T10:25:00.000Z	dmsuperman	unavailable	where can I get some screenlets from? I want to use my awesome compiz widget layer, but nothing to use with it
+2008-06-22T10:25:00.000Z	dmsuperman	unavailable	googling gives no good results
+2008-06-22T10:26:00.000Z	unavailable	dmsuperman	screenlets.org
+2008-06-22T10:27:00.000Z	dmsuperman	unavailable	down :(
+2008-06-22T10:50:00.000Z	dmsuperman	unavailable	I have XP running in a VM, plus all my other apps on my desktop, and i've never come close to using 2gb
+2008-06-22T23:15:00.000Z	dmsuperman	unavailable	those are right angle and left angle quotes
+2008-06-22T23:15:00.000Z	dmsuperman	unavailable	no clue about the second question
+2008-06-22T23:15:00.000Z	dmsuperman	unavailable	in html it's &raquo;
+2008-06-22T23:15:00.000Z	dmsuperman	unavailable	that line was empty
+2008-06-22T23:16:00.000Z	dmsuperman	unavailable	nope, i t hink irc doesn't transmit those special characters
+2008-06-22T23:16:00.000Z	dmsuperman	unavailable	that little box is for characters not in your character set though
+2008-06-22T23:18:00.000Z	unavailable	dmsuperman	so any idea on how i can find out what character set that belongs to??  or is it just "you dont have it, so here's a box"
+2008-06-22T23:18:00.000Z	unavailable	dmsuperman	and its kinda funny that the kernel would display a charset i dont have... thats from dmesg btw
+2008-06-22T23:19:00.000Z	dmsuperman	unavailable	not that you don't necesarily don't have, just that you aren't using
+2008-06-22T23:19:00.000Z	dmsuperman	unavailable	no idea what that's about then :P
+2008-06-22T23:19:00.000Z	dmsuperman	unavailable	I know I get those with those retarded slant quotes from MS word
+2008-06-22T23:19:00.000Z	unavailable	dmsuperman	so on a fresh install, i would have to enable special charsets to view dmesg the right way?
+2008-08-12T08:31:00.000Z	unavailable	dmsuperman	you choosing the right workgroup?
+2008-08-12T08:31:00.000Z	dmsuperman	unavailable	I left it as the default workgroup
+2008-08-12T08:31:00.000Z	dmsuperman	unavailable	should it be anything particular?
+2008-08-12T08:31:00.000Z	unavailable	dmsuperman	i mean when you go to get the folder
+2008-08-12T08:31:00.000Z	unavailable	dmsuperman	you should see workgroup and vboxsvr
+2008-08-12T08:31:00.000Z	dmsuperman	unavailable	I tried the \\vboxsvr and it couldn't find it
+2008-08-12T08:31:00.000Z	unavailable	dmsuperman	 or something like that
+2008-08-12T08:32:00.000Z	dmsuperman	unavailable	nothing
+2008-08-12T08:32:00.000Z	unavailable	dmsuperman	try network places
+2008-08-12T08:32:00.000Z	dmsuperman	unavailable	yeah, that's where I'm at. it's an empty pane
+2008-08-12T08:32:00.000Z	unavailable	dmsuperman	 then try map network drive
+2008-08-12T08:32:00.000Z	dmsuperman	unavailable	I can't go to \\vboxsvr though, that's the problem
+2008-08-12T08:33:00.000Z	unavailable	dmsuperman	 then try map network drive
+2008-08-12T08:33:00.000Z	unavailable	dmsuperman	 where share is the name of the share
+2008-08-12T08:34:00.000Z	dmsuperman	unavailable	System error 67, network name cannot be found
+2008-08-12T08:36:00.000Z	unavailable	dmsuperman	thats the problem i had with xp
+2008-08-12T08:36:00.000Z	unavailable	dmsuperman	 network didnt work
+2008-08-12T08:36:00.000Z	dmsuperman	unavailable	any idea how to fix it?
+2008-08-12T08:36:00.000Z	unavailable	dmsuperman	 scrap xp and use 2000?
+2008-08-12T08:37:00.000Z	dmsuperman	unavailable	no can do :(
+2008-08-12T08:37:00.000Z	unavailable	dmsuperman	 try using a different card setup in vb settings
+2008-08-12T08:37:00.000Z	unavailable	dmsuperman	 and your using xVM and not ose?
+2008-08-12T08:38:00.000Z	dmsuperman	unavailable	yeah
+2008-08-12T08:41:00.000Z	unavailable	dmsuperman	  your going to have to set up a non nat network connection in xp which in virtual box is impossible unless its been fixed since i had the prob, to be able to ping your host
+2008-08-12T08:42:00.000Z	dmsuperman	unavailable	so is there just no way to do it? why can I do it with seemingly random installs of vbox and xp but seemingly random others can't
+2008-08-12T08:42:00.000Z	unavailable	dmsuperman	 the share thing *should* work oob
+2008-08-12T08:42:00.000Z	dmsuperman	unavailable	jmichelsen that's what way I'm doing it is through vbox
+2008-08-12T08:43:00.000Z	unavailable	dmsuperman	 lemmie see what google tells me
+2008-08-12T08:43:00.000Z	dmsuperman	unavailable	I've been looking and haven't found much yet :(
+2008-08-12T08:44:00.000Z	unavailable	dmsuperman	 #vbox
+2008-08-12T08:46:00.000Z	unavailable	dmsuperman	 no guarentees on getting support there though
+2008-08-12T08:46:00.000Z	unavailable	dmsuperman	 they are usually slow to the punch
+2008-08-12T08:46:00.000Z	dmsuperman	unavailable	:(
+2008-08-12T08:48:00.000Z	unavailable	dmsuperman	 have you read this?  http://www.ubuntugeek.com/create-and-manage-virtual-machines-using-virtualbox.html
+2008-08-12T08:49:00.000Z	dmsuperman	unavailable	yeah it doesn't mention shared folders
+2008-08-12T08:49:00.000Z	unavailable	dmsuperman	 but did you install what was said in the beginning few paragraphs
+2008-08-12T08:49:00.000Z	dmsuperman	unavailable	yeah that's just explaining installing the latest vbox from the site
+2008-08-12T08:50:00.000Z	unavailable	dmsuperman	  do you have virtualbox 1.6.4
+2008-08-12T08:51:00.000Z	dmsuperman	unavailable	believe so...whichever is thel atest from the site is what i have
+2008-08-12T08:51:00.000Z	dmsuperman	unavailable	i just installed it then installed windows then came here to get help
+2008-08-12T08:51:00.000Z	unavailable	dmsuperman	 http://wvarner.blogspot.com/2008/08/virtualbox-164-folders-does-not-work.html
+2008-08-12T08:51:00.000Z	unavailable	dmsuperman	 that may be exactly what youre looking for
+2008-08-12T08:52:00.000Z	dmsuperman	unavailable	probably it, thanks a billion :D
+2008-08-12T08:53:00.000Z	unavailable	dmsuperman	cause its microsoft, it dont like being bogged down by a real pc
+2008-08-12T08:54:00.000Z	dmsuperman	unavailable	heh
+2008-08-12T08:54:00.000Z	dmsuperman	unavailable	imagine so
+2008-08-12T08:57:00.000Z	dmsuperman	unavailable	that did it, thanks again!
+2008-08-12T08:58:00.000Z	dmsuperman	unavailable	woo hoo, seamless works now too!
+2008-08-12T08:58:00.000Z	unavailable	dmsuperman	 lol
+2008-08-12T08:58:00.000Z	unavailable	dmsuperman	 seamless is the shizzle
+2008-08-12T08:59:00.000Z	dmsuperman	unavailable	fo sho
+2008-08-12T09:00:00.000Z	dmsuperman	unavailable	only 2 things could make seamless better: integrating it with gnome, so each window acts as their own window, and making it so when you drag a window you don't see flickers of windows desktop
+2008-08-12T09:01:00.000Z	unavailable	dmsuperman	 try this, minimize all windows in windows
+2008-08-12T09:01:00.000Z	dmsuperman	unavailable	why not? nothing's happened
+2008-08-12T09:01:00.000Z	dmsuperman	unavailable	ah!
+2008-08-12T09:01:00.000Z	dmsuperman	unavailable	i take that back :P
+2008-08-12T09:02:00.000Z	unavailable	dmsuperman	 rofl
+2008-08-12T09:02:00.000Z	dmsuperman	unavailable	hahahaha
+2008-08-12T09:02:00.000Z	unavailable	dmsuperman	 thats the only problem i have found
+2008-08-12T09:02:00.000Z	dmsuperman	unavailable	that's so weird

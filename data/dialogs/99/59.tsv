@@ -1,0 +1,99 @@
+2012-08-31T01:37:00.000Z	Troy^		hmm i want to update my ehternet interface settings via ssh i dont want to do sudo ifdown eth0 then it won't come back up :S
+2012-08-31T01:38:00.000Z	rox	Troy^	that is most certainly not a good idea
+2012-08-31T01:39:00.000Z	rox	Troy^	if you are going to do that, then you should do the following first: make a script, that will detect, if your network is still up, and if it detects that it is not, it should revert to your current settings
+2012-08-31T01:39:00.000Z	Troy^	rox	sounds ideal lol.. makezan just set mine up
+2012-08-31T01:39:00.000Z	rox	Troy^	no, you can't just set it to revert to revious settings, you need to script it up
+2012-08-31T01:41:00.000Z	rox	Troy^	no, if the first one fails, it won't run the second one
+2012-08-31T01:41:00.000Z	rox	Troy^	the && operator in the shell does that
+2012-08-31T01:42:00.000Z	rox	Troy^	for many reasons
+2012-08-31T01:42:00.000Z	rox	Troy^	wait
+2012-08-31T01:42:00.000Z	rox	Troy^	let's do this right
+2012-08-31T01:44:00.000Z	rox	Troy^	do this: cp /etc/network/interfaces ~/interfaces.bak
+2012-08-31T01:45:00.000Z	rox	Troy^	so, you are changing your primary interface, right?
+2012-08-31T01:46:00.000Z	rox	Troy^	so, let's make a script
+2012-08-31T01:46:00.000Z	rox	Troy^	wait a minute, i'll give it to you in a pastebin
+2012-08-31T01:53:00.000Z	rox	Troy^	http://pastebin.com/s7pi5U4X
+2012-08-31T01:54:00.000Z	rox	Troy^	MAKE SURE YOU EDIT PATHS
+2012-08-31T01:54:00.000Z	rox	Troy^	edit the script, so that the paths are correct
+2012-08-31T01:54:00.000Z	rox	Troy^	i don't know where you stored the backup file
+2012-08-31T01:54:00.000Z	rox	Troy^	so please edit the path to the interfaces.back file, so that it is correct
+2012-08-31T01:55:00.000Z	rox	Troy^	and the pastebin messed up the other path too, please change it ti /etc/network/interfaces
+2012-08-31T01:56:00.000Z	rox	Troy^	right, that should do it
+2012-08-31T01:56:00.000Z	rox	Troy^	the whole point is, that ping fails, if your network is down
+2012-08-31T01:57:00.000Z	rox	Troy^	if ping fails, the value if $? will be something other then 0
+2012-08-31T01:57:00.000Z	rox	Troy^	so in that case, we need to revert
+2012-08-31T01:58:00.000Z	rox	Troy^	glad to help, good luck
+2012-08-31T02:11:00.000Z	Troy^	rox	my internet face isnt coming up
+2012-08-31T02:11:00.000Z	rox	Troy^	sooo, both your reconfiguration and my script failed
+2012-08-31T02:11:00.000Z	rox	Troy^	bad luck
+2012-08-31T02:12:00.000Z	rox	Troy^	if it really doesn't come up, then you will need to access the box physically
+2012-08-31T02:12:00.000Z	rox	Troy^	no other way to do it
+2012-08-31T02:13:00.000Z	rox	Troy^	well, check the file
+2012-08-31T02:13:00.000Z	rox	Troy^	ls -l /etc/network/interfaces
+2012-08-31T02:14:00.000Z	rox	Troy^	are you sure, that the file name is exactly right?
+2012-08-31T02:15:00.000Z	rox	Troy^	also, IIRC in interfaces, tabs matter
+2012-08-31T02:15:00.000Z	rox	Troy^	can you show me the file?
+2012-08-31T02:15:00.000Z	rox	Troy^	pastebin
+2012-08-31T02:15:00.000Z	rox	Troy^	then how can you edit it?
+2012-08-31T02:16:00.000Z	rox	Troy^	you have physical access to the file?
+2012-08-31T02:16:00.000Z	rox	Troy^	ah, ok, at least you don't have to travel
+2012-08-31T02:17:00.000Z	rox	Troy^	that's just your standard vanilla dhcp setup
+2012-08-31T02:17:00.000Z	rox	Troy^	the only reason for the interface not to come up would be, if the dhcp server isn't functioning, or  if the wire is unplugged
+2012-08-31T02:18:00.000Z	rox	Troy^	did you ping IPs or hostnames?
+2012-08-31T02:19:00.000Z	rox	Troy^	what does ifconfig say?
+2012-08-31T02:20:00.000Z	rox	Troy^	if you just run ifconfig with no arguments?
+2012-08-31T02:20:00.000Z	rox	Troy^	there, it's not reading your DHCP configuration
+2012-08-31T02:21:00.000Z	rox	Troy^	but if it+'s showing eth0, then the interface didn't go down
+2012-08-31T02:22:00.000Z	rox	Troy^	try to do it manually
+2012-08-31T02:22:00.000Z	rox	Troy^	sudo ifconfig eth0 down
+2012-08-31T02:24:00.000Z	rox	Troy^	when you get it down, then try to get it up manually
+2012-08-31T02:24:00.000Z	rox	Troy^	say
+2012-08-31T02:24:00.000Z	rox	Troy^	dhclient eth0
+2012-08-31T02:25:00.000Z	rox	Troy^	when you get the box back online, you can put the interfaces file into a pastebin
+2012-08-31T02:26:00.000Z	Troy^	rox	i cant
+2012-08-31T02:26:00.000Z	rox	Troy^	elaborate
+2012-08-31T02:27:00.000Z	rox	Troy^	what does ifconfig eth0 down say?
+2012-08-31T02:28:00.000Z	rox	Troy^	what does ls -l /etc/network/interfaces say?
+2012-08-31T02:29:00.000Z	rox	Troy^	ok, if you are running up and down, then we should do batches
+2012-08-31T02:29:00.000Z	rox	Troy^	first you get it down with ifconfig eth0 down
+2012-08-31T02:29:00.000Z	Troy^	rox	269 root root /etc/network/interfaces in green
+2012-08-31T02:29:00.000Z	rox	Troy^	they you run dhcp manually,
+2012-08-31T02:30:00.000Z	rox	Troy^	i was actually interested in permissions
+2012-08-31T02:30:00.000Z	rox	Troy^	that -rwxr--r-- thing
+2012-08-31T02:30:00.000Z	Troy^	rox	well earlier when it said ifup didnt have permission i chmod 777 /etc/network/interfaces
+2012-08-31T02:30:00.000Z	rox	Troy^	hmm, weird
+2012-08-31T02:31:00.000Z	Troy^	rox	well the interface is down now rox
+2012-08-31T02:31:00.000Z	rox	Troy^	how about runnind dhclient manually?
+2012-08-31T02:31:00.000Z	rox	Troy^	run this: sudo dhclient eth0
+2012-08-31T02:32:00.000Z	Troy^	rox	eth0 is now up and obtained a dhcp address
+2012-08-31T02:32:00.000Z	Troy^	rox	i am now ssh'd in
+2012-08-31T02:32:00.000Z	rox	Troy^	now you can copy/paste the command outputs
+2012-08-31T02:33:00.000Z	Troy^	rox	yes lol
+2012-08-31T02:34:00.000Z	rox	Troy^	now you can show me your static configuration and the file that was unreadable
+2012-08-31T02:34:00.000Z	rox	Troy^	did you by any chance edit it in windows?
+2012-08-31T02:34:00.000Z	Troy^	rox	fizz@server:~$ ls -l /etc/network/interfaces
+2012-08-31T02:34:00.000Z	rox	Troy^	use pastebin
+2012-08-31T02:35:00.000Z	Troy^	rox	http://pastebin.com/ZEGRLFHG
+2012-08-31T02:36:00.000Z	Troy^	rox	both commands are there
+2012-08-31T02:36:00.000Z	rox	Troy^	ahh, there we go
+2012-08-31T02:37:00.000Z	Troy^	rox	and histo: http://paste.ubuntu.com/1176795/
+2012-08-31T02:37:00.000Z	rox	Troy^	what ifup said does not mean, that it can not access the file, but that it does not understand it
+2012-08-31T02:37:00.000Z	rox	Troy^	something is wrong with the file content
+2012-08-31T02:37:00.000Z	Troy^	rox	my screen cut off the first character on my linux server
+2012-08-31T02:38:00.000Z	rox	Troy^	so, remove the character, and everything should be in order
+2012-08-31T02:38:00.000Z	rox	Troy^	when you drop the interface, drop it with ifconfig
+2012-08-31T02:39:00.000Z	rox	Troy^	ifconfig eth0 dhcp release
+2012-08-31T02:39:00.000Z	rox	Troy^	when it is down, you can then raise it back up with ifup
+2012-08-31T02:39:00.000Z	rox	Troy^	ifup and ifdown commands are wrappers for ifconfig
+2012-08-31T02:40:00.000Z	rox	Troy^	this should do
+2012-08-31T02:41:00.000Z	rox	Troy^	try not to scatter any loose } or ~ characters anywhere :-P
+2012-08-31T02:41:00.000Z	rox	Troy^	then just get it down
+2012-08-31T02:41:00.000Z	rox	Troy^	ifconfig eth0 down
+2012-08-31T02:44:00.000Z	rox	Troy^	seems to be dhcp?
+2012-08-31T02:44:00.000Z	rox	Troy^	hmm, is your dhclient running?
+2012-08-31T02:44:00.000Z	rox	Troy^	kill dhclient
+2012-08-31T02:44:00.000Z	rox	Troy^	killall dhclient
+2012-08-31T02:45:00.000Z	rox	Troy^	if dhclient is running, then it keeps overriding your static settings
+2012-08-31T02:46:00.000Z	rox	Troy^	i'm going to bed, i hope you won't have any more problems
+2012-08-31T02:48:00.000Z	Troy^	rox	it's not giving me my static ip im requesting maybe my router but i have other comps set for static and i never had to do anything on router
+2012-08-31T03:00:00.000Z	Troy^	rox	got it

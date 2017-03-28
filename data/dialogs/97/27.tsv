@@ -1,0 +1,97 @@
+2008-06-12T02:54:00.000Z	ActionParsnip		hey all, can someone suggest a web based jukebox app that wil play music on the server and not stream it to the client system?
+2008-06-12T02:55:00.000Z	puff	ActionParsnip	Depends on what you're using to play tunes on the server, but I recall that when shoutcast andicecast and those things came around, there were a half dozen or more web interfaces for them.
+2008-06-12T02:56:00.000Z	ActionParsnip	puff	Im open to suggestion
+2008-06-12T02:56:00.000Z	ActionParsnip	puff	i got a music library and want a web based way to control them if possible :)
+2008-06-12T02:56:00.000Z	puff	ActionParsnip	Well, what are you using to play the audio?  Google on that and "web interface"
+2008-06-12T02:57:00.000Z	ActionParsnip	puff	 ok cool :)
+2008-10-28T13:30:00.000Z	ActionParsnip	puff	both are free ;)
+2008-10-28T13:30:00.000Z	puff	ActionParsnip	Yeah, but his time isn't :-).
+2008-10-28T13:31:00.000Z	ActionParsnip	puff	hence the ;)
+2009-03-29T17:08:00.000Z	ActionParsnip	puff	you can edit /etc/network/interfaces
+2009-03-29T17:08:00.000Z	puff	ActionParsnip	I did, but when I rebooted the thumb drive, /etc/network/interfaces was back to what it had been.
+2009-03-29T17:09:00.000Z	ActionParsnip	puff	you could chmod it 555 to make it read only
+2009-03-29T17:10:00.000Z	ActionParsnip	puff	if you have zero need for dhcp then you could
+2009-03-29T17:10:00.000Z	puff	ActionParsnip	I'd rather not.
+2009-12-08T04:19:00.000Z	ActionParsnip	puff	you can remove the old ones if you wish
+2009-12-08T04:21:00.000Z	ActionParsnip	puff	dont remove the current kernel
+2009-12-08T04:22:00.000Z	puff	ActionParsnip	I assume that's the most recent?  Apt is giving me warnings about linux-restricted-modules-etc, version numbers match the kernel numbers, I guess the libs depend on the kernels.
+2009-12-08T04:23:00.000Z	ActionParsnip	puff	no, the one you are running. you can se it with: uname -a
+2009-12-08T04:23:00.000Z	puff	ActionParsnip	 That is, a) is it safe to assume that the highest version number, -15, is the most recent and is also the current kernel,
+2009-12-08T04:24:00.000Z	puff	ActionParsnip	AH, yeah, that's -15.
+2009-12-08T04:24:00.000Z	puff	ActionParsnip	 and b) apt is warning me that removing the old kernels will break the linux-restricted-modules packages that have the same version numbers;  is it safe to just remove them?
+2009-12-08T04:26:00.000Z	ActionParsnip	puff	you can remove the currently none running kernels, you will also need to remove the kernel modules as they will be redundant
+2009-12-08T04:28:00.000Z	puff	ActionParsnip	Cool.
+2009-12-08T04:29:00.000Z	puff	ActionParsnip	Thanks.
+2010-08-26T07:24:00.000Z	ActionParsnip	puff	it also chews ram like a fat kid at a free pie buffet
+2010-08-26T07:25:00.000Z	ActionParsnip	puff	try deadbeef, its badass
+2010-08-31T03:48:00.000Z	ActionParsnip	puff	remove the boot options in the quotes in /etc/default/grub
+2010-08-31T03:49:00.000Z	ActionParsnip	puff	the: quiet splash   text, then save the file and run: sudo update-grub   to apply the setting
+2011-05-28T23:07:00.000Z	puff	ActionParsnip	Ah, okay, the "disk" part mislead me :-).
+2011-05-28T23:09:00.000Z	puff	ActionParsnip	Also, I wanted to check and make sure the download is complete, it seems a tad bit undersized.  But I can't seem to find the md5sums for the downloads in ubuntu.com/download/ubuntu/download.
+2011-05-28T23:09:00.000Z	puff	ActionParsnip	Thanks!
+2011-11-14T02:09:00.000Z	ActionParsnip	puff	try:  killall pulseaudio; rm -r ~/.pulse; rm -r ~/.pulse-cookie
+2011-11-14T02:12:00.000Z	puff	ActionParsnip	And then what, reboot?
+2011-11-14T02:13:00.000Z	puff	ActionParsnip	Or restart pulseaudio?
+2011-11-14T02:13:00.000Z	ActionParsnip	puff	pulseaudio restarts itself :), try some sound apps
+2011-11-14T02:13:00.000Z	puff	ActionParsnip	Still nothing.
+2011-11-14T02:14:00.000Z	ActionParsnip	puff	if you run:   alsamixer     are all levels cranked and unmuted?
+2011-11-14T02:14:00.000Z	puff	ActionParsnip	Everything except analog mic boost.
+2011-11-14T02:14:00.000Z	puff	ActionParsnip	 I don't see any sign of mute, how do i turn it on/.off?
+2011-11-14T02:15:00.000Z	ActionParsnip	puff	all I can suggest is a reboot, my sound troubleshooting is basic at best
+2011-12-14T20:12:00.000Z	ActionParsnip	puff	groovsharke maybe
+2011-12-14T20:12:00.000Z	ActionParsnip	puff	musictube too (costs 9 euros but very worth it)
+2011-12-14T22:26:00.000Z	ActionParsnip	puff	it's layers really, simple stuff
+2012-01-07T05:38:00.000Z	ActionParsnip	puff	it should work, you will pull in all the deps you need, is there no 64bit deb?
+2012-01-07T05:46:00.000Z	puff	ActionParsnip	I got an odd error when I tried to "dpkg -i" the .deb I manually downloaded.   When I tried to add the partner repo via aptitude, aptitude update choked on updating extras AND on security.  Somebody elsenet suggested using synaptic and letting it pick a better mirror, that seems to work and it found skype i386 so I'm trying that.
+2012-01-07T06:20:00.000Z	ActionParsnip	puff	can you give a pastebin of the output of:  sudo apt-get update
+2012-01-07T06:21:00.000Z	puff	ActionParsnip	Sure, I'll have to cancel synaptic's update though.
+2012-01-07T06:21:00.000Z	ActionParsnip	puff	let it finish, then we can continue
+2012-01-07T06:21:00.000Z	puff	ActionParsnip	waiting for aptitude to finish now...
+2012-01-07T06:35:00.000Z	puff	ActionParsnip	*still* waiting for aptitude to finish updating.
+2012-01-07T06:36:00.000Z	puff	ActionParsnip	http://pastebin.com/Bia7U6zq
+2012-01-07T06:39:00.000Z	ActionParsnip	puff	tried switching to the main server?
+2012-01-07T06:43:00.000Z	puff	ActionParsnip	I started with the main server.
+2012-01-07T06:44:00.000Z	puff	ActionParsnip	Saw the same problem, trie to fi it by having synaptic select the best mirror, same problem.
+2012-01-07T06:50:00.000Z	puff	ActionParsnip	The aptitude udpate finally ended, with an error: http://pastebin.com/SQmRWm9p
+2012-01-07T06:51:00.000Z	ActionParsnip	puff	do you have software centre open or are updates running?
+2012-01-07T06:51:00.000Z	puff	ActionParsnip	Nope.
+2012-01-07T06:53:00.000Z	puff	ActionParsnip	hm, no visible output, but... trying aptitude update again.
+2012-01-07T06:56:00.000Z	puff	ActionParsnip	Hm, similar errors so far.
+2012-01-07T06:56:00.000Z	ActionParsnip	puff	tried a reboot?
+2012-01-07T07:05:00.000Z	puff	ActionParsnip	Yeah, though I guess I could reboot again.
+2012-01-07T07:17:00.000Z	puff	ActionParsnip	I started trying to install skype client from the deb from their site; it was installing but when I tried to run it I go ta wierd error (something about the file not being there, but of course /usr/bin/skype *was* there).  So I rebooted, then remove/purged skype, then downloaded the deb again, but when I tried to run the deb I got an odd error.  I tried adding the Canonical Partner repo to install skype that way
+2012-01-07T07:18:00.000Z	ActionParsnip	puff	try:  sudo apt-get -f install
+2012-01-07T07:19:00.000Z	ActionParsnip	puff	remember to match the arch of the deb to the arch of your ubuntu install (this isn't always the arch of your cpu as you can run 32bit OS on 64bit CPU)
+2012-01-07T07:24:00.000Z	puff	ActionParsnip	Yeah, I'm running 64 bit oneiric, I tried the 64 bit skype deb, now with using the canonical partenrs repo, all I see is i386.
+2012-01-07T07:31:00.000Z	ActionParsnip	puff	yeah the repos install 32bit, grab the 64bit deb from skype site
+2012-01-07T07:33:00.000Z	puff	ActionParsnip	the URL alien2050 linked seems to suggest it's not good to install the 64 bit from the skype site.
+2012-01-07T07:59:00.000Z	ActionParsnip	puff	have you disabled IPv6? Did you run speedtest 3 times?
+2012-01-07T07:59:00.000Z	puff	ActionParsnip	No, and no.
+2012-01-07T07:59:00.000Z	ActionParsnip	puff	speedtest is your WEB speed, not LAN speed. You could have N speed wifi to a 2Mbps internet link and speedtest would show you with 2Mb connection
+2012-01-07T08:00:00.000Z	ActionParsnip	puff	always run speedtest 3 times, makes for better results, disabling ipv6 can help speed a little
+2012-01-07T08:00:00.000Z	puff	ActionParsnip	I'm not too worried about LA?N speed, just about how fast my pipe is.
+2012-01-07T08:00:00.000Z	puff	ActionParsnip	How do I disable ipv6?
+2012-01-07T08:01:00.000Z	ActionParsnip	puff	add the boot option:  ipv6.disable=1
+2012-01-07T08:05:00.000Z	puff	ActionParsnip	Do you still need a crossover cable to do the sort of thing roadfish is trying to do?
+2012-01-07T08:06:00.000Z	ActionParsnip	puff	yes as it is p2p
+2012-01-07T08:10:00.000Z	puff	ActionParsnip	One possibility with my troubles, I replaced the apple airport with a mikrotik rb751u (http://routerboard.com/RB751U-2HnD) so there may be some problem with that.
+2012-01-07T08:11:00.000Z	puff	ActionParsnip	Blah, it's 10pm now, I've been wranlging with this for hours, I think it's time to sleep on it and take a fresh look in the morning.  Much thanks for your help.
+2012-10-21T04:31:00.000Z	ActionParsnip	puff	you could grab the debs yourself for your arch and install them manually
+2012-10-21T04:33:00.000Z	puff	ActionParsnip	Doh, I just realized, that page says "Status: Deleted"
+2012-10-21T04:35:00.000Z	puff	ActionParsnip	"Deleted, see this debian bug... written in russian"
+2012-10-21T04:35:00.000Z	puff	ActionParsnip	My CPU is a Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz, so that would be i386?
+2012-10-21T04:37:00.000Z	ActionParsnip	puff	run:  uname -m
+2012-10-21T04:37:00.000Z	ActionParsnip	puff	a 64bit CPU can run both 64bit and 32bit OS
+2012-10-21T04:37:00.000Z	ActionParsnip	puff	so stating the CPU is only half useful :)
+2012-10-21T04:37:00.000Z	puff	ActionParsnip	I seem to recall some confusing strangeness with the architectures, back when I installed this thing.
+2012-10-21T04:37:00.000Z	ActionParsnip	puff	your OS is 64bit
+2012-10-21T04:37:00.000Z	puff	ActionParsnip	Yup.
+2012-10-21T04:38:00.000Z	puff	ActionParsnip	ISTR some weirdness where despite it being intel I had to use an amd64 downlaod of some sort :-)
+2012-10-21T04:38:00.000Z	ActionParsnip	puff	so you'll want a 64bit deb of the package
+2012-10-21T04:38:00.000Z	ActionParsnip	puff	its just an old name that stuck
+2012-10-21T04:38:00.000Z	ActionParsnip	puff	it's like 'IDE hard drive' and so forth
+2012-10-21T04:39:00.000Z	puff	ActionParsnip	Yes, but still confusing.  So the question is, where/how do I *find* the 64bit deb of that package?  I'm here:  https://launchpad.net/ubuntu/oneiric/i386/libxprintapputil1/1:1.0.1.xsf1-3
+2012-10-21T04:40:00.000Z	ActionParsnip	puff	not sure really, you may need to build it
+2012-10-21T04:41:00.000Z	puff	ActionParsnip	Hm, so I just tweaked the URL, subbed amd64 for i386:  https://launchpad.net/ubuntu/oneiric/amd64/libxprintapputil1/1:1.0.1.xsf1-3
+2012-10-21T04:42:00.000Z	puff	ActionParsnip	It says there it's a binary from the natty release... think that'll matter?
+2012-10-21T04:43:00.000Z	puff	ActionParsnip	And the other package, libxprintutil1, says it's a build from maverick.

@@ -1,0 +1,95 @@
+2006-12-27T06:31:00.000Z	mwe		can't you just sudo aptitude install xfce4?
+2006-12-27T06:32:00.000Z	mwe		I think so
+2006-12-27T06:32:00.000Z	adaptr	mwe	that's not as easy as you make it sound.. xfce is composed of a few dozen packages
+2006-12-27T06:32:00.000Z	mwe	adaptr	I know
+2006-12-27T06:32:00.000Z	mwe	adaptr	it's a meta package providing the needed parts though
+2006-12-27T06:33:00.000Z	adaptr	mwe	well, if you're sure... but that won;t get you the required changes in system startup thatthe xubuntu package provides...
+2006-12-27T06:33:00.000Z	mwe	adaptr	what changes?
+2006-12-27T06:33:00.000Z	mwe	adaptr	you just install it then choose xfce at the login manager
+2006-12-27T06:34:00.000Z	adaptr	mwe	you have done this ?
+2006-12-27T06:34:00.000Z	mwe	adaptr	I've done it with fluxbox
+2006-12-27T06:34:00.000Z	mwe	adaptr	I believe all window managers provide an entry to gdm
+2006-12-27T06:51:00.000Z	adaptr	mwe	I'd choose torsmo instead of conky though...
+2006-12-27T06:52:00.000Z	mwe	adaptr	what's torsmo?
+2006-12-27T06:53:00.000Z	mwe	adaptr	it said it doesn't know it
+2006-12-27T06:54:00.000Z	adaptr	mwe	http://torsmo.sourceforge.net/
+2006-12-27T06:55:00.000Z	mwe	adaptr	I haven't heard of it before. they need to fix their homepage to get rid of the warnings though
+2007-01-07T07:36:00.000Z	mwe	adaptr	is that a good idea if it's locked because another program is using it?
+2007-01-07T07:37:00.000Z	adaptr	mwe	he says he's in a terminal, and I am assuming he is *not* running X, or else he could just close synaptic
+2007-01-07T07:37:00.000Z	adaptr	mwe	so the only processes running that could hold the lock should be defunct or orphaned
+2007-01-07T07:37:00.000Z	mwe	adaptr	ther could be an active X session on the same machine
+2007-01-07T07:38:00.000Z	adaptr	mwe	then he could just switch to it
+2007-01-07T07:39:00.000Z	mwe	adaptr	if he's logged in through ssh he do that
+2007-01-07T07:49:00.000Z	adaptr	mwe	above the enter key, usually
+2007-01-07T07:55:00.000Z	adaptr	mwe	nya nya nya ..nyer :)
+2007-01-07T08:02:00.000Z	adaptr	mwe	I'd make that "sudo apt-get install apache"
+2007-01-07T08:02:00.000Z	mwe	adaptr	I see
+2007-01-07T08:05:00.000Z	mwe	adaptr	you prefer apache 1 ?
+2007-01-07T08:06:00.000Z	adaptr	mwe	hum.. okay, so use apache2 instead, but I don't see why you would use aptitude, if that is even possible with command-line arguments
+2007-01-07T08:06:00.000Z	mwe	adaptr	it is indeed possible
+2007-01-07T08:07:00.000Z	adaptr	mwe	and aptitude uses its default dependency checking this way ? because that *would* make it useful... nothing else would
+2007-01-07T08:07:00.000Z	mwe	adaptr	and IMO it's superiour to apt-get as it allows proper uninstallation of automatically installed dependencies
+2007-01-07T08:07:00.000Z	adaptr	mwe	that's what I meant by "dependency checking", yeah :)
+2007-01-07T08:08:00.000Z	mwe	adaptr	it does
+2007-01-07T08:27:00.000Z	adaptr	mwe	actually, it works for all three of them at the same time, which may not be what you want if you've got more than one installed
+2007-01-07T08:27:00.000Z	mwe	adaptr	it doesn't matter
+2007-01-07T08:28:00.000Z	mwe	adaptr	it works as the ones that are not default will just exit without doing anything
+2007-01-07T08:53:00.000Z	adaptr	mwe	not on debian
+2007-01-07T08:53:00.000Z	adaptr	mwe	adduser is a front-end to useradd, which asks you for all info and doesn't require you to remember all the switches
+2007-01-07T08:54:00.000Z	mwe	adaptr	I thought it was the other way around. I find the similar names hard to remember which is which
+2007-01-07T08:55:00.000Z	adaptr	mwe	well, think of it this way - useradd is the *nix command of old, usually recognised by the form "object-action"
+2007-01-07T08:55:00.000Z	adaptr	mwe	the new-bie friendly way is usually more windoze-oriented, "action-object"
+2007-01-07T08:55:00.000Z	mwe	adaptr	yeah ;)
+2007-01-07T08:56:00.000Z	adaptr	mwe	most *nix commands follow that pattern
+2007-01-07T13:22:00.000Z	mwe	adaptr	I wouldn't run edgy on a public server
+2007-01-07T13:22:00.000Z	adaptr	mwe	I understand, don't get your shirt up...
+2007-01-07T13:18:00.000Z	adaptr	mwe	www-data for both
+2007-01-07T13:19:00.000Z	adaptr	mwe	don't need to check
+2007-01-07T13:20:00.000Z	mwe	adaptr	did you see that? it changed in 6.10
+2007-01-07T13:21:00.000Z	adaptr	mwe	I was mistaken, it is also root:root in dapper; I was thinking of the running user, not the permissions...
+2007-01-07T13:21:00.000Z	adaptr	mwe	edgy for a server ? brrr
+2007-01-07T13:21:00.000Z	mwe	adaptr	it's not a server
+2007-01-07T13:21:00.000Z	mwe	adaptr	I use it to test some php scripts and stuff
+2007-01-07T13:21:00.000Z	adaptr	mwe	if you run apache, by definition :)
+2007-01-07T13:22:00.000Z	mwe	adaptr	it's only listening to localhost
+2007-01-07T13:22:00.000Z	mwe	adaptr	huh
+2007-01-07T13:22:00.000Z	mwe	adaptr	it's a server to localhost only.
+2007-01-10T17:49:00.000Z	adaptr	mwe	not so fast... look through the possible tune2fs options for ext3 and you'll see there is a lot of room for argument; strictly, ext3 is an extension of ext2, and not a real FS in its own right - proven by the fact that you can always mount an ext3 partition as if it were ext2
+2007-01-10T16:29:00.000Z	adaptr	mwe	careful with the "should" there :)
+2007-01-21T14:08:00.000Z	adaptr	mwe	and ctrl-alt f*7* to get back.. dude!
+2007-01-21T14:09:00.000Z	mwe	adaptr	right ;)
+2007-01-21T14:12:00.000Z	adaptr	mwe	yeah ? i'll check it out then, thanks
+2007-01-21T14:12:00.000Z	mwe	adaptr	you can't 'scroll down' in top. AFAIK
+2007-01-21T14:12:00.000Z	adaptr	mwe	true.. very true :(
+2007-01-21T14:12:00.000Z	mwe	adaptr	htop is the next level
+2007-05-28T15:35:00.000Z	mwe	adaptr	what does free say?
+2007-05-28T15:35:00.000Z	adaptr	mwe	I have 2GB in this box, and it's using 760MB right now, for FF, Konversation, TB, a few shells, and stuff
+2007-05-28T15:35:00.000Z	mwe	adaptr	some of that must be cached
+2007-05-28T15:35:00.000Z	mwe	adaptr	if not it's crazy
+2007-05-28T15:35:00.000Z	adaptr	mwe	huh ?
+2007-05-28T15:36:00.000Z	adaptr	mwe	free says 778 used
+2007-05-28T15:36:00.000Z	mwe	adaptr	cached?
+2007-05-28T15:36:00.000Z	mwe	adaptr	last field
+2007-05-28T15:37:00.000Z	adaptr	mwe	I know how free works, trust me
+2007-05-28T15:37:00.000Z	mwe	adaptr	what does the cached field say?
+2007-05-28T15:37:00.000Z	adaptr	mwe	1054MB cached
+2007-05-28T15:37:00.000Z	mwe	adaptr	ok
+2007-05-28T15:38:00.000Z	mwe	adaptr	because the cached memory is actually free memory
+2007-05-28T15:38:00.000Z	adaptr	mwe	and ?
+2007-05-28T15:38:00.000Z	adaptr	mwe	no, it's not, thank $
+2007-05-28T15:39:00.000Z	mwe	adaptr	cached memory is free. if you open firefox and close it right away the memory will be cached so it will open fast next time you open it. if another program needs that memory it will get it
+2007-05-28T15:40:00.000Z	adaptr	mwe	and you are telling me this because ?
+2007-05-28T15:45:00.000Z	mwe	adaptr	I was trying to point out that some of the memory that free reports as used is actually availble
+2007-05-28T15:46:00.000Z	adaptr	mwe	and I told you early on that I know very well how free works
+2007-05-28T15:47:00.000Z	adaptr	mwe	I reported what I knew to be the case: my box is using ~780MB of real RAM
+2007-05-28T15:47:00.000Z	mwe	adaptr	I see, so the-/+ buffers/cache row confirms that I guess
+2007-05-28T15:47:00.000Z	adaptr	mwe	confirms what ?
+2007-05-28T15:48:00.000Z	mwe	adaptr	that 780 MB is used
+2007-05-28T15:48:00.000Z	adaptr	mwe	that's what sys monitor tells me, and it does report the actual amount used
+2007-05-28T15:49:00.000Z	mwe	adaptr	it's just crazy. I have firefox a few terminal, xchat and gnome running, using 198MB of RAM on this laptop. 780 MB sounds crazy to me. that's all
+2007-05-28T15:50:00.000Z	adaptr	mwe	well, just remember that Linux will use what it has - the actual amount of virtual memory assigned to any process is governed by a number of factors, the premier one being vm.swappiness, which determines the balance between RAM and swap used for any process
+2007-05-28T15:51:00.000Z	adaptr	mwe	if you look at the amount of virtual memory used by, let's say, FF, you will see that it quickly consumes up to 1GB of VM
+2007-05-28T15:52:00.000Z	mwe	adaptr	yes ;)
+2007-05-28T15:53:00.000Z	mwe	adaptr	I guess I'll go ahead and install it on the machine with 256MB of ram and see how it goes
+2007-05-28T15:53:00.000Z	mwe	adaptr	I'll switch to xubuntu if it get's slow
+2007-05-28T15:53:00.000Z	adaptr	mwe	the reason you generally have more memory used as cache than as resident memory is that - up to the point where you run so  any programs that it needs more RAM - caching is also considered very important, and it is

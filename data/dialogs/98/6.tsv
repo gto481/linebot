@@ -1,0 +1,98 @@
+2010-11-26T07:07:00.000Z	Serebro	soreau	yes.
+2010-11-26T07:00:00.000Z	soreau	Serebro	Possible kernel issue. Is it causing a particular problem?
+2010-11-26T07:01:00.000Z	soreau	Serebro	At what point in the boot process?
+2010-11-26T07:02:00.000Z	soreau	Serebro	Can you pastebin syslog?
+2010-11-26T07:03:00.000Z	soreau	Serebro	Try mounting the file system and find /var/log/messages
+2010-11-26T07:04:00.000Z	soreau	Serebro	btw, is this an upgrade or clean install?
+2010-11-26T07:04:00.000Z	Serebro	soreau	was an upgrade, but I did a clean install on a different physical drive/partition and got same issue.
+2010-11-26T07:05:00.000Z	soreau	Serebro	But the live cd works of the same version of ubuntu?
+2010-11-26T07:06:00.000Z	Serebro	soreau	LiveCD is the only one I could find--it's a 10.10 RC
+2010-11-26T07:07:00.000Z	soreau	Serebro	So it works on a live cd until you install it, then it boots to black screen?
+2010-11-26T07:07:00.000Z	soreau	Serebro	Have you tried burning the officially released version of 10.10 and installing from that?
+2010-11-26T07:08:00.000Z	Serebro	soreau	Brasero doesn't want to work to do so--one optical drive. :p
+2010-11-26T07:08:00.000Z	soreau	Serebro	Have you run apt-get update/upgrade from the recovery mode?
+2010-11-26T07:09:00.000Z	Serebro	soreau	gotta figure out how to get into recovery mode first... :p
+2010-11-26T07:09:00.000Z	soreau	Serebro	When you boot your machine, you should be able to get to the grub menu and it should list ubuntu, one with recovery mode and an entry for memory test
+2010-11-26T07:10:00.000Z	Serebro	soreau	ah, right, I can get there.
+2010-11-26T07:10:00.000Z	soreau	Serebro	Then when you boot into recovery mode, select the option to boot to a root prompt and run apt-get update/upgrade etc
+2010-11-26T07:11:00.000Z	Serebro	soreau	gonna be here for a while so I can run/do that? (One computer available atm.)
+2010-11-26T07:11:00.000Z	soreau	Serebro	You could do it from the live cd by chrooting into the root partition but it's a bit more involving..
+2010-11-26T07:12:00.000Z	soreau	Serebro	I suspect the problem is your kernel is out of date
+2010-11-26T07:12:00.000Z	soreau	Serebro	But without logs to review, it's hard to say
+2010-11-26T07:12:00.000Z	Serebro	soreau	log location is??
+2010-11-26T07:12:00.000Z	soreau	Serebro	/var/log/messages
+2010-11-26T07:13:00.000Z	soreau	Serebro	But make sure you get it from the mounted file system on the hard drive and not your live session log
+2010-11-26T07:13:00.000Z	Serebro	soreau	will see about pastebin asap
+2010-11-26T07:13:00.000Z	Serebro	soreau	yeah, mount drive and cd into it
+2010-11-26T07:17:00.000Z	Serebro	soreau	pastebin... http://pastebin.com/Yz8XuPXR
+2010-11-26T07:19:00.000Z	soreau	Serebro	Also pastebin the X log and the output of lspci -v
+2010-11-26T07:19:00.000Z	Serebro	soreau	location of x log?
+2010-11-26T07:20:00.000Z	soreau	Serebro	/var/log/Xorg.0.log
+2010-11-26T07:23:00.000Z	soreau	Serebro	That log looks suspiciously like the live session log and not the one from the hard drive file system..
+2010-11-26T07:24:00.000Z	soreau	Serebro	ok
+2010-11-26T07:25:00.000Z	soreau	Serebro	Alright, I will look at these logs. In the meantime, go ahead and see what happens when you boot into recovery mode and run 'apt-get update && apt-get upgrade'.
+2010-11-26T07:25:00.000Z	Serebro	soreau	okay, will do.
+2010-11-26T07:58:00.000Z	soreau	Serebro	After it installed all the updates you rebooted again and reran update/upgrade until it had nothing left to update?
+2010-11-26T07:58:00.000Z	soreau	Serebro	Also this is the log from the live session because it says the kernel is from /casper (when it should be from /boot)
+2010-11-26T08:00:00.000Z	soreau	Serebro	At the top of the file it says the BOOT_IMAGE= and it should be from /boot, not /casper
+2010-11-26T08:03:00.000Z	Serebro	soreau	will check and make sure I get the right ones this time. which files besides the Xorg.0.log?
+2010-11-26T08:03:00.000Z	soreau	Serebro	/var/log/messages
+2010-11-26T08:03:00.000Z	Serebro	soreau	thanks, will get them
+2010-11-26T08:03:00.000Z	soreau	Serebro	It will end up being /mount/point/var/log/blah/blah
+2010-11-26T08:04:00.000Z	soreau	Serebro	Simply type 'mount' to see what's mounted and to where
+2010-11-26T08:05:00.000Z	Serebro	soreau	I'm at /media/4f3b0f89-561e-41d7-85f9-90ada3b1e387/var/log, should get the right file by just getting messages now. ;)
+2010-11-26T08:05:00.000Z	soreau	Serebro	right.
+2010-11-26T08:07:00.000Z	Serebro	soreau	messages: http://pastebin.com/AGnwabBm
+2010-11-26T08:10:00.000Z	Serebro	soreau	shouldn't need a new lspci -v, right?
+2010-11-26T08:10:00.000Z	soreau	Serebro	Right, lspci output will be the same regardless
+2010-11-26T08:10:00.000Z	soreau	Serebro	These files show you have X.org server from 10.04 but kernel from 10.10 AFAICT
+2010-11-26T08:11:00.000Z	soreau	Serebro	And it never loads the intel_agp module
+2010-11-26T08:11:00.000Z	Serebro	soreau	So how do I get it straightened out?
+2010-11-26T08:12:00.000Z	soreau	Serebro	The fact that it's working on a live cd and not on the hard drive installation simply indicates a broken installation
+2010-11-26T08:12:00.000Z	soreau	Serebro	However it's strange if it does not work after you've reinstalled it.
+2010-11-26T08:13:00.000Z	soreau	Serebro	I think it's possible that you installed fresh but never actually booted into that fresh installation
+2010-11-26T08:13:00.000Z	soreau	Serebro	Since you left the faulty installation around, you probably just booted into that one again </suspecting>
+2010-11-26T08:14:00.000Z	soreau	Serebro	I would suggest checking /etc/apt/sources/list and making sure all of the uncommented entries are all for maverick and none for lucid, or any other spurious repo
+2010-11-26T08:15:00.000Z	Serebro	soreau	This started as an automatic upgrade... and then an install to /dev/sdb5 instead of the original on /dev/sde5. I'll check that now.
+2010-11-26T08:17:00.000Z	Serebro	soreau	all uncommented sources are Lucid, not Maverick.
+2010-11-26T08:18:00.000Z	soreau	Serebro	Well somewhere along the line you got a maverick kernel installed
+2010-11-26T08:19:00.000Z	Serebro	soreau	I was told by a friend NOT to upgrade to Maverick due to the problems with Intel chips.  Would a complete wipe and reinstall of the partition hopefully fix that?
+2010-11-26T08:20:00.000Z	soreau	Serebro	Upgrades are generally problematic from my experience with ubuntu. I suspect if you change all instances of 'lucid' to 'maverick' (preferably using a auto-replace feature in a text editor) and re-run 'apt-get update/upgrade/dist-upgrade', it's possible you will get a working system
+2010-11-26T08:21:00.000Z	soreau	Serebro	It will take awhile to download and install everything but the sure fire way would be to just do a clean install of maverick (preferably with the officially released installer image) since it's working fine with the live session already
+2010-11-26T08:22:00.000Z	soreau	Serebro	Either way, I think you will figure it out ;)
+2010-11-26T08:23:00.000Z	Serebro	soreau	Okay, will try the repo switch, then a reinstall. If neither works, I'll see you guys in an hour or two.
+2010-11-26T08:25:00.000Z	soreau	Serebro	Best of wishes
+2010-11-26T08:26:00.000Z	Serebro	soreau	seriously on the Radeon? I've been thinking about a graphics card, but couldn't find an Nvidia that wasn't showing up with lots of problems.
+2010-11-26T08:27:00.000Z	Serebro	soreau	awesome, I'll check some out soon. :)
+2010-11-26T08:27:00.000Z	soreau	Serebro	Yes, seriously. They already have support upstream for HD5xxx and HD6xxx cards
+2010-11-26T08:39:00.000Z	Serebro	soreau	got logged into a graphical session that's not a LiveCD. Will only allow a partial upgrade.
+2010-11-26T08:54:00.000Z	soreau	Serebro	Did you get anywhere with your installation yet?
+2010-11-26T08:56:00.000Z	Serebro	soreau	got booted into a graphical desktop, which at least helps me get the new release version DL'd and burned...but it's going to take an hour to finish DL'ing, then the install time.
+2010-11-26T08:56:00.000Z	soreau	Serebro	Ah ok
+2010-11-26T08:56:00.000Z	Serebro	soreau	so...I'm hanging out to try and pick up a little more knowledge. ;)
+2010-11-26T09:03:00.000Z	Serebro	soreau	what does lspci list? all pci interfaces? (told you, pretty newb to this)
+2010-11-26T09:03:00.000Z	soreau	Serebro	Yes. ls means list and pci refers to the PCI bus
+2010-11-26T09:04:00.000Z	soreau	Serebro	Of course 'ls' is for listing file and directory information while lsusb lists devices on the USB bus
+2010-11-26T09:04:00.000Z	Serebro	soreau	I was pretty sure ls was list. :) just trying to get a couple more pieces of the puzzle that is command-line stuff figured out.
+2010-11-26T09:06:00.000Z	soreau	Serebro	lspci and lsusb are invaluable for identifying hardware connected to your system
+2010-11-26T09:06:00.000Z	Serebro	soreau	I've used lsusb before, getting my gamepad to work and troubleshooting a usb headset.
+2010-11-26T09:07:00.000Z	soreau	Serebro	Ah, fun times. I built an interface circuit for my controllers and fixed the linux driver (and later added rumble support for it ;)
+2010-11-26T09:08:00.000Z	Serebro	soreau	nice--I don't think the rumble support's available yet, is it?
+2010-11-26T09:09:00.000Z	soreau	Serebro	There is no 'the rumble support'. Force feedback is specific to each and every device that has such a fefature
+2010-11-26T09:39:00.000Z	Serebro	soreau	thanks, gonna explore that one.
+2010-11-26T09:10:00.000Z	soreau	Serebro	So far as the linux kernel is concerned, it definitely has force feedback support for all kinds of input devices
+2010-11-26T09:11:00.000Z	Serebro	soreau	sometime, I'll ask you how to enable it for a Logitech RumblePad 2 (USB, wired)
+2010-11-26T09:12:00.000Z	soreau	Serebro	I might not be here sometime :P
+2010-11-26T09:12:00.000Z	Serebro	soreau	fair enough. :)
+2010-11-26T09:19:00.000Z	Serebro	soreau	it at least used to work more regularly. :p
+2010-11-26T09:37:00.000Z	Serebro	soreau	where was that apt-sources list again? curious to see if the other drive had the same issue.
+2010-11-26T09:38:00.000Z	soreau	Serebro	/etc/apt/sources.list
+2010-11-26T09:42:00.000Z	Serebro	soreau	same issue on that one...maverick kernel, lucid sources. Wonder if I can boot right in and get my system working again now...
+2010-11-26T09:42:00.000Z	soreau	Serebro	It's very possible
+2010-11-26T09:43:00.000Z	Serebro	soreau	gonna wait till this Maverick CD finishes DLing anyway, and get it burned to disk so I have one. ;)
+2010-11-26T09:43:00.000Z	soreau	Serebro	Never a bad idea. I still do that once every 6 months ;)
+2010-11-26T09:43:00.000Z	Serebro	soreau	should be interesting to see if it doesn't, though.
+2010-11-26T09:57:00.000Z	Serebro	soreau	burning disc, bbiaf and let you know what happened when booting other install with tweaked sources.list
+2010-11-26T09:58:00.000Z	soreau	Serebro	You have to run apt-get update/upgrade to get the effects of a changed sources.list file
+2010-11-26T09:59:00.000Z	soreau	Serebro	And probably want to use apt-get dist-upgrade since you are upgrading the distro
+2010-11-26T10:00:00.000Z	Serebro	soreau	thanks, will do. Cd's about done, gonna reboot into rescue mode/root term and then apt-get update, apt-get dist-upgrade. *crosses fingers*

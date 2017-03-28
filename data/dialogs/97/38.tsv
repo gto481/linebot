@@ -1,0 +1,97 @@
+2009-08-21T18:59:00.000Z	Dr_Willis		it was the kernel you were using befor..
+2009-08-21T19:00:00.000Z	Dr_Willis		 You srue about that grawity ?  ive never seen a space in there befor.
+2009-08-21T19:00:00.000Z	llutz	Dr_Willis	it is allowed
+2009-08-22T15:05:00.000Z	llutz	Dr_Willis	he want to hibernate
+2009-09-01T17:44:00.000Z	Dr_Willis	llutz	 ps ax | grep  -> the basics. :)
+2009-09-01T17:44:00.000Z	llutz	Dr_Willis	naa, too much typing
+2009-11-06T20:18:00.000Z	llutz	Dr_Willis	udf shouldn't be a problem for linux-systems today
+2009-11-06T20:18:00.000Z	Dr_Willis	llutz	 ive still heard of issues with it.
+2009-11-09T19:16:00.000Z	Dr_Willis	llutz	 in 9.10- gdm is handled by upstart   best to use 'service gdm restart'
+2009-11-13T18:55:00.000Z	Dr_Willis	llutz	  I think the xchat-gnome has them auto joining.
+2009-11-13T22:28:00.000Z	llutz	Dr_Willis	it's more than just mkfs
+2009-11-13T23:21:00.000Z	Dr_Willis	llutz	 I Told my wife that.. and it took her  a wile to figure it out and yell at me. :)
+2009-11-13T23:21:00.000Z	llutz	Dr_Willis	there are things on earth, one should tell his wife....
+2009-11-14T00:05:00.000Z	llutz	Dr_Willis	services for unix exist
+2009-11-15T14:14:00.000Z	llutz	Dr_Willis	alazyworkaholic missed the {}
+2009-11-15T14:14:00.000Z	Dr_Willis	llutz	 that paste had  lots of extra characters in it here as well. some a's with hats and super/subscripts also :)
+2009-11-15T14:15:00.000Z	llutz	Dr_Willis	the line is: Acquire::http { Proxy “http://localhost:3142″; };
+2009-11-15T14:15:00.000Z	llutz	Dr_Willis	{} needed for apt-config-syntax
+2009-11-15T14:15:00.000Z	Dr_Willis	llutz	 i see extra chars at the end of that also. right after the 3142
+2009-11-15T14:16:00.000Z	Dr_Willis	llutz	 im using       Acquire::http::Proxy "http://cow:3142";
+2009-11-15T14:16:00.000Z	llutz	Dr_Willis	sry, replace “  with "
+2009-11-15T14:16:00.000Z	Dr_Willis	llutz	 i blame this putty client im using :)
+2009-11-15T14:17:00.000Z	Dr_Willis	llutz	so more properly it should be       Acquire::http {Proxy "http://cow:3142";};        ?
+2009-11-15T14:18:00.000Z	llutz	Dr_Willis	imho yes
+2009-11-15T14:18:00.000Z	llutz	Dr_Willis	you own a farm? ;)
+2009-11-15T14:19:00.000Z	Dr_Willis	llutz	 its a 'gateway' machine. :) thus the cow motif.
+2009-11-18T00:19:00.000Z	llutz	Dr_Willis	looking for fs-driver.org?
+2009-12-12T17:33:00.000Z	Dr_Willis	llutz	 windows training.
+2009-12-26T16:42:00.000Z	llutz	Dr_Willis	-F was taken out of shutdown in ubuntu ages ago :(
+2009-12-26T16:42:00.000Z	llutz	Dr_Willis	^touch /forcefsck
+2009-12-26T16:42:00.000Z	Dr_Willis	llutz	 yea. thats what i was thinking.
+2009-12-26T16:43:00.000Z	llutz	Dr_Willis	factoid should be corrected
+2009-12-26T18:36:00.000Z	llutz	Dr_Willis	there's also no santa? :(
+2009-12-26T18:36:00.000Z	Dr_Willis	llutz	 someone broke in to my house and put stuff under my tree last night.. and i dont think it was the tooth fairy
+2009-12-29T01:40:00.000Z	llutz	Dr_Willis	makes colors cooler
+2009-12-29T01:40:00.000Z	Dr_Willis	llutz	 just thiouight about it - the garrage has a old laptop  sitting there. :) wasent sure if i should bring it in or not.
+2009-12-29T01:41:00.000Z	Dr_Willis	llutz	 its allredy been below 32F for quite a few days
+2009-12-29T01:41:00.000Z	llutz	Dr_Willis	leave it, don't take it into warm and it will/should survive
+2009-12-29T01:42:00.000Z	Dr_Willis	llutz	 yea - its just an old Pent3, I do seem to recall some Radios i had with LCD's (b/w ones) failing to display in the spring.
+2009-12-29T01:42:00.000Z	llutz	Dr_Willis	but that was real LCD, computer use tft, nothing liquid in
+2010-01-17T11:40:00.000Z	llutz	Dr_Willis	-X for X-forwarding
+2010-01-17T12:45:00.000Z	llutz	Dr_Willis	look for freesbie
+2010-01-17T14:49:00.000Z	llutz	Dr_Willis	character device
+2010-01-18T02:17:00.000Z	llutz	Dr_Willis	wubi + wobbly windows maybe *brrrrr*
+2010-01-22T17:26:00.000Z	llutz	Dr_Willis	missed -backwards
+2010-01-22T17:26:00.000Z	Dr_Willis	llutz	 and --in-mandrin-chinese
+2010-01-22T17:42:00.000Z	Dr_Willis	llutz	 i was thinking that also.. they dont make them like they used to.
+2010-01-24T16:30:00.000Z	Dr_Willis	llutz	 pastebin.ca is not even responding here.. perhaps its under attack. :)
+2010-01-24T16:31:00.000Z	llutz	Dr_Willis	loads fine from on of my vps, odd
+2010-02-04T18:20:00.000Z	llutz	Dr_Willis	upstart seem to lack a ton of things too (yet) ;(
+2010-02-08T17:49:00.000Z	llutz	Dr_Willis	go, look for a hobby :)
+2010-02-08T17:57:00.000Z	llutz	Dr_Willis	every DE has its pro and cons, at least you will get a usable system with all of them
+2010-02-08T17:57:00.000Z	Dr_Willis	llutz	 I hear that twm is getting updated :)
+2010-02-08T17:57:00.000Z	llutz	Dr_Willis	whow, must have
+2010-02-08T17:58:00.000Z	Dr_Willis	llutz	 i think its gettting compositing support even
+2010-02-08T17:58:00.000Z	llutz	Dr_Willis	strange things are going on. i really wonder: who needs/uses that?
+2010-02-08T17:59:00.000Z	Dr_Willis	llutz	 no idea. but i noticed some of the vncserver packages still used to default to 'twm' but dident have twm as a dependency
+2010-02-28T15:37:00.000Z	llutz	Dr_Willis	^^ :)
+2010-03-24T18:54:00.000Z	llutz	Dr_Willis	thats the long-version
+2010-05-03T16:52:00.000Z	llutz	Dr_Willis	 -R "man chmod" ;)
+2010-05-03T16:52:00.000Z	Dr_Willis	llutz	 and in cp its -r ?  and scp...
+2010-05-03T16:53:00.000Z	llutz	Dr_Willis	i like  consistency
+2010-05-12T18:22:00.000Z	llutz	Dr_Willis	if you change permission on hardlinks, you'll change file-permissions too (sounds logical to me, both point to same inode)
+2010-05-12T18:22:00.000Z	Dr_Willis	llutz	 yep. Hard or soft.. changing the link. changes the orignal file here.. (from what i am seeing)
+2010-05-19T21:05:00.000Z	llutz	Dr_Willis	handles by lograte?
+2010-05-19T21:05:00.000Z	Dr_Willis	llutz	 never really noticed. I tend to clean them out befor i get too many. :) havent cleaned them in weeks...
+2010-05-30T17:10:00.000Z	llutz	Dr_Willis	tmux
+2010-05-30T17:40:00.000Z	llutz	Dr_Willis	you expect someone will read faqs?
+2010-05-31T14:50:00.000Z	Dr_Willis	llutz	 that one that dims the other windows so she stays focused on the current one is handy. and thers a feature that puts ROOT: in the title of any app running as root
+2010-05-31T20:17:00.000Z	llutz	Dr_Willis	xev
+2010-09-25T15:29:00.000Z	llutz	Dr_Willis	default bs=512
+2010-09-25T15:30:00.000Z	Dr_Willis	llutz	 guess thate better then 1
+2010-09-26T18:03:00.000Z	llutz	Dr_Willis	2.30-2,48 GHz
+2011-02-13T20:49:00.000Z	llutz	Dr_Willis	sticky /man chmod
+2011-02-13T20:49:00.000Z	llutz	Dr_Willis	i.e. default for /tmp
+2011-02-13T20:49:00.000Z	Dr_Willis	llutz	 now i have to wonder how they got the t option...
+2011-02-13T20:51:00.000Z	llutz	Dr_Willis	how is easy, chmod 1755 dir    . the "why" is more interesting :)
+2011-02-13T20:52:00.000Z	Dr_Willis	llutz	 yea. nautiuls was crashhing when i 'moved' a directory earlier. (did it several times)  i think it left it with the 't' mode.
+2011-03-05T18:27:00.000Z	llutz	Dr_Willis	don't use killall on Solaris. if you don't know the differences ;)
+2011-03-05T18:28:00.000Z	llutz	Dr_Willis	only if used as root
+2011-03-05T18:38:00.000Z	llutz	Dr_Willis	ashworth thats why they changed it into "boot-dir" with is more logic
+2011-03-05T18:40:00.000Z	Dr_Willis	llutz	 i just pasted whats in my tomboy notes on 'how i reinstall grub' :) note.
+2011-03-05T18:40:00.000Z	llutz	Dr_Willis	right, seems there will be a change in coming versions.
+2011-05-04T19:48:00.000Z	llutz	Dr_Willis	scp has no -d option
+2011-05-19T21:20:00.000Z	llutz	Dr_Willis	typo, thanks for correcting
+2011-05-28T13:14:00.000Z	Dr_Willis	llutz	 yep. scary.
+2011-05-28T13:15:00.000Z	Dr_Willis	llutz	 im used to not being listened to... im married..  :)
+2011-06-08T17:36:00.000Z	llutz	Dr_Willis	sshd_conf:  AllowHost/DenyHost you mean?
+2011-06-08T17:37:00.000Z	Dr_Willis	llutz	 yea. i just recall reading those settings files once ages ago. and the oreally book on ssh.
+2011-07-14T23:59:00.000Z	llutz	Dr_Willis	irc on phone, easier :)
+2011-07-15T00:00:00.000Z	Dr_Willis	llutz	 the android irc clients ive found so far are a bit lacking.. also ive had issues with AT*T every once in a while wont connect to freenode. due to some odd 'sasl' issue.
+2011-07-15T00:01:00.000Z	llutz	Dr_Willis	i like "yaaic", but i don't use sasl.
+2011-07-15T00:02:00.000Z	Dr_Willis	llutz	 i dont use sasl either.. but its some odd bug/network issue with AT*T and irc it seems..  the irs servers are trying to get sasl info from at*t ip. not the ip of the irc client. (or so ive researched). if i disconnect/get a new ip on the phone.. it will work..
+2011-07-15T00:02:00.000Z	Dr_Willis	llutz	 but for now im sshing, and/or using ZNC :)
+2011-07-15T00:04:00.000Z	llutz	Dr_Willis	ah ok
+2012-06-02T14:34:00.000Z	llutz	Dr_Willis	me too, google pointed me to https://wiki.ubuntu.com/Quickly
+2012-08-16T13:25:00.000Z	llutz	Dr_Willis	"we're all cloud" :)

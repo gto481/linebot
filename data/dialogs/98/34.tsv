@@ -1,0 +1,98 @@
+2008-04-09T00:20:00.000Z	Redian		Yeah, no probs there
+2008-04-09T00:21:00.000Z	Scunizi	Redian	make sure you burn at a slow speed
+2008-04-09T00:21:00.000Z	Scunizi	Redian	I burn at 4x
+2008-04-09T00:23:00.000Z	Scunizi	Redian	you have to use nicks so they highlight.
+2008-04-09T00:24:00.000Z	Redian	Scunizi	I do, but there's so much general conversation also
+2008-04-09T00:24:00.000Z	Scunizi	Redian	ya can't read it all without going buggy.
+2008-04-09T00:29:00.000Z	Scunizi	Redian	if the boot menu is screwed up .. that's Grub.. check out http://users.bigpond.net.au/hermanzone/p15.htm for an easy fix
+2008-04-09T00:34:00.000Z	Redian	Scunizi	It sounds like she's got the Disk IO Error? She just gets a black screen with a flashing white cursor...but there aren't directions for fixing it?
+2008-04-09T00:34:00.000Z	Redian	Scunizi	http://users.bigpond.net.au/hermanzone/p15.htm#Disk_IO_error_
+2008-04-09T00:36:00.000Z	Scunizi	Redian	could be just the video driver.. if she can ctrl+alt+F2 and get a user name password prompt (text based) then its probably that.
+2008-04-09T00:37:00.000Z	Redian	Scunizi	I don't think that would work, because it goes straight from BIOS to that screen, no grub screen in between...I can't imagine it being a graphics error...
+2008-04-09T00:39:00.000Z	Scunizi	Redian	ah ok.. I missed that point.. dead drive?.. bad ram?... does she have windows on this machine too? does it work.. or is Ubuntu a full install.
+2008-04-09T00:39:00.000Z	Redian	Scunizi	windows on the machine also
+2008-04-09T00:39:00.000Z	Scunizi	Redian	and it works?
+2008-04-09T00:40:00.000Z	Scunizi	Redian	did it just stop working after trying to install ubuntu?
+2008-04-09T00:40:00.000Z	Redian	Scunizi	she can't boot anything, when she presses for boot options on BIOS screen and chooses the hard drive she just gets the black screen.
+2008-04-09T00:40:00.000Z	Redian	Scunizi	Yeah, its the Ubuntu install that killed it. It sounds like the MBR got really messed up
+2008-04-09T00:41:00.000Z	Scunizi	Redian	she might need to reinstall ubuntu with a cd that is known to work..
+2008-04-09T00:41:00.000Z	Redian	Scunizi	I've given out sooo many XD
+2008-04-09T00:58:00.000Z	Redian	Scunizi	You think by changing the partitions she might be able to achieve functionality?
+2008-04-09T00:59:00.000Z	Scunizi	Redian	not necessarily.  It sounds like it just wasn't installed correctly.. she should have a GRUB menu that pops up on boot. right after bios.. that's why I suggested the previous link.. a reinstall may fix it all.
+2008-04-09T01:10:00.000Z	Redian	Scunizi	Even though it probably won't work, I'm having her delete all the faulty Linux partitions. Its almost funny, she has 7 partitions. A fat32, 3 ext3s and 3 linux swaps. >.>
+2008-04-09T01:12:00.000Z	Scunizi	Redian	THAT would cause issues.. 2 ext3s and 1 swap is all you need for linux.. 1 ext3=10-12 gigs for / (root) ... 1 swap (max 1gig)... the rest ext3 for /home
+2008-04-09T01:12:00.000Z	Redian	Scunizi	wouldn't that be nice if getting rid of the extras and resizing the windows to its original size worked?
+2008-04-09T01:13:00.000Z	Scunizi	Redian	no need to resize yet. try first.
+2008-04-09T01:13:00.000Z	Redian	Scunizi	Hmm, it won't let her edit the partitions. She can't unmount the ext3s and swaps
+2008-04-09T01:15:00.000Z	Scunizi	Redian	on reinstall when you get to the partitioning section you have to choose manual .. in there you'll be able to delete the uneeded partitions.
+2008-04-09T01:15:00.000Z	Redian	Scunizi	I have her in partition manager, that won't work?
+2008-04-09T01:16:00.000Z	Scunizi	Redian	partition manager in Windows?
+2008-04-09T01:16:00.000Z	Scunizi	Redian	or the live cd?
+2008-04-09T01:16:00.000Z	Redian	Scunizi	livecd
+2008-04-09T01:17:00.000Z	Scunizi	Redian	yes that will work.. however if you are just going to delete what's not needed then you need to know which partition has / on it and which swap is setup for the install.. better to delete them all and recreate them then reinstall.
+2008-04-09T01:17:00.000Z	Redian	Scunizi	I'm having her delete all but the windows one.
+2008-04-09T01:18:00.000Z	Redian	Scunizi	Odd thing is none of them have a boot flag, and it wouldn't let her select unmount for the partitions
+2008-04-09T01:18:00.000Z	Redian	Scunizi	without unmounting she can't delete them
+2008-04-09T01:18:00.000Z	Scunizi	Redian	that'll work... if they are not mounted you won't be able to unmount them..
+2008-04-09T01:20:00.000Z	Scunizi	Redian	 the live cd typically doesn't allow you to "see" the HD.. you could have her install gparted in the live cd if she has enough ram.. then run that.. that should be able to do it.
+2008-04-09T01:30:00.000Z	Redian	Scunizi	"Check Disk Integrity" on th eliveCD
+2008-04-09T01:21:00.000Z	Redian	Scunizi	hmm, I'm having use the install feature..
+2008-04-09T01:21:00.000Z	Scunizi	Redian	that should work.
+2008-04-09T01:23:00.000Z	Redian	Scunizi	 IS there a way she can apply the changes without creating an ext3 for linux and a linux-swap? (in the install
+2008-04-09T01:24:00.000Z	Scunizi	Redian	not that I'm aware of because she's deep into the install process.. no problem though.. delete all and then create what's actually needed and go through the install process.
+2008-04-09T01:25:00.000Z	Redian	Scunizi	How big does the ext3 need to be?
+2008-04-09T01:26:00.000Z	Scunizi	Redian	if you are not seperating / from /home then as big as you want.. You can use all the remaining space that is not taken by windows or a 1 gig /swap
+2008-04-09T01:28:00.000Z	Redian	Scunizi	I just hope the two files on the disc that are bad won't mess up her install again.
+2008-04-09T01:29:00.000Z	Scunizi	Redian	what 2 files are bad? are they in the windows side.. ? or the other side?
+2008-04-09T01:29:00.000Z	Redian	Scunizi	She checked disc integrity and she got two bad files
+2008-04-09T01:29:00.000Z	Scunizi	Redian	what did she use to check with?
+2008-04-09T01:30:00.000Z	Scunizi	Redian	ah.. ok.. well .. we'll see :)
+2008-04-09T01:40:00.000Z	Redian	Scunizi	its installing....ooooo she's at 8%, last time it failed at 58%
+2008-04-09T01:41:00.000Z	Scunizi	Redian	cross your fingers.. did she try to manually do the partitions last time? weird that she had so many.
+2008-04-09T01:42:00.000Z	Scunizi	Redian	men have logic... women have emotion..
+2008-04-09T01:42:00.000Z	Redian	Scunizi	LOL NO. Her laptop killed itself, overheat.
+2008-04-09T01:43:00.000Z	Scunizi	Redian	I was thinking of the partitioning.
+2008-04-09T01:43:00.000Z	Redian	Scunizi	...and?
+2008-04-09T01:43:00.000Z	Redian	Scunizi	Oh XD No I was LOL NOing because her computer killed itself in the middle of install, which definitely is not going to help...
+2008-04-09T01:44:00.000Z	Scunizi	Redian	It would be logical not to make too many partitions but emotionally it might make sense. :)
+2008-04-09T01:46:00.000Z	Redian	Scunizi	I have to go do my hw, but I wanted to get that resolved for her...I'll talk to you maybe some other time. If you're interested in finding out whether or not it worked, send me a message and give me your email XD
+2008-04-09T01:47:00.000Z	Scunizi	Redian	no problem.. I'm here when I can be. I"ve got a unique nick.. just shout!  :)  C Ya
+2008-04-09T02:48:00.000Z	Redian	Scunizi	FAIL xD
+2008-04-09T02:49:00.000Z	Redian	Scunizi	Just figured I'd let you know XD
+2008-04-09T02:50:00.000Z	Scunizi	Redian	arg.. if she has a windows install cd she could boot to that and go to Recovery dos prompt and run chkdsk /r or chkdsk /R or chkdsk /f. I can't remember which looks at the drive and locks out bad sectors
+2008-04-09T02:51:00.000Z	Scunizi	Redian	while there she can also do a fixmbr and maybe boot back into windows.
+2008-04-09T02:51:00.000Z	Redian	Scunizi	Burning at 4X, she does have one of those, but I don't know if I could take her through that. Not today at least...
+2008-04-09T02:52:00.000Z	Scunizi	Redian	does she need windows?  if not blow it all away.. but ..sounds like she might be due for a new hd.. they're cheep.
+2008-04-09T02:55:00.000Z	Redian	Scunizi	I'd like to convince her to make the full switch, but its like half of a family laptop, so thats another reason I was really intent on figuring this out.
+2008-04-09T02:55:00.000Z	Scunizi	Redian	so.. they each get their own account :)
+2008-04-09T02:56:00.000Z	Redian	Scunizi	I don't think I could convince them to move away from all the branded software...
+2008-04-09T02:57:00.000Z	Redian	Scunizi	The problem is I essentially caused the crash of one of 2 necessary computers in the house.
+2008-04-09T02:58:00.000Z	Scunizi	Redian	what an opportunity!  keep the software on there for a while and install FOSS versions.. for them to get use to ...So.. you're part of the family or only the enemy now? :)
+2008-04-09T03:00:00.000Z	Redian	Scunizi	Not sure, what's FOSS?
+2008-04-09T03:01:00.000Z	Scunizi	Redian	maybe I should have said Opensource
+2008-04-09T03:01:00.000Z	Redian	Scunizi	Yep, wiki look up beat you to the explanation XD
+2008-04-09T03:02:00.000Z	Redian	Scunizi	I'm gunna check this cd later if I have a chance...
+2008-04-09T03:02:00.000Z	Scunizi	Redian	I hope it works.
+2008-04-10T00:54:00.000Z	Redian	Scunizi	What should I tell her if it doesn't work....
+2008-04-10T00:55:00.000Z	Scunizi	Redian	do you have another drive lying around that you can test in her machine?  or a laptop drive that you can remove from your machine and put into hers?  that would be a good test if he issue is the drive itself
+2008-04-10T00:57:00.000Z	Redian	Scunizi	Oh boy, the only other thing I have in the way of drives...Actually I have this dell I don't use too often. In 10th grade you don't have very much at your disposal XD Maybe I'll try and install it onto my external, and then try booting off the external on her laptop.
+2008-04-10T00:58:00.000Z	Scunizi	Redian	that presents a whole new issue with getting the machine to boot from usb.. I don't know how to do that.
+2008-04-10T00:58:00.000Z	Redian	Scunizi	I'm pretty sure that's on most boot menus...
+2008-04-10T00:59:00.000Z	Redian	Scunizi	Operable from the BIOS boot menu I mean
+2008-04-10T00:59:00.000Z	Scunizi	Redian	it is but there's also something about "persistance" or maybe that's just for usb memory sticks
+2008-04-10T01:00:00.000Z	Redian	Scunizi	78%....It should make it, I just hope it corrects her boot problems.
+2008-04-10T01:00:00.000Z	Scunizi	Redian	what'd you have her do?
+2008-04-10T01:00:00.000Z	Redian	Scunizi	I had her manually set up the partitions first, then instal, I gave her a new CD this morning that I burned last night and had perfect integrity according to itself.
+2008-04-10T01:04:00.000Z	Redian	Scunizi	Finished successfully, restarting...*hearts pounding*
+2008-04-10T01:04:00.000Z	Scunizi	Redian	the suspense is killing me.
+2008-04-10T01:05:00.000Z	Redian	Scunizi	It worked, but they don't have xp anymore...
+2008-04-10T01:06:00.000Z	Redian	Scunizi	If they reinstall it, you think they'll have a problem?
+2008-04-10T01:07:00.000Z	Scunizi	Redian	before reinstalling xp try the grub fix.. or maybe someone here will know know how do edit grub and add the right path for windows.. if you have to reinstall you'll definitely have to reinstall grub
+2008-04-10T01:07:00.000Z	Redian	Scunizi	I think someone definitely gave me a linka bout it.
+2008-04-10T01:08:00.000Z	Scunizi	Redian	I just did .. for Grub.. see above.
+2008-04-10T01:17:00.000Z	Redian	Scunizi	I just hope her windows install didn't fail because of the MBR problems caused by the ubuntu install failures
+2008-04-10T01:17:00.000Z	Redian	Scunizi	Because if she reinstalls windows then grub is removed?
+2008-04-10T01:18:00.000Z	Scunizi	Redian	well.. overwritten yes.. but easy to put back and when you do you should have an entry for windows automatically put in there..
+2008-04-10T01:20:00.000Z	Redian	Scunizi	It should be the same as mine.
+2008-04-10T01:20:00.000Z	Scunizi	Redian	yep.. if you're dual booting.. /boot/grub/menu.lst
+2008-04-10T02:53:00.000Z	Redian	Scunizi	Rrg, her wireless isn't working so its hard for me to give her directions..

@@ -1,0 +1,96 @@
+2005-06-26T10:07:00.000Z	Danar		so check their page
+2005-06-26T10:09:00.000Z	Danar		how come ext3 doesn't need defragging?
+2005-06-26T10:10:00.000Z	nalioth	Danar	ext2, -3 and reiserfs 'defrag' on the fly
+2005-06-26T10:10:00.000Z	Danar	nalioth	uh, there's an ext2 defrag utility...
+2005-06-26T10:10:00.000Z	nalioth	Danar	where did you get it? and what is it written for?
+2005-06-26T10:11:00.000Z	Danar	nalioth	i just searched 'defrag' in synaptic, and there it was
+2005-07-14T16:08:00.000Z	nalioth	Danar	nvu is availabe from the nvu homepage
+2005-07-14T16:08:00.000Z	Danar	nalioth	easier to apt-get stuff. i'd rather have it in the repository
+2005-07-14T16:09:00.000Z	nalioth	Danar	at this time, nvu isnt available via repo, it will be in breezy, i believe
+2005-07-14T16:09:00.000Z	nalioth	Danar	the deb from nvu homepage installs just fine
+2005-07-14T16:10:00.000Z	nalioth	Danar	only if you are running woody
+2005-07-14T16:10:00.000Z	Danar	nalioth	er, testing
+2005-07-14T16:10:00.000Z	nalioth	Danar	is that sid or etch?
+2005-07-14T16:11:00.000Z	Danar	nalioth	whichever testing is :p
+2005-07-14T16:11:00.000Z	nalioth	Danar	probably easier to clean install ubuntu
+2005-07-14T16:12:00.000Z	Danar	nalioth	i'd prefer to be able to keep most of my settings and stuff the way they are without having to go through configurations all over again...
+2005-07-14T16:12:00.000Z	nalioth	Danar	well, from woody is the only easy option
+2005-07-14T16:12:00.000Z	Danar	nalioth	:/ woody isn't up-to-date enough
+2005-07-14T16:13:00.000Z	nalioth	Danar	understand, but the fact that it is OLD, makes the ubuntu upgrade the easiest
+2005-07-14T16:38:00.000Z	nalioth	Danar	you will have lots of version discrepancies
+2005-07-14T16:38:00.000Z	Danar	nalioth	what do you mean?
+2005-07-14T16:39:00.000Z	nalioth	Danar	sarge, sid and etch are too similar to ubuntu for a smooth transition via sources.list swap
+2005-07-14T16:40:00.000Z	Danar	nalioth	what? i would think similarity would ease the switch, not hinder it
+2005-07-14T16:40:00.000Z	nalioth	Danar	ubuntu has its own pkgs
+2005-07-14T16:40:00.000Z	nalioth	Danar	ubuntu and debian pkgs don't mix very well
+2005-07-14T16:41:00.000Z	Danar	nalioth	what's the ubuntu equivalent of testing called?
+2005-07-14T16:43:00.000Z	nalioth	Danar	i dont think there is one
+2005-07-14T16:43:00.000Z	Danar	nalioth	one what?
+2005-07-14T16:43:00.000Z	nalioth	Danar	'testing'
+2005-07-14T16:44:00.000Z	Danar	nalioth	couple birdies told me it was Breezy...
+2005-07-14T16:45:00.000Z	nalioth	Danar	then that must be it, note the /topic
+2005-07-14T16:45:00.000Z	Danar	nalioth	hrm. what's that about?
+2005-07-14T16:45:00.000Z	nalioth	Danar	yes it's stable
+2005-07-14T16:45:00.000Z	nalioth	Danar	as in "dont use breezy"?
+2005-07-14T16:45:00.000Z	Danar	nalioth	yeh, i see that. i'm asking why
+2005-07-14T16:46:00.000Z	nalioth	Danar	because breezy is in active development now and is pretty ugly for normal use
+2005-07-14T16:46:00.000Z	nalioth	Danar	its !info nautilus
+2005-07-14T16:46:00.000Z	Danar	nalioth	ah. thx
+2005-07-14T16:51:00.000Z	Danar	nalioth	breezy is in active development? isn't there an equivalent to unstable for that?
+2005-07-14T16:51:00.000Z	nalioth	Danar	i dont think ubuntu follows debians levels of preparedness
+2005-07-14T16:52:00.000Z	Danar	nalioth	that seems to imply it's just starting and hasn't developed that many levels yet, but apparently ubuntu is at version 5 now...
+2005-07-14T16:52:00.000Z	nalioth	Danar	version numbers are year and month warty 4.10 (2004 october), hoary 5.04 (2005, april), etc
+2005-07-14T16:54:00.000Z	nalioth	Danar	next will be breezy badger 5.10
+2005-07-14T05:35:00.000Z	Danar	nalioth	if you bothered to check the paste, he already did
+2005-07-14T05:36:00.000Z	nalioth	Danar	he has "libs" not "lib"
+2005-07-14T05:36:00.000Z	Danar	nalioth	oops. my bad. didn't see that
+2005-07-14T05:47:00.000Z	nalioth	Danar	he doesnt know the command to start it
+2005-07-14T05:48:00.000Z	nalioth	Danar	i've directed Ziggity to the homepage of that app to read the faq/docs
+2005-07-14T07:09:00.000Z	nalioth	Danar	bmp is a gtk2 port of xmms
+2005-07-14T07:20:00.000Z	nalioth	Danar	every1 left with you
+2005-07-14T07:38:00.000Z	nalioth	Danar	gtk vs qt?
+2005-07-14T07:38:00.000Z	Danar	nalioth	i believe so
+2005-07-14T07:39:00.000Z	nalioth	Danar	gparted is gtk, and qtparted is qt
+2005-07-14T07:39:00.000Z	Danar	nalioth	yeh
+2005-07-14T08:39:00.000Z	nalioth	Danar	how much  ram is on your system?
+2005-07-14T08:39:00.000Z	Danar	nalioth	512
+2005-07-14T08:39:00.000Z	nalioth	Danar	bigfoot1: if your puters are much differnt, they will act differently
+2005-07-14T09:32:00.000Z	nalioth	Danar	gtk2 over gtk1 (and some minor fixes)
+2005-07-14T09:47:00.000Z	nalioth	Danar	you should recommend wiping the .evolution dir first (or moving it somehwere other than your homedir, or renaming it)
+2005-07-14T09:48:00.000Z	Danar	nalioth	reinstalling shouldn't affecting anything... should it?
+2005-07-14T09:48:00.000Z	Danar	nalioth	just the binaries and stuff
+2005-07-14T09:48:00.000Z	nalioth	Danar	Imsdle try renaming your .evolution folder in your home directory
+2005-07-14T09:49:00.000Z	Danar	nalioth	oh, you mean before reinstalling. heh. haven't used evolution in a long time
+2005-07-14T09:49:00.000Z	nalioth	Danar	yes, its easier to rename the .evolution, and if that is it, he can start over with a new one
+2005-07-16T16:49:00.000Z	nalioth	Danar	i missed your question
+2005-07-16T05:41:00.000Z	nalioth	Danar	gstreamer0.8-mad
+2005-07-16T06:52:00.000Z	nalioth	Danar	w32codecs, but don't hold your breath for anything made by wmp9 or 10
+2005-07-16T06:53:00.000Z	Danar	nalioth	no installation candidate
+2005-07-16T06:53:00.000Z	nalioth	Danar	you need to enable backports for this thing (then disable after you've gotten them)
+2005-07-16T06:54:00.000Z	Danar	nalioth	how? is that the only way to play wmv?
+2005-07-16T06:55:00.000Z	nalioth	Danar	afaik, yes
+2005-07-16T06:55:00.000Z	nalioth	Danar	you might try using vlc, it has native support for lots of files
+2005-07-16T06:55:00.000Z	nalioth	Danar	but the codecs will allow your whole system to access win32 things
+2005-07-16T06:56:00.000Z	Danar	nalioth	not worried about that right now. i'm on the livecd
+2005-07-16T06:57:00.000Z	nalioth	Danar	then its w32codecs, via the backports
+2005-07-16T06:58:00.000Z	nalioth	Danar	or you can download them from www.mplayerhq.hu
+2005-07-16T07:04:00.000Z	Danar	nalioth	i installed w32codecs but i still can't play it
+2005-07-16T07:04:00.000Z	nalioth	Danar	did you restart your player, and is it a wmv3 datatype?
+2005-07-16T07:05:00.000Z	Danar	nalioth	yep
+2005-07-16T07:05:00.000Z	nalioth	Danar	if its wmv3 you are most likely out of luck
+2005-07-16T07:05:00.000Z	Danar	nalioth	why's that?
+2005-07-16T07:06:00.000Z	nalioth	Danar	b/c uncle bill has kept his codecs well hidden
+2005-07-16T07:07:00.000Z	nalioth	Danar	wmv is windows media video (and the latest versions of wmv havent been reverse engineered yet)
+2005-07-16T07:07:00.000Z	Danar	nalioth	didn't realize wmv3 was the latest version
+2005-07-16T07:48:00.000Z	nalioth	Danar	if he doesnt have the repos in his sources.list, your method won't work
+2005-07-16T07:48:00.000Z	Danar	nalioth	that would only happen if he removed them
+2005-07-16T07:48:00.000Z	Danar	nalioth	i'm on the livecd and it works for me
+2005-07-16T08:16:00.000Z	nalioth	Danar	shut down parted and see what cfdisk says
+2005-07-16T08:18:00.000Z	Danar	nalioth	they don't show in cfdisk. i tried qtparted and it said they weren't cleanly unmounted
+2005-07-16T08:18:00.000Z	nalioth	Danar	perhaps a restart?
+2005-07-16T08:18:00.000Z	nalioth	Danar	or an fsck?
+2005-07-16T08:19:00.000Z	Danar	nalioth	fsck didn't work :/
+2005-07-16T08:19:00.000Z	nalioth	Danar	have you tried chrooting to the HD-based *nix?
+2005-07-16T08:19:00.000Z	Danar	nalioth	uh, no
+2005-07-16T08:20:00.000Z	Danar	nalioth	can't now. ubuntu doesn't see those partitions anymore
+2005-07-16T08:20:00.000Z	nalioth	Danar	well then a restart will "cleanse the palate" as well as it will

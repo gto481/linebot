@@ -1,0 +1,99 @@
+2004-12-07T14:42:00.000Z	wood1		Anybody here, my problem is with samba networking
+2004-12-07T14:43:00.000Z	wood1		Well since updating to Hoary, I have not been able to browse my Windows Workgroup Network
+2004-12-07T14:43:00.000Z	ogra	wood1	hmm, hoary.....
+2004-12-07T14:48:00.000Z	ogra	wood1	its linux...... no need for reboots.....execpt you change kernel stuff
+2004-12-07T14:49:00.000Z	ogra	wood1	try ctrl-L in nautilus, the type smb://hostname/sharename
+2004-12-07T14:50:00.000Z	ogra	wood1	from where to where does what work .... and what not....
+2004-12-07T14:51:00.000Z	ogra	wood1	you can browse the shares on the hoary box from warty ?
+2004-12-07T14:51:00.000Z	ogra	wood1	and you cant browse/access the shares form hoary to warty ?
+2004-12-07T14:52:00.000Z	ogra	wood1	but the other way works ?
+2004-12-07T14:54:00.000Z	ogra	wood1	ahh.... this was not clear to me
+2004-12-07T14:55:00.000Z	ogra	wood1	what happens then, any error ?
+2004-12-07T15:02:00.000Z	ogra	wood1	why ? if someone works on the network libs it probably wont.....its hoary....
+2004-12-07T15:05:00.000Z	ogra	wood1	hoary is a development beast
+2004-12-07T15:08:00.000Z	ogra	wood1	thats what its good for currently.....
+2004-12-07T15:11:00.000Z	ogra	wood1	sites with software ? http://www.ubuntulinux.org/wiki/BreakMyUbuntu
+2004-12-07T15:12:00.000Z	ogra	wood1	sites with artwork ?  http://www.ubuntulinux.org/wiki/CommunityArtwork
+2004-12-07T15:14:00.000Z	ogra	wood1	one contains one to my own site, pure self-interst hehe
+2004-12-09T08:09:00.000Z	ogra	wood1	with all Users having Root Level Access ??
+2004-12-09T08:10:00.000Z	ogra	wood1	why did you do that ?
+2004-12-09T08:10:00.000Z	ogra	wood1	root access to damage the system is a polocy at your office ? thats weird
+2004-12-09T08:12:00.000Z	ogra	wood1	s why not a account for everyone ?
+2004-12-09T08:12:00.000Z	ogra	wood1	what for ? you will have to set it up over and over again if they break it....
+2004-12-09T08:14:00.000Z	ogra	wood1	probably through removing the group rights ?
+2004-12-09T08:23:00.000Z	ogra	wood1	so they could always access as sudo.....i dont thik there is a easy way to hide the /home from root...you will have to adjust a lot in the sudo setup i guess
+2004-12-09T08:25:00.000Z	wood1	ogra	do you know about Samba Networking ?
+2004-12-09T08:26:00.000Z	ogra	wood1	a bit....i use it sometimes if no nfs is available
+2004-12-09T08:28:00.000Z	ogra	wood1	ps ax|grep smb
+2004-12-09T08:29:00.000Z	ogra	wood1	nfs is unix based and offers all the advantages of a unix filesystem.....
+2004-12-09T08:30:00.000Z	ogra	wood1	samby
+2004-12-09T08:32:00.000Z	ogra	wood1	its a task done by gnome-vfs you dont need a samba client "running"
+2004-12-09T08:33:00.000Z	ogra	wood1	a samba server offers the folders on your system to the outside world.....you need to adjust /etc/samba/smb.conf to share
+2004-12-09T08:34:00.000Z	ogra	wood1	ps ax|grep smb
+2004-12-09T08:35:00.000Z	wood1	ogra	 it shows: 8275 pts/4 S+ 0:00 grep smb
+2004-12-09T08:35:00.000Z	ogra	wood1	so its not running....
+2004-12-09T08:37:00.000Z	ogra	wood1	sudo /etc/init.d/samba start
+2004-12-09T08:38:00.000Z	ogra	wood1	but you need to adjust the config before....there is nothing shared by default i think
+2004-12-09T08:38:00.000Z	wood1	ogra	I think that I have not installed the Samba Server in the first place
+2004-12-09T08:39:00.000Z	wood1	ogra	what is the command to install it ?
+2004-12-09T08:39:00.000Z	ogra	wood1	ahh, yep, its not there by default......sudo apt-get install samba will do it
+2004-12-09T08:41:00.000Z	ogra	wood1	samba = server, gnome-vfs = client.....
+2004-12-09T08:42:00.000Z	ogra	wood1	not related....
+2004-12-09T08:44:00.000Z	ogra	wood1	or: http://www.ubuntulinux.org/wiki/SettingUpSamba
+2004-12-09T08:48:00.000Z	ogra	wood1	you ned to configure it first
+2004-12-09T08:48:00.000Z	ogra	wood1	see here..... or the other url mentioned above : http://www.ubuntulinux.org/wiki/SettingUpSamba
+2004-12-09T09:12:00.000Z	wood1	ogra	I have created the neccessary shares in the smb.conf , how do I connect to it from my Windows PC ?
+2004-12-09T09:13:00.000Z	ogra	wood1	browse network ?
+2004-12-09T09:16:00.000Z	ogra	wood1	sis you follow the wiki ?
+2004-12-09T09:21:00.000Z	ogra	wood1	again, did you follow the wiki ?
+2004-12-09T09:22:00.000Z	ogra	wood1	with the smbpassword stuff and all ?
+2004-12-09T09:26:00.000Z	wood1	ogra	I did the smbpasswd
+2004-12-09T09:26:00.000Z	ogra	wood1	and you use the username you gave it ?
+2004-12-09T09:26:00.000Z	ogra	wood1	at the password prompt ?
+2004-12-09T09:34:00.000Z	ogra	wood1	there are bugs in hoary at this level it seems, there were several other ppl this week with the same probs
+2004-12-09T09:37:00.000Z	ogra	wood1	hoary is a unstable development system....if someone works on the librarys that are responsive it gets buggy
+2004-12-09T09:39:00.000Z	ogra	wood1	read what i wrote before ? look in bugzilla....if its not already there, file a bug :)
+2004-12-10T14:38:00.000Z	wood1	ogra	how I use seahorse ?
+2004-12-10T14:41:00.000Z	ogra	wood1	no idea....sorry....
+2004-12-11T14:19:00.000Z	ogra	wood1	the loginscreen ? or the one that comes afterwards ?
+2004-12-11T14:19:00.000Z	ogra	wood1	unse gconf-editor and look for apps/gnome-session
+2004-12-11T14:27:00.000Z	wood1	ogra	how do I change the skins of Xmms ?
+2004-12-11T14:27:00.000Z	ogra	wood1	i dont use xmms...but right click the window would be my guess
+2004-12-11T14:27:00.000Z	ogra	wood1	rhythmbox...
+2004-12-11T14:29:00.000Z	ogra	wood1	the mad plugin is missing i guess: http://www.ubuntulinux.org/wiki/RestrictedFormats
+2004-12-17T17:25:00.000Z	ogra	wood1	if you run them in this order, apt-get upgrade and dist-upgrade are redundant....just use dist-upgrade
+2005-01-03T13:11:00.000Z	ogra	wood1	remove the kde libs package
+2005-01-04T06:07:00.000Z	ogra	wood1	you need to install a ssh server on your ubuntu..... there is none by default
+2005-01-04T06:07:00.000Z	ogra	wood1	openssh-server ?
+2005-01-04T06:09:00.000Z	ogra	wood1	or with synaptic
+2005-01-04T06:11:00.000Z	ogra	wood1	is it running ? else start it with: sudo /etc/init.d/ssh start
+2005-01-04T06:13:00.000Z	ogra	wood1	then putty should work
+2005-01-04T06:13:00.000Z	ogra	wood1	do you have SP2 installed on your XP ?
+2005-01-04T06:13:00.000Z	ogra	wood1	it locks some ports afaik
+2005-01-04T07:07:00.000Z	ogra	wood1	still no luck ?
+2005-01-04T07:07:00.000Z	ogra	wood1	is any firewall SW on the win box running ?
+2005-01-04T07:10:00.000Z	ogra	wood1	take putty, should work
+2005-01-04T10:12:00.000Z	ogra	wood1	sudo apt-get remove `deborphan`
+2005-01-04T10:12:00.000Z	ogra	wood1	regard the backticks !
+2005-01-04T10:12:00.000Z	ogra	wood1	it offers to uninstall all unused software
+2005-01-04T10:13:00.000Z	ogra	wood1	noipe with backticks
+2005-01-04T10:14:00.000Z	ogra	wood1	copy and paste my line ;)
+2005-01-04T10:14:00.000Z	ogra	wood1	sudo apt-get remove `deborphan`
+2005-01-04T10:14:00.000Z	wood1	ogra	with the quotes
+2005-01-04T10:14:00.000Z	ogra	wood1	yep, with the backticks
+2005-01-04T10:16:00.000Z	ogra	wood1	not this: ' but this `
+2005-01-04T10:16:00.000Z	ogra	wood1	nope
+2005-01-04T10:17:00.000Z	ogra	wood1	wrong character
+2005-01-04T10:17:00.000Z	ogra	wood1	yep
+2005-01-04T10:18:00.000Z	ogra	wood1	if you never use it.....but emacs is bigger
+2005-01-04T10:20:00.000Z	ogra	wood1	you dont win any space with that, its a empty pkg
+2005-01-04T10:21:00.000Z	ogra	wood1	sudo apt-get clean, as Lathiat2 suggested
+2005-01-04T10:38:00.000Z	ogra	wood1	there is also a gnome-btdownloadgui anywhere on the web, packaged for ubuntu
+2005-01-05T14:14:00.000Z	wood1	ogra	do you dual boot your Ubuntu with Windows ?
+2005-01-05T14:14:00.000Z	ogra	wood1	on one of my laotops is a win98... but i never booted it.... :)
+2005-01-05T14:14:00.000Z	ogra	wood1	whats the prob ?
+2005-01-05T14:17:00.000Z	wood1	ogra	I forgot the option where we need to unhide the GNOME Desktop in GConf-Editor ?
+2005-01-05T14:19:00.000Z	wood1	ogra	where is the option in Gconf-editor to show the GNOME desktop while right clicking the desktop ?
+2005-01-05T14:20:00.000Z	ogra	wood1	in nautilus/interface i think.....
+2005-01-05T14:20:00.000Z	ogra	wood1	/apps/nautilus/interface
+2005-01-10T08:36:00.000Z	wood1	ogra	are you in there ?

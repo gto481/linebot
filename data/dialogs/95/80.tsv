@@ -1,0 +1,95 @@
+2005-04-03T09:47:00.000Z	fangorious		anyone?
+2005-04-03T09:48:00.000Z	crimsun	fangorious	you mean case-_sensitive_, since "dsdt" will return nothing
+2005-04-03T09:48:00.000Z	crimsun	fangorious	but yes, two of my machines return something. Why?
+2005-04-03T09:49:00.000Z	fangorious	crimsun	i meant `dmesg | grep -i dsdt` as I wasn't sure how it would be printed. I wanted to see if an enhancement I reqeusted in hoary had made it in
+2005-04-03T09:49:00.000Z	crimsun	fangorious	which "enhancement"?
+2005-04-03T09:50:00.000Z	fangorious	crimsun	the kernel should be looking in your initrd for a custom DSDT, helps people with laptops with crappy ACPI implementations
+2005-04-03T09:50:00.000Z	fangorious	crimsun	bugzilla #3379
+2005-04-03T09:50:00.000Z	fangorious	crimsun	thanks, btw
+2005-04-03T09:51:00.000Z	crimsun	fangorious	if it's still open, it's highly doubtful it made it in
+2005-04-03T09:52:00.000Z	fangorious	crimsun	says resolved, last comment said dmesg didn't mention dsdt, though, which is why i came here. :)
+2005-04-03T09:52:00.000Z	crimsun	fangorious	because you're not using the correct case. It's uppercase, not lowercase.
+2005-04-03T09:53:00.000Z	fangorious	crimsun	the -i flag makes the search case insensitive, so grep -i dsdt would match DSDT
+2005-04-03T09:53:00.000Z	crimsun	fangorious	it returns results here...
+2005-04-03T09:55:00.000Z	fangorious	crimsun	thanks for checking.
+2005-04-04T07:11:00.000Z	fangorious	crimsun	how can it still be broken .... every other current distro i've tried works with the chip
+2005-04-04T07:08:00.000Z	crimsun	fangorious	what graphics chipset?
+2005-04-04T07:10:00.000Z	crimsun	fangorious	I believe that's being sorted (i810).
+2005-04-04T07:16:00.000Z	crimsun	fangorious	I'm not familiar with the i810 and Hoary's X.Org; have you searched bugzilla?
+2005-04-04T07:16:00.000Z	fangorious	crimsun	in the process
+2005-04-08T08:31:00.000Z	crimsun	fangorious	/usr/share/pixmaps/  is one location
+2005-04-08T08:31:00.000Z	crimsun	fangorious	there are multiple directories
+2005-04-08T08:32:00.000Z	fangorious	crimsun	hm, already changed the one in /usr/share/pixmaps, will keep looking I guess
+2005-12-02T13:55:00.000Z	crimsun	fangorious	both.
+2005-12-02T13:55:00.000Z	fangorious	crimsun	lovely, thanks
+2005-12-04T12:24:00.000Z	crimsun	fangorious	what sort?
+2005-12-04T12:25:00.000Z	fangorious	crimsun	I have it installed,a basic configuration for WPA-PSK, but I can't seem to figure out how to make it connect
+2005-12-04T12:25:00.000Z	crimsun	fangorious	Breezy?
+2005-12-04T12:25:00.000Z	fangorious	crimsun	yeah
+2005-12-04T12:25:00.000Z	crimsun	fangorious	sanitise your /etc/wpa_supplicant.conf and paste it onto http://paste.ubuntulinux.nl
+2005-12-04T12:25:00.000Z	crimsun	fangorious	paste your /etc/default/wpasupplicant as well
+2005-12-04T12:29:00.000Z	fangorious	crimsun	pasted
+2005-12-04T12:30:00.000Z	crimsun	fangorious	are you using WPA or WPA2?
+2005-12-04T12:31:00.000Z	fangorious	crimsun	the AP should support both
+2005-12-04T12:31:00.000Z	crimsun	fangorious	but which are you using?
+2005-12-04T12:32:00.000Z	fangorious	crimsun	I have both turned on at the AP, I don't know which wpasupplicant is 'set' for, just the contents of the two config files
+2005-12-04T12:33:00.000Z	fangorious	crimsun	I see this for my AP when I run 'sudo wpa_cli scan_results': "[WPA-PSK-TKIP+CCMP] [WPA2-PSK-TKIP+CCMP] "
+2005-12-04T12:33:00.000Z	crimsun	fangorious	if you're using breezy, you must use WPA with TKIP
+2005-12-04T12:33:00.000Z	crimsun	fangorious	no way around that.
+2005-12-04T12:33:00.000Z	crimsun	fangorious	not AES, not WPA2.
+2005-12-04T12:34:00.000Z	fangorious	crimsun	doesn't the output of scan_results confimr that WPA with TKIP is enabled on my AP?
+2005-12-04T12:34:00.000Z	crimsun	fangorious	furthermore, you should use wpa_passphrase to generate the hex string from your ascii psk and use that in /etc/wpa_supplicant.conf
+2005-12-04T12:34:00.000Z	crimsun	fangorious	wpasupplicant does not work correctly with mixed aes+tkip
+2005-12-04T12:34:00.000Z	fangorious	crimsun	I had that at first, but it wasn't working, so I tried switching to the ASCII passphrase
+2005-12-04T12:34:00.000Z	crimsun	fangorious	you _must_ use tkip
+2005-12-04T12:34:00.000Z	fangorious	crimsun	ah, I'll try changing that, then
+2005-12-04T12:39:00.000Z	fangorious	crimsun	ok. I set the AP to be only WPA w\ TKIP, confirmed with 'wpa_cli scan[_result] ', changed the wpa_supplicant.conf to use the hex psk, and restarted wpasupplicant
+2005-12-04T12:39:00.000Z	fangorious	crimsun	so now what, ifup eth0?
+2005-12-04T12:39:00.000Z	crimsun	fangorious	are you using a linksys AP?
+2005-12-04T12:40:00.000Z	fangorious	crimsun	wrt54g with openwrt whiterussian rc4 firmware
+2005-12-04T12:40:00.000Z	crimsun	fangorious	ah, I use linksys's standard 4.20.7
+2005-12-04T12:41:00.000Z	crimsun	fangorious	you should ifup --force eth0
+2005-12-04T12:41:00.000Z	crimsun	fangorious	make sure your psk= directive is not enclosed by "s
+2005-12-04T12:42:00.000Z	fangorious	crimsun	didn't work, "No DHCPOFFERS received."
+2005-12-04T12:42:00.000Z	crimsun	fangorious	your ipw interface is in fact eth0?
+2005-12-04T12:43:00.000Z	crimsun	fangorious	err, you removed the WEP stuff from /etc/network/interfaces, right?
+2005-12-04T12:44:00.000Z	crimsun	fangorious	first check if your ipw has associated successfully with the AP
+2005-12-04T12:44:00.000Z	fangorious	crimsun	yeah, "iface eth0 inet dhcp" is the only reference to eth0 in /etc/network/interfaces
+2005-12-04T12:45:00.000Z	crimsun	fangorious	kill wpasupplicant and run it from the command line using the options in /etc/default/wpasupplicant, but append -dd
+2005-12-04T12:45:00.000Z	fangorious	crimsun	iwconfig says unassociated
+2005-12-04T12:46:00.000Z	fangorious	crimsun	"No suitable AP found" look srathe rsuspicious
+2005-12-04T12:47:00.000Z	crimsun	fangorious	need to boot my laptop, sec.
+2005-12-04T12:49:00.000Z	fangorious	crimsun	since I have the ssid hard coded, it should be ok that I have broadcasting the ssid disabled on the AP, right?
+2005-12-04T12:51:00.000Z	crimsun	fangorious	I actually use eapol_version=2
+2005-12-04T12:52:00.000Z	crimsun	fangorious	you may need ap_scan=2, too
+2005-12-04T12:54:00.000Z	fangorious	crimsun	ok, running wpa_supplicant with -dd looked better that time, not sure if it looked right, but I'm trying ifup
+2005-12-04T12:56:00.000Z	fangorious	crimsun	still no good. iwconfig says unassociated still, but at least it has the right ssid listed now. any hints on what I might look for in the wpa_supplicant -dd output?
+2005-12-04T12:56:00.000Z	crimsun	fangorious	does it remain associated with the AP?
+2005-12-04T13:01:00.000Z	crimsun	fangorious	yeah, it's not associating properly then
+2005-12-04T13:01:00.000Z	crimsun	fangorious	so it's definitely set to WPA and TKIP?
+2005-12-04T13:05:00.000Z	crimsun	fangorious	using wpasupplicant from Breezy, correct?
+2005-12-04T13:05:00.000Z	fangorious	crimsun	correct, 0.4.5-0ubuntu1
+2005-12-04T13:06:00.000Z	crimsun	fangorious	ok, then try specifyng the key_mgmt parameter
+2005-12-04T13:09:00.000Z	fangorious	crimsun	no change
+2005-12-04T13:09:00.000Z	fangorious	crimsun	set it to WPA-PSK
+2005-12-04T13:13:00.000Z	crimsun	fangorious	did you set pairwise and group, too, to TKIP?
+2005-12-04T13:13:00.000Z	crimsun	fangorious	and proto to WPA?
+2005-12-04T13:16:00.000Z	crimsun	fangorious	err, you're not using scan_ssid=2 ?
+2005-12-04T13:17:00.000Z	fangorious	crimsun	the example config file only indicates 0 and 1 as valid values for that
+2005-12-04T13:17:00.000Z	crimsun	fangorious	sorry, eapol
+2005-12-04T13:17:00.000Z	fangorious	crimsun	i have that set to 2, but it's not in the network block, guess it's global
+2005-12-04T13:17:00.000Z	crimsun	fangorious	that's fine. any luck?
+2005-12-04T13:23:00.000Z	fangorious	crimsun	finally! it works now
+2005-12-04T13:23:00.000Z	fangorious	crimsun	thanks for your help. now I have suspend, hibernate, and wpa working. This is officially the best supported laptop i've run, and ubuntu certainly took care of most of it
+2005-12-04T13:24:00.000Z	fangorious	crimsun	not sure if the last couple messages got delivered, having two interfaces on the same subnet seems to screw up xchat, but it's working now
+2005-12-05T12:04:00.000Z	crimsun	fangorious	...like?
+2005-12-05T12:06:00.000Z	fangorious	crimsun	last time i checked, ubuntu loaded about twice as many modules as fedora on the same hardware. it may have improevd since the, though
+2005-12-05T12:06:00.000Z	crimsun	fangorious	then blacklist them, and they won't load on next boot.
+2005-12-05T12:06:00.000Z	fangorious	crimsun	i haven't noticed any performance problems, so i never bothered to trim it down.
+2005-12-05T12:07:00.000Z	fangorious	crimsun	was just making a casual observance
+2005-12-05T12:10:00.000Z	fangorious	crimsun	i'm asking beecause I don't have sound after resuming from suspend (but resuming from hibernate works just fine) not because I'm trying to trim the load
+2005-12-05T12:10:00.000Z	crimsun	fangorious	known acpi issue
+2005-12-05T12:10:00.000Z	crimsun	fangorious	it'll help us if you file a bug report, of course
+2005-12-05T12:10:00.000Z	crimsun	fangorious	http://bugzilla.ubuntu.com/
+2005-12-05T12:10:00.000Z	fangorious	crimsun	will do
+2005-12-05T12:11:00.000Z	fangorious	crimsun	i was hoping i could track down the difference myself to file a report along with the workaround, though

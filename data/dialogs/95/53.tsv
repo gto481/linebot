@@ -1,0 +1,95 @@
+2007-04-24T08:28:00.000Z	oktober		Can anyone help with installing a .run file?
+2007-04-24T08:28:00.000Z	oktober		that's all?
+2007-04-24T08:28:00.000Z	mneptok	oktober	that smells like nVidia's binary driver installer
+2007-04-24T08:29:00.000Z	mneptok	oktober	what are you trying to install?
+2007-04-24T08:29:00.000Z	mneptok	oktober	what graphics chipset?
+2007-04-24T08:30:00.000Z	mneptok	oktober	you'll want the nVidia binary drivers before Q4
+2007-04-24T08:31:00.000Z	oktober	mneptok	I'm sorry, but what do I need?
+2007-04-24T08:33:00.000Z	mneptok	oktober	Feisty?
+2007-04-24T08:33:00.000Z	oktober	mneptok	feisty?
+2007-04-24T08:33:00.000Z	mneptok	oktober	which release of Ubuntu?
+2007-04-24T08:33:00.000Z	oktober	mneptok	6.06
+2007-04-24T08:34:00.000Z	oktober	mneptok	I find drivers on the nvidia website
+2007-04-24T08:34:00.000Z	mneptok	oktober	sudo apt-get update && sudo apt-get upgrade && sudo apt-get install linux-image-686 && sudo apt-get install nvidia-glx linux-restricted-modules
+2007-04-24T08:35:00.000Z	oktober	mneptok	I can't just use the gizmo in the adminstratino tab?
+2007-04-24T08:35:00.000Z	mneptok	oktober	sure. but i'm not trying to typ4e it
+2007-04-24T08:35:00.000Z	oktober	mneptok	it's all good so far.. no updating needed
+2007-04-24T08:36:00.000Z	oktober	mneptok	why do I want the 686 install?
+2007-04-24T08:36:00.000Z	oktober	mneptok	nvidia-glx is already the newest version
+2007-04-24T08:37:00.000Z	oktober	mneptok	but it says it can't find the package linux-restricted-modules
+2007-04-24T08:37:00.000Z	mneptok	oktober	cat /etc/X11/xorg.conf | grep Driver
+2007-04-24T08:37:00.000Z	oktober	mneptok	grep?
+2007-04-24T08:37:00.000Z	mneptok	oktober	just paste that command
+2007-04-24T08:37:00.000Z	oktober	mneptok	alright, stuff comes up
+2007-04-24T08:38:00.000Z	oktober	mneptok	driver "kbd".. driver "mouse"
+2007-04-24T08:38:00.000Z	mneptok	oktober	are you usidng the "nv" or "nvidia" driver?
+2007-04-24T08:38:00.000Z	oktober	mneptok	it's a nvidia chipset?
+2007-04-24T08:38:00.000Z	oktober	mneptok	I'm not sure what I'm looking for...
+2007-04-24T08:40:00.000Z	mneptok	oktober	Driver = nv/nvidia/vesa ?
+2007-04-24T08:40:00.000Z	oktober	mneptok	is this trying to tell me what I'm running or am I looking to install?
+2007-04-24T08:40:00.000Z	mneptok	oktober	what you are running now
+2007-04-24T08:40:00.000Z	oktober	mneptok	how do I tell that? "nv" is displayed
+2007-04-24T08:41:00.000Z	mneptok	oktober	then you are using the open nVidia driver, not nvidia-glx
+2007-04-24T08:41:00.000Z	oktober	mneptok	okies, so I downloaded the geforce4 latest driver from the website, doe sthat help?
+2007-04-24T08:42:00.000Z	mneptok	oktober	no. you should install via the package system
+2007-04-24T08:42:00.000Z	oktober	mneptok	right, ok
+2007-04-24T08:42:00.000Z	mneptok	oktober	stand by. ssh'ing to a Dapper test box.
+2007-04-24T08:42:00.000Z	oktober	mneptok	kks, thanks
+2007-04-24T08:44:00.000Z	mneptok	oktober	sudo apt-get install linux-restricted-modules-686
+2007-04-24T08:46:00.000Z	oktober	mneptok	alright, so it's installing goodies... linux-image-2...., linux-doc.... and lilo
+2007-04-24T08:47:00.000Z	oktober	mneptok	all done
+2007-04-24T08:47:00.000Z	oktober	mneptok	restart needed....
+2007-04-24T08:47:00.000Z	mneptok	oktober	reboot to the new kernel and modules
+2007-04-24T08:50:00.000Z	oktober	mneptok	restarted, all ready to go
+2007-04-24T08:52:00.000Z	oktober	mneptok	So, I want to now try and get the linux geforce4 drivers w/ snaptic?
+2007-04-24T08:53:00.000Z	mneptok	oktober	do you know how to edit text files with nano, vi, or some other editor?
+2007-04-24T08:53:00.000Z	oktober	mneptok	nope
+2007-04-24T08:53:00.000Z	mneptok	oktober	open a terminal
+2007-04-24T08:53:00.000Z	oktober	mneptok	alright
+2007-04-24T08:54:00.000Z	mneptok	oktober	sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.bak
+2007-04-24T08:54:00.000Z	oktober	mneptok	nothing happened other than a prompt for a password
+2007-04-24T08:54:00.000Z	mneptok	oktober	supply the password
+2007-04-24T08:54:00.000Z	oktober	mneptok	yeah, and then nothing, just another blank prompt
+2007-04-24T08:55:00.000Z	mneptok	oktober	gksudo gedit /etc/X11/xorg.conf
+2007-04-24T08:55:00.000Z	oktober	mneptok	opened
+2007-04-24T08:55:00.000Z	oktober	mneptok	xorg.conf (/etc/X11) - gedit
+2007-04-24T08:56:00.000Z	mneptok	oktober	go find "nv" and change it to "nvidia"
+2007-04-24T08:56:00.000Z	mneptok	oktober	then save and quit gedit
+2007-04-24T08:56:00.000Z	oktober	mneptok	kk
+2007-04-24T08:56:00.000Z	oktober	mneptok	Identifier "NVIDIA Corporation NV25 [GeForce4 Ti 4200] " Driver "nvidia"
+2007-04-24T08:57:00.000Z	mneptok	oktober	perfect
+2007-04-24T08:57:00.000Z	mneptok	oktober	was that already there?
+2007-04-24T08:57:00.000Z	oktober	mneptok	nope
+2007-04-24T08:57:00.000Z	oktober	mneptok	just "nv"
+2007-04-24T08:57:00.000Z	mneptok	oktober	cool. so change "nv" to "nvidia"
+2007-04-24T08:57:00.000Z	oktober	mneptok	changed...
+2007-04-24T08:57:00.000Z	mneptok	oktober	save and exit
+2007-04-24T08:58:00.000Z	oktober	mneptok	yeah, did that when I cut'n pasted :)
+2007-04-24T08:58:00.000Z	mneptok	oktober	time to restart X. ctl-alt-backspace. see you when you reconnect :)
+2007-04-24T08:59:00.000Z	oktober	mneptok	can I do that w/o restarting the machine? just log out?
+2007-04-24T08:59:00.000Z	mneptok	oktober	ctl-alt-backspace
+2007-04-24T09:00:00.000Z	mneptok	oktober	wb
+2007-04-24T09:00:00.000Z	oktober	mneptok	and I'm back
+2007-04-24T09:00:00.000Z	oktober	mneptok	wb?
+2007-04-24T09:00:00.000Z	mneptok	oktober	get a spiffy nVidia splash screen?
+2007-04-24T09:00:00.000Z	oktober	mneptok	I got a blank boring nothing
+2007-04-24T09:00:00.000Z	oktober	mneptok	and then the normal login
+2007-04-24T09:00:00.000Z	mneptok	oktober	that's fine
+2007-04-24T09:01:00.000Z	mneptok	oktober	where is this Q4 demo? and what files are in there?
+2007-04-24T09:01:00.000Z	oktober	mneptok	in my home folder, quake4-linux-1.0-demo.x86.run
+2007-04-24T09:02:00.000Z	oktober	mneptok	I tried to do "install quake4-linux-1.0-demo.x86.run -d /usr/local/games" and then the same but in a new folder, /usr/local/games/quake4
+2007-04-24T09:02:00.000Z	mneptok	oktober	chmod +x ~/quake4-linux-1.0-demo.x86.run && ~/quake4-linux-1.0-demo.x86.run
+2007-04-24T09:03:00.000Z	oktober	mneptok	gawd, these commands are huge... uncompressing it is
+2007-04-24T09:04:00.000Z	mneptok	oktober	long commands help me feel like a REALLY BIG TOUGH GUY
+2007-04-24T09:04:00.000Z	oktober	mneptok	baah, I need sudo
+2007-04-24T09:04:00.000Z	mneptok	oktober	chmod +x ~/quake4-linux-1.0-demo.x86.run && sudo ~/quake4-linux-1.0-demo.x86.run
+2007-04-24T09:04:00.000Z	oktober	mneptok	it couldn't install because it didn't have permission
+2007-04-24T09:04:00.000Z	oktober	mneptok	"no write permission to /usr/local/games"
+2007-04-24T09:05:00.000Z	mneptok	oktober	sudo ~/quake4-linux-1.0-demo.x86.run
+2007-04-24T09:05:00.000Z	oktober	mneptok	path in which to create symbolic links: usr/local/bin?
+2007-04-24T09:06:00.000Z	mneptok	oktober	sure
+2007-04-24T09:06:00.000Z	oktober	mneptok	alrighty, installing
+2007-04-24T09:06:00.000Z	oktober	mneptok	if I hate this, how do I kill it? and what's chmod?
+2007-04-24T09:06:00.000Z	mneptok	oktober	remember this excellent service and recommend Canonical Support to all your friends! ;)
+2007-04-24T09:07:00.000Z	oktober	mneptok	Dude, yeah, thanks!
+2007-04-24T09:11:00.000Z	mneptok	oktober	how goes the struggle?

@@ -1,0 +1,97 @@
+2006-04-06T11:31:00.000Z	ompaul		ds[de] , force - do not ask for permission
+2006-04-06T11:32:00.000Z	ompaul		!info audacity
+2006-04-06T11:33:00.000Z	ompaul		FOLKS if you want to ask the bot a question but not for yourself you can do >>/msg ubotu KeyWord<< and it does not spam the channel
+2006-04-06T11:34:00.000Z	DBO	ompaul	I wasnt asking the bot a question, it was for _Fulg
+2006-04-06T11:39:00.000Z	DBO	ompaul	=)
+2006-04-13T07:45:00.000Z	ompaul	DBO	the bot is not for playing with and its not really a good thing to do in front of 680+ logged into the channel, if we all did it there would be no help
+2006-04-13T07:45:00.000Z	DBO	ompaul	Im sorry...  I know better...
+2006-04-13T07:45:00.000Z	ompaul	DBO	hmm don't tempt me then :-)
+2006-04-13T07:45:00.000Z	ompaul	DBO	there is #ubuntu-offtopic
+2006-04-13T07:46:00.000Z	DBO	ompaul	Im quite aware of that channel
+2006-04-20T14:56:00.000Z	ompaul	DBO	anything that is not mp3 is a step in the right direction :)
+2006-04-20T14:56:00.000Z	DBO	ompaul	that is true, but transcoding from one codec to another is still going to lose quality
+2006-04-22T15:50:00.000Z	ompaul	DBO	so now I get the blame if the world is flat?
+2006-04-22T15:50:00.000Z	DBO	ompaul	that and EVERYTHING else
+2006-04-22T15:51:00.000Z	DBO	ompaul	=)
+2006-04-22T05:59:00.000Z	ompaul	DBO	if you want
+2006-04-24T15:20:00.000Z	DBO	ompaul	does a reboot always fix it?
+2006-04-24T15:21:00.000Z	ompaul	DBO	?
+2006-04-24T15:21:00.000Z	DBO	ompaul	the sudo not giving a password prompt
+2006-04-24T15:22:00.000Z	ompaul	DBO	don't know to be honest
+2006-04-24T15:24:00.000Z	ompaul	DBO	okay I read back through what was there
+2006-04-24T15:24:00.000Z	DBO	ompaul	yeah, appearantly a reboot fixed him, I want to know if thats been put as a bug
+2006-04-24T15:26:00.000Z	ompaul	DBO	1) sudo sets a ticket that ticket has a time attached to it (15 minutes if I recall) 2) that system can be revoked , and 3) someone found a bug where a modem a modem was online, the machine powered off and the machine powered on again (rather fast) the modem would dial out during that 15, it is said not to happen with dapper but that is another story
+2006-04-24T15:27:00.000Z	DBO	ompaul	ah, I see now
+2006-04-26T14:57:00.000Z	DBO	ompaul	I thinks he has two installs of grub, one on the old drive which is broke (obviously) and one on the new drive which currently isnt default
+2006-04-26T15:01:00.000Z	DBO	ompaul	I had the same issue with ubuntu, if you install it to a drive that is not your boot drive, grub does not work...  if you change the boot drive, everything works dandy
+2006-05-01T15:32:00.000Z	ompaul	DBO	that is not my opinion :-)
+2006-05-01T15:33:00.000Z	DBO	ompaul	I was afraid I was going to set off your highlight =P
+2006-05-01T15:33:00.000Z	ompaul	DBO	flashing lights and sirens :)
+2006-05-01T16:15:00.000Z	ompaul	DBO	if bad and bad again the front door remains closed
+2006-05-01T16:15:00.000Z	DBO	ompaul	oooooooh, you mean the "retirement" home
+2006-05-03T06:21:00.000Z	ompaul	DBO	no its just getting where hit should do :-)
+2006-05-03T11:05:00.000Z	DBO	ompaul	bit by tab complete again =P
+2006-05-03T11:05:00.000Z	ompaul	DBO	I was
+2006-05-06T16:17:00.000Z	ompaul	DBO	now do you use an away message?
+2006-05-06T16:17:00.000Z	DBO	ompaul	no?
+2006-05-06T16:18:00.000Z	ompaul	DBO	sorry let me rephase this, how do you use an away message? :-)
+2006-05-06T16:18:00.000Z	DBO	ompaul	in IRC?
+2006-05-06T16:18:00.000Z	ompaul	DBO	its an easy question in irc :)
+2006-05-18T13:57:00.000Z	DBO	ompaul	yeah, but by default there is a symlink in /media/floppy that points to /media/floppy0
+2006-05-18T13:58:00.000Z	ompaul	DBO	so let them mount /media/floppy (ohh how 16th century :))
+2006-05-18T14:03:00.000Z	DBO	ompaul	we are going to have to stop interupting each other like this, people will say its love =P
+2006-05-18T14:03:00.000Z	ompaul	DBO	it will be all yours in a moment - I have to split
+2006-05-18T14:04:00.000Z	DBO	ompaul	I was just kidding, no need to run away
+2006-05-18T14:04:00.000Z	ompaul	DBO	ohh but there it, 'tis breakfast time
+2006-05-18T14:05:00.000Z	ompaul	DBO	 or md5sum :)
+2006-05-18T14:10:00.000Z	ompaul	DBO	that is so wrong, and I own three sets of sandles
+2006-05-18T14:10:00.000Z	ompaul	DBO	which is excessive
+2006-05-18T14:10:00.000Z	DBO	ompaul	do your jeans have holes in the knees too?
+2006-05-18T14:11:00.000Z	ompaul	DBO	what are jeans chinos shorts and suits
+2006-05-18T14:11:00.000Z	DBO	ompaul	and at some point in your life you have sported a ponytail?
+2006-05-20T14:19:00.000Z	ompaul	DBO	morning
+2006-05-20T15:32:00.000Z	ompaul	DBO	:)
+2006-05-24T14:37:00.000Z	ompaul	DBO	morning
+2006-05-24T14:59:00.000Z	DBO	ompaul	thats it, I love this job, how do I get paid for it so I can quit my other job? =P
+2006-05-24T15:00:00.000Z	ompaul	DBO	if I knew how to get enough money out of it I would write a book :-) 1000 problems solved the irc way
+2006-05-24T15:00:00.000Z	ompaul	DBO	no index just several of the same storys jumbled up in some random order :)
+2006-05-24T15:00:00.000Z	DBO	ompaul	problem #36, nobody pays attention to you.  Solution: change nick to Lady<whatever>
+2006-05-24T15:01:00.000Z	ompaul	DBO	that is almost bash worthy
+2006-05-24T15:01:00.000Z	DBO	ompaul	I do have a bash quote =)
+2006-05-24T16:15:00.000Z	ompaul	DBO	I can sing your praises, but lets be honest no one wants that :)
+2006-05-25T15:49:00.000Z	DBO	ompaul	=P  irony?
+2006-05-25T15:50:00.000Z	ompaul	DBO	I regret to concur
+2006-05-25T15:56:00.000Z	ompaul	DBO	hicham its this one http://paste.ubuntu-nl.org/14330
+2006-05-25T15:56:00.000Z	ompaul	DBO	at least he used his nic - hicham some people don't use their nic when posting leading to confusion
+2006-05-25T15:57:00.000Z	DBO	ompaul	Im so guilty of that...
+2006-05-25T15:40:00.000Z	ompaul	DBO	no, read above your note :)
+2006-05-25T15:40:00.000Z	DBO	ompaul	he said it didnt work
+2006-05-25T15:42:00.000Z	DBO	ompaul	I see, I read it wrong then.  In which case, yes you are right =)  Single user mode ftw here
+2006-05-27T15:39:00.000Z	DBO	ompaul	can I pm you?
+2006-05-27T15:40:00.000Z	ompaul	DBO	certainly
+2006-05-27T06:38:00.000Z	ompaul	DBO	find unusable beyond all recognition
+2006-05-27T06:39:00.000Z	DBO	ompaul	yeah, lets go with that
+2006-05-27T10:12:00.000Z	ompaul	DBO	what is stranger is named -v tells you the version of bind, and don't ask the other, I still have not figured out why that happens
+2006-05-27T10:12:00.000Z	DBO	ompaul	once more with grammar
+2006-05-27T10:14:00.000Z	ompaul	DBO	what is stranger (referring to your !dapper, in other words random stranger) is >>named -v <<  tells you the version of bind, and don't ask the other (implying bind -v), I still have not figured out why that happens
+2006-05-27T10:15:00.000Z	ompaul	DBO	I think it is keybindings but I have no idea
+2006-05-27T10:16:00.000Z	DBO	ompaul	beats me my friend...
+2006-05-27T10:16:00.000Z	ompaul	DBO	aka I found something I don't know the answer to nor how to find it
+2006-05-27T10:18:00.000Z	DBO	ompaul	good question...
+2006-05-27T10:20:00.000Z	DBO	ompaul	because the bind command you are refering to is not for BIND
+2006-05-27T10:21:00.000Z	DBO	ompaul	the bind command allows you to change the editing keys, editing options, and make keyboard macros
+2006-05-27T07:14:00.000Z	ompaul	DBO	your call
+2006-05-30T07:00:00.000Z	ompaul	DBO	 use ! and insist on it
+2006-05-30T07:00:00.000Z	DBO	ompaul	you know better than to think I would ever take the easy way out =P
+2006-06-16T05:02:00.000Z	DBO	ompaul	at BEST you only have half a sense of humor
+2006-06-16T05:02:00.000Z	ompaul	DBO	 well that is why I kinda joke ;-)
+2006-06-27T11:49:00.000Z	ompaul	DBO	?
+2006-07-08T06:18:00.000Z	ompaul	DBO	excellent catch
+2006-08-19T06:58:00.000Z	ompaul	DBO	wikise it? cos it looks like lots of folks are about to get that as an issue
+2006-08-19T06:58:00.000Z	DBO	ompaul	unless you can figure out how to get aptitude to give uniform results to everyone...
+2006-08-19T06:59:00.000Z	DBO	ompaul	btw, if you see people give the symlink fix in here for this issue, slap them upside the head, ok?
+2006-08-27T13:10:00.000Z	ompaul	DBO	about time too I was just going to :)
+2006-08-28T16:54:00.000Z	ompaul	DBO	got a sec?
+2008-12-04T23:15:00.000Z	ompaul	DBO	chase down crimsun
+2008-12-04T23:15:00.000Z	DBO	ompaul	i was hoping someone would give me an excuse to poke him
+2008-12-04T23:15:00.000Z	ompaul	DBO	I just did :)

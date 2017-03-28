@@ -1,0 +1,96 @@
+2005-10-08T08:02:00.000Z	dmlinux		hey guys
+2005-10-08T08:02:00.000Z	dmlinux		what are the benefits of Gentoo Vs Ubuntu
+2005-10-08T08:03:00.000Z	dmlinux		what are the benefits of Gentoo Vs Ubuntu
+2005-10-08T08:05:00.000Z	nalioth	dmlinux	join #ubuntu-offtopic or #freenode and ask
+2005-10-11T13:38:00.000Z	nalioth	dmlinux	you'll have to rebuild grub, cuz windows loves the taste of it
+2005-10-11T13:39:00.000Z	dmlinux	nalioth	god damn windows
+2005-10-11T13:39:00.000Z	dmlinux	nalioth	how do  i just repair windows then? its saying im missing a DLL
+2005-10-11T13:39:00.000Z	nalioth	dmlinux	https://wiki.ubuntu.com/RecoveringUbuntuAfterInstallingWindows
+2005-10-12T10:49:00.000Z	nalioth	dmlinux	unrar-nonfree
+2005-10-12T10:51:00.000Z	nalioth	dmlinux	thats it
+2005-10-14T12:40:00.000Z	nalioth	dmlinux	on the limewire page
+2005-10-14T12:42:00.000Z	dmlinux	nalioth	i dont see a tarball ., isee a linux (RPM) which is what i downloaded
+2005-10-14T12:42:00.000Z	nalioth	dmlinux	something with .tar.gz or .tgz on the end
+2005-10-14T12:43:00.000Z	dmlinux	nalioth	how do i run it ?
+2005-10-14T12:43:00.000Z	nalioth	dmlinux	one opens tar.gz with file-roller or tar (in a console)
+2005-10-14T12:46:00.000Z	dmlinux	nalioth	sudo install /home/limewire/runLime.sh?
+2005-10-14T12:46:00.000Z	nalioth	dmlinux	no, just /home/dmlinux/limewire/runlime.sh
+2005-10-14T12:49:00.000Z	dmlinux	nalioth	hmm says there is no such file or dir
+2005-10-14T12:49:00.000Z	nalioth	dmlinux	execute the runlime.sh
+2005-10-14T12:50:00.000Z	dmlinux	nalioth	:( how do i do that. im a noob ,
+2005-10-14T12:50:00.000Z	nalioth	dmlinux	hit alt-f2 and browse for runlime.sh
+2005-10-14T12:51:00.000Z	dmlinux	nalioth	holy crap i never knew that hot key !
+2005-10-14T13:47:00.000Z	dmlinux	nalioth	do you know what this guy is talking about from BlueZ when he told me to :::you need to use the 2.6.13-mh1 patch to get full report mode protocol
+2005-10-14T13:49:00.000Z	nalioth	dmlinux	that person wants you to use an unstable testing kernel
+2005-10-14T13:50:00.000Z	dmlinux	nalioth	hmmm well how do i install that? lol
+2005-10-14T13:50:00.000Z	nalioth	dmlinux	i dont adivse use of unstable testing kernels
+2005-10-14T13:50:00.000Z	dmlinux	nalioth	ugh, thats what the developer of BlueZ told me to do to get my mouse scroll button working, nothing else will work
+2005-10-21T05:21:00.000Z	nalioth	dmlinux	use YOUR linux user/pass
+2005-10-21T05:21:00.000Z	dmlinux	nalioth	i did and it comes up Blaire/dm and my pw, and it doesnt let me in
+2005-10-21T05:22:00.000Z	nalioth	dmlinux	bah. samba is a concession to microsoft
+2005-10-21T05:22:00.000Z	dmlinux	nalioth	what?
+2005-10-21T05:23:00.000Z	nalioth	dmlinux	samba is a concession to microsoft protocols (the smb protocol)
+2005-10-21T05:23:00.000Z	dmlinux	nalioth	ok, do yo uknow how i set it so i can access?
+2005-10-21T05:23:00.000Z	nalioth	dmlinux	i dont have any idea, i havent owned a windows machine in years
+2005-10-21T05:23:00.000Z	dmlinux	nalioth	DOH!
+2005-10-21T14:23:00.000Z	nalioth	dmlinux	read the enclosed documentation to start
+2005-10-21T14:24:00.000Z	nalioth	dmlinux	most standard source pkgs have a configure script in them to run
+2005-10-21T14:25:00.000Z	dmlinux	nalioth	it has a make file, a .conf , and abunch of other files that cant be exe
+2005-10-21T14:25:00.000Z	dmlinux	nalioth	when i say "make" it says bash: make: command not found
+2005-10-21T14:29:00.000Z	nalioth	dmlinux	you want help compiling or whatever, join #kubuntu-offtopic
+2005-10-23T14:03:00.000Z	dmlinux	nalioth	what is xfce4?
+2005-10-23T14:03:00.000Z	nalioth	dmlinux	a lightweight window mangler for older slower systems
+2005-10-23T14:30:00.000Z	dmlinux	nalioth	do you know if there is a sound equilizer for Rythmbox?
+2005-10-28T10:13:00.000Z	nalioth	dmlinux	please not in here
+2005-10-28T10:13:00.000Z	dmlinux	nalioth	dont worry , i didnt say anything , nor do i discuss details.
+2005-10-28T10:16:00.000Z	dmlinux	nalioth	i sent you a pm , about a question
+2005-10-28T10:17:00.000Z	nalioth	dmlinux	are you registered?
+2005-10-28T10:17:00.000Z	dmlinux	nalioth	um just my name on IRC, i didnt put anywhere about my realname, or addy or phone # or anything
+2005-10-28T10:18:00.000Z	nalioth	dmlinux	you are not registered and cannot send /PMs
+2005-10-28T10:18:00.000Z	nalioth	dmlinux	join #kubuntu-offtopic to talk to me, please
+2005-10-28T10:18:00.000Z	dmlinux	nalioth	oh , then what does /notice <nick> do ?
+2005-10-28T10:18:00.000Z	nalioth	dmlinux	nothing until you register
+2005-10-28T10:19:00.000Z	dmlinux	nalioth	im confused lol
+2005-10-28T10:19:00.000Z	nalioth	dmlinux	join #kubuntu-offtopic please
+2005-10-28T10:20:00.000Z	dmlinux	nalioth	im in the channel nal
+2005-10-28T13:16:00.000Z	nalioth	dmlinux	got all your repos enabled?
+2005-10-28T13:17:00.000Z	dmlinux	nalioth	yep
+2005-10-28T13:20:00.000Z	dmlinux	nalioth	hmm still cant find Fglrx
+2005-10-28T13:20:00.000Z	nalioth	dmlinux	read your ubotu /PM
+2005-10-28T13:21:00.000Z	dmlinux	nalioth	oh i got it :) i already had it installed some how.
+2005-10-28T13:23:00.000Z	dmlinux	nalioth	how do i mount a .mdf file? its kind alike an ISO image
+2005-10-28T13:23:00.000Z	nalioth	dmlinux	you'll have to figure some way to convert it to something linux understands
+2005-10-28T13:24:00.000Z	dmlinux	nalioth	ah
+2005-10-28T13:24:00.000Z	dmlinux	nalioth	im trying to figure out a way to port battlefield 2 over to linux without Cedega
+2005-10-29T16:26:00.000Z	nalioth	dmlinux	why would you want to do that?
+2005-10-29T16:27:00.000Z	dmlinux	nalioth	um. ok how do i install whatever is in a rpm
+2005-10-29T16:27:00.000Z	nalioth	dmlinux	is the pkg not available in the repos?
+2005-10-29T16:28:00.000Z	nalioth	dmlinux	if the pkg is available via ubuntu repos, you should get it from there
+2005-10-29T16:29:00.000Z	nalioth	dmlinux	alien -i file.rpm, i believe
+2005-10-29T16:29:00.000Z	nalioth	dmlinux	dont say we didnt warn you
+2005-10-29T16:30:00.000Z	dmlinux	nalioth	ill wait till he epllains it to me , ty anyway
+2005-10-29T11:40:00.000Z	dmlinux	nalioth	in here?
+2005-10-29T11:49:00.000Z	dmlinux	nalioth	ok , going to try this
+2005-10-29T11:42:00.000Z	nalioth	dmlinux	bc you didnt give it proper priveleges
+2005-10-29T11:42:00.000Z	dmlinux	nalioth	how do i give it proper privs?
+2005-10-29T11:43:00.000Z	nalioth	dmlinux	i dont know, i dont run root things when i start up my box
+2005-10-29T11:43:00.000Z	dmlinux	nalioth	ack
+2005-10-29T11:43:00.000Z	dmlinux	nalioth	when it says username, do i do just my login name , or my name and my boxes name
+2005-10-29T11:44:00.000Z	nalioth	dmlinux	your username
+2005-10-29T11:45:00.000Z	dmlinux	nalioth	yeah it says i do not have root user priveleges to use Firestarter..
+2005-10-29T11:45:00.000Z	nalioth	dmlinux	perhaps you should approach your goal from another direction
+2005-10-29T11:46:00.000Z	dmlinux	nalioth	i know of no other direction
+2005-10-29T11:47:00.000Z	nalioth	dmlinux	perhaps in system > preferences > sessions, you put "gksudo firestarter" ?
+2005-10-29T11:48:00.000Z	dmlinux	nalioth	what is gksudo?
+2005-10-29T11:48:00.000Z	dmlinux	nalioth	i have sudo firestarter atm :P
+2005-10-29T11:48:00.000Z	nalioth	dmlinux	a gtk frontend to 'sudo'
+2005-10-29T11:49:00.000Z	dmlinux	nalioth	does that prevent asking for a password ?
+2005-10-29T11:49:00.000Z	nalioth	dmlinux	it will prompt you when you log into gnome
+2005-10-29T11:52:00.000Z	dmlinux	nalioth	that worked, but i have to type in my PW now
+2005-10-29T11:52:00.000Z	dmlinux	nalioth	any way to make it not need a password?
+2005-10-29T11:53:00.000Z	nalioth	dmlinux	there are ways, but they lead to security issues
+2005-10-29T11:53:00.000Z	dmlinux	nalioth	ah nm then
+2005-10-30T15:40:00.000Z	nalioth	dmlinux	enable powersaving and let your display depower
+2005-10-30T15:41:00.000Z	dmlinux	nalioth	id does :P
+2005-10-30T15:41:00.000Z	dmlinux	nalioth	:) i dont mind if the screen goes off all night anyay, thats why i put up a SS
+2005-11-02T14:14:00.000Z	dmlinux	nalioth	any idea what this means ?dpkg: dependency problems prevent configuration of fglrx-control:

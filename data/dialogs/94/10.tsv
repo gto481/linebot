@@ -1,0 +1,94 @@
+2011-07-31T20:44:00.000Z	Alain_		Hello, I disabled everything in Compiz and now everything is screwed up. I saw a solution to default it, but I can't even open the terminal. Please help!
+2011-07-31T20:45:00.000Z	girlygirl	Alain_	Alt + F2 matacity --replace
+2011-07-31T20:46:00.000Z	Alain_	girlygirl	 that doesnt work. I cant open the terminal either
+2011-07-31T20:47:00.000Z	girlygirl	Alain_	using the mouse try creating a textfile
+2011-07-31T20:47:00.000Z	girlygirl	Alain_	Tell me if you manage that
+2011-07-31T20:47:00.000Z	Alain_	girlygirl	 I just created a new file.txt
+2011-07-31T20:48:00.000Z	girlygirl	Alain_	In the textfile (open it) and on line 1 type "metacity --replace" without quotes
+2011-07-31T20:49:00.000Z	Alain_	girlygirl	 done, what next?
+2011-07-31T20:49:00.000Z	girlygirl	Alain_	 save and close, then right click properties on the file
+2011-07-31T20:50:00.000Z	girlygirl	Alain_	first before properties rename file to text.sh
+2011-07-31T20:50:00.000Z	girlygirl	Alain_	then in properties find an option to make file exectutable
+2011-07-31T20:51:00.000Z	Alain_	girlygirl	 done
+2011-07-31T20:51:00.000Z	girlygirl	Alain_	 http://ma65p.files.wordpress.com/2008/07/screenshot-jre-1_5_0_12-linux-i586-copybin-properties.png?w=364&h=444
+2011-07-31T20:51:00.000Z	girlygirl	Alain_	 run the file by clicking
+2011-07-31T20:52:00.000Z	Alain_	girlygirl	 do I run it in terminal or what?
+2011-07-31T20:52:00.000Z	girlygirl	Alain_	Just run it double click it
+2011-07-31T20:52:00.000Z	Alain_	girlygirl	 yea, but it gives me a box with several options
+2011-07-31T20:53:00.000Z	Alain_	girlygirl	run in terminal, display or run
+2011-07-31T20:54:00.000Z	girlygirl	Alain_	 run
+2011-07-31T20:54:00.000Z	Alain_	girlygirl	 ahh. now I can move my windows but I still dont have the taskbar or start menu
+2011-07-31T20:55:00.000Z	Alain_	girlygirl	terminal works now. Can I use the compiz default command?
+2011-07-31T20:55:00.000Z	girlygirl	Alain_	which version of ubuntu
+2011-07-31T20:55:00.000Z	Alain_	girlygirl	 11.04 Will this solution work? http://www.ubuntugeek.com/ubuntu-tip-how-to-reset-compiz-settings-to-default-system-settings-from-command-line.html
+2011-07-31T20:56:00.000Z	girlygirl	Alain_	Try if it doesn;t work click the text file
+2011-07-31T20:56:00.000Z	girlygirl	Alain_	let me have a look
+2011-07-31T20:56:00.000Z	girlygirl	Alain_	yes then run "compiz --replace"
+2011-07-31T20:56:00.000Z	girlygirl	Alain_	After the gide I mean
+2011-07-31T20:57:00.000Z	girlygirl	Alain_	If taksbar is not there after that run "" well I don't know the command for unity I use KDE someone help me out here
+2011-07-31T20:58:00.000Z	Alain_	girlygirl	it didnt work. OmegaForte  I disabled everything in Compiz and now I dont have taskbar or start menu
+2011-07-31T20:59:00.000Z	girlygirl	Alain_	run unity-shell
+2011-07-31T21:01:00.000Z	Alain_	girlygirl	 now I cant open the terminal again
+2011-07-31T21:01:00.000Z	girlygirl	Alain_	 run the textfile again
+2011-07-31T21:01:00.000Z	Alain_	girlygirl	 I did, but the unity-shell command did not work
+2011-07-31T21:02:00.000Z	Alain_	girlygirl	 it said invalid command
+2011-07-31T21:02:00.000Z	girlygirl	Alain_	let me get back on you for the command
+2011-07-31T21:02:00.000Z	Alain_	girlygirl	 ok thanks
+2011-07-31T21:05:00.000Z	girlygirl	Alain_	try running "unity"
+2011-07-31T21:07:00.000Z	Alain_	girlygirl	I accidently had to reboot
+2011-07-31T21:07:00.000Z	girlygirl	Alain_	Does it work now
+2011-07-31T21:08:00.000Z	Alain_	girlygirl	 no. I had to run the file again to move my windows
+2011-07-31T21:08:00.000Z	girlygirl	Alain_	"sudo apt-get install fusion-icon"
+2011-07-31T21:10:00.000Z	Alain_	girlygirl	 what next?
+2011-07-31T21:11:00.000Z	girlygirl	Alain_	run fusion-icon
+2011-07-31T21:11:00.000Z	Alain_	girlygirl	OmegaForte: Where is the icon?
+2011-07-31T21:11:00.000Z	girlygirl	Alain_	done?
+2011-07-31T21:12:00.000Z	girlygirl	Alain_	The icon is in the system tray (don't know what gnome calls it
+2011-07-31T21:12:00.000Z	girlygirl	Alain_	Like the xp taskbar part that gives balloon popups
+2011-07-31T21:12:00.000Z	girlygirl	Alain_	Notification Area Thanks OmegaForte
+2011-07-31T21:13:00.000Z	girlygirl	Alain_	Control + ALT + T
+2011-07-31T21:13:00.000Z	girlygirl	Alain_	terminal should show
+2011-07-31T21:14:00.000Z	girlygirl	Alain_	fusion-icon
+2011-07-31T21:14:00.000Z	Alain_	girlygirl	 now 75% of my screen is grey, nothing else happened
+2011-07-31T21:16:00.000Z	Alain_	girlygirl	 what do you think?
+2011-07-31T21:16:00.000Z	girlygirl	Alain_	I have a solution unistall compiz get back to default then instal compiz and set up
+2011-07-31T21:17:00.000Z	girlygirl	Alain_	actually OmegaForte 's suggestion
+2011-07-31T21:17:00.000Z	Alain_	girlygirl	 ok. How do we do this?
+2011-07-31T21:17:00.000Z	girlygirl	Alain_	restart in failsafe mode
+2011-07-31T21:17:00.000Z	girlygirl	Alain_	drop to root shell prompt
+2011-07-31T21:18:00.000Z	girlygirl	Alain_	done?
+2011-07-31T21:19:00.000Z	Alain_	girlygirl	 hmm. how do I get into failsafe mode and root shell prompt? :/
+2011-07-31T21:19:00.000Z	girlygirl	Alain_	at grub select recovery mode
+2011-07-31T21:20:00.000Z	Alain_	girlygirl	isnt it just as easy to reinstall ubuntu at this point?
+2011-07-31T21:20:00.000Z	girlygirl	Alain_	 no its a simple fix
+2011-07-31T21:20:00.000Z	Alain_	girlygirl	 where do I find grub?
+2011-07-31T21:20:00.000Z	girlygirl	Alain_	or in terminal ctrl ALT + T
+2011-07-31T21:21:00.000Z	girlygirl	Alain_	type sudo apt-get purge compiz
+2011-07-31T21:21:00.000Z	girlygirl	Alain_	you follow me
+2011-07-31T21:21:00.000Z	Alain_	girlygirl	 now the grey screen cover the text file and I cant get into terminal :(
+2011-07-31T21:22:00.000Z	girlygirl	Alain_	 CTRL + ALT + T, then sudo apt-get purge compiz
+2011-07-31T21:22:00.000Z	Alain_	girlygirl	 terminal doesnt work
+2011-07-31T21:22:00.000Z	girlygirl	Alain_	when you boot ubuntu do you see a place labeled Ubuntu Linux XX kernel
+2011-07-31T21:23:00.000Z	Alain_	girlygirl	tell me how to make that file so I can access terminal?
+2011-07-31T21:25:00.000Z	Alain_	girlygirl	 what do I do now? Things are only worse now
+2011-07-31T21:26:00.000Z	girlygirl	Alain_	 Reboot while pressing ESC. Then you will can an option Select ubuntu recovery mode, then select drop to root shell, the login, then type "apt-get purge compiz", then type "init 6" it will reboot, . everything should be fine, if it isn't run my textfile and it will work
+2011-07-31T21:26:00.000Z	Alain_	girlygirl	 i need to write that down. 2 sec
+2011-07-31T21:28:00.000Z	Alain_	girlygirl	ok. I will try thart
+2011-07-31T21:32:00.000Z	Alain_	girlygirl	 that did not work. I did not get any options. it jsut booted
+2011-07-31T21:32:00.000Z	girlygirl	Alain_	 1 sec
+2011-07-31T21:33:00.000Z	Alain_	girlygirl	 one more chance and I am reinstalling this non user friendly system
+2011-07-31T21:34:00.000Z	girlygirl	Alain_	 Follow this then retry my steps http://www.howtogeek.com/howto/ubuntu/show-the-grub-menu-by-default-on-ubuntu/
+2011-07-31T21:34:00.000Z	Alain_	girlygirl	 fuck this. Im going to the xbox and reinstalling this crap when I get home
+2011-07-31T21:35:00.000Z	girlygirl	Alain_	Its a simple problem actually, reinstall have patience, you will soon get used to ubuntu, we are all like that at fist
+2011-07-31T21:36:00.000Z	girlygirl	Alain_	Please use proper language though
+2011-07-31T21:37:00.000Z	Alain_	girlygirl	 one more chance. give me that link again
+2011-07-31T21:37:00.000Z	girlygirl	Alain_	http://www.howtogeek.com/howto/ubuntu/show-the-grub-menu-by-default-on-ubuntu/
+2011-07-31T21:37:00.000Z	girlygirl	Alain_	please wait let me correct that
+2011-07-31T21:38:00.000Z	girlygirl	Alain_	same 1st instructions but shift instead of ESC sorry my mistake
+2011-07-31T21:39:00.000Z	Alain_	girlygirl	 ok. will try
+2011-07-31T21:46:00.000Z	Alain_	girlygirl	 did not work
+2011-07-31T21:46:00.000Z	Alain_	girlygirl	 I did everything as stated, it uninstalled but did not work
+2011-07-31T21:46:00.000Z	girlygirl	Alain_	now ctrl + ALT + T metacity --replace
+2011-07-31T21:47:00.000Z	Alain_	girlygirl	 it only got worse. Give OmegaForte  a chance
+2011-07-31T21:51:00.000Z	girlygirl	Alain_	http://linuxfud.wordpress.com/2007/02/14/how-to-reset-ubuntugnome-settings-to-defaults-without-re-installing/
+2011-07-31T21:51:00.000Z	girlygirl	Alain_	all settings will go but

@@ -1,0 +1,99 @@
+2008-02-11T10:26:00.000Z	tantric132		Can someone tell me how to get sound? Very new to Linux. All I have is USB head set. when I go to System>Pref>Sound and hit Test next to Sound Playback I hear the annoying buzz but I can't seem to get sound on youtube.com
+2008-02-11T10:27:00.000Z	kmg	tantric132	you're using firefox?
+2008-02-11T10:28:00.000Z	tantric132	kmg	yes. Also, I plugged in my iPod and opened the Rhythmbox music player and scanned for it
+2008-02-11T10:28:00.000Z	kmg	tantric132	most browsers don't seem to use those sound settings very well.  open up a terminal and do 'asoundconf list'
+2008-02-11T10:28:00.000Z	tantric132	kmg	and found it but when I try to play music it says "You do not have a decoder installed to handle this file. You might need to install the necessary plugins"
+2008-02-11T10:28:00.000Z	kmg	tantric132	does rythmbox play through the headset?
+2008-02-11T10:28:00.000Z	kmg	tantric132	that sounds like you're trying to play a weird format, is it mp3?
+2008-02-11T10:29:00.000Z	tantric132	kmg	I don't have any music on the HD yet...just formatted, but its not playing off my ipod. yes its .mp3 as far as I know let me double check
+2008-02-11T10:30:00.000Z	kmg	tantric132	from a terminal do 'asoundconf list'
+2008-02-11T10:31:00.000Z	tantric132	kmg	i've never used terminal. I just typed in asoundconf list?
+2008-02-11T10:31:00.000Z	kmg	tantric132	yes, type that into the terminal and press enter
+2008-02-11T10:32:00.000Z	kmg	tantric132	it should give you a list of probably two or three things, is one of the 'Headset'?
+2008-02-11T10:32:00.000Z	tantric132	kmg	Names of available sound cards:
+2008-02-11T10:32:00.000Z	kmg	tantric132	ok do 'asoundconf set-default-card Headset'
+2008-02-11T10:32:00.000Z	kmg	tantric132	and press enter
+2008-02-11T10:33:00.000Z	tantric132	kmg	after entering that, terminal shouldn't respound, correct?
+2008-02-11T10:33:00.000Z	kmg	tantric132	then do sudo /etc/init.d/alsa-utils restart
+2008-02-11T10:33:00.000Z	kmg	tantric132	i don't believe so
+2008-02-11T10:33:00.000Z	kmg	tantric132	now it will ask for your root password
+2008-02-11T10:33:00.000Z	kmg	tantric132	type in your root password not your user password
+2008-02-11T10:34:00.000Z	tantric132	kmg	i never made a root password?
+2008-02-11T10:34:00.000Z	kmg	tantric132	you set up a root password when you first install ubuntu
+2008-02-11T10:35:00.000Z	tantric132	kmg	i just installed Ubuntu. there was one page during the installation that asked: Your name. Your Desired Username. Your desired password. Again. Computer name
+2008-02-11T10:35:00.000Z	tantric132	kmg	that was all.
+2008-02-11T10:35:00.000Z	kmg	tantric132	ok then try putting in your user password =P
+2008-02-11T10:37:00.000Z	kmg	tantric132	put in your user password
+2008-02-11T10:37:00.000Z	tantric132	kmg	when I type, nothing comes up. if I press Enter, a line break will happen and I will have 2 secs to type in my password. wtf?
+2008-02-11T10:37:00.000Z	kmg	tantric132	yeah it doesn't show your password when you type it
+2008-02-11T10:38:00.000Z	tantric132	kmg	so type it and press enter?
+2008-02-11T10:38:00.000Z	kmg	tantric132	if it did everybody would be able to see it if looking at your screen, it never display your password
+2008-02-11T10:38:00.000Z	kmg	tantric132	yes
+2008-02-11T10:39:00.000Z	tantric132	kmg	i feel like an idiot =P ok so what command were you saying to type?
+2008-02-11T10:39:00.000Z	kmg	tantric132	asoundconf set-default-card Headset
+2008-02-11T10:40:00.000Z	kmg	tantric132	actually that will fail out, do 'sudo asoundconf set-default-card Headset'
+2008-02-11T10:40:00.000Z	kmg	tantric132	gotta be root ;)
+2008-02-11T10:40:00.000Z	tantric132	kmg	Please note that you are attempting to run asoundconf as a privileged superuser, which may have unintended consequences.
+2008-02-11T10:41:00.000Z	kmg	tantric132	dammit i'm confused, ok take out the sudo, that's for the next command =P
+2008-02-11T10:42:00.000Z	kmg	tantric132	after you do 'asoundconf set-default-card Headset' do 'sudo /etc/init.d/alsa-utils restart' and THAT will ask for your password
+2008-02-11T10:42:00.000Z	tantric132	kmg	Usage: /etc/init.d/alsa-utils {start [CARD]|stop [CARD]|restart [CARD]|reset [CARD]}
+2008-02-11T10:42:00.000Z	kmg	tantric132	'sudo /etc/init.d/alsa-utils restart'
+2008-02-11T10:43:00.000Z	tantric132	kmg	 * Shutting down ALSA...                                                 [ OK ]
+2008-02-11T10:44:00.000Z	kmg	tantric132	now restart firefox and try again
+2008-02-11T10:45:00.000Z	tantric132	kmg	nothing =[
+2008-02-11T10:45:00.000Z	kmg	tantric132	ok from the command line type 'alsamixer'
+2008-02-11T10:46:00.000Z	kmg	tantric132	also, what brand is your headset?
+2008-02-11T10:46:00.000Z	tantric132	kmg	it looks much different =D
+2008-02-11T10:46:00.000Z	tantric132	kmg	Logitech
+2008-02-11T10:47:00.000Z	tantric132	kmg	it says Card: Logitech USB Headset
+2008-02-11T10:47:00.000Z	kmg	tantric132	ok good, now are all the sliders all the way up?
+2008-02-11T10:47:00.000Z	tantric132	kmg	the Mic is empty. Speaker is 48<>48(half way)
+2008-02-11T10:48:00.000Z	kmg	tantric132	turn the speaker all the way up using the arrow keys
+2008-02-11T10:48:00.000Z	tantric132	kmg	done.
+2008-02-11T10:49:00.000Z	kmg	tantric132	ok now from terminal do 'cat ~/.asoundrc'
+2008-02-11T10:49:00.000Z	kmg	tantric132	does anything appear or is it blank?
+2008-02-11T10:50:00.000Z	tantric132	kmg	# ALSA library configuration file
+2008-02-11T10:50:00.000Z	kmg	tantric132	that's basically the configuration file for alsa, your sound manager. the mixer you were just in is the alsa mixer.
+2008-02-11T10:51:00.000Z	tantric132	kmg	do you think it could be the firefox plugin? I think youtube runs off of the adobe flash plugin
+2008-02-11T10:51:00.000Z	kmg	tantric132	ugh
+2008-02-11T10:51:00.000Z	tantric132	kmg	i have video feedback just not sound
+2008-02-11T10:51:00.000Z	kmg	tantric132	well if you have the video you should be getting the sound
+2008-02-11T10:52:00.000Z	tantric132	kmg	that is true. on a different note, why am I getting a playback error when I try to play songs off of my ipod. they are in mp3 form. let me copy the error
+2008-02-11T10:52:00.000Z	tantric132	kmg	Playback Error: You do not have a decoder installed to handle this file. You might need to install the necessary plugins.
+2008-02-11T10:53:00.000Z	tantric132	kmg	the radio def works in this program
+2008-02-11T10:53:00.000Z	kmg	tantric132	it's supposed to
+2008-02-11T10:54:00.000Z	tantric132	kmg	whats the alsa mixer again its blowing my eardrums =D
+2008-02-11T10:54:00.000Z	kmg	tantric132	lol, well in rythmbox there is a volume slider button
+2008-02-11T10:54:00.000Z	kmg	tantric132	top right
+2008-02-11T10:54:00.000Z	kmg	tantric132	little picture of a speaker with musical notes
+2008-02-11T10:55:00.000Z	kmg	tantric132	else open up terminal and type 'alsamixer'
+2008-02-11T10:56:00.000Z	kmg	tantric132	yeah you likely need to install some codecs
+2008-02-11T10:59:00.000Z	tantric132	kmg	how do you go about installing programs that are not on the Add/Remove application. I'm sure it is all done in terminal
+2008-02-11T11:00:00.000Z	kmg	tantric132	most codecs can be installed from Add/Remove
+2008-02-11T11:01:00.000Z	tantric132	kmg	I'm talking about programs. for example, I want to install Songbird(songbirdnest.com) and the new Firefox 3 Beta 2. I have downloaded the programs and they sit in a tar.bz2 and tar.gz on my desktop
+2008-02-11T11:01:00.000Z	kmg	tantric132	well first you need to untar them, double-click them and they should open in the archive manager, then drag the contents to your desktop
+2008-02-11T11:02:00.000Z	kmg	tantric132	so what's there?
+2008-02-11T11:03:00.000Z	tantric132	kmg	I got it...easy as cake. thanks bud
+2008-02-11T11:05:00.000Z	kmg	tantric132	no problem.  I find that managing sound devices is often initially one of the largest difficulties when starting off in ubuntu
+2008-02-11T11:06:00.000Z	tantric132	kmg	yeah I'm not getting any playback in songbird
+2008-02-11T11:07:00.000Z	kmg	tantric132	can you paste the contents of the file located at '~/.asoundrc.asoundconf
+2008-02-11T11:07:00.000Z	kmg	tantric132	'?
+2008-02-11T11:08:00.000Z	tantric132	kmg	bash: /home/tantric132/.asoundrc.asoundconf: Permission denied
+2008-02-11T11:09:00.000Z	kmg	tantric132	do 'sudo cat ~/.asoundrc.asoundconf' and paste it to a pastebin, not into this channel (it will be long)
+2008-02-11T11:09:00.000Z	tantric132	kmg	its alot of shit. ALOT
+2008-02-11T11:10:00.000Z	kmg	tantric132	yeah, don't paste it here
+2008-02-11T11:10:00.000Z	kmg	tantric132	paste it here: http://paste.ubuntu-nl.org
+2008-02-11T11:12:00.000Z	tantric132	kmg	what is the syntax?
+2008-02-11T11:12:00.000Z	kmg	tantric132	of what?
+2008-02-11T11:13:00.000Z	tantric132	kmg	http://paste.ubuntu-nl.org/ ask for my name, Syntax, and text
+2008-02-11T11:13:00.000Z	kmg	tantric132	oh don't worry about that
+2008-02-11T11:13:00.000Z	kmg	tantric132	i need the link to your paste specifically
+2008-02-11T11:13:00.000Z	tantric132	kmg	http://paste.ubuntu-nl.org/55572/
+2008-02-11T11:16:00.000Z	kmg	tantric132	this all seems to be in order!
+2008-02-11T11:17:00.000Z	tantric132	kmg	just PM me on the forums if you think of anuything. im about to fall asleep. forum name is tantric132.
+2008-02-11T11:18:00.000Z	kmg	tantric132	ok yeah i need to go get some food anyway
+2008-02-11T11:18:00.000Z	tantric132	kmg	thanks for the help!
+2008-02-11T11:18:00.000Z	kmg	tantric132	i swear you chose the worst possible thing to try with ubuntu, configuring a usb headset
+2008-02-11T11:19:00.000Z	kmg	tantric132	just be glad you're not trying to use it with a wine app
+2008-02-11T11:19:00.000Z	kmg	tantric132	later
+2008-02-11T11:19:00.000Z	tantric132	kmg	heh...oops!

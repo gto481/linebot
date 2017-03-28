@@ -1,0 +1,97 @@
+2006-01-21T12:32:00.000Z	mcdenyer		hey how do i set up ubuntu to play movie clips from the internet like movies from ebaumsworld
+2006-01-21T12:34:00.000Z	mcdenyer		what do i use to play video off the net like movies form ebaumsworld.com
+2006-01-21T12:36:00.000Z	tonyyarusso	mcdenyer	I use the mplayer plugin with firefox.
+2006-01-21T12:36:00.000Z	tonyyarusso	mcdenyer	With the codecs mentioned.
+2006-01-21T12:37:00.000Z	mcdenyer	tonyyarusso	how do i install that and where
+2006-01-21T12:39:00.000Z	tonyyarusso	mcdenyer	For the codecs, use the link in your message from ubotu.  You can get mplayer and its plugin with 'sudo apt-get install mplayer-386 mozilla-mplayer'.
+2006-01-21T13:01:00.000Z	tonyyarusso	mcdenyer	Have you seen http://paste.ubuntu-nl.org/6047 yet?  (From !sources)
+2006-01-21T13:02:00.000Z	mcdenyer	tonyyarusso	ok yeah thats what i have
+2006-01-21T13:02:00.000Z	tonyyarusso	mcdenyer	I can give you mine too if you'd like.
+2006-01-21T13:02:00.000Z	mcdenyer	tonyyarusso	can u help me get my w32 codecs going ?
+2006-01-21T13:02:00.000Z	mcdenyer	tonyyarusso	ok
+2006-01-21T13:03:00.000Z	mcdenyer	tonyyarusso	u have aim or msn?
+2006-01-21T13:03:00.000Z	tonyyarusso	mcdenyer	Yeah, both.  pm me if you'd prefer that to get through your codecs.
+2006-01-21T13:04:00.000Z	mcdenyer	tonyyarusso	how do i pm with xchat?
+2006-01-21T13:04:00.000Z	tonyyarusso	mcdenyer	Actually, who am I kidding?  That would be silly.  tonyyarusso on AIM.
+2006-01-21T13:04:00.000Z	tonyyarusso	mcdenyer	For reference though, /msg nick Your message here.
+2006-01-21T13:04:00.000Z	tonyyarusso	mcdenyer	(And you have to be registered to do it in this channel.)
+2006-01-25T06:51:00.000Z	tonyyarusso	mcdenyer	dist-upgrade
+2006-01-25T06:52:00.000Z	mcdenyer	tonyyarusso	should i update my hoary first though?
+2006-01-25T06:52:00.000Z	mcdenyer	tonyyarusso	or should i just upgrade to breezy then update
+2006-01-25T06:52:00.000Z	tonyyarusso	mcdenyer	I think I'd suggest upgrade the hoary and then go to breezy, but I'm not sure if it matters.
+2006-01-25T06:52:00.000Z	tonyyarusso	mcdenyer	No harm in that way anyway.
+2006-01-25T06:53:00.000Z	mcdenyer	tonyyarusso	true it sudo apt-get update to update hoary right?
+2006-01-25T06:55:00.000Z	tonyyarusso	mcdenyer	update updates the sources list / package cache.  upgrade gets new versions of files.  dist-upgrade will get you to breezy from hoary.
+2006-01-25T06:57:00.000Z	tonyyarusso	mcdenyer	Yeah, you can get it to replace pretty much anything you want in any ascii file.
+2006-01-27T06:13:00.000Z	tonyyarusso	mcdenyer	I did, but I'm still at 90 FPS.
+2006-01-27T06:13:00.000Z	mcdenyer	tonyyarusso	hey man
+2006-01-27T06:13:00.000Z	mcdenyer	tonyyarusso	ive been looking for you haha
+2006-01-27T06:14:00.000Z	tonyyarusso	mcdenyer	So what's your issue with it?
+2006-01-27T15:03:00.000Z	mcdenyer	tonyyarusso	hey man
+2006-01-27T15:03:00.000Z	mcdenyer	tonyyarusso	you helped me a while back set up meadi for the net
+2006-01-27T15:03:00.000Z	mcdenyer	tonyyarusso	and i was wondering if you could help me do it again
+2006-01-27T15:03:00.000Z	tonyyarusso	mcdenyer	Refresh my memory, meadi?
+2006-01-27T15:04:00.000Z	mcdenyer	tonyyarusso	media
+2006-01-27T15:04:00.000Z	mcdenyer	tonyyarusso	like sewting up to play vidoes of the net
+2006-01-27T15:04:00.000Z	tonyyarusso	mcdenyer	Ah okay.  mplayer plugins and the like?
+2006-01-27T15:05:00.000Z	mcdenyer	tonyyarusso	ok
+2006-01-27T15:05:00.000Z	tonyyarusso	mcdenyer	Which version of Firefox?
+2006-01-27T15:05:00.000Z	mcdenyer	tonyyarusso	the version that came with breezy
+2006-01-27T15:06:00.000Z	mcdenyer	tonyyarusso	and you had me installed something else besides mplayer and it worked alot better
+2006-01-27T15:06:00.000Z	mcdenyer	tonyyarusso	when i use mplayer the videos never finish they just stop after a while and the audio almost never kicks in
+2006-01-27T15:07:00.000Z	tonyyarusso	mcdenyer	As in an alternative, or addon?
+2006-01-27T15:07:00.000Z	mcdenyer	tonyyarusso	i installed all the codecs i needed already
+2006-01-27T15:07:00.000Z	mcdenyer	tonyyarusso	i dont know
+2006-01-27T15:07:00.000Z	tonyyarusso	mcdenyer	As far as I know I've always recommended mplayer, as that's what I use.
+2006-01-27T15:07:00.000Z	mcdenyer	tonyyarusso	well i installed m player but its not the same thing that u had me install
+2006-01-27T15:07:00.000Z	tonyyarusso	mcdenyer	There is the mozilla-mplayer plugin package though, perhaps that?
+2006-01-27T15:07:00.000Z	mcdenyer	tonyyarusso	maybe u had me get a newer vserion
+2006-01-27T15:08:00.000Z	tonyyarusso	mcdenyer	Maybe also gstreamer0.8*
+2006-01-27T15:08:00.000Z	mcdenyer	tonyyarusso	yeah i have all those gstreamer codecs
+2006-01-27T15:09:00.000Z	mcdenyer	tonyyarusso	if you could just step me thourgh it like u did last time
+2006-01-27T15:09:00.000Z	mcdenyer	tonyyarusso	but i already have the codecs
+2006-01-27T15:09:00.000Z	tonyyarusso	mcdenyer	I'm at a little bit of a loss as to what else it might have been.  There's a VLC plugin for Firefox too, but I haven't used it.
+2006-01-27T15:09:00.000Z	mcdenyer	tonyyarusso	i think it mightve been gstearmer
+2006-01-27T15:09:00.000Z	tonyyarusso	mcdenyer	Okay, sudo apt-get install mplayer-386 mozilla-mplayer gstreamer0.8*
+2006-01-27T15:10:00.000Z	tonyyarusso	mcdenyer	Hope that it links automatically.
+2006-01-27T15:11:00.000Z	tonyyarusso	mcdenyer	If not, sudo ln -s /usr/lib/mozilla/plugins/* /usr/lib/mozilla-firefox/plugins/
+2006-01-27T15:13:00.000Z	mcdenyer	tonyyarusso	i did that first command u gave me and it installsed sucessfully
+2006-01-27T15:13:00.000Z	mcdenyer	tonyyarusso	now do i do that second one u gave me?
+2006-01-27T15:14:00.000Z	tonyyarusso	mcdenyer	If things are working already, then it's not necessary.  If you have problems still, try it.
+2006-01-27T15:14:00.000Z	mcdenyer	tonyyarusso	ok it finished dling how do i get firefox to use the new stuff?;
+2006-01-27T15:26:00.000Z	mcdenyer	tonyyarusso	ok i got the stuff now how do i get firefox to play media with it?
+2006-01-27T15:27:00.000Z	tonyyarusso	mcdenyer	It should already.  Have you tried?  Otherwise do the symlink.  That's all I've got.
+2006-01-27T15:28:00.000Z	mcdenyer	tonyyarusso	 can u type thaty out again?
+2006-01-28T07:23:00.000Z	mcdenyer	tonyyarusso	ok hey how do  i install the gstreamer plugin for firefox?
+2006-01-28T07:24:00.000Z	tonyyarusso	mcdenyer	sudo apt-get install gstreamer0.8* mozilla-mplayer
+2006-01-28T07:26:00.000Z	mcdenyer	tonyyarusso	ok once i install it how do i get firefox to use it?
+2006-01-28T07:26:00.000Z	mcdenyer	tonyyarusso	after i did that it still tries to play it with totem
+2006-01-28T07:26:00.000Z	tonyyarusso	mcdenyer	Either it will automatically, or you'll have to make the symlinks as before.
+2006-01-28T07:26:00.000Z	tonyyarusso	mcdenyer	Ah, that part.
+2006-01-28T07:27:00.000Z	tonyyarusso	mcdenyer	Remove the totem symlinks too.
+2006-01-28T07:27:00.000Z	tonyyarusso	mcdenyer	In /usr/lib/mozilla-firefox/plugins/, rm the two with 'totem' in their name.
+2006-01-28T07:27:00.000Z	mcdenyer	tonyyarusso	ok one sec
+2006-01-28T07:29:00.000Z	mcdenyer	tonyyarusso	ok so i just delete the files
+2006-01-28T07:30:00.000Z	tonyyarusso	mcdenyer	Yeah.
+2006-01-28T07:31:00.000Z	mcdenyer	tonyyarusso	which files do i remove exactly the .las or the .so or what?
+2006-01-28T07:32:00.000Z	tonyyarusso	mcdenyer	The two with totem in their name, whatever those are.
+2006-01-28T07:32:00.000Z	mcdenyer	tonyyarusso	theres 4
+2006-01-28T07:32:00.000Z	tonyyarusso	mcdenyer	Okay, then all four.
+2006-01-28T07:33:00.000Z	mcdenyer	tonyyarusso	whats the command to delete?
+2006-01-28T07:33:00.000Z	tonyyarusso	mcdenyer	rm
+2006-01-28T07:33:00.000Z	mcdenyer	tonyyarusso	sudo rm
+2006-01-28T07:34:00.000Z	tonyyarusso	mcdenyer	correct.
+2006-01-28T07:35:00.000Z	mcdenyer	tonyyarusso	ok now what?
+2006-01-28T07:35:00.000Z	tonyyarusso	mcdenyer	Now try it.
+2006-01-28T07:37:00.000Z	mcdenyer	tonyyarusso	man the video and sound quality is great works perfectly thanks alot man
+2006-01-28T07:37:00.000Z	tonyyarusso	mcdenyer	np
+2006-01-28T07:46:00.000Z	mcdenyer	tonyyarusso	hmm that works good except for the video size is like half the size it should be
+2006-01-28T07:46:00.000Z	mcdenyer	tonyyarusso	is there a nother plugin i can try?
+2006-01-28T07:46:00.000Z	tonyyarusso	mcdenyer	How are you judging what "it should be"?
+2006-01-28T07:46:00.000Z	mcdenyer	tonyyarusso	mmm how i see it when using windows
+2006-01-28T07:47:00.000Z	tonyyarusso	mcdenyer	Not really sure.  I don't have anything else to recommend since that works for me.
+2006-01-28T07:48:00.000Z	mcdenyer	tonyyarusso	hmm u set me up with one where it had like a black loading screen
+2006-01-28T07:48:00.000Z	mcdenyer	tonyyarusso	you helped me set it up on aim
+2006-01-28T07:49:00.000Z	tonyyarusso	mcdenyer	Oy, I don't really remember.
+2006-01-28T07:49:00.000Z	mcdenyer	tonyyarusso	hmm ok
+2006-01-28T07:53:00.000Z	mcdenyer	tonyyarusso	whats the difference between gstreamer-0.8* mozilla-mplayer and just mozilla-mplayer?

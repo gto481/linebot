@@ -1,0 +1,98 @@
+2007-09-29T10:55:00.000Z	zetheroo		I am trying to install the latest version of WINE in Ubuntu Feisty.... I am following the How-to form the winehq site.... but I get errors when doing sudo apt-get update    http://paste.ubuntu-nl.org/38985/
+2007-09-29T10:57:00.000Z	zetheroo		anyone?
+2007-09-29T10:57:00.000Z	scguy318	zetheroo	have you tried running that sudo apt-get update?
+2007-09-29T10:57:00.000Z	scguy318	zetheroo	and you did follow the instructions to the T?
+2007-09-29T10:57:00.000Z	zetheroo	scguy318	I followed this How-to http://www.winehq.org/site/download-deb
+2007-09-29T10:58:00.000Z	zetheroo	scguy318	I added the repo key.... I added the source.... I did sudo apt-get update.... and there I get the error
+2007-09-29T11:00:00.000Z	scguy318	zetheroo	can you pastebin the contents of /etc/apt/sources.list and the GPG key which I will give you the path in a moment
+2007-09-29T11:01:00.000Z	zetheroo	scguy318	sources.list http://paste.ubuntu-nl.org/38986/
+2007-09-29T11:03:00.000Z	scguy318	zetheroo	did you add the Wine BudgetDedicated repos? i dont see them in sources.list
+2007-09-29T11:05:00.000Z	zetheroo	scguy318	yeah I know,,,,, i don't see them either..... but when I go to the Software Sources list they are in the Third-Party section
+2007-09-29T11:05:00.000Z	scguy318	zetheroo	perhaps you should remove them from third-party and add them manually to sources.list
+2007-09-29T11:06:00.000Z	scguy318	zetheroo	as the instructions said
+2007-09-29T11:07:00.000Z	zetheroo	scguy318	the instructions don't say to do it manually ..... they say to enter this in the terminal: sudo wget http://wine.budgetdedicated.com/apt/sources.list.d/feisty.list -O /etc/apt/sources.list.d/winehq.list
+2007-09-29T11:07:00.000Z	zetheroo	scguy318	and thats what I did
+2007-09-29T11:07:00.000Z	scguy318	zetheroo	mm, you're right
+2007-09-29T11:08:00.000Z	zetheroo	scguy318	do you know what i should put there if I want to do it manually?
+2007-09-29T11:08:00.000Z	scguy318	zetheroo	deb http://wine.budgetdedicated.com/apt feisty main #WineHQ - Ubuntu 7.04 "Feisty Fawn"
+2007-09-29T11:09:00.000Z	scguy318	zetheroo	though it may not be it
+2007-09-29T11:09:00.000Z	scguy318	zetheroo	im thinking it could be the GPG key operation
+2007-09-29T11:09:00.000Z	zetheroo	scguy318	gosh... ok
+2007-09-29T11:09:00.000Z	scguy318	zetheroo	gimme a moment
+2007-09-29T11:10:00.000Z	scguy318	zetheroo	just redo the GPG key operation I suppose
+2007-09-29T11:16:00.000Z	zetheroo	scguy318	: do you know how I can remove the GPG key i added?
+2007-09-29T11:17:00.000Z	scguy318	zetheroo	you can go to Software Sources
+2007-09-29T11:17:00.000Z	scguy318	zetheroo	and remove the key from there
+2007-09-29T11:18:00.000Z	zetheroo	scguy318	: well i would if i could see the key there..... but all there is is one called Scott Richie
+2007-09-29T11:18:00.000Z	scguy318	zetheroo	interesting, looks like your GPG key db is screwy :(
+2007-09-29T11:18:00.000Z	zetheroo	scguy318	things are just getting better....ha
+2007-09-29T11:19:00.000Z	scguy318	zetheroo	you have any place where I can send files?
+2007-09-29T11:19:00.000Z	zetheroo	scguy318	send files?..... umm not really..... Email.... but I would rather not give it out here....
+2007-09-29T11:21:00.000Z	scguy318	zetheroo	mm, lemme think
+2007-09-29T11:25:00.000Z	scguy318	zetheroo	you would just use Software Sources to remove
+2007-09-29T11:25:00.000Z	scguy318	zetheroo	but since your file is screwy
+2007-09-29T11:25:00.000Z	scguy318	zetheroo	do you want my GPG key file?
+2007-09-29T11:25:00.000Z	scguy318	zetheroo	mine is 100% functional
+2007-09-29T11:26:00.000Z	zetheroo	scguy318	: guess what ... I removed that Scott Richie one and now my other keys are going nuts
+2007-09-29T11:26:00.000Z	scguy318	zetheroo	how would like for me to send my GPG key file?
+2007-09-29T11:26:00.000Z	scguy318	zetheroo	i know mine works, worth a shot to try to usem ine
+2007-09-29T11:26:00.000Z	zetheroo	scguy318	is there no way that I can repair/edit mine?
+2007-09-29T11:27:00.000Z	scguy318	zetheroo	if there is, im not really sure how
+2007-09-29T11:28:00.000Z	scguy318	zetheroo	the Scott Richie key is the one that signs the Ubuntu repos
+2007-09-29T11:28:00.000Z	scguy318	zetheroo	okay
+2007-09-29T11:28:00.000Z	scguy318	zetheroo	can you pastebin the output of sudo apt-key list?
+2007-09-29T11:29:00.000Z	zetheroo	scguy318	 :   http://paste.ubuntu-nl.org/38988/
+2007-09-29T11:30:00.000Z	zetheroo	scguy318	: How do I get Scott Richie back?
+2007-09-29T11:30:00.000Z	scguy318	zetheroo	you can use my key file
+2007-09-29T11:31:00.000Z	scguy318	zetheroo	how would like for me to send it?
+2007-09-29T11:31:00.000Z	zetheroo	scguy318	do you use Skype?
+2007-09-29T11:31:00.000Z	scguy318	zetheroo	unfortunately, no
+2007-09-29T11:31:00.000Z	scguy318	zetheroo	mm
+2007-09-29T11:31:00.000Z	scguy318	zetheroo	lemme just use...rapidshare :P
+2007-09-29T11:32:00.000Z	zetheroo	scguy318	: Yahoo MSN?
+2007-09-29T11:32:00.000Z	scguy318	zetheroo	I have MSN
+2007-09-29T11:32:00.000Z	zetheroo	scguy318	: ok... MSN then
+2007-09-29T11:33:00.000Z	zetheroo	scguy318	My MSN is leozeth21@hotmail.com
+2007-09-29T11:34:00.000Z	scguy318	zetheroo	i've added you, though don't really need to use MSN
+2007-09-29T11:39:00.000Z	scguy318	zetheroo	http://rapidshare.com/files/59005503/trusted.gpg.html
+2007-09-29T11:42:00.000Z	scguy318	zetheroo	respond please
+2007-10-22T11:50:00.000Z	scguy318	zetheroo	the question?
+2007-10-22T11:50:00.000Z	scguy318	zetheroo	your original question?
+2007-10-22T11:50:00.000Z	zetheroo	scguy318	I will paste it for you...
+2007-10-22T11:51:00.000Z	zetheroo	scguy318	a friend of mine upgraded to Gusty from Feisty and now his wireless is completely unresponsive..... he can see all the available networks .... but beyond that nothing.... what do ya think?
+2007-10-22T11:51:00.000Z	scguy318	zetheroo	try using something like ndiswrapper? maybe the native thing is borked
+2007-10-22T11:51:00.000Z	zetheroo	scguy318	thing is that I upgraded also and I have no probs with it..
+2007-10-22T11:51:00.000Z	scguy318	zetheroo	have you all peeked in syslog?
+2007-10-22T11:51:00.000Z	zetheroo	scguy318	only diff is that I have an Intel Wifi card and he has Atheros
+2007-10-22T11:52:00.000Z	scguy318	zetheroo	thats two different things
+2007-10-22T11:52:00.000Z	zetheroo	scguy318	syslog?
+2007-10-22T11:52:00.000Z	scguy318	zetheroo	System -> Administartion -> System Log
+2007-10-22T11:52:00.000Z	scguy318	zetheroo	maybe his Atheros is having issues with the native module, ndiswrapper is worth a shot
+2007-10-22T11:53:00.000Z	zetheroo	scguy318	and what would we be looking for in there?
+2007-10-22T11:53:00.000Z	scguy318	zetheroo	anything related to the wireless?
+2007-10-22T11:53:00.000Z	zetheroo	scguy318	so install the drivers manually?
+2007-10-22T11:53:00.000Z	zetheroo	scguy318	oh ok
+2007-10-22T11:53:00.000Z	scguy318	zetheroo	any messages of interest may help in diagnosing what went wrong, and
+2007-10-22T11:53:00.000Z	zetheroo	scguy318	ha thanks....
+2007-10-22T11:54:00.000Z	scguy318	zetheroo	SetupNdiswrapperHowto on the UBuntu Wiki describes how to install ndiswrapper and get it working
+2007-10-22T11:54:00.000Z	zetheroo	scguy318	I have use ndis before and quite enjoy it ... harhar
+2007-10-22T11:54:00.000Z	scguy318	zetheroo	a few minor steps need to be tweaked since we're in Gutsy, but other than that cool
+2007-10-22T11:55:00.000Z	zetheroo	scguy318	I see you here a lot and you are always a help ... are you a developer?
+2007-10-22T11:55:00.000Z	scguy318	zetheroo	not at all
+2007-10-22T11:55:00.000Z	scguy318	zetheroo	i'm just a loser who has better things to do :P
+2007-10-22T11:55:00.000Z	zetheroo	scguy318	but I feel I have chatted with you before...
+2007-10-22T11:56:00.000Z	scguy318	zetheroo	perhaps, I hang out here a lot
+2007-10-22T11:57:00.000Z	zetheroo	scguy318	are you "red+u splintercellguy" on MSN?
+2007-10-22T11:57:00.000Z	scguy318	zetheroo	yes I am
+2007-10-22T11:57:00.000Z	zetheroo	scguy318	ahhh,.... terrific.. I have you on my chat.. i guess we have chatted before..
+2007-10-22T11:57:00.000Z	scguy318	zetheroo	yeah probably :P
+2007-10-22T11:57:00.000Z	zetheroo	scguy318	have you ever used Mandriva?
+2007-10-22T11:58:00.000Z	scguy318	zetheroo	not at all, Ubuntu happens to be my first
+2007-10-22T11:58:00.000Z	zetheroo	scguy318	for how long?
+2007-10-22T11:58:00.000Z	scguy318	zetheroo	since April
+2007-10-22T11:59:00.000Z	zetheroo	scguy318	Wow... sorta like me.... you sure learn quick
+2007-10-22T12:02:00.000Z	zetheroo	scguy318	there is also VirtualBox for Linux
+2007-10-22T12:03:00.000Z	zetheroo	scguy318	true about the flaws... I could never get the group thing working...
+2007-11-30T14:17:00.000Z	scguy318	zetheroo	for that situation you would do a PXE install
+2007-11-30T14:20:00.000Z	zetheroo	scguy318	PXE install?
+2007-12-15T15:27:00.000Z	scguy318	zetheroo	no

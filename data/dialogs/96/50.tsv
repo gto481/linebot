@@ -1,0 +1,96 @@
+2007-06-22T11:05:00.000Z	doms	yurimxpxman	 yehey
+2007-06-22T10:29:00.000Z	yurimxpxman	doms	are you trying to get php working in apache?
+2007-06-22T10:30:00.000Z	doms	yurimxpxman	yes
+2007-06-22T10:30:00.000Z	doms	yurimxpxman	 http://rafb.net/p/SQD6ag85.html
+2007-06-22T10:30:00.000Z	yurimxpxman	doms	sudo aptitude install php5-apache2-mod-bt
+2007-06-22T10:30:00.000Z	doms	yurimxpxman	 ok
+2007-06-22T10:31:00.000Z	doms	yurimxpxman	 access for bittorent
+2007-06-22T10:32:00.000Z	doms	yurimxpxman	 let me try
+2007-06-22T10:32:00.000Z	doms	yurimxpxman	 ahahah
+2007-06-22T10:33:00.000Z	yurimxpxman	doms	success?
+2007-06-22T10:33:00.000Z	doms	yurimxpxman	 hey  installation complete  so i need to clear my cache
+2007-06-22T10:34:00.000Z	doms	yurimxpxman	 then restart browser
+2007-06-22T10:34:00.000Z	doms	yurimxpxman	 w8
+2007-06-22T10:35:00.000Z	doms	yurimxpxman	 http://localhost/testphp.php    unable to connect
+2007-06-22T10:35:00.000Z	yurimxpxman	doms	do you have apache2 installed?
+2007-06-22T10:35:00.000Z	doms	yurimxpxman	  http://rafb.net/p/SQD6ag85.html    the pastebin  this how i install my apache and php
+2007-06-22T10:36:00.000Z	doms	yurimxpxman	  pls read my pastbin
+2007-06-22T10:36:00.000Z	doms	yurimxpxman	  did you see the pastebin
+2007-06-22T10:37:00.000Z	yurimxpxman	doms	reading now
+2007-06-22T10:41:00.000Z	yurimxpxman	doms	have you tried installing apache2-common?
+2007-06-22T10:41:00.000Z	doms	yurimxpxman	  nope
+2007-06-22T10:41:00.000Z	doms	yurimxpxman	  do i need that package
+2007-06-22T10:42:00.000Z	doms	yurimxpxman	  let me try
+2007-06-22T10:42:00.000Z	yurimxpxman	doms	possibly
+2007-06-22T10:43:00.000Z	doms	yurimxpxman	  ups  my apache2.2-common is already installed
+2007-06-22T10:43:00.000Z	doms	yurimxpxman	  and the mpm-prefork
+2007-06-22T10:44:00.000Z	yurimxpxman	doms	man apache-modconf
+2007-06-22T10:44:00.000Z	doms	yurimxpxman	  the document  ok i will try
+2007-06-22T10:44:00.000Z	doms	yurimxpxman	 yeah feisty fawn
+2007-06-22T10:45:00.000Z	doms	yurimxpxman	 but those cofiguration works fine in my edgy
+2007-06-22T10:45:00.000Z	yurimxpxman	doms	pastebin your httpd.conf file
+2007-06-22T10:45:00.000Z	doms	yurimxpxman	 ok
+2007-06-22T10:46:00.000Z	doms	yurimxpxman	 yeah theres an index.html  and the testphp.php in /var/www
+2007-06-22T10:47:00.000Z	doms	yurimxpxman	 http://rafb.net/p/Imk4jw84.html    here the httpd.conf
+2007-06-22T10:48:00.000Z	doms	yurimxpxman	 http://rafb.net/p/Imk4jw84.html    here the httpd.conf
+2007-06-22T10:48:00.000Z	doms	yurimxpxman	 did you see my httpd.conf
+2007-06-22T10:49:00.000Z	yurimxpxman	doms	yes
+2007-06-22T10:49:00.000Z	doms	yurimxpxman	 ok
+2007-06-22T10:49:00.000Z	doms	yurimxpxman	 :)
+2007-06-22T10:49:00.000Z	yurimxpxman	doms	I think you're missing something.. lemme check mine. one sec
+2007-06-22T10:50:00.000Z	doms	yurimxpxman	 wow  what is it?
+2007-06-22T10:50:00.000Z	doms	yurimxpxman	 i hope we can track it
+2007-06-22T10:52:00.000Z	doms	yurimxpxman	keep tracking on it, i'am still looking the missing configuration
+2007-06-22T10:52:00.000Z	yurimxpxman	doms	pastebin the results of this: ls /etc/apache2/mods-available|less
+2007-06-22T10:52:00.000Z	doms	yurimxpxman	ok
+2007-06-22T10:54:00.000Z	yurimxpxman	doms	on second thought, it'd be easier to remove the |less at the end of that
+2007-06-22T10:54:00.000Z	doms	yurimxpxman	http://rafb.net/p/oEBNEc28.html
+2007-06-22T10:54:00.000Z	doms	yurimxpxman	that all the load
+2007-06-22T10:55:00.000Z	yurimxpxman	doms	pastebin this: /etc/apache2/mods-enabled
+2007-06-22T10:55:00.000Z	yurimxpxman	doms	ls /etc/apache2/mods-enabled
+2007-06-22T10:55:00.000Z	doms	yurimxpxman	ok
+2007-06-22T10:56:00.000Z	doms	yurimxpxman	http://rafb.net/p/vdc1mB93.html
+2007-06-22T10:56:00.000Z	doms	yurimxpxman	thas all the enabled file
+2007-06-22T10:57:00.000Z	yurimxpxman	doms	do you have an old version of apache installed alongside apache2?
+2007-06-22T10:57:00.000Z	doms	yurimxpxman	nope
+2007-06-22T10:57:00.000Z	doms	yurimxpxman	this is fresh
+2007-06-22T10:57:00.000Z	doms	yurimxpxman	the userdir is there
+2007-06-22T10:58:00.000Z	yurimxpxman	doms	it all seems to look fine to me.. I'm not sure what we're missing here
+2007-06-22T10:58:00.000Z	doms	yurimxpxman	but b4 this configuration   is install both apache and apache2
+2007-06-22T10:58:00.000Z	yurimxpxman	doms	get rid of the first apache
+2007-06-22T10:58:00.000Z	doms	yurimxpxman	then i install apache and keep my apache2
+2007-06-22T10:59:00.000Z	doms	yurimxpxman	then i uninstall apache and keep my apache2
+2007-06-22T10:59:00.000Z	yurimxpxman	doms	sudo aptitude remove apache
+2007-06-22T10:59:00.000Z	doms	yurimxpxman	yeah i use my snyaptic to remove apache
+2007-06-22T10:59:00.000Z	doms	yurimxpxman	and the bugs started up
+2007-06-22T11:00:00.000Z	doms	yurimxpxman	but trace up my apache configuration its looks fine
+2007-06-22T11:00:00.000Z	yurimxpxman	doms	pastebin this file: /etc/apache2/apache2.conf
+2007-06-22T11:01:00.000Z	doms	yurimxpxman	okie
+2007-06-22T11:03:00.000Z	doms	yurimxpxman	 http://rafb.net/p/tTJ1pR42.html
+2007-06-22T11:03:00.000Z	doms	yurimxpxman	 thats the apache2.conf
+2007-06-22T11:04:00.000Z	doms	yurimxpxman	 did notice at the end of the file ServerName 192.168.1.20
+2007-06-22T11:04:00.000Z	doms	yurimxpxman	 did you notice at the end of the file ServerName 192.168.1.20  i change this
+2007-06-22T11:04:00.000Z	doms	yurimxpxman	 coz my local 192.168.1.20 is my local ip
+2007-06-22T11:05:00.000Z	doms	yurimxpxman	 http://rafb.net/p/tTJ1pR42.html
+2007-06-22T11:05:00.000Z	yurimxpxman	doms	I diffed it against my conf, and that was the only difference.. I didn't have that line at all, so just remove it and restart apache2
+2007-06-22T11:05:00.000Z	doms	yurimxpxman	 still reading
+2007-06-22T11:05:00.000Z	doms	yurimxpxman	 ah
+2007-06-22T11:10:00.000Z	doms	yurimxpxman	 i hope it work
+2007-06-22T11:10:00.000Z	doms	yurimxpxman	i forgot how to restart my apache
+2007-06-22T11:10:00.000Z	doms	yurimxpxman	what is the command
+2007-06-22T11:10:00.000Z	yurimxpxman	doms	sudo /etc/init.d stop
+2007-06-22T11:10:00.000Z	yurimxpxman	doms	sudo /etc/init.d start
+2007-06-22T11:11:00.000Z	doms	yurimxpxman	command not found
+2007-06-22T11:11:00.000Z	yurimxpxman	doms	oops. sudo /etc/init.d/apache2 stop
+2007-06-22T11:11:00.000Z	yurimxpxman	doms	sudo /etc/init.d/apache2 stop
+2007-06-22T11:11:00.000Z	doms	yurimxpxman	okie
+2007-06-22T11:12:00.000Z	doms	yurimxpxman	copy
+2007-06-22T11:12:00.000Z	yurimxpxman	doms	sudo /etc/init.d/apachce2 start
+2007-06-22T11:12:00.000Z	doms	yurimxpxman	stoping okie
+2007-06-22T11:12:00.000Z	yurimxpxman	doms	sudo /etc/init.d/apache2 start
+2007-06-22T11:13:00.000Z	doms	yurimxpxman	 root@pc1:/#
+2007-06-22T11:13:00.000Z	doms	yurimxpxman	 started
+2007-06-22T11:14:00.000Z	doms	yurimxpxman	 still unable to connect localhost
+2007-06-22T11:14:00.000Z	yurimxpxman	doms	ah, the server isn't working *at*all*?
+2007-06-22T11:26:00.000Z	doms	yurimxpxman	 yes your right
+2007-06-22T11:27:00.000Z	doms	yurimxpxman	 still there

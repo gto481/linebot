@@ -1,0 +1,96 @@
+2010-09-18T07:08:00.000Z	rahduke		please someone help me out, was trying to change my DNS Server as per these instructions... http://www.omgubuntu.co.uk/2010/09/how-to-switch-to-opendns-in-ubuntu-for-faster-browsing/
+2010-09-18T07:09:00.000Z	rahduke		once i set the DNS and clikced apply, and apply to all users my eth0 dissapeared from network connection manager, after reset I'm on the same DNS server as before and now for some weird reason no other computers on my network can see my NFS shares
+2010-09-18T07:09:00.000Z	rahduke		pleas help im bugging out
+2010-09-18T07:10:00.000Z	rahduke		also for some weird reason I cant get into IRC using Pidgin, I'm on empathy
+2010-09-18T07:10:00.000Z	tensorpudding	rahduke	if you set your DNS server to something outside of your LAN, it can't resolve host names on your LAN
+2010-09-18T07:10:00.000Z	tensorpudding	rahduke	which would explain why your NFS isn't working
+2010-09-18T07:10:00.000Z	rahduke	tensorpudding	well the problem is eth0 no longer shows up in network manager so i cant change back the settings
+2010-09-18T07:11:00.000Z	tensorpudding	rahduke	what do you mean?
+2010-09-18T07:11:00.000Z	tensorpudding	rahduke	you can't change your connection?
+2010-09-18T07:11:00.000Z	rahduke	tensorpudding	in network connections, the little box is now empty....no eth1 no eth0 no nothing
+2010-09-18T07:12:00.000Z	tensorpudding	rahduke	that's pretty weird
+2010-09-18T07:13:00.000Z	tensorpudding	rahduke	how did you configure your NFS exports?
+2010-09-18T07:14:00.000Z	rahduke	tensorpudding	i configured it like a year ago, it was working fine for over 9 months
+2010-09-18T07:14:00.000Z	tensorpudding	rahduke	you can hand-edit /etc/resolv.conf to point to your ISP's DNS server
+2010-09-18T07:14:00.000Z	tensorpudding	rahduke	it will get reset when you renegotiate DHCP though
+2010-09-18T07:15:00.000Z	tensorpudding	rahduke	though more likely if you're on a LAN you were using a DNS server on your LAN
+2010-09-18T07:16:00.000Z	rahduke	tensorpudding	how do u explain the fact that im not on a new DNS server, for somereason that guide didnt work for me
+2010-09-18T07:16:00.000Z	tensorpudding	rahduke	which guide is this?
+2010-09-18T07:17:00.000Z	tensorpudding	rahduke	you're not on a new DNS server?
+2010-09-18T07:17:00.000Z	tensorpudding	rahduke	what does your /etc/resolv.conf say?
+2010-09-18T07:17:00.000Z	rahduke	tensorpudding	no the settings didnt take, i dunno what happen but when i goto opendns to check it says im not on their server
+2010-09-18T07:18:00.000Z	rahduke	tensorpudding	edbian: when i try to restart NFS it says command not found now
+2010-09-18T07:19:00.000Z	tensorpudding	rahduke	does your LAN have NAT?
+2010-09-18T07:19:00.000Z	rahduke	tensorpudding	no NAT to my knowledge at least
+2010-09-18T07:20:00.000Z	tensorpudding	rahduke	okay, so are 167.206.254.2 etc. the OpenDNS nameservers, or your ISP nameservers?
+2010-09-18T07:20:00.000Z	rahduke	tensorpudding	according to the guide i was using the openDNS server is at "208.67.222.222, 208.67.220.220"
+2010-09-18T07:20:00.000Z	rahduke	tensorpudding	so that must be my ISP
+2010-09-18T07:21:00.000Z	tensorpudding	rahduke	okay
+2010-09-18T07:21:00.000Z	tensorpudding	rahduke	can you ping other computers on your LAN by hostname?
+2010-09-18T07:23:00.000Z	tensorpudding	rahduke	i think it might be /etc/init.d/nfs-kernel-server
+2010-09-18T07:23:00.000Z	tensorpudding	rahduke	hostname
+2010-09-18T07:24:00.000Z	rahduke	tensorpudding	pinging my host name works but the response time is a joke over 16ms
+2010-09-18T07:25:00.000Z	tensorpudding	rahduke	what about other hosts on the network?
+2010-09-18T07:25:00.000Z	rahduke	tensorpudding	pinging from other "nodes" to my host works as well
+2010-09-18T07:26:00.000Z	rahduke	tensorpudding	just really slow response times
+2010-09-18T07:26:00.000Z	tensorpudding	rahduke	but what about the other way?
+2010-09-18T07:26:00.000Z	rahduke	tensorpudding	they work both ways just really slow
+2010-09-18T07:26:00.000Z	tensorpudding	rahduke	okay, then i'm not sure
+2010-09-18T07:27:00.000Z	tensorpudding	rahduke	did you use hostnames or ip's when you were configuring NFS?
+2010-09-18T07:27:00.000Z	rahduke	tensorpudding	its so weird, i've been cut off at the knees without my NFS shares my network is useless
+2010-09-18T07:28:00.000Z	rahduke	tensorpudding	its been so long i forgot what the NFS file is called, i think its exports but i forgot where its located
+2010-09-18T07:29:00.000Z	tensorpudding	rahduke	/etc/exports
+2010-09-18T07:29:00.000Z	rahduke	tensorpudding	thanks, "/home 192.168.1.100/255.255.255.0 (rw,sync,no_root_squash,no_subtree_check)"
+2010-09-18T07:29:00.000Z	tensorpudding	rahduke	huh
+2010-09-18T07:29:00.000Z	tensorpudding	rahduke	and nfs-kernel-server is running?
+2010-09-18T07:30:00.000Z	rahduke	tensorpudding	thats one of the lines from my exports, and yes nfs-kernel-server is running
+2010-09-18T07:31:00.000Z	tensorpudding	rahduke	those exports are to local ip's, can you reach those machines using local ip's?
+2010-09-18T07:31:00.000Z	tensorpudding	rahduke	more specifically, that export line suggests you are behind NAT
+2010-09-18T07:31:00.000Z	tensorpudding	rahduke	since those IP's aren't publically-routable
+2010-09-18T07:32:00.000Z	rahduke	tensorpudding	the IP listed "192.168.1.100" is my IP running the NFS server, and its set in a range from 192.168.1.100 to 255.255.255.0 this way I cover any IP that hops on my network
+2010-09-18T07:32:00.000Z	tensorpudding	rahduke	that netmask should allow anything on 192.168.1.xxx right?
+2010-09-18T07:33:00.000Z	rahduke	tensorpudding	i really dont think im on NAT man, its a junky lil linksys router and ive never setup any NAT anything
+2010-09-18T07:33:00.000Z	rahduke	tensorpudding	yes thats the idea, and its always worked int he past
+2010-09-18T07:33:00.000Z	tensorpudding	rahduke	NAT is setup on routers by default, generally
+2010-09-18T07:33:00.000Z	rahduke	tensorpudding	then maybe I am, I'm really not familiar with NAT, i've never looked into it
+2010-09-18T07:33:00.000Z	tensorpudding	rahduke	it allows you to have as many machines as you want on your local network without having to buy as many ip's from your isp
+2010-09-18T07:34:00.000Z	tensorpudding	rahduke	but anyway
+2010-09-18T07:34:00.000Z	rahduke	tensorpudding	well that would make sense, I mean I have a network setup on the 19.21.68.1.*** range
+2010-09-18T07:34:00.000Z	rahduke	tensorpudding	i have 3 pcs and 4 HTPC's on the network all running Ubuntu
+2010-09-18T07:34:00.000Z	tensorpudding	rahduke	this doesn't explain why NFS isn't working, which is odd
+2010-09-18T07:35:00.000Z	rahduke	tensorpudding	i know thats why im freaking out....lol
+2010-09-18T07:35:00.000Z	tensorpudding	rahduke	since they all have local ip's
+2010-09-18T07:35:00.000Z	tensorpudding	rahduke	and you configured the exports to work with the whole local range
+2010-09-18T07:36:00.000Z	rahduke	tensorpudding	i know this sounds n00bish but in network connections my option for eth0 has always been there, the minute i changed the DNS settings and checked "make available to all users" it dissapeared
+2010-09-18T07:36:00.000Z	tensorpudding	rahduke	i don't actually know what the "make available to all users" option does
+2010-09-18T07:36:00.000Z	rahduke	tensorpudding	yea everything worked perfect for over a year, thru upgrades on all machines from 9.11 - 10.04
+2010-09-18T07:38:00.000Z	tensorpudding	rahduke	hmm, but generally there is a DNS server running on the router
+2010-09-18T07:39:00.000Z	rahduke	tensorpudding	all this DNS stuff is over my head, i really hate networking....
+2010-09-18T07:39:00.000Z	rahduke	tensorpudding	all i was trying to do is get off optiumonlines crappy horrible ad based DNS
+2010-09-18T07:40:00.000Z	tensorpudding	rahduke	i have bad residential DNS too, so i am running a caching DNS server on a machine on my LAN
+2010-09-18T07:41:00.000Z	rahduke	tensorpudding	is there a way to completely remove nfs all the settings and everything and start over? and do u think that will help?
+2010-09-18T07:42:00.000Z	rahduke	tensorpudding	even better is there a way to reset your DNS server from command line?
+2010-09-18T07:43:00.000Z	tensorpudding	rahduke	the first thing you need to do is figure out how to configure NetworkManager back to the way it was
+2010-09-18T07:43:00.000Z	rahduke	tensorpudding	exactly, thats what i want to do
+2010-09-18T07:43:00.000Z	tensorpudding	rahduke	you can try creating a new connection
+2010-09-18T07:43:00.000Z	rahduke	tensorpudding	but without seeing my netowrk card in there is like impossible, i tried making a new conne
+2010-09-18T07:44:00.000Z	tensorpudding	rahduke	it should be fine, I think
+2010-09-18T07:44:00.000Z	rahduke	tensorpudding	how can i reset my connection from command line?
+2010-09-18T07:45:00.000Z	tensorpudding	rahduke	you can disconnect and reconnect
+2010-09-18T07:47:00.000Z	rahduke	tensorpudding	well that didnt work
+2010-09-18T07:48:00.000Z	rahduke	tensorpudding	i dunno what that was about or what happened but reseting both server and node worked!
+2010-09-18T07:49:00.000Z	tensorpudding	rahduke	so NFS works now?
+2010-09-18T07:49:00.000Z	rahduke	tensorpudding	yup
+2010-09-18T07:49:00.000Z	tensorpudding	rahduke	heh
+2010-09-18T07:49:00.000Z	rahduke	tensorpudding	so weird
+2010-09-18T07:50:00.000Z	tensorpudding	rahduke	but like i said, i get pretty good DNS performance running my own DNS server on my LAN
+2010-09-18T07:50:00.000Z	rahduke	tensorpudding	how'd ya set that up?
+2010-09-18T07:50:00.000Z	tensorpudding	rahduke	I used BIND 9
+2010-09-18T07:50:00.000Z	rahduke	tensorpudding	i tried opendns like a year ago but it was a nightmare
+2010-09-18T07:51:00.000Z	tensorpudding	rahduke	it just caches DNS requests locally
+2010-09-18T07:51:00.000Z	rahduke	tensorpudding	u dont need a dedicated machine as a DNS server right?
+2010-09-18T07:51:00.000Z	tensorpudding	rahduke	i use it on my server, which also hosts a zfs array and a webserver
+2010-09-18T07:52:00.000Z	rahduke	tensorpudding	oh thats wayyy beyond the setup that I have, just running my main comp as my network share server
+2010-09-18T07:52:00.000Z	tensorpudding	rahduke	bind9 isn't big on resources unless you use a lot of web traffic, or you're using it as an authoritative DNS server for a website
+2010-09-18T07:54:00.000Z	rahduke	tensorpudding	lol well I have no webserver running, I think im just gunna deal with my ISP's DNS, every time i try to change things i run into lots of issues
+2010-09-18T08:41:00.000Z	rahduke	tensorpudding	yea i tried it too, its way to slow and it has real kiddie porn, i wrote to fbi about it never got a response

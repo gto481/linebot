@@ -1,0 +1,95 @@
+2010-06-01T04:56:00.000Z	tripelb		Please help me learn how to search in terminal for all files that have the term transmission anywhere in the char string of the name. Please help. I dont know how to use the command, and wildcards properly and the GUI fails me.
+2010-06-01T04:57:00.000Z	tripelb		ne_home see above line my question.
+2010-06-01T04:57:00.000Z	edbian	tripelb	find transmission
+2010-06-01T04:58:00.000Z	tripelb	edbian	no such file or directory (I have the program installed, per standard ubuntu)
+2010-06-01T04:59:00.000Z	edbian	tripelb	locate transmission
+2010-06-01T04:59:00.000Z	edbian	tripelb	Do you have that installed?
+2010-06-01T05:00:00.000Z	edbian	tripelb	sudo find / -name transmission
+2010-06-01T05:00:00.000Z	edbian	tripelb	Might take a bit to finish.
+2010-06-01T05:04:00.000Z	edbian	tripelb	that commands tells dpkg (the low level package manager) to install a package in the current directory named "transmission"  Is that what you want?
+2010-06-01T05:05:00.000Z	tripelb	edbian	no. I have transmission. It just doesnt put together a well-formed target file-path.
+2010-06-01T05:05:00.000Z	edbian	tripelb	I don't know what you mean "a well formed target file path"?  What is that about?
+2010-06-01T05:09:00.000Z	tripelb	edbian	-- I think it's since I put in vuze. I cant seem to get rid of vuze.
+2010-06-01T05:11:00.000Z	tripelb	edbian	ps > I tried this and got this --- help I feel like Alice thru the looking glass --- >  grep vuze  bash: grep: Permission denied
+2010-06-01T05:12:00.000Z	edbian	tripelb	What are you trying to do?  grep filters things.
+2010-06-01T05:13:00.000Z	tripelb	edbian	yes I know. I was trying to see if there were any vuze still running. I want to completely remove vuze from my system. Tonight I did sudo apt-get remove vuze and it did a lot but vuze did not leave.
+2010-06-01T05:14:00.000Z	edbian	tripelb	removing the package makes it so that that code can never be started again.  It does not stop instances of that code that are already running.  If you want to see what's running you can use ps -e
+2010-06-01T05:14:00.000Z	tripelb	edbian	I am also trying to get a torrent to download with transmission. It used to work. So I did something that changed it.
+2010-06-01T05:15:00.000Z	edbian	tripelb	If you want to filter the output of ps -e (cause there is a lot) send it to grep using a pipe and give grep something to filter based on like this: ps -e | grep vu
+2010-06-01T05:15:00.000Z	edbian	tripelb	That will show every line in ps -e that has vu in it
+2010-06-01T05:15:00.000Z	edbian	tripelb	Make sense?
+2010-06-01T05:15:00.000Z	tripelb	edbian	that's what ps was supposed to to      ps > grep vuze    I thought would give me all the vuze that is running. It has in the past for firefox. What happened.
+2010-06-01T05:15:00.000Z	edbian	tripelb	ps > grep ... is bsd syntax.  Linux syntax is ps | grep ...
+2010-06-01T05:16:00.000Z	edbian	tripelb	ps -e shows all of them
+2010-06-01T05:16:00.000Z	edbian	tripelb	ps shows what's being run on that term by you or something
+2010-06-01T05:18:00.000Z	tripelb	edbian	there is nothing vuze running. There is vuze still under applications>internet.  Ne_home need to keep my focus in.
+2010-06-01T05:18:00.000Z	edbian	tripelb	Might be a bug that it's been left in the menu.  Does it run if you click it?
+2010-06-01T05:20:00.000Z	tripelb	edbian	now something called evince is asking me about crash recovery (I downloaded rute.pdf)
+2010-06-01T05:21:00.000Z	edbian	tripelb	evince is a pdf reader.  It must have crashed
+2010-06-01T05:21:00.000Z	edbian	tripelb	You're doing a lot at once! :)
+2010-06-01T05:23:00.000Z	tripelb	edbian	NE_Home  - I googled the minor question.  ubuntuforums rules.    /xxx/.config/transmission
+2010-06-01T05:23:00.000Z	tripelb	edbian	NE_Home  - I googled the minor question.  ubuntuforums rules.    /xxx/.config/transmission  (what I was doing didnt search DOWN for transmission)
+2010-06-01T05:23:00.000Z	edbian	tripelb	Good call
+2010-06-01T05:26:00.000Z	edbian	tripelb	the other slash is an escape character
+2010-06-01T05:30:00.000Z	tripelb	edbian	NE_home, how do I get rid of VUZE? I dont see a gui uninstall.
+2010-06-01T05:31:00.000Z	edbian	tripelb	to get rid of fuse you sudo apt-get remove <allFuzePackages>
+2010-06-01T05:31:00.000Z	tripelb	edbian	literally?
+2010-06-01T05:31:00.000Z	edbian	tripelb	If you are having that much trouble with transmission you can delete the .config/transmission folder and all of your settings will be erased and it will act like it is brand new again.
+2010-06-01T05:31:00.000Z	tripelb	edbian	brilliant
+2010-06-01T05:32:00.000Z	edbian	tripelb	no, <thisIsAVariable> ;)
+2010-06-01T05:32:00.000Z	tripelb	edbian	just the settings.json or the entire directory?
+2010-06-01T05:33:00.000Z	edbian	tripelb	just the stuff for transmission?  I'm not really sure what you're asking
+2010-06-01T05:37:00.000Z	tripelb	edbian	this is what's in .config/transmission      ~/.config/transmission$ ls        blocklists  dht.dat  lock  resume  settings.json  stats.json  torrents
+2010-06-01T05:38:00.000Z	edbian	tripelb	You can get rid of the entire transmission folder
+2010-06-01T05:38:00.000Z	edbian	tripelb	When you run transmission again it will be auto-generated with all the typical defaults
+2010-09-22T02:18:00.000Z	edbian	tripelb	gparted is a graphical app.  It by definition will not work in the term.
+2010-09-22T02:20:00.000Z	tripelb	edbian	that's what I mentioned I thought to ul--- earlier who told me to try it. How about the nongraphical version?
+2010-09-22T02:21:00.000Z	edbian	tripelb	The cli version of the partition editor is fdisk.  It is hard to use.  Don't ask me how to use it, I don't know how.
+2011-03-27T21:03:00.000Z	edbian	tripelb	The french channel?
+2011-03-27T21:03:00.000Z	tripelb	edbian	that's what I was trying to suggest .. I didnt see the beginning queston so I am lost. Je me perde.
+2011-05-08T02:27:00.000Z	edbian	tripelb	The free command tells you how much of memory has usable stuff in it.  The gnome system monitor tells you how much ram and stuff that the kernel and applications absouletly need stored.  The difference is cache.  The kernel generally throws stuff into ram that it expects will be used
+2011-05-08T02:27:00.000Z	edbian	tripelb	hi :)
+2011-05-08T02:28:00.000Z	edbian	tripelb	I made a typo.  the gnome system monitor tells you how much ram that the kernel and applications absolutely need stored.  The difference is...
+2011-05-08T02:28:00.000Z	tripelb	edbian	so the free command is telling me about RAM+cache (and cache is a part of the hard drive used to page RAM). - Is that so?
+2011-05-08T02:29:00.000Z	edbian	tripelb	Yes.  That's what buffers / cache are in free -m
+2011-05-08T02:32:00.000Z	tripelb	edbian	I'll save that to get more clear about later. thanks you and thiebaude -- yes I just learned about free -m because I am reading a page on terminal commands. ==> basically I want ot learn about pulseaudio because I am trying to make this webcam work in something beside cheese and trying to get it's audio going. Last night I get no action here so I'm on my own. So I want to see if there is a program clled pulsaudo. So then I need
+2011-05-08T02:33:00.000Z	edbian	tripelb	Just type pulse[tab][tab]  it will autocomplete by looking in those directories automatically
+2011-05-08T02:33:00.000Z	edbian	tripelb	Then look it up in synaptic if you need to install it (it's not install I don't think)
+2011-05-08T02:37:00.000Z	tripelb	edbian	I found out how to do it in gnome (places, search for files, tada) -- but I'd still like to learn it in bash (I found out how to do echo $SHELL too --- love google and UCD
+2011-05-08T02:37:00.000Z	edbian	tripelb	I told you pulse[tab][tab]
+2011-05-08T02:38:00.000Z	tripelb	edbian	I know about that. but I didnt know that pulseaudio was a command.  (ignorance is bliss, heh)
+2011-05-08T02:39:00.000Z	edbian	tripelb	I'm not sure it is.  Better idea would be to look a the pulseaudio package in synaptic to get an idea of what it is
+2011-05-08T02:48:00.000Z	tripelb	edbian	synaptic is something that fails me (all but one time) I was reading info pulseaudio, then wiki on lowlatency. PPulseAudio (formerly Polypaudio) is a cross-platform, networked sound server (wikip), PulseAudio is a networked low-latency sound server(info) -- and I say "a server" -- ok I'll just let that ride in my mind, (client-server pair and all).  -- that's where I sit so far.
+2011-05-08T02:49:00.000Z	tripelb	edbian	the wikip entry is copied from synaptic
+2011-05-08T02:53:00.000Z	edbian	tripelb	that triggered my name :P
+2011-05-08T02:57:00.000Z	tripelb	edbian	I thought we were still discussion how I can understand pulseaudio but then I decided you were busy. so I just asked, again, <tripelb> Will anyone help me get my webcam microphone to function! SVP!
+2011-05-08T02:57:00.000Z	edbian	tripelb	http://www.tuxradar.com/content/how-it-works-linux-audio-explained
+2011-05-08T02:58:00.000Z	edbian	tripelb	This is a good starting point.
+2011-05-08T03:03:00.000Z	tripelb	edbian	good source but "too many bananas". I want to be able to chat with a friend. What they are teaching me is that it's not well designed. In that case I want to know how to do it. Is thre a SIMPLE way to test the microphone like "soundRecorder" in windows? That might tell me if it's the specific programs I am trying or somthing more specific to my webcam microphone. (Logitech quickcam for windows. UCD says works out of the box but
+2011-05-08T03:04:00.000Z	edbian	tripelb	Are you trying to get your mic working in skype?
+2011-05-08T03:05:00.000Z	tripelb	edbian	I tried skype. that didnt work. so I loaded exiga. I have no idea how to make a test call in that. (yes I got an account too) so I thought I'd get even more simple. can I record a sound.  {tripelb tried to simplify and think clearly.)
+2011-05-08T03:05:00.000Z	edbian	tripelb	I actually fixed the same problem for myself on an acer aspire one and skype so I feel pretty confident about this.
+2011-05-08T03:06:00.000Z	edbian	tripelb	Here it is: http://www.blog.arun-prabha.com/2008/05/23/skype-microphone-problem-and-complete-pulse-audio-setup-in-ubuntu/
+2011-05-08T03:07:00.000Z	tripelb	edbian	clicking
+2011-05-08T03:08:00.000Z	edbian	tripelb	waiting
+2011-05-08T03:08:00.000Z	edbian	tripelb	You should see the little input level thingy move when you make noise.
+2011-05-08T03:09:00.000Z	tripelb	edbian	I must go to the park. or this will be the 3rd year of missing the local festival 1/2 block away.
+2011-05-08T03:09:00.000Z	edbian	tripelb	I'm looking at this link too.  It's huge. Try to follow if you want.  I'm gonna find a shorter one
+2011-05-08T03:09:00.000Z	edbian	tripelb	Oh
+2011-05-08T03:09:00.000Z	tripelb	edbian	leave me a PM if you would be so nice.
+2011-06-21T02:14:00.000Z	edbian	tripelb	You cannot open  new tab from the place menu because you don't have a nautilus window open yet.  Once it is open you can right click to open folders in a new tab.
+2011-06-21T02:16:00.000Z	tripelb	edbian	what kind of window did I open? It looks like a nautilus window. I'm not right tabbing from the menu but from the window that came when I clicked on (my)Computer.
+2011-06-21T02:16:00.000Z	tripelb	edbian	it is nautilus. I looked at about
+2011-06-21T02:16:00.000Z	edbian	tripelb	If you click on anything in places it opens a nautilus windows
+2011-06-21T02:18:00.000Z	tripelb	edbian	yes. I'm not near that basic. I want to open something in a new tab. this isnt the soert of thing that should be difficult. or to open it in a new window. I am looking at a set of drives.
+2011-07-23T05:36:00.000Z	edbian	tripelb	what do you mean by 'good' ?
+2011-07-23T05:38:00.000Z	tripelb	edbian	I was looking for trouble. Not. I wanted to know if anyone has some experience with this. I only want safe stuff. But some more functionality (font styles, sizes - pasting in a pic) would be welcome.
+2011-07-23T05:38:00.000Z	edbian	tripelb	I've never used it.  Since it doesn't come from the repos it's a good idea you're asking around though.
+2011-08-07T23:05:00.000Z	edbian	tripelb	Look at the 'at' command.
+2011-08-07T23:05:00.000Z	tripelb	edbian	what's the at command??
+2011-08-07T23:06:00.000Z	edbian	tripelb	It lets you say 'at 3:45 run this command'
+2011-08-07T23:08:00.000Z	tripelb	edbian	that's not an interval. I want to do 10 then 5 then 3. I dont care about the time. Only the interval. Calculating time differences from now to what I want is NOT what I want.  I will want to do interval after interval. And I care about half-minutes.
+2011-08-07T23:08:00.000Z	tripelb	edbian	specific aint she
+2011-08-07T23:08:00.000Z	edbian	tripelb	10 then 5 then 3?  Like 10:00 a.m. then 5:00 p.m. then 3:00 p.m. ?
+2011-08-07T23:10:00.000Z	tripelb	edbian	I've asked before and only gotten a ring off at a clocktime answer. But for the record. how do I access the at command?  ----- no -language is a femaledog -  I mean 10 minutes 2 mins 2 mins 2 imns 3 mins 2 mins 5 mins.  like for an exercise forinstance
+2011-08-07T23:11:00.000Z	edbian	tripelb	man at     I'm still not clear what you want.  A program that runs a command at 10minutes, then 2, then 2, then 2, then 3, then 3 ??

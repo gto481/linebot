@@ -1,0 +1,97 @@
+2007-01-20T08:13:00.000Z	idea		Intellig: tell him to try disabling the onboard gfx card.
+2007-01-20T08:13:00.000Z	idea		intellig: from the bios.
+2007-01-20T08:15:00.000Z	idea		intellig: try auto and leave snooping off.
+2007-01-20T08:16:00.000Z	idea		intellig: if auto doesn't work, then try onboard.
+2007-01-20T08:17:00.000Z	idea		intellig: if it's on auto, set to onboard.
+2007-01-20T08:19:00.000Z	idea		someone will pick up on it locomtive. *maybe*
+2007-01-20T08:19:00.000Z	idea		i'm still hoping my issue gets some ubuntu love :)
+2007-01-20T08:21:00.000Z	idea		:)
+2007-01-20T08:22:00.000Z	idea		"The default theme schemas could not be found on your system.  This means that you probably don't have metacity installed, or that your gconf is configured incorrectly."
+2007-01-20T08:22:00.000Z	idea		I need some help.. google ain't..
+2007-01-20T08:22:00.000Z	xtknight	idea	hmm
+2007-01-20T08:22:00.000Z	xtknight	idea	ill see what i can do
+2007-01-20T08:22:00.000Z	idea	xtknight	i'd be mightily obliged :)
+2007-01-20T08:23:00.000Z	idea	xtknight	i've tried a new account. same deal.
+2007-01-20T08:23:00.000Z	xtknight	idea	cd /usr/share/gconf && ls -Ral    post to pastebin plz
+2007-01-20T08:23:00.000Z	idea	xtknight	ok.
+2007-01-20T08:26:00.000Z	xtknight	idea	got the pastebin?
+2007-01-20T08:26:00.000Z	idea	xtknight	will have.. being very slow..
+2007-01-20T08:27:00.000Z	idea	xtknight	http://pastebin.com/863540
+2007-01-20T08:28:00.000Z	xtknight	idea	you could use pastebin.ubuntu.nl   might be faster.  being slow for me as well
+2007-01-20T08:28:00.000Z	idea	xtknight	ok. will do in future.
+2007-01-20T08:33:00.000Z	xtknight	idea	sudo dpkg-reconfigure gconf  && sudo dpkg-reconfigure metacity && sudo dpkg-reconfigure metacity-common && sudo dpkg-reconfigure gnome-themes
+2007-01-20T08:33:00.000Z	xtknight	idea	give it a shot...cant get much worse
+2007-01-20T08:33:00.000Z	idea	xtknight	ok
+2007-01-20T08:34:00.000Z	idea	xtknight	can you repost that after i've logged into original account please.. apt-get appears not to work from this account :(
+2007-01-20T08:35:00.000Z	xtknight	idea	sure
+2007-01-20T08:35:00.000Z	idea	xtknight	don't run off! will brb.
+2007-01-20T08:38:00.000Z	idea	xtknight	back!!
+2007-01-20T08:38:00.000Z	xtknight	idea	still here ;)
+2007-01-20T08:39:00.000Z	idea	xtknight	excellent :) can you repost the command majickery please? :)
+2007-01-20T08:39:00.000Z	xtknight	idea	sudo dpkg-reconfigure gconf  && sudo dpkg-reconfigure metacity && sudo dpkg-reconfigure metacity-common && sudo dpkg-reconfigure gnome-themes
+2007-01-20T08:39:00.000Z	idea	xtknight	curious: says gconf not installed..
+2007-01-20T08:40:00.000Z	idea	xtknight	shall i get that?
+2007-01-20T08:40:00.000Z	xtknight	idea	sudo dpkg --purge gconf && sudo apt-get install gconf
+2007-01-20T08:40:00.000Z	idea	xtknight	ok. thanks.
+2007-01-20T08:40:00.000Z	xtknight	idea	may need to remove &&, dpkg could fail, thats alright, mainly need to install gconf
+2007-01-20T08:40:00.000Z	xtknight	idea	by remove && i mean place a | in place of it ;P
+2007-01-20T08:41:00.000Z	idea	xtknight	ah, ok.. wasn't familiar with && syntax
+2007-01-20T08:41:00.000Z	xtknight	idea	&& checks if last cmd fails before it succeeds.  pipe (|) does not check success of cmds , it just goes rambo
+2007-01-20T08:44:00.000Z	idea	xtknight	all done.
+2007-01-20T08:44:00.000Z	idea	xtknight	do i need to logout?
+2007-01-20T08:44:00.000Z	xtknight	idea	probably
+2007-01-20T08:45:00.000Z	idea	xtknight	same error. let me logout and in again.
+2007-01-20T08:45:00.000Z	xtknight	idea	ok
+2007-01-20T08:46:00.000Z	idea	xtknight	same as before. no change :(
+2007-01-20T08:47:00.000Z	xtknight	idea	blah we'll get it fixed.  linux can always be fixed
+2007-01-20T08:47:00.000Z	idea	xtknight	love your optimism and cando!
+2007-01-20T08:49:00.000Z	xtknight	idea	cat /etc/gconf/2/path   post on pastebin
+2007-01-20T08:49:00.000Z	idea	xtknight	ok
+2007-01-20T08:52:00.000Z	idea	xtknight	pastebin.ubuntu.nl not found.. reverting to standard pastebin
+2007-01-20T08:52:00.000Z	xtknight	idea	that exact url ?
+2007-01-20T08:53:00.000Z	xtknight	idea	its actually -nl.org
+2007-01-20T08:54:00.000Z	idea	xtknight	http://paste.ubuntu-nl.org/2285/
+2007-01-20T08:56:00.000Z	xtknight	idea	this one sure is tough
+2007-01-20T08:58:00.000Z	xtknight	idea	http://ubuntuforums.org/showthread.php?p=207219
+2007-01-20T08:58:00.000Z	idea	xtknight	yeah, it's tricky.. let's check that url.
+2007-01-20T08:59:00.000Z	xtknight	idea	sudo apt-get --purge remove metacity && sudo apt-get install metacity    i guess
+2007-01-20T08:59:00.000Z	idea	xtknight	ok. let's do that ;)
+2007-01-20T09:03:00.000Z	xtknight	idea	did that cmd help any?  or if youre debugging with strace, etc right now thats fine
+2007-01-20T09:03:00.000Z	idea	xtknight	just downloading..
+2007-01-20T09:03:00.000Z	xtknight	idea	ahh ok
+2007-01-20T09:04:00.000Z	idea	xtknight	i *guess* strace finished when the same error was generated?
+2007-01-20T09:04:00.000Z	xtknight	idea	i dont know, youll have to leave that to frogzoo , i havent been follwoing :P
+2007-01-20T09:28:00.000Z	xtknight	idea	that's cool.  used hamachi tons with vnc
+2007-01-20T09:04:00.000Z	idea	xtknight	ok. gonna relogin.
+2007-01-20T09:07:00.000Z	idea	xtknight	same same :(
+2007-01-20T09:07:00.000Z	xtknight	idea	damn
+2007-01-20T09:07:00.000Z	idea	xtknight	yeah. my sentiments also :)
+2007-01-20T09:09:00.000Z	xtknight	idea	post   cat /var/log/syslog   itll be huge
+2007-01-20T09:09:00.000Z	idea	xtknight	ok. on it!
+2007-01-20T09:28:00.000Z	xtknight	idea	give me a sec
+2007-01-20T09:11:00.000Z	idea	xtknight	not so huge.. one sec.
+2007-01-20T09:13:00.000Z	idea	xtknight	http://paste.ubuntu-nl.org/2289/
+2007-01-20T09:15:00.000Z	xtknight	idea	let's dynamite gdm and gconf then.  sudo apt-get --purge remove gdm && sudo apt-get install gdm && sudo apt-get --purge remove gconf && sudo apt-get install gconf
+2007-01-20T09:15:00.000Z	idea	xtknight	ok :)
+2007-01-20T09:23:00.000Z	idea	xtknight	all done.. logging in again. brb.
+2007-01-20T09:23:00.000Z	xtknight	idea	ok
+2007-01-20T09:26:00.000Z	idea	xtknight	love to say it's fixed! but, no. same same :((
+2007-01-20T09:27:00.000Z	xtknight	idea	well...i guess the only option is to reinstall...unless you dont mind me VNCing in and seeing what i can do... i wouldn't mind
+2007-01-20T09:27:00.000Z	idea	xtknight	um. reinstall :( vnc ok.. we'd need to use hamachi, though..
+2007-01-20T09:28:00.000Z	idea	xtknight	proper stuff. you're a gent.. me too.. need to install hamachi and vnc..
+2007-01-20T09:28:00.000Z	xtknight	idea	sudo apt-get install vino-server   for vnc
+2007-01-20T09:28:00.000Z	idea	xtknight	ok. thanks.
+2007-01-20T09:30:00.000Z	idea	xtknight	vino-server? not found..
+2007-01-20T09:30:00.000Z	xtknight	idea	just vino actually
+2007-01-20T09:31:00.000Z	idea	xtknight	ok. ta.
+2007-01-20T09:32:00.000Z	idea	xtknight	vino appears to be installed.. just getting hamachi.
+2007-01-20T09:34:00.000Z	idea	xtknight	where do i drop the hamachi dir (from downloaded archive)? or is there a simpler install method?
+2007-01-20T09:34:00.000Z	xtknight	idea	download the tar file to your home dir, extract it.  then go into the hamachi dir and follow the README
+2007-01-20T09:40:00.000Z	xtknight	idea	any luck?  get hamachi installed?
+2007-01-20T09:56:00.000Z	idea	xtknight	sorry. network outage :( um. issues with hamachi..
+2007-01-20T09:56:00.000Z	idea	xtknight	will see if i can resolve them.
+2007-01-20T09:57:00.000Z	xtknight	idea	sorry i'll have to help later
+2007-01-20T09:58:00.000Z	xtknight	idea	i'll be on maybe in a couple hours, im not sure
+2007-01-20T09:58:00.000Z	idea	xtknight	ok. thanks for all your help so far.
+2007-01-20T10:05:00.000Z	idea	xtknight	fwiw, now have hamachi running, but blank pass is invalid, apparently.
+2007-01-20T12:20:00.000Z	xtknight	idea	i'm bakc

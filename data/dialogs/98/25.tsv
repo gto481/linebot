@@ -1,0 +1,98 @@
+2008-12-23T12:04:00.000Z	hashbrowns		I'm having problems dualbooting windows xp pro x64 and ubuntu 8.10 64-bit.  The ubuntu install went allright, no errors.  After the reboot though, my computer just automatically booted my windows installation without any prompt to choose which OS I would like to boot.  How do I fix this?
+2008-12-23T12:06:00.000Z	hashbrowns		I'm having problems dualbooting windows xp pro x64 and ubuntu 8.10 64-bit.  The ubuntu install went allright, no errors.  After the reboot though, my computer just automatically booted my windows installation without any prompt to choose which OS I would like to boot.  How do I fix this?
+2008-12-23T12:08:00.000Z	hashbrowns		anyone here good at troubleshooting dualboot problems?
+2008-12-23T12:09:00.000Z	Slart	hashbrowns	you won't know until you actually describe your problem
+2008-12-23T12:09:00.000Z	Slart	hashbrowns	questions like that rarely get any answers
+2008-12-23T12:11:00.000Z	Slart	hashbrowns	that looks alright to me.. it's probably a grub problem
+2008-12-23T12:11:00.000Z	Slart	hashbrowns	it was the "Anyone here good at..."-question I commented on =)
+2008-12-23T12:12:00.000Z	hashbrowns	Slart	sorry, its just i posted that a few times earlier to no avail at getting some response so i changed my post just a little.
+2008-12-23T12:13:00.000Z	Slart	hashbrowns	did you install ubuntu first, then windows? or the other way around?
+2008-12-23T12:13:00.000Z	hashbrowns	Slart	windows then ubuntu
+2008-12-23T12:13:00.000Z	Slart	hashbrowns	did you chose not to install grub during the installation?
+2008-12-23T12:14:00.000Z	hashbrowns	Slart	well the option never came up but I think I did install grub cause on the last page of the install process there was this "advanced" button I clicked on.  I didn't change anything but install grub was checked.
+2008-12-23T12:24:00.000Z	hashbrowns	Slart	well I just did the first part of that link you gave me and no luck.  Should I try the rest of it or is that for something else?
+2008-12-23T12:25:00.000Z	Slart	hashbrowns	they are all good links.. but the first one ought to have fixed it... perhaps there's someting else wrong
+2008-12-23T12:26:00.000Z	hashbrowns	Slart	have you any ideas as to what may be wrong?
+2008-12-23T12:27:00.000Z	Slart	hashbrowns	my first guess was that grub either wasn't installed at all or that the windows mbr was still there.. the first link ought to have fixed those.. I'm not really sure what else could be wrong.. do you see any text mentioning GRUB when you boot up?
+2008-12-23T12:28:00.000Z	hashbrowns	Slart	none at all.  My computer just does its POST and then runs right to windows.
+2008-12-23T12:30:00.000Z	Slart	hashbrowns	hmm.. did you try a full reinstall of grub?
+2008-12-23T12:32:00.000Z	hashbrowns	Slart	well I did that first part of that link you gave me labeled quick start up until the first restart.  then it says to open /boot/grub/menu.list via live CD but my computer says it doesnt exist.
+2008-12-23T12:32:00.000Z	hashbrowns	Slart	but maybe i dont need to do that cause my windows install is working correctly, its just i cant boot my ubuntu install lol.
+2008-12-23T12:32:00.000Z	Slart	hashbrowns	try doing the full reinstall.. it's chapter 7  in the second link
+2008-12-23T12:33:00.000Z	Slart	hashbrowns	windows is a egocentric little whiny kid.. you won't be able to convince it to boot anything but itself..
+2008-12-23T12:34:00.000Z	Slart	hashbrowns	so you need to have grub installed.. it can boot both windows and linux
+2008-12-23T12:36:00.000Z	hashbrowns	Slart	When I installed ubuntu should I have mounted a partition to /boot?
+2008-12-23T12:36:00.000Z	hashbrowns	Slart	cause i just made to partitions one swap and one ext3 with mountpoint /
+2008-12-23T12:36:00.000Z	Slart	hashbrowns	nope.. on a  normal install it's located on the root
+2008-12-23T12:37:00.000Z	hashbrowns	Slart	Okay. Doing that chapter 7 thing now.
+2008-12-23T12:37:00.000Z	Slart	hashbrowns	ie you have /bin /home /var /boot etc on the same place
+2008-12-23T12:44:00.000Z	hashbrowns	Slart	Just finished that and still had no luck.  It seemed to be the same process as the thing I tried earlier.
+2008-12-23T12:45:00.000Z	Slart	hashbrowns	yes.. it is pretty much the same..
+2008-12-23T12:45:00.000Z	Slart	hashbrowns	ok.. let's go through this again.. start with the hard drives.. are you using windows now?
+2008-12-23T12:46:00.000Z	hashbrowns	Slart	Yeah. Ive got three hdds, all are sata, 2 250GB and 1 500GB. Windows and Ubuntu are both installed to the same 250GB drive.
+2008-12-23T12:47:00.000Z	Slart	hashbrowns	ok.. and then you insert the linux live cd and reboot, right?
+2008-12-23T12:48:00.000Z	Slart	hashbrowns	and that's where you try reinstalling grub?
+2008-12-23T12:48:00.000Z	hashbrowns	Slart	yes.
+2008-12-23T12:48:00.000Z	Slart	hashbrowns	let me check that howto again....
+2008-12-23T12:49:00.000Z	hashbrowns	Slart	Okay.
+2008-12-23T12:49:00.000Z	Slart	hashbrowns	when you use the live cd, do you have an internet connection?
+2008-12-23T12:50:00.000Z	hashbrowns	Slart	Yeah.
+2008-12-23T12:50:00.000Z	Slart	hashbrowns	oh.. wait.. just thought of something.. you're not using some kind of BIOS antivirus setting?
+2008-12-23T12:51:00.000Z	hashbrowns	Slart	I dont believe I am.
+2008-12-23T12:51:00.000Z	Slart	hashbrowns	some BIOS's have an virus protection thingy that denies access to the mbr.. ie you can't change it
+2008-12-23T12:51:00.000Z	Slart	hashbrowns	ok.. could you boot the live cd and start xchat? I think it will join this channel by default
+2008-12-23T12:52:00.000Z	Slart	hashbrowns	if xchat isn't installed you can install it either using "Add/Remove programs" or in synaptic
+2008-12-23T12:52:00.000Z	hashbrowns	Slart	well I've had GRUB installed before, I had this problem a few days ago but Ubuntu would boot but windows said ntldr was corrupt or something, rendering my windows install unusable.
+2008-12-23T12:53:00.000Z	hashbrowns	Slart	one sec, gotta reboot and stuff to get the live CD going
+2008-12-23T12:53:00.000Z	Slart	hashbrowns	sure
+2008-12-23T12:55:00.000Z	hashbrowns	Slart	how do i start xchat?
+2008-12-23T12:55:00.000Z	Slart	hashbrowns	take a look in the Applications, Internet menu
+2008-12-23T12:56:00.000Z	Slart	hashbrowns	or just open a terminal and run "xchat"
+2008-12-23T12:59:00.000Z	hashbrowns	Slart	which one do i want to install from synaptic? xchat-gnome or xchat-gnome-common
+2008-12-23T13:00:00.000Z	Slart	hashbrowns	you'll need both.. xchat-gnome will install xchat-gnome-common for you
+2008-12-23T13:00:00.000Z	hashbrowns	Slart	Okay one sec
+2008-12-23T13:03:00.000Z	Slart	hashbrowns	great
+2008-12-23T13:04:00.000Z	Slart	hashbrowns	try opening this link https://help.ubuntu.com/community/RecoveringUbuntuAfterInstallingWindows?action=show&redirect=RestoreGrub
+2008-12-23T13:59:00.000Z	Slart	hashbrowns	good luck
+2008-12-23T14:01:00.000Z	hashbrowns	Slart	Thanks man! It worked!  Now should I boot to ubuntu first or to my windows install?  Last time I was at this stage my windows install wouldnt boot saying ntldr is corrupt or something.
+2008-12-23T14:01:00.000Z	Slart	hashbrowns	we can fix the windows boot from ubuntu
+2008-12-23T14:01:00.000Z	Slart	hashbrowns	so boot to ubuntu, from the hard drive
+2008-12-23T14:02:00.000Z	hashbrowns	Slart	so which should I start first?  The windows problem may not be present now.
+2008-12-23T14:02:00.000Z	hashbrowns	Slart	sorry didnt see the post
+2008-12-23T14:02:00.000Z	Slart	hashbrowns	how do you choose which one to boot? do you see the grub menu?
+2008-12-23T14:03:00.000Z	hashbrowns	Slart	yes. The grub menu
+2008-12-23T14:03:00.000Z	Slart	hashbrowns	you have a windows option there?
+2008-12-23T14:04:00.000Z	hashbrowns	Slart	Yes
+2008-12-23T14:04:00.000Z	Slart	hashbrowns	well... try both ubuntu and windows.. hopefully they will both work
+2008-12-23T14:04:00.000Z	hashbrowns	Slart	okay well im in ubuntu atm, should i do anything before i restart and try the windows option?
+2008-12-23T14:05:00.000Z	Slart	hashbrowns	nope.. just try them both first
+2008-12-23T14:06:00.000Z	hashbrowns	Slart	 Okay windows says " Starting up ...       NTLDR is missing   press Ctrl+Alt+Del to restart
+2008-12-23T14:07:00.000Z	Slart	hashbrowns	hmm.. ok.. go back to ubuntu
+2008-12-23T14:09:00.000Z	Slart	hashbrowns	ok.. try this.. "sudo apt-get install pastebinit; cat /boot/grub/menu.lst | pastebinit"
+2008-12-23T14:10:00.000Z	Slart	hashbrowns	it installs pastebinit.. a program that lets you paste stuff on pastebin, !paste for more info, and then sends the contents of your grub config file to that program.. you'll get an url back from that command.. give us the url so we can check why windows isn't booting properly
+2008-12-23T14:10:00.000Z	Slart	hashbrowns	you got an url?
+2008-12-23T14:13:00.000Z	Slart	hashbrowns	ok.. can you confirm that the windows system is on /dev/sda1 ?
+2008-12-23T14:13:00.000Z	Slart	hashbrowns	you can check in gparted for example
+2008-12-23T14:14:00.000Z	hashbrowns	Slart	how do I check that?
+2008-12-23T14:15:00.000Z	hashbrowns	Slart	Sorry I know so little about this stuff.
+2008-12-23T14:15:00.000Z	Slart	hashbrowns	start gparted (system, administration, partition editor or run gparted from a terminal) then look through your hard drives for the ntfs-partition with windows on it
+2008-12-23T14:15:00.000Z	Slart	hashbrowns	no worries.. we've all been there
+2008-12-23T14:17:00.000Z	hashbrowns	Slart	well no partition editor under administration, in terminal do i just type "gparted"?
+2008-12-23T14:17:00.000Z	Slart	hashbrowns	yes.. perhaps it's not installed by default.. can't really remember
+2008-12-23T14:17:00.000Z	hashbrowns	Slart	yeah its not, should i just go ahead and install it?
+2008-12-23T14:18:00.000Z	Slart	hashbrowns	yes
+2008-12-23T14:18:00.000Z	Slart	hashbrowns	it shouldn't take long to install and it's a good tool to have
+2008-12-23T14:19:00.000Z	hashbrowns	Slart	 I believe my windows install is on /dev/sdb1
+2008-12-23T14:21:00.000Z	Slart	hashbrowns	hmm.. then grub is right.. I wonder if it's some kind of 64-bit windows quirk
+2008-12-23T14:24:00.000Z	hashbrowns	Slart	so what now?
+2008-12-23T14:25:00.000Z	Slart	hashbrowns	I'm googling.. there seems to be other that are having the same problem with 64bit windows and dualbooting
+2008-12-23T14:26:00.000Z	hashbrowns	Slart	K. I hope there is a solution :S  BRB one sec.
+2008-12-23T14:34:00.000Z	hashbrowns	Slart	back
+2008-12-23T14:39:00.000Z	hashbrowns	Slart	any luck?
+2008-12-23T14:41:00.000Z	Slart	hashbrowns	nope.. nothing good so far
+2008-12-23T14:42:00.000Z	hashbrowns	Slart	k. do you think we will be able to resolve this issue?
+2008-12-23T14:44:00.000Z	Slart	hashbrowns	I don't know of any easy fixes at this point..
+2008-12-23T14:44:00.000Z	Slart	hashbrowns	according to all I know it should work now..
+2008-12-23T14:53:00.000Z	Slart	hashbrowns	nope.. can't really find anything useful about this.. sorry
+2008-12-23T14:55:00.000Z	Slart	hashbrowns	ask the channel.. there are plenty of wise people out there
+2008-12-23T14:57:00.000Z	hashbrowns	Slart	Okay.  Thanks for all the help man. I appreciate you sticking around for a few hours.

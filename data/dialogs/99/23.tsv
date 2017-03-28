@@ -1,0 +1,99 @@
+2012-03-06T23:28:00.000Z	binger		am having problems with network connectivity using ubuntu 11.10 as dual boot partition with win7
+2012-03-06T23:28:00.000Z	celthunder	binger	more info
+2012-03-06T23:30:00.000Z	celthunder	binger	whats it say whet you try to connect
+2012-03-06T23:30:00.000Z	celthunder	binger	any results in ip addr
+2012-03-06T23:32:00.000Z	celthunder	binger	whats it fail with
+2012-03-06T23:32:00.000Z	celthunder	binger	like no dhcp can you get the gateway etc
+2012-03-06T23:33:00.000Z	celthunder	binger	ok
+2012-03-06T23:34:00.000Z	celthunder	binger	try static addressing and test if you can ping the gateway
+2012-03-06T23:35:00.000Z	celthunder	binger	try to connect from terminal see what it fails with check ip route and ip addr etc
+2012-03-06T23:36:00.000Z	celthunder	binger	you can but its not much of a solution.
+2012-03-06T23:38:00.000Z	celthunder	binger	mount the external drive and then cp it
+2012-03-06T23:41:00.000Z	celthunder	binger	mount /dev/drivepartition mountpoint then cp -r source destinaition
+2012-03-07T07:37:00.000Z	celthunder	binger	it should ask if not go to a terminal and use fdisk or cfdisk
+2012-03-07T07:40:00.000Z	celthunder	binger	wubi is a stupid idea
+2012-03-07T07:41:00.000Z	celthunder	binger	tab to complete the nick so to type my name type cel tab
+2012-03-07T07:44:00.000Z	celthunder	binger	weechat-curses chatzilla isnt even a proper client
+2012-03-07T07:45:00.000Z	celthunder	binger	try weechat its irssi how it ends up anyway
+2012-03-07T08:54:00.000Z	celthunder	binger	/etc/network/interfaces and /etc/resolv.conf
+2012-03-07T08:27:00.000Z	binger	celthunder	well, I booted from the cd and can't get connectivity either.  So now I am going to take a look at my router to see if there's anything there. It's frustrating because it WAS working.  I grabbed 25gb of an android repo yesterday.  It was all good and can't figure out what's wrong.  I got it working for a little bit today, but as soon as I tried to make the install perm it went away
+2012-03-07T08:30:00.000Z	binger	celthunder	am not sure which ones those were?  I used the cd?
+2012-03-07T08:32:00.000Z	celthunder	binger	i said try static addressing check ip addr and ip route and /etc/resolv.conf
+2012-03-07T08:40:00.000Z	binger	celthunder	oh right.  I did do that and I saved the results for you.  Will try to send to you, but give me a bit...my irc skills are rusty.  I did find the url that was very similar to what I am seeing here: http://ubuntuforums.org/showthread.php?t=1802235  see post #7 especially.  I tried walking through that thread and my results were very similar.  Maybe something with the dhcp but not sure
+2012-03-07T08:48:00.000Z	binger	celthunder	am trying to send you that file now.  Not sure if i did that right :)
+2012-03-07T08:52:00.000Z	celthunder	binger	upload it somewhere
+2012-03-07T08:52:00.000Z	celthunder	binger	or use pastebin
+2012-03-07T08:53:00.000Z	binger	celthunder	one thought, I do have my ethernet connection set to a static address in windows.  So is there something I have to do in ubuntu so it sees that address?  In other words how to set the static addr there?
+2012-03-07T08:54:00.000Z	binger	celthunder	i don't know how much influence what I do in windows has on what i do in ubuntu in a side by side install.  i don't know how independent/dependent they are in each other
+2012-03-07T08:54:00.000Z	celthunder	binger	you can use tho same static address in each of them
+2012-03-07T08:55:00.000Z	binger	celthunder	so i need to edit those?
+2012-03-07T08:55:00.000Z	celthunder	binger	yes
+2012-03-07T08:55:00.000Z	binger	celthunder	aha, maybe we are getting somewhere :)
+2012-03-07T08:56:00.000Z	binger	celthunder	of course the other test would be to disable the static ip in windows.  Then it should work no matter what in ubuntu?
+2012-03-07T08:56:00.000Z	celthunder	binger	no
+2012-03-07T08:57:00.000Z	celthunder	binger	do you have anther comy ou can talk to me on while in ubuntu
+2012-03-07T08:58:00.000Z	celthunder	binger	it would make this a lot easier
+2012-03-07T08:59:00.000Z	binger	celthunder	I agree that it would and was actually thinking about that.  I have an old xp laptop but fear that that would be another issue as it is slow as a slug.  If I don't get this working today I will try and see what I can do about getting IRC working on that one and we can continue on..
+2012-03-07T09:02:00.000Z	binger	celthunder	so what I am going to try to do tonight is 1) install ubuntu 11.10 from the cd side by side with win7 if no connectivity I will 2) look for those two files you mentioned and edit them and reboot and see what happens.  3) if I am not totally frustrated by then I will disable the static ethernet ip in windows and see if the livecd will get a connect in try me mode.  Sound good?
+2012-03-07T09:02:00.000Z	celthunder	binger	ok well here first write down your netmask ip and gateway from windows then boot to ubuntu edit /etc/network/interfaces like so http://www.ubuntugeek.com/change-ubuntu-system-from-dhcp-to-a-static-ip-address.html then edit /etc/resolv.conf and add nameserver 8.8.8.8
+2012-03-07T09:03:00.000Z	celthunder	binger	then stop netmanager and related services and do a /etc/init.d/networking restart
+2012-03-07T09:03:00.000Z	celthunder	binger	try that
+2012-03-07T09:04:00.000Z	celthunder	binger	su up then /etc/init.d/networkmanager stop btw use root to edit the above files and restart networking as well
+2012-03-07T09:06:00.000Z	celthunder	binger	sudo su -
+2012-03-07T09:54:00.000Z	binger	celthunder	 good news + question.  I have a little script/batch file to run when travelling with the laptop and to disable the static ip.  Ran that to disable the static ip and I now get connectivity via ethernet  with the "try me" ubuntu live cd.  This is good.  My question now is that it wants to install on one of the little Western digital external drives that I use, in particular, an old
+2012-03-07T09:59:00.000Z	celthunder	binger	glad your network works hope my advice helped a bit.  anyway you can defrag and resize your c partition
+2012-03-07T10:01:00.000Z	binger	celthunder	yes it did.  It wants to install ubuntu on my g: external drive though.  Will I lose data if I allow it?  How do I get it to install on the c?  The c drive currently has 58gb out of 298gb free while the g is 26.2gb out of 74.5gb.  That doesn't sound good to me.  Need some wiggle room.
+2012-03-07T10:02:00.000Z	celthunder	binger	you pick the drive you want and the installer should let you resize make sure you have a backup though
+2012-03-07T10:02:00.000Z	celthunder	binger	especially with that little free space
+2012-03-07T10:03:00.000Z	binger	celthunder	it's not letting me pick.  The drop down menu in the installer only shows the one and, of course, it's the one without the most free space.
+2012-03-07T10:03:00.000Z	celthunder	binger	partition it outside the installer then or hope somene else can help i usually just wipe everything
+2012-03-07T10:04:00.000Z	celthunder	binger	so sorry not much use in resizing etc
+2012-03-08T09:05:00.000Z	binger	celthunder	hi it's me from yesterday. I did get ubuntu up and running ok with both wireless and wired connectivity.  The wireless needed a driver. I am on the right track with the static ip for the wired too.  Downloaded 25gb of android rom repo just fine. Started the compile before we went for dinner and when we got back the screen was dark and couldn't get it to wake up.
+2012-03-08T09:06:00.000Z	binger	celthunder	so i shut it down and restarted and now ubuntu won't boot up at all.  There's a message initially that says something like "HDIO get_identity failed /dev/sdc" and then it boots to an initramfs prompt
+2012-03-08T10:05:00.000Z	celthunder	binger	still having issues?
+2012-03-08T10:06:00.000Z	binger	celthunder	different ones now  see http://paste.ubuntu.com/874038/ if interested
+2012-03-08T10:15:00.000Z	binger	celthunder	or scientes see http://paste.ubuntu.com/874069 for result of the sudo blkid
+2012-03-08T10:19:00.000Z	celthunder	binger	you dont have to but you can
+2012-03-08T10:21:00.000Z	celthunder	binger	location where you want it modes order and something else
+2012-03-08T10:21:00.000Z	celthunder	binger	the last two catn usually be 0 or 0 1
+2012-03-08T10:41:00.000Z	binger	celthunder	 this is what i entered in the last line of fstab:  /dev/sda1 / ext4 defaults 0 0   does that sound right? I rebooted after making that edit and ended up at the same initramfs prompt :(
+2012-03-08T10:42:00.000Z	celthunder	binger	ok yeah that looks right if its ext4.
+2012-03-08T10:43:00.000Z	celthunder	binger	hmm when did this start and at what point does it drp you to initramfs ..like what did it fail to load
+2012-03-08T10:44:00.000Z	binger	celthunder	 see http://paste.ubuntu.com/874038/ for all the gory details
+2012-03-08T10:44:00.000Z	celthunder	binger	ok give me a moment
+2012-03-08T10:46:00.000Z	celthunder	binger	ok got you so sdc fails. what is sdc inyour system do you have any usb devices plugged in at the moment
+2012-03-08T10:46:00.000Z	binger	celthunder	yes there are 2 usb externals attached now
+2012-03-08T10:46:00.000Z	celthunder	binger	disconnect them and type exit
+2012-03-08T10:47:00.000Z	binger	celthunder	from initramfs?
+2012-03-08T10:47:00.000Z	celthunder	binger	yes=
+2012-03-08T10:51:00.000Z	celthunder	binger	any luck
+2012-03-08T10:52:00.000Z	binger	celthunder	so i hit exit at the initramfs prompt and it gives half page that starts with kernel panic-not syncing attempted to kill init
+2012-03-08T10:52:00.000Z	celthunder	binger	reboot with the drives unplugged
+2012-03-08T10:53:00.000Z	binger	celthunder	alrighty
+2012-03-08T10:54:00.000Z	binger	celthunder	at grub menu i selected ubuntu and the cursor in upper left blinked for a while then went to busybox screen and initramfs prompt
+2012-03-08T10:55:00.000Z	celthunder	binger	awe... new error at least?
+2012-03-08T10:55:00.000Z	binger	celthunder	fun ain't it?  maybe i should reedit that fstab to get rid of the line i put in?
+2012-03-08T11:00:00.000Z	binger	celthunder	so am booting from the livecd and going to revert my fstab edit. do sudo blkid too to see what it shows now. I sure am learning a lot about linux/ubuntu in the process though.
+2012-03-08T11:02:00.000Z	celthunder	binger	thats a good thing i guess can you pastebin you fstab while you edit it
+2012-03-08T11:07:00.000Z	binger	celthunder	this is the latest sudo blkid http://paste.ubuntu.com/874106/  there was nothing to revert in the /etc/fstab since I edited in the trial ubuntu.  DOH!
+2012-03-08T11:09:00.000Z	binger	celthunder	is there something i should be entering at the initramfs prompt?
+2012-03-08T11:09:00.000Z	celthunder	binger	lol make a chroot from the live install
+2012-03-08T11:16:00.000Z	binger	celthunder	I googled chroot. In the livecd try me I went to the home folder and i can see the 29gb ubuntu partition listed but will not let me mount and open.
+2012-03-08T11:17:00.000Z	binger	celthunder	so I can't get the complete mount path.  The error message says something about how there may be more info in the syslog.  Where is this?
+2012-03-08T11:18:00.000Z	celthunder	binger	/var/log/syslog
+2012-03-08T11:22:00.000Z	binger	celthunder	that is one long syslog file.  Not sure what I am looking for either.  So if I reinstall ubuntu over the existing will it fix things?  will I lose that 25gb download AGAIN?
+2012-03-08T11:22:00.000Z	celthunder	binger	you can reinstall thats not a solution and if you choose not to format you wont lose anything.
+2012-03-08T11:23:00.000Z	celthunder	binger	you should really just fix it though reinstall is the worst solution...
+2012-03-08T11:23:00.000Z	binger	celthunder	so are you saying it won't fix the immediate issue?
+2012-03-08T11:23:00.000Z	binger	celthunder	I agree but don't know how.
+2012-03-08T11:25:00.000Z	celthunder	binger	pastebin the last few lines of your syslog
+2012-03-08T11:32:00.000Z	binger	celthunder	this may be a little more than you asked for but wasn't sure: http://paste.ubuntu.com/874123/
+2012-03-08T11:39:00.000Z	celthunder	binger	back ok
+2012-03-08T11:39:00.000Z	celthunder	binger	so... what mode is your hdd in ahci compat etc in bios?
+2012-03-08T11:46:00.000Z	binger	celthunder	thought i could see that in the bios at startup but don't.  Gonna boot into win7.  I can look under device manager pretty sure
+2012-03-08T11:47:00.000Z	celthunder	binger	uhm you want the mode in bios and nvm i guess....
+2012-03-08T11:47:00.000Z	celthunder	binger	its not likely you swapped it tn the last few days if you dont know where it is
+2012-03-08T11:53:00.000Z	binger	celthunder	of course windows is taking this time to do some updating of it's own so it's gonna be a while... I may give up for tonight
+2012-03-08T11:55:00.000Z	binger	celthunder	i would guess that it is IDE though
+2012-03-08T12:06:00.000Z	binger	celthunder	as far as I know I've never seen a reference to ahci. the controller is ata/atapi if that helps. Looked in sys info in win7 and it doesn't really specify mode
+2012-03-08T23:39:00.000Z	binger	celthunder	- you around?  Am back to trying to fix my ubuntu install.

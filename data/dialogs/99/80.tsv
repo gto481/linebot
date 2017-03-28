@@ -1,0 +1,99 @@
+2006-01-16T08:55:00.000Z	warpforge		allison: do you know the IP address of your computer?
+2006-01-16T08:55:00.000Z	warpforge		allison: well, you're welcome to try forwarding the huge range you use to your computer
+2006-01-16T08:56:00.000Z	warpforge		allison: just be prepared to reset your router if it goes kaputt
+2006-01-16T08:57:00.000Z	warpforge		allison: resetting usually isn't that bad. at most, you'll return it to the factor config and have to input the DSL account settings
+2006-01-16T08:57:00.000Z	warpforge		factory*
+2006-01-16T08:57:00.000Z	warpforge		allison: actually, let's try something else first
+2006-01-16T08:58:00.000Z	warpforge		allison: you shouldn't have to call the ADSL people, even if you crash the router
+2006-01-16T08:59:00.000Z	warpforge		allison: all port forwarding does is take incoming requests to a certain port and send it all the way to your computer
+2006-01-16T08:59:00.000Z	warpforge		allison: the port number is like dialing an extension when you call an office
+2006-01-16T09:00:00.000Z	warpforge		Secreth: have you tried sudo mounting your second drive?
+2006-01-16T09:00:00.000Z	Secreth`X	warpforge	like mount /dev/hdd ?
+2006-01-16T09:02:00.000Z	Secreth`X	warpforge	mount /dev/hdd /media/cdrom1 ?
+2006-01-16T09:03:00.000Z	Secreth`X	warpforge	 k
+2006-01-16T09:05:00.000Z	Secreth`X	warpforge	I will, thanks for the help.. what do I need to do if it doesnt solve my problem?
+2006-01-16T09:06:00.000Z	Secreth`X	warpforge	I dont know wich hardware could cause this problem..
+2006-01-16T09:07:00.000Z	Secreth`X	warpforge	ubuntu is the only OS on this computer..
+2006-01-16T09:09:00.000Z	Secreth`X	warpforge	[device]  can be?
+2006-01-16T09:11:00.000Z	Secreth`X	warpforge	it returns this mount: special device /dev/hdd does not exist
+2006-01-16T09:13:00.000Z	Secreth`X	warpforge	yes, HDC is the one that already was in this computer before
+2006-01-16T09:14:00.000Z	Secreth`X	warpforge	what do you mean by that?
+2006-01-16T09:14:00.000Z	Secreth`X	warpforge	thats another problem, im not that good on hardware, so I really dont know which one is second en which one is master..
+2006-01-16T09:15:00.000Z	Secreth`X	warpforge	nope, only the one before
+2006-01-16T09:16:00.000Z	Secreth`X	warpforge	you cant help me with the issue?
+2006-01-16T09:16:00.000Z	Secreth`X	warpforge	same IDE cable? yes
+2006-01-16T09:17:00.000Z	Secreth`X	warpforge	I dont know how :/
+2006-01-16T09:17:00.000Z	Secreth`X	warpforge	you live in?
+2006-01-16T09:18:00.000Z	Secreth`X	warpforge	you live in?
+2006-01-16T09:25:00.000Z	Secreth`X	warpforge	Ill be here soon
+2006-01-16T09:27:00.000Z	Secreth`X	warpforge	k
+2006-01-16T09:28:00.000Z	warpforge	Secreth`X	is your other PC shut down?
+2006-01-16T09:28:00.000Z	Secreth`X	warpforge	shutting down
+2006-01-16T09:29:00.000Z	Secreth`X	warpforge	its shut down
+2006-01-16T09:29:00.000Z	warpforge	Secreth`X	touch the case to kill and static, turn off the power switch on your power supply, and unplug the power
+2006-01-16T09:31:00.000Z	Secreth`X	warpforge	done
+2006-01-16T09:31:00.000Z	warpforge	Secreth`X	open your case and remove the IDE cable from your CD drives
+2006-01-16T09:32:00.000Z	warpforge	Secreth`X	yes, off both drives
+2006-01-16T09:32:00.000Z	warpforge	Secreth`X	we need to check jumpers on both
+2006-01-16T09:33:00.000Z	Secreth`X	warpforge	so I need to screw them loos?
+2006-01-16T09:33:00.000Z	warpforge	Secreth`X	probably
+2006-01-16T09:33:00.000Z	Secreth`X	warpforge	I need to pull out the power things?
+2006-01-16T09:34:00.000Z	warpforge	Secreth`X	you don't have to
+2006-01-16T09:34:00.000Z	Secreth`X	warpforge	k
+2006-01-16T09:34:00.000Z	warpforge	Secreth`X	we just need to check that your old drive's jumper is set to "master"
+2006-01-16T09:34:00.000Z	warpforge	Secreth`X	and your new one is "slave"
+2006-01-16T09:35:00.000Z	Secreth`X	warpforge	where do I see if it is master or slave?
+2006-01-16T09:36:00.000Z	warpforge	Secreth`X	there's usually a label on your drive saying what jumper setting is master, etc
+2006-01-16T09:36:00.000Z	warpforge	Secreth`X	there's not a standard
+2006-01-16T09:36:00.000Z	Secreth`X	warpforge	ok.. I found some plugs where it shows master and slave
+2006-01-16T09:37:00.000Z	warpforge	Secreth`X	whatever drive is on the end the IDE cable, you should set to master
+2006-01-16T09:37:00.000Z	Secreth`X	warpforge	there is no switch or something :s
+2006-01-16T09:38:00.000Z	warpforge	Secreth`X	yes
+2006-01-16T09:38:00.000Z	warpforge	Secreth`X	whatever two pins the little jumper piece connects is what your drive is set to
+2006-01-16T09:40:00.000Z	warpforge	Secreth`X	set the drive you want on the far end of the IDE cable to "master"
+2006-01-16T09:40:00.000Z	warpforge	Secreth`X	set the drive in the middle of the cable to "slave"
+2006-01-16T09:42:00.000Z	Secreth`X	warpforge	the old one was the master, but it was on the middle of the IDE, the new one was cable select but it was on the end of the IDE
+2006-01-16T09:42:00.000Z	warpforge	Secreth`X	that would do it
+2006-01-16T09:43:00.000Z	warpforge	Secreth`X	I always recommend using explicit master and slave settings
+2006-01-16T09:43:00.000Z	warpforge	Secreth`X	And a little-known tip: the red mark on the IDE cable always goes toward the power connector
+2006-01-16T09:44:00.000Z	Secreth`X	warpforge	K I had totally no expirience with hardware
+2006-01-16T09:44:00.000Z	warpforge	Secreth`X	That's alright. There's a reason this stuff doesn't exist anymore in SATA.
+2006-01-16T09:45:00.000Z	warpforge	Secreth`X	What you did also has no risk of damaging the hardware.
+2006-01-16T09:45:00.000Z	Secreth`X	warpforge	?
+2006-01-16T09:45:00.000Z	warpforge	Secreth`X	yes?
+2006-01-16T09:46:00.000Z	Secreth`X	warpforge	no i mean, what do you mean? ;p
+2006-01-16T09:46:00.000Z	warpforge	Secreth`X	Serial ATA has no concept of master and slave devices anymore
+2006-01-16T09:47:00.000Z	warpforge	Secreth`X	Serial ATA is what's replacing what you have
+2006-01-16T09:47:00.000Z	warpforge	Secreth`X	what you did cannot damage hardware
+2006-01-16T09:49:00.000Z	warpforge	Secreth`X	you should be able to re-screw-in your drives, reconnect the IDE cable, close the case, plug it in, switch on the power supply, and boot up now
+2006-01-16T09:49:00.000Z	Secreth`X	warpforge	yea Im still screwing ;o
+2006-01-16T09:49:00.000Z	Secreth`X	warpforge	I need to fix something first (I put my RESETSW in the wrong position ;))
+2006-01-16T09:50:00.000Z	warpforge	Secreth`X	k
+2006-01-16T09:50:00.000Z	warpforge	Secreth`X	if you hook your RESETSW into the slave connection on your new drive, you can have your second CD drive only show up on boot if you hold down "reset"
+2006-01-16T09:51:00.000Z	warpforge	Secreth`X	that's a joke. don't do it.
+2006-01-16T09:57:00.000Z	Secreth`X	warpforge	GREAT now my bios found it.. now lets hope the same for ubuntu
+2006-01-16T09:58:00.000Z	warpforge	Secreth`X	we probably still have to configure fstab
+2006-01-16T10:08:00.000Z	warpforge	Secreth`X	run "sudo mount -a"
+2006-01-16T10:02:00.000Z	Secreth`X	warpforge	k Im ready, /dev/hdd isnt in fstab :x
+2006-01-16T10:03:00.000Z	warpforge	Secreth`X	go to /dev and run "ls | grep hd" for me again
+2006-01-16T10:04:00.000Z	warpforge	Secreth`X	great :-)
+2006-01-16T10:04:00.000Z	warpforge	Secreth`X	now run "sudo gedit /etc/fstab"
+2006-01-16T10:04:00.000Z	warpforge	Secreth`X	okay. copy the line with hdc (your existing cd drive) onto a new line
+2006-01-16T10:05:00.000Z	warpforge	Secreth`X	modify the line to refer to your new cd drive
+2006-01-16T10:05:00.000Z	warpforge	Secreth`X	is that clear?
+2006-01-16T10:05:00.000Z	Secreth`X	warpforge	so hdc becomes hdd and /media/cdrom0 becomes cdrom1
+2006-01-16T10:05:00.000Z	warpforge	Secreth`X	yes, and open another terminal
+2006-01-16T10:06:00.000Z	warpforge	Secreth`X	i forgot to have you make the media entry for your new disk
+2006-01-16T10:06:00.000Z	warpforge	Secreth`X	you don't have to close what you're working on
+2006-01-16T10:06:00.000Z	Secreth`X	warpforge	other terminal is open
+2006-01-16T10:07:00.000Z	warpforge	Secreth`X	when you put something in fstab, it needs a directory in the filesystem tree to bind to
+2006-01-16T10:07:00.000Z	warpforge	Secreth`X	so go to /media and "sudo mkdir cdrom1"
+2006-01-16T10:08:00.000Z	Secreth`X	warpforge	done
+2006-01-16T10:08:00.000Z	warpforge	Secreth`X	okay. save your fstab
+2006-01-16T10:08:00.000Z	warpforge	Secreth`X	and one more step
+2006-01-16T10:08:00.000Z	warpforge	Secreth`X	it reloads your fstab entries
+2006-01-16T10:09:00.000Z	warpforge	Secreth`X	putting it in fstab also means it will reload the change every boot
+2006-01-16T10:10:00.000Z	Secreth`X	warpforge	GREAT it works :D
+2006-01-16T10:16:00.000Z	Secreth`X	warpforge	thanks again
+2006-01-16T10:16:00.000Z	warpforge	Secreth`X	you're welcome :-)
+2006-01-16T10:16:00.000Z	warpforge	Secreth`X	bye

@@ -1,0 +1,99 @@
+2009-05-16T06:30:00.000Z	jdu	J-_	 the -R option to do something with chmod or chown recursively
+2009-05-16T07:18:00.000Z	jdu	J-_	all directories must be executable to access them.
+2009-05-16T07:20:00.000Z	jdu	J-_	so if you made the permissions _everything_ rw-r--r-- then you wouldn't be able to access anything because the directories wouldn't work.
+2009-05-16T07:20:00.000Z	J-_	jdu	I made /media/exteral which is my external drive 640. Is there anyway to ... fix it? The drive won't even mount now.
+2009-05-16T07:21:00.000Z	jdu	J-_	did you say which filesystem it is?
+2009-05-16T07:21:00.000Z	J-_	jdu	It's ext3
+2009-05-16T07:21:00.000Z	jdu	J-_	and you can't mount it?
+2009-05-16T07:21:00.000Z	J-_	jdu	no
+2009-05-16T07:25:00.000Z	jdu	J-_	so set  dmask=0022 as a boot option and try.
+2009-05-16T07:25:00.000Z	J-_	jdu	boot option? How?
+2009-05-16T07:26:00.000Z	jdu	J-_	mount -t ext3 -o dmask=0022 /dev/sdb1 /mnt/point
+2009-05-16T07:26:00.000Z	jdu	J-_	the device and the mount point may need to change.
+2009-05-16T07:26:00.000Z	jdu	J-_	so you can put various mount options after the -o with commas inbetween each
+2009-05-16T07:27:00.000Z	J-_	jdu	mount point doesn't exist. I guess I have to make it?
+2009-05-16T07:27:00.000Z	jdu	J-_	yes
+2009-05-16T07:27:00.000Z	jdu	J-_	mkdir /mnt/point     all this requires root (so sudo)
+2009-05-16T07:28:00.000Z	J-_	jdu	mount: special device /dev/sdb1 does not exist
+2009-05-16T07:28:00.000Z	jdu	J-_	that was just a guess.  This is an external drive?
+2009-05-16T07:28:00.000Z	J-_	jdu	Yes
+2009-05-16T07:29:00.000Z	J-_	jdu	I also think I assinged a UUID.
+2009-05-16T07:29:00.000Z	jdu	J-_	does it only have one filesystem on it or multiple?
+2009-05-16T07:29:00.000Z	J-_	jdu	Just one.
+2009-05-16T07:30:00.000Z	jdu	J-_	that was meant to you obviously.
+2009-05-16T07:30:00.000Z	J-_	jdu	Yes.
+2009-05-16T07:30:00.000Z	jdu	J-_	at any rate.  you can do   ls /dev | grep sd
+2009-05-16T07:31:00.000Z	jdu	J-_	to see what hard drive devices are available.
+2009-05-16T07:31:00.000Z	jdu	J-_	or probably just do UUID=blabla  instead.
+2009-05-16T07:32:00.000Z	jdu	J-_	so to clarify:  the dmask=0022 option should instruct the permissions of directories to be 755.
+2009-05-16T07:33:00.000Z	J-_	jdu	weird. Let me pastebin my fstab. there's an error on line 16
+2009-05-16T07:34:00.000Z	J-_	jdu	http://pastebin.ca/1424304
+2009-05-16T07:35:00.000Z	jdu	J-_	the $ should not be there.  Change it to two zeros with a space inbetween.
+2009-05-16T07:36:00.000Z	J-_	jdu	I guess I should restart now then?
+2009-05-16T07:36:00.000Z	J-_	jdu	Looks like a totally different problem though.
+2009-05-16T07:36:00.000Z	jdu	J-_	no
+2009-05-16T07:36:00.000Z	J-_	jdu	hmm
+2009-05-16T07:36:00.000Z	jdu	J-_	do swapoff then swapon
+2009-05-16T07:36:00.000Z	jdu	J-_	I meant no to restarting
+2009-05-16T07:37:00.000Z	jdu	J-_	so sudo swapoff; sudo swapon -a
+2009-05-16T07:37:00.000Z	jdu	J-_	so is either /dev/sda4 or /dev/sda2 the drive that you can't access?
+2009-05-16T07:37:00.000Z	J-_	jdu	I just did 2 commands, "sudo swapoff -a" and "swapon -a"
+2009-05-16T07:38:00.000Z	jdu	J-_	then do    swapon -s
+2009-05-16T07:38:00.000Z	jdu	J-_	if something appears, then you know that swap is working.
+2009-05-16T07:39:00.000Z	J-_	jdu	The problem isn't with swap though. I tried to exit nano. I had /etc/fstab up, after it closed it said there was an error on like 16. Which is totally unrelated since my swap is on my internal drive rather than my external.
+2009-05-16T07:39:00.000Z	J-_	jdu	And, it looks like my external drive isn't even in fstab.
+2009-05-16T07:40:00.000Z	jdu	J-_	correct, but now swap is fixed because it must have gotten messed up when editing fstab
+2009-05-16T07:40:00.000Z	J-_	jdu	Or, someone got into my computer somehow and changed stuff.
+2009-05-16T07:40:00.000Z	jdu	J-_	so to discover what device it is:  plug it in.  run:  sudo parted          then at the prompt:  print all
+2009-05-16T07:41:00.000Z	J-_	jdu	Yeah the device isn't there. :)
+2009-05-16T07:41:00.000Z	jdu	J-_	if you want to be paranoid... does some one know your password?  at any rate.  with the previous command you will get a listing of all your partitions.  Find the one that matches the filesystem you want to mount.
+2009-05-16T07:42:00.000Z	jdu	J-_	It will say:  Disk /dev/sXX   note what XX is.       Then note the partition number below.
+2009-05-16T07:43:00.000Z	jdu	J-_	with that info, you can retry the mount command.
+2009-05-16T07:43:00.000Z	J-_	jdu	No one knows my password, no. My partition I want isn't listed there. I'm thinking the drive is fried, or the external case is garbage.
+2009-05-16T07:43:00.000Z	jdu	J-_	perhaps.  But you said you chmod -R 644   right?
+2009-05-16T07:44:00.000Z	J-_	jdu	chmod 640
+2009-05-16T07:44:00.000Z	jdu	J-_	If you did that. to the drive, you would have made it impossible to access, because directories must be executable.
+2009-05-16T07:44:00.000Z	jdu	J-_	ok 640   the same result in this case.
+2009-05-16T07:44:00.000Z	jdu	J-_	directories should be 755
+2009-05-16T07:45:00.000Z	jdu	J-_	so, It seems odd that the disk would die right at that moment; much more likely you just need to mount it with dmask=0022 or similar
+2009-05-16T07:47:00.000Z	J-_	jdu	Not sure if you seen, but prior to all of this I asked what permission my external drive would be... I wanted, root: read and write, user: read, everyone else: none. Put I didn't know it needed to be executeable. so I went with 640, in which I think I wanted 740.
+2009-05-16T07:47:00.000Z	J-_	jdu	can I mount with a UUID?
+2009-05-16T07:47:00.000Z	jdu	J-_	yes.  Directories should be executable and files not ;(
+2009-05-16T07:48:00.000Z	jdu	J-_	minimally in fstab, I have not ever used an UUID with a standard mount command.  Try!
+2009-05-16T07:48:00.000Z	jdu	J-_	and I don't have any drives to test it on that are ext3
+2009-05-16T07:49:00.000Z	jdu	J-_	that aren't already mounted.
+2009-05-16T07:49:00.000Z	J-_	jdu	I first need to find out the UUID, but if it's not mounted. I can't really. :P
+2009-05-16T07:49:00.000Z	jdu	J-_	I find it hard to believe you can't find the device name.  That is a prerequisite for the UUID with vol_id anyway, right?
+2009-05-16T07:50:00.000Z	jdu	J-_	assuming the drive works, something should appear either with parted  or in /dev when the drive is plugged in.
+2009-05-16T07:51:00.000Z	jdu	J-_	sudo sfdisk -l   will give a list of partitions and their devices.
+2009-05-16T07:54:00.000Z	jdu	J-_	so you can just run:  blkid
+2009-05-16T07:55:00.000Z	J-_	jdu	hmm, yeah. Not there. :) I don't know dude. This external enclosure is under warranty, so I think I may take it back tomorrow and see if that's the verdict. Thanks for the help. :)
+2009-05-16T07:55:00.000Z	jdu	J-_	too bad it couldn't be fixed.  No problem, and good luck!
+2009-05-16T07:57:00.000Z	J-_	jdu	... LOL. I was just fooling around with the power supply, and now ... the disk is spinning. I should have took notice at first. ;(
+2009-05-16T07:58:00.000Z	jdu	J-_	one way to get a drive working... :)
+2009-05-16T07:59:00.000Z	J-_	jdu	Weird. blkid shows: /dev/sdb1: SEC_TYPE="msdos" LABEL="KINGSTON" UUID="E0FD-1813" TYPE="vfat"
+2009-05-16T07:59:00.000Z	J-_	jdu	Is that normal when it's not executeable?
+2009-05-16T07:59:00.000Z	jdu	J-_	is that all it shows for /dev/sdb ?
+2009-05-16T08:00:00.000Z	J-_	jdu	Yes.
+2009-05-16T08:00:00.000Z	jdu	J-_	because vfat will not store linux permissions anyway.
+2009-05-16T08:00:00.000Z	J-_	jdu	It wasn't vfat in the first place.
+2009-05-16T08:00:00.000Z	jdu	J-_	In other words, that doesn't look like ext3...
+2009-05-16T08:01:00.000Z	jdu	J-_	can you mount it?
+2009-05-16T08:01:00.000Z	J-_	jdu	It was... ext3. It says it's already mounted.
+2009-05-16T08:02:00.000Z	J-_	jdu	mount: /dev/sdb1 already mounted or /media/external_ busy
+2009-05-16T08:02:00.000Z	J-_	jdu	also mount: according to mtab, /dev/sdb1 is already mounted on /media/external_
+2009-05-16T08:02:00.000Z	jdu	J-_	what does the output of "mount" say
+2009-05-16T08:02:00.000Z	jdu	J-_	regarding what filesystem it is mounted as?
+2009-05-16T08:03:00.000Z	J-_	jdu	I can pastebin it, but the line I want(I think) is: /dev/sdb1 on /media/external_ type ext3 (rw,nosuid,nodev,uhelper=hal)
+2009-05-16T08:04:00.000Z	J-_	jdu	What I might do is, umount /media/external_, delete /media/external I just created. And remount, or hope it remounts.
+2009-05-16T08:05:00.000Z	jdu	J-_	odd. but blkid said it was vfat.  Now that you mention it. I have a /dev/sdb1 with blkid that also says it is vfat and I have no external drive attached.
+2009-05-16T08:05:00.000Z	jdu	J-_	and /dev/sda3 says it is ext2 with blkid even though it is ext3
+2009-05-16T08:05:00.000Z	J-_	jdu	I just did ls /media/external_ and it's listing the files.
+2009-05-16T08:05:00.000Z	jdu	J-_	perhaps it is better to use something other than blkid in this case.
+2009-05-16T08:06:00.000Z	jdu	J-_	good, so problem is solved.
+2009-05-16T08:07:00.000Z	J-_	jdu	not yet. :P I need to rm -R /media/external && umount /media/external_ && mount /media/external/. I'll do it per command though.
+2009-05-16T08:09:00.000Z	jdu	J-_	so you are trying to delete everything on the drive?  -r (or -R) is correct
+2009-05-16T08:09:00.000Z	J-_	jdu	It's definitely a faulty case.
+2009-05-16T08:09:00.000Z	J-_	jdu	Just deleting an empty directory.
+2009-05-16T08:10:00.000Z	jdu	J-_	sadly cases are often bad.
+2009-05-16T08:12:00.000Z	J-_	jdu	Yeah for sure. I just turned the case off, and back on. Drive isn't spinning. So I guess I can fool around with this POS for a while until it decided it wants to turn on.

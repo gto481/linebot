@@ -1,0 +1,95 @@
+2009-12-15T04:16:00.000Z	ae86-drifter		i know..
+2009-12-15T04:16:00.000Z	ae86-drifter		lol...
+2009-12-15T04:17:00.000Z	ae86-drifter		rethus
+2009-12-15T04:17:00.000Z	ae86-drifter		install mp3demux
+2009-12-15T04:17:00.000Z	ae86-drifter		i think
+2009-12-15T04:18:00.000Z	ae86-drifter		ifconfig eth0 down; ifconfig eth0 up
+2009-12-15T04:18:00.000Z	ikonia	ae86-drifter	that won't restart networking
+2010-02-02T06:14:00.000Z	ikonia	ae86-drifter	control your language
+2010-05-13T13:42:00.000Z	ikonia	ae86-drifter	ok, so there is a problem straight away, that card is a known issue card in general
+2010-05-13T13:40:00.000Z	ikonia	ae86-drifter	what is your issue
+2010-05-13T13:41:00.000Z	ae86-drifter	ikonia	When I get the grub boot menu and select the normal boot option, it boots into low graphics mode. I cannot move my cursor and it will not let me switch to a different tty. The system becomes fully unresponsive and I am forced to hard reboot my PC. I can only boot recovery mode with shell, I have tried reinstalling some xorg packages, gdm and gnome-desktop. This happened straight after upgrading from 9.10 > 10.04. The repositor
+2010-05-13T13:41:00.000Z	ikonia	ae86-drifter	what video card do you have
+2010-05-13T13:42:00.000Z	ikonia	ae86-drifter	the first thing I would do is force my xorg.conf file to use the "vesa" driver
+2010-05-13T13:42:00.000Z	ikonia	ae86-drifter	if you ignore people - then a.) I don't know to hear about it or care b.) you are limiting your help
+2010-05-13T13:43:00.000Z	ikonia	ae86-drifter	once my machine is booting using the vesa driver config I would then use the hardware drivers tool to make sure the propritary drivers on the system are up to date
+2010-05-13T13:43:00.000Z	ikonia	ae86-drifter	I would then stop xorg using vesa and reboot and test it
+2010-05-13T13:43:00.000Z	ae86-drifter	ikonia	he was being smart and not helping at all, so i ignored him, thanks for the suggestion, ill try that now.. one sec
+2010-05-13T13:44:00.000Z	ikonia	ae86-drifter	the channel doesn't need to know you ignored him
+2010-05-13T13:45:00.000Z	ae86-drifter	ikonia	sorry, i just wanted him to know in case he was trying to talk to me
+2010-05-13T13:45:00.000Z	ikonia	ae86-drifter	no - you didn't, if you want to tell him something, pm him, you announced it to the channel so everyone knew
+2010-05-13T13:47:00.000Z	ae86-drifter	ikonia	yeah sorry, im just frustrated atm, please forgive me.. do i change the load    "glx" part to load    "vesa" ?
+2010-05-13T13:47:00.000Z	ikonia	ae86-drifter	no, you change the driver line to vesa
+2010-05-13T13:57:00.000Z	ae86-drifter	ikonia	i copied failsafe version over xorg.conf, it now boots normal without the low graphics mode message but it still becomes unresponsive and cant change tty or move cursor
+2010-05-13T13:58:00.000Z	ikonia	ae86-drifter	why did you do that
+2010-05-13T13:58:00.000Z	ikonia	ae86-drifter	that's not what I told you to do
+2010-05-13T13:59:00.000Z	ae86-drifter	ikonia	because im trying to get it working, youre suggestion left me in exact same situation as now anyway so i tried this..
+2010-05-13T14:01:00.000Z	ikonia	ae86-drifter	when you're machine locks, hit caps lock and see if the light goes on / off
+2010-05-13T14:01:00.000Z	ae86-drifter	ikonia	nope, no response
+2010-05-13T14:01:00.000Z	ikonia	ae86-drifter	ok - so that sounds like a hardware error
+2010-05-13T14:01:00.000Z	ikonia	ae86-drifter	if the machine is locking at that level, I'd be surprised if it a video card error
+2010-05-13T14:02:00.000Z	ae86-drifter	ikonia	i can boot into recovery mode and get the cli, use the network etc..
+2010-05-13T14:02:00.000Z	ikonia	ae86-drifter	that doesn't mean it's not a hardware error
+2010-05-13T14:02:00.000Z	ae86-drifter	ikonia	maybe a hardware error caused by bad drivers?
+2010-05-13T14:02:00.000Z	ikonia	ae86-drifter	very doubtful
+2010-05-13T14:03:00.000Z	ikonia	ae86-drifter	that wouldn't create a hardlock of the level you are talking about
+2010-05-13T14:03:00.000Z	ae86-drifter	ikonia	okay.. i have no idea.
+2010-05-13T14:04:00.000Z	ikonia	ae86-drifter	a good test would be a.) boot from a 10.04 livecd and work for a bit b.) use memtest on a livecd for a good few passes
+2010-05-13T14:04:00.000Z	ikonia	ae86-drifter	you may also want to consider a clean 10.04 install rather than an upgrade, sometimes ugprades do go wrong
+2010-05-13T14:04:00.000Z	ae86-drifter	ikonia	sorry i forgot to add, i was using a mandriva one live cd yesterday for about 4 or 5 hrs
+2010-05-13T14:05:00.000Z	ikonia	ae86-drifter	again that doesn't really back up or disprove anything
+2010-05-13T14:06:00.000Z	ae86-drifter	ikonia	i have about 40 GB of apps installed so i would rather not clean install, sorry, i thought you were trying to disprove a memory fault
+2010-05-13T14:06:00.000Z	ikonia	ae86-drifter	memtest will prove/disprove a memory fault
+2010-05-13T14:09:00.000Z	ae86-drifter	ikonia	i just booted into the recovery mode again, and the actual text based recovery menu has locked up now, i think memory fault would be very unlikely as this PC is only around 8-9 mo old, and this happed as a result of the upgrade, is there something you can suggest i try besides a clean install of linux, to be honest if i were to go down that path, i will probably go with a more stable distro from MY own experience such as suse, 
+2010-05-13T14:20:00.000Z	ikonia	ae86-drifter	if the box is locking up within safe mode, - then I would strongly look at hardware errors
+2010-05-13T14:20:00.000Z	ikonia	ae86-drifter	that would be the first point of call
+2010-05-13T14:23:00.000Z	ae86-drifter	ikonia	i have just found out a few things, caps lock doesnt work but numlock and scroll do, i unplugged and plugged my keyboard in and all these messages appear on the screen, like generic-usb logitech keyboard on usb-6745674 blah blah, so its not locking up, it just has little response..
+2010-05-13T14:23:00.000Z	ae86-drifter	ikonia	i am doing a memtest right now
+2010-05-13T14:28:00.000Z	ikonia	ae86-drifter	if it's not actually locking up - that's a different issue totally
+2010-05-13T14:30:00.000Z	ae86-drifter	ikonia	i am going to cancel this memtest, there is no errors so far, but it is saying my ram is 667Mhz when it is actually 1066MHz(saying DDR2-400 when it is DDR2-1066) i think i will reset my bios because i overclocked my CPU, maybe thats it, no that didnt make a difference. Would it really be a hardware issue even though i can boot live cd? and access my local hard disk fine?
+2010-05-13T14:31:00.000Z	ikonia	ae86-drifter	overclocking is a BIG cause of unstability
+2010-05-13T14:32:00.000Z	ae86-drifter	ikonia	i reset back to dewfault and it made no diffeerence, it has been stable ever since i got it and have all the big cooling fans etc running at 4.06GHz
+2010-05-13T14:33:00.000Z	ikonia	ae86-drifter	then it (if you insist there is no hardware problems) looking like your upgrade didn't work
+2010-05-13T14:33:00.000Z	ae86-drifter	ikonia	i think its because of the upgrade to lucid
+2010-05-13T14:37:00.000Z	ikonia	ae86-drifter	ut;s dekt wut
+2010-05-13T14:37:00.000Z	ikonia	ae86-drifter	it's delt with
+2010-05-13T14:40:00.000Z	ae86-drifter	ikonia	is there a procedure to fully reinstall all the x11 stuff and all gfx drivers and gdm etc, do you think that would work?
+2010-05-13T14:41:00.000Z	ikonia	ae86-drifter	as you are having the same problems in safe mode
+2010-05-13T14:41:00.000Z	ae86-drifter	ikonia	wha about hardware drivers, like usb and serial etc?
+2010-05-13T14:42:00.000Z	ikonia	ae86-drifter	that's in the kernel, and I don't think that would matter
+2010-05-13T14:42:00.000Z	ae86-drifter	ikonia	true
+2010-05-13T14:55:00.000Z	ae86-drifter	ikonia	this pc has been in this state for around a week now, however it has been running this whole time in recovery mode and i have been using apache, php, torrentflux and playstation media server from this machine fine, it seems to be very stable, only in recovery mode, but keyboard/mouse input freezes hen in normal boot, but the servers still run fine.
+2010-05-13T14:55:00.000Z	ikonia	ae86-drifter	it's not running stable, you said it hung in recovery mode (or performed very slow) earlier
+2010-05-13T14:56:00.000Z	ae86-drifter	ikonia	it is stable when it boots up properly, which i can only do in recovery mode, i just discovered then, that all the services are running and working fine even when it appears to be locked up.
+2010-05-13T14:57:00.000Z	ikonia	ae86-drifter	that's not stable then
+2010-05-13T14:57:00.000Z	ikonia	ae86-drifter	that just means services are running
+2010-05-13T14:57:00.000Z	ae86-drifter	ikonia	it is stable remotely, i can SSH to it and stream media from it perfedctly, except K?M input is gone...
+2010-05-13T14:59:00.000Z	ikonia	ae86-drifter	have you looke at the logs yet for any errors ?
+2010-05-13T14:59:00.000Z	ae86-drifter	ikonia	sorry i am not aware of the log files or where they are kept, or which one
+2010-05-13T15:00:00.000Z	ae86-drifter	ikonia	if you haven't noticed i'm pretty noob at linux
+2010-05-13T17:50:00.000Z	ikonia	ae86-drifter	you should not need to compile the kernel at all
+2010-05-13T17:51:00.000Z	ikonia	ae86-drifter	the kernel is modular
+2010-05-13T17:51:00.000Z	ikonia	ae86-drifter	you won't need to remove any hardware support, if there is no device, the modules are not loaded
+2010-05-13T17:51:00.000Z	ae86-drifter	ikonia	in wht sense
+2010-05-13T17:52:00.000Z	ae86-drifter	ikonia	okay i see, why do people recompile on slower machines ?
+2010-05-13T17:52:00.000Z	ikonia	ae86-drifter	because they are misguided and wrong
+2010-06-27T19:21:00.000Z	ikonia	ae86-drifter	why should he do a clean install ?
+2010-06-27T19:21:00.000Z	ikonia	ae86-drifter	there is a perfectly stable upgrade path
+2010-06-27T19:22:00.000Z	ae86-drifter	ikonia	sure well on two occasions it failed for me and both occasions i had to clean install over again
+2010-06-27T19:22:00.000Z	ikonia	ae86-drifter	ok - so you're personal experiences have not worked out, so please don't say "do a clean install" as the upgrade works for thousands of people
+2010-06-27T19:23:00.000Z	ikonia	ae86-drifter	thousands of people would disagree, it can have problems if you are not %100 in line with requirements
+2010-06-27T19:24:00.000Z	ikonia	ae86-drifter	that's exactly what you said
+2010-06-27T19:24:00.000Z	ikonia	ae86-drifter	no - you are not saying "I've had 2 failures" you're saying you'd be better off doing a clean install as fact, based on you having to experiences
+2010-06-27T19:24:00.000Z	ikonia	ae86-drifter	probably doesn't make it any better
+2010-06-27T19:28:00.000Z	ae86-drifter	ikonia	do you think the upgrade is fairly robust? what could possibly cause it to go wrong? I am sick of every time a new release comes out it fails for me, and i need to clean install again.
+2010-06-27T21:42:00.000Z	ikonia	ae86-drifter	how is that anything to do with ubuntu
+2010-06-27T21:42:00.000Z	ae86-drifter	ikonia	i mean to use with ubuntu instead of mandriva
+2010-06-27T21:43:00.000Z	ikonia	ae86-drifter	the backend connection does not matter
+2010-06-27T21:43:00.000Z	ikonia	ae86-drifter	as login as there is a login manager running you should be able to connect to it
+2010-06-27T21:43:00.000Z	ae86-drifter	ikonia	i am using debian
+2010-06-27T21:43:00.000Z	ikonia	ae86-drifter	ok - so why are you asking ubuntu ?
+2010-06-27T21:43:00.000Z	ikonia	ae86-drifter	they work the same
+2010-06-27T21:44:00.000Z	ikonia	ae86-drifter	nope, just a login manager to connect to, that's it
+2010-06-27T21:45:00.000Z	ae86-drifter	ikonia	so i do not even need to have x loaded on my ubuntu machine?
+2010-06-27T21:45:00.000Z	ikonia	ae86-drifter	you need to have X running on the machine you want to connect to, for a backend connection.
+2010-10-11T16:16:00.000Z	ikonia	ae86-drifter	for general desktop browsing/usage canonical think it is a better version

@@ -1,0 +1,97 @@
+2007-06-27T10:29:00.000Z	UbuntuServerUser		Is it recommended to use Swat for Samba?
+2007-06-27T10:30:00.000Z	PanzerMKZ_	UbuntuServerUser	swat?
+2007-06-27T10:30:00.000Z	UbuntuServerUser	PanzerMKZ_	https://help.ubuntu.com/community/Swat.
+2007-06-27T10:31:00.000Z	PanzerMKZ_	UbuntuServerUser	then just setup samba
+2007-06-27T10:33:00.000Z	PanzerMKZ_	UbuntuServerUser	seems to me swat would be overkill for a simple file server
+2007-06-27T10:34:00.000Z	UbuntuServerUser	PanzerMKZ_	ok then....thanks for input, I'm just used to GUI's and a web GUI sounds nice....is there a sort of all in one webGUI for ubuntu server?
+2007-06-27T10:34:00.000Z	PanzerMKZ_	UbuntuServerUser	just add the user. once you get samba installed then smbpasswd -a (user name) at the cli
+2007-06-27T10:35:00.000Z	PanzerMKZ_	UbuntuServerUser	then smbpasswd -e (user) name. the first one adds that user. the second enables the user
+2007-06-27T10:36:00.000Z	PanzerMKZ_	UbuntuServerUser	you get those two commands?
+2007-06-27T10:38:00.000Z	PanzerMKZ_	UbuntuServerUser	well with ubuntu just make the folder on the second drive and then right click and share out
+2007-06-27T10:38:00.000Z	PanzerMKZ_	UbuntuServerUser	then just use those two commands to add and enable users
+2007-06-27T10:38:00.000Z	UbuntuServerUser	PanzerMKZ_	I'm using ubuntu Server CLI and this is not easy :(
+2007-06-27T10:39:00.000Z	PanzerMKZ_	UbuntuServerUser	well then go to I think /etc/samba/smb.conf
+2007-06-27T10:39:00.000Z	UbuntuServerUser	PanzerMKZ_	using https://help.ubuntu.com/community/SettingUpSamba and I get smbfs first then mount second drive right?
+2007-06-27T10:40:00.000Z	PanzerMKZ_	UbuntuServerUser	well you have to have the second drive in the os. smbfs is not going to do you anygood til you get the second drive where you can see it local
+2007-06-27T10:41:00.000Z	UbuntuServerUser	PanzerMKZ_	how might I be able to do that via CLI? i don't even know where it is or if its mounted
+2007-06-27T10:41:00.000Z	PanzerMKZ_	UbuntuServerUser	you would have to check /etc/fstab
+2007-06-27T10:42:00.000Z	PanzerMKZ_	UbuntuServerUser	see if it is in there
+2007-06-27T10:43:00.000Z	UbuntuServerUser	PanzerMKZ_	how ...via command dir? (Sorry I've read the docs but can't remmber)
+2007-06-27T10:43:00.000Z	PanzerMKZ_	UbuntuServerUser	cd /etc/
+2007-06-27T10:44:00.000Z	UbuntuServerUser	PanzerMKZ_	how do I list everything itn /etc
+2007-06-27T10:44:00.000Z	PanzerMKZ_	UbuntuServerUser	ls
+2007-06-27T10:44:00.000Z	UbuntuServerUser	PanzerMKZ_	command not found
+2007-06-27T10:44:00.000Z	PanzerMKZ_	UbuntuServerUser	the command that I would use to view fstab is cat /etc/fstab
+2007-06-27T10:44:00.000Z	PanzerMKZ_	UbuntuServerUser	"ls"
+2007-06-27T10:47:00.000Z	PanzerMKZ_	UbuntuServerUser	hold on
+2007-06-27T10:48:00.000Z	PanzerMKZ_	UbuntuServerUser	ok and where is your second drive mounted??
+2007-06-27T10:49:00.000Z	UbuntuServerUser	PanzerMKZ_	well last time I had computer in GUI kubuntu it was under hdab
+2007-06-27T10:49:00.000Z	UbuntuServerUser	PanzerMKZ_	it is slave to master
+2007-06-27T10:50:00.000Z	PanzerMKZ_	UbuntuServerUser	there should not be a hbab
+2007-06-27T10:50:00.000Z	UbuntuServerUser	PanzerMKZ_	hdb sorry
+2007-06-27T10:51:00.000Z	PanzerMKZ_	UbuntuServerUser	you must then make a entry in fstab or hand mount hba
+2007-06-27T10:51:00.000Z	PanzerMKZ_	UbuntuServerUser	hdb rather
+2007-06-27T10:51:00.000Z	UbuntuServerUser	PanzerMKZ_	well I don't want to bother you too much, there an easy CLI guide to that?
+2007-06-27T10:51:00.000Z	PanzerMKZ_	UbuntuServerUser	no bother
+2007-06-27T10:52:00.000Z	PanzerMKZ_	UbuntuServerUser	you see the way fstab is setup. just go with that
+2007-06-27T10:53:00.000Z	UbuntuServerUser	PanzerMKZ_	so i have to create an entry in fstab using nano? Where is fstab located?
+2007-06-27T10:53:00.000Z	PanzerMKZ_	UbuntuServerUser	/etc/fstab
+2007-06-27T10:54:00.000Z	UbuntuServerUser	PanzerMKZ_	so how would I add this drive...I don't even know if its there, I can't just create it can I?
+2007-06-27T10:54:00.000Z	PanzerMKZ_	UbuntuServerUser	you have to fdisk it and all that
+2007-06-27T10:54:00.000Z	UbuntuServerUser	PanzerMKZ_	yea IDK how to do that
+2007-06-27T10:54:00.000Z	UbuntuServerUser	PanzerMKZ_	whats the tool called that I need to use?
+2007-06-27T10:55:00.000Z	PanzerMKZ_	UbuntuServerUser	IDK?
+2007-06-27T10:55:00.000Z	UbuntuServerUser	PanzerMKZ_	I don't know
+2007-06-27T10:56:00.000Z	PanzerMKZ_	UbuntuServerUser	the tool is fdisk
+2007-06-27T10:58:00.000Z	PanzerMKZ_	UbuntuServerUser	you got to fdisk and partition
+2007-06-27T11:01:00.000Z	UbuntuServerUser	PanzerMKZ_	Unable to read /etc/fstab
+2007-06-27T11:01:00.000Z	PanzerMKZ_	UbuntuServerUser	what shell you running
+2007-06-27T11:01:00.000Z	UbuntuServerUser	PanzerMKZ_	CLI
+2007-06-27T11:02:00.000Z	PanzerMKZ_	UbuntuServerUser	did you "cat /etc/fstab"
+2007-06-27T11:03:00.000Z	UbuntuServerUser	PanzerMKZ_	yes...that just gave me an output
+2007-06-27T11:03:00.000Z	UbuntuServerUser	PanzerMKZ_	http://pastebin.com/937234
+2007-06-27T11:03:00.000Z	PanzerMKZ_	UbuntuServerUser	oh so you want to mod it then. ok so sudo nano /etc/fstab
+2007-06-27T11:04:00.000Z	UbuntuServerUser	PanzerMKZ_	OK done (btw should I always login my usual username and not login to root all the time
+2007-06-27T11:04:00.000Z	UbuntuServerUser	PanzerMKZ_	so what I need to edit
+2007-06-27T11:05:00.000Z	PanzerMKZ_	UbuntuServerUser	yes all the time as reg user. use sudo to go to root.
+2007-06-27T11:05:00.000Z	PanzerMKZ_	UbuntuServerUser	you will add a line for hdb
+2007-06-27T11:05:00.000Z	UbuntuServerUser	PanzerMKZ_	ok I'm listening
+2007-06-27T11:06:00.000Z	PanzerMKZ_	UbuntuServerUser	you will have to make hdb look like hda. you got the same file system
+2007-06-27T11:06:00.000Z	UbuntuServerUser	PanzerMKZ_	I believe its formated as ext3
+2007-06-27T11:07:00.000Z	PanzerMKZ_	UbuntuServerUser	is hda formatted ext3?
+2007-06-27T11:07:00.000Z	UbuntuServerUser	PanzerMKZ_	how can I tell for sure? Isn't hda my boot drive so it should be
+2007-06-27T11:08:00.000Z	PanzerMKZ_	UbuntuServerUser	hda should be in fstab
+2007-06-27T11:08:00.000Z	UbuntuServerUser	PanzerMKZ_	well hda1 is ext3
+2007-06-27T11:09:00.000Z	UbuntuServerUser	PanzerMKZ_	and then theres this random hda5
+2007-06-27T11:09:00.000Z	UbuntuServerUser	PanzerMKZ_	http://pastebin.com/937234
+2007-06-27T11:10:00.000Z	PanzerMKZ_	UbuntuServerUser	hda5 is your swap
+2007-06-27T11:13:00.000Z	UbuntuServerUser	PanzerMKZ_	hope your still here BRB
+2007-06-27T11:13:00.000Z	PanzerMKZ_	UbuntuServerUser	yea I am here
+2007-06-27T11:19:00.000Z	UbuntuServerUser	PanzerMKZ_	OK I'm back, now what do I do in regard to setting up my second HDD in /etc/fstab?
+2007-06-27T11:20:00.000Z	PanzerMKZ_	UbuntuServerUser	did you format the drive
+2007-06-27T11:21:00.000Z	UbuntuServerUser	PanzerMKZ_	I think I may have a long time ago to ext3, but got all sorts of errors when I tried to mount it...shoudl I format again just to be on the safe side?
+2007-06-27T11:21:00.000Z	PanzerMKZ_	UbuntuServerUser	yea I would
+2007-06-27T11:22:00.000Z	PanzerMKZ_	UbuntuServerUser	fdisk if I remember
+2007-06-27T11:23:00.000Z	UbuntuServerUser	PanzerMKZ_	fdisk hdb?
+2007-06-27T11:23:00.000Z	PanzerMKZ_	UbuntuServerUser	man fdisk
+2007-06-27T11:23:00.000Z	UbuntuServerUser	PanzerMKZ_	its the slave
+2007-06-27T11:24:00.000Z	PanzerMKZ_	UbuntuServerUser	yea I kinda guessed that when you said it was hdb
+2007-06-27T11:27:00.000Z	UbuntuServerUser	PanzerMKZ_	fdisk /dev/hdb then what? No format option is available do you want me to delete the partition?
+2007-06-27T11:28:00.000Z	PanzerMKZ_	UbuntuServerUser	yea nd then you might need to fdisk to get the new partition
+2007-06-27T11:29:00.000Z	PanzerMKZ_	UbuntuServerUser	and then man format for the commands to format
+2007-06-27T11:29:00.000Z	UbuntuServerUser	PanzerMKZ_	man brings up the manual
+2007-06-27T11:29:00.000Z	PanzerMKZ_	UbuntuServerUser	yea
+2007-06-27T11:29:00.000Z	PanzerMKZ_	UbuntuServerUser	don't know the commands off the top of my hand
+2007-06-27T11:31:00.000Z	UbuntuServerUser	PanzerMKZ_	83 Linux right?
+2007-06-27T11:32:00.000Z	PanzerMKZ_	UbuntuServerUser	wols says yes
+2007-06-27T11:34:00.000Z	PanzerMKZ_	UbuntuServerUser	no t
+2007-06-27T11:35:00.000Z	UbuntuServerUser	PanzerMKZ_	so how I create new 83 linux partition?
+2007-06-27T11:36:00.000Z	UbuntuServerUser	PanzerMKZ_	I got it!
+2007-06-27T11:37:00.000Z	PanzerMKZ_	UbuntuServerUser	take a moment to pat yourself on the back. Go outside have a fag and calm down
+2007-06-27T11:37:00.000Z	PanzerMKZ_	UbuntuServerUser	a laugh is always good
+2007-06-27T11:38:00.000Z	UbuntuServerUser	PanzerMKZ_	rgr that
+2007-06-27T11:38:00.000Z	UbuntuServerUser	PanzerMKZ_	ok so I need to apt-get format...is there any other tool included in ubuntu server to format?
+2007-06-27T11:45:00.000Z	UbuntuServerUser	PanzerMKZ_	 HOws this? mkfs -v -t ext3 /dev/hdb
+2007-06-27T11:47:00.000Z	UbuntuServerUser	PanzerMKZ_	 HOws this? mkfs -v -t ext3 /dev/hdb
+2007-06-27T11:48:00.000Z	PanzerMKZ_	UbuntuServerUser	did you get the commands from earlier? I think there was a largefile in there somewhere?
+2007-06-27T11:49:00.000Z	UbuntuServerUser	PanzerMKZ_	all I got was mkfs.ext3 and that didn't make any sense to me

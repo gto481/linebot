@@ -1,0 +1,99 @@
+2011-06-09T04:46:00.000Z	macnix		I have the most annoying network interface problem on 10.04.02 64bit which I just can't figure out
+2011-06-09T04:47:00.000Z	macnix		ifconfig output is good, I can ping it, but none of the services are available
+2011-06-09T04:47:00.000Z	macnix		it just hangs when I try to connect via ssh or http to anything but the primary IP
+2011-06-09T04:48:00.000Z	milamber	macnix	check the router config?
+2011-06-09T04:48:00.000Z	macnix	milamber	this is a server with an ISP, don't have access to the router
+2011-06-09T04:49:00.000Z	milamber	macnix	does your isp allow you to run it remotely?
+2011-06-09T04:49:00.000Z	macnix	milamber	this is the full picture https://gist.github.com/93472542fb4d0ca5cc27
+2011-06-09T04:49:00.000Z	macnix	milamber	you mean run nmap remotely?
+2011-06-09T04:49:00.000Z	milamber	macnix	yes
+2011-06-09T04:50:00.000Z	milamber	macnix	does it show the right ports as interesting?
+2011-06-09T04:53:00.000Z	macnix	milamber	if I run traceroutes to the IPs, they stop at the firewall so I can't get to the actual machines, to confirm that the IPs have been allocated correctly
+2011-06-09T04:53:00.000Z	macnix	milamber	but they all respond to pings and they didn't until I set them up on the server
+2011-06-09T04:54:00.000Z	macnix	milamber	I have NEVER had this problem before on Ubuntu and did quiet a few multi-IP setups
+2011-06-09T04:54:00.000Z	milamber	macnix	it really doesn't seem like an ubuntu problem. sounds like a network setup issue. 1 sec.
+2011-06-09T04:55:00.000Z	macnix	milamber	that's what I thought, but I need ammo if I'm going to tell the biggest DC in Europe that they got their network config screwed :D
+2011-06-09T05:01:00.000Z	milamber	macnix	what is the output of route -n?
+2011-06-09T05:03:00.000Z	macnix	milamber	sorry, got a brew
+2011-06-09T05:09:00.000Z	macnix	milamber	updated the pastie with route -n output https://gist.github.com/93472542fb4d0ca5cc27
+2011-06-09T05:09:00.000Z	macnix	milamber	direct link https://gist.github.com/93472542fb4d0ca5cc27#file_route_n.output.sh
+2011-06-09T05:16:00.000Z	macnix	milamber	any ideas?
+2011-06-09T05:16:00.000Z	milamber	macnix	no, everything looks ok . . . still working on it though
+2011-06-09T05:17:00.000Z	macnix	milamber	cool, thanks
+2011-06-09T05:17:00.000Z	macnix	milamber	I attempted to figure out a fix twice, with a few days in between, so I've triple checked everything on my end
+2011-06-09T05:17:00.000Z	macnix	milamber	it feels like I'm missing something, but I don't know what
+2011-06-09T05:18:00.000Z	macnix	milamber	think I took my networking experience as far as I could : )
+2011-06-09T05:19:00.000Z	milamber	macnix	have  you restarted networking?
+2011-06-09T05:19:00.000Z	macnix	milamber	yes, like 10 times :)
+2011-06-09T05:20:00.000Z	milamber	macnix	that seems like an issue.
+2011-06-09T05:22:00.000Z	macnix	milamber	taking its time to come back up..
+2011-06-09T05:23:00.000Z	milamber	macnix	related maybe? https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/663352
+2011-06-09T05:24:00.000Z	macnix	milamber	spot on!
+2011-06-09T05:24:00.000Z	macnix	milamber	reading about it...
+2011-06-09T05:26:00.000Z	macnix	milamber	hmm, from what I read, that bug refers to the desktop version
+2011-06-09T05:27:00.000Z	milamber	macnix	it might apply to other versions also, just noticed there. is your computing machine back up?
+2011-06-09T05:27:00.000Z	macnix	milamber	yes
+2011-06-09T05:28:00.000Z	milamber	macnix	does ifconfig eth0:1 give you anything?
+2011-06-09T05:29:00.000Z	macnix	milamber	so all 3 IPs appear in ifconfig (same as in my pastie)
+2011-06-09T05:29:00.000Z	macnix	milamber	nmap only returns the open ports for eth0, nothing for eth0:0 or eth0:1
+2011-06-09T05:30:00.000Z	macnix	milamber	nmap reports them as being down: Nmap done: 1 IP address (0 hosts up) scanned in 0.42 seconds
+2011-06-09T05:30:00.000Z	macnix	milamber	but ifconfig reports them as being up...
+2011-06-09T05:31:00.000Z	milamber	macnix	i trust nmap :/
+2011-06-09T05:31:00.000Z	macnix	milamber	this is really pulling my leg right now
+2011-06-09T05:31:00.000Z	macnix	milamber	me too
+2011-06-09T05:31:00.000Z	macnix	milamber	so where is the disconnect?
+2011-06-09T05:34:00.000Z	milamber	macnix	how many software engineers does it take to screw in a lightbulb? trick question - that's a hardware problem :)
+2011-06-09T05:34:00.000Z	milamber	macnix	not sure about that, but i am checking now. situation just brought that winner of a joke to mind.
+2011-06-09T05:34:00.000Z	macnix	milamber	hehe, good one :)
+2011-06-09T05:36:00.000Z	milamber	macnix	it could be a nic thing. i might be wrong, but i don't think *all* network cards support multiple ips.
+2011-06-09T05:36:00.000Z	macnix	milamber	it's a very decent NIC card... let me get the info
+2011-06-09T05:36:00.000Z	macnix	milamber	NetXtreme BCM5723 Gigabit Ethernet PCIe
+2011-06-09T05:37:00.000Z	macnix	milamber	HP ProLiant DL120  standard spec
+2011-06-09T05:37:00.000Z	macnix	milamber	even the HDDs are HP FFS!!
+2011-06-09T05:49:00.000Z	milamber	macnix	ok
+2011-06-09T05:51:00.000Z	milamber	macnix	ssh server config?
+2011-06-09T05:51:00.000Z	macnix	milamber	but then what about HTTP? It hangs just like SSH
+2011-06-09T05:53:00.000Z	macnix	milamber	sshd has the default config, it's not bound to a specific address
+2011-06-09T05:53:00.000Z	macnix	milamber	by default, AFAIK, it listens on all network interfaces
+2011-06-09T05:56:00.000Z	milamber	macnix	can you ssh to either of the alias ips locally?
+2011-06-09T05:56:00.000Z	macnix	milamber	no
+2011-06-09T06:00:00.000Z	milamber	macnix	restart networking?
+2011-06-09T06:00:00.000Z	macnix	milamber	output is: restart: Unknown instance:
+2011-06-09T06:10:00.000Z	milamber	macnix	nc -zvw 1 <host_here> <port_here>
+2011-06-09T06:11:00.000Z	macnix	milamber	all are successful
+2011-06-09T06:11:00.000Z	macnix	milamber	but that's since the route add
+2011-06-09T06:12:00.000Z	macnix	milamber	I ran that nc on the server
+2011-06-09T06:12:00.000Z	macnix	milamber	running it locally it just hangs
+2011-06-09T06:13:00.000Z	milamber	macnix	doing it remotely?
+2011-06-09T06:13:00.000Z	macnix	milamber	hangs
+2011-06-09T06:13:00.000Z	macnix	milamber	oh, hang on
+2011-06-09T06:13:00.000Z	macnix	milamber	only for eth0:0 it hangs, eth0:1 seems fine
+2011-06-09T06:13:00.000Z	macnix	milamber	let me try this a few times
+2011-06-09T06:14:00.000Z	milamber	macnix	have you tried ssh to eth0:1?
+2011-06-09T06:14:00.000Z	macnix	milamber	yes, eth0:1 works
+2011-06-09T06:16:00.000Z	macnix	milamber	rename eth0:0 to eth0:2, restarting networking
+2011-06-09T06:16:00.000Z	macnix	milamber	nice, we're getting somewhere
+2011-06-09T06:19:00.000Z	macnix	milamber	rationalOgre ok, so I'm pretty sure someone else is using my IP address
+2011-06-09T06:19:00.000Z	milamber	macnix	possible.
+2011-06-09T06:19:00.000Z	macnix	milamber	rationalOgre not sure how that's possible, but otherwise SIOCSIFFLAGS: Cannot assign requested address doesn't make sense
+2011-06-09T06:21:00.000Z	milamber	macnix	nmap -A <ipaddress>
+2011-06-09T06:23:00.000Z	milamber	macnix	is 2 the one you did the route add command on?
+2011-06-09T06:23:00.000Z	macnix	milamber	I added them all, but when I restarted the networking, only the default route remained
+2011-06-09T06:24:00.000Z	macnix	milamber	still, locally, I can ssh into any of the 3 IPs
+2011-06-09T06:24:00.000Z	macnix	milamber	remotely, only into 1 & 3
+2011-06-09T06:24:00.000Z	milamber	macnix	remotely do: nmap -A <ipaddress>
+2011-06-09T06:26:00.000Z	macnix	milamber	I'm on OSX, need to install nmap first...
+2011-06-09T06:26:00.000Z	macnix	milamber	will be a few mins
+2011-06-09T06:26:00.000Z	macnix	milamber	can run it from a different host though...
+2011-06-09T06:28:00.000Z	macnix	milamber	ok, got it
+2011-06-09T06:29:00.000Z	macnix	milamber	IP2 has been taken by someone else
+2011-06-09T06:29:00.000Z	macnix	milamber	going to do a pastie
+2011-06-09T06:34:00.000Z	milamber	macnix	this is the ip you were trying to get? http://lexi.lazu.co.uk/  ??  http works on this one?
+2011-06-09T06:35:00.000Z	milamber	macnix	but it is not you?
+2011-06-09T06:35:00.000Z	macnix	milamber	yes, that's the machine. It has 3 IPs pointing to it
+2011-06-09T06:36:00.000Z	macnix	milamber	all with proper PTR
+2011-06-09T06:36:00.000Z	milamber	macnix	well, i just got to it using the ip you ran nmap with, so it seems to be working now.
+2011-06-09T06:36:00.000Z	milamber	macnix	glad you got it resolved.
+2011-06-09T06:38:00.000Z	macnix	milamber	the PTR is set in my ISPs control panel which checks it with the DNS servers. But because someone else has assigned it before, even if my end is all good, their network is routing all the traffic to that server.
+2011-06-09T06:38:00.000Z	macnix	milamber	so they need to give me another IP and apologise profoundly for setting me on a wild goose chase
+2011-06-09T06:38:00.000Z	macnix	milamber	and doubting ubuntu!!! imagine the travesty!!! :D

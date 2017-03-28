@@ -1,0 +1,95 @@
+2010-01-22T06:10:00.000Z	ubuntuUserTom		Hey people =)
+2010-01-22T06:11:00.000Z	ubuntuUserTom		Chris__, try powerttop
+2010-01-22T06:13:00.000Z	ubuntuUserTom		Hey, could any one help me with a Slight problem I have. I ammed out on partitioning my HDD while installing Ubuntu 9.10 on myLaptop...I kinda forgot to partition the 110gigs of Space I have for files and Now im low on space... Im wondering, is there any way to like resize my Home Directory to use this space?
+2010-01-22T06:14:00.000Z	DasEi	ubuntuUserTom	yes, does this unallocated 100~ lie next to your current /home ?
+2010-01-22T06:20:00.000Z	ubuntuUserTom	DasEi	- ill open gparted
+2010-01-22T06:20:00.000Z	DasEi	ubuntuUserTom	open a trml ..
+2010-01-22T06:20:00.000Z	DasEi	ubuntuUserTom	sudo apt-get install pastebinit
+2010-01-22T06:21:00.000Z	DasEi	ubuntuUserTom	sudo fdisk -l |pastebinit
+2010-01-22T06:21:00.000Z	DasEi	ubuntuUserTom	give url from trml here
+2010-01-22T06:21:00.000Z	ubuntuUserTom	DasEi	- sure, just a sec installing packages now
+2010-01-22T06:24:00.000Z	ubuntuUserTom	DasEi	http://pastebin.com/f7bb97c35
+2010-01-22T06:24:00.000Z	DasEi	ubuntuUserTom	got it above, did you set up a seperate /boot ?
+2010-01-22T06:28:00.000Z	DasEi	ubuntuUserTom	you got two linux partis, is one of them a seperate /boot ?
+2010-01-22T06:29:00.000Z	ubuntuUserTom	DasEi	I think so, I halve a 12gb Linux File System then a 2gb 'Extended' partition...then my swap space
+2010-01-22T06:32:00.000Z	ubuntuUserTom	DasEi	yes, I see. I dont think it is then installed on a separate partition.
+2010-01-22T06:32:00.000Z	ubuntuUserTom	DasEi	yeah.
+2010-01-22T06:36:00.000Z	ubuntuUserTom	DasEi	ok, so If I did move Home to the sda3 partition I would just need to learn how to mount that partition on startup right?
+2010-01-22T06:36:00.000Z	ubuntuUserTom	DasEi	ok, fstab. Ill google it. sda3 is ext4 I have it partitioned atm
+2010-01-22T06:37:00.000Z	ubuntuUserTom	DasEi	*formatted
+2010-01-22T06:38:00.000Z	DasEi	ubuntuUserTom	k, so is sda3 mounted now ? (mount in trml tells you) ?
+2010-01-22T06:38:00.000Z	ubuntuUserTom	DasEi	quick question, in say a terminal, if I wanted to accsess my Home directory would I still just type cd /home
+2010-01-22T06:38:00.000Z	ubuntuUserTom	DasEi	yes sda3 has been mounted, it require d a password to mount.
+2010-01-22T06:38:00.000Z	DasEi	ubuntuUserTom	if you open a trml as regualar user you are in your home
+2010-01-22T06:39:00.000Z	ubuntuUserTom	DasEi	ah ok
+2010-01-22T06:39:00.000Z	DasEi	ubuntuUserTom	we can put this through in 20 min, if youre up to
+2010-01-22T06:40:00.000Z	ubuntuUserTom	DasEi	Sure, that sounds great.
+2010-01-22T06:43:00.000Z	DasEi	ubuntuUserTom	open trml..
+2010-01-22T06:43:00.000Z	ubuntuUserTom	DasEi	open
+2010-01-22T06:43:00.000Z	DasEi	ubuntuUserTom	cd
+2010-01-22T06:43:00.000Z	ubuntuUserTom	DasEi	where to?
+2010-01-22T06:44:00.000Z	DasEi	ubuntuUserTom	just cd, no args
+2010-01-22T06:44:00.000Z	DasEi	ubuntuUserTom	mount
+2010-01-22T06:44:00.000Z	DasEi	ubuntuUserTom	where is sda3 mounted ?
+2010-01-22T06:44:00.000Z	ubuntuUserTom	DasEi	file:///media/72af32b2-f0c5-4599-a477-aa8813581141
+2010-01-22T06:45:00.000Z	DasEi	ubuntuUserTom	sudo chown -R TomOrwahteverusernamehere /media/72af32b2-f0c5-4599-a477-aa8813581141
+2010-01-22T06:46:00.000Z	DasEi	ubuntuUserTom	replace above with actual used username on that sys
+2010-01-22T06:46:00.000Z	ubuntuUserTom	DasEi	ok
+2010-01-22T06:47:00.000Z	ubuntuUserTom	DasEi	Ok, its done. No notifications or anything in the terminal.
+2010-01-22T06:47:00.000Z	ubuntuUserTom	DasEi	used this command - sudo chown -R tom /media/72af32b2-f0c5-4599-a477-aa8813581141
+2010-01-22T06:49:00.000Z	ubuntuUserTom	DasEi	rsync -P ~  /media/72af32b2-f0c5-4599-a477-aa8813581141 - Respones: sent 8 bytes  received 12 bytes  40.00 bytes/sec
+2010-01-22T06:52:00.000Z	ubuntuUserTom	DasEi	ok, something is happening
+2010-01-22T06:52:00.000Z	ubuntuUserTom	DasEi	61%
+2010-01-22T06:53:00.000Z	ubuntuUserTom	DasEi	skipping non-regular file "tom/.Private"
+2010-01-22T06:54:00.000Z	ubuntuUserTom	DasEi	ok, its nearly done I think.
+2010-01-22T06:55:00.000Z	ubuntuUserTom	DasEi	Its still copying a tone of stuff, ill give you a shout when its done.
+2010-01-22T07:00:00.000Z	ubuntuUserTom	DasEi	ok its done
+2010-01-22T07:00:00.000Z	ubuntuUserTom	DasEi	now performing rsync -P -r -u   /home/tom  /media/72af32b2-f0c5-4599-a477-aa8813581141
+2010-01-22T07:00:00.000Z	ubuntuUserTom	DasEi	ok thats done
+2010-01-22T07:03:00.000Z	ubuntuUserTom	DasEi	umm it dosent exist, but im looking @ nautilius right now (currently viewing the mounted drive) and it has 'tom' and within 'tom it has 'Desktop'
+2010-01-22T07:03:00.000Z	ubuntuUserTom	DasEi	I can CD to Desktop no problems
+2010-01-22T07:04:00.000Z	DasEi	ubuntuUserTom	and in Desk.. your files, fine then
+2010-01-22T07:04:00.000Z	ubuntuUserTom	DasEi	yes =) thank you for the help!
+2010-01-22T07:04:00.000Z	DasEi	ubuntuUserTom	still few steps ..
+2010-01-22T07:04:00.000Z	ubuntuUserTom	DasEi	oh, fstab and stuff?
+2010-01-22T07:04:00.000Z	DasEi	ubuntuUserTom	gksudo gedit /etc/fstab
+2010-01-22T07:05:00.000Z	DasEi	ubuntuUserTom	scroll down to a new line, add the line
+2010-01-22T07:06:00.000Z	DasEi	ubuntuUserTom	saw above ?
+2010-01-22T07:06:00.000Z	ubuntuUserTom	DasEi	Yes, I have added it.
+2010-01-22T07:06:00.000Z	DasEi	ubuntuUserTom	save
+2010-01-22T07:07:00.000Z	DasEi	ubuntuUserTom	close
+2010-01-22T07:07:00.000Z	ubuntuUserTom	DasEi	Ok
+2010-01-22T07:07:00.000Z	DasEi	ubuntuUserTom	sudo mount -a
+2010-01-22T07:07:00.000Z	DasEi	ubuntuUserTom	second
+2010-01-22T07:07:00.000Z	DasEi	ubuntuUserTom	back to trml
+2010-01-22T07:07:00.000Z	ubuntuUserTom	DasEi	yes
+2010-01-22T07:08:00.000Z	DasEi	ubuntuUserTom	cd    , and close nautilus (/media..) if still open
+2010-01-22T07:08:00.000Z	DasEi	ubuntuUserTom	sudo umount /dev/sda3
+2010-01-22T07:09:00.000Z	ubuntuUserTom	DasEi	umount: /home: device is busy.
+2010-01-22T07:10:00.000Z	DasEi	ubuntuUserTom	for work, we should be done now, yes I did the mistake missing sda3 unmount first, well..
+2010-01-22T07:10:00.000Z	ubuntuUserTom	DasEi	Would a restart fix it?
+2010-01-22T07:11:00.000Z	DasEi	ubuntuUserTom	situation is you got to reboot, if that gives errors, you can still comment the last line in fstab out (by #), yes, as /home is mounted now
+2010-01-22T07:11:00.000Z	ubuntuUserTom	DasEi	Ok I will restart now, ill come back and give you a report on how it went. BBS
+2010-01-22T07:11:00.000Z	DasEi	ubuntuUserTom	let me look at your fstab before reboot
+2010-01-22T07:14:00.000Z	DasEi	ubuntuUserTom	ah, still alive
+2010-01-22T07:15:00.000Z	ubuntuUserTom	DasEi	Yeah =P Only error I got was a Space Shortage error lol...in root
+2010-01-22T07:16:00.000Z	ubuntuUserTom	DasEi	But....Home has been enlarged
+2010-01-22T07:16:00.000Z	ubuntuUserTom	DasEi	85gig now =D I think its just roots a little small?
+2010-01-22T07:16:00.000Z	DasEi	ubuntuUserTom	open trml
+2010-01-22T07:16:00.000Z	ubuntuUserTom	DasEi	ok, opened
+2010-01-22T07:17:00.000Z	DasEi	ubuntuUserTom	df -h
+2010-01-22T07:17:00.000Z	ubuntuUserTom	DasEi	http://pastebin.com/f55371231
+2010-01-22T07:18:00.000Z	DasEi	ubuntuUserTom	k, short on root is k for now... , I suggest the following ..
+2010-01-22T07:21:00.000Z	DasEi	ubuntuUserTom	you still have to delete the old /home, you can do it by (for one reboot) alter fstab back to old status (just put an # in front of last line,reboot) to give the space free to / , but first try not to use any more space in /  to see a day if all went well, before killing old one,  can delete uneeded packages and o course emty trash
+2010-01-22T07:29:00.000Z	ubuntuUserTom	DasEi	alright, ill do that soon then =D
+2010-01-22T07:22:00.000Z	ubuntuUserTom	DasEi	alright, ill see how it goes. Thanks for your help mate, I really appreciate it!
+2010-01-22T07:24:00.000Z	ubuntuUserTom	DasEi	are applications installed by default in the root directory, or one of its supfolders?
+2010-01-22T07:24:00.000Z	DasEi	ubuntuUserTom	yes, not in /home  , /usr and its subdirs mainly, also under /
+2010-01-22T07:26:00.000Z	ubuntuUserTom	DasEi	ok, well its not a problem now because my system is set up with all the Development tools I need...but it might become a problem later down the track, when it does i will probably just reinstall Ubuntu, partitioning it correctly this time.
+2010-01-22T07:27:00.000Z	DasEi	ubuntuUserTom	nah, have a look now a day or two, then reboot once with "old fstab, delete everything you can from /home, re-alter fstab, reboot, be done
+2010-01-22T07:28:00.000Z	ubuntuUserTom	DasEi	ok =D I will do that then.
+2010-01-22T07:29:00.000Z	DasEi	ubuntuUserTom	gksudo gedit /etc/fstab  , the # in front of line makes it a non-executed comment
+2010-01-22T07:29:00.000Z	DasEi	ubuntuUserTom	so you can edit (delete) all the old stuff from home then
+2010-01-22T07:33:00.000Z	ubuntuUserTom	DasEi	where was fstab located again?
+2010-01-22T07:33:00.000Z	DasEi	ubuntuUserTom	gksudo gedit /etc/fstab  , the # in front of line makes it a non-executed comment
+2010-01-22T07:33:00.000Z	ubuntuUserTom	DasEi	cheers

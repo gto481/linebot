@@ -1,0 +1,95 @@
+2010-11-18T10:16:00.000Z	Jordan_U	aboleth	Can you pastebin the output of "dmesg"?
+2010-11-18T10:17:00.000Z	aboleth	Jordan_U	http://pastebin.com/8fTrVkwr there seems to be more than that, but that's all that fit on the terminal
+2010-11-18T10:19:00.000Z	Jordan_U	aboleth	Almost certainly a hardware problem with the drive.
+2010-11-18T10:19:00.000Z	Jordan_U	aboleth	How important is the data on the drive, and do you have another hard drive large enough to hold a complete image of the drive?
+2010-11-18T10:20:00.000Z	aboleth	Jordan_U	it's pretty important to me, it has several things i really don't want to lose, and i might be able to store most of it on an usb hd on my desk
+2010-11-18T10:20:00.000Z	aboleth	Jordan_U	the other hd is fairly old too though... and i don't really have any money for a new one
+2010-11-18T10:20:00.000Z	aboleth	Jordan_U	http://pastebin.com/8iekiNdL
+2010-11-18T10:23:00.000Z	Jordan_U	aboleth	First, take any really important data from your working drive and back it up to somewhere like Ubuntu one. You really don't want to depend on a single drive for important data.
+2010-11-18T10:23:00.000Z	aboleth	Jordan_U	how could i do that now?
+2010-11-18T10:24:00.000Z	Jordan_U	aboleth	I meant with the working drive.
+2010-11-18T10:24:00.000Z	aboleth	Jordan_U	don't you have to pay for ubuntu one?
+2010-11-18T10:25:00.000Z	Jordan_U	aboleth	You get 2 GiB free. Not much, but enough for what tend to be the most important files (documents).
+2010-11-18T10:27:00.000Z	Jordan_U	aboleth	As for recovering the data from your failing hard drive I would recommend using "ddrescue" from the "gddrescue" pacakge (not "dd_rescue" from the "ddrescue" pacakge).
+2010-11-18T10:27:00.000Z	aboleth	Jordan_U	how could i do that from a livecd?
+2010-11-18T10:28:00.000Z	Jordan_U	aboleth	Either install gddrescue from Applications > Ubuntu Software Center or run "sudo software-properties -e universe; sudo apt-get update; sudo apt-get install gddrescue"
+2010-11-18T10:32:00.000Z	aboleth	Jordan_U	sudo: software-properties: command not found
+2010-11-18T10:33:00.000Z	Jordan_U	aboleth	Sorry, software-properties-gtk
+2010-11-18T10:33:00.000Z	aboleth	Jordan_U	thanks
+2010-11-18T10:33:00.000Z	Jordan_U	aboleth	You're welcome.
+2010-11-18T10:35:00.000Z	aboleth	Jordan_U	it can't seem to find gddrescue
+2010-11-18T10:36:00.000Z	Jordan_U	aboleth	Did you run "sudo update-grub"?
+2010-11-18T10:36:00.000Z	aboleth	Jordan_U	no
+2010-11-18T10:36:00.000Z	aboleth	Jordan_U	ubuntu@ubuntu:~$ sudo update-grub
+2010-11-18T10:36:00.000Z	Jordan_U	aboleth	Sorry, did you run "sudo apt-get update"?
+2010-11-18T10:37:00.000Z	aboleth	Jordan_U	yeah i'm pretty sure i did
+2010-11-18T10:37:00.000Z	Jordan_U	aboleth	Was there any error?
+2010-11-18T10:37:00.000Z	aboleth	Jordan_U	i'll just show you the output
+2010-11-18T10:38:00.000Z	aboleth	Jordan_U	http://pastebin.com/N2zHCsSL
+2010-11-18T10:40:00.000Z	Jordan_U	aboleth	It's a '-' not a space in "software-properties-gtk".
+2010-11-18T10:40:00.000Z	aboleth	Jordan_U	it seems to be working now
+2010-11-18T10:43:00.000Z	aboleth	Jordan_U	so what do i do with gddrescue?
+2010-11-18T10:44:00.000Z	Jordan_U	aboleth	First mount a partition on your working drive and confirm that there is enough free space for a complete image of your failing drive.
+2010-11-18T10:45:00.000Z	aboleth	Jordan_U	i don't think i have enough space on the one on my desk, but i'll see if my dad has any bigger hard drives
+2010-11-18T11:05:00.000Z	aboleth	Jordan_U	yes
+2010-11-18T10:56:00.000Z	aboleth	Jordan_U	ok i plugged it in
+2010-11-18T10:57:00.000Z	aboleth	Jordan_U	though i don't seem to have quite enough space on this one
+2010-11-18T10:57:00.000Z	aboleth	Jordan_U	i might need to use my dad's one
+2010-11-18T10:59:00.000Z	aboleth	Jordan_U	for the image does it only count space used or the entire capacity of the drive?
+2010-11-18T11:00:00.000Z	Jordan_U	aboleth	The entire capacity.
+2010-11-18T11:04:00.000Z	aboleth	Jordan_U	ok i have the external hd set up and it has enough space now
+2010-11-18T11:05:00.000Z	Jordan_U	aboleth	Ok, is the partition you're going to store the image on mounted?
+2010-11-18T11:05:00.000Z	Jordan_U	aboleth	Can you pastebin the output of "mount"?
+2010-11-18T11:05:00.000Z	aboleth	Jordan_U	unmount it and remount?
+2010-11-18T11:07:00.000Z	Jordan_U	aboleth	No, just run "mount" (or just confirm that nothing on sda is mounted and tell me what the mountpoint is for the partition you're recovering to).
+2010-11-18T11:08:00.000Z	aboleth	Jordan_U	http://pastebin.com/YD5jN1Ff
+2010-11-18T11:12:00.000Z	Jordan_U	aboleth	Ok. To use ddrescue to create a rescue image named "sda_rescue.img" run "sudo ddrescue /dev/sda /media/JPs\ 500gb\ SATA\ II\ \ Hard\ Drive/sda_rescue.img    /media/JPs\ 500gb\ SATA\ II\ \ Hard\ Drive/sda_rescue.log"
+2010-11-18T11:14:00.000Z	aboleth	Jordan_U	ok i'm running it now
+2010-11-18T11:25:00.000Z	aboleth	Jordan_U	it's running still and some weird stuff happened
+2010-11-18T11:26:00.000Z	Jordan_U	aboleth	Ok. My guess is that you used the wrong path when you ran ddrescue and so it hasn't been writing to the external drive.
+2010-11-18T11:27:00.000Z	Jordan_U	aboleth	Instead it's been writing the image to the live filesystem, which stores changes in RAM.
+2010-11-18T11:27:00.000Z	aboleth	Jordan_U	i checked the directory in nautilus before it screwed up and i saw both files right where i expected
+2010-11-18T11:28:00.000Z	Jordan_U	aboleth	Odd. Stop ddrescue now and run "sync".
+2010-11-18T11:28:00.000Z	Jordan_U	aboleth	Because it uses a log file you'll be able to continue where you left off (but only if you pass the log file to ddrescue properly next time you run it).
+2010-11-18T11:30:00.000Z	aboleth	Jordan_U	i'm having trouble running commands like this
+2010-11-18T11:31:00.000Z	aboleth	Jordan_U	should i try ctrl+alt+1?
+2010-11-18T11:32:00.000Z	Jordan_U	aboleth	Yes.
+2010-11-18T11:32:00.000Z	Jordan_U	aboleth	Did you successfully stop ddrescue?
+2010-11-18T11:33:00.000Z	Jordan_U	aboleth	If everything seems to be frozen then do *not* pull the plug. Use sysrq magic instead.
+2010-11-18T21:59:00.000Z	aboleth	Jordan_U	could you help me put the image on the external hd without it screwing up like last time?
+2010-11-19T00:02:00.000Z	aboleth	Jordan_U	are you here yet, i'm trying to figure out gddrescue on my own and it looks quite daunting. i would really appreciate your help
+2010-11-19T01:52:00.000Z	Jordan_U	aboleth	I'm back. Did you figure out why the liveCD ran out of memory?
+2010-11-19T01:52:00.000Z	aboleth	Jordan_U	no i didn't. i'm glad you're back though
+2010-11-19T01:53:00.000Z	Jordan_U	aboleth	How much RAM do you have?
+2010-11-19T01:55:00.000Z	aboleth	Jordan_U	Memory
+2010-11-19T01:59:00.000Z	aboleth	Jordan_U	so what should i do now?
+2010-11-19T02:03:00.000Z	Jordan_U	aboleth	The recommended minimum amount of RAM for Ubuntu is 1 GiG, so there is a chance that you ran out of memory even if ddrescue was writing to the drive. It's odd that it would leave a zero byte file in that case though.
+2010-11-19T02:06:00.000Z	aboleth	Jordan_U	what should i do now?
+2010-11-19T02:07:00.000Z	Jordan_U	aboleth	You could try using a lighter weight LiveCD. grml is one I like and it comes with ddrescue on the CD.
+2010-11-19T02:07:00.000Z	aboleth	Jordan_U	does it still have a way to connect to irc on it?
+2010-11-19T02:10:00.000Z	Jordan_U	aboleth	Yes, though the included client appears to be irssi, which is terminal based and takes a bit to learn.
+2010-11-19T02:12:00.000Z	aboleth	Jordan_U	i'm gonna try it on the livecd right now so i can talk while on grml
+2010-11-19T02:14:00.000Z	Jordan_U	aboleth	You can also use Firefox + http://webchat.freenode.net .
+2010-11-19T02:16:00.000Z	aboleth	Jordan_U	i'm trying that now, it sounds much easier
+2010-11-19T02:20:00.000Z	aboleth	Jordan_U	will you be on here for much longer?
+2010-11-19T02:21:00.000Z	Jordan_U	aboleth	Yes.
+2010-11-19T02:22:00.000Z	aboleth	Jordan_U	ok, well then i'll download grml and try everything on there
+2010-11-19T06:49:00.000Z	aboleth	Jordan_U	i'm on grml now, but my usb mouse isn't working. i know it's not an ubuntu question, but how could i fix that, i'd really like to be able to have that working before i start recovering the files
+2010-11-19T06:50:00.000Z	Jordan_U	aboleth	I don't know, and unfortunately I need to leave right now :(
+2010-11-19T06:50:00.000Z	aboleth	Jordan_U	will you be back today?
+2010-11-19T06:50:00.000Z	Jordan_U	aboleth	Possibly. If not I will be tomorrow.
+2010-11-19T06:51:00.000Z	Jordan_U	aboleth	Keeping in mind that I'm probably in a different time zone that you (it's currently 17:51 where I am).
+2010-11-19T06:51:00.000Z	aboleth	Jordan_U	ok, well then i'll try recovering it whenever you get back
+2010-11-19T06:52:00.000Z	aboleth	Jordan_U	i'm in eastern time, but i'm not sure what time it is now, but it's almost certainly after 19:00
+2010-11-21T03:10:00.000Z	aboleth	Jordan_U	hey are you there now?
+2010-11-21T03:10:00.000Z	aboleth	Jordan_U	i'm using irssi on grml now
+2010-11-21T03:10:00.000Z	Jordan_U	aboleth	Yes.
+2010-11-21T03:11:00.000Z	aboleth	Jordan_U	i was busy with other things and i couldn't get x to work right on grml so i just gave up with it and am doing everything in text mode
+2010-11-21T03:11:00.000Z	aboleth	Jordan_U	so what should i do about my drive right now?
+2010-11-21T03:13:00.000Z	Jordan_U	aboleth	Do you know for sure which device name (/dev/sdX) is your failing drive and which is your good one?
+2010-11-21T03:14:00.000Z	aboleth	Jordan_U	i forget how to list drives, but i think i'll know if i do that
+2010-11-21T03:14:00.000Z	Jordan_U	aboleth	"blkid"
+2010-11-21T03:15:00.000Z	aboleth	Jordan_U	it only lists a squashfs volume, which i assume is the livecd. i don't think any of the other drives are mounted right now
+2010-11-21T03:16:00.000Z	Jordan_U	aboleth	Odd, they shouldn't normally need to be mounted to be listed in blkid. Try "fdisk -l".
+2010-11-21T03:16:00.000Z	aboleth	Jordan_U	it gives no output
+2010-11-21T03:18:00.000Z	Jordan_U	aboleth	Sounds like that may be a problem with disk drivers in grml. Lets move this to #grml.

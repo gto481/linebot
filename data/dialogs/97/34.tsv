@@ -1,0 +1,97 @@
+2007-07-23T05:57:00.000Z	Gambrinus	owen1	i have good success with FreeNX.
+2007-07-23T05:57:00.000Z	owen1	Gambrinus	thanks
+2007-07-23T05:57:00.000Z	Gambrinus	owen1	https://help.ubuntu.com/community/FreeNX
+2007-07-23T05:59:00.000Z	Gambrinus	owen1	either works.  i connect to my router ip address with a specific port number.  that port is then forwarded to a specific computer in my lan
+2007-07-23T06:01:00.000Z	owen1	Gambrinus	thanks
+2007-07-23T07:10:00.000Z	owen1	Gambrinus	didn't work.
+2007-07-23T06:55:00.000Z	owen1	Gambrinus	how do i configure it to go to random port.
+2007-07-23T06:36:00.000Z	Gambrinus	owen1	try connecting locally first, then once you get it working you can go to the next step of connecting from outside of your LAN
+2007-07-23T06:39:00.000Z	Gambrinus	owen1	...you need to get your ports configured correctly too
+2007-07-23T06:39:00.000Z	owen1	Gambrinus	i set it to forward port 22 on my d-link
+2007-07-23T06:39:00.000Z	owen1	Gambrinus	the problem is my ip. it's up to the ISP...
+2007-07-23T06:42:00.000Z	Gambrinus	owen1	port 22 gets a lot of scans and hack attempts from zombie machines.
+2007-07-23T06:42:00.000Z	owen1	Gambrinus	so what should i do?
+2007-07-23T06:43:00.000Z	Gambrinus	owen1	just set your router to forword whatever (ex 40253) to port 22 on your computer you want to connect to.  it's all in the router admin side
+2007-07-23T06:45:00.000Z	Gambrinus	owen1	dont' worry about blacklisting
+2007-07-23T06:45:00.000Z	owen1	Gambrinus	ok
+2007-07-23T06:47:00.000Z	Gambrinus	owen1	ill give example of how i do this.  "ssh gambrinus@routeripnumber -p 31234"
+2007-07-23T06:48:00.000Z	Gambrinus	owen1	the -p is the port number I have setup in router admin. so 31234 will point to computer 192.168.1.143 port 22 in local lan
+2007-07-23T06:48:00.000Z	owen1	Gambrinus	five me 1 minute, i'll try it as well. btw, how do i close the ssh connection from the client?
+2007-07-23T06:49:00.000Z	Gambrinus	owen1	just type "exit"
+2007-07-23T06:49:00.000Z	owen1	Gambrinus	o
+2007-07-23T06:49:00.000Z	owen1	Gambrinus	so when i exit the shell it close it as well/
+2007-07-23T06:51:00.000Z	Gambrinus	owen1	when i close my terminal without using "exit" it logs me out automatically on my host, but it may be different for you
+2007-07-23T06:51:00.000Z	owen1	Gambrinus	ok
+2007-07-23T06:54:00.000Z	owen1	Gambrinus	i understand what u say but don't know how to configure my router...maybe like this 192.168.0.101:22 ?
+2007-07-23T06:54:00.000Z	Gambrinus	owen1	which router do you have?
+2007-07-23T06:54:00.000Z	owen1	Gambrinus	i am inside my router.
+2007-07-23T06:55:00.000Z	Gambrinus	owen1	like a genie?
+2007-07-23T06:55:00.000Z	owen1	Gambrinus	d-link 514
+2007-07-23T06:55:00.000Z	Gambrinus	owen1	you're already in the admin page?
+2007-07-23T06:55:00.000Z	owen1	Gambrinus	yes
+2007-07-23T06:56:00.000Z	owen1	Gambrinus	how do i set my port to go to random port
+2007-07-23T06:56:00.000Z	Gambrinus	owen1	you just need to choose a "random" port.  it won't randomize a port.
+2007-07-23T06:56:00.000Z	Gambrinus	owen1	find the "gaming" or "port forwarding" section.
+2007-07-23T06:57:00.000Z	owen1	Gambrinus	i did. but how do i tell this port to go to 22?
+2007-07-23T06:57:00.000Z	owen1	Gambrinus	i am talking about the 'private ip' field.
+2007-07-23T06:58:00.000Z	Gambrinus	owen1	i'm not familiar with your admin section.  let me look it up or i can describe mine.
+2007-07-23T06:58:00.000Z	owen1	Gambrinus	in the private port i put a random number.
+2007-07-23T06:59:00.000Z	owen1	Gambrinus	i think i got it. but i am not sure.
+2007-07-23T06:59:00.000Z	Gambrinus	owen1	ok, now if you have an "ip" box, put in the ip address of the computer you want to hook up to.  it will start with 192.168.1
+2007-07-23T06:59:00.000Z	owen1	Gambrinus	i have private and public ports!
+2007-07-23T06:59:00.000Z	owen1	Gambrinus	so my public will be the random?
+2007-07-23T07:00:00.000Z	Gambrinus	owen1	public port is the random port, and private will be 22
+2007-07-23T07:00:00.000Z	owen1	Gambrinus	great, let me try!
+2007-07-23T07:05:00.000Z	owen1	Gambrinus	connection refused
+2007-07-23T07:05:00.000Z	owen1	Gambrinus	i put 22 as private port..
+2007-07-23T07:06:00.000Z	owen1	Gambrinus	and 5 digits number as public
+2007-07-23T07:06:00.000Z	Gambrinus	owen1	firewall problem
+2007-07-23T07:06:00.000Z	owen1	Gambrinus	but it worked with port 22 as public
+2007-07-23T07:06:00.000Z	owen1	Gambrinus	should i open a port on my router?
+2007-07-23T07:06:00.000Z	owen1	Gambrinus	the public one?
+2007-07-23T07:09:00.000Z	owen1	Gambrinus	should i open another port on my router? (the public one)
+2007-07-23T07:10:00.000Z	Gambrinus	owen1	try a four digit port number as the public
+2007-07-23T07:10:00.000Z	owen1	Gambrinus	ok
+2007-07-23T07:12:00.000Z	Gambrinus	owen1	try this: http://www.no-ip.com/support/guides/routers/dlink.html
+2007-07-23T07:12:00.000Z	owen1	Gambrinus	ok
+2007-07-23T07:13:00.000Z	owen1	Gambrinus	maybe i should choose both (tcp and udp
+2007-07-23T07:13:00.000Z	owen1	Gambrinus	i did only tcp
+2007-07-23T07:14:00.000Z	Gambrinus	owen1	it's hard for me to tell you how to do it because your router is different.  that page should be easier to follow.  i believe ssh is only tcp, but try both anyway.
+2007-07-23T07:14:00.000Z	owen1	Gambrinus	ok
+2007-07-23T07:14:00.000Z	Gambrinus	owen1	d-link also has a "firewall" section that might be blocking your connection.
+2007-07-23T07:15:00.000Z	owen1	Gambrinus	ok
+2007-07-23T07:15:00.000Z	owen1	Gambrinus	i'll check it out
+2007-07-23T07:19:00.000Z	Gambrinus	owen1	i've read some people have experienced problems port forwarding with your router model.  you can just use port 22 since it worked before, but use a strong password.  or you can change the port number in ssh config.
+2007-07-23T07:20:00.000Z	owen1	Gambrinus	got it. strong password of my server machine?
+2007-07-23T07:20:00.000Z	Gambrinus	owen1	yes
+2007-07-23T07:20:00.000Z	owen1	Gambrinus	ok
+2007-07-23T07:21:00.000Z	Gambrinus	owen1	or you can use public/private keys.
+2007-07-23T07:22:00.000Z	owen1	Gambrinus	after i'll get dyanmic dns from dyndns.org i suppose to put it in the router instead of the 192.168.0.105 ?
+2007-07-23T07:22:00.000Z	Gambrinus	owen1	i've never used dyndns.
+2007-07-23T07:23:00.000Z	owen1	Gambrinus	ok
+2007-07-23T07:29:00.000Z	Gambrinus	owen1	i use what Flannel recommends as a dev.
+2007-07-23T07:29:00.000Z	Gambrinus	owen1	works perfectly
+2007-07-23T07:30:00.000Z	owen1	Gambrinus	Flannel : but i should use dyndns if i want to connect easily all the time, right?
+2007-07-23T07:34:00.000Z	Gambrinus	owen1	you will not need to change the settings of your router everyday.  you will just need to know the ip address of the router when you wish to connect
+2007-07-23T07:35:00.000Z	owen1	Gambrinus	will the ip of my router stay the same?
+2007-07-23T07:35:00.000Z	Gambrinus	owen1	that depends on your ISP or plan.
+2007-07-23T07:36:00.000Z	Gambrinus	owen1	mine is not static, but it only changes a few times a year so it is easy to know the ip address.
+2007-07-23T07:36:00.000Z	owen1	Gambrinus	so i will do something like this : mysuperbox.dyndns.org:81
+2007-07-23T07:37:00.000Z	owen1	Gambrinus	can u give me an example of url?
+2007-07-23T07:37:00.000Z	Gambrinus	owen1	i'm not familiar with dyndns, but when I connect: http://219.35.23.4:23982
+2007-07-23T07:38:00.000Z	owen1	Gambrinus	can u give an example of how u watch website on your home machie?
+2007-07-23T07:38:00.000Z	Gambrinus	owen1	locally: http://localhost
+2007-07-23T07:38:00.000Z	owen1	Gambrinus	and  http://219.35.23.4 is usually stable?
+2007-07-23T07:39:00.000Z	Gambrinus	owen1	that set of numbers was just an example of my router ip address.  it rarely changes, but your ISP may be different
+2007-07-23T07:39:00.000Z	owen1	Gambrinus	so if i am lucky, i don't need dyndns...like u.
+2007-07-23T07:39:00.000Z	Gambrinus	owen1	yep
+2007-07-23T07:40:00.000Z	owen1	Gambrinus	interesting, i'll follow the public ip that i get from my provider.
+2007-07-23T07:40:00.000Z	Gambrinus	owen1	or just call em and ask how often it changes.
+2007-07-23T07:40:00.000Z	owen1	Gambrinus	i assume that the machine should be connected all the time
+2007-07-23T07:41:00.000Z	owen1	Gambrinus	when u loose the internet connection do u get a new ip?
+2007-07-23T07:41:00.000Z	Gambrinus	owen1	when you need to access it.  only i access mine so i know when to leave it on
+2007-07-23T07:41:00.000Z	owen1	Gambrinus	so before u leave home u need to make sure it doesn't change, right?
+2007-07-23T07:41:00.000Z	Gambrinus	owen1	i have a cable modem.  it is always on.
+2007-07-23T07:42:00.000Z	Gambrinus	owen1	it hardly ever changes.  i don't even worry about it.
+2007-07-23T07:43:00.000Z	Gambrinus	owen1	just figure out how dynamic your router ip is and decide whether or not you need dyndns
+2007-07-23T07:43:00.000Z	owen1	Gambrinus	i will.

@@ -1,0 +1,97 @@
+2005-11-04T12:34:00.000Z	nuck		here's what i got from running that command... it's just 1 liner so please bear with me pn  language-pack- <none>         (no description available)
+2005-11-04T12:36:00.000Z	nuck		guys how do you know all this? i been reading on stuff and there's no way i think you could memorize all these commands just by reading
+2005-11-04T12:37:00.000Z	nuck		ok
+2005-11-04T12:37:00.000Z	bob2	nuck	use them
+2005-11-05T14:36:00.000Z	bob2	nuck	apt-cache policy blah
+2005-11-05T14:36:00.000Z	bob2	nuck	the *'d line is the one you have installed
+2005-11-05T14:42:00.000Z	bob2	nuck	for a start, paste your /etc/apt/sources.list to #flood
+2005-11-05T14:43:00.000Z	bob2	nuck	19:42:03           bob2 | nuck: for a start, paste your /etc/apt/sources.list to #flood
+2005-11-05T14:45:00.000Z	nuck	bob2	sources.list is now in #flood
+2005-11-05T14:46:00.000Z	bob2	nuck	and "apt-cache policy libc6"
+2005-11-05T14:47:00.000Z	bob2	nuck	aarnet has an ubuntu mirror, fwiw
+2005-11-05T14:47:00.000Z	bob2	nuck	linux.anu.edu.au might even have a free traffic one
+2005-11-05T14:47:00.000Z	nuck	bob2	apt-cache is there now in flood
+2005-11-05T14:48:00.000Z	bob2	nuck	uh, so you did point apt at sid
+2005-11-05T14:48:00.000Z	bob2	nuck	don't do that
+2005-11-05T14:48:00.000Z	nuck	bob2	would you know how i could solve the backward dependency of libc6-dev to libc6
+2005-11-05T14:49:00.000Z	bob2	nuck	simpelst solution is to reinstall, and never do it again
+2005-11-05T14:49:00.000Z	bob2	nuck	depending on what you did while you had apt poitned at sid, it may be fixable
+2005-11-05T14:50:00.000Z	nuck	bob2	can you help me with a solution without having to reinstall i really couldnt afford to lose any more time
+2005-11-05T14:51:00.000Z	bob2	nuck	when I say things like "depending on what you did while you had apt poitned at sid, it may be fixable", I'm hinting that you hsould tell us what you did
+2005-11-05T15:11:00.000Z	bob2	nuck	well, mount it then
+2005-11-05T14:52:00.000Z	nuck	bob2	all i know is that someone made me change my sources.list to the contents of http://paste.ubuntulinux.nl/969
+2005-11-05T14:52:00.000Z	nuck	bob2	the problem is i wasnt even aware i did that i have no idea what sid stands for i got a lot to learn about linux
+2005-11-05T14:52:00.000Z	bob2	nuck	that's not all that's happened
+2005-11-05T14:53:00.000Z	bob2	nuck	your version of libc6 is from debian, not ubuntu
+2005-11-05T14:53:00.000Z	bob2	nuck	why didn't you just install kdevelop from Debian?
+2005-11-05T14:53:00.000Z	bob2	nuck	anyway
+2005-11-05T14:53:00.000Z	bob2	nuck	don't ever do that again
+2005-11-05T14:54:00.000Z	bob2	nuck	debian and ubuntu are not package compatible (in general)
+2005-11-05T14:54:00.000Z	bob2	nuck	open up /etc/apt/preferences in your editor of choice
+2005-11-05T14:55:00.000Z	nuck	bob2	i don't have the file preferences from /etc/apt
+2005-11-05T14:55:00.000Z	bob2	nuck	create it
+2005-11-05T14:56:00.000Z	nuck	bob2	so my objective now is to replace libc6 (debian) i have installed with libc6 of ubuntu right?
+2005-11-05T14:56:00.000Z	bob2	nuck	right
+2005-11-05T14:57:00.000Z	bob2	nuck	those lines mess with apt in a way that makes it prefer things in hoary over things from anywhere else
+2005-11-05T14:58:00.000Z	nuck	bob2	k im running it
+2005-11-05T15:01:00.000Z	nuck	bob2	no can do i realized its d/l ~70MB+ of apps and i got low internet quota than that so i aborted
+2005-11-05T15:02:00.000Z	nuck	bob2	point apt at aarnet thats in sources.list
+2005-11-05T15:04:00.000Z	bob2	nuck	is this a laptop?
+2005-11-05T15:06:00.000Z	nuck	bob2	i do have it
+2005-11-05T15:07:00.000Z	bob2	nuck	put it in and run 'sudo apt-cdrom add'
+2005-11-05T15:08:00.000Z	bob2	nuck	please don't paste in here...
+2005-11-05T15:08:00.000Z	bob2	nuck	sudo apt-cdrom -d /media/cdrom0/ add
+2005-11-05T15:09:00.000Z	nuck	bob2	same error. am not putting sudo cuz am already root
+2005-11-05T15:10:00.000Z	bob2	nuck	did you inser the cd? did it get mounted?
+2005-11-05T15:11:00.000Z	nuck	bob2	i pasted the outout in flood
+2005-11-05T15:11:00.000Z	bob2	nuck	'sudo mount -t iso9660 /dev/scd0 /mnt'
+2005-11-05T15:12:00.000Z	nuck	bob2	mount: special device /dev/scd0 does not exist
+2005-11-05T15:12:00.000Z	bob2	nuck	/dev/hdc then
+2005-11-05T15:13:00.000Z	nuck	bob2	 after running "mount -t iso9660 /dev/hdc /mnt"
+2005-11-05T15:14:00.000Z	nuck	bob2	am considering reinstalling ubuntu
+2005-11-05T15:14:00.000Z	nuck	bob2	can you tell me what i need to do so that i will get the following app installed when i do reinstall the whole OS?
+2005-11-05T15:14:00.000Z	bob2	nuck	I'm pretty sure I talked to you about this sort of thing months ago
+2005-11-05T15:14:00.000Z	nuck	bob2	which sort of thing?
+2005-11-05T15:15:00.000Z	bob2	nuck	read wiki.ubuntu.com/AddingRepositoriesHowto, and enable universe
+2005-11-05T15:15:00.000Z	bob2	nuck	then install the kdevelop package with whatever packagemanement tool you like
+2005-11-05T15:15:00.000Z	bob2	nuck	I'd recommend stickign with synaptic for now
+2005-11-05T15:18:00.000Z	bob2	nuck	'df -h' will show the sizes of mounted partitions
+2005-11-05T16:32:00.000Z	bob2	nuck	/msg ubotu ntfs
+2005-11-05T16:32:00.000Z	bob2	nuck	then follow those instructions to mount it
+2005-11-05T16:41:00.000Z	bob2	nuck	no
+2005-11-05T16:41:00.000Z	bob2	nuck	just add it to /etc/fstab manually then
+2005-11-05T16:42:00.000Z	bob2	nuck	yes, just edit /etc/fstab manually then
+2005-11-05T16:44:00.000Z	bob2	nuck	"mount"
+2005-11-05T16:44:00.000Z	bob2	nuck	also, if you'd stop ignoring me, you could have fixed this by now
+2005-11-05T16:46:00.000Z	bob2	nuck	dude
+2005-11-05T16:47:00.000Z	bob2	nuck	what partition do you want to mount?
+2005-11-05T16:48:00.000Z	bob2	nuck	that's unsurprising, since you haven't mounted it
+2005-11-05T16:49:00.000Z	bob2	nuck	no
+2005-11-05T16:49:00.000Z	bob2	nuck	mount /mnt/whateveryoutoldit
+2005-11-05T16:52:00.000Z	bob2	nuck	yes
+2005-11-05T16:52:00.000Z	bob2	nuck	as long as you put no quote
+2005-11-05T16:56:00.000Z	bob2	nuck	then make it
+2005-11-05T16:57:00.000Z	bob2	nuck	sudo mkdir /edia/whatever
+2005-11-05T16:59:00.000Z	nuck	bob2	did i mention i crashed my computer last night both of them i lost everything... the feeling is probly the same as having your house burned down only to a lesser extent
+2005-11-06T17:13:00.000Z	bob2	nuck	vfat is the filesystem type, not FAT32
+2005-11-06T17:14:00.000Z	nuck	bob2	in /etc/fstab right?
+2005-11-06T17:14:00.000Z	bob2	nuck	yes, in the filesystem column
+2005-11-06T17:15:00.000Z	nuck	bob2	you  mean in the <type> column cuz the <file system> column all have entries of the form /dev/hdan to which i put /dev/hda6/
+2005-11-06T17:15:00.000Z	bob2	nuck	yeah, my mistake, sorry
+2005-11-06T17:16:00.000Z	nuck	bob2	now i get "wrong fs type, bad option, bad superblock on /dev/hda6
+2005-11-06T17:17:00.000Z	bob2	nuck	you're sure hda6 is fat32?
+2005-11-06T17:20:00.000Z	nuck	bob2	ok this is how i concluded that it is the "common" partition i opened System-->Admin->Device Manager
+2005-11-06T17:58:00.000Z	nuck	bob2	i fnly able to mount the common filesystem partition in ubuntu
+2005-11-06T07:25:00.000Z	nuck	bob2	ive been able to mount a common filesystem partition to share btween my dual boot XP/Ubuntu system.  problem is i can manipulate it from XP but not from Ubuntu. i can only view it.
+2005-11-06T07:26:00.000Z	bob2	nuck	put 'defaults,umask=000' in the options column in fstab, instead of defaults
+2005-11-07T10:52:00.000Z	bob2	nuck	dpkg -l blah
+2005-11-07T17:00:00.000Z	bob2	nuck	very, since it has nothing listening on the network by default
+2005-11-07T17:04:00.000Z	bob2	nuck	sure it does
+2005-11-07T17:08:00.000Z	nuck	bob2	you still there?
+2005-11-07T17:09:00.000Z	nuck	bob2	do you know how to tunnel through the ports in using the comp labs wireless so i can chat here while in the labs?
+2005-11-07T17:09:00.000Z	bob2	nuck	you could ssh back to your computer in your college
+2005-11-07T17:09:00.000Z	bob2	nuck	last I tried I could not ssh out of dcslabs at all
+2005-11-07T17:10:00.000Z	nuck	bob2	pepsi so to do that i have to have 2 computers right?
+2005-11-07T17:11:00.000Z	bob2	nuck	one in the lab, one outside it, yes
+2005-11-07T17:11:00.000Z	bob2	nuck	for irc? no...
+2005-11-08T10:32:00.000Z	bob2	nuck	/msg

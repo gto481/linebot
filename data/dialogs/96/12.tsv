@@ -1,0 +1,96 @@
+2010-05-20T12:21:00.000Z	Krishnandu		Hi friends, I'm not being able to log into ubuntu....I'm getting "Low Graphics Mode" error since last update yesterday. Please help :(
+2010-05-20T12:22:00.000Z	Krishnandu		Please Help
+2010-05-20T12:22:00.000Z	optical	Krishnandu	i have some problem every time i update.  are you using nvidia card?
+2010-05-20T12:22:00.000Z	Krishnandu	optical	Yes
+2010-05-20T12:22:00.000Z	optical		its easy to fix
+2010-05-20T12:22:00.000Z	Krishnandu	optical	9500GT
+2010-05-20T12:23:00.000Z	Krishnandu	optical	How??
+2010-05-20T12:23:00.000Z	optical		no problem its easy to fix let me  get you link
+2010-05-20T12:23:00.000Z	optical		one sec
+2010-05-20T12:23:00.000Z	Krishnandu	optical	okies
+2010-05-20T12:24:00.000Z	optical		ok Krishnandu  do this, go here and download this file http://www.nvidia.com/object/linux-display-ia32-195.36.24.html
+2010-05-20T12:24:00.000Z	optical	Krishnandu	chmod +x the file
+2010-05-20T12:24:00.000Z	optical		once its done downloading
+2010-05-20T12:24:00.000Z	Krishnandu	optical	okies
+2010-05-20T12:25:00.000Z	optical	Krishnandu	then you gotta reboot your computer, when its in low graphics mode it will prompt you with 4 choices when it starts up.  Choose the bottom option, quit to console, and Xwindows will close
+2010-05-20T12:25:00.000Z	optical		then you run that downloaded NVIDIA driver as root
+2010-05-20T12:25:00.000Z	optical		and pick yes
+2010-05-20T12:25:00.000Z	optical		it will recompile the drivers for you
+2010-05-20T12:25:00.000Z	Krishnandu	optical	you are somewhat closer of what i'm getting
+2010-05-20T12:26:00.000Z	Krishnandu	optical	lemme show u sumthing
+2010-05-20T12:26:00.000Z	optical		you have to run that downloaded file with X not running
+2010-05-20T12:26:00.000Z	optical		then it will recompile and update your Xconfig file
+2010-05-20T12:26:00.000Z	Krishnandu	optical	I'm not getting x
+2010-05-20T12:26:00.000Z	optical		then you just reboot once more and all is good
+2010-05-20T12:26:00.000Z	Krishnandu	optical	please look into this http://ubuntuforums.org/showthread.php?t=1487915
+2010-05-20T12:26:00.000Z	optical		yes you're getting the Low Graphics Mode didnt you say?
+2010-05-20T12:26:00.000Z	optical		ok
+2010-05-20T12:27:00.000Z	optical	Krishnandu	exactly, you press OK on this box:  http://img208.imageshack.us/i/image0009s.jpg/
+2010-05-20T12:27:00.000Z	Krishnandu	optical	yes.....I'm getting the error screen.....
+2010-05-20T12:27:00.000Z	optical	Krishnandu	 then it will give you 4 choices
+2010-05-20T12:27:00.000Z	optical	Krishnandu	pick the bottom choice to close X and go back to console
+2010-05-20T12:27:00.000Z	optical		and then run that downloaded NVIDIA file i showed you
+2010-05-20T12:27:00.000Z	Krishnandu	optical	ya its giving
+2010-05-20T12:27:00.000Z	optical		it will fix it right up
+2010-05-20T12:27:00.000Z	Krishnandu	optical	buttom one is restart x
+2010-05-20T12:27:00.000Z	optical		hrmm
+2010-05-20T12:27:00.000Z	optical		try 3rd one
+2010-05-20T12:27:00.000Z	optical		one should say quit to console
+2010-05-20T12:28:00.000Z	Krishnandu	optical	ya close x and return to console
+2010-05-20T12:28:00.000Z	optical	Krishnandu	 yep, pick that one, it will close X.  Then run the NVIDIA file you downloaded
+2010-05-20T12:28:00.000Z	Krishnandu	optical	how??
+2010-05-20T12:28:00.000Z	Krishnandu	optical	I'm a noob......don't have any idea
+2010-05-20T12:29:00.000Z	Krishnandu	optical	I tried the solution posted by bashphoenux and have posted the result for each command. You can take a look
+2010-05-20T12:29:00.000Z	Krishnandu	optical	BTW how to run the NVIDIA file??
+2010-05-20T12:30:00.000Z	optical		Krishnandu:
+2010-05-20T12:30:00.000Z	optical		type sudo ./NVIDIA(tab)
+2010-05-20T12:30:00.000Z	Krishnandu	optical	yup??
+2010-05-20T12:30:00.000Z	optical		it should autocomplete the filename
+2010-05-20T12:30:00.000Z	Krishnandu	optical	okies....
+2010-05-20T12:30:00.000Z	optical		and run it
+2010-05-20T12:30:00.000Z	Krishnandu	optical	that will be ok??
+2010-05-20T12:31:00.000Z	optical		well if it works it should bring you into an installer program
+2010-05-20T12:31:00.000Z	Krishnandu	optical	one more query....I'm in windows now. So if I download the file how would i get this windows drive there in ubuntu??
+2010-05-20T12:31:00.000Z	Krishnandu	optical	I don't know the mount command
+2010-05-20T12:32:00.000Z	Krishnandu	optical	I used to mount them from GUI
+2010-05-20T12:32:00.000Z	optical	Krishnandu	 well its easiest just to download it in ubuntu.  when low grapahics mode boots up, choose "stay in low graphics mode" then boot into X
+2010-05-20T12:32:00.000Z	optical		then go to the nvidia URL i gave you
+2010-05-20T12:32:00.000Z	optical		above
+2010-05-20T12:32:00.000Z	optical		and download the file
+2010-05-20T12:32:00.000Z	optical		then reboot, and next time choose Close X and go to console
+2010-05-20T12:32:00.000Z	optical		and the file shoudl be where you downloaded it to
+2010-05-20T12:32:00.000Z	Krishnandu	optical	There the problem comes......no screen....I'm if I choose to stay in low graphics mode nothing comes at all
+2010-05-20T12:32:00.000Z	Krishnandu	optical	I waited from 5-10mins since yesterday many times
+2010-05-20T12:33:00.000Z	optical	Krishnandu	hmm, strange
+2010-05-20T12:33:00.000Z	optical		mine will go into low graphcis desktop
+2010-05-20T12:33:00.000Z	optical		very low resolution and large fonts
+2010-05-20T12:34:00.000Z	Krishnandu	optical	wekk should I try it again?? Or anything else I should do now??
+2010-05-20T12:34:00.000Z	optical		you could just download it with wget instead
+2010-05-20T12:34:00.000Z	optical		and not boot into X at all
+2010-05-20T12:35:00.000Z	optical	Krishnandu	 OK do this instead.  Reboot into ubuntu, pick exit to console, and then when in the console and logged in, type " wget http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/NVIDIA-Linux-x86-195.36.24-pkg1.run "
+2010-05-20T12:35:00.000Z	optical		that will download the file for you
+2010-05-20T12:35:00.000Z	optical		then once the file is downloaded, type chmod +x NVIDIA-Linux-x86-195.36.24-pkg1.run
+2010-05-20T12:35:00.000Z	optical		then sudo ./NVIDIA-Linux-x86-195.36.24-pkg1.run
+2010-05-20T12:35:00.000Z	optical		done
+2010-05-20T12:35:00.000Z	Krishnandu		<khafiz> http://techie-buzz.com/foss/ubuntu-10-04-lts-installation-guide.html
+2010-05-20T12:36:00.000Z	Krishnandu	optical	Yup I did that. And then It downloaded a file
+2010-05-20T12:36:00.000Z	optical		good
+2010-05-20T12:36:00.000Z	optical		then type sudo ./NVIDIA-Linux-x86-195.36.24-pkg1.run
+2010-05-20T12:36:00.000Z	optical		and it will run the installer
+2010-05-20T12:36:00.000Z	Krishnandu	optical	after that i typed sudo sh NVIDIA-Linux-x86-pkg1.run
+2010-05-20T12:36:00.000Z	optical		well the filename isnt called that
+2010-05-20T12:36:00.000Z	optical		its called NVIDIA-Linux-x86-195.36.24-pkg1.run
+2010-05-20T12:36:00.000Z	optical		if you downloaded the right one.
+2010-05-20T12:36:00.000Z	Krishnandu	optical	please look here http://ubuntuforums.org/showthread.php?t=1487915
+2010-05-20T12:37:00.000Z	Krishnandu	optical	I've tried the similar stops
+2010-05-20T12:37:00.000Z	Krishnandu		*steps
+2010-05-20T12:37:00.000Z	optical	Krishnandu	 yes I saw there, those commands arent how i do it and havent tried that way.  Just type literally "wget http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/NVIDIA-Linux-x86-195.36.24-pkg1.run"  then "sudo ./http://us.download.nvidia.com/XFree86/Linux-x86/195.36.24/NVIDIA-Linux-x86-195.36.24-pkg1.run"
+2010-05-20T12:37:00.000Z	optical		literally those 2 commands please
+2010-05-20T12:37:00.000Z	optical		thats as simple as i can possibly explain it
+2010-05-20T12:38:00.000Z	Krishnandu	optical	okies
+2010-05-20T12:38:00.000Z	Krishnandu	optical	thank you......i'll brb after trying these commands
+2010-05-20T12:38:00.000Z	Krishnandu	optical	And let you know the results
+2010-05-20T12:38:00.000Z	optical		errr "sudo ./NVIDIA-Linux-x86-195.36.24-pkg1.run"
+2010-05-20T12:38:00.000Z	optical		is the second line
+2010-05-20T12:38:00.000Z	optical	Krishnandu	"sudo ./NVIDIA-Linux-x86-195.36.24-pkg1.run" is the second line sorry, not the http part
+2010-05-20T12:38:00.000Z	Krishnandu	optical	okies

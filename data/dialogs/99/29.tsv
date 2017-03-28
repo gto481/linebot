@@ -1,0 +1,99 @@
+2008-11-01T09:40:00.000Z	dr_willis		sh - is  a smaller shell. :)
+2008-11-01T09:40:00.000Z	Tyrath	dr_willis	do you mean by smaller that it's not as powerful?
+2008-11-01T09:41:00.000Z	dr_willis	Tyrath	 power is relative..  bash has more features.. its used as the users shell.. sh (is actually dash on ubuntu) is smaller in size/footprint but is still sh posix compliant.
+2008-11-01T09:41:00.000Z	dr_willis	Tyrath	 sh is used as the system shell
+2008-11-01T09:42:00.000Z	Tyrath	dr_willis	ah k. cause the default shell on my release is bash
+2008-11-01T09:42:00.000Z	dr_willis	Tyrath	 the default USER shell is bash. system shell should be dash
+2008-11-01T09:42:00.000Z	Tyrath	dr_willis	ah k
+2008-11-01T09:42:00.000Z	dr_willis	Tyrath	 ls -l /bin/sh
+2008-11-01T09:44:00.000Z	dr_willis	Tyrath	 rubbish? what rubbish?
+2008-11-01T09:44:00.000Z	Tyrath	dr_willis	the ~ stuff
+2008-11-01T09:44:00.000Z	dr_willis	Tyrath	 what ~ stuff?
+2008-11-01T09:44:00.000Z	Tyrath	dr_willis	user@usercomputer~$:
+2008-11-01T09:44:00.000Z	dr_willis	Tyrath	 bash is customizeable.  - thats just the prompt... trivial to change that
+2008-11-01T09:44:00.000Z	dr_willis	Tyrath	 export PS1=""
+2008-11-01T09:45:00.000Z	Tyrath	dr_willis	I understand that line tells me I'm in ~
+2008-11-01T09:45:00.000Z	Tyrath	dr_willis	but what's the point in it oter than that?
+2008-11-01T09:45:00.000Z	dr_willis	Tyrath	 go read some bash prompt guides
+2008-11-01T09:45:00.000Z	dr_willis	Tyrath	 theres 10000's of things it can tell you
+2008-11-01T09:46:00.000Z	dr_willis	Tyrath	  my promot -> --(willis@black)-(52/pts/0)-(0146/01-Nov-08)--
+2008-11-01T10:12:00.000Z	dr_willis	Tyrath	 yes... with the proper bash prompt. :)
+2008-11-01T10:12:00.000Z	Tyrath	dr_willis	which is?
+2008-11-01T10:12:00.000Z	dr_willis	Tyrath	 check the bash-prompt-howto for such examples
+2008-11-01T10:12:00.000Z	Tyrath	dr_willis	where, it terminal?
+2008-11-01T10:13:00.000Z	dr_willis	Tyrath	 they print 'escape codes' that sets the  terminal title.
+2008-11-01T10:13:00.000Z	dr_willis	Tyrath	 its a howto documentation. :)  google for 'bash prompt howto;
+2008-11-01T10:13:00.000Z	Tyrath	dr_willis	ah k thanks
+2008-11-01T10:13:00.000Z	dr_willis	Tyrath	 note that some tricks may only work withs pecific terminal programs.
+2008-11-01T10:15:00.000Z	dr_willis	Tyrath	 you can get web browsers for the console. some can even do graphics
+2008-11-01T10:15:00.000Z	Tyrath	dr_willis	I've got lynx but it doesn't do javascript
+2008-11-01T10:15:00.000Z	dr_willis	Tyrath	 theres other web browsers for the console that might
+2008-11-01T10:15:00.000Z	Tyrath	dr_willis	or https for that matter
+2008-11-01T10:16:00.000Z	Tyrath	dr_willis	does your version have a GUI?
+2008-11-01T10:16:00.000Z	Tyrath	dr_willis	i mean does your dist have a GUI?
+2008-11-01T10:16:00.000Z	dr_willis	Tyrath	 most all disrtos come with X :)
+2008-11-01T10:17:00.000Z	Tyrath	dr_willis	in that case what's the different between ubuntu kubuntu and xubuntu?
+2008-11-01T10:17:00.000Z	dr_willis	Tyrath	 havent done any research eh? One has kde, one has gnome, other uses xfce
+2008-11-01T10:18:00.000Z	Tyrath	dr_willis	and does KDE, Gnome and X all have their personal advanatages?
+2008-11-01T10:18:00.000Z	dr_willis	Tyrath	 of course.
+2008-11-01T10:18:00.000Z	Tyrath	dr_willis	I thought ubuntu had X?
+2008-11-01T10:18:00.000Z	dr_willis	Tyrath	 they all got X.
+2008-11-01T10:18:00.000Z	dr_willis	Tyrath	 X is the foundataion for the GUI
+2008-11-01T10:18:00.000Z	Tyrath	dr_willis	so then Xubuntu has the least functionality?
+2008-11-01T10:19:00.000Z	dr_willis	Tyrath	 not really
+2008-11-01T10:19:00.000Z	dr_willis	Tyrath	 just install  xubuntu-desktop and try xfce if you want to know.
+2008-11-01T10:19:00.000Z	Tyrath	dr_willis	I'd rather not. bandwidth :/
+2008-11-01T10:19:00.000Z	Tyrath	dr_willis	besides installing ibex took ages
+2008-11-01T11:40:00.000Z	Tyrath	dr_willis	I went to that thing for changing the header. it told me how to change the title but said nothing about how I could insert the filename into the header
+2008-11-01T11:41:00.000Z	dr_willis	Tyrath	ive no clue what you mean by 'header'
+2008-11-01T11:41:00.000Z	Tyrath	dr_willis	I mean the title of the terminal
+2008-11-01T11:42:00.000Z	dr_willis	Tyrath	 you can change the title bar title with the proper escape sequences.. -  Not sure what you are asking.
+2008-11-01T11:42:00.000Z	Tyrath	dr_willis	if I open a program I want the program title to show up in the title of the menu bar
+2008-11-01T11:42:00.000Z	dr_willis	Tyrath	 use ctrl-z then 'bg'  to run an app in the background.
+2008-11-01T11:43:00.000Z	dr_willis	Tyrath	 what program?   if you run 'gedit' from the terminal you want it to say gedit in the xterm terminal title?
+2008-11-01T11:43:00.000Z	Tyrath	dr_willis	exactly. but not just for gedit, for everything
+2008-11-01T11:43:00.000Z	dr_willis	Tyrath	 sounds rather useless to me..
+2008-11-01T11:44:00.000Z	Tyrath	dr_willis	on the contrary. I don't have to click on every terminal tab to work out the one I want.
+2008-11-01T11:44:00.000Z	dr_willis	Tyrath	 youd proberly have tow rite a script that does it for one app and have it called by the bash prompt  every time
+2008-11-01T11:44:00.000Z	dr_willis	Tyrath	 gedit is a gui tool.. whats the point?  or are you confuseing things again?
+2008-11-01T11:44:00.000Z	Tyrath	dr_willis	i know what gedit is
+2008-11-01T11:45:00.000Z	Tyrath	dr_willis	and gedit is irrelevant to what I'm trying to do
+2008-11-01T11:46:00.000Z	dr_willis	Tyrath	 guess determine where  http://tldp.org/HOWTO/Bash-Prompt-HOWTO/xterm-title-bar-manipulations.html  is setting the title bar from and  sonme how stick in a variable/script that tells it the name of the last ran command.
+2008-11-01T11:47:00.000Z	Tyrath	dr_willis	I went to that link before - it showed me how to set the title but not how to make the title read the file that is currently running
+2008-11-01T11:48:00.000Z	dr_willis	Tyrath	 yep..  thats the trick.. find the env variagle thats showing the currently running application
+2008-11-01T11:49:00.000Z	Tyrath	dr_willis	i couldn't find it anywhere
+2008-11-01T11:49:00.000Z	dr_willis	Tyrath	 if its not in the 'set' variables  not sure of a way to get it either..
+2008-11-01T11:50:00.000Z	Tyrath	dr_willis	you can edit it by editing ~/.bashrc
+2008-11-01T11:51:00.000Z	Tyrath	dr_willis	I just need to know how print the currently running file name
+2008-11-01T11:51:00.000Z	dr_willis	Tyrath	 ive seen no way to do that.
+2008-11-01T11:51:00.000Z	dr_willis	Tyrath	 and it would be currnetly running application/program not filename
+2008-11-01T11:51:00.000Z	Tyrath	dr_willis	I'm guessing you can do ps ax | grep <something here> but I don't know
+2008-11-01T11:52:00.000Z	dr_willis	Tyrath	 any commands you use will get ran every time you hit return in the terminal - its best to not use long/big script/commands
+2008-11-01T11:53:00.000Z	Tyrath	dr_willis	I meant the running application name
+2008-11-01T11:53:00.000Z	Tyrath	dr_willis	so if I open vim, the terminal title will read VIM
+2008-11-16T05:38:00.000Z	Tyrath	dr_willis	would you be able to help me with boot permissions?
+2008-11-16T05:38:00.000Z	Tyrath	dr_willis	actually a partition permission. enabling permissions for /dev/fb0
+2008-11-16T05:39:00.000Z	Tyrath	dr_willis	cause apparently doing sudo chmod 666 /dev/fb0 only will set them temporarily
+2008-11-16T05:39:00.000Z	dr_willis	Tyrath	 i notifed the other day - i had to run mplayer as root to get it to play videos on fb0. I dont know of the perment fix..
+2008-11-16T05:39:00.000Z	dr_willis	Tyrath	 a nasty work around.. i guess ya chould chmod them in rc.local :()
+2008-11-16T05:41:00.000Z	Tyrath	dr_willis	what did you do to enable mplayer?
+2008-11-16T05:41:00.000Z	Tyrath	dr_willis	and I don't get why I'm not having the problem with fbi when you're having it with mplayer
+2008-11-24T17:39:00.000Z	Tyrath	dr_willis	do you use wired?
+2008-11-24T17:39:00.000Z	Tyrath	dr_willis	would you know how to fix my wireless problem?
+2008-11-24T17:39:00.000Z	dr_willis	Tyrath	 not a clue. i rarely use wireless
+2008-11-24T17:40:00.000Z	Tyrath	dr_willis	actually don't answer that
+2008-11-24T17:40:00.000Z	dr_willis	Tyrath	 :) if im not using wireless... what else is there.. :P
+2008-11-24T17:40:00.000Z	dr_willis	Tyrath	 8.10 for the first time actually has wireless working for me on my 2 laptops
+2008-11-24T17:40:00.000Z	Tyrath	dr_willis	i tried to sneak in a don't answer that, not sure if you got it :P i realised my mistake
+2008-11-24T17:40:00.000Z	Tyrath	dr_willis	that's awesome
+2008-11-24T17:41:00.000Z	Tyrath	dr_willis	what does your /etc/network/interface file read?
+2008-11-24T17:41:00.000Z	Tyrath	dr_willis	i'm trying to work out why if i'm happily running on wireless, if i attach a wire, i loose connection
+2008-11-24T17:42:00.000Z	Tyrath	dr_willis	then if I detach from the wire i don't get my wireless connection back :/
+2008-11-24T17:42:00.000Z	dr_willis	Tyrath	  just 2 lines..   auto lo
+2008-11-24T17:43:00.000Z	Tyrath	dr_willis	gah. i was afraid you'd say that. thanks anyhow
+2008-11-24T17:43:00.000Z	dr_willis	Tyrath	 thats because its the network manager tool/sustem, that handles it.. you are bypassing network manager totally it seems
+2008-11-24T17:43:00.000Z	Tyrath	dr_willis	i'm trying but failing :/
+2008-11-24T17:43:00.000Z	Tyrath	dr_willis	i'm trying to loose my dependency on the GUI
+2008-11-24T17:44:00.000Z	Tyrath	dr_willis	i still will need the GUI for most graphical things, just shouldn't need it for basic things like wireless
+2008-11-27T06:46:00.000Z	Tyrath	dr_willis	lol
+2009-01-12T04:47:00.000Z	Tyrath	dr_willis	just curious. what's .run? shouldn't it be .sh ?

@@ -1,0 +1,97 @@
+2006-04-23T08:23:00.000Z	lgc		seems nalioth_zZz has some job to do...
+2006-04-23T06:45:00.000Z	lgc		Hello: can anyone help me with a hoary->Breezy update problem?
+2006-04-23T06:45:00.000Z	gnomefreak	lgc	tell us a lil about the problem and we will see
+2006-04-23T06:46:00.000Z	gnomefreak	lgc	please dont paste in here please use pastebin
+2006-04-23T06:52:00.000Z	gnomefreak	lgc	can we have the link after you hot send?
+2006-04-23T06:52:00.000Z	lgc	gnomefreak	http://paste.ubuntu-nl.org/12500
+2006-04-23T06:53:00.000Z	lgc	gnomefreak	http://paste.ubuntu-nl.org/12498
+2006-04-23T06:54:00.000Z	gnomefreak	lgc	uncomment the last 2 lines than run sudo apt-get update let me know of any errors
+2006-04-23T06:56:00.000Z	lgc	gnomefreak	you mean uncommenting the last 2 lines of "sources.list" and then rerun?
+2006-04-23T06:56:00.000Z	gnomefreak	lgc	yes
+2006-04-23T06:56:00.000Z	lgc	gnomefreak	let me do that...
+2006-04-23T06:57:00.000Z	gnomefreak	lgc	wait
+2006-04-23T06:57:00.000Z	gnomefreak	lgc	while your in there take the mx. away from the security repos please
+2006-04-23T07:01:00.000Z	lgc	gnomefreak	lots of errors!
+2006-04-23T07:01:00.000Z	gnomefreak	lgc	please paste them on pastebin
+2006-04-23T07:02:00.000Z	lgc	gnomefreak	I take that back. I did something stupid...it's fine now so far.
+2006-04-23T07:04:00.000Z	lgc	gnomefreak	I did "apt-get -d dist-upgrade" last night so I don't have to download anything. Should I proceed online or offline?
+2006-04-23T07:04:00.000Z	gnomefreak	lgc	sudo apt-get dist-upgrade
+2006-04-23T07:04:00.000Z	lgc	gnomefreak	yes, but online or offline?
+2006-04-23T07:05:00.000Z	lgc	gnomefreak	or it doesn't matter...
+2006-04-23T07:05:00.000Z	gnomefreak	lgc	online
+2006-04-23T07:07:00.000Z	lgc	gnomefreak	http://paste.ubuntu-nl.org/12501
+2006-04-23T07:08:00.000Z	gnomefreak	lgc	sudo apt-get -f install        <<<just like that no packages or nothing
+2006-04-23T07:12:00.000Z	lgc	gnomefreak	this one is all over the place: http://paste.ubuntu-nl.org/12503
+2006-04-23T07:13:00.000Z	gnomefreak	lgc	you didnt read the docs on how to upgrade did you?
+2006-04-23T07:13:00.000Z	gnomefreak	lgc	your missing something you need from hoary
+2006-04-23T07:14:00.000Z	lgc	gnomefreak	I only know what good-intentioned people like you have told me...
+2006-04-23T07:14:00.000Z	gnomefreak	lgc	change you repos back to hoary and run apt-get update (we are gonna try to fix this may not beable to)
+2006-04-23T07:15:00.000Z	lgc	gnomefreak	the install "finished" without further errors...
+2006-04-23T07:16:00.000Z	gnomefreak	lgc	what install? the sudo apt-get -f install?
+2006-04-23T07:16:00.000Z	lgc	gnomefreak	indeed.
+2006-04-23T07:17:00.000Z	gnomefreak	lgc	now run sudo apt-get dist-upgrade see if it pulls anything else in
+2006-04-23T07:18:00.000Z	lgc	gnomefreak	don't you tell me it's going to try and download everything again?
+2006-04-23T07:18:00.000Z	gnomefreak	lgc	yes it is going to install anything it needs to finish if nothing than tahts better
+2006-04-23T07:20:00.000Z	lgc	gnomefreak	what I fear is that it's going to download 817 MB of data again, instead of just what it needs to complete the install!
+2006-04-23T07:21:00.000Z	gnomefreak	lgc	it will install anything not installed to complete upgrade
+2006-04-23T07:21:00.000Z	lgc	gnomefreak	that's why I asked if I should do that offline...
+2006-04-23T07:21:00.000Z	gnomefreak	lgc	if tapt-get already downloaded everything it will check and than just install
+2006-04-23T07:21:00.000Z	gnomefreak	lgc	no i said online not offline
+2006-04-23T07:24:00.000Z	lgc	gnomefreak	it's downloading all the libraries...seems to me it's going to do it all afresh...
+2006-04-23T07:47:00.000Z	lgc	gnomefreak	why is it (seemingly) downloading everything again?
+2006-04-23T08:32:00.000Z	lgc	gnomefreak	can't I just interrupt the download, leave open the security repositories, apt-get update and apt-get install to avoid waiting for another 3 hours?
+2006-04-23T08:32:00.000Z	gnomefreak	lgc	you can but i dont suggest it
+2006-04-23T08:32:00.000Z	lgc	gnomefreak	why?
+2006-04-23T08:33:00.000Z	gnomefreak	lgc	its not a good thing to interupt apt
+2006-04-23T12:54:00.000Z	lgc	gnomefreak	sure ssh is installed...
+2006-04-23T11:02:00.000Z	lgc	gnomefreak	do you know how can one temporarily disable the synaptics touchpad?
+2006-04-23T11:08:00.000Z	gnomefreak	lgc	no i dont
+2006-04-23T11:09:00.000Z	lgc	gnomefreak	sorry about the windmill...
+2006-04-23T12:41:00.000Z	lgc	gnomefreak	I'm being asked what should I do with /etc/hdparm.conf (Y,N,D,Z)...
+2006-04-23T12:49:00.000Z	lgc	gnomefreak	now it asks what it should do with "/etc/ssh/ssh_config"...
+2006-04-23T12:51:00.000Z	gnomefreak	lgc	i have no clue what your doing im not gonna be much help atm
+2006-04-23T12:52:00.000Z	lgc	gnomefreak	I've been doing as you said for the last 4 hours...
+2006-04-23T12:53:00.000Z	gnomefreak	lgc	upgrading will only ask you about ssh if its already installed
+2006-04-23T12:55:00.000Z	gnomefreak	lgc	than your gonna have to answer the questions like you did the first time you installed it
+2006-04-23T12:56:00.000Z	lgc	gnomefreak	the main differences are the ForwardAgent and ForwardX11 answers ("no" for Breezy vs. "yes" for Hoary)...
+2006-04-23T12:56:00.000Z	gnomefreak	lgc	i dont use ssh
+2006-04-23T12:57:00.000Z	lgc	gnomefreak	is there something you can use instead of ssh (apart from the deprecated rsh and telnet, of course)? What a surprise
+2006-04-23T12:58:00.000Z	gnomefreak	lgc	i can use anything they offer i have no need for it
+2006-10-04T16:48:00.000Z	gnomefreak	lgc	download xserver-xorg-video-i810 from ubuntu.packages.com and save it to usb stick than install it on ubuntu (you might want to get xorg and xserver-xorg-driver-all while you at it)
+2006-10-04T16:49:00.000Z	lgc	gnomefreak	what is that for?
+2006-10-04T16:50:00.000Z	gnomefreak	lgc	your intel card. werent you the person that needed the intel drivers
+2006-10-04T16:51:00.000Z	lgc	gnomefreak	not that I know of...my networking just doesn't function anymore (and I didn't mess with it!)
+2006-10-04T16:52:00.000Z	gnomefreak	lgc	sorry it was lsc that needed it
+2006-10-04T16:52:00.000Z	lgc	gnomefreak	but maybe you can help me anyway!
+2006-10-04T16:53:00.000Z	gnomefreak	lgc	wireless?
+2006-10-04T16:53:00.000Z	lgc	gnomefreak	that's another problem, but let's concentrate on eth0
+2006-10-04T16:55:00.000Z	lgc	gnomefreak	any ideas?
+2006-10-04T16:56:00.000Z	gnomefreak	lgc	can you ping anything?
+2006-10-04T16:56:00.000Z	lgc	gnomefreak	no. 100% loss.
+2006-10-04T16:56:00.000Z	gnomefreak	lgc	what card is it?
+2006-10-04T16:56:00.000Z	lgc	gnomefreak	how do I find out?
+2006-10-04T16:56:00.000Z	gnomefreak	lgc	lspci  should list the nic card
+2006-10-04T16:58:00.000Z	lgc	gnomefreak	since I'm in Windoze now, I would like to know what else to try when I reboot to Breezy...
+2006-10-04T16:59:00.000Z	gnomefreak	lgc	find drivers for the nick card when you find out what card it is go to the following link
+2006-10-04T16:59:00.000Z	lgc	gnomefreak	I suppose I can figure that out on Windoze too, am I right?
+2006-10-04T16:59:00.000Z	gnomefreak	lgc	yes should be in device or whatever its called
+2006-10-04T16:59:00.000Z	lgc	gnomefreak	was that for me?
+2006-10-04T16:59:00.000Z	gnomefreak	lgc	the hardware was
+2006-10-04T05:00:00.000Z	lgc	gnomefreak	the hardware is OK, this is the proof.
+2006-10-04T05:00:00.000Z	gnomefreak	lgc	but the hardware link above will show you what nic cards are supported and how they work (if you need drivers and so on)
+2006-10-04T05:02:00.000Z	lgc	gnomefreak	I am not trying your patience here, but I didn't install anything and everything was working fine before I needed to reboot in Windoze (and I think Windoze is not the bad guy either). Do you see any point in reviewing hardware or driver issues?
+2006-10-04T05:03:00.000Z	gnomefreak	lgc	see you didnt tell me any of this so i dont know it :)
+2006-10-04T05:03:00.000Z	lgc	gnomefreak	now you know.
+2006-10-04T05:03:00.000Z	gnomefreak	lgc	did you do updates before you rebooted to windows
+2006-10-04T05:03:00.000Z	lgc	gnomefreak	no.
+2006-10-04T05:03:00.000Z	gnomefreak	lgc	and you net works in windows not in ubuntu?
+2006-10-04T05:04:00.000Z	lgc	gnomefreak	yes.
+2006-10-04T05:07:00.000Z	lgc	gnomefreak	any idea?
+2006-10-04T05:08:00.000Z	gnomefreak	lgc	not off hand.
+2006-10-04T05:08:00.000Z	lgc	gnomefreak	what oracle should I resort to now?
+2006-10-04T05:09:00.000Z	lgc	gnomefreak	is there anything like network utility reconfiguration commands?
+2006-10-04T05:09:00.000Z	gnomefreak	lgc	ifconfig
+2006-10-04T05:09:00.000Z	gnomefreak	lgc	gnome-network-manager
+2006-10-04T05:11:00.000Z	lgc	gnomefreak	gnomefreak gnome-network-manager reinstalls anything? Or it just asks you for options like DNS vs fixed IP and so on?
+2006-10-04T05:13:00.000Z	lgc	gnomefreak	gnome-network-manager reinstalls anything? Or it just asks you for options like DNS vs fixed IP and so on?
+2006-10-04T05:14:00.000Z	lgc	gnomefreak	yoo-hoo!

@@ -1,0 +1,96 @@
+2006-07-27T15:32:00.000Z	pkh		does anyone know about the way sudo works?  I've screwed it up and now can't work as supervisor!
+2006-07-27T15:33:00.000Z	ic56	pkh	how did you revert to old password file?
+2006-07-27T15:34:00.000Z	ic56	pkh	that's good.  Do you know what the change was that broke it?
+2006-07-27T15:34:00.000Z	pkh	ic56	yes, i was trying to make user 1001 who had been put in group 1001 into group users (100) but I think I changed the wrong column...
+2006-07-27T15:35:00.000Z	ic56	pkh	ok.  Which files did you edit while trying to make the change?
+2006-07-27T15:36:00.000Z	ic56	pkh	hmmm. ok.
+2006-07-27T15:37:00.000Z	ic56	pkh	let's take a look at your password file.
+2006-07-27T15:38:00.000Z	ic56	pkh	that's good.  Probably, the group is wrong.  sudo relies on the group being a particular value
+2006-07-27T15:39:00.000Z	pkh	ic56	ok.  i've got the recovery console (at the other end of the room) should I be looking for anythign in particular?
+2006-07-27T15:39:00.000Z	ic56	pkh	what's the name of the user who is unable to sudo?
+2006-07-27T15:40:00.000Z	ic56	pkh	ok.  As you know, fields in the /etc/password are separated by colons (the : character)
+2006-07-27T15:40:00.000Z	ic56	pkh	what are teh values of the 3rd and 4th fields for user paulhannah?
+2006-07-27T15:43:00.000Z	ic56	pkh	hmmm, that's unexpected -- it seems correct.  Ok, let's look at /etc/group
+2006-07-27T15:44:00.000Z	pkh	ic56	what do you want to see from /etc/group?
+2006-07-27T15:46:00.000Z	pkh	ic56	admin:x:108:
+2006-07-27T15:47:00.000Z	ic56	pkh	that's the problem
+2006-07-27T15:47:00.000Z	ic56	pkh	ok. We need to edit /etc/group and /etc/gshadow
+2006-07-27T15:47:00.000Z	pkh	ic56	so I should change that?
+2006-07-27T15:47:00.000Z	pkh	ic56	ok.
+2006-07-27T15:48:00.000Z	ic56	pkh	each of these files has an admin entry.  You need to append paulhannah after teh trailing colon.  If the gshadow entry isn't same as the /etc/group entry, tell me what it is.
+2006-07-27T15:49:00.000Z	pkh	ic56	gshadow line: admin:!::
+2006-07-27T15:50:00.000Z	ic56	pkh	yeah, ok.  That doesn't need correction.  So just append paulhannah to the end of the line in each of the files.
+2006-07-27T15:50:00.000Z	pkh	ic56	:)  nano doesn't work -- what should I use...
+2006-07-27T15:52:00.000Z	pkh	ic56	the long way would be for me to reboot into normal mode, copy the files to my home dir, edit and then reboot into the rescue, but i'm wondering if there's a more basic editor?
+2006-07-27T15:52:00.000Z	ic56	pkh	sed should be available.   Let's confirm it is.  Type sed and press enter.  it should block (no prompt).  Press ctl-D to get the prompt back.  If sed isn't available, you'll get an error message.  Let me know which way it goes
+2006-07-27T15:53:00.000Z	pkh	ic56	sed on the commandline gives me usage instructions.
+2006-07-27T15:53:00.000Z	ic56	pkh	ah. ok. good enough.
+2006-07-27T15:54:00.000Z	ic56	pkh	BTW, yes there is a basic editor, but you would know how to use it.  With sed, it's easier to give you instructions.
+2006-07-27T15:55:00.000Z	pkh	ic56	thanks -- i've used sed many years ago, but can't remember anything from those days.
+2006-07-27T15:55:00.000Z	ic56	pkh	Type this: sed -i '/^admin/s/$/paulhannah' /etc/group
+2006-07-27T15:55:00.000Z	ic56	pkh	then repeat for /etc/gshadow
+2006-07-27T15:56:00.000Z	ic56	pkh	let me know of any error messages
+2006-07-27T15:56:00.000Z	ic56	pkh	wait
+2006-07-27T15:57:00.000Z	pkh	ic56	unterminated s command (p.s. I'm doing this on grouptest first, so don't panic...)
+2006-07-27T15:57:00.000Z	ic56	pkh	better use this (colon after admin).  It's more accurate. Here's a fix for the unterminated command too sed -i '/^admin:/s/$/paulhannah/' /etc/group
+2006-07-27T15:58:00.000Z	ic56	pkh	ok, that should be fine
+2006-07-27T15:59:00.000Z	pkh	ic56	change made, rebooting now -- thanks and fingers crossed.
+2006-07-27T15:59:00.000Z	ic56	pkh	stop
+2006-07-27T16:00:00.000Z	ic56	pkh	we need to check /etc/sudoers
+2006-07-27T16:00:00.000Z	pkh	ic56	stop?
+2006-07-27T16:00:00.000Z	pkh	ic56	i had already checked sudoers (from google source) and i looked fine -- now rebooted and working fine --thanks!!!
+2006-07-27T16:01:00.000Z	ic56	pkh	well, if it's already booting, we might as well see if it worked
+2006-07-27T16:01:00.000Z	ic56	pkh	ah. good.
+2006-07-27T16:01:00.000Z	ic56	pkh	yw!
+2006-07-27T16:01:00.000Z	pkh	ic56	can you give me some more advice...
+2006-07-27T16:01:00.000Z	ic56	pkh	ask away
+2006-07-27T16:02:00.000Z	pkh	ic56	the reason I started all this is that I have a svn setup that i copied from an older server.  everyone was primarily in group users, for that to work (everything is 755 from memory) -- is that the right way to have it set up?  and if so, how do I get  the users set up that way?
+2006-07-27T16:03:00.000Z	ic56	pkh	what is "svn"?
+2006-07-27T16:04:00.000Z	pkh	ic56	subversion.
+2006-07-27T16:05:00.000Z	pkh	ic56	i'll simplify my question a bit -- should all users be in group users?  should that be the primary group (or secondary with the username group as primary) and... how would I go about that?
+2006-07-27T16:06:00.000Z	ic56	pkh	having all users belong to group "users" is a reasonable setup.  Whether you make that everyone's primary group or a secondary group depends on what you want the default group owner for files being created
+2006-07-27T16:07:00.000Z	pkh	ic56	it's primary use is as a samba server, so I'm going to assume that primary group being users would make more sense (that way group based protections will work better if differnet people are creating files)
+2006-07-27T16:07:00.000Z	ic56	pkh	by default, in Linux, when you create a file, it is made to belong to the same group as the process that created it.  Under most circumstances, that group is the same as your primary group.
+2006-07-27T16:08:00.000Z	ic56	pkh	who's primary use is as a samba server?
+2006-07-27T16:08:00.000Z	pkh	ic56	i think I'm going to go with primary group = users...  what is the accepted way to make that change?
+2006-07-27T16:09:00.000Z	ic56	pkh	wait a minute.
+2006-07-27T16:09:00.000Z	ic56	pkh	whatever you do needs to be same in all machines that share files in your network
+2006-07-27T16:10:00.000Z	ic56	pkh	if you set up different defaults between the samba server and the samba clients, you're setting yourself up for trouble
+2006-07-27T16:10:00.000Z	pkh	ic56	all users run xp...
+2006-07-27T16:12:00.000Z	ic56	pkh	ah.  WindowsXP has a concept of groups too though.  Are you addressing this in your SAMBA setup or are you ignoring it?
+2006-07-27T16:15:00.000Z	ic56	pkh	hmmm, it doesn't sound like your users are aware of the possibility of sharing files through the filesystem.  To avoid surprises (new kid in the office reads old timer's private documents) perhaps its best you eliminate the possibility.  If your samba forces a 077 umask on everything, then the group won't matter but if
+2006-07-27T16:16:00.000Z	ic56	pkh	a user ever gets the opportunity to set the perms accidentally to something else, then you need to worry about what group that user belongs to.
+2006-07-27T16:16:00.000Z	ic56	pkh	actually, now that I think about it, putting everyone in one group makes for a more secure setup
+2006-07-27T16:17:00.000Z	pkh	ic56	ok understood.  each user has a 'home' dir under samba for personal files -- and one 'general' share that everyone has equal rw access to -- i think common users group is the best option for us here.
+2006-07-27T16:18:00.000Z	ic56	pkh	easier to administer.  Anyway the right way to change things is to use vipw and vigr
+2006-07-27T16:19:00.000Z	ic56	pkh	vipw startsyour favourite editor (defined by the $VISUAL envirnonment variable) on /etc/passwd and
+2006-07-27T16:20:00.000Z	ic56	pkh	then updates /etc/shadow  vigr does the same for /etc/group and /etc/gshadow
+2006-07-27T16:20:00.000Z	ic56	pkh	what's your favourite editor?  For how many users do you need to change the groups?
+2006-07-27T16:25:00.000Z	ic56	pkh	I think I might be wrong about vipw updating /etc/shadow .  The manpage doesn't say so.  Investigating
+2006-07-27T16:32:00.000Z	pkh	ic56	thanks heaps -- have been at the door but will read your replies and get onto it -- thanks heaps for allyour help -- you saved me from 3 hours of reinstall i wasnot  looking forward to!!
+2006-07-27T16:33:00.000Z	ic56	pkh	read the replies and get back to me.  There are questions to be answered as to the best way to proceed
+2006-07-27T16:34:00.000Z	pkh	ic56	only a few users -- a quick google (should have done that this afternoon :) ) seems to indicate usermod -g is the way to go (number of users here is less than ten...)
+2006-07-27T16:34:00.000Z	pkh	ic56	is that the best way to handle it?
+2006-07-27T16:34:00.000Z	ic56	pkh	usermod is the slowest way
+2006-07-27T16:35:00.000Z	ic56	pkh	favourite editor?  Are you familiar with decent editors like vi or emacs?  Alternately, are you familiar with scripting?
+2006-07-27T16:37:00.000Z	pkh	ic56	used vi many many years ago -- bash scripting i have done some of but usually infrequently enough that I need to google for every command every time...  I think i'm going to take the wimps way out and usermod my way through each of the users :)
+2006-07-27T16:38:00.000Z	ic56	pkh	so, what are we doing here? changing the primary group of each user?
+2006-07-27T16:39:00.000Z	pkh	ic56	yes
+2006-07-27T16:40:00.000Z	ic56	pkh	I take it you created each user manually using the defaults, so each has his own group?
+2006-07-27T16:40:00.000Z	pkh	ic56	yeah, that started the whole thing
+2006-07-27T16:41:00.000Z	ic56	pkh	do you want to delete the per-user groups or do you want to preserve them, in case you decide to use them later?
+2006-07-27T16:44:00.000Z	ic56	pkh	ok, I'm done thinkg about this.  usermod is too inconvenient for what needs to be done.
+2006-07-27T16:45:00.000Z	pkh	ic56	thanks for you help.  much appreciated.
+2006-07-27T16:45:00.000Z	ic56	pkh	the easiest way, given your experience, is to manually edit /etc/passwd and /etc/group, and change each entry to the right settings.
+2006-07-27T16:45:00.000Z	ic56	pkh	I'll walk you through it
+2006-07-27T16:46:00.000Z	ic56	pkh	first get yourself a root shell like so: sudo -i
+2006-07-27T16:46:00.000Z	pkh	ic56	i appreciate your help, but for this one-of, the inefficient tool will do the job...
+2006-07-27T16:46:00.000Z	ic56	pkh	are you sure you used the right usermod command?  Give me an example of what you used
+2006-07-27T16:47:00.000Z	ic56	pkh	making the changes in the editor would have been easier than repeated usermod commands.
+2006-07-27T16:47:00.000Z	ic56	pkh	the usermod command you used is wrong
+2006-07-27T16:48:00.000Z	ic56	pkh	you didn't set the secondary group
+2006-07-27T16:48:00.000Z	pkh	ic56	oh, that should be set to the same name as the user?
+2006-07-27T16:49:00.000Z	ic56	pkh	yes. the secondary group needs to be same as teh user.  Do you want my advice or would you rather go it alone?
+2006-07-27T16:50:00.000Z	pkh	ic56	I think neither at the moment -- i've got my wife standing over my shoulder (for the last 20 minutes :) ) and really hinting that we should go :)  it's 7pm and i should have finished work at 4...  I need to run and hack at it tomorrow.
+2006-07-27T16:50:00.000Z	pkh	ic56	thanks again
+2006-07-27T16:50:00.000Z	ic56	pkh	ok. ttyl

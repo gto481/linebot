@@ -1,0 +1,98 @@
+2008-05-27T02:04:00.000Z	kajo		flash is broken on my 8.04 ubuntu system in firefox. How do I just uninstall, and then reinstall?
+2008-05-27T02:04:00.000Z	fde	kajo	no need... sudo aptitude reinstall <package>
+2008-05-27T02:04:00.000Z	fde	kajo	That is probably not the issue though.
+2008-05-27T02:05:00.000Z	kajo	fde	what would cause it to stop working/what do I need to do?
+2008-05-27T02:05:00.000Z	kajo	fde	it was working fine a while ago...
+2008-05-27T02:05:00.000Z	fde	kajo	do you have gnash installed? how about swfdec? (dpkg -l them to see)
+2008-05-27T02:06:00.000Z	kajo	fde	no, I always did flashplugin-nonfree
+2008-05-27T02:06:00.000Z	fde	kajo	Please check.
+2008-05-27T02:06:00.000Z	fde	kajo	Just for kicks
+2008-05-27T02:06:00.000Z	kajo	fde	how?
+2008-05-27T02:06:00.000Z	fde	kajo	I said... 'dpkg -l gnash' and 'dpkg -l swfdec'
+2008-05-27T02:07:00.000Z	kajo	fde	I have neither.
+2008-05-27T02:09:00.000Z	kajo	fde	I had neither of those installed, what else could be the problem?
+2008-05-27T02:09:00.000Z	fde	kajo	ok... can you please pastebin the output from 'dpkg -L flashplugin-nonfree' and also the output from 'ls -l /usr/lib/xulrunner-addons/plugins' for me
+2008-05-27T02:12:00.000Z	kajo	fde	http://paste.ubuntu.com/14899/
+2008-05-27T02:14:00.000Z	kajo	fde	http://paste.ubuntu.com/14899/
+2008-05-27T02:14:00.000Z	fde	kajo	umm... this is Hardy right?
+2008-05-27T02:15:00.000Z	kajo	fde	yes. I tried to uninstall flash and reinstall before I came with just "sudo aptitude remove", and then reinstall, which didn't work- and then tried removing and isntalling within the browser, which didn't work.
+2008-05-27T02:16:00.000Z	fde	kajo	That doesn't explain why there is _nothing_ in the xulrunner-addons/plugins dir ... please re-run that command with a terminal.
+2008-05-27T02:17:00.000Z	fde	kajo	There is NO way those are actual results if you typed those commands within Applications > Accessories > Terminal .
+2008-05-27T02:17:00.000Z	kajo	fde	weird. I ran it again and it did something different. I just copied pasted, so I dunno what went wrong... I'll probably check my last command in a second.
+2008-05-27T02:18:00.000Z	kajo	fde	I accidentally had the ' before the command...
+2008-05-27T02:18:00.000Z	fde	kajo	That's more like it... flash isn't there... which is expected based on what you've said... please type: dpkg -L flashplugin-nonfree
+2008-05-27T02:19:00.000Z	kajo	fde	I already typed that, and got the same result as last time- "Package 'flash..." does not contain any files (!)"
+2008-05-27T02:20:00.000Z	fde	kajo	sudo aptitude purge flashplugin-nonfree && sudo aptitude clean && sudo aptitude install flashplugin-nonfree  <-- copy and paste that please.
+2008-05-27T02:21:00.000Z	fde	kajo	Then try restart Firefox, and try Youtube or something.
+2008-05-27T02:23:00.000Z	kajo	fde	I go to youtbe, and it doesn't even try to open the vid, just says, "hello, you either have javaScript turned off or..."
+2008-05-27T02:24:00.000Z	kajo	fde	youtube does not work.
+2008-05-27T02:25:00.000Z	fde	kajo	can you type: dpkg -L flashplugin-nonfree again?
+2008-05-27T02:25:00.000Z	kajo	fde	I still have a dropdown bar above that says I have missing plugins
+2008-05-27T02:26:00.000Z	kajo	fde	http://paste.ubuntu.com/14903/
+2008-05-27T02:26:00.000Z	fde	kajo	You didn't do the entire command I said then....
+2008-05-27T02:26:00.000Z	kajo	fde	I am certain I did. I'll check.
+2008-05-27T02:27:00.000Z	kajo	fde	http://paste.ubuntu.com/14904/
+2008-05-27T02:28:00.000Z	fde	kajo	Can you please try each step before the &&'s and tell me any errrors?
+2008-05-27T02:30:00.000Z	kajo	fde	http://paste.ubuntu.com/14907/
+2008-05-27T02:31:00.000Z	fde	kajo	System > Administration > Software Sources ... please ensure each of the top 4 checkboxes on the first tab are checked.
+2008-05-27T02:32:00.000Z	kajo	fde	there is no option 'software sources' under 'system->administration'
+2008-05-27T02:33:00.000Z	fde	kajo	Ok... do the same thing in "Synaptic Package Manager" entry in Settions > Repositories ...
+2008-05-27T02:34:00.000Z	fde	kajo	Same menu.
+2008-05-27T02:34:00.000Z	kajo	fde	every box is checked under 'software sources' on the 'ubuntu software' tab.
+2008-05-27T02:35:00.000Z	fde	kajo	Did it prompt you to refresh anything?
+2008-05-27T02:35:00.000Z	kajo	fde	no- they were all already checked. Would you like to see the original output from the first time I ran the clean/purge/install code you gave me? Maybe that might help?
+2008-05-27T02:36:00.000Z	fde	kajo	Sure... there is no way you can't find flashplugin-nonfree though if multiverse is enabled.
+2008-05-27T02:36:00.000Z	fde	kajo	Wow... you're on the same machine right now right?
+2008-05-27T02:37:00.000Z	kajo	fde	yes.
+2008-05-27T02:37:00.000Z	kajo	fde	http://paste.ubuntu.com/14908/
+2008-05-27T02:38:00.000Z	fde	kajo	Ok... in the same place as before... directly below, it lets you choose a different mirror... "Download from:" ... click here and pick Other mirror... and have it pick best one.
+2008-05-27T02:39:00.000Z	fde	kajo	Then try searching here for 'flashplugin' install it and if it doesn't work then, we're going to cheat.
+2008-05-27T02:41:00.000Z	kajo	fde	I got the same errorbox when I reloaded.
+2008-05-27T02:43:00.000Z	kajo	fde	I got the same error when I reloaded as synaptic instructed me to.
+2008-05-27T02:43:00.000Z	fde	kajo	get the tar.gz here: http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash
+2008-05-27T02:44:00.000Z	kajo	fde	open it with archive manager?
+2008-05-27T02:44:00.000Z	fde	kajo	tar xzf the.tar.gz ... sudo mv whatever/flashplugin.so /usr/lib/xulrunner-addons/plugins
+2008-05-27T02:46:00.000Z	fde	kajo	actually, the file is libflashplugin.so ... but there are only 2 files in the archive... just move that to the directory, and hey presto... you just did what that script refuses to do for you  :/
+2008-05-27T02:47:00.000Z	kajo	fde	sudo mv whatever/flashplugin.so /usr/lib/xulrunner-addons/plugins I don't know how to translate that into what I am supposed to do, (I already did the tar xzf)
+2008-05-27T02:49:00.000Z	fde	kajo	after extracting the file, there will be a directory with the resulting files... in this directory, there is libflashplugin.so ... sudo mv thatfile /usr/lib/xulrunner-addons/plugins
+2008-05-27T02:51:00.000Z	kajo	fde	it created a folder called "install_flash_player_9_linux", and if I cd to that and ls, I get "flashplayer-installer" & "libflashplayer.so"... so does that mean you want me to do "sudo mv libflashplayer.so /usr/lib/xulrunner-addons/plugins"?
+2008-05-27T02:51:00.000Z	fde	kajo	yes
+2008-05-27T02:52:00.000Z	fde	kajo	That script likely just does exactly that for you  :/
+2008-05-27T02:52:00.000Z	kajo	fde	done, now what?
+2008-05-27T02:53:00.000Z	fde	kajo	now restart firefox and type 'about:plugins' ensure flash is in the list... if so, try youtube
+2008-05-27T02:54:00.000Z	kajo	fde	it works, finally.... what the heck was the problem with my repositories?
+2008-05-27T02:55:00.000Z	fde	kajo	I have no idea... if you want you can paste your /etc/apt/sources.list so I can see if there are any issues there...
+2008-05-27T02:58:00.000Z	fde	kajo	please remove instances of 'web' from the file and aptitude update (both with sudo)
+2008-05-27T03:01:00.000Z	kajo	fde	what is the command in vim to delete all instances of a word? I can't remember, haven't used it much lately. :\
+2008-05-27T03:02:00.000Z	fde	kajo	sudo awk -e s/web// /etc/apt/sources.list
+2008-05-27T03:04:00.000Z	kajo	fde	"awk: -e is not an option"
+2008-05-27T03:04:00.000Z	fde	kajo	sorry ... sed not awk... I need to leave after this. Same command other than that though.
+2008-05-27T03:05:00.000Z	kajo	fde	thanks for everything
+2008-05-27T03:06:00.000Z	fde	kajo	you're welcome... please make sure you sudo aptitude update when it's done... if that gives errors, please state my name and I will take a look.
+2008-05-27T03:19:00.000Z	kajo	fde	just got around to doing that stuff... reload in synaptic still brings up the same errorbox.
+2008-05-27T03:20:00.000Z	fde	kajo	Can you show me the file again please (/etc/apt/sources.list)
+2008-05-27T03:20:00.000Z	fde	kajo	If you don't mind, I'll condense it so it's easier to read, but remain exactly the same, then send it back... we'll backup yours, and see if it makes a differece
+2008-05-27T03:24:00.000Z	kajo	fde	http://paste.ubuntu.com/14928/
+2008-05-27T03:31:00.000Z	fde	kajo	Ok... sorry that took so long.... http://paste.ubuntu.com/14931/  FIRST do 'sudo mv /etc/apt/sources.list /etc/apt/sources.fde' ... then copy these into a file called 'sources.list' in your home directory... and move it to /etc/apt/ using sudo... then chmod 644 /etc/apt/sources.list
+2008-05-27T03:32:00.000Z	fde	kajo	If that doesn't make sense please ask for clarification...
+2008-05-27T03:33:00.000Z	fde	kajo	Crazy that everything in that file basically amounts to those 3 lines huh?
+2008-05-27T03:36:00.000Z	kajo	fde	I do not completely understand. when you say, 'then copy *these* into a file called 'sources.list' in your home directory", I don't know what you mean by these. I also don't know what 'chmod 644 file' would do. But ultimately, I don't understand what that all does. :\
+2008-05-27T03:37:00.000Z	fde	kajo	The lines in the paste I gave you. chmod modifies the permissions on the file, because it has to be a certain way for apt to honor it.
+2008-05-27T03:42:00.000Z	kajo	fde	I did it (though instead of making the file in my home directory, I just did "sudo nano sources.list", pasted it there, and saved it, and then did sudo chmod 644 /etc/apt/sources.list)
+2008-05-27T03:43:00.000Z	kajo	fde	that all of that equalled those three lines is insane.
+2008-05-27T03:43:00.000Z	kajo	fde	ran sudo aptitude update just now, and it did quite a bit of loading.
+2008-05-27T03:43:00.000Z	fde	kajo	ok... that should be it... you actually skipped my next two commands, but I thought it'd be easier that way....
+2008-05-27T03:44:00.000Z	fde	kajo	No more errors though?
+2008-05-27T03:44:00.000Z	fde	kajo	It would have updated the security repo, which was disabled... and probably this mirror never actually worked.
+2008-05-27T03:44:00.000Z	kajo	fde	no more erros, thank you infinitely.
+2008-05-27T03:45:00.000Z	fde	kajo	You're very welcome, I only apologize for you having to go through this :(
+2008-05-27T03:46:00.000Z	kajo	fde	A true ubuntu patriot, eh? Do you know what went wrong with my sources list to cause the mayhem, or *why* something went wrong with it?
+2008-05-27T03:46:00.000Z	fde	kajo	For what it's worth, flashplugin-nonfree would just be a simple install away now... as is over 24,000 other pieces of software, including games and any tool you could possibly need...
+2008-05-27T03:46:00.000Z	fde	kajo	Without a functional package management system, you might as well be using Windows  :P
+2008-05-27T03:47:00.000Z	fde	kajo	I have seen the issue with imbrandon's mirror before... it is something wrong with that.
+2008-05-27T03:47:00.000Z	fde	kajo	However, I had asked you to switch mirrors, and the issue never went away.
+2008-05-27T03:47:00.000Z	kajo	fde	I wasn't using his mirror before, though, I only switched to that when it tried to select the optimal server.
+2008-05-27T03:50:00.000Z	fde	kajo	are you in holland by chance?
+2008-05-27T03:50:00.000Z	kajo	fde	nope, I'm in texas.
+2008-05-27T03:51:00.000Z	fde	kajo	Ok, then it's definitely a more wide spread issue.
+2008-12-19T20:53:00.000Z	fde	kajo	ls -a

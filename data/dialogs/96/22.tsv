@@ -1,0 +1,96 @@
+2010-02-06T09:59:00.000Z	thechris		is there any way to run FIXMBR from linux?
+2010-02-06T09:59:00.000Z	edbian	thechris	FIXMBR is a dos command installed in MS windows.
+2010-02-06T09:59:00.000Z	edbian	thechris	Short answer: not that I know of
+2010-02-06T10:00:00.000Z	edbian	thechris	fixing the mbr will put the windows boot loader there. The windows boot loader will not boot linux for you
+2010-02-06T10:00:00.000Z	thechris	edbian	and grub won't allow winxp to boot _at all_ right not.
+2011-12-30T09:29:00.000Z	edbian	thechris	what card do you have?
+2011-12-30T09:29:00.000Z	edbian	thechris	it's a usb dongle?
+2011-12-30T09:33:00.000Z	edbian	thechris	you there?
+2011-12-30T09:34:00.000Z	edbian	thechris	what card is this?  Do you know how to figure this out?
+2011-12-30T09:35:00.000Z	edbian	thechris	what exactly does  lsusb call it?
+2011-12-30T09:35:00.000Z	edbian	thechris	yeah, we need firmware / drivers.  The trick is figuring out which packages it is.  That's where I can help.
+2011-12-30T09:35:00.000Z	edbian	thechris	does the usb device show up in the output of lsusb ?
+2011-12-30T09:35:00.000Z	edbian	thechris	do you know how to run lsusb?
+2011-12-30T09:36:00.000Z	edbian	thechris	I don't know what firmware/driver/package we need to install without more info
+2011-12-30T09:36:00.000Z	edbian	thechris	can you pastebin the line?  paste.ubuntu.com
+2011-12-30T09:36:00.000Z	edbian	thechris	where did yo uget rt2800 from?
+2011-12-30T09:37:00.000Z	edbian	thechris	rt2800 must be a driver...
+2011-12-30T09:37:00.000Z	edbian	thechris	please pastebin the output of lsusb -v   paste.ubuntu.com
+2011-12-30T09:37:00.000Z	thechris	edbian	that computer isn't connected to the internet
+2011-12-30T09:38:00.000Z	edbian	thechris	oh :(  how about can you just give me the one line about this device from lsusb ? the entire line without altercations
+2011-12-30T09:40:00.000Z	edbian	thechris	it was the 0b05:179d I needed
+2011-12-30T09:42:00.000Z	edbian	thechris	I'm not sure that's the wifi card?
+2011-12-30T09:43:00.000Z	edbian	thechris	if you run sudo iwlist scan   do you get any wifi networks in the output?
+2011-12-30T09:43:00.000Z	thechris	edbian	the verbose outptu lists it as an 802.11 WLAN
+2011-12-30T09:43:00.000Z	edbian	thechris	what verbose output?
+2011-12-30T09:44:00.000Z	thechris	edbian	from lsusb -v
+2011-12-30T09:44:00.000Z	edbian	thechris	ahh, ok good sign
+2011-12-30T09:44:00.000Z	thechris	edbian	iwlist scan -- wlan0 has no scane results
+2011-12-30T09:44:00.000Z	edbian	thechris	what about sudo iwlist scan ?
+2011-12-30T09:44:00.000Z	edbian	thechris	what exactly does it say?   does it say 'network is down?'
+2011-12-30T09:45:00.000Z	edbian	thechris	Then, I think the card is working, and there are no wifi networks near you.
+2011-12-30T09:45:00.000Z	thechris	edbian	no, there are 2 dozen networks by me
+2011-12-30T09:45:00.000Z	edbian	thechris	mmm, ok
+2011-12-30T09:45:00.000Z	thechris	edbian	my laptop is on one of them
+2011-12-30T09:45:00.000Z	edbian	thechris	ok
+2011-12-30T09:48:00.000Z	edbian	thechris	sudo modprobe rt2500usb
+2011-12-30T09:49:00.000Z	edbian	thechris	I'm piecing this together from this page: http://linuxwireless.org/en/users/Drivers
+2011-12-30T09:49:00.000Z	edbian	thechris	Except I can't figure out what chipset this thing is
+2011-12-30T09:50:00.000Z	edbian	thechris	e.g. RT2571  or RT2770
+2011-12-30T09:50:00.000Z	edbian	thechris	based on what?  what about sudo modprobe rt2500usb  ?
+2011-12-30T09:51:00.000Z	thechris	edbian	based on wikidev, which lists it as "probably rt2800 or 2870sta"
+2011-12-30T09:51:00.000Z	edbian	thechris	it said that was the chipset of the 0b05:179d ?
+2011-12-30T09:52:00.000Z	edbian	thechris	ahhh
+2011-12-30T09:52:00.000Z	edbian	thechris	I see your link now
+2011-12-30T09:52:00.000Z	edbian	thechris	what about the modprobe ?
+2011-12-30T09:52:00.000Z	edbian	thechris	I'm on the edge of my seat here!
+2011-12-30T09:54:00.000Z	edbian	thechris	ok, let's try that 2870  sudo modprobe rt2870sta
+2011-12-30T09:54:00.000Z	edbian	thechris	After reading your wiki page I'm not surprised that 2500usb didn't work
+2011-12-30T09:55:00.000Z	edbian	thechris	the rmmod  isn't necessary
+2011-12-30T09:55:00.000Z	edbian	thechris	have you tried modprobing this stuff before?
+2011-12-30T09:55:00.000Z	thechris	edbian	rt2870sta doesn't exist
+2011-12-30T09:55:00.000Z	edbian	thechris	I was afraid of that.  I'll try to figure that out online
+2011-12-30T10:01:00.000Z	edbian	thechris	https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsDlink
+2011-12-30T10:01:00.000Z	edbian	thechris	I'm reading this
+2011-12-30T10:04:00.000Z	edbian	thechris	sudo apt-get install linux-firmware
+2011-12-30T10:05:00.000Z	thechris	edbian	hmm, something messed up.  rebooting
+2011-12-30T10:05:00.000Z	edbian	thechris	ok?
+2011-12-30T10:06:00.000Z	edbian	thechris	what chipset do you think this is?
+2011-12-30T10:06:00.000Z	thechris	edbian	can't sudo
+2011-12-30T10:06:00.000Z	edbian	thechris	strange...
+2011-12-30T10:07:00.000Z	thechris	edbian	I'm assuming it was rt2870.
+2011-12-30T10:07:00.000Z	edbian	thechris	mhmm
+2011-12-30T10:07:00.000Z	edbian	thechris	mistake?
+2011-12-30T10:07:00.000Z	edbian	thechris	any usb?
+2011-12-30T10:08:00.000Z	thechris	edbian	i put the rt2870 firmware in /lib/firmware
+2011-12-30T10:09:00.000Z	edbian	thechris	but wifi is working?
+2011-12-30T10:09:00.000Z	edbian	thechris	where did you get the firmware?
+2011-12-30T10:09:00.000Z	thechris	edbian	from ralink
+2011-12-30T10:09:00.000Z	thechris	edbian	and I can't set the wpa password without a keyboard/mouse
+2011-12-30T10:09:00.000Z	edbian	thechris	i see, reboot
+2011-12-30T10:10:00.000Z	edbian	thechris	maybe the keyboard / mouse will come back (they obviously should not interfere)
+2011-12-30T10:12:00.000Z	thechris	edbian	when i plug the usb adapater back in, i have access to the mouse.  still no AP's
+2011-12-30T10:12:00.000Z	edbian	thechris	when did you unplug the usb dongle?  Did you reboot?
+2011-12-30T10:14:00.000Z	thechris	edbian	after rebooting, still no AP's
+2011-12-30T10:14:00.000Z	edbian	thechris	but mouse and keyboard are back?
+2011-12-30T10:14:00.000Z	thechris	edbian	this time they did come back
+2011-12-30T10:15:00.000Z	edbian	thechris	what module is currently active?  Did you remove the firmware from /lib/firmware ?
+2011-12-30T10:15:00.000Z	thechris	edbian	no, linux-firmware was previously at the latest version
+2011-12-30T10:15:00.000Z	edbian	thechris	Yeah, I know that.  (saw that on my system)
+2011-12-30T10:15:00.000Z	thechris	edbian	rt2800usb/lib is what is currently in use
+2011-12-30T10:16:00.000Z	edbian	thechris	strange name,  is that what was active when you saw AP's listed?
+2011-12-30T10:16:00.000Z	thechris	edbian	I've never seen AP's listed from the desktop, only from the laptop
+2011-12-30T10:17:00.000Z	edbian	thechris	desktop, laptop... ?
+2011-12-30T10:17:00.000Z	edbian	thechris	which machine have we been talking about this whole time
+2011-12-30T10:17:00.000Z	thechris	edbian	oh, the desktop is what doens't work.  the laptop also has wifi and is what I've used to determine that the wireless world still exists
+2011-12-30T10:18:00.000Z	edbian	thechris	ok, you've never seen wifi networks using the usb dongle in question right?
+2011-12-30T10:18:00.000Z	thechris	edbian	no, its new
+2011-12-30T10:19:00.000Z	edbian	thechris	I think your best bet is to get rt2870sta working, unfortunately I cannot find what package this is in
+2011-12-30T10:19:00.000Z	thechris	edbian	the usb key blinks regularly.  that doesn't really help me much
+2011-12-30T10:19:00.000Z	thechris	edbian	i'm probably just going to have to see if the 3rd party module compiles in 11.10
+2011-12-30T10:20:00.000Z	edbian	thechris	Yes, I think that is rt2870sta
+2011-12-30T10:21:00.000Z	thechris	edbian	what is "sta"  "static?:
+2011-12-30T10:21:00.000Z	edbian	thechris	IDK :
+2011-12-30T10:22:00.000Z	edbian	thechris	the blinking unfortuantely means very little
+2011-12-30T10:25:00.000Z	thechris	edbian	and the  kernel module does not build
+2011-12-30T10:25:00.000Z	edbian	thechris	of course

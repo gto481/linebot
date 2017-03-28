@@ -1,0 +1,97 @@
+2005-05-10T11:27:00.000Z	IIIEars		why "yawn"? - i tried a dozen distros before Ubuntu none worked - How about a "Pat on the back"?
+2005-05-10T11:28:00.000Z	thoreauputic	IIIEars	I just meant there are so many satisfied custoners it's getting to the stage where you yawn every time :)
+2005-05-14T15:57:00.000Z	IIIEars	thoreauputic	- getting set up and everything in ubuntu to your liking takes a little time - could there be an application to easily back everything up?
+2005-05-14T15:58:00.000Z	thoreauputic	IIIEars	there are quite a few - e.g.rsync, tar, dd
+2005-05-14T15:59:00.000Z	thoreauputic	IIIEars	if you mean back up all your configs, it isn't necessary if you use dist-upgrade to upgrade your system
+2005-05-14T16:01:00.000Z	thoreauputic	IIIEars	you can also use the gnome file-roller to tar files for backup if you wish
+2005-05-14T16:03:00.000Z	thoreauputic	IIIEars	you can use dd to save the mbr ( it's just the first 512 bytes on the hard drive), but be careful!
+2005-06-01T16:47:00.000Z	thoreauputic	IIIEars	lame will do that
+2005-06-01T16:48:00.000Z	thoreauputic	IIIEars	or Audacity
+2005-06-02T08:23:00.000Z	thoreauputic	IIIEars	it isn't compulsory :)
+2005-06-02T08:24:00.000Z	thoreauputic	IIIEars	I only have 512MB but I use the 686 kernel anyway
+2005-06-02T08:41:00.000Z	thoreauputic	IIIEars	I haven't a clue ;-)
+2005-06-02T09:09:00.000Z	thoreauputic	IIIEars	several
+2005-06-04T16:30:00.000Z	thoreauputic	IIIEars	no, I'm pretty ordinary actually
+2005-06-04T08:22:00.000Z	thoreauputic	IIIEars	linux=kernel  GNU/Linux + the whole OS
+2005-06-06T05:16:00.000Z	IIIEars	thoreauputic	- Sorry i ask so many questions and have so few answers. (5th week with linux)
+2005-06-06T05:17:00.000Z	thoreauputic	IIIEars	why are you apologising? You have more clues than most beginners
+2005-06-06T05:18:00.000Z	thoreauputic	IIIEars	lspci -vvv | less migh tbe easier to read
+2005-06-07T05:36:00.000Z	IIIEars	thoreauputic	- why are you kidding yourself? - "Ordinary dude.." nah you and a dozen other people make the Ubuntu channel great.
+2005-06-07T05:37:00.000Z	thoreauputic	IIIEars	thanks - well everyone contributes I guess
+2005-06-07T05:37:00.000Z	IIIEars	thoreauputic	- you field more questions than any most people.
+2005-06-07T05:42:00.000Z	IIIEars	thoreauputic	- Do you know someone that can tweak an Xchat ispell script to  FAQ URLS to menomics?
+2005-06-07T05:43:00.000Z	thoreauputic	IIIEars	I don't even understand the question :)
+2005-06-08T08:46:00.000Z	thoreauputic	IIIEars	the problem is it acts as spam for those who don't speak their language
+2005-06-11T08:35:00.000Z	thoreauputic	IIIEars	hi :)
+2005-06-11T08:41:00.000Z	IIIEars	thoreauputic	-does win32codec do dvds?
+2005-06-11T08:41:00.000Z	thoreauputic	IIIEars	no, you need libdvdcss2 I guess
+2005-06-11T08:51:00.000Z	thoreauputic	IIIEars	probably better to teach the bot in /msg (also BTW "!" is enough - you don't need "! ubotu"
+2005-06-11T08:51:00.000Z	IIIEars	thoreauputic	Nice tip. - Thank You
+2005-06-11T08:53:00.000Z	IIIEars	thoreauputic	- going to ned a vote of confidence or two to see what i enter stays. (hint-hint)
+2005-06-11T08:54:00.000Z	thoreauputic	IIIEars	don't look at me - my entries have been removed so I gave up...
+2005-06-11T08:59:00.000Z	thoreauputic	IIIEars	amnesia appears to be one of the few things ubotu hasn't forgotten ;)
+2005-06-11T09:07:00.000Z	IIIEars	thoreauputic	- Oops, - The bot is an excellent addition. - sorry.
+2005-06-11T09:08:00.000Z	thoreauputic	IIIEars	heh
+2005-06-11T09:11:00.000Z	thoreauputic	IIIEars	an=maranth already deleted it :)
+2005-06-11T09:41:00.000Z	IIIEars	thoreauputic	- AOL users need love too. - grin
+2005-06-11T09:42:00.000Z	thoreauputic	IIIEars	lots of it, I'd say ;)
+2005-06-11T12:00:00.000Z	thoreauputic	IIIEars	hey, don't diss the bot , dude !
+2005-06-11T12:07:00.000Z	IIIEars	thoreauputic	- Why is your name flashing now?
+2005-06-11T12:08:00.000Z	thoreauputic	IIIEars	?
+2005-06-11T12:25:00.000Z	thoreauputic	IIIEars	ah, you don't like archaelogy?
+2005-06-11T12:36:00.000Z	thoreauputic	IIIEars	no
+2005-06-13T09:57:00.000Z	IIIEars	thoreauputic	- erm what did i do?
+2005-06-13T09:57:00.000Z	thoreauputic	IIIEars	broke the flooding record?
+2005-06-13T09:59:00.000Z	thoreauputic	IIIEars	when you /msg, only the first line goes to PM - the rest lands in the channel
+2005-06-13T10:09:00.000Z	IIIEars	thoreauputic	- can a carriage return be inserted in /msg <some_foo>  ?
+2005-06-13T10:09:00.000Z	thoreauputic	IIIEars	dunno, sorry
+2005-06-13T15:56:00.000Z	thoreauputic	IIIEars	heh - doesn't like your punctuation I guess
+2005-06-13T15:58:00.000Z	thoreauputic	IIIEars	teach the bot in PM, please
+2005-06-13T15:58:00.000Z	thoreauputic	IIIEars	well, please don't spam the channel
+2005-06-14T16:01:00.000Z	IIIEars	thoreauputic	- Do you know how to display ubotu's command variables?
+2005-06-14T16:01:00.000Z	thoreauputic	IIIEars	try "help" ?
+2005-06-15T15:07:00.000Z	thoreauputic	IIIEars	heh - I think fabbione knows a thing or two about the kernel ;)
+2005-06-15T15:09:00.000Z	IIIEars	thoreauputic	- my first kernel is HUGE - it is very inclusive - rofl
+2005-06-15T15:10:00.000Z	thoreauputic	IIIEars	ah well, better safe than sorry I guess ;)
+2005-06-15T14:43:00.000Z	IIIEars	thoreauputic	- can you easily gerp a mess of files and recurse directories looking for a text string?
+2005-06-15T14:44:00.000Z	thoreauputic	IIIEars	probably, but I don't know the command
+2005-06-15T14:44:00.000Z	IIIEars	thoreauputic	- Thanks :0
+2005-06-15T14:08:00.000Z	thoreauputic	IIIEars	the Code of Conduct factoid is " !conduct" by the way (in case you were looking ) :)
+2005-06-15T14:09:00.000Z	IIIEars	thoreauputic	- Thanks :)
+2005-06-16T06:54:00.000Z	thoreauputic	IIIEars	just rdirect it to a file with > or >> filename
+2005-06-16T06:57:00.000Z	thoreauputic	IIIEars	id the drive isn't bootable, you can just mount it
+2005-06-17T14:35:00.000Z	thoreauputic	IIIEars	yeah, they only need a bot repeating " retry, reboot, reinstall" in an endless loop ;)
+2005-06-17T13:42:00.000Z	thoreauputic	IIIEars	ubotu's database is corrupted, apparently
+2005-06-17T14:06:00.000Z	IIIEars	thoreauputic	- ugh - what to do....
+2005-06-17T14:07:00.000Z	thoreauputic	IIIEars	he had a backports firefox that confused apt completely
+2005-06-17T14:08:00.000Z	thoreauputic	IIIEars	the bot is sick - I think it's best to leave the poor thing alone until he gets some medication ;)
+2005-06-18T08:43:00.000Z	IIIEars	thoreauputic	- can it corrupt anything if it misbehaves?
+2005-06-18T08:44:00.000Z	thoreauputic	IIIEars	not really - having the GUI running isn't necessary at all, and AFAIK that's all you would kill
+2005-06-18T08:47:00.000Z	IIIEars	thoreauputic	- the easiest way would be a firestarter reinstall but, - grin - i am curious would tail and dmsg to a log be possible? syntax?
+2005-06-18T08:47:00.000Z	thoreauputic	IIIEars	you know more than me on those subjects, I'd say
+2005-06-19T15:24:00.000Z	thoreauputic	IIIEars	I don't see a connection - i thought "halt" did the same thing more or less as "shutdown -h now" ?
+2005-07-22T15:36:00.000Z	thoreauputic	IIIEars	have you tried !nougat as well *grin* ?
+2005-07-23T06:22:00.000Z	thoreauputic	IIIEars	the patents directive was defeated
+2005-07-23T10:06:00.000Z	IIIEars	thoreauputic	- reiserfs and emacs. - sly grin
+2005-07-23T10:10:00.000Z	IIIEars	thoreauputic	- nice link
+2005-07-29T06:39:00.000Z	IIIEars	thoreauputic	- grep tip #101  what was wrong with this link? (scratches head)  wget http://download.mozilla.org/?product=firefox-1.0.6&os=linux&lang=en-US
+2005-07-29T06:41:00.000Z	thoreauputic	IIIEars	nothing afaics
+2005-07-29T06:41:00.000Z	thoreauputic	IIIEars	it seems to point at the tar.gz installer for linux...
+2005-08-02T12:21:00.000Z	IIIEars	thoreauputic	- How can Ubuntu join my windows workgroup DEBIAN_FANS ?
+2005-08-02T12:22:00.000Z	thoreauputic	IIIEars	I know nothing about samba, sorry - i use pure NFS and have only linux machines
+2005-08-02T12:22:00.000Z	IIIEars	thoreauputic	- Okay. - Thanks :)
+2005-08-02T12:45:00.000Z	IIIEars	thoreauputic	- spermie, - top in a terminal "top" see also atop and ntop
+2005-08-02T14:00:00.000Z	IIIEars	thoreauputic	- Any good free AV scanners that can be used with samba to scan a windows share?
+2005-08-02T14:00:00.000Z	thoreauputic	IIIEars	clamav I guess
+2005-08-02T14:01:00.000Z	thoreauputic	IIIEars	as i said, my windows knowledge is minuscule
+2005-08-02T15:14:00.000Z	IIIEars	thoreauputic	- what would happen if he used the users and groups tool to change his password?
+2005-08-02T15:14:00.000Z	thoreauputic	IIIEars	I doubt that he needs to do that
+2005-08-02T15:15:00.000Z	thoreauputic	IIIEars	as you see ;)
+2005-08-02T15:24:00.000Z	thoreauputic	IIIEars	we can't all be sound gurus like crimsun, I guess ;)
+2005-08-02T15:25:00.000Z	IIIEars	thoreauputic	- Everyone has their strong point.   I am really very god at misconfiguring about:config in firefox - grin
+2005-08-02T15:32:00.000Z	IIIEars	thoreauputic	- we all know the only real linux is tmsrtbt.. - wild grin
+2005-08-02T15:33:00.000Z	thoreauputic	IIIEars	yeah, if it doesn't fit on a floppy it's bloated ;)
+2005-08-03T09:33:00.000Z	IIIEars	thoreauputic	- I need a pointer on tracking intermittant connections from a co-opted machine. - Can you help?
+2005-08-03T09:34:00.000Z	thoreauputic	IIIEars	I doubt it - I don't know much about that
+2005-08-03T09:35:00.000Z	thoreauputic	IIIEars	you established that from yesterday? We were talking about it I recall ...
+2005-08-03T10:50:00.000Z	IIIEars	thoreauputic	- always diplomatic. :)

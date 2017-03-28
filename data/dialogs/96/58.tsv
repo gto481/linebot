@@ -1,0 +1,96 @@
+2006-07-28T10:50:00.000Z	dek_aik	FeestBijtje	i have the same prob, have to manually insmod the sound modules eveytime after hibernate
+2006-07-28T10:50:00.000Z	FeestBijtje	dek_aik	how do i do that?
+2006-07-28T10:51:00.000Z	FeestBijtje	dek_aik	ur there?
+2006-07-28T10:51:00.000Z	dek_aik	FeestBijtje	find you sound module..and "sudo modprobe -a xxxx"
+2006-07-28T10:53:00.000Z	FeestBijtje	dek_aik	my sound module is alsa
+2006-07-28T10:53:00.000Z	dek_aik	FeestBijtje	no the module of you sound chip...mine is snd_es1968...try lsmod|grep snd
+2006-07-28T10:55:00.000Z	FeestBijtje	dek_aik	i have the list but with one do i have to chose?
+2006-07-28T10:56:00.000Z	FeestBijtje	dek_aik	?
+2006-07-28T10:57:00.000Z	dek_aik	FeestBijtje	hmmm...you should find it yourself..let me see
+2006-07-28T10:58:00.000Z	dek_aik	FeestBijtje	try "lspci --|grep audio"
+2006-07-28T10:59:00.000Z	FeestBijtje	dek_aik	 0000:02:09.0 Multimedia audio controller: Creative Labs SB Live! EMU10k1 (rev 07)
+2006-07-28T11:00:00.000Z	dek_aik	FeestBijtje	then you sound chip is creative sound blaster live...
+2006-07-28T11:00:00.000Z	FeestBijtje	dek_aik	it is :)
+2006-07-28T11:01:00.000Z	FeestBijtje	dek_aik	dousnt work see error: feestbijtje@feestbijtje-ubuntu:~$ sudo modprobe -a EMU10k1 WARNING: Module EMU10k1 not found.
+2006-07-28T11:02:00.000Z	dek_aik	FeestBijtje	no...you moduleshould be something like snd_xxx
+2006-07-28T11:02:00.000Z	dek_aik	FeestBijtje	i dont have sb...let me see
+2006-07-28T11:05:00.000Z	FeestBijtje	dek_aik	still there/
+2006-07-28T11:06:00.000Z	dek_aik	FeestBijtje	do you have snd_sbxx in the list
+2006-07-28T11:07:00.000Z	FeestBijtje	dek_aik	no but i do have my onboard soundcard on the list
+2006-07-28T11:09:00.000Z	dek_aik	FeestBijtje	what is the module name? modprobe that
+2006-07-28T11:09:00.000Z	FeestBijtje	dek_aik	snd_intel8x0
+2006-07-28T11:10:00.000Z	dek_aik	FeestBijtje	do "sudo rmmod snd_intel8x0" and then "sudo modprobe -a snd_intel8x0"
+2006-07-28T11:11:00.000Z	FeestBijtje	dek_aik	^^^^^
+2006-07-28T11:12:00.000Z	dek_aik	FeestBijtje	sound then? i hear "click" from here
+2006-07-28T11:12:00.000Z	FeestBijtje	dek_aik	still no sound
+2006-07-28T11:13:00.000Z	dek_aik	FeestBijtje	do the between " " once at a time
+2006-07-28T11:14:00.000Z	dek_aik	FeestBijtje	just to make sure do "killall artsd"
+2006-07-28T11:14:00.000Z	dek_aik	FeestBijtje	sudo rmmod snd_intel8x0
+2006-07-28T11:14:00.000Z	dek_aik	FeestBijtje	sudo modprobe -a snd_intel8x0
+2006-07-28T11:15:00.000Z	FeestBijtje	dek_aik	feestbijtje@feestbijtje-ubuntu:~$ sudo rmmod snd_intel8x0
+2006-07-28T11:16:00.000Z	dek_aik	FeestBijtje	killall artsd
+2006-07-28T11:16:00.000Z	FeestBijtje	dek_aik	feestbijtje@feestbijtje-ubuntu:~$ killall artsd
+2006-07-28T11:18:00.000Z	dek_aik	FeestBijtje	i dont know if i can use pm ..not registered i think
+2006-07-28T11:18:00.000Z	FeestBijtje	dek_aik	ok
+2006-07-28T11:19:00.000Z	FeestBijtje	dek_aik	tomorrow il reformat my entire system
+2006-07-28T11:19:00.000Z	FeestBijtje	dek_aik	then il try every thing aggain
+2006-07-28T11:19:00.000Z	dek_aik	FeestBijtje	i dont think it is wise
+2006-07-28T11:20:00.000Z	FeestBijtje	dek_aik	thanx for the help but i need to go now :(
+2006-07-28T12:24:00.000Z	FeestBijtje	dek_aik	still there?
+2006-07-28T12:25:00.000Z	dek_aik	FeestBijtje	yes..any luck?
+2006-07-28T12:37:00.000Z	FeestBijtje	dek_aik	intel works but sb live wont work thats the problem and i want to use sb live because its higher quality sound
+2006-07-28T12:33:00.000Z	FeestBijtje	dek_aik	no luck yet :( but i got the system beep working :)
+2006-07-28T12:35:00.000Z	dek_aik	FeestBijtje	do u have 2 soundcards? onboard and pci?
+2006-07-28T12:35:00.000Z	FeestBijtje	dek_aik	yes
+2006-07-28T12:35:00.000Z	FeestBijtje	dek_aik	i use the pci one with is soundblaste
+2006-07-28T12:36:00.000Z	dek_aik	FeestBijtje	well, i had this problem..try to swap them..give me a sec
+2006-07-28T12:40:00.000Z	dek_aik	FeestBijtje	basically you have to modprobe also the sb module..if only i know the name
+2006-07-28T12:41:00.000Z	FeestBijtje	dek_aik	feestbijtje@feestbijtje-ubuntu:~$ lspci -v | grep -i audio
+2006-07-28T12:42:00.000Z	dek_aik	FeestBijtje	maybe snd_emu10k1
+2006-07-28T12:43:00.000Z	FeestBijtje	dek_aik	just tried il pm you my modprobe list thingy
+2006-07-28T12:46:00.000Z	dek_aik	FeestBijtje	yes its a snd_emu10k1...then try "sudo rmmod snd_emu10k1" and then modprobe
+2006-07-28T12:46:00.000Z	FeestBijtje	dek_aik	feestbijtje@feestbijtje-ubuntu:~$ sudo rmmod snd_emu10k1
+2006-07-28T12:48:00.000Z	dek_aik	FeestBijtje	what i did was manually...was to rmmod one-by-one the modules..eventually it came to the desired one...others may have better solution
+2006-07-28T12:49:00.000Z	dek_aik	FeestBijtje	start from module snd_emu10k1_synth
+2006-07-28T12:50:00.000Z	dek_aik	FeestBijtje	btw, this a link to 2 soundcards problem http://alsa.opensrc.org/index.php?page=MultipleCards
+2006-07-28T12:52:00.000Z	dek_aik	FeestBijtje	in your case, the intel is loaded first then sb, that is why intel works ans not sb...look at the bottom of the link there a hinthow to change that
+2006-07-28T12:53:00.000Z	dek_aik	FeestBijtje	errrr...in that link the guy also had an intel and SB!
+2006-07-28T12:54:00.000Z	FeestBijtje	dek_aik	tha last one?
+2006-07-28T12:54:00.000Z	dek_aik	FeestBijtje	yes..
+2006-07-28T12:57:00.000Z	FeestBijtje	dek_aik	i dit that
+2006-07-28T12:59:00.000Z	dek_aik	FeestBijtje	u dont mind to reboot? i dont know how to restart the modules the easy way
+2006-07-28T13:02:00.000Z	FeestBijtje	dek_aik	still no working :(
+2006-07-28T13:02:00.000Z	dek_aik	FeestBijtje	no sound? please detail
+2006-07-28T13:10:00.000Z	dek_aik	FeestBijtje	just want to check, if you start normally (not from hibernate), does the sb or intel that work?
+2006-07-28T13:10:00.000Z	FeestBijtje	dek_aik	what do you mean
+2006-07-28T13:12:00.000Z	dek_aik	FeestBijtje	you did swap the sound cards right? now if you shutdown and then restart what happen ..is it the intel or sb that works?
+2006-07-28T13:13:00.000Z	FeestBijtje	dek_aik	one is onboard and one is pci so how should i swap them.... if its with that tutorial... yes i did
+2006-07-28T13:14:00.000Z	dek_aik	FeestBijtje	the tut is to "swap" the function of course...now is it the sb or the intel sound that you hearing? you said earlier about "yelling allow"
+2006-07-28T13:43:00.000Z	dek_aik	FeestBijtje	are you still there?
+2006-07-28T13:47:00.000Z	FeestBijtje	dek_aik	i am still here
+2006-07-28T13:48:00.000Z	dek_aik	FeestBijtje	so how the sound ? did you figure out which one now..sb or intel?
+2006-07-28T13:48:00.000Z	FeestBijtje	dek_aik	none works now -_-
+2006-07-28T13:49:00.000Z	dek_aik	FeestBijtje	well sorry...have you try to modprobe the modules?
+2006-07-28T13:50:00.000Z	FeestBijtje	dek_aik	yes
+2006-07-28T13:50:00.000Z	dek_aik	FeestBijtje	ther are not on the lsmod|grep snd?
+2006-07-28T13:50:00.000Z	FeestBijtje	dek_aik	nope
+2006-07-28T13:51:00.000Z	dek_aik	FeestBijtje	well if you modprobe snd_emuXX for example what is the output?
+2006-07-28T13:52:00.000Z	FeestBijtje	dek_aik	sudo modprobe snd_emu10k1 say's nothing
+2006-07-28T13:52:00.000Z	dek_aik	FeestBijtje	i mean, snd_emu10k1 and snd_intel8x0
+2006-07-28T13:52:00.000Z	FeestBijtje	dek_aik	both say's nothing
+2006-07-28T13:53:00.000Z	dek_aik	FeestBijtje	what is the output of lsmod|grep snd? ---pm me there
+2006-07-28T13:55:00.000Z	FeestBijtje	dek_aik	done
+2006-07-28T13:55:00.000Z	dek_aik	FeestBijtje	welll, there are there?...:)
+2006-07-28T13:55:00.000Z	FeestBijtje	dek_aik	yes but why it aint working... i broke it ^^
+2006-07-28T13:56:00.000Z	FeestBijtje	dek_aik	on live cd i have sound but not on my installed version
+2006-07-28T13:56:00.000Z	dek_aik	FeestBijtje	how do you test the sound then? maybe the alsa-mixer is still mute
+2006-07-28T13:57:00.000Z	FeestBijtje	dek_aik	alsamixer is not muted
+2006-07-28T13:58:00.000Z	dek_aik	FeestBijtje	well..i am lost..sorry friend
+2006-07-28T13:59:00.000Z	FeestBijtje	dek_aik	ill re install my OS
+2006-07-28T14:00:00.000Z	dek_aik	FeestBijtje	well i walkthroughed two people with the same problem and with a success...must be something i missed
+2006-07-28T14:00:00.000Z	FeestBijtje	dek_aik	mabe its cause this is been my worst day since yesterday....
+2006-07-28T14:01:00.000Z	FeestBijtje	dek_aik	no never mind i am drunk already cause of the absint... me and my gf broke up and now i am completely lost in my self
+2006-07-28T14:01:00.000Z	FeestBijtje	dek_aik	i also lost my computer now :(
+2006-07-28T14:01:00.000Z	FeestBijtje	dek_aik	 still loads of peacis are in my head i broke a mirror with my fore head
+2006-07-28T14:02:00.000Z	FeestBijtje	dek_aik	can you tell me atleast what i can do more eccept bashing my self into walls
+2006-07-28T14:02:00.000Z	dek_aik	FeestBijtje	keep safe..wish you better luck then..others will help..its 3 am here..i need some sleep..bye

@@ -1,0 +1,98 @@
+2006-05-16T11:34:00.000Z	metatag		mediated : http://www.redhat.com/archives/rhl-list/2005-March/msg02004.html
+2006-05-16T06:24:00.000Z	metatag		lol
+2006-05-16T06:24:00.000Z	metatag		yup I am
+2006-05-16T06:24:00.000Z	ferronica	metatag	r u using???
+2006-05-16T06:25:00.000Z	metatag	ferronica	: I use PPP0 rather
+2006-05-16T06:25:00.000Z	metatag	ferronica	: whats the prob?
+2006-05-16T06:26:00.000Z	ferronica	metatag	u got external modem too and u use dial up type to connect internet...
+2006-05-16T06:27:00.000Z	metatag	ferronica	:  yeah thats right
+2006-05-16T06:27:00.000Z	metatag	ferronica	: I have a sagem fast 800 modem
+2006-05-16T06:27:00.000Z	metatag	ferronica	: Its a usb modem
+2006-05-16T06:28:00.000Z	ferronica	metatag	ok, tell me them how to use it in ubuntu as we use it in windows
+2006-05-16T06:28:00.000Z	metatag	ferronica	: well personally i used the eagle-usb drivers
+2006-05-16T06:28:00.000Z	ferronica	metatag	now if i wanna to disconnect it what i do?
+2006-05-16T06:29:00.000Z	metatag	ferronica	: sudo stopadsl
+2006-05-16T06:29:00.000Z	ferronica	metatag	bcoz there is no dialer in ubuntu, at the time of booting i switched ON the modem
+2006-05-16T06:29:00.000Z	ferronica	metatag	u mean to disconnect???
+2006-05-16T06:30:00.000Z	ferronica	metatag	how did u created the PPPOE connection in ur ubuntu>>>
+2006-05-16T06:30:00.000Z	ferronica		??
+2006-05-16T06:30:00.000Z	metatag	ferronica	: yeah i use : sudo stopadsl to stop
+2006-05-16T06:30:00.000Z	metatag	ferronica	: download eagle-usb drivers
+2006-05-16T06:30:00.000Z	metatag	ferronica	: compile and install
+2006-05-16T06:30:00.000Z	ferronica	metatag	i use lan card to connect my modem to PC
+2006-05-16T06:30:00.000Z	metatag	ferronica	: pretty easy infact
+2006-05-16T06:31:00.000Z	ferronica	metatag	dont hav USB connection
+2006-05-16T06:32:00.000Z	ferronica	metatag	Do u know ???
+2006-05-16T06:32:00.000Z	metatag	ferronica	: try System > Administration > Networking
+2006-05-16T06:34:00.000Z	ferronica	metatag	 there is Ethernet and modem connection
+2006-05-16T06:34:00.000Z	metatag	ferronica	: is your connection active in Networking?
+2006-05-16T06:34:00.000Z	ferronica	metatag	 there is Ethernet and modem connection
+2006-05-16T06:35:00.000Z	ferronica	metatag	 In both Activate option is DIM
+2006-05-16T06:36:00.000Z	ferronica	metatag	 :(
+2006-05-16T06:36:00.000Z	metatag	ferronica	: is you modem correctly connected to your lan card?
+2006-05-16T06:36:00.000Z	ferronica	metatag	 yes,
+2006-05-16T06:36:00.000Z	ferronica	metatag	 thats why i am on internet
+2006-05-16T06:37:00.000Z	ferronica	metatag	i wanna to know how to disconnect and connect it, As we do in windows??
+2006-05-16T06:37:00.000Z	metatag	ferronica	: u mean you are currently using the modem?
+2006-05-16T06:37:00.000Z	ferronica	metatag	yessss :)
+2006-05-16T06:38:00.000Z	metatag	ferronica	: kewl! to disconnect just unplug it :P
+2006-05-16T06:38:00.000Z	ferronica	metatag	unplug from where???
+2006-05-16T06:38:00.000Z	ferronica	metatag	YOU mean switch OFF modem
+2006-05-16T06:38:00.000Z	metatag	ferronica	: yeah
+2006-05-16T06:39:00.000Z	metatag	ferronica	: why would you want to disconnect anyways?
+2006-05-16T06:39:00.000Z	ferronica	metatag	So there is no option for DIALER here Like we do in windows
+2006-05-16T06:39:00.000Z	ferronica	metatag	sometime if i wanna to do,
+2006-05-16T06:39:00.000Z	metatag	ferronica	: try System > Administration > Networking .. do you get the option to desactivate?
+2006-05-16T06:39:00.000Z	ferronica	metatag	yes there is
+2006-05-16T06:40:00.000Z	metatag	ferronica	: thats your disconnect
+2006-05-16T06:40:00.000Z	ferronica	metatag	Oh Okay
+2006-05-16T06:40:00.000Z	metatag	ferronica	: to reconnect only activate it
+2006-05-16T06:40:00.000Z	ferronica	metatag	you use internet over telephone line???
+2006-05-16T06:40:00.000Z	metatag	ferronica	: yeah
+2006-05-16T06:40:00.000Z	ferronica	metatag	Kool like :)
+2006-05-16T06:41:00.000Z	metatag	ferronica	: crappy adsl from mauritius
+2006-05-16T06:41:00.000Z	metatag	ferronica	: :)
+2006-05-16T06:41:00.000Z	ferronica	metatag	Whats ur speed???
+2006-05-16T06:41:00.000Z	metatag	ferronica	: 128
+2006-05-16T06:41:00.000Z	metatag	ferronica	: :(
+2006-05-16T06:41:00.000Z	ferronica	metatag	but mine ADSL works great
+2006-05-16T06:42:00.000Z	metatag	ferronica	: I wish i had an ethernet modem.. wud not have to go thru startadsl and stuffs
+2006-05-16T06:42:00.000Z	ferronica	metatag	i got 512 Kbps, and gettin 70 KBPS download speed
+2006-05-16T06:42:00.000Z	metatag	ferronica	: am getting only about 13 KBPS
+2006-05-16T06:42:00.000Z	metatag	ferronica	: guess the contention ratio is high
+2006-05-16T06:43:00.000Z	ferronica	metatag	why dont u upgrade it, to 512mbps or 1Mbps
+2006-05-16T06:43:00.000Z	metatag	ferronica	: u see adsl is quite costly here in mauritius
+2006-05-16T06:43:00.000Z	ferronica	metatag	As i did, i just called up my ISP to upgrade my speed to 1Mbps
+2006-05-16T06:44:00.000Z	metatag	ferronica	: where are you from?
+2006-05-16T06:44:00.000Z	ferronica	metatag	Singapore
+2006-05-16T06:44:00.000Z	ferronica	metatag	how do u connect ur external modem to PC
+2006-05-16T06:44:00.000Z	metatag	ferronica	: well through usb
+2006-05-16T06:45:00.000Z	ferronica	metatag	but i heared USB is better then Lan connected
+2006-05-16T06:45:00.000Z	metatag	ferronica	: no lan shud be better
+2006-05-16T06:45:00.000Z	metatag	ferronica	: see u are using internet without connecting or disconnecting
+2006-05-16T06:45:00.000Z	ferronica	metatag	Why so
+2006-05-16T06:46:00.000Z	metatag	ferronica	: i need to get the driver that will emulate a lan
+2006-05-16T06:46:00.000Z	metatag	ferronica	: compile it
+2006-05-16T06:46:00.000Z	ferronica	metatag	but in only ubuntu, in Xp i hav to use dialer to connect internet
+2006-05-16T06:47:00.000Z	metatag	ferronica	: i believe ubuntu uses the most natural way to connect to the net
+2006-05-16T06:47:00.000Z	metatag	ferronica	: esp if you have ethernet modems
+2006-05-16T06:47:00.000Z	metatag	ferronica	: you only need to switch on your modem to connect
+2006-05-16T06:48:00.000Z	metatag	ferronica	: on xp did you have a username and password?
+2006-05-16T06:48:00.000Z	metatag	ferronica	: gtg now. get back to work.. boss is on patrol
+2006-05-16T06:48:00.000Z	metatag	ferronica	: :)
+2006-05-16T06:49:00.000Z	ferronica	metatag	ya i use username and password. and in ubutu when i created pppoe connection via terminal there also it asked me for username and password...
+2006-05-16T06:49:00.000Z	metatag	ferronica	: kewl see it will only ask you once
+2006-05-16T06:50:00.000Z	ferronica	metatag	when will u come back, where r u in home or office
+2006-05-16T06:50:00.000Z	metatag	ferronica	: office right now
+2006-05-16T06:50:00.000Z	ferronica	metatag	what ISP in ur home???
+2006-05-16T06:51:00.000Z	metatag	ferronica	: same things.. telecom plus via wanadoo
+2006-05-16T06:51:00.000Z	ferronica	metatag	Okay, can u send me ur dialer screen shot???
+2006-05-16T06:51:00.000Z	ferronica	metatag	Let me see the difference...if u dont mind
+2006-05-16T06:51:00.000Z	metatag	ferronica	: well its on command line
+2006-05-16T06:52:00.000Z	ferronica	metatag	ok what u do to connect to internet .....??
+2006-05-16T06:52:00.000Z	metatag	ferronica	: go onto applications > System tools > Terminal
+2006-05-16T06:52:00.000Z	metatag	ferronica	: then i type in sudo startadsl
+2006-05-16T06:52:00.000Z	metatag	ferronica	: dats it
+2006-05-16T06:53:00.000Z	ferronica	metatag	everytime u hav to use terminal???
+2006-05-16T06:53:00.000Z	metatag	ferronica	: yup
+2006-05-16T06:53:00.000Z	metatag	ferronica	: u ask strange questions

@@ -1,0 +1,99 @@
+2009-05-29T06:44:00.000Z	losher	fallore	you still needing help?
+2009-05-29T06:49:00.000Z	fallore	losher	yes i still need help
+2009-05-29T06:50:00.000Z	losher	fallore	Remind me: You lost your boot block after installing windows after Ubuntu & wanted to restore it using Knoppix live ?
+2009-05-29T06:50:00.000Z	fallore	losher	yes
+2009-05-29T06:52:00.000Z	losher	fallore	do you not have a ubuntu live cd? It would be much easier...
+2009-05-29T06:54:00.000Z	losher	fallore	I don't think so, but if you've already booted knoppix I'm game to try if you are...
+2009-05-29T06:55:00.000Z	losher	fallore	ok, what's the url you're using?
+2009-05-29T06:57:00.000Z	losher	fallore	ok. does 'df -h' show a disk is mounted?
+2009-05-29T06:58:00.000Z	fallore	losher	/dev/hdd seems to be the only thing that looks like a mounted disk, though there are ~10 entries
+2009-05-29T06:59:00.000Z	fallore	losher	bpun: fdisk /dev/sda   and then p was suggested to me earlier
+2009-05-29T07:01:00.000Z	losher	fallore	if your disks are named /dev/hd then you'll need instead: fdisk -l /dev/hda
+2009-05-29T07:01:00.000Z	fallore	losher	that command doesn't do anything (afaik)
+2009-05-29T07:03:00.000Z	fallore	losher	i'd like you to help as long as you don't mind. i was just trying to explain to him what we were doing.
+2009-05-29T07:04:00.000Z	losher	fallore	ok. first we need to find out what disks knoppix thinks you have. Try 'dmesg | egrep hd' and see what it says
+2009-05-29T07:05:00.000Z	fallore	losher	http://pastebin.com/d4e03005b
+2009-05-29T07:06:00.000Z	losher	fallore	I only see the CD drive. Try 'dmesg | more' and look for something that looks like a hard drive...
+2009-05-29T07:08:00.000Z	losher	fallore	yes, when it boots, it probes all the devices. There should be an entry that shows it saw your hard drive
+2009-05-29T07:08:00.000Z	fallore	losher	sd 5:0:0:0: [sdc] Attached SCSI removable disk something like that?
+2009-05-29T07:09:00.000Z	losher	fallore	yes, that looks more like it. It's a removable disk?
+2009-05-29T07:11:00.000Z	losher	fallore	looks more like it. Is there an name e.g. hd<something> or sd<something> on a nearby line?
+2009-05-29T07:13:00.000Z	losher	fallore	that' it. A 320GB seagate drive if I'm not mistaken.
+2009-05-29T07:13:00.000Z	losher	fallore	ok, next: fdisk -l /dev/sda & paste the output please
+2009-05-29T07:14:00.000Z	fallore	losher	http://pastebin.com/d153143f4
+2009-05-29T07:16:00.000Z	losher	fallore	ok, your linux system is on /dev/sda6. Let's confirm that. Type: fsck /dev/sda6
+2009-05-29T07:16:00.000Z	fallore	losher	http://pastebin.com/d29058e6b
+2009-05-29T07:18:00.000Z	losher	fallore	perfect. It's a linux ext filesystem & it checks clean. Now lets go back to the knoppix guide.
+2009-05-29T07:18:00.000Z	losher	fallore	type: mkdir /mnt/root
+2009-05-29T07:20:00.000Z	fallore	losher	mkdir: cannot create directory `/mnt/root': Permission denied
+2009-05-29T07:20:00.000Z	losher	fallore	type: sudo mkdir /mnt/root
+2009-05-29T07:20:00.000Z	losher	fallore	good, no output means it worked :-)
+2009-05-29T07:21:00.000Z	losher	fallore	sudo mount -o dev,rw /dev/sda6 /mnt/root
+2009-05-29T07:22:00.000Z	losher	fallore	perfect, now 'ls -l /mnt/root' (that's a lower case L btw)
+2009-05-29T07:22:00.000Z	losher	fallore	see a bunch of files in there?
+2009-05-29T07:24:00.000Z	losher	fallore	ok,. now try 'sudo chroot /mnt/root bash'
+2009-05-29T07:25:00.000Z	losher	fallore	do another 'ls -l' and paste the result
+2009-05-29T07:25:00.000Z	fallore	losher	http://pastebin.com/d6c1b1870
+2009-05-29T07:26:00.000Z	losher	fallore	perfect. Now the big moment, type: grub
+2009-05-29T07:26:00.000Z	fallore	losher	worked :D
+2009-05-29T07:26:00.000Z	losher	fallore	now type: find /boot/grub/stage1
+2009-05-29T07:26:00.000Z	fallore	losher	Error 15: File not found
+2009-05-29T07:27:00.000Z	losher	fallore	ok, please wait while I check my notes
+2009-05-29T07:30:00.000Z	losher	fallore	are you looking at a grub prompt like this one 'grub> "
+2009-05-29T07:30:00.000Z	losher	fallore	try it again just to be sure: find /boot/grub/stage1
+2009-05-29T07:31:00.000Z	losher	fallore	bummer. Not supposed to happen. Ok. let's try it the knoppix guide way. Type exit to get out of grub
+2009-05-29T07:33:00.000Z	losher	fallore	now try 'grub-install /dev/sda'
+2009-05-29T07:34:00.000Z	fallore	losher	/dev/sda: Not found or not a block device.
+2009-05-29T07:34:00.000Z	losher	fallore	once more, but with hda instead i.e. 'grub-install /dev/hda'
+2009-05-29T07:36:00.000Z	losher	fallore	ok, I think this is because knoppix uses different naming conventions for grub. I think I'm stuck at this point. Did you say you have a ubuntu live cd?
+2009-05-29T07:36:00.000Z	fallore	losher	i might somewhere, let me look
+2009-05-29T07:37:00.000Z	fallore	losher	i have 7.10 :P will that work?
+2009-05-29T07:37:00.000Z	losher	fallore	it should work fine. Do you want to try booting it?
+2009-05-29T07:38:00.000Z	losher	fallore	ok, standing by...
+2009-05-29T07:43:00.000Z	losher	fallore	hi fallore
+2009-05-29T07:43:00.000Z	losher	fallore	ok, we're gonna follow http://ubuntuforums.org/showthread.php?t=224351
+2009-05-29T07:45:00.000Z	losher	fallore	ok, here we go. 'sudo grub'
+2009-05-29T07:45:00.000Z	losher	fallore	find /boot/grub/stage1
+2009-05-29T07:45:00.000Z	fallore	losher	Error 15: File not found
+2009-05-29T07:46:00.000Z	losher	fallore	ok. I wonder if the grub files are lost. Open another terminal
+2009-05-29T07:46:00.000Z	fallore	losher	could this be because i have two hard drives? there is an edit and quote at the bottom of the post about this
+2009-05-29T07:47:00.000Z	fallore	losher	AND grub is not and would not be installed on the the hard drive i've been running windows off of for a while.
+2009-05-29T07:47:00.000Z	fallore	losher	both "edits" look like they may have some relevance to my problem
+2009-05-29T07:47:00.000Z	losher	fallore	well, we'll check again. In the new terminal, do 'fdisk -l /dev/sda' like last time
+2009-05-29T07:48:00.000Z	losher	fallore	oops, sudo fdisk -l /dev/sda
+2009-05-29T07:48:00.000Z	fallore	losher	http://pastebin.com/d671c5b3c
+2009-05-29T07:49:00.000Z	losher	fallore	ok, sudo fsck /dev/sda6
+2009-05-29T07:50:00.000Z	losher	fallore	good, now 'sudo mkdir /mnt/root' like last time
+2009-05-29T07:51:00.000Z	losher	fallore	and finally. mount /dev/sda6 /mnt/root
+2009-05-29T07:53:00.000Z	losher	fallore	ok, 'ls -l /mnt/root/boot/grub' & oaste
+2009-05-29T07:53:00.000Z	fallore	losher	http://pastebin.com/d4973692f
+2009-05-29T07:54:00.000Z	losher	fallore	that looks perfect. All the grub files are there, including stage1
+2009-05-29T07:54:00.000Z	fallore	losher	do i have to use the hdd(x,y) bit then?
+2009-05-29T07:55:00.000Z	losher	fallore	we'll get to that. Notice that there some extra steps in the guide for people who couldn't get grub to find the stage1 file? we're gonna try those...
+2009-05-29T07:56:00.000Z	losher	fallore	ok, we already have /mnt/root and /dev/sda6 is mounted. Now we need to add: sudo mount -t proc none /mnt/root/proc
+2009-05-29T07:57:00.000Z	losher	fallore	perfect, and then sudo mount -o bind /dev /mnt/root/dev
+2009-05-29T07:58:00.000Z	losher	fallore	good, now sudo chroot /mnt/root /bin/bash
+2009-05-29T07:58:00.000Z	losher	fallore	then 'find /boot/grub/stage1'
+2009-05-29T07:59:00.000Z	fallore	losher	find: /boot/grub: No such file or directory
+2009-05-29T08:01:00.000Z	losher	fallore	so the find never returned a line like 'root (hd0,5)'
+2009-05-29T08:01:00.000Z	losher	fallore	ok, exit from grub
+2009-05-29T08:02:00.000Z	losher	fallore	and do 'ls -l /boot/grub'. Does it show stage1 ?
+2009-05-29T08:03:00.000Z	losher	fallore	the find is supposed to search all the drives. But we can try it. Nothing to lose at this point...
+2009-05-29T08:03:00.000Z	losher	fallore	back into grub: 'sudo grub'
+2009-05-29T08:04:00.000Z	losher	fallore	type root (hd0,5)
+2009-05-29T08:04:00.000Z	losher	fallore	now 'setup (hd0)'
+2009-05-29T08:05:00.000Z	fallore	losher	http://pastebin.com/d4d4d5699
+2009-05-29T08:08:00.000Z	losher	fallore	damn. I'm afraid I'm stuck then. The best I can offer at this stage is for you to keep reading that thread and try some of the different suggestions
+2009-05-29T08:12:00.000Z	losher	fallore	sorry it didn't solve your problem. I think we're close though, for what it's worth... :-(
+2009-05-29T08:13:00.000Z	fallore	losher	i got it ;) interested in the solution? :)
+2009-05-29T08:13:00.000Z	losher	fallore	definitely. Please tell...
+2009-05-29T08:14:00.000Z	fallore	losher	we forgot to chroot :P
+2009-05-29T08:14:00.000Z	losher	fallore	so it works now?
+2009-05-29T08:15:00.000Z	fallore	losher	sudo chroot /mnt/root /bin/bash was the only step i didn't take. i did that and then followed all the instructions after (in the 2nd "NOTICE/EDIT" window) and it worked perfectly
+2009-05-29T08:15:00.000Z	losher	fallore	and it boots (the acid test)?
+2009-05-29T08:18:00.000Z	fallore	losher	haven't tried yet, but i'll let you know
+2009-05-29T08:19:00.000Z	losher	fallore	good luck
+2009-05-29T08:29:00.000Z	fallore	losher	alright, gonna reboot O_O wish me luck
+2009-05-29T08:29:00.000Z	losher	fallore	fingers crossed
+2009-05-29T08:34:00.000Z	fallore	losher	grub showed up :D booted to windows, so i don't know if actually booting to ubuntu works (though i assume so), but i'm pretty sure my problem is fixed :D
+2009-05-29T08:35:00.000Z	losher	fallore	if it doesn't work booting Ubuntu, I know how to fix it :-)

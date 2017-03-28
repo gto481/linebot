@@ -1,0 +1,96 @@
+2012-01-19T15:08:00.000Z	kevin_		kevin@ubuntu:~/Desktop$ sudo apt-get install xlibs
+2012-01-19T15:08:00.000Z	kevin_		Reading package lists... Done
+2012-01-19T15:08:00.000Z	kevin_		Building dependency tree
+2012-01-19T15:08:00.000Z	kevin_		Reading state information... Done
+2012-01-19T15:08:00.000Z	kevin_		Package xlibs is not available, but is referred to by another package.
+2012-01-19T15:08:00.000Z	kevin_		This may mean that the package is missing, has been obsoleted, or
+2012-01-19T15:09:00.000Z	kevin_		http://pastebin.com/uqBkngiZ
+2012-01-19T15:09:00.000Z	crizzy	kevin_	sudo apt-cache search xlibs
+2012-01-19T15:10:00.000Z	crizzy		yup, true
+2012-01-19T15:10:00.000Z	kevin_		Either way I'm not really getting results..
+2012-01-19T15:10:00.000Z	crizzy		the question is, where you need xlibs, exactly?
+2012-01-19T15:10:00.000Z	kevin_		The answer is, I have no idea. I'm just trying to install a game. A simple 2d crappy game.
+2012-01-19T15:11:00.000Z	crizzy		i doubt xlibs is what you need for anything
+2012-01-19T15:11:00.000Z	crizzy	kevin_	what game, exactly?
+2012-01-19T15:12:00.000Z	kevin_		http://pastebin.com/98p8FgBw
+2012-01-19T15:12:00.000Z	kevin_		Graal
+2012-01-19T15:12:00.000Z	crizzy		ok, xlibs is not what you need there
+2012-01-19T15:12:00.000Z	kevin_		I was just trying to do what someone else said because I want to fix this.. x.x
+2012-01-19T15:12:00.000Z	crizzy	kevin_	install package: libxxf86vm1
+2012-01-19T15:12:00.000Z	kevin_		is that like
+2012-01-19T15:13:00.000Z	crizzy		sudo apt-get install libxxf86vm1
+2012-01-19T15:13:00.000Z	kevin_		http://pastebin.com/CZY9tN61
+2012-01-19T15:15:00.000Z	kevin_	crizzy	http://pastebin.com/CZY9tN61
+2012-01-19T15:16:00.000Z	crizzy	kevin_	that is weid then
+2012-01-19T15:16:00.000Z	crizzy		*weird
+2012-01-19T15:16:00.000Z	kevin_		All I'm trying to do is run a silly 2d game. x.x
+2012-01-19T15:17:00.000Z	crizzy	kevin_	what does 'whereis libxxf86vm1' say ?
+2012-01-19T15:18:00.000Z	kevin_	crizzy	you mean locate?
+2012-01-19T15:18:00.000Z	crizzy	kevin_	and this is exactly why package managers and repositories were invented :) this not working is simply the game authors lazyness not to provide ubuntu package
+2012-01-19T15:18:00.000Z	crizzy	kevin_	no, i mean whereis
+2012-01-19T15:19:00.000Z	kevin_	crizzy	http://pastebin.com/718vAX5N
+2012-01-19T15:20:00.000Z	crizzy		:/
+2012-01-19T15:21:00.000Z	crizzy	kevin_	what about ls -l /usr/lib32/libXxf86vm.so*
+2012-01-19T15:21:00.000Z	kevin_	crizzy	Oh, I also have the library that i'm "missing" I can find it when i say locate libxxf86vm1
+2012-01-19T15:21:00.000Z	kevin_		ls: cannot access /usr/lib32/libXxf86vm.so*: No such file or directory
+2012-01-19T15:21:00.000Z	kevin_		wait
+2012-01-19T15:21:00.000Z	kevin_		it's vm1
+2012-01-19T15:22:00.000Z	kevin_		Meh.. Still says the same thing.
+2012-01-19T15:22:00.000Z	crizzy		do you have 32 or 64bit ubuntu?
+2012-01-19T15:22:00.000Z	kevin_		i'm on Xubuntu and i'm pretty sure it's 64
+2012-01-19T15:22:00.000Z	crizzy		you said locate found it, where it was?
+2012-01-19T15:23:00.000Z	kevin_		x86_64
+2012-01-19T15:24:00.000Z	kevin_		gives me "x86_64"
+2012-01-19T15:24:00.000Z	crizzy	kevin_	ping, you said locate found the .so file, where it is?
+2012-01-19T15:25:00.000Z	kevin_		http://pastebin.com/TuLdXSAK
+2012-01-19T15:26:00.000Z	crizzy	kevin_	could you pastebin output of 'locate libXxf86vm.so' pls
+2012-01-19T15:28:00.000Z	kevin_		http://pastebin.com/nzrX0wUL
+2012-01-19T15:28:00.000Z	crizzy	kevin_	ok, so it is there, altho in a bit bizarre location
+2012-01-19T15:28:00.000Z	crizzy	kevin_	now check with 'whereis graal' where you program binary is and pastebin that
+2012-01-19T15:29:00.000Z	kevin_		http://pastebin.com/U0pycvFq
+2012-01-19T15:29:00.000Z	crizzy		now, pastebin output of: "ldd /usr/bin/graal"
+2012-01-19T15:31:00.000Z	crizzy	kevin_	ping :)
+2012-01-19T15:31:00.000Z	kevin_		http://pastebin.com/aT0BrG0E
+2012-01-19T15:32:00.000Z	crizzy	kevin_	which ubuntu version you have btw?
+2012-01-19T15:33:00.000Z	kevin_		Xubuntu
+2012-01-19T15:33:00.000Z	crizzy		yes, but 11.10?
+2012-01-19T15:33:00.000Z	kevin_		Yes.
+2012-01-19T15:33:00.000Z	crizzy		hmm, ok
+2012-01-19T15:33:00.000Z	crizzy		i think then this could fix it:
+2012-01-19T15:34:00.000Z	crizzy		sudo apt-get install libxxf86vm1:i386
+2012-01-19T15:34:00.000Z	crizzy	kevin_	problem seems to be, graal binary is 32bit, and you have only 64bit version of libxxf86vm1 installed
+2012-01-19T15:35:00.000Z	kevin_		Okay, installed, now I should be able to run the game?
+2012-01-19T15:35:00.000Z	crizzy		yes, try and see what happens :P
+2012-01-19T15:35:00.000Z	kevin_		Also yes, the programmers of the game are very lazy bastards. xD
+2012-01-19T15:35:00.000Z	crizzy		did you install it from the .deb package?
+2012-01-19T15:35:00.000Z	kevin_		No, it's a game I've played for years and years. More or less a chat client these days
+2012-01-19T15:36:00.000Z	crizzy		ok, well, does it work now?
+2012-01-19T15:36:00.000Z	kevin_		Nope, one second.
+2012-01-19T15:36:00.000Z	kevin_		http://pastebin.com/bN52XqTy
+2012-01-19T15:36:00.000Z	crizzy		ok, BadRequests almost without an exception are a driver problem
+2012-01-19T15:37:00.000Z	crizzy		what gfx card you have and what drivers you have installed?
+2012-01-19T15:37:00.000Z	kevin_		These guys get paid more than enough though trust me :P
+2012-01-19T15:38:00.000Z	kevin_		The people that made the game I'm talking about
+2012-01-19T15:38:00.000Z	crizzy	kevin_	ping, gfx card and what drivers?
+2012-01-19T15:38:00.000Z	kevin_		But uh... It shouldn't be the driver, I run this game on Windows all the time and it works just fine
+2012-01-19T15:38:00.000Z	crizzy		it is
+2012-01-19T15:38:00.000Z	crizzy		i bet your 3D acceleration is not working
+2012-01-19T15:39:00.000Z	kevin_		Yes, crizzy is helping me out
+2012-01-19T15:39:00.000Z	kevin_		Yeah I don't think i have the opengl dep :(
+2012-01-19T15:39:00.000Z	crizzy	kevin_	this is purely a driver issue :) either 3D works or it doesn't
+2012-01-19T15:39:00.000Z	crizzy	kevin_	now, what's your gfx card
+2012-01-19T15:40:00.000Z	kevin_		Prepare to laugh. Mobile Intel 4 crapcrap lol
+2012-01-19T15:40:00.000Z	crizzy		ugh
+2012-01-19T15:40:00.000Z	crizzy		:p
+2012-01-19T15:41:00.000Z	crizzy	kevin_	pls pastebin output of "glxinfo | grep rendering"
+2012-01-19T15:41:00.000Z	crizzy	kevin_	if it says 'no' you don't have 3D acceleration
+2012-01-19T15:42:00.000Z	kevin_		http://pastebin.com/VU48EwRS
+2012-01-19T15:42:00.000Z	crizzy	kevin_	yup, your drivers are definitely not working :)
+2012-01-19T15:42:00.000Z	crizzy		the game itself should work now, though, if your acceleration would work
+2012-01-19T15:43:00.000Z	kevin_		How am I supposed to make the acceleration work? Like I said the game runs just fine on the same computer under windows
+2012-01-19T15:43:00.000Z	crizzy		i have no experience with intel cards though, i only know their drivers are worst of all drivers in existence, with amd/nvidia it would likely just work(tm)
+2012-01-19T15:43:00.000Z	kevin_		They have a Windows and Linux separate installer as well
+2012-01-19T15:43:00.000Z	crizzy	kevin_	this has nothing to do with windows
+2012-01-19T15:43:00.000Z	crizzy	kevin_	the problem only, and only is, your linux intel drivers don't work right now
+2012-01-19T15:44:00.000Z	kevin_		So basically I'm screwed?
+2012-01-19T15:44:00.000Z	crizzy	kevin_	basically the same if you would uninstall your gfx drivers from windows and try to run the game with windows'es built-in VGA driver - it would not work

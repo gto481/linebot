@@ -1,0 +1,95 @@
+2010-06-20T06:55:00.000Z	sebsebseb		!pm
+2010-06-20T06:57:00.000Z	sebsebseb		!info human-theme
+2010-06-20T06:57:00.000Z	sebsebseb		!info human-legacy-theme
+2010-06-20T06:58:00.000Z	Zela	sebsebseb	uh?
+2010-06-17T02:17:00.000Z	Zela	sebsebseb	HI!!!
+2010-06-17T02:18:00.000Z	sebsebseb	Zela	ok you seem excited to see me
+2010-06-20T06:40:00.000Z	Zela	sebsebseb	remember me?
+2010-06-20T06:40:00.000Z	sebsebseb	Zela	pm
+2010-06-20T06:54:00.000Z	sebsebseb	Zela	support in pm hrm, if I do it here, other people could benefit as well, but who would actsauly read it
+2010-06-20T06:55:00.000Z	sebsebseb	Zela	most users don't want 10.04 to look like an older version of Ubuntu
+2010-06-20T06:55:00.000Z	sebsebseb	Zela	since either they don't know they can, or well they don't want to
+2010-06-20T06:55:00.000Z	sebsebseb	Zela	plus theres this when it comes to pm
+2010-06-20T06:56:00.000Z	Zela	sebsebseb	well I do, so there is no way i can change it?
+2010-06-20T06:56:00.000Z	sebsebseb	Zela	lets do it in the channel then, get a nice offical log of it as well :)
+2010-06-20T06:56:00.000Z	sebsebseb	Zela	this way
+2010-06-20T06:56:00.000Z	sebsebseb	Zela	yes you can remove  what you don't want, and customize to look like older versions
+2010-06-20T06:56:00.000Z	Zela	sebsebseb	ok
+2010-06-20T06:56:00.000Z	Zela	sebsebseb	I would like 9.10
+2010-06-20T06:56:00.000Z	sebsebseb	Zela	even better lets make it look like  8.10/8.04
+2010-06-20T06:57:00.000Z	sebsebseb	Zela	you'll see
+2010-06-20T06:57:00.000Z	Zela	sebsebseb	okies, this is reversable right?
+2010-06-20T06:57:00.000Z	sebsebseb	Zela	yes
+2010-06-20T06:57:00.000Z	sebsebseb	Zela	of course
+2010-06-20T06:57:00.000Z	Zela	sebsebseb	ok
+2010-06-20T06:57:00.000Z	sebsebseb	Zela	first of all you need the old theme
+2010-06-20T06:57:00.000Z	Zela	sebsebseb	where do I get it
+2010-06-20T06:58:00.000Z	sebsebseb	Zela	theres also a legacy theme,  with the old icons by default, but you will get that with the human-theme
+2010-06-20T06:58:00.000Z	sebsebseb	Zela	system > preferences > terminal
+2010-06-20T06:58:00.000Z	Zela	sebsebseb	how do I download it
+2010-06-20T06:58:00.000Z	Zela	sebsebseb	oh
+2010-06-20T06:59:00.000Z	Zela	sebsebseb	so what do I type in terminal
+2010-06-20T06:59:00.000Z	sebsebseb	Zela	sudo apt-get install human-theme
+2010-06-20T07:01:00.000Z	sebsebseb	Zela	sudo apt-get install human-theme
+2010-06-20T07:01:00.000Z	Zela	sebsebseb	done
+2010-06-20T07:01:00.000Z	sebsebseb	Zela	then system > preferences > apperance
+2010-06-20T07:01:00.000Z	sebsebseb	Zela	and select it as the theme
+2010-06-20T07:02:00.000Z	sebsebseb	Zela	we aren't finnished yet, this is only the start
+2010-06-20T07:03:00.000Z	sebsebseb	Zela	it will have installed two human themes
+2010-06-20T07:03:00.000Z	sebsebseb	Zela	have a look
+2010-06-20T07:03:00.000Z	sebsebseb	Zela	oh I think i'll  do this with you in my vm since yeah
+2010-06-20T07:04:00.000Z	Zela	sebsebseb	since what?
+2010-06-20T07:04:00.000Z	sebsebseb	Zela	since I got a vm where I want to do this kind of stuff with really
+2010-06-20T07:04:00.000Z	Zela	sebsebseb	ok, can I have my startup to look like it also?
+2010-06-20T07:05:00.000Z	sebsebseb	Zela	like previous versions of Ubuntu, no not easilly, but there are other better log in screens you can have instead
+2010-06-20T07:05:00.000Z	sebsebseb	Zela	ok human-clearlooks
+2010-06-20T07:05:00.000Z	sebsebseb	Zela	is the theme I use, but I customize this a bit as well
+2010-06-20T07:06:00.000Z	Zela	sebsebseb	yea I really dont like the 8.04 one
+2010-06-20T07:06:00.000Z	sebsebseb	Zela	what clearlooks or just human?
+2010-06-20T07:07:00.000Z	sebsebseb	Zela	which theme don't you like then,  human or human-clearlooks ?
+2010-06-20T07:07:00.000Z	Zela	sebsebseb	both lol
+2010-06-20T07:07:00.000Z	sebsebseb	Zela	hrm
+2010-06-20T07:08:00.000Z	sebsebseb	Zela	the icons
+2010-06-20T07:08:00.000Z	sebsebseb	Zela	you see the Ubuntu logo
+2010-06-20T07:08:00.000Z	sebsebseb	Zela	next to applications
+2010-06-20T07:08:00.000Z	sebsebseb	Zela	that will be changed to the old
+2010-06-20T07:08:00.000Z	Zela	sebsebseb	ah when?
+2010-06-20T07:08:00.000Z	sebsebseb	Zela	thats the next thing to do with the theme
+2010-06-20T07:09:00.000Z	Zela	sebsebseb	ah yea, I just like the different boot look.
+2010-06-20T07:09:00.000Z	sebsebseb	Zela	which boot look?
+2010-06-20T07:09:00.000Z	Zela	sebsebseb	9.10
+2010-06-20T07:09:00.000Z	sebsebseb	Zela	oh xsplash ?
+2010-06-20T07:09:00.000Z	sebsebseb	Zela	the Ubuntu logo in the centre of the sceen on boot up?
+2010-06-20T07:09:00.000Z	Zela	sebsebseb	yes
+2010-06-20T07:09:00.000Z	sebsebseb	Zela	and its white
+2010-06-20T07:10:00.000Z	sebsebseb	Zela	thats in the repo for 10.04, but  like the old log in screen GDM,  you can't just install and use
+2010-06-20T07:11:00.000Z	sebsebseb	Zela	doing this theme stuff and that or not?
+2010-06-20T07:11:00.000Z	Zela	sebsebseb	ah no thanks i like 10.04 i guess lol.
+2010-06-20T07:11:00.000Z	sebsebseb	Zela	uhmm  if you finnish you learn someting :D if not you don't,  and then you can change back to before if you want of course
+2010-06-20T07:12:00.000Z	Zela	sebsebseb	yea :D thanks bud for helping me :)
+2010-06-20T07:13:00.000Z	sebsebseb	Zela	so yeah pick one of the themes, and then.  the next thing would be to.  go to customize
+2010-06-20T07:13:00.000Z	Zela	sebsebseb	ah ok :)
+2010-06-20T07:13:00.000Z	sebsebseb	Zela	maybe should have started removing features,  that aren't that good,  instead of changing theme, ah well
+2010-06-20T07:14:00.000Z	Zela	sebsebseb	yea ill see
+2010-06-20T07:14:00.000Z	sebsebseb	Zela	window borders  human or human-clearlooks
+2010-06-20T07:14:00.000Z	sebsebseb	Zela	controls human or human-clearlooks.  so really the one you went with
+2010-06-20T07:16:00.000Z	sebsebseb	Zela	have a look at the current system menu as well.  then go back to the theme thing or something,  since your going to put the Gnome icons instead for the theme :)
+2010-06-20T07:16:00.000Z	sebsebseb	Zela	oh yeah just click on system to see at the top
+2010-06-20T07:17:00.000Z	sebsebseb	Zela	eww purple preferences button aye?
+2010-06-20T07:17:00.000Z	Zela	sebsebseb	XD
+2010-06-20T07:17:00.000Z	sebsebseb	Zela	notice the purple with the default 10.04 theme
+2010-06-20T07:17:00.000Z	Zela	sebsebseb	yea
+2010-06-20T07:17:00.000Z	sebsebseb	Zela	sure you did
+2010-06-20T07:17:00.000Z	sebsebseb	Zela	so yeah Gnome icons as well
+2010-06-20T07:18:00.000Z	sebsebseb	Zela	then close it, and look at system menu again
+2010-06-20T07:18:00.000Z	sebsebseb	Zela	or first remove the
+2010-06-20T07:18:00.000Z	Zela	sebsebseb	yea i dont like hte purple.
+2010-06-20T07:19:00.000Z	sebsebseb	Zela	well thats the colour for their new branding :(
+2010-06-20T07:19:00.000Z	Zela	sebsebseb	purple
+2010-06-20T07:19:00.000Z	Zela	sebsebseb	brb
+2010-06-20T07:19:00.000Z	sebsebseb	Zela	yeah
+2010-06-20T07:23:00.000Z	sebsebseb	Zela	oh :(
+2010-06-20T07:23:00.000Z	sebsebseb	Zela	ok well next time, you know where to find me
+2010-06-20T07:23:00.000Z	sebsebseb	Zela	the more fun will be next time
+2010-06-20T07:23:00.000Z	sebsebseb	Zela	with the customizing
+2010-06-20T07:23:00.000Z	Zela	sebsebseb	indeed :D

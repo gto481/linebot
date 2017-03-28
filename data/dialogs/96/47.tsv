@@ -1,0 +1,96 @@
+2007-03-07T11:22:00.000Z	omegacenti		I'm dying here foe someone to tell me how to fix resolution problems (I have exhausted fixresolution howto)
+2007-03-07T11:22:00.000Z	omegacenti		for*
+2007-03-07T11:22:00.000Z	arrenlex	omegacenti	What card?
+2007-03-07T11:23:00.000Z	omegacenti	arrenlex	intel 900 chipset
+2007-03-07T11:23:00.000Z	arrenlex	omegacenti	Have you been using 915resolution?
+2007-03-07T11:23:00.000Z	omegacenti	arrenlex	I used 915resolution.
+2007-03-07T11:23:00.000Z	arrenlex	omegacenti	And what happened?
+2007-03-07T11:24:00.000Z	omegacenti	arrenlex	it also made a file in /etc/default/915resolution
+2007-03-07T11:24:00.000Z	arrenlex	omegacenti	Installing it isn't enough... you have to run it, with correct options.
+2007-03-07T11:25:00.000Z	omegacenti	arrenlex	How do I even know I ran the right options if I can't tell if it is even around...
+2007-03-07T11:25:00.000Z	omegacenti	arrenlex	For instance, in my xorg.conf it stills says my driver is i810
+2007-03-07T11:25:00.000Z	arrenlex	omegacenti	Hold up, let me fire up my laptop which has that driver.
+2007-03-07T11:25:00.000Z	arrenlex	omegacenti	That's right. That is the correct driver.
+2007-03-07T11:25:00.000Z	omegacenti	arrenlex	I appreciate it.
+2007-03-07T11:26:00.000Z	arrenlex	omegacenti	What resolution are you aiming for?
+2007-03-07T11:26:00.000Z	omegacenti	arrenlex	http://paste.ubuntu-nl.org/9050/
+2007-03-07T11:27:00.000Z	omegacenti	arrenlex	I am aiming for 800x600 for diablo II in wine, and I know 800x600 works in windows because it worked.
+2007-03-07T11:27:00.000Z	arrenlex	omegacenti	800x600 should work with any card... are you sure it's not in your resolution settings?
+2007-03-07T11:28:00.000Z	omegacenti	arrenlex	Tell me where my resolution settings are and I promise you will find out quick :)
+2007-03-07T11:28:00.000Z	arrenlex	omegacenti	No idea, I don't run gnome.
+2007-03-07T11:30:00.000Z	arrenlex	omegacenti	Try right-clicking on the desktop and looking around? Should be somewhere there.
+2007-03-07T11:30:00.000Z	omegacenti	arrenlex	Nothing there but my chickens.
+2007-03-07T11:32:00.000Z	arrenlex	omegacenti	Look there.
+2007-03-07T11:32:00.000Z	omegacenti	arrenlex	Thats exactly where my issues are, it wont list 800x 600!!
+2007-03-07T11:34:00.000Z	arrenlex	omegacenti	Anyway, sorry... let me find the command for you, a moment.
+2007-03-07T11:36:00.000Z	arrenlex	omegacenti	Please pastebin the results of "sudo 915resolution -l"
+2007-03-07T11:37:00.000Z	omegacenti	arrenlex	 one sec.
+2007-03-07T11:39:00.000Z	omegacenti	arrenlex	http://paste.ubuntu-nl.org/9051/
+2007-03-07T11:40:00.000Z	arrenlex	omegacenti	Mode 52 : 800x600, 32 bits/pixel <--- there it is. You should be able to run it just fine... o_O
+2007-03-07T11:41:00.000Z	arrenlex	omegacenti	No. That's already there. You should be able to access that resolution.
+2007-03-07T11:41:00.000Z	omegacenti	arrenlex	I can't
+2007-03-07T11:42:00.000Z	arrenlex	omegacenti	What happens if you put remove 1280x768 in /etc/X11/xorg.conf so 800x600 is first??
+2007-03-07T11:45:00.000Z	arrenlex	omegacenti	What resolution did it boot to?
+2007-03-07T11:45:00.000Z	omegacenti	arrenlex	Good ol 1280x768
+2007-03-07T11:45:00.000Z	omegacenti	arrenlex	I'll even show you the edited files.
+2007-03-07T11:45:00.000Z	arrenlex	omegacenti	Could you pastebin /var/log/Xorg.0.log please?
+2007-03-07T11:46:00.000Z	omegacenti	arrenlex	Whats the easiest way to obtain all the text from /var/log/Xorg.0.log
+2007-03-07T11:47:00.000Z	omegacenti	arrenlex	I tried cat /var/log/Xorg.0.log but it freaked out and cut off the top of it
+2007-03-07T11:47:00.000Z	arrenlex	omegacenti	gedit /var/log/Xorg.0.log, ctrl+a, ctrl+c, open pastebin, ctrl+v
+2007-03-07T11:48:00.000Z	omegacenti	arrenlex	http://paste.ubuntu-nl.org/9052/
+2007-03-07T11:49:00.000Z	arrenlex	omegacenti	I810(0): Not using mode "800x600" (no mode of this name)
+2007-03-07T11:49:00.000Z	arrenlex	omegacenti	And yet, it's mode 52.
+2007-03-07T11:49:00.000Z	omegacenti	arrenlex	eh?
+2007-03-07T11:50:00.000Z	omegacenti	arrenlex	I don't understand.
+2007-03-07T11:50:00.000Z	arrenlex	omegacenti	Your log says: I810(0): Not using mode "800x600" (no mode of this name)
+2007-03-07T11:50:00.000Z	arrenlex	omegacenti	Which is why it refuses to show that.
+2007-03-07T11:50:00.000Z	arrenlex	omegacenti	And yet a mode of that name DOES exist, and is #52.
+2007-03-07T11:50:00.000Z	omegacenti	arrenlex	Is this my error, and can I fix it?
+2007-03-07T11:50:00.000Z	arrenlex	omegacenti	This is your error, and I don't understand why it's appearing, so I can't help you out. o_o I'm lost.
+2007-03-07T11:51:00.000Z	omegacenti	arrenlex	I've been known to produce the strangest errors known to mankind. Thankyou for trying to surmount one of them. I really appreciate it.
+2007-03-07T11:51:00.000Z	arrenlex	omegacenti	You could try restarting your computer to reset the changes 915resolution made, and then using "sudo 915resolution -l" again to see if the mode exists by default.
+2007-03-07T11:51:00.000Z	arrenlex	omegacenti	Error: keyboard not found, press any key to continue? :)
+2007-03-07T11:52:00.000Z	omegacenti	arrenlex	I edited /etc/default/915resolution to reflect mode 5(something?) 800 by 600, depth 32
+2007-03-07T11:52:00.000Z	arrenlex	omegacenti	Yeah, restart, and then pastebin "sudo 915resolution -l" please.
+2007-03-07T11:52:00.000Z	arrenlex	omegacenti	Hmm.
+2007-03-07T11:52:00.000Z	arrenlex	omegacenti	Hold on.
+2007-03-07T11:53:00.000Z	arrenlex	omegacenti	I don't like that. Remove that file and reinstall 915resolution. Better to work with the defaults.
+2007-03-07T11:56:00.000Z	omegacenti	arrenlex	Okay, so now my computer is doing 1024x768 (and it looks absolutely weird on widescreen)
+2007-03-07T11:57:00.000Z	arrenlex	omegacenti	And a new /var/log/Xorg.0.log please
+2007-03-07T11:57:00.000Z	omegacenti	arrenlex	http://paste.ubuntu-nl.org/9053/ is 915resolution
+2007-03-07T11:59:00.000Z	omegacenti	arrenlex	xorg log: http://paste.ubuntu-nl.org/9054/
+2007-03-07T12:01:00.000Z	omegacenti	arrenlex	Its just weird. You're a good man in my book. :)
+2007-03-07T12:01:00.000Z	arrenlex	omegacenti	Actually, it's less weird than it seems.
+2007-03-07T12:01:00.000Z	arrenlex	omegacenti	There's an asterisk by that modeline, but there isn't next to any others.
+2007-03-07T12:01:00.000Z	arrenlex	omegacenti	It seems to be throwing it away for some reason.
+2007-03-07T12:01:00.000Z	omegacenti	arrenlex	Its a new planet with complete set of creatures weird for me.
+2007-03-07T12:01:00.000Z	arrenlex	omegacenti	I'm googling right now. Appears to be because of refresh rates.
+2007-03-07T12:03:00.000Z	arrenlex	omegacenti	In the meantime, it should run at that resolution if you dial it back to 16 bits per pixel.
+2007-03-07T12:04:00.000Z	omegacenti	arrenlex	Dial what back to 16 bits per pixel?
+2007-03-07T12:04:00.000Z	arrenlex	omegacenti	X. In xorg.conf, change "24" to "16" where you have your resolutions.
+2007-03-07T12:05:00.000Z	omegacenti	arrenlex	Have you seen my xorg?
+2007-03-07T12:05:00.000Z	arrenlex	omegacenti	You'll only get 16-bit colour depth, rather than 32-bit colour depth, but the right res.
+2007-03-07T12:05:00.000Z	arrenlex	omegacenti	Yes, why?
+2007-03-07T12:06:00.000Z	arrenlex	omegacenti	http://paste.ubuntu-nl.org/9050/ <-- lines 117 and 119 go to 16 instead of 24.
+2007-03-07T12:06:00.000Z	omegacenti	arrenlex	http://paste.ubuntu-nl.org/9055/
+2007-03-07T12:06:00.000Z	arrenlex	omegacenti	Yep, 117 and 119
+2007-03-07T12:07:00.000Z	omegacenti	arrenlex	Okay I changed the lines you told me to. Restart X or restart computer..?
+2007-03-07T12:09:00.000Z	arrenlex	omegacenti	Restart x
+2007-03-07T12:11:00.000Z	omegacenti	arrenlex	By any chance do you know how to tell whether or not the resolution changed?
+2007-03-07T12:11:00.000Z	arrenlex	omegacenti	You can't even tell?! XD
+2007-03-07T12:11:00.000Z	omegacenti	arrenlex	in screen resolution manager it still says 1024x768
+2007-03-07T12:11:00.000Z	arrenlex	omegacenti	Go to that place in X and see if that option has become available.
+2007-03-07T12:12:00.000Z	omegacenti	arrenlex	 um... what place in X...
+2007-03-07T12:12:00.000Z	arrenlex	omegacenti	in gnome. The one that the nice people gave you after I shouted yo, channel.
+2007-03-07T12:13:00.000Z	omegacenti	arrenlex	do you mean the system-->preferences--> screen resolution?
+2007-03-07T12:13:00.000Z	arrenlex	omegacenti	Yes
+2007-03-07T12:14:00.000Z	omegacenti	arrenlex	It syays 1024x768
+2007-03-07T12:15:00.000Z	arrenlex	omegacenti	You can't change it?
+2007-03-07T12:15:00.000Z	arrenlex	omegacenti	Post a new /var/log/Xorg.0.log for kicks, but I'm pretty sure I'm beat for good this time.
+2007-03-07T12:15:00.000Z	omegacenti	arrenlex	Not unless I am missing something more obvious then trying to click it and seeing only 1024x768
+2007-03-07T12:16:00.000Z	omegacenti	arrenlex	log http://paste.ubuntu-nl.org/9057/
+2007-03-07T12:16:00.000Z	arrenlex	omegacenti	(II) I810(0): Not using mode "800x600" (no mode of this name). Yep, I'm beat. = /
+2007-03-07T12:17:00.000Z	arrenlex	omegacenti	I'm sorry...
+2007-03-07T12:18:00.000Z	omegacenti	arrenlex	I stand by my words that you are a good man and that you tried your damndest. Thankyou for all the time you allowed for me.
+2007-03-07T13:06:00.000Z	arrenlex	omegacenti	So did [vali]  help you get it working?
+2007-03-07T13:06:00.000Z	omegacenti	arrenlex	[vali]  is working on it right now.

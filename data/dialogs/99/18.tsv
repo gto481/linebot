@@ -1,0 +1,99 @@
+2009-08-27T06:12:00.000Z	aj_444		I am having trouble shutting down ubuntu. I get as far as the ubuntu screen and the line going the opposite direction it does at startup. Then the screen goes black and theres a blinking white - up in the left hand corner. There it stays. I've wa
+2009-08-27T06:13:00.000Z	aj_444		ed around five minutes and still nothing
+2009-08-27T06:13:00.000Z	sebsebseb	aj_444	does it turn off  on it's own like it's meant to or not?
+2009-08-27T06:13:00.000Z	sebsebseb	aj_444	does the computer still turn off on it's own?
+2009-08-27T06:14:00.000Z	aj_444	sebsebseb	No. I have to hold down the power button to get it to shut down.
+2009-08-27T06:15:00.000Z	sebsebseb	aj_444	I see,   well  not sure what's causing it, but   what I do know is, that you can  hold down your power button and turn off  a  Linux distro,  without it  complaining at you the next time you turn it on again, like Windows would
+2009-08-27T06:15:00.000Z	sebsebseb	aj_444	basically  you  don't have to  shut down  like  you would Windows,  just use the power button if you like
+2009-08-27T06:16:00.000Z	aj_444	sebsebseb	I remember reading somewhere it was bad for your comptuer to do that
+2009-08-27T06:16:00.000Z	sebsebseb	aj_444	I  think if you  switch it off via the plug then, yes possibily
+2009-08-27T06:16:00.000Z	sebsebseb	aj_444	,but  via the power button  it should be alright,  plus then the hardware knows, it's going to turn off?
+2009-08-27T06:17:00.000Z	aj_444	sebsebseb	Mmkay.
+2009-08-27T06:23:00.000Z	sebsebseb	aj_444	your issue will probably disappper in Karmic,  which isn't released as a final yet.   also  HAL is being replaced in that one
+2009-08-27T06:23:00.000Z	aj_444	sebsebseb	I am actually running karmic currently. jaunty wouldn't recogonize my wireless/ethernet
+2009-08-27T06:23:00.000Z	sebsebseb	aj_444	ah ha I see
+2009-08-27T06:24:00.000Z	sebsebseb	aj_444	same here,   I think  I  had  a similar issue before,  or was that the vm,   by the way  for Karmic help you should be using #ubuntu+1 really
+2009-08-27T06:24:00.000Z	sebsebseb	aj_444	this psyicail install seems to be shutting down fine, but the vm I had before this was a bit hmm
+2009-08-27T06:25:00.000Z	aj_444	sebsebseb	oh. I didn't know there was a karmic help irc.
+2009-08-27T06:30:00.000Z	aj_444	sebsebseb	I went to ubuntu+1.. there isn't anyone responding
+2009-08-27T06:31:00.000Z	sebsebseb	aj_444	just wait
+2009-08-27T06:32:00.000Z	aj_444	sebsebseb	I'll try. <_<
+2009-08-30T02:34:00.000Z	sebsebseb	aj_444	yes
+2009-08-30T02:34:00.000Z	aj_444	sebsebseb	How would I go about doing that?
+2009-08-30T02:35:00.000Z	sebsebseb	aj_444	altough a waste of a DVD really space wise, since the ISO is really for a CD
+2009-08-30T02:35:00.000Z	sebsebseb	aj_444	download  the ISO, and check the ISO before downloading that's a good idea
+2009-08-30T02:35:00.000Z	sebsebseb	aj_444	uh before burning I meant
+2009-08-30T02:36:00.000Z	sebsebseb	aj_444	and make sure your burning the contents of the ISO, rather than the ISO itself
+2009-08-30T02:36:00.000Z	aj_444	sebsebseb	Is there a certain program I should use?
+2009-08-30T02:36:00.000Z	sebsebseb	aj_444	I assume your on Windows right now?
+2009-08-30T02:36:00.000Z	aj_444	sebsebseb	Vista. Yes.
+2009-08-30T02:37:00.000Z	sebsebseb	aj_444	imgburn is good and will do it,  but most proper burning softwares, can do  this these days
+2009-08-30T02:37:00.000Z	aj_444	sebsebseb	is that a free program?
+2009-08-30T02:37:00.000Z	sebsebseb	aj_444	if not all the proper ones,   Nero etc,   and yes  Imgburn is free
+2009-08-30T02:37:00.000Z	sebsebseb	aj_444	as in price, not freedom, for imgburn
+2009-08-30T02:39:00.000Z	aj_444	sebsebseb	so I want to write and image file to a disk?
+2009-08-30T02:40:00.000Z	sebsebseb	aj_444	yes
+2009-08-30T02:40:00.000Z	sebsebseb	aj_444	and I suggested checking that your download is good before burning
+2009-08-30T02:41:00.000Z	aj_444	sebsebseb	how do if the download is good?
+2009-08-30T02:41:00.000Z	sebsebseb	aj_444	already  gave the bot thing to you, but won't hurt doing it again, but hmm someone beat me to that
+2009-08-30T02:42:00.000Z	sebsebseb	aj_444	here's my reply to what you told me in pm]
+2009-08-30T04:18:00.000Z	sebsebseb	aj_444	how much RAM?
+2009-08-30T04:18:00.000Z	sebsebseb	aj_444	oh it's you again
+2009-08-30T04:19:00.000Z	aj_444	sebsebseb	yup. Uh, it says 256mb. thats what it says in the bios
+2009-08-30T04:19:00.000Z	sebsebseb	aj_444	ok  that explains it  maybe
+2009-08-30T04:19:00.000Z	sebsebseb	aj_444	altough Ubuntu can boot on 256MB ARM
+2009-08-30T04:19:00.000Z	sebsebseb	aj_444	it's 128MB   where  you got to do something a little special
+2009-08-30T04:20:00.000Z	aj_444	sebsebseb	okay. hold on. brb.
+2009-08-30T04:22:00.000Z	sebsebseb	aj_444	when you get back see above, my messages to   trism
+2009-08-30T04:24:00.000Z	aj_444	sebsebseb	so what should i do?
+2009-08-30T04:25:00.000Z	sebsebseb	aj_444	see above my messages to trism
+2009-08-30T04:25:00.000Z	sebsebseb	aj_444	or the SWAP trick
+2009-08-30T04:25:00.000Z	sebsebseb	aj_444	 You can get the Gparted Live CD and  put on your SWAP partition
+2009-08-30T04:26:00.000Z	aj_444	sebsebseb	I have no clue what that is.
+2009-08-30T04:26:00.000Z	sebsebseb	aj_444	or   use the alternate CD
+2009-08-30T04:28:00.000Z	sebsebseb	aj_444	you can  put  on a  512MB or so SWAP partition   on the hard disk with the Gparted CD,  and  hopefuly the desktop CD will  boot up properly, and that will probably be the case,   or do the alternate yeah
+2009-08-30T04:28:00.000Z	sebsebseb	aj_444	  and you want to get rid of the Windows on there, and anything in it, right?
+2009-08-30T04:28:00.000Z	aj_444	sebsebseb	yup
+2009-08-30T04:31:00.000Z	aj_444	sebsebseb	so then for the alternative method, I do the same thing?
+2009-08-30T04:32:00.000Z	sebsebseb	aj_444	what same thing?  md5sum? yep
+2009-08-30T04:32:00.000Z	sebsebseb	aj_444	 just  you get a differnet code
+2009-08-30T04:32:00.000Z	aj_444	sebsebseb	I mean burn to a disc.
+2009-08-30T04:32:00.000Z	sebsebseb	aj_444	yes
+2009-08-30T04:33:00.000Z	aj_444	sebsebseb	do you think this'll work?
+2009-08-30T04:35:00.000Z	sebsebseb	aj_444	it's worth a try
+2009-08-30T04:35:00.000Z	sebsebseb	aj_444	 you also can do the SWAP trick
+2009-08-30T04:35:00.000Z	aj_444	sebsebseb	whats the swap trick?
+2009-08-30T04:36:00.000Z	sebsebseb	aj_444	where you put a 512MB or so SWAP partition on the hard disk using the Gparted Live CD,  and then try  and boot up  the Desktop CD again
+2009-08-30T04:36:00.000Z	sebsebseb	aj_444	well that works for 128MB RAM,   and  really yours should be booting up properly with 256MB RAM, but maybe it will help  with that as well.
+2009-08-30T04:36:00.000Z	sebsebseb	aj_444	did you md5sum the ISO for desktop though?
+2009-08-30T04:36:00.000Z	aj_444	sebsebseb	is there a different distro I could use?
+2009-08-30T04:37:00.000Z	sebsebseb	aj_444	there are two that are specifically made for older hardware
+2009-08-30T04:37:00.000Z	aj_444	sebsebseb	what are those?
+2009-08-30T04:37:00.000Z	sebsebseb	aj_444	,but try  alternate  first, and then if that don't work SWAP  trick,  and then   well  other distros sure
+2009-08-30T04:38:00.000Z	aj_444	sebsebseb	I'd have to install a torrent, which I'm not interested in doing.
+2009-08-30T04:38:00.000Z	sebsebseb	aj_444	Damn Small Linux  and there's Puppy Linux plus many versions of it,  Puppy  being the better of the two
+2009-08-30T04:38:00.000Z	aj_444	sebsebseb	mmkay. I'll check those out. do they have support forums like this?
+2009-08-30T04:38:00.000Z	sebsebseb	aj_444	I said to do those as option three
+2009-08-30T04:38:00.000Z	sebsebseb	aj_444	if opton one or two won't work, and Ubuntu has better support
+2009-08-30T04:39:00.000Z	sebsebseb	aj_444	 Ubuntu has much better support
+2009-08-30T04:39:00.000Z	sebsebseb	aj_444	since a lot more users
+2009-08-30T04:39:00.000Z	sebsebseb	aj_444	what you mean install a torrent?  that's one way you can download   Linux ISO's  usaully though, torrents
+2009-08-30T04:40:00.000Z	sebsebseb	aj_444	and you can download the alternate CD without using a   torrent, same thing for the Gparted Live CD
+2009-08-30T04:40:00.000Z	aj_444	sebsebseb	that isn't an option on the alternative downloads page.
+2009-08-30T04:41:00.000Z	sebsebseb	aj_444	what page are you on?
+2009-08-30T04:41:00.000Z	aj_444	sebsebseb	http://www.ubuntu.com/getubuntu/downloadmirrors#alternative
+2009-08-30T04:41:00.000Z	sebsebseb	aj_444	the alternateve or whatever, is going on the old desktop?  not  a netbook, right?
+2009-08-30T04:41:00.000Z	aj_444	sebsebseb	the gateway is a laptop
+2009-08-30T04:44:00.000Z	sebsebseb	aj_444	the mirrors at the bottom of the page seem to be for ISO's anyway   http://releases.ubuntu.com/9.04/   and you can download the ISO  as well as get the md5sum,  when you click on those links
+2009-08-30T04:46:00.000Z	aj_444	sebsebseb	Okay. Now we wait.
+2009-08-30T05:24:00.000Z	aj_444	sebsebseb	okay, so I did the alternative install and now I'm getting an acpi: invalid _PTC data message
+2009-08-30T05:24:00.000Z	sebsebseb	aj_444	no idea what that means, did you Google it?
+2009-08-30T05:25:00.000Z	aj_444	sebsebseb	actually, I waited it out.. and I think its installing
+2009-08-30T05:37:00.000Z	aj_444	sebsebseb	So, neither of the methods you suggested worked.
+2009-08-30T05:37:00.000Z	sebsebseb	aj_444	you did  the SWAP on gparted cd?
+2009-08-30T05:38:00.000Z	aj_444	sebsebseb	yup.
+2009-08-30T05:38:00.000Z	sebsebseb	aj_444	well  I  guess  you got hardware problems, after all the XP on there, won't even boot up
+2009-08-30T05:38:00.000Z	aj_444	sebsebseb	do you think I could fit puppy on there?
+2009-08-30T05:38:00.000Z	sebsebseb	aj_444	of course it's  tiny
+2009-08-30T05:39:00.000Z	aj_444	sebsebseb	I guess that's what I'll have to try. Thanks.
+2009-08-30T05:39:00.000Z	sebsebseb	aj_444	 if you got  USB  stick  you can probably run  them from that even

@@ -1,0 +1,97 @@
+2008-09-24T16:50:00.000Z	shomon		how do I connect to a wireless network? I'm using madwifi and ubuntu hardy
+2008-09-24T16:51:00.000Z	shomon		missing a "g" there ActionParsnip
+2008-09-24T16:51:00.000Z	ActionParsnip	shomon	huh??
+2008-09-24T16:52:00.000Z	ActionParsnip	shomon	thats the command
+2008-09-24T16:52:00.000Z	ActionParsnip	shomon	bah
+2008-09-24T16:53:00.000Z	ActionParsnip	shomon	tab complete makes me lazy
+2008-09-24T16:54:00.000Z	ActionParsnip	shomon	lshw -C network
+2008-09-24T17:00:00.000Z	ActionParsnip	shomon	try renaming you /etc/network/interface file and rebooting
+2009-08-27T15:07:00.000Z	ActionParsnip	shomon	did the previous kernel not work for you?
+2010-07-07T22:06:00.000Z	ActionParsnip	shomon	use brasero / gnomebaker etc, simply open the iso with the burner and it will start the burning procedure, burn ISOs slowly and MD5 check the ISO *BEFORE* burning
+2010-07-08T04:34:00.000Z	ActionParsnip	shomon	ffmpeg -i video.3gp -b 250 -s 160×120 -r 15 -f avi -an video.avi
+2010-07-08T04:36:00.000Z	ActionParsnip	shomon	you will need to install ffmpeg
+2010-07-08T04:36:00.000Z	ActionParsnip	shomon	or you can try handbrake or winff
+2010-07-08T04:37:00.000Z	ActionParsnip	shomon	http://swik.net/Linux/Technorati+Linux+Feed/Convert+movies+in+mobile+(3gp)+to+AVI+in+Ubuntu/c0ual
+2010-07-08T04:42:00.000Z	ActionParsnip	shomon	both are very powerful
+2010-11-17T03:29:00.000Z	ActionParsnip	shomon	what hardware is misbehaving?
+2010-11-17T03:30:00.000Z	ActionParsnip	shomon	what is the output of: sudo lshw -C network   ?
+2010-11-17T03:31:00.000Z	ActionParsnip	shomon	use: http://pastie.org to give the output (or another pastebin if you prefer)
+2010-11-17T03:31:00.000Z	ActionParsnip	shomon	what version, is it a Broadcom 43xx ?
+2010-11-17T03:33:00.000Z	ActionParsnip	shomon	ok is the device attached via USB or is it an internal device?
+2010-11-17T03:34:00.000Z	ActionParsnip	shomon	also can you prepend text addressed to me with my nick, see how the text to you is highlighted. thats not an accident
+2010-11-17T03:34:00.000Z	ActionParsnip	shomon	type my nick to address stuff to me, you can use tab to autocomplete
+2010-11-17T03:35:00.000Z	ActionParsnip	shomon	is it USB or is the wireless device in side the system?
+2010-11-17T03:36:00.000Z	ActionParsnip	shomon	how does the wireless connect to the system? does it stick out of the system, connected via USB or is the device not attached externally and is part of the system??
+2010-11-17T03:36:00.000Z	ActionParsnip	shomon	ok cool, can you give the output of: lspci   use pastebin to give the output
+2010-11-17T03:37:00.000Z	ActionParsnip	shomon	run: lspci    what is the line relating to the wireless?
+2010-11-17T03:39:00.000Z	ActionParsnip	shomon	http://wwww.ubuntuforums.org/showthread.php?t=1561098
+2010-11-17T03:39:00.000Z	ActionParsnip	shomon	use the hardware activation tool, seems to have the driver youv need
+2010-11-17T04:20:00.000Z	shomon	ActionParsnip	I now connected the computer and am writing from there, using a micronet usb stick. but still trying to enable my internal wireless
+2010-11-17T04:21:00.000Z	shomon	ActionParsnip	on the link you sent before it said to update my broadcom driver. do I do this via the hardware drivers area?
+2010-11-17T04:23:00.000Z	ActionParsnip	shomon	yes, you will need a connection to grab the driver with so use a wired connection
+2010-11-17T04:23:00.000Z	shomon	ActionParsnip	I mean a wireless usb key
+2010-11-17T04:24:00.000Z	ActionParsnip	shomon	ok then run:  lsusb  what is the 8 character Hex ID you have for the device
+2010-11-17T04:25:00.000Z	shomon	ActionParsnip	I'm not trying to get this one to work. I plugged it in from my desktop computer, so as to get on here and ask you how to get the internal wireless working
+2010-11-17T04:25:00.000Z	shomon	ActionParsnip	but the hex code is 0bda:8189
+2010-11-17T04:29:00.000Z	ActionParsnip	shomon	https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsRealTek
+2010-11-17T04:29:00.000Z	shomon	ActionParsnip	you think my internal card is a realtek?
+2010-11-17T04:31:00.000Z	shomon	ActionParsnip	I think the realtek is the usb wireles, but I'm trying to fix the internal broadcom wireless card that came with this hp g62 laptop
+2010-11-17T04:34:00.000Z	ActionParsnip	shomon	its a realtek chip and now you know the model of the chip so yuou can find guides on how to make it run, strange its saying broadcom
+2010-11-17T04:35:00.000Z	ActionParsnip	shomon	you can always use the windows driver+ndisgtk if push comes to shove
+2010-11-17T04:35:00.000Z	shomon	ActionParsnip	I'm not sure if you mean the internal one or the one I'm using now
+2010-11-17T04:37:00.000Z	ActionParsnip	shomon	oh you have TWO wireless adapter, that makes more sense. ok the usb one uses a realtek chip and you can grab guides for that online
+2010-11-17T04:38:00.000Z	ActionParsnip	shomon	the internal one is a broadcom and should be usable once you use the broadcom how to
+2010-11-17T04:38:00.000Z	shomon	ActionParsnip	thanks very much!
+2010-11-17T04:42:00.000Z	shomon	ActionParsnip	I'm now not sure if my internal wireless card is actually broadcom. I just ran lscpi -vvnn  | grep 14e4 and it says "network controller: Broadcom" but no reference to a wireless card
+2010-11-17T04:49:00.000Z	shomon	ActionParsnip	I upgraded the driver via system/hardware drivers and now it works, thanks very much for your help!
+2010-11-17T04:54:00.000Z	ActionParsnip	shomon	np bro. Enjoy :)
+2010-11-17T13:19:00.000Z	ActionParsnip	shomon	np man
+2011-04-20T16:42:00.000Z	ActionParsnip	shomon	i'd ask in #vbox
+2011-04-20T16:44:00.000Z	ActionParsnip	shomon	power off the vbox and go into the settings, there are shared folders there. It also shows how to map them to the OS
+2011-04-20T16:45:00.000Z	ActionParsnip	shomon	if you are using samba to share on the LAN you can use a bridged network connection and access the shares as if the virtual system was a real system of it'sown
+2011-04-20T16:46:00.000Z	ActionParsnip	shomon	can be easier although not as graceful, the #vbox guys will help. You will also find youtube vids detailing it too
+2011-05-02T17:26:00.000Z	ActionParsnip	shomon	is it not in the partner repo?
+2011-05-02T17:28:00.000Z	ActionParsnip	shomon	add the repo and you will be able to install it like any other app
+2011-08-05T15:36:00.000Z	ActionParsnip	shomon	memory test is a good start
+2011-08-05T15:37:00.000Z	ActionParsnip	shomon	hold shift at boot, select the memtest from the menu you see
+2011-08-05T15:38:00.000Z	ActionParsnip	shomon	if you have bad RAM try removing a stcik (after powering OFF) and retesting. This will help diagnose the bad stick
+2011-10-07T17:45:00.000Z	ActionParsnip	shomon	install imagemagick and run:  sleep 10; import ~/sceen.png     the 10 is seconds to get the screen setup. Then draw a box around what you want to screenshot
+2011-11-26T15:59:00.000Z	ActionParsnip	shomon	the install DVD has a lot more apps on the disk for offline use
+2011-11-26T16:02:00.000Z	ActionParsnip	shomon	yes but its offtopic and not supported here
+2011-11-27T17:10:00.000Z	ActionParsnip	shomon	is it the same as all users? Make a new one if you only have one
+2011-11-27T17:13:00.000Z	ActionParsnip	shomon	its worth exploring
+2011-11-27T17:17:00.000Z	ActionParsnip	shomon	logging on as root isn't supported or needed
+2011-12-01T03:18:00.000Z	ActionParsnip	shomon	alsamixer
+2011-12-01T03:19:00.000Z	shomon	ActionParsnip	it gives all on high but no sound comes out when I play videos on flash
+2011-12-01T03:21:00.000Z	ActionParsnip	shomon	can you give a pastebin of the output of:   lsb_release -a; uname -a; dpkg -l | egrep 'flash|gnash|swf|spark'
+2011-12-01T03:25:00.000Z	shomon	ActionParsnip	http://pastebin.com/GA6Y0Zyg
+2011-12-01T03:28:00.000Z	ActionParsnip	shomon	try: sudo apt-get --purge remove flashplugin-installer flashplugin-nonfree; sudo apt-get update; sudo apt-get install flashplugin-nonfree
+2011-12-01T03:42:00.000Z	shomon	ActionParsnip	I did that and now mplayer is playing a video with no sound, and at a superfast speed?
+2011-12-01T03:43:00.000Z	ActionParsnip	shomon	how about VLC?
+2011-12-01T03:44:00.000Z	ActionParsnip	shomon	could try the mplayer daily build
+2011-12-02T01:22:00.000Z	ActionParsnip	shomon	check the audio output method in the settings
+2011-12-13T22:40:00.000Z	ActionParsnip	shomon	run it from terminal, output in the terminal may help
+2011-12-13T22:43:00.000Z	shomon	ActionParsnip	I have all that output, may I pastebin it for you to see?
+2011-12-13T22:46:00.000Z	shomon	ActionParsnip	http://pastebin.com/BC39YX4e is the output from banshee.. the "critical" bit is when I clicked on the podcast tab
+2011-12-29T18:38:00.000Z	ActionParsnip	shomon	is it muted in alsamixer ?
+2011-12-29T18:38:00.000Z	shomon	ActionParsnip	but I'm getting a connection refused error when running it in the terminal
+2011-12-29T18:39:00.000Z	ActionParsnip	shomon	try the deb from the skype site
+2011-12-29T22:56:00.000Z	ActionParsnip	shomon	does the mic work in other apps?
+2011-12-29T22:56:00.000Z	ActionParsnip	shomon	beat me to it
+2011-12-29T22:56:00.000Z	ActionParsnip	shomon	is it a laptop or a branded pc?
+2011-12-29T22:56:00.000Z	ActionParsnip	shomon	what make and model?
+2011-12-29T23:04:00.000Z	shomon	ActionParsnip	sorry you got cut off there -it's an acer g62
+2012-04-10T02:18:00.000Z	ActionParsnip	shomon	boot with the device detached, log in and let the OS settle, plug it in and wait 10 seconds, then run:  dmesg | tail   may give clues
+2012-04-10T02:19:00.000Z	ActionParsnip	shomon	it will give clues as to what is going on
+2012-04-10T02:21:00.000Z	ActionParsnip	shomon	dmesg is all I can suggest. Once its been in a while you may see it if you run:  sudo lshw -C disk; sudo lshw -C drive
+2012-04-25T13:02:00.000Z	ActionParsnip	shomon	http://www.linux-on-laptops.com/toshiba.html
+2012-08-14T23:50:00.000Z	ActionParsnip	shomon	use software centre
+2012-09-24T15:29:00.000Z	ActionParsnip	shomon	sudo usermod -a -G sudo username
+2012-09-24T15:29:00.000Z	ActionParsnip	shomon	next time the user will log in they will be able to use sudo
+2012-09-24T15:31:00.000Z	ActionParsnip	shomon	you need to run it as someone who can ALREADY use sudo
+2012-09-24T15:32:00.000Z	ActionParsnip	shomon	if you wish, you can boot to root recovery console and run the command there :)
+2012-09-24T15:34:00.000Z	ActionParsnip	shomon	any user whom can run admin tasks needs to run the command as it changes the access of the user, users cannot add themselves to groups (unless there is a group password and the user has been given the password)
+2012-09-24T15:34:00.000Z	ActionParsnip	shomon	so root or any other user in the sudo group can do i
+2012-09-24T15:35:00.000Z	ActionParsnip	shomon	if you run:  whoami   does it say 'root'?
+2012-09-24T15:35:00.000Z	ActionParsnip	shomon	weird
+2012-11-17T22:27:00.000Z	ActionParsnip	shomon	looks ok to me

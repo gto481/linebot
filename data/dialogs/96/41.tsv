@@ -1,0 +1,96 @@
+2007-10-10T13:58:00.000Z	ultraviolet_		hi, i had ubuntu-server 6.06 installed in my comp, and i just installed gutsy in other partition. now that it works fine, i want to remove the other partition and resize the gutsy one for the whole disk. i tried to do that with gparted, but the server partition seems to be blocked, and it recommends i do it manually. how do i do that?
+2007-10-10T13:59:00.000Z	nrdb	ultraviolet_	I wouldn't try that, you could mount the other partition as /home or something like that.
+2007-10-10T14:01:00.000Z	ultraviolet_	nrdb	i will be able to use it with gutsy data?
+2007-10-10T14:04:00.000Z	nrdb	ultraviolet_	1) backup anything you want on the partition. 2) copy you current /home partition into the root of the partition 3) create an entry in you /etc/fstab 4) reboot.
+2007-10-10T14:05:00.000Z	nrdb	ultraviolet_	do you know how to mount partitions ?
+2007-10-10T14:05:00.000Z	ultraviolet_	nrdb	thanks
+2007-10-10T14:05:00.000Z	ultraviolet_	nrdb	not manually. i used ubuntu installation CD to create the other ones
+2007-10-10T14:07:00.000Z	nrdb	ultraviolet_	ok step by step, have you got access to the computer now ? are you using for this communication ?
+2007-10-10T14:07:00.000Z	ultraviolet_	nrdb	yes
+2007-10-10T14:09:00.000Z	nrdb	ultraviolet_	ok, so you can't reboot it so all the setup needs to be done before resetting.
+2007-10-10T14:09:00.000Z	nrdb	ultraviolet_	is there anything important you want to keep on the partition ?
+2007-10-10T14:10:00.000Z	ultraviolet_	nrdb	not at all
+2007-10-10T14:10:00.000Z	nrdb	ultraviolet_	ok, is there plenty of spare space on the partition ?
+2007-10-10T14:11:00.000Z	ultraviolet_	nrdb	15Gb
+2007-10-10T14:12:00.000Z	nrdb	ultraviolet_	that should be enough.  how many users are setup for that computer ?
+2007-10-10T14:13:00.000Z	ultraviolet_	nrdb	two: me and a root account
+2007-10-10T14:14:00.000Z	nrdb	ultraviolet_	fyi, root isn't a seperate account.    ok,  cd to the /home directory
+2007-10-10T14:14:00.000Z	ultraviolet_	nrdb	ok
+2007-10-10T14:15:00.000Z	nrdb	ultraviolet_	do a 'ls' you should see one directory ?
+2007-10-10T14:15:00.000Z	ultraviolet_	nrdb	yes, my name on it
+2007-10-10T14:16:00.000Z	nrdb	ultraviolet_	is the partition you want to use mounted ?
+2007-10-10T14:17:00.000Z	ultraviolet_	nrdb	i can see it in gparted, it's hda2 and hda6 (linux swap). what is it, by the way?
+2007-10-10T14:20:00.000Z	nrdb	ultraviolet_	swap is the partition used for the Linux virtual memory, its ok.  I presume that hda1 has the install you want to keep ?
+2007-10-10T14:20:00.000Z	ultraviolet_	nrdb	i also presume that : ) but I'm willing to take risks
+2007-10-10T14:22:00.000Z	nrdb	ultraviolet_	we can find out, if you type the command 'cat /proc/mounts' near the top you should see a line like '/dev/hda1 / ext3 ....'
+2007-10-10T14:25:00.000Z	ultraviolet_	nrdb	my that might help: at gparted it finds: hda1 ext3 20Gb | hda3 ext3 15Gb (boot flagged) |  hda2 extended 1Gb | hda6 linux-swap 684Mb | hda5 linux-swap 684Mb
+2007-10-10T14:28:00.000Z	ultraviolet_	nrdb	cat output is too long, i don't i can paste it here. is there any particular information you need?
+2007-10-10T14:30:00.000Z	nrdb	ultraviolet_	no hda2 !  is the partition you want to use visible at /media/hda3 ?
+2007-10-10T14:31:00.000Z	nrdb	ultraviolet_	I am trying to get a feel for your setup, so any commands don't do any damage.
+2007-10-10T14:31:00.000Z	ultraviolet_	nrdb	in media i have only cdrom and floppy
+2007-10-10T14:32:00.000Z	ultraviolet_	nrdb	ok here's cat output
+2007-10-10T14:34:00.000Z	ultraviolet_	nrdb	ok, just saw the pastebin stuff, but don't know how to use it, just a sec
+2007-10-10T14:34:00.000Z	nrdb	ultraviolet_	can you put it in the pastebin see above.
+2007-10-10T14:34:00.000Z	nrdb	ultraviolet_	cut/paste it in via firefox and give me the url it gives you.
+2007-10-10T14:36:00.000Z	ultraviolet_	nrdb	http://paste.ubuntu-nl.org/40131/
+2007-10-10T14:39:00.000Z	nrdb	ultraviolet_	ok got that !
+2007-10-10T14:40:00.000Z	nrdb	ultraviolet_	can you please do the same with /etc/mtab ?
+2007-10-10T14:43:00.000Z	ultraviolet_	nrdb	http://paste.ubuntu-nl.org/40132/
+2007-10-10T14:46:00.000Z	nrdb	ultraviolet_	ah! hda3 is your main partition.    so we want to mount hda1.   "cd /tmp" then "mkdir hda1"  then "mount -t auto /dev/hda1 /tmp/hda1"
+2007-10-10T14:47:00.000Z	nrdb	ultraviolet_	you might need to use "sudo mount -t auto /dev/hda1 /tmp/hda1"
+2007-10-10T14:47:00.000Z	ultraviolet_	nrdb	just did it
+2007-10-10T14:47:00.000Z	ultraviolet_	nrdb	it's only that?
+2007-10-10T14:48:00.000Z	nrdb	ultraviolet_	no!  we need to copy the home directory and change you setup slightly.  if you look a /tmp/hda1 you should see the partition you want to use.
+2007-10-10T14:49:00.000Z	ultraviolet_	nrdb	ok
+2007-10-10T14:52:00.000Z	nrdb	ultraviolet_	ok now copy the home directory. "cd /tmp/hda1" then "cp -r  /home/* /tmp/hda1"
+2007-10-10T14:54:00.000Z	ultraviolet_	nrdb	sorry but copy to where?
+2007-10-10T14:56:00.000Z	nrdb	ultraviolet_	the "cp -r /home/* /tmp/hda1" will copy it the drive mounted at /tmp/hda1 which should be the partition you want to use as your /home directory.
+2007-10-10T14:57:00.000Z	ultraviolet_	nrdb	sorry, i got it wrong. just did it
+2007-10-10T14:59:00.000Z	nrdb	ultraviolet_	if you now do a "ls -lA /tmp/hda1/<name>" you should see all your files.  make sure there are the directories starting with a '.' dot.
+2007-10-10T15:00:00.000Z	nrdb	ultraviolet_	opps! that directory is /tmp/hda1/<name>
+2007-10-10T15:00:00.000Z	ultraviolet_	nrdb	everything is up there
+2007-10-10T15:02:00.000Z	nrdb	ultraviolet_	ok! now we change things.  "cd /" then rename the home directory "sudo mv /home /home_old" then "sudo mkdir /home".
+2007-10-10T15:04:00.000Z	ultraviolet_	nrdb	should i do this from root or from tmp/hda1?
+2007-10-10T15:04:00.000Z	nrdb	ultraviolet_	from root thats why I put in the "cd /"
+2007-10-10T15:08:00.000Z	ultraviolet_	nrdb	just did a stupid thing. i closed terminal window, and now it can't open anymore, cause it doesn't find it
+2007-10-10T15:10:00.000Z	ultraviolet_	nrdb	can i access it through nautilus?
+2007-10-10T15:10:00.000Z	nrdb	ultraviolet_	try <alt> and <ctrl> then <f1> then login, and to return to the gui <alt> and <ctrl> then <F7>
+2007-10-10T15:10:00.000Z	nrdb	ultraviolet_	i will try again for that message
+2007-10-10T15:11:00.000Z	nrdb	ultraviolet_	try [alt]  and [ctrl]  then [F1]  and login in, use [alt]  and [ctrl]  then [F7]  to return to the gui.
+2007-10-10T15:13:00.000Z	ultraviolet_	nrdb	nothing happens
+2007-10-10T15:14:00.000Z	nrdb	ultraviolet_	the [alt]  and [ctrl]  then [F1]  didn't change the screen ?
+2007-10-10T15:14:00.000Z	ultraviolet_	nrdb	but i could also login as root and do all the renaming and cutting in nautilus, isn't it?
+2007-10-10T15:14:00.000Z	ultraviolet_	nrdb	not at all
+2007-10-10T15:15:00.000Z	nrdb	ultraviolet_	I don't think you are allowed to login as root.
+2007-10-10T15:16:00.000Z	ultraviolet_	nrdb	i am, i created a root account, and change the settings, so i can login to gnome as root
+2007-10-10T15:16:00.000Z	ultraviolet_	nrdb	i'll try it, if i don't come back anymore, i just wanted to say thanks
+2007-10-10T15:16:00.000Z	nrdb	ultraviolet_	ok, you could try a 'switch user'
+2007-10-10T15:17:00.000Z	nrdb	ultraviolet_	you can reverse the 'mv' with the LiveCD.
+2007-10-10T15:19:00.000Z	nrdb	ultraviolet_	hi
+2007-10-10T15:19:00.000Z	ultraviolet_	nrdb	worked
+2007-10-10T15:20:00.000Z	ultraviolet_	nrdb	now i opened terminal. what do i do again?
+2007-10-10T15:20:00.000Z	nrdb	ultraviolet_	ok! first lets check the copy to make sure its worked ok.  first 'umount /tmp/hda1'
+2007-10-10T15:22:00.000Z	ultraviolet_	nrdb	"umont: command not found", the umount command path is probably changed now, so it doesn't find it...
+2007-10-10T15:22:00.000Z	nrdb	ultraviolet_	umount
+2007-10-10T15:23:00.000Z	ultraviolet_	nrdb	that's what i put, just mistyped now
+2007-10-10T15:23:00.000Z	nrdb	ultraviolet_	try /bin/umount /tmp/hda1
+2007-10-10T15:23:00.000Z	ultraviolet_	nrdb	worked
+2007-10-10T15:24:00.000Z	nrdb	ultraviolet_	ah!  the path doesn't seem to be setup. ok we will work around that.
+2007-10-10T15:25:00.000Z	nrdb	ultraviolet_	now try "/bin/mount -t ext3 /dev/hda1 /home"
+2007-10-10T15:25:00.000Z	ultraviolet_	nrdb	ok
+2007-10-10T15:25:00.000Z	nrdb	ultraviolet_	now "cd /home/[login name] "
+2007-10-10T15:26:00.000Z	nrdb	ultraviolet_	is everything there !
+2007-10-10T15:26:00.000Z	ultraviolet_	nrdb	yup
+2007-10-10T15:28:00.000Z	nrdb	ultraviolet_	good now to make it automatic.  "nano /etc/fstab"  and add a line at the bottom "/dev/hda1   /home   ext3   defaults   0 0"
+2007-10-10T15:29:00.000Z	ultraviolet_	nrdb	done.
+2007-10-10T15:29:00.000Z	nrdb	ultraviolet_	[ctrl]  O (as in orange) to save
+2007-10-10T15:29:00.000Z	ultraviolet_	nrdb	saved
+2007-10-10T15:30:00.000Z	nrdb	ultraviolet_	[ctrl]  X to exit
+2007-10-10T15:30:00.000Z	ultraviolet_	nrdb	ok
+2007-10-10T15:32:00.000Z	nrdb	ultraviolet_	do you see what that is going to do.
+2007-10-10T15:33:00.000Z	ultraviolet_	nrdb	i supposed i moved everything i had from hda3 to hda1, was that the question?
+2007-10-10T15:34:00.000Z	ultraviolet_	nrdb	now i need to umount hda3 and resize hda1, isn't it?
+2007-10-10T15:35:00.000Z	nrdb	ultraviolet_	if you reset now, you should be able to log in.  if every thing goes ok you will need to clean the /home directory. of all the extra directory left over. (i.e. everything but the [user name]  directory).   Got to go for dinner now will check back latter to see if things are OK.
+2007-10-10T15:36:00.000Z	ultraviolet_	nrdb	ok. thanks a lot
+2007-10-10T15:36:00.000Z	ultraviolet_	nrdb	really. have a nice dinner
+2007-10-10T15:36:00.000Z	nrdb	ultraviolet_	see you latter.

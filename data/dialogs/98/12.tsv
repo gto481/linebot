@@ -1,0 +1,98 @@
+2010-01-02T07:30:00.000Z	NamVet		Anybody: In Karmic Koala OS is the file mgr Nautilus?
+2010-01-02T07:30:00.000Z	EastDallas	NamVet	Yes
+2010-01-02T07:31:00.000Z	EastDallas	NamVet	Hey Neighbor!
+2010-01-02T07:31:00.000Z	NamVet	EastDallas	Hey neighbor, how do I access Nautilus file mgr?
+2010-01-02T07:32:00.000Z	EastDallas	NamVet	Choose anything from the places menu.
+2010-01-02T07:32:00.000Z	NamVet	EastDallas	that is my problem nothing in the Places folder opens, the timer spins and quit w/ no Joy
+2010-01-02T07:33:00.000Z	EastDallas	NamVet	Try running from a terminal: nautilus
+2010-01-02T07:33:00.000Z	NamVet	EastDallas	do you have the exact cmd? Newbie here.
+2010-01-02T07:34:00.000Z	EastDallas	NamVet	nautilus
+2010-01-02T07:34:00.000Z	NamVet	EastDallas	thx EastDallas I'll give it a shot
+2010-01-02T07:34:00.000Z	EastDallas	NamVet	let me know what errors it gives if it won't open.
+2010-01-02T07:36:00.000Z	NamVet	EastDallas	coming up; got errors
+2010-01-02T07:37:00.000Z	NamVet	EastDallas	(nautilus:2657): Eel-CRITICAL **: eel_preferences_get_boolean: assertion `preferences_is_initialized ()' failed
+2010-01-02T07:38:00.000Z	EastDallas	NamVet	go to http://paste.ubuntu.com and paste the errors there.  Then post the link here.
+2010-01-02T07:39:00.000Z	NamVet	EastDallas	thank you, I was afraid that would happen. sry all
+2010-01-02T07:41:00.000Z	NamVet	EastDallas	i put it there at the link, don't know how that works. Hope I did it right
+2010-01-02T07:41:00.000Z	EastDallas	NamVet	What version of Ubuntu?
+2010-01-02T07:41:00.000Z	NamVet	EastDallas	9.10
+2010-01-02T07:42:00.000Z	EastDallas	NamVet	post the link to the page you get after you pressed send
+2010-01-02T07:42:00.000Z	NamVet	EastDallas	this all started trying to put Adobe Flashplayer so i could see YouTube vids.
+2010-01-02T07:42:00.000Z	NamVet	EastDallas	okay
+2010-01-02T07:43:00.000Z	NamVet	EastDallas	 http://paste.ubuntu.com/350204/
+2010-01-02T07:45:00.000Z	EastDallas	NamVet	 How did you install Flash?
+2010-01-02T07:45:00.000Z	NamVet	EastDallas	never did get it to install
+2010-01-02T07:46:00.000Z	EastDallas	NamVet	 How were you trying to install it?
+2010-01-02T07:46:00.000Z	NamVet	EastDallas	think i tried the something z , then .deb i am sure it was all wrong
+2010-01-02T07:46:00.000Z	EastDallas	NamVet	Are you familiar with Synaptic?
+2010-01-02T07:47:00.000Z	NamVet	EastDallas	I installed a downloader opensource so now I download the vids to watch them
+2010-01-02T07:49:00.000Z	NamVet	EastDallas	 I saved pictures of what the errors were but should of saved pictures of the cmds that screwed everything up. I will in the future
+2010-01-02T07:50:00.000Z	NamVet	EastDallas	I should bookmark this ubuntu pastebin?
+2010-01-02T07:50:00.000Z	EastDallas	NamVet	 Normally, you can install everything from within Synaptic.  Including Flash.  Don't worry about bookmarking that pastebin.  you can reproduce the error
+2010-01-02T07:53:00.000Z	EastDallas	NamVet	 Take a look at this link:  There's a patch near the end: https://bugs.launchpad.net/ubuntu/+source/nautilus/+bug/454234
+2010-01-02T07:53:00.000Z	NamVet	EastDallas	Okay, thanks
+2010-01-02T07:53:00.000Z	NamVet	EastDallas	do I need to sign in?
+2010-01-02T07:55:00.000Z	EastDallas	NamVet	 I was able to view it without signing in.
+2010-01-02T07:56:00.000Z	NamVet	EastDallas	is this where the patch is? https://launchpad.net/~erez-volk/+archive/nautilus
+2010-01-02T07:58:00.000Z	EastDallas	NamVet	Yes, click the link.  you can add the ppa by following the instrux under "adding this ppa to your system".
+2010-01-02T07:58:00.000Z	NamVet	EastDallas	rgr ty
+2010-01-02T08:04:00.000Z	NamVet	EastDallas	what would happen if i uninstalled Nautilus in Synaptic then reinstalled it?
+2010-01-02T08:05:00.000Z	EastDallas	NamVet	losha:  What if he completely removed it?
+2010-01-02T08:06:00.000Z	EastDallas	NamVet	losha: as opposed to regular removal
+2010-01-02T08:07:00.000Z	NamVet	EastDallas	losha: i'll give it a shot.
+2010-01-02T08:10:00.000Z	NamVet	EastDallas	Nautilus completely removed allong w/ desktop and Gnome should I log out and log back in then reinstall it?
+2010-01-02T08:10:00.000Z	EastDallas	NamVet	You completely removed gnome?
+2010-01-02T08:10:00.000Z	NamVet	EastDallas	that is what it said it was going to do w/ config files also
+2010-01-02T08:11:00.000Z	EastDallas	NamVet	I would try re-installing the package called ubuntu-desktop and don't log out first
+2010-01-02T08:13:00.000Z	NamVet	EastDallas	Dr_Willis: had to do something been reading forums & logs until I am blue in the face like i said this has been going on for almost 3wks. at my end on this.
+2010-01-02T08:14:00.000Z	EastDallas	NamVet	I think I would've just re-installed after a couple of days if I were you.  Did you install package ubuntu-desktop?
+2010-01-02T08:16:00.000Z	EastDallas	NamVet	are you reinstalling ubuntu-desktop?
+2010-01-02T08:40:00.000Z	NamVet	EastDallas	rgr I'll do it now
+2010-01-02T08:16:00.000Z	NamVet	EastDallas	the desktop was part of Nautilus, so what ever it installed w/ it
+2010-01-02T08:17:00.000Z	EastDallas	NamVet	Nautilus is part of gnome, gnome is not part of nautilus
+2010-01-02T08:17:00.000Z	NamVet	EastDallas	got the same errors as before
+2010-01-02T08:20:00.000Z	EastDallas	NamVet	 You need to reinstall the package ubuntu-desktop.  This is a must do.  YOu will have much bigger problems if you don't
+2010-01-02T08:20:00.000Z	NamVet	EastDallas	rgr that on it right now
+2010-01-02T08:22:00.000Z	EastDallas	NamVet	 Were you able to add that PPA and install the patched version of nautilus from that link I sent you?
+2010-01-02T08:23:00.000Z	NamVet	EastDallas	ubuntu desktop installing now
+2010-01-02T08:25:00.000Z	NamVet	EastDallas	ubuntu-desktop is back along w/ 23 files
+2010-01-02T08:25:00.000Z	EastDallas	NamVet	 Were you able to add that PPA and install the patched version of nautilus from that link I sent you?
+2010-01-02T08:25:00.000Z	NamVet	EastDallas	not as yet trying to understand it now
+2010-01-02T08:27:00.000Z	EastDallas	NamVet	Open Synaptic, go to Settings>Repositories>Other Software>Add> Enter this line: ppa:erez-volk/nautilus
+2010-01-02T08:28:00.000Z	EastDallas	NamVet	 Click 'Add Source'>Click 'Close'>Reload
+2010-01-02T08:30:00.000Z	EastDallas	NamVet	Click 'Mark all upgrades', then ensure 'Nautilus' is in the list.  Click 'Apply'
+2010-01-02T08:30:00.000Z	NamVet	EastDallas	rgr "ppa:erez-volk/nautilus" going now
+2010-01-02T08:32:00.000Z	NamVet	EastDallas	done
+2010-01-02T08:33:00.000Z	EastDallas	NamVet	YOu got the patched version of nautilus installed?
+2010-01-02T08:33:00.000Z	NamVet	EastDallas	did it the way you told me
+2010-01-02T08:33:00.000Z	EastDallas	NamVet	try opening nautilus
+2010-01-02T08:33:00.000Z	NamVet	EastDallas	rgr
+2010-01-02T08:34:00.000Z	NamVet	EastDallas	no joy
+2010-01-02T08:34:00.000Z	NamVet	EastDallas	same errors
+2010-01-02T08:36:00.000Z	NamVet	EastDallas	where I made the original mistake was going to the Adobe website to get the download
+2010-01-02T08:36:00.000Z	EastDallas	NamVet	Yeah, there's a version of flash that works fine available via Synaptic
+2010-01-02T08:37:00.000Z	EastDallas	NamVet	Unfortunately, we were all trained to go to the website from using Windows
+2010-01-02T08:37:00.000Z	NamVet	EastDallas	rgr I originally went in synaptic and did a search and it gave the link for the adobe flashplayer? new to Ubuntu so I clicked the link and the sheet hit the proverbial fan
+2010-01-02T08:39:00.000Z	NamVet	EastDallas	been installing Ubuntu on our computer club members' pc like crazy, they love it
+2010-01-02T08:39:00.000Z	EastDallas	NamVet	 YOu might need to enable the optional repositories in Synaptic.  Settings>Repositories>make sure the top 4 boxes are checked on the first tab
+2010-01-02T08:41:00.000Z	NamVet	EastDallas	they are already checked
+2010-01-02T08:41:00.000Z	EastDallas	NamVet	Is reinstalling an option at this point?  I've googled this error, and haven't really found any resolution other than that patch.
+2010-01-02T08:41:00.000Z	NamVet	EastDallas	Setting>repositories>software
+2010-01-02T08:42:00.000Z	NamVet	EastDallas	I don't mind reinstall, done it a couple of times. but not to happy about losing personal files. I have a 8 gig flashusb but don't know how to get files to it from Terminal
+2010-01-02T08:42:00.000Z	EastDallas	NamVet	I don't understand how you got a link to the adobe website in Synaptic?!?!  The package is adobe-flashplugin.
+2010-01-02T08:42:00.000Z	NamVet	EastDallas	also a 40gb external hard drive.
+2010-01-02T08:43:00.000Z	NamVet	EastDallas	that's it adobe-flashplugin
+2010-01-02T08:43:00.000Z	NamVet	EastDallas	i can show you the errors
+2010-01-02T08:44:00.000Z	EastDallas	NamVet	 Boot to an Ubuntu install CD.  Choose the option to try ubuntu without making any changes to your computer.  You will boot to a desktop where you can use nautilus to move the files to your flash drive or usb hard drive.
+2010-01-02T08:44:00.000Z	NamVet	EastDallas	awesome
+2010-01-02T08:45:00.000Z	NamVet	EastDallas	thankyou so much i will do it.
+2010-01-02T08:45:00.000Z	EastDallas	NamVet	NP
+2010-01-02T08:45:00.000Z	NamVet	EastDallas	when i am on the live cd i will access nautilus thru terminal?
+2010-01-02T08:46:00.000Z	EastDallas	NamVet	no, just use the places list
+2010-01-02T08:46:00.000Z	NamVet	EastDallas	Oh, okay. ty
+2010-01-02T08:47:00.000Z	EastDallas	NamVet	 Good luck
+2010-01-02T08:47:00.000Z	NamVet	EastDallas	got it
+2010-01-02T08:51:00.000Z	NamVet	EastDallas	Dr_Willis & others thank you so much for the help, Happy New Year everybody. Signing Out
+2010-01-13T12:30:00.000Z	EastDallas	NamVet	Confusing I know.
+2010-01-13T12:30:00.000Z	EastDallas	NamVet	I see!
+2010-01-13T12:35:00.000Z	NamVet	EastDallas	Jordan_U: See you later, now that I got Karmic going again w/ the GUI working correctly.

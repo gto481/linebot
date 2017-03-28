@@ -1,0 +1,96 @@
+2007-01-06T06:34:00.000Z	livingdaylight		do i need a particular version of ubuntu for my laptop - it is core duo 2
+2007-01-06T06:34:00.000Z	ikonia	livingdaylight	i'm not sure breezy has core2 support
+2007-01-06T06:34:00.000Z	livingdaylight	ikonia	what makes you say breezy?
+2007-01-06T06:34:00.000Z	ikonia	livingdaylight	ubntu 6.0.6
+2007-01-06T06:35:00.000Z	livingdaylight	ikonia	what about Dapper or Edgy
+2007-01-06T06:36:00.000Z	ikonia	livingdaylight	check the HCL on the site
+2007-01-06T06:36:00.000Z	livingdaylight	ikonia	HCL?
+2007-01-06T06:38:00.000Z	livingdaylight	ikonia	darn it only goes up to IBM R52, mine is R60e
+2007-01-06T06:39:00.000Z	livingdaylight	ikonia	i'll have to try suse. They tend to work on laptops better than ubuntu
+2007-09-06T16:48:00.000Z	ikonia	livingdaylight	someone telling you that is ill-informed
+2007-09-06T16:49:00.000Z	livingdaylight	ikonia	ahhh.. maybe just a ubuntu hater
+2007-09-06T16:49:00.000Z	ikonia	livingdaylight	no just ill-informed
+2007-10-02T05:04:00.000Z	ikonia	livingdaylight	still in beta
+2007-10-02T05:05:00.000Z	ikonia	livingdaylight	release candidates, or straight to final
+2007-10-02T05:05:00.000Z	ikonia	livingdaylight	depends on your needs/setup/config
+2007-10-02T05:05:00.000Z	ikonia	livingdaylight	it may not work at ll
+2007-11-29T14:06:00.000Z	ikonia	livingdaylight	gmail isn't an application, its a webpage
+2007-11-29T14:06:00.000Z	livingdaylight	ikonia	do you know how to set it to gmail to send links rather than evolution though?
+2007-11-29T14:07:00.000Z	ikonia	livingdaylight	I would try replacing it with the gmail link for the "launcher" url
+2007-11-29T14:08:00.000Z	livingdaylight	ikonia	gmail link? like the whole line?
+2007-11-29T14:08:00.000Z	ikonia	livingdaylight	the line for the launcher
+2007-12-18T20:13:00.000Z	ikonia	livingdaylight	there is not
+2007-12-18T20:13:00.000Z	ikonia	livingdaylight	why ?
+2007-12-18T20:13:00.000Z	ikonia	livingdaylight	there is no plans - so it doesn't matter
+2007-12-18T20:14:00.000Z	ikonia	livingdaylight	thats your opionion, which your welcome to
+2007-12-18T20:14:00.000Z	livingdaylight	ikonia	sorry, i thought it was a well-known fact
+2007-12-18T20:14:00.000Z	ikonia	livingdaylight	no, it's not. It's your opinion only
+2007-12-18T20:15:00.000Z	livingdaylight	ikonia	not just mine.... a lot of people say it is a fact
+2007-12-18T20:15:00.000Z	ikonia	livingdaylight	more so it's not - so by your logic your wrong
+2008-04-14T22:16:00.000Z	ikonia	livingdaylight	most biffs can only do one account
+2008-05-14T19:48:00.000Z	livingdaylight	ikonia	better?
+2008-05-14T19:44:00.000Z	ikonia	livingdaylight	you'd need to do absoulte paths
+2008-05-14T19:45:00.000Z	ikonia	livingdaylight	as the launcher runs from the desktops cwd
+2008-05-14T19:45:00.000Z	livingdaylight	ikonia	what and how do i do an absolute path?
+2008-05-14T19:45:00.000Z	ikonia	livingdaylight	for example /usr/bin/jar xvf /home/mr_user/myfile.jar
+2008-05-14T19:46:00.000Z	ikonia	livingdaylight	thats an absoulte path for the binary and the path to the jar file
+2008-05-14T19:46:00.000Z	livingdaylight	ikonia	so if the file is in my home directory i do /usr/home/livingdaylight ﻿java -jar cgoban.jar ?
+2008-05-14T19:46:00.000Z	ikonia	livingdaylight	no, re-read the example I gave you
+2008-05-14T19:47:00.000Z	ikonia	livingdaylight	absoulte paths to the binary and the file
+2008-05-14T19:47:00.000Z	ikonia	livingdaylight	/usr/bin/jar xvf /home/user/javfile.jar
+2008-05-14T19:48:00.000Z	livingdaylight	ikonia	usr/bin/jar xvf /home/livingdaylight/cgoban.jat
+2008-05-14T19:48:00.000Z	ikonia	livingdaylight	that looks better
+2008-05-14T19:50:00.000Z	livingdaylight	ikonia	failed to execute child process /usr/bin/jar no such file directory
+2008-05-14T19:58:00.000Z	livingdaylight	ikonia	i did it, but it turned out to be easier than imagined
+2008-05-14T19:58:00.000Z	livingdaylight	ikonia	instead of that really long command, simply: java -jar /pathto/cgoban.jar
+2009-05-01T22:17:00.000Z	ikonia	livingdaylight	you can't
+2009-05-01T22:17:00.000Z	ikonia	livingdaylight	it's a clean install needed
+2009-05-01T22:17:00.000Z	livingdaylight	ikonia	damn.... too late... i thought i read one could upgrade without reformatting
+2010-05-21T01:51:00.000Z	ikonia	livingdaylight	on what version
+2010-05-21T01:51:00.000Z	livingdaylight	ikonia	lucid
+2010-05-21T01:52:00.000Z	ikonia	livingdaylight	looks like it's outdated already
+2010-05-21T01:52:00.000Z	livingdaylight	ikonia	mplayer?
+2010-05-21T01:53:00.000Z	ikonia	livingdaylight	smplayer
+2010-05-21T01:53:00.000Z	livingdaylight	ikonia	there is a newer version?
+2010-05-21T01:53:00.000Z	ikonia	livingdaylight	I've not looked, but that warning sugggests so
+2010-05-21T01:54:00.000Z	livingdaylight	ikonia	why does smplayer complain bout a lack of the newest version of Mplyer rather than let me know that a newer version of smplayer is available. That smplayer is outdated rather than Mplayer?
+2010-05-21T01:54:00.000Z	ikonia	livingdaylight	I don't know, ask the smplayer developers
+2010-05-21T01:54:00.000Z	livingdaylight	ikonia	that warning suggests that Mplayer is outdated
+2010-05-21T01:58:00.000Z	livingdaylight	ikonia	where/how do i ask the smplayer developers?
+2010-05-21T01:58:00.000Z	ikonia	livingdaylight	look on the webpage for contact details
+2010-07-31T01:14:00.000Z	ikonia	livingdaylight	no
+2010-07-31T01:14:00.000Z	ikonia	livingdaylight	people are under no obligation to do anything
+2010-07-31T01:15:00.000Z	livingdaylight	ikonia	its just funny how people like to respond if someone is 'out of line' but ask nicely a million times and one get ignored - can be frustrating. Of course no one is under any obligation to do anything - I understand
+2010-07-31T01:15:00.000Z	ikonia	livingdaylight	not at all, people are busy being helped
+2010-07-31T01:16:00.000Z	livingdaylight	ikonia	but youre not helping me?
+2010-07-31T01:16:00.000Z	ikonia	livingdaylight	I'm helping other people
+2010-07-31T01:16:00.000Z	livingdaylight	ikonia	you're busy telling me that you're helping other people
+2010-07-31T01:16:00.000Z	ikonia	livingdaylight	then I best get back to helping other people
+2010-08-01T17:43:00.000Z	livingdaylight	ikonia	are you helping lots of people still?
+2010-10-18T16:24:00.000Z	ikonia	livingdaylight	have you told 10.04 to offer none-lts releases ?
+2010-10-18T16:25:00.000Z	livingdaylight	ikonia	i don't recall telling it anything
+2011-11-16T15:22:00.000Z	ikonia	livingdaylight	uname -a please
+2011-11-16T15:23:00.000Z	livingdaylight	ikonia	thx
+2011-12-20T02:29:00.000Z	ikonia	livingdaylight	try ##hardware
+2011-12-20T02:29:00.000Z	ikonia	livingdaylight	having a problem with multiple OS's, same symptoms, probably a hardware issue
+2011-12-20T02:30:00.000Z	livingdaylight	ikonia	yea, probably, Ubuntu and xubuntu [fresh install today] Firefox seems to trigger it. But ran chrome came back and had to reboot too
+2011-12-20T02:31:00.000Z	ikonia	livingdaylight	ok - so both ubuntu based though
+2011-12-20T02:31:00.000Z	ikonia	livingdaylight	have you considered doing a base hardware check, such as memtest
+2011-12-20T02:31:00.000Z	livingdaylight	ikonia	yes *buntu based 100%
+2011-12-20T02:32:00.000Z	livingdaylight	ikonia	that's why I am asking because I don't know what I can do. hardwqare check such as memtest?
+2011-12-20T02:32:00.000Z	ikonia	livingdaylight	I'd suggest a little hardware test, run memcheck for a good few hours, and use a tool called "stress Linux" for a good few hours, just test your hardware to get an idea that is't supported
+2011-12-20T02:32:00.000Z	livingdaylight	ikonia	can you please tell me how?
+2011-12-20T02:32:00.000Z	livingdaylight	ikonia	not familiar with either
+2011-12-20T02:32:00.000Z	ikonia	livingdaylight	memtest is in the ubuntu boot menu, select it from grub run it for 12 - 14 hours or so at least, any errors in your ram will show up
+2011-12-20T02:33:00.000Z	livingdaylight	ikonia	is stress test in repositories? where is this tool?
+2011-12-20T02:33:00.000Z	ikonia	livingdaylight	stress linux is a livecd
+2011-12-20T02:35:00.000Z	ikonia	livingdaylight	it's a bit of a drag as it will waste 24 hours of your life, however it's worth it to get a bit of confidence your hardware is ok
+2011-12-20T02:37:00.000Z	livingdaylight	ikonia	well, this has more than wasted 24hrs of my life already. Its a real drag, coz I not long ago got a new hd. Admittedly the machine is relatively old now, although still a dual-core. Nevertheless, I don't know what I can and can't keep and whether to just get a new base unit. If this can diagnose the problem so at least I know whehter I can salvage my system or not I can move forward
+2011-12-20T02:37:00.000Z	ikonia	livingdaylight	run the tests I've suggested, that may give you an idea to any possible hardware problems, we can move forward from there
+2011-12-20T02:37:00.000Z	ikonia	livingdaylight	it's worth while
+2011-12-20T02:37:00.000Z	livingdaylight	ikonia	http://www.stresslinux.org/sl/ these guys, yes?
+2011-12-20T02:38:00.000Z	ikonia	livingdaylight	that's the stuff
+2011-12-20T02:38:00.000Z	livingdaylight	ikonia	thx
+2012-07-13T13:19:00.000Z	livingdaylight	ikonia	thank!
+2012-07-13T13:20:00.000Z	livingdaylight	ikonia	when I installed Ubuntu there was an option to install 3rd party proprietary codecs etc, which I enabled, so, not sure why I have to go round finding all the bits and bobs to make my system multimedia working
+2012-07-13T13:21:00.000Z	ikonia	livingdaylight	there are options to enable other repos, but you can follow that guide to add the repos/packages you need

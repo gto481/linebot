@@ -1,0 +1,98 @@
+2005-03-16T14:22:00.000Z	crimsun	sunnie	ls *.deb
+2005-03-16T13:05:00.000Z	crimsun	sunnie	what's the main dsp?
+2005-03-16T13:06:00.000Z	sunnie	crimsun	what is a dsp?
+2005-03-16T13:06:00.000Z	crimsun	sunnie	lspci -v (don't flood here) has info on your audio chipset...
+2005-03-16T13:09:00.000Z	sunnie	crimsun	unfortunately, there isn't something in that list that equates to the name of my soundcard, or has audio in it
+2005-03-16T13:11:00.000Z	crimsun	sunnie	sec.
+2005-03-16T13:12:00.000Z	sunnie	crimsun	no problems.  thank you.
+2005-03-16T13:18:00.000Z	crimsun	sunnie	lsmod|grep ^snd_intel8x0
+2005-03-16T13:21:00.000Z	crimsun	sunnie	please paste the output of amixer onto http://pastebin.ca
+2005-03-16T13:23:00.000Z	sunnie	crimsun	http://pastebin.ca/6890
+2005-03-16T13:26:00.000Z	crimsun	sunnie	getting to it.
+2005-03-16T13:26:00.000Z	sunnie	crimsun	it's okay, i know you're helping someone else. i'll be patient.
+2005-03-16T13:30:00.000Z	crimsun	sunnie	are you using warty or hoary?
+2005-03-16T13:30:00.000Z	sunnie	crimsun	i'm on hoary.
+2005-03-16T13:32:00.000Z	crimsun	sunnie	make sure you have the 'universe' repository enabled, then sudo apt-get install fakeroot build-essential kernel-package linux-headers-$(uname -r) alsa-source
+2005-03-16T13:33:00.000Z	crimsun	sunnie	also ensure that your user is in the 'src' group
+2005-03-16T13:33:00.000Z	sunnie	crimsun	i have the universe repository enabled, i need to sudo the rest of those aps...and by ensuring i'm in the src group, do i cd into that folder?
+2005-03-16T13:34:00.000Z	crimsun	sunnie	yeah, but you need to be a member of the 'src' group to untar the driver source
+2005-03-16T13:35:00.000Z	sunnie	crimsun	how do i know i'm a member of the 'src' group?  i'm really sorry crimsun, i'm a newbie at this.
+2005-03-16T13:36:00.000Z	crimsun	sunnie	groups|grep src
+2005-03-16T13:36:00.000Z	sunnie	crimsun	it returned nothing
+2005-03-16T13:37:00.000Z	crimsun	sunnie	sudo adduser $USER src
+2005-03-16T13:37:00.000Z	crimsun	sunnie	then you need to either log in on another console, or log out and back into GNOME
+2005-03-16T13:38:00.000Z	sunnie	crimsun	alright it has added me to the group src. i'll brb
+2005-03-16T13:43:00.000Z	crimsun	sunnie	cd /usr/src && tar xfj alsa-driver.tar.bz2
+2005-03-16T13:43:00.000Z	crimsun	sunnie	then sudo dpkg-reconfigure alsa-source
+2005-03-16T13:43:00.000Z	sunnie	crimsun	alright i'll do that.
+2005-03-16T13:44:00.000Z	crimsun	sunnie	make sure you answer "no" to isa pnp, "yes" to debug - and choose the "azx" driver
+2005-03-16T13:46:00.000Z	sunnie	crimsun	it's giving me errors as an output such as "no such file or directory"
+2005-03-16T13:49:00.000Z	crimsun	sunnie	which command gave you that error?
+2005-03-16T13:49:00.000Z	sunnie	crimsun	tar xfj alsa-driver.tar.bz2
+2005-03-16T13:49:00.000Z	crimsun	sunnie	pwd
+2005-03-16T13:49:00.000Z	crimsun	sunnie	it should report /usr/src
+2005-03-16T13:50:00.000Z	sunnie	crimsun	yes, it says /usr/src
+2005-03-16T13:50:00.000Z	crimsun	sunnie	sudo apt-get install alsa-source
+2005-03-16T13:51:00.000Z	sunnie	crimsun	it tells me that alsa-source is the newest version
+2005-03-16T13:52:00.000Z	crimsun	sunnie	ls /usr/src/alsa-driver.tar.bz2
+2005-03-16T13:52:00.000Z	sunnie	crimsun	yes, it is here.
+2005-03-16T13:53:00.000Z	crimsun	sunnie	and you typed "tar xfj alsa-driver.tar.bz2" ?
+2005-03-16T13:54:00.000Z	sunnie	crimsun	yes, i just checked it again. no errors in typing :(
+2005-03-16T13:55:00.000Z	crimsun	sunnie	wait, what sort of "no file or directory" errors is it?
+2005-03-16T13:55:00.000Z	crimsun	sunnie	are they, rather
+2005-03-16T13:55:00.000Z	sunnie	crimsun	for example, tar: modules/alsa-driver/pci/azx/patch_realtek.c: Cannot open: No such file or directory
+2005-03-16T13:56:00.000Z	crimsun	sunnie	groups|grep src
+2005-03-16T13:57:00.000Z	sunnie	crimsun	mm hm, did that and it returned nothing.
+2005-03-16T13:58:00.000Z	crimsun	sunnie	uh huh. So that's why you're getting those errors; your user wasn't added properly to the 'src' group.
+2005-03-16T13:58:00.000Z	crimsun	sunnie	so let's try again: sudo adduser <your username> src
+2005-03-16T13:59:00.000Z	sunnie	crimsun	crimsun: it says i'm already a member of src
+2005-03-16T14:00:00.000Z	crimsun	sunnie	yet ,,groups|grep src'' returns null?
+2005-03-16T14:00:00.000Z	sunnie	crimsun	mm hm, yup
+2005-03-16T14:00:00.000Z	crimsun	sunnie	is your username "aoede"?
+2005-03-16T14:01:00.000Z	sunnie	crimsun	yup.  that's what i put.
+2005-03-16T14:01:00.000Z	crimsun	sunnie	ok, and that matches ,,echo $USER'', I presume
+2005-03-16T14:02:00.000Z	sunnie	crimsun	yes, echo returns my username
+2005-03-16T14:02:00.000Z	crimsun	sunnie	and you logged out and back in completely?
+2005-03-16T14:03:00.000Z	sunnie	crimsun	yes i did. should i restart ubuntu again, just to see, because i only exited to the login screen last time.
+2005-03-16T14:03:00.000Z	crimsun	sunnie	nah, it's not absolutely imperative
+2005-03-16T14:04:00.000Z	crimsun	sunnie	we'll just continue with a slightly more hackish method
+2005-03-16T14:04:00.000Z	crimsun	sunnie	sudo dpkg-reconfigure alsa-source
+2005-03-16T14:04:00.000Z	sunnie	crimsun	:) devious.  alright what do i do?
+2005-03-16T14:04:00.000Z	sunnie	crimsun	k
+2005-03-16T14:05:00.000Z	crimsun	sunnie	make sure you answer "no" to isa pnp, "yes" to debug code - and choose the azx driver
+2005-03-16T14:06:00.000Z	sunnie	crimsun	no no, it's alright. k i did that.
+2005-03-16T14:06:00.000Z	crimsun	sunnie	ok, now sudo tar xfj alsa-driver.tar.bz2
+2005-03-16T14:06:00.000Z	sunnie	crimsun	no errors
+2005-03-16T14:07:00.000Z	crimsun	sunnie	cd modules/alsa-driver
+2005-03-16T14:07:00.000Z	sunnie	crimsun	okay
+2005-03-16T14:07:00.000Z	crimsun	sunnie	sudo debian/rules binary_modules KSRC=/usr/src/linux-headers-$(uname -r)/ KVERS=$(uname -r)
+2005-03-16T14:13:00.000Z	sunnie	crimsun	yay it's done.
+2005-03-16T14:13:00.000Z	crimsun	sunnie	cd ..
+2005-03-16T14:14:00.000Z	sunnie	crimsun	mm hm
+2005-03-16T14:14:00.000Z	crimsun	sunnie	ls|grep alsa-driver
+2005-03-16T14:15:00.000Z	crimsun	sunnie	err, ls alsa-driver*deb
+2005-03-16T14:15:00.000Z	sunnie	crimsun	returned with nothing.
+2005-03-16T14:16:00.000Z	crimsun	sunnie	pwd
+2005-03-16T14:16:00.000Z	crimsun	sunnie	are you sure the compilation didn't error out?
+2005-03-16T14:17:00.000Z	sunnie	crimsun	yup, no errors.  it didn't say anything after the spew of text going up the terminal.  pwd returns /usr/src/modules
+2005-03-16T14:18:00.000Z	sunnie	crimsun	i type in ls|grep alsa-driver*deb?
+2005-03-16T14:19:00.000Z	sunnie	crimsun	or is it ls alsa-driver/
+2005-03-16T14:21:00.000Z	crimsun	sunnie	actually it's: ls alsa-driver*deb
+2005-03-16T14:21:00.000Z	sunnie	crimsun	oh lol k one moment
+2005-03-16T14:22:00.000Z	sunnie	crimsun	ls: alsa-driver*deb: No such file or directory
+2005-03-16T14:23:00.000Z	sunnie	crimsun	alsa-modules-2.6.10-4-386_1.0.8-4ubuntu1_i386.deb
+2005-03-16T14:23:00.000Z	crimsun	sunnie	err, sorry, I'm tired. Yes, that's the correct file.
+2005-03-16T14:24:00.000Z	crimsun	sunnie	sudo dpkg -i alsa*.deb
+2005-03-16T14:25:00.000Z	sunnie	crimsun	it's okay, i'm really appreciating your help.  thanks.  k, so i typed in that command and now everything is done.
+2005-03-16T14:26:00.000Z	crimsun	sunnie	and after you reboot, everything should work. You may have to unmute and adjust the mixer sliders using alsamixer or GNOME's Volume Control
+2005-03-16T14:27:00.000Z	sunnie	crimsun	thank you so much for taking the time to help me.  I'll try it out after I reboot and hopefully everything will work as planned.
+2005-03-16T14:27:00.000Z	sunnie	crimsun	thanks again.  ...er...and don't overwork yourself, if you're tired, you should rest. anyways, thanks.
+2005-03-16T14:38:00.000Z	sunnie	crimsun	thanks!  everything is working.  although I want to ask you for one more favor, if possible.
+2005-03-16T14:38:00.000Z	sunnie	crimsun	could you repeat the packages i needed during the initial stages of this sound process?
+2005-03-16T14:39:00.000Z	sunnie	crimsun	cause i want to know for future reference. :( i didn't get the log files of those.
+2005-03-16T14:40:00.000Z	crimsun	sunnie	do you mean which packages you needed to install? If so - fakeroot, build-essential, kernel-package, linux-headers-$(uname -r), alsa-source
+2005-03-16T14:40:00.000Z	sunnie	crimsun	yes perfect.  thank you so much
+2005-03-16T14:40:00.000Z	crimsun	sunnie	keep in mind that you only need to install those packages once (unless you continually reinstall distros)
+2005-03-16T14:42:00.000Z	sunnie	crimsun	*nods* i know. i just needed to write it down because i will be holding an installfest soon on my campus using ubuntu as our main distro.
+2005-03-16T14:42:00.000Z	crimsun	sunnie	excellent :-)
+2005-03-16T14:43:00.000Z	sunnie	crimsun	yes, so just in case someone comes in with a new board like mine, i know how to solve that problem.  thanks to you, now i sort of do.

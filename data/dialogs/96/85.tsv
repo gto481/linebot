@@ -1,0 +1,96 @@
+2005-07-08T13:24:00.000Z	grogoreo		hi
+2005-07-08T13:25:00.000Z	grogoreo		I'm having a problem with my hard drive and am wondering if there are any disk drive tools. I'm running Ubuntu Live CD now, and the problem is that when I come to format the drive it just fails. I have tried doing it manually and using the defaults which works OK, just when it comes to physically formatting the drive there are problems.
+2005-07-08T13:25:00.000Z	HappyFool	grogoreo	what do you mean by 'physically formatting the drive' ?
+2005-07-08T13:25:00.000Z	HappyFool	grogoreo	what tool are you using ?
+2005-07-08T13:26:00.000Z	grogoreo	HappyFool	physically, actually doing the designated partitions
+2005-07-08T13:27:00.000Z	HappyFool	grogoreo	i'm not quite following, but nm. what error do you get?
+2005-07-08T13:29:00.000Z	HappyFool	grogoreo	does it say anything else? that is not an especially useful error message
+2005-07-08T13:29:00.000Z	grogoreo	HappyFool	sorry for the way I'm putting it, but when you install linux you say what partitions you want (so you are designating them and are not set in place unless formatted) and then after you've said what you want you properly make those partitons (format).
+2005-07-08T13:30:00.000Z	HappyFool	grogoreo	hrm. i guess you need a disk checking program
+2005-07-08T13:32:00.000Z	HappyFool	grogoreo	i'm not really an expert on this, but i see a program called 'badblocks' on my system
+2005-07-08T13:32:00.000Z	HappyFool	grogoreo	you say you have the live cd ?
+2005-07-08T13:32:00.000Z	grogoreo	HappyFool	yes
+2005-07-08T13:32:00.000Z	HappyFool	grogoreo	ok, and the drive you want to install to is the only hard drive in the computer ?
+2005-07-08T13:33:00.000Z	grogoreo	HappyFool	yes
+2005-07-08T13:33:00.000Z	HappyFool	grogoreo	ok, my idea is to start a terminal, and run 'badblocks /dev/hda'
+2005-07-08T13:34:00.000Z	HappyFool	grogoreo	or maybe 'badblocks -v /dev/hda'
+2005-07-08T13:34:00.000Z	HappyFool	grogoreo	afaict, that will not write to the disk
+2005-07-08T13:34:00.000Z	HappyFool	grogoreo	yeah, /dev/sda
+2005-07-08T13:34:00.000Z	HappyFool	grogoreo	you got that? 'badblocks -c /dev/sda'
+2005-07-08T13:37:00.000Z	grogoreo	HappyFool	hmm, for some reason it says "badblocks: bad simultaneous block count - /dev/sda" and I've tried sda1 too
+2005-07-08T13:38:00.000Z	HappyFool	grogoreo	drop the -c, sorry
+2005-07-08T13:38:00.000Z	HappyFool	grogoreo	or try -c 128 or -c 256
+2005-07-08T13:40:00.000Z	grogoreo	HappyFool	argh, for some reason it says "badblocks: No such device or address while trying to determine device size"
+2005-07-08T13:40:00.000Z	grogoreo	HappyFool	but I can see it in the Device manager
+2005-07-08T13:40:00.000Z	HappyFool	grogoreo	no /dev/sda ?
+2005-07-08T13:40:00.000Z	HappyFool	grogoreo	hrm
+2005-07-08T13:41:00.000Z	HappyFool	grogoreo	i think you want /dev/sda, not /dev/sda1
+2005-07-08T13:41:00.000Z	grogoreo	HappyFool	tried both
+2005-07-08T13:42:00.000Z	HappyFool	grogoreo	are you root? I'm not that familiar with the livecd
+2005-07-08T13:42:00.000Z	HappyFool	grogoreo	try maybe 'sudo badblocks /dev/sda'
+2005-07-08T13:42:00.000Z	grogoreo	HappyFool	I've tried to mount it (i know i cant) in GNOME it it says "mount: /dev/sda1 is not a valid block device"
+2005-07-08T13:43:00.000Z	HappyFool	grogoreo	ok, let's try this: 'sudo dd if=/dev/sda of=/dev/null bs=1k count=1'
+2005-07-08T13:44:00.000Z	HappyFool	grogoreo	that ought to read 1k of data from /dev/sda
+2005-07-08T13:44:00.000Z	grogoreo	HappyFool	dd: opening `/dev/sda': No such device or address
+2005-07-08T13:44:00.000Z	HappyFool	grogoreo	does 'sudo fdisk -l' list any /dev/sda partitions ?
+2005-07-08T13:45:00.000Z	grogoreo	HappyFool	no
+2005-07-08T13:45:00.000Z	HappyFool	grogoreo	what partitions does it list, if any?
+2005-07-08T13:45:00.000Z	grogoreo	HappyFool	none
+2005-07-08T13:45:00.000Z	HappyFool	grogoreo	something is very screwy
+2005-07-08T13:54:00.000Z	HappyFool	grogoreo	are you getting anywhere
+2005-07-08T13:54:00.000Z	grogoreo	HappyFool	just looking for those repositories. I've found the universe but cant remember what else, main?
+2005-07-08T14:04:00.000Z	HappyFool	grogoreo	hrm
+2005-07-08T14:05:00.000Z	HappyFool	grogoreo	maybe try apt-get update again ?
+2005-07-08T14:05:00.000Z	grogoreo	HappyFool	hmm, nope!
+2005-07-08T14:05:00.000Z	grogoreo	HappyFool	HTTP must be working was I wouldnt be able to speak to you
+2005-07-08T14:06:00.000Z	HappyFool	grogoreo	i get occasional.. ah. hiccups with the repostories. usually re-updating (or re-reloading in synaptic) fixes it
+2005-07-08T14:07:00.000Z	grogoreo	HappyFool	tried again and nothing! "Couldn't stat source package list http://archive.ubuntu.com warty/main Packages (/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_warty_main_binary-i386_Packages) - stat (2 No such file or directory)
+2005-07-08T14:09:00.000Z	HappyFool	grogoreo	go to packages.ubuntu.com, search for smartmontols in warty
+2005-07-08T14:10:00.000Z	HappyFool	grogoreo	here: http://packages.ubuntu.com/warty/utils/smartmontools
+2005-07-08T14:11:00.000Z	HappyFool	grogoreo	no dependencies (well, libc6 hardly counts)
+2005-07-08T14:11:00.000Z	HappyFool	grogoreo	there's a i386 download link on that page. you can then use 'dpkg -i' to install the .deb file you download
+2005-07-08T14:18:00.000Z	HappyFool	grogoreo	what does 'cat /proc/scsi/scsi' say ?
+2005-07-08T14:18:00.000Z	grogoreo	HappyFool	nothing!
+2005-07-08T14:18:00.000Z	HappyFool	grogoreo	afaik sata devices appear under scsi in linux. i may be wrong
+2005-07-08T14:19:00.000Z	HappyFool	grogoreo	what do you see in /proc/ide ?
+2005-07-08T14:19:00.000Z	HappyFool	grogoreo	that's a directory, not a file
+2005-07-08T14:20:00.000Z	grogoreo	HappyFool	hdc, hdd, hde, ide1, ide2 which are folders and files drivers and via
+2005-07-08T14:20:00.000Z	HappyFool	grogoreo	how many drives do you have in the machine ?
+2005-07-08T14:21:00.000Z	HappyFool	grogoreo	so it seems likely that /dev/hde is your sata ?
+2005-07-08T14:23:00.000Z	HappyFool	grogoreo	how about 'badblocks /dev/hde' ? (to get back to the original idea)
+2005-07-08T14:23:00.000Z	HappyFool	grogoreo	ok, try smartctl first ;)
+2005-07-08T14:27:00.000Z	grogoreo	HappyFool	should i expect the bad block check to go into its thousands? its only at 35 now
+2005-07-08T14:28:00.000Z	HappyFool	grogoreo	didn't you run the smartmon thing first ?
+2005-07-08T14:28:00.000Z	grogoreo	HappyFool	yes but only the copyright thing came up
+2005-07-08T14:28:00.000Z	HappyFool	grogoreo	with 'sudo' ?
+2005-07-08T14:29:00.000Z	HappyFool	grogoreo	hrm. actually, i can't get it to work here. stand by
+2005-07-08T14:29:00.000Z	grogoreo	HappyFool	sudo smartctl /dev/sda1
+2005-07-08T14:29:00.000Z	HappyFool	grogoreo	anyway, yeah, i guess badblocks will take a while
+2005-07-08T14:31:00.000Z	HappyFool	grogoreo	well, let's try some diagnostics first. what does 'sudo smartctl -i /dev/hde' say ?
+2005-07-08T14:32:00.000Z	grogoreo	HappyFool	well it says info and the drive
+2005-07-08T14:33:00.000Z	HappyFool	grogoreo	and then 'smartctl -s on /dev/hde' and *then* 'smartctl -a /dev/hde|less'
+2005-07-08T14:33:00.000Z	HappyFool	grogoreo	on my machine i see a comforting line like this: 'SMART overall-health self-assessment test result: PASSED'
+2005-07-08T14:34:00.000Z	grogoreo	HappyFool	http://paste.ubuntulinux.nl/386
+2005-07-08T14:35:00.000Z	HappyFool	grogoreo	smartctl -a /dev/hde > outputfile.txt
+2005-07-08T14:36:00.000Z	HappyFool	grogoreo	use 'q' to quit less
+2005-07-08T14:37:00.000Z	HappyFool	grogoreo	yeah, i think you need to run badblocks now
+2005-07-08T14:37:00.000Z	HappyFool	grogoreo	oddly enough i have a Maxtor 6Y160P0 (you have a Maxtor 6Y160M0)
+2005-07-08T14:38:00.000Z	HappyFool	grogoreo	maybe try 'badblocks -c 256 /dev/hde' or higher to increase the speed
+2005-07-08T14:38:00.000Z	grogoreo	HappyFool	btw here is the output of the file if it would help http://paste.ubuntulinux.nl/388
+2005-07-08T14:39:00.000Z	HappyFool	grogoreo	i really ought to be getting to sleep. i'm sure gentle nalioth here will guide you deeper into the mysteries of fdisk and mkfs
+2005-07-08T14:39:00.000Z	HappyFool	grogoreo	if it said 'PASSED', smartmon has probably told us all it can
+2005-07-08T14:39:00.000Z	grogoreo	HappyFool	ok thank you very much for your help
+2005-09-16T12:58:00.000Z	HappyFool	grogoreo	Edit -> Current Profile, deselect 'Use the system terminal font' and choose a different font
+2005-09-16T12:59:00.000Z	HappyFool	grogoreo	or just ctrl-+
+2005-09-16T13:01:00.000Z	grogoreo	HappyFool	I want to keep the font size the same. Just the width of the terminal
+2005-09-16T13:01:00.000Z	HappyFool	grogoreo	ah
+2005-09-16T13:01:00.000Z	grogoreo	HappyFool	I can do it manually by pulling the right side of the window
+2005-09-16T13:01:00.000Z	HappyFool	grogoreo	drag it to make it bigger?
+2005-09-16T13:02:00.000Z	grogoreo	HappyFool	I have to do it every time
+2005-09-16T13:02:00.000Z	HappyFool	grogoreo	oh. hmm.
+2005-09-16T13:02:00.000Z	grogoreo	HappyFool	I just wanted to change the default width
+2005-09-16T13:03:00.000Z	HappyFool	grogoreo	how about gnome-terminal --geometry=800x600
+2005-09-16T13:04:00.000Z	HappyFool	grogoreo	to be honest i'm not sure what those parameters are in units of, but you can play with it
+2005-09-16T13:04:00.000Z	grogoreo	HappyFool	WOW! Your amazing! It worked. I'll just change the command that loads the default terminal!
+2005-09-16T13:05:00.000Z	grogoreo	HappyFool	thanks
+2005-09-16T13:05:00.000Z	HappyFool	grogoreo	np ;)

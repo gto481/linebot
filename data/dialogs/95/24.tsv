@@ -1,0 +1,95 @@
+2009-11-16T08:36:00.000Z	linuxguy2009		 tsrk: Whatever floats your boat.
+2009-11-16T08:37:00.000Z	linuxguy2009		 flan_suse: check your user privledges.
+2009-11-16T08:38:00.000Z	SingAlong	linuxguy2009	you there?
+2009-11-16T08:38:00.000Z	SingAlong	linuxguy2009	this is my output http://pastie.org/700521
+2009-11-16T08:38:00.000Z	linuxguy2009	SingAlong	Yes I am.
+2009-11-16T08:38:00.000Z	SingAlong	linuxguy2009	my modem got restarted suddenly so got kicked out
+2009-11-16T08:39:00.000Z	linuxguy2009	SingAlong	I take it you completely missed all my answers to you right?
+2009-11-16T08:39:00.000Z	SingAlong	linuxguy2009	ya
+2009-11-16T08:40:00.000Z	SingAlong	linuxguy2009	i installed using the usb stick. downloaded the iso file
+2009-11-16T08:41:00.000Z	linuxguy2009	SingAlong	I had the same issue when i used unetbootin. However I just purchased the matching slot load DVDRW drive from Dell for my Mini 10v and it fixed the driver detection issue. i can tell you what files to install from the CD or repos if you want.
+2009-11-16T08:42:00.000Z	SingAlong	linuxguy2009	sure
+2009-11-16T08:42:00.000Z	linuxguy2009	SingAlong	Let me start up my Mini and check synaptic.
+2009-11-16T08:42:00.000Z	SingAlong	linuxguy2009	i checked to see that the restricted repos are enabled. they are.
+2009-11-16T08:42:00.000Z	linuxguy2009	SingAlong	ok
+2009-11-16T08:43:00.000Z	linuxguy2009	SingAlong	just give me a sec
+2009-11-16T08:43:00.000Z	SingAlong	linuxguy2009	sure
+2009-11-16T08:44:00.000Z	linuxguy2009	SingAlong	bcmwl-kernel-source install that one.
+2009-11-16T08:44:00.000Z	linuxguy2009	SingAlong	It will need (dkms, fakeroot, patch) as deps.
+2009-11-16T08:45:00.000Z	SingAlong	linuxguy2009	ya installing those
+2009-11-16T08:45:00.000Z	linuxguy2009	SingAlong	Ok
+2009-11-16T08:45:00.000Z	SingAlong	linuxguy2009	is that it?
+2009-11-16T08:46:00.000Z	linuxguy2009	SingAlong	open the hardware drivers windows and see if the new driver shows up now.
+2009-11-16T08:46:00.000Z	SingAlong	linuxguy2009	k. its still installing.
+2009-11-16T08:46:00.000Z	linuxguy2009	SingAlong	ok
+2009-11-16T08:47:00.000Z	linuxguy2009	SingAlong	An external CD/ DVD drive would have made it work out of the box cause then ubuntu would see the driver file on the CD as a source. I had the exact same issue.
+2009-11-16T08:48:00.000Z	linuxguy2009	SingAlong	packages done installing?
+2009-11-16T08:49:00.000Z	SingAlong	linuxguy2009	yes. checking for new drivers
+2009-11-16T08:49:00.000Z	linuxguy2009	SingAlong	cool
+2009-11-16T08:49:00.000Z	SingAlong	linuxguy2009	i found 2 drivers Broadcom b43 and STA. which one do i install?
+2009-11-16T08:50:00.000Z	linuxguy2009	SingAlong	Your wifi will work like magic now/
+2009-11-16T08:51:00.000Z	linuxguy2009	SingAlong	Any luck?
+2009-11-16T08:52:00.000Z	SingAlong	linuxguy2009	i restarted networking after activating STA driver. but still wireless doesnt show up.
+2009-11-16T08:52:00.000Z	linuxguy2009	SingAlong	Is your raouter broadcasting the SSID? Or did you add it manually?
+2009-11-16T08:53:00.000Z	SingAlong	linuxguy2009	its an open network. it should be detected automatically
+2009-11-16T08:53:00.000Z	linuxguy2009	SingAlong	That depends on if the SSID is being broadcast or if it isnt it has tro be added manually.
+2009-11-16T08:53:00.000Z	SingAlong	linuxguy2009	should i try the b43 driver?
+2009-11-16T08:53:00.000Z	linuxguy2009	SingAlong	No that isnt a driver
+2009-11-16T08:54:00.000Z	SingAlong	linuxguy2009	oh.
+2009-11-16T08:54:00.000Z	linuxguy2009	SingAlong	try a reboot
+2009-11-16T08:54:00.000Z	SingAlong	linuxguy2009	in my previous 9.04, it used to detect automatically. same when i upgraded to 9.10
+2009-11-16T08:54:00.000Z	SingAlong	linuxguy2009	k
+2009-11-16T08:57:00.000Z	SingAlong	linuxguy2009	no luck.
+2009-11-16T08:58:00.000Z	linuxguy2009	SingAlong	What is the netowork SSID?
+2009-11-16T08:58:00.000Z	SingAlong	linuxguy2009	but i have blacklisted acer_wmi in /etc/modprobe.d/blacklist.conf should i remove that?
+2009-11-16T08:58:00.000Z	SingAlong	linuxguy2009	How do i find that?
+2009-11-16T08:58:00.000Z	linuxguy2009	SingAlong	Chances are the SSID isnt being broadcast. Otherwise you would know it.
+2009-11-16T08:59:00.000Z	SingAlong	linuxguy2009	well the network is called "Akash"
+2009-11-16T08:59:00.000Z	linuxguy2009	SingAlong	Yeah thats the SSID.
+2009-11-16T08:59:00.000Z	SingAlong	linuxguy2009	oh sorry. the SSIS is UTStarcom
+2009-11-16T08:59:00.000Z	linuxguy2009	SingAlong	ok
+2009-11-16T08:59:00.000Z	linuxguy2009	SingAlong	right click the network icon and edit connections
+2009-11-16T08:59:00.000Z	SingAlong	linuxguy2009	k
+2009-11-16T09:00:00.000Z	SingAlong	linuxguy2009	and?
+2009-11-16T09:00:00.000Z	linuxguy2009	SingAlong	under wireless , click add, enter the ssid or network name.Apply and close.
+2009-11-16T09:00:00.000Z	SingAlong	linuxguy2009	there's a wireless tab. and i clicked add there
+2009-11-16T09:00:00.000Z	SingAlong	linuxguy2009	network name?
+2009-11-16T09:01:00.000Z	linuxguy2009	SingAlong	The SSID
+2009-11-16T09:01:00.000Z	linuxguy2009	SingAlong	If its not being broadcast then you have to manually enter it.
+2009-11-16T09:01:00.000Z	SingAlong	linuxguy2009	k i entered UTStarcom in that place and added it
+2009-11-16T09:02:00.000Z	linuxguy2009	SingAlong	try firefox
+2009-11-16T09:02:00.000Z	SingAlong	linuxguy2009	shouldnt i be selecting the wireless connection first?
+2009-11-16T09:02:00.000Z	SingAlong	linuxguy2009	not working
+2009-11-16T09:02:00.000Z	linuxguy2009	SingAlong	Well yeah if its listed.
+2009-11-16T09:02:00.000Z	linuxguy2009	SingAlong	Try removing the blacklist entry and reboot.
+2009-11-16T09:02:00.000Z	SingAlong	linuxguy2009	k
+2009-11-16T09:06:00.000Z	SingAlong	linuxguy2009	still no luck
+2009-11-16T09:06:00.000Z	linuxguy2009	SingAlong	click on the network icon you should see a wired network section and a wireless section
+2009-11-16T09:07:00.000Z	linuxguy2009	SingAlong	have the wireless one?
+2009-11-16T09:07:00.000Z	SingAlong	linuxguy2009	nope. but i found something wrong. the STA was disabled. just enabling it.
+2009-11-16T09:07:00.000Z	linuxguy2009	SingAlong	Theres why.
+2009-11-16T09:08:00.000Z	SingAlong	linuxguy2009	let me activate it and try restarting
+2009-11-16T09:08:00.000Z	linuxguy2009	SingAlong	ok
+2009-11-16T09:08:00.000Z	SingAlong	linuxguy2009	ah! now after i activated it, it says that i need to restart my comp :)
+2009-11-16T09:09:00.000Z	linuxguy2009	SingAlong	good sign
+2009-11-16T09:09:00.000Z	SingAlong	linuxguy2009	but the wireless is already working :D
+2009-11-16T09:09:00.000Z	SingAlong	linuxguy2009	thank you! thanks a lot!
+2009-11-16T09:09:00.000Z	linuxguy2009	SingAlong	Huge High Five!!!
+2009-11-16T09:09:00.000Z	SingAlong	linuxguy2009	haha :D
+2009-11-16T09:09:00.000Z	SingAlong	linuxguy2009	now i can installed emacs and all dev tools without a wired tail for my netbook
+2009-11-16T09:10:00.000Z	linuxguy2009	SingAlong	Might be a good idea to invest in an external bus powered CD/DVD drive like I did for this exact reason.
+2009-11-16T09:10:00.000Z	SingAlong	linuxguy2009	b/w whats the pkg name? bcmwl-kernel-source?
+2009-11-16T09:10:00.000Z	linuxguy2009	SingAlong	yep thats the one.
+2009-11-16T09:10:00.000Z	linuxguy2009	SingAlong	If you would have installed from a CD/DVD it would have seen the drivers right away.
+2009-11-16T09:10:00.000Z	SingAlong	linuxguy2009	also "switch to desktop mode" option seems to be missing in 9.10
+2009-11-16T09:11:00.000Z	linuxguy2009	SingAlong	just add the package. Need the name?
+2009-11-16T09:11:00.000Z	SingAlong	linuxguy2009	ya
+2009-11-16T09:12:00.000Z	linuxguy2009	SingAlong	1 min gotta remeber the name. hehe
+2009-11-16T09:12:00.000Z	SingAlong	linuxguy2009	:D
+2009-11-16T09:14:00.000Z	linuxguy2009	SingAlong	I cant find it. Ill ask the room.
+2009-11-16T09:14:00.000Z	SingAlong	linuxguy2009	k :)
+2009-11-16T09:16:00.000Z	linuxguy2009	SingAlong	hmm be patient friend Ill find it if you really need it.
+2009-11-16T09:16:00.000Z	SingAlong	linuxguy2009	I'm right here :) np
+2009-11-16T09:21:00.000Z	SingAlong	linuxguy2009	whats your Dell Mini model?
+2009-11-16T09:21:00.000Z	SingAlong	linuxguy2009	ah k. dell mini 10v
+2009-11-16T09:22:00.000Z	SingAlong	linuxguy2009	np. i found out :)

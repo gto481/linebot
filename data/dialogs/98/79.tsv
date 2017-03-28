@@ -1,0 +1,98 @@
+2004-12-08T08:32:00.000Z	_|Imanewbie|_		does anyone here uses bittornado?
+2004-12-08T08:33:00.000Z	ogra	_|Imanewbie|_	this one looks nice: http://www.sury.org/ubuntu/
+2004-12-09T09:03:00.000Z	ogra	_|Imanewbie|_	no :)
+2004-12-09T09:04:00.000Z	ogra	_|Imanewbie|_	what kind of high perfomance computing tasks do you want to run ? *g*
+2004-12-09T09:05:00.000Z	_|Imanewbie|_	ogra	I'm CS student, well I got no car, my parents gave me nutthing when I got to a FREE and GREAT University so they offered me an upgrade for my PC
+2004-12-09T09:06:00.000Z	_|Imanewbie|_	ogra	I want to run Doom 3 =p
+2004-12-09T09:06:00.000Z	ogra	_|Imanewbie|_	hehe
+2004-12-09T09:07:00.000Z	ogra	_|Imanewbie|_	i am fine with the 600mhz here for all tasks i do, so what should i guess :)
+2004-12-09T09:08:00.000Z	ogra	_|Imanewbie|_	i would keep the money until this HW is to slow and buy new stuff then....
+2004-12-09T09:54:00.000Z	ogra	_|Imanewbie|_	when hoary gets out :)
+2004-12-09T16:48:00.000Z	ogra	_|Imanewbie|_	about 14000
+2004-12-09T16:48:00.000Z	_|Imanewbie|_	ogra	thx
+2004-12-09T16:48:00.000Z	ogra	_|Imanewbie|_	packages.....
+2004-12-09T16:48:00.000Z	ogra	_|Imanewbie|_	i dunno the amount of binarys in there ;)
+2004-12-09T16:57:00.000Z	ogra	_|Imanewbie|_	Computer menu
+2004-12-10T17:41:00.000Z	ogra	_|Imanewbie|_	user and groups tool in the system tools menu below computer
+2004-12-10T17:41:00.000Z	_|Imanewbie|_	ogra	thx
+2004-12-10T17:56:00.000Z	ogra	_|Imanewbie|_	http://www.ubuntulinux.org/wiki/Java
+2004-12-10T17:56:00.000Z	ogra	_|Imanewbie|_	i would suggest method two
+2004-12-10T17:56:00.000Z	_|Imanewbie|_	ogra	thanks!
+2004-12-10T17:56:00.000Z	ogra	_|Imanewbie|_	but method one is what yo asked for :)
+2004-12-10T17:56:00.000Z	_|Imanewbie|_	ogra	I will do it manually and link stuff my self
+2004-12-10T17:56:00.000Z	_|Imanewbie|_	ogra	I'm used to do it from slack
+2004-12-10T17:56:00.000Z	ogra	_|Imanewbie|_	ok.... but method 2 brings v1.5 in :)
+2004-12-10T17:58:00.000Z	_|Imanewbie|_	ogra	what does "** edit /usr/share/java-package/sun-j2sdk.sh to reflect the actual JDK 1.5 release version" means?
+2004-12-10T17:59:00.000Z	ogra	_|Imanewbie|_	nothing anymore it think...it was fixed afaik ....but else you would have to edit one line in the script from 1.4 to 1.5
+2004-12-10T06:00:00.000Z	ogra	_|Imanewbie|_	its in uni or multiverse
+2004-12-10T06:26:00.000Z	ogra	_|Imanewbie|_	gnome-panel-screenshot
+2004-12-10T06:26:00.000Z	_|Imanewbie|_	ogra	I want to show a thing on applications menu to my friend so I cant select both!
+2004-12-10T06:27:00.000Z	ogra	_|Imanewbie|_	use gimp....there is a aquire option in the file menu
+2004-12-10T06:28:00.000Z	_|Imanewbie|_	ogra	thanks
+2004-12-10T06:31:00.000Z	_|Imanewbie|_	ogra	it worked fine thx a lot
+2004-12-10T06:54:00.000Z	ogra	_|Imanewbie|_	http://www.grawert.net/software/startup-settings/
+2004-12-10T06:55:00.000Z	_|Imanewbie|_	ogra	thanks
+2004-12-10T06:57:00.000Z	_|Imanewbie|_	ogra	where should I save it so ubuntu can chek it with apt?
+2004-12-10T06:58:00.000Z	ogra	_|Imanewbie|_	either add the repo from the software page or do it with dpkg -i <package.deb> on the commadline
+2004-12-10T06:58:00.000Z	_|Imanewbie|_	ogra	I dont get it
+2004-12-10T06:59:00.000Z	ogra	_|Imanewbie|_	http://www.grawert.net/software.html
+2004-12-10T07:00:00.000Z	ogra	_|Imanewbie|_	add it to synaptic, hit refresh and install ;)
+2004-12-10T07:00:00.000Z	ogra	_|Imanewbie|_	i guarantee it will do you no harm (its my site)
+2004-12-10T07:02:00.000Z	_|Imanewbie|_	ogra	lol I will nuke you if it attempts to kill me =p
+2004-12-10T07:02:00.000Z	ogra	_|Imanewbie|_	hehe
+2004-12-10T07:04:00.000Z	_|Imanewbie|_	ogra	how do I add your site to synaptic?
+2004-12-10T07:05:00.000Z	ogra	_|Imanewbie|_	 http://www.ubuntulinux.org/wiki/AddingRepositoriesHowto#adding-outside-repositories
+2004-12-10T07:05:00.000Z	ogra	_|Imanewbie|_	fortunately my repo is the example
+2004-12-10T07:05:00.000Z	_|Imanewbie|_	ogra	I add it as a source or bin repos?
+2004-12-10T07:09:00.000Z	_|Imanewbie|_	ogra	added now?
+2004-12-10T07:09:00.000Z	ogra	_|Imanewbie|_	hit reload in synaptic
+2004-12-10T07:10:00.000Z	_|Imanewbie|_	ogra	already reloaded, well it seems unable to find your site =/
+2004-12-10T07:11:00.000Z	_|Imanewbie|_	ogra	my ault
+2004-12-10T07:12:00.000Z	ogra	_|Imanewbie|_	got it ?
+2004-12-10T07:12:00.000Z	ogra	_|Imanewbie|_	great
+2004-12-10T07:13:00.000Z	_|Imanewbie|_	ogra	http://www.grawert.net/ubuntu/dists/warty/universe/source/Sources.gz: 404 Not Found
+2004-12-10T07:13:00.000Z	ogra	_|Imanewbie|_	dont add deb-src
+2004-12-10T07:13:00.000Z	ogra	_|Imanewbie|_	there are none yet
+2004-12-10T07:14:00.000Z	_|Imanewbie|_	ogra	done! =)
+2004-12-10T07:14:00.000Z	ogra	_|Imanewbie|_	startup-settings installs in the Computer->System Tools menu
+2004-12-10T07:16:00.000Z	_|Imanewbie|_	ogra	Ive ran it on terminal, it appears to dont want to open as I'm logged as a commom user
+2004-12-10T07:17:00.000Z	ogra	_|Imanewbie|_	run it from the menu or with sudo
+2004-12-10T07:17:00.000Z	_|Imanewbie|_	ogra	From the menu it doesnt want to pen up, Ive ran it fine with sudo
+2004-12-10T07:17:00.000Z	ogra	_|Imanewbie|_	no ? oh
+2004-12-10T07:18:00.000Z	ogra	_|Imanewbie|_	did it give an error ?
+2004-12-10T07:18:00.000Z	_|Imanewbie|_	ogra	simple doesnt show up
+2004-12-10T07:18:00.000Z	_|Imanewbie|_	ogra	by the way I think it is quite right
+2004-12-10T07:18:00.000Z	ogra	_|Imanewbie|_	not even the password dialog ?
+2004-12-10T07:18:00.000Z	_|Imanewbie|_	ogra	nothing
+2004-12-10T07:18:00.000Z	ogra	_|Imanewbie|_	weird
+2004-12-10T07:19:00.000Z	ogra	_|Imanewbie|_	could you look in the preferences of the starter ?
+2004-12-10T07:19:00.000Z	ogra	_|Imanewbie|_	i.e. right click the menu entry
+2004-12-10T07:20:00.000Z	ogra	_|Imanewbie|_	i.e. right click the menu entry and tell me what is there in the command field ?
+2004-12-10T07:23:00.000Z	_|Imanewbie|_	ogra	gksudo startup-settings
+2004-12-10T07:24:00.000Z	ogra	_|Imanewbie|_	could you run this from the terminal ?
+2004-12-10T07:24:00.000Z	_|Imanewbie|_	ogra	yes
+2004-12-10T07:25:00.000Z	ogra	_|Imanewbie|_	does it start this way ?
+2004-12-10T07:25:00.000Z	_|Imanewbie|_	ogra	yes, starts perfectly from the terminal
+2004-12-10T07:25:00.000Z	ogra	_|Imanewbie|_	i mean  gksudo startup-settings not sudo startup-settings
+2004-12-10T07:27:00.000Z	ogra	_|Imanewbie|_	hmm, you can run things like synaptic ?
+2004-12-10T07:27:00.000Z	_|Imanewbie|_	ogra	not as my default user
+2004-12-10T07:28:00.000Z	ogra	_|Imanewbie|_	ahh....that drops another light on it....i thought it was the app :)
+2004-12-10T07:30:00.000Z	_|Imanewbie|_	ogra	but sinaptyc askes me for a root password so I can log on it
+2004-12-10T07:31:00.000Z	ogra	_|Imanewbie|_	thats what startup-settings is supposed to do too
+2004-12-10T07:31:00.000Z	_|Imanewbie|_	ogra	but it doesnt =p
+2004-12-10T07:31:00.000Z	ogra	_|Imanewbie|_	but not root, your pw
+2004-12-10T07:31:00.000Z	_|Imanewbie|_	ogra	it askes no pass
+2004-12-10T07:31:00.000Z	ogra	_|Imanewbie|_	strange
+2004-12-11T13:45:00.000Z	ogra	_|Imanewbie|_	dont forget the shipping costs
+2004-12-11T13:46:00.000Z	_|Imanewbie|_	ogra	this is another point this is the grat cost they will have
+2004-12-12T17:02:00.000Z	ogra	_|Imanewbie|_	you dont want that
+2004-12-12T17:03:00.000Z	ogra	_|Imanewbie|_	hotplug loads your modules
+2004-12-12T17:03:00.000Z	ogra	_|Imanewbie|_	not all, but lots of them
+2004-12-12T17:03:00.000Z	_|Imanewbie|_	ogra	I do it is giving me alerts about beeing unable to load shpchp
+2004-12-12T17:03:00.000Z	ogra	_|Imanewbie|_	http://www.ubuntulinux.org/wiki/BootHotPlugErrors
+2004-12-12T17:06:00.000Z	_|Imanewbie|_	ogra	thanks
+2004-12-12T17:07:00.000Z	ogra	_|Imanewbie|_	these errors are a weird way to tell you *** there is no such hardware ***
+2004-12-12T17:07:00.000Z	ogra	_|Imanewbie|_	just cosmetic
+2004-12-12T17:12:00.000Z	_|Imanewbie|_	ogra	solved thanks a lot =)
+2004-12-12T17:12:00.000Z	ogra	_|Imanewbie|_	:)
+2004-12-15T13:16:00.000Z	ogra	_|Imanewbie|_	yep

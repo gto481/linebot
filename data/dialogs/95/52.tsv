@@ -1,0 +1,95 @@
+2007-04-16T10:39:00.000Z	sorcerer22		guys iam trying to play this stream or lets listen to this station online and it aint opening up in amorok .. please coud you take a look and tell me if there is something i can do about it to listen here is the web site http://www.bbc.co.uk/radio1/innewmusicwetrust/petetong/
+2007-04-16T10:41:00.000Z	pokoko	sorcerer22	works fine for me
+2007-04-16T10:41:00.000Z	pokoko	sorcerer22	you need realplayer for linux
+2007-04-16T10:42:00.000Z	sorcerer22	pokoko	oh so i cant use it on amorok or anything else only realplayer ?
+2007-04-16T10:42:00.000Z	pokoko	sorcerer22	there you go
+2007-04-16T10:42:00.000Z	pokoko	sorcerer22	not sure about amarok
+2007-04-16T10:42:00.000Z	pokoko	sorcerer22	i use xmms for lots of stuff
+2007-04-16T10:42:00.000Z	pokoko	sorcerer22	nice music
+2007-04-16T10:43:00.000Z	sorcerer22	pokoko	cheers mate .. man too bad i cant listen to it :(
+2007-04-16T10:43:00.000Z	pokoko	sorcerer22	well, it's just a matter of installing realplay. wait up
+2007-04-16T10:54:00.000Z	sorcerer22	pokoko	ok the plug on or the whole p[rogram coz i dont want real player i want an alternative
+2007-04-16T10:50:00.000Z	pokoko	sorcerer22	http://ubuntuguide.org/wiki/Ubuntu_Edgy#How_to_install_Multimedia_Player_.28RealPlayer_10.29
+2007-04-16T10:50:00.000Z	pokoko	sorcerer22	need realplayer 10
+2007-04-16T10:50:00.000Z	pokoko	sorcerer22	and not realplayer 8
+2007-04-16T10:51:00.000Z	pokoko	sorcerer22	add this to your /etc/apt/sources.list at the bottom
+2007-04-16T10:51:00.000Z	pokoko	sorcerer22	deb http://archive.canonical.com/ubuntu edgy-commercial main
+2007-04-16T10:53:00.000Z	sorcerer22	pokoko	ok i will but whats that lines supposed to do ./
+2007-04-16T10:53:00.000Z	pokoko	sorcerer22	that will add the repository to download realplayer version 10 which is needed.
+2007-04-16T10:53:00.000Z	pokoko	sorcerer22	"deb http://archive.canonical.com/ubuntu edgy-commercial main" at the end of your /etc/apt/sources.list
+2007-04-16T10:54:00.000Z	pokoko	sorcerer22	then do "sudo apt-get update"
+2007-04-16T10:54:00.000Z	pokoko	sorcerer22	then do "sudo apt-get install realplay"
+2007-04-16T10:54:00.000Z	sorcerer22	pokoko	i dont want the porgram its self if i just get in the plug in thats fine
+2007-04-16T10:55:00.000Z	sorcerer22	pokoko	can i just get the plug in by adding teh link in my sources.list
+2007-04-16T10:55:00.000Z	pokoko	sorcerer22	there's a small library there that you copy to your browser's plugins dir
+2007-04-16T10:55:00.000Z	pokoko	sorcerer22	i don't think so
+2007-04-16T10:56:00.000Z	pokoko	sorcerer22	heh
+2007-04-16T10:56:00.000Z	sorcerer22	pokoko	man .. you use xmms right .. does it work with that and .. is it better than amorok ?
+2007-04-16T10:57:00.000Z	pokoko	sorcerer22	well, xmms is more sort of personal audio system. it's fast and very slick.
+2007-04-16T10:57:00.000Z	pokoko	sorcerer22	ok give me your email
+2007-04-16T10:57:00.000Z	pokoko	sorcerer22	i'll send you the plugin
+2007-04-16T10:57:00.000Z	sorcerer22	pokoko	the plug in for what ?
+2007-04-16T10:58:00.000Z	pokoko	sorcerer22	never mind. just install the realplay and then copy nphelix.so and nphelix.xpt in your browser's plugin and then you delete realplayer. how's that ?
+2007-04-16T10:59:00.000Z	sorcerer22	pokoko	sounds great buuut .. i dunno how to do that :(
+2007-04-16T10:59:00.000Z	sorcerer22	pokoko	 this is my secod or third day on linux .. iam using staight and havent gone to windwss yet ,lol
+2007-04-16T11:00:00.000Z	sorcerer22	pokoko	 i miss that channel
+2007-04-16T11:00:00.000Z	pokoko	sorcerer22	come on quick
+2007-04-16T11:00:00.000Z	sorcerer22	pokoko	always used to tune into it ..
+2007-04-16T11:00:00.000Z	pokoko	sorcerer22	update your /etc/apt/sources.list
+2007-04-16T11:01:00.000Z	pokoko	sorcerer22	feel free to ask anytime
+2007-04-16T11:01:00.000Z	sorcerer22	pokoko	sudo apt-get install real player right
+2007-04-16T11:01:00.000Z	pokoko	sorcerer22	yes
+2007-04-16T11:01:00.000Z	pokoko	sorcerer22	"sudo apt-get install realplay"
+2007-04-16T11:03:00.000Z	sorcerer22	pokoko	ok mate its done .. installing and stuff now what
+2007-04-16T11:03:00.000Z	pokoko	sorcerer22	let it install mate
+2007-04-16T11:03:00.000Z	pokoko	sorcerer22	whatever i am not registered with freenode.
+2007-04-16T11:03:00.000Z	sorcerer22	pokoko	its done
+2007-04-16T11:03:00.000Z	pokoko	sorcerer22	ok good. now "sudo dpkg -L reaplay" please
+2007-04-16T11:04:00.000Z	pokoko	sorcerer22	did you get output from dpkg ?
+2007-04-16T11:05:00.000Z	sorcerer22	pokoko	 i did now what
+2007-04-16T11:05:00.000Z	pokoko	sorcerer22	"sudo dpkg -L realplay"
+2007-04-16T11:06:00.000Z	sorcerer22	pokoko	i did what you told me now what
+2007-04-16T11:07:00.000Z	pokoko	sorcerer22	so see where is nphelix.so and nphelix.xpt installed ? need those 2 files.
+2007-04-16T11:07:00.000Z	sorcerer22	pokoko	holly shit tahts a lot of files to go through is there a search funtion or something '/
+2007-04-16T11:08:00.000Z	pokoko	sorcerer22	"sudo dpkg -L realplay | grep nphelix.so"
+2007-04-16T11:09:00.000Z	sorcerer22	pokoko	looking for i know what directories they are at .. now what
+2007-04-16T11:10:00.000Z	pokoko	sorcerer22	did you get hold of nphelix.so ?
+2007-04-16T11:11:00.000Z	sorcerer22	pokoko	i knwo where they are at
+2007-04-16T11:11:00.000Z	sorcerer22	pokoko	now what do i do with them
+2007-04-16T11:12:00.000Z	pokoko	sorcerer22	good. copy them to /usr/lib/mozilla-firefox/plugins with "sudo cp /location/of/nphelix.so /usr/lib/mozilla-firefox/plugins"
+2007-04-16T11:15:00.000Z	pokoko	sorcerer22	done ?
+2007-04-16T11:15:00.000Z	pokoko	sorcerer22	you are missing out something mate.
+2007-04-16T11:16:00.000Z	sorcerer22	pokoko	iam coping the thing wrong or something
+2007-04-16T11:17:00.000Z	pokoko	sorcerer22	use pastebin to paste where your 2 files are nphelix.so and nphelix.xpt
+2007-04-16T11:17:00.000Z	pokoko	sorcerer22	ok ok.. you've already got it.
+2007-04-16T11:18:00.000Z	sorcerer22	pokoko	sudo cp /usr/lib/firefox/plugins/nphelix.so  /usr/lib/mozilla-firefox/plugins/
+2007-04-16T11:18:00.000Z	pokoko	sorcerer22	fine. now restart firefox and see if that BBC music loads up
+2007-04-16T11:18:00.000Z	pokoko	sorcerer22	:)
+2007-04-16T11:18:00.000Z	sorcerer22	pokoko	 ok i wil
+2007-04-16T11:21:00.000Z	pokoko	sorcerer22	all good ?
+2007-04-16T11:26:00.000Z	pokoko	sorcerer22	all good mate ? ;)
+2007-04-16T11:27:00.000Z	sorcerer22	pokoko	 umm yeah i dont get a an error buuut ..
+2007-04-16T11:27:00.000Z	pokoko	sorcerer22	does it load up or not ?
+2007-04-16T11:27:00.000Z	sorcerer22	pokoko	 umm there is not sound it says .. its playing but i cant hear anything
+2007-04-16T11:28:00.000Z	pokoko	sorcerer22	adjust your sound with gnome-volume-manager or type "alsamixer" in the terminal
+2007-04-16T11:28:00.000Z	sorcerer22	pokoko	 the windows loads up and what not but i cant hear anything
+2007-04-16T11:29:00.000Z	sorcerer22	pokoko	 it works lol
+2007-04-16T11:29:00.000Z	pokoko	sorcerer22	good good.
+2007-04-16T11:29:00.000Z	pokoko	sorcerer22	;) enjoy my friend!
+2007-04-16T11:30:00.000Z	pokoko	sorcerer22	shut your p to p
+2007-04-16T11:30:00.000Z	pokoko	sorcerer22	whatever
+2007-04-16T11:32:00.000Z	sorcerer22	pokoko	daam it .. still is not smooth like whats wrong i have a fast connection ..
+2007-04-16T11:32:00.000Z	pokoko	sorcerer22	don't know about that mate. maybe some other process is hogging your bandwith ?
+2007-04-16T11:33:00.000Z	sorcerer22	pokoko	 how can i check
+2007-04-16T11:33:00.000Z	sorcerer22	pokoko	 if you liked that channel you would like www.etn.fm and www.di.fm .. enjoy mate
+2007-04-16T11:33:00.000Z	pokoko	sorcerer22	cool.
+2007-04-16T11:33:00.000Z	pokoko	sorcerer22	thanks mate ;) great stuff
+2007-04-16T11:34:00.000Z	sorcerer22	pokoko	 anytime at least i could pay you back for yor help :) .. hey dude how can i see whats hogging my bandwith ?
+2007-04-16T11:35:00.000Z	pokoko	sorcerer22	"sudo netstat -tupan |less" will show you what processes are using the network
+2007-04-16T11:37:00.000Z	sorcerer22	pokoko	could you take a look at my list and tell me if something is up ?
+2007-04-16T11:38:00.000Z	sorcerer22	pokoko	http://paste.ubuntu-nl.org/15985/
+2007-04-16T11:38:00.000Z	sorcerer22	pokoko	lad ill be back
+2007-04-16T11:39:00.000Z	pokoko	sorcerer22	nothing significant is hogging up the network
+2007-04-16T11:43:00.000Z	pokoko	sorcerer22	are you sure in your "/usr/lib/firefox/plugins/", you have both nphelix.so and nphelix.xpt ?
+2007-04-16T11:48:00.000Z	sorcerer22	pokoko	 iam back
+2007-04-16T11:51:00.000Z	sorcerer22	pokoko	yeah bothe plug ins are there

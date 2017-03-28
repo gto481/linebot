@@ -1,0 +1,97 @@
+2005-06-25T06:09:00.000Z	robotgeek	nalioth	:)
+2005-07-25T07:51:00.000Z	robotgeek	nalioth	that was all over /.
+2005-07-25T07:54:00.000Z	nalioth	robotgeek	ppc users (like me) have to use wiki.ubuntu.com//JavaPPC
+2005-07-25T07:58:00.000Z	nalioth	robotgeek	yes i know this
+2005-07-25T07:58:00.000Z	nalioth	robotgeek	i'm tryin to find out what anne has
+2005-07-25T07:58:00.000Z	robotgeek	nalioth	sorry, my bad
+2005-07-25T08:57:00.000Z	nalioth	robotgeek	yes, its smokin hot new
+2005-07-26T12:35:00.000Z	nalioth	robotgeek	what wouldn't install?
+2005-07-26T12:36:00.000Z	nalioth	robotgeek	i have tiger and ubuntu on the same box, and it works just fine
+2005-07-26T12:36:00.000Z	robotgeek	nalioth	OS X Tiger
+2005-07-26T12:36:00.000Z	nalioth	robotgeek	it just refused to install? or what?
+2005-07-26T12:36:00.000Z	robotgeek	nalioth	the dvd just pops out saying "can't install".
+2005-07-26T12:37:00.000Z	robotgeek	nalioth	so i just got rid of my old panther partition and used it for linux :)
+2005-07-26T12:38:00.000Z	nalioth	robotgeek	tiger wouldnt install over panther?
+2005-07-26T12:38:00.000Z	robotgeek	nalioth	most of the things work just fine. I just need to work on video out, blue tooth with my phone issues. gonna take a look later though
+2005-07-26T12:39:00.000Z	nalioth	robotgeek	so you don't need a sounding board to get tiger back on?
+2005-07-26T12:39:00.000Z	robotgeek	nalioth	my panther partion got fscked. looks like the only way is to format/partition and reinstall everything
+2005-07-26T12:40:00.000Z	robotgeek	nalioth	i was just talking about how ubuntu has won me over :)
+2005-07-26T12:40:00.000Z	nalioth	robotgeek	and that is doable or not? (burning the HD and restarting from scratch)
+2005-07-26T12:41:00.000Z	robotgeek	nalioth	yeah...i just need to backup my home directory, and my /etc/
+2005-07-26T12:42:00.000Z	nalioth	robotgeek	i installed from scratch OSX and linux and had no problems (except Tiger has a taste for yaboot)
+2005-07-26T12:42:00.000Z	robotgeek	nalioth	u installed tiger first though?
+2005-07-26T12:43:00.000Z	nalioth	robotgeek	no, i installed ydl, got pissed at rpmhell, and put ubuntu on it back when warty came out
+2005-07-26T12:43:00.000Z	nalioth	robotgeek	when i had 10.3
+2005-07-26T12:43:00.000Z	robotgeek	nalioth	looks like we followed a similiar route, except i used debian
+2005-07-26T12:44:00.000Z	nalioth	robotgeek	upgraded tiger over 10.3 and tiger ate my bootloader
+2005-07-26T12:44:00.000Z	nalioth	robotgeek	and that was the only 'excitement' i had
+2005-07-26T12:45:00.000Z	robotgeek	nalioth	i havent had to boot into OS X for anything, so why have it.
+2005-07-26T12:45:00.000Z	nalioth	robotgeek	i havetn booted into osx (to use it) since i went to ubuntu
+2005-07-26T12:46:00.000Z	robotgeek	nalioth	:)
+2005-07-26T12:46:00.000Z	nalioth	robotgeek	however i bought a new mac yestern and have had to firewire-target-mode my ubuntu box
+2005-07-26T12:46:00.000Z	robotgeek	nalioth	congrats!
+2005-07-26T15:06:00.000Z	robotgeek	nalioth	do u know how we add PKG_CONFIG env variable, though
+2005-07-26T15:06:00.000Z	nalioth	robotgeek	in your ~/.bashrc
+2005-08-28T06:36:00.000Z	robotgeek	nalioth	i agree
+2005-08-28T06:37:00.000Z	nalioth	robotgeek	ncurses-bt + gnu screen
+2005-08-28T06:37:00.000Z	robotgeek	nalioth	:)
+2005-08-28T06:53:00.000Z	nalioth	robotgeek	what is bbwin?
+2005-08-28T06:53:00.000Z	robotgeek	nalioth	blackbox like shell for windows!
+2005-08-28T06:53:00.000Z	nalioth	robotgeek	ah. i dont run windoze
+2005-08-28T06:54:00.000Z	robotgeek	nalioth	lab work, CAD design..sucks!
+2005-08-28T06:54:00.000Z	robotgeek	nalioth	this alteast allieviates the issue
+2005-08-28T06:54:00.000Z	nalioth	robotgeek	alleviates what issue?
+2005-08-31T05:07:00.000Z	robotgeek	nalioth	:)
+2005-08-31T05:07:00.000Z	robotgeek	nalioth	why?
+2005-08-31T05:08:00.000Z	nalioth	robotgeek	i dual boot, and OSX just took a dump on me. diskwarrior reported "too much filesystem damage to repair" (call all$oft for more repair options)
+2005-08-31T05:08:00.000Z	robotgeek	nalioth	okay, so the apple boot disk must not have worked,i presume!
+2005-08-31T05:09:00.000Z	nalioth	robotgeek	that was first in line, and it "repaired" stuff, but not what was terribly damgd
+2005-08-31T05:09:00.000Z	robotgeek	nalioth	maybe it's a sign from the Ubuntu god, to move to ubuntu, and bless the OS X hdd with holy linux pee?
+2005-08-31T05:10:00.000Z	robotgeek	nalioth	i was doing that too, till it crashed on me too. and then, i moved to ubuntu completely. sounds like a pattern :)
+2005-08-31T05:11:00.000Z	nalioth	robotgeek	i'm almost to that point
+2005-08-31T05:12:00.000Z	robotgeek	nalioth	backup your data and format :(
+2005-08-31T05:13:00.000Z	nalioth	robotgeek	my thoughts exactly *but may just leave osx off of it
+2005-08-31T05:14:00.000Z	robotgeek	nalioth	as long as got everthing working under linux , i don't see why not
+2005-09-13T12:34:00.000Z	robotgeek	nalioth	offtopic, but did u check out the wmv 9 codec under linux/OS X?
+2005-09-13T12:34:00.000Z	robotgeek	nalioth	http://nanocrew.net/?p=129
+2005-09-13T12:35:00.000Z	robotgeek	nalioth	i am on ppc too, that's why i am excited!
+2005-09-13T12:36:00.000Z	robotgeek	nalioth	cool, ain't it?
+2005-09-13T12:36:00.000Z	nalioth	robotgeek	i'm readin, gimme a minute
+2005-09-13T12:36:00.000Z	robotgeek	nalioth	ah okay
+2005-09-13T12:41:00.000Z	robotgeek	nalioth	boom, ran into a bug!
+2005-09-13T12:53:00.000Z	robotgeek	nalioth	done reading?
+2005-09-13T13:22:00.000Z	robotgeek	nalioth	damn libtheora bug :)
+2005-09-14T10:21:00.000Z	nalioth	robotgeek	ralink?
+2005-09-14T10:22:00.000Z	robotgeek	nalioth	http://rt2x00.serialmonkey.com/wiki/index.php/Main_Page gpl'ed drivers
+2005-09-14T10:30:00.000Z	nalioth	robotgeek	where does one buy ralink usb dongles?
+2005-09-14T10:30:00.000Z	robotgeek	nalioth	usb dongles, i am not sure. i use a pcmcia card.
+2005-09-14T10:31:00.000Z	nalioth	robotgeek	my ibook has no pcmcia slot
+2005-09-14T10:31:00.000Z	robotgeek	nalioth	okay. they are good cards, and the driver is getting better all the time
+2005-09-14T10:33:00.000Z	nalioth	robotgeek	yes, so i read. but i dont have pcmcia
+2005-09-14T10:33:00.000Z	robotgeek	nalioth	trying to pull up which ones u can buy in a fry's
+2005-09-14T10:35:00.000Z	robotgeek	nalioth	http://ralink.rapla.net/
+2005-09-18T10:59:00.000Z	robotgeek	nalioth	even sound?
+2005-09-18T11:00:00.000Z	nalioth	robotgeek	are we talking ubuntu on the G5 imac or the iMac G5 in general?
+2005-09-22T06:12:00.000Z	robotgeek	nalioth	did it stop working suddenly?
+2005-10-19T09:20:00.000Z	nalioth	robotgeek	not "gnu screen" + ncurses bittorrent?
+2005-10-19T09:20:00.000Z	nalioth	robotgeek	:)
+2005-10-19T09:20:00.000Z	robotgeek	nalioth	:)
+2005-10-23T08:09:00.000Z	nalioth	robotgeek	i didnt do it
+2005-10-23T08:09:00.000Z	robotgeek	nalioth	you invited me :)
+2005-11-03T15:09:00.000Z	robotgeek	nalioth	it's a anonymity thing from gnu, i think
+2005-11-09T16:05:00.000Z	nalioth	robotgeek	linux is freedome
+2005-11-09T16:10:00.000Z	nalioth	robotgeek	that is the bomb for goin from one box to another
+2005-11-09T16:12:00.000Z	nalioth	robotgeek	there is no uninstall script
+2005-11-09T16:13:00.000Z	robotgeek	nalioth	no need, see..we can make the .deb, and then uninstall it. it will remove the files it puts there
+2005-11-09T16:18:00.000Z	robotgeek	nalioth	interesting point. can u install programs on the live cd?
+2005-11-09T16:20:00.000Z	robotgeek	nalioth	did you try the newer version of java from the ibm site? much faster for me
+2005-11-09T16:20:00.000Z	nalioth	robotgeek	what java?
+2005-11-09T16:21:00.000Z	nalioth	robotgeek	it wont say anything
+2005-11-09T16:21:00.000Z	nalioth	robotgeek	the 'make install' failed
+2005-11-09T16:22:00.000Z	robotgeek	nalioth	i tht he had the install complete?
+2005-11-09T16:22:00.000Z	nalioth	robotgeek	one time he did, checkinstall choked on the 2nd 'make install'
+2005-11-09T16:22:00.000Z	robotgeek	nalioth	https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=lxdk <- java 5
+2006-01-12T07:11:00.000Z	robotgeek	nalioth	hellp!!
+2006-01-17T06:28:00.000Z	nalioth	robotgeek	he's freeezin
+2006-01-23T12:26:00.000Z	nalioth	robotgeek	politics in #ubuntu-offtopic please
+2006-01-23T12:26:00.000Z	robotgeek	nalioth	sorry

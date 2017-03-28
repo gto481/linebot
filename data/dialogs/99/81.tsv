@@ -1,0 +1,99 @@
+2005-09-10T07:57:00.000Z	the4bagger		please PM me if you can help with the following error: (EE)Screen(s) found, but none have usable configuration.
+2005-09-10T07:33:00.000Z	the4bagger		How do I gain write access to my ubuntu system files? please pm me for more info
+2005-09-10T07:33:00.000Z	LinuxJones	the4bagger	you mean the core system files ?
+2005-09-10T07:35:00.000Z	LinuxJones	the4bagger	you usually use sudo "command" (enter your user password)
+2005-09-10T07:35:00.000Z	LinuxJones	the4bagger	you can do sudo gedit /etc/apt/sources.lst for example
+2005-09-10T07:38:00.000Z	LinuxJones	the4bagger	so your trying to install the nvidia or ati  binary drivers ?
+2005-09-10T07:42:00.000Z	LinuxJones	the4bagger	:P
+2005-09-10T07:42:00.000Z	LinuxJones	the4bagger	so your trying to install the nvidia or ati  binary drivers ?
+2005-09-10T07:42:00.000Z	the4bagger	LinuxJones	did you get my PM?
+2005-09-10T07:43:00.000Z	LinuxJones	the4bagger	yes but it didn't provide enough info
+2005-09-10T07:43:00.000Z	LinuxJones	the4bagger	your xorg config isn't working ?
+2005-09-10T07:44:00.000Z	LinuxJones	the4bagger	ok you have to set your monitors refresh rates correctly
+2005-09-10T07:44:00.000Z	LinuxJones	the4bagger	see ^^
+2005-09-10T07:47:00.000Z	the4bagger	LinuxJones	I have tried to configure my monitor using xorgconfig, but I continue to get the same error
+2005-09-10T07:47:00.000Z	LinuxJones	the4bagger	you can't change them under System >> Preferences >> Screen Resolution ?
+2005-09-10T07:48:00.000Z	the4bagger	LinuxJones	I can not boot into the GUI
+2005-09-10T07:48:00.000Z	LinuxJones	the4bagger	the problem is your monitor is not correctly detected. Search google as per the link above and get your vertical refresh rates for your make/model of your monitor write them down and edit the xorg.conf file by hand
+2005-09-10T07:51:00.000Z	LinuxJones	the4bagger	here is my monitor config from the xorg config file this is the info you need >> http://pastebin.ca/22142
+2005-09-10T07:51:00.000Z	LinuxJones	the4bagger	nope here is fine :)
+2005-09-10T07:53:00.000Z	the4bagger	LinuxJones	one of the errors i get is: (EE) Screens(s) found, but none have usable configuration.
+2005-09-10T07:54:00.000Z	LinuxJones	the4bagger	ok once you get your monitor info login to the bash terminal and type sudo nano /etc/X11/xorg.conf  (enter your users password)          then arrow down to the monitor section and add your hor/vertical refresh settings then hit ALT + o and save changes. Then hit startx to re-start the xserver
+2005-09-10T07:55:00.000Z	LinuxJones	the4bagger	ok then also select vesa as your video driver
+2005-09-10T08:05:00.000Z	the4bagger	LinuxJones	does that same edit method work with the grub file, menu.lst?
+2005-09-10T08:07:00.000Z	LinuxJones	the4bagger	yes
+2005-09-10T08:08:00.000Z	the4bagger	LinuxJones	so editing the files this way will give me write access?
+2005-09-10T08:09:00.000Z	LinuxJones	the4bagger	yes using sudo basically gives you administrative priviliges (root priviliges)
+2005-09-10T08:10:00.000Z	the4bagger	LinuxJones	so can you give me the full commands to edit the xorg.conf and menu.1st (grub) file?
+2005-09-10T08:11:00.000Z	LinuxJones	the4bagger	sudo nano /etc/X11/xorg.conf    sudo nano /etc/apt/sources.lst
+2005-09-10T08:12:00.000Z	LinuxJones	the4bagger	sudo -s will give you a root shell (admin rights to your whole system but be carefull using this command)
+2005-09-10T08:14:00.000Z	the4bagger	LinuxJones	and alt o saves the file?
+2005-09-10T08:15:00.000Z	LinuxJones	the4bagger	CRTL + o sorry
+2005-09-10T08:17:00.000Z	LinuxJones	the4bagger	good luck :)
+2005-09-10T09:21:00.000Z	LinuxJones	the4bagger	how did you make out ?
+2005-09-10T09:22:00.000Z	the4bagger	LinuxJones	i fixed the grub loader to my liking, but I could not find any refresh rates in the xorg.conf file so I didnt mess with it
+2005-09-10T09:25:00.000Z	the4bagger	LinuxJones	Perhaps I can add a few lines to my xorg.conf file for my monitor?
+2005-09-10T09:26:00.000Z	LinuxJones	the4bagger	you can use the config tool to create a new one but first you have to make a few changes
+2005-09-10T09:27:00.000Z	the4bagger	LinuxJones	my horizontal rate is 24-82KHZ, my vertical is 50-85HZ
+2005-09-10T09:27:00.000Z	the4bagger	LinuxJones	what changes would I have to make?
+2005-09-10T09:28:00.000Z	LinuxJones	the4bagger	read the top of the /etc/X11/xorg.conf file about 10 lines down
+2005-09-10T09:28:00.000Z	LinuxJones	the4bagger	follow those instructions then let me know when your done
+2005-09-10T09:29:00.000Z	the4bagger	LinuxJones	I compared the ubuntu xorg.conf file with the live knoppix one and they are very different
+2005-09-10T09:30:00.000Z	LinuxJones	the4bagger	yes, just follow the commands and we will try to get you up and running quickly
+2005-09-10T09:30:00.000Z	the4bagger	LinuxJones	is there any software for windows that can read linux partitions so i dont have to keep rebooting?
+2005-09-10T09:31:00.000Z	LinuxJones	the4bagger	>> http://uranus.it.swin.edu.au/~jn/linux/explore2fs.htm
+2005-09-10T09:32:00.000Z	LinuxJones	the4bagger	it only does ext2/3 not reiser or any other
+2005-09-10T09:33:00.000Z	the4bagger	LinuxJones	eeerr, it might be reiser...are there any that can read that?
+2005-09-10T09:34:00.000Z	LinuxJones	the4bagger	I don't think so, regardless once you make those changes run sudo dpkg-reconfigure xserver-xorg set your monitors refresh rates with resolution settings and select vesa as the video card driver and you should be ok
+2005-09-10T09:42:00.000Z	the4bagger	LinuxJones	it seems that that program has a invalid download source, is there a different mirror?
+2005-09-10T09:47:00.000Z	LinuxJones	the4bagger	dpkg-reconfigure xserver-xorg ?
+2005-09-10T09:47:00.000Z	the4bagger	LinuxJones	I didnt reboot to view those first 10 lines in the file yet
+2005-09-10T09:48:00.000Z	LinuxJones	the4bagger	ok
+2005-09-10T09:49:00.000Z	the4bagger	LinuxJones	the Explore2fs site you gave me appears to have a invalid download source
+2005-09-10T09:51:00.000Z	the4bagger	LinuxJones	can you DCC send me the latest Explore2fs?
+2005-09-10T09:51:00.000Z	LinuxJones	the4bagger	>> http://freshmeat.net/redir/explore2fs/2480/url_zip/explore2fs-1.07.zip
+2005-09-10T09:52:00.000Z	LinuxJones	the4bagger	I don't have any windows machines
+2005-09-10T09:52:00.000Z	the4bagger	LinuxJones	oh :)
+2005-09-10T09:54:00.000Z	the4bagger	LinuxJones	thanks for the link, its working now...once its done I will read those lines
+2005-09-10T09:58:00.000Z	LinuxJones	the4bagger	you can't do that from windows
+2005-09-10T09:58:00.000Z	the4bagger	LinuxJones	I know, but what should I do, just do those commands?
+2005-09-10T09:59:00.000Z	LinuxJones	the4bagger	yes but you have to do them from within ubuntu
+2005-09-10T10:00:00.000Z	LinuxJones	the4bagger	write them down or print them off. Boot to Ubuntu make the changes, then sudo dpkg-reconfigure xserver-xorg accept most of the defaults except monitor refresh, sync and resolution settings finally select vesa as the videocard driver.
+2005-09-10T10:25:00.000Z	the4bagger	LinuxJones	im back
+2005-09-10T10:25:00.000Z	the4bagger	LinuxJones	i did the dpkg-reconfigure xserver-xorg command, but now i am getting a mouse error
+2005-09-10T10:28:00.000Z	LinuxJones	the4bagger	ok you have a usb mouse ?
+2005-09-10T10:29:00.000Z	LinuxJones	the4bagger	ok run the command again and select the ps2 mouse from the list
+2005-09-10T10:30:00.000Z	LinuxJones	the4bagger	accept the rest of the default settings for eveyrthing else
+2005-09-10T10:30:00.000Z	the4bagger	LinuxJones	it made me go through a big setup when I did that command
+2005-09-10T10:31:00.000Z	the4bagger	LinuxJones	so just press enter for everything else but the video?
+2005-09-10T10:31:00.000Z	LinuxJones	the4bagger	yes
+2005-09-10T10:31:00.000Z	LinuxJones	the4bagger	no everything else except the mouse
+2005-09-10T10:32:00.000Z	LinuxJones	the4bagger	you'll need to select ps2 mouse or the model if it's available
+2005-09-10T10:32:00.000Z	LinuxJones	the4bagger	it's not normally this hard for most users :D
+2005-09-10T10:34:00.000Z	the4bagger	LinuxJones	will this be worth my time? lol
+2005-09-10T10:34:00.000Z	LinuxJones	the4bagger	yes :)
+2005-09-10T10:34:00.000Z	the4bagger	LinuxJones	ok, ill go try to reconfigure then hop back on
+2005-09-10T10:54:00.000Z	the4bagger	LinuxJones	out of curiousity I removed the PS/2 cable from my computer and my mouse and keyboard still work via the one USB cable
+2005-09-10T11:02:00.000Z	the4bagger	LinuxJones	are you there?
+2005-09-10T11:04:00.000Z	LinuxJones	the4bagger	yeah
+2005-09-10T11:05:00.000Z	the4bagger	LinuxJones	out of curiousity I removed the PS/2 cable from my computer and my mouse and keyboard still work via the one USB cable
+2005-09-10T11:06:00.000Z	LinuxJones	the4bagger	so your mouse is workign now ?
+2005-09-10T11:07:00.000Z	LinuxJones	the4bagger	so everything worked ok when you did the initial install ?
+2005-09-10T11:11:00.000Z	LinuxJones	the4bagger	ok if your mouse is on usb now you can run dpkg-reconfigure xserver-xorg and select /dev/input/mice as the mouse type that should fix that problem, select vesa as the video driver to get you up and running. I have a GF5200 and the nv driver doesn't work with it.
+2005-09-10T11:11:00.000Z	the4bagger	LinuxJones	i have tried that already and get the same error
+2005-09-10T11:12:00.000Z	LinuxJones	the4bagger	what kind of mouse is it again ?
+2005-09-10T11:16:00.000Z	the4bagger	LinuxJones	any more ideas?
+2005-09-10T11:17:00.000Z	LinuxJones	the4bagger	boot Ubuntu, then cat /dev/input/mice move the mouse around and see if spits out anything to the console
+2005-09-10T11:20:00.000Z	the4bagger	LinuxJones	im on dialup right now so as soon as i can i will put IRC on linux so i can talk without rebooting...i will go do that mouse thing now
+2005-09-10T11:20:00.000Z	LinuxJones	the4bagger	looks like this might help, print it off and follow the instructions >>  http://docs.tenshu.net/Logitech-MX-Duo-mini-HOWTO/
+2005-09-10T11:57:00.000Z	the4bagger	LinuxJones	i think i may have a solution, but i dont know the code to do it
+2005-09-10T11:58:00.000Z	the4bagger	LinuxJones	when I try booting into ubuntu it appears as though it is trying to boot from my user directory, the4bagger
+2005-09-11T16:21:00.000Z	the4bagger	LinuxJones	could you please continue to help me with my Xserver problem?
+2005-09-11T16:23:00.000Z	LinuxJones	the4bagger	it's probably alot less frustrating to just go back to knoppix for a while until you get a feel for Linux. Since you only have 1 computer fixing you problem will take much longer. Once your a bit more comfortable try re-installing Ubuntu then.
+2005-09-11T16:25:00.000Z	the4bagger	LinuxJones	I have been troubleshooting this problem for over 3 days, I really dont want to give up now
+2005-09-11T16:25:00.000Z	the4bagger	LinuxJones	I have 2 computers, but my hard drives are in my dual boot pc atm
+2005-09-11T16:25:00.000Z	LinuxJones	the4bagger	I am jsut worried that you will give up on Linux because of it :)
+2005-09-11T16:26:00.000Z	the4bagger	LinuxJones	I will NEVER give up on linux
+2005-09-11T16:27:00.000Z	LinuxJones	the4bagger	If you can get your 2nd computer online you can have someone help walk you through in real time instead of having to reboot each time you want to make a change
+2005-09-11T16:29:00.000Z	LinuxJones	the4bagger	there are console based irc programs that you could use to get online but I have never had to use one. If your internet connection is working in Ubuntu that is.
+2005-09-11T16:29:00.000Z	the4bagger	LinuxJones	the thing is that I dont have the same video card on my other system, so I think that would effect the setup process

@@ -1,0 +1,99 @@
+2011-12-06T08:33:00.000Z	matin		ok so no one is responding on #svn
+2011-12-06T08:34:00.000Z	Flannel	matin	What are you having trouble with?
+2011-12-06T08:34:00.000Z	matin	Flannel	i followed tutorials
+2011-12-06T08:34:00.000Z	Flannel	matin	Are you following a guide?  Are you trying to set up a server? just to use it as a client?
+2011-12-06T08:34:00.000Z	Flannel	matin	Alright, which tutorial? just so I know what steps they're having you go through
+2011-12-06T08:37:00.000Z	matin	Flannel	http://www.howtogeek.com/howto/ubuntu/install-subversion-with-web-access-on-ubuntu/
+2011-12-06T08:39:00.000Z	Flannel	matin	Alright.  In general howtogeek is a horrible place for accurate tutorials (for Debian based systems, they tend to do things the RPM based way), but this one looks pretty accurate (mostly because its straightforward).  What steps are you having trouble with? or just "get to end, stuff don't work"?
+2011-12-06T08:42:00.000Z	Flannel	matin	Alright.  That makes sense, now that I take a second look at that tutorial.  Let me ask, is your intent to do this via apache? (http(s):// links) or do you not care what protocol?  Do you want/need the apache browsing ability?
+2011-12-06T08:43:00.000Z	Flannel	matin	Right.  So, you're already running apache on this machine (or don't mind running it if you're not already)?
+2011-12-06T08:44:00.000Z	Flannel	matin	Alright, just a couple more questions.  Do you intend for this to be local-LAN only? or visible from the outside world?
+2011-12-06T08:45:00.000Z	Flannel	matin	over http or https or both?
+2011-12-06T08:48:00.000Z	Flannel	matin	Well, currently you're serving stuff over http but not https.  The only thing about this with regard to your svn is it means your passwords would be transmitted in plaintext.
+2011-12-06T08:49:00.000Z	Flannel	matin	I suggest you make sure to use a different svn password than your regular user account password.  Just be congizant of it :)
+2011-12-06T08:50:00.000Z	Flannel	matin	So, lets make this work.  From that tutorial, I think you have a /svn directory, is this true?
+2011-12-06T08:51:00.000Z	Flannel	matin	Alright, lets go ahead and delete that.  We have to re-create the repository anyway, so the least we can do is do it in a non-obnoxious location.
+2011-12-06T08:51:00.000Z	Flannel	matin	I'll come back to that, give me a sec.
+2011-12-06T08:52:00.000Z	Flannel	matin	Do you have /var on a separate (large) partition, because you're expecting to put a lot of stuff in /var/www? or do we just have one partition with everything on it?
+2011-12-06T08:52:00.000Z	Flannel	matin	... why did you do that?
+2011-12-06T08:53:00.000Z	Flannel	matin	No worries, everyone is new at some point :)
+2011-12-06T08:54:00.000Z	Flannel	matin	Alright.  I'm not going to deal with that at the moment, but go ahead and pastebin the output of `df -h` (pastebin is http://planet.ubuntu.com/, you paste output, hit 'submit' then give the url here for us to look at)
+2011-12-06T08:54:00.000Z	Flannel	matin	Er, sorry. paste.ubuntu.com
+2011-12-06T08:55:00.000Z	matin	Flannel	any directory?
+2011-12-06T08:55:00.000Z	Flannel	matin	just `df -h`
+2011-12-06T08:56:00.000Z	Flannel	matin	Alright, so we've just got everything in /, which is fine.  We're still going to put /svn in /var though, because that's where it belongs.  (There is no standard here, other than /var for variable sized data)
+2011-12-06T08:57:00.000Z	Flannel	matin	Personally, I made a /var/devel/ which I then put /svn/ and other things in, but you're free to just create it in /var/svn/
+2011-12-06T08:58:00.000Z	Flannel	matin	No, we're not moving, we're going to delete the old one: `sudo rm -r /svn` (Be very careful with that, you don't want a space in between '/' and 'svn')
+2011-12-06T08:58:00.000Z	Flannel	matin	No
+2011-12-06T08:59:00.000Z	Flannel	matin	Alright, now go ahead and make a svn folder, sudo mkdir /var/svn/ if you want it in /var/svn/ (for example, mine is /var/devel/svn/)
+2011-12-06T09:01:00.000Z	Flannel	matin	That's fine.  Ok.  So, in our head we realize we have to update the apache config to point there, which we'll do in a minute.  Right now, I need to ask: Is this going to be your only svn repository? or do you think you'll have an immediate need for more than one?
+2011-12-06T09:01:00.000Z	Flannel	matin	We can add more later, of course, so you're not really locked in, but we can do it for "1" now or for "many" now (with a little bit more work)
+2011-12-06T09:01:00.000Z	Flannel	matin	Alright, good.
+2011-12-06T09:02:00.000Z	Flannel	matin	Alright, I'd normally say we're ready to create it, but before, I feel compelled to ask: did you change the default user/group that apache runs as?
+2011-12-06T09:02:00.000Z	Flannel	matin	this would consist of replacing `www-data` with $something-else in your apache config.
+2011-12-06T09:03:00.000Z	Flannel	matin	This is why I asked :)  Also, did I mention howtogeek is a rotten place for tutorials yet? :)
+2011-12-06T09:04:00.000Z	Flannel	matin	If you didn't change anything, /etc/apache2/envvars would list it, BUT since you may have hardcoded it, we'll need to probably check /etc/apache2/apache2.conf.  So, the command to do that:
+2011-12-06T09:05:00.000Z	Flannel	matin	Nah, we'll use grep, it's easier!
+2011-12-06T09:06:00.000Z	Flannel	matin	Let me pause this, because this is a teaching moment.
+2011-12-06T09:07:00.000Z	Flannel	matin	So, `sudo` is only used when you need elevated permissions.  MOST (not all, but probably 99%) config files are world readable, so there's no reason to sudo nano /etc/apache2/apache2.conf (unless you intend to change something) or sudo grep /etc/whatever
+2011-12-06T09:08:00.000Z	Flannel	matin	Its not the end of the world, most of the time sudo X will work just fine, but it can cause problems, and certainly can lead to accidental changes :)
+2011-12-06T09:08:00.000Z	Flannel	matin	anyway, the command you can pastebin the output to is: grep User /etc/apache2/apache2.conf && grep Group /etc/apache2/apache2.conf && grep www-data /etc/apache2/envvars
+2011-12-06T09:08:00.000Z	Flannel	matin	All on one line (command1 && command2 && command3 means 'do command1, then if it has no errors, do command2, and the same with command3)
+2011-12-06T09:09:00.000Z	Flannel	matin	So that command looked first for the string 'User' in /etc/apache2/apache2.conf, then it looked for 'Group' in the same file, and then the last command looked for 'www-data' in /etc/apache2/envvars
+2011-12-06T09:10:00.000Z	Flannel	matin	The first two told me you haven't hard coded the values (theyre still ${APACHE_RUN_USER} and ${APACHE_RUN_GROUP}, respectively) and the last one told me you haven't changed the defaults for those settings either.
+2011-12-06T09:13:00.000Z	Flannel	matin	Still with me?  Or confused as heck?  (Take your time, just want to make sure you're not looking at the screen dumbfounded)
+2011-12-06T09:14:00.000Z	matin	Flannel	sorry had to get up for a second
+2011-12-06T09:14:00.000Z	Flannel	matin	No worries.
+2011-12-06T09:15:00.000Z	Flannel	matin	Alright.  So, the point of that was to figure out what user and group apache runs as.  You're still default, which means it runs as www-data:www-data.
+2011-12-06T09:15:00.000Z	matin	Flannel	right
+2011-12-06T09:16:00.000Z	Flannel	matin	Now that we know that, we want to make /var/svn/ owned by www-data:www-data (because the apache user is going to be how we interact with it): sudo chown www-data:www-data /var/svn/
+2011-12-06T09:17:00.000Z	Flannel	matin	Now, we're ready to create our svn repository.  Again, we want to do this as our apache user.  So we'll use sudo to open a shell as our apache user, then move to our subversion directory, then make a repository.  What name do you want to give this repository?
+2011-12-06T09:18:00.000Z	matin	Flannel	triumph
+2011-12-06T09:19:00.000Z	Flannel	matin	Alright.  So, `sudo -u www-data -i` (it likely won't ask for your password, but if it does, remember, it's YOUR password)
+2011-12-06T09:20:00.000Z	Flannel	matin	then you'll see probably nothing but a `$` prompt.  You're essentially logged in as apache right now, you can probably `ls` and see your site's files.  So we want to change to our subversion directory, `cd /var/svn/`
+2011-12-06T09:20:00.000Z	Flannel	matin	and then create our repository: `svnadmin create triumph`
+2011-12-06T09:20:00.000Z	Flannel	matin	sure
+2011-12-06T09:21:00.000Z	Flannel	matin	Oh, this could be due to the fact that you moved it to your homedir.
+2011-12-06T09:21:00.000Z	Flannel	matin	You can cd /var/svn/ and `ls` successfully though, right? (it'll be empty, but it wont error)
+2011-12-06T09:22:00.000Z	Flannel	matin	No, don't do that.
+2011-12-06T09:22:00.000Z	Flannel	matin	That's alright.  It gave you a "you're not allowed" message anyway, because you're www-data, right?
+2011-12-06T09:22:00.000Z	Flannel	matin	(even if you did it as your user, we can fix it later)
+2011-12-06T09:23:00.000Z	Flannel	matin	right.  So, `svnadmin create triumph`  (we could have just did `svnadmin create /var/svn/triumph` instead of cd etc too, but this is obviously more educational :)
+2011-12-06T09:23:00.000Z	Flannel	matin	Just in the terminal, where you're currently in /var/svn/ as www-data
+2011-12-06T09:23:00.000Z	Flannel	matin	Same terminal
+2011-12-06T09:24:00.000Z	Flannel	matin	'triumph' in that case is a relative path, 'whereever I am' being the default working directory
+2011-12-06T09:25:00.000Z	Flannel	matin	Alright, now we want to get out of our www-data terminal, and go back to your normal user, so we use `exit` (which is similar but different than logout)
+2011-12-06T09:27:00.000Z	Flannel	matin	After that, we need to go into apache and point it at our new repository location.  So... lets see, this would be in /etc/apache2/sites-available/default
+2011-12-06T09:27:00.000Z	Flannel	matin	At least, that's probably where it is.  You may have done it differently if you were using a different tutorial.
+2011-12-06T09:28:00.000Z	Flannel	matin	We want to edit that file, so `sudo nano /etc/apache2/sites-available/default` in that file you should see a <Location /svn> directive, with SVNPath /svn in it, etc.  If you don't, let me know, we'll need to find it.
+2011-12-06T09:28:00.000Z	Flannel	matin	No, we want the enabled one.
+2011-12-06T09:29:00.000Z	Flannel	matin	Alright.  Go ahead and open that, and pastebin its contents please (there shouldn't be anything sensitive in it)
+2011-12-06T09:30:00.000Z	Flannel	matin	That doesn't look like a complete file, but just a section of the middle of one.
+2011-12-06T09:31:00.000Z	Flannel	matin	(actually it looks like the end of it)
+2011-12-06T09:33:00.000Z	Flannel	matin	Oh, right.  Sorry, you're right! there isn't a <Location /svn> in that file!  Because as of ... 10.04 or 8.04 or something, it's actually in /etc/apache2/mods-available/dav_svn.conf
+2011-12-06T09:33:00.000Z	Flannel	matin	so, go ahead and close this file, then open that (with sudo) in nano. (and pastebin if you don't mind!)
+2011-12-06T09:38:00.000Z	Flannel	matin	Alright.  Now we need to change line 11, where it says SVNPath /svn, we need to move that to point to our new path, SVNPath /var/svn/triumph
+2011-12-06T09:39:00.000Z	Flannel	matin	Save it, restart apache, and it should be.  You should see "Revision: 0" at http://playtriumph.tk/svn once you log in.
+2011-12-06T09:42:00.000Z	Flannel	matin	Which one?
+2011-12-06T09:45:00.000Z	Flannel	matin	Did you view http://playtriumph.tk/svn/ or  http://playtriumph.tk/svn ? (trailing slash)
+2011-12-06T09:47:00.000Z	Flannel	matin	Alright.  Lets look at our apache error log, that'll tell us what it's not able to do.  pastebin `tail -n 25 /var/log/apache2/error.log` (that just displays the last (up to) 25 lines of that file)
+2011-12-06T09:49:00.000Z	Flannel	matin	Alright, if I had to guess, I'd say we didn't successfully update /etc/apache2/mods-available/dav_svn.conf
+2011-12-06T09:50:00.000Z	Flannel	matin	Actually, let me ask this instead.  Can you please pastebin the contents of /etc/apache2/mods-enabled/dav_svn.conf?
+2011-12-06T09:52:00.000Z	Flannel	matin	Alright, so you have (line 19): SVNPath /svn/triumph, this needs to be /var/svn/triumph
+2011-12-06T09:53:00.000Z	Flannel	matin	If you look at your error log, it was looking for /svn/triumph/format (format is a file in the repository that apache was looking for), which is how I knew this wasn't configured correctly (should be looking for /var/svn/triumph/format)
+2011-12-06T09:54:00.000Z	Flannel	matin	So, now go back to your homedir, make a scratch folder, go into it.  `svn checkout https://playtriumph.tk/svn/ .`
+2011-12-06T09:54:00.000Z	Flannel	matin	That'll checkout the repository (its empty) to your current working directory (which, you've made a new folder for)
+2011-12-06T09:55:00.000Z	Flannel	matin	Er sorry, http not https.
+2011-12-06T09:55:00.000Z	Flannel	matin	you can do this on your macbook pro, if you have svn installed.
+2011-12-06T09:55:00.000Z	Flannel	matin	At this point, your server is set up, and we're off to svn-land.
+2011-12-06T09:55:00.000Z	Flannel	matin	Install svn on your macbook.... I don't really know how to do that :)  We CAN do it on your server too if that's easier
+2011-12-06T09:57:00.000Z	Flannel	matin	http://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html  That book is a good book.  You oviously don't need to set up a repository, just use it, so you can skip the first svnadmin bit.
+2011-12-06T09:57:00.000Z	Flannel	matin	`svn` is the command
+2011-12-06T09:58:00.000Z	Flannel	matin	If you've got stuff you want to import, then svn import will work.  I prefer an initial structure commit first, but that's just personal preference.
+2011-12-06T10:00:00.000Z	Flannel	matin	svn commit -m "message", I encourage you to peruse that page/its links (and the rest of it).  It's actually a pretty quick read for the basics (skip the reference and advanced stuff, etc)
+2011-12-06T10:00:00.000Z	Flannel	matin	especially if you're already familiar with git
+2011-12-06T10:00:00.000Z	Flannel	matin	http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html for instance.
+2011-12-06T10:21:00.000Z	Flannel	matin	You need to svn add first.  You've checked out, then you copy (filesystem) then add (files from filesystem into svn), then commit.  `svn status` will tell you what has been added (not yet committed), or question marks mean "not under version control"
+2011-12-06T10:21:00.000Z	Flannel	matin	`svn add file`
+2011-12-06T10:22:00.000Z	Flannel	matin	where file is a particular file, or a glob of files
+2011-12-06T10:22:00.000Z	Flannel	matin	to add your current directory?

@@ -1,0 +1,99 @@
+2006-04-21T11:49:00.000Z	TeamCanada|Silen		XD
+2006-04-21T11:50:00.000Z	TeamCanada|Silen		is there a theme for windows 3.1, cause that would be pretty sweet!
+2006-04-21T11:51:00.000Z	TeamCanada|Silen		very
+2006-04-21T11:51:00.000Z	TeamCanada|Silen		well, i dont know
+2006-04-21T11:52:00.000Z	TeamCanada|Silen		warbo, I'm trying the install again, get more info on the error
+2006-04-21T11:53:00.000Z	TeamCanada|Silen		is it possible to get a corrupt mailed cd?
+2006-04-21T11:54:00.000Z	TeamCanada|Silen		SuSE hated my monitor
+2006-04-21T11:54:00.000Z	TeamCanada|Silen		hehe
+2006-04-21T11:54:00.000Z	TeamCanada|Silen		I wouldnt mind getting the 64 bit dual boot w/ windows on my amd 64 4000+
+2006-04-21T11:55:00.000Z	TeamCanada|Silen		Hostname: Ubuntu <--- is this ok? the equivalent of computer name in winblows?
+2006-04-21T11:55:00.000Z	[Chameleon] 	TeamCanada|Silen	I'm dual-booting with Windows XP Pro 32-bit and Ubuntu Dapper AMD64
+2006-04-21T11:56:00.000Z	[Chameleon] 	TeamCanada|Silen	WTF, you went backwards?
+2006-04-21T11:56:00.000Z	[Chameleon] 	TeamCanada|Silen	how?
+2006-04-21T12:05:00.000Z	[Chameleon] 	TeamCanada|Silen	I like LVM
+2006-04-21T12:06:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah, generally.
+2006-04-21T12:10:00.000Z	[Chameleon] 	TeamCanada|Silen	how smart are you?
+2006-04-21T12:10:00.000Z	[Chameleon] 	TeamCanada|Silen	heh, j/k
+2006-04-21T12:12:00.000Z	[Chameleon] 	TeamCanada|Silen	I just use SSH to get to my server
+2006-04-21T12:13:00.000Z	[Chameleon] 	TeamCanada|Silen	Secure SHell
+2006-04-21T12:13:00.000Z	[Chameleon] 	TeamCanada|Silen	to login to the system. kernel doesn't matter.
+2006-04-21T12:14:00.000Z	[Chameleon] 	TeamCanada|Silen	what are you talking about?
+2006-04-21T12:15:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah
+2006-04-21T12:15:00.000Z	[Chameleon] 	TeamCanada|Silen	automounted on startup via /etc/fstab
+2006-04-21T12:16:00.000Z	[Chameleon] 	TeamCanada|Silen	I set it up
+2006-04-21T12:16:00.000Z	[Chameleon] 	TeamCanada|Silen	are you dual-booting?
+2006-04-21T12:16:00.000Z	[Chameleon] 	TeamCanada|Silen	it's a config file
+2006-04-21T12:16:00.000Z	[Chameleon] 	TeamCanada|Silen	shell scripts are like batch files.
+2006-04-21T12:17:00.000Z	[Chameleon] 	TeamCanada|Silen	extensions are not required in Linux
+2006-04-21T12:25:00.000Z	[Chameleon] 	TeamCanada|Silen	/ is not an imaginary point. it's the beginning.
+2006-04-21T12:26:00.000Z	[Chameleon] 	TeamCanada|Silen	also, with Windows, using A-Z you are limited to 26 mounted filesystems / devices. Linux is UNLIMITED.
+2006-04-21T12:27:00.000Z	[Chameleon] 	TeamCanada|Silen	depends on where you define them in the /etc/fstab
+2006-04-21T12:27:00.000Z	[Chameleon] 	TeamCanada|Silen	they can mount ANYWHERE
+2006-04-21T12:28:00.000Z	[Chameleon] 	TeamCanada|Silen	what do you mean?
+2006-04-21T12:28:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah, or you can use Symbolic links.
+2006-04-21T12:28:00.000Z	[Chameleon] 	TeamCanada|Silen	symbolic links will blow your mind
+2006-04-21T12:30:00.000Z	[Chameleon] 	TeamCanada|Silen	probably not. don't move stuff around. just learn it.
+2006-04-21T12:30:00.000Z	[Chameleon] 	TeamCanada|Silen	it's the way it is for a reason... because it works well.
+2006-04-21T12:31:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah, but it'll become a nightmare really quick.
+2006-04-21T12:35:00.000Z	[Chameleon] 	TeamCanada|Silen	there are like 7 known viruses ever for Linux. none are spreading around.
+2006-04-21T12:36:00.000Z	[Chameleon] 	TeamCanada|Silen	it's not a concern, but if you are super worried you can install antivirus software on Linux
+2006-04-21T12:39:00.000Z	[Chameleon] 	TeamCanada|Silen	there are some things like tripwire that will tell you... and root-kit scanners.
+2006-04-21T12:39:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah, use Firestarter... it's nice.
+2006-04-21T12:53:00.000Z	[Chameleon] 	TeamCanada|Silen	there are more
+2006-04-21T12:53:00.000Z	[Chameleon] 	TeamCanada|Silen	but install both GNOME & KDE and then when you login, click the Session or Options/Session button to decide which to use
+2006-04-21T12:54:00.000Z	[Chameleon] 	TeamCanada|Silen	there's all kinds of window managers.
+2006-04-21T12:54:00.000Z	[Chameleon] 	TeamCanada|Silen	there's an option in GDM, the initial login screen.
+2006-04-21T12:55:00.000Z	[Chameleon] 	TeamCanada|Silen	but it's quite insecure to do that.
+2006-04-21T12:55:00.000Z	[Chameleon] 	TeamCanada|Silen	what does that matter? I have no monitor or keyboard or mouse on my server.
+2006-04-21T12:56:00.000Z	[Chameleon] 	TeamCanada|Silen	it's a windows SSH client
+2006-04-21T12:56:00.000Z	[Chameleon] 	TeamCanada|Silen	SSH is like rcon but with encryption over the connection.
+2006-04-21T13:14:00.000Z	[Chameleon] 	TeamCanada|Silen	no. what are you booting? Breezy?
+2006-04-21T13:15:00.000Z	[Chameleon] 	TeamCanada|Silen	do expert
+2006-04-21T13:15:00.000Z	[Chameleon] 	TeamCanada|Silen	once you get to the menu, there should be an option toward the bottom for media check / verify
+2006-04-21T13:16:00.000Z	[Chameleon] 	TeamCanada|Silen	just ask when there's a question you can't answer.
+2006-04-21T13:16:00.000Z	[Chameleon] 	TeamCanada|Silen	should eventually get to a colorful blueish menu with a lot of options.
+2006-04-21T13:21:00.000Z	[Chameleon] 	TeamCanada|Silen	you clicked?? or used arrows and pressed enter?
+2006-04-21T13:21:00.000Z	[Chameleon] 	TeamCanada|Silen	I don't think it's mouse driven
+2006-04-21T13:21:00.000Z	[Chameleon] 	TeamCanada|Silen	um... yeah, do that
+2006-04-21T13:21:00.000Z	[Chameleon] 	TeamCanada|Silen	:)
+2006-04-21T13:23:00.000Z	[Chameleon] 	TeamCanada|Silen	um, no
+2006-04-21T13:25:00.000Z	[Chameleon] 	TeamCanada|Silen	is it a laptop? if not, select No
+2006-04-21T13:29:00.000Z	[Chameleon] 	TeamCanada|Silen	don't think it's even begun yet
+2006-04-21T13:29:00.000Z	[Chameleon] 	TeamCanada|Silen	however, it may be going too far
+2006-04-21T13:29:00.000Z	[Chameleon] 	TeamCanada|Silen	I don't want to make you loose the data on that machine with an install of ubuntu
+2006-04-21T13:29:00.000Z	[Chameleon] 	TeamCanada|Silen	OK, good
+2006-04-21T13:29:00.000Z	[Chameleon] 	TeamCanada|Silen	and with that I'm going to bed
+2006-04-21T13:30:00.000Z	[Chameleon] 	TeamCanada|Silen	you want my IM?
+2006-04-21T13:30:00.000Z	[Chameleon] 	TeamCanada|Silen	which one do you want? I use all
+2006-04-21T13:30:00.000Z	[Chameleon] 	TeamCanada|Silen	heh, except that
+2006-04-21T13:36:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah, use an RW and write it slow
+2006-04-21T13:36:00.000Z	[Chameleon] 	TeamCanada|Silen	what max speed is your burner?
+2006-04-21T13:37:00.000Z	[Chameleon] 	TeamCanada|Silen	on an RW?
+2006-04-21T13:37:00.000Z	[Chameleon] 	TeamCanada|Silen	it should say on front
+2006-04-21T13:37:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah, so do 4x like DeMoNSeED said
+2006-04-21T13:53:00.000Z	[Chameleon] 	TeamCanada|Silen	it's a good thing. use it
+2006-04-21T13:53:00.000Z	[Chameleon] 	TeamCanada|Silen	less likely to burn coasters
+2006-04-21T13:53:00.000Z	[Chameleon] 	TeamCanada|Silen	bad discs
+2006-04-21T13:53:00.000Z	[Chameleon] 	TeamCanada|Silen	only useful as coasters for drinks
+2006-04-21T13:57:00.000Z	[Chameleon] 	TeamCanada|Silen	at least 512 MB
+2006-04-21T14:00:00.000Z	[Chameleon] 	TeamCanada|Silen	I agree... but check out transgaming.com
+2006-04-21T14:01:00.000Z	[Chameleon] 	TeamCanada|Silen	like what?
+2006-04-21T14:01:00.000Z	[Chameleon] 	TeamCanada|Silen	how?
+2006-04-21T14:01:00.000Z	[Chameleon] 	TeamCanada|Silen	yeah Cedega is $5/mo
+2006-04-21T14:02:00.000Z	[Chameleon] 	TeamCanada|Silen	and that's OO.o's problem how?
+2006-04-21T14:08:00.000Z	[Chameleon] 	TeamCanada|Silen	Chameleon22 has been around here for a while... almost as long as me.
+2006-04-21T14:09:00.000Z	[Chameleon] 	TeamCanada|Silen	I use Ogg Vorbis on my Neuros
+2006-04-21T14:10:00.000Z	[Chameleon] 	TeamCanada|Silen	http://neurosaudio.com/
+2006-04-21T14:13:00.000Z	[Chameleon] 	TeamCanada|Silen	what's expensive??
+2006-04-21T14:14:00.000Z	[Chameleon] 	TeamCanada|Silen	I've not found one
+2006-04-21T14:14:00.000Z	[Chameleon] 	TeamCanada|Silen	but I haven't tried either
+2006-04-21T14:14:00.000Z	[Chameleon] 	TeamCanada|Silen	because that's not right
+2006-04-21T14:14:00.000Z	[Chameleon] 	TeamCanada|Silen	uhh... conscience?
+2006-04-21T14:15:00.000Z	[Chameleon] 	TeamCanada|Silen	that's why I switched to Linux.... tired of stealing warez.
+2006-04-21T14:28:00.000Z	[Chameleon] 	TeamCanada|Silen	evo has a calendar and tasks built in, too
+2006-04-21T14:28:00.000Z	[Chameleon] 	TeamCanada|Silen	it's like Outlook
+2006-04-21T14:29:00.000Z	[Chameleon] 	TeamCanada|Silen	but not as crappy
+2006-04-21T14:29:00.000Z	[Chameleon] 	TeamCanada|Silen	how old are u?
+2006-04-21T14:33:00.000Z	[Chameleon] 	TeamCanada|Silen	hey, register your nickname so I can query you
+2006-04-21T14:34:00.000Z	[Chameleon] 	TeamCanada|Silen	so use yours

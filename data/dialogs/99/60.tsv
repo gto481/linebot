@@ -1,0 +1,99 @@
+2006-10-03T16:58:00.000Z	collier_		mount: special device /dev/sdb1 does not exist
+2006-10-03T05:00:00.000Z	collier_		[18:58]  <collier_> collier@collier-desktop:~$ sudo  mount -t  vfat /dev/sdb1 /media/usb
+2006-10-03T05:00:00.000Z	collier_		[18:58]  <collier_> mount: special device /dev/sdb1 does not exist
+2006-10-03T05:00:00.000Z	collier_		So what should I do now?
+2006-10-03T05:02:00.000Z	collier_		1
+2006-10-03T05:03:00.000Z	collier_		Device: /dev/sda/
+2006-10-03T05:05:00.000Z	collier_		It still says the same thing
+2006-10-03T05:05:00.000Z	collier_		I just switched it
+2006-10-03T05:06:00.000Z	collier_		Ok well I just plugged in my zen and it has a removeable disk on it and it worked with that but not my usb
+2006-10-03T05:07:00.000Z	collier_		port 9050
+2006-10-03T05:08:00.000Z	Warbo	collier_	was that for me?
+2006-10-03T05:08:00.000Z	Warbo	collier_	yes. He needs to set FF to look for Privoxy which is running through TOR
+2006-10-03T05:08:00.000Z	collier_	Warbo	is he trying to use tor?
+2006-10-03T05:09:00.000Z	Warbo	collier_	tsock? I don;t know what that is. I know it uses SOCKS which is a type of proxy
+2006-10-03T05:10:00.000Z	collier_	Warbo	hold on ill see what it says
+2006-10-03T05:11:00.000Z	collier_	Warbo	Nevermind its working but I thought u use Port 9050
+2006-10-03T05:11:00.000Z	Warbo	collier_	TOR uses 9050, but it is a good idea to use privoxy, point your browser at it, then run privoxy through TOR
+2006-10-03T05:12:00.000Z	collier_	Warbo	How do u do that? I just installed tor
+2006-10-03T05:12:00.000Z	Warbo	collier_	It should also install "privoxy"
+2006-10-03T05:12:00.000Z	Warbo	collier_	OK, then scroll up as I just waled me and micael71 through it. Do you want me to post the messages again?
+2006-10-03T05:13:00.000Z	Warbo	collier_	It is started up by default, you just have to set your browser to use it
+2006-10-03T05:13:00.000Z	collier_	Warbo	its running right now?
+2006-10-03T05:14:00.000Z	collier_	Warbo	How do I set my browser to use it?
+2006-10-03T05:14:00.000Z	Warbo	collier_	read these instructions
+2006-10-03T05:15:00.000Z	collier_	Warbo	what instructions
+2006-10-03T05:15:00.000Z	Warbo	collier_	these messages which start with "micael71"
+2006-10-03T05:16:00.000Z	Warbo	collier_	I basically walsed him through it 2 minutes ago, so I have just copy/pasted the stuff I told him
+2006-10-03T05:17:00.000Z	Warbo	collier_	I can't send you a PM
+2006-10-03T05:20:00.000Z	collier_	Warbo	At the very top
+2006-10-03T05:20:00.000Z	collier_	Warbo	Before It says Sample config file for privoxy?
+2006-10-03T05:20:00.000Z	Warbo	collier_	Yes, press enter a few times to get some space
+2006-10-03T05:22:00.000Z	Warbo	collier_	No. ALL that the line says is "logfile logfile", and it needs to be changes to say "# logfile logfile"
+2006-10-03T05:24:00.000Z	collier_	Warbo	How Do I set my browser to point to that?
+2006-10-03T05:25:00.000Z	Warbo	collier_	If you are using Firefox then the extension on that page I linked to will sort it out
+2006-10-03T05:25:00.000Z	Warbo	collier_	But I am using Epiphany and haven't figured it out yet :(
+2006-10-03T05:25:00.000Z	collier_	Warbo	Oh
+2006-10-03T05:26:00.000Z	collier_	Warbo	I clicked on Tor Enabled
+2006-10-03T05:26:00.000Z	collier_	Warbo	But I did the tor test thing and it says I am not using tor
+2006-10-03T05:27:00.000Z	Warbo	collier_	Ok, hang on I will fore up FIrefox (so to speak)
+2006-10-03T05:27:00.000Z	collier_	Warbo	But I dont think I have tor running I need enabled it
+2006-10-03T05:28:00.000Z	Warbo	collier_	"sudo /etc/init.d/tor restart"
+2006-10-03T05:28:00.000Z	collier_	Warbo	It still not working I think I put that thing at the wrong part of the top of the config file
+2006-10-03T05:29:00.000Z	Warbo	collier_	In FF go on Edit>Preferences>General>Connection Settings and set "manual proxy configuration" to address "127.0.0.1" port "8118"
+2006-10-03T05:29:00.000Z	Warbo	collier_	I don't think it matters where it goes, but keeping it at the top keeps it easily accessible for editing
+2006-10-03T05:30:00.000Z	collier_	Warbo	IT says localhost
+2006-10-03T05:30:00.000Z	Warbo	collier_	OK, same thing
+2006-10-03T05:30:00.000Z	collier_	Warbo	forward-socks4a / localhost:9050 .
+2006-10-03T05:30:00.000Z	collier_	Warbo	Does it need to have the period at the end
+2006-10-03T05:30:00.000Z	Warbo	collier_	Wait, in the config file? 9050 and yes, the perios
+2006-10-03T05:31:00.000Z	Warbo	collier_	 "forward-socks4a / localhost:9050 ."
+2006-10-03T05:32:00.000Z	Warbo	collier_	You saved the config file?
+2006-10-03T05:32:00.000Z	collier_	Warbo	yes.. Now for tor do I have to enable it to start everytime I boot up?
+2006-10-03T05:32:00.000Z	Warbo	collier_	It is already set up to do that
+2006-10-03T05:33:00.000Z	Warbo	collier_	and privoxy
+2006-10-03T05:33:00.000Z	collier_	Warbo	Thank you
+2006-10-03T05:33:00.000Z	Warbo	collier_	But to make sure your changes take effect copy/paste this into a trminal and run it "sudo /etc/init.d/privoxy restart && sudo /etc/init.d/tor restart"
+2006-10-03T05:34:00.000Z	Warbo	collier_	does it say "restarting anonymising proxy server, etc. etc. etc."?
+2006-10-03T05:34:00.000Z	Warbo	collier_	I mean filtering
+2006-10-03T05:35:00.000Z	Warbo	collier_	In the terminal you ran that command in
+2006-10-03T05:35:00.000Z	Warbo	collier_	Perfect. One more step
+2006-10-03T05:36:00.000Z	Warbo	collier_	In Firefox go in Edit>Preferences>General>Connection Settings
+2006-10-03T05:37:00.000Z	Warbo	collier_	Make sure "Manual proxy configuration" is selected, and in the top box put "127.0.0.1" and port 8118, then select "use this for all"
+2006-10-03T05:38:00.000Z	Warbo	collier_	"view"?
+2006-10-03T05:39:00.000Z	Warbo	collier_	I don't know about that
+2006-10-03T05:40:00.000Z	Warbo	collier_	WINE, or GIMP
+2006-10-03T05:44:00.000Z	Warbo	collier_	You probably need to use sudo to edit the file ("sudo nano /etc/apt/sources.list") to get super user permission
+2006-10-03T05:46:00.000Z	collier_	Warbo	I did it now I go to syanptic and search for wine?
+2006-10-03T05:47:00.000Z	Warbo	collier_	Make sure you click "Reload"
+2006-10-03T05:47:00.000Z	Warbo	collier_	amd64 WINE? Oops, that is a tricky one
+2006-10-03T05:47:00.000Z	collier_	Warbo	Yeah I have amd64
+2006-10-03T05:48:00.000Z	Warbo	collier_	Basically since WINE runs Windows programs, which are pretty much all 32bit, the developers haven't made a 64bit version. That means that you will have to install the 32bit version
+2006-10-03T05:48:00.000Z	Warbo	collier_	See https://help.ubuntu.com/community and search for Wine
+2006-10-03T06:04:00.000Z	Warbo	collier_	Open file browser, press ctrl-L type "fonts:"
+2006-10-03T06:05:00.000Z	collier_	Warbo	could not find fonts
+2006-10-03T06:05:00.000Z	Warbo	collier_	Oh. Well, plan B I would install "kcontrol" and open it up. It is a KDE app, but is VERY useful for installing fonts (start it with "gksudo kcontrol")
+2006-10-03T06:07:00.000Z	collier_	Warbo	I did that now what?
+2006-10-03T06:25:00.000Z	collier_	Warbo	How do u edit /etc/apt/sources.list  in terminal again?
+2006-10-03T06:25:00.000Z	Warbo	collier_	"sudo nano /etc/apt/sources.list"
+2006-10-03T06:30:00.000Z	Warbo	collier_	Personally I would get the package from debian-multimedia.org and install that (you shouldn't really install Debain packages, but Flash is binary only anyway)
+2006-10-03T06:33:00.000Z	collier_	Warbo	I got to etc/apt/source.list and add which one from http://debian-multimedia.org/mirrors.html to the list
+2006-10-03T06:37:00.000Z	collier_	Warbo	I got to etc/apt/source.list and add which one from http://debian-multimedia.org/mirrors.html to the list
+2006-10-03T06:38:00.000Z	Warbo	collier_	Add an unstable or a sid, and use the deb not the deb-src
+2006-10-03T06:39:00.000Z	collier_	Warbo	W: GPG error: http://ieso.gotdns.com unstable Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 07DC563D1F41B907
+2006-10-03T06:41:00.000Z	collier_	Warbo	Do I Need to put #deb http://mirror.home-dn.net/debian-multimedia unstable main or with the #
+2006-10-03T06:41:00.000Z	Warbo	collier_	Without the #
+2006-10-03T06:41:00.000Z	collier_	Warbo	W: GPG error: http://ieso.gotdns.com unstable Release: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 07DC563D1F41B907
+2006-10-03T06:41:00.000Z	Warbo	collier_	Oh? Hang on, I will give you my line....
+2006-10-03T06:42:00.000Z	Warbo	collier_	Oh, don;'t pay attention to that
+2006-10-03T06:42:00.000Z	Warbo	collier_	It has worked fine
+2006-10-03T06:42:00.000Z	Warbo	collier_	Now look for "mozilla-flash-player7-binary"
+2006-10-03T06:43:00.000Z	collier_	Warbo	Didnt find anything
+2006-10-03T06:43:00.000Z	collier_	Warbo	Yes I am on amd64 so what should  I do
+2006-10-03T06:43:00.000Z	Warbo	collier_	Hmm, one second
+2006-10-03T06:44:00.000Z	Warbo	collier_	While you wait, remove that repo from sources.list (never a good idea to keep Debian repos around when you might press upgrade)
+2006-10-03T06:44:00.000Z	collier_	Warbo	ok
+2006-10-03T06:45:00.000Z	Warbo	collier_	Try this, but I haven't used it myself as I am in 32bit land https://help.ubuntu.com/community/FirefoxAMD64FlashJava?highlight=%28flash%29
+2006-10-03T06:50:00.000Z	Warbo	collier_	You sure you installed all of the packages it said?
+2006-10-03T06:50:00.000Z	collier_	Warbo	bash: linux32: No such file or directory
+2006-10-03T06:51:00.000Z	collier_	Warbo	I dont have 32 I have 64 so do I have to change that?

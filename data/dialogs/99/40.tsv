@@ -1,0 +1,99 @@
+2008-08-16T20:10:00.000Z	thiebaude		actionparsnip:thanks, im using thunar now
+2008-08-16T20:10:00.000Z	ActionParsnip	thiebaude	any good to you?
+2008-08-16T20:11:00.000Z	ActionParsnip	thiebaude	sweet
+2008-08-16T20:11:00.000Z	ActionParsnip	thiebaude	there is more than knoqueror
+2008-08-16T20:12:00.000Z	ActionParsnip	thiebaude	there may be an even better one for you
+2008-08-16T20:12:00.000Z	ActionParsnip	thiebaude	i use fluxbox
+2008-08-16T20:13:00.000Z	ActionParsnip	thiebaude	its a desktpo environment
+2008-08-16T20:14:00.000Z	ActionParsnip	thiebaude	http://www.google.co.uk/url?q=http://fluxbox.sourceforge.net/screenshots.php&sa=X&oi=smap&resnum=1&ct=result&cd=2&usg=AFQjCNFWCWMNpMfTYKM1fv_ZGdr8QRqHag
+2008-08-16T20:14:00.000Z	ActionParsnip	thiebaude	i love making it slick and quiick
+2008-08-16T20:16:00.000Z	ActionParsnip	thiebaude	doesnt look like my sorta thing
+2008-08-16T20:16:00.000Z	ActionParsnip	thiebaude	you can always remove it ;)
+2008-08-16T20:17:00.000Z	ActionParsnip	thiebaude	yep
+2008-08-16T20:21:00.000Z	ActionParsnip	thiebaude	log off, change session type
+2008-08-16T20:28:00.000Z	ActionParsnip	thiebaude	check your xorg.conf, make the leftmost value the resolution you desire
+2008-08-16T20:29:00.000Z	ActionParsnip	thiebaude	swing around on websearches you might find something, I think its in the right click menu or try right clicking on the bar at the bottom
+2008-08-16T20:29:00.000Z	ActionParsnip	thiebaude	theres hold  ctrl+alt and press + and - to change ;)
+2008-08-16T20:30:00.000Z	ActionParsnip	thiebaude	http://fluxbox-wiki.org/index.php/Howto_change_resolution
+2008-09-22T19:20:00.000Z	ActionParsnip	thiebaude	me too, its sweet and slick
+2008-10-05T04:41:00.000Z	ActionParsnip	thiebaude	usually in /usr/bin
+2008-10-05T04:42:00.000Z	ActionParsnip	thiebaude	you can find out by typing: which <appname>
+2008-10-08T19:05:00.000Z	ActionParsnip	thiebaude	graphics, sound, wireless?
+2008-10-12T06:31:00.000Z	ActionParsnip	thiebaude	why are you running that. there is a multitude of media players. WMP uses a tonne of windows librarys, hence its name
+2008-10-12T06:33:00.000Z	ActionParsnip	thiebaude	you probably could get it going but it'll be pain
+2008-10-12T06:36:00.000Z	ActionParsnip	thiebaude	mplayer or amarok are ok, depends what you need
+2008-10-12T06:37:00.000Z	ActionParsnip	thiebaude	vlc is fine for that
+2008-10-12T06:37:00.000Z	ActionParsnip	thiebaude	amarok has some pretty decent shoutcast servers in it so you acn listen to a variety of musics
+2008-10-18T01:51:00.000Z	ActionParsnip	thiebaude	sweet aint it :D
+2008-10-18T01:51:00.000Z	ActionParsnip	thiebaude	P_Kable: http://i270.photobucket.com/albums/jj93/andrew_woodhead666/MyScreenshot.png?t=1223893978
+2008-10-18T01:53:00.000Z	ActionParsnip	thiebaude	i'll host it for you ;)
+2008-10-18T01:53:00.000Z	ActionParsnip	thiebaude	you can pul it down then
+2008-10-18T01:57:00.000Z	ActionParsnip	thiebaude	http://img325.imageshack.us/img325/8974/tux0011024x7684hn.png
+2008-10-18T02:00:00.000Z	ActionParsnip	thiebaude	recognise!
+2008-10-29T18:16:00.000Z	ActionParsnip	thiebaude	exactly so if you dont use more than 4gb ram its wasted space
+2008-11-27T05:54:00.000Z	ActionParsnip	thiebaude	sup?
+2008-11-27T05:59:00.000Z	ActionParsnip	thiebaude	for screen res I always edit xorg.conf
+2008-11-27T06:00:00.000Z	ActionParsnip	thiebaude	or add a script to set it in ~/.fluxbox/startup
+2008-11-27T06:01:00.000Z	thiebaude	ActionParsnip	what is the command to open xorg.conf? to edit it
+2008-11-27T06:01:00.000Z	ActionParsnip	thiebaude	sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf_old; gksudo gedit /etc/X11/xorg.conf
+2008-11-27T06:01:00.000Z	ActionParsnip	thiebaude	the first bit makes a backup copy so you can roll back ;)
+2008-11-27T06:03:00.000Z	ActionParsnip	thiebaude	or if yuo add a script to run the xandr command
+2008-11-27T06:03:00.000Z	thiebaude	ActionParsnip	yea, i dont anything about scripts
+2008-11-27T06:04:00.000Z	ActionParsnip	thiebaude	you need a file with: #!/bin/bash at the top
+2008-11-27T06:04:00.000Z	ActionParsnip	thiebaude	then the xandr command you use underneath
+2008-11-27T06:05:00.000Z	ActionParsnip	thiebaude	then the script wil have that on the second line, save the file then chmod u+x it, yuo now have a script
+2008-12-01T16:37:00.000Z	ActionParsnip	thiebaude	it doesnt really
+2009-01-13T02:20:00.000Z	thiebaude	ActionParsnip	hi
+2009-02-09T03:30:00.000Z	ActionParsnip	thiebaude	could always use firepup too
+2009-02-09T03:22:00.000Z	ActionParsnip	thiebaude	chillin
+2009-02-09T03:27:00.000Z	thiebaude	ActionParsnip	i problem was installing flash on opera
+2009-02-09T03:28:00.000Z	ActionParsnip	thiebaude	sudo cp libflashplayer.so /usr/lib/opera/plugins
+2009-02-09T03:31:00.000Z	ActionParsnip	thiebaude	its a very small / fast custom version of firefox
+2009-02-09T03:31:00.000Z	ActionParsnip	thiebaude	theres a million different web browsers, just seems recently everyone if firefox branwashed
+2009-02-09T03:31:00.000Z	thiebaude	ActionParsnip	are you able to install flash on it?
+2009-02-09T03:31:00.000Z	ActionParsnip	thiebaude	sure
+2009-02-09T03:45:00.000Z	thiebaude	ActionParsnip	i installed and ran opera and flash is already available
+2009-02-09T03:45:00.000Z	ActionParsnip	thiebaude	there yuo go then ;)
+2009-02-09T03:45:00.000Z	thiebaude	ActionParsnip	you still use fluxbox?
+2009-02-09T03:46:00.000Z	ActionParsnip	thiebaude	yeah i switch between that and compiz which i find hilarious
+2009-02-09T03:47:00.000Z	ActionParsnip	thiebaude	im only using an onboard GeForce 6250
+2009-02-09T04:30:00.000Z	thiebaude	ActionParsnip	can you recommend a good wallpaper?
+2009-02-09T04:31:00.000Z	ActionParsnip	thiebaude	www.vladstudio.com
+2009-02-09T04:31:00.000Z	ActionParsnip	thiebaude	lsb_release -c
+2009-02-09T04:31:00.000Z	ActionParsnip	thiebaude	sec - http://s270.photobucket.com/albums/jj93/andrew_woodhead666/?action=view&current=snapshot1.png
+2009-02-09T04:32:00.000Z	ActionParsnip	thiebaude	psychadelia deluxe
+2009-02-09T04:33:00.000Z	thiebaude	ActionParsnip	i got that valentine's one
+2009-02-09T04:33:00.000Z	ActionParsnip	thiebaude	it wows windows users, i dont find it overly useful
+2009-03-17T23:37:00.000Z	thiebaude	ActionParsnip	yo
+2009-03-17T23:38:00.000Z	ActionParsnip	thiebaude	yo yo yo
+2009-04-27T21:44:00.000Z	thiebaude	ActionParsnip	you still use fluxbox?
+2009-04-27T21:44:00.000Z	ActionParsnip	thiebaude	my fileserver ues it
+2009-04-27T21:45:00.000Z	ActionParsnip	thiebaude	its my favorite DE after LXDE
+2009-04-27T21:46:00.000Z	ActionParsnip	thiebaude	flux has awesome shortcut key support
+2009-04-28T05:46:00.000Z	thiebaude	ActionParsnip	which wm do you use?
+2009-06-18T04:01:00.000Z	thiebaude	ActionParsnip	yo
+2009-06-18T22:08:00.000Z	thiebaude	ActionParsnip	bonjour
+2009-07-24T05:19:00.000Z	thiebaude	ActionParsnip	sebsebseb  hi
+2009-09-01T02:02:00.000Z	thiebaude	ActionParsnip	haven't heard that in a while
+2009-09-01T02:02:00.000Z	ActionParsnip	thiebaude	heard what?
+2009-09-01T02:02:00.000Z	thiebaude	ActionParsnip	yo yo yo
+2009-09-01T02:41:00.000Z	thiebaude	ActionParsnip	i agree, i couldn't imagine saving everything to the desktp
+2009-09-01T02:42:00.000Z	ActionParsnip	thiebaude	specially as there is a ~/Downloads folder
+2009-09-06T21:14:00.000Z	thiebaude	ActionParsnip	but it conforms with the GPL v3 license
+2009-09-11T01:26:00.000Z	thiebaude	ActionParsnip	i use opera 10
+2009-09-11T23:24:00.000Z	thiebaude	ActionParsnip	hey
+2009-09-15T19:06:00.000Z	thiebaude	ActionParsnip	any day im ready to put 9.10 on my system
+2009-09-22T18:55:00.000Z	thiebaude	ActionParsnip	lol
+2009-09-22T18:56:00.000Z	thiebaude	ActionParsnip	dont feel bad, i did too
+2009-09-22T18:56:00.000Z	ActionParsnip	thiebaude	too much drugs and booze
+2009-09-22T18:56:00.000Z	thiebaude	ActionParsnip	oh no
+2009-11-14T22:43:00.000Z	thiebaude	ActionParsnip	i use that also
+2009-11-14T22:46:00.000Z	ActionParsnip	thiebaude	i think there will be a day when we look back at firefox and say "what were we thinking!?"
+2009-11-14T22:47:00.000Z	thiebaude	ActionParsnip	yep
+2009-11-14T23:05:00.000Z	thiebaude	ActionParsnip	yep, mine is up to date
+2009-11-14T23:07:00.000Z	thiebaude	ActionParsnip	i had to add under the Screen section, Device "Default Device" in xorg.conf
+2009-11-14T23:08:00.000Z	ActionParsnip	thiebaude	very annoying that karmic doesnt have one by default but my ubuntu setu script copies one in from my backups :)
+2009-11-14T23:08:00.000Z	thiebaude	ActionParsnip	it was a parser error before
+2009-11-24T01:30:00.000Z	thiebaude	ActionParsnip	yep,its awful
+2011-09-24T23:29:00.000Z	thiebaude	ActionParsnip	hey there :)
+2012-11-23T07:19:00.000Z	thiebaude	ActionParsnip	agree

@@ -1,0 +1,97 @@
+2006-01-25T10:08:00.000Z	allison_1984	jbzz	yes
+2006-01-25T10:02:00.000Z	jbzz	allison_1984	 Where is the printer attached?
+2006-01-25T10:02:00.000Z	jbzz	allison_1984	 Since the other machine is sharing you do not need Samba.
+2006-01-25T10:03:00.000Z	allison_1984	jbzz	so how do I connect to the printer ? or the files on the server
+2006-01-25T10:03:00.000Z	jbzz	allison_1984	 Are you running Ubuntu?
+2006-01-25T10:04:00.000Z	jbzz	allison_1984	 Did you try adding a printer and indicating you want to connect to the Windows printer?
+2006-01-25T10:04:00.000Z	allison_1984	jbzz	my admin is telling me I have to go back to windows, which I so don't want to
+2006-01-25T10:05:00.000Z	allison_1984	jbzz	I did add a printer
+2006-01-25T10:05:00.000Z	jbzz	allison_1984	 Well I connect to a Windows printer from my Ubuntu.
+2006-01-25T10:06:00.000Z	allison_1984	jbzz	how did you do it ?
+2006-01-25T10:07:00.000Z	jbzz	allison_1984	 I added a printer, but chose a network printer, and it was a 'Windows (smb)'  connection.
+2006-01-25T10:07:00.000Z	jbzz	allison_1984	 Then I had to indicate where it was located.
+2006-01-25T10:07:00.000Z	jbzz	allison_1984	 Then I had a user account I used that was allowed on the Windows machine.
+2006-01-25T10:07:00.000Z	allison_1984	jbzz	what is the location ?
+2006-01-25T10:07:00.000Z	allison_1984	jbzz	alright
+2006-01-25T10:08:00.000Z	allison_1984	jbzz	thanks
+2006-01-25T10:08:00.000Z	jbzz	allison_1984	 When you fill in the 'add printer' and indicate it is a network printer you will have options for filling in the loaction of the remote printer.
+2006-01-25T10:08:00.000Z	jbzz	allison_1984	 Are you still with me?
+2006-01-25T10:09:00.000Z	jbzz	allison_1984	 I have set up Sambe here to share a hard drive.  But I had been using the Windows printer prior to that time.
+2006-01-25T10:10:00.000Z	allison_1984	jbzz	ok, hmmmmm, sometime I should be setting up samba then
+2006-01-25T10:10:00.000Z	jbzz	allison_1984	 But I must tell you that when I filled in the Ubuntu form for attaching to the Windows printer ...
+2006-01-25T10:10:00.000Z	jbzz	allison_1984	 I had to go into a file and manually change the text to make the printer connection correct.
+2006-01-25T10:12:00.000Z	allison_1984	jbzz	hmmm, sounds complicated
+2006-01-25T10:12:00.000Z	jbzz	allison_1984	 I first tried to attach to the printer, then I went into the file and made the necessary correction.  Not really too bad.
+2006-01-25T10:12:00.000Z	allison_1984	jbzz	wouldn't it be just easier with samba then ?
+2006-01-25T10:12:00.000Z	jbzz	allison_1984	 Samba allows YOU to share YOUR hard drives and printers with others.
+2006-01-25T10:12:00.000Z	allison_1984	jbzz	lemme try it and see if it works...thanks anyway
+2006-01-25T12:04:00.000Z	jbzz	allison_1984	 You have returned.  How far did you get with the shared printer?
+2006-01-25T12:05:00.000Z	allison_1984	jbzz	well, everything looks fine, the icon even says prinitng, but nothing gets printed so far
+2006-01-25T12:06:00.000Z	jbzz	allison_1984	 That is what I found when I tried it.  I will tell you what to check.
+2006-01-25T12:06:00.000Z	jbzz	allison_1984	 Look at the file called   /etc/cups/printers.conf
+2006-01-25T12:07:00.000Z	jbzz	allison_1984	There will be a line in there for the printer you are trying to reach.
+2006-01-25T12:07:00.000Z	allison_1984	jbzz	hey, its ok, it just printed.....
+2006-01-25T12:07:00.000Z	jbzz	allison_1984	  Super.  See you.
+2006-01-25T12:07:00.000Z	allison_1984	jbzz	thanks, I used the cups options instaed of the windows(smb) :)
+2006-01-25T12:08:00.000Z	jbzz	allison_1984	  Odd.  I never tried that.
+2006-01-25T12:08:00.000Z	allison_1984	jbzz	next is the server files....hahahaha
+2006-01-25T12:08:00.000Z	jbzz	allison_1984	  No fear!
+2006-01-25T12:08:00.000Z	allison_1984	jbzz	it just works....well try it then
+2006-01-25T12:20:00.000Z	jbzz	allison_1984	  Are you still there?
+2006-01-25T12:20:00.000Z	allison_1984	jbzz	yes, tell me
+2006-01-25T12:21:00.000Z	jbzz	allison_1984	  Hey I just sahred a directory on my Windows 2000 Pro system and tried to connect to get at the files.
+2006-01-25T12:21:00.000Z	allison_1984	jbzz	did it work ?
+2006-01-25T12:22:00.000Z	jbzz	allison_1984	  It was very easy.  In 'File Browser' use the 'File  -  Connect to server'  selection and fill in the form.  Choose a Windows network.  Worked fine.
+2006-01-25T12:23:00.000Z	jbzz	allison_1984	  I  chose to use a username that I knew existed on that Windows 2000 Pro system to make the connection.  You will see the box for that.
+2006-01-25T12:23:00.000Z	allison_1984	jbzz	I have to figure to connect to the server files, I so don't want to go to back to windoze
+2006-01-25T12:23:00.000Z	allison_1984	jbzz	cool. I will try it
+2006-01-25T12:24:00.000Z	jbzz	allison_1984	  So you should not have a hard time connecting to your WIndows shared files.  Take care.
+2006-01-25T12:24:00.000Z	allison_1984	jbzz	thanks...likewise
+2006-01-25T12:27:00.000Z	allison_1984	jbzz	btw, which application is this file browser in ?
+2006-01-25T12:27:00.000Z	jbzz	allison_1984	  Choose   Applications  then Accessories   Then File Browser.
+2006-01-25T12:27:00.000Z	allison_1984	jbzz	remote desktop ?
+2006-01-25T12:28:00.000Z	jbzz	allison_1984	  Not a remote desktop.
+2006-01-25T12:28:00.000Z	allison_1984	jbzz	alright
+2006-01-25T12:29:00.000Z	jbzz	allison_1984	   Then    File    then   Connect to server
+2006-01-25T12:33:00.000Z	allison_1984	jbzz	should the host name be also the server name ?
+2006-01-25T12:33:00.000Z	jbzz	allison_1984	  For the HOST name I used the name of the computer that is sharing files.
+2006-01-25T12:34:00.000Z	allison_1984	jbzz	yes, thats the ip address of the xp machine....what should I give for server ?
+2006-01-25T12:35:00.000Z	jbzz	allison_1984	  The 'Server'   I used the name of the computer that is sharing the directory.    I did not use the IP number.
+2006-01-25T12:35:00.000Z	jbzz	allison_1984	  But I do have entires in my    HOSTS  file that changes names to IP numbers.
+2006-01-25T12:36:00.000Z	jbzz	allison_1984	  The domain name is the name of the network.
+2006-01-25T12:37:00.000Z	allison_1984	jbzz	I know the domain name......
+2006-01-25T12:38:00.000Z	jbzz	allison_1984	 The 'name to use for connection' is what YOU want to call the connection on YOUR end.
+2006-01-25T12:39:00.000Z	jbzz	allison_1984	The 'user name' is a name of a user that exists on the Windows machine.
+2006-01-25T12:39:00.000Z	allison_1984	jbzz	I alreday got a username for the network,
+2006-01-25T12:40:00.000Z	jbzz	allison_1984	  Are you trying to make that connection now?
+2006-01-25T12:40:00.000Z	allison_1984	jbzz	alright, what do I put in server ?
+2006-01-25T12:40:00.000Z	allison_1984	jbzz	yes
+2006-01-25T12:40:00.000Z	jbzz	allison_1984	  The 'server'  is the name of the computer that is providing the sharepoint.  Simply the name of that machine.
+2006-01-25T12:41:00.000Z	allison_1984	jbzz	alright
+2006-01-25T12:53:00.000Z	allison_1984	jbzz	still here ?
+2006-01-25T12:53:00.000Z	jbzz	allison_1984	  Yes.
+2006-01-25T12:54:00.000Z	allison_1984	jbzz	hmmm, it keeps asking me for the password ? I can alreday see the admin icon on the server
+2006-01-25T12:55:00.000Z	jbzz	allison_1984	  Hmmm.  I can connect.  When I tried to edit a file on the Windows share point it asked me for a password then it let me edit.
+2006-01-25T12:56:00.000Z	jbzz	allison_1984	  The next time I tried to edit it did NOT ask me for a password.
+2006-01-25T12:57:00.000Z	allison_1984	jbzz	says...you must log in to access abcd@192.687.2.678@server domain something.org
+2006-01-25T12:58:00.000Z	jbzz	allison_1984	  Wow.  Are you trying to log into a REMOTE Windows system or a LOCAL Windows server?
+2006-01-25T12:59:00.000Z	jbzz	allison_1984	  Mine is LOCAL.
+2006-01-25T12:59:00.000Z	allison_1984	jbzz	its local, I think
+2006-01-25T12:59:00.000Z	jbzz	allison_1984	  Is it in the same building you are in ?  On the LOCAL network?
+2006-01-25T12:59:00.000Z	allison_1984	jbzz	the office's....lol
+2006-01-25T13:02:00.000Z	jbzz	allison_1984	  Are you in the same building as the server?
+2006-01-25T13:03:00.000Z	allison_1984	jbzz	yes, the server is right in front of me
+2006-01-25T13:03:00.000Z	allison_1984	jbzz	sorry, I am not so good with servers and network... ;)
+2006-01-25T13:03:00.000Z	jbzz	allison_1984	  Well mine is in the basement.  Did you give that machine a name?
+2006-01-25T13:04:00.000Z	allison_1984	jbzz	the it chap told me its called server itself
+2006-01-25T13:05:00.000Z	jbzz	allison_1984	  Yes it serves files and printers.   Did you make a sharepoint on the server machine that you can connect to?
+2006-01-25T13:06:00.000Z	allison_1984	jbzz	what's a sharepoint ? is it the same as having a unique username/password to access it ?
+2006-01-25T13:07:00.000Z	jbzz	allison_1984	  No.  On the server you choose a directory and right click on the name.  Then choose to SHARE that directory.  That is then a sharepoint.
+2006-01-25T13:07:00.000Z	jbzz	allison_1984	  Then you can connect to that with your Ubuntu system because now it is PRESENTED as an accessible sharepoint.
+2006-01-25T13:07:00.000Z	allison_1984	jbzz	alright, I should be doing that from my machine or ther server ?
+2006-01-25T13:08:00.000Z	allison_1984	jbzz	alright
+2006-01-25T13:08:00.000Z	jbzz	allison_1984	  One the server, make a sharepoint.  That is the directory you want to share.  Right click on the directory you want to share and choose to make it SHARED.
+2006-01-25T13:10:00.000Z	jbzz	allison_1984	  Then you connect to that NAME that you are sharing it as.  So if you have a directory called BB on the server you can elect to share it as BB, or some other name if you wish.
+2006-01-25T13:11:00.000Z	jbzz	allison_1984	  Then go back to your Ubuntu machine and instruct it to connect to that name you used for the sharepoint.
+2006-01-25T13:11:00.000Z	allison_1984	jbzz	ok, cool, thanks again
+2006-01-28T07:04:00.000Z	allison_1984	jbzz	hey man

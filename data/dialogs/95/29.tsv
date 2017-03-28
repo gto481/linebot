@@ -1,0 +1,95 @@
+2009-09-20T20:03:00.000Z	IdleOne	ZykoticK9	it is legal/copyright issues that prevent songbird from being added to repos but according to the site they are working on it
+2009-09-20T20:15:00.000Z	IdleOne	ZykoticK9	I don't even want to ask why you need 10 workspaces heh
+2009-09-20T20:17:00.000Z	ZykoticK9	IdleOne	across dual-monitors it's awesome!
+2010-01-29T21:55:00.000Z	ZykoticK9	IdleOne	doesn't that replace the package that you just removed?  i'd think ubuntu-desktop would only be removed when a package it uses is being removed, then by reinstalling ubuntu-desktop wouldn't that just reinstall what you're trying to remove?
+2010-01-29T21:57:00.000Z	IdleOne	ZykoticK9	you know what, that is a good question. I am not sure anymore heh
+2010-01-29T21:57:00.000Z	IdleOne	ZykoticK9	let me test it out...
+2010-01-29T22:00:00.000Z	IdleOne	ZykoticK9	I just removed seahorse and it also took ubuntu-desktop with it. now when reinstalling ubuntu-desktop it does not bring back seahorse.
+2010-01-29T22:00:00.000Z	IdleOne	ZykoticK9	oops wait, it does
+2010-01-29T22:00:00.000Z	ZykoticK9	IdleOne	good to know - but that doesn't make sense...
+2010-01-29T22:00:00.000Z	IdleOne	ZykoticK9	guess I had it wrong
+2010-01-29T22:00:00.000Z	ZykoticK9	IdleOne	that does make sense :)
+2010-01-29T22:01:00.000Z	IdleOne	ZykoticK9	good catch.
+2010-01-30T00:11:00.000Z	IdleOne	ZykoticK9	I have never used Xpenguins but would assume the placement can be adjusted in a config file
+2010-01-30T00:13:00.000Z	ZykoticK9	IdleOne	that would certainly be "normal" for a *nix program, but I don't find ANY config files - it only seems to accept switches from CLI/launcher and nothing about resolution - thanks for the reply though
+2010-01-30T00:14:00.000Z	IdleOne	ZykoticK9	hehe I got Tux's all over my screen now
+2010-01-30T00:14:00.000Z	ZykoticK9	IdleOne	do they go down to the bottom of your screen?
+2010-01-30T00:15:00.000Z	IdleOne	ZykoticK9	yes, they drop down to the panel and then run around
+2010-01-30T00:15:00.000Z	ZykoticK9	IdleOne	you happen to be running Nvidia/Twinview?
+2010-01-30T00:15:00.000Z	IdleOne	ZykoticK9	no sorry
+2010-01-30T00:18:00.000Z	ZykoticK9	IdleOne	turns out problem was due to gnome-do - quitting it and they drop all the way down
+2010-01-30T00:19:00.000Z	IdleOne	ZykoticK9	glad you figured it out
+2010-03-07T00:27:00.000Z	ZykoticK9	IdleOne	actually Solaris' ZFS has a very similar feature to "windows restore" and it's very powerful - so don't completely disregard the idea :)
+2010-03-07T00:27:00.000Z	IdleOne	ZykoticK9	something to keep in mind :)
+2010-03-07T00:28:00.000Z	IdleOne	ZykoticK9	as long as it is not a la windows :)
+2010-03-15T00:18:00.000Z	ZykoticK9	IdleOne	"Vive le Québec libre" ;)
+2010-03-15T00:16:00.000Z	ZykoticK9	IdleOne	"chown -R user:user folder"
+2010-03-15T00:16:00.000Z	IdleOne	ZykoticK9	so chown -R root:idleone /path/to/folder ?
+2010-03-15T00:17:00.000Z	ZykoticK9	IdleOne	that would leave root as owner is that what you want?
+2010-03-15T00:17:00.000Z	IdleOne	ZykoticK9	no I want idleone as owner
+2010-03-15T00:17:00.000Z	ZykoticK9	IdleOne	so "sudo chown -R idleone:idleone /path/to/folder"
+2010-03-15T00:19:00.000Z	IdleOne	ZykoticK9	hmm yeah but how did you know I am in QC?
+2010-03-15T00:19:00.000Z	ZykoticK9	IdleOne	launchpad stalking
+2010-03-15T00:22:00.000Z	ZykoticK9	IdleOne	yes to sudo if they're owned by root
+2010-03-15T00:23:00.000Z	IdleOne	ZykoticK9	thanks again :)
+2010-03-15T03:24:00.000Z	IdleOne	ZykoticK9	yeah that too, I can use video and get the info
+2010-03-15T03:25:00.000Z	ZykoticK9	IdleOne	video doesn't work on my system?
+2010-03-15T03:25:00.000Z	IdleOne	ZykoticK9	oops your right, video output capture card info for me
+2010-04-10T03:04:00.000Z	ZykoticK9	IdleOne	was it you that was trying to get volume mouse scroll wheel to work a while ago?  notice it's working now :)
+2010-04-10T03:04:00.000Z	IdleOne	ZykoticK9	yeah! been working for a week or so now :)
+2010-04-10T03:05:00.000Z	ZykoticK9	IdleOne	i just notice yesterday by accident
+2010-04-10T03:05:00.000Z	IdleOne	ZykoticK9	I kept trying and then one day it worked
+2010-04-17T05:31:00.000Z	ZykoticK9	IdleOne	maco <OT>Congrats to you both on becoming operators :) </OT>
+2010-04-17T06:08:00.000Z	IdleOne	ZykoticK9	thank you
+2010-04-21T06:30:00.000Z	ZykoticK9	IdleOne	"rem-apt-repository"?
+2010-04-21T06:30:00.000Z	IdleOne	ZykoticK9	remove or delete the ppa
+2010-04-21T06:31:00.000Z	ZykoticK9	IdleOne	command not found
+2010-04-21T06:31:00.000Z	IdleOne	ZykoticK9	add-apt-repository counter part is what I am looking for
+2010-04-21T06:31:00.000Z	ZykoticK9	IdleOne	that one i'm familiar with :)
+2010-04-21T06:35:00.000Z	ZykoticK9	IdleOne	if it's a PPA that you want to remove check out "sudo ppa-purge ppa:repository-name/subdirectory"
+2010-04-22T06:06:00.000Z	IdleOne	ZykoticK9	I wouldn't say becoming an ubuntu member is an exclusive club, in fact I think it is a little to open
+2010-04-22T06:07:00.000Z	ZykoticK9	IdleOne	point taken
+2010-04-22T08:27:00.000Z	ZykoticK9	IdleOne	i used to think so too - i still prefer apt-get (BUT under a development release, "aptitude safe-upgrade" is crucial)
+2010-04-28T05:40:00.000Z	ZykoticK9	IdleOne	>> appends yes
+2010-04-28T05:41:00.000Z	IdleOne	ZykoticK9	Bodsda thanks :) good to know
+2010-05-07T09:32:00.000Z	IdleOne	ZykoticK9	maco did give a book title that is FREE so you can learn :P
+2010-07-28T09:37:00.000Z	ZykoticK9	IdleOne	actually you can register multiple nicks on your freenode account, so I'm not sure what switching to a non-associated nic would do.  just sayin'.  hope all is well.
+2010-07-28T09:37:00.000Z	IdleOne	ZykoticK9	um, yeah I knew that, I meant he shouldn't be kicked for changing nick. I'm well thanks :)
+2010-07-29T09:55:00.000Z	ZykoticK9	IdleOne	thanks
+2010-08-11T07:15:00.000Z	ZykoticK9	IdleOne	why is rezolute still here?
+2010-08-11T07:16:00.000Z	IdleOne	ZykoticK9	I only set +q which is quiet user
+2010-08-11T07:17:00.000Z	ZykoticK9	IdleOne	after the nazi comment I would have just kicked them (why i'm not an op)
+2010-08-13T10:01:00.000Z	ZykoticK9	IdleOne	"team canada" ;)
+2010-08-13T10:02:00.000Z	IdleOne	ZykoticK9	Ubuntu Without Borders.
+2010-08-15T07:41:00.000Z	IdleOne	ZykoticK9	let it go :)
+2010-08-15T07:42:00.000Z	ZykoticK9	IdleOne	sorry.
+2010-08-15T07:43:00.000Z	IdleOne	ZykoticK9	:) no worries
+2010-08-22T23:22:00.000Z	ZykoticK9	IdleOne	thanks (i'm in 10.10 right now so couldn't check easily)
+2010-09-22T23:29:00.000Z	ZykoticK9	IdleOne	i don't think shipit allows one per release anymore - they've cut it back
+2010-09-22T23:30:00.000Z	IdleOne	ZykoticK9	yeah, depending on location and other things.
+2010-09-26T19:31:00.000Z	ZykoticK9	IdleOne	i believe juk mentioned apt-on-cd earlier, i could be wrong
+2010-09-26T19:32:00.000Z	IdleOne	ZykoticK9	yeah, that is why I don't understand the loading iso part
+2010-09-26T19:33:00.000Z	ZykoticK9	IdleOne	i've never bothered with apt-on-cd, i just copy the debs from /var/apt/archives sorta thing - but this method requires an internet connection to run "sudo apt-get update" sorta thing.
+2010-09-26T19:39:00.000Z	ZykoticK9	IdleOne	i have no idea why willinja is seeing WINEPREFIX=/home/willinja/.wine in an apt command?  you got any ideas where that would be coming from /etc/apt/sources?
+2010-09-26T19:40:00.000Z	IdleOne	ZykoticK9	no idea
+2010-11-20T19:07:00.000Z	IdleOne	ZykoticK9	that file is empty for me
+2010-11-20T19:08:00.000Z	ZykoticK9	IdleOne	;) see above
+2010-11-20T19:08:00.000Z	IdleOne	ZykoticK9	yeah, I looked in sources.list.d
+2010-11-20T19:09:00.000Z	IdleOne	ZykoticK9	:) never mind
+2010-11-20T19:39:00.000Z	ZykoticK9	IdleOne	ppa-purge isn't in default install
+2010-12-24T20:35:00.000Z	ZykoticK9	IdleOne	i was just working on typing that out...
+2011-01-04T22:18:00.000Z	IdleOne	ZykoticK9	he has been given the guidelines, see where it goes from here :)
+2011-05-06T04:13:00.000Z	IdleOne	ZykoticK9	nope they didn't
+2011-05-06T04:14:00.000Z	ZykoticK9	IdleOne	thanks - i was just curious (wanted to point it out)
+2011-05-30T05:00:00.000Z	ZykoticK9	IdleOne	is -9 next ;) Soupermanito
+2011-05-30T05:01:00.000Z	IdleOne	ZykoticK9	I guess he could try a kill -9
+2011-05-30T05:01:00.000Z	ZykoticK9	IdleOne	"killall -9 mmpong-gl" Soupermanito
+2011-05-31T09:34:00.000Z	ZykoticK9	IdleOne	grumbly needs HFS support...
+2011-06-25T02:35:00.000Z	IdleOne	ZykoticK9	preserve permissions?
+2011-06-25T02:35:00.000Z	ZykoticK9	IdleOne	thanks
+2011-06-25T02:36:00.000Z	IdleOne	ZykoticK9	I didn't look but sounds right :)
+2011-06-25T02:36:00.000Z	ZykoticK9	IdleOne	you are of course correct ;) "-p     same as --preserve=mode,ownership,timestamps"
+2011-06-26T08:31:00.000Z	ZykoticK9	IdleOne	LibreOffice is in 11.04?  Cool stuff.
+2011-06-26T08:31:00.000Z	IdleOne	ZykoticK9	default yeah
+2011-06-29T07:32:00.000Z	ZykoticK9	IdleOne	is if there is anything useful in ~/.config/chromium/Default
+2011-06-29T07:33:00.000Z	ZykoticK9	IdleOne	s/is/see/

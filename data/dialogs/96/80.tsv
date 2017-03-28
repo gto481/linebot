@@ -1,0 +1,96 @@
+2005-09-07T13:43:00.000Z	CaiN_SA		what version of kde is in breezy ?
+2005-09-07T13:43:00.000Z	bob2	CaiN_SA	packages.ubuntu.com/kde
+2005-09-12T12:54:00.000Z	bob2	CaiN_SA	please be more careful...
+2005-09-12T05:29:00.000Z	CaiN_SA	bob2	rofll
+2005-09-13T11:46:00.000Z	CaiN_SA	bob2	:P elo
+2005-09-13T11:47:00.000Z	bob2	CaiN_SA	read mdz's post on the topic
+2005-09-13T11:48:00.000Z	bob2	CaiN_SA	http://lwn.net/Articles/148200/
+2005-09-13T11:51:00.000Z	bob2	CaiN_SA	do you know what either of them do?
+2005-09-13T11:52:00.000Z	bob2	CaiN_SA	no, it doesn't test that
+2005-09-13T11:53:00.000Z	CaiN_SA	bob2	:  -t     Perform  timings  of device reads for benchmark and comparison purposes.
+2005-09-13T11:53:00.000Z	bob2	CaiN_SA	yes, I read the manpage
+2005-09-13T11:54:00.000Z	bob2	CaiN_SA	dude, try to use complete sentences on single lines
+2005-09-13T11:55:00.000Z	bob2	CaiN_SA	yes, I read it, and neither of those tests have anything to do with how a disk performs in real life
+2005-09-17T15:27:00.000Z	bob2	CaiN_SA	your system would not boot without the C library
+2005-09-18T15:56:00.000Z	CaiN_SA	bob2	how do i change the image that usplash uses ?
+2005-09-18T15:56:00.000Z	bob2	CaiN_SA	change the initramfs, I guess
+2005-09-18T15:56:00.000Z	bob2	CaiN_SA	ls /etc/*initram* would be a start
+2005-09-19T16:58:00.000Z	CaiN_SA	bob2	are you in ?
+2005-09-20T11:46:00.000Z	CaiN_SA	bob2	but initramfs scans hardware and modules itself ?
+2005-09-20T11:47:00.000Z	bob2	CaiN_SA	no
+2005-09-20T11:47:00.000Z	bob2	CaiN_SA	initramfs is just like initrd, it just holds modulesd needed for boot
+2005-09-20T11:48:00.000Z	bob2	CaiN_SA	I thin kthe kernel uses hotplug to look up the pci id or whatever to find the module
+2005-09-20T11:48:00.000Z	CaiN_SA	bob2	ah ok. on distrowatch they said ubuntu uses initramfs for hardware detection
+2005-09-20T11:49:00.000Z	bob2	CaiN_SA	that sounds like distrowatch being crap
+2005-09-20T11:49:00.000Z	CaiN_SA	bob2	ok ok
+2005-09-20T12:05:00.000Z	CaiN_SA	bob2	her com port is wrong
+2005-09-20T12:05:00.000Z	bob2	CaiN_SA	no, it will be a bizarro port, since it's using a binary driver
+2005-09-20T12:53:00.000Z	CaiN_SA	bob2	i wanted to ask how do i get mplayer in ubuntu ?
+2005-09-20T12:54:00.000Z	bob2	CaiN_SA	it's in multiverse, /msg ubuntu repositories
+2005-09-20T12:54:00.000Z	CaiN_SA	bob2	and what is better xine or mplayer ?
+2005-09-20T12:55:00.000Z	bob2	CaiN_SA	I like mplayer because it's easier to control from the terminal
+2005-09-20T12:57:00.000Z	CaiN_SA	bob2	i got universe repos but it has no mplayer
+2005-09-20T12:57:00.000Z	bob2	CaiN_SA	multiverse, not universe
+2005-09-20T12:58:00.000Z	CaiN_SA	bob2	i know xine doesnt play all broken vids, but mplayer does
+2005-09-20T13:00:00.000Z	bob2	CaiN_SA	non-free unsupported software
+2005-09-20T14:44:00.000Z	CaiN_SA	bob2	when i do Xorg -configure it said : missing output drivers. How do i fix it ?
+2005-09-20T14:45:00.000Z	bob2	CaiN_SA	don't run that
+2005-09-20T14:45:00.000Z	bob2	CaiN_SA	sudo dpkg-reconfigure xserver-xorg
+2005-09-21T06:09:00.000Z	CaiN_SA	bob2	you hope insta doesnt ask to much
+2005-09-21T06:12:00.000Z	CaiN_SA	bob2	how i reconfigure xorg again ?
+2005-09-21T06:12:00.000Z	bob2	CaiN_SA	sudo dpkg-reconfgigure xserver-xorg
+2005-09-21T06:15:00.000Z	CaiN_SA	bob2	any way of making that reconfigure not asking anything like when you install ?
+2005-09-21T06:17:00.000Z	bob2	CaiN_SA	dpkg-reconfigure -phigh
+2005-09-21T06:17:00.000Z	CaiN_SA	bob2	i promise you he cant even use windos
+2005-09-21T06:22:00.000Z	CaiN_SA	bob2	thx for all your help
+2005-09-21T06:33:00.000Z	CaiN_SA	bob2	help here quick gabberman has isa soundcard
+2005-09-24T16:54:00.000Z	bob2	CaiN_SA	so log them out
+2005-09-24T16:54:00.000Z	CaiN_SA	bob2	they are not logged in
+2005-09-24T16:54:00.000Z	CaiN_SA	bob2	i reboot and try and then it tells me that
+2005-09-24T16:54:00.000Z	bob2	CaiN_SA	who are you logged in as?
+2005-09-24T16:55:00.000Z	CaiN_SA	bob2	root
+2005-09-24T05:32:00.000Z	bob2	CaiN_SA	remember everyone in here is a volunteer
+2005-09-28T13:10:00.000Z	CaiN_SA	bob2	when i type : grug-install /dev/hda i get the error : /dev/foo: not found or not a block device
+2005-09-28T13:11:00.000Z	bob2	CaiN_SA	really /dev/foo?
+2005-09-28T13:14:00.000Z	CaiN_SA	bob2	, yes why does it do that i dont specify that :/
+2005-10-09T12:12:00.000Z	bob2	CaiN_SA	have you installed the amd64 port of ubuntu?
+2005-10-09T12:13:00.000Z	CaiN_SA	bob2	no i want to know which packages i must install to make it 64bit ready
+2005-10-09T12:14:00.000Z	bob2	CaiN_SA	that's not how the world works
+2005-10-09T12:14:00.000Z	bob2	CaiN_SA	if you want to run the amd64 port on your machine, that's what you need to install
+2005-10-09T12:14:00.000Z	bob2	CaiN_SA	istalling a 64-bit amd64 kernel on i386 does not do anything about your applications
+2005-10-09T12:15:00.000Z	bob2	CaiN_SA	no, please stop
+2005-10-09T12:15:00.000Z	bob2	CaiN_SA	this is not how it works
+2005-10-09T12:16:00.000Z	bob2	CaiN_SA	if you want all your applications to be amd64 binaries, you need to install the amd64 port
+2005-10-09T12:16:00.000Z	CaiN_SA	bob2	lol
+2005-10-09T12:16:00.000Z	bob2	CaiN_SA	no
+2005-10-09T12:16:00.000Z	bob2	CaiN_SA	no
+2005-10-09T12:17:00.000Z	bob2	CaiN_SA	you appear to be very confused
+2005-10-09T12:17:00.000Z	bob2	CaiN_SA	do you know what the difference between an amd64 executable and an i386 one is?
+2005-10-09T12:19:00.000Z	CaiN_SA	bob2	ok what you are saying is : ubuntu team recompiles everything with 64bit support.
+2005-10-09T12:19:00.000Z	bob2	CaiN_SA	no
+2005-10-09T12:20:00.000Z	bob2	CaiN_SA	because you don't seem to understand what an architecture is in Linux
+2005-10-09T12:20:00.000Z	bob2	CaiN_SA	ubuntu compiles each binary package for each architecture
+2005-10-09T12:20:00.000Z	bob2	CaiN_SA	once for powerpc, once for ia-64, once for i386, once for hppa, once for amd64
+2005-10-09T12:21:00.000Z	CaiN_SA	bob2	so if i want to make 64 bit version : dpkg -l , and make new breezy ( 64 bit ) and make sure all thos apps are installed ?
+2005-10-09T12:22:00.000Z	bob2	CaiN_SA	no, stop saying "64 bit"
+2005-10-09T12:22:00.000Z	bob2	CaiN_SA	"64 bit" is meaningless in this context
+2005-10-09T12:23:00.000Z	bob2	CaiN_SA	if your question is "How do I convert an i386 install to an amd64 one", the answer is "reinstall"
+2005-10-09T12:23:00.000Z	CaiN_SA	bob2	ok IA64 ok
+2005-10-09T12:23:00.000Z	bob2	CaiN_SA	they are different architectures
+2005-10-09T12:23:00.000Z	CaiN_SA	bob2	whqat
+2005-10-09T12:23:00.000Z	bob2	CaiN_SA	this is how every OS works
+2005-10-09T12:28:00.000Z	bob2	CaiN_SA	no
+2005-10-09T12:28:00.000Z	bob2	CaiN_SA	stop confusing the issue
+2005-10-09T12:29:00.000Z	bob2	CaiN_SA	your question appeared to be "How do I convert an ubuntu i386 system to and amd64 one?", and the answer to that is "reinstall"
+2005-10-09T12:29:00.000Z	CaiN_SA	bob2	and if your making an operating system  ????? you cant reinstall something you dont have
+2005-10-09T12:29:00.000Z	bob2	CaiN_SA	dude, stop
+2005-10-09T12:29:00.000Z	bob2	CaiN_SA	you're massively confusing yourself here
+2005-10-09T12:30:00.000Z	bob2	CaiN_SA	if you have a specific question, ask it, perhaps in #ubuntu-offtopic
+2005-10-09T12:31:00.000Z	bob2	CaiN_SA	no, stop
+2005-10-09T12:31:00.000Z	bob2	CaiN_SA	#ubuntu-offtopic
+2005-11-01T13:59:00.000Z	CaiN_SA	bob2	do you know maby ?
+2005-11-01T13:59:00.000Z	bob2	CaiN_SA	read the file
+2005-11-01T14:00:00.000Z	bob2	CaiN_SA	/boot/grub/menu.lst
+2005-11-01T14:00:00.000Z	CaiN_SA	bob2	it gets overwritten by something else :/
+2005-11-01T14:02:00.000Z	bob2	CaiN_SA	dude, seriously
+2005-11-01T14:02:00.000Z	bob2	CaiN_SA	read. it.

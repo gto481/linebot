@@ -1,0 +1,96 @@
+2009-04-02T09:24:00.000Z	FAJ	JoeLinux117	ok done, now to reboot into new kernel.... one sec.
+2009-04-02T09:25:00.000Z	FAJ	JoeLinux117	 starting up new kernel *crosses fingers..*
+2009-04-02T09:26:00.000Z	JoeLinux117	FAJ	Ok, let's hope for something.  We can also check "dmesg" to see if it spit out anything of interest.
+2009-04-02T09:27:00.000Z	FAJ	JoeLinux117	ok what it is doing is it's now going into low res. mode.. HAS to have to do with that linux-ubuntu....
+2009-04-02T09:27:00.000Z	JoeLinux117	FAJ	Also, you can type "locate ndiswrapper.ko", and see if that module is in the directory for your new kernel.
+2009-04-02T09:28:00.000Z	JoeLinux117	FAJ	Are you good on the command-line?  I would say don't even bother with the graphics for right now, that way you can just focus on getting ndiswrapper working first.
+2009-04-02T09:28:00.000Z	FAJ	JoeLinux117	 ok internet is working GREAT.  now just get resolution off of 800x600...
+2009-04-02T09:28:00.000Z	JoeLinux117	FAJ	Ok nevermind... On to stage 2.
+2009-04-02T09:28:00.000Z	JoeLinux117	FAJ	lol
+2009-04-02T09:29:00.000Z	FAJ	JoeLinux117	 righto lol
+2009-04-02T09:29:00.000Z	JoeLinux117	FAJ	If you go to System --> Administration --> NVIDIA XServer Settings, does it give you an error?
+2009-04-02T09:30:00.000Z	FAJ	JoeLinux117	 when i have linux-ubuntu... hehe failsafe termina ftw
+2009-04-02T09:30:00.000Z	FAJ	JoeLinux117	 yah it says run 'nvidia x-config' as roopt
+2009-04-02T09:31:00.000Z	JoeLinux117	FAJ	"lsmod | grep nv"... what does that give you?
+2009-04-02T09:31:00.000Z	FAJ	JoeLinux117	 ran sudo nvidia-xconfig...
+2009-04-02T09:32:00.000Z	FAJ	JoeLinux117	nothing.
+2009-04-02T09:32:00.000Z	FAJ	JoeLinux117	 for your command
+2009-04-02T09:32:00.000Z	FAJ	JoeLinux117	 but nvidia-settings still gives me that error
+2009-04-02T09:32:00.000Z	JoeLinux117	FAJ	Go to System --> Administration --> Hardware Drivers
+2009-04-02T09:33:00.000Z	JoeLinux117	FAJ	That should give you the option of downloading and installing the recommended nvidia driver for your kernel.
+2009-04-02T09:33:00.000Z	FAJ	JoeLinux117	 what is that in failsafe terminal?
+2009-04-02T09:34:00.000Z	JoeLinux117	FAJ	Oh yea, sorry!  Umm, you would need a display running in order to see that...
+2009-04-02T09:34:00.000Z	JoeLinux117	FAJ	Do you know the model of your nVidia card?
+2009-04-02T09:34:00.000Z	FAJ	JoeLinux117	 i am in failsafe terminal; so display is open...
+2009-04-02T09:35:00.000Z	JoeLinux117	FAJ	"sudo jockey-gtk"
+2009-04-02T09:35:00.000Z	FAJ	JoeLinux117	 nothing available...
+2009-04-02T09:35:00.000Z	FAJ	JoeLinux117	 what if i try nvidia-glx-new?
+2009-04-02T09:35:00.000Z	FAJ	JoeLinux117	 it's a 6800....?
+2009-04-02T09:36:00.000Z	JoeLinux117	FAJ	I don't know your nVidia card model...
+2009-04-02T09:36:00.000Z	JoeLinux117	FAJ	Oh ok..
+2009-04-02T09:36:00.000Z	FAJ	JoeLinux117	 6200.
+2009-04-02T09:37:00.000Z	JoeLinux117	FAJ	I'm trying to remember in 8.04... do you have a package called "nvidia-glx-180"?
+2009-04-02T09:37:00.000Z	JoeLinux117	FAJ	Not installed, but available to install.
+2009-04-02T09:38:00.000Z	FAJ	JoeLinux117	 apt-cache search shows nothing..
+2009-04-02T09:39:00.000Z	JoeLinux117	FAJ	Right, I meant having it available to install.  I just want to make sure that's the package name.
+2009-04-02T09:39:00.000Z	FAJ	JoeLinux117	https://bugs.launchpad.net/ubuntu/+source/linux-restricted-modules-2.6.24/+bug/220952
+2009-04-02T09:39:00.000Z	FAJ	JoeLinux117	 i think my prob
+2009-04-02T09:39:00.000Z	JoeLinux117	FAJ	"aptitude search nvidia-glx" and see if it's there.
+2009-04-02T09:40:00.000Z	FAJ	JoeLinux117	 nvidia-glx-new already installed.
+2009-04-02T09:41:00.000Z	JoeLinux117	FAJ	Look in /etc/X11/xorg.conf, and in the "Device" section, see if the driver being used is "nvidia"... my guess is it's not.
+2009-04-02T09:42:00.000Z	FAJ	JoeLinux117	driver "vesa"
+2009-04-02T09:42:00.000Z	FAJ	JoeLinux117	 change to "nvidia" ?
+2009-04-02T09:43:00.000Z	JoeLinux117	FAJ	"sudo vim /etc/X11/xorg.conf", and switch that driver name to "nvidia"... hopefully that will work.
+2009-04-02T09:43:00.000Z	FAJ	JoeLinux117	 ok done, restart x?
+2009-04-02T09:43:00.000Z	JoeLinux117	FAJ	Or "sudo gedit /etc/X11/xorg.conf", whatever you prefer...
+2009-04-02T09:43:00.000Z	JoeLinux117	FAJ	No, restart the whole machine.
+2009-04-02T09:43:00.000Z	FAJ	JoeLinux117	 ok rebooting
+2009-04-02T09:44:00.000Z	FAJ	JoeLinux117	 i have my old old xorg.conf backed up
+2009-04-02T09:44:00.000Z	JoeLinux117	FAJ	Good.
+2009-04-02T09:44:00.000Z	FAJ	JoeLinux117	 lol i had to get into grub and change kernel, weird haha.
+2009-04-02T09:45:00.000Z	JoeLinux117	FAJ	Really?
+2009-04-02T09:45:00.000Z	FAJ	JoeLinux117	 yah i had it booting up to old kernel ;)
+2009-04-02T09:45:00.000Z	FAJ	JoeLinux117	 no luck with that change.
+2009-04-02T09:45:00.000Z	JoeLinux117	FAJ	Oh ok... I thought you meant something else.
+2009-04-02T09:45:00.000Z	FAJ	JoeLinux117	 so how can i get nvidia-settings to work...????
+2009-04-02T09:46:00.000Z	JoeLinux117	FAJ	You have to have the nvidia module loaded first.
+2009-04-02T09:46:00.000Z	JoeLinux117	FAJ	Try reinstalling nvidia-glx-new.
+2009-04-02T09:46:00.000Z	FAJ	JoeLinux117	 it keeps removing it... ok
+2009-04-02T09:48:00.000Z	FAJ	JoeLinux117	 after that reinstallll>...?
+2009-04-02T09:49:00.000Z	JoeLinux117	FAJ	Once it's reinstalled, you'll have to reboot the machine... it should have modified xorg.conf for you.
+2009-04-02T09:49:00.000Z	FAJ	JoeLinux117	 we wil se
+2009-04-02T09:50:00.000Z	FAJ	JoeLinux117	 nope
+2009-04-02T09:50:00.000Z	JoeLinux117	FAJ	*sigh*
+2009-04-02T09:50:00.000Z	FAJ	JoeLinux117	 yah...
+2009-04-02T09:52:00.000Z	JoeLinux117	FAJ	Try installing "sudo apt-get install envyng-core" (or whatever the "envyng" package is in 8.04).
+2009-04-02T09:52:00.000Z	FAJ	JoeLinux117	 one sec; onto something on #nvidia
+2009-04-02T09:52:00.000Z	JoeLinux117	FAJ	Ok, excellent.
+2009-04-02T10:05:00.000Z	FAJ	JoeLinux117	so far no good....
+2009-04-02T10:06:00.000Z	JoeLinux117	FAJ	Did #nvidia ask you to install envyng?
+2009-04-02T10:07:00.000Z	FAJ	JoeLinux117	 no
+2009-04-02T10:07:00.000Z	JoeLinux117	FAJ	If not, install it (it might be "envyng-gtk" or "envyng-core" or something in 8.04)
+2009-04-02T10:13:00.000Z	JoeLinux117	FAJ	Where are you at now?
+2009-04-02T10:14:00.000Z	FAJ	JoeLinux117	 one sec don't wanna get over excited here.
+2009-04-02T10:14:00.000Z	JoeLinux117	FAJ	lol
+2009-04-02T10:14:00.000Z	JoeLinux117	FAJ	Is that a happy "YES"?
+2009-04-02T10:14:00.000Z	FAJ	JoeLinux117	 what if i uninstalled linux-ubuntu-modules (which i think to be the source of my problems, b/c with it uninstalled, nvidia will work fine but no internet) uninstall linux-restricted, install linux-ubuntu, reinstall linux-restricted?
+2009-04-02T10:14:00.000Z	FAJ	JoeLinux117	 taht worked
+2009-04-02T10:14:00.000Z	JoeLinux117	FAJ	Excellent!
+2009-04-02T10:15:00.000Z	JoeLinux117	FAJ	Hey, if it's working, don't bother messing with those packages, haha.
+2009-04-02T10:15:00.000Z	FAJ	JoeLinux117	 well lol joe i think my update-manager is bad, b/c it will not update the other ones.
+2009-04-02T10:25:00.000Z	FAJ	JoeLinux117	 have you ever heard when update-manager doesn't update all the packages
+2009-04-02T10:25:00.000Z	JoeLinux117	FAJ	Yes, but typically when a partial upgrade of the OS is required, which update-manager should walk you through.
+2009-04-02T10:26:00.000Z	JoeLinux117	FAJ	I've seen it happen before also for other reasons, but you can usually get around it by dropping to the command line: "sudo aptitude safe-upgrade"
+2009-04-02T10:26:00.000Z	FAJ	JoeLinux117	 b/c mine does that... reinstalle update-manager?
+2009-04-02T10:26:00.000Z	FAJ	JoeLinux117	 will that make upgrade??!
+2009-04-02T10:26:00.000Z	JoeLinux117	FAJ	Of the packages... it won't upgrade your OS version.
+2009-04-02T10:27:00.000Z	FAJ	JoeLinux117	 didn't do anything... reinstall update-manager?
+2009-04-02T10:28:00.000Z	JoeLinux117	FAJ	Umm, I don't think that's gonna do it.
+2009-04-02T10:29:00.000Z	FAJ	JoeLinux117	 haha, it's just weird b/c when kernel updates, it will not WILL NOT also install linux-restricted...
+2009-04-02T10:29:00.000Z	JoeLinux117	FAJ	I've seen before where the new kernel is made available, but the linux-restricted-modules package for that kernel has not... it's unfortunate.
+2009-04-02T10:30:00.000Z	JoeLinux117	FAJ	I haven't had that problem in a while though.
+2009-04-02T10:30:00.000Z	FAJ	JoeLinux117	 ok i will make note.
+2009-04-02T10:30:00.000Z	JoeLinux117	FAJ	I've been running 9.04 without a hitch for at least two months now... it was in Alpha earlier, and there was a few bugs.
+2009-04-02T10:31:00.000Z	JoeLinux117	FAJ	Well, hope I helped you out.  Now I'm off to sleep ;)
+2009-04-02T10:32:00.000Z	FAJ	JoeLinux117	 thanks
+2009-04-02T10:32:00.000Z	JoeLinux117	FAJ	No prob...

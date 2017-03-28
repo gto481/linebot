@@ -1,0 +1,95 @@
+2009-08-29T16:55:00.000Z	Shasirox		Paddy: Now im on my brothers comp... :)
+2009-08-29T16:56:00.000Z	Shasirox		Paddy: Ctrl+Alt+F1 ?
+2009-08-29T16:56:00.000Z	Peddy	Shasirox	yep.
+2009-08-29T16:57:00.000Z	Peddy	Shasirox	try pressing ctrl-alt-f2
+2009-08-29T16:57:00.000Z	Shasirox	Peddy	New reboot?
+2009-08-29T16:57:00.000Z	Peddy	Shasirox	no
+2009-08-29T16:58:00.000Z	Peddy	Shasirox	it should bring you to a text-only terminal, where you can fix things.
+2009-08-29T16:59:00.000Z	Shasirox	Peddy	When i come to the weerd looking login screen the keyboard doesn't respond
+2009-08-29T16:59:00.000Z	Shasirox	Peddy	Can i come back in 5 minutes?
+2009-08-29T17:01:00.000Z	Peddy	Shasirox	sure.
+2009-08-29T17:04:00.000Z	Shasirox	Peddy	I'm back :)
+2009-08-29T17:04:00.000Z	Shasirox	Peddy	What shall i do now?
+2009-08-29T17:05:00.000Z	Peddy	Shasirox	you can't type, correct? At the grub prompt when you reboot, please hit escape, then highlight the first line, and press E. remove the 'quiet' and 'splash' lines. Don't worry about messing anything up, these changes are not saved.
+2009-08-29T17:07:00.000Z	Peddy	Shasirox	how's it going?
+2009-08-29T17:08:00.000Z	Peddy	Shasirox	can you see them?
+2009-08-29T17:08:00.000Z	Shasirox	Peddy	I just have 1 of them, the "quiet"
+2009-08-29T17:08:00.000Z	Peddy	Shasirox	remove that, then press b to boot.
+2009-08-29T17:08:00.000Z	Shasirox	Peddy	ok
+2009-08-29T17:09:00.000Z	Shasirox	Peddy	Booting
+2009-08-29T17:09:00.000Z	Peddy	Shasirox	do ctrl-alt-F1 again. Do you see scrolling text?
+2009-08-29T17:09:00.000Z	Shasirox	Peddy	Nothing has changed...
+2009-08-29T17:09:00.000Z	Shasirox	Peddy	Oh -.-
+2009-08-29T17:09:00.000Z	Shasirox	Peddy	W8
+2009-08-29T17:11:00.000Z	Shasirox	Peddy	i saw a scrolling text, then the failed login-screen comes up :/
+2009-08-29T17:11:00.000Z	Peddy	Shasirox	reboot, and select 'recovery mode' from the GRUB menu, please.
+2009-08-29T17:12:00.000Z	Shasirox	Peddy	 Ok
+2009-08-29T17:12:00.000Z	Peddy	Shasirox	choose 'drop to root shell'
+2009-08-29T17:13:00.000Z	Shasirox	Peddy	done
+2009-08-29T17:15:00.000Z	Peddy	Shasirox	can you type 'sudo apt-get install envyng-core' please
+2009-08-29T17:15:00.000Z	Shasirox	Peddy	Yes, one sec
+2009-08-29T17:15:00.000Z	Peddy	Shasirox	you don't actually need the sudo, but whatever :-P
+2009-08-29T17:16:00.000Z	Shasirox	Peddy	I alreaday had that package
+2009-08-29T17:18:00.000Z	Peddy	Shasirox	do 'envyng -t' please.
+2009-08-29T17:18:00.000Z	Shasirox	Peddy	Now im in EnvyNG Menu :)
+2009-08-29T17:19:00.000Z	Peddy	Shasirox	you probably want to choose option 3
+2009-08-29T17:19:00.000Z	Shasirox	Peddy	Install ATI drivers? :)
+2009-08-29T17:19:00.000Z	Shasirox	Peddy	 I will
+2009-08-29T17:21:00.000Z	Shasirox	Peddy	There is now only one option, and that one is already installed...
+2009-08-29T17:21:00.000Z	Peddy	Shasirox	try uninstalling it with option 4 and reinstalling it.
+2009-08-29T17:23:00.000Z	Shasirox	Peddy	Restart after unistall is done?
+2009-08-29T17:23:00.000Z	Peddy	Shasirox	yep.
+2009-08-29T17:24:00.000Z	Shasirox	Peddy	Should i try to start the comp without installing the drivers?
+2009-08-29T17:25:00.000Z	Peddy	Shasirox	oh, I thought you reinstalled them. You need to install them again, then try rebooting. EnvyNG should detect which ones work with your card.
+2009-08-29T17:25:00.000Z	Shasirox	Peddy	Ok, i will
+2009-08-29T17:27:00.000Z	Shasirox	Peddy	It wont install it...
+2009-08-29T17:27:00.000Z	Peddy	Shasirox	what happens?
+2009-08-29T17:29:00.000Z	Shasirox	Peddy	I click to install it and the option fore what drive i should use comes up, theres only one option. I pick that one and it "installs" and it sais Faild to fetch some things on internet...
+2009-08-29T17:29:00.000Z	Peddy	Shasirox	quit envy, and type 'ifconfig' please
+2009-08-29T17:29:00.000Z	Shasirox	Peddy	Ok
+2009-08-29T17:30:00.000Z	Shasirox	Peddy	Done
+2009-08-29T17:30:00.000Z	Shasirox	Peddy	 i have internet to the comp...
+2009-08-29T17:30:00.000Z	Peddy	Shasirox	try doing 'ping ubuntu.com' please.
+2009-08-29T17:31:00.000Z	Shasirox	Peddy	unknown host....
+2009-08-29T17:31:00.000Z	Peddy	Shasirox	OK, hold on 1 second
+2009-08-29T17:31:00.000Z	Shasirox	Peddy	ok :)
+2009-08-29T17:33:00.000Z	Peddy	Shasirox	do you have any other machines on your LAN? Do you know their IPs?
+2009-08-29T17:34:00.000Z	Shasirox	Peddy	I can look it up :)
+2009-08-29T17:34:00.000Z	Shasirox	Peddy	 W8
+2009-08-29T17:34:00.000Z	Shasirox	Peddy	192.168.1.43   its the comp im using right now :)
+2009-08-29T17:35:00.000Z	Peddy	Shasirox	do 'ping 192.168.1.43'
+2009-08-29T17:35:00.000Z	Shasirox	Peddy	It's on wired internet
+2009-08-29T17:36:00.000Z	Peddy	Shasirox	OK. Still, do it. Does it say anything?
+2009-08-29T17:36:00.000Z	Shasirox	Peddy	It sais unreachable... -.-
+2009-08-29T17:36:00.000Z	Peddy	Shasirox	do you know if you use DHCP or static IPs?
+2009-08-29T17:37:00.000Z	Shasirox	Peddy	protection? a code?
+2009-08-29T17:37:00.000Z	Shasirox	Peddy	I have a open connecting, no codes or anyting like that :)
+2009-08-29T17:37:00.000Z	Peddy	Shasirox	OK... do 'dhclient eth0' please.
+2009-08-29T17:39:00.000Z	Shasirox	Peddy	That wored :)
+2009-08-29T17:39:00.000Z	Peddy	Shasirox	the internet works now? Try the Envy thing again.
+2009-08-29T17:39:00.000Z	Peddy	Shasirox	great.
+2009-08-29T17:40:00.000Z	Peddy	Shasirox	brb
+2009-08-29T17:40:00.000Z	Shasirox	Peddy	It wont stop pinging :S
+2009-08-29T17:41:00.000Z	Peddy	Shasirox	hit ctrl-c XD
+2009-08-29T17:42:00.000Z	Shasirox	Peddy	Haha, im a little nooby somtimes ^^
+2009-08-29T17:42:00.000Z	Peddy	Shasirox	ping will go on forever without interruption.
+2009-08-29T17:43:00.000Z	Shasirox	Peddy	installing now :)
+2009-08-29T17:43:00.000Z	Peddy	Shasirox	good.
+2009-08-29T17:44:00.000Z	Shasirox	Peddy	Succes:
+2009-08-29T17:44:00.000Z	Shasirox	Peddy	Restart?
+2009-08-29T17:44:00.000Z	Peddy	Shasirox	good. Reboot. I don't think it's going to work, though
+2009-08-29T17:46:00.000Z	Shasirox	Peddy	Didnt work :(
+2009-08-29T17:47:00.000Z	Peddy	Shasirox	ugh. Basically, the drivers from AMD don't support the version of X server Jaunty uses.
+2009-08-29T17:48:00.000Z	Shasirox	Peddy	Ok...
+2009-08-29T17:48:00.000Z	Peddy	Shasirox	you could try an earlier version of Ubuntu, such as 8.10. It should work out of the box.
+2009-08-29T17:49:00.000Z	Peddy	Shasirox	without what? the problems?
+2009-08-29T17:51:00.000Z	Shasirox	Peddy	Thanks for all the help :D
+2009-08-29T17:51:00.000Z	Peddy	Shasirox	oh, right! I actually don't think there's any way to do that. Installing an older version of X server would cause incompatibility with a whole bunch of programs. There was quite an uproar about this very same issue a while back.
+2009-08-29T17:52:00.000Z	Peddy	Shasirox	I'm very sorry that your experience with Ubuntu hasn't been satisfactory :/ hopefully you get it working.
+2009-08-29T17:52:00.000Z	Peddy	Shasirox	8.10 should work, and for the future, nvidia tends to play better with GNU/Linux...
+2009-08-29T17:52:00.000Z	Shasirox	Peddy	I love ubuntu, its great... But it isnt Windows...
+2009-08-29T17:53:00.000Z	Shasirox	Peddy	Ubuntu has worked before... it's just that it doesnt work now
+2009-08-29T17:53:00.000Z	Peddy	Shasirox	old ATi cards won't work with 9.04 until AMD fixes it, period.
+2009-08-29T17:53:00.000Z	Shasirox	Peddy	Thank You!
+2009-08-29T17:53:00.000Z	Peddy	Shasirox	I'm going now, I'm sorry I couldn't be of more assistance :) have a good night. :D
+2009-08-29T17:54:00.000Z	Shasirox	Peddy	Time is 15:00 here :P

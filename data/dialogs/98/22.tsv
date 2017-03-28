@@ -1,0 +1,98 @@
+2012-06-19T19:14:00.000Z	sacarlson	viktor	I'm guessing you present user isn't a memeber of the group to allow mount user-space filesystems
+2012-06-19T19:14:00.000Z	viktor	sacarlson	i only have one user, and i worked untill shortly
+2012-06-19T19:15:00.000Z	sacarlson	viktor	upgrade? update?
+2012-06-19T19:15:00.000Z	viktor	sacarlson	i update regularly, definitively not gonna upgrade if i can't back-up (no external hdd usable)
+2012-06-19T19:16:00.000Z	sacarlson	viktor	external disk I assume are usb flash or other?
+2012-06-19T19:17:00.000Z	viktor	sacarlson	yes, usb hard drive, it gets listed under devices in nautilus, but if i click it, i get a window saying "not authorized"
+2012-06-19T19:18:00.000Z	viktor	sacarlson	using oneiric if relevant
+2012-06-19T19:18:00.000Z	sacarlson	viktor	I would check in user groups to see you have priv set
+2012-06-19T19:21:00.000Z	sacarlson	viktor	I think you need to be sure your a member of the fuse group https://bugs.launchpad.net/ubuntu/+source/fuse/+bug/385375
+2012-06-19T19:28:00.000Z	viktor	sacarlson	i enabled the user_allow_other in /etc/fuse.conf but the problem persists, do i need to reboot to make this work?
+2012-06-19T19:29:00.000Z	sacarlson	viktor	oh I thought all that was required was to be a member of fuse group
+2012-06-19T19:30:00.000Z	sacarlson	viktor	what do you see when you type $groups
+2012-06-19T19:30:00.000Z	sacarlson	viktor	is fuse in the list of groups?
+2012-06-19T19:30:00.000Z	viktor	sacarlson	viktor adm dialout cdrom plugdev lpadmin admin sambashare jupiter
+2012-06-19T19:30:00.000Z	viktor	sacarlson	nope
+2012-06-19T19:31:00.000Z	sacarlson	viktor	you need to add yourself to the fuse group
+2012-06-19T19:31:00.000Z	viktor	sacarlson	how do i put it there? i can't find the right file?
+2012-06-19T19:31:00.000Z	sacarlson	viktor	there is a gui for user and groups
+2012-06-19T19:32:00.000Z	viktor	sacarlson	not in unity, unless i'm mistaken...
+2012-06-19T19:32:00.000Z	sacarlson	viktor	oh then System>Admin>Users and groups
+2012-06-19T19:34:00.000Z	viktor	sacarlson	those drop-down menu's aren't available anymore, i don't know how to edit groups from gui (i'm really starting to dislike unity)
+2012-06-19T19:34:00.000Z	sacarlson	viktor	then sudo  useradd -G fuse  yourusername
+2012-06-19T19:35:00.000Z	viktor	sacarlson	useradd: user 'viktor' already exists
+2012-06-19T19:35:00.000Z	sacarlson	viktor	oh I thought you said you not running unity
+2012-06-19T19:35:00.000Z	sacarlson	viktor	oh now groups
+2012-06-19T19:35:00.000Z	viktor	sacarlson	maybe i made a typo...
+2012-06-19T19:36:00.000Z	sacarlson	viktor	type groups
+2012-06-19T19:36:00.000Z	viktor	sacarlson	nope
+2012-06-19T19:37:00.000Z	sacarlson	viktor	best you read this maybe you didn't understand what I said http://www.cyberciti.biz/faq/howto-linux-add-user-to-group/
+2012-06-19T19:38:00.000Z	sacarlson	viktor	or maybe the group fuse doesn't exist?
+2012-06-19T19:39:00.000Z	viktor	sacarlson	use adduser instead, got it
+2012-06-19T19:40:00.000Z	viktor	sacarlson	how do i check if fuse exists?
+2012-06-19T19:41:00.000Z	sacarlson	viktor	well after the command you should see fuse in your groups list
+2012-06-19T19:42:00.000Z	viktor	sacarlson	llutz, ok, just gonna reboot then
+2012-06-19T19:42:00.000Z	sacarlson	viktor	one method is to look at the file  /etc/group  with more /etc/group  you should see a list of all the groups
+2012-06-19T19:50:00.000Z	viktor	sacarlson	llutz, still the same problem...
+2012-06-19T19:50:00.000Z	sacarlson	viktor	wow bummer
+2012-06-19T19:51:00.000Z	sacarlson	viktor	lets look at mount
+2012-06-19T19:51:00.000Z	viktor	sacarlson	is it possible i have to istall fuse?
+2012-06-19T19:51:00.000Z	sacarlson	viktor	I don't think so
+2012-06-19T19:52:00.000Z	sacarlson	viktor	some reason you disk is mounting without adding you to have perms to read or write it
+2012-06-19T19:52:00.000Z	viktor	sacarlson	http://paste.ubuntu.com/1049321/
+2012-06-19T19:53:00.000Z	sacarlson	viktor	it apears you have privs rw,nosuid,nodev,user=viktor
+2012-06-19T19:54:00.000Z	viktor	sacarlson	don't understand all of that, but then i should at least be able to open it?
+2012-06-19T19:54:00.000Z	sacarlson	viktor	oh that's your encrypted account
+2012-06-19T19:54:00.000Z	sacarlson	viktor	I don't see any usb mounted
+2012-06-19T19:55:00.000Z	sacarlson	viktor	did you try unplug and plug the usb device
+2012-06-19T19:56:00.000Z	viktor	sacarlson	yes, it's not the 2nd line, i'll connect a second external drive and send mount-output again
+2012-06-19T19:57:00.000Z	viktor	sacarlson	i meant to typ a "?" after "it's not the 2nd line"
+2012-06-19T19:57:00.000Z	sacarlson	viktor	no that's your root file system
+2012-06-19T19:58:00.000Z	sacarlson	viktor	unplug and replug your usb flash device
+2012-06-19T19:59:00.000Z	viktor	sacarlson	i replugged and connected another one as well, here's mount output: http://paste.ubuntu.com/1049333/
+2012-06-19T20:00:00.000Z	viktor	sacarlson	theyshow under devices in nautilus, so they have to be somewhere...
+2012-06-19T20:00:00.000Z	sacarlson	viktor	no I don't see it so lets try lsusb
+2012-06-19T20:00:00.000Z	sacarlson	viktor	oh they do?
+2012-06-19T20:01:00.000Z	sacarlson	viktor	if they mounted they should be seen somplace in /media if you didn't modify /etc/fstab
+2012-06-19T20:02:00.000Z	viktor	sacarlson	yes, if i click them i get the "not authorized" message, here is the output: http://paste.ubuntu.com/1049340/ the last line is definitivly the other usb-hdd
+2012-06-19T20:03:00.000Z	viktor	sacarlson	media holds only the cd-rom folder, checking fstab now, but i usuallt don't mess around in my files, so unless it got altered some other way...
+2012-06-19T20:03:00.000Z	sacarlson	viktor	I don't understand why it won't mount
+2012-06-19T20:05:00.000Z	sacarlson	viktor	oh lets look in /var/log/syslog
+2012-06-19T20:06:00.000Z	viktor	sacarlson	this is fstab http://paste.ubuntu.com/1049352/ don't see it here. looking in syslog now
+2012-06-19T20:06:00.000Z	sacarlson	viktor	 instead of /var/log/syslog  short to look at /var/log/dmesg
+2012-06-19T20:07:00.000Z	sacarlson	viktor	nothing in fstab but root and swap
+2012-06-19T20:10:00.000Z	viktor	sacarlson	euhm, how do i copy all that?
+2012-06-19T20:11:00.000Z	sacarlson	viktor	from gedit?  pastebinit
+2012-06-19T20:12:00.000Z	sacarlson	viktor	/var/log/dmesg
+2012-06-19T20:13:00.000Z	viktor	sacarlson	got it, was using vim, gedit is easier :) http://paste.ubuntu.com/1049367/
+2012-06-19T20:16:00.000Z	sacarlson	viktor	I don't see the device even attempted, maybe do tail /etc/var/log/dmesg  ; and see what might change when you unplug and replug the device
+2012-06-19T20:17:00.000Z	sacarlson	viktor	maybe it's not seen in dmesg?
+2012-06-19T20:20:00.000Z	viktor	sacarlson	don't know... here's the tail: http://paste.ubuntu.com/1049381/
+2012-06-19T20:20:00.000Z	sacarlson	viktor	I found that it's not seen in dmesg,  you need to tail -f /var/log/syslog ;
+2012-06-19T20:20:00.000Z	sacarlson	viktor	and unplug replug
+2012-06-19T20:24:00.000Z	viktor	sacarlson	http://paste.ubuntu.com/1049387/
+2012-06-19T20:27:00.000Z	sacarlson	viktor	I guess I see it disconected but not reconnected?
+2012-06-19T20:28:00.000Z	viktor	sacarlson	doesn't it reconnect on line 13, the packerd bell thing?
+2012-06-19T20:29:00.000Z	viktor	sacarlson	srry, line 17, that's the make of the hdd, no other hardware of that make
+2012-06-19T20:29:00.000Z	sacarlson	viktor	yes I think your correct
+2012-06-19T20:29:00.000Z	sacarlson	viktor	so if that's the case why is it not mounted now then?
+2012-06-19T20:30:00.000Z	sacarlson	viktor	oh maybe it's not formated?
+2012-06-19T20:31:00.000Z	sacarlson	viktor	 so fdisk -l
+2012-06-19T20:31:00.000Z	sacarlson	viktor	oh sudo fdisk -l
+2012-06-19T20:31:00.000Z	viktor	sacarlson	should be formatted in ext4, the other one is my back-up drive, that one's encrypted to, and if i try to format them with disk utility, i get th same message
+2012-06-19T20:32:00.000Z	viktor	sacarlson	euhm do i need to specify a disk, i don't want to format the wrong thing?
+2012-06-19T20:33:00.000Z	sacarlson	viktor	no default will show all I think
+2012-06-19T20:35:00.000Z	sacarlson	viktor	for me I get /dev/sdd1   *           1        1023     1934462    c  W95 FAT32 (LBA)
+2012-06-19T20:36:00.000Z	viktor	sacarlson	http://paste.ubuntu.com/1049408/
+2012-06-19T20:37:00.000Z	viktor	sacarlson	i think the last one could be one of the external hdd, it might be FAT32, i use it with other os sometimes
+2012-06-19T20:38:00.000Z	sacarlson	viktor	ok I guess the format is mest up so it won't mount so how do you fsck a fat32 file system?
+2012-06-19T20:38:00.000Z	sacarlson	viktor	could try sudo fsck /dev/sdb1 ;  see if it works
+2012-06-19T20:39:00.000Z	viktor	sacarlson	the other one is definitively ext4 and it's unlikely they both got messed up... i'll try fsck now
+2012-06-19T20:39:00.000Z	sacarlson	viktor	or we could try to manualy mount and see what the error is sudo mount /dev/sdb1 /mnt
+2012-06-19T20:40:00.000Z	sacarlson	viktor	make sure there is a /mnt directory   mkdir /mnt
+2012-06-19T20:48:00.000Z	viktor	sacarlson	i can acces the files on the hdd via the /mnt dir in nautilus (thay take forever to load though) and now the drive ISN'T listed under devices anymore in nautilus
+2012-06-19T20:49:00.000Z	sacarlson	viktor	ok so did the fsck fix it or??
+2012-06-19T20:50:00.000Z	viktor	sacarlson	haven't done the fsck yet
+2012-06-19T20:50:00.000Z	sacarlson	viktor	if it mount manualy I don't understand why it won't automount
+2012-06-19T20:51:00.000Z	sacarlson	viktor	but it's working to some extent and it's my beer time
+2012-06-19T20:53:00.000Z	viktor	sacarlson	i'm gonna give it rest for now too, thnks for al the help

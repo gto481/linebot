@@ -1,0 +1,95 @@
+2007-10-08T07:25:00.000Z	Soskel		can someone help me please? http://texticle.net/27
+2007-10-08T07:26:00.000Z	AsusG1	Soskel	how many primary partitions have you got?
+2007-10-08T07:26:00.000Z	Soskel	AsusG1	I don't know... how can I check? I have gparted open
+2007-10-08T07:27:00.000Z	AsusG1	Soskel	Anything outside of an extended partition is primary, you can only have 4
+2007-10-08T07:28:00.000Z	Soskel	AsusG1	I have 2 NTSF, 1 Unallowacated, 1 extended, and 1 linux swap(I am running on a live CD right now)
+2007-10-08T07:30:00.000Z	AsusG1	Soskel	Are you trying to create a partition?
+2007-10-08T07:30:00.000Z	Soskel	AsusG1	yes
+2007-10-08T07:31:00.000Z	AsusG1	Soskel	Are you letting ubuntu make decisions as to where partitions are going?
+2007-10-08T07:32:00.000Z	AsusG1	Soskel	Make sure ubuntu isnt creating too many extra partitions - it make be exceeding the allowance
+2007-10-08T07:32:00.000Z	Soskel	AsusG1	I selected the 'guided' option AsusG1
+2007-10-08T07:33:00.000Z	Soskel	AsusG1	how can I make it so I can have 5 partitions?
+2007-10-08T07:33:00.000Z	AsusG1	Soskel	You can oly have 5 primary partitions + 1 extended
+2007-10-08T07:33:00.000Z	AsusG1	Soskel	The extended can contain many "logical" partitions within it
+2007-10-08T07:34:00.000Z	AsusG1	Soskel	It depends what you would like those 5 partitions to do
+2007-10-08T07:35:00.000Z	AsusG1	Soskel	You should be ok then, what other partitions would you like?
+2007-10-08T07:36:00.000Z	Soskel	AsusG1	I don't know what the different types of partitions there are, sorry
+2007-10-08T07:37:00.000Z	AsusG1	Soskel	What other drives would you like?
+2007-10-08T07:38:00.000Z	Soskel	AsusG1	what do you mean 'other drivers' ?
+2007-10-08T07:38:00.000Z	AsusG1	Soskel	Are you in the LiveCD?
+2007-10-08T07:39:00.000Z	AsusG1	Soskel	System -> Administration -> GNOME Partition Editor
+2007-10-08T07:41:00.000Z	AsusG1	Soskel	Below the graphical display of partitions there is a list which displays in text for what partitions are where
+2007-10-08T07:41:00.000Z	AsusG1	Soskel	Do you have an extended partition in that list?
+2007-10-08T07:41:00.000Z	AsusG1	Soskel	Dont worry about the lock :D
+2007-10-08T07:42:00.000Z	AsusG1	Soskel	next to extended there is an "aqua" colour, if you look a the the graphical representation you should see other partitions wrapped in this colour
+2007-10-08T07:43:00.000Z	AsusG1	Soskel	yes/no/confused?
+2007-10-08T07:44:00.000Z	AsusG1	Soskel	Aqua = light green
+2007-10-08T07:44:00.000Z	AsusG1	Soskel	Aqua = light green/ blue
+2007-10-08T07:45:00.000Z	AsusG1	Soskel	We'll call it light blue
+2007-10-08T07:45:00.000Z	Soskel	AsusG1	yup, it's that color
+2007-10-08T07:45:00.000Z	AsusG1	Soskel	everything inside that color is a logical partition - you can have quite a few of these (never reached the limit)
+2007-10-08T07:46:00.000Z	AsusG1	Soskel	everything outside that color is a primary partition, you may only have 4 of these
+2007-10-08T07:46:00.000Z	AsusG1	Soskel	the extended partition does not count as one of the 4
+2007-10-08T07:46:00.000Z	Soskel	AsusG1	doesn't unallowacted and linux swap count?
+2007-10-08T07:47:00.000Z	AsusG1	Soskel	my mistake - extended does
+2007-10-08T07:48:00.000Z	AsusG1	Soskel	unallocated isn't a partition yet
+2007-10-08T07:49:00.000Z	AsusG1	Soskel	You only need one swap partition, and you can put it inside the extended partition to free up more primary partitions
+2007-10-08T07:49:00.000Z	Soskel	AsusG1	sounds good, how can I do that?
+2007-10-08T07:49:00.000Z	Soskel	AsusG1	and it won't hurt my system, right?
+2007-10-08T07:49:00.000Z	AsusG1	Soskel	that depends on the current layout of the rest of your partitions
+2007-10-08T07:50:00.000Z	Soskel	AsusG1	so... it could hurt my system...?
+2007-10-08T07:51:00.000Z	AsusG1	Soskel	i'm unsure of the consequences of moving a swap partition after an operating system is using it
+2007-10-08T07:52:00.000Z	AsusG1	Soskel	you probably have to edit the fstab, but I am no expert on that
+2007-10-08T07:53:00.000Z	Soskel	AsusG1	I can't just say to my hdd "I want 6 primary partitions to be the limit!"?
+2007-10-08T07:53:00.000Z	AsusG1	Soskel	No, you can only have 4 primary partitions
+2007-10-08T07:54:00.000Z	Soskel	AsusG1	ok, I would like to move the swap..... but I want like, a "revert" button.... if it's possible..
+2007-10-08T07:56:00.000Z	AsusG1	Soskel	There is a revert button until  the changes are applied
+2007-10-08T07:56:00.000Z	Soskel	AsusG1	would be as so kind as to walk me through the proscess of moving the swap?
+2007-10-08T07:56:00.000Z	AsusG1	Soskel	Do you have linux installed at the moment?
+2007-10-08T07:56:00.000Z	Soskel	AsusG1	yes
+2007-10-08T08:00:00.000Z	AsusG1	Soskel	NTSF? Did you mean NTFS or is NTSF a filesystem I do not know of?
+2007-10-08T08:01:00.000Z	AsusG1	Soskel	you said "AsusG1: I have 2 NTSF, 1 Unallowacated, 1 extended, and 1 linux swap(I am running on a live CD right now)"
+2007-10-08T08:01:00.000Z	Soskel	AsusG1	correct
+2007-10-08T08:05:00.000Z	AsusG1	Soskel	If I describe my hard disk as ext3,ext3,ext3,extended(fat-32,linux-swap) could you describe yours in such a way?
+2007-10-08T08:07:00.000Z	AsusG1	Soskel	you have just specified 5 primary partitions
+2007-10-08T08:07:00.000Z	Soskel	AsusG1	shall I screenshot?/
+2007-10-08T08:08:00.000Z	AsusG1	Soskel	that would work
+2007-10-08T08:09:00.000Z	Soskel	AsusG1	http://imageswire.com/public/view/full/19
+2007-10-08T08:11:00.000Z	AsusG1	Soskel	Whats in /dev/sda2? windows?
+2007-10-08T08:11:00.000Z	AsusG1	Soskel	What is you linux operating system?
+2007-10-08T08:12:00.000Z	Soskel	AsusG1	the one I want to install, or the one already installed?
+2007-10-08T08:12:00.000Z	AsusG1	Soskel	already installed
+2007-10-08T08:12:00.000Z	Soskel	AsusG1	ubuntu
+2007-10-08T08:12:00.000Z	AsusG1	Soskel	the same ubuntu as you're installing?
+2007-10-08T08:14:00.000Z	AsusG1	Soskel	(cdm10 correct me if im wrong) but I believe you should be able to install KDE from within gnome
+2007-10-08T08:15:00.000Z	Soskel	AsusG1	you can
+2007-10-08T08:15:00.000Z	Soskel	AsusG1	I already did
+2007-10-08T08:15:00.000Z	AsusG1	Soskel	Im confused, why do you want to install ubuntu again?
+2007-10-08T08:16:00.000Z	Soskel	AsusG1	I am not installed ubuntu
+2007-10-08T08:16:00.000Z	Soskel	AsusG1	I am not trying to install ubuntu
+2007-10-08T08:18:00.000Z	AsusG1	Soskel	You're not trying to install ubuntu, but you dont have ubuntu installed, So what are you tring to install?
+2007-10-08T08:18:00.000Z	Soskel	AsusG1	I have ubuntu installed... I am trying to install linux mint
+2007-10-08T08:19:00.000Z	AsusG1	Soskel	Do you want to get rid of windows?
+2007-10-08T08:19:00.000Z	Soskel	AsusG1	no thank you
+2007-10-08T08:20:00.000Z	AsusG1	Soskel	which distrobution are you tring to install?
+2007-10-08T08:20:00.000Z	Soskel	AsusG1	mint linux
+2007-10-08T08:21:00.000Z	Soskel	AsusG1	*linuxmint
+2007-10-08T08:21:00.000Z	Soskel	AsusG1	http://www.linuxmint.com/
+2007-10-08T08:21:00.000Z	AsusG1	Soskel	just googled it...
+2007-10-08T08:22:00.000Z	AsusG1	Soskel	Whats in the first partition (/dev/sda1)?
+2007-10-08T08:23:00.000Z	Soskel	AsusG1	windows recovery partition
+2007-10-08T08:23:00.000Z	Soskel	AsusG1	all I need to do now is move the swap
+2007-10-08T08:23:00.000Z	AsusG1	Soskel	Is that recovery partition bootable?
+2007-10-08T08:24:00.000Z	Soskel	AsusG1	I am not sure.... let me check real quick
+2007-10-08T08:25:00.000Z	AsusG1	Soskel	let be put this annother way, did you put that partition there?
+2007-10-08T08:25:00.000Z	Soskel	AsusG1	I didn't put that partition there... and it is bootable
+2007-10-08T08:26:00.000Z	AsusG1	Soskel	In order for a partition to be bootable it has to be primary, you have 3 primary boot partitons
+2007-10-08T08:27:00.000Z	Soskel	AsusG1	ahh
+2007-10-08T08:28:00.000Z	AsusG1	Soskel	Personally, I would spend 20 on an ew 80Gb HDD and put linux on that
+2007-10-08T08:29:00.000Z	Soskel	AsusG1	I still have 50GB's free on my HD now... it would be a waste og money
+2007-10-08T08:29:00.000Z	AsusG1	Soskel	Im sorry, I dont think I can help you further
+2007-10-08T08:29:00.000Z	Soskel	AsusG1	but.... if I move my swap.... problem solved, right?
+2007-10-08T08:29:00.000Z	AsusG1	Soskel	your swap is already inside the extended partition
+2007-10-08T08:30:00.000Z	AsusG1	Soskel	You need annother primary partition, unless you can install it into an extended partition (No idea on this front)
+2007-10-08T08:31:00.000Z	AsusG1	Soskel	I hope you have a better understanding of partitions, at least I have passed something on to you. Good luck with LinuxMint
+2007-10-08T08:33:00.000Z	Soskel	AsusG1	thank you so so so much for al you have helped me with

@@ -1,0 +1,98 @@
+2008-11-10T00:39:00.000Z	alex_mayorga		I've been using the developmente version of 8.10, how do I make sure I've got the release version?
+2008-11-10T00:40:00.000Z	Flannel	alex_mayorga	Just do regular updates with update-manager (or another package manager)
+2008-11-10T00:41:00.000Z	alex_mayorga	Flannel	problem is I have random package breakage going on and I seem to have been bite by bug #254840
+2008-11-10T00:46:00.000Z	alex_mayorga	Flannel	so on synaptic I first try to fix all breakage, right?
+2008-11-10T00:46:00.000Z	Flannel	alex_mayorga	Yeah, if you have broken packages.
+2008-11-10T00:46:00.000Z	alex_mayorga	Flannel	done that, what now?
+2008-11-10T00:47:00.000Z	Flannel	alex_mayorga	just regular upgrades, either via update-manager, or sudo apt-get update && sudo apt-get dist-upgrade
+2008-11-10T00:48:00.000Z	alex_mayorga	Flannel	ivan_: thanks, will do
+2008-12-01T12:23:00.000Z	alex_mayorga	Flannel	do you happen to know if there's such a place #ubuntu-swap-old-hardware
+2008-12-01T12:23:00.000Z	Flannel	alex_mayorga	No, but you might look into your LoCo team
+2008-12-01T12:23:00.000Z	alex_mayorga	Flannel	I'm my LoCo team for now, unofficial of course
+2008-12-01T12:25:00.000Z	Flannel	alex_mayorga	that's not true.  The mexico team is fairly well established.
+2008-12-01T12:25:00.000Z	Flannel	alex_mayorga	Eh, #ubuntu-mx, https://wiki.ubuntu.com/UbuntuMxTeam
+2008-12-01T12:26:00.000Z	alex_mayorga	Flannel	I'm in the .mx team myself, I'll ask around
+2008-12-27T04:41:00.000Z	Flannel	alex_mayorga	You only have windows and memtest?  That is odd.  Do you remember where your linux is (what partitions, etc)? We can do it from the grub menu.  Actually, you'll likely need a liveCD anyway.
+2008-12-27T04:42:00.000Z	alex_mayorga	Flannel	ubuntu would be on hd0,1 can you help me boot from GRUB commandl please?
+2008-12-27T04:42:00.000Z	Flannel	alex_mayorga	Yeah, Do you have a liveCD?
+2008-12-27T04:44:00.000Z	alex_mayorga	Flannel	cn28h, LiveCDs won't go on my system bug# 146706
+2008-12-27T04:46:00.000Z	Flannel	alex_mayorga	Alright.  The only thing we need to know is which version kernel you've got.  Which we can determine from within the grub menu.  Reboot, and at the grub menu hit 'c' (to get to a grub console)
+2008-12-27T04:46:00.000Z	alex_mayorga	Flannel	thanks, rebooting as of now, really appreciated
+2008-12-27T04:47:00.000Z	alex_mayorga	Flannel	I'm at grub>
+2008-12-27T04:48:00.000Z	Flannel	alex_mayorga	Alright, type (no quotes) "null (hd0,1)/vml" and then hit tab, we need to know the version number after one of the vmlinuz- entries
+2008-12-27T04:50:00.000Z	alex_mayorga	Flannel	Error 15: File not found :(
+2008-12-27T04:51:00.000Z	Flannel	alex_mayorga	Alright.  Try some other hdX,Y combinations.
+2008-12-27T04:51:00.000Z	alex_mayorga	Flannel	got lost+found var media etc cdrom bin boot dev home initrd lib mnt opt proc root sbin srv sys tmp usr on hd0,1
+2008-12-27T04:51:00.000Z	Flannel	alex_mayorga	Actually, type this: "find /vmlinuz"
+2008-12-27T04:51:00.000Z	Flannel	alex_mayorga	Oh rigt. srory
+2008-12-27T04:52:00.000Z	Flannel	alex_mayorga	null (hd0,1)/boot/vml (then tab)
+2008-12-27T04:53:00.000Z	alex_mayorga	Flannel	only memtest86+.bin and grub under /boot :(
+2008-12-27T04:54:00.000Z	Flannel	alex_mayorga	That's.... interesting.  Certainly not good.  You (apparently) don't have any kernels?  Is there no liveCD (maybe not a recent one, but something ese) you could boot to, so we could see exactly what all is/isn't there?
+2008-12-27T04:55:00.000Z	alex_mayorga	Flannel	under grub there's device.map stage1 stage2 e2fs_stage1_5 fat_stage1_5 jfs_stage1_5 minix_stage1_5 reiserfs_stage1_5 xfs_stage1_5  default installed-version menu.lst and menu.lst~
+2008-12-27T04:56:00.000Z	alex_mayorga	Flannel	I seem to be able to get a prompt using rescue on an alternate CD does that help?
+2008-12-27T04:56:00.000Z	Flannel	alex_mayorga	right, that's normal.  But under /boot, we need kernels.  Do you remember if you installed wth a separate boot partition?
+2008-12-27T04:57:00.000Z	alex_mayorga	Flannel	all the ubuntu stuff was on one partition
+2008-12-27T04:57:00.000Z	Flannel	alex_mayorga	Thats what I assumed.  But... no kernels?  That's... just strange.  What were you doing when this happened?
+2008-12-27T04:58:00.000Z	alex_mayorga	Flannel	power outage
+2008-12-27T04:59:00.000Z	alex_mayorga	Flannel	can you guide me on rescue mode using Alternate?
+2008-12-27T04:59:00.000Z	Flannel	alex_mayorga	Power outages shouldn't erase entire folders of files.  Although I suppose stranger things have happened.  What were you doing when the outage happened?
+2008-12-27T05:00:00.000Z	alex_mayorga	Flannel	I left the system updating overnight if I'm not mistaken, just coming back from the Christmas break to a non functional ubuntu :(
+2008-12-27T05:00:00.000Z	Flannel	alex_mayorga	I've unfortunately (or fortunately?) never used the rescue mode on the alternate CD.  So I'm not familiar with it at all.  I'll see if I can find anything on the internet about it, and you can ask any questions you may have about it (I get X, Y, and Z, as choices, what do I want?)
+2008-12-27T05:01:00.000Z	alex_mayorga	Flannel	so no hope from the grub promt then?
+2008-12-27T05:02:00.000Z	Flannel	alex_mayorga	No, you have no kernel to boot to (apparently)
+2008-12-27T05:03:00.000Z	Flannel	alex_mayorga	If you were updating... it sounds to me like it was less the problem of the power outage, and more that somehow you removed all of your kernels.
+2008-12-27T05:03:00.000Z	Flannel	alex_mayorga	since update-grub ran (and rewrote the menu.lst) without any of them
+2008-12-27T05:04:00.000Z	alex_mayorga	Flannel	that would be real weird,but then I can manage to break anything
+2008-12-27T05:05:00.000Z	Flannel	alex_mayorga	It is real weird, but it... sort of makes sense (as in, that would be one way we could get to this state).  If we could get a live system, we could read the dpkg logs and see.  And we can also likely extract a kernel deb and work our way to a working system again.
+2008-12-27T05:05:00.000Z	alex_mayorga	Flannel	trying "Rescue a broken system" in the alternate CD
+2008-12-27T05:08:00.000Z	alex_mayorga	Flannel	I can "Execute a shell in /dev/sda2" on "Execute a shell in the installer environment", what to pick?
+2008-12-27T05:09:00.000Z	Flannel	alex_mayorga	The former
+2008-12-27T05:09:00.000Z	alex_mayorga	Flannel	I already try to "Reinstall GRUB" with no success
+2008-12-27T05:09:00.000Z	Flannel	alex_mayorga	GRUB is working fine, it's not a GRUB issue.  The issue is you have no kernels.
+2008-12-27T05:09:00.000Z	Flannel	alex_mayorga	this is a 8.10 Alternate CD? or 8.04?
+2008-12-27T05:12:00.000Z	alex_mayorga	Flannel	I think is 8.10
+2008-12-27T05:12:00.000Z	alex_mayorga	Flannel	Might even be Jaunty :S
+2008-12-27T05:13:00.000Z	Flannel	alex_mayorga	Erm.... What version is the system?
+2008-12-27T05:13:00.000Z	alex_mayorga	Flannel	I'm at a # shell
+2008-12-27T05:13:00.000Z	alex_mayorga	Flannel	it was 8.10 when operational
+2008-12-27T05:13:00.000Z	Flannel	alex_mayorga	alright.  `lsb_release -a` gives you what version?
+2008-12-27T05:14:00.000Z	alex_mayorga	Flannel	Release: 8.10
+2008-12-27T05:14:00.000Z	Flannel	alex_mayorga	Check in /media/ or /mnt/ and see if your CDrom is mounted there
+2008-12-27T05:15:00.000Z	alex_mayorga	Flannel	cdrom and cdrom0 are under media
+2008-12-27T05:16:00.000Z	Flannel	alex_mayorga	Alright, cd into one/either/both of them and see if there's a README.diskdefines file in it
+2008-12-27T05:18:00.000Z	alex_mayorga	Flannel	there's nothing under either cdrom or cdrom0
+2008-12-27T05:19:00.000Z	Flannel	alex_mayorga	Alright, lets mount it, sudo /dev/sdb1 /media/cdrom (I assume its sdb1, it may be sdc1, etc, depending on your hardware)
+2008-12-27T05:19:00.000Z	Flannel	alex_mayorga	er, there's a mount in there too ;)
+2008-12-27T05:19:00.000Z	alex_mayorga	Flannel	sorry I got lost in the last one
+2008-12-27T05:21:00.000Z	Flannel	alex_mayorga	sudo mount /dev/sdb1 /media/cdrom (mounts sdb1 to /media/cdrom)
+2008-12-27T05:21:00.000Z	Flannel	alex_mayorga	you'll want to cd .. before doing that
+2008-12-27T05:24:00.000Z	alex_mayorga	Flannel	the CD is DISKNAME Ubuntu 8.10
+2008-12-27T05:24:00.000Z	Flannel	alex_mayorga	sounds good.  Did you mount it successfully?
+2008-12-27T05:24:00.000Z	alex_mayorga	Flannel	it was /dev/scd0 after all
+2008-12-27T05:25:00.000Z	alex_mayorga	Flannel	is now under /media/cdrom as read-only mount
+2008-12-27T05:25:00.000Z	Flannel	alex_mayorga	That's fine.  cd /media/cdrom/pool/l/linux/
+2008-12-27T05:27:00.000Z	alex_mayorga	Flannel	cd media/cdrom/pool/main/l/linux/ did the trick ;)
+2008-12-27T05:27:00.000Z	Flannel	alex_mayorga	then once you're there, you should see linux-image-2.6.27-7-generic(some numbers).deb, sudo dpkg -i linux-image(tab)
+2008-12-27T05:29:00.000Z	alex_mayorga	Flannel	sudo: unable to resolve host ubuntu, I'm already # so I might skip sudo right?
+2008-12-27T05:29:00.000Z	Flannel	alex_mayorga	Oh, right.
+2008-12-27T05:30:00.000Z	alex_mayorga	Flannel	installing the package it seems
+2008-12-27T05:31:00.000Z	Flannel	alex_mayorga	good.  Lets hopeit's installing to your /boot on your install.
+2008-12-27T05:33:00.000Z	alex_mayorga	Flannel	seemed to also updater grub under /boot
+2008-12-27T05:33:00.000Z	Flannel	alex_mayorga	yeah, after you install a kernel it runs update-grub
+2008-12-27T05:34:00.000Z	alex_mayorga	Flannel	how to confirm it went fine and what to do next?
+2008-12-27T05:34:00.000Z	Flannel	alex_mayorga	cd /boot and see if there's appropriate files there
+2008-12-27T05:35:00.000Z	alex_mayorga	Flannel	there are now vmlinuz in there :)
+2008-12-27T05:35:00.000Z	Flannel	alex_mayorga	If it worked, reboot, boot to linux, copy your dpkg.log (since I'd like to see it), and then install linux-generic (right now your kernel isn't updated, nor do you have restricted-modules, so you may be low resolution, etc)
+2008-12-27T05:36:00.000Z	Flannel	alex_mayorga	That'll drag in an up-to-date kernel, etc.  Reboot again, and you'll be back to normal.  (save that dpkg.log, since we may be able to get insight into what it's thinking removing all the kernels)
+2008-12-27T05:37:00.000Z	alex_mayorga	Flannel	shutdown -h now won't go, other way to shutdown?
+2008-12-27T05:38:00.000Z	alex_mayorga	Flannel	it says Connection refused
+2008-12-27T05:38:00.000Z	Flannel	alex_mayorga	that's odd.  A safe way to shut down (if it wont do it the normal way) would be REISUB
+2008-12-27T05:38:00.000Z	Flannel	alex_mayorga	alt-sysrq then slowly type r, e, i, s, u, b
+2008-12-27T05:38:00.000Z	Flannel	alex_mayorga	Its certainly not ideal, but it's safe.
+2008-12-27T05:39:00.000Z	alex_mayorga	Flannel	sysreq?
+2008-12-27T05:39:00.000Z	Flannel	alex_mayorga	its on the same key as print screen
+2008-12-27T05:40:00.000Z	Flannel	alex_mayorga	Anotehr thing you ought to do is fsck.  Once we reboot and install the new kernel, we'll go ahead and do that. (sudo touch /forcefsck, then reboot, and it'll fsck on boot)
+2008-12-27T05:44:00.000Z	alex_mayorga	Flannel	I had to google the REISUB :)
+2008-12-27T05:44:00.000Z	alex_mayorga	Flannel	it has rebooted now and I'm now at my all glorious rainbow of flashing colors as detailed on https://bugs.edge.launchpad.net/xorg-server/+bug/146706
+2008-12-27T05:47:00.000Z	alex_mayorga	Flannel	from the bug can you help me regain video, used to work last time
+2008-12-27T05:52:00.000Z	alex_mayorga	Flannel	you still around?

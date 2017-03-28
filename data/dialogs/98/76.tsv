@@ -1,0 +1,98 @@
+2005-04-22T05:15:00.000Z	SeamusLP		Search the forums for it, I believe he posted a location to the source somewhere
+2005-04-22T05:16:00.000Z	Amaranth	SeamusLP	I have my own subforum for it. :)
+2005-04-22T05:17:00.000Z	SeamusLP	Amaranth	 That was quite creepy :) Hey, I think you know my roommate, g01dfish?
+2005-04-22T05:17:00.000Z	Amaranth	SeamusLP	haha, yeah
+2005-04-22T10:14:00.000Z	Amaranth	SeamusLP	goldfish woke up, save me!
+2005-04-22T10:14:00.000Z	SeamusLP	Amaranth	from what?  His gentoo fanboyism?
+2005-04-22T10:14:00.000Z	Amaranth	SeamusLP	hehe, he seems to be in this channel
+2005-04-22T10:21:00.000Z	SeamusLP	Amaranth	 You have a web site for your menu editor, right?
+2005-04-22T10:23:00.000Z	Amaranth	SeamusLP	it's on the ubuntu forums
+2005-04-28T11:19:00.000Z	Amaranth	SeamusLP	Kick goldfish a couple times for me. :)
+2005-04-28T11:22:00.000Z	SeamusLP	Amaranth	 My main argument for gnome is that it doesn't look like crap
+2005-04-28T11:37:00.000Z	SeamusLP	Amaranth	 I think he was demonstrating to goldfish the difference between /query and /msg
+2005-04-28T11:38:00.000Z	SeamusLP	Amaranth	 He's already got one.
+2005-04-28T08:53:00.000Z	Amaranth	SeamusLP	nautilus is 400k lines of undebuggable crap. :P
+2005-04-28T08:53:00.000Z	SeamusLP	Amaranth	 I take it you've tried? heh
+2005-04-28T08:54:00.000Z	Amaranth	SeamusLP	I've watched other try and fail and bitch and moan. I'm scared to look.
+2005-04-28T08:55:00.000Z	SeamusLP	Amaranth	 It's a good file manager, they just need to stop tacking on crap to it and fix the damn bugs
+2005-04-29T08:49:00.000Z	Amaranth	SeamusLP	You don't get a new menu editor, btw. ;)
+2005-04-29T08:50:00.000Z	SeamusLP	Amaranth	 Why even put screenshots then :P
+2005-04-29T08:50:00.000Z	Amaranth	SeamusLP	Well, there is nothing left to do for 0.5 in the app. I just need to figure out how to package PyXDG CVS and gnome-menus CVS from the 2.10 branch.
+2005-04-29T08:51:00.000Z	Amaranth	SeamusLP	Because they fix xdg support bugs that my app exposes.
+2005-04-29T08:53:00.000Z	SeamusLP	Amaranth	 I was curious because there are some menu items I have that can't be edited.
+2005-04-30T14:23:00.000Z	SeamusLP	Amaranth	 Was that supposed to replace the default bittorrent client?
+2005-04-30T14:23:00.000Z	Amaranth	SeamusLP	It probably did, yeah.
+2005-04-30T14:24:00.000Z	Amaranth	SeamusLP	The command to run is /usr/bin/btdownloadgui.py
+2005-04-30T14:24:00.000Z	SeamusLP	Amaranth	 Yeah looks like it's still trying to use bittornado for me
+2005-04-30T14:25:00.000Z	Amaranth	SeamusLP	When you run /usr/bin/btdownloadgui.py it open bittornado?
+2005-04-30T14:26:00.000Z	SeamusLP	Amaranth	 Removed it bittornado and it's good now.
+2005-04-30T14:26:00.000Z	Amaranth	SeamusLP	Good, because you don't need bittornado anymore. :)
+2005-04-30T14:26:00.000Z	SeamusLP	Amaranth	 It's a good client but ugly as hell.
+2005-04-30T14:26:00.000Z	Amaranth	SeamusLP	You click on the tray icon to make the window go away, click it again to bring it back.
+2005-04-30T14:26:00.000Z	SeamusLP	Amaranth	 Bittornado I mean
+2005-04-30T14:27:00.000Z	Amaranth	SeamusLP	BitTorrent is so much better and looks good.
+2005-04-30T14:29:00.000Z	SeamusLP	Amaranth	 Doesn't look like there's any way to change the default port
+2005-04-30T14:29:00.000Z	Amaranth	SeamusLP	Open up your firewall. ;)
+2005-04-30T14:30:00.000Z	SeamusLP	Amaranth	 It's very nice looking however I need to be able to change my ports.  I get TV shows from torrentbytes and they require an alternate port for who knows what reason.
+2005-04-30T14:31:00.000Z	Amaranth	SeamusLP	:/
+2005-04-30T14:31:00.000Z	Amaranth	SeamusLP	I'll look into adding it. :)
+2005-04-30T14:32:00.000Z	Amaranth	SeamusLP	This isn't my client, this is the official client. So it might take awhile if I can go it at all.
+2005-04-30T14:32:00.000Z	SeamusLP	Amaranth	 The new version of the official client?
+2005-04-30T14:32:00.000Z	Amaranth	SeamusLP	yeah.
+2005-04-30T14:33:00.000Z	SeamusLP	Amaranth	 There has to be a conf file I can edit...
+2005-04-30T14:35:00.000Z	SeamusLP	Amaranth	 Oh shit, I feel stupid.  It lets you specify a starting port.  I think I'll use this client now :D
+2005-04-30T14:37:00.000Z	Amaranth	SeamusLP	Like I said, it's perfect. :)
+2005-04-30T14:38:00.000Z	SeamusLP	Amaranth	 I'm inclined to agree, being a sort of a fan of clean GUIs.
+2005-05-02T12:08:00.000Z	SeamusLP	Amaranth	 go1dfish has a test in 30 minutes, he hasn't been to class since the last test, he hasn't studied, and he's currently asleep.  I blame you guys :P
+2005-05-02T12:09:00.000Z	Amaranth	SeamusLP	lmao
+2005-05-02T12:10:00.000Z	Amaranth	SeamusLP	I'll ban him from #pymusique if he fails. :D
+2005-05-02T12:10:00.000Z	SeamusLP	Amaranth	 Heh he won't, it's just a trivial 100 level astronomy class.
+2005-05-02T13:24:00.000Z	SeamusLP	Amaranth	 So far the only complaint about that bittorrent client is that it can't be resized.  Wouldn't it be fairly trivial to change this in pygtk?
+2005-05-02T13:25:00.000Z	Amaranth	SeamusLP	Yeah, I could make the starting size the minimum size.
+2005-05-02T13:27:00.000Z	SeamusLP	Amaranth	 Cool.  I might have to learn python.  It appears to be rather simple and quick to boot.
+2005-05-03T16:43:00.000Z	SeamusLP	Amaranth	 I think that bittorrent 4.0 doesn't allow more than 3 simultaneous connections.  Perhaps this should be changed?
+2005-05-03T16:43:00.000Z	Amaranth	SeamusLP	It doesn't?
+2005-05-03T16:43:00.000Z	SeamusLP	Amaranth	 Not connections, torrents I meant
+2005-05-03T16:43:00.000Z	SeamusLP	Amaranth	 Check the FAQ out
+2005-05-03T16:45:00.000Z	Amaranth	SeamusLP	"For this reason, BitTorrent allows up to three simulataneous torrents, however, running BitTorrent this way all the time is not recommended and will likely hurt BitTorrent's overall performance."
+2005-05-03T16:45:00.000Z	Amaranth	SeamusLP	I'll look into it.
+2005-05-03T16:45:00.000Z	SeamusLP	Amaranth	 I may go digging through the code in a sec.  It may just be implemented as a constant.
+2005-05-03T16:46:00.000Z	Amaranth	SeamusLP	I'll do it when I change the resize stuff.
+2005-05-03T16:48:00.000Z	Amaranth	SeamusLP	In the config set advanced to true.
+2005-05-03T16:48:00.000Z	Amaranth	SeamusLP	That'll make it resizeable at least.
+2005-05-03T16:49:00.000Z	SeamusLP	Amaranth	 What config?
+2005-05-03T16:50:00.000Z	Amaranth	SeamusLP	~/.bittorrent/data/ui_config set advanced to 1
+2005-05-03T16:50:00.000Z	Amaranth	SeamusLP	Looks like you can set min/max port in there too.
+2005-05-03T16:51:00.000Z	Amaranth	SeamusLP	That'll give you lots of shiny info about the running torrents too, kinda cool.
+2005-05-03T16:52:00.000Z	Amaranth	SeamusLP	I'll probably make the resize stuff a seperate option though.
+2005-05-03T16:52:00.000Z	SeamusLP	Amaranth	 Nice man.  Do all package maintainers put that much care into their packages?
+2005-05-03T16:53:00.000Z	Amaranth	SeamusLP	Yeah, probably.
+2005-05-03T16:53:00.000Z	Amaranth	SeamusLP	I'm not a good packager though, I don't have a diff.gz of my changes. :)
+2005-05-03T16:54:00.000Z	SeamusLP	Amaranth	 In the config it seems to say that max_files_open is set to 50...
+2005-05-03T16:55:00.000Z	Amaranth	SeamusLP	That's probably files, not torrents.
+2005-05-03T16:55:00.000Z	Amaranth	SeamusLP	For multi-file torrents.
+2005-05-03T16:56:00.000Z	SeamusLP	Amaranth	 Right
+2005-05-03T16:56:00.000Z	Amaranth	SeamusLP	I'll dig into it when I redo this to be a good package.
+2005-05-03T16:56:00.000Z	SeamusLP	Amaranth	 Alright man, cool
+2005-05-03T05:09:00.000Z	SeamusLP	Amaranth	 advanced = 1 is doing some whacked out shit.  Wouldn't recommend it, ever.
+2005-05-03T05:11:00.000Z	SeamusLP	Amaranth	 Also it deleted the advanced=1 line after I restarted the app.
+2005-05-03T08:21:00.000Z	Amaranth	SeamusLP	PING?
+2005-05-03T08:24:00.000Z	SeamusLP	Amaranth	 PONG
+2005-05-03T08:24:00.000Z	Amaranth	SeamusLP	Kick goldfish for me, he broke something before he went to bed.
+2005-05-03T08:25:00.000Z	SeamusLP	Amaranth	 You want me to try and wake him up? crap.
+2005-05-03T08:25:00.000Z	Amaranth	SeamusLP	hehe, please?
+2005-05-03T08:25:00.000Z	SeamusLP	Amaranth	 Granted he has a test in an hour and he he's been asleep for like two
+2005-05-03T08:30:00.000Z	SeamusLP	Amaranth	 I'll make sure he doesn't go to sleep after the test, heh.
+2005-05-03T08:30:00.000Z	Amaranth	SeamusLP	Just wake him up a little early for the test so he gets on IRC. :)
+2005-05-03T08:48:00.000Z	SeamusLP	Amaranth	 Hurry he's partially awake, he wants to know what he broke?
+2005-05-03T08:50:00.000Z	Amaranth	SeamusLP	he needs to chmod napster.tar.gz so the webserver can access it.
+2005-05-03T08:50:00.000Z	Amaranth	SeamusLP	when he wakes up again :)
+2005-05-03T08:52:00.000Z	SeamusLP	Amaranth	If I knew the root password I'd help you out.  But Alex isn't being very responsive.  So maybe you'll see him again in about 6 hours or so.
+2005-05-07T14:26:00.000Z	SeamusLP	Amaranth	 Has go1dfish been online at all in the past 18 hours?  He's sick or something.  Went to bed around 9:00, and he's still asleep now.
+2005-05-07T14:27:00.000Z	Amaranth	SeamusLP	I'm not sure.
+2005-05-07T14:27:00.000Z	SeamusLP	Amaranth	 I'd better make sure he's asleep and that's not actually his rotting corpse...
+2005-05-07T14:27:00.000Z	Amaranth	SeamusLP	heh
+2005-05-07T14:28:00.000Z	Amaranth	SeamusLP	pour water on his face
+2005-05-11T09:12:00.000Z	SeamusLP	Amaranth	 Whats the address to your website?  I lost it yet again
+2005-05-11T09:12:00.000Z	Amaranth	SeamusLP	http://www.realistanew.com
+2005-05-11T09:13:00.000Z	SeamusLP	Amaranth	 Aha, new menu editor.  Looks great.

@@ -1,0 +1,97 @@
+2011-07-06T20:30:00.000Z	Ceno3x		hi guys
+2011-07-06T20:31:00.000Z	Ceno3x		does anyone know where can I get a package for kernel 2.6.39 for 11.04? i used to go to the kernel-team ppa, but for some reason it doesn't seem to be working...
+2011-07-06T20:31:00.000Z	ikonia	Ceno3x	why would you want that kernel ?
+2011-07-06T20:32:00.000Z	Ceno3x	ikonia	I'm having issues with virtualbox and I think it's a kernel bug
+2011-07-06T20:32:00.000Z	ikonia	Ceno3x	why ?
+2011-07-06T20:33:00.000Z	ikonia	Ceno3x	no
+2011-07-06T20:33:00.000Z	ikonia	Ceno3x	do not do that
+2011-07-06T20:33:00.000Z	ikonia	Ceno3x	why do you think you have a kernel bug
+2011-07-06T20:34:00.000Z	Ceno3x	ikonia	it's a medium sized explanation, are you familiar with virtualbox and how the kernel works, those kind of things?
+2011-07-06T20:34:00.000Z	ikonia	Ceno3x	yes
+2011-07-06T20:35:00.000Z	Ceno3x	ikonia	see above, sorry
+2011-07-06T20:36:00.000Z	ikonia	Ceno3x	I see
+2011-07-06T20:36:00.000Z	Ceno3x	ikonia	now I installed kubuntu 11.04, and it's not good. I installed vbox, imported my VM, installed the latest guest additions, but my system freezes if I try to do a heavy disk operation like copying a large file, or installing a large program
+2011-07-06T20:37:00.000Z	ikonia	Ceno3x	ok, why do you think that is a kernel bug ?
+2011-07-06T20:38:00.000Z	Ceno3x	ikonia	because the only difference between ubuntu 10.04 and 11.04 from vbox's perspective is the kernel, and there's a big warning saying that due to a kernel bug running an ext4 guest on a ext4 host can cause problems. the warning was always there, but I'm only witnessing any effect now
+2011-07-06T20:39:00.000Z	Ceno3x	ikonia	makes sense? I might be mistaken, and I hope I am, it'd be a lot less trouble for me
+2011-07-06T20:43:00.000Z	ikonia	Ceno3x	ok - so why do you think that bug is fixed in the later kernel ?
+2011-07-06T20:43:00.000Z	Ceno3x	ikonia	there's only one way to find out...
+2011-07-06T20:43:00.000Z	ikonia	Ceno3x	and the kernel is not the only difference, the libraries that run the OS are different, the binarys that make up the virtual machine are different
+2011-07-06T20:43:00.000Z	ikonia	Ceno3x	no - that's not the way to do it, updating random comre components of the OS
+2011-07-06T20:44:00.000Z	Ceno3x	ikonia	indeed, it's just a hunch. that would be easily verifiable if there was a kernel package available... I was going straight to kvm, but I had that idea
+2011-07-06T20:45:00.000Z	ikonia	Ceno3x	a hunch - you've not done any research on it and you want upgrade a core component of the OS
+2011-07-06T20:45:00.000Z	Ceno3x	ikonia	why are you so shocked with the idea of the upgrading the kernl?
+2011-07-06T20:45:00.000Z	ikonia	Ceno3x	there is so much more to incestigate
+2011-07-06T20:46:00.000Z	Ceno3x	ikonia	yes, but I have a thesis to write <
+2011-07-06T20:46:00.000Z	ikonia	Ceno3x	I'm not, I'm shocked at doing it randomly taking your system to an unsupported state with zero reason to believe it is the problem or the fix
+2011-07-06T20:48:00.000Z	ikonia	Ceno3x	I can help you with debugging to try to get to the real issue, or at least the ball park
+2011-07-06T20:48:00.000Z	Ceno3x	ikonia	ok, that'd be very nice of you. here's what happened. VM boots, wget 1.2gb file, the system freezes , after 5m the VM is aborted.
+2011-07-06T20:49:00.000Z	ikonia	Ceno3x	so it's only the guest that locks up - not the host ?
+2011-07-06T20:49:00.000Z	Ceno3x	ikonia	the I\O operation on the guest causes the whole computer to freeze
+2011-07-06T20:49:00.000Z	ikonia	Ceno3x	does the whole computer come back to life, or is it totally lcoked for ever ?
+2011-07-06T20:50:00.000Z	Ceno3x	ikonia	after the VM is aborted automaticaly, the host returns back to life. though my touchpad stopped working normaly while my usb mouse is fine
+2011-07-06T20:51:00.000Z	ikonia	Ceno3x	ok - so here is one suggestion to try - you believe this is a known bug between an ext4 vm and a ext4 host, change your host or your guest to ext3, or xfs and try it
+2011-07-06T20:51:00.000Z	ikonia	Ceno3x	that will guide you towards or away from that bug
+2011-07-06T20:53:00.000Z	Ceno3x	ikonia	not exactly. there's a different bug in running virtualbox on an ext4 host. I believe it may be somehow related, but it's not the same bug.  Is there any way to migrate the ext4fs to ext3 without reinstaling the whole system?
+2011-07-06T20:54:00.000Z	ikonia	Ceno3x	not really,
+2011-07-06T20:54:00.000Z	ikonia	Ceno3x	it's still an ext4 file system
+2011-07-06T20:55:00.000Z	ikonia	Ceno3x	ok - lets try a different approach
+2011-07-06T20:55:00.000Z	ikonia	Ceno3x	instead of doing a wget, do something like a large file copy or an scp see if that causes the io problem you see
+2011-07-06T20:55:00.000Z	Ceno3x	ikonia	formating the drive is my last resort, my host took forever to install properly, my guest is running a custom real time kernel that I have to compile manualy again
+2011-07-06T20:56:00.000Z	Ceno3x	ikonia	it does, I've tried multiple ways of trying to get the 1.2gb file into the system
+2011-07-06T20:56:00.000Z	ikonia	Ceno3x	run iostat 3 on the host while running the file move, does the io go up ?
+2011-07-06T20:58:00.000Z	Ceno3x	ikonia	i was monitoring the thing with the gnome panel monitor, and the "I\O wait" just to maximum just before the system freezes. is this related or will iostat give different information? i'm not familiar with the tool
+2011-07-06T20:58:00.000Z	ikonia	Ceno3x	iostat will give you more info - but I'm just thinking about something you said earlier
+2011-07-06T20:59:00.000Z	ikonia	Ceno3x	here is a thought, you'll have to fill in the blanks for me
+2011-07-06T20:59:00.000Z	Ceno3x	ikonia	ok
+2011-07-06T21:00:00.000Z	ikonia	Ceno3x	on virutal machine guests, time is provided by the host, and it's basically dependant on cpu cycles issuing clock updates, you're running a real time kernel on the guest, in your opinion is it possible the io issue is due to a time (not time as in clock) loop being created between io write acknowledgements and the real time update stuck waiting for the next free cyle
+2011-07-06T21:00:00.000Z	ikonia	Ceno3x	that's a bit of a scrappy way of explaining it, do you follow what I'm saying
+2011-07-06T21:01:00.000Z	ikonia	Ceno3x	eg: the real time clock depends on very accurate timings, by default a vm will not give out accurate timing
+2011-07-06T21:01:00.000Z	Ceno3x	ikonia	I tried with the stock kernel from ubuntu 10.04 and the problem was the same, so I don't think it's related
+2011-07-06T21:02:00.000Z	ikonia	Ceno3x	so your guest is ubuntu 10.04 ?
+2011-07-06T21:02:00.000Z	Ceno3x	ikonia	yep
+2011-07-06T21:03:00.000Z	ikonia	Ceno3x	the reason I'm dubious on this is that if there was a problem with the 11.04 kernel I'd expect many people to be logging a bug that they can't use it with 10.04 guests, but they are no
+2011-07-06T21:04:00.000Z	Ceno3x	ikonia	i had a tough time phrasing the problem in google to get related information. How would you confirm what you just said? go to launchpad and search the bugs?
+2011-07-06T21:04:00.000Z	ikonia	Ceno3x	that's one reason, but I am normally in this channel, and #vbox and it's not being mentioned
+2011-07-06T21:05:00.000Z	ikonia	Ceno3x	that's not "fact" but it's the norm if there was a problem of that size
+2011-07-06T21:06:00.000Z	Ceno3x	ikonia	yeah, I believe you, I was just asking because I was trouble searching about it and it ocurred that maybe I should've gone to launchpad
+2011-07-06T21:06:00.000Z	ikonia	Ceno3x	it's a reasonable question - I did check launchpad after your second post on the matter
+2011-07-06T21:07:00.000Z	Ceno3x	ikonia	maybe the problem is me importing the appliance? I'm gonna try to install stock ubuntu 10.04  on a new one and see if the problem persists, the installation is rather quick
+2011-07-06T21:08:00.000Z	ikonia	Ceno3x	I'm not going anywhere, let me know
+2011-07-06T21:09:00.000Z	Ceno3x	ikonia	ok, thx for the help, I'm downloading the iso now
+2011-07-06T21:21:00.000Z	Ceno3x	ikonia	are you still around? the VM was aborted as soon as the installation began
+2011-07-06T21:22:00.000Z	ikonia	Ceno3x	yes, I'm here
+2011-07-06T21:22:00.000Z	ikonia	Ceno3x	ok - so that's a good sign (sort of) that the issue is with the host
+2011-07-06T21:27:00.000Z	Ceno3x	ikonia	tried installation with an ext3 partition, it was less agressive but I almost couldn't shutdown the VM. Yes, the VMs are fine, something with the host is at fault. The only thing I have non-standard is the xorg-edgers ppa
+2011-07-06T21:27:00.000Z	ikonia	Ceno3x	long shot - what about a hardware error ?
+2011-07-06T21:28:00.000Z	Ceno3x	ikonia	like a problem with the disk? I doubt it, everything is fine except for vbox...
+2011-07-06T21:29:00.000Z	ikonia	Ceno3x	I'm thinking more ram - as in reality it's all ram driven
+2011-07-06T21:30:00.000Z	ikonia	Ceno3x	I appreciate that's not the best diagnosis,
+2011-07-06T21:30:00.000Z	Ceno3x	ikonia	hm, with ext4 the VM was aborted during the formating, does this happen in ram? at some point it has to be commited to disk at least. As a side note, I'm also passing pcie_aspm=force as a boot parameter
+2011-07-06T21:31:00.000Z	Ceno3x	ikonia	lol I've been at this since yesterday, you still think trying a different kernel is useless?
+2011-07-06T21:31:00.000Z	ikonia	Ceno3x	it doesn't happen "in ram" but think about it, your machine is a machine running in the ram of a guest, which has ram allocated to it from the ram of a guest
+2011-07-06T21:31:00.000Z	ikonia	Ceno3x	I don't think this is a kernel problem in honesty
+2011-07-06T21:32:00.000Z	ikonia	Ceno3x	that doesn't mean I'm right, but there is nothing you've said that points at a kernel issue beyond the hard lock - which makes me lean more towards a hardware issue at this time
+2011-07-06T21:34:00.000Z	Ceno3x	ikonia	the thing is it's related to filesystem operation, there might be some weird thing going on there you see.  Jumping to a hardware problem is I think much more far-fetched, everything was fine 4 days ago when it was a 10.04 host instead of 11.04...
+2011-07-06T21:34:00.000Z	ikonia	Ceno3x	I don't disagree, but a hard lock is unlikley, a kernel issue would panic/dump normally, hard lock is normally linked to the hardware (at a very generic level)
+2011-07-06T21:36:00.000Z	Ceno3x	ikonia	well, let's not hope it's hardware because it's a mac and I'm not very high on money at the moment!
+2011-07-06T21:37:00.000Z	Ceno3x	ikonia	anyway, thanks for your interest in the situation, I'm gonna try removing the boot parameter, if that doesn't work I'm gonna go for kvm and start over
+2011-07-06T21:37:00.000Z	ikonia	Ceno3x	agreed, it's not a very factual diagnoses, and what you've said about working on 10.04 does move away from it being a hardware problem
+2011-07-06T21:37:00.000Z	ikonia	Ceno3x	has the version of vbox changed between 10.04 and 11.04 ?
+2011-07-06T21:38:00.000Z	Ceno3x	ikonia	yes it did, so I removed the package, installed the same version I was running (4.06) and imported the appliances again, to no avail
+2011-07-06T21:39:00.000Z	ikonia	Ceno3x	how did you install the same version ?
+2011-07-06T21:39:00.000Z	Ceno3x	ikonia	got the package from the website
+2011-07-06T21:39:00.000Z	ikonia	Ceno3x	from the vbox website ?
+2011-07-06T21:40:00.000Z	Ceno3x	ikonia	yep
+2011-07-06T21:40:00.000Z	ikonia	Ceno3x	did you do that because you where having a problem with the one packaged in ubuntu, or just to keep the versions the same
+2011-07-06T21:42:00.000Z	Ceno3x	ikonia	at first I went to the latest from the site, that didn't work, so I removed and installed the one in the repos. Then I removed and installed 4.06 to keep the versions the same
+2011-07-06T21:42:00.000Z	ikonia	Ceno3x	what happened with the one in the repos ?
+2011-07-06T21:43:00.000Z	Ceno3x	ikonia	the same behavior. it's version 4.0.8
+2011-07-06T21:44:00.000Z	ikonia	Ceno3x	that is super frustrating
+2011-07-06T21:44:00.000Z	ikonia	Ceno3x	it would be great to test it back on 10.04 - but I appreciate that's not realisitic in your current situation
+2011-07-06T21:44:00.000Z	Ceno3x	ikonia	believe it! I've been tearing my hair off for over 10 hours now
+2011-07-06T21:46:00.000Z	Ceno3x	ikonia	yes, I understand what you mean, but I need to work, not triage a bug... it's been 4 days now I haven't programmed a thing due to issues like these
+2011-07-06T21:46:00.000Z	ikonia	Ceno3x	fully support what you're saying
+2011-07-06T21:49:00.000Z	Ceno3x	ikonia	do you know of any guide to help get me started with kvm or qemu? or is it easy and I wouldn't need that much help?
+2011-07-06T21:50:00.000Z	ikonia	Ceno3x	there is some good guides/info on the ubuntu wiki
+2011-07-06T21:51:00.000Z	Ceno3x	ikonia	I think I'm all set. Again, thank you for your time and interest in my situation, I really appreciate it . cheers!

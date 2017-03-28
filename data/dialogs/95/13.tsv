@@ -1,0 +1,95 @@
+2010-04-01T04:30:00.000Z	crogeek		hi to all
+2010-04-01T04:31:00.000Z	crogeek		I have couple of questions
+2010-04-01T04:31:00.000Z	crogeek		first I have radeon 9600 pro AGP card on my p4 PC and I cannot run 3d effects, I am using regular drivers from kernel of Ubuntu
+2010-04-01T04:31:00.000Z	crogeek		secondly, why software reposierties are not updated to the end?
+2010-04-01T04:31:00.000Z	crogeek		I saw latest Firefox is 3.5.8 in rep.
+2010-04-01T04:33:00.000Z	crogeek		can someone explain me how to download latest ATI driver for my graph. card and run 3d effects, I know it should work, in 9.04 on my radeon 9600 that worked well
+2010-04-01T04:33:00.000Z	crogeek		and I saw that Firefox isn't updated, even in software rep. I didn't see any new ver
+2010-04-01T04:34:00.000Z	chelz	crogeek	when there are updates the update manager should prompt you if nothing was changed in the notification settings. otherwise all is well.
+2010-04-01T04:35:00.000Z	crogeek	chelz	: that's okay, but as I see 3.5.8 has major security flaws and I don't wanna to have non-updated version of FF
+2010-04-01T04:36:00.000Z	chelz	crogeek	ubuntu patches security flows and releases updates just for ubuntupackages
+2010-04-01T04:36:00.000Z	chelz	crogeek	also flaws
+2010-04-01T04:36:00.000Z	crogeek	chelz	: even in Firefox ?
+2010-04-01T04:36:00.000Z	chelz	crogeek	yes
+2010-04-01T04:37:00.000Z	chelz	crogeek	all packages that come installed with ubuntu get all necessary security patches
+2010-04-01T04:37:00.000Z	crogeek	chelz	: so this means (from my personal point of view) that Ubuntu dev. team can patch Firefox flaws even on outdated version on FF?
+2010-04-01T04:37:00.000Z	chelz	crogeek	yep. that's how 'fixed release' linux distributions work. they pick a version of some software and stick with it for the lifetime of the version.
+2010-04-01T04:38:00.000Z	chelz	crogeek	for your ati, did you follow this yet?: https://help.ubuntu.com/community/BinaryDriverHowto
+2010-04-01T04:39:00.000Z	crogeek	chelz	: I will try to fix that, because I cannot get to run 3d effects on my Ubuntu with radeon 9600 also Adobe's Flash is running very slow on Streaming flash based web sites, I disabled hardware acceleration and that is now working well, but some lags are there still :(
+2010-04-01T04:50:00.000Z	crogeek	chelz	: I will try to do now
+2010-04-01T04:51:00.000Z	crogeek	chelz	: look this
+2010-04-01T04:52:00.000Z	chelz	crogeek	alright
+2010-04-01T04:53:00.000Z	crogeek	chelz	: 01:00.0 VGA compatible controller: ATI Technologies Inc RV350 AP [Radeon 9600]
+2010-04-01T04:53:00.000Z	crogeek	chelz	: so what I do next?
+2010-04-01T04:54:00.000Z	chelz	crogeek	http://ubuntuforums.org/showthread.php?t=1361335
+2010-04-01T04:54:00.000Z	chelz	crogeek	not that
+2010-04-01T04:54:00.000Z	chelz	crogeek	System->Administration->Hardware Drivers
+2010-04-01T04:54:00.000Z	crogeek	chelz	: there's nothing :(
+2010-04-01T04:54:00.000Z	chelz	crogeek	what version of ubuntu are you on?
+2010-04-01T04:54:00.000Z	crogeek	chelz	: 9.10
+2010-04-01T04:56:00.000Z	chelz	crogeek	 sudo apt-get install xorg-driver-fglrx
+2010-04-01T04:57:00.000Z	crogeek	chelz	: thanks I will do that
+2010-04-01T04:57:00.000Z	crogeek	chelz	: I did that and see this
+2010-04-01T04:58:00.000Z	chelz	crogeek	use http://paste.ubuntu.com
+2010-04-01T04:58:00.000Z	crogeek	chelz	 ok
+2010-04-01T04:59:00.000Z	crogeek	chelz	: I did that
+2010-04-01T04:59:00.000Z	crogeek	chelz	: http://paste.ubuntu.com/407321/
+2010-04-01T05:00:00.000Z	chelz	crogeek	 sudo apt-get install --reinstall xorg-driver-fglrx
+2010-04-01T05:02:00.000Z	crogeek	chelz	: http://paste.ubuntu.com/407323/ - look
+2010-04-01T05:03:00.000Z	chelz	crogeek	run in a terminal and pastebin:  compiz-check
+2010-04-01T05:03:00.000Z	crogeek	chelz	http://paste.ubuntu.com/407326/
+2010-04-01T05:04:00.000Z	chelz	crogeek	 sudo apt-get install compiz-check && compiz-check
+2010-04-01T05:05:00.000Z	crogeek	chelz	: http://paste.ubuntu.com/407327/
+2010-04-01T05:06:00.000Z	chelz	crogeek	 wget http://blogage.de/files/9124/download -O compiz-check && chmod u+x compiz-check && ./compiz-check
+2010-04-01T05:07:00.000Z	crogeek	chelz	: http://paste.ubuntu.com/407328/
+2010-04-01T05:10:00.000Z	crogeek	chelz	: what to do now ? - what do you think what's problem?
+2010-04-01T05:11:00.000Z	chelz	crogeek	reboot then go to System->Administration->Hardware Drivers and install the driver
+2010-04-01T05:11:00.000Z	crogeek	chelz	: okay I will do that, brb
+2010-04-01T05:11:00.000Z	crogeek	chelz	: thanks
+2010-04-01T05:14:00.000Z	crogeek	chelz	: hi and still the same message I have, there's no new drivers
+2010-04-01T05:14:00.000Z	chelz	crogeek	is there anything in the driver list?
+2010-04-01T05:15:00.000Z	crogeek	chelz	: I didn't try to install AMD drivers I am using currently Ubuntu drivers, but when I enable 3d effects, everything is slow and sometimes even I cannot enable this - I updated my Ubuntu to the end
+2010-04-01T05:16:00.000Z	chelz	crogeek	you need to have AMD drivers for 3d stuff
+2010-04-01T05:16:00.000Z	crogeek	chelz	: can you give me link how to install this? - I am amateur for terminal :(
+2010-04-01T05:16:00.000Z	chelz	crogeek	are you on 32bit or 64bit?
+2010-04-01T05:18:00.000Z	chelz	crogeek	have you installed all updates for your system?
+2010-04-01T05:19:00.000Z	crogeek	chelz	: yes*
+2010-04-01T05:19:00.000Z	chelz	crogeek	ok just for fun, please run this in a terminal and pastebin the output:   sudo apt-get update && sudo apt-get upgrade
+2010-04-01T05:20:00.000Z	chelz	crogeek	please also include the output of this in a terminal:   uname -a
+2010-04-01T05:23:00.000Z	crogeek	chelz	: look http://paste.ubuntu.com/407336/
+2010-04-01T05:23:00.000Z	crogeek	chelz	: I have updated Ubuntu to the end
+2010-04-01T05:24:00.000Z	chelz	crogeek	please also include the output of this in a terminal:   uname -a
+2010-04-01T05:25:00.000Z	crogeek	chelz	: on this command?
+2010-04-01T05:25:00.000Z	crogeek	chelz	: jura@Jura-linuxUbuntu:~$ uname -a
+2010-04-01T05:27:00.000Z	crogeek	chelz	: what do you think?
+2010-04-01T05:29:00.000Z	chelz	crogeek	please pastebin the contents of /etc/X11/xorg.conf
+2010-04-01T05:30:00.000Z	crogeek	chelz	: how to do it? in terminal?
+2010-04-01T05:34:00.000Z	chelz	crogeek	sudo apt-get install pastebinit && cat /etc/X11/xorg.conf | pastebinit
+2010-04-01T05:35:00.000Z	crogeek	chelz	: look this
+2010-04-01T05:35:00.000Z	crogeek	chelz	: http://paste.ubuntu.com/407340/
+2010-04-01T05:36:00.000Z	crogeek	chelz	: it gives me errror that this conf doesn't exist
+2010-04-01T05:36:00.000Z	chelz	crogeek	yeah that's ok
+2010-04-01T05:37:00.000Z	crogeek	chelz	: hm - so what do you think, this means that I don't have drivers ?
+2010-04-01T05:37:00.000Z	chelz	crogeek	sudo apt-get remove --purge xorg-driver-fglrx && sudo apt-get install --reinstall libgl1-mesa-glx libgl1-mesa-dri
+2010-04-01T05:37:00.000Z	chelz	crogeek	then reboot
+2010-04-01T05:39:00.000Z	crogeek	chelz	: ok, brb
+2010-04-01T05:41:00.000Z	crogeek	chelz	: yes I have done that and what now?
+2010-04-01T05:42:00.000Z	chelz	crogeek	  ./compiz-check | pastebinit
+2010-04-01T05:43:00.000Z	crogeek	chelz	: yes I have done that
+2010-04-01T05:43:00.000Z	chelz	crogeek	it should give you a url to give to me
+2010-04-01T05:43:00.000Z	crogeek	chelz	: okay
+2010-04-01T05:43:00.000Z	crogeek	chelz	: I will copy paste what ./compiz-check
+2010-04-01T05:44:00.000Z	crogeek	chelz	: http://paste.ubuntu.com/407342/
+2010-04-01T05:46:00.000Z	chelz	crogeek	do you have compiz-settings installed?
+2010-04-01T05:46:00.000Z	crogeek	chelz	: I think yes
+2010-04-01T05:46:00.000Z	crogeek	chelz	: I am not sure, how to check for that?
+2010-04-01T05:46:00.000Z	chelz	crogeek	go to System -> Preferences -> Appearance and try to enable desktop effects
+2010-04-01T05:47:00.000Z	crogeek	chelz	: "searching for avaiable drivers" and
+2010-04-01T05:48:00.000Z	crogeek	chelz	: O MY GOD! it's working
+2010-04-01T05:48:00.000Z	chelz	crogeek	yeah, good. sorry that took so long.
+2010-04-01T05:48:00.000Z	crogeek	chelz	: can you say me what has been faulty?
+2010-04-01T05:48:00.000Z	chelz	crogeek	i do not know. somehow the driver wasn't setup properly. just removing and reinstalling some stuff was the fix.
+2010-04-01T05:51:00.000Z	crogeek	chelz	: only what lags is now Flash video, but I think that's because I have not good graph. card
+2010-04-01T05:51:00.000Z	chelz	crogeek	flash lags everywhere unfortunately
+2010-04-01T05:51:00.000Z	crogeek	chelz	: that's problem of Adobe?
+2010-04-01T05:52:00.000Z	chelz	crogeek	mostly yeah

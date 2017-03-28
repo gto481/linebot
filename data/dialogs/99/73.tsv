@@ -1,0 +1,99 @@
+2006-05-27T15:39:00.000Z	Some_Person		I cant boot the live cd
+2006-05-27T15:40:00.000Z	Some_Person		i get some error about X something can't display
+2006-05-27T15:40:00.000Z	Some_Person		(I am a noobie at linux)
+2006-05-27T15:41:00.000Z	Some_Person		hell
+2006-05-27T15:41:00.000Z	Some_Person		i really wanted ubunty
+2006-05-27T15:42:00.000Z	Some_Person		GeForce 6100 Nvidia
+2006-05-27T15:43:00.000Z	Some_Person		I bought my computer a few days ago
+2006-05-27T15:43:00.000Z	NoUse	Some_Person	try installing the nvidia drivers via the wiki page ubotu will send you
+2006-05-27T13:19:00.000Z	NoUse	Some_Person	have you run defrag on the drive?
+2006-05-27T13:19:00.000Z	NoUse	Some_Person	yes
+2006-05-27T13:21:00.000Z	NoUse	Some_Person	yeah
+2006-05-27T13:24:00.000Z	NoUse	Some_Person	yes
+2006-05-27T13:44:00.000Z	NoUse	Some_Person	try getting the gparted live cd
+2006-05-27T13:45:00.000Z	NoUse	Some_Person	the gparted livecd is 26MB
+2006-05-27T13:46:00.000Z	NoUse	Some_Person	it doesn't like you
+2006-05-27T13:55:00.000Z	NoUse	Some_Person	don't paste!
+2006-05-27T09:45:00.000Z	NoUse	Some_Person	what are you trying to do?
+2006-05-27T15:27:00.000Z	NoUse	Some_Person	you don't
+2006-05-27T15:27:00.000Z	NoUse	Some_Person	its a horrible idea, not safe, insecure
+2006-05-27T15:30:00.000Z	NoUse	Some_Person	man mount is the documentation for the mount program
+2006-05-27T15:31:00.000Z	NoUse	Some_Person	run this: "gksudo gedit /etc/fstab"
+2006-05-27T15:31:00.000Z	NoUse	Some_Person	tell me when it opens
+2006-05-30T12:13:00.000Z	NoUse	Some_Person	it probably doesn't like you
+2006-05-30T12:13:00.000Z	NoUse	Some_Person	did you change something or has it never worked?
+2006-05-30T12:13:00.000Z	NoUse	Some_Person	thats probably why
+2006-05-30T12:13:00.000Z	NoUse	Some_Person	if you feel comfortable ediitng your lilo.conf, you need to pass a boot option of 'splash' I believe
+2006-06-07T15:12:00.000Z	NoUse	Some_Person	please don't paste
+2006-06-07T15:13:00.000Z	NoUse	Some_Person	have you been messing with your sources.list?
+2006-06-07T15:13:00.000Z	NoUse	Some_Person	thats a dapper kernel
+2006-06-07T15:15:00.000Z	NoUse	Some_Person	no yours is fine
+2006-06-07T15:16:00.000Z	NoUse	Some_Person	just install linux-k7
+2006-06-07T15:17:00.000Z	NoUse	Some_Person	thats only on dapper
+2006-06-07T15:18:00.000Z	NoUse	Some_Person	on breezy the most recent kernel is 2.6.12-10
+2006-06-07T15:19:00.000Z	NoUse	Some_Person	4 hours for what?
+2006-06-07T15:19:00.000Z	NoUse	Some_Person	I don't know
+2006-06-07T15:19:00.000Z	NoUse	Some_Person	ah
+2006-06-07T15:25:00.000Z	NoUse	Some_Person	have you run through sound troubleshooting section in the wiki?
+2006-06-08T14:40:00.000Z	NoUse	Some_Person	oss is on by default
+2006-06-12T08:18:00.000Z	NoUse	Some_Person	you've been told countless times not to paste
+2006-06-16T10:14:00.000Z	NoUse	Some_Person	from the page "They don't work with kernel 2.6"
+2006-06-16T10:14:00.000Z	NoUse	Some_Person	== they don't work with Ubuntu
+2006-06-19T08:42:00.000Z	NoUse	Some_Person	what program is giving the error about the kernel version?
+2006-06-19T08:38:00.000Z	NoUse	Some_Person	I think I've personally told you to not paste about 10 times now, how many times before you actually listen?
+2006-06-19T08:38:00.000Z	NoUse	Some_Person	use it the *first* time, not after you get yelled at
+2006-06-19T08:39:00.000Z	NoUse	Some_Person	to fix that error just install the latest version of linux-headers
+2006-06-19T08:40:00.000Z	NoUse	Some_Person	do you have the version that matches your running kernel?
+2006-06-19T08:41:00.000Z	NoUse	Some_Person	'sudo apt-get install linux-headers-`uname -r`'
+2006-06-19T08:45:00.000Z	NoUse	Some_Person	^^
+2006-06-19T15:53:00.000Z	NoUse	Some_Person	you mean a really crappy player?
+2006-06-19T15:53:00.000Z	NoUse	Some_Person	totem?
+2006-06-19T15:53:00.000Z	NoUse	Some_Person	did you install totem-xine?
+2006-06-19T15:54:00.000Z	NoUse	Some_Person	mplayer is good player
+2006-06-19T15:55:00.000Z	NoUse	Some_Person	you might have to write one
+2006-06-19T15:55:00.000Z	NoUse	Some_Person	vlc is the only other thing I can think of
+2006-06-19T15:57:00.000Z	NoUse	Some_Person	I use Kaffeine but you'll have to pull down all the KDE libs
+2006-06-19T15:58:00.000Z	NoUse	Some_Person	it depends on how you define a player, mplayer will play 10x the media files WMP does
+2006-06-19T15:59:00.000Z	NoUse	Some_Person	^^^
+2006-06-20T16:01:00.000Z	NoUse	Some_Person	I think we've listed pretty much every player, so if you aren't satisified, fire up a a web browser and start googling and/or fire up a text editor and start helping make totem better
+2006-06-20T16:06:00.000Z	NoUse	Some_Person	good for music, doesn't do video
+2006-06-20T16:06:00.000Z	NoUse	Some_Person	try kaffeine
+2006-06-20T16:06:00.000Z	NoUse	Some_Person	I believe it does play WMA files because it uses the xine engine
+2006-06-20T10:43:00.000Z	NoUse	Some_Person	people with DVD isos
+2006-06-20T10:43:00.000Z	NoUse	Some_Person	what if I don't want to delete it?
+2006-06-20T10:44:00.000Z	NoUse	Some_Person	and if something happens to that copy?
+2006-06-20T10:44:00.000Z	NoUse	Some_Person	the point is Fat32 sucks :-)
+2006-06-20T10:45:00.000Z	NoUse	Some_Person	the point is to have *2* copies of it
+2006-06-20T10:45:00.000Z	NoUse	Some_Person	windows can read ext3
+2006-06-20T10:45:00.000Z	NoUse	Some_Person	^^^
+2006-06-20T10:47:00.000Z	NoUse	Some_Person	not likley, we open source our file systems, they don't
+2006-06-20T10:48:00.000Z	NoUse	Some_Person	you want to?
+2006-06-20T10:48:00.000Z	NoUse	Some_Person	"Can't someone" translates to "I'll do it" here :-)
+2006-06-20T10:49:00.000Z	NoUse	Some_Person	just buy a C book and a hex editor
+2006-06-20T11:32:00.000Z	NoUse	Some_Person	have you tried changing references to us. repos? those have been having problems as far as I know
+2006-06-20T11:34:00.000Z	NoUse	Some_Person	doubt it, thats probably the default date
+2006-06-20T11:35:00.000Z	NoUse	Some_Person	have you tried changing references in /etc/apt/sources.list to us.arhive to something else?
+2006-06-20T11:36:00.000Z	NoUse	Some_Person	go to the terminal and run 'env | grep -i proxy'
+2006-06-20T11:38:00.000Z	NoUse	Some_Person	did you run the 'env...' command?
+2006-06-20T11:40:00.000Z	NoUse	Some_Person	please run that 'env | grep -i proxy'
+2006-06-20T11:41:00.000Z	NoUse	Some_Person	this looks like a network issue on your end to me
+2006-06-20T11:41:00.000Z	NoUse	Some_Person	does synaptic work?
+2006-06-20T11:42:00.000Z	NoUse	Some_Person	please pastebin /ec/apt/apt.conf
+2006-06-20T11:42:00.000Z	NoUse	Some_Person	 but can you run "reload" in synaptic without errors?
+2006-06-20T11:43:00.000Z	NoUse	Some_Person	its like apt-get update
+2006-06-20T11:44:00.000Z	NoUse	Some_Person	same errors?
+2006-06-20T11:45:00.000Z	NoUse	Some_Person	can you pastebin /etc/apt/apt.conf ?
+2006-06-20T11:46:00.000Z	Some_Person	NoUse	it doesn't exist
+2006-06-20T11:47:00.000Z	NoUse	Some_Person	ok, try replacing all http:// in sources.list to ftp://
+2006-06-20T11:48:00.000Z	Some_Person	NoUse	even the unofficial? repos?
+2006-06-20T11:48:00.000Z	NoUse	Some_Person	if you mean universe and mulitiverse, use
+2006-06-20T11:48:00.000Z	Some_Person	NoUse	I mean PLF and BACKPORTS
+2006-06-20T11:48:00.000Z	NoUse	Some_Person	leave those for now
+2006-06-20T11:54:00.000Z	Some_Person	NoUse	lol, got a "Bizarre Error"
+2006-06-20T11:54:00.000Z	NoUse	Some_Person	pastebin, I gotta run in a couple minutes
+2006-06-20T11:55:00.000Z	Some_Person	NoUse	http://paste.ubuntu-nl.org/16100
+2006-06-20T11:56:00.000Z	NoUse	Some_Person	its still pointing to http
+2006-06-20T11:56:00.000Z	NoUse	Some_Person	get rid of all reference to http
+2006-06-20T11:57:00.000Z	Some_Person	NoUse	ok, but thats the backports repo, its unofficial, does it have an ftp?
+2006-06-20T11:57:00.000Z	NoUse	Some_Person	yeah it should
+2006-06-20T11:58:00.000Z	NoUse	Some_Person	be back later

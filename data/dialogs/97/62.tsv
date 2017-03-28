@@ -1,0 +1,97 @@
+2007-08-28T13:35:00.000Z	Agent_bob		ok this box can ping other boxen on both cables,  why can't it ping google    http://ubuntu.pastebin.us/39222
+2007-08-28T13:36:00.000Z	solid_liq	Agent_bob	can it do   host google.com    ?
+2007-08-28T13:37:00.000Z	Agent_bob	solid_liq	nope   -root: host: command not found
+2007-08-28T13:37:00.000Z	solid_liq	Agent_bob	ok, then try:    dig google.com
+2007-08-28T13:37:00.000Z	solid_liq	Agent_bob	uh,    nslookup google.com
+2007-08-28T13:38:00.000Z	solid_liq	Agent_bob	wait, are you chatting from the box that can't ping google?
+2007-08-28T13:38:00.000Z	Agent_bob	solid_liq	yes but through an ssh connection
+2007-08-28T13:38:00.000Z	solid_liq	Agent_bob	k,    cat /etc/resolv.conf
+2007-08-28T13:39:00.000Z	Agent_bob	solid_liq	i copied that from the server connected to the world  so it should be right
+2007-08-28T13:39:00.000Z	solid_liq	Agent_bob	route -n
+2007-08-28T13:40:00.000Z	Agent_bob	solid_liq	i posted that to start with
+2007-08-28T13:40:00.000Z	solid_liq	Agent_bob	didn't see it
+2007-08-28T13:40:00.000Z	Agent_bob	solid_liq	     ^
+2007-08-28T13:40:00.000Z	solid_liq	Agent_bob	ping 192.168.0.1 work?
+2007-08-28T13:41:00.000Z	Agent_bob	solid_liq	yep
+2007-08-28T13:41:00.000Z	Agent_bob	solid_liq	i can ping on both cables.
+2007-08-28T13:41:00.000Z	solid_liq	Agent_bob	have you done any other connectivity tests?
+2007-08-28T13:41:00.000Z	Agent_bob	solid_liq	just can't reach the world
+2007-08-28T13:41:00.000Z	Agent_bob	solid_liq	as in ?
+2007-08-28T13:42:00.000Z	Agent_bob	solid_liq	tried to irc out first.
+2007-08-28T13:42:00.000Z	solid_liq	Agent_bob	used a web browser for instanct
+2007-08-28T13:42:00.000Z	Agent_bob	solid_liq	yep
+2007-08-28T13:42:00.000Z	Agent_bob	solid_liq	nothing outside the dmz
+2007-08-28T13:42:00.000Z	solid_liq	Agent_bob	k, what kind of router are you connecting to?
+2007-08-28T13:42:00.000Z	solid_liq	Agent_bob	oh, you're on a dmz?
+2007-08-28T13:42:00.000Z	Agent_bob	solid_liq	dialup
+2007-08-28T13:43:00.000Z	solid_liq	Agent_bob	so what is 192.168.0.1 exactly?
+2007-08-28T13:43:00.000Z	Agent_bob	solid_liq	linux box
+2007-08-28T13:43:00.000Z	solid_liq	Agent_bob	and that's the one with the dialup connection?
+2007-08-28T13:44:00.000Z	solid_liq	Agent_bob	ok, now are you ssh'd into that box for irc?  or one on the 192.168.1.0/24 side?
+2007-08-28T13:44:00.000Z	Agent_bob	solid_liq	yes
+2007-08-28T13:44:00.000Z	solid_liq	Agent_bob	which, the gateway?
+2007-08-28T13:45:00.000Z	Agent_bob	solid_liq	i'm ssh'd into  192.168.0.1  from the one we are working on,    192.168.0.1 has the dialup line.
+2007-08-28T13:45:00.000Z	solid_liq	Agent_bob	sounds like the problem is on 192.168.0.1   have you done:    echo "1" > /proc/sys/net/ipv4/ip_forward      ?
+2007-08-28T13:45:00.000Z	Agent_bob	solid_liq	but i've been using it all day with no problems,   i dont think the problem is on 192.168.0.1
+2007-08-28T13:46:00.000Z	solid_liq	Agent_bob	but have you had any other computers use it to connect?
+2007-08-28T13:46:00.000Z	Agent_bob	solid_liq	yes
+2007-08-28T13:46:00.000Z	solid_liq	Agent_bob	just do this on 192.168.0.1 really quickly as a test:  cat /proc/sys/net/ipv4/ip_forward
+2007-08-28T13:48:00.000Z	solid_liq	Agent_bob	what's the output of that, did you try it?
+2007-08-28T13:49:00.000Z	Agent_bob	solid_liq	let me more clearly define what is here,  all addressing will be 192.168* so i'll just use the last two fields.     0.1 has a dialup modem and nic connected to a switch  the switch has two other boxes and this one making a total of 4 connected to it.   this box 0.3 also has another card 1.3 and crossover cable with 1.2 on the end of it.  this is the bad link in the chain...  and now i'll try the test.
+2007-08-28T13:50:00.000Z	Agent_bob	solid_liq	1 on  0.1  and  1 on 0.3
+2007-08-28T13:50:00.000Z	solid_liq	Agent_bob	k, now on 0.3, run    iptables -L
+2007-08-28T13:51:00.000Z	solid_liq	Agent_bob	and of course you can't apt-get install any tools on it since you can't get to the wan, right?
+2007-08-28T13:52:00.000Z	solid_liq	Agent_bob	ok, try this really quickly, just to see if it helps:    ifconfig eth0 down
+2007-08-28T13:53:00.000Z	solid_liq	Agent_bob	er, I meant eth1 down
+2007-08-28T13:53:00.000Z	Agent_bob	solid_liq	and then ?  cause if i do that im disconnected from here
+2007-08-28T13:53:00.000Z	Agent_bob	solid_liq	oh ok.
+2007-08-28T13:53:00.000Z	Agent_bob	solid_liq	eth1 is down
+2007-08-28T13:53:00.000Z	solid_liq	Agent_bob	k, now try the ping
+2007-08-28T13:54:00.000Z	solid_liq	Agent_bob	just a sec
+2007-08-28T13:57:00.000Z	solid_liq	Agent_bob	hmm, you need to install more tools on that box to aid the diagnosis
+2007-08-28T13:58:00.000Z	solid_liq	Agent_bob	do you know how to get debs onto the 0.1 box?
+2007-08-28T13:59:00.000Z	solid_liq	Agent_bob	better question, is 0.1 an ubuntu box?
+2007-08-28T14:01:00.000Z	Agent_bob	solid_liq	but just because it's ubuntu don't think it's default anything
+2007-08-28T14:02:00.000Z	solid_liq	Agent_bob	ok, do you have the host utility on 0.1?
+2007-08-28T14:02:00.000Z	Agent_bob	solid_liq	yes
+2007-08-28T14:03:00.000Z	solid_liq	Agent_bob	ok, then look to see if the package for it is in /var/cache/apt/archives
+2007-08-28T14:03:00.000Z	Agent_bob	solid_liq	i can copy it by hand  yes  will installing it help figure this out ?
+2007-08-28T14:04:00.000Z	solid_liq	Agent_bob	you can copy it over to 0.3 with scp or rsync, then use dpkg to install it
+2007-08-28T14:13:00.000Z	Agent_bob	solid_liq	?
+2007-08-28T14:13:00.000Z	solid_liq	Agent_bob	you get that?
+2007-08-28T14:13:00.000Z	Agent_bob	solid_liq	what do you want me to do with host now ?
+2007-08-28T14:13:00.000Z	solid_liq	Agent_bob	now it's a better way to check, see if your dns is working
+2007-08-28T14:13:00.000Z	solid_liq	Agent_bob	so try     host google.com     now
+2007-08-28T14:14:00.000Z	solid_liq	Agent_bob	ok, now
+2007-08-28T14:14:00.000Z	solid_liq	Agent_bob	try     host 192.168.0.1
+2007-08-28T14:15:00.000Z	solid_liq	Agent_bob	what does iptables -L   show?
+2007-08-28T14:15:00.000Z	solid_liq	Agent_bob	cat /etc/resolv.conf    *please*
+2007-08-28T14:15:00.000Z	Agent_bob	solid_liq	i can't paste all that.
+2007-08-28T14:15:00.000Z	solid_liq	Agent_bob	pastbin it
+2007-08-28T14:15:00.000Z	Agent_bob	solid_liq	i showed you resolv.conf
+2007-08-28T14:16:00.000Z	solid_liq	Agent_bob	no you didn't, you showed me output of      route -n
+2007-08-28T14:16:00.000Z	solid_liq	Agent_bob	:D
+2007-08-28T14:17:00.000Z	Agent_bob	solid_liq	and ?    what now
+2007-08-28T14:18:00.000Z	solid_liq	Agent_bob	try these instead:    nameserver 208.67.222.222
+2007-08-28T14:18:00.000Z	solid_liq	Agent_bob	and     nameserver 208.67.220.220
+2007-08-28T14:18:00.000Z	Agent_bob	solid_liq	why ?
+2007-08-28T14:18:00.000Z	solid_liq	Agent_bob	those are the openDNS nameservers, they work for anyone for free, so they'll work no matter what if you can route to them
+2007-08-28T14:18:00.000Z	Agent_bob	solid_liq	is there something about the address that the nat can't handle ?
+2007-08-28T14:18:00.000Z	solid_liq	Agent_bob	it's a test
+2007-08-28T14:20:00.000Z	Agent_bob	solid_liq	ok
+2007-08-28T14:20:00.000Z	solid_liq	Agent_bob	host google.com
+2007-08-28T14:20:00.000Z	solid_liq	Agent_bob	so it still doesn't work...
+2007-08-28T14:21:00.000Z	Agent_bob	solid_liq	that's right.
+2007-08-28T14:22:00.000Z	solid_liq	Agent_bob	hmmmmmmmmmmmmm
+2007-08-28T14:22:00.000Z	solid_liq	Agent_bob	and there's no firewall on 0.1 right?
+2007-08-28T14:24:00.000Z	solid_liq	Agent_bob	what's your internet gateway IP?
+2007-08-28T14:25:00.000Z	Agent_bob	solid_liq	you mean the ip that the isp issues ?
+2007-08-28T14:25:00.000Z	solid_liq	Agent_bob	yeah, and the gateway
+2007-08-28T14:25:00.000Z	solid_liq	Agent_bob	so, ifconfig for the IP on 0.1, and route -n on 0.1 too
+2007-08-28T14:26:00.000Z	solid_liq	Agent_bob	the gateway is where the traffic passes through, it's on the ISP side in this case
+2007-08-28T14:26:00.000Z	solid_liq	Agent_bob	but for 0.3, 0.1 is acting as the gateway
+2007-08-28T14:27:00.000Z	Agent_bob	solid_liq	ok and what do you want now?    you know i'm just a little uneasy about posting my ip for a thousand peopel
+2007-08-28T14:28:00.000Z	solid_liq	Agent_bob	yeah, so just post the gateway IP for now, easy way:        route -n | grep UG
+2007-08-28T14:28:00.000Z	solid_liq	Agent_bob	do that on 0.1
+2007-08-28T14:29:00.000Z	solid_liq	Agent_bob	and the gateway IP isn't your IP
+2007-08-28T14:30:00.000Z	solid_liq	Agent_bob	ok, try UH, it's been forever since I was on dialup

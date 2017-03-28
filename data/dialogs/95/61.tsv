@@ -1,0 +1,95 @@
+2006-09-30T06:31:00.000Z	Geoffrey2		could someone confirm they are reading me...just so I know I'm actually posting in the channel
+2006-09-30T06:33:00.000Z	feross	Geoffrey2	well, is it a new install? maybe you need to reinstall. Could be your grub isn't setup right.. shrug
+2006-09-30T06:41:00.000Z	feross	Geoffrey2	hmm, maybe the fstab is messed up.. yeah and try some other kernel. At least you would be able to get in and take a look.
+2006-09-30T06:44:00.000Z	Geoffrey2	feross	ok, it identifies root as (hd0,4), Filesystem as ext2fs, partition type 0x83, runs the kernel and initrd commands, savedefault, boot, message comes up "Uncompressing Linux... Ok, booting the kernel."
+2006-09-30T06:49:00.000Z	Geoffrey2	feross	any idea where I might start troubleshooting this thing...
+2006-09-30T06:50:00.000Z	feross	Geoffrey2	hmm
+2006-09-30T06:52:00.000Z	feross	Geoffrey2	I think you can try booting in recover mode and check the / partition with ext fs check.. or check it by booting the ubuntu cd and runnig from there
+2006-09-30T07:00:00.000Z	Geoffrey2	feross	ok, live CD is up and I'm at the desktop
+2006-09-30T07:01:00.000Z	feross	Geoffrey2	can you mount the / partiton and read it?
+2006-09-30T07:01:00.000Z	Geoffrey2	feross	do I need to do that in terminal?
+2006-09-30T07:04:00.000Z	feross	Geoffrey2	yes, or it might alread be mounted... try  df -h to see what you have mounted
+2006-09-30T07:11:00.000Z	feross	Geoffrey2	ok try mkdir /hda4 then mount -t ext2 /hda4 /dev/hda4 or whatever your partition is.. ALso you can run qtparted and check the partitons
+2006-09-30T07:12:00.000Z	Geoffrey2	feross	is qtparted on the Live CD?
+2006-09-30T07:15:00.000Z	feross	Geoffrey2	hmm not sure.. try it. Just drop to console and type it in or type qt then <tab> to see if it autocompletes
+2006-09-30T07:16:00.000Z	Geoffrey2	feross	nope...ok, I'll stick in the System Rescue CD, I think that DOES have qtparted in it
+2006-09-30T07:17:00.000Z	feross	Geoffrey2	true
+2006-09-30T07:27:00.000Z	Geoffrey2	feross	ok, qtparted is up...sda4 is extended, sda5 is ext3, and sda6 is linux-swap
+2006-09-30T07:29:00.000Z	feross	Geoffrey2	can you run a check on your /
+2006-09-30T07:30:00.000Z	Geoffrey2	feross	FYI (assuming you haven't already figured this out), I switched over from pure Windows not that long ago, so I really don't know many of the Linux commands *YET*
+2006-09-30T07:30:00.000Z	feross	Geoffrey2	try rightclick on the parttion for your root and look for something like check partition
+2006-09-30T07:35:00.000Z	Geoffrey2	feross	I don't see any option for that in QtParted...
+2006-09-30T07:37:00.000Z	feross	Geoffrey2	hmm, drop to console and do fsck.ext2 -h to see options.
+2006-09-30T07:39:00.000Z	Geoffrey2	feross	ok, any particular options I want?
+2006-09-30T07:41:00.000Z	feross	Geoffrey2	try 'fsck.ext2 -pcf /dev/yourpartition' ..
+2006-09-30T07:43:00.000Z	Geoffrey2	feross	ok, force checking, check for bad blocks, and auto repair (no questions)....
+2006-09-30T07:47:00.000Z	Geoffrey2	feross	ok, I entered fsck.ext2 -pcf /dev/sda5
+2006-09-30T07:47:00.000Z	feross	Geoffrey2	any feedback from it? did it say it fixed anything?
+2006-09-30T07:48:00.000Z	Geoffrey2	feross	so far I'm just getting a blinking cursor on the line below it, nothing else
+2006-09-30T07:49:00.000Z	feross	Geoffrey2	do you see drive activity?
+2006-09-30T07:50:00.000Z	Geoffrey2	feross	the drive light is on, yes
+2006-09-30T07:50:00.000Z	feross	Geoffrey2	ok so we should assume that it's still working on it.. could take some time.
+2006-09-30T07:50:00.000Z	Geoffrey2	feross	sda5 is about 20 GB, I can believe it
+2006-09-30T07:56:00.000Z	Geoffrey2	feross	would be nice if this thing didn't run silently, just so I could know for sure it was actually accomplishing something
+2006-09-30T07:56:00.000Z	feross	Geoffrey2	true, I thought it would give you a progress bar or something :) never ran it just see a fsck come up every 30 mounts or so when I reboot.
+2006-09-30T08:00:00.000Z	Geoffrey2	feross	done..../dev/sda5: 98993/2725440 files (1.9% non-contiguous), 998299/5442010 blocks
+2006-09-30T08:01:00.000Z	feross	Geoffrey2	any other partitions to check before reboot?
+2006-09-30T08:02:00.000Z	Geoffrey2	feross	well, any need to check linux-swap?
+2006-09-30T08:02:00.000Z	feross	Geoffrey2	nah
+2006-09-30T08:03:00.000Z	Geoffrey2	feross	that's the only ext2 partition I have....then there's the NTFS partition, but I don't think I want Ubuntu trying to fix anything in there
+2006-09-30T08:03:00.000Z	feross	Geoffrey2	true, just try reboot.
+2006-09-30T08:05:00.000Z	Geoffrey2	feross	rebooted, same problem
+2006-09-30T08:05:00.000Z	Geoffrey2	feross	it starts with Mounting /dev/sda5 on /root failed: No such device
+2006-09-30T08:07:00.000Z	feross	Geoffrey2	hmm, you could try reinstall grub but if that doesn't work your sda5 is prolly borked. Need to reinstall and use EXT3 instead of 2...
+2006-09-30T08:07:00.000Z	Geoffrey2	feross	which means every file in there is now gone?
+2006-09-30T08:08:00.000Z	feross	Geoffrey2	oh, well you might still be able to mount the drive and retrieve files from it.
+2006-09-30T08:08:00.000Z	Geoffrey2	feross	any idea what would happen so it was fine last night and is totally gone now?
+2006-09-30T08:11:00.000Z	feross	Geoffrey2	I had an email server crash/currupt a reiserfs ... but that's thousands of little files writing and reading at the same time. Also one time installing windows and linux on the same hard drive screwed something up where one of the partitions became unreadable and had to wipe the whole thing.
+2006-09-30T08:15:00.000Z	Geoffrey2	feross	ok, does the Live CD have a CD burner I could use to back up my data before I blow away the ext2 partition?
+2006-09-30T08:16:00.000Z	feross	Geoffrey2	I think so.
+2006-09-30T08:20:00.000Z	Geoffrey2	feross	how do I go about mounting the drive in Ubuntu?
+2006-09-30T08:21:00.000Z	feross	Geoffrey2	'mkdir /sda5' then 'mount /dev/sda5 /sda5'
+2006-09-30T08:23:00.000Z	Geoffrey2	feross	hmmm, Permission denied...can I sudo on Live CD?
+2006-09-30T08:26:00.000Z	Geoffrey2	feross	I am presuming any folder with an 'x' in a red square next to it is borked?
+2006-09-30T08:27:00.000Z	feross	Geoffrey2	hmm, not a good indicator :(
+2006-09-30T08:27:00.000Z	Geoffrey2	feross	could I be looking at a pending HD failure?
+2006-09-30T08:28:00.000Z	feross	Geoffrey2	could be, it's always a possibility
+2006-09-30T08:46:00.000Z	feross	Geoffrey2	MiB? or just MB -> yes Mega-Byte
+2006-09-30T08:47:00.000Z	Geoffrey2	feross	the CD/DVD creator says I should have at least 170 MiB free
+2006-09-30T08:52:00.000Z	feross	Geoffrey2	give it a shot, wouldn't hurt.
+2006-09-30T08:53:00.000Z	Geoffrey2	feross	problem is, it keeps prompting me to Insert a rewritable or blank disc....
+2006-09-30T08:55:00.000Z	feross	Geoffrey2	it might not have unmounted properly *shrug*
+2006-09-30T08:58:00.000Z	feross	Geoffrey2	do you have any external, USB, drives you can copy to?
+2006-09-30T08:58:00.000Z	Geoffrey2	feross	none
+2006-09-30T09:03:00.000Z	feross	Geoffrey2	true, but use ext3 instead, you can read ext3 from windows so it's a great way to store files on a modern fs.
+2006-09-30T09:04:00.000Z	Geoffrey2	feross	but can windows WRITE to ext3?
+2006-09-30T09:04:00.000Z	feross	Geoffrey2	yup
+2006-09-30T09:06:00.000Z	feross	Geoffrey2	yes, better than CD. Unless your drive is on it's way out.
+2006-09-30T09:07:00.000Z	Geoffrey2	feross	dunno....I haven't had any problems until I shut off the computer last night, and it decided it couldn't boot this evening when I turned it back on
+2006-09-30T09:14:00.000Z	Geoffrey2	feross	what do you put in the main storage partition?
+2006-09-30T09:14:00.000Z	feross	Geoffrey2	MP3's, images, video etc.
+2006-09-30T09:15:00.000Z	feross	Geoffrey2	snes roms, karaoke files :)
+2006-09-30T09:45:00.000Z	feross	Geoffrey2	email is not that important. Prolly all spam anyway ;)
+2006-09-30T09:46:00.000Z	Geoffrey2	feross	so the x means the folder is basically gone?
+2006-09-30T09:47:00.000Z	feross	Geoffrey2	I guess, the copy to the other partition didn't work?
+2006-09-30T09:49:00.000Z	Geoffrey2	feross	just curious that nobody in here can tell me what that symbol is telling me.....
+2006-09-30T09:56:00.000Z	feross	Geoffrey2	yes
+2006-09-30T09:59:00.000Z	feross	Geoffrey2	yeah
+2006-09-30T09:59:00.000Z	Geoffrey2	feross	during the install process?
+2006-09-30T09:59:00.000Z	feross	Geoffrey2	just remember to change it to an EXT3
+2006-09-30T10:00:00.000Z	feross	Geoffrey2	yes during install
+2006-09-30T10:11:00.000Z	Geoffrey2	feross	I probably want to manually edit the partitions, right?
+2006-09-30T10:12:00.000Z	feross	Geoffrey2	yes
+2006-09-30T10:13:00.000Z	Geoffrey2	feross	ok, interesting.....it looks like the partition that tanked WAS an ext3
+2006-09-30T10:20:00.000Z	Geoffrey2	feross	ok, drive format in progress....
+2006-09-30T10:20:00.000Z	feross	Geoffrey2	oh yeah, it was already ext3 right.. weird
+2006-09-30T11:34:00.000Z	feross	Geoffrey2	did you want this one http://www.arsgeek.com/?p=564
+2006-09-30T11:39:00.000Z	Geoffrey2	feross	is the file I need to modify in etc?
+2006-09-30T11:39:00.000Z	feross	Geoffrey2	for sources.list? its  /etc/apt/sources.list
+2006-09-30T11:52:00.000Z	feross	Geoffrey2	hold a sec I got a link for you
+2006-09-30T11:54:00.000Z	feross	Geoffrey2	http://lunapark6.com/?p=1235  edit your sources like it has here then go down to the part about viewing restricted formats unless you want to do any of the other stuff
+2006-09-30T12:00:00.000Z	Geoffrey2	feross	the wget command for w32codecs does not work any more
+2006-09-30T12:02:00.000Z	Geoffrey2	feross	it says debian-marillat/pool/main/w/w32codecs does not exist
+2006-09-30T12:02:00.000Z	feross	Geoffrey2	k hold a sec
+2006-09-30T12:02:00.000Z	Geoffrey2	feross	okie
+2006-09-30T12:04:00.000Z	feross	Geoffrey2	http://ubuntuguide.org/wiki/Ubuntu_dapper#How_to_install_Multimedia_Codecs

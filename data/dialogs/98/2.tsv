@@ -1,0 +1,98 @@
+2004-08-27T14:11:00.000Z	whiprush	jdub	hello
+2004-08-31T08:45:00.000Z	whiprush	jdub	point of no return now, I moved my main pc to ubuntu. fear.
+2004-08-31T09:23:00.000Z	jdub	whiprush	rad!
+2004-09-07T08:29:00.000Z	whiprush	jdub	I had a strong suspicion that that exchange button was upstream.
+2004-09-07T08:31:00.000Z	jdub	whiprush	it's annoying
+2004-09-07T09:50:00.000Z	jdub	whiprush	erk, that's really a side-effect of the computer menu stuff
+2004-09-07T09:50:00.000Z	jdub	whiprush	yeah
+2004-09-07T09:51:00.000Z	whiprush	jdub	I've started wondering if being able to drop files right on the applet and have them moved/copied to ~ would be a good idea.
+2004-09-07T09:52:00.000Z	jdub	whiprush	... eek. now you're turning a whoopsie into a feature. ;)
+2004-09-07T09:53:00.000Z	jdub	whiprush	basically they appear as applets because they're special menu entries
+2004-09-07T09:55:00.000Z	jdub	whiprush	might be best to assume lack-of-plan ahead of obvious-plan ;)
+2004-09-12T06:01:00.000Z	jdub	whiprush	got xscreensaver running?
+2004-09-12T06:01:00.000Z	whiprush	jdub	nope.
+2004-09-24T09:24:00.000Z	whiprush	jdub	ping
+2004-09-25T10:39:00.000Z	jdub	whiprush	invite some friends along ;)
+2004-09-25T10:39:00.000Z	jdub	whiprush	but probably not a LUG list or anything
+2004-09-26T15:05:00.000Z	whiprush	jdub	take a pic of the group please!
+2004-09-27T06:41:00.000Z	jdub	whiprush	different, and really cool ;)
+2004-09-27T06:41:00.000Z	jdub	whiprush	totally out of the kernel, not horribly hackish
+2004-09-28T10:31:00.000Z	jdub	whiprush	any cool ars stuff up about ubuntu yet?
+2004-09-28T12:03:00.000Z	whiprush	jdub	btw I tested ubuntu with freenx today, works fine.
+2004-09-28T12:03:00.000Z	jdub	whiprush	we want to get NX in for Hoary too
+2004-09-28T12:03:00.000Z	jdub	whiprush	want to mail some info to -devel about what you've done?
+2004-09-28T12:05:00.000Z	jdub	whiprush	yeha!
+2004-09-28T12:05:00.000Z	jdub	whiprush	so dude
+2004-09-28T12:05:00.000Z	jdub	whiprush	at guadec in norway
+2004-09-28T12:05:00.000Z	jdub	whiprush	HP sent a bunch of thin clients with NX support
+2004-09-28T12:06:00.000Z	jdub	whiprush	and a four way HT xeon server with 16GB ram
+2004-09-28T12:06:00.000Z	jdub	whiprush	it was *incredible*
+2004-09-28T12:06:00.000Z	whiprush	jdub	heh.
+2004-09-28T12:13:00.000Z	jdub	whiprush	we smoked 'em? nice ;)
+2004-09-28T07:33:00.000Z	jdub	whiprush	dude, so i bought this dell x300
+2004-09-28T07:33:00.000Z	jdub	whiprush	it's pretty rad
+2004-09-28T07:33:00.000Z	jdub	whiprush	one of each
+2004-09-28T07:33:00.000Z	jdub	whiprush	only bummer is acpi stuff needs weird aml/dsdt hacking
+2004-09-29T11:54:00.000Z	whiprush	jdub	ping pong
+2004-09-29T12:19:00.000Z	jdub	whiprush	pong
+2004-09-29T12:23:00.000Z	whiprush	jdub	hey are you replacing your ibook or just adding the x300?
+2004-09-29T12:30:00.000Z	jdub	whiprush	adding the X300
+2004-09-29T12:30:00.000Z	jdub	whiprush	handy to have a ppc (even if it's slow) around
+2004-09-29T12:54:00.000Z	jdub	whiprush	usb or firewire?
+2004-09-29T12:54:00.000Z	whiprush	jdub	either, I have both.
+2004-09-29T12:55:00.000Z	whiprush	jdub	although, for a while in sid it was busted, so I'm leaning towards "busted at the moment".
+2004-09-29T12:56:00.000Z	whiprush	jdub	yeah, it even mounts it as "ieee1394drive" or whatever
+2004-10-03T06:34:00.000Z	whiprush	jdub	hey you guys need a pastebin also.
+2004-10-03T06:34:00.000Z	jdub	whiprush	TROUBLEMAKER
+2004-10-04T07:47:00.000Z	jdub	whiprush	got some nice stuff going into universe for testing before hoary
+2004-10-04T07:47:00.000Z	whiprush	jdub	oh oh
+2004-10-04T07:48:00.000Z	jdub	whiprush	howl, gamin, polypaudio
+2004-10-04T07:50:00.000Z	whiprush	jdub	you did an itp for gamin for debian a while back didn't you?
+2004-10-04T07:55:00.000Z	whiprush	jdub	good to see howl go in too.
+2004-10-07T06:56:00.000Z	whiprush	jdub	I found a "rad" new applet: http://web.ics.purdue.edu/~kuliniew/rhythmbox-applet/
+2004-10-10T05:29:00.000Z	whiprush	jdub	dude ... you will not believe what I found at work today.
+2004-10-10T05:29:00.000Z	jdub	whiprush	an old banana in your drawer?
+2004-10-10T05:31:00.000Z	jdub	whiprush	dude, this just goes to show
+2004-10-10T05:31:00.000Z	jdub	whiprush	that gnome needs rounded corners again
+2004-10-10T05:32:00.000Z	jdub	whiprush	dude, you should totally blog these pics, i'll url them up on planet gnome and get some rounded corner action going ;)
+2004-10-10T05:53:00.000Z	whiprush	jdub	blogged, pics are probably too big though
+2004-10-10T07:49:00.000Z	whiprush	jdub	heh, thanks for the mention
+2004-10-10T07:54:00.000Z	whiprush	jdub	dude you totally forgot the case for rounded panel corners.
+2004-10-10T07:57:00.000Z	whiprush	jdub	heh, if you see the animation for opening windows .. it's like the current metacity animation ... distrubingly so.
+2004-10-10T08:01:00.000Z	jdub	whiprush	they don't have much to do with why we didn't ship xorg. :)
+2004-10-10T08:02:00.000Z	whiprush	jdub	dude I asked the guy. :p
+2004-10-10T08:02:00.000Z	jdub	whiprush	still doesn't have much to do with why we didn't ship it. :-)
+2004-10-10T09:38:00.000Z	whiprush	jdub	dude. after you posted your blog I've had three calls to my house asking for dibs on the lisa.
+2004-10-19T11:58:00.000Z	whiprush	jdub	I think you're ok also. :p
+2004-10-23T16:59:00.000Z	jdub	whiprush	it's going in
+2004-10-23T05:01:00.000Z	whiprush	jdub	man, almost got an x300 this week.
+2004-10-29T08:20:00.000Z	whiprush	jdub	exactly what I wanted to say
+2004-10-31T14:39:00.000Z	jdub	whiprush	yeah, it'll take less than a week to build current debian sid ;)
+2004-11-05T13:17:00.000Z	jdub	whiprush	you sucker!
+2004-11-05T13:17:00.000Z	whiprush	jdub	heh, NOT. paid for by work. woo.
+2004-11-09T07:48:00.000Z	whiprush	jdub	so this polyopaudio is pretty good eh?
+2004-11-09T09:17:00.000Z	whiprush	jdub	was it you the other day that mentioned packaging ifolder in the future?
+2004-11-14T09:47:00.000Z	whiprush	jdub	ping
+2005-02-03T14:39:00.000Z	whiprush	jdub	pong
+2005-02-04T17:08:00.000Z	jdub	whiprush	pingy-pong
+2005-02-04T17:10:00.000Z	whiprush	jdub	yo
+2005-02-04T17:10:00.000Z	jdub	whiprush	i had something to say
+2005-02-04T17:10:00.000Z	jdub	whiprush	i think it was as a result of reading your blog
+2005-02-04T17:10:00.000Z	jdub	whiprush	so i will refer to it for a moment ;)
+2005-02-04T17:11:00.000Z	jdub	whiprush	ah, that's right.
+2005-02-04T17:11:00.000Z	jdub	whiprush	you guys should join the MOTU instead of maintaining stuff on arslinux.
+2005-02-04T17:11:00.000Z	jdub	whiprush	we are more relaxed about useful updates to universe post-freze.
+2005-02-04T17:11:00.000Z	jdub	whiprush	as long as someone's validating that they work.
+2005-02-04T17:12:00.000Z	jdub	whiprush	ubuntu-love starts this week. :)
+2005-02-06T08:55:00.000Z	whiprush	jdub	is there a bug open for the gtk dialogs/cups patches for firefox, I can't seem to find one.
+2005-02-06T08:58:00.000Z	jdub	whiprush	ubuntu bug? probably not
+2005-02-06T08:59:00.000Z	jdub	whiprush	thom is looking into it though, so if you open one, assign to thom may :)
+2005-02-14T11:58:00.000Z	jdub	whiprush	we can look down at slashdot, but it still has a large readership
+2005-02-14T11:59:00.000Z	whiprush	jdub	yeah, I'm just saying, a link to the hoary goals shoul really do the trick.
+2005-02-14T12:00:00.000Z	whiprush	jdub	or maybe a point by point drilldown of each of the things on the hoarygoals list and why they matter.
+2005-02-14T12:00:00.000Z	jdub	whiprush	more about the livecd
+2005-02-14T12:02:00.000Z	jdub	whiprush	because it's boring :)
+2005-02-14T12:12:00.000Z	whiprush	jdub	so are we hosed with regard to howl?
+2005-02-14T12:12:00.000Z	jdub	whiprush	kind of
+2005-03-19T14:16:00.000Z	whiprush	jdub	/ Mako: Can you guys point me in the general direction of some download stats or something similar? I'm working on a lug presentation and would like a best guess on the amount of downloads.
+2005-04-20T10:59:00.000Z	whiprush	jdub	Mr. DUB!

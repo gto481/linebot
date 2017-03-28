@@ -1,0 +1,97 @@
+2006-12-14T16:39:00.000Z	n2diy		How do I get Firefox to default to Thunderbird, instead of Evolution, when I click on a "mail to" link?
+2006-12-14T16:39:00.000Z	bruenig	n2diy	system>preferences>preferred applications
+2006-12-31T07:25:00.000Z	bruenig	n2diy	700 MB
+2006-12-17T12:45:00.000Z	bruenig	n2diy	it would depend on the application of course. The tar.gz would have to have configure scripts and stuff. So for small applications, that could make it far larger. But for large applications they should be nearly the same
+2006-12-23T06:43:00.000Z	n2diy	bruenig	she was told to create a new user, and she chose to name it root.
+2006-12-23T06:43:00.000Z	bruenig	n2diy	but root is not root, just the name of a normal user?
+2006-12-23T06:43:00.000Z	n2diy	bruenig	yes
+2006-12-23T06:43:00.000Z	bruenig	n2diy	oh
+2006-12-23T06:44:00.000Z	n2diy	bruenig	I suggested she create a user, named Emily, and go from there.
+2006-12-28T12:59:00.000Z	bruenig	n2diy	if you want to register do /msg nickserv register password, of course substituting password with your own, I think that is the syntax someone will correct me if it isn't
+2006-12-28T13:17:00.000Z	bruenig	n2diy	I think you might be oversimplifying it a bit, I mean I remove that trash icon immediately
+2006-12-28T13:18:00.000Z	n2diy	bruenig	why remove it, just empty it?
+2006-12-28T13:18:00.000Z	bruenig	n2diy	well I wrote a script to empty it and then keyboard shortcutted that
+2006-12-28T13:19:00.000Z	n2diy	bruenig	ok, I missed what you folks are trying to do.
+2006-12-28T13:19:00.000Z	bruenig	n2diy	I never really understood the point of the trash. It saves me maybe once a year when I accidentally delete something I didn't intend to but generally, I put something in the trash and then clear the trash immediately, waste of effort
+2006-12-28T13:21:00.000Z	n2diy	bruenig	understood, and I forget to empty it before I backup.
+2006-12-31T06:21:00.000Z	bruenig	n2diy	they are slow, lot of traffic
+2006-12-31T06:22:00.000Z	n2diy	bruenig	roger on that.
+2006-12-31T07:24:00.000Z	n2diy	bruenig	what is the minimum ram req. for Xbuntu?
+2006-12-31T07:24:00.000Z	n2diy	bruenig	thanks.
+2006-12-31T07:25:00.000Z	n2diy	bruenig	any idea how large the Xubuntu dl is?
+2006-12-31T07:26:00.000Z	n2diy	bruenig	ouch
+2006-12-31T07:26:00.000Z	bruenig	n2diy	well it is the same as any other, fill up that cd
+2006-12-31T07:27:00.000Z	n2diy	bruenig	I'm on dial up, that is why I use Ship It to get my CDs, and I don't think Xubuntu is an option there.
+2006-12-31T07:30:00.000Z	bruenig	n2diy	what is the deal with your ISP, do you live in a real remote area or something
+2006-12-31T07:32:00.000Z	n2diy	bruenig	Sorta, I'm in Carbon County, Pa., USA.
+2006-12-31T07:33:00.000Z	n2diy	bruenig	Yes, DSL is available, but only from one source, and it is a little pricey. I have a new neighbor, and we are thinking about sharing a DSL connection.
+2006-12-31T07:34:00.000Z	bruenig	n2diy	luckily where I am at dsl is ten dollars more than dialup so it is not that big a deal
+2006-12-31T07:34:00.000Z	n2diy	bruenig	I had a neighbor that shared a satellite connection with me, that was really cool, but he moved, and took his toys with him.
+2007-01-04T07:39:00.000Z	n2diy	bruenig	create a chart in gnumeric, and then import it into abiword.
+2007-01-04T07:39:00.000Z	bruenig	n2diy	I will have to admit, I have not yet created a chart
+2007-01-04T07:52:00.000Z	n2diy	bruenig	fromvega, I've found that libs that were needed for the install don't get removed.
+2007-01-06T06:10:00.000Z	bruenig	n2diy	the calendar thing?
+2007-01-06T06:10:00.000Z	n2diy	bruenig	yep
+2007-01-06T06:11:00.000Z	bruenig	n2diy	it worked before but doesn't anymore?
+2007-01-06T06:11:00.000Z	n2diy	bruenig	yep
+2007-05-28T09:57:00.000Z	bruenig	n2diy	I think he means within a text file
+2007-05-28T09:58:00.000Z	n2diy	bruenig	roger that, I can't read minds. :)
+2007-05-28T09:59:00.000Z	n2diy	bruenig	Ah, now that I re-read the post, I see was looking for the word, sorry.
+2007-06-10T06:48:00.000Z	n2diy	bruenig	joebob777as7 or use scp.
+2007-06-11T08:00:00.000Z	n2diy	bruenig	any idea if the feisty plug ins would work in Dapper?
+2007-06-11T08:00:00.000Z	bruenig	n2diy	what plugin are you wanting
+2007-06-11T08:01:00.000Z	n2diy	bruenig	the one your currently talking about with kkathman.
+2007-06-11T08:01:00.000Z	bruenig	n2diy	there is no plugin that will work with that at all I believe
+2007-06-17T10:29:00.000Z	n2diy	bruenig	but how to you boot, to get to tar?
+2007-06-17T10:31:00.000Z	n2diy	bruenig	?? no man page for uff?
+2007-06-19T13:02:00.000Z	bruenig	n2diy	you should install xchat
+2007-06-19T13:02:00.000Z	n2diy	bruenig	as opposed to xchat-gnome?
+2007-06-19T13:02:00.000Z	bruenig	n2diy	yes
+2007-06-19T13:03:00.000Z	n2diy	bruenig	Ok, thanks, I _thougt_ I was done installing stuff?!
+2007-06-20T11:30:00.000Z	bruenig	n2diy	he said keyboard, listen
+2007-06-20T11:30:00.000Z	n2diy	bruenig	ah, sorry.
+2007-07-04T13:16:00.000Z	bruenig	n2diy	right
+2007-07-04T13:16:00.000Z	n2diy	bruenig	rmmod is the command?
+2007-07-06T15:27:00.000Z	bruenig	n2diy	not in ipw
+2007-07-06T15:28:00.000Z	n2diy	bruenig	ipw, whatz zat?
+2007-07-06T15:28:00.000Z	bruenig	n2diy	intel pro wireless, like ipw2200 ipw3945 and the others
+2007-07-06T15:29:00.000Z	n2diy	bruenig	Ok, more homework for me, thanks. :)
+2007-07-06T15:36:00.000Z	bruenig	n2diy	stop putting my name in there
+2007-07-07T12:38:00.000Z	n2diy	bruenig	me to, I have ten fingers, why only use three of them on a mouse?
+2007-07-07T12:39:00.000Z	bruenig	n2diy	hard to control someone when you have to worry about whether they clicked the right box or not
+2007-07-07T12:40:00.000Z	n2diy	bruenig	yes, and whether the right clicked, left clicked, double clicked, etc...
+2007-07-07T14:44:00.000Z	n2diy	bruenig	1.5 what?
+2007-07-08T11:42:00.000Z	n2diy	bruenig	sushi, I think?
+2007-07-08T11:48:00.000Z	n2diy	bruenig	likes to live on the edge. :)
+2007-07-09T10:59:00.000Z	n2diy	bruenig	that's the second time you've made that statement tonight, is it a file?
+2007-07-09T11:06:00.000Z	n2diy	bruenig	can you offer anything but an opinion on this?
+2007-07-09T11:06:00.000Z	bruenig	n2diy	I don't say either one is better, when someone makes the claim that aptitude is better, ask them why, almost always they will tell you something that is flat out wrong that they heard someone else say
+2007-07-09T11:06:00.000Z	bruenig	n2diy	something about dependency removal or some other nonsense
+2007-07-09T11:07:00.000Z	n2diy	bruenig	roger that, we all have opinions, and without proof, that is all they are. I like synaptic, it works for me, so far.
+2007-07-10T12:14:00.000Z	n2diy	bruenig	I think your using X as a variable? Maybe x is a better choice?
+2007-07-10T12:14:00.000Z	bruenig	n2diy	perhaps in this instance
+2007-07-10T12:15:00.000Z	n2diy	bruenig	:)
+2007-07-15T12:03:00.000Z	bruenig	n2diy	iwlist interface scan
+2007-07-15T12:05:00.000Z	bruenig	n2diy	not sure
+2007-07-15T12:08:00.000Z	bruenig	n2diy	I just said I don't know
+2007-07-15T12:09:00.000Z	n2diy	bruenig	ok, I'll drop you from the replies.
+2007-07-27T11:56:00.000Z	bruenig	n2diy	yes, it is a windows ssh client
+2007-07-27T11:56:00.000Z	n2diy	bruenig	will putty play with ssh/scp?
+2007-07-27T11:56:00.000Z	n2diy	bruenig	TY
+2007-07-28T09:53:00.000Z	n2diy	bruenig	knoppix?
+2007-07-28T09:53:00.000Z	n2diy	bruenig	and an install CD, at least with 3.6
+2007-07-28T09:53:00.000Z	bruenig	n2diy	what is your point
+2007-07-28T09:54:00.000Z	n2diy	bruenig	it's a good trouble shooting distro.
+2007-07-28T09:55:00.000Z	n2diy	bruenig	sure it can, I running it here!
+2007-07-28T09:56:00.000Z	bruenig	n2diy	the install process shows apt output?
+2007-07-28T09:56:00.000Z	n2diy	bruenig	what version?
+2007-07-28T09:57:00.000Z	bruenig	n2diy	any of them
+2007-07-28T09:57:00.000Z	n2diy	bruenig	not 3.6, what install "process" are you trying?
+2007-07-28T09:57:00.000Z	bruenig	n2diy	my initial comment was to use a distro that had more meaningful install output and you recommended knoppix, does knoppix have meaningful install output or is it click and pray
+2007-07-28T09:58:00.000Z	n2diy	bruenig	it shows you dmesg as you are booting.
+2007-07-28T09:58:00.000Z	bruenig	n2diy	my initial comment was to use a distro that had more meaningful install output and you recommended knoppix, does knoppix have meaningful install output or is it click and pray
+2007-07-28T09:58:00.000Z	n2diy	bruenig	it shows you dmesg as you are booting, and is a text based install.
+2007-07-28T09:58:00.000Z	bruenig	n2diy	does it show install output or not
+2007-07-28T09:59:00.000Z	bruenig	n2diy	does it show selecting such and such package and installing such and such package or not
+2007-07-28T09:59:00.000Z	n2diy	bruenig	yes, yes, and yes.
+2007-08-09T15:27:00.000Z	bruenig	n2diy	just restart the daemon

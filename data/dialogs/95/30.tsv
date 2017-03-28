@@ -1,0 +1,95 @@
+2009-01-25T06:21:00.000Z	BlackBatMan		SCP?
+2009-01-25T06:23:00.000Z	johnnnny	BlackBatMan	very simple..get the Installer version :)
+2009-01-25T06:24:00.000Z	johnnnny	BlackBatMan	download this: http://winscp.net/download/winscp418setup.exe
+2009-01-25T06:25:00.000Z	johnnnny	BlackBatMan	thats the windows installer of WinSCP (a FTP, SFTP, SCP, .. client)
+2009-01-25T06:26:00.000Z	johnnnny	BlackBatMan	how's that going ? :)
+2009-01-25T06:27:00.000Z	johnnnny	BlackBatMan	or you could try to get your Samba service to work :P
+2009-01-25T06:29:00.000Z	johnnnny	BlackBatMan	Norton one.
+2009-01-25T06:30:00.000Z	johnnnny	BlackBatMan	create a "NEW" connection
+2009-01-25T06:31:00.000Z	johnnnny	BlackBatMan	let me know if you manage to go threw the process of createing a new connection, saving it, and connecting to your linux machine.
+2009-01-25T06:31:00.000Z	BlackBatMan	johnnnny	i have no "NEW" option
+2009-01-25T06:32:00.000Z	johnnnny	BlackBatMan	you don't have a "New" button on the top right ?
+2009-01-25T06:32:00.000Z	BlackBatMan	johnnnny	i don't know how to fill this up either
+2009-01-25T06:32:00.000Z	johnnnny	BlackBatMan	Do you have a user account on your linux box ?
+2009-01-25T06:32:00.000Z	johnnnny	BlackBatMan	do you know the IP of that box ?
+2009-01-25T06:33:00.000Z	BlackBatMan	johnnnny	no
+2009-01-25T06:33:00.000Z	johnnnny	BlackBatMan	uh
+2009-01-25T06:33:00.000Z	johnnnny	BlackBatMan	is this on your home network ?
+2009-01-25T06:34:00.000Z	BlackBatMan	johnnnny	these two computers are connected to the same router
+2009-01-25T06:34:00.000Z	johnnnny	BlackBatMan	can you type "ifconfig" on a shell on your linux and find your IP ?
+2009-01-25T06:36:00.000Z	johnnnny	BlackBatMan	still following ?
+2009-01-25T06:36:00.000Z	BlackBatMan	johnnnny	.... i'll show you the ouput in a sec
+2009-01-25T06:36:00.000Z	johnnnny	BlackBatMan	i'm sure you can find the IP in there yourself !:)
+2009-01-25T06:36:00.000Z	BlackBatMan	johnnnny	i see no ip
+2009-01-25T06:37:00.000Z	johnnnny	BlackBatMan	use a USB key instead maybe ?
+2009-01-25T06:37:00.000Z	BlackBatMan	johnnnny	yup i got it
+2009-01-25T06:37:00.000Z	johnnnny	BlackBatMan	show me your output in a pastebin,  and i'll see.. but maybe you have no network connection working on your machine ?
+2009-01-25T06:38:00.000Z	johnnnny	BlackBatMan	so you got the IP ?
+2009-01-25T06:38:00.000Z	BlackBatMan	johnnnny	i have it but i don't know if it's safe to send it to you
+2009-01-25T06:38:00.000Z	BlackBatMan	johnnnny	ok
+2009-01-25T06:38:00.000Z	johnnnny	BlackBatMan	DOn't send it, i want you to know it! :)
+2009-01-25T06:39:00.000Z	johnnnny	BlackBatMan	and now in windows... In WinSCP, in the Host name: you type your IP
+2009-01-25T06:39:00.000Z	johnnnny	BlackBatMan	Username: and Password: i think you know what those are too!
+2009-01-25T06:39:00.000Z	johnnnny	BlackBatMan	and than, you can <Save> or  simply <Login> and try !:)
+2009-01-25T06:41:00.000Z	BlackBatMan	johnnnny	Error "Network error: Connection refused
+2009-01-25T06:41:00.000Z	BlackBatMan	johnnnny	"OK" "Reconnect" "Help"
+2009-01-25T06:41:00.000Z	johnnnny	BlackBatMan	probably not windows firewall
+2009-01-25T06:42:00.000Z	johnnnny	BlackBatMan	did you open OpenSSH ?
+2009-01-25T06:42:00.000Z	BlackBatMan	johnnnny	i have here "file protocol /???
+2009-01-25T06:42:00.000Z	BlackBatMan	johnnnny	and allow scp fallback
+2009-01-25T06:43:00.000Z	johnnnny	BlackBatMan	i usually don't touch anything...
+2009-01-25T06:43:00.000Z	BlackBatMan	johnnnny	mmhmm ok
+2009-01-25T06:43:00.000Z	johnnnny	BlackBatMan	1 sec
+2009-01-25T06:44:00.000Z	johnnnny	BlackBatMan	if you type (in linux) :  ps -A | grep sshd           do you get anything listed ?
+2009-01-25T06:45:00.000Z	johnnnny	BlackBatMan	and, can you technically remote access your linux box ? (Did you install the OpenSSH server)?
+2009-01-25T06:45:00.000Z	BlackBatMan	johnnnny	no output for ps -A | grep sshd
+2009-01-25T06:46:00.000Z	BlackBatMan	johnnnny	if i knew i would have known
+2009-01-25T06:46:00.000Z	BlackBatMan	johnnnny	ok, thnks for trying
+2009-01-25T06:47:00.000Z	BlackBatMan	johnnnny	i'll try sypnatic manager
+2009-01-25T06:47:00.000Z	johnnnny	BlackBatMan	once you get that sshd thing installed.... you'll be able to remote-access your linux box with a windows client like Putty
+2009-01-25T06:49:00.000Z	BlackBatMan	johnnnny	i have a couple of similar results.... I have a 320 gig hard drive, should i just install all of it?
+2009-01-25T06:49:00.000Z	johnnnny	BlackBatMan	ya, the synaptic manager should help you
+2009-01-25T06:49:00.000Z	BlackBatMan	johnnnny	ok
+2009-01-25T06:49:00.000Z	johnnnny	BlackBatMan	not necessarely..
+2009-01-25T06:49:00.000Z	BlackBatMan	johnnnny	i don't know which one to install
+2009-01-25T06:50:00.000Z	johnnnny	BlackBatMan	somebody that knows needs to tell you which one exactly :)
+2009-01-25T06:51:00.000Z	johnnnny	BlackBatMan	u got that!? :)
+2009-01-25T06:51:00.000Z	BlackBatMan	johnnnny	yup
+2009-01-25T06:51:00.000Z	johnnnny	BlackBatMan	get this Windows Tool too!!: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+2009-01-25T06:52:00.000Z	johnnnny	BlackBatMan	PuTTY
+2009-01-25T06:52:00.000Z	johnnnny	BlackBatMan	synaptic ?
+2009-01-25T06:53:00.000Z	johnnnny	BlackBatMan	let it run...
+2009-01-25T06:53:00.000Z	johnnnny	BlackBatMan	don't kill if it's still workng :)
+2009-01-25T06:53:00.000Z	johnnnny	BlackBatMan	it might be fetching stuff from the web..
+2009-01-25T06:55:00.000Z	BlackBatMan	johnnnny	i just checked openssh-server, but it seems to be doing something
+2009-01-25T06:55:00.000Z	johnnnny	BlackBatMan	it should tell you what the dependencies are, I think.
+2009-01-25T06:56:00.000Z	johnnnny	BlackBatMan	great :(
+2009-01-25T06:56:00.000Z	johnnnny	BlackBatMan	hummm... right :)
+2009-01-25T06:56:00.000Z	johnnnny	BlackBatMan	your good for that .. ? :)
+2009-01-25T06:57:00.000Z	BlackBatMan	johnnnny	i see progress
+2009-01-25T06:57:00.000Z	BlackBatMan	johnnnny	done
+2009-01-25T06:57:00.000Z	johnnnny	BlackBatMan	great :)
+2009-01-25T06:57:00.000Z	johnnnny	BlackBatMan	did you get Putty too ?
+2009-01-25T06:58:00.000Z	johnnnny	BlackBatMan	or just try WinSCP again :)
+2009-01-25T06:58:00.000Z	johnnnny	BlackBatMan	i should actually ask you to do : ps -A | grep sshd        before, to not waste time.
+2009-01-25T06:59:00.000Z	BlackBatMan	johnnnny	yes ouput
+2009-01-25T06:59:00.000Z	BlackBatMan	johnnnny	private key file ?
+2009-01-25T07:00:00.000Z	BlackBatMan	johnnnny	no, it's a prompt or input from WinScP
+2009-01-25T07:00:00.000Z	johnnnny	BlackBatMan	 whatever it suggests! :)
+2009-01-25T07:00:00.000Z	BlackBatMan	johnnnny	ok
+2009-01-25T07:00:00.000Z	johnnnny	BlackBatMan	you need to accept/create that key :)
+2009-01-25T07:01:00.000Z	BlackBatMan	johnnnny	cool
+2009-01-25T07:01:00.000Z	johnnnny	BlackBatMan	got in, right ? :)
+2009-01-25T07:01:00.000Z	BlackBatMan	johnnnny	ok thanks
+2009-01-25T07:01:00.000Z	johnnnny	BlackBatMan	but wait.. :)
+2009-01-25T07:01:00.000Z	johnnnny	BlackBatMan	Try Putty!!!   it'll give you Shell access :)
+2009-01-25T07:02:00.000Z	johnnnny	BlackBatMan	like that you can do everything from your windows machine :)
+2009-01-25T07:03:00.000Z	BlackBatMan	johnnnny	ok :)
+2009-01-25T07:05:00.000Z	BlackBatMan	johnnnny	see, i need windows to put music/video into my palm pda
+2009-01-25T07:05:00.000Z	BlackBatMan	johnnnny	so i can download music from linux and transfer the file and sync into my pda
+2009-01-25T07:05:00.000Z	johnnnny	BlackBatMan	understandable
+2009-01-25T07:06:00.000Z	johnnnny	BlackBatMan	so, is there a particular problem your faced with at this point with winSCP ?
+2009-01-25T07:06:00.000Z	johnnnny	BlackBatMan	just wondering on the sense of the phrase :)
+2009-01-25T07:06:00.000Z	BlackBatMan	johnnnny	nope
+2009-01-25T07:06:00.000Z	johnnnny	BlackBatMan	k :)
+2009-01-25T07:10:00.000Z	johnnnny	BlackBatMan	so, your all set to go ? :)

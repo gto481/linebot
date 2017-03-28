@@ -1,0 +1,99 @@
+2009-02-13T04:02:00.000Z	^hashbang^	dmsuperman	I see this in the output "failed to initialize GLX extension (Compatible NVIDIA X driver not found)"
+2009-02-13T04:03:00.000Z	^hashbang^	dmsuperman	can you pastebin your /etc/X11/xorg.conf please
+2009-02-13T04:03:00.000Z	dmsuperman	^hashbang^	What would cause it to suddenly not be found? I tried reinstalling my video driver and that didn't work (using the binaries from nvidia.com, version 180.25 and 180.11 and 180.22 don't work anymore)
+2009-02-13T04:03:00.000Z	dmsuperman	^hashbang^	Sure thing
+2009-02-13T04:03:00.000Z	^hashbang^	dmsuperman	have you tried running nvidia-xconfig?
+2009-02-13T04:04:00.000Z	^hashbang^	dmsuperman	I usually will do that first thing, then I'll reboot, and then start up nvidia-settings-manager
+2009-02-13T04:05:00.000Z	dmsuperman	^hashbang^	http://dmsuperman.pastebin.com/f4542a412
+2009-02-13T04:05:00.000Z	dmsuperman	^hashbang^	And yeah, I've tried using my old config and trying a fresh start using nvidia-xconfig
+2009-02-13T04:05:00.000Z	dmsuperman	^hashbang^	A reboot didn't fix it
+2009-02-13T04:06:00.000Z	^hashbang^	dmsuperman	what does ` lsmod | grep nv` give you?
+2009-02-13T04:06:00.000Z	dmsuperman	^hashbang^	Odd, only "sata_nv" and "libata"
+2009-02-13T04:07:00.000Z	^hashbang^	dmsuperman	ah, there be the problem... no nvidia kernel driver
+2009-02-13T04:07:00.000Z	dmsuperman	^hashbang^	The installer didn't give me any error though :(
+2009-02-13T04:07:00.000Z	^hashbang^	dmsuperman	start from scratch. uninstall all nvidia drivers, reboot, then reinstall the 180 drivers
+2009-02-13T04:08:00.000Z	dmsuperman	^hashbang^	How do you "uninstall" the nvidia drivers?
+2009-02-13T04:08:00.000Z	^hashbang^	dmsuperman	use synpatic..
+2009-02-13T04:08:00.000Z	dmsuperman	^hashbang^	Synaptic only works for packages, which I'm not using, and also is an X app ;)
+2009-02-13T04:08:00.000Z	dmsuperman	^hashbang^	I have the binaries from nvidia.com because those are the only ones that work for my setup
+2009-02-13T04:09:00.000Z	^hashbang^	dmsuperman	hmm, then I
+2009-02-13T04:09:00.000Z	^hashbang^	dmsuperman	hmm, then I'm not sure...
+2009-02-13T04:09:00.000Z	dmsuperman	^hashbang^	:(
+2009-02-13T04:10:00.000Z	^hashbang^	dmsuperman	I've compiled my nvidia drivers when I used fedora for my quadro fx570 dual head monitors, but on ubuntu, I just use the repos 180 package and everything works
+2009-02-13T04:11:00.000Z	^hashbang^	dmsuperman	your using a GX7900 right?
+2009-02-13T04:11:00.000Z	dmsuperman	^hashbang^	I'm on hardy, I don't get those in the repos :(
+2009-02-13T04:11:00.000Z	dmsuperman	^hashbang^	7900GS KO
+2009-02-13T04:11:00.000Z	^hashbang^	dmsuperman	doh! yea ... that one.. =)
+2009-02-13T04:12:00.000Z	^hashbang^	dmsuperman	try commenting out the "Load glx" option in /etc/X11/xorg.conf
+2009-02-13T04:12:00.000Z	^hashbang^	dmsuperman	or, what about modprobe nvidia
+2009-02-13T04:12:00.000Z	dmsuperman	^hashbang^	Doesn't help :(
+2009-02-13T04:13:00.000Z	^hashbang^	dmsuperman	did you try the modprobe too?
+2009-02-13T04:14:00.000Z	dmsuperman	^hashbang^	Yeah, modprobe nvidia says FATAL: Error running isntall command for nvidia
+2009-02-13T04:14:00.000Z	^hashbang^	dmsuperman	 hmm, in type uname -r and paste that in here
+2009-02-13T04:14:00.000Z	^hashbang^	dmsuperman	 wow, old kernel
+2009-02-13T04:15:00.000Z	^hashbang^	dmsuperman	do: cd /lib/modules/2.4.24-19; find . -name \*nvidia*
+2009-02-13T04:15:00.000Z	dmsuperman	^hashbang^	I'm kind of stuck, this is where the problem is. I have 2 video cards, and I use 4GB of RAM on a 32bit OS. I use PAE, which works fine and dandy, except at work when I recompiled a later kernel with PAE my video driver entirely stopped working, so I'm afraid to upgrade at home and effectively screw myself over
+2009-02-13T04:16:00.000Z	dmsuperman	^hashbang^	And in Intrepid, there's a bug with X with certain dual card setups where it just says "fatal error: no screens found"
+2009-02-13T04:16:00.000Z	^hashbang^	dmsuperman	hmm, 32bit doesn't support 4G of ram
+2009-02-13T04:17:00.000Z	dmsuperman	^hashbang^	That's why I use PAE, but that requires me to recompile my kernel with the flag enabled
+2009-02-13T04:17:00.000Z	^hashbang^	dmsuperman	doh! ok
+2009-02-13T04:17:00.000Z	dmsuperman	^hashbang^	And at work, when I did that, I couldn't install my video drivers anymore :P
+2009-02-13T04:17:00.000Z	^hashbang^	dmsuperman	hmm, I'm not sure
+2009-02-13T04:17:00.000Z	dmsuperman	^hashbang^	http://dmsuperman.pastebinit.com/fa3956f
+2009-02-13T04:17:00.000Z	^hashbang^	dmsuperman	I've never tried using 2 video cards (tho I wanted to)... =)
+2009-02-13T04:24:00.000Z	^hashbang^	dmsuperman	in /lib/modules/$kernelversion/build build should be symlinked to the version of kernel and it's source tree in /usr/src/linux or whatever name you used
+2009-02-13T04:25:00.000Z	dmsuperman	^hashbang^	Ah, yes, they are properly linked
+2009-02-13T04:26:00.000Z	^hashbang^	dmsuperman	did you try running find /lib/modules/yourkernel -name \*nv*
+2009-02-13T04:26:00.000Z	dmsuperman	^hashbang^	Yeah I pastebinned it before
+2009-02-13T04:26:00.000Z	dmsuperman	^hashbang^	http://dmsuperman.pastebinit.com/fa3956f
+2009-02-13T04:26:00.000Z	dmsuperman	^hashbang^	I think that's the pastebin
+2009-02-13T04:26:00.000Z	^hashbang^	dmsuperman	doh! yea that link didn't seem to work..
+2009-02-13T04:27:00.000Z	^hashbang^	dmsuperman	 try paste.ubuntu.com for me
+2009-02-13T04:27:00.000Z	dmsuperman	^hashbang^	http://dmsuperman.pastebin.com/fa3956f
+2009-02-13T04:27:00.000Z	dmsuperman	^hashbang^	I typed teh link wrong :P
+2009-02-13T04:28:00.000Z	^hashbang^	dmsuperman	 lol np
+2009-02-13T04:28:00.000Z	^hashbang^	dmsuperman	 so what happens when you run.. insmod /kernel/drivers/video/nvidia
+2009-02-13T04:29:00.000Z	^hashbang^	dmsuperman	 /kernel/drivers/video/nvidia.ko I mean or /volatile/nvidia.ko
+2009-02-13T04:29:00.000Z	dmsuperman	^hashbang^	video/nvidia is a directory
+2009-02-13T04:30:00.000Z	^hashbang^	dmsuperman	you need to use the full path insmod /lib/modules/kernelversion/bla/bla/bla
+2009-02-13T04:30:00.000Z	dmsuperman	^hashbang^	Odd, now the nvidia module is loaded
+2009-02-13T04:30:00.000Z	^hashbang^	dmsuperman	ok what does dmesg stay?
+2009-02-13T04:30:00.000Z	dmsuperman	^hashbang^	And X works again :D
+2009-02-13T04:31:00.000Z	^hashbang^	dmsuperman	hmm
+2009-02-13T04:31:00.000Z	^hashbang^	dmsuperman	that's not right
+2009-02-13T04:31:00.000Z	^hashbang^	dmsuperman	question now is, why didn't it load on reboot
+2009-02-13T04:31:00.000Z	dmsuperman	^hashbang^	That is the question :)
+2009-02-13T04:31:00.000Z	^hashbang^	dmsuperman	try rebooting again
+2009-02-13T04:32:00.000Z	dmsuperman	^hashbang^	Alright. Luckily this is in irssi + screen so I don't have to leave ;)
+2009-02-13T04:32:00.000Z	^hashbang^	dmsuperman	woot!
+2009-02-13T04:35:00.000Z	dmsuperman	^hashbang^	Yup, doesn't work upon reboot
+2009-02-13T04:35:00.000Z	^hashbang^	dmsuperman	dude that's messed up. Only think I can think of now is to add that insmod command to /etc/rc.local
+2009-02-13T04:35:00.000Z	dmsuperman	^hashbang^	Hehe, hackish but meh it works :P
+2009-02-13T04:36:00.000Z	^hashbang^	dmsuperman	yea, I hack junk all the time =)
+2009-02-13T04:52:00.000Z	dmsuperman	^hashbang^	Where did you suggest I put that again?
+2009-02-13T04:52:00.000Z	^hashbang^	dmsuperman	/etc/rc2.d/rc.local
+2009-02-13T04:53:00.000Z	dmsuperman	^hashbang^	There is no rc.local in there, should I create it?
+2009-02-13T04:54:00.000Z	^hashbang^	dmsuperman	/etc/rc.local
+2009-02-13T04:54:00.000Z	^hashbang^	dmsuperman	sorry
+2009-02-13T04:58:00.000Z	dmsuperman	^hashbang^	It kind of worked, but I rarely reboot so I'm not going to question it haha
+2009-02-13T04:58:00.000Z	^hashbang^	dmsuperman	sorry man...
+2009-02-13T04:59:00.000Z	dmsuperman	^hashbang^	It's cool, I'm in X now
+2009-02-13T04:59:00.000Z	dmsuperman	^hashbang^	I'm hoping I'll not have these X issues with Jaunty
+2009-02-13T05:00:00.000Z	^hashbang^	dmsuperman	well, you will still need the nvidia drivers... so I'm not sure...
+2009-02-13T05:00:00.000Z	dmsuperman	^hashbang^	They're installed
+2009-02-13T05:00:00.000Z	dmsuperman	^hashbang^	I just have to insmod them whenever I reboot lol
+2009-02-13T05:01:00.000Z	^hashbang^	dmsuperman	yea I know, but 9.04 isn't going to make this issue go away... it's something else, just not sure what yet.
+2009-02-13T05:01:00.000Z	dmsuperman	^hashbang^	Oh no I mean hopefully some of my issues will be cleared up
+2009-02-13T05:02:00.000Z	^hashbang^	dmsuperman	oh oh, well I'd hope so =)
+2009-02-13T05:02:00.000Z	dmsuperman	^hashbang^	Like I'll perhaps be able to use PAE + nvidia drivers without issue, or maybe (just maybe) flash 64bit will be usable by then :P
+2009-02-13T05:02:00.000Z	^hashbang^	dmsuperman	sorry, my eyes are starting to get blurry =)
+2009-02-13T05:02:00.000Z	dmsuperman	^hashbang^	Hehe, time for bed or more coffee
+2009-02-13T05:02:00.000Z	^hashbang^	dmsuperman	I am using flash 64bit just fine =)
+2009-02-13T05:03:00.000Z	dmsuperman	^hashbang^	Flash will load maybe once in 15 attempts using 64bit for me
+2009-02-13T05:03:00.000Z	^hashbang^	dmsuperman	did you install the version from labs.adobe.com?
+2009-02-13T05:03:00.000Z	dmsuperman	^hashbang^	Yeah, flash 10 latest beta?
+2009-02-13T05:04:00.000Z	^hashbang^	dmsuperman	yea
+2009-02-13T05:04:00.000Z	dmsuperman	^hashbang^	Yeah, doesn't work :P
+2009-02-13T05:04:00.000Z	^hashbang^	dmsuperman	what!!
+2009-02-13T05:04:00.000Z	dmsuperman	^hashbang^	Yup :P
+2009-02-13T05:05:00.000Z	^hashbang^	dmsuperman	hmm, open firefox and do about:plugins

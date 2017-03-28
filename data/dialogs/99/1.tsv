@@ -1,0 +1,99 @@
+2012-08-27T05:53:00.000Z	Adie		multi screen is not doing it right.
+2012-08-27T05:54:00.000Z	Adie		I am trying to get three displays to work, but they either overlay, or one gets disabled for some reason
+2012-08-27T05:54:00.000Z	Adie		it's weird
+2012-08-27T05:54:00.000Z	Adie		ANVE YOU EVER SEEN SCREENS INTERSECTING? D:
+2012-08-27T05:55:00.000Z	Adie		It's a 6970
+2012-08-27T05:55:00.000Z	Adie		I enabled all three displays via CCC
+2012-08-27T05:55:00.000Z	Adie		http://i.imgur.com/y2jrV.png
+2012-08-27T05:55:00.000Z	Adie		that's what I end up with
+2012-08-27T05:55:00.000Z	Adie		it's *funny*, but not what I want
+2012-08-27T05:55:00.000Z	Adie		lol
+2012-08-27T05:55:00.000Z	trevorj	Adie	sae card as me, nie
+2012-08-27T05:56:00.000Z	trevorj	Adie	whats this picture of
+2012-08-27T05:56:00.000Z	trevorj	Adie	two monitors?
+2012-08-27T05:56:00.000Z	trevorj	Adie	wheres the third?
+2012-08-27T05:56:00.000Z	trevorj	Adie	how did you connect the three screens? Does X see all three screens? (ie run 'xrandr' and see what outputs it sees)
+2012-08-27T05:57:00.000Z	trevorj	Adie	oh shit
+2012-08-27T05:57:00.000Z	trevorj	Adie	they do intersect don't they
+2012-08-27T05:57:00.000Z	trevorj	Adie	that's a fun one ;)
+2012-08-27T05:57:00.000Z	trevorj	Adie	which one is on the right
+2012-08-27T05:58:00.000Z	trevorj	Adie	I figured so much!
+2012-08-27T05:58:00.000Z	trevorj	Adie	can you pastebin the output of xrandr
+2012-08-27T06:00:00.000Z	trevorj	Adie	what error?
+2012-08-27T06:00:00.000Z	trevorj	Adie	and from what?
+2012-08-27T06:02:00.000Z	trevorj	Adie	ah, from gnome-control-center's display applet?
+2012-08-27T06:02:00.000Z	trevorj	Adie	what error?
+2012-08-27T06:03:00.000Z	Adie	trevorj	http://i.imgur.com/GOplS.png
+2012-08-27T06:05:00.000Z	trevorj	Adie	ah
+2012-08-27T06:05:00.000Z	trevorj	Adie	do you have an xorg.conf
+2012-08-27T06:06:00.000Z	trevorj	Adie	have you tried removing it?
+2012-08-27T06:06:00.000Z	trevorj	Adie	by removing I mean renaming it of course
+2012-08-27T06:07:00.000Z	trevorj	Adie	by removing I mean renaming it of course
+2012-08-27T06:07:00.000Z	trevorj	Adie	have you tried removing it? ** is what I said before you quit
+2012-08-27T06:07:00.000Z	trevorj	Adie	also are you using fglrx or radeon
+2012-08-27T06:08:00.000Z	trevorj	Adie	I've been loving the open source radeon drivers as of late with KMS and such
+2012-08-27T06:08:00.000Z	trevorj	Adie	fglrx is proprietary crap
+2012-08-27T06:09:00.000Z	trevorj	Adie	try using the radeon driver, it's free and already installed
+2012-08-27T06:09:00.000Z	trevorj	Adie	if you deactivate fglrx it will automatically be used
+2012-08-27T06:09:00.000Z	trevorj	Adie	also, rename xorg.conf
+2012-08-27T06:11:00.000Z	trevorj	Adie	yes, 9/10
+2012-08-27T06:11:00.000Z	trevorj	Adie	and people say Linux requires so much configuring )
+2012-08-27T06:11:00.000Z	trevorj	Adie	;)*
+2012-08-27T06:13:00.000Z	trevorj	Adie	just add them to fstab
+2012-08-27T06:13:00.000Z	trevorj	Adie	that will do both
+2012-08-27T06:13:00.000Z	trevorj	Adie	the reason I said to rename xorg.conf just so you're aware is because X usually chooses some damn good defaults
+2012-08-27T06:13:00.000Z	trevorj	Adie	/etc/fstab
+2012-08-27T06:14:00.000Z	trevorj	Adie	And many times people put a "Virtual $x $y" entry in there
+2012-08-27T06:15:00.000Z	trevorj	Adie	it's already getting better
+2012-08-27T06:15:00.000Z	trevorj	Adie	did you see it in 10.04?
+2012-08-27T06:15:00.000Z	trevorj	Adie	it's new, give it some time to mature
+2012-08-27T06:15:00.000Z	trevorj	Adie	plus there's a zillion other wms out there
+2012-08-27T06:15:00.000Z	trevorj	Adie	you are free to use any of them
+2012-08-27T06:16:00.000Z	trevorj	Adie	I'm sure unity will get dragging of it's dock
+2012-08-27T06:16:00.000Z	trevorj	Adie	just give it time to mature
+2012-08-27T06:16:00.000Z	trevorj	Adie	window managers
+2012-08-27T06:16:00.000Z	trevorj	Adie	I personally use xmonad
+2012-08-27T06:17:00.000Z	trevorj	Adie	stuck? lol
+2012-08-27T06:17:00.000Z	trevorj	Adie	ah, good
+2012-08-27T06:17:00.000Z	trevorj	Adie	the annoyances I had when I first started using it
+2012-08-27T06:17:00.000Z	trevorj	Adie	eventually all left
+2012-08-27T06:17:00.000Z	trevorj	Adie	but they were really just differences I found
+2012-08-27T06:18:00.000Z	trevorj	Adie	not necessarily flaws (usually)
+2012-08-27T06:18:00.000Z	trevorj	Adie	apt-get install winetricks
+2012-08-27T06:19:00.000Z	trevorj	Adie	tbh, you're better off using a native client
+2012-08-27T06:19:00.000Z	trevorj	Adie	there are tons of them
+2012-08-27T06:19:00.000Z	trevorj	Adie	have you tried pidgin?
+2012-08-27T06:25:00.000Z	trevorj	Adie	for wine, to get more apps to run create wine32 setup
+2012-08-27T06:25:00.000Z	trevorj	Adie	I've even got ie9 running
+2012-08-27T06:25:00.000Z	trevorj	Adie	wine defaults to 64 bit mode
+2012-08-27T06:25:00.000Z	trevorj	Adie	nowadays
+2012-08-27T06:26:00.000Z	trevorj	Adie	problem is winetricks for instance only has URLs in it for numerous packages for 32 bit
+2012-08-27T06:26:00.000Z	trevorj	Adie	make a script, throw it in /usr/local/bin/wine32
+2012-08-27T06:26:00.000Z	trevorj	Adie	put this in it
+2012-08-27T06:33:00.000Z	trevorj	Adie	http://pastebin.com/ZqVDY6mU
+2012-08-27T06:33:00.000Z	trevorj	Adie	there's instructions fo r 32 bit wine setup
+2012-08-27T06:42:00.000Z	trevorj	Adie	?
+2012-08-27T06:43:00.000Z	trevorj	Adie	like, what is broken, lol
+2012-08-27T06:43:00.000Z	trevorj	Adie	you mean X recovery mode?
+2012-08-27T06:43:00.000Z	trevorj	Adie	X failsafe mode?
+2012-08-27T06:44:00.000Z	trevorj	Adie	or are you in recovery mode selected at th grub menu
+2012-08-27T06:44:00.000Z	trevorj	Adie	which
+2012-08-27T06:44:00.000Z	trevorj	Adie	then how did you start xchat?
+2012-08-27T06:44:00.000Z	trevorj	Adie	lol, im just personally interested
+2012-08-27T06:45:00.000Z	trevorj	Adie	ah
+2012-08-27T06:45:00.000Z	trevorj	Adie	pastebin your fstab for me
+2012-08-27T06:45:00.000Z	trevorj	Adie	lol, use a text editor
+2012-08-27T06:46:00.000Z	trevorj	Adie	man fstab
+2012-08-27T06:46:00.000Z	trevorj	Adie	=P
+2012-08-27T06:47:00.000Z	trevorj	Adie	they are ntfs ?
+2012-08-27T06:48:00.000Z	trevorj	Adie	change the fourth column to 'defaults'
+2012-08-27T06:48:00.000Z	Adie	trevorj	yup yup
+2012-08-27T06:48:00.000Z	trevorj	Adie	also
+2012-08-27T06:48:00.000Z	trevorj	Adie	don't use /media/blah
+2012-08-27T06:48:00.000Z	trevorj	Adie	use /mnt/blah
+2012-08-27T06:48:00.000Z	trevorj	Adie	mkdir the targets as well
+2012-08-27T06:53:00.000Z	trevorj	Adie	hi
+2012-08-27T06:53:00.000Z	Adie	trevorj	still broken ^_^
+2012-08-27T06:53:00.000Z	trevorj	Adie	sorry I told you it wrong
+2012-08-27T06:53:00.000Z	trevorj	Adie	lol, change ntfs to ntfs-3g
+2012-08-27T07:47:00.000Z	Adie	trevorj	I foxed it :x

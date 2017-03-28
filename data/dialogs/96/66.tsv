@@ -1,0 +1,96 @@
+2006-03-31T15:56:00.000Z	arrick		What http://gentoo-wiki.com/HOWTO_Lexmark_Printersis RSDP during boot?
+2006-03-31T15:58:00.000Z	arrick		what is RSDP during boot of ubuntu?
+2006-03-31T16:00:00.000Z	arrick		what is ubuntu's command for 'emerge'
+2006-03-31T16:00:00.000Z	Dr_Willis	arrick	 time to read up on 'apt-get'
+2006-04-01T17:05:00.000Z	Dr_Willis	arrick	 i think ya got some basic learning to do. :P
+2006-04-01T08:00:00.000Z	Dr_Willis	arrick	 what 'commands' ?
+2006-04-01T08:01:00.000Z	arrick	Dr_Willis	tar -xzf CJLZ600LE-CUPS-1.0-1.TAR.gz'
+2006-04-01T08:02:00.000Z	Dr_Willis	arrick	 the - is not needed any more i belive.
+2006-04-01T08:02:00.000Z	Dr_Willis	arrick	 hence the 'old' option.
+2006-04-01T08:04:00.000Z	arrick	Dr_Willis	this is what it returned before ' tar: Old option 'C' requires an argument.' and now without the - it gives 'tar: error is not recoverable: exiting now, tar: child returned status 2'
+2006-04-01T08:05:00.000Z	Dr_Willis	arrick	 normally to untar somthinh  i use, tar xzvf whatever.tar.gz
+2006-04-01T08:09:00.000Z	arrick	Dr_Willis	do I download the file using tar?
+2006-04-01T08:09:00.000Z	Dr_Willis	arrick	 tar has NOTHING to do with 'downloading' files.
+2006-04-01T08:12:00.000Z	arrick	Dr_Willis	How do I download the file from the site? gotta use a browser?
+2006-04-01T08:12:00.000Z	Dr_Willis	arrick	 yea that would be one way... how did you find the file?
+2006-04-01T08:13:00.000Z	Dr_Willis	arrick	 I think you got a long session of learning to do. :P
+2006-04-01T08:14:00.000Z	Dr_Willis	arrick	 this was for some lexmark printer?
+2006-04-01T08:14:00.000Z	Dr_Willis	arrick	 you may be better off. mowing yards for 3 days - and buying a better printer. :P
+2006-04-01T08:15:00.000Z	Dr_Willis	arrick	 ive tossed out many a lexmark printers. :P
+2006-04-01T09:12:00.000Z	Dr_Willis	arrick	 cd to /home/USERNAME/Desktop  or was it desktop.
+2006-04-01T09:12:00.000Z	Dr_Willis	arrick	 then use the tar commands.
+2006-04-01T09:14:00.000Z	arrick	Dr_Willis	its telling me ther is no such directroy
+2006-04-01T09:14:00.000Z	Dr_Willis	arrick	 it MAY be worth whole to spend the next hr reading a bash tutoriual,  try cd d<tab>    for file name completion, use 'ls' and LOOK and see what the file names are.
+2006-04-01T09:17:00.000Z	Dr_Willis	arrick	 Desktop is different from 'desktop' :P
+2006-04-01T09:25:00.000Z	Dr_Willis	arrick	 its an old tutorial then :P
+2006-04-01T09:57:00.000Z	Dr_Willis	arrick	 it should show up in the printer config tools :P
+2006-04-01T11:27:00.000Z	arrick	Dr_Willis	I have folloed all of your advice in the past, I know you can help me, please????
+2006-04-01T11:28:00.000Z	arrick	Dr_Willis	I loaded the gnome, and need to know how to add printers in the gui
+2006-04-01T11:28:00.000Z	Dr_Willis	arrick	 theres a menu item for printer configuration
+2006-04-01T11:30:00.000Z	Dr_Willis	arrick	 i would guess you dont have some packages installed that you need.
+2006-04-01T11:56:00.000Z	Dr_Willis	arrick	 no you dont need to get rid of it.
+2006-04-01T11:57:00.000Z	Dr_Willis	arrick	 you can install gnome-desktop and ubuntu-desktop and even kubuntu-desktop - then pick what to use at login time
+2006-04-01T11:57:00.000Z	Dr_Willis	arrick	 you use the GDM login manager.. is how. :P
+2006-04-01T11:57:00.000Z	Dr_Willis	arrick	 or make a .xinitrc that will start what you want.
+2006-04-01T11:58:00.000Z	Dr_Willis	arrick	 sudo gdm     is one way
+2006-04-01T11:58:00.000Z	Dr_Willis	arrick	 normally the system should boot to a login manager.
+2006-04-01T12:28:00.000Z	arrick	Dr_Willis	I'm back with gnome running
+2006-04-01T11:28:00.000Z	Dr_Willis	arrick	 wget, or curl are commands for that.
+2006-04-02T10:32:00.000Z	Dr_Willis	arrick	 go to freshmeat.net and search for accounting programs.
+2006-04-02T10:33:00.000Z	arrick	Dr_Willis	bimberi, thanks
+2006-04-02T12:18:00.000Z	Dr_Willis	arrick	 mount the thing
+2006-04-02T12:18:00.000Z	Dr_Willis	arrick	 mount it correctly then. :P
+2006-04-02T12:24:00.000Z	Dr_Willis	arrick	 boot the live cd and look at /etc/fstab
+2006-04-02T12:57:00.000Z	arrick	Dr_Willis	can you check out pastebin, find my two last entries, compare them and tell me what to change to get my external drive up?
+2006-04-02T12:58:00.000Z	Dr_Willis	arrick	 i gotta run to work..  - i tend to use the options   'user,users,umask=022' for my ntfs partitions
+2006-04-03T10:25:00.000Z	Dr_Willis	arrick	 i would NOT put too much TRUST in that.
+2006-04-03T10:26:00.000Z	arrick	Dr_Willis	only for changing text files, not anything else
+2006-04-03T10:26:00.000Z	Dr_Willis	arrick	 even then. I wouldent trust it very much. Backup your Critical data :)
+2006-04-03T10:49:00.000Z	Dr_Willis	arrick	 chech freshmeat.net
+2006-04-03T11:55:00.000Z	Dr_Willis	arrick	 theres free versions of xchat for windows - the 'official' windows xchat version is not free. *yes its odd*
+2006-04-03T11:56:00.000Z	arrick	Dr_Willis	you have a link for the free?
+2006-04-03T11:56:00.000Z	Dr_Willis	arrick	 google.com :P
+2006-04-11T10:15:00.000Z	Dr_Willis	arrick	 ssh  and 'winscp' is handy :P
+2006-04-11T10:21:00.000Z	Dr_Willis	arrick	 samas about a 1 min setup. :P
+2006-04-14T11:06:00.000Z	Dr_Willis	arrick	 try 'sudo mount'
+2006-04-14T11:07:00.000Z	Dr_Willis	arrick	 you sure they are mounted?
+2006-04-14T11:08:00.000Z	Dr_Willis	arrick	 odd
+2006-04-14T11:09:00.000Z	Dr_Willis	arrick	 if they are mounting - then it seems tobe some issue with mount. not the fstab
+2006-04-14T11:10:00.000Z	arrick	Dr_Willis	I was wondering if I need to change the last 0 to 2 like the hda and hdc are?
+2006-04-14T11:10:00.000Z	Dr_Willis	arrick	 try it and see. I dont those matter much.
+2006-04-14T11:13:00.000Z	arrick	Dr_Willis	I am hoping to be able to see the hd's in mount, but if I can write is shouldnt be necesary right?, I mean there are only 8 of them on this beast
+2006-04-14T11:13:00.000Z	Dr_Willis	arrick	  im thinking some how  mtab dident get updated right
+2006-04-14T11:13:00.000Z	Dr_Willis	arrick	 ive never seen somthing be mounted and NOT show up
+2006-04-14T11:14:00.000Z	Dr_Willis	arrick	 mtab is auto-generated i  think  you DONT edit it.
+2006-04-15T08:18:00.000Z	Dr_Willis	arrick	 :P
+2006-04-15T08:19:00.000Z	Dr_Willis	arrick	 the fact they were not spinning up was a clue eh?
+2006-04-17T08:44:00.000Z	arrick	Dr_Willis	you think to much :-Ohahahahaa
+2006-04-17T08:44:00.000Z	Dr_Willis	arrick	 yea.. "real work!"  - Bah! -  lets twiddle with themes and  stuff all day!
+2006-04-17T08:47:00.000Z	arrick	Dr_Willis	why do I come in here everyday and find all new names in here? is it just me? or is it because so many new people are trying something new and need help?
+2006-04-17T08:48:00.000Z	Dr_Willis	arrick	 we are so good at helping the newbies.. no one else needs help seting upo the ATI cards, or mp3/dvd/nvidia stuff.. and everyone is now reading the Faq. so they know theres no Root password... ( *yea right*)
+2006-04-17T08:50:00.000Z	arrick	Dr_Willis	well, I have been taught the basics, so now I have read about all of the ubuntu manuals, and when i can't find what I need that is when I ask. I hate askign more than once, but what the hey
+2006-04-17T08:51:00.000Z	Dr_Willis	arrick	 36 :P
+2006-04-20T09:54:00.000Z	arrick	Dr_Willis	sethk check out !root
+2006-04-20T09:59:00.000Z	arrick	Dr_Willis	that better?
+2006-04-24T06:55:00.000Z	arrick	Dr_Willis	you around?
+2006-04-28T08:40:00.000Z	arrick	Dr_Willis	where can I go to get help setting up a bot?
+2006-04-30T11:07:00.000Z	Dr_Willis	arrick	 playing with 'networkmanager'
+2006-05-15T11:03:00.000Z	arrick	Dr_Willis	where is a good forum on basic setup of Windows Server 2003 Enterprise?
+2006-05-15T11:03:00.000Z	Dr_Willis	arrick	 no clue there..  thats beyond my experience. :P
+2006-05-15T11:08:00.000Z	Dr_Willis	arrick	 you proberly need to just fdisk it and delete the ext3 partitions.. then fdisk/format it from a windows box.
+2006-05-15T11:09:00.000Z	Dr_Willis	arrick	 not sure you can create a ntfs parttion/formated from within linux
+2006-05-25T07:40:00.000Z	Dr_Willis	arrick	 any time ive heard of someone needing to do a 'true' low level format... they basicially needed a new hd. :P or a normal format worked fine
+2006-05-25T07:42:00.000Z	arrick	Dr_Willis	you wanna come get this thing up and going? Ive tried 9 hds, and no os will install then boot except "ubuntu server" default ubuntu hangs at "loading grub please wait...." and windows os from 98 to winserv03 all get to the part "setup is starting windows now" and bluescreens, any suggestions?
+2006-05-25T07:43:00.000Z	Dr_Willis	arrick	 so the hd worked good in Pc #2 - but not in PC #1 eh?
+2006-05-25T07:44:00.000Z	Dr_Willis	arrick	 that tells me - its not a HD issue.
+2006-05-25T07:45:00.000Z	Dr_Willis	arrick	 could be some odd overheating issue.. or wiggling.. or any of a 1000 other hw problems with the mb.
+2006-05-25T07:48:00.000Z	arrick	Dr_Willis	its running right about 113 f for proc, and 80 for system temps,
+2006-05-25T07:48:00.000Z	Dr_Willis	arrick	 so its running  good now? just crashes every so often?
+2006-05-25T07:49:00.000Z	arrick	Dr_Willis	nothing will boot but the ubuntu server os
+2006-05-25T07:49:00.000Z	Dr_Willis	arrick	 odd..  makes me wonder if its a cdrom drive issue.
+2006-05-25T07:50:00.000Z	arrick	Dr_Willis	i'll try another (will be the fourth know good) and see what happens
+2006-05-25T07:50:00.000Z	Dr_Willis	arrick	 considering the cheap price of motherboards.. :P gets to a point where ya got to ask which is worth more.. my time or my $$ :P
+2006-05-25T07:51:00.000Z	arrick	Dr_Willis	with ubuntu is installs, throws out the cd, then gets to" GRUB loading, please wait..." and hangs there
+2006-05-25T07:51:00.000Z	arrick	Dr_Willis	free box
+2006-05-25T07:51:00.000Z	Dr_Willis	arrick	 :P makes ya wonder why now.. eh. :P
+2006-05-25T07:51:00.000Z	Dr_Willis	arrick	 the most valueable part of the box is the case eh?

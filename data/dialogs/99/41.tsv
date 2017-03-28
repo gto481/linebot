@@ -1,0 +1,99 @@
+2008-07-25T16:07:00.000Z	wols		aczby telling us the real error
+2008-07-25T16:08:00.000Z	wols		!errors | ActionParsnip
+2008-07-25T16:08:00.000Z	wols		!errors | aozturk
+2008-07-25T16:08:00.000Z	ActionParsnip	wols	huh?
+2008-07-25T16:08:00.000Z	wols	ActionParsnip	sorry, wrong nick
+2008-07-25T16:08:00.000Z	ActionParsnip	wols	np
+2008-07-25T16:12:00.000Z	ActionParsnip	wols	id say the same for compiz :D
+2008-08-05T16:25:00.000Z	wols	ActionParsnip	depends a bit on how you installed it. mostly because nvidia and ati are fscking m.
+2008-08-05T16:42:00.000Z	wols	ActionParsnip	it is a netbook yes
+2008-08-05T17:10:00.000Z	ActionParsnip	wols	you got that link on sudo for gui apps please
+2008-08-07T16:01:00.000Z	ActionParsnip	wols	what soundcard do you recommend?
+2008-08-07T16:02:00.000Z	wols	ActionParsnip	SB Live 5.1 :) works like a charm since forever incl hardware mixer support
+2008-08-07T16:02:00.000Z	wols	ActionParsnip	but most times, juse use the hda on the mobo
+2008-08-07T16:02:00.000Z	wols	ActionParsnip	and the SB live is dirt cheap too
+2008-08-07T16:03:00.000Z	ActionParsnip	wols	just with you saying creative rubbish i figured yo know a sweet card
+2008-08-07T16:03:00.000Z	ActionParsnip	wols	i use onboard too
+2008-08-07T16:04:00.000Z	wols	ActionParsnip	newer creative stuff is rubbish since creative are to stupid to write drivers or give specs for recent OSes
+2008-08-09T23:42:00.000Z	wols	ActionParsnip	P5 is nto a 686
+2008-08-09T23:42:00.000Z	ActionParsnip	wols	i thouugh 686 was anything above a p3
+2008-08-09T23:43:00.000Z	wols	ActionParsnip	P5 = pentium 1. 2 gens before P3
+2008-08-09T23:43:00.000Z	wols	ActionParsnip	and from PPRo onwards all are 686
+2008-08-09T23:43:00.000Z	ActionParsnip	wols	ahhh
+2008-08-20T14:13:00.000Z	ActionParsnip	wols	i did ask ;)
+2008-08-20T14:36:00.000Z	wols	ActionParsnip	how is this ubuntu related
+2008-08-20T14:37:00.000Z	ActionParsnip	wols	security-wise (?)
+2008-08-22T14:43:00.000Z	wols	ActionParsnip	if they are all available. it'S not so simple. a chroot is usually better
+2008-08-22T14:43:00.000Z	wols	ActionParsnip	most of them at least
+2008-08-27T15:21:00.000Z	wols	ActionParsnip	it is no error
+2008-08-27T15:21:00.000Z	ActionParsnip	wols	?
+2008-09-01T01:57:00.000Z	wols	ActionParsnip	it doesn't matter. he's to ignorant to actually read the readme file...
+2008-09-01T01:57:00.000Z	wols	ActionParsnip	in hardy no more. ath5k it is htere
+2008-09-01T01:57:00.000Z	wols	ActionParsnip	E_CHAN
+2008-09-01T01:58:00.000Z	ActionParsnip	wols	im on a Ethernet controller: Atheros Communications Inc. AR5212/AR5213 Multiprotocol MAC/baseband processor (rev 01) and it works fiiiiine
+2008-09-01T02:04:00.000Z	wols	ActionParsnip	fsck on _what_?
+2008-09-01T02:04:00.000Z	ActionParsnip	wols	the sda drive
+2008-09-01T02:04:00.000Z	wols	ActionParsnip	now tell me how one can fsck whole drives...
+2008-09-04T15:45:00.000Z	wols	ActionParsnip	can be. can be a a DSN lookup problem or can simply be latency
+2008-09-04T15:45:00.000Z	ActionParsnip	wols	how can i troubleshoot the dns?
+2008-09-04T15:45:00.000Z	wols	ActionParsnip	does reverse DNS work as intended?
+2008-09-04T15:46:00.000Z	ActionParsnip	wols	do you mean ip to name convertion?
+2008-09-04T15:46:00.000Z	wols	ActionParsnip	yes
+2008-09-04T15:55:00.000Z	ActionParsnip	wols	looks like its checking the www, can you please tell me where to add my routers address as a DNS
+2008-09-04T15:55:00.000Z	wols	ActionParsnip	/etc/hosts is easiest
+2008-09-04T15:58:00.000Z	ActionParsnip	wols	awesome man, i'll get back
+2008-09-04T16:24:00.000Z	ActionParsnip	wols	got it sorted man, added names and ips to /etc/hosts as well as hosts.allow
+2008-09-04T16:24:00.000Z	ActionParsnip	wols	samba is way faster too
+2008-09-04T16:24:00.000Z	ActionParsnip	wols	cheers buddy
+2008-09-04T16:38:00.000Z	wols	ActionParsnip	don't foget uid, gid and umask
+2008-09-04T16:39:00.000Z	ActionParsnip	wols	ooh do tell
+2011-06-18T15:21:00.000Z	wols	ActionParsnip	if there is no eth0 entry in interfaces.... hence why I asked for dhclient0
+2011-06-18T15:22:00.000Z	wols	ActionParsnip	don't give out bad advice like this please
+2011-06-18T15:23:00.000Z	ActionParsnip	wols	if the driver isn't loaded then eth0 wouldn't be upable
+2011-06-18T15:23:00.000Z	wols	ActionParsnip	if the driver i sn't loaded there is no eth0 in the first place, duh
+2011-06-18T15:23:00.000Z	ActionParsnip	wols	yes, hence the link to the driver...
+2011-06-18T15:23:00.000Z	wols	ActionParsnip	but there is a eth0. he told us so
+2011-06-18T15:24:00.000Z	ActionParsnip	wols	lets see how this goes, according to hadware4linux it uses via-velocity
+2011-06-18T15:24:00.000Z	wols	ActionParsnip	and before you tell people to download drivers for 5-10 year old common nics, better check there really isn't a driver for it in the kernel...
+2011-06-18T15:25:00.000Z	ActionParsnip	wols	its just something I found, its a step towards the solution
+2011-06-18T15:32:00.000Z	wols	ActionParsnip	he needs to patch the xfce panel to perform like he wants to. this howto assumes portage but it would (probably) work with apt-get source and patch just as well
+2011-06-18T15:32:00.000Z	ActionParsnip	wols	makes sense, just curious of the link
+2011-06-18T16:34:00.000Z	wols	ActionParsnip	*cough*
+2011-06-18T17:39:00.000Z	ActionParsnip	wols	non-standard..windows.... ;)
+2011-06-18T18:19:00.000Z	ActionParsnip	wols	I think the whole gpu switching idea is a hack
+2011-06-18T18:19:00.000Z	wols	ActionParsnip	it's a fine thing. a very good idea. but in this case the architecture of X doesn't work with it
+2011-06-18T18:20:00.000Z	ActionParsnip	wols	i think the gpu should just clock up and down like cool'n'quiet
+2011-06-18T18:20:00.000Z	wols	ActionParsnip	anything that lets notebooks have more graphicspower while still being able to have long batery life is a good thing
+2011-06-18T18:20:00.000Z	ActionParsnip	wols	true true
+2011-06-19T13:56:00.000Z	wols	ActionParsnip	configure your irc client properly please
+2011-06-19T14:25:00.000Z	ActionParsnip	wols	it is? How do you mean?
+2011-06-19T14:26:00.000Z	ActionParsnip	wols	it's not changed from yesterday and you didn't say anything then...
+2011-06-19T18:01:00.000Z	wols	ActionParsnip	http://paste.ubuntu.com/629360/  this. it totally negates your cloak and it happens cause you join the channel before your nickserv identification is done. either use SASL or wait longer between auth and join
+2011-06-19T18:09:00.000Z	ActionParsnip	wols	cloak doesn't interest me
+2011-06-19T18:09:00.000Z	ActionParsnip	wols	I don't wear a tinfoil hat
+2011-06-19T18:11:00.000Z	ActionParsnip	wols	is taht all you meant?
+2011-06-19T18:12:00.000Z	wols	ActionParsnip	then why do you have one?
+2011-06-19T18:12:00.000Z	ActionParsnip	wols	its part of being a member
+2011-06-19T18:13:00.000Z	ActionParsnip	wols	thanks for the concern though, it is appreciated :)
+2011-06-19T19:17:00.000Z	ActionParsnip	wols	doing it just for you :)
+2011-06-19T19:17:00.000Z	wols	ActionParsnip	good. 2 less lines of spam in #ubuntu
+2011-06-19T19:17:00.000Z	ActionParsnip	wols	thats important. Again, thanks for the heads up
+2011-06-21T21:20:00.000Z	wols	ActionParsnip	intel 945
+2011-06-21T21:21:00.000Z	wols	ActionParsnip	he has given more detail than we wanted. not necessarily the right detail but I definitely give an A for effort...
+2011-06-21T21:22:00.000Z	ActionParsnip	wols	looks like its an 8284G ;)
+2011-06-21T22:26:00.000Z	wols	ActionParsnip	then why ask us? nevermind
+2011-06-21T22:28:00.000Z	ActionParsnip	wols	strange isn't it :)
+2011-06-21T22:28:00.000Z	wols	ActionParsnip	hence: defrag
+2011-07-22T17:04:00.000Z	wols	ActionParsnip	he's talking about grub default selection (so far), nothing about autostart. he must be confused
+2011-07-22T17:32:00.000Z	wols	ActionParsnip	I doubt he wants to
+2011-07-22T17:32:00.000Z	ActionParsnip	wols	why?
+2011-07-22T17:32:00.000Z	wols	ActionParsnip	read the log
+2011-07-22T17:33:00.000Z	ActionParsnip	wols	I'm not following you
+2011-07-22T20:15:00.000Z	ActionParsnip	wols	might not be enabled in BIOS
+2011-07-22T20:40:00.000Z	ActionParsnip	wols	why not use nvidia-xconfig
+2012-10-13T12:52:00.000Z	wols	ActionParsnip	but will it install the changes to the install?
+2012-10-13T12:53:00.000Z	ActionParsnip	wols	I'm not sure the packages which are updated go to then ne installed if the same media is used to install an OS
+2012-10-13T12:53:00.000Z	wols	ActionParsnip	persistence uses a unionfs or such, right?
+2012-10-13T12:55:00.000Z	ActionParsnip	wols	if memory serves, yes
+2012-11-02T19:31:00.000Z	wols	ActionParsnip	it's not the cron thing that is the problem :)
+2012-11-02T19:31:00.000Z	ActionParsnip	wols	i see

@@ -1,0 +1,97 @@
+2008-11-07T08:35:00.000Z	toastedmilk		Is there any way to access time machine restricted files from an external hard drive on Hardy?
+2008-11-07T08:35:00.000Z	karsten	toastedmilk	???
+2008-11-07T08:35:00.000Z	karsten	toastedmilk	time machine == Apple's file storage wireless thing?
+2008-11-07T08:36:00.000Z	toastedmilk	karsten	my roommate has mac with time machine on his external harddrive.  I want his music files on my pc.  (Time Machine = backup utility for Mac's Leopard)  But it tells me I'm not authorized, and doesn't provide an option to enter a pass
+2008-11-07T08:36:00.000Z	karsten	toastedmilk	What's the protocol?  smbfs?
+2008-11-07T08:40:00.000Z	toastedmilk	karsten	where do I find the protocol?
+2008-11-07T08:41:00.000Z	karsten	toastedmilk	What protocol?
+2008-11-07T08:41:00.000Z	toastedmilk	karsten	my roommate has mac with time machine on his external harddrive.  I want his music files on my pc.  (Time Machine = backup utility for Mac's Leopard)  But it tells me I'm not authorized, and doesn't provide an option to enter a pass
+2008-11-07T08:41:00.000Z	karsten	toastedmilk	Oh.  How do you access the time machine?
+2008-11-07T08:41:00.000Z	toastedmilk	karsten	you asked what protocol
+2008-11-07T08:41:00.000Z	karsten	toastedmilk	Web access?  Is it like a filesystem?  what?
+2008-11-07T08:41:00.000Z	toastedmilk	karsten	firewire to usb to my computer
+2008-11-07T08:41:00.000Z	karsten	toastedmilk	Mounted as a disk?
+2008-11-07T08:41:00.000Z	toastedmilk	karsten	no, juts plugged in
+2008-11-07T08:42:00.000Z	toastedmilk	karsten	I'm not exactly accessing time machine
+2008-11-07T08:42:00.000Z	karsten	toastedmilk	what does 'mount' show for the time machine?
+2008-11-07T08:42:00.000Z	toastedmilk	karsten	just scrolling the folders in the hdd
+2008-11-07T08:42:00.000Z	toastedmilk	karsten	it says I do not have the permissions to access the files
+2008-11-07T08:43:00.000Z	karsten	toastedmilk	what does 'mount' show you for the time-machine mount?  Run:  'mount; cat /proc/mounts' and pastebin the output.
+2008-11-07T08:44:00.000Z	toastedmilk	karsten	what pastebin url does this channel use?
+2008-11-07T08:44:00.000Z	karsten	toastedmilk	I don't care. Just post the url when you're done
+2008-11-07T08:44:00.000Z	karsten	toastedmilk	http://channels.debian.net/paste works for me.
+2008-11-07T08:46:00.000Z	toastedmilk	karsten	http://paste.pocoo.org/show/90442/
+2008-11-07T08:49:00.000Z	karsten	toastedmilk	Sec.
+2008-11-07T08:49:00.000Z	karsten	toastedmilk	Best I can tell:  that's mounted directly as hfsplus.  You should be able to access anything as root.
+2008-11-07T08:50:00.000Z	karsten	toastedmilk	... assuming no gimfoolery on the part of Apple, which I won't guarantee.
+2008-11-07T08:50:00.000Z	toastedmilk	karsten	gimfoolery?
+2008-11-07T08:50:00.000Z	karsten	toastedmilk	Too-clever electronics, DRM, or similar.
+2008-11-07T08:51:00.000Z	karsten	toastedmilk	http://www.google.com/search?hl=en&sa=X&oi=spell&resnum=0&ct=result&cd=1&q=define%3Atomfoolery&spell=1
+2008-11-07T08:51:00.000Z	toastedmilk	karsten	I know what tomfoolery is! just not 'gim'!
+2008-11-07T08:51:00.000Z	karsten	toastedmilk	I may have made that up ;-)
+2008-11-07T08:52:00.000Z	toastedmilk	karsten	hehe
+2008-11-07T08:53:00.000Z	karsten	toastedmilk	Unclosed quote in shell.
+2008-11-07T08:53:00.000Z	toastedmilk	karsten	well the directory im copying from has a ' in it
+2008-11-07T08:54:00.000Z	toastedmilk	karsten	use quotes?
+2008-11-07T08:55:00.000Z	toastedmilk	karsten	mark@ToastedMilk:~$ suo cp "//media/ /Backups.backupdb/yans' apple/Latest/ /Users/YAWN/Music" chmod +x /home/mark/Music
+2008-11-07T08:56:00.000Z	karsten	toastedmilk	That'll do it.
+2008-11-07T08:56:00.000Z	karsten	toastedmilk	If a file has a single or double quote in it, you've got to quote or escape it.
+2008-11-07T08:57:00.000Z	karsten	toastedmilk	So, say, "Mom's Recipies" has to be specified, like that, or as "cp Mom\s\ Recipies
+2008-11-07T08:57:00.000Z	toastedmilk	karsten	also I put chmod +x in between where I wanted to copy from and where I wanted to copy to, and it wasn't working
+2008-11-07T08:57:00.000Z	karsten	toastedmilk	... which gets to be a pain.  If you can avoid creating filenames with quotes and spaces, so much the better.
+2008-11-07T08:58:00.000Z	toastedmilk	karsten	mark@ToastedMilk:~$ sudo cp "//media/ /Backups.backupdb/yans' apple/Latest/ /Users/YAWN/Music"  /home/mark/Music
+2008-11-07T08:58:00.000Z	karsten	toastedmilk	Oh dear sweet ogd.
+2008-11-07T08:59:00.000Z	toastedmilk	karsten	It's not my harddrive!  Like I said they're his Time Machine backups.  I just want the music!
+2008-11-07T08:59:00.000Z	karsten	toastedmilk	That should work.
+2008-11-07T08:59:00.000Z	karsten	toastedmilk	Yeah, I know.
+2008-11-07T08:59:00.000Z	toastedmilk	karsten	it brings back cp: omitting directory
+2008-11-07T08:59:00.000Z	toastedmilk	karsten	the hell is it doing that for?
+2008-11-07T08:59:00.000Z	karsten	toastedmilk	'-R' for recursive copy.
+2008-11-07T08:59:00.000Z	karsten	toastedmilk	cp does just files by default.
+2008-11-07T08:59:00.000Z	toastedmilk	karsten	so -R instead of cp ??
+2008-11-07T09:00:00.000Z	karsten	toastedmilk	No.  'cp -R <stuff> <destination>'
+2008-11-07T09:00:00.000Z	karsten	toastedmilk	man cp
+2008-11-07T09:00:00.000Z	toastedmilk	karsten	ty sir
+2008-11-07T09:00:00.000Z	karsten	toastedmilk	I'm out for the evening, have fun.
+2008-11-07T09:01:00.000Z	toastedmilk	karsten	one sec.  It brought back a blank line
+2008-11-07T09:03:00.000Z	toastedmilk	karsten	I copied them successfully but still don't have the permissions
+2008-11-07T09:03:00.000Z	karsten	toastedmilk	Perms how?
+2008-11-07T09:07:00.000Z	toastedmilk	karsten	It says I don't have permissions to view the folder.  that's it
+2008-11-07T09:07:00.000Z	toastedmilk	karsten	cannot display the files of folder blah blah, you do not have the permissions necessary
+2008-11-07T09:07:00.000Z	karsten	toastedmilk	On the sources, or the stuff you've copied?
+2008-11-07T09:07:00.000Z	toastedmilk	karsten	on what I've copied
+2008-11-07T09:08:00.000Z	toastedmilk	karsten	is there some way to remove the permissions from terminal?
+2008-11-07T09:08:00.000Z	karsten	toastedmilk	You did run a 'sudo cp ...' right?
+2008-11-07T09:09:00.000Z	toastedmilk	karsten	correct
+2008-11-07T09:09:00.000Z	karsten	toastedmilk	on the _destination_ tree:   sudo chown -R <your userid> .
+2008-11-07T09:09:00.000Z	karsten	toastedmilk	Recursively changes ownership to your user.  Root preserved file ownerships when it copied.
+2008-11-07T09:10:00.000Z	karsten	toastedmilk	tar is a utility you could have used to accomplish that in one step, research tar a bit.  Basically:  sudo tar cvf - <source> | ( cd destination; tar xf - )
+2008-11-07T09:11:00.000Z	karsten	toastedmilk	... which creates the archive as root (so it has access permission) but unpacks it as yourself (so it creates files with your ownership), all in a pipeline.
+2008-11-07T09:11:00.000Z	karsten	toastedmilk	It's a classic sysadmin trick.
+2008-11-07T09:11:00.000Z	toastedmilk	karsten	with parentheses? or no
+2008-11-07T09:11:00.000Z	karsten	toastedmilk	Yes, the parens start a subshell.
+2008-11-07T09:12:00.000Z	toastedmilk	karsten	can I do this locally or do I need to reinert the external?
+2008-11-07T09:12:00.000Z	karsten	toastedmilk	It's not something you want to do right now.
+2008-11-07T09:13:00.000Z	karsten	toastedmilk	Just a technique for future reference.
+2008-11-07T09:13:00.000Z	toastedmilk	karsten	right before I hit enter
+2008-11-07T09:13:00.000Z	karsten	toastedmilk	chown will do you fro now.
+2008-11-07T09:13:00.000Z	karsten	toastedmilk	;)
+2008-11-07T09:13:00.000Z	toastedmilk	karsten	chown didn't work
+2008-11-07T09:13:00.000Z	toastedmilk	karsten	'sudo chown -R mark'?
+2008-11-07T09:13:00.000Z	karsten	toastedmilk	sudo chown -R mark .
+2008-11-07T09:14:00.000Z	karsten	toastedmilk	The '.' is significant.
+2008-11-07T09:14:00.000Z	karsten	toastedmilk	It means the current directory.
+2008-11-07T09:14:00.000Z	karsten	toastedmilk	So:  "chwon -R mark ." is the command
+2008-11-07T09:14:00.000Z	karsten	toastedmilk	*WITH* the dot.
+2008-11-07T09:15:00.000Z	toastedmilk	karsten	OH! thankies
+2008-11-07T09:15:00.000Z	karsten	toastedmilk	Synopsis:  chown <options> <userid> <files>
+2008-11-07T09:15:00.000Z	toastedmilk	karsten	chown: cannot read directory `./Music': Permission denied
+2008-11-07T09:15:00.000Z	karsten	toastedmilk	'.' == current working directory.  '..' == parent
+2008-11-07T09:15:00.000Z	karsten	toastedmilk	With  sudo?
+2008-11-07T09:16:00.000Z	toastedmilk	karsten	Thank you thank you thank you!
+2008-11-07T09:16:00.000Z	toastedmilk	karsten	but wait... ><  all the files are locked
+2008-11-07T09:16:00.000Z	karsten	toastedmilk	??
+2008-11-07T09:16:00.000Z	toastedmilk	karsten	they're all read only files
+2008-11-07T09:17:00.000Z	karsten	toastedmilk	They're music files, right?  mp3s or FLAC or something?
+2008-11-07T09:17:00.000Z	toastedmilk	karsten	well folders with music in them
+2008-11-07T09:17:00.000Z	toastedmilk	karsten	but the folders all come up as read only's without permissions

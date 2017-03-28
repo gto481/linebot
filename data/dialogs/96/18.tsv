@@ -1,0 +1,96 @@
+2009-07-12T02:34:00.000Z	Andorin		How do I set a static IP address in Ubuntu?
+2009-07-12T02:35:00.000Z	MaT-dg	Andorin	right-click on the networkmanager icon > edit connections
+2009-07-12T02:36:00.000Z	MaT-dg	Andorin	then choose the correct interface and add press the 'add' button
+2009-07-12T02:45:00.000Z	Andorin	MaT-dg	Okay, I'll do that.
+2009-07-12T02:36:00.000Z	MaT-dg	Andorin	go to the IPv4 tab an set the method to manually
+2009-07-12T02:36:00.000Z	MaT-dg	Andorin	correction 'manual'
+2009-07-12T02:37:00.000Z	Andorin	MaT-dg	Alright. It wants address, netmask and gateway. How do I find those?
+2009-07-12T02:37:00.000Z	MaT-dg	Andorin	u mean u want to know what u have to fill in?
+2009-07-12T02:38:00.000Z	Andorin	MaT-dg	Sort of. I've been having massive trouble with port forwarding and guides say to set a static IP address for my computer. I'm trying to follow them but there is so much I do not understand.
+2009-07-12T02:39:00.000Z	MaT-dg	Andorin	I suppose u have a router?
+2009-07-12T02:39:00.000Z	Andorin	MaT-dg	Yep.
+2009-07-12T02:41:00.000Z	MaT-dg	Andorin	okay, right click on the networkmanager icon again and choose 'connection information'
+2009-07-12T02:41:00.000Z	Andorin	MaT-dg	It brings up a window with some information.
+2009-07-12T02:41:00.000Z	MaT-dg	Andorin	then select the correct interface
+2009-07-12T02:43:00.000Z	MaT-dg	Andorin	and then look for the IP Adress, subnet mask, default route and primairy DNS
+2009-07-12T02:43:00.000Z	Andorin	MaT-dg	Yep, I see all that.
+2009-07-12T02:45:00.000Z	MaT-dg	Andorin	okay now we can fill in those things in the manual IP config
+2009-07-12T02:46:00.000Z	MaT-dg	Andorin	Address is the IP Address (the last number can be different though, you can choose one that isn't already taken on the network
+2009-07-12T02:46:00.000Z	Andorin	MaT-dg	What do I put for gateway?
+2009-07-12T02:46:00.000Z	MaT-dg	Andorin	Netmask is the Subnet Mask
+2009-07-12T02:46:00.000Z	MaT-dg	Andorin	gateway is the Default Route
+2009-07-12T02:47:00.000Z	MaT-dg	Andorin	and DNS Servers is 'Primary DNS'
+2009-07-12T02:47:00.000Z	Andorin	MaT-dg	Alright. I hit Apply and apparently now I'm connected through this connection.
+2009-07-12T02:48:00.000Z	MaT-dg	Andorin	okay, it should be static now
+2009-07-12T02:49:00.000Z	Andorin	MaT-dg	Alright, now although IRC is working, Pidgin won't connect and Firefox won't load web pages.
+2009-07-12T02:50:00.000Z	MaT-dg	Andorin	try restarting them
+2009-07-12T02:50:00.000Z	Andorin	MaT-dg	Nope, still won't.
+2009-07-12T02:52:00.000Z	MaT-dg	Andorin	can u tell me what addresses u have filled in?
+2009-07-12T02:52:00.000Z	Andorin	MaT-dg	Also, when I run ifconfig it shows a computer IP different from the static IP I set.
+2009-07-12T02:53:00.000Z	MaT-dg	Andorin	are you sure u are using the new profile?
+2009-07-12T02:53:00.000Z	Andorin	MaT-dg	I..... think so. The icon says I'm connected to it.
+2009-07-12T02:54:00.000Z	MaT-dg	Andorin	try reconnecting then
+2009-07-12T02:58:00.000Z	Andorin	MaT-dg	Had to switch over to my laptop because now my PC is not giving me any Internet access at all.
+2009-07-12T02:59:00.000Z	Andorin	MaT-dg	Wait, it gives me a connection if I use the new connection, but not the old one.
+2009-07-12T02:59:00.000Z	MaT-dg	Andorin	okay, can u give me the output of ifconfig?
+2009-07-12T03:00:00.000Z	Andorin	MaT-dg	One sec.
+2009-07-12T03:01:00.000Z	Andorin	MaT-dg	http://pastebin.com/d38777e4e
+2009-07-12T03:03:00.000Z	MaT-dg	Andorin	so that is the static config and is not working?
+2009-07-12T03:03:00.000Z	Andorin	MaT-dg	When I connect through the new connection, that we just made, it gives me access.
+2009-07-12T03:04:00.000Z	MaT-dg	Andorin	then there is no problem anymore?
+2009-07-12T03:05:00.000Z	Andorin	MaT-dg	Well.... I'm not sure. The big issue behind all this has been port forwarding. I guess I get to test that now.
+2009-07-12T03:08:00.000Z	Andorin	MaT-dg	It looks like I still have my underlying issue: Ports will /not/ open.
+2009-07-12T03:10:00.000Z	MaT-dg	Andorin	well, a static IP and port forwarding are not related very much, when you fill in the correct IP in the router it works whether the IP is static or dynamic
+2009-07-12T03:10:00.000Z	MaT-dg	Andorin	what application needs the forwarding?
+2009-07-12T03:10:00.000Z	Andorin	MaT-dg	Deluge.
+2009-07-12T03:12:00.000Z	MaT-dg	Andorin	sec I'll install it to know what I'm talking about ^^
+2009-07-12T03:12:00.000Z	Andorin	MaT-dg	The trouble was that my torrents wouldn't seed much at all. Now they ARE seeding, but Deluge still reports the port as being closed. Perhaps I ought to leave it alone now that it's working again.
+2009-07-12T03:14:00.000Z	MaT-dg	Andorin	in deluge, do u have random ports disabled?
+2009-07-12T03:14:00.000Z	Andorin	MaT-dg	Yes, I have it set to use one specific port, which should be opened according to my router.
+2009-07-12T03:14:00.000Z	MaT-dg	Andorin	ok, is it a high number like somewhere above 40 000 ?
+2009-07-12T03:15:00.000Z	Andorin	MaT-dg	Yeah, it's 58552. On my router I have 55001-62999 set to open for the address of this computer.
+2009-07-12T03:16:00.000Z	MaT-dg	Andorin	isn't that port range triggering?
+2009-07-12T03:16:00.000Z	Andorin	MaT-dg	I don't know anything about port triggering. I have it set, on my router, under Port Range Forward.
+2009-07-12T03:16:00.000Z	MaT-dg	Andorin	there's no need to set so many ports open since u configured only one
+2009-07-12T03:17:00.000Z	MaT-dg	Andorin	ah port range forward, the name can be a little different on each router but it's the same :) What u need is port forwarding
+2009-07-12T03:18:00.000Z	MaT-dg	Andorin	you should find it somewhere close to port range forwarding
+2009-07-12T03:18:00.000Z	Andorin	MaT-dg	I have Port Range Forward, Port Triggering, DMZ and QoS.
+2009-07-12T03:19:00.000Z	Andorin	MaT-dg	My modem is in DMZ so I don't think I want to set my router to it unless I have to..
+2009-07-12T03:19:00.000Z	MaT-dg	Andorin	Port Triggering should be it
+2009-07-12T03:20:00.000Z	Andorin	MaT-dg	Alright, I get two sections for inputting port information... I have start/end for Triggered Range, and start/end for Forwarded Range.
+2009-07-12T03:22:00.000Z	MaT-dg	Andorin	hmm I didn't expect ranges... with port forwarding you should forward only 1 port so there's no need for ranges...
+2009-07-12T03:23:00.000Z	MaT-dg	Andorin	or maybe your router is more advanced then the ones I worked with.. but I'm somewhat lost here since I don't know exactly what you are seeing
+2009-07-12T03:23:00.000Z	Andorin	MaT-dg	My router is a linksys WRT54G, if that helps.
+2009-07-12T03:24:00.000Z	MaT-dg	Andorin	nice router ^^ I have a linksys to gathering dust atm, I'll get it and connect with it.. I think the menu's are about the same
+2009-07-12T03:24:00.000Z	Andorin	MaT-dg	Probably.
+2009-07-12T03:28:00.000Z	MaT-dg	Andorin	is it omething like this that u see? http://npds.free.fr/docs/new/LinksysWRT54G.jpg
+2009-07-12T03:28:00.000Z	Andorin	MaT-dg	That's pretty close; the only difference is that I also have the Port Triggering and DMZ subsections.
+2009-07-12T03:30:00.000Z	Andorin	MaT-dg	But yes, it is basically what I see.
+2009-07-12T03:31:00.000Z	MaT-dg	Andorin	key sec, got the wrong adapter xD
+2009-07-12T03:32:00.000Z	Andorin	MaT-dg	Alright, take your time.
+2009-07-12T03:44:00.000Z	MaT-dg	Andorin	I don't get the damn thing to work... I'll have to guess then
+2009-07-12T03:47:00.000Z	Andorin	MaT-dg	What are you trying to determine? Where I open ports on this router?
+2009-07-12T03:48:00.000Z	MaT-dg	Andorin	oh wait, I got it... full reset xD now.. what's the default user pass on a linksys router?
+2009-07-12T03:48:00.000Z	Andorin	MaT-dg	Should just be admin/admin
+2009-07-12T03:48:00.000Z	MaT-dg	Andorin	yeah, I want to see what u are seeing
+2009-07-12T03:52:00.000Z	MaT-dg	Andorin	okay got it somehow
+2009-07-12T03:52:00.000Z	MaT-dg	Andorin	now, on my router I also have the option 'Single port forwarding' Do you have that?
+2009-07-12T03:53:00.000Z	Andorin	MaT-dg	Where is that under?
+2009-07-12T03:54:00.000Z	MaT-dg	Andorin	like in the screenshot under apllications and gaming
+2009-07-12T03:55:00.000Z	Andorin	MaT-dg	Nope, I see nothing labeled single port forwarding.
+2009-07-12T03:56:00.000Z	MaT-dg	Andorin	okay than we'll have to do it with a range. Try 'Port Range Forwarding', fill in your port from deluge  in both start and end (range of 1 port ^^), set the protocol to both and use your staic IP\
+2009-07-12T03:57:00.000Z	Andorin	MaT-dg	Ok, setting now
+2009-07-12T03:58:00.000Z	Andorin	MaT-dg	I set it, but Deluge still thinks the port is closed.
+2009-07-12T04:03:00.000Z	MaT-dg	Andorin	how do you see that? in the network preferences?
+2009-07-12T04:04:00.000Z	Andorin	MaT-dg	No, I have Deluge test the active port.
+2009-07-12T04:05:00.000Z	MaT-dg	Andorin	yes, that's what I meant. I have tested it here (with my current router, not the linksys) and when I forwarded the port deluge noticed it right away so the problem is with the router
+2009-07-12T04:07:00.000Z	MaT-dg	Andorin	can you config your machine in the DMZ of the router?
+2009-07-12T04:07:00.000Z	Andorin	MaT-dg	If I need to set DMZ, I can.
+2009-07-12T04:07:00.000Z	MaT-dg	Andorin	yes, just for testing purpose
+2009-07-12T04:09:00.000Z	Andorin	MaT-dg	DMZ set.
+2009-07-12T04:09:00.000Z	MaT-dg	Andorin	okay, let's see what deluge thinks about the port now
+2009-07-12T04:11:00.000Z	Andorin	MaT-dg	Still registers as closed. Perhaps I should set my modem to DMZ as well?
+2009-07-12T04:13:00.000Z	MaT-dg	Andorin	I don't think so, your modem just passes everything to the router... unless your modem has a built-in router
+2009-07-12T04:14:00.000Z	Andorin	MaT-dg	I could check.
+2009-07-12T04:15:00.000Z	Andorin	MaT-dg	I don't think it does.
+2009-07-12T04:15:00.000Z	MaT-dg	Andorin	check the linsys status page and see what IP Adress you find there (pm it to me)

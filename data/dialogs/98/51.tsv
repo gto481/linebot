@@ -1,0 +1,98 @@
+2006-12-13T15:03:00.000Z	Bray		yoshing3 It's not buggy so much as it is not as user friendly as Windows
+2006-12-13T15:03:00.000Z	Bray		Which is why 80% of computer users use Windows
+2006-12-13T15:05:00.000Z	Pie-rate	Bray	80%? Don't you mean 95%?
+2006-12-13T15:05:00.000Z	Bray	Pie-rate	No, I mean 80. 19% is Mac, 1% is Linux. Mind you these are rather rough numbers.
+2006-12-13T15:11:00.000Z	Pie-rate	Bray	how is vista better?
+2006-12-13T15:11:00.000Z	Bray	Pie-rate	Let's see. You don't need to type a rediculous amount of crap to install something. It always works right. You don't have to download drivers for everything you have just to get it all working. I could go on, but that seems sufficient.
+2006-12-13T15:14:00.000Z	Bray	Pie-rate	I'm in here because I'm trying to get WoW working with Ubuntu, and because I think VISTA solely is better than Ubuntu. XP can kiss Ubuntu's ass
+2006-12-13T15:15:00.000Z	Pie-rate	Bray	Vista will be just as insecure as every version of windows before it. I'm sure of it and I won't be switching to it. That aside, what problems are you having getting WoW working?
+2006-12-13T15:16:00.000Z	Bray	Pie-rate	Well currently I'm having problems compiling Wine. I get this error when I type "make depend": make: *** No rule to make target `depend'.  Stop.
+2006-12-13T15:17:00.000Z	Pie-rate	Bray	Don't bother, go to winehq.com, add the ubuntu repository to synaptic, and install wine from that.
+2006-12-13T15:17:00.000Z	Pie-rate	Bray	that'll get you 0.9.27, the most recent version, and it works perfectly for me
+2006-12-13T15:17:00.000Z	Bray	Pie-rate	You mean you can play WoW?
+2006-12-13T15:18:00.000Z	Pie-rate	Bray	Yes
+2006-12-13T15:18:00.000Z	Bray	Pie-rate	Really... So I've been bothering with this for nothing?
+2006-12-13T15:18:00.000Z	Pie-rate	Bray	you're probably following an old guide that's telling you to use a patch?
+2006-12-13T15:18:00.000Z	Pie-rate	Bray	pretty much
+2006-12-13T15:18:00.000Z	Bray	Pie-rate	Yeah, and it's also trying to get me to install .24
+2006-12-13T15:19:00.000Z	Pie-rate	Bray	Yeah, starting with .26 it works with WoW "out of the box"
+2006-12-13T15:19:00.000Z	Bray	Pie-rate	Son of a mother... well I think you may have saved me a bunch of time... only time will tell, lol
+2006-12-13T15:22:00.000Z	Bray	Pie-rate	How do I add the .deb to Synaptics?
+2006-12-13T15:22:00.000Z	Pie-rate	Bray	1 sec figuring it out
+2006-12-13T15:23:00.000Z	Pie-rate	Bray	settings->repositories->third party
+2006-12-13T15:30:00.000Z	Pie-rate	Bray	once you've installed WoW, you need to change config.wtf so that it sets gxapi to opengl, and some sound things
+2006-12-13T15:31:00.000Z	Bray	Pie-rate	Did all those already, lol
+2006-12-13T15:32:00.000Z	Pie-rate	Bray	then go into the World of Warcraft directory, and type "wine WoW.exe" (case sensitive) and it should run
+2006-12-13T15:34:00.000Z	Bray	Pie-rate	dag nabbit, it's doing the same thing it did last time... it pops up with some weird designs on the screen and a large square cursor
+2006-12-13T15:36:00.000Z	Pie-rate	Bray	that's strange.
+2006-12-13T15:36:00.000Z	Bray	Pie-rate	I know it is. It's so freaking annoying too
+2006-12-13T15:37:00.000Z	Pie-rate	Bray	are you sure its wine 0.9.27?
+2006-12-13T15:37:00.000Z	Bray	Pie-rate	I think I've given up ever playing WoW on my laptop with Ubuntu anymore
+2006-12-13T15:37:00.000Z	Bray	Pie-rate	Of course I'm sure, lol
+2006-12-13T15:37:00.000Z	Bray	Pie-rate	Even if it weren't, it would be 9,26
+2006-12-13T15:38:00.000Z	Pie-rate	Bray	are you running an nvidia card?
+2006-12-13T15:38:00.000Z	Bray	Pie-rate	Nope, an integrated Intel card
+2006-12-13T15:38:00.000Z	Pie-rate	Bray	what does "glxinfo|grepdirect" give you?
+2006-12-13T15:39:00.000Z	Bray	Pie-rate	I'll tell you in a sec
+2006-12-13T15:39:00.000Z	Pie-rate	Bray	its also likely that an integrated intel card will have a lot of trouble running WoW with reasonable FPS, have you tried it on windows?
+2006-12-13T15:40:00.000Z	Pie-rate	Bray	what's that libGL warning from?
+2006-12-13T15:40:00.000Z	Pie-rate	Bray	wine?
+2006-12-13T15:40:00.000Z	Bray	Pie-rate	From when I did "glxinfo |grep direct"
+2006-12-13T15:41:00.000Z	Pie-rate	Bray	that line does not contain the word "direct"
+2006-12-13T15:41:00.000Z	Pie-rate	Bray	I find that extremely hard to believe
+2006-12-13T15:42:00.000Z	Pie-rate	Bray	ACtually, i don't, that's probably stderr
+2006-12-13T15:42:00.000Z	Bray	Pie-rate	What about the "direct rendering: Yes" part?
+2006-12-13T15:42:00.000Z	Pie-rate	Bray	one sec
+2006-12-13T15:42:00.000Z	Pie-rate	Bray	that's a good thing
+2006-12-13T15:42:00.000Z	Bray	Pie-rate	A ray of hope perhaps?
+2006-12-13T15:43:00.000Z	Pie-rate	Bray	does wine display the same error when you run it?
+2006-12-13T15:43:00.000Z	Bray	Pie-rate	the libGL warning?
+2006-12-13T15:43:00.000Z	Pie-rate	Bray	yes
+2006-12-13T15:43:00.000Z	Bray	Pie-rate	Yes
+2006-12-13T15:44:00.000Z	Pie-rate	Bray	googling, but so far no forum posts about it have been resolved
+2006-12-13T15:45:00.000Z	Bray	Pie-rate	Well dang... I'll look around also, see if I can find anything
+2006-12-13T15:45:00.000Z	Pie-rate	Bray	do you think you could paste the entire output of "wine WoW.exe" to
+2006-12-13T15:46:00.000Z	Bray	Pie-rate	Yeah, just a sec
+2006-12-13T15:48:00.000Z	Bray	Pie-rate	There's the paste
+2006-12-13T15:51:00.000Z	Pie-rate	Bray	I found a couple things suggested by various forums to try. Try running "gksudo gedit /etc/X11/xorg.conf" and changing the "Driver" line under the "Device" section to "Driver "vesa""
+2006-12-13T15:53:00.000Z	Bray	Pie-rate	When I did the "gksudo gedit /etc/X11/xorg.conf" command, it prompted me for my password and nothing else happened.
+2006-12-13T15:55:00.000Z	Pie-rate	Bray	did you put in your password?
+2006-12-13T15:55:00.000Z	Bray	Pie-rate	Yeah, and it just brought up "bray@bray-laptop:~$" again
+2006-12-13T15:56:00.000Z	Pie-rate	Bray	that is pretty strange...
+2006-12-13T15:56:00.000Z	Bray	Pie-rate	I think my laptop is haunted, lol
+2006-12-13T15:56:00.000Z	Pie-rate	Bray	type gedit
+2006-12-13T15:57:00.000Z	Pie-rate	Bray	.................. O.o
+2006-12-13T15:57:00.000Z	Bray	Pie-rate	I take it that's no good?
+2006-12-13T15:57:00.000Z	Pie-rate	Bray	sudo apt-get install gedit
+2006-12-13T15:58:00.000Z	Bray	Pie-rate	alright, now let's try that other command again
+2006-12-13T15:58:00.000Z	Bray	Pie-rate	There we go, now it opened up
+2006-12-13T15:59:00.000Z	Pie-rate	Bray	are you running 6.10 edgy? when i installed ubuntu it came with gedit already installed
+2006-12-13T15:59:00.000Z	Bray	Pie-rate	Yeah, I'm using edgy... it might be because I'm using Xubuntu...
+2006-12-13T16:00:00.000Z	Pie-rate	Bray	that'd do it
+2006-12-13T16:04:00.000Z	Bray	Pie-rate	That little fix didn
+2006-12-13T16:05:00.000Z	Pie-rate	Bray	you need to restart X
+2006-12-13T16:05:00.000Z	Pie-rate	Bray	I don't know how to do that on xubuntu
+2006-12-13T16:05:00.000Z	Bray	Pie-rate	The commands are all the same as on Ubuntu, and xfce is so like Gnome that it hurts
+2006-12-13T16:06:00.000Z	Pie-rate	Bray	try ctrl+alt+backspace (MAKE SURE YOU SAVE ANY WORK FIRST)
+2006-12-13T16:08:00.000Z	Pie-rate	Bray	yeah
+2006-12-13T16:09:00.000Z	Pie-rate	Bray	working?
+2006-12-13T16:10:00.000Z	Bray	Pie-rate	Well a pop-up came up and said something along the lines of "Hardware changed. Wanna go back to default?" To which I said "No" and then my screen flickered as a bunch of things showed up on the Terminal and it said that 3D accelleration wouldn
+2006-12-13T16:11:00.000Z	Pie-rate	Bray	dammit. what does glxinfo|grep direct say?
+2006-12-13T16:13:00.000Z	Pie-rate	Bray	type mv /etc/X11/xorg.conf~ /etc/X11/xorg.conf
+2006-12-13T16:14:00.000Z	Pie-rate	Bray	sorry, forgot to tell you to do sudo
+2006-12-13T16:14:00.000Z	Bray	Pie-rate	ah
+2006-12-13T16:15:00.000Z	Pie-rate	Bray	answer n and then do the same command with sudo in front of it
+2006-12-13T16:15:00.000Z	Pie-rate	Bray	does WoW look like this, by any chance? http://forums.fedoraforum.org/attachment.php?attachmentid=10712
+2006-12-13T16:16:00.000Z	Bray	Pie-rate	No, in fact, it looks a lot worse
+2006-12-13T16:17:00.000Z	Bray	Pie-rate	btw, when I did that command it prompted me for my password (which I gave) and the brought up a command line again
+2006-12-13T16:17:00.000Z	Pie-rate	Bray	yeah then it worked
+2006-12-13T16:17:00.000Z	Pie-rate	Bray	restart X again (ctrl alt backspace)
+2006-12-13T16:18:00.000Z	Bray	Pie-rate	ok
+2006-12-13T16:20:00.000Z	Bray	Pie-rate	Well I'm still getting the messed up picture, but this time it had sound!
+2006-12-13T16:20:00.000Z	Pie-rate	Bray	yeah it should be exactly the same as before
+2006-12-13T16:21:00.000Z	Bray	Pie-rate	I see, ok
+2006-12-13T16:21:00.000Z	Bray	Pie-rate	I should really go to bed, but we're actually making progress... so I think I'll stick around, lol
+2006-12-13T16:24:00.000Z	Bray	Pie-rate	Will you be on later? As in like... around 2 Pacific Standard time?
+2006-12-13T16:28:00.000Z	Bray	Pie-rate	Hey, I'm gonna head out... will you be on around 14:00 for a little more help? lol, I feel so useless
+2006-12-13T16:33:00.000Z	Pie-rate	Bray	i'm in here all the time
+2006-12-13T16:33:00.000Z	Bray	Pie-rate	Good thing, lol, I'll need your help still, XD

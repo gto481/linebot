@@ -1,0 +1,97 @@
+2005-11-28T17:00:00.000Z	gnomefreak		brb i hope
+2005-11-28T12:36:00.000Z	gnomefreak		hda,hdb,hdc is used in linux :)
+2005-11-28T12:37:00.000Z	gnomefreak		/mnt/pornstorage   would mount a file foe storage of your porn?
+2005-11-28T12:38:00.000Z	Dr_Willis	gnomefreak	 :P
+2005-11-29T08:31:00.000Z	Dr_Willis	gnomefreak	 offline machine is my guess.
+2005-11-29T08:31:00.000Z	gnomefreak	Dr_Willis	 ummmmmmmm wouldnt you need internet connection to download them?
+2005-11-29T08:32:00.000Z	Dr_Willis	gnomefreak	 hes wantoing to dowload them on machine X.. and copy them to machine Y.
+2005-11-29T08:37:00.000Z	gnomefreak	Dr_Willis	losty said he wanted spanish so me and thoreauputic  gave the es output from ubotu :)
+2005-11-30T07:45:00.000Z	gnomefreak	Dr_Willis	 i think nalioth  was right hes just spamming the room
+2005-11-30T07:46:00.000Z	Dr_Willis	gnomefreak	 i was thinking i wasent paying attention. :P but guess not. LOL>
+2005-11-30T07:55:00.000Z	Dr_Willis	gnomefreak	 yea - checking on "The Open CD" page now - The Live CD component is now based on Ubuntu 5.10 (the Breezy Badger).
+2005-11-30T07:55:00.000Z	Dr_Willis	gnomefreak	 but it dosent really mention WHAT that does/means...
+2005-11-30T07:55:00.000Z	gnomefreak	Dr_Willis	 oh ok sorry  i thought the live cd for ubuntu would have been a different download
+2005-11-30T07:56:00.000Z	Dr_Willis	gnomefreak	 if it is -- its not shown on their downloads page.. so they got ME all confused.
+2005-11-30T07:57:00.000Z	Dr_Willis	gnomefreak	 17% done here.
+2005-11-30T07:57:00.000Z	Dr_Willis	gnomefreak	 http://www.theopencd.org/index.php?option=com_static&staticfile=screenshots-v3.0.html&Itemid=47
+2005-11-30T07:58:00.000Z	gnomefreak	Dr_Willis	 it looks almost like a live cd that doesnt need to be booted
+2005-11-30T07:59:00.000Z	Dr_Willis	gnomefreak	 i think its BOTH. :P  boot it = live cd.. dont boot = show windows insaller/front end.
+2005-11-30T08:06:00.000Z	Dr_Willis	gnomefreak	 Huh?
+2005-11-30T08:06:00.000Z	Dr_Willis	gnomefreak	 they just seem to tack on a # that no one ever uses at the end. :P
+2005-11-30T08:07:00.000Z	Dr_Willis	gnomefreak	 why not just put a real DATE on the end then. :P
+2005-11-30T08:07:00.000Z	gnomefreak	Dr_Willis	 i dont know this was something i relized while laying in bed
+2005-11-30T08:07:00.000Z	Dr_Willis	gnomefreak	 Well at least it has a little logic to it. :P
+2005-11-30T08:08:00.000Z	Dr_Willis	gnomefreak	 they should just make the version # the 'md5sum'  :P
+2005-12-10T06:41:00.000Z	gnomefreak	Dr_Willis	.bin=binary
+2005-12-10T06:41:00.000Z	Dr_Willis	gnomefreak	 .bin - dosnet really mean much of anything actually. :P it could benamed  whynot.runme.
+2005-12-10T06:42:00.000Z	gnomefreak	Dr_Willis	isnt the reason its labled.bin is to let you know its a binary file?
+2005-12-10T06:42:00.000Z	Dr_Willis	gnomefreak	 not really.. its just an annoying practice.. technicially isent EVERY file a 'binary' file?
+2005-12-27T11:38:00.000Z	Dr_Willis	gnomefreak	 harsh :p
+2005-12-27T11:52:00.000Z	Dr_Willis	gnomefreak	 also vague terms. :P
+2005-12-27T12:09:00.000Z	Dr_Willis	gnomefreak	 its read only on new logins
+2005-12-27T12:10:00.000Z	Dr_Willis	gnomefreak	 the .bash_profile is ran ONLY by 'login' shells.  .bashrc is read by all new shells.
+2005-12-27T12:13:00.000Z	Dr_Willis	gnomefreak	 you are trying to add the current dir to the path?
+2005-12-27T12:13:00.000Z	Dr_Willis	gnomefreak	 'think' ?
+2005-12-27T12:15:00.000Z	gnomefreak	Dr_Willis	yes i am i made a script "logins" and im trying to run it by just typing "logins" without the "" but it still only runs using ./logins
+2005-12-27T12:15:00.000Z	Dr_Willis	gnomefreak	 why not make a /home/user/bin dir and put it in there?
+2005-12-27T12:15:00.000Z	Dr_Willis	gnomefreak	 or make an alias for it.
+2005-12-27T12:16:00.000Z	Dr_Willis	gnomefreak	 your way - you will have to 'cd' to where its at.. then run it.
+2005-12-27T12:17:00.000Z	Dr_Willis	gnomefreak	 i THINK you are making this way toooo hard.  lol but thats the basics of it.
+2005-12-27T12:21:00.000Z	gnomefreak	Dr_Willis	the command is mkdir /home/user/bin isnt it im trying to recall it from memory
+2005-12-27T12:22:00.000Z	Dr_Willis	gnomefreak	 well you do want to use your users name fior 'user' :P
+2005-12-27T12:41:00.000Z	gnomefreak	Dr_Willis	 i added the dir and re-wrote the script and put it in the bin file and now i have to cd bin than ./logins to run it im trying to avoid cd'ing and also trying to avoid the ./ command
+2005-12-30T17:30:00.000Z	gnomefreak	Dr_Willis	 so do i since i found the free Xchat for win
+2006-01-03T12:12:00.000Z	gnomefreak	Dr_Willis	asking those questions tend to hurt sometimes :)
+2006-01-03T12:21:00.000Z	Dr_Willis	gnomefreak	 :P depends...
+2006-01-03T12:49:00.000Z	gnomefreak	Dr_Willis	 man thats huge
+2006-01-03T12:49:00.000Z	Dr_Willis	gnomefreak	 :P i got a huge font set - lol..
+2006-01-05T10:59:00.000Z	Dr_Willis	gnomefreak	 some would say its a full fork now.. but the improvements get sent back to debian...
+2006-01-08T12:33:00.000Z	gnomefreak	Dr_Willis	why is that too light maybe?
+2006-01-08T12:33:00.000Z	Dr_Willis	gnomefreak	 too light? its  all about eye candy.
+2006-01-08T12:34:00.000Z	Dr_Willis	gnomefreak	 yep 'try' but never 'use' :P
+2006-01-08T12:35:00.000Z	gnomefreak	Dr_Willis	yes menu unlike flux or black box
+2006-01-08T12:36:00.000Z	Dr_Willis	gnomefreak	 Huh?
+2006-01-08T12:36:00.000Z	gnomefreak	Dr_Willis	last time i checked i couldnt find a menu for any of the "boxes"
+2006-01-08T12:37:00.000Z	Dr_Willis	gnomefreak	 all the Flux/Black/Open box's i used have a 'programs menu' rigth there on one of the mouse buttons
+2006-01-08T12:37:00.000Z	Dr_Willis	gnomefreak	 thats the 'standard' for 98% of the window managers out there.
+2006-01-08T12:37:00.000Z	Dr_Willis	gnomefreak	 the 2 that dont do it - are KDE and GNOME. :P
+2006-01-08T12:38:00.000Z	Dr_Willis	gnomefreak	 :P
+2006-01-13T08:42:00.000Z	Dr_Willis	gnomefreak	 5.10   ;)  *#&# the cute names.
+2006-01-22T06:04:00.000Z	gnomefreak	Dr_Willis	i gave up wondering on alot of questions now i just answer lol
+2006-01-23T11:46:00.000Z	gnomefreak	Dr_Willis	dual booting off same hd?
+2006-01-23T11:46:00.000Z	Dr_Willis	gnomefreak	 nope.
+2006-01-23T11:46:00.000Z	Dr_Willis	gnomefreak	 just dapper install to a new 300gb hd. Grubs hanging at the 'stage 1.5' thing.
+2006-01-23T11:48:00.000Z	Dr_Willis	gnomefreak	 :P not my issue.. googling for it now. lol
+2006-01-23T11:48:00.000Z	gnomefreak	Dr_Willis	did you check malone?
+2006-01-23T11:49:00.000Z	Dr_Willis	gnomefreak	 heres an interesting poste. :P about how it may be checking the floppy drive which is set to boot..
+2006-01-23T11:49:00.000Z	Dr_Willis	gnomefreak	 lets try disabling the floppy - lol.
+2006-01-23T11:49:00.000Z	Dr_Willis	gnomefreak	 bbl
+2006-02-24T09:11:00.000Z	gnomefreak	Dr_Willis	xfce is broken :(
+2006-02-24T09:11:00.000Z	Dr_Willis	gnomefreak	 and it has other oddities as well. :P
+2006-02-24T09:12:00.000Z	Dr_Willis	gnomefreak	 heh - everything can be broken in dapper... and i also saw it was broke in dapper.. but  dont confuse people here. Lol..
+2006-02-24T09:12:00.000Z	gnomefreak	Dr_Willis	good :)
+2006-02-24T09:20:00.000Z	Dr_Willis	gnomefreak	 heh - i dont think thats much better. :P   but heck - i feel people should learn how to do it the 'standard' way.
+2006-02-24T09:20:00.000Z	gnomefreak	Dr_Willis	me too
+2006-02-24T09:20:00.000Z	gnomefreak	Dr_Willis	i dont even know what those apps do :(
+2006-02-24T14:19:00.000Z	gnomefreak	Dr_Willis	gtk-vin-gnome :)
+2006-03-03T12:59:00.000Z	Dr_Willis	gnomefreak	 its not in synaptic.
+2006-03-03T13:00:00.000Z	gnomefreak	Dr_Willis	and yet they still seem to get it installed without a problem
+2006-03-03T13:00:00.000Z	Dr_Willis	gnomefreak	 its just a shell script you download and run.
+2006-03-04T10:03:00.000Z	Dr_Willis	gnomefreak	 guess not
+2006-03-04T10:26:00.000Z	gnomefreak	Dr_Willis	its in the menu isnt it?
+2006-03-09T09:40:00.000Z	gnomefreak	Dr_Willis	yes
+2006-03-09T11:55:00.000Z	gnomefreak	Dr_Willis	that would still be sh file.bin?
+2006-05-22T11:05:00.000Z	Dr_Willis	gnomefreak	 i was just about to ask that. :P
+2006-09-03T11:50:00.000Z	gnomefreak	Dr_Willis	libgtk?
+2006-09-03T11:51:00.000Z	Dr_Willis	gnomefreak	 to the apt-cache search bat man!
+2007-07-30T07:47:00.000Z	gnomefreak	Dr_Willis	sudo dpkg-reconfigure xserver-xorg
+2007-07-30T08:41:00.000Z	gnomefreak	Dr_Willis	just some extras you have to install (like sound) :(
+2007-07-30T08:41:00.000Z	Dr_Willis	gnomefreak	 yea - that may be it.
+2007-09-14T11:49:00.000Z	gnomefreak	Dr_Willis	it might be
+2007-09-14T11:49:00.000Z	gnomefreak	Dr_Willis	notice no package though
+2007-09-14T11:50:00.000Z	gnomefreak	Dr_Willis	most likely the commercial repos check in add/remove to see
+2007-09-14T11:51:00.000Z	gnomefreak	Dr_Willis	its not in official repos
+2010-07-31T23:27:00.000Z	gnomefreak	Dr_Willis	it is but no 3D support
+2010-07-31T23:28:00.000Z	Dr_Willis	gnomefreak	 it barely works with 2d on my box. :) has a lot of other issues also.
+2010-07-31T23:29:00.000Z	gnomefreak	Dr_Willis	it does and always will. nididia doesnt really "support"(lack of better word) it
+2010-08-30T16:57:00.000Z	gnomefreak	Dr_Willis	is he on Lucid or Maverick?

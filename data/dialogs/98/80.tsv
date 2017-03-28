@@ -1,0 +1,98 @@
+2004-11-08T06:28:00.000Z	thoreauputic		/var/cache/apt/archives/hotplug <tab>
+2004-11-08T06:30:00.000Z	thoreauputic		if that comes up empty, it ain't there
+2004-11-08T06:31:00.000Z	|trey|	thoreauputic	archive*
+2004-11-08T07:24:00.000Z	|trey|	thoreauputic	or just mount -o users like I said  ;)
+2004-11-08T07:27:00.000Z	|trey|	thoreauputic	uhh, s/or/then/ ... imma shut up now  :o
+2004-11-08T07:47:00.000Z	thoreauputic	|trey|	umm... I don't think viruses are an issue in Linux
+2004-11-08T07:47:00.000Z	|trey|	thoreauputic	of course they are... just not as bad as for windows...
+2004-11-08T07:48:00.000Z	thoreauputic	|trey|	sorry, but my reading suggests otherwise
+2004-11-08T07:48:00.000Z	|trey|	thoreauputic	I can find a virus for you to test your theory with real quick if you want?
+2004-11-08T07:49:00.000Z	thoreauputic	|trey|	I'm not going to argue the point - it really doesn't matter :)
+2004-11-08T07:54:00.000Z	thoreauputic	|trey|	and how did this "virus" gain root privileges to achiev the equivalent of rm -rf /  ?
+2004-11-08T07:55:00.000Z	|trey|	thoreauputic	no idea... I know for a fact my box wasn't logged in as root though, and it worked on my box  :/
+2004-11-08T07:55:00.000Z	thoreauputic	|trey|	a lot of inquiring minds would like to know - like every linux security expert in the world
+2004-11-09T11:49:00.000Z	thoreauputic	|trey|	sid doesn't have kde 3.3
+2004-11-09T11:50:00.000Z	thoreauputic	|trey|	apt-cache policy shows 3.1.2
+2004-11-09T11:50:00.000Z	|trey|	thoreauputic	Umm, it did before Ubuntu came out...
+2004-11-09T11:50:00.000Z	thoreauputic	|trey|	no, sid has never had 3.3
+2004-11-09T11:52:00.000Z	|trey|	thoreauputic	what does this say?  http://packages.debian.org/cgi-bin/search_packages.pl?keywords=kdebase&searchon=names&subword=1&version=unstable&release=all
+2004-11-09T11:52:00.000Z	|trey|	thoreauputic	kde-core is versioned differently... :/
+2004-11-09T11:54:00.000Z	thoreauputic	|trey|	I just checked with apt-cache policy - I'm confused now as in #debian they were also saying 3.3 wasn't in sid
+2004-11-09T11:55:00.000Z	|trey|	thoreauputic	ok, well I haven't used it in a while... I used it when it first got into Sid though... with gtk2-engines-gtk-qt...
+2004-11-09T11:56:00.000Z	thoreauputic	|trey|	sudo apt-get -t unstable install kde   returns "already the latest version" and apt-cache policy says 3.1.2  ... ??
+2004-11-09T11:58:00.000Z	|trey|	thoreauputic	ugh @ you... kde-core is not versioned the same... try kdebase or kdelibs etc... it just hasn't been upgraded cuz its the same...
+2004-11-09T12:10:00.000Z	thoreauputic	|trey|	re KDE in Sid - my mistake, I was looking at the metapackage - soory about that
+2004-11-12T17:48:00.000Z	|trey|	thoreauputic	what does restrict= do to a google search?
+2004-11-12T17:49:00.000Z	thoreauputic	|trey|	that's a google/linux search :)
+2004-11-12T17:59:00.000Z	|trey|	thoreauputic	minus apt-get due to that being available for slack and rpm based distro's...
+2004-11-12T06:00:00.000Z	thoreauputic	|trey|	true, it's really policy and better repos and organisation
+2004-11-12T06:32:00.000Z	thoreauputic	|trey|	a one liner is too complex??
+2004-11-12T06:32:00.000Z	|trey|	thoreauputic	more complex then what I said? yes
+2004-11-12T06:34:00.000Z	thoreauputic	|trey|	umm... the files he wants to move don't have an extension - hence the error
+2004-11-12T06:43:00.000Z	|trey|	thoreauputic	I am a convicted felon, drug offenses... they won't give me medication enless I am dying...
+2004-11-12T08:51:00.000Z	|trey|	thoreauputic	thats what I did... first link = what I told him  ;)
+2004-11-12T08:55:00.000Z	thoreauputic	|trey|	do try to give advice that is sensible, rather than just pulling answers out one after another :/
+2004-11-12T08:57:00.000Z	|trey|	thoreauputic	I say what I would use... the more they ask that it answers, the more I inforce...
+2004-11-12T09:16:00.000Z	thoreauputic	|trey|	he doesn't need to wipe his mbr - he needs to fix his BIOS: this is a known issue with some 2.6.* kernels
+2004-11-12T09:17:00.000Z	|trey|	thoreauputic	it would appear his BIOS doesn't support that though... so on to the next idea...
+2004-11-12T09:17:00.000Z	thoreauputic	|trey|	yes but don't jump to conclusions when your suggestions could endanger someones data :/
+2004-11-12T09:18:00.000Z	|trey|	thoreauputic	my logic... if it won't work one way... lets try the other... but ok... lets fuss for a while then maybe he will do what I said at first...
+2004-11-12T09:19:00.000Z	thoreauputic	|trey|	your attitude is reckless. Sorry. Also you don't seem to consider the possibility that you might be wrong
+2004-11-12T09:20:00.000Z	|trey|	thoreauputic	umm, I handed him a HOWTO that worked for me... how is that reckless?
+2004-11-12T09:27:00.000Z	thoreauputic	|trey|	regarding reckless; <thoreauputic> |trey|: he doesn't need to wipe his mbr - he needs to fix his BIOS: this is a known issue with some 2.6.* kernels . Gues what worked? And guess which google search I pointed hime to?
+2004-11-12T09:28:00.000Z	|trey|	thoreauputic	I saw that... however he had just come back saying he couldn't find this option  :/
+2004-11-15T11:09:00.000Z	thoreauputic	|trey|	Bob2 already told her - you are just confusing the issue
+2004-11-15T11:11:00.000Z	|trey|	thoreauputic	ahh... didn't even see  :(
+2004-11-15T11:49:00.000Z	|trey|	thoreauputic	I never shut down anyways... and you can just hit power button breifly to shut down "correctly"...
+2004-11-15T11:51:00.000Z	|trey|	thoreauputic	and on Unix based systems... you actually start init 0...
+2004-11-15T11:51:00.000Z	thoreauputic	|trey|	captive, I think it's called - but it's experimental at this stage I believe
+2004-11-15T11:51:00.000Z	|trey|	thoreauputic	I believe so yes...
+2004-11-15T11:52:00.000Z	thoreauputic	|trey|	I actually type shutdown -h now , which seems logical - or `halt`
+2004-11-15T11:53:00.000Z	|trey|	thoreauputic	what do you think that does? it starts all the kill scripts in /etc/rc2.d
+2004-11-15T11:54:00.000Z	thoreauputic	|trey|	yes, yes, I'm aware of that... thank you for sharing
+2004-11-15T11:55:00.000Z	|trey|	thoreauputic	I just think every OS does a job  :/
+2004-11-15T11:55:00.000Z	thoreauputic	|trey|	to mimic windows, set default runlevel to 6 ;)
+2004-11-15T12:47:00.000Z	|trey|	thoreauputic	because, if you know your way around vi, its a lot faster to get such things done...
+2004-11-15T12:48:00.000Z	|trey|	thoreauputic	vim was designed with administration of config files in mind...
+2004-11-15T12:48:00.000Z	thoreauputic	|trey|	I think you missed the point - I was trying to find easier ways for janice to do what she needs to do
+2004-11-15T12:48:00.000Z	thoreauputic	|trey|	and once again, you are kind of preaching to the choir :)
+2004-11-15T12:48:00.000Z	|trey|	thoreauputic	I agree, for janice, nano would be easier... but BrittBS does appear to know vim well...
+2004-11-15T12:49:00.000Z	|trey|	thoreauputic	;)
+2004-11-15T13:21:00.000Z	thoreauputic	|trey|	you can probably get gnome themes working in waimea by putting gnome-settings-daemon in your startup file - I do it with fluxbox anyway
+2004-11-15T13:22:00.000Z	|trey|	thoreauputic	I don't like that fluxbox still brings along its own task bar...
+2004-11-15T13:22:00.000Z	|trey|	thoreauputic	Flux definatly isn't designed to work with a DE...
+2004-11-15T13:23:00.000Z	thoreauputic	|trey|	well, I can show you the lines i'm talking about if you want to try them in waimea - shall I paste them in #flood for you?
+2004-11-15T13:23:00.000Z	|trey|	thoreauputic	sure  :)
+2004-11-15T13:23:00.000Z	thoreauputic	|trey|	OK hang on a second
+2004-11-15T13:25:00.000Z	|trey|	thoreauputic	where are you putting that? ~/.xsession?
+2004-11-15T13:26:00.000Z	thoreauputic	|trey|	yes - with my other startups like xscreensaver and fluxbox
+2004-11-15T13:26:00.000Z	|trey|	thoreauputic	cool, thanks, I will give it a shot  :)
+2004-11-15T13:28:00.000Z	thoreauputic	|trey|	sudo apt-get install gtk-theme-switch
+2004-11-15T13:29:00.000Z	|trey|	thoreauputic	I've used that before... but why would I need it if I am still having control-center installed?
+2004-11-15T13:29:00.000Z	thoreauputic	|trey|	up to you - whatever works for you  :)
+2004-11-15T13:30:00.000Z	|trey|	thoreauputic	:)  only time I don't have control-center installed is if I am using gtk2-engines-gtk-qt  :)
+2004-11-15T13:30:00.000Z	thoreauputic	|trey|	I like it because it pops up fast and is small :)
+2004-11-15T13:32:00.000Z	|trey|	thoreauputic	true  :)  I am just always forget to add it to menu's etc... when on the desktop, I try to use those tools  :)
+2004-11-15T13:34:00.000Z	thoreauputic	|trey|	well, my fluxbox menu is pretty heavily customised
+2004-11-15T13:34:00.000Z	|trey|	thoreauputic	Themes or the KDE KCM load fast anyways, and are more powerful  :)
+2004-11-15T13:35:00.000Z	|trey|	thoreauputic	heh, I had like 300 vd's on flux once, crazy... usually stuck with the Debian Menu though due to being more familier with it (note I didn't say I liked it... badly laid out imo)
+2004-11-15T13:39:00.000Z	|trey|	thoreauputic	haha, I stopped paying attention  :(
+2004-11-15T13:40:00.000Z	|trey|	thoreauputic	ahh, I remember that part... her head probably kinda hurts, but if she grasped at least some of it, she will be ok in a few months  :)
+2004-11-16T14:07:00.000Z	|trey|	thoreauputic	I miss dpkg the bot  :(
+2004-11-16T14:07:00.000Z	thoreauputic	|trey|	ah yes, a bot would be nice..
+2004-11-16T14:08:00.000Z	|trey|	thoreauputic	I said that... dpkg's database is public too... would be nice to customize one, maybe have it sync with the wiki or something  :)
+2004-11-16T14:08:00.000Z	|trey|	thoreauputic	plus some fun stuff of course  :)
+2004-11-16T14:09:00.000Z	thoreauputic	|trey|	some of the factoids are not exactly in the spirit of Ubuntu ;)
+2004-11-16T14:13:00.000Z	|trey|	thoreauputic	you can delete those then, thats fine...  :)
+2004-11-16T14:13:00.000Z	|trey|	thoreauputic	only thing I don't get about Aussie rules... why a round field?  :o
+2004-11-16T14:14:00.000Z	thoreauputic	|trey|	they play on cricket ovals, mostly
+2004-11-16T14:14:00.000Z	thoreauputic	|trey|	that's the reason I guess, historically
+2004-11-16T14:14:00.000Z	|trey|	thoreauputic	my Grandfather almost went pro for Cricket... Dad for Golf...
+2004-11-16T14:15:00.000Z	|trey|	thoreauputic	My Grandfathers second wife ran a lot of Marathons, she can't now though, she doesn't have the energy, too old  :(
+2004-11-16T14:16:00.000Z	thoreauputic	|trey|	that's pretty impressive
+2004-11-16T14:16:00.000Z	thoreauputic	|trey|	very good, indeed
+2004-11-16T14:37:00.000Z	thoreauputic	|trey|	I don't think he can get a shell - so that wouldn't help
+2004-11-16T14:37:00.000Z	|trey|	thoreauputic	it basically tries what init will try manually...
+2004-11-16T14:38:00.000Z	|trey|	thoreauputic	go type that on a terminal, it restarts getty...  :)
+2004-11-16T14:38:00.000Z	thoreauputic	|trey|	OK :)
+2004-11-16T08:02:00.000Z	|trey|	thoreauputic	^^

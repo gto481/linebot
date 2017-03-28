@@ -1,0 +1,96 @@
+2008-08-30T08:01:00.000Z	chrisdown	leo_away	do you want me to explain what the problem is?
+2008-08-30T08:02:00.000Z	leo_away	chrisdown	yeah, maybe I can help you
+2008-08-30T08:02:00.000Z	chrisdown	leo_away	blackopus helped me get protected dvds to run on VLC, but there is no sound. i am currently getting output, but it doesn't seem to mention sound problems.
+2008-08-30T08:03:00.000Z	chrisdown	leo_away	i am about to post on the forums, i'll link you when it's up.
+2008-08-30T08:03:00.000Z	leo_away	chrisdown	do you get sound with other videos?
+2008-08-30T08:03:00.000Z	chrisdown	leo_away	yes, i don't get anything on VLC though
+2008-08-30T08:03:00.000Z	chrisdown	leo_away	youtube is fine, for example.
+2008-08-30T08:04:00.000Z	leo_away	chrisdown	what about other players? something like totem, do you get sound with totem and other videos?
+2008-08-30T08:04:00.000Z	chrisdown	leo_away	totem fails completely
+2008-08-30T08:04:00.000Z	chrisdown	leo_away	gets stuck at 0:00
+2008-08-30T08:05:00.000Z	leo_away	chrisdown	are you using pulseaudio?
+2008-08-30T08:05:00.000Z	chrisdown	leo_away	not to my knowledge
+2008-08-30T08:06:00.000Z	leo_away	chrisdown	are you using hardy heron? did
+2008-08-30T08:16:00.000Z	leo_away	chrisdown	go to jamendo.com and just get any ogg song
+2008-08-30T08:06:00.000Z	leo_away	chrisdown	did you ever change it to anything else than pulseaudio?
+2008-08-30T08:06:00.000Z	chrisdown	leo_away	8.04, yeah.
+2008-08-30T08:06:00.000Z	chrisdown	leo_away	it was on 'auto', so i tried some others
+2008-08-30T08:07:00.000Z	chrisdown	leo_away	it's on ALSA
+2008-08-30T08:07:00.000Z	chrisdown	leo_away	here is the thread with outputs http://ubuntuforums.org/showthread.php?p=5691498#post5691498
+2008-08-30T08:10:00.000Z	chrisdown	leo_away	any ideas on the outputs i linked you to?
+2008-08-30T08:11:00.000Z	leo_away	chrisdown	can you pastebin the output for a non-dvd video? something like ogg?
+2008-08-30T08:11:00.000Z	chrisdown	leo_away	i'll find something
+2008-08-30T08:14:00.000Z	chrisdown	leo_away	I get no output.
+2008-08-30T08:15:00.000Z	leo_away	chrisdown	does it seem like it is playing? does the lil thing moves and the seconds go up?
+2008-08-30T08:16:00.000Z	chrisdown	leo_away	i get no audio on the ogg either, but it plays fine otherwise. perhaps it's just a soundless video
+2008-08-30T08:16:00.000Z	leo_away	chrisdown	then try playing it on vlc
+2008-08-30T08:16:00.000Z	chrisdown	leo_away	what about trying mp3?
+2008-08-30T08:17:00.000Z	chrisdown	leo_away	i have a good few of those lying around anyway
+2008-08-30T08:17:00.000Z	leo_away	chrisdown	yeah, same thing
+2008-08-30T08:17:00.000Z	leo_away	chrisdown	but you will have to install codecs or smth... i believe
+2008-08-30T08:18:00.000Z	chrisdown	leo_away	already got codecs
+2008-08-30T08:18:00.000Z	leo_away	chrisdown	ok, yeah, try an mp3
+2008-08-30T08:18:00.000Z	chrisdown	leo_away	it plays, but no sound - there is output
+2008-08-30T08:18:00.000Z	leo_away	chrisdown	pastebin it
+2008-08-30T08:18:00.000Z	chrisdown	leo_away	even better, i'll post it in the thread for others
+2008-08-30T08:19:00.000Z	leo_away	chrisdown	yup, def better
+2008-08-30T08:21:00.000Z	chrisdown	leo_away	here http://ubuntuforums.org/showthread.php?p=5691542#post5691542
+2008-08-30T08:22:00.000Z	chrisdown	leo_away	"invalid new backstep" sounds interesting
+2008-08-30T08:22:00.000Z	chrisdown	leo_away	as does "skiping granule"
+2008-08-30T08:23:00.000Z	leo_away	chrisdown	I have no idea what those are... i was expecting something like "can't open /dev/seq" or "ALSA error blah blah blah"
+2008-08-30T08:23:00.000Z	leo_away	chrisdown	i'm installing vlc to see if you can change options in it to make it work
+2008-08-30T08:26:00.000Z	chrisdown	leo_away	- gonna poke around in vlc
+2008-08-30T08:26:00.000Z	leo_away	chrisdown	settings > preferences > audio > output modules
+2008-08-30T08:26:00.000Z	leo_away	chrisdown	change those and see if any one of them works
+2008-08-30T08:27:00.000Z	leo_away	chrisdown	ALSA, OSS, pulseaudio... w/e
+2008-08-30T08:27:00.000Z	chrisdown	leo_away	: try it with the ogg video or the mp3?
+2008-08-30T08:27:00.000Z	leo_away	chrisdown	yeah, any media file with sound
+2008-08-30T08:27:00.000Z	leo_away	chrisdown	if that doesn't work then I have no idea... maybe try alsamixer and check that the sound is not mute and that the volume is all the way up
+2008-08-30T08:28:00.000Z	chrisdown	leo_away	shouldn't the number of output channels be >0?
+2008-08-30T08:29:00.000Z	leo_away	chrisdown	beats me
+2008-08-30T08:29:00.000Z	leo_away	chrisdown	but i would say so
+2008-08-30T08:29:00.000Z	chrisdown	leo_away	: changed to pulseaudio with 32 channels, was 9
+2008-08-30T08:34:00.000Z	chrisdown	leo_away	- shall i try another dvd?
+2008-08-30T08:34:00.000Z	leo_away	chrisdown	if you don't get sounds with mp3s then another dvd is not going to solve anything
+2008-08-30T08:35:00.000Z	chrisdown	leo_away	is my thoughts.
+2008-08-30T08:35:00.000Z	chrisdown	leo_away	hahaha, it works!
+2008-08-30T08:35:00.000Z	chrisdown	leo_away	only for this dvd though
+2008-08-30T08:35:00.000Z	leo_away	chrisdown	o.O
+2008-08-30T08:35:00.000Z	chrisdown	leo_away	my thoughts too
+2008-08-30T08:35:00.000Z	chrisdown	leo_away	want an output?
+2008-08-30T08:35:00.000Z	leo_away	chrisdown	I have no idea what's going on there...
+2008-08-30T08:35:00.000Z	leo_away	chrisdown	vlc outputs are too cryptic
+2008-08-30T08:36:00.000Z	chrisdown	leo_away	unless it wanted new media before it would change the setting
+2008-08-30T08:36:00.000Z	leo_away	chrisdown	what app is it running on?
+2008-08-30T08:36:00.000Z	chrisdown	leo_away	don't know what it's called, whatever is default
+2008-08-30T08:37:00.000Z	chrisdown	leo_away	'Movie Player'
+2008-08-30T08:37:00.000Z	chrisdown	leo_away	no, no sound on VLC with that dvd either
+2008-08-30T08:37:00.000Z	leo_away	chrisdown	oh, ok... use that now then, haha
+2008-08-30T08:37:00.000Z	chrisdown	leo_away	haha
+2008-08-30T08:37:00.000Z	leo_away	chrisdown	i don't use gnome... i don't even use ubuntu
+2008-08-30T08:37:00.000Z	chrisdown	leo_away	well i usually run netbsd but i thought i'd take the plunge
+2008-08-30T08:38:00.000Z	chrisdown	leo_away	before i go i must check whether the dvd i am actually trying to play is playeble in totem
+2008-08-30T08:38:00.000Z	leo_away	chrisdown	i installed ubuntu on another machine and totem didn't seem like a bad guy...
+2008-08-30T08:39:00.000Z	leo_away	chrisdown	did it work?
+2008-08-30T08:39:00.000Z	chrisdown	leo_away	it's working on totem
+2008-08-30T08:39:00.000Z	leo_away	chrisdown	: )
+2008-08-30T08:39:00.000Z	chrisdown	leo_away	thanks a million
+2008-08-30T08:39:00.000Z	leo_away	chrisdown	that vlc thing bothers me tho... haha
+2008-08-30T08:40:00.000Z	chrisdown	leo_away	after 5 hours of trying to fix this (that's actually 5 hours, really) it is done!
+2008-08-30T08:40:00.000Z	chrisdown	leo_away	thanks a million, going to watch the dvd
+2008-08-30T08:40:00.000Z	leo_away	chrisdown	enjoy the movie
+2008-08-30T08:47:00.000Z	chrisdown	leo_away	you still there?
+2008-08-30T08:47:00.000Z	leo_away	chrisdown	ylp
+2008-08-30T08:47:00.000Z	leo_away	chrisdown	s/ylp/yup
+2008-08-30T08:48:00.000Z	chrisdown	leo_away	audio is ~3 seconds out of sync
+2008-08-30T08:48:00.000Z	leo_away	chrisdown	there might be a key to adjust that in totem. i know smplayer has that functionallity
+2008-08-30T08:48:00.000Z	chrisdown	leo_away	i'll look around
+2008-08-30T08:51:00.000Z	chrisdown	leo_away	apparently the solution is to change the gstreamer audio output to ESA
+2008-08-30T08:51:00.000Z	chrisdown	leo_away	how do i do that?
+2008-08-30T08:52:00.000Z	leo_away	chrisdown	i use aRTs with alsa on KDE, I have no idea how that works in gnome
+2008-08-30T08:56:00.000Z	chrisdown	leo_away	not confirmed, but i think a seek has corrected the sync
+2008-08-30T08:57:00.000Z	leo_away	chrisdown	it may happen again after a while...
+2008-08-30T08:57:00.000Z	chrisdown	leo_away	confirmed, a seek fixed it
+2008-08-30T08:57:00.000Z	chrisdown	leo_away	i'll just seek again :P
+2008-08-30T08:57:00.000Z	leo_away	chrisdown	i think that happened to me too when i used totem. i did seek again when that happened
+2008-08-30T08:57:00.000Z	chrisdown	leo_away	thanks for the help

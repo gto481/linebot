@@ -1,0 +1,98 @@
+2008-02-05T15:47:00.000Z	pele1	ikonia	do you think you can handle one more error (my error) at the moment?
+2008-02-05T15:54:00.000Z	pele1	ikonia	could you give your opinion about my /etc/network/interfaces please? I cannot access to the internet at all, after following a few HOWTOS...
+2008-02-05T15:55:00.000Z	pele1	ikonia	read mostly this: http://ubuntuforums.org/showthread.php?t=202834
+2008-02-05T15:55:00.000Z	ikonia	pele1	sure, if you put it in a pastebin I'll take a look
+2008-02-05T15:55:00.000Z	pele1	ikonia	here already: http://paste.ubuntu-nl.org/54832
+2008-02-05T15:56:00.000Z	ikonia	pele1	ok - so your connecting to the internet wirlessly, how far along does it get, does the interface come up, does it get an IP etc etc
+2008-02-05T15:56:00.000Z	pele1	ikonia	without the extra  `
+2008-02-05T15:56:00.000Z	pele1	ikonia	in a minute I will post all details
+2008-02-05T15:57:00.000Z	ikonia	pele1	the extra ` by CCMP - doesn't look right
+2008-02-05T15:58:00.000Z	pele1	ikonia	I have configured the file as you've seen, and did
+2008-02-05T15:58:00.000Z	ikonia	pele1	can you paste the errors in the pastebin please. .
+2008-02-05T15:58:00.000Z	pele1	ikonia	yes
+2008-02-05T16:01:00.000Z	pele1	ikonia	it is there - most of it
+2008-02-05T16:01:00.000Z	ikonia	pele1	sorry, I missed your post
+2008-02-05T16:02:00.000Z	pele1	ikonia	http://paste.ubuntu-nl.org/54833/
+2008-02-05T16:02:00.000Z	pele1	ikonia	there are more errors - it is quite long. I copy manually; should I copy more?
+2008-02-05T16:02:00.000Z	ikonia	pele1	that looks like it can't actually see eth1
+2008-02-05T16:02:00.000Z	ikonia	pele1	as a physical device it appears it can't see it
+2008-02-05T16:03:00.000Z	ikonia	pele1	if you do an ifconfig eth1 and an iwconfig eth1 do you see any details
+2008-02-05T16:03:00.000Z	pele1	ikonia	I don't even know what it means. I DOES see a network card in administration
+2008-02-05T16:04:00.000Z	pele1	ikonia	device not found
+2008-02-05T16:04:00.000Z	ikonia	pele1	put the output of the two commands I mentioned into a pastebin please. Also what type of wirless card is this ?
+2008-02-05T16:04:00.000Z	pele1	ikonia	intel pro/wireless network connection driver for linux
+2008-02-05T16:04:00.000Z	pele1	ikonia	checked and "in use"
+2008-02-05T16:05:00.000Z	pele1	ikonia	it CAN see eth0. how can I know what to choose?
+2008-02-05T16:05:00.000Z	ikonia	pele1	ok - so put the output of 1.) ifconfig -a into a pastebin and then put the output of iwconfig eth1
+2008-02-05T16:05:00.000Z	ikonia	pele1	what do you mean what to choose ? does your laptop have a wired connect and a wirless card in it ?
+2008-02-05T16:06:00.000Z	pele1	ikonia	I don't know. I guess that I have both - or maybe it is on the same card?
+2008-02-05T16:06:00.000Z	ikonia	pele1	do you have both - yes/no - eg: do you have a wirless connection and a slot to put a network card in
+2008-02-05T16:07:00.000Z	pele1	ikonia	I have both. but iwconfig shows no wireless extension for lo and for eth0. I think that eth1 was for wireless before.
+2008-02-05T16:08:00.000Z	ikonia	pele1	eth1 should be - but the fact that the device is not visable is a concern
+2008-02-05T16:08:00.000Z	pele1	ikonia	iwconfig totally ingnores eth1
+2008-02-05T16:08:00.000Z	pele1	ikonia	maybe I'll try to restart?
+2008-02-05T16:08:00.000Z	ikonia	pele1	reboot so all the kernel modules are loaded correctly then lets start working it through
+2008-02-05T16:09:00.000Z	pele1	ikonia	rebooting
+2008-02-05T16:09:00.000Z	pele1	ikonia	thanks, I appreciate it.
+2008-02-05T16:10:00.000Z	pele1	ikonia	maybe it is important: I have a DELL inspiron 6400 (laptop)
+2008-02-05T16:10:00.000Z	ikonia	pele1	that fine
+2008-02-05T16:11:00.000Z	pele1	ikonia	iwconfig shows only lo and eth0 after reboot
+2008-02-05T16:12:00.000Z	ikonia	pele1	so your network card is not visable as a device - has this ever worked ?
+2008-02-05T16:12:00.000Z	pele1	ikonia	it is weird, because it worked in the last 4 days.
+2008-02-05T16:12:00.000Z	pele1	ikonia	I had it visible this morning
+2008-02-05T16:13:00.000Z	ikonia	pele1	so what have you done to make it go away - what have you changed
+2008-02-05T16:13:00.000Z	pele1	ikonia	I have changed only this file (interfaces)
+2008-02-05T16:13:00.000Z	ikonia	pele1	look in /var/log/messages to see if there is any hints to why eth1/intel card is not working
+2008-02-05T16:14:00.000Z	pele1	ikonia	I have the card visible in restricted drivers manager
+2008-02-05T16:14:00.000Z	ikonia	pele1	but it's not visable to the system
+2008-02-05T16:15:00.000Z	pele1	ikonia	I have some logs about eth1
+2008-02-05T16:15:00.000Z	pele1	ikonia	"eth1: link is not ready"
+2008-02-05T16:15:00.000Z	ikonia	pele1	pastebin them please.
+2008-02-05T16:15:00.000Z	pele1	ikonia	many times
+2008-02-05T16:16:00.000Z	ikonia	pele1	thats not an error - thats because the device isn't there, we need to se why the device isn't there
+2008-02-05T16:19:00.000Z	pele1	ikonia	not much: http://paste.ubuntu-nl.org/54835/
+2008-02-05T16:20:00.000Z	ikonia	pele1	as I said - thats not the reason it's broke, thats a symptom
+2008-02-05T16:20:00.000Z	pele1	ikonia	yes, but I can't find "eth1" anywhere else in that file. shall I look for something eles?
+2008-02-05T16:20:00.000Z	ikonia	pele1	dmesg | grep eth1
+2008-02-05T16:21:00.000Z	pele1	ikonia	can't it be just something in the interface file? you think it something worse?
+2008-02-05T16:21:00.000Z	pele1	ikonia	what about "lp: driver loaded but no devices found"?
+2008-02-05T16:21:00.000Z	ikonia	pele1	thats for printers
+2008-02-05T16:23:00.000Z	pele1	ikonia	any other directions?
+2008-02-05T16:23:00.000Z	ikonia	pele1	did you get any output from dmesg ?
+2008-02-05T16:24:00.000Z	pele1	ikonia	dmesg?
+2008-02-05T16:24:00.000Z	pele1	ikonia	hey, found something!
+2008-02-05T16:25:00.000Z	ikonia	pele1	dmesg | grep eth1
+2008-02-05T16:25:00.000Z	pele1	ikonia	last line in dmesg is "Kill switch must be turned off for wireless networking to work"
+2008-02-05T16:25:00.000Z	ikonia	pele1	there is a hardware switch on your laptop - flick it
+2008-02-05T16:25:00.000Z	ikonia	pele1	it enabled/disabled wirless
+2008-02-05T16:26:00.000Z	pele1	ikonia	I can't believe it. that ugly fn-F2 button...
+2008-02-05T16:26:00.000Z	pele1	ikonia	now I have eth1 in iwconfig
+2008-02-05T16:26:00.000Z	ikonia	pele1	ok, well done
+2008-02-05T16:26:00.000Z	pele1	ikonia	what is the next step?
+2008-02-05T16:27:00.000Z	pele1	ikonia	I am back to the beginning, but I still can't access the internet.
+2008-02-05T16:27:00.000Z	ikonia	pele1	reboot - and lets see what happens
+2008-02-05T16:27:00.000Z	pele1	ikonia	rebooting. thanks again.
+2008-02-05T16:31:00.000Z	pele1	ikonia	rebooted; I have the device again in network manager, roaming mode enabled, status: disconnected
+2008-02-05T16:32:00.000Z	ikonia	pele1	just a minute, I just need to finish something
+2008-02-05T16:32:00.000Z	pele1	ikonia	take your time!
+2008-02-05T16:39:00.000Z	ikonia	pele1	not fogot about you - I just need to complete this bug report properly
+2008-02-05T16:40:00.000Z	pele1	ikonia	thanks
+2008-02-05T16:45:00.000Z	ikonia	pele1	where have you gone ?
+2008-02-05T20:45:00.000Z	pele1	ikonia	are you back?
+2008-02-05T20:46:00.000Z	ikonia	pele1	I am yes, sorry I had to leave earlier.
+2008-02-05T20:46:00.000Z	pele1	ikonia	are you available now?
+2008-02-05T20:46:00.000Z	ikonia	pele1	sure
+2008-02-05T20:46:00.000Z	pele1	ikonia	wow, thanks... I almost cry, really.
+2008-02-05T20:47:00.000Z	ikonia	pele1	keep in mind I'm limited in what I can do as I don't have a box with wirless cards in to play with wirless tools with you
+2008-02-05T20:47:00.000Z	pele1	ikonia	at the moment I removed WPA from my router. Poka says that eth1 is "not associated".
+2008-02-05T20:47:00.000Z	ikonia	pele1	ok so do you know the SID of your router ?
+2008-02-05T20:47:00.000Z	pele1	ikonia	it shouldn't be something really weird. only conventional stuff
+2008-02-05T20:47:00.000Z	pele1	ikonia	yes: Stoke Newington House Project
+2008-02-05T20:48:00.000Z	ikonia	pele1	thats your SID ?
+2008-02-05T20:48:00.000Z	pele1	ikonia	it is written correctly in the interfaces file
+2008-02-05T20:48:00.000Z	ikonia	pele1	ignore the interfaces file - what is the SID of the router
+2008-02-05T20:48:00.000Z	pele1	ikonia	and in the admin of the router as well
+2008-02-05T20:48:00.000Z	pele1	ikonia	Name (SSID): Stoke Newington House Project
+2008-02-05T20:48:00.000Z	pele1	ikonia	from NETGEAR admin page
+2008-02-05T20:51:00.000Z	ikonia	pele1	ok so iwconfig eth1 ESSID=stoke newington house project
+2008-02-05T21:13:00.000Z	pele1	ikonia	please? Can we continue the procedure?

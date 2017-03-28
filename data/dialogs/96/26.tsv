@@ -1,0 +1,96 @@
+2009-05-16T19:06:00.000Z	mac9416		I'm trying to get the nvidia-glx-180 driver enabled. I go to Hardware Drivers and enable the thing. Then when I reboot it still isn't enabled and it says another version of the same driver is installed. I assume that's the .run I got from Nvidia's website? How do I get rid of the .run one and use the nvidia-glx-180.deb?
+2009-05-16T19:07:00.000Z	coz_	mac9416	 yes you have to uninstall the one you got from nvidia which apparenlty you didnt install correctly
+2009-05-16T19:08:00.000Z	coz_	mac9416	  run this in terminal to remove the previous install   sudo /usr/bin/nvidia-installer --uninstall
+2009-05-16T19:08:00.000Z	mac9416	coz_	Wow, you're good. OK, I'll try.
+2009-05-16T19:09:00.000Z	coz_	mac9416	 i would also,,, just to be safe.. reboot  after you uninstall that  then install the one from  hardeware dirvers
+2009-05-16T19:09:00.000Z	coz_	mac9416	although out of curiosity...how did you try to install the one from nvidia?
+2009-05-16T19:10:00.000Z	coz_	mac9416	 I usually install nvidia's   that's why I am asking
+2009-05-16T19:15:00.000Z	mac9416	coz_	I installed the Nvidia one by typing "sudo sh <driver name>.run"
+2009-05-16T19:15:00.000Z	coz_	mac9416	 ok that is wrong  if you did it inside the terminal
+2009-05-16T19:16:00.000Z	coz_	mac9416	  there is a file that needs to be edited first and then you have to go into console to install the driver
+2009-05-16T19:16:00.000Z	mac9416	coz_	I did it from the console.
+2009-05-16T19:17:00.000Z	mac9416	coz_	I just ran that command and rebooted. I got "Nvidia module faled to load... Screen(s) found but none with usable configuration.:
+2009-05-16T19:17:00.000Z	coz_	mac9416	ok  however before that you would have to go into the  /etc/default/linux-restricted-modules-common  and change  DISABLED_MODULES=""   to   DISABLED_MODULES="nv nvidia_new"
+2009-05-16T19:18:00.000Z	coz_	mac9416	 then reboot after running in console the nvidia sh
+2009-05-16T19:18:00.000Z	mac9416	coz_	Don't use the .deb
+2009-05-16T19:19:00.000Z	coz_	mac9416	  right   I generally just download the nvidia driver from nvidia.com  however  the repo version is fine in jaunty
+2009-05-16T19:19:00.000Z	coz_	mac9416	 although that particular 180.xx driver in ubunt's repor is not one of the best in the 180.xx series
+2009-05-16T19:20:00.000Z	coz_	mac9416	 there are only two versions in 180.xx drivers that are good  one is 180.17 BETA  and the other is 180.29 release
+2009-05-16T19:20:00.000Z	mac9416	coz_	Well, I installed the deb one. Should I keep working with that one, or uninstall it and go with the .sh?
+2009-05-16T19:20:00.000Z	coz_	mac9416	 the rest are buggie at best
+2009-05-16T19:20:00.000Z	coz_	mac9416	 is it working?
+2009-05-16T19:20:00.000Z	mac9416	coz_	No I got: "Nvidia module faled to load... Screen(s) found but none with usable configuration."
+2009-05-16T19:20:00.000Z	coz_	mac9416	 oooo
+2009-05-16T19:21:00.000Z	coz_	mac9416	 did you reboot?
+2009-05-16T19:21:00.000Z	mac9416	coz_	Yezzir
+2009-05-16T19:22:00.000Z	coz_	mac9416	 go to pastebin and paste the entire   /var/log/Xorg.0.log
+2009-05-16T19:22:00.000Z	mac9416	coz_	OK, just a min.
+2009-05-16T19:27:00.000Z	mac9416	coz_	http://paste.ubuntu.com/173675/
+2009-05-16T19:27:00.000Z	coz_	mac9416	 looking
+2009-05-16T19:28:00.000Z	mac9416	coz_	3sec remaining, 5hr remaining, 4min remaining... :-P
+2009-05-16T19:29:00.000Z	mac9416	coz_	(EE) NVIDIA(0): Failed to load the NVIDIA kernel module! That seems important.
+2009-05-16T19:29:00.000Z	coz_	mac9416	also pastebin  /etc/X11/xorg.conf
+2009-05-16T19:30:00.000Z	mac9416	coz_	OK, brb... 10min remaining, 3hr remaining...
+2009-05-16T19:35:00.000Z	mac9416	coz_	http://paste.ubuntu.com/173681/
+2009-05-16T19:36:00.000Z	coz_	mac9416	 ok  open a terminal and type    nvidia-xconfig
+2009-05-16T19:36:00.000Z	mac9416	coz_	OK, just a sec...
+2009-05-16T19:37:00.000Z	coz_	mac9416	  then restart  X
+2009-05-16T19:37:00.000Z	coz_	mac9416	 but do it properly  with ctrl+alt+F1   then log in then  sudo /etc/init.d/gdm restart
+2009-05-16T19:41:00.000Z	mac9416	coz_	I missed those last two lines and just rebooted :-) Same problem. The xorg.conf is different, but the log and error messages are the same.
+2009-05-16T19:41:00.000Z	coz_	mac9416	 ok which nvidia-glx version is installed?
+2009-05-16T19:42:00.000Z	mac9416	coz_	180.44
+2009-05-16T19:42:00.000Z	coz_	mac9416	 ok   sudo apt-get autoremove  nvidia-glx-180.44
+2009-05-16T19:43:00.000Z	mac9416	coz_	well, the package name is nvidia-glx-180 but the version is .44. I'll run the command....
+2009-05-16T19:45:00.000Z	mac9416	coz_	OK, nvidia-glx-180 removed.
+2009-05-16T19:46:00.000Z	coz_	mac9416	  sudo apt-get install build-essential linux-headers-`uname -r`
+2009-05-16T19:47:00.000Z	coz_	mac9416	   is that done ?
+2009-05-16T19:48:00.000Z	mac9416	coz_	No, working. See, the Jaunty machine is offline. I have to download the files and install them by hand. Well, I generate my own repo and use that.
+2009-05-16T19:49:00.000Z	coz_	mac9416	  ah ok let me know
+2009-05-16T19:49:00.000Z	mac9416	coz_	So, there's quite a bit of file shuffling.
+2009-05-16T19:49:00.000Z	mac9416	coz_	Will do.
+2009-05-16T19:50:00.000Z	coz_	mac9416	 in that case also get this     sudo apt-get install linux-source
+2009-05-16T19:51:00.000Z	coz_	mac9416	 then go here http://www.nvidia.com/object/linux_display_ia32_180.29.html and download the 180.29 driver  onto the Desktop
+2009-05-16T19:51:00.000Z	mac9416	coz_	OK...
+2009-05-16T19:52:00.000Z	coz_	mac9416	 although I am not sure this is going to work well without being connected to the internet   cant you connet that machine up?
+2009-05-16T19:52:00.000Z	mac9416	coz_	No, my internet is through Verizon, a whtdoyoucallit, laptop card. My Ubuntu box is a desktop.
+2009-05-16T19:53:00.000Z	coz_	mac9416	 ah ok
+2009-05-16T19:54:00.000Z	coz_	mac9416	 is there an ethernet slot in the back of the laptop?  I wonder if you can piggyback that connection?
+2009-05-16T19:56:00.000Z	mac9416	coz_	Yep, got ethernet. IDK about piggybacking, might be possible. I wouldn't know how.
+2009-05-16T20:01:00.000Z	mac9416	coz_	You sure I'm gonna need to recompile the kernel?
+2009-05-16T20:02:00.000Z	coz_	mac9416	 no you wont have to recompile the kernel but you do need the linux source
+2009-05-16T20:02:00.000Z	mac9416	coz_	OK, you had me worried :-)
+2009-05-16T20:03:00.000Z	mac9416	coz_	Verizon puts a 5g/month cap on me and big downloads make me cringe. Their stupid bandwidth meter is buggy too. But I can take 50 megs
+2009-05-16T20:04:00.000Z	coz_	mac9416	 ok  let me know when all is downloaded
+2009-05-16T20:18:00.000Z	mac9416	coz_	linux-source/nvidia driver are both downloaded
+2009-05-16T20:19:00.000Z	coz_	mac9416	 ok now   gksudo gedit /etc/default/linux-restricted-modules-common
+2009-05-16T20:19:00.000Z	coz_	mac9416	  change   DISABLED_MODULES=""   to    DISABLED_MODULES="nv nvidia_new"
+2009-05-16T20:19:00.000Z	mac9416	coz_	working...
+2009-05-16T20:20:00.000Z	coz_	mac9416	  then ctrl+alt+F1  then  log in then  sudo /etc/init.d/gdm stop  then cd to the location of the downloaded driver  and    sudo   sh NV  hit tab to complete name   then answer yes to all   then    when finished    sudo   init 6  to reboot
+2009-05-16T20:21:00.000Z	coz_	mac9416	 if you are not familiar with those commands I am going to suggest writing them down on paper :)
+2009-05-16T20:22:00.000Z	mac9416	coz_	Paper?! How archaic!
+2009-05-16T20:22:00.000Z	coz_	mac9416	  lol  yes but how  functional
+2009-05-16T20:23:00.000Z	mac9416	coz_	OK, working...
+2009-05-16T20:23:00.000Z	coz_	mac9416	 ok
+2009-05-16T20:31:00.000Z	mac9416	coz_	OK, ran the driver installer. Got a slew of errors that eppeared to be conflicts with nvidia-glx-180. They were very long, but I copied down one of them:
+2009-05-16T20:31:00.000Z	mac9416	coz_	ERROR: Unable to open '/usr/lib/xorg/modules/extensions/libglx.so' for reading. No such file or directory.
+2009-05-16T20:31:00.000Z	coz_	mac9416	 oy
+2009-05-16T20:31:00.000Z	coz_	mac9416	 ok I am going to hand you over to raylu  then   I apprently am missing something here
+2009-05-16T20:32:00.000Z	mac9416	coz_	OK, thanks for the help :-)
+2009-05-16T20:34:00.000Z	mac9416	coz_	lol, I thought those errors were it for me, but I didn't pay attention when it booted up. Guess what...
+2009-05-16T20:34:00.000Z	coz_	mac9416	 what?
+2009-05-16T20:35:00.000Z	mac9416	coz_	No errors on boot. All appears in order :-D
+2009-05-16T20:35:00.000Z	coz_	mac9416	 ah ha:)
+2009-05-16T20:35:00.000Z	coz_	mac9416	  so it is working now?
+2009-05-16T20:35:00.000Z	mac9416	coz_	Yezzir, as far as I know. Desktop effects working. That appears to have got it. Thanks!
+2009-05-16T20:36:00.000Z	coz_	mac9416	  very cool :)   and you dont have to update that driver until the next series  most likely... unless nvidia fixes the major buts in that series :)
+2009-05-16T20:36:00.000Z	coz_	mac9416	 major bugs  but butts works too :)
+2009-05-16T20:37:00.000Z	mac9416	coz_	lol, yeah.
+2009-05-16T20:37:00.000Z	coz_	mac9416	  cool now you can just enjoy :)
+2009-05-16T20:37:00.000Z	mac9416	coz_	Thanks so much! Cya
+2009-05-16T20:37:00.000Z	coz_	mac9416	 no problem
+2009-05-17T19:12:00.000Z	coz_	mac9416	 let me check hold on
+2009-05-17T19:12:00.000Z	coz_	mac9416	  http://dl.getdropbox.com/u/132551/REINSTALL%20GRUB
+2009-05-17T19:13:00.000Z	mac9416	coz_	Thanks again, man. I'll tell you if my car breaks down. ;-)
+2009-05-17T19:13:00.000Z	coz_	mac9416	 lol
+2009-05-17T19:14:00.000Z	coz_	mac9416	  well your car will have to wait I am going to change starter and a few other things on my car as it is :)
+2009-05-17T19:14:00.000Z	mac9416	coz_	lol

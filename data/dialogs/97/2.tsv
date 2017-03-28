@@ -1,0 +1,97 @@
+2011-11-23T12:10:00.000Z	sln45		May I ask a question about on-screen annotation and metacity as a compositing manager?
+2011-11-23T12:12:00.000Z	sln45		Nobody would be able to help me? Metacity and Compiz at the same time? Annotation tools?
+2011-11-23T12:13:00.000Z	soreau	sln45	AFAIK, only compiz has annotate, noe metacity
+2011-11-23T12:15:00.000Z	soreau	sln45	compiz is only as heavy as the plugins you enable and how well your graphics driver performs
+2011-11-23T12:16:00.000Z	soreau	sln45	You cant use compiz and metacity at the same time but you can configure compiz to have only the same functionality of metacity + annotate
+2011-11-23T12:16:00.000Z	sln45	soreau	There's a bear minimum of plugins that it just won't allow me to turn off, and I don't know how to make it not be my compositing manager and do nothing but annotate
+2011-11-23T12:17:00.000Z	sln45	soreau	I literally only want window shadows and annotate
+2011-11-23T12:17:00.000Z	soreau	sln45	You cant make it do only annotate. You have to run compiz as your window manager
+2011-11-23T12:18:00.000Z	soreau	sln45	What version of ubuntu?
+2011-11-23T12:18:00.000Z	soreau	sln45	That is not necessary
+2011-11-23T12:20:00.000Z	sln45	soreau	Gotcha. Well, can I configure it beyond what its frontend wants me to? Because it seems to follow those three magic wand special effects settings
+2011-11-23T12:20:00.000Z	soreau	sln45	After those comments, I really dont feel like helping you anymore
+2011-11-23T12:21:00.000Z	sln45	soreau	Fine by me. No one is making you do anything. I appreciate what help you've given me
+2011-11-23T12:22:00.000Z	sln45	soreau	It's Natty Narwhal if you still want to know
+2011-11-23T12:23:00.000Z	soreau	sln45	What 'three magic wand special effects settings' are you referring to then?
+2011-11-23T12:24:00.000Z	sln45	soreau	I'm sorry it was such an unspecific way of putting it. I was hoping you'd recognize what I was talking about. Give me a minute to get the exact name
+2011-11-23T12:31:00.000Z	sln45	soreau	Again, sorry for the delay. The setting is gone; I assume that's a result of my not having compiz for like a year now. I'm putting it back as my compositing manager... Might go back to fiddling with things myself instead of bothering you
+2011-11-23T12:31:00.000Z	soreau	sln45	This is what you probably want to do: 1) Remove compiz-plugins-main package 2) In ccsm, disable everything except Move, Resize, Window Decoration, Application Switcher, Gnome Compatibility and Place Windows (and of course Annotate) 3) Run compiz and test
+2011-11-23T12:31:00.000Z	sln45	soreau	Oh! Okay, noted.
+2011-11-23T12:32:00.000Z	soreau	sln45	Since 0.9.4 has a fair amount of bugs that are fixed in compiz git master, I would go as far as recommending to install latest. There is a script to automate the process on 11.04 and installs to /opt (wont mess with your packaged compiz)
+2011-11-23T12:33:00.000Z	sln45	soreau	I'm going to try things, and I'll come back if I have any problems. Thank you.
+2011-11-23T12:33:00.000Z	sln45	soreau	You mean the dev? Or is there a new build not in the repository?
+2011-11-23T12:35:00.000Z	soreau	sln45	ubuntu heavily patches compiz to get unity working. Regardless, 0.9.4 has enough bugs to make it very frustrating to use. The main upstream development branch is reasonable from my experience
+2011-11-23T12:35:00.000Z	sln45	soreau	I don't have unity. I probably should have mentioned that.
+2011-11-23T12:36:00.000Z	sln45	soreau	I can't run it.
+2011-11-23T12:36:00.000Z	soreau	sln45	And if you must know, I personally did some work on annotate plugin for compiz 0.9.x so there are new features and bug fixes
+2011-11-23T12:36:00.000Z	sln45	soreau	Oh! Hey, that's really cool. So yes, there's a new build and I'm not getting the dev?
+2011-11-23T12:37:00.000Z	soreau	sln45	I also wrote the build script for compiz 0.9.x tailored for ubuntu 11.04. In case you're interested, do this to install it: sudo apt-get install git && git clone git://anongit.compiz.org/users/soreau/scripts && ./scripts/build_compiz++
+2011-11-23T12:39:00.000Z	sln45	soreau	Oh, well... I actually have another machine of the same make and build with an older release I want to do this with, too. I don't think I'll be employing your script, though I appreciate it.
+2011-11-23T12:40:00.000Z	soreau	sln45	In compiz 0.8.x (included with <= 10.10) there's a bug in annotate where it 'skips'
+2011-11-23T12:41:00.000Z	sln45	soreau	Okay. Also noted.
+2011-11-23T12:50:00.000Z	sln45	soreau	0.9.4 was the one I installed from the repositories. Is this acceptable?
+2011-11-23T12:51:00.000Z	soreau	sln45	Like I said, there are a considerable amount of bugs in that version which is why I recommend installing from git
+2011-11-23T12:52:00.000Z	soreau	sln45	It should 'work' nonetheless
+2011-11-23T12:52:00.000Z	sln45	soreau	Okay. I wasn't clear on which you were referring to.
+2011-11-23T13:05:00.000Z	sln45	soreau	Still there?
+2011-11-23T13:06:00.000Z	soreau	sln45	Do you have window borders?
+2011-11-23T13:07:00.000Z	sln45	soreau	That I do, but I don't think I can even get Compiz to be my manager again (though it thinks it is.) Nothing has changed since I turned Metacity's manager off
+2011-11-23T13:07:00.000Z	soreau	sln45	What is the output of 'ps ax|grep compiz|grep -v grep'?
+2011-11-23T13:08:00.000Z	sln45	soreau	Wha..... There's no output at all!
+2011-11-23T13:08:00.000Z	soreau	sln45	That means compiz isn't running and thus not managing anything at all
+2011-11-23T13:09:00.000Z	sln45	soreau	Ah, I'll fix that then.
+2011-11-23T13:09:00.000Z	soreau	sln45	Try compiz --replace from Alt+F2 run dialog or 'compiz --replace & disown' from a terminal
+2011-11-23T13:10:00.000Z	sln45	soreau	That did the trick. Thanks.
+2011-11-23T13:10:00.000Z	sln45	soreau	Continuing with your instructions
+2011-11-23T13:11:00.000Z	sln45	soreau	compiz-plugins-main is dependent on compiz. It won't go unless compiz goes
+2011-11-23T13:13:00.000Z	soreau	sln45	then just leave it
+2011-11-23T13:17:00.000Z	sln45	soreau	Alright. Well, Compiz isn't wrecking me as much as I expected, though a little more than I'd like. I guess I can play with it and see if it'll work out okay. Thanks for helping me, it was cool to meet you.
+2011-11-23T13:22:00.000Z	sln45	soreau	Oh God, someting broke and I have to restart my computer.
+2011-11-23T13:23:00.000Z	soreau	sln45	What happened?
+2011-11-23T13:46:00.000Z	sln45	soreau	You still there?
+2011-11-23T13:48:00.000Z	soreau	sln45	Why did you react so hastily?
+2011-11-23T13:48:00.000Z	sln45	soreau	Huh?
+2011-11-23T13:48:00.000Z	sln45	soreau	To what?
+2011-11-23T13:48:00.000Z	soreau	sln45	I assume compiz crashed and you had no window borders etc
+2011-11-23T13:49:00.000Z	sln45	soreau	No, the compiz settings manager froze. Er, it thought it was closed, but the window yet filled my screen. Everything is fine now, after two reboots. :\
+2011-11-23T13:50:00.000Z	soreau	sln45	You might want to install compiz-plugins-extra and enable crash handler plugin. Inside, tell it to start a fallback wm and make the command 'metacity --replace'
+2011-11-23T13:51:00.000Z	sln45	soreau	I certainly will. But the real irony is that everything but annotate is now working. Annotate is totally ignoring the mouse. The mouse just does its usual mouse thing.
+2011-11-23T13:51:00.000Z	soreau	sln45	What keybinding are you using for it?
+2011-11-23T13:52:00.000Z	sln45	soreau	The default, alt + super
+2011-11-23T13:52:00.000Z	soreau	sln45	Alt+Super what?
+2011-11-23T13:52:00.000Z	sln45	soreau	alt + super + left mouse click
+2011-11-23T13:53:00.000Z	soreau	sln45	It should work
+2011-11-23T13:53:00.000Z	sln45	soreau	I know that much. That's why I came to you.
+2011-11-23T13:54:00.000Z	sln45	soreau	Worked a year ago, for sure.
+2011-11-23T13:54:00.000Z	sln45	soreau	As someone who helped improve that function, do you have any thoughts?
+2011-11-23T13:56:00.000Z	soreau	sln45	worksforme even with default compiz 0.9.4
+2011-11-23T13:56:00.000Z	sln45	soreau	I'm sure. But neither the touchscreen nor the mousepad are doing anything.
+2011-11-23T13:57:00.000Z	sln45	soreau	They each just select an area or click something. The function isn't activated at all. The windows key is the super key, right?
+2011-11-23T13:57:00.000Z	soreau	sln45	yes
+2011-11-23T13:57:00.000Z	sln45	soreau	Oh, hey, maybe my super's the problem. Hold on.
+2011-11-23T13:58:00.000Z	soreau	sln45	Maybe try the other set of Super+Alt buttons
+2011-11-23T13:58:00.000Z	sln45	soreau	Other set? I have but the one.
+2011-11-23T13:58:00.000Z	sln45	soreau	Tiny keyboard
+2011-11-23T13:59:00.000Z	sln45	soreau	Fits my little hands
+2011-11-23T13:59:00.000Z	soreau	sln45	Ah, well maybe try setting it to a different binding like Ctrl+Button1 or something
+2011-11-23T13:59:00.000Z	sln45	soreau	Sure. One sec
+2011-11-23T14:00:00.000Z	sln45	soreau	Zip. How do I debug this function?
+2011-11-23T14:03:00.000Z	soreau	sln45	Try running compiz --replace in your terminal and look for related messages
+2011-11-23T14:04:00.000Z	soreau	sln45	Or pastebin the output of 'dpkg -l|grep compiz' to pastebin.com
+2011-11-23T14:05:00.000Z	soreau	sln45	After restarting ccsm, does annotate remain enabled?
+2011-11-23T14:05:00.000Z	sln45	soreau	One sec
+2011-11-23T14:06:00.000Z	sln45	soreau	It does
+2011-11-23T14:06:00.000Z	soreau	sln45	remove compiz-fusion-bcop for starters
+2011-11-23T14:07:00.000Z	soreau	sln45	then in ccsm>Preferences, do Reset to Defaults (while metacity is running) and then reconfigure compiz. Also make sure FlatFile backend is selected there
+2011-11-23T14:08:00.000Z	soreau	sln45	If ~/.compiz-1 exists, get rid of it too
+2011-11-23T14:10:00.000Z	sln45	soreau	Is flatfile backend a plugin? Where am I supposed to see it?
+2011-11-23T14:10:00.000Z	soreau	sln45	same place you Reset to Defaults
+2011-11-23T14:12:00.000Z	sln45	soreau	Done! Now I try it?
+2011-11-23T14:12:00.000Z	soreau	sln45	Did you reconfigure ccsm and re-enable all necessary plugins?
+2011-11-23T14:13:00.000Z	sln45	soreau	Er, I reset it if that's what you mean. Is there something specific I must enable besides annotate?
+2011-11-23T14:13:00.000Z	soreau	sln45	Yes, all the plugins I mentioned earlier
+2011-11-23T14:14:00.000Z	sln45	soreau	I suppose I missed that list.
+2011-11-23T14:14:00.000Z	soreau	sln45	In ccsm, disable everything except Move, Resize, Window Decoration, Application Switcher, Gnome Compatibility and Place Windows (and of course Annotate)
+2011-11-23T14:14:00.000Z	soreau	sln45	conversely, enable those plugins^^
+2011-11-23T14:15:00.000Z	sln45	soreau	Right
+2011-11-23T14:19:00.000Z	soreau	sln45	Did you enable crash handler with the fallback wm of metacity?

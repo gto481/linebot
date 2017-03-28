@@ -1,0 +1,97 @@
+2005-06-20T11:48:00.000Z	chombee		Can anyone tell me how to mount this USB hard-drive enclosure? I can't figure out which device to fdisk or mount. Here is the output of tail /var/log/messages as I turned the device on and off a couple of times: Jun 13 13:28:53 localhost kernel: Initializing USB Mass Storage driver...
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:28:53 localhost kernel: scsi0 : SCSI emulation for USB Mass Storage devices
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:28:53 localhost kernel: usbcore: registered new driver usb-storage
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:28:53 localhost kernel: USB Mass Storage support registered.
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:28:53 localhost usb.agent[8612] :      usb-storage: loaded successfullyJun 13 13:31:00 localhost kernel: usb 1-1: USB disconnect, address 2
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:31:38 localhost kernel: usb 1-1: new full speed USB device using uhci_hcd and address 3
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:31:38 localhost kernel: scsi1 : SCSI emulation for USB Mass Storage devices
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:31:39 localhost usb.agent[8996] :      usb-storage: already loaded
+2005-06-20T11:48:00.000Z	chombee		Jun 13 13:37:30 localhost kernel: usb 1-1: USB disconnect, address 3
+2005-06-20T11:48:00.000Z	chombee		:
+2005-06-20T11:48:00.000Z	HappyFool	chombee	please don't paste so much stuff
+2005-06-20T11:49:00.000Z	chombee	HappyFool	- sorry. I didn't realise it would space it out so much
+2005-06-20T12:11:00.000Z	HappyFool	chombee	what device is it?
+2005-06-20T12:12:00.000Z	chombee	HappyFool	- 3.5" external HD enclosure, bytetec ME-740
+2005-06-20T12:13:00.000Z	HappyFool	chombee	and what ubuntu are you running ? 5.04 (hoary) ? on a conventional intel/amd pc ?
+2005-06-20T12:13:00.000Z	chombee	HappyFool	- yes
+2005-06-20T12:14:00.000Z	HappyFool	chombee	and it's not auto-mounted when you plug it in?
+2005-06-20T12:14:00.000Z	chombee	HappyFool	- no, doesn't seem to be, I don't see it anywhere
+2005-06-20T12:14:00.000Z	HappyFool	chombee	hrm
+2005-06-20T12:15:00.000Z	HappyFool	chombee	ok, let's try mounting it manually
+2005-06-20T12:15:00.000Z	HappyFool	chombee	let me just plug in my memory stick and see where it appears ....
+2005-06-20T12:15:00.000Z	chombee	HappyFool	- dmesg and /var/log/messages seem to show the device being detected, but not mounted, and no device name
+2005-06-20T12:15:00.000Z	HappyFool	chombee	it'll probably be /dev/sda1 or something
+2005-06-20T12:16:00.000Z	chombee	HappyFool	- Unable to open /dev/sda
+2005-06-20T12:17:00.000Z	HappyFool	chombee	/dev/sda1, not /dev/sda -- and you need to mount it (err, maybe you know how to mount devices?)
+2005-06-20T12:18:00.000Z	chombee	HappyFool	-  I was trying to use fdisk to see what partitions are on the device, I can't try to mount it without the partition name
+2005-06-20T12:18:00.000Z	HappyFool	chombee	hrm, good idea
+2005-06-20T12:18:00.000Z	HappyFool	chombee	did you sudo ?
+2005-06-20T12:18:00.000Z	HappyFool	chombee	'sudo fdisk -l /dev/sda' ?
+2005-06-20T12:18:00.000Z	chombee	HappyFool	- sudo fdisk /dev/sda
+2005-06-20T12:19:00.000Z	chombee	HappyFool	- with -l it gives no output
+2005-06-20T12:19:00.000Z	HappyFool	chombee	sub-optimal
+2005-06-20T12:19:00.000Z	HappyFool	chombee	how many files do you see if you do ls -l /dev/sd?     ?
+2005-06-20T12:20:00.000Z	chombee	HappyFool	- No such file or directory
+2005-06-20T12:20:00.000Z	HappyFool	chombee	um
+2005-06-20T12:20:00.000Z	HappyFool	chombee	so /dev/sda doesn't even exist ?
+2005-06-20T12:21:00.000Z	HappyFool	chombee	if you do 'cat /proc/scsi/scsi', do you see an 'Attached devices' line ?
+2005-06-20T12:21:00.000Z	chombee	HappyFool	- doesn't look like /dev/sda exists
+2005-06-20T12:22:00.000Z	HappyFool	chombee	so i see. to repeat from earlier: if you do 'cat /proc/scsi/scsi', do you see an 'Attached devices' line ?
+2005-06-20T12:22:00.000Z	chombee	HappyFool	'$ cat /proc/scsi/scsi' gives 'Attached devices:'
+2005-06-20T12:23:00.000Z	HappyFool	chombee	is that it?
+2005-06-20T12:23:00.000Z	HappyFool	chombee	i mean, does it list any devices there ?
+2005-06-20T12:23:00.000Z	chombee	HappyFool	- yeah, looks like no scsi devices
+2005-06-20T12:23:00.000Z	HappyFool	chombee	suboptimal
+2005-06-20T12:24:00.000Z	chombee	HappyFool	- i see this in dmesg: scsi1 : SCSI emulation for USB Mass Storage devices
+2005-06-20T12:25:00.000Z	HappyFool	chombee	can you put the output of dmesg up here: http://rafb.net/paste/
+2005-06-20T12:25:00.000Z	HappyFool	chombee	tell me the URL when you're done
+2005-06-20T12:26:00.000Z	HappyFool	chombee	i googled for your drive model and got 0 hits -- you said it's a bytetec ME-740 ?
+2005-06-20T12:28:00.000Z	chombee	HappyFool	- http://rafb.net/paste/results/oHTXyG26.html I couldn't find any Linux stuff about it on google, hold on
+2005-06-20T12:29:00.000Z	chombee	HappyFool	- Bytecc ME-740
+2005-06-20T12:31:00.000Z	HappyFool	chombee	it's just an extended partition -- 5 and 6 are elements of that extended partition
+2005-06-20T12:32:00.000Z	HappyFool	chombee	dunno. it doesn't matter ;) cos it's not helping you find your usb drive
+2005-06-20T12:33:00.000Z	chombee	HappyFool	Seveas - okay. I just thought it was suspicous. I tried mounting that partition earlier, not good
+2005-06-20T12:38:00.000Z	HappyFool	chombee	yeah, but evidently it detects scsi devices (which is how linux is seeing your usb drive)
+2005-06-20T12:42:00.000Z	chombee	HappyFool	Seveas - do you think I need to mount scsi1? I think the device probably has multiple partitions, but fdisk finds nothing on /dev/scsi or /dev/scsi1
+2005-06-20T12:42:00.000Z	HappyFool	chombee	i think that 'scsi1' is an internal name only
+2005-06-20T12:53:00.000Z	chombee	HappyFool	Seveas - looks like we're out of leads, do you think the device is simply unsupported?
+2005-06-20T12:53:00.000Z	HappyFool	chombee	not sure. that thing about 'virtual <something> not detected properly' sounded a bit funny
+2005-06-20T12:54:00.000Z	HappyFool	chombee	however, i am out of ideas
+2005-06-20T12:54:00.000Z	chombee	HappyFool	- that's just the lshw command doesn't detect USB Mass storage devices that pose as virtual scsi devices
+2005-06-20T12:55:00.000Z	HappyFool	chombee	ok, fair enough
+2005-06-20T12:59:00.000Z	HappyFool	chombee	Window -> Channel list
+2005-06-20T13:01:00.000Z	chombee	HappyFool	Seveas - thanks for the help, I'll continue elsewhere
+2005-06-20T13:02:00.000Z	HappyFool	chombee	what problems you having?
+2005-06-20T13:02:00.000Z	HappyFool	chombee	note that use repo is down
+2005-06-20T13:03:00.000Z	HappyFool	chombee	i meant us repo
+2005-06-20T13:03:00.000Z	chombee	HappyFool	- this is just a friend of mine, I was setting up some multimedia a packages for him and he's been repeatedly unable to get a couple of them, mplayer ones, looks like repo is down. You say a US repo is down?
+2005-06-20T13:04:00.000Z	HappyFool	chombee	yeah, the us repo. in /etc/apt/sources.list, change 'us.archive.ubuntu.com' to archive.ubuntu.com
+2005-06-20T13:05:00.000Z	chombee	HappyFool	- or wait for the US one to come back up, I guess
+2005-06-20T13:05:00.000Z	HappyFool	chombee	it's been down since friday, i think. hope you're patient ;)
+2005-06-20T13:05:00.000Z	chombee	HappyFool	- I notice mplayer is on marillat though
+2005-06-20T13:05:00.000Z	HappyFool	chombee	marillat the path to the dark side is
+2005-06-20T13:06:00.000Z	HappyFool	chombee	using marillat packages can be troublesome for ubuntu systems. marillat is designed for debian, afaik
+2005-06-20T13:09:00.000Z	chombee	HappyFool	- you know what, I gave him the sample sources.list from the Hoary guide, so it doesn't even contain marillat, just adds universe and multiverse I guess, so it's just the US thing. He seemed to get almost all packages though, just not a couple of mplayer ones
+2005-06-20T13:10:00.000Z	HappyFool	chombee	in that case it probably is the us.archive problem
+2005-06-20T14:05:00.000Z	chombee	HappyFool	- do you think my USB problem could be because I didn't insert the HD properly?
+2005-06-20T14:07:00.000Z	HappyFool	chombee	hrm, i dunno
+2005-06-20T14:07:00.000Z	HappyFool	chombee	try unplugging the HD, and plugging in the cage (err, or whatever you call it)
+2005-06-20T14:07:00.000Z	HappyFool	chombee	see if dmesg registers anything
+2005-06-21T14:08:00.000Z	HappyFool	chombee	i think that is relatively unlikely
+2005-06-21T14:09:00.000Z	HappyFool	chombee	can't you boot from the cd?
+2005-06-21T14:09:00.000Z	chombee	HappyFool	- is there a way to make an Ubuntu boot disk? My friend has a laptop with an external USB cdrom, he can't boot from the cdrom but can boot from a floppy then lauch a Windows install from the cdrom
+2005-06-21T14:10:00.000Z	HappyFool	chombee	um
+2005-06-21T14:10:00.000Z	HappyFool	chombee	you can try here, but it might be a bit of work: http://www.ubuntulinux.org/wiki/NetbootInstallHowto
+2005-06-21T14:11:00.000Z	HappyFool	chombee	sorry, don't know much more
+2005-06-21T14:11:00.000Z	chombee	HappyFool	- okay, thanks
+2005-06-23T14:12:00.000Z	HappyFool	chombee	you can boot in rescue mode
+2005-06-23T14:13:00.000Z	chombee	HappyFool	- how? Will this enable me to get the login name?
+2005-06-23T14:13:00.000Z	HappyFool	chombee	well, you can take a look at /etc/passwd (or just /home), so yes
+2005-06-23T14:14:00.000Z	chombee	HappyFool	- great, thanks
+2005-06-23T14:14:00.000Z	HappyFool	chombee	it'll also let you reset that user's password
+2005-06-23T14:14:00.000Z	chombee	HappyFool	- how to access this mode?
+2005-06-23T14:14:00.000Z	HappyFool	chombee	reboot, press 'ESC' when prompted (very early in the boot process)
+2005-06-23T14:15:00.000Z	HappyFool	chombee	you should get a boot menu. select 'rescue mode'
+2005-06-23T14:15:00.000Z	chombee	HappyFool	- recovery mode, thanks
+2005-06-23T14:15:00.000Z	HappyFool	chombee	err, or that ;)
+2005-09-15T13:09:00.000Z	chombee	HappyFool	funkyHat, thanks

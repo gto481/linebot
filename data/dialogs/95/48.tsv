@@ -1,0 +1,95 @@
+2007-10-03T09:42:00.000Z	soundray	arnath	join #ubuntu+1, read the topic and decide for yourself. My opinion: it's worth trying.
+2007-10-03T09:42:00.000Z	arnath	soundray	ok
+2007-10-03T10:13:00.000Z	arnath	soundray	i dont want to fstab it, just add it once (im in the livecd and want to back up some files before i install)
+2007-10-03T10:14:00.000Z	soundray	arnath	for temporary mounting, 'sudo mount /dev/sdb1 /mnt' (adapt the device name)
+2007-10-03T10:14:00.000Z	arnath	soundray	"you must specify the filesystem type" (i tried -t ext3)
+2007-10-03T10:15:00.000Z	soundray	arnath	you're not giving it the correct /dev/sdXy name
+2007-10-03T10:15:00.000Z	soundray	arnath	how is the drive connected?
+2007-10-03T10:15:00.000Z	arnath	soundray	sataII and im lookin at fdisk -l, its sdb2
+2007-10-03T10:18:00.000Z	arnath	soundray	and how do i mount an external usb drive?
+2007-10-03T10:18:00.000Z	soundray	arnath	exactly the same, just adapt the device name. And umount /mnt first, probably
+2007-10-03T10:20:00.000Z	arnath	soundray	is it normal that fdisk -l says "sdc doesn't contain a valid partition table", but that i can mount & read it?
+2007-10-03T10:21:00.000Z	soundray	arnath	no, that's not normal. But I've had that type of trouble myself with fdisk and externals.
+2007-10-03T13:27:00.000Z	soundray	arnath	if something went wrong at the grub stage, use the RecoveringUbuntu... instructions from the private message that's coming...
+2007-10-03T13:40:00.000Z	arnath	soundray	i installed grub and it is booting now, but i get "error 22: no such partition"
+2007-10-03T13:40:00.000Z	soundray	arnath	yuck, something else went wrong with your installation. Would it be terrible to start over?
+2007-10-03T13:40:00.000Z	arnath	soundray	you mean my grub installation or the linux one?
+2007-10-03T13:41:00.000Z	soundray	arnath	ubuntu
+2007-10-03T13:41:00.000Z	arnath	soundray	well it would be rather nasty, but if it must be done...
+2007-10-03T13:41:00.000Z	soundray	arnath	why, you haven't got data on it yet, have you?
+2007-10-03T13:41:00.000Z	arnath	soundray	what did i do wrong the last time? because simply repeating my steps will probably lead to the same outcome
+2007-10-03T13:42:00.000Z	arnath	soundray	i spent a while putting together the hardware and backing up existing data, then coming to the painful conclusion that the normal live cd doesnt work (and extensive searches on 8600gts inability to work in ubuntu properly)
+2007-10-03T13:42:00.000Z	arnath	soundray	so i'm a bit beat at the moment :p
+2007-10-03T13:43:00.000Z	soundray	arnath	I don't know what you did wrong of course, but it's happened to me that I succeeded on a second or third attempt, without knowing exactly what made the difference.
+2007-10-03T13:43:00.000Z	soundray	arnath	now I know that's not a principled approach, but if it's about getting things running, I don't mind being a bit un-principled.
+2007-10-03T13:43:00.000Z	arnath	soundray	btw, the setup is -> one sata drive with an old version of windows on it (old = from another computer, i just imported the harddrive), one sata drive with linux on it
+2007-10-03T13:43:00.000Z	arnath	soundray	could the windows drive be causing me problems?
+2007-10-03T13:44:00.000Z	soundray	arnath	no, I doubt that very much
+2007-10-03T13:44:00.000Z	arnath	soundray	then i shall repeat my steps and hopefully i will be more successful
+2007-10-03T13:44:00.000Z	soundray	arnath	do you know which the bios treats as first and which as second?
+2007-10-03T13:44:00.000Z	arnath	soundray	btw, my partition table is this: 10 gig for /, []  gig for /home, 2 gig for swap and bootable on the / partition
+2007-10-03T13:45:00.000Z	soundray	arnath	all on the second drive?
+2007-10-03T13:45:00.000Z	arnath	soundray	for booting or in general?
+2007-10-03T13:45:00.000Z	arnath	soundray	yes
+2007-10-03T13:45:00.000Z	soundray	arnath	if it swaps between booting and Linux taking over, that might explain the problem.
+2007-10-03T13:46:00.000Z	arnath	soundray	ah, in the original lineup, the windows drive was first to be booted, but i changed this explicitly in the bios
+2007-10-03T13:47:00.000Z	soundray	arnath	to increase your probability of succeeding, you could remove the Windows hard disk.
+2007-10-03T13:48:00.000Z	arnath	soundray	ok, i will try that
+2007-10-03T13:48:00.000Z	arnath	soundray	haha, its fixed
+2007-10-03T13:48:00.000Z	soundray	arnath	?
+2007-10-03T13:48:00.000Z	arnath	soundray	what you suggested about it switching between grub and actual booting
+2007-10-03T13:48:00.000Z	arnath	soundray	i switched the internal harddisk boot lineup and now it works
+2007-10-03T13:48:00.000Z	soundray	arnath	whew
+2007-10-03T13:49:00.000Z	arnath	soundray	thanks a lot, it wouldn't have occurred to me in a million years
+2007-10-03T13:49:00.000Z	arnath	soundray	now i just have to fix my nvidia drivers so my x doesnt go blank on boot and im set! :)
+2007-10-03T13:49:00.000Z	soundray	arnath	good luck
+2007-10-03T13:49:00.000Z	arnath	soundray	thx :)
+2007-10-03T13:50:00.000Z	arnath	soundray	should i use "recovery mode" to install the nvidia drivers?
+2007-10-03T13:51:00.000Z	soundray	arnath	do you have no X at all at present?
+2007-10-03T13:51:00.000Z	arnath	soundray	indeed, no X at all, the screen goes blank once ubuntu is done loading
+2007-10-03T13:51:00.000Z	soundray	arnath	do you know what driver is currently active?
+2007-10-03T13:51:00.000Z	arnath	soundray	hmm, not sure how i figure that one out
+2007-10-03T13:52:00.000Z	soundray	arnath	what's happening right now?
+2007-10-03T13:53:00.000Z	arnath	soundray	im booting again, hoping a ctrl+alt+backspace will kill my x and give me command line
+2007-10-03T13:53:00.000Z	soundray	arnath	it probably won't. Try Ctrl-Alt-F2 to get a console.
+2007-10-03T13:54:00.000Z	arnath	soundray	last time i tried to install the drivers, i had to kill the X, otherwise it wouldnt install
+2007-10-03T13:54:00.000Z	arnath	soundray	also, quick question, how can i get the drivers off the official nvidia site in the command line?
+2007-10-03T13:55:00.000Z	soundray	arnath	I don't know -- I would stick to the ubuntu packages if at all possible
+2007-10-03T13:55:00.000Z	arnath	soundray	ive been looking at this particular problem for a while now, and the packages are not sufficient
+2007-10-03T13:55:00.000Z	arnath	soundray	or so i've read over and over again
+2007-10-03T13:56:00.000Z	arnath	soundray	what i could do, is activate the ummm, default drivers, something starting with a "v", this should work enough to allow me to open X
+2007-10-03T13:57:00.000Z	arnath	soundray	but i'm not sur ehow to change it and i forgot the name :D
+2007-10-03T13:57:00.000Z	soundray	arnath	I see. Did you find anything about vesa mode not working on your card?
+2007-10-03T13:57:00.000Z	arnath	soundray	o ye vesa, thats it
+2007-10-03T13:57:00.000Z	arnath	soundray	i believe that should work, but i dont know how to activate it
+2007-10-03T13:57:00.000Z	soundray	arnath	exactly, let's try to get that going.
+2007-10-03T13:59:00.000Z	arnath	soundray	if i open xorg.conf and change (in section "Device") the driver from "nv" to "vesa", would that do it?
+2007-10-03T14:00:00.000Z	soundray	arnath	yes, try that.
+2007-10-03T14:01:00.000Z	arnath	soundray	its working
+2007-10-03T14:01:00.000Z	soundray	arnath	sry, phone, away for a while
+2007-10-03T14:01:00.000Z	arnath	soundray	ok
+2007-10-03T14:43:00.000Z	soundray	arnath	how are you getting on?
+2007-10-03T14:47:00.000Z	soundray	arnath	you probably need to get the monitor section right.
+2007-10-03T14:47:00.000Z	arnath	soundray	hmm, what do you mean by that?
+2007-10-03T14:48:00.000Z	soundray	arnath	best to find out the hsync and vrefresh specs and configure them in 'sudo dpkg-reconfigure xserver-xorg', using the "Advanced" option in the Monitor section.
+2007-10-03T14:48:00.000Z	soundray	arnath	that's if you have a manual for your monitor or can find the specs on the web
+2007-10-03T14:51:00.000Z	arnath	soundray	im afraid im not quite qualified to be running that
+2007-10-03T14:52:00.000Z	arnath	soundray	its asking me a LOT of questions i dont know the answer to
+2007-10-03T14:52:00.000Z	soundray	arnath	what questions?
+2007-10-03T14:52:00.000Z	arnath	soundray	too many to state here i think :D
+2007-10-03T14:52:00.000Z	arnath	soundray	can't i just manually adapt the xorg.conf? thats what i did on my last install and i got it working...somewhat
+2007-10-03T14:52:00.000Z	soundray	arnath	you've been through dpkg-reconfigure xserver-xorg before, haven't you
+2007-10-03T14:53:00.000Z	arnath	soundray	i haven't encountered some of these questions, so i suppose not
+2007-10-03T14:53:00.000Z	soundray	arnath	just accept all the defaults, until it gets to questions concerning your monitor.
+2007-10-03T14:53:00.000Z	arnath	soundray	this only changes my xorg.conf yes? so if i just back it up, i should be ok?
+2007-10-03T14:54:00.000Z	soundray	arnath	yes
+2007-10-03T14:56:00.000Z	arnath	soundray	that didnt quite work :<
+2007-10-03T14:56:00.000Z	arnath	soundray	im still stuck with the same problem
+2007-10-03T14:56:00.000Z	soundray	arnath	what did you set as hsync and vrefresh?
+2007-10-03T14:57:00.000Z	arnath	soundray	actually i didnt encounter that, i might have taken the wrong option when asked about one part of my screen
+2007-10-03T14:58:00.000Z	soundray	arnath	watch out for the dialog that asks you whether you want to use the Simple, Medium or Advanced method of monitor configuration.
+2007-10-03T14:58:00.000Z	soundray	arnath	you want advanced. Have you got the numbers?
+2007-10-03T15:00:00.000Z	arnath	soundray	im lookin into it, but im not entirely sure bout wot kind of screen i have :< cant find the number
+2007-10-03T15:01:00.000Z	soundray	arnath	please ask the others in the channel now, I'm logging off. Note the private message from ubotu, that should help
+2007-10-03T15:01:00.000Z	soundray	arnath	good luck'
+2007-10-08T16:49:00.000Z	soundray	arnath	no swearing here. Watch ubotu:

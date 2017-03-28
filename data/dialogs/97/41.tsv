@@ -1,0 +1,97 @@
+2007-02-26T06:04:00.000Z	Shrimpy1		hello can anyone help me install the graphics card for intel so i can adjust my resolutions
+2007-02-26T06:06:00.000Z	Shrimpy1		hell crimsun
+2007-02-26T06:07:00.000Z	IndyGunFreak	Shrimpy1	did you get your resolution problem fixed?
+2007-02-26T06:08:00.000Z	Shrimpy1	IndyGunFreak	i did the xserver thinkgy and i messed it up really bad. got fustrated and re-intstalled ubuntu
+2007-02-26T06:08:00.000Z	Shrimpy1	IndyGunFreak	mind helping me out kinda step by step?
+2007-02-26T06:08:00.000Z	IndyGunFreak	Shrimpy1	wow.. how'd you mess i tup that bad?
+2007-02-26T06:08:00.000Z	IndyGunFreak	Shrimpy1	did i send you that xserver instruction earlier?
+2007-02-26T06:09:00.000Z	Shrimpy1	IndyGunFreak	yes you did.   but it said incorrect information and would go to a black screen with a blinking cursor.   could not type commands
+2007-02-26T06:09:00.000Z	IndyGunFreak	Shrimpy1	sorry, as you can see by the thread i sent you, it worked perfectly for me
+2007-02-26T06:10:00.000Z	Shrimpy1	IndyGunFreak	can you send it once again?
+2007-02-26T06:10:00.000Z	IndyGunFreak	Shrimpy1	are you still stuck in 640x480?
+2007-02-26T06:10:00.000Z	IndyGunFreak	Shrimpy1	i can, but i don't want you to get screwed trwice..lol
+2007-02-26T06:10:00.000Z	IndyGunFreak	Shrimpy1	so whats the prob?
+2007-02-26T06:10:00.000Z	Shrimpy1	IndyGunFreak	i can't chage the resolution to fit my screen (1280x800)
+2007-02-26T06:11:00.000Z	IndyGunFreak	Shrimpy1	i see
+2007-02-26T06:11:00.000Z	Shrimpy1	IndyGunFreak	so everything is big and goofy
+2007-02-26T06:16:00.000Z	Shrimpy1	IndyGunFreak	yeah i'm going to not cgoing to do that because i get retareed and just hit enter
+2007-02-26T06:12:00.000Z	Shrimpy1	IndyGunFreak	i think if yo send that forum i am going to look at it and see what i did wrong
+2007-02-26T06:12:00.000Z	IndyGunFreak	Shrimpy1	hang on, i'll find you the link agian
+2007-02-26T06:12:00.000Z	Shrimpy1	IndyGunFreak	thanks
+2007-02-26T06:15:00.000Z	IndyGunFreak	Shrimpy1	   http://www.linuxquestions.org/questions/showthread.php?t=495248
+2007-02-26T06:15:00.000Z	Shrimpy1	IndyGunFreak	thanks
+2007-02-26T06:16:00.000Z	Shrimpy1	IndyGunFreak	yeah i'm going to no command anything
+2007-02-26T06:17:00.000Z	IndyGunFreak	Shrimpy1	lol
+2007-02-26T06:18:00.000Z	Shrimpy1	IndyGunFreak	hey, i have an xconfig file that my friend sent me (which had the same problem) and before he just switched them or changed something. know anything babout that
+2007-02-26T06:18:00.000Z	IndyGunFreak	Shrimpy1	no clue
+2007-02-26T06:18:00.000Z	Shrimpy1	IndyGunFreak	ok thanks anyways
+2007-02-26T06:18:00.000Z	Shrimpy1	IndyGunFreak	know anything else i can try?
+2007-02-26T06:19:00.000Z	IndyGunFreak	Shrimpy1	other than manually making your icons smaller?..lol
+2007-02-26T06:19:00.000Z	Shrimpy1	IndyGunFreak	that might take a while
+2007-02-26T06:19:00.000Z	Shrimpy1	IndyGunFreak	but it made me laugh!
+2007-02-26T06:19:00.000Z	IndyGunFreak	Shrimpy1	what time of video card do you have again?
+2007-02-26T06:19:00.000Z	IndyGunFreak	Shrimpy1	it did me to..lol
+2007-02-26T06:20:00.000Z	Shrimpy1	IndyGunFreak	its an intel express graphics
+2007-02-26T06:20:00.000Z	Shrimpy1	IndyGunFreak	i'm on a dell untill i can save up and buy an IBM
+2007-02-26T06:21:00.000Z	IndyGunFreak	Shrimpy1	build your own, you'll be happier
+2007-02-26T06:21:00.000Z	Shrimpy1	IndyGunFreak	well i do for desktops, but i am converting to laptop
+2007-02-26T06:22:00.000Z	Shrimpy1	IndyGunFreak	and i have no clue where to start on barbone laptops
+2007-02-26T06:22:00.000Z	IndyGunFreak	Shrimpy1	i see
+2007-02-26T06:22:00.000Z	IndyGunFreak	Shrimpy1	me either..lol
+2007-02-26T06:23:00.000Z	Shrimpy1	IndyGunFreak	i know HP computers are pretty good with linux but i like IBM becasue they are hardcore with computer
+2007-02-26T06:25:00.000Z	IndyGunFreak	Shrimpy1	not to mention, HP is absolute junk
+2007-02-26T06:28:00.000Z	Shrimpy1	IndyGunFreak	yeah lol
+2007-02-26T06:44:00.000Z	IndyGunFreak	Shrimpy1	are you still working on the resolution thing?
+2007-02-26T06:44:00.000Z	Shrimpy1	IndyGunFreak	yes sir    or    ma'am
+2007-02-26T06:45:00.000Z	IndyGunFreak	Shrimpy1	lol, sir
+2007-02-26T06:46:00.000Z	IndyGunFreak	Shrimpy1	if i recall correctly, the only question it asked me, was how many bytes of memory my video card had
+2007-02-26T06:48:00.000Z	Shrimpy1	IndyGunFreak	i know i did not want to bother you but i'm going to ask you some
+2007-02-26T06:48:00.000Z	IndyGunFreak	Shrimpy1	if i can remember, i'll try
+2007-02-26T06:49:00.000Z	Shrimpy1	IndyGunFreak	it ask for pci bus port would it be 00:02.1 Display controller: Intel Corporation Mobile 915GM/GMS/910GML Express Graphics Controller (rev 03)    but the 00:02.1 part?
+2007-02-26T06:49:00.000Z	IndyGunFreak	Shrimpy1	you got me on that one, i have no idea.
+2007-02-26T07:00:00.000Z	IndyGunFreak	Shrimpy1	i don't know if i love it that much, but it is at least comedic relief.
+2007-02-26T07:01:00.000Z	Shrimpy1	IndyGunFreak	on the configyyy thingyyy it ask for video tingggyyyys   (as in sizes ex 800x600) do i click only one or can i have more then one? and what did you do?
+2007-02-26T07:02:00.000Z	IndyGunFreak	Shrimpy1	honestly, its been ages since i've done that command, i don't remember, but i think i only chose 1
+2007-02-26T07:04:00.000Z	Shrimpy1	IndyGunFreak	ok its done do i reboot?
+2007-02-26T07:04:00.000Z	IndyGunFreak	Shrimpy1	i guess if it tells you to reboot, yes
+2007-02-26T07:04:00.000Z	IndyGunFreak	Shrimpy1	but listen
+2007-02-26T07:05:00.000Z	IndyGunFreak	Shrimpy1	if its screwed up, before you do a new install, boot a live cd, install x-chat or something, and come back here and see if we can help you fix the prob.
+2007-02-26T07:06:00.000Z	Shrimpy1	IndyGunFreak	alright! i have my windows desktop that i hardly touch and i'll long on to that.  Thanks for your help hope to talk to you later with a sucess rating!
+2007-02-26T07:11:00.000Z	IndyGunFreak	Shrimpy1	you're back awful fast
+2007-02-26T07:11:00.000Z	Shrimpy1	IndyGunFreak	hey, it kinda worked. i have options on my prefs. but not 1200x800 i think i forgot to change it
+2007-02-26T07:12:00.000Z	IndyGunFreak	Shrimpy1	forgot to change what?
+2007-02-26T07:12:00.000Z	IndyGunFreak	Shrimpy1	are you still running the live CD?.. or did you install?
+2007-02-26T07:12:00.000Z	Shrimpy1	IndyGunFreak	like add 1200x800 resloution option... it's install lol
+2007-02-26T07:15:00.000Z	Shrimpy1	IndyGunFreak	Be Right Back (hopefully)
+2007-02-26T10:16:00.000Z	Shrimpy1	IndyGunFreak	hey hey
+2007-02-26T10:16:00.000Z	IndyGunFreak	Shrimpy1	lol, did you get it working?
+2007-02-26T10:17:00.000Z	Shrimpy1	IndyGunFreak	negative, screen is still not right
+2007-02-26T10:17:00.000Z	IndyGunFreak	Shrimpy1	i thik you're gonna have to learn to live with the lower res...lol
+2007-02-26T10:19:00.000Z	Shrimpy1	IndyGunFreak	but i think i'm going to ask around on here
+2007-02-26T10:19:00.000Z	IndyGunFreak	Shrimpy1	good luck, i don't know whats causing your prob.
+2007-02-26T10:19:00.000Z	IndyGunFreak	Shrimpy1	try posting your problem in the Ubuntu forum at http://www.linuxquestions.org
+2007-02-26T10:19:00.000Z	Shrimpy1	IndyGunFreak	do they respond fast?
+2007-02-26T10:20:00.000Z	IndyGunFreak	Shrimpy1	the ubuntu forum there is pretty active..
+2007-02-26T10:20:00.000Z	IndyGunFreak	Shrimpy1	or you could post it in the newbie forum
+2007-02-26T10:21:00.000Z	Shrimpy1	IndyGunFreak	what side do yo live on (not to be personal or anything)
+2007-02-26T10:21:00.000Z	IndyGunFreak	Shrimpy1	lot of smart folks there.. someon ca n probably help you, just dont "irritate" a mod, by posting in more than one forum
+2007-02-26T10:21:00.000Z	IndyGunFreak	Shrimpy1	what side?
+2007-02-26T10:22:00.000Z	Shrimpy1	IndyGunFreak	I'm from kentucky, (lexington) just wondering to know where other people live in the world
+2007-02-26T10:23:00.000Z	IndyGunFreak	Shrimpy1	i think i went to Ky one time as a kid
+2007-02-26T10:23:00.000Z	Shrimpy1	IndyGunFreak	awesome
+2007-02-26T10:40:00.000Z	IndyGunFreak	Shrimpy1	you still here?
+2007-02-26T10:40:00.000Z	Shrimpy1	IndyGunFreak	yes, sir?
+2007-02-26T10:41:00.000Z	Shrimpy1	IndyGunFreak	is it bad i hate mac's (although i love their commericals)
+2007-02-26T10:42:00.000Z	IndyGunFreak	Shrimpy1	i kinda agree with you...  http://www.youtube.com/watch?v=ZgZQ_It0weI
+2007-02-26T10:42:00.000Z	IndyGunFreak	Shrimpy1	watch that youtube video, i nearly wetmyself
+2007-02-26T10:43:00.000Z	Shrimpy1	IndyGunFreak	yeah its great, ... now i know i need to install java back on here
+2007-02-26T10:43:00.000Z	IndyGunFreak	Shrimpy1	have you seen it before?
+2007-02-26T10:43:00.000Z	Shrimpy1	IndyGunFreak	yes, sir
+2007-02-26T10:43:00.000Z	IndyGunFreak	Shrimpy1	i love it
+2007-02-26T10:44:00.000Z	Shrimpy1	IndyGunFreak	its the one where everything was filed with a mac
+2007-02-26T10:44:00.000Z	IndyGunFreak	Shrimpy1	no.. even better
+2007-02-26T10:48:00.000Z	IndyGunFreak	Shrimpy1	i hope you get the screen resolution thing worked out
+2007-02-26T10:49:00.000Z	Shrimpy1	IndyGunFreak	yea, i'll be back need to close for flash player :(
+2007-02-26T10:52:00.000Z	IndyGunFreak	Shrimpy1	did you get flash to work?
+2007-02-26T10:52:00.000Z	Shrimpy1	IndyGunFreak	now i need java lol
+2007-02-26T10:54:00.000Z	Shrimpy1	IndyGunFreak	going to sleep?

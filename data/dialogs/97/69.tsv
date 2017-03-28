@@ -1,0 +1,97 @@
+2006-01-18T15:26:00.000Z	EloraKun		Hi people. How can I configure a new sound card -SB Audigy- from the console in Breezy?
+2006-01-18T15:26:00.000Z	crimsun	EloraKun	you plug it in, why?
+2006-01-18T15:27:00.000Z	EloraKun	crimsun	It doesn't seem to detect it. eLive has problems with alsaconf, too
+2006-01-18T15:27:00.000Z	crimsun	EloraKun	Ubuntu doesn't ship alsaconf due to lots of buggy crop-ups
+2006-01-18T15:27:00.000Z	crimsun	EloraKun	what's the lspci -v output? Use pastebin.
+2006-01-18T15:31:00.000Z	EloraKun	crimsun	http://paste.ubuntu-nl.org/7110
+2006-01-18T15:32:00.000Z	crimsun	EloraKun	lsb_release -r
+2006-01-18T15:32:00.000Z	crimsun	EloraKun	then, lsmod|grep ^snd_ca0106
+2006-01-18T15:33:00.000Z	EloraKun	crimsun	Release 5.10
+2006-01-18T15:33:00.000Z	EloraKun	crimsun	lsmod|grep ^snd_ca0106
+2006-01-18T15:34:00.000Z	crimsun	EloraKun	and the output from amixer onto pastebin
+2006-01-18T15:36:00.000Z	EloraKun	crimsun	http://paste.ubuntu-nl.org/7111
+2006-01-18T15:38:00.000Z	crimsun	EloraKun	please increase the volumes on the Analog* controls. Start with 'Analog Front'
+2006-01-18T15:40:00.000Z	EloraKun	crimsun	I've been changing them now. They get nothing at all -which is an improvement, since before trying eLive they tended to generate loud static anytime i started XMMS-
+2006-01-18T15:44:00.000Z	crimsun	EloraKun	did you unmute 'AC97 in', too?
+2006-01-18T15:44:00.000Z	crimsun	EloraKun	also try unmuting 'SRC out'
+2006-01-18T15:45:00.000Z	EloraKun	crimsun	unmute? If that's a command, it does not exist...
+2006-01-18T15:46:00.000Z	crimsun	EloraKun	it's not a command. What are you using to adjust the volumes?
+2006-01-18T15:46:00.000Z	EloraKun	crimsun	alsamixer
+2006-01-18T15:46:00.000Z	crimsun	EloraKun	press 'm'
+2006-01-18T15:48:00.000Z	EloraKun	crimsun	Press m in alsamixer? Does nothing. Sticks to CA0106
+2006-01-18T15:48:00.000Z	crimsun	EloraKun	m mutes or unmutes the selected mixer element
+2006-01-18T15:48:00.000Z	crimsun	EloraKun	if that doesn't work, amixer sset 'AC97 in' on
+2006-01-18T15:48:00.000Z	crimsun	EloraKun	(amixer uses on for unmute and off for mute)
+2006-01-18T15:50:00.000Z	EloraKun	crimsun	SRC out and AC97 are not present in alsamixer. Another program to do that?
+2006-01-18T15:50:00.000Z	crimsun	EloraKun	I just gave you the command for amixer
+2006-01-18T15:51:00.000Z	EloraKun	crimsun	AC97 is my hateful MotherBoard Sound card...
+2006-01-18T15:51:00.000Z	crimsun	EloraKun	no, I'm talking about your amixer output, which I presume is from your ... wait, you have two sound cards? Does cat /proc/asound/cards list your Audigy LS as your second?
+2006-01-18T15:58:00.000Z	crimsun	EloraKun	completed those steps yet?
+2006-01-18T15:53:00.000Z	EloraKun	crimsun	amixer sset does not change their status. And AudigyLS is listed as my first sound card (entry 0).
+2006-01-18T15:54:00.000Z	crimsun	EloraKun	ok, then you'll need to try ALSA 1.0.10. Read the entry that's being sent to you.
+2006-01-18T15:54:00.000Z	EloraKun	crimsun	AudigyLS [Unknown]  at 0xc000 irq 18
+2006-01-18T15:54:00.000Z	crimsun	EloraKun	um ok, someone munged my factoid
+2006-01-18T15:55:00.000Z	EloraKun	crimsun	thanks for the help
+2006-01-18T15:55:00.000Z	crimsun	EloraKun	first, enable the universe repository
+2006-01-18T15:55:00.000Z	crimsun	EloraKun	then, sudo apt-get install linux-headers-$(uname -r) build-essential gcc-3.4 module-assistant
+2006-01-18T15:56:00.000Z	crimsun	EloraKun	then, wget http://archive.ubuntu.com/ubuntu/pool/universe/a/alsa-driver/alsa-source_1.0.10-3_all.deb && sudo dpkg -i alsa-source_1.0.10-3_all.deb ; sudo apt-get -f install
+2006-01-18T16:04:00.000Z	EloraKun	crimsun	I finished.
+2006-01-18T16:05:00.000Z	crimsun	EloraKun	ok now, sudo dpkg-reconfigure alsa-source
+2006-01-18T16:05:00.000Z	crimsun	EloraKun	choose "yes" for both pnp and debug symbols, then deselect "all" cards and choose only your two drivers
+2006-01-18T16:05:00.000Z	crimsun	EloraKun	after that, sudo module-assistant a-i alsa-source
+2006-01-18T16:07:00.000Z	crimsun	EloraKun	ping me when that completes. I'm away for a few minutes.
+2006-01-18T16:10:00.000Z	EloraKun	crimsun	reconfigured with ca0106
+2006-01-18T16:15:00.000Z	EloraKun	crimsun	Building alsa-source with module-assistant a-i alsa-source... running force-reload... It has reloaded exactly the same modules, and still no sound
+2006-01-18T16:31:00.000Z	EloraKun	crimsun	Back?
+2006-01-18T16:34:00.000Z	EloraKun	crimsun	Tried using emu10k1 as module, and I'm back to loud static.
+2006-01-18T16:45:00.000Z	crimsun	EloraKun	snd-emu10k1 is the wrong module
+2006-01-18T16:45:00.000Z	crimsun	EloraKun	you _must_ use snd-ca0106
+2006-01-18T16:46:00.000Z	EloraKun	crimsun	ca0106 just produces static
+2006-01-18T16:46:00.000Z	crimsun	EloraKun	and /proc/asound/version reports 1.0.10?
+2006-01-18T16:47:00.000Z	EloraKun	crimsun	I've been trying some modules I found around...
+2006-01-18T16:47:00.000Z	EloraKun	crimsun	/proc/asound/version is not a file in my system
+2006-01-18T16:48:00.000Z	crimsun	EloraKun	...
+2006-01-18T16:48:00.000Z	crimsun	EloraKun	do you have ALSA loaded?
+2006-01-18T16:48:00.000Z	crimsun	EloraKun	lsmod|grep ^snd_ca0106
+2006-01-18T16:50:00.000Z	EloraKun	crimsun	http://paste.ubuntu-nl.org/7120
+2006-01-18T16:51:00.000Z	EloraKun	crimsun	I did  /etc/init.d/alsa force-reload
+2006-01-18T16:55:00.000Z	crimsun	EloraKun	and it reports 1.0.10, correct?
+2006-01-18T16:56:00.000Z	EloraKun	crimsun	What should report 1.0.10 correct?
+2006-01-18T16:56:00.000Z	crimsun	EloraKun	cat /proc/asound/version
+2006-01-18T16:56:00.000Z	EloraKun	crimsun	Advanced Linux Sound Architecture Driver Version 1.0.10
+2006-01-18T16:57:00.000Z	crimsun	EloraKun	amixer output, please
+2006-01-18T16:58:00.000Z	crimsun	EloraKun	also, did you pastebin lspci -nv output?
+2006-01-19T17:00:00.000Z	EloraKun	crimsun	amixer http://paste.ubuntu-nl.org/7121 and lspci http://paste.ubuntu-nl.org/7122+
+2006-01-19T17:00:00.000Z	EloraKun	crimsun	Sorry: amixer http://paste.ubuntu-nl.org/7121 and lspci http://paste.ubuntu-nl.org/7122
+2006-01-19T17:02:00.000Z	crimsun	EloraKun	sec
+2006-01-19T17:07:00.000Z	crimsun	EloraKun	ok, you're using the right driver. Audigy ES, correct?
+2006-01-19T17:08:00.000Z	crimsun	EloraKun	Audigy SE, rather
+2006-01-19T17:09:00.000Z	crimsun	EloraKun	amixer sset 'i2s mixer out' on
+2006-01-19T17:10:00.000Z	EloraKun	crimsun	They refuse to change to on. And still getting the stati everytime the card is used
+2006-01-19T17:11:00.000Z	crimsun	EloraKun	cat /proc/interrupts
+2006-01-19T17:12:00.000Z	EloraKun	crimsun	http://paste.ubuntu-nl.org/7124
+2006-01-19T17:14:00.000Z	crimsun	EloraKun	please try a cold boot
+2006-01-19T17:14:00.000Z	EloraKun	crimsun	Ok
+2006-01-19T17:14:00.000Z	EloraKun	crimsun	Trying...
+2006-01-19T17:18:00.000Z	EloraKun	crimsun	Still getting the static
+2006-01-19T17:19:00.000Z	crimsun	EloraKun	ok, sec
+2006-01-19T17:20:00.000Z	crimsun	EloraKun	aha, you need 1.0.11rc2 due to a mixer snafu.
+2006-01-19T17:20:00.000Z	EloraKun	crimsun	uuuh. So I have to compile get the new deb and repeat...
+2006-01-19T17:21:00.000Z	crimsun	EloraKun	wget http://http.us.debian.org/debian/pool/main/a/alsa-driver/alsa-source_1.0.10+1.0.11rc2-2_all.deb && sudo dpkg -i alsa-source_1.0.10+1.0.11rc2-2_all.deb && sudo module-assistant a-i alsa-source
+2006-01-19T17:24:00.000Z	crimsun	EloraKun	then verify that ``cat /proc/asound/version'' gives you 1.0.11rc2
+2006-01-19T17:28:00.000Z	EloraKun	crimsun	THAAAANKS A LOOOT!! '=)
+2006-01-19T17:29:00.000Z	EloraKun	crimsun	I'll try to add this to the ubuntu wiki...
+2006-01-19T17:29:00.000Z	crimsun	EloraKun	excellent. I'll push it into our kernel.
+2006-01-19T08:04:00.000Z	EloraKun	crimsun	Okiz
+2006-01-19T08:03:00.000Z	EloraKun	crimsun	I'm writting the wiki to install Audigy SE card you solved some hours ago, and have one question. In case alsa-source is downloaded from Ubuntu repositories instead of Debian's, should module-assistant be run anyway?
+2006-01-19T08:04:00.000Z	crimsun	EloraKun	yes. I've already pushed the patch into our kernel: http://kernel.org/git/?p=linux/kernel/git/bcollins/ubuntu-2.6.git;a=commit;h=0066257ff77354040953fa47a17e8d5ff8bc221b
+2006-01-19T08:08:00.000Z	EloraKun	crimsun	It's done. If you want to check for any bradbarity I probably have commited, here is the link: https://wiki.ubuntu.com/HowToSetupSoundBlasterAudigyInBreezy
+2006-01-19T08:08:00.000Z	crimsun	EloraKun	please rename that link to https://wiki.ubuntu.com/HowToSetupSoundBlasterAudigySEinBreezy
+2006-01-19T08:08:00.000Z	crimsun	EloraKun	yours is a very specific Audigy SE model; not all Audigys are affected
+2006-01-19T08:08:00.000Z	EloraKun	crimsun	Ok
+2006-01-19T08:09:00.000Z	EloraKun	crimsun	AudigySE?
+2006-01-19T08:09:00.000Z	crimsun	EloraKun	yes, HowToSetupSoundBlasterAudigySEinBreezy
+2006-01-19T08:16:00.000Z	EloraKun	crimsun	Here is the new link, anyway: https://wiki.ubuntu.com/HowToSetupSoundBlasterAudigySEInBreezy
+2006-01-19T08:33:00.000Z	crimsun	EloraKun	done. Final version at https://wiki.ubuntu.com/HowToConfigureSoundBlasterAudigySEinBreezy
+2006-01-19T08:38:00.000Z	EloraKun	crimsun	Ok. Thanks for your help again.
+2006-01-19T08:42:00.000Z	crimsun	EloraKun	np

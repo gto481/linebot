@@ -1,0 +1,99 @@
+2009-11-22T05:46:00.000Z	Wilabob		Hi, I just installed ubuntu with my existing xp installation and when I boot it says GRUB loading. error: no such partition
+2009-11-22T05:46:00.000Z	Wilabob		What can I do to fix this?
+2009-11-22T05:47:00.000Z	Wilabob		I have 2 disks and 2 partitions on the first one (xp and ubuntu) and one on my smaller hard drive for file transfer between oses
+2009-11-22T05:48:00.000Z	Wilabob		they're ata or ide
+2009-11-22T05:49:00.000Z	Wilabob		How can I fix it? Why would it install wrong, I had a previous install that worked fine.
+2009-11-22T05:50:00.000Z	Wilabob		I'm on 9.10 so it doesn't have a menu.lst
+2009-11-22T05:50:00.000Z	Wilabob		Yep
+2009-11-22T05:52:00.000Z	Wilabob		So I should boot with the live cd and try and edit it?
+2009-11-22T05:52:00.000Z	ChogyDan	Wilabob	whats the problem?
+2009-11-22T05:53:00.000Z	ChogyDan	Wilabob	what is your partition layout?
+2009-11-22T05:55:00.000Z	ChogyDan	Wilabob	hmmm, can you give me the partition layout to?
+2009-11-22T05:59:00.000Z	ChogyDan	Wilabob	try update-grub  and see what it reports for the drive mapping
+2009-11-22T06:03:00.000Z	Wilabob	ChogyDan	Is there anyway to do it without the cd because it takes like 5min to click on one thing!!
+2009-11-22T06:03:00.000Z	ChogyDan	Wilabob	hmm, I dunno, maybe from windows?
+2009-11-22T06:04:00.000Z	ChogyDan	Wilabob	actually, nvm, I just don't know
+2009-11-22T06:06:00.000Z	Wilabob	ChogyDan	Actually it's running faster now... so I run the sudo update-grub command?
+2009-11-22T06:06:00.000Z	ChogyDan	Wilabob	first run: sudo apt-get install pastebinit
+2009-11-22T06:06:00.000Z	ChogyDan	Wilabob	then: sudo update-grub > pastebinit
+2009-11-22T06:09:00.000Z	Wilabob	ChogyDan	What's the password for the live cd?
+2009-11-22T06:09:00.000Z	ChogyDan	Wilabob	should be blank I thought
+2009-11-22T06:10:00.000Z	ChogyDan	Wilabob	you may need to chroot into the installed partition
+2009-11-22T06:10:00.000Z	Wilabob	ChogyDan	Ran into a problem... the terminal has a white screen and doesn't show anything,,,
+2009-11-22T06:11:00.000Z	Wilabob	ChogyDan	How do I do that?
+2009-11-22T06:14:00.000Z	Wilabob	ChogyDan	I managed to be able to see the terminal window
+2009-11-22T06:15:00.000Z	ChogyDan	Wilabob	is this a new install?  it, er, might, be easier to reinstall.     Anyway.  You need to mount the partition: sudo mkdir /mnt && sudo mount /dev/<your partition location> /mnt
+2009-11-22T06:17:00.000Z	Wilabob	ChogyDan	how do I find my partition location?
+2009-11-22T06:17:00.000Z	ChogyDan	Wilabob	do you know which partition you installed to?
+2009-11-22T06:18:00.000Z	Wilabob	ChogyDan	I know it's the second one but what do I call it?
+2009-11-22T06:18:00.000Z	ChogyDan	Wilabob	probably /dev/sda2
+2009-11-22T06:20:00.000Z	Wilabob	ChogyDan	it says cannot create that directory /mnt file exists and if I get rid of the mkdir part I get mount you must specify the file system.. What now?
+2009-11-22T06:21:00.000Z	ChogyDan	Wilabob	sudo mkdir /media/install && sudo mount /dev/sda2 /media/install
+2009-11-22T06:22:00.000Z	Wilabob	ChogyDan	Still says I have to specify the file system... I think it's ext4
+2009-11-22T06:25:00.000Z	Wilabob	ChogyDan	What?
+2009-11-22T06:27:00.000Z	ChogyDan	Wilabob	try adding -t ext4
+2009-11-22T06:30:00.000Z	Wilabob	ChogyDan	now it's giving me wrong fs type, bad option.......... very long error
+2009-11-22T06:30:00.000Z	ChogyDan	Wilabob	maybe try ext3?
+2009-11-22T06:30:00.000Z	Wilabob	ChogyDan	nope
+2009-11-22T06:31:00.000Z	ChogyDan	Wilabob	can you access it through the places menu?
+2009-11-22T06:32:00.000Z	ChogyDan	Wilabob	then it must already be mounted.  Just chroot into whatever mount point it is using.  Something under /media
+2009-11-22T06:33:00.000Z	ChogyDan	Wilabob	try mount
+2009-11-22T06:34:00.000Z	Wilabob	ChogyDan	I mounted it... now it's on my desktop
+2009-11-22T06:34:00.000Z	ChogyDan	Wilabob	yes, now run mount, and see where it is mounted
+2009-11-22T06:35:00.000Z	Wilabob	ChogyDan	It gives me a big block of text... What am I looking for?
+2009-11-22T06:36:00.000Z	Wilabob	ChogyDan	Nevermind found it
+2009-11-22T06:36:00.000Z	ChogyDan	Wilabob	/dev/sda2 on /media/somehting   mk
+2009-11-22T06:38:00.000Z	Wilabob	ChogyDan	I did it!! Now what do I need to do?
+2009-11-22T06:38:00.000Z	ChogyDan	Wilabob	ok, so once you got the chroot going, run update-grub
+2009-11-22T06:40:00.000Z	Wilabob	ChogyDan	Ok it gave me grub-probe: error: cannot find device for /.
+2009-11-22T06:40:00.000Z	ChogyDan	Wilabob	you may have to mount /dev and /sys
+2009-11-22T06:40:00.000Z	ChogyDan	Wilabob	and maybe /proc too
+2009-11-22T06:41:00.000Z	Wilabob	ChogyDan	Uggg, How?
+2009-11-22T06:41:00.000Z	ChogyDan	Wilabob	sudo mount /dev         etc
+2009-11-22T06:42:00.000Z	Wilabob	ChogyDan	Gives me mount: can't find /dev in /ect/fstab or /ect/mtab
+2009-11-22T06:42:00.000Z	ChogyDan	Wilabob	ok, just exit the chroot with exit
+2009-11-22T06:43:00.000Z	Wilabob	ChogyDan	done
+2009-11-22T06:43:00.000Z	ChogyDan	Wilabob	sudo mount /dev/proc /media/your_drive/dev      etc etc
+2009-11-22T06:44:00.000Z	ChogyDan	Wilabob	oops, should be sudo mount /dev /media/your_drive/dev
+2009-11-22T06:44:00.000Z	ChogyDan	Wilabob	then sub in /proc for /dev and then /sys too
+2009-11-22T06:45:00.000Z	Wilabob	ChogyDan	now it says mount: /dev is not a block device
+2009-11-22T06:46:00.000Z	ChogyDan	Wilabob	hmmm, I don't know then.  its strange that your mounts are just picking up the types
+2009-11-22T06:47:00.000Z	Wilabob	ChogyDan	should I just try installing again? Or will it just do the same thing? BTW I'm using the alternate cd
+2009-11-22T06:48:00.000Z	ChogyDan	Wilabob	really?  so, you don't have a livecd environment?
+2009-11-22T06:48:00.000Z	Wilabob	ChogyDan	I'm using the live cd now but I used the alternate cd to install
+2009-11-22T06:49:00.000Z	Wilabob	ChogyDan	Because the live cd takes sooo long
+2009-11-22T06:49:00.000Z	ChogyDan	Wilabob	actually, maybe try the instructions here: http://www.ubuntu-inside.me/2009/06/howto-recover-grub2-after-windows.html
+2009-11-22T06:51:00.000Z	Wilabob	ChogyDan	Okay I'll try that but I have to eat dinner now... I'll be back in a bit
+2009-11-22T06:51:00.000Z	ChogyDan	Wilabob	but yeah, if that doesn't work, I would just reinstall.  Take care
+2009-11-22T07:10:00.000Z	Wilabob	ChogyDan	Back... I tried to follow the guide but on the second command it gives me this mount: mount point /mnt/dev does not exist
+2009-11-22T07:11:00.000Z	ChogyDan	Wilabob	that just means that you have to create the directory
+2009-11-22T07:11:00.000Z	Wilabob	ChogyDan	so mkdir /mnt/dev
+2009-11-22T07:14:00.000Z	ChogyDan	Wilabob	wait, you need to use the directory that your partition is mounted in place of /mnt
+2009-11-22T07:19:00.000Z	Wilabob	ChogyDan	w00t! It let me run the update-grub cmd but at the end it said cannot find the list of permissions
+2009-11-22T07:20:00.000Z	ChogyDan	Wilabob	erm, hmmm,  I don't know
+2009-11-22T07:21:00.000Z	Wilabob	ChogyDan	is it reinstall time?
+2009-11-22T07:22:00.000Z	ChogyDan	Wilabob	did all the mounts work?  did you switch to your partition instead of the /mnt?
+2009-11-22T07:23:00.000Z	Wilabob	ChogyDan	Yes no error on mounting
+2009-11-22T07:24:00.000Z	Wilabob	ChogyDan	Let me try all the cmds again...
+2009-11-22T07:30:00.000Z	Wilabob	ChogyDan	I got a little furthur... It says there's a problem with my device.map How do I go about fixing it?
+2009-11-22T07:30:00.000Z	ChogyDan	Wilabob	what is the problem?  you just have to edit device.map
+2009-11-22T07:32:00.000Z	Wilabob	ChogyDan	I don't know maybe it doesn't show the right partitions? It says (hd0) /dev/sda and (hd1) /dev/sdb
+2009-11-22T07:34:00.000Z	Wilabob	ChogyDan	Any ideas?
+2009-11-22T07:34:00.000Z	ChogyDan	Wilabob	I dunno.  Did you get an error? or did you just get a warning?
+2009-11-22T07:36:00.000Z	ChogyDan	Wilabob	yeah, I think I would need to see the error
+2009-11-22T07:38:00.000Z	ChogyDan	Wilabob	yeah, that is fine.  It always says that.  Yours looks good AFAIK
+2009-11-22T07:38:00.000Z	Wilabob	ChogyDan	so I should try a reboot?
+2009-11-22T07:39:00.000Z	ChogyDan	Wilabob	yeah
+2009-11-22T07:39:00.000Z	Wilabob	ChogyDan	Okay here goes...
+2009-11-22T07:41:00.000Z	Wilabob	ChogyDan	Nope didn't work
+2009-11-22T07:41:00.000Z	Wilabob	ChogyDan	Now it's reinstall time
+2009-11-22T07:42:00.000Z	ChogyDan	Wilabob	ya
+2009-11-22T07:42:00.000Z	Wilabob	ChogyDan	If it does it again then what?
+2009-11-22T07:43:00.000Z	ChogyDan	Wilabob	file a bug on launchpad.net
+2009-11-22T07:43:00.000Z	Wilabob	ChogyDan	So I would have to install like 9.04 or something?
+2009-11-22T07:44:00.000Z	ChogyDan	Wilabob	why 9.04, did that work for you?
+2009-11-22T07:44:00.000Z	ChogyDan	Wilabob	whatever works
+2009-11-22T07:45:00.000Z	Wilabob	ChogyDan	would installing 9.04 then updating possibly work?
+2009-11-22T07:45:00.000Z	ChogyDan	Wilabob	ya.  And then just forget about grub2 for now
+2009-11-25T08:23:00.000Z	Wilabob	ChogyDan	Hey I got ubuntu running!! I needed to add a /boot partition at the beginning of my disk cause of OLD bios
+2009-11-25T08:24:00.000Z	Wilabob	ChogyDan	Now I need to install wifi.. Not near as easy as winshit... Here's my thread if you could take a look: http://ubuntuforums.org/showthread.php?p=8381766#post8381766

@@ -1,0 +1,96 @@
+2007-02-19T17:52:00.000Z	doojin		hi
+2007-02-19T17:52:00.000Z	doojin		I solve many ubuntu problems
+2007-02-19T17:52:00.000Z	doojin		today
+2007-02-19T17:53:00.000Z	doojin		How can I know linux recognizes my usb joypad?
+2007-02-19T09:00:00.000Z	doojin		hi
+2007-02-19T09:00:00.000Z	doojin		Linux is still pretty unstable
+2007-02-19T09:01:00.000Z	doojin		I mean the gui
+2007-02-19T09:02:00.000Z	ikonia_	doojin	thats personal opinion
+2007-02-20T08:21:00.000Z	doojin	ikonia_	: the documents on usplash doesn't work
+2007-02-20T08:15:00.000Z	ikonia_	doojin	there is documents on the wiki on this
+2007-02-20T08:16:00.000Z	ikonia_	doojin	if its too dificult - you can't do it
+2007-02-20T08:21:00.000Z	ikonia_	doojin	they do
+2007-02-20T08:21:00.000Z	doojin	ikonia_	: did you do it yourself?
+2007-02-20T08:21:00.000Z	ikonia_	doojin	yup
+2007-02-20T08:21:00.000Z	doojin	ikonia_	: but That's about just changing a background image
+2007-02-20T08:22:00.000Z	doojin	ikonia_	: it is not about changing a complete theme
+2007-02-20T08:22:00.000Z	ikonia_	doojin	to change the theme you need to re-create the initrd
+2007-02-20T08:22:00.000Z	doojin	ikonia_	: that is not in the manual
+2007-02-20T08:22:00.000Z	ikonia_	doojin	search the wiki- thats where I found the info
+2007-02-20T08:25:00.000Z	doojin	ikonia_	: That's too hard
+2007-02-20T08:25:00.000Z	ikonia_	doojin	what's too hard
+2007-02-20T08:25:00.000Z	doojin	ikonia_	: learning about initrd
+2007-02-20T08:25:00.000Z	ikonia_	doojin	then you can't change the theme
+2007-02-20T08:26:00.000Z	ikonia_	doojin	I'm afraid your stuck with it
+2007-02-20T08:27:00.000Z	ikonia_	doojin	apt-get install fbflash
+2007-02-20T08:27:00.000Z	ikonia_	doojin	but even then you'll need to change the initrd
+2007-02-20T08:28:00.000Z	ikonia_	doojin	you can't use fbsplash
+2007-02-20T08:28:00.000Z	doojin	ikonia_	: fbsplash package is not in ubuntu 6.10
+2007-02-20T08:28:00.000Z	ikonia_	doojin	you can't use it, but it doesn't matter any way as you'd need to change initrd still
+2007-02-20T08:29:00.000Z	doojin	ikonia_	: how do you know?
+2007-02-20T08:29:00.000Z	ikonia_	doojin	because I've used fbflash
+2007-02-20T08:29:00.000Z	doojin	ikonia_	: used under what circumstance?
+2007-02-20T08:30:00.000Z	ikonia_	doojin	yes, so ?
+2007-02-20T08:30:00.000Z	ikonia_	doojin	it does
+2007-02-20T08:31:00.000Z	doojin	ikonia_	: I mean the convenience
+2007-02-20T08:31:00.000Z	ikonia_	doojin	it does
+2007-02-20T08:31:00.000Z	doojin	ikonia_	: usplash has a convenient background support?
+2007-02-20T08:31:00.000Z	doojin	ikonia_	: I can not believe it
+2007-02-20T08:31:00.000Z	ikonia_	doojin	then don't
+2007-02-20T08:31:00.000Z	doojin	ikonia_	: what is the reason?
+2007-02-20T08:32:00.000Z	ikonia_	doojin	the reason for what ?
+2007-02-20T08:32:00.000Z	doojin	ikonia_	: the reason why you think it is easy
+2007-02-20T08:32:00.000Z	ikonia_	doojin	because it is
+2007-02-20T08:33:00.000Z	doojin	ikonia_	: With grub, I can change the background just by changing the link.
+2007-02-20T08:33:00.000Z	doojin	ikonia_	: with usplash, I have to read the wiki
+2007-02-20T08:33:00.000Z	ikonia_	doojin	so - thats a different application, for a different purpose
+2007-02-20T08:33:00.000Z	ikonia_	doojin	bottom line is - you can't use it, so your stuck with what you have
+2007-02-20T08:38:00.000Z	doojin	ikonia_	: why you can't install fbsplash on ubuntu?
+2007-02-20T09:22:00.000Z	doojin	ikonia_	Installing usplash-theme turned out to be simple after I read the makefile of example usplash theme source code.
+2007-02-20T09:22:00.000Z	ikonia_	doojin	I know its simple
+2007-02-20T09:22:00.000Z	doojin	ikonia_	: It wasn't simple until I read the makefile of the example theme
+2007-02-20T09:22:00.000Z	ikonia_	doojin	thats your problem
+2007-02-20T09:23:00.000Z	doojin	ikonia_	: I just needed to make, and make install, and make a symbolic link to the compiled so file.
+2007-02-20T09:24:00.000Z	ikonia_	doojin	I'm not interested - I know how to use it thanks
+2007-02-20T09:25:00.000Z	doojin	ikonia_	: did you recognize alternatives system was just for making symbolic links?
+2007-02-20T09:25:00.000Z	ikonia_	doojin	what ?
+2007-02-20T09:26:00.000Z	doojin	ikonia_	: alternative system was introduced in usplash customization howto
+2007-02-20T09:26:00.000Z	ikonia_	doojin	I know how to use it, so I'm not bothered
+2007-02-20T09:30:00.000Z	doojin	ikonia_	: what are you interested in?
+2007-02-20T09:31:00.000Z	ikonia_	doojin	thats not for discussion in here
+2007-02-20T09:31:00.000Z	doojin	ikonia_	: maybe it was too personal
+2007-02-20T09:31:00.000Z	ikonia_	doojin	not at all, its just nothing to do with ubuntu and this is ubuntu support
+2007-02-20T09:32:00.000Z	doojin	ikonia_	: Are you one of ubuntu support men?
+2007-02-20T09:32:00.000Z	ikonia_	doojin	no
+2007-02-20T09:33:00.000Z	doojin	ikonia_	: It seems you are paid
+2007-02-20T09:33:00.000Z	ikonia_	doojin	thats not for discussion in here
+2007-02-20T10:55:00.000Z	doojin	ikonia_	: hi ... I succeeded in changing usplash, but it doesn't fill up 1024x768 screen. do you know how to fill 1024x768 screen?
+2007-02-20T10:55:00.000Z	ikonia_	doojin	yes, its all explainined in the howto
+2007-02-20T10:55:00.000Z	doojin	ikonia_	: you mean the howto of ubuntu wiki?
+2007-02-20T10:56:00.000Z	ikonia_	doojin	yes
+2007-02-20T10:56:00.000Z	doojin	ikonia_	: It doesn't say anything about fixing resolution problem
+2007-02-20T10:56:00.000Z	ikonia_	doojin	again - you're out of luck then
+2007-02-20T10:57:00.000Z	doojin	ikonia_	: you said it was in the howto
+2007-02-20T10:57:00.000Z	ikonia_	doojin	it is if you read it properly
+2007-02-20T10:57:00.000Z	doojin	ikonia_	: can you guess any?
+2007-02-20T10:57:00.000Z	ikonia_	doojin	yes, I understand why
+2007-02-20T10:58:00.000Z	doojin	ikonia_	: I want you to tell me your guess
+2007-02-20T10:58:00.000Z	ikonia_	doojin	sorry no. There are two possabilities
+2007-02-20T10:58:00.000Z	doojin	ikonia_	: what possibilities?
+2007-02-20T10:58:00.000Z	ikonia_	doojin	both are potentially explainied in the wiki. you may also find results searching the forums
+2007-02-20T11:00:00.000Z	doojin	ikonia_	: I'm going to sleep soon, so I will be pleased if you just tell me the two possibilities
+2007-02-20T11:00:00.000Z	ikonia_	doojin	sorry no
+2007-02-20T11:00:00.000Z	doojin	ikonia_	: why not?
+2007-02-20T11:00:00.000Z	ikonia_	doojin	because I helped you before, and found you too lazy to do anything
+2007-02-20T11:01:00.000Z	doojin	ikonia_	: come on, I'm almost succeeding
+2007-02-20T11:01:00.000Z	ikonia_	doojin	please stop talking to me
+2007-02-20T11:01:00.000Z	doojin	ikonia_	: Are you mad at me?
+2007-02-20T11:02:00.000Z	ikonia_	doojin	no,not at all
+2007-02-20T11:02:00.000Z	doojin	ikonia_	: maybe you are just tired of answering to many people
+2007-02-20T11:02:00.000Z	doojin	ikonia_	: I know repetitive works drain my energy
+2007-02-20T11:02:00.000Z	ikonia_	doojin	you've just proved me point. I'm chosing not to help you because you don't listen and you're too lazy to do anything. By asking this after I've told you - you have just proved you don't listen
+2007-02-20T11:03:00.000Z	doojin	ikonia_	: Whatever you think, I understand your being sick of me.
+2007-02-20T11:03:00.000Z	ikonia_	doojin	please stop talking to me
+2007-02-20T11:05:00.000Z	doojin	ikonia_	: just one more sentence, you have done good job so far. you don't have to answer me for a while
+2007-02-20T11:05:00.000Z	ikonia_	doojin	I'm putting you ignore now
+2007-02-20T11:06:00.000Z	doojin	ikonia_	must be very very sick of me because he puts me on ignore after I cheered him

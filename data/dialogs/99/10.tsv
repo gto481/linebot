@@ -1,0 +1,99 @@
+2010-10-23T13:52:00.000Z	anygivenname	Gnea	nooo
+2010-10-23T13:24:00.000Z	Gnea	anygivenname	network manager can do that, just edit the connection and click on the box that says "allow anyone to connect"
+2010-10-23T13:26:00.000Z	anygivenname	Gnea	does allowing connection to anyone means that system will acquire IP from network before system's startup password has been entered ?!
+2010-10-23T13:27:00.000Z	Gnea	anygivenname	that's how it works on my end
+2010-10-23T13:28:00.000Z	Gnea	anygivenname	the interfaces file is the old way of assigning IP's. once you do it, the easier GUI way is broken and will not work, at all, whatsoever.
+2010-10-23T13:28:00.000Z	Gnea	anygivenname	unless, of course, you restore the interfaces file to its original configuration
+2010-10-23T13:29:00.000Z	Gnea	anygivenname	so, you can either click on one box, or go through all of that hassle
+2010-10-23T13:36:00.000Z	anygivenname	Gnea	i have rebooted but the machine did not connect to network before I put in the password at starup & hit enter
+2010-10-23T13:38:00.000Z	Gnea	anygivenname	weird...
+2010-10-23T13:39:00.000Z	anygivenname	Gnea	it connected directly after i put in password & entered
+2010-10-23T13:52:00.000Z	Gnea	anygivenname	any luck?
+2010-10-23T13:41:00.000Z	Gnea	anygivenname	speaking of weird, I just noticed something odd with my system... sec
+2010-10-23T13:42:00.000Z	Gnea	anygivenname	okay, just noticed I had wicd and network-manager installed side-by-side somehow
+2010-10-23T13:42:00.000Z	anygivenname	Gnea	i have them both aswell
+2010-10-23T13:43:00.000Z	anygivenname	Gnea	cause yesterday someone told me that wicd would do the job so I installed it
+2010-10-23T13:43:00.000Z	anygivenname	Gnea	r u connected wired or wireless ?
+2010-10-23T13:43:00.000Z	Gnea	anygivenname	wireless. i just removed network-manager, only supposed to have one or the other.
+2010-10-23T13:45:00.000Z	anygivenname	Gnea	i am on wireless aswell.....but urs worked while having both u said....how did u know it system connected before u logged-in system password ?
+2010-10-23T13:45:00.000Z	Gnea	anygivenname	I have no idea
+2010-10-23T13:46:00.000Z	anygivenname	Gnea	ah so u r not sure that ur system was assigned an IP before you logged-in
+2010-10-23T13:47:00.000Z	Gnea	anygivenname	well, heh, I just logged out, switched to ctrl-alt-f1 and reattached my screen session, and I'm still on the network
+2010-10-23T13:52:00.000Z	Gnea	anygivenname	oh man... did you remove network-manager?
+2010-10-23T13:52:00.000Z	anygivenname	Gnea	ctrl-alt-f1 got me into a black screen so I had to power off
+2010-10-23T13:53:00.000Z	Gnea	anygivenname	nooooooooo!
+2010-10-23T13:53:00.000Z	anygivenname	Gnea	how do I remove network-manager ?
+2010-10-23T13:53:00.000Z	Gnea	anygivenname	never do that! ctrl-alt-f1 takes you to the first console
+2010-10-23T13:53:00.000Z	anygivenname	Gnea	u told me u did so & u were still connected
+2010-10-23T13:53:00.000Z	Gnea	anygivenname	yes, because I'm using irssi in screen
+2010-10-23T13:54:00.000Z	Gnea	anygivenname	you can get back to the GUI by pressing alt-f7 or alt-f8
+2010-10-23T13:54:00.000Z	anygivenname	Gnea	ofcourse i dont know what irssi is :)
+2010-10-23T13:54:00.000Z	Gnea	anygivenname	lol
+2010-10-23T13:54:00.000Z	anygivenname	Gnea	how do I remove network-manager ?
+2010-10-23T13:54:00.000Z	Gnea	anygivenname	you're sure you have wicd installed?
+2010-10-23T13:55:00.000Z	Gnea	anygivenname	sudo apt-get remove network-manager
+2010-10-23T13:55:00.000Z	anygivenname	Gnea	yes
+2010-10-23T13:55:00.000Z	Gnea	anygivenname	after that, make sure that wicd is handling the connection properly
+2010-10-23T13:55:00.000Z	anygivenname	Gnea	i have both icons on top
+2010-10-23T13:57:00.000Z	Gnea	anygivenname	yeah, after I removed NM, its icon went away after I relogged in and the wicd icon is properly illuminated now and my connection is much more stable
+2010-10-23T13:58:00.000Z	anygivenname	Gnea	removed network manager
+2010-10-23T13:59:00.000Z	anygivenname	Gnea	will restart & see if wicd now gets connected before log-in password is entered
+2010-10-23T13:59:00.000Z	Gnea	anygivenname	okay
+2010-10-23T14:03:00.000Z	anygivenname	Gnea	frustrating
+2010-10-23T14:03:00.000Z	Gnea	anygivenname	yeah, you'll need an X display somewhere
+2010-10-23T14:04:00.000Z	anygivenname	Gnea	i restarted....then got the password small window.....at that time my pc was not connected to the network yet
+2010-10-23T14:04:00.000Z	anygivenname	Gnea	it only connected after i put in the password & ofcourse hit enter
+2010-10-23T14:04:00.000Z	anygivenname	Gnea	what's X display ?
+2010-10-23T14:05:00.000Z	Gnea	anygivenname	uh, that was meant for acidflash, not you
+2010-10-23T14:06:00.000Z	anygivenname	Gnea	is there any special settings needed on wicd ?
+2010-10-23T14:07:00.000Z	Gnea	anygivenname	it ought to just work
+2010-10-23T14:08:00.000Z	anygivenname	Gnea	just trying to figure out how u knew ur pc was connected to the network & acquired IP before u entered the startup log-in & password
+2010-10-23T14:08:00.000Z	Gnea	anygivenname	it only asks for the password once
+2010-10-23T14:09:00.000Z	Gnea	anygivenname	as i said, i switched to the console, logged in and checked the IP information
+2010-10-23T14:09:00.000Z	Gnea	anygivenname	afterward, i switched back to the GUI
+2010-10-23T14:09:00.000Z	anygivenname	Gnea	u switched to the console before putting in the password on system startup ?
+2010-10-23T14:09:00.000Z	Gnea	anygivenname	of course
+2010-10-23T14:10:00.000Z	Gnea	anygivenname	well, i just logged out
+2010-10-23T14:10:00.000Z	Gnea	anygivenname	i didn't reboot the system, that would be silly
+2010-10-23T14:10:00.000Z	anygivenname	Gnea	no that's not the log out i am talking about ofcourse
+2010-10-23T14:10:00.000Z	Gnea	anygivenname	but that makes no sense, it doesn't need to be connected before I login for the first time
+2010-10-23T14:12:00.000Z	anygivenname	Gnea	i am talking about a Desktop that would power off if the electricity gets cut off & then it powers on when the electricity gets back....so what I need is that the system gets connected before the log-in password has been entered
+2010-10-23T14:12:00.000Z	Gnea	anygivenname	that's what servers are for
+2010-10-23T14:13:00.000Z	anygivenname	Gnea	so that when I log on to it remotely I can see the log-in screen & put in the password myself
+2010-10-23T14:13:00.000Z	Gnea	anygivenname	well wicd should do that anyway, I don't see why it's not
+2010-10-23T14:14:00.000Z	anygivenname	Gnea	otherwise I have to remove the password option & that way the system will be have a security hole
+2010-10-23T14:14:00.000Z	Gnea	anygivenname	that is even more silly. why not just have your account login automatically on bootup and have it set a screensaver/lock right away?
+2010-10-23T14:15:00.000Z	anygivenname	Gnea	it is a good idea.....how do I make it ?
+2010-10-23T14:16:00.000Z	Gnea	anygivenname	you set it up with the login manager, system->administration->login screen
+2010-10-23T14:19:00.000Z	anygivenname	Gnea	do I set it to 1 sec ?
+2010-10-23T14:19:00.000Z	Gnea	anygivenname	sure
+2010-10-23T14:20:00.000Z	anygivenname	Gnea	will test
+2010-10-23T14:27:00.000Z	anygivenname	Gnea	nice option.....set it to 600 secs....which is the max
+2010-10-23T14:28:00.000Z	Gnea	anygivenname	huh?
+2010-10-23T14:28:00.000Z	anygivenname	Gnea	so no one can log-in after me for 600 secs
+2010-10-23T14:29:00.000Z	anygivenname	Gnea	but there is no option of setting screensaver to work immediately after log-in....the minimum is 1 minute
+2010-10-23T14:29:00.000Z	Gnea	anygivenname	so let it go 1 minute. what's the chance someone else will be there?
+2010-10-23T14:30:00.000Z	anygivenname	Gnea	yeah right.....now my development phase is complete....I am ready to move this implementation to a new machine
+2010-10-23T14:32:00.000Z	Gnea	anygivenname	ok
+2010-12-14T11:10:00.000Z	Gnea	anygivenname	sudo /etc/init.d/logwatch start
+2010-12-14T11:11:00.000Z	anygivenname	Gnea	command not found
+2010-12-14T11:12:00.000Z	Gnea	anygivenname	try installing it first
+2010-12-14T11:14:00.000Z	anygivenname	Gnea	I have it already & it sends me a daily report on my email but suddenly the past 3 days it started to send me some srambled lines with 'Can't exec "/bin/sh": Argument list too long at /usr/sbin/logwatch line 862'
+2010-12-14T11:15:00.000Z	Gnea	anygivenname	aah, did you check the files that it reads from? possibly in /var?
+2010-12-14T11:19:00.000Z	anygivenname	Gnea	the logs are fine
+2010-12-14T11:20:00.000Z	Gnea	anygivenname	none of them seem overbloated?
+2010-12-14T11:21:00.000Z	anygivenname	Gnea	I dont know.....they seem like that last time I have seen them
+2010-12-14T11:23:00.000Z	Gnea	anygivenname	well it's a shell script, right?
+2010-12-14T11:24:00.000Z	anygivenname	Gnea	I found an error on fail2ban.log
+2010-12-14T11:24:00.000Z	Gnea	anygivenname	oh?
+2010-12-14T11:29:00.000Z	anygivenname	Gnea	that's line 82 on usr/sbin/logwatch :           system("$Config{'pathtocat'} $Command") == 0
+2010-12-14T11:30:00.000Z	Gnea	anygivenname	not sure why that makes a difference, maybe turn debugging on and run it again
+2010-12-14T11:33:00.000Z	anygivenname	Gnea	how do I run it agin?
+2010-12-14T11:34:00.000Z	Gnea	anygivenname	just add -x to it:  #!/bin/sh -x
+2010-12-14T11:35:00.000Z	anygivenname	Gnea	I dont understand...pls simplify
+2010-12-14T11:36:00.000Z	Gnea	anygivenname	thought you said it was a shell script
+2010-12-14T11:36:00.000Z	Gnea	anygivenname	I'm not sure, read through it, see if there's a comment or something for debugging purposes... if not, dunno
+2010-12-14T11:37:00.000Z	anygivenname	Gnea	u mean debug on sshd_config
+2010-12-14T11:37:00.000Z	Gnea	anygivenname	no, I mean debug on logwatch
+2010-12-14T11:39:00.000Z	anygivenname	Gnea	what's the command line to have logwatch generate report now ?
+2010-12-14T11:40:00.000Z	Gnea	anygivenname	I don't know, read the manpage

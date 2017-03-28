@@ -1,0 +1,96 @@
+2012-11-21T01:03:00.000Z	invariant		I get the following error message (I am not using any custom components): PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20090626/pdo_pgsql.so' - /usr/lib/php5/20090626/pdo_pgsql.so: undefined symbol: pdo_parse_params in Unknown on line 0
+2012-11-21T01:04:00.000Z	_r00t_	invariant	I know the answer to that and so do the ppl on #Apache ;)
+2012-11-21T01:05:00.000Z	invariant	_r00t_	I asked here, because this is an Ubuntu package.
+2012-11-21T01:05:00.000Z	invariant	_r00t_	can you please tell me?
+2012-11-21T01:05:00.000Z	invariant	_r00t_	the bug tracking system doesn't contain this exact same message.
+2012-11-21T01:07:00.000Z	_r00t_	invariant	find /usr/lib/php5/ -name "*.so"
+2012-11-21T01:08:00.000Z	invariant	_r00t_	/usr/lib/php5/20090626/pdo_pgsql.so and /usr/lib/php5/20090626/pgsql.so exist and a bunch of others.
+2012-11-21T01:11:00.000Z	invariant	_r00t_	what is this
+2012-11-21T01:11:00.000Z	invariant	_r00t_	solution you were talking about?
+2012-11-21T01:11:00.000Z	invariant	_r00t_	because I haven'
+2012-11-21T01:12:00.000Z	invariant	_r00t_	t seen anything yet.
+2012-11-21T01:12:00.000Z	_r00t_	invariant	did you google ?
+2012-11-21T01:12:00.000Z	_r00t_	invariant	http://osdir.com/ml/ubuntu-bugs/2012-05/msg11281.html
+2012-11-21T01:12:00.000Z	invariant	_r00t_	that is a different problem.
+2012-11-21T01:12:00.000Z	invariant	_r00t_	you shouldn't judge so fast.
+2012-11-21T01:12:00.000Z	_r00t_	invariant	is it ?
+2012-11-21T01:12:00.000Z	invariant	_r00t_	YES
+2012-11-21T01:13:00.000Z	_r00t_	invariant	have you tried it ? did you do an ld on the .so ?
+2012-11-21T01:13:00.000Z	invariant	_r00t_	I hope you learned not to waste the time of people with playing guess games.
+2012-11-21T01:15:00.000Z	invariant	_r00t_	ldd output is normal. I do find it inconvenient that the .so has been stripped.
+2012-11-21T01:16:00.000Z	_r00t_	invariant	let me check.... pastebin yours in the meantime
+2012-11-21T01:17:00.000Z	invariant	_r00t_	http://paste.kde.org/611558/
+2012-11-21T01:21:00.000Z	_r00t_	invariant	nm -D !$
+2012-11-21T01:21:00.000Z	invariant	_r00t_	U pdo_parse_params
+2012-11-21T01:23:00.000Z	invariant	_r00t_	is that what you wanted to know?
+2012-11-21T01:24:00.000Z	_r00t_	invariant	can't be right no bind ?
+2012-11-21T01:25:00.000Z	invariant	_r00t_	that's why it's a problem.
+2012-11-21T01:26:00.000Z	_r00t_	invariant	I'm telling you dude. Purge and reinstall it
+2012-11-21T01:26:00.000Z	invariant	_r00t_	it being?
+2012-11-21T01:26:00.000Z	invariant	_r00t_	just this particular package or all of php?
+2012-11-21T01:27:00.000Z	_r00t_	invariant	where's that post I first linked to ;)
+2012-11-21T01:31:00.000Z	invariant	_r00t_	I think it is solved now.
+2012-11-21T01:31:00.000Z	invariant	_r00t_	checking...
+2012-11-21T01:33:00.000Z	_r00t_	invariant	installed correctly now in lfs ?
+2012-11-21T01:33:00.000Z	invariant	_r00t_	lfs?
+2012-11-21T01:34:00.000Z	invariant	_r00t_	I am not using lfs. This is just a dependency specification problem.
+2012-11-21T01:34:00.000Z	invariant	_r00t_	it's a bug in Ubuntu.
+2012-11-21T01:35:00.000Z	_r00t_	invariant	nope.... how did you install it in the first place ?
+2012-11-21T01:36:00.000Z	invariant	_r00t_	yes, because I was using the version of php suitable for some preforking version of Apache.
+2012-11-21T01:37:00.000Z	_r00t_	invariant	so you didn't install php5-pgsql
+2012-11-21T01:37:00.000Z	invariant	_r00t_	it should simply make it impossible to configure it wrong.
+2012-11-21T01:37:00.000Z	invariant	_r00t_	I did install that.
+2012-11-21T01:38:00.000Z	_r00t_	invariant	your distro and php version
+2012-11-21T01:39:00.000Z	invariant	_r00t_	precise and whatever php is distributed with precise.
+2012-11-21T01:39:00.000Z	_r00t_	invariant	that's rubbish as the modules are not installed in that directory
+2012-11-21T01:39:00.000Z	invariant	_r00t_	if that's the case, then perhaps I have a problem.
+2012-11-21T01:40:00.000Z	invariant	_r00t_	let me see
+2012-11-21T01:40:00.000Z	invariant	_r00t_	I had libapache2-mod-php5 installed.
+2012-11-21T01:40:00.000Z	_r00t_	invariant	if you did any pear or phpize magic then I'm sure you've screwed it :)
+2012-11-21T01:40:00.000Z	invariant	_r00t_	I did nothing like that.
+2012-11-21T01:42:00.000Z	_r00t_	invariant	awww man my bad..... sorry about that
+2012-11-21T01:42:00.000Z	invariant	_r00t_	do you maintain php?
+2012-11-21T01:42:00.000Z	_r00t_	invariant	nope I'm a noob .... just trying to help
+2012-11-21T01:52:00.000Z	_r00t_	invariant	you still hanging in there ?
+2012-11-21T01:53:00.000Z	invariant	_r00t_	yes
+2012-11-21T01:53:00.000Z	invariant	_r00t_	you can see by the fact that your tab completion works :)
+2012-11-21T01:56:00.000Z	invariant	_r00t_	in fact, the problem has not been solved :/
+2012-11-21T01:59:00.000Z	_r00t_	invariant	dpkg -l | grep php5 ..... let's see what you've got and you're sure that /etc/php5/apache2/conf.d ini files reference the correct shared objects
+2012-11-21T02:01:00.000Z	invariant	_r00t_	http://paste.kde.org/611564/
+2012-11-21T02:03:00.000Z	_r00t_	invariant	I had problems with filter and used libapache2-mod-php5
+2012-11-21T02:05:00.000Z	_r00t_	invariant	I'm using this ppa for the latest version of php https://launchpad.net/~ondrej/+archive/php5 (5.4 instead of the default 5.3)
+2012-11-21T02:06:00.000Z	invariant	_r00t_	does that also have the pg modules that I need?
+2012-11-21T02:06:00.000Z	_r00t_	invariant	yes
+2012-11-21T02:06:00.000Z	invariant	_r00t_	I thought 12.04 was supposed to be a stable version. What's the point if something as fundamental as a database doesn't work?
+2012-11-21T02:06:00.000Z	_r00t_	invariant	but I wound seriously post your pgsql.ini first
+2012-11-21T02:07:00.000Z	invariant	_r00t_	it's the default.
+2012-11-21T02:07:00.000Z	invariant	_r00t_	I modified nothing about it.
+2012-11-21T02:08:00.000Z	_r00t_	invariant	and it has the correct zend_extension =
+2012-11-21T02:08:00.000Z	invariant	_r00t_	I haven't modified anything except for php5.ini where I added extension=pdo_pgsql.so (or something like that)
+2012-11-21T02:11:00.000Z	_r00t_	invariant	hold up
+2012-11-21T02:15:00.000Z	_r00t_	invariant	seriously the symbols in your .so are incomplete - I installed it and it worked - you did try the reinstall right ?
+2012-11-21T02:15:00.000Z	invariant	_r00t_	yes
+2012-11-21T02:16:00.000Z	invariant	_r00t_	you installed it from that ppa, didn't you?
+2012-11-21T02:16:00.000Z	_r00t_	invariant	nope on a fresh 12.04 base
+2012-11-21T02:17:00.000Z	invariant	_r00t_	40e9f4dcb356dc2849c86d1227fcc5ae6a515ce937f1219443571b8cc19d550b  /usr/lib/php5/20090626/pdo_pgsql.so
+2012-11-21T02:17:00.000Z	invariant	_r00t_	sha256sum
+2012-11-21T02:18:00.000Z	_r00t_	invariant	md5sum ?
+2012-11-21T02:18:00.000Z	invariant	_r00t_	no, sha256sum
+2012-11-21T02:19:00.000Z	_r00t_	invariant	no I want an md5sum as I'm not using a 64 bit OS :p
+2012-11-21T02:19:00.000Z	invariant	_r00t_	482cc06d39fc2ed1b2af3ab433e55968
+2012-11-21T02:20:00.000Z	invariant	_r00t_	same?
+2012-11-21T02:20:00.000Z	_r00t_	invariant	how can it be ? I use 32bit, 64bit is outside my budget LOL
+2012-11-21T02:22:00.000Z	_r00t_	invariant	plus I use libapache2-mod-php5
+2012-11-21T02:22:00.000Z	invariant	_r00t_	I also used that now.
+2012-11-21T02:23:00.000Z	_r00t_	invariant	apt-get remove --purge libapache2-mod-php5filter
+2012-11-21T02:24:00.000Z	invariant	_r00t_	already done
+2012-11-21T02:27:00.000Z	invariant	_r00t_	exactly the same problem with the newer PHP version, but now for the newer version of that file.
+2012-11-21T02:30:00.000Z	_r00t_	invariant	http://paste.ubuntu.com/1373433/
+2012-11-21T02:31:00.000Z	invariant	_r00t_	how do you load the extension module?
+2012-11-21T02:31:00.000Z	invariant	_r00t_	I think I just read a part of the solution which says that the order matters...
+2012-11-21T02:31:00.000Z	invariant	_r00t_	as such, it would make a lot of sense if it just tried to load it too early or something like that.
+2012-11-21T02:32:00.000Z	invariant	_r00t_	if I have a known good order, then it would probably work.
+2012-11-21T02:34:00.000Z	_r00t_	invariant	http://paste.ubuntu.com/1373442/
+2012-11-21T02:39:00.000Z	_r00t_	invariant	user conf error or ubuntu error ?
+2012-11-21T02:39:00.000Z	invariant	_r00t_	probably user conf error, but it should warn against such bad use.
+2012-11-21T02:59:00.000Z	_r00t_	invariant	Talk to me man !

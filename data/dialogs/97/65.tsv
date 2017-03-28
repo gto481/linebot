@@ -1,0 +1,97 @@
+2006-02-24T11:38:00.000Z	jsestri2		I am having trouble with XWindows, it will not start properly if my onboard network is enabled(cable in or out), but starts just fine completely if i disable it via BIOS...Anyone have any help/suggestions?
+2006-02-24T11:38:00.000Z	crouton	jsestri2	Does X lock up hard if the NIC is enabled, or can you shift to a virtual terminal and get a dmesg?
+2006-02-24T11:39:00.000Z	jsestri2	crouton	it gives me a sort of error screen that looks like text based windows, with some sort of error messages...it then drops me out into the normal terminal login
+2006-02-24T11:40:00.000Z	jsestri2	crouton	it would appear everything boots, just not XWindows
+2006-02-24T11:40:00.000Z	crouton	jsestri2	do a 'dmesg' from the terminal, see if there's any weird error messages
+2006-02-24T11:54:00.000Z	jsestri2	crouton	no problem, I just got back, I did the dmesg command from the terminal, after XWindows fails to start...I saw no error messages.
+2006-02-24T11:55:00.000Z	jsestri2	crouton	any idea for a location of a Xwin log file that would contain the problems from its failed start?
+2006-02-24T11:55:00.000Z	crouton	jsestri2	/var/log/Xorg.0.log
+2006-02-24T11:56:00.000Z	jsestri2	crouton	anything else worth checking while im at it? (i'm dual booting this comp, so i cant have this up at the same time as ubuntu)
+2006-02-24T11:57:00.000Z	crouton	jsestri2	i'm assuming you don't have a spare NIC?
+2006-02-24T11:57:00.000Z	jsestri2	crouton	unfortunately no...but if it would solve the problem, i could probaly spare the 10$...or maybe my roommate here at college has one i can pilfer...heh
+2006-02-24T11:58:00.000Z	crouton	jsestri2	just so I've got this straight - if the NIC is enabled and the cable plugged in, you *do* get inet access but X fails to start?
+2006-02-24T11:59:00.000Z	jsestri2	crouton	I'm going to check the inet capabilities when i restart this time...hopefully i can ftp that log file somewhere else...
+2006-02-24T11:59:00.000Z	crouton	jsestri2	I was going to suggest just installing a commandline IRC client, but that would work as well.
+2006-02-24T11:59:00.000Z	jsestri2	crouton	at very least that dmesg made it sound like the eth setup was fine
+2006-02-24T11:59:00.000Z	crouton	jsestri2	if the NIC was enabled, yeah.
+2006-02-24T11:59:00.000Z	jsestri2	crouton	well i'll see how it goes after this reboot...
+2006-02-24T12:00:00.000Z	jsestri2	crouton	thanks for all the help thus far
+2006-02-24T12:00:00.000Z	crouton	jsestri2	sho
+2006-02-24T12:11:00.000Z	jsestri2	crouton	i do have inet access even after the XWindows server fails, and i use the terminal without XWindows
+2006-02-24T12:11:00.000Z	crouton	jsestri2	That's interesting.
+2006-02-24T12:12:00.000Z	jsestri2	crouton	if you'd like to take a look...
+2006-02-24T12:12:00.000Z	crouton	jsestri2	sure, did you get the X log?  You can put it into pastebin..
+2006-02-24T12:13:00.000Z	jsestri2	crouton	whats the syntax as that?
+2006-02-24T12:13:00.000Z	crouton	jsestri2	Oh, that's just the bot.. You'll need to visit the website, paste in the log, and then post the resulting URL here
+2006-02-24T12:14:00.000Z	jsestri2	crouton	i just ftp'd it to a website...will that be fine, or you want it there?
+2006-02-24T12:14:00.000Z	crouton	jsestri2	prefer pastebin, if it's ok with you.
+2006-02-24T12:15:00.000Z	jsestri2	crouton	sure
+2006-02-24T12:15:00.000Z	jsestri2	crouton	the bot dosent seem to be responding....
+2006-02-24T12:16:00.000Z	crouton	jsestri2	You need to visit that website.  http://paste.ubuntu-nl.org
+2006-02-24T12:17:00.000Z	jsestri2	crouton	http://paste.ubuntu-nl.org/8837
+2006-02-24T12:17:00.000Z	jsestri2	crouton	thats Xorg.0.log
+2006-02-24T12:18:00.000Z	crouton	jsestri2	taking a look
+2006-02-24T12:18:00.000Z	jsestri2	crouton	if you'd like to see the output of dmesg: http://paste.ubuntu-nl.org/8838
+2006-02-24T12:19:00.000Z	crouton	jsestri2	For whatever reason, it's not recognizing your video card as valid for the driver it's loading.  Is this a laptop?
+2006-02-24T12:19:00.000Z	jsestri2	crouton	no its a desktop
+2006-02-24T12:19:00.000Z	jsestri2	crouton	thats odd that it recognizes it though if the onboard NIC is disabled...
+2006-02-24T12:21:00.000Z	crouton	jsestri2	looking around a bit, brb
+2006-02-24T12:22:00.000Z	jsestri2	crouton	alright...i'll be here
+2006-02-24T12:22:00.000Z	crouton	jsestri2	What motherboard do you have again?
+2006-02-24T12:23:00.000Z	jsestri2	crouton	ASUS - P5GPL - (intel p4)
+2006-02-24T12:27:00.000Z	crouton	jsestri2	Try this.
+2006-02-24T12:28:00.000Z	crouton	jsestri2	Copy your /etc/X11/xorg.conf to /etc/X11/xorg.conf.bak, and run dpkg-reconfigure xserver-xorg.
+2006-02-24T12:28:00.000Z	crouton	jsestri2	That should do the xserver reconfiguration from the terminal.  You said you have a GeForce 6600GT?
+2006-02-24T12:28:00.000Z	jsestri2	crouton	that is correct
+2006-02-24T12:29:00.000Z	jsestri2	crouton	is there an commandline too built into Ubuntu?
+2006-02-24T12:29:00.000Z	crouton	jsestri2	?  commandline tool?
+2006-02-24T12:29:00.000Z	jsestri2	crouton	i mean an commandline IRC tool? -- lost the IRC
+2006-02-24T12:30:00.000Z	crouton	jsestri2	plenty of tools, what exactly do you mean? dpkg-reconfigure xserver-xorg is commandline that will re-setup your Xorg.conf file... which is why I advocating copying it into a backup file.
+2006-02-24T12:31:00.000Z	jsestri2	crouton	i meant so i dont have to reboot into windows to use IRC
+2006-02-24T12:32:00.000Z	crouton	jsestri2	Ah. Yes.  Lemme see which ones work from cli..
+2006-02-24T12:34:00.000Z	crouton	jsestri2	irssi i think
+2006-02-24T12:34:00.000Z	jsestri2	crouton	alright...we'll see if that works
+2006-02-24T12:35:00.000Z	jsestri2	crouton	be back in a few
+2006-02-24T12:35:00.000Z	crouton	jsestri2	aight
+2006-02-24T12:59:00.000Z	crouton	jsestri2	back?
+2006-02-24T13:00:00.000Z	jsestri2	crouton	yeah, i missspelled your name a second ago...Thanks a bunch! I am talking via X-Chat!
+2006-02-24T13:00:00.000Z	crouton	jsestri2	X-chat? That's a Gnome app... you got X working?
+2006-02-24T13:00:00.000Z	jsestri2	crouton	you wouldnt have any clues as to where to go with onboard sound...that was causing issues at the "starting hotplug subsystem" stage of startup
+2006-02-24T13:01:00.000Z	crouton	jsestri2	not really sure, does the sound device show up if you do 'lspci'?
+2006-02-24T13:01:00.000Z	jsestri2	crouton	trying...
+2006-02-24T13:02:00.000Z	crouton	jsestri2	so it was the hotplug that was preventing Xorg from running successfully?
+2006-02-24T13:03:00.000Z	jsestri2	crouton	no...i have been running the on-board sound disabled since we started talking
+2006-02-24T13:03:00.000Z	crouton	jsestri2	Ahh. Interesting.
+2006-02-24T13:03:00.000Z	jsestri2	crouton	the xorg stuff was fixed with the reconfigure you suggested
+2006-02-24T13:03:00.000Z	crouton	jsestri2	Excellent, that's good news.
+2006-02-24T13:03:00.000Z	jsestri2	crouton	I have now moved onto trying to get it to work wtih my on-board sound
+2006-02-24T13:04:00.000Z	jsestri2	crouton	it dosent show up under lspci (i'd assume because its not enabled)
+2006-02-24T13:04:00.000Z	jsestri2	crouton	when i say its not enabled, i mean i have disabled the onboard sound via BIOS
+2006-02-24T13:05:00.000Z	crouton	jsestri2	That'd be correct.  Is it the standard AC97 or is it something else (Realtek or maybe Creative)?
+2006-02-24T13:05:00.000Z	jsestri2	crouton	i'm pretty sure its Realtek
+2006-02-24T13:06:00.000Z	crouton	jsestri2	Might as well enable it and check the lspci output when you reboot, that's the first step
+2006-02-24T13:06:00.000Z	jsestri2	crouton	assuming nothing has changed with that, I cannot boot...it hangs the start-up at the "starting hotplug subsystem" step
+2006-02-24T13:07:00.000Z	jsestri2	crouton	and I am not able to Ctrl+c it
+2006-02-24T13:08:00.000Z	crouton	jsestri2	Ah, right.
+2006-02-24T13:09:00.000Z	crouton	jsestri2	You could pass 'nohotplug' as an option when you boot.  You aware of how to do that (with GRUB)?
+2006-02-24T13:09:00.000Z	jsestri2	crouton	no
+2006-02-24T13:10:00.000Z	crouton	jsestri2	When the computer boots, press Esc, then hit 'e' to edit the preferred boot image, get down to where you see the line starting with 'kernel'
+2006-02-24T13:10:00.000Z	crouton	jsestri2	Add 'nohotplug' to the end of that line, and hit Enter.  You dont' want to hit 'b' to boot, but Return to boot with the changes you just made.
+2006-02-24T13:11:00.000Z	jsestri2	crouton	alright cool, I'll brb after trying that out...
+2006-02-24T13:11:00.000Z	crouton	jsestri2	ok
+2006-02-24T13:15:00.000Z	jsestri2	crouton	sorry, where do i add the nohotplug?
+2006-02-24T13:16:00.000Z	crouton	jsestri2	At the end of the line that begins 'kernel'
+2006-02-24T13:16:00.000Z	jsestri2	crouton	alright...be back in a few
+2006-02-24T13:24:00.000Z	jsestri2	crouton	i can't get that command to stick
+2006-02-24T13:25:00.000Z	jsestri2	crouton	i edit it, and it appears to stay, and then i back up and boot my kernel, but it drops the nohotplug part of it
+2006-02-24T13:25:00.000Z	crouton	jsestri2	you can't backup
+2006-02-24T13:25:00.000Z	crouton	jsestri2	that's why you hit Enter to use the edit
+2006-02-24T13:25:00.000Z	jsestri2	crouton	ooo, i guess i misread what you said. You said not to use b, but if i use enter is all good?
+2006-02-24T13:26:00.000Z	crouton	jsestri2	Yeah, don't back up and don't hit b.  Just make the edit and hit Enter to boot with those edits
+2006-02-24T13:26:00.000Z	jsestri2	crouton	alright i'll get that going then
+2006-02-24T13:33:00.000Z	jsestri2	crouton	hmm, Enter doesn't do anything for me...I tried b, and nohotplug was there on the command line, however it still attempted to start the nohotplug subsystem...ideas?
+2006-02-24T13:34:00.000Z	crouton	jsestri2	Hmm. That's weird.
+2006-02-24T13:34:00.000Z	jsestri2	crouton	i also noticed that it said there was a TAB complete option, and so i gave that some wacks and it didnt seem to like the nohotplug line at all
+2006-02-24T13:36:00.000Z	crouton	jsestri2	Not sure about that. I'm about to crash, but I'm sure if you ask other folks around here you can keep going. :)
+2006-02-24T13:37:00.000Z	jsestri2	crouton	well i have to thank you for all the help you've given me anyways...i was about to give up. hah See you around
+2006-02-24T13:37:00.000Z	crouton	jsestri2	No problem, keep pluggin and you'll get it.

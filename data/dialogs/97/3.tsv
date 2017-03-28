@@ -1,0 +1,97 @@
+2011-06-16T22:33:00.000Z	dr_willis		You basically need to make an extended partitioon metadan  with logicals in it for ubuntu to install to
+2011-06-16T22:34:00.000Z	dr_willis		You can try. - but it seems odd the installer is not seeing it allready MetaBot
+2011-06-16T22:34:00.000Z	dr_willis		!p2p | kingkong
+2011-06-16T22:34:00.000Z	dr_willis		!p2p | kingofswords
+2011-06-16T22:35:00.000Z	kingofswords	dr_willis	thx
+2011-07-07T18:49:00.000Z	dr_willis	kingofswords	 what sites for example?
+2011-07-07T18:50:00.000Z	kingofswords	dr_willis	it was originally modaco but thats fine now but amazon doesnt load
+2011-07-07T18:50:00.000Z	kingofswords	dr_willis	ff and chrominum
+2011-07-07T18:52:00.000Z	kingofswords	dr_willis	ubuntu forums doesnt load either
+2011-07-07T18:53:00.000Z	kingofswords	dr_willis	 PING www.amazon.com (72.21.194.1) 56(84) bytes of data.
+2011-07-07T18:54:00.000Z	dr_willis	kingofswords	 so ping works..   does  the http://72.21.194.1    (or the ip above work?)
+2011-07-07T18:54:00.000Z	dr_willis	kingofswords	 you do get a ping reply from amazon?
+2011-07-07T18:55:00.000Z	kingofswords	dr_willis	all i get in terminal is what i copy/pasted inhere
+2011-07-07T18:56:00.000Z	dr_willis	kingofswords	   does  the http://72.21.194.1   work?
+2011-07-07T18:56:00.000Z	kingofswords	dr_willis	sorry amazon front page and search works but when i click on an item it wont load
+2011-07-07T18:57:00.000Z	kingofswords	dr_willis	no same as b4
+2011-07-07T18:57:00.000Z	kingofswords	dr_willis	 that link worked
+2011-07-07T18:58:00.000Z	dr_willis	kingofswords	 its pointing more and more to your isp's dns servers having issues...
+2011-07-07T18:59:00.000Z	kingofswords	dr_willis	 maybe because it a mobile network?
+2011-07-07T18:59:00.000Z	dr_willis	kingofswords	 it may start working here in a short while.
+2011-07-07T19:04:00.000Z	dr_willis	kingofswords	 ok. when you said mobile - i was thinking mobile-phone...
+2011-07-07T19:04:00.000Z	kingofswords	dr_willis	yeh its my phone
+2011-07-07T19:05:00.000Z	kingofswords	dr_willis	im in uk....we are known for our crap interent speeds
+2011-07-07T19:12:00.000Z	kingofswords	dr_willis	 to be honest i been dling movies games alot(havent has own connection for yrs so playing catch up) and was only touching the 80gb at end of month anyway
+2011-07-07T19:14:00.000Z	kingofswords	dr_willis	were you using android phones?
+2011-07-07T19:14:00.000Z	dr_willis	kingofswords	 yes. Galaxy S.
+2011-07-07T19:14:00.000Z	kingofswords	dr_willis	and it didnt tether? was android rooted?
+2011-07-07T19:15:00.000Z	dr_willis	kingofswords	 the issue was with the laptop and connecting to the tether..  otehr devices did work. (at&t wants another $10 a mo to enable the feature... but tjheres ways around that. :P  )
+2011-07-07T19:15:00.000Z	kingofswords	dr_willis	im on 10.04lts has real problem with previous ver as ivps6 or kernal slowed down my connection speed
+2011-07-07T19:17:00.000Z	kingofswords	dr_willis	im on 3 network...they known for their mobile bb but also for being a useless phone provider
+2011-07-10T02:31:00.000Z	dr_willis	kingofswords	 depends on your specific needs
+2011-07-10T02:31:00.000Z	kingofswords	dr_willis	gaming
+2011-07-10T02:31:00.000Z	dr_willis	kingofswords	  then i suggest dual booting.
+2011-07-10T02:32:00.000Z	kingofswords	dr_willis	does virtual box use up alot of memory then?
+2011-07-10T02:32:00.000Z	dr_willis	kingofswords	 you can tell it differnt amounts
+2011-08-17T00:08:00.000Z	dr_willis	kingofswords	 would start with the mountpoint of the windows filessystem.. not /dev/XXXX
+2011-08-17T00:08:00.000Z	kingofswords	dr_willis	i dont understand?
+2011-08-17T00:09:00.000Z	dr_willis	kingofswords	 like /media/windowsdrive/
+2011-08-17T00:10:00.000Z	dr_willis	kingofswords	 when using paths with spaces you normally escape the space, or use quotes  '/media/foo/path with spaces'
+2011-08-17T00:11:00.000Z	kingofswords	dr_willis	ahhhh
+2011-08-17T00:11:00.000Z	kingofswords	dr_willis	do i just ommit the spaces?
+2011-08-17T00:12:00.000Z	kingofswords	dr_willis	 i dont know aht u mean escape them?
+2011-08-17T00:12:00.000Z	kingofswords	dr_willis	you mean put quotes either side of the path
+2011-08-17T00:13:00.000Z	dr_willis	kingofswords	  time to check out some linux tutorals on command line ussage,    like http://www.tuxfiles.org/linuxhelp/weirdchars.html   (first google hit for linux spaces filename )
+2011-08-17T00:18:00.000Z	kingofswords	dr_willis	i dont what this means
+2011-08-17T00:19:00.000Z	dr_willis	kingofswords	 whats not to understand   you confert spaces in the path to '\ '  (slash space)  so they get seen properly.. OR you use quotes as needed...
+2011-08-17T00:22:00.000Z	dr_willis	kingofswords	 you reanamed 'documents and settings' to be 'documents' ?
+2011-08-17T00:22:00.000Z	dr_willis	kingofswords	 that most likely broke windows to some degree....
+2011-08-17T00:24:00.000Z	dr_willis	kingofswords	 You have taken somthoing rather trivial and made it too complex. :)
+2011-08-17T00:24:00.000Z	kingofswords	dr_willis	thats why its so frustrating
+2011-08-17T00:25:00.000Z	dr_willis	kingofswords	 all ive been 'teaching' you are linux fundamentals. :)      Im big on linux FUNdamentals.
+2011-08-17T00:28:00.000Z	dr_willis	kingofswords	 paste the exact command.. not sure what you mean...
+2011-08-17T00:30:00.000Z	kingofswords	dr_willis	/media/6A0CA92E0CA8F5EB/Documents\and\Settings/james.JAMES-0200CAEF2/Desktop/ac.iso example.iso: No such file or directory
+2011-08-17T00:31:00.000Z	dr_willis	kingofswords	 use the tab key as needed to complete proper spelling/case of all files in the path.. AND you used \   not '\ '  slash SPACE....
+2011-08-17T00:33:00.000Z	kingofswords	dr_willis	 i copied it to desktop and it mounted fine...but as i have run out of space need to mount it from windows
+2011-08-17T00:33:00.000Z	kingofswords	dr_willis	 ill cd it
+2011-08-17T00:43:00.000Z	kingofswords	dr_willis	omg it worked thank you so much
+2011-08-17T00:43:00.000Z	dr_willis	kingofswords	 think smarter, not harder. :)
+2011-08-17T00:44:00.000Z	dr_willis	kingofswords	 you could used the tab key also to complete the path/name/escape the spaces.. but its a bit of a hassle.
+2011-09-09T04:01:00.000Z	dr_willis	kingofswords	 one way   sh foo.sh   or chmod+x foo.sh  then ./foo.sh
+2011-09-09T04:01:00.000Z	dr_willis	kingofswords	 chmod +x foo.sh  then ./foo.sh
+2011-09-09T04:01:00.000Z	kingofswords	dr_willis	thanks
+2011-09-09T04:02:00.000Z	dr_willis	kingofswords	 dare we ask what this script is doing? :)
+2011-09-09T04:02:00.000Z	kingofswords	dr_willis	do i have to add the path aswell?
+2011-09-09T04:02:00.000Z	kingofswords	dr_willis	veetle player
+2011-09-09T04:02:00.000Z	dr_willis	kingofswords	  ./foo.sh   -> is giving the full path..  so in this example no.
+2011-12-17T07:30:00.000Z	dr_willis	kingofswords	 i just copy .ttf fonts to my .fonts dir normally
+2011-12-17T07:32:00.000Z	dr_willis	kingofswords	 its .fonts   in the users Home dir.. unless you want to install them system wide
+2011-12-17T07:33:00.000Z	dr_willis	kingofswords	 its .fonts with a .    and you MAKE it.. if it dosent exist.
+2011-12-17T07:34:00.000Z	dr_willis	kingofswords	 never installed fonts JUST for gimp for..
+2011-12-17T07:34:00.000Z	dr_willis	kingofswords	 if gimp uses the normal system fonts it should..
+2011-12-17T07:35:00.000Z	dr_willis	kingofswords	 so... make a .fonts dir.. copy them to it.. restart gimp.  a log out.back in might be needed
+2011-12-28T22:12:00.000Z	dr_willis	kingofswords	 try a differnt browser?
+2011-12-28T22:12:00.000Z	kingofswords	dr_willis	tryed ff and chromium
+2011-12-28T22:12:00.000Z	dr_willis	kingofswords	 try opera perhaps.
+2011-12-28T22:14:00.000Z	dr_willis	kingofswords	 i thinkits in the partners repo.. check the url above?
+2011-12-28T22:35:00.000Z	dr_willis	kingofswords	 ive never heard of any problems..
+2011-12-28T22:36:00.000Z	dr_willis	kingofswords	 what site?
+2012-04-24T04:52:00.000Z	dr_willis	kingofswords	 a interesting test would be to make a  new user and  see if it works for them. IF it did.. that woud point to a user setting issue
+2012-04-24T04:52:00.000Z	kingofswords	dr_willis	its not a problem , its almost impossible to use, 4 or 5 times refresh to get video to show..and almost always crashes with error rreport or stalls at 10 seconds for some werid reason
+2012-04-24T04:55:00.000Z	kingofswords	dr_willis	will that add another home folder than/
+2012-04-24T04:58:00.000Z	kingofswords	dr_willis	yeh true....i ok with basic cmds, but when it get too complicated lose my bearing and dont understand what ive done 2 pc....which makes problems un solvable as i cant backtrace
+2012-04-24T05:00:00.000Z	kingofswords	dr_willis	do i need reboot 4 new user to show?
+2012-04-24T05:00:00.000Z	dr_willis	kingofswords	 should appear at the login screen
+2012-04-24T05:03:00.000Z	kingofswords	dr_willis	its same in billgates login
+2012-04-24T05:04:00.000Z	dr_willis	kingofswords	 that points to asystem issue then .not a user config issue.   googles chrome browser also has its own built in flash that may be worth testing.  Flash can be a royal pain, its often hard to trouble shoot,
+2012-04-24T05:05:00.000Z	kingofswords	dr_willis	so a fresh install is only option?
+2012-04-24T05:06:00.000Z	dr_willis	kingofswords	 hard to tell. 12.04 is due out in a few days, may be worth the effort to  backup imoirntant stuff and just do a clean install,
+2012-04-24T05:06:00.000Z	kingofswords	dr_willis	flashfix extension? or prog?
+2012-04-24T05:07:00.000Z	dr_willis	kingofswords	 no idea really. ive never used it just seen it mentioned in here a few times.
+2012-04-24T05:08:00.000Z	kingofswords	dr_willis	its hard...i have ssd hdd with xp....took me days to install dual lboot last time as xp doesnt contain ssd drivers so doesnt see  it
+2012-04-24T05:09:00.000Z	dr_willis	kingofswords	 my main ubuntu install is on a 16 gb usb flash drive. ;) i dont have to touch the windows drive at all,
+2012-04-24T05:09:00.000Z	kingofswords	dr_willis	i did have a weird things going on with my boot screen....seems to be lots more option to choose from now
+2012-04-24T05:09:00.000Z	kingofswords	dr_willis	like its been copying itself but changing the ver number up
+2012-04-24T05:09:00.000Z	dr_willis	kingofswords	 each new kernel version adds an entry
+2012-04-24T05:10:00.000Z	kingofswords	dr_willis	had alot of problems with my grub wen i first installed too
+2012-04-24T05:14:00.000Z	kingofswords	dr_willis	nice...thats whats so annoying i moved to linux cos i thought things wud work better and faster...ur celeron prob faster than mine

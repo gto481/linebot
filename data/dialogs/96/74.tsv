@@ -1,0 +1,96 @@
+2005-12-17T07:20:00.000Z	Ng		how much ram does it have?
+2005-12-17T07:21:00.000Z	Ng		yes, more RAM ;)
+2005-12-17T07:23:00.000Z	Ng		you ought to be able to dig up a 64mb SIMM or whatever for pennies these days
+2005-12-17T07:24:00.000Z	Ng		he could debootstrap it
+2005-12-17T07:24:00.000Z	Ng		but I don't really see any point ;)
+2005-12-17T07:25:00.000Z	Ng		:)
+2005-12-17T07:26:00.000Z	gnomefreak	Ng	im not even sure his proccesser meets min req. for ubuntu its something like a 199mhz if i remember right
+2005-12-17T07:26:00.000Z	Ng	gnomefreak	that's largely irrelevant really
+2005-12-17T07:27:00.000Z	Ng	gnomefreak	there are levels below which you're mad to try it, but in theory there's no actual lower limit - so long as your CPU ticks ;)
+2005-12-18T08:14:00.000Z	Ng	gnomefreak	depends on the application, but it generally won't be easy
+2005-12-18T08:14:00.000Z	Ng	gnomefreak	it may have been ported already though
+2005-12-18T08:15:00.000Z	Ng	gnomefreak	what are you looking for?
+2005-12-18T08:16:00.000Z	Ng	gnomefreak	probably a bit specialised to havev been ported
+2005-12-18T08:50:00.000Z	Ng	gnomefreak	there's a links2 package in ubuntu - that no good?
+2005-12-18T08:51:00.000Z	Ng	gnomefreak	recompiling the ubuntu package would be easier than building from source
+2005-12-18T08:52:00.000Z	gnomefreak	Ng	 theres a graphical links2 browser
+2005-12-18T08:53:00.000Z	Ng	gnomefreak	the ubuntu links2 package depends on libx11, so I'd say it includes some graphical stuff
+2005-12-18T08:54:00.000Z	gnomefreak	Ng	 i dont remember being able to run links2 in graphical mode from ubuntus package
+2005-12-18T08:54:00.000Z	Ng	gnomefreak	links2 -h
+2005-12-18T09:07:00.000Z	Ng	gnomefreak	are you searching names and descriptions in synaptic?
+2005-12-18T09:08:00.000Z	Ng	gnomefreak	texi2html looks like it have makeinfo
+2005-12-18T09:08:00.000Z	Ng	gnomefreak	ah, no, I'm wrong, it doesn't
+2005-12-18T09:08:00.000Z	Ng	gnomefreak	it just mentions it in the description
+2005-12-18T09:13:00.000Z	Ng	gnomefreak	are you still really sure you don't want to rebuild the ubuntu package? ;)
+2005-12-18T09:13:00.000Z	gnomefreak	Ng	 if i have to use make its not gonna matter make isnt working right
+2005-12-18T09:14:00.000Z	Ng	gnomefreak	except that apt can install dependencies required to rebuild one of its packages
+2005-12-31T10:01:00.000Z	Ng	gnomefreak	the k8 kernel is only available if you install the 64bit version of ubuntu
+2006-01-08T10:14:00.000Z	gnomefreak	Ng	 he was blaming ram
+2006-01-08T12:03:00.000Z	Ng	gnomefreak	if you want a patch in, contact the ubuntu maintainer, or file a bug
+2006-01-14T09:11:00.000Z	Ng	gnomefreak	yeah
+2006-01-21T09:24:00.000Z	Ng	gnomefreak	I use /usr/local/RealPlayer
+2006-01-23T17:27:00.000Z	Ng	gnomefreak	restricted is just another "channel" like main/universe/multiverse
+2006-01-23T10:13:00.000Z	Ng	gnomefreak	ctral+a, c
+2006-01-23T10:13:00.000Z	Ng	gnomefreak	ctrl+a, n moves to the next term
+2006-01-23T10:13:00.000Z	Ng	gnomefreak	ctrl+a, ? shows all of the available commands
+2006-01-26T13:48:00.000Z	Ng	gnomefreak	glxinfo gives quite a lot of informaion (especially lines containing "vendor" or "direct rendering")
+2006-02-20T09:12:00.000Z	Ng	gnomefreak	for you, I bet it broke for some people ;)
+2006-02-20T09:13:00.000Z	gnomefreak	Ng	oh im sure it did with 200 updates something is bound to break on unstablel
+2006-02-20T09:37:00.000Z	Ng	gnomefreak	you may need the g++ packages
+2006-02-20T09:38:00.000Z	gnomefreak	Ng	thats my point there are different packages for each lang
+2006-02-20T09:38:00.000Z	Ng	gnomefreak	.c means C. you probably want to name your files .cpp or something
+2006-02-20T09:38:00.000Z	Ng	gnomefreak	or use -x
+2006-02-20T09:39:00.000Z	gnomefreak	Ng	i know all that to compile a cpp you need g++
+2006-02-20T09:40:00.000Z	Ng	gnomefreak	gcc is just a frontend, it's not a compiler, it calls c89 or c99 to compile .c files
+2006-02-23T08:41:00.000Z	gnomefreak	Ng	last reports i saw were the announced it in vegas but either way i think google will be supporting that
+2006-02-23T08:42:00.000Z	Ng	gnomefreak	there has been no announcement
+2006-02-23T08:42:00.000Z	Ng	gnomefreak	if it exists at all it's their internal modified ubuntu
+2006-02-23T08:44:00.000Z	gnomefreak	Ng	 this is where i read the annoucment in vegas http://www.theregister.co.uk/2006/01/31/google_goes_desktop_linux/
+2006-02-23T08:45:00.000Z	Ng	gnomefreak	look, they're not going to release a linux distro. they use linux a lot internally, that's all that's going on here.
+2006-02-26T17:05:00.000Z	gnomefreak	Ng	intelikey gave him that for some reason (doesnt remember why)
+2006-02-26T17:06:00.000Z	Ng	gnomefreak	well it looks like nonsense to me
+2006-02-26T17:11:00.000Z	gnomefreak	Ng	depends on a bunch of crap
+2006-03-05T09:38:00.000Z	gnomefreak	Ng	he cant get it for 64bit
+2006-03-05T09:38:00.000Z	Ng	gnomefreak	it's in multiverse
+2006-03-05T09:38:00.000Z	gnomefreak	Ng	i know he has it enabled
+2006-03-05T09:38:00.000Z	Ng	gnomefreak	I can't get to my amd64 box atm to test, but pacakges.ubuntu.com clearly lists it
+2006-03-05T09:39:00.000Z	gnomefreak	Ng	i gave him the sources.list
+2006-03-05T10:26:00.000Z	Ng	gnomefreak	maybe I mis-assumed what he was asking then, I figured he was referring to something like Glade
+2006-03-05T10:26:00.000Z	gnomefreak	Ng	never heard of glade but now that i do is it good?
+2006-03-05T10:26:00.000Z	Ng	gnomefreak	it doesn't support enough gnome widgets imho, but yes it makes developing simple UIs far quicker
+2006-03-05T10:27:00.000Z	gnomefreak	Ng	in the repos?
+2006-03-07T17:35:00.000Z	Ng	gnomefreak	$PATH is the environment variable that controls where things look for binaries
+2006-03-07T09:39:00.000Z	Ng	gnomefreak	perhaps check the bios for an option to disable the onboard vga
+2006-03-07T09:39:00.000Z	Ng	gnomefreak	failing that it is possible to put a pci id for the nvidia card in xorg.conf
+2006-03-07T09:39:00.000Z	gnomefreak	Ng	the doc scoop was all i saw for vc
+2006-03-07T09:39:00.000Z	Ng	gnomefreak	I have no idea what doc scoop is
+2006-03-07T09:39:00.000Z	gnomefreak	Ng	dont know how to do it that way
+2006-03-07T09:41:00.000Z	gnomefreak	Ng	also i installed nvidia-settings and went to install nvidia-gxl and it removed the settings one :(
+2006-03-07T09:42:00.000Z	Ng	gnomefreak	that doesn't sound right
+2006-03-07T09:42:00.000Z	gnomefreak	Ng	thats what i said too but i did it 3 times
+2006-03-08T09:10:00.000Z	gnomefreak	Ng	thats my fault
+2006-03-11T06:08:00.000Z	Ng	gnomefreak	yes there is
+2006-03-11T06:09:00.000Z	gnomefreak	Ng	i thought the name was blackdown-j2re1.4
+2006-03-12T09:01:00.000Z	Ng	gnomefreak	that sounds like a pretty terrible idea
+2006-03-12T09:01:00.000Z	gnomefreak	Ng	i did it by mistake one day didnt know if it was good
+2006-04-09T15:58:00.000Z	gnomefreak	Ng	there is #apple or #mac i think i know there is a #osx for sure
+2006-04-09T15:58:00.000Z	Ng	gnomefreak	those don't sound very ubuntu related ;)
+2006-04-09T15:59:00.000Z	gnomefreak	Ng	they are not they are mac related you are in the ubuntu-mac channel ;)
+2006-04-09T16:04:00.000Z	gnomefreak	Ng	 nope grub nor lilo will work on mac :(
+2006-04-09T16:05:00.000Z	Ng	gnomefreak	well of course, they're PC specific
+2006-04-09T16:08:00.000Z	gnomefreak	Ng	give me a sec i thought i ran across a wiki on yaboot
+2006-04-09T16:08:00.000Z	Ng	gnomefreak	ok, ta
+2006-04-09T16:08:00.000Z	gnomefreak	Ng	see if this helps https://wiki.ubuntu.com/YabootConfigurationForMacintoshPowerPCsDualBoot?highlight=%28yaboot%29
+2006-04-09T16:09:00.000Z	Ng	gnomefreak	I'll take a look
+2006-05-20T16:10:00.000Z	gnomefreak	Ng	thought it was safe to mount nad read ntfs in ubuntu just not writing?
+2006-05-20T16:10:00.000Z	Ng	gnomefreak	correct
+2006-05-22T09:29:00.000Z	gnomefreak	Ng	he did ;)
+2006-05-24T09:30:00.000Z	Ng	gnomefreak	"adduser someusername admin" as root, so it may need a reboot into recovery mode if there is no root user or user with sudo access available
+2006-05-24T09:57:00.000Z	gnomefreak	Ng	hes gone
+2006-05-27T08:32:00.000Z	gnomefreak	Ng	its in universe iirc
+2006-05-27T08:35:00.000Z	gnomefreak	Ng	he always does that
+2006-05-27T08:36:00.000Z	Ng	gnomefreak	sounds like he wants a ban then ;)
+2006-06-22T07:45:00.000Z	Ng	gnomefreak	2.14.2
+2006-07-21T16:22:00.000Z	gnomefreak	Ng	?
+2006-07-21T16:23:00.000Z	Ng	gnomefreak	/lastlog airzer0
+2006-10-13T16:40:00.000Z	Ng	gnomefreak	ok thanks, Ifigured that would just be for xgl

@@ -1,0 +1,97 @@
+2010-09-12T13:38:00.000Z	xiaclo	piyushmishra	have you specified the code type? from the dropdown it should do syntax highlighting for just about anything including html ... if that isn't sufficient, you can look into modifying the gedit syntax files to suit what you need
+2010-09-12T13:39:00.000Z	piyushmishra	xiaclo	I selected the highlighting part. am looking for plugins to clean my code. something that automatically indents on each new line when I have hit tab once till I stop it and something that can balance out braces for me so that I can find where I missed out one
+2010-09-12T13:40:00.000Z	xiaclo	piyushmishra	i could swear gedit could do that ... give me a second, let me play with it
+2010-09-12T13:40:00.000Z	piyushmishra	xiaclo	tell me how :)
+2010-09-12T13:45:00.000Z	xiaclo	piyushmishra	edit > preferences > View > highlight matching bracket (at the bottom) .... Editor > enable automatic indentation (middle)
+2010-09-12T13:46:00.000Z	piyushmishra	xiaclo	^^
+2010-09-12T13:47:00.000Z	piyushmishra	xiaclo	auto indent works :)
+2010-09-12T13:48:00.000Z	xiaclo	piyushmishra	just a second, there is a way around the bracket thing, let me figure out how to do it
+2010-09-12T13:48:00.000Z	piyushmishra	xiaclo	anything to balance braces and also to add language libraries for an auto suggest like feature?
+2010-09-12T13:49:00.000Z	xiaclo	piyushmishra	you mean like you start typing and it completes html tags and such?
+2010-09-12T13:49:00.000Z	piyushmishra	xiaclo	class browser does it but only for py and ruby not for php
+2010-09-12T13:50:00.000Z	xiaclo	piyushmishra	also under plugins, try tag list
+2010-09-12T13:50:00.000Z	piyushmishra	xiaclo	auto complete is present but it doesnt prompt built in and user defined functions etc
+2010-09-12T13:55:00.000Z	xiaclo	piyushmishra	just doing some quick research, second for geany, it does include code folding, which is what i was looking for in gedit, doesn't even seem to be a plugin (that isn't extremely buggy anyways)
+2010-09-12T13:56:00.000Z	piyushmishra	xiaclo	means u can select and close parts of codes like blocks?
+2010-09-12T13:57:00.000Z	xiaclo	piyushmishra	yeah, so blocks you know are fine, you can collapse to just the first line
+2010-09-12T13:57:00.000Z	piyushmishra	xiaclo	I would love that feature I am missing it too. I came from dreamweaver on windows to gedit on ubuntu :P
+2010-09-12T13:58:00.000Z	xiaclo	piyushmishra	yeah, gedit is missing quite a few things for coding ... if you don't mind a bit of a learning curve, i would actually suggest going with something like emacs or vim ... but not everyone is up for that ... geany sounds like a nice middleground
+2010-09-12T13:59:00.000Z	piyushmishra	xiaclo	vim works on terminal na?
+2010-09-12T13:59:00.000Z	xiaclo	piyushmishra	vim does yes, but there is also gvim, which is a gtk version
+2010-09-12T14:00:00.000Z	xiaclo	piyushmishra	yeah, vim is very powerful, but like i said, quite a bit of a learning curve to it ... once you get used to it, everything else seems second-rate ... but it takes a while
+2010-09-12T14:01:00.000Z	piyushmishra	xiaclo	lol I am learning a lot since I am on ubuntu
+2010-09-12T14:01:00.000Z	piyushmishra	xiaclo	does the gtk verion match the original vim ?
+2010-09-12T14:02:00.000Z	xiaclo	piyushmishra	yes, the only difference is it has dropdown menus, so you don't have to remember a million arcane keybinds
+2010-09-12T14:03:00.000Z	piyushmishra	xiaclo	I will carry a handbook of all keybinds I have a short memory :P
+2010-09-12T14:03:00.000Z	xiaclo	piyushmishra	some you will use often enough to get used to, the rest you can find in dropdown menus, that's the nice part about gvim
+2010-09-12T14:04:00.000Z	piyushmishra	xiaclo	so sudo apt-get install gvim ?
+2010-09-12T14:04:00.000Z	xiaclo	piyushmishra	yep, should get you started ... look through the menus, there is a LOT of options
+2010-09-12T14:05:00.000Z	piyushmishra	xiaclo	Package gvim is a virtual package provided by:
+2010-09-12T14:05:00.000Z	xiaclo	piyushmishra	err ... let's go with vim-gnome ... although honestly i think they are the same package ...
+2010-09-12T14:06:00.000Z	piyushmishra	xiaclo	do you have a gtalk/yahoo? I think I will eat up ur head when I dont find something on vim :P
+2010-09-12T14:07:00.000Z	xiaclo	piyushmishra	no, but i leave my computer idle on irc, so just msg me here, i'll get back to you when i can
+2010-09-12T14:08:00.000Z	piyushmishra	xiaclo	good :)
+2010-09-12T14:09:00.000Z	piyushmishra	xiaclo	I need to be able to do all the basic things that I can do with gedit now first with vim. does it have highlighting abilities? coloring parts of code for ease in reading
+2010-09-12T14:10:00.000Z	xiaclo	piyushmishra	from gvim, just syntax> automatic should work, it's pretty good about detecting what language it is
+2010-09-12T14:11:00.000Z	piyushmishra	xiaclo	omg its huge :P
+2010-09-12T14:13:00.000Z	piyushmishra	xiaclo	I have used this before. we used to code c and c++ in vim in our first and second yr at college on red hat :)
+2010-09-12T14:13:00.000Z	piyushmishra	xiaclo	we used very little keybinds but yes I remember it now
+2010-09-12T14:13:00.000Z	xiaclo	piyushmishra	yeah, vim is a beast ... but it's one of the most powerful text editors that exists ... although i'm sure people would argue with me for emacs =)
+2010-09-12T14:14:00.000Z	piyushmishra	xiaclo	auto indent and balance braces?
+2010-09-12T14:16:00.000Z	piyushmishra	xiaclo	how do I save settings?
+2010-09-12T14:16:00.000Z	xiaclo	piyushmishra	balance braces is on by default as long as it recognizes what language you are in, its part of syntax highlighting ... auto indent is edit > file settings > toggle autoindent
+2010-09-12T14:17:00.000Z	piyushmishra	xiaclo	I was trying to set the number of spaces in tab
+2010-09-12T14:18:00.000Z	xiaclo	piyushmishra	for everything command, there is a vim shortcut ... you can add that to your ~/.vimrc file .... for example, autoindent is ':set ai!'
+2010-09-12T14:18:00.000Z	piyushmishra	xiaclo	I have edited that config file. what is the key to sabe it
+2010-09-12T14:18:00.000Z	xiaclo	piyushmishra	any file is esc > :w or :wq if you want to exit too
+2010-09-12T14:19:00.000Z	xiaclo	piyushmishra	or just file > save =)
+2010-09-12T14:19:00.000Z	piyushmishra	xiaclo	we used this ty for it
+2010-09-12T14:19:00.000Z	piyushmishra	xiaclo	no its in buffer mode
+2010-09-12T14:20:00.000Z	piyushmishra	xiaclo	how do I save settings there?
+2010-09-12T14:21:00.000Z	xiaclo	piyushmishra	hmm, i didn't have an issue with it ... esc to exit insert mode ... then type :wq
+2010-09-12T14:22:00.000Z	piyushmishra	xiaclo	 its an option window
+2010-09-12T14:22:00.000Z	xiaclo	piyushmishra	you went to edit > startup settings, yes?
+2010-09-12T14:23:00.000Z	piyushmishra	xiaclo	no settings window
+2010-09-12T14:23:00.000Z	xiaclo	piyushmishra	oh, just quit then ... :q
+2010-09-12T14:24:00.000Z	piyushmishra	xiaclo	lol nice learning curve we did all these basic ones and now I have forgotten all of this :P
+2010-09-12T14:24:00.000Z	xiaclo	piyushmishra	to set your tab length to 4 for example ... add these two lines to your ~/.vimrc ... ':set tabstop=4' ':set sw=4'
+2010-09-12T14:26:00.000Z	piyushmishra	xiaclo	I did that on the other file :P btw how to select all code? ctrl+a seems to copy the last few lines
+2010-09-12T14:28:00.000Z	xiaclo	piyushmishra	i use a massive number ... although i'm sure there is a way to copy all ... y is yank (or copy) followed by number of lines before or after and a direction .... so y5<down arrow> will copy your current line, and 5 lines below it ... p will paste ... again, out of insert mode
+2010-09-12T14:28:00.000Z	xiaclo	piyushmishra	so the whole file ... i usually do something like :1 (jump to line 1) y9999999<down>
+2010-09-12T14:29:00.000Z	piyushmishra	xiaclo	ohk
+2010-09-12T14:29:00.000Z	xiaclo	piyushmishra	it sounds bad ... but you get really fast at it ... and i'm sure some vi guru could show you an easier way, i just know the basic stuff myself
+2010-09-12T14:30:00.000Z	piyushmishra	xiaclo	does this have a keybind map somewhere which I can print out?
+2010-09-12T14:30:00.000Z	xiaclo	piyushmishra	if you look through the menus, they always have the key shortcuts next to them ... in fact, just figured out an easier way to do it ... ggVGy ... will copy everything =)
+2010-09-12T14:31:00.000Z	piyushmishra	xiaclo	lol I was looking to select all :P
+2010-09-12T14:32:00.000Z	xiaclo	piyushmishra	yeah, its in the menu with the shortcut ... its ggVG ... then y to copy or d to cut
+2010-09-12T14:32:00.000Z	xiaclo	piyushmishra	i tend to use d to delete as well, but it's technically cut not delete
+2010-09-12T14:34:00.000Z	piyushmishra	xiaclo	how to did you say I can get my codes colored?
+2010-09-12T14:35:00.000Z	xiaclo	piyushmishra	:syn on
+2010-09-12T14:36:00.000Z	piyushmishra	xiaclo	ohk I had to save it with the extension to be able to do it
+2010-09-12T14:37:00.000Z	piyushmishra	xiaclo	why does everyone like darker colors more, I just noticed most color schemes are darker
+2010-09-12T14:38:00.000Z	piyushmishra	xiaclo	ty for now I think I will look or some keybind printable page first
+2010-09-12T14:39:00.000Z	piyushmishra	xiaclo	cant I save my settings on it?
+2010-09-12T14:40:00.000Z	xiaclo	piyushmishra	http://www.viemu.com/vi-vim-cheat-sheet.gif ... and settings are saved in your ~/.vimrc .. so note the command, and add it to your vimrc, ill send you mine a minute
+2010-09-12T14:41:00.000Z	piyushmishra	xiaclo	now I know how gamers got their hotkeys :P
+2010-09-12T14:42:00.000Z	xiaclo	piyushmishra	mine could be tweaked more,  but its a decent starting point for coding ... http://pastebin.com/7B3Kq6qJ
+2010-09-12T14:44:00.000Z	xiaclo	piyushmishra	and this will help you learn the key combos http://cse.taylor.edu/~moquist/vim_help/vi_cheat_sheet.gif
+2010-09-12T14:46:00.000Z	piyushmishra	xiaclo	how do I paste things into my startup settings?
+2010-09-12T14:47:00.000Z	xiaclo	piyushmishra	i for insert, then shift-insert or middle click
+2010-09-12T14:47:00.000Z	piyushmishra	xiaclo	how to save color scheme into the startup file? I pasted it successfully
+2010-09-12T14:49:00.000Z	piyushmishra	xiaclo	colorscheme morning
+2010-09-12T14:49:00.000Z	xiaclo	piyushmishra	yeah, just found it too, you're getting the hang of it =)
+2010-09-12T14:50:00.000Z	piyushmishra	xiaclo	u have set space to fold the code?
+2010-09-12T14:50:00.000Z	xiaclo	piyushmishra	yes, you can change that to something else, or remove it if you want
+2010-09-12T14:51:00.000Z	piyushmishra	xiaclo	Its fine I was trying to make sense of the settings
+2010-09-12T14:51:00.000Z	piyushmishra	xiaclo	its cool I think I can learn it in a day or two
+2010-09-12T14:51:00.000Z	piyushmishra	xiaclo	any key for toggle full screen?
+2010-09-12T14:51:00.000Z	xiaclo	piyushmishra	for basic use yeah, it's one of those programs that takes years of experimenting to master
+2010-09-12T14:52:00.000Z	piyushmishra	xiaclo	lol its an operating system if u ask me :P
+2010-09-12T14:53:00.000Z	xiaclo	piyushmishra	yeah, might as well be ... most programming languages aren't as complicated as vim ... and i dont think there is a full screen ... maximizing the window is about the best you can do
+2010-09-12T14:53:00.000Z	xiaclo	piyushmishra	remember it's command-line ... so it doesn't know about the window it's running in or have control over it ... would have to handle that through gnome
+2010-09-12T14:54:00.000Z	piyushmishra	xiaclo	okie its really fun though everytime i use something on this, I feel like I am pro-er now :P
+2010-09-13T00:02:00.000Z	piyushmishra	xiaclo	der?
+2010-09-13T00:11:00.000Z	xiaclo	piyushmishra	yep, found that too, but a lot of reviews say it's really buggy on only works in a handful of simplier languages
+2010-09-13T00:12:00.000Z	piyushmishra	xiaclo	lol u were here :) I am trying it now. for php it just works with braces I guess. alt-z for folding. I am learning py right now. will read gedit plugin doc and try if I can work something out for custom folding
+2010-09-13T00:13:00.000Z	xiaclo	piyushmishra	yeah, i pop in and out, but i leave it on idle most of the time
+2010-09-13T00:13:00.000Z	piyushmishra	xiaclo	:) I have a feeling we will talk a lot... tc for now very tired n sleepy its late here

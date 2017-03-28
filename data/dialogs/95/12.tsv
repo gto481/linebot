@@ -1,0 +1,95 @@
+2011-06-10T03:36:00.000Z	lekefly_	pfifo	http://www.cl.ly/0W3i461g3Q212O39060q this is from regular ubuntu install after the brown screen with icon on the bottom
+2011-06-10T03:37:00.000Z	pfifo	lekefly_	yeah, its definatly your dell monitor
+2011-06-10T03:37:00.000Z	lekefly_	pfifo	xD
+2011-06-10T03:37:00.000Z	pfifo	lekefly_	the actuall error isnt on that screen
+2011-06-10T03:38:00.000Z	pfifo	lekefly_	do you get the same problem with the alt livecd?
+2011-06-10T03:38:00.000Z	lekefly_	pfifo	burning now hehe you on for 20 min more?
+2011-06-10T03:39:00.000Z	pfifo	lekefly_	probbally all night, usueally in #ubuntu-offtopic 24/7
+2011-06-10T03:45:00.000Z	lekefly_	pfifo	im not in the select language menu.. Should i just try to install?
+2011-06-10T03:46:00.000Z	pfifo	lekefly_	yes, install with the alternate iso
+2011-06-10T03:47:00.000Z	lekefly_	pfifo	Got a black screen
+2011-06-10T03:47:00.000Z	pfifo	lekefly_	might need to give it a bit more time
+2011-06-10T03:49:00.000Z	lekefly_	pfifo	Hehe.. still black :p
+2011-06-10T03:51:00.000Z	pfifo	lekefly_	did it not do anything at all?
+2011-06-10T03:51:00.000Z	lekefly_	pfifo	nope.. i just hit the option "install ubuntu"
+2011-06-10T03:52:00.000Z	pfifo	lekefly_	reboot and try the command line install option
+2011-06-10T03:53:00.000Z	lekefly_	pfifo	Expert mode? i cant see any commandline install
+2011-06-10T04:00:00.000Z	pfifo	lekefly_	no thats not right
+2011-06-10T04:01:00.000Z	pfifo	lekefly_	which iso did you download?
+2011-06-10T04:03:00.000Z	lekefly_	pfifo	this one http://mirror.bytemark.co.uk/ubuntu-releases//11.04/ubuntu-11.04-alternate-i386.iso
+2011-06-10T04:05:00.000Z	lekefly_	pfifo	correct right?
+2011-06-10T04:06:00.000Z	pfifo	lekefly_	have you ever gotten a linux kernel to boot on this machine?
+2011-06-10T04:06:00.000Z	lekefly_	pfifo	nope :S
+2011-06-10T04:06:00.000Z	lekefly_	pfifo	its brand new..
+2011-06-10T04:09:00.000Z	lekefly_	pfifo	AMD Athlon II X2 250
+2011-06-10T04:10:00.000Z	pfifo	lekefly_	do you know what motherboard it has?
+2011-06-10T04:10:00.000Z	lekefly_	pfifo	MSI 890FXA-GD65, Socket-AM3
+2011-06-10T04:13:00.000Z	lekefly_	pfifo	tryed a disk with ubuntu installed on.. and tryed to enter recovery mode.. and got the same error that was on that image i sendt to you
+2011-06-10T04:14:00.000Z	pfifo	lekefly_	im dl the alternate iso your using just a sec
+2011-06-10T04:17:00.000Z	pfifo	lekefly_	do you have a spare USB drive around?
+2011-06-10T04:17:00.000Z	lekefly_	pfifo	yeah
+2011-06-10T04:17:00.000Z	pfifo	lekefly_	and a working ubuntu system I take it
+2011-06-10T04:17:00.000Z	lekefly_	pfifo	hehe yeah
+2011-06-10T04:18:00.000Z	pfifo	lekefly_	what kind of graphic card do you have?
+2011-06-10T04:18:00.000Z	lekefly_	pfifo	Just 5850s
+2011-06-10T04:22:00.000Z	pfifo	lekefly_	put your spare usb drive in and unmount anything that gets automounted
+2011-06-10T04:24:00.000Z	lekefly_	pfifo	alright done
+2011-06-10T04:25:00.000Z	pfifo	lekefly_	now sudo -s, and run this command replacing X with the letter of you usb drive (this will erase all data on your disk `wget -O /dev/sdX "http://archive.ubuntu.com/ubuntu/dists/natty/main/installer-i386/current/images/netboot/mini.iso"`
+2011-06-10T04:27:00.000Z	pfifo	lekefly_	in the mean time, on the boot options of the alternate install press fc and choose noacpi andacpi=off then boot with the install ubuntu command
+2011-06-10T04:27:00.000Z	pfifo	lekefly_	"f6" typo
+2011-06-10T04:28:00.000Z	lekefly_	pfifo	how do you list drives again? :p
+2011-06-10T04:29:00.000Z	pfifo	lekefly_	sudo blkid or sudo fdisk -l
+2011-06-10T04:32:00.000Z	lekefly_	pfifo	done downloading
+2011-06-10T04:33:00.000Z	pfifo	lekefly_	put that to the side for a minute and try booting the alternate iso with noacpi and acpi=off
+2011-06-10T04:33:00.000Z	lekefly_	pfifo	Just black screen still just did it tho
+2011-06-10T04:33:00.000Z	pfifo	lekefly_	try boting from that USB stick instead
+2011-06-10T04:35:00.000Z	pfifo	lekefly_	makesure theres no CDs in the drive when you do
+2011-06-10T04:37:00.000Z	lekefly_	pfifo	It just booted to the hd after selecting usb..
+2011-06-10T04:38:00.000Z	pfifo	lekefly_	make sure your using a usb 2.0 port
+2011-06-10T04:38:00.000Z	lekefly_	pfifo	the 3.0 are blue right?
+2011-06-10T04:38:00.000Z	pfifo	lekefly_	couldnt say, you can paint anything any color
+2011-06-10T04:39:00.000Z	pfifo	lekefly_	try a few different ports
+2011-06-10T04:39:00.000Z	lekefly_	pfifo	But on this drive i have ubuntu and i booted into grub now and can edit the recovery .. should i give it a try?
+2011-06-10T04:39:00.000Z	pfifo	lekefly_	you mean ubuntu is already installed on it?
+2011-06-10T04:40:00.000Z	lekefly_	pfifo	Yeah.. but it might be corrupt.. it wont boot aswell :p
+2011-06-10T04:40:00.000Z	pfifo	lekefly_	it wont boot? does it give that same error?
+2011-06-10T04:40:00.000Z	lekefly_	pfifo	yeah
+2011-06-10T04:41:00.000Z	lekefly_	pfifo	should i try another graphic card?
+2011-06-10T04:43:00.000Z	pfifo	lekefly_	ok pop that usb drive back in the working ubuntu, unmount and try this `wget -O /dev/sdX "http://archive.ubuntu.com/ubuntu/dists/natty/main/installer-amd64/current/images/netboot/mini.iso"` then boot from that, you are definatly having a hardware issue here maybe 64 bit will work better
+2011-06-10T04:47:00.000Z	lekefly_	pfifo	does it really use 6 secs to download and make the usb bootable?
+2011-06-10T04:47:00.000Z	pfifo	lekefly_	yes, 19MB
+2011-06-10T04:49:00.000Z	lekefly_	pfifo	Alright.. so just run from disk or what?
+2011-06-10T04:50:00.000Z	lekefly_	pfifo	oh.. it auto booted.. same error :P
+2011-06-10T04:51:00.000Z	lekefly_	pfifo	in it now again.. just shot if you have ideas what i can try
+2011-06-10T04:52:00.000Z	pfifo	lekefly_	try pressing pause during boot and see if you can get the first error message on the screen
+2011-06-10T04:52:00.000Z	lekefly_	pfifo	how?
+2011-06-10T04:52:00.000Z	pfifo	lekefly_	by pressing pause during boot
+2011-06-10T04:53:00.000Z	lekefly_	pfifo	as in the pause button on the keyboard? :P ill try
+2011-06-10T04:53:00.000Z	pfifo	lekefly_	yeah it does actually do something :)
+2011-06-10T04:53:00.000Z	lekefly_	pfifo	install or run from usb?
+2011-06-10T04:54:00.000Z	pfifo	lekefly_	anywhere it creates that message
+2011-06-10T04:54:00.000Z	pfifo	lekefly_	can you run any OS on this machine?
+2011-06-10T04:55:00.000Z	lekefly_	pfifo	Have not tryed windows.. just ubuntu and CentOS
+2011-06-10T04:55:00.000Z	pfifo	lekefly_	centOS give that same error?
+2011-06-10T04:56:00.000Z	lekefly_	pfifo	Something els about kernel panic
+2011-06-10T04:56:00.000Z	pfifo	lekefly_	can you successfully run 'memcheck86"
+2011-06-10T04:58:00.000Z	lekefly_	pfifo	Yeah
+2011-06-10T04:58:00.000Z	pfifo	lekefly_	how did you install ubuntu on it to begin with?
+2011-06-10T04:59:00.000Z	lekefly_	pfifo	another machine :P
+2011-06-10T05:00:00.000Z	pfifo	lekefly_	try booting windows, if that doesnt work then id have to say your hardware is broken
+2011-06-10T05:00:00.000Z	lekefly_	pfifo	bah.. hehe
+2011-06-10T05:00:00.000Z	lekefly_	pfifo	got a video of the boot now.. sec
+2011-06-10T05:03:00.000Z	lekefly_	pfifo	http://www.cl.ly/3J2Q32043e16360T1t19
+2011-06-10T05:04:00.000Z	lekefly_	pfifo	Can i just get a hold of a windows iso and use the command you gave me to make it bootable on usb? :P
+2011-06-10T05:05:00.000Z	pfifo	lekefly_	thats definatly a hardware issue, the kernel crashes right away
+2011-06-10T05:05:00.000Z	pfifo	lekefly_	no that little trick with wget doesnt even work with most linux isos
+2011-06-10T05:06:00.000Z	lekefly_	pfifo	What hardware do you think is wrong? :p
+2011-06-10T05:07:00.000Z	pfifo	lekefly_	your CPU or FSB
+2011-06-10T05:07:00.000Z	pfifo	lekefly_	yeah
+2011-06-10T05:08:00.000Z	lekefly_	pfifo	alright.. ill try to swap mb.. but i just got 2 of the same tho..
+2011-06-10T05:10:00.000Z	lekefly_	pfifo	What are the odds that its the CPU rather than MB? both are brand new like 5 days old
+2011-06-10T05:11:00.000Z	pfifo	lekefly_	pretty good, CPUs are so sensitive to everything
+2011-06-10T05:12:00.000Z	lekefly_	pfifo	bah :p
+2011-06-10T05:13:00.000Z	lekefly_	pfifo	How can i have 2 CPUs that are not working.. *facepalm*
+2011-06-10T05:14:00.000Z	pfifo	lekefly_	you have 2 cpus in the machine? you could try testing them seperately
+2011-06-10T05:16:00.000Z	lekefly_	pfifo	no in another machine:p

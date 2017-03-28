@@ -1,0 +1,97 @@
+2006-12-30T17:37:00.000Z	ubuntu		who knows anything about mounting my linux drive using a live cd to edit repositories so i can update an old hoary server install into a dapper desktop install or anyone have better idea? if i had more skills this obviously wouldnt be a problem haha :(
+2006-12-30T17:38:00.000Z	Pelo	ubuntu	  sudo mount /watever/hdd1   /media/hdd1
+2006-12-30T17:40:00.000Z	Pelo	ubuntu	  check the hardware manager for the available drives
+2006-12-30T17:41:00.000Z	Pelo	ubuntu	 did you make a  test dir in /mnt/ ?
+2006-12-30T17:42:00.000Z	Pelo	ubuntu	 check the forum for your error message
+2007-04-10T08:25:00.000Z	Pelo	ubuntu	 you probabaly need to mount it
+2007-04-10T08:27:00.000Z	Pelo	ubuntu	 mind changnig your nick to something we dont, type every 2 minutes ? you won't get highlited as much
+2007-04-23T06:37:00.000Z	Pelo	ubuntu	 drag the folder to your terminal and the path will be writen automaticaly
+2007-05-19T07:55:00.000Z	Pelo	ubuntu	what did you do ?
+2007-05-19T07:56:00.000Z	ubuntu	Pelo	i was trying to install qemu (virtual machine)
+2007-05-19T07:57:00.000Z	ubuntu	Pelo	im actually using a kubuntu live cd right now and whenever i try to open something with kate through my konsol it says cannot start X server
+2007-05-19T07:57:00.000Z	ubuntu	Pelo	sorry whats pm?
+2007-05-19T07:57:00.000Z	Pelo	ubuntu	 private message window from ubotu
+2007-05-19T07:57:00.000Z	ubuntu	Pelo	i see :) thanks
+2007-05-19T08:02:00.000Z	ubuntu	Pelo	thanks gonna restart now and see if it worked. Thanks for the help
+2007-05-19T08:09:00.000Z	Pelo	ubuntu	didn'T work ?
+2007-05-19T08:09:00.000Z	ubuntu	Pelo	nope it gets stuck at grub loading screen "grub loading stage 1.5"
+2007-05-19T08:10:00.000Z	Pelo	ubuntu	ok lets, review  where were you doing the setup (hd0,0) line to ?
+2007-05-19T08:11:00.000Z	ubuntu	Pelo	i did it in the terminal
+2007-05-19T08:11:00.000Z	Pelo	ubuntu	 I mean which didyou put for (hd?,?)
+2007-05-19T08:12:00.000Z	ubuntu	Pelo	let me check, i think it was hd0,1 but i better make sure
+2007-05-19T08:14:00.000Z	ubuntu	Pelo	yes it was hd0,1
+2007-05-19T08:15:00.000Z	Pelo	ubuntu	 ok what is on the second partition on your first hdd ?
+2007-05-19T08:16:00.000Z	ubuntu	Pelo	kubuntu\
+2007-05-19T08:16:00.000Z	Pelo	ubuntu	how many hdd do you have ?
+2007-05-19T08:17:00.000Z	ubuntu	Pelo	ive got 4 partitions... but i dont know what one of them is. I only use kubuntu and windows
+2007-05-19T08:17:00.000Z	Pelo	ubuntu	  not how many partitons,  how many hard disks do you have on that computer ?
+2007-05-19T08:18:00.000Z	ubuntu	Pelo	just one
+2007-05-19T08:19:00.000Z	Pelo	ubuntu	 ok   I want you to do that same procedure again,  when you get to  the line that says  setup (hd0,0)  step 5 or 6,   use  setup (hd0)
+2007-05-19T08:19:00.000Z	ubuntu	Pelo	ok I will thanks
+2007-05-19T08:19:00.000Z	ubuntu	Pelo	hopefully next time i talk to you I wont be "ubuntu"
+2007-05-19T08:22:00.000Z	ubuntu	Pelo	when I type setup (hd0) I get "cannot mount selected partition"
+2007-05-19T08:23:00.000Z	ubuntu	Pelo	: when i do fdisk -l  it doesnt have hd it has sd
+2007-05-19T08:23:00.000Z	Pelo	ubuntu	 different naming system , donT' worry about it
+2007-05-19T08:24:00.000Z	Pelo	ubuntu	  sda  =  hd0   sda1 = hd0,0
+2007-05-19T08:25:00.000Z	ubuntu	Pelo	: I see, so what should i do i keep geting error when i try setup (hd0)
+2007-05-19T08:25:00.000Z	Pelo	ubuntu	 you need to reset grub to read stabe 1 on the boot partition which is (hd0) , hence the grub setup (hdO)
+2007-05-19T08:27:00.000Z	ubuntu	Pelo	: Should i reinstall grub
+2007-05-19T08:27:00.000Z	Pelo	ubuntu	that would be a good idea
+2007-05-19T08:27:00.000Z	ubuntu	Pelo	: k ill follow the how-to guide at the bottom
+2007-05-19T08:28:00.000Z	Pelo	ubuntu	 best of luck
+2007-05-19T08:50:00.000Z	Pelo	ubuntu	  check in this like you'll find where the documnetation is stored   http://doc.vic.computerbank.org.au/tutorials/linuxdirectorystructure/
+2007-05-22T16:48:00.000Z	ubuntu	Pelo	 ok i am back , and i am at fiesty
+2007-05-22T16:49:00.000Z	Pelo	ubuntu	?
+2007-07-13T09:02:00.000Z	Pelo	ubuntu	just boot up the live cd,   backup any important data you have , and reinstall ubuntu
+2007-08-03T09:49:00.000Z	Pelo	ubuntu	c'est le plus que je peut faire avec seulement un mot pour me guider
+2007-08-12T13:25:00.000Z	Pelo	ubuntu	 find the file right cilck,  burn to cd
+2007-08-28T07:24:00.000Z	Pelo	ubuntu	  ubotu is a bot , we use it to send quick info
+2007-08-28T07:25:00.000Z	ubuntu	Pelo	i didn't say it
+2007-09-10T15:52:00.000Z	Pelo	ubuntu	 why not
+2007-11-04T04:13:00.000Z	Pelo	ubuntu	 there doesn't seem to be anyone in here clear on your problem atm can you start from scratch ?
+2007-11-04T04:14:00.000Z	Pelo	ubuntu	 is ubuntu actualy installed or are you running the live cd ?
+2007-11-04T04:15:00.000Z	Pelo	ubuntu	 ok boot the installed version,  then run  sudo dpkg-reconfigure xserver-xorg   if you don't see your card listed , use the vesa driver
+2007-11-04T04:16:00.000Z	Pelo	ubuntu	 what is the other card ?
+2007-11-04T04:17:00.000Z	Pelo	ubuntu	 if you want to install ubuntut on your comp running a ati or nvidia card you better use the alternate install cd, it is a text based installer,  install a vesa driver so you can get running and then you can install proper nvidia or ati drivers fro your card
+2007-11-04T04:18:00.000Z	Pelo	ubuntu	 that's pretty much all I can do for you , try the dpkg-reconfigure thing I suggested earlier
+2007-11-04T04:19:00.000Z	Pelo	ubuntu	 it's basicaly the same as the ubuntu live cd , but whitout the live cd part or the pretty graphics
+2008-04-09T22:26:00.000Z	Pelo	ubuntu	permissions ?
+2008-04-09T22:29:00.000Z	Pelo	ubuntu	try it with the command like  sudo rm /path/filename
+2008-04-09T22:29:00.000Z	ubuntu	Pelo	: did, says: rm: cannot remove `khfFXooo.dll': Read-only file system
+2008-04-09T22:30:00.000Z	Pelo	ubuntu	very odd
+2008-04-10T07:18:00.000Z	ubuntu	Pelo	Anything in particular i should do once installed?
+2008-04-10T07:18:00.000Z	Pelo	ubuntu	yes,  do not do anything , other then try to install the restricted driver from the admin menu, that is the only safe thing to do at this point
+2008-04-10T07:20:00.000Z	ubuntu	Pelo	tmi
+2008-04-10T07:23:00.000Z	Pelo	ubuntu	for gui apps gksu , for commands sudo
+2008-04-10T07:23:00.000Z	ubuntu	Pelo	isn't it gksudo ?
+2008-04-10T07:23:00.000Z	ubuntu	Pelo	and is the difference?
+2008-04-10T07:23:00.000Z	Pelo	ubuntu	gksu and gksudo sar the same
+2008-04-10T07:24:00.000Z	ubuntu	Pelo	what is the difference between gksudo and normal sudo?
+2008-04-10T07:24:00.000Z	Pelo	ubuntu	read up , gksu is for gtk apps, works a bit differetrnly
+2008-04-10T07:25:00.000Z	ubuntu	Pelo	RyanPrior: Can't really read up ATM. I got that one is cli, one is gtk, i was wondering if there was a larger reason under the hood
+2008-04-10T07:25:00.000Z	Pelo	ubuntu	there is but it's over my head so I can'T realy explain it
+2008-04-10T07:26:00.000Z	Pelo	ubuntu	/nick newnick
+2008-04-10T07:28:00.000Z	Pelo	ubuntu	how are we comming along ?
+2008-04-11T00:11:00.000Z	Pelo	ubuntu	hold on , let me check the grub manual for hte error
+2008-04-11T00:12:00.000Z	Pelo	ubuntu	this is error 17 : Cannot mount selected partition
+2008-04-11T00:13:00.000Z	ubuntu	Pelo	 ok. what can i do
+2008-04-11T00:13:00.000Z	Pelo	ubuntu	personnaly  would give up and reisntall everythinng but you can always try asking in #grub
+2008-04-11T00:14:00.000Z	ubuntu	Pelo	 ok
+2008-04-11T00:21:00.000Z	ubuntu	Pelo	can do it
+2008-04-11T00:21:00.000Z	ubuntu	Pelo	cant do it
+2008-04-11T00:23:00.000Z	ubuntu	Pelo	 grub> find /boot/grub/stage1
+2008-04-11T00:23:00.000Z	Pelo	ubuntu	what ?
+2008-04-11T00:23:00.000Z	Pelo	ubuntu	if you messed up stage one ,  get the supergrub cd and fix it with that , the easiet way I know
+2008-04-11T00:27:00.000Z	ubuntu	Pelo	 grub>  find /boot/grub/stage1 (hd0,5)
+2008-04-11T00:27:00.000Z	Pelo	ubuntu	what are you doing , and why are you telling me about it ?
+2008-04-11T00:28:00.000Z	ubuntu	Pelo	 i followed !grub
+2008-04-11T00:28:00.000Z	Pelo	ubuntu	I've never managed to do it with that ,  I use the supergrub cd
+2008-04-11T00:29:00.000Z	ubuntu	Pelo	k
+2008-04-19T07:47:00.000Z	Pelo	ubuntu	sudo killalll -9 apt
+2008-04-19T07:49:00.000Z	Pelo	ubuntu	bad packge ? ubuntu  reboot,  and assuming you hve a gui for adept where you can choose what packages to update,  just pick a few and do those
+2008-04-20T04:14:00.000Z	Pelo	ubuntu	not paying attention apparently
+2008-04-20T04:15:00.000Z	ubuntu	Pelo	perhaps you can help. I have a 9600, so the drivers aren't working on the livecd. It goes to boot into graphical and says it needs to use low settings, then goes back to the command prompt and it's stuck on "Starting Gnome Manager..."
+2008-04-20T04:16:00.000Z	Pelo	ubuntu	a 9600 what ?
+2008-04-20T04:17:00.000Z	Pelo	ubuntu	dl and burn the alternate install cd,    on the ubuntu site , same palce as the other just check the alternate cd box blow the dl button,    it's a text based installer
+2008-04-20T04:17:00.000Z	ubuntu	Pelo	thanks :D
+2010-01-22T04:35:00.000Z	Pelo	ubuntu	torrent for what ?

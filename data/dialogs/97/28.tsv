@@ -1,0 +1,97 @@
+2008-01-17T08:03:00.000Z	Djerkaf		Hello, does anyone know how to get around the "bios age(1999) fails cutoff(2000)" problem?
+2008-01-17T08:05:00.000Z	bod_	Djerkaf	that reminds me of the millenium bug,.,.lol
+2008-01-17T08:05:00.000Z	Djerkaf	bod_	I have read comments about the millennium bug several times when googling the problem.
+2008-01-17T08:06:00.000Z	bod_	Djerkaf	the milennium bug was a bios problem due to the fact that they could not understand that there could be any date after 31/12/1999 ,.,. a bios update usually fixed the problem i think ,.,. but do u/ have u ever had a syystem without this error?
+2008-01-17T08:08:00.000Z	Djerkaf	bod_	I have got that error on all old computers I've tried to install it on.
+2008-01-17T08:08:00.000Z	bod_	Djerkaf	is ur machines bios fully up-to-date?
+2008-01-17T08:09:00.000Z	bod_	Djerkaf	is ur bios up to date?
+2008-01-17T08:09:00.000Z	Djerkaf	bod_	It's an old PC, the bios is from that date I wrote, 07/29/1999
+2008-01-17T08:09:00.000Z	Djerkaf	bod_	I guess
+2008-01-17T08:10:00.000Z	Djerkaf	bod_	Hard to find information about it
+2008-01-17T08:10:00.000Z	bod_	Djerkaf	yer i no,.,. find out wot motherboard ur using then search google for newer bios's
+2008-01-17T08:10:00.000Z	bod_	Djerkaf	ul have to make a bootable floppy to install the new bios
+2008-01-17T08:11:00.000Z	Djerkaf	bod_	I have the latest bios for my motherboard.
+2008-01-17T08:12:00.000Z	bod_	Djerkaf	r u saying that a motherboard u have has no idea that the world doesnt end on the date u said earlier?
+2008-01-17T08:12:00.000Z	Djerkaf	bod_	Is it simply enough impossible to install an ubuntu system on a computer from before 2000 ?
+2008-01-17T08:12:00.000Z	bod_	Djerkaf	NO ,.,. i have succesfully solved this problem
+2008-01-17T08:12:00.000Z	Djerkaf	bod_	Not really sure what you mean. The system clock is correct, but the bios is from 07/29/1999.
+2008-01-17T08:13:00.000Z	bod_	Djerkaf	so wots the problem?
+2008-01-17T08:13:00.000Z	Djerkaf	bod_	Well I get that error message, that should be pretty obvious from my first message here. :P
+2008-01-17T08:14:00.000Z	bod_	Djerkaf	wot error message ,.,. sorry didnt c it?
+2008-01-17T08:14:00.000Z	Djerkaf	bod_	the message disappears when using noacpi , but it can't identify the format of the disk when partitioning.
+2008-01-17T08:14:00.000Z	Djerkaf	bod_	"bios age(1999) fails cutoff(2000)"
+2008-01-17T08:14:00.000Z	bod_	Djerkaf	yer trust me that is an outdated bios,.,. u DONT HAVE THE LATEST BIOS
+2008-01-17T08:15:00.000Z	Djerkaf	bod_	And you are sure of that, just like that, without knowing when the motherboard was stopped made?
+2008-01-17T08:16:00.000Z	Djerkaf	bod_	I can't even find my specific board on the manufacturor's homepage. I'm pretty sure I'm shit out of luck when it comes to bios updating.
+2008-01-17T08:16:00.000Z	bod_	Djerkaf	either im right or the motherboard ur using is 1 of a kind and no one has fixed the milennium bug
+2008-01-17T08:16:00.000Z	bod_	Djerkaf	have u googled ur motherboard name?
+2008-01-17T08:17:00.000Z	Djerkaf	bod_	Well. Yes. Otherwise I wouldn't be in this room.
+2008-01-17T08:17:00.000Z	Djerkaf	bod_	Maybe it does not have to do with the millennium bug.
+2008-01-17T08:17:00.000Z	Djerkaf	bod_	since it can't identify the format of my drive, and freezes.
+2008-01-17T08:17:00.000Z	bod_	Djerkaf	so no one else in the entire world has the same motherboard as u?
+2008-01-17T08:17:00.000Z	Djerkaf	bod_	I have only found a few sites with the same board.
+2008-01-17T08:18:00.000Z	Djerkaf	bod_	but haven't found anyone having the same problem as I, with ubuntu.
+2008-01-17T08:18:00.000Z	bod_	Djerkaf	can u give me the full name of ur motherboard
+2008-01-17T08:18:00.000Z	Djerkaf	bod_	wait
+2008-01-17T08:18:00.000Z	bod_	Djerkaf	ur problem ISNT with ubuntu ,.,. its with ur bios ,.,. tahts b4 an os is even started
+2008-01-17T08:19:00.000Z	Djerkaf	bod_	When I boot up the PC I see the following:   07/29/1999-SiS-620-P6SET-MLC-00   and   p6SET-ML Ver 1.2 07/29/1999
+2008-01-17T08:20:00.000Z	bod_	Djerkaf	plz post just the name of  the motherboard
+2008-01-17T08:20:00.000Z	Djerkaf	bod_	That is the letters and digits I have as information about the board.
+2008-01-17T08:20:00.000Z	Djerkaf	bod_	I do -not- have any manual to it.
+2008-01-17T08:22:00.000Z	bod_	Djerkaf	does ur mother board look like this ,.,.--,.,. http://www.fujitsu-siemens.co.uk/rl/servicesupport/techsupport/Consumer/Archive/P6SET-ML/P6SET-ML.htm
+2008-01-17T08:22:00.000Z	Djerkaf	bod_	That could be it, yes.
+2008-01-17T08:23:00.000Z	bod_	Djerkaf	kk ,.,. give me a few mins to use the power of google
+2008-01-17T08:23:00.000Z	Djerkaf	bod_	A few minutes,, I really have to go to bed asap. =P
+2008-01-17T08:24:00.000Z	bod_	Djerkaf	do u want a solution ,.,. or am i wasting my time
+2008-01-17T08:24:00.000Z	Djerkaf	bod_	I want a solution, but I'm here tomorrow too
+2008-01-17T08:24:00.000Z	Djerkaf	bod_	or you could e-mail tips...?
+2008-01-17T08:25:00.000Z	Djerkaf	bod_	I've been up like 38 hours, so I'm pretty dozey
+2008-01-17T08:25:00.000Z	bod_	Djerkaf	give me ur email then,.,. ha ive done the same ,.,.lol
+2008-01-17T08:26:00.000Z	Djerkaf	bod_	insertdacoin@hotmail.com   Thank you for your time and excuse my aggressiveness, I've been trying to get the scrap to work forever now and is a -little- irritable....
+2008-01-17T08:26:00.000Z	bod_	Djerkaf	i no ,.,. dw,.,. i look for fixes ,.,. my email is bodssocks@hotmail.com ,.,. do u no how to update a bios?
+2008-01-17T08:27:00.000Z	bod_	Djerkaf	that email is wrong,.,. its bodssocks:yahoo.co.uk
+2008-01-17T08:27:00.000Z	Djerkaf	bod_	I have not done it before, but it shouldn't be very hard, should it?
+2008-01-17T08:27:00.000Z	bod_	Djerkaf	no its bodssocks@yahoo.co.uk
+2008-01-17T08:28:00.000Z	bod_	Djerkaf	its complicatedly confusing ,.,. il talk u through it sometime ,.,. when we get there ,.,.
+2008-01-17T08:29:00.000Z	Djerkaf	bod_	I forgot to say this, when I boot, it also says "award modular bios v4.51PG", just found it among my notes
+2008-01-17T08:30:00.000Z	bod_	Djerkaf	now that is so annoyingly confusing im gonna be up all nite jsut findong out wtf is going on ,,.lol,.,. il email u tonite with some findings and arrange a time to meet on here to fix it
+2008-01-17T08:30:00.000Z	Djerkaf	bod_	I am sorry, I will not have access to internet more than..er.. (I'm in Sweden, so the time's not "right"...)  ... for 24 hours, I think.
+2008-01-17T08:31:00.000Z	bod_	Djerkaf	ok im in england but i stay up late lol,.,. just reply to my email when u can and we should have it fixed soon
+2008-01-17T08:32:00.000Z	bod_	Djerkaf	cya m8
+2008-01-17T08:33:00.000Z	Djerkaf	bod_	that's great, I'll probably be online all day tomorrow. I'll see you then! Good night and by!
+2008-01-17T23:13:00.000Z	Djerkaf	bod_	Did you find anything useful for the board? :)
+2008-01-17T23:14:00.000Z	bod_	Djerkaf	check ur email,.,. i need u to email me the info again ,.,. sorry
+2008-01-17T23:15:00.000Z	Djerkaf	bod_	sorry, forgot that I gave you my second address. :(
+2008-01-17T23:15:00.000Z	bod_	Djerkaf	lol
+2008-01-17T23:16:00.000Z	Djerkaf	bod_	Can we have a separate conversation here instead so it's easier to talk?
+2008-01-17T23:16:00.000Z	bod_	Djerkaf	yer ive started one
+2008-01-17T23:24:00.000Z	bod_	Djerkaf	go here -- http://freenode.net/faq.shtml#privmsg
+2008-01-17T23:30:00.000Z	Djerkaf	bod_	Ok, understood, let's just talk here then
+2008-01-17T23:30:00.000Z	bod_	Djerkaf	hang on m8
+2008-01-17T23:31:00.000Z	Djerkaf	bod_	did you lose the mb info I gave you yesterday?
+2008-01-17T23:32:00.000Z	bod_	Djerkaf	yer ,.,. soz
+2008-01-17T23:32:00.000Z	bod_	Djerkaf	go her ,.,. http://freenode.net/faq.shtml#privmsg
+2008-01-17T23:38:00.000Z	Djerkaf	bod_	I can't load the page, we'll have to take it here
+2008-01-17T23:39:00.000Z	bod_	Djerkaf	copy and paste the link into ur browser manually
+2008-01-17T23:40:00.000Z	Djerkaf	bod_	Do you need the mobo strings I sent yesterday...?
+2008-01-17T23:40:00.000Z	bod_	Djerkaf	yer
+2008-01-17T23:40:00.000Z	Djerkaf	bod_	done that, but the site can't load.
+2008-01-17T23:41:00.000Z	bod_	Djerkaf	site loads fine for me ,.,. lol
+2008-01-17T23:41:00.000Z	Djerkaf	bod_	07/29/1999-SiS-620-P6SET-MLC-00
+2008-01-17T23:41:00.000Z	Djerkaf	bod_	P6SET-ML Ver 1.2
+2008-01-17T23:41:00.000Z	Djerkaf	bod_	Not sure which is necessary.
+2008-01-17T23:41:00.000Z	bod_	Djerkaf	lol ,.,. me neither
+2008-01-17T23:42:00.000Z	bod_	Djerkaf	ouch dude this is windows 98 territory,,. f**k me thats old
+2008-01-17T23:42:00.000Z	Djerkaf	bod_	It's old school, baby!
+2008-01-17T23:45:00.000Z	bod_	Djerkaf	this isnt looking promising,.,. ive found a similiar page with the same prob as u,.,. let me go ask my old man ,.,. he fixed the millennium bug for a living
+2008-01-17T23:47:00.000Z	Djerkaf	bod_	seems strange though that that would be the problem since XP ran well
+2008-01-17T23:49:00.000Z	bod_	Djerkaf	xp does not rely soul'ly on the bios,.,. erm,.,. i have good news and bad news ,.,. which do u want first?
+2008-01-17T23:50:00.000Z	Djerkaf	bod_	bad
+2008-01-17T23:51:00.000Z	bod_	Djerkaf	u were rite,.,. i am unable to find an update to ur bios,.,. good news-- it doesnt have to cost u a forune to get a new motherboard that has a better driver,. however a GOOD motherboard will cost u a small fortune,.,.lol
+2008-01-17T23:51:00.000Z	bod_	Djerkaf	sorry
+2008-01-17T23:52:00.000Z	Djerkaf	bod_	Okay, that sucks. Yeah I've seen mobtherboards good enough for maybe 500 SEK , it's not that much.
+2008-01-17T23:53:00.000Z	Djerkaf	bod_	but thanks for your time and work anyway
+2008-01-17T23:53:00.000Z	bod_	Djerkaf	dunno wot that is in GBP but ok,.,. no probs m8,.,. keep in touch if u have any other problems dude
+2008-01-17T23:54:00.000Z	Djerkaf	bod_	I'd guess that's about £ 35
+2008-01-17T23:54:00.000Z	bod_	Djerkaf	yer that sounds about right,.,. how long ago did u purchase the machine?
+2008-01-17T23:55:00.000Z	Djerkaf	bod_	 I just got it from a friend of my dad, so I don't know exactly when it was in the store

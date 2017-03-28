@@ -1,0 +1,96 @@
+2004-10-10T16:33:00.000Z	bob2		hat is so good about k3b?
+2004-10-10T16:33:00.000Z	bob2		people seem transfixed by it
+2004-10-10T16:33:00.000Z	bob2		so does nautilus
+2004-10-10T16:34:00.000Z	bob2		'drag files here.  click "burn"'
+2004-10-10T16:35:00.000Z	bob2		that's not what nautilus does
+2004-10-10T16:36:00.000Z	bob2		that seems amazingly broken
+2004-10-10T16:36:00.000Z	cef	bob2	what about copying a cd?
+2004-10-10T16:37:00.000Z	bob2	cef	ah, good point
+2004-10-10T16:59:00.000Z	cef	bob2	so you don't wanna reboot but wanna hack root?
+2004-10-10T16:37:00.000Z	cef	bob2	particularly if it's a format you can't read, but still need to copy
+2004-10-10T16:59:00.000Z	bob2	cef	oh, I'm just bitter that my laptop fucked up at all, don't mind me
+2004-10-10T05:00:00.000Z	cef	bob2	heh.. fun fun
+2004-10-10T05:00:00.000Z	cef	bob2	well spose this does point out a possible problem for ubuntu.. huge reliance on sudo
+2004-10-10T05:02:00.000Z	bob2	cef	yeah
+2004-10-10T05:02:00.000Z	bob2	cef	I don't think it will be a common problem, it's never bothered me before
+2004-10-10T05:08:00.000Z	bob2	cef	my condolences :-)
+2004-11-04T08:57:00.000Z	cef	bob2	what worries me more is htat ECMA can be juggled about to spell ACME
+2004-11-04T09:09:00.000Z	bob2	cef	did you get ubuntu onto that amd64 the other day?
+2004-11-04T09:09:00.000Z	cef	bob2	it's at work, and i'm not.. so it's installed but needs some initrd love
+2004-11-04T09:10:00.000Z	bob2	cef	ah, right
+2004-11-04T09:10:00.000Z	cef	bob2	so in about 12 hrs, it should be fixed (I hope)..
+2004-11-04T09:10:00.000Z	cef	bob2	and a bug report should also be filed by that time
+2004-11-04T09:11:00.000Z	cef	bob2	then I can have some fun *grin*.. should be interesting
+2004-11-04T09:13:00.000Z	bob2	cef	hah, should be scarily fast
+2004-11-04T09:13:00.000Z	cef	bob2	should be.. dual opteron 246 and 3ware raid.. not really really fast, but fast enough
+2004-11-04T09:15:00.000Z	cef	bob2	I'll have a hack at a few things with it and hopefully I can get into things again
+2004-11-04T09:16:00.000Z	cef	bob2	why do I see the words "management potential" written above Gmail's head?
+2004-11-04T09:16:00.000Z	bob2	cef	heehehe
+2004-11-04T09:18:00.000Z	cef	bob2	ahh yes, that reminds me that i have to hit daniels next time I see him
+2004-11-04T09:18:00.000Z	bob2	cef	on principle?
+2004-11-04T09:18:00.000Z	cef	bob2	pretty much *grin*
+2004-11-04T09:18:00.000Z	bob2	cef	ask him about x.org ;)
+2004-11-04T09:19:00.000Z	cef	bob2	he's off overseas soon about all that isn't he?
+2004-11-04T09:20:00.000Z	bob2	cef	think so
+2004-11-04T09:21:00.000Z	cef	bob2	pity
+2004-11-24T06:59:00.000Z	cef	bob2	thanks
+2004-11-24T07:00:00.000Z	cef	bob2	upgraded my desktop to hoary.. it now fails to boot.. I blame daniels
+2004-11-24T07:01:00.000Z	bob2	cef	hah, worked fine for me, which is lucky for daniels
+2004-11-24T07:01:00.000Z	cef	bob2	grub has lost the kernel.. *sigh*
+2004-11-24T07:01:00.000Z	cef	bob2	and an older kernel cant find the rootfs
+2004-11-24T07:02:00.000Z	bob2	cef	hm, that older thing sounds like a initrd issue
+2004-11-24T07:03:00.000Z	cef	bob2	the older kernel used to boot though, which is the problem
+2004-11-24T07:04:00.000Z	cef	bob2	oh well.. was thinking of reinstalling anyway. wanna set the drive with lvm
+2004-11-24T07:15:00.000Z	cef	bob2	yeah re: 12th.. I have no idea if it closed.. I amended my order after the first lot had shipped.. the new lot haven't been marked as shipped yet, so nfi if I'll actually get all the amended cd's
+2004-11-24T07:16:00.000Z	bob2	cef	ah, right
+2004-11-24T07:17:00.000Z	cef	bob2	yeah re: 12th.. I have no idea if it closed.. I amended my order after the first lot had shipped.. the new lot haven't been marked as shipped yet, so nfi if I'll actually get all the amended cd's
+2004-12-26T15:44:00.000Z	bob2	cef	didn't arrive yet?
+2004-12-26T15:44:00.000Z	cef	bob2	no.. which by now is actually starting to be annoying
+2004-12-26T15:44:00.000Z	bob2	cef	hm, according to reports fro mhome, mine haven't either
+2004-12-26T15:45:00.000Z	cef	bob2	yeah.. If the list is alphabetical by last name, I'll be waiting a while
+2004-12-26T15:45:00.000Z	bob2	cef	hehe, me too
+2004-12-26T15:48:00.000Z	cef	bob2	amd64 and i386 particularly would be useful about now
+2004-12-26T15:48:00.000Z	bob2	cef	ah, handing them out?
+2004-12-26T15:48:00.000Z	cef	bob2	using them actually.. would like to redo one of my desktops and my new lappy when I get it
+2004-12-26T15:49:00.000Z	bob2	cef	ah, cool
+2004-12-26T15:50:00.000Z	cef	bob2	and since I don't have a bootdisk and hoary failed to boot after upgrading from warty on the desktop, and it has the burner in it.. *sigh*
+2005-01-01T06:40:00.000Z	cef	bob2	you know what I need? a livecd with dev tools and distcc.. *grin*
+2005-01-01T06:40:00.000Z	bob2	cef	haha
+2005-01-01T06:40:00.000Z	cef	bob2	for all those work machines that sit idle every night
+2005-01-02T15:38:00.000Z	cef	bob2	was thinking that.. is that pretty standard? last I heard (a while ago) the video format itself was changing
+2005-01-02T15:41:00.000Z	cef	bob2	whatever..
+2005-01-02T15:43:00.000Z	cef	bob2	getting an amd64 lappy.. *grin*
+2005-01-02T15:43:00.000Z	cef	bob2	*grin* should be fun
+2005-01-02T15:44:00.000Z	bob2	cef	work/play/both?
+2005-01-02T15:44:00.000Z	cef	bob2	both. work paying.. no hooks. if I left 5 days after they gave it to me, it's still mine
+2005-01-02T15:44:00.000Z	bob2	cef	wow
+2005-01-02T15:45:00.000Z	cef	bob2	payback for taking almost 4 weeks out of my life to move the office back in September
+2005-01-02T15:45:00.000Z	bob2	cef	ahhhh
+2005-01-02T15:47:00.000Z	cef	bob2	quite a powerhouse of a machine tho.. ATI 9700 Pro, 1 gig ram, 5 x usb2's, 1 x 1394, etc
+2005-01-02T15:47:00.000Z	cef	bob2	and of course, it'll be running ubuntu *grin*
+2005-01-02T15:49:00.000Z	bob2	cef	oh man, jeaaalous
+2005-03-14T06:53:00.000Z	bob2	cef	no
+2005-03-14T06:54:00.000Z	cef	bob2	hrm.. that's different to what I've heard on various lists, particularly since said convo's invovled mark.. ahh whatever
+2005-03-14T06:57:00.000Z	bob2	cef	hm, ok
+2005-03-14T06:59:00.000Z	cef	bob2	on sounder, Date: 28/02/05 03:10, "Bendy's not *entirely* final, let's call it a working title for now.  Grumpy Groundhog is still on the way, it will be a rolling "unstable" release, much like Sid in Debian and Cooker in Mandrake. The "grumpy" name will be perfect for that :-)"
+2005-03-14T07:00:00.000Z	bob2	cef	ah
+2005-03-14T07:00:00.000Z	bob2	cef	duh me for not keeping up then, sorry
+2005-03-14T07:01:00.000Z	cef	bob2	heh.. the lists just move sometimes... I tend to just read sounder and only occasionly keep up on some of the other lists
+2005-03-14T07:01:00.000Z	cef	bob2	which is of course how I actually saw that and remembered it
+2005-03-14T07:01:00.000Z	bob2	cef	hah, right
+2005-03-14T07:02:00.000Z	cef	bob2	course, if had my new laptop by now, it probably wouldn't be such an issue
+2005-03-14T07:02:00.000Z	bob2	cef	still not there?
+2005-03-14T07:02:00.000Z	cef	bob2	matter of finding something decent within my price range that is well supported
+2005-03-14T07:03:00.000Z	bob2	cef	ah
+2005-03-14T07:03:00.000Z	cef	bob2	annoying shit like wireless drivers that aren't in the kernel (which if you do any kernel dev, is a right pain in the rear)
+2005-03-14T07:04:00.000Z	bob2	cef	heh, yeah
+2005-03-14T07:04:00.000Z	bob2	cef	are any in the kernel these days?
+2005-03-14T07:04:00.000Z	cef	bob2	prism54 and ipw2200 are the prime contenders afaik
+2005-03-14T07:05:00.000Z	bob2	cef	2200's still a bit dodge.  no scanning, aiui, for instance
+2005-03-14T07:05:00.000Z	bob2	cef	2100's ok but needs to be reset a lot (ie unload/load the module)
+2005-03-14T07:07:00.000Z	cef	bob2	main issue is that if have to, I need to be able to use free drivers for a while... not necessarily all the time.. hence nvidia isn't that much of a problem
+2005-03-14T07:07:00.000Z	bob2	cef	ah, right
+2005-04-09T10:07:00.000Z	bob2	cef	eh? it tells you what you'll get right on the front page
+2005-04-09T10:08:00.000Z	cef	bob2	yeah I missed it cos it's just small text *grin*
+2005-04-09T10:08:00.000Z	bob2	cef	hah, the font size is ass, yeah
+2005-09-28T15:58:00.000Z	cef	bob2	exactly

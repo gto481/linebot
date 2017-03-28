@@ -1,0 +1,99 @@
+2009-03-23T14:33:00.000Z	tehbaut		trying to boot up the live cd, but I'm stalled at: ---[ end trace 4eaa2a2...2da22 ]---
+2009-03-23T14:33:00.000Z	tehbaut		anyone got any clues as to why
+2009-03-23T14:33:00.000Z	tehbaut		pressing enter doesn't help
+2009-03-23T14:34:00.000Z	ActionParsnip	tehbaut	did you md5 check the iso you downloaded as well as verify the cd was consistant once burned?
+2009-03-23T14:34:00.000Z	tehbaut	ActionParsnip	the cd was verified yes
+2009-03-23T14:35:00.000Z	ActionParsnip	tehbaut	did the iso check out ok too?
+2009-03-23T14:35:00.000Z	ActionParsnip	tehbaut	you calculate the hash of the image then compare it with the hashfile on the server, they must match
+2009-03-23T14:36:00.000Z	ActionParsnip	tehbaut	if the iso is ok, then read
+2009-03-23T14:42:00.000Z	tehbaut	ActionParsnip	/ HammerHead66: looks like they match
+2009-03-23T14:43:00.000Z	ActionParsnip	tehbaut	cool, ok then look into bootoptions, you may have to disable acpi to get it installed
+2009-03-23T14:43:00.000Z	tehbaut	ActionParsnip	where do I find bootoptions?
+2009-03-23T14:51:00.000Z	ActionParsnip	tehbaut	i think they are identical
+2009-03-23T15:49:00.000Z	ActionParsnip	tehbaut	sudo fdisk -l
+2009-03-23T15:49:00.000Z	tehbaut	ActionParsnip	is that L or 1?
+2009-03-23T15:50:00.000Z	ActionParsnip	tehbaut	ell for List
+2009-03-23T15:50:00.000Z	tehbaut	ActionParsnip	gotcha
+2009-03-23T15:51:00.000Z	ActionParsnip	tehbaut	it doesnt apply either
+2009-03-23T15:52:00.000Z	ActionParsnip	tehbaut	sure would, you may have to install grub to the boot sector
+2009-03-23T15:53:00.000Z	tehbaut	ActionParsnip	grub to the boot sector of the unpartitioned disk?
+2009-03-23T15:53:00.000Z	ActionParsnip	tehbaut	after the dd it may be needed on the new disk
+2009-03-23T15:54:00.000Z	tehbaut	ActionParsnip	I'm trying to clone a mac bootable drive... does that make a difference?
+2009-03-23T15:55:00.000Z	ActionParsnip	tehbaut	dd doesnt care, its a bit by bit copy
+2009-03-23T15:55:00.000Z	tehbaut	ActionParsnip	I meant in regards to the grub requirement
+2009-03-23T15:58:00.000Z	tehbaut	ActionParsnip	I'm going to assume grub will not be needed, as I'm just running off a live cd
+2009-03-23T15:58:00.000Z	ActionParsnip	tehbaut	the drive will need a boot sector
+2009-03-23T15:58:00.000Z	tehbaut	ActionParsnip	won't that get cloned from the existing disc?
+2009-03-23T15:59:00.000Z	ActionParsnip	tehbaut	thats why i said "may need to"
+2009-03-23T16:00:00.000Z	tehbaut	ActionParsnip	so you're saying there's a chance that hte boot sector could not get cloned?
+2009-03-23T16:00:00.000Z	ActionParsnip	tehbaut	possibly, but grub can easily be installed and configured
+2009-03-23T16:01:00.000Z	tehbaut	ActionParsnip	and grub works regardless of the fact that only one OS is installed?
+2009-03-23T16:03:00.000Z	ActionParsnip	tehbaut	i single boot all my systems and use grub
+2009-03-23T16:10:00.000Z	ActionParsnip	tehbaut	how do you mean?
+2009-03-23T16:10:00.000Z	ActionParsnip	tehbaut	does it show up in bios, is it referenced in the output of   dmesg | tail
+2009-03-23T16:12:00.000Z	ActionParsnip	tehbaut	no, check bios first to make sure it shows the drive, if it does, boot to linux then read through   dmesg | less
+2009-03-23T16:13:00.000Z	ActionParsnip	tehbaut	partition it but dont format it
+2009-03-23T16:24:00.000Z	tehbaut	ActionParsnip	well I created a simple volume on the disk, but didn't format it... it's still not being picked up though. Should I restart ubuntu?
+2009-03-23T16:27:00.000Z	tehbaut	ActionParsnip	dmesg | less has a bunch of "no additional sense information" type-messages
+2009-03-23T16:39:00.000Z	tehbaut	ActionParsnip	you still around?
+2009-04-07T15:18:00.000Z	ActionParsnip	tehbaut	edit /boot/grub/menu.list and chage default to whichever OS you wish
+2009-04-07T15:20:00.000Z	tehbaut	ActionParsnip	Any idea on how to do it from grub's cmd line utility?
+2009-04-07T15:20:00.000Z	ActionParsnip	tehbaut	no idea man, i edit the file, personally
+2009-07-14T16:52:00.000Z	ActionParsnip	tehbaut	fat32 doesnt hold the permissions that linux needs, i'd use ext3
+2009-07-14T16:54:00.000Z	ActionParsnip	tehbaut	you can mount a partition anywhere you like (just not in /proc anywhere)
+2009-07-14T16:55:00.000Z	ActionParsnip	tehbaut	most people make a new folder in /media and mount to that but there is nothing stopping you from using a folder i your home drive to mount to
+2009-09-23T12:14:00.000Z	ActionParsnip	tehbaut	its not under the wine appdb, could try it
+2009-09-23T12:16:00.000Z	ActionParsnip	tehbaut	java is fully portable
+2009-09-23T12:16:00.000Z	ActionParsnip	tehbaut	windows java = linux java = any java
+2009-09-23T12:44:00.000Z	tehbaut	ActionParsnip	but can Java intercept active windows and capture titles and such properties of windows natively?
+2009-09-23T12:45:00.000Z	tehbaut	ActionParsnip	and if so, I suppose it depends on whether the developers implemented those functions, or decided to use a Windows library for supporting such requirements of the app ;)
+2009-09-23T14:37:00.000Z	ActionParsnip	tehbaut	i'd guess a class 6 one
+2009-09-23T14:38:00.000Z	ActionParsnip	tehbaut	lower class = slower
+2009-10-08T13:49:00.000Z	ActionParsnip	tehbaut	do you mean the ubuntu-artwork package?
+2009-10-08T13:50:00.000Z	ActionParsnip	tehbaut	i guess you could find a jaunty ppa for it maybe
+2009-10-08T13:51:00.000Z	ActionParsnip	tehbaut	could just download it if its there, on gnomelook.org
+2009-10-08T14:22:00.000Z	ActionParsnip	tehbaut	is it mounted?
+2009-10-08T14:23:00.000Z	ActionParsnip	tehbaut	boot to windows, shutdown again then boot to live CD to resize
+2009-10-08T14:23:00.000Z	tehbaut	ActionParsnip	this is a non-bootable drive
+2009-10-08T14:24:00.000Z	ActionParsnip	tehbaut	does windows ever touch it?
+2009-10-09T12:30:00.000Z	ActionParsnip	tehbaut	you will most likely find it on the drive you installed ubuntu to
+2009-10-09T12:32:00.000Z	tehbaut	ActionParsnip	I'm trying to get grub onto the ntldr menu via EasyBCD ...but choosing the partition where grub is physically installed doesn't seem to work
+2009-10-09T12:32:00.000Z	ActionParsnip	tehbaut	you can install grub using the liveCD, doesnt matter which it is installed to as it will still use te same disk numbers
+2009-10-09T12:33:00.000Z	tehbaut	ActionParsnip	but grub is already installed
+2009-10-09T12:33:00.000Z	ActionParsnip	tehbaut	then point your bios at the disk it is on and grub will load
+2009-10-09T12:34:00.000Z	ActionParsnip	tehbaut	why, why not have grub load the windows system with chainloading?
+2009-10-09T12:35:00.000Z	ActionParsnip	tehbaut	nice, erm, i think you can add to boot.ini to load stuff but ive not done it
+2009-10-19T12:01:00.000Z	ActionParsnip	tehbaut	do you mean move your settings, or the actual app itself?
+2009-10-19T12:01:00.000Z	ActionParsnip	tehbaut	or do you mean in just the menu
+2009-10-19T12:02:00.000Z	ActionParsnip	tehbaut	tried alacarte
+2009-10-19T12:04:00.000Z	tehbaut	ActionParsnip	ah, yes looks like I am using alacarte (which is where I'm having the issue)
+2009-10-19T12:05:00.000Z	ActionParsnip	tehbaut	its usually just drag and drop, if that fails, just make a new launcher in the right place and delete the stubborn one
+2009-10-20T13:37:00.000Z	ActionParsnip	tehbaut	gnome has one under graphics or it may be under accessories
+2009-10-20T13:38:00.000Z	tehbaut	ActionParsnip	out of the box? it doesn't support scrolling regions tho...
+2009-10-20T13:38:00.000Z	ActionParsnip	tehbaut	ah, i see
+2009-10-20T13:39:00.000Z	tehbaut	ActionParsnip	to be honest, I'm looking for a SnagIt replacement for linux
+2009-10-20T13:39:00.000Z	tehbaut	ActionParsnip	only better, as SnagIt couldn't seem to scroll all regions successfully
+2009-10-20T13:40:00.000Z	ActionParsnip	tehbaut	i use snaggit on my work laptop, ive not used or heard of scrolling regions
+2009-10-20T13:40:00.000Z	tehbaut	ActionParsnip	you must not have it set to scroll then?
+2009-10-20T13:41:00.000Z	ActionParsnip	tehbaut	i just press ctrl + print screen and draw a square round what I need
+2009-10-20T13:42:00.000Z	tehbaut	ActionParsnip	it's an awesome feature when it works (and it does for a majority of scrollable regions)
+2009-10-20T13:43:00.000Z	ActionParsnip	tehbaut	i've only used it for small regions, I can do the same without and mspaint to isolate what i need
+2009-10-20T13:44:00.000Z	tehbaut	ActionParsnip	well saving time sure is a beautiful thing :)
+2009-10-20T13:44:00.000Z	ActionParsnip	tehbaut	i'm at work now
+2009-10-20T13:44:00.000Z	ActionParsnip	tehbaut	i have time
+2009-10-20T13:57:00.000Z	ActionParsnip	tehbaut	there may be some desklet that gives it
+2009-10-20T14:01:00.000Z	ActionParsnip	tehbaut	http://www.gdesklets.de/
+2009-10-20T14:03:00.000Z	ActionParsnip	tehbaut	sounds like you found something then :)
+2009-10-20T15:33:00.000Z	ActionParsnip	tehbaut	could make a shortcut to it on your desktop
+2009-10-20T15:33:00.000Z	ActionParsnip	tehbaut	some people assign ctrl+alt+del to it like in windows
+2009-10-20T15:38:00.000Z	ActionParsnip	tehbaut	http://www.ghacks.net/2009/06/09/linux-tips-modify-ctrl-alt-del-behavior/
+2009-10-20T17:25:00.000Z	ActionParsnip	tehbaut	read the readme and install files
+2009-10-20T17:25:00.000Z	ActionParsnip	tehbaut	not everything uses configure either
+2009-10-20T17:25:00.000Z	tehbaut	ActionParsnip	I am, it's not working like it says it should
+2009-10-20T17:26:00.000Z	tehbaut	ActionParsnip	why would it tell me to run it if it doesn't need me to
+2009-10-20T17:26:00.000Z	ActionParsnip	tehbaut	is there an autogen file, some apps have one of thse you need to run first
+2009-10-20T17:26:00.000Z	ActionParsnip	tehbaut	can you link me to the tar.gz and i'll see where you have to compile from
+2009-10-20T17:28:00.000Z	tehbaut	ActionParsnip	http://www.gnome-look.org/content/download.php?content=97866&id=1&tan=25175142
+2009-10-20T17:31:00.000Z	ActionParsnip	tehbaut	there is no configure script there so I'd head straight to make
+2009-10-20T17:32:00.000Z	ActionParsnip	tehbaut	make sure you have all the -dev dependancies so you can compile it
+2011-01-31T20:08:00.000Z	ActionParsnip	tehbaut	executable

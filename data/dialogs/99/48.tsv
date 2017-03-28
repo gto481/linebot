@@ -1,0 +1,99 @@
+2008-01-27T14:28:00.000Z	Symmetria		*sigh* now the fun starts, rsynching 7.6 terabytes of data from one machine to another
+2008-01-27T14:29:00.000Z	Symmetria		heh voltagex heh gigE between the machine, duplicating mirror server and moving to anycast infrastructure
+2008-01-27T14:29:00.000Z	Symmetria		heh voltagex http://paste.ubuntu-nl.org/53620/ <=== disk space in the new machine :p
+2008-01-27T14:30:00.000Z	Symmetria		heh voltage Im just wishing I had a spare 10gig interface, I have one in the server Im rsynching FROM but not one in the one Im rsyching 2
+2008-01-27T14:32:00.000Z	Symmetria		heh voltagex cant remeber what we paid for em, but those sdk, sdl and sdm are 500gig sata disks in iSCSI arrays, md0 is an array of 8 300gig internal SCSI drives
+2008-01-27T14:33:00.000Z	Symmetria		then there are 2 more scsi disks on the base system
+2008-01-27T14:33:00.000Z	Symmetria		but that machine in total has 46 disks linked to it (tons and tons of space lost because of raid redundancy though)
+2008-01-27T14:34:00.000Z	Symmetria		heh I have another array in the machine Im rsyching from which is made up of 15 x 750gig SATA disks in a SAS attached storage bay
+2008-01-27T14:34:00.000Z	Symmetria		that thing is *FAST*
+2008-01-27T14:34:00.000Z	Symmetria		and ubuntu had no problem with the controller :)
+2008-01-27T14:35:00.000Z	JonathanD	Symmetria	what kind of iscsi system?
+2008-01-27T14:35:00.000Z	JonathanD	Symmetria	commercial or home-brew?
+2008-01-27T14:35:00.000Z	Symmetria		jonathaN the iscsi systems are intel SSR220MA's
+2008-01-27T14:36:00.000Z	Symmetria		intel systems
+2008-01-27T14:36:00.000Z	JonathanD	Symmetria	so homebrew? :)
+2008-01-27T14:36:00.000Z	Symmetria		I wouldnt go iscsi again if I could avoid it
+2008-01-27T14:36:00.000Z	Symmetria		jonathaN no
+2008-01-27T14:37:00.000Z	Symmetria		ooops they are SSR212MA's I think, those are dedicated intel san's
+2008-01-27T14:37:00.000Z	Symmetria		for iSCSI
+2008-01-27T14:37:00.000Z	JonathanD		ahh
+2008-01-27T14:37:00.000Z	JonathanD		alright
+2008-01-27T14:37:00.000Z	Symmetria		spee its slow as hell compared to something like SAS
+2008-01-27T14:37:00.000Z	JonathanD	Symmetria	really?
+2008-01-27T14:37:00.000Z	JonathanD		mmm
+2008-01-27T14:37:00.000Z	JonathanD		iscsi on proper hardware is just fine.
+2008-01-27T14:37:00.000Z	Symmetria		jonathaN its fine, but its not as fast as something like a powervault md1000 array
+2008-01-27T14:38:00.000Z	Symmetria		and the powervault md1000 arrays are no more expensive than the iSCSI systems
+2008-01-27T14:38:00.000Z	JonathanD	Symmetria	I'm using DS3400 for stuff in that space.
+2008-01-27T14:38:00.000Z	Symmetria		heh, I cap out on my powervault systems with a read speed of over 400Mbytes/second
+2008-01-27T14:38:00.000Z	Symmetria		and a write speed of 200Mbytes/second
+2008-01-27T14:38:00.000Z	Symmetria		and thats in raid 5 config
+2008-01-27T14:38:00.000Z	JonathanD	Symmetria	well, Gbit ethernet wil be a limitation there anyway :
+2008-01-27T14:39:00.000Z	JonathanD		on a per host basis, at least.
+2008-01-27T14:39:00.000Z	Symmetria		jonathaN err  dont run gigE in that box for most things :)
+2008-01-27T14:39:00.000Z	Symmetria		run 10gE
+2008-01-27T14:39:00.000Z	Symmetria		ixgbe card
+2008-01-27T14:39:00.000Z	JonathanD		does it offer CPU monitoring?
+2008-01-27T14:39:00.000Z	JonathanD		whats the bottleneck?
+2008-01-27T14:39:00.000Z	Symmetria		jonathaN bottleneck is the sas controllers, they are limited to 3gigabit per controller, 2 controlloers into the array
+2008-01-27T14:40:00.000Z	JonathanD		cause you take something like a midrange nseries, and you can saturate multiple GBe adapters.
+2008-01-27T14:40:00.000Z	Symmetria		heh that and the physical disk speed :)
+2008-01-27T14:40:00.000Z	JonathanD	Symmetria	I'm talking about on the iscsi box.
+2008-01-27T14:41:00.000Z	JonathanD	Symmetria	like the IBM DS3000 series, they're sas backed, but iscsi, sas, or FC frontend
+2008-01-27T14:41:00.000Z	Symmetria	JonathanD	Im not actually sure, I want to strip those boxes down, rip out the flash drive in them, put ubuntu on them, put software raid on them, and then turn them into NFS systems
+2008-01-27T14:41:00.000Z	Symmetria		:p
+2008-01-27T14:41:00.000Z	Symmetria		I have a feeling that the operating system on those iSCSI san's is its bottleneck
+2008-01-27T14:41:00.000Z	JonathanD	Symmetria	ahh :P
+2008-01-27T14:42:00.000Z	JonathanD	Symmetria	I really like iscsi, just not as an end all be all solution.
+2008-01-27T14:42:00.000Z	JonathanD		I'd like to see more combo iscsi/fc hardware.
+2008-01-27T14:42:00.000Z	Symmetria		jonathaN iSCSI works for mass storage etc, it just doesnt work imho as a very high speed solution for load intensive systems
+2008-01-27T14:43:00.000Z	Symmetria		jonathaN I'd rather go external SAS than almost anything, external SAS is faster than FC as well
+2008-01-27T14:43:00.000Z	JonathanD		with both interfaces on the storage controller, to give you flexability for inexpensive stuff.
+2008-01-27T14:43:00.000Z	JonathanD	Symmetria	SAS is a slower interface.
+2008-01-27T14:43:00.000Z	Symmetria		and with the powervault you can throw in SATA disks
+2008-01-27T14:43:00.000Z	Symmetria		errr no, its not
+2008-01-27T14:43:00.000Z	JonathanD		with the same speed disks, it wont be any faster.
+2008-01-27T14:43:00.000Z	Symmetria		FC = 2gigabit
+2008-01-27T14:43:00.000Z	Symmetria		SAS = 3gigabit
+2008-01-27T14:44:00.000Z	JonathanD	Symmetria	old FC = 2gb
+2008-01-27T14:44:00.000Z	JonathanD		current would be 4, or more.
+2008-01-27T14:44:00.000Z	JonathanD		I haven't installed a new piece of FC equipment < 4Gb in over a year.
+2008-01-27T14:45:00.000Z	Symmetria	JonathanD	fair enough, other thing though about FC, are there any *fast* FC array boxes which take SATA disks in them?
+2008-01-27T14:45:00.000Z	Symmetria		(my SAS arrays are filled with large SATA disks)
+2008-01-27T14:45:00.000Z	JonathanD	Symmetria	DS4000
+2008-01-27T14:45:00.000Z	Symmetria	JonathanD	pricey or not really?
+2008-01-27T14:45:00.000Z	JonathanD		DS3000, although it's FC frontend/Sas backend.
+2008-01-27T14:46:00.000Z	Symmetria		thats an IBM box right?
+2008-01-27T14:46:00.000Z	JonathanD	Symmetria	the DS4000 is up there, it's still midrange though.
+2008-01-27T14:46:00.000Z	JonathanD		DS3000 is pretty affordable.
+2008-01-27T14:46:00.000Z	JonathanD		as SANs go.
+2008-01-27T14:46:00.000Z	JonathanD		both are IBM boxes.
+2008-01-27T14:47:00.000Z	Symmetria	JonathanD	you seen the md1000 powervault?
+2008-01-27T14:47:00.000Z	JonathanD	Symmetria	no. but I admit I have an IBM bias.
+2008-01-27T14:48:00.000Z	Symmetria		infact I think our local IBM office probably hates my guts right now :p
+2008-01-27T14:48:00.000Z	JonathanD	Symmetria	go through a BP then :p
+2008-01-27T14:48:00.000Z	JonathanD	Symmetria	where you at?
+2008-01-27T14:48:00.000Z	Symmetria		heh JonathanD in .za
+2008-01-27T14:48:00.000Z	Symmetria		they are a little sore cause I awarded an 18 million dollar tender to someone else :p
+2008-01-27T14:49:00.000Z	JonathanD	Symmetria	:)
+2008-01-27T14:49:00.000Z	JonathanD		storage or otherwise, Symmetria?
+2008-01-27T14:49:00.000Z	Symmetria	JonathanD	networking (cisco kit)
+2008-01-27T14:49:00.000Z	Symmetria		ibm = second largest cisco partner in the world if I remeber correctly
+2008-01-27T14:50:00.000Z	JonathanD	Symmetria	likely be totally different sales folks if you went to them for storage.
+2008-01-27T14:50:00.000Z	JonathanD	Symmetria	yeah, they're huge cisco vendor. I think they sell more than cisco does.
+2008-01-27T14:50:00.000Z	JonathanD		same with netapp.
+2008-01-27T14:50:00.000Z	Symmetria	JonathanD	errr thats because cisco doesnt sell direct, to anyone :p
+2008-01-27T14:52:00.000Z	JonathanD	Symmetria	I just did a fake DS3400 config
+2008-01-27T14:52:00.000Z	JonathanD		dual FC controller with 9TB of disk, about 20K :p
+2008-01-27T14:52:00.000Z	JonathanD		(4Gbit FC)
+2008-01-27T14:53:00.000Z	Symmetria		jonathaNd thats more than double the powervault price
+2008-01-27T14:53:00.000Z	Symmetria		:p
+2008-01-27T14:54:00.000Z	JonathanD	Symmetria	the powevault is single host?
+2008-01-27T14:54:00.000Z	JonathanD		or a SAN?
+2008-01-27T14:54:00.000Z	Symmetria		jonathaN stackable SAN
+2008-01-27T14:54:00.000Z	JonathanD		the description is weird :p
+2008-01-27T14:54:00.000Z	Symmetria		6gigabit (has 2 x 3gigabit SAS controllers)
+2008-01-27T14:55:00.000Z	JonathanD	Symmetria	that was for a 4 x 4 Gbit FC controller.
+2008-01-27T14:55:00.000Z	JonathanD		2 dual port controller.
+2008-01-27T14:57:00.000Z	JonathanD	Symmetria	you can price stuff yourself : http://www-304.ibm.com/jct01004c/systems/support/supportsite.wss/docdisplay?lndocid=MIGR-62168&brandind=5000008

@@ -1,0 +1,95 @@
+2008-11-05T08:07:00.000Z	DasEi		﻿ heinrich: running ibex ?
+2008-11-05T08:08:00.000Z	DasEi		heinrich:problem with initramfs
+2008-11-05T08:08:00.000Z	DasEi		*problem
+2008-11-05T08:09:00.000Z	heinrich	DasEi	never heard of
+2008-11-05T08:09:00.000Z	heinrich	DasEi	but you are right^^
+2008-11-05T08:09:00.000Z	heinrich	DasEi	I just dont know what it is^^ Yet...
+2008-11-05T08:11:00.000Z	heinrich	DasEi	perhaps changing from ide to ahci will fix it?
+2008-11-05T08:12:00.000Z	heinrich	DasEi	regular 8.04 Lts
+2008-11-05T08:12:00.000Z	DasEi	heinrich	does the live cd boot ?
+2008-11-05T08:13:00.000Z	heinrich	DasEi	yes...
+2008-11-05T08:13:00.000Z	heinrich	DasEi	boots too i get to the ubuntu screen then BusyBox appears.
+2008-11-05T08:13:00.000Z	DasEi	heinrich	you are in live now or on another system ?
+2008-11-05T08:14:00.000Z	DasEi	heinrich	so it does not boot to desktop, then
+2008-11-05T08:14:00.000Z	heinrich	DasEi	I'm on another computer..^^
+2008-11-05T08:15:00.000Z	heinrich	DasEi	got 3 computers so alot of backups;)
+2008-11-05T08:15:00.000Z	DasEi	heinrich	did you check the installers cd for defects (a option from the boot menu like install or memcheck ) ?
+2008-11-05T08:15:00.000Z	heinrich	DasEi	can't seem to find the answer on google...
+2008-11-05T08:15:00.000Z	heinrich	DasEi	yepp, works like a charm.
+2008-11-05T08:16:00.000Z	DasEi	heinrich	what a computer is it you tried to install to ?
+2008-11-05T08:16:00.000Z	heinrich	DasEi	alot of info
+2008-11-05T08:16:00.000Z	heinrich	DasEi	stationary computer with my own choosen components=S
+2008-11-05T08:18:00.000Z	heinrich	DasEi	p35-ds4 core2duo 6850 x3 sata 500 disc's pny 8800gts asus Xonar d2 sound card...that's about it=P
+2008-11-05T08:20:00.000Z	DasEi	heinrich	you then should try the alternate 64 bit installer and google for bootoptions, like no ahci,nolapic and so on
+2008-11-05T08:20:00.000Z	heinrich	DasEi	Ah, found the problem.
+2008-11-05T08:20:00.000Z	DasEi	heinrich	so ?
+2008-11-05T08:21:00.000Z	heinrich	DasEi	forgot about raid^^
+2008-11-05T08:21:00.000Z	DasEi	heinrich	hardware raid ?
+2008-11-05T08:21:00.000Z	heinrich	DasEi	Mhm...
+2008-11-05T08:23:00.000Z	heinrich	DasEi	well then, only the graphics and sound left then=)
+2008-11-05T08:23:00.000Z	heinrich	DasEi	any known troubles installing a 8800gts?^^
+2008-11-05T08:24:00.000Z	heinrich	DasEi	alsa for asus soundcard? hmm, oki
+2008-11-05T08:26:00.000Z	heinrich	DasEi	I'm not in live, I've installed it and is now booting without cd^^
+2008-11-05T08:26:00.000Z	heinrich	DasEi	hmm thnx good to know
+2008-11-05T08:26:00.000Z	heinrich	DasEi	desktop
+2008-11-05T08:27:00.000Z	heinrich	DasEi	only used ubuntu for about two weeks now but I guess I'm still a quick learner=)
+2008-11-05T08:28:00.000Z	heinrich	DasEi	I'm way ahead=) update almost done.
+2008-11-05T08:29:00.000Z	heinrich	DasEi	Hmm restricted drivers? according to what I'm reading here it's most likely old drivers and I should install drivers from Nvidias homepage instead?
+2008-11-05T08:32:00.000Z	heinrich	DasEi	are there any easy ways to write to the same person? I'm just manually typing your name in front of the thing I wanna say right now=P Not a irc fan, started this today=P
+2008-11-05T08:32:00.000Z	heinrich	DasEi	hmm still learning Linux language system.
+2008-11-05T08:33:00.000Z	heinrich	DasEi	oki
+2008-11-05T08:33:00.000Z	heinrich	DasEi	Yeah
+2008-11-05T08:34:00.000Z	heinrich	DasEi	Haha, I feel like I'm back in school=P
+2008-11-05T08:38:00.000Z	heinrich	DasEi	ok ok, I'll learn more as I go=) I feel bad for you manually writing to me=P
+2008-11-05T08:38:00.000Z	DasEi	heinrich	first walk, then run .. np
+2008-11-05T08:40:00.000Z	heinrich	DasEi	I think I've got most of it covered=)
+2008-11-05T08:40:00.000Z	heinrich	DasEi	hmm stop x server then install...
+2008-11-05T08:41:00.000Z	heinrich	DasEi	How do I stop X-server when I'm using it?=P
+2008-11-05T08:42:00.000Z	DasEi	heinrich	copy the installer smw, like /usr/src, then : sudo /etc/init.d/gdm stop             (logs you off!)
+2008-11-05T08:43:00.000Z	heinrich	DasEi	hmm ok
+2008-11-05T08:44:00.000Z	DasEi	heinrich	you know how to star the installer ?
+2008-11-05T08:45:00.000Z	heinrich	DasEi	I just found out=)
+2008-11-05T08:45:00.000Z	heinrich	DasEi	Hmm "no precompiled kernel interface was found to match your kernel"
+2008-11-05T08:46:00.000Z	heinrich	DasEi	 Now...what does that mean? =S
+2008-11-05T08:46:00.000Z	heinrich	DasEi	Hmm, I only used sudo^^
+2008-11-05T08:48:00.000Z	DasEi	heinrich	not particulary sure on nvidia, could try :
+2008-11-05T08:49:00.000Z	DasEi	heinrich	sudo apt-get install linux-ubuntu-modules-$(uname -r)
+2008-11-05T08:51:00.000Z	heinrich	DasEi	bah install is not working too good=P
+2008-11-05T08:52:00.000Z	heinrich	DasEi	something about libc not being installed
+2008-11-05T08:54:00.000Z	DasEi	heinrich	as I told you, next to churches I'm no specialist in that, try to find the packet : apt-cache search libc*
+2008-11-05T08:55:00.000Z	heinrich	DasEi	Somthing about 9402 hits when i searched for libc^^
+2008-11-05T08:56:00.000Z	DasEi	heinrich	ask for someone with a new nvidia here, or use the (older) driver option of ubuntu - or, at your own risk, try envyNG;;; backup xorg.conf before
+2008-11-05T08:58:00.000Z	heinrich	DasEi	oki Found something and tried it. It installed the nvidia drivers now but no picture when i tried starting x-server, perhaps i have to arm nvidia for x-server...hmm
+2008-11-05T08:58:00.000Z	heinrich	DasEi	 Looking into it=)
+2008-11-05T09:35:00.000Z	heinrich	DasEi	Something is wrong with that line.
+2008-11-05T09:36:00.000Z	heinrich	DasEi	u just wrote
+2008-11-05T09:36:00.000Z	DasEi	heinrich	  sudo dpkg-reconfigure xserver-xorg
+2008-11-05T09:37:00.000Z	heinrich	DasEi	 Doesn't work
+2008-11-05T09:37:00.000Z	DasEi	heinrich	  sudo apt-get install displayconfig-gtk
+2008-11-05T09:39:00.000Z	heinrich	DasEi	Bah i give up soon, it's not worth the time....
+2008-11-05T09:40:00.000Z	heinrich	DasEi	I dont ever think I'll like ubuntu more then xp, to annoyingly userUnfriendly...
+2008-11-05T09:44:00.000Z	heinrich	DasEi	Ok, that's it...I give up.
+2008-11-05T09:44:00.000Z	DasEi	heinrich	have a break
+2008-11-05T09:45:00.000Z	heinrich	DasEi	more then an hour getting no where close to installing a graphics card... now that's just sad...
+2008-11-05T09:45:00.000Z	DasEi	heinrich	after using a sys for two weeks ?
+2008-11-05T09:46:00.000Z	heinrich	DasEi	If the system is not even working when following a step by step guide under about the same circumstances....yes.
+2008-11-05T09:48:00.000Z	heinrich	DasEi	If everything is so totally annoyingly far fetched as to take hours to install such a small thing. Then I guess id rather spend my time on something more worthwhile^^
+2008-11-05T09:49:00.000Z	DasEi	heinrich	go ahead as you wish, my start was as pleasant as my first alphabet :)
+2008-11-05T09:50:00.000Z	heinrich	DasEi	Really? what did u install ubuntu in?
+2008-11-05T09:50:00.000Z	DasEi	heinrich	: I started with suse 7.3,  but have your break now ..
+2008-11-05T09:51:00.000Z	heinrich	DasEi	Ah ok.
+2008-11-05T09:52:00.000Z	heinrich	DasEi	I heard that Ubuntu was the most user-friendly so I installed it. But so far it's been very Un-friendly in every way.
+2008-11-05T09:56:00.000Z	heinrich	DasEi	Oh I have a question for u.
+2008-11-05T09:56:00.000Z	heinrich	DasEi	do I really need a swap drive when i have 4GB ram?
+2008-11-05T09:57:00.000Z	DasEi	heinrich	: not really, for hibernation sure
+2008-11-05T09:59:00.000Z	heinrich	DasEi	Oki, only wanted to know if it could be the cause of something not working
+2008-11-05T09:59:00.000Z	heinrich	DasEi	installed without one.
+2008-11-05T10:00:00.000Z	DasEi	heinrich	64 bit, I assume
+2008-11-05T10:00:00.000Z	heinrich	DasEi	32, I dislike 64...
+2008-11-05T10:01:00.000Z	DasEi	heinrich	so only 3gig of your ram are adressed
+2008-11-05T10:01:00.000Z	heinrich	DasEi	in ubuntu, yeah
+2008-11-05T10:01:00.000Z	heinrich	DasEi	in vista 3,5 xp 3 i think
+2008-11-05T10:03:00.000Z	heinrich	DasEi	64bit has to many errors right now, I have enough of them as it is...
+2008-11-05T10:03:00.000Z	DasEi	heinrich	mind joining :
+2008-11-05T10:04:00.000Z	heinrich	DasEi	Dont know about linuxes though
+2008-11-05T10:04:00.000Z	heinrich	DasEi	Me...supporter?=P

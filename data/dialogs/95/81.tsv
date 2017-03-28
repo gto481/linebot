@@ -1,0 +1,95 @@
+2005-02-25T14:24:00.000Z	membreya		lol did a convert on my windows drive to make it FAT32...now it reads as only 24gb :|
+2005-02-25T08:07:00.000Z	membreya		just curios, I currently have linux on a 10gb partition of 120gb harddrive.. I'm going to get a new 200gb harddrive next weekend and I want to know ..will it be easier to convert the entire existing drive to linux (delete windows partitions and resize linux) or can I just dump linux onto the new drive?
+2005-02-25T08:09:00.000Z	membreya		nooooooooo I've just gotten everything configured right..excepting tv-out :\
+2005-02-25T08:10:00.000Z	membreya		hah 32 :)
+2005-02-25T08:11:00.000Z	ompaul	membreya	well if you rephrased that as what would you advise I would suggest that you partition the disk a bit more into / /swap /usr /home /var /randomnames and then install hoary/warty/ and now for the real fun mount the *other* [old]  partition and copy the user data into the /home directory but not the config files and enjoy it
+2005-02-25T08:12:00.000Z	ompaul	membreya	and taking into consideration your 'nooooooo' I would say you have the old configs and the new configs and you can manage that I imagine :)
+2005-02-25T08:12:00.000Z	membreya	ompaul	i should be fine :) ... i can always come running and crying to this channel
+2005-02-25T08:15:00.000Z	ompaul	membreya	there is a school of thought that blocking icmp is just evil /me points at a $companies firewall
+2005-02-25T08:15:00.000Z	membreya	ompaul	i can enable it ..but for what?
+2005-02-25T08:15:00.000Z	ompaul	membreya	also if configured properly it should not be an issue
+2005-02-25T08:18:00.000Z	ompaul	membreya	it is used to keep various parts of the internet unbroken :)
+2005-03-03T12:07:00.000Z	ompaul	membreya	your simple statement about your father was 19230769 times wrong
+2005-03-03T12:23:00.000Z	membreya	ompaul	if everything here was documented, I would stop having the semblence of knowledge
+2005-03-03T12:23:00.000Z	ompaul	membreya	now you know yourself that is not true :)
+2005-03-03T12:24:00.000Z	membreya	ompaul	stop hurting my head..it's coming up to 5.30 am
+2005-03-23T15:58:00.000Z	ompaul	membreya	:)
+2005-03-23T16:09:00.000Z	ompaul	membreya	ahh vic - I have only been in nsw and fnq
+2005-03-23T16:10:00.000Z	ompaul	membreya	well I started off in cairns and went north
+2005-03-23T16:11:00.000Z	ompaul	membreya	well I am a paddy
+2005-03-23T16:12:00.000Z	ompaul	membreya	and I was drinking a lot of water, one (1.5l) bottle for the top of my head and the other one for inside me
+2005-03-25T12:29:00.000Z	ompaul	membreya	that is the wrong question
+2005-03-25T12:30:00.000Z	ompaul	membreya	there are exactly several methods more than you need, you are free to choose one that is there or create a new way :)
+2005-03-25T12:33:00.000Z	ompaul	membreya	where is the ecosystem in that?
+2005-03-25T12:34:00.000Z	membreya	ompaul	but it would be a controlled environment that is full of discipline
+2005-03-25T12:35:00.000Z	ompaul	membreya	 and broken software :) .. see the redmond sample for concepts of what might happen
+2005-03-25T12:35:00.000Z	membreya	ompaul	a multi-billion dollar international company?
+2005-03-28T16:13:00.000Z	ompaul	membreya	ahh yeah but, the internet is broken and it is all your fault
+2005-03-28T16:19:00.000Z	ompaul	membreya	some programs where you get high volume output and you want to capture it at the same time can be run as follows: sudo tcpdump -l | tee > some logfile
+2005-03-28T16:20:00.000Z	ompaul	membreya	meant to say run and see output at the same time
+2005-03-28T16:21:00.000Z	membreya	ompaul	I tried doing a > to a file name and it gave me a 0 byte file :|
+2005-03-28T16:27:00.000Z	ompaul	membreya	programname options | tee foolog   <<< that works sorry I think I left my brain in bed
+2005-03-28T16:31:00.000Z	ompaul	membreya	what program are you using?
+2005-03-28T16:31:00.000Z	membreya	ompaul	wget
+2005-03-28T16:37:00.000Z	ompaul	membreya	what is the command you are issuing?
+2005-03-28T16:37:00.000Z	membreya	ompaul	wget :P
+2005-03-28T16:38:00.000Z	membreya	ompaul	wget https://www.anz.com/wholesale/bankmain.asp?AFFID=01025 -d | tee test
+2005-03-28T16:39:00.000Z	ompaul	membreya	okay I have to eat - breakfast is served I will look at it when I get back
+2005-03-28T16:50:00.000Z	ompaul	membreya	run this >> more bankmain.asp\?AFFID\=01025
+2005-03-28T16:50:00.000Z	membreya	ompaul	im tired, gimme the exact syntax
+2005-03-28T16:51:00.000Z	ompaul	membreya	I ran what you showed me last - the wget command line with url and tee and I then typed that more command
+2005-03-28T16:52:00.000Z	ompaul	membreya	your command line is foobarred :)
+2005-03-28T17:00:00.000Z	ompaul	membreya	I suggest you look at this >  wget -o log https://www.anz.com/wholesale/bankmain.asp?AFFID=01025 < this outputs a file (a) log and a file which is the last part of the url in this case (b) bankmain.asp?AFFID=01025 you can use the command less bankmain.asp?AFFID=01025 or more bankmain.asp?AFFID=01025  cat bankmain.asp?AFFID=01025 | more {or less} :) and see in case (a) what happened (b) what data you actually sucked
+2005-03-28T17:00:00.000Z	ompaul	membreya	break it up it is lots of little things
+2005-03-28T17:00:00.000Z	ompaul	membreya	it is not hard it just looks it
+2005-03-28T17:01:00.000Z	membreya	ompaul	... I understand it ..thankyou :)
+2005-03-28T17:02:00.000Z	ompaul	membreya	grand, and a happy paddy's day whats left of it
+2005-04-19T16:51:00.000Z	ompaul	membreya	no
+2005-04-19T16:34:00.000Z	ompaul	membreya	I got my upgrade a few minutes ago
+2005-04-19T16:34:00.000Z	membreya	ompaul	I'm getting http://archive.ubuntu.com hoary/main Packages Sub-process gzip returned an error code (1)
+2005-04-19T16:36:00.000Z	ompaul	membreya	I was able to read it in the browser
+2005-04-19T16:37:00.000Z	ompaul	membreya	I will do it in a moment - I am downloading half the internet atm :)(
+2005-04-19T16:40:00.000Z	ompaul	membreya	almost there 74% [200 libsnmp-base 811669/1005kB 80%]                           108kB/s 6m15s
+2005-04-19T16:44:00.000Z	ompaul	membreya	I need a bigger pipe :) 86% [250 libssl-dev 850429/2491kB 34%]                             105kB/s 3m22s
+2005-04-19T16:46:00.000Z	ompaul	membreya	 95% [267 kdevelop3-plugins 3725080/6884kB 54%]                       108kB/s 60s
+2005-04-19T16:47:00.000Z	membreya	ompaul	the error message I'm getting is
+2005-04-19T16:48:00.000Z	ompaul	membreya	- go for it
+2005-04-19T16:51:00.000Z	ompaul	membreya	it is working fine for me
+2005-04-19T16:51:00.000Z	membreya	ompaul	running amd64?
+2005-04-19T16:54:00.000Z	membreya	ompaul	do you have any idea on how to fix the problem ? I can easily download the file myself
+2005-04-19T16:55:00.000Z	ompaul	membreya	there is no output, so I would be inclined to look at top /ps to see if the program kicked off - I would also be looking at cpdump to see what was coming back across the wire when you made the request
+2005-04-19T16:56:00.000Z	ompaul	membreya	that is tcpdump -lvv but you know that :)
+2005-04-19T16:58:00.000Z	membreya	ompaul	I did a tcpdump -lvv |grep ubuntu and it's getting "bad udp cksum" :|
+2005-04-19T16:59:00.000Z	ompaul	membreya	so you need to fix your repositries
+2005-04-19T05:01:00.000Z	ompaul	membreya	as thoreauputic said
+2005-04-19T05:01:00.000Z	ompaul	membreya	maybe not
+2005-04-19T05:01:00.000Z	ompaul	membreya	ignore me I am asleep
+2005-04-19T05:02:00.000Z	ompaul	membreya	grab the file and figure it out later?
+2005-04-19T14:08:00.000Z	ompaul	membreya	if you are interested I have hit the same apt-get wall :-/ on 32bit
+2005-04-19T14:08:00.000Z	ompaul	membreya	ehh ignore that
+2005-05-04T13:12:00.000Z	ompaul	membreya	ReiserFS: $disk: warning: watch me loose your data faster then you can put it on the disk (okay thats not fair but it ate months of stuff on me a couple of years ago)
+2005-05-04T13:14:00.000Z	membreya	ompaul	should I try reiserfsck to rebuild the superblock?
+2005-05-04T13:14:00.000Z	ompaul	membreya	ya
+2005-05-04T13:15:00.000Z	ompaul	membreya	ya should do that
+2005-05-04T13:17:00.000Z	membreya	ompaul	now I'm getting Bad root block 0 :|
+2005-05-04T13:19:00.000Z	ompaul	membreya	ooch
+2005-05-04T13:19:00.000Z	ompaul	membreya	gime a min with a book or two and lets see if I have anything that might be useful for that
+2005-05-04T13:25:00.000Z	ompaul	membreya	if you offer the following to the command line what do you get back? fsck -y /dev/sda1 ?
+2005-05-04T13:26:00.000Z	ompaul	membreya	the fsck command should have some brains to figure out what it is looking at
+2005-05-04T13:26:00.000Z	membreya	ompaul	#flood
+2005-05-04T13:30:00.000Z	membreya	ompaul	should I boot to liveCD and do a fsck on the whole drive? my rootFS is reiserFS as well and no problems
+2005-05-04T13:30:00.000Z	ompaul	membreya	that is a good idea - have you got a spare disk like sdb hanging around?
+2005-05-04T13:31:00.000Z	membreya	ompaul	only a network drive..most of my data, including my backup, was on my 90gb partition
+2005-05-04T13:31:00.000Z	ompaul	membreya	arrrrrr
+2005-05-04T13:31:00.000Z	membreya	ompaul	it's no biggy..most of the partition was music vids (43gb)
+2005-05-04T13:32:00.000Z	ompaul	membreya	well it looks like the safest thing to do is to boot from that livecd
+2005-05-04T13:32:00.000Z	ompaul	membreya	well I would try the live cd
+2005-05-04T13:33:00.000Z	ompaul	membreya	and then move data around until you can kill the partition and start again
+2005-05-04T13:34:00.000Z	membreya	ompaul	I'm starting to think it has something to do with the latest Breezy updates :|
+2005-05-04T13:35:00.000Z	ompaul	membreya	if you run a dev system you can get burned
+2005-05-04T13:36:00.000Z	ompaul	membreya	at least once every development cycle
+2005-05-04T13:57:00.000Z	membreya	ompaul	I'm in the LiveCD now, doing a  sudo reiserfsck --rebuild-tree /dev/sda5
+2005-05-04T13:59:00.000Z	ompaul	membreya	and it is working?
+2005-05-04T13:59:00.000Z	membreya	ompaul	init_source_bitmap: Bitmap 0 (of 32768 bits) is wrong - mark all blocks [0 - 32768]  as used
+2005-05-04T14:00:00.000Z	membreya	ompaul	it's 20% through
+2005-05-04T14:00:00.000Z	ompaul	membreya	go for a tea or coffee and then come back

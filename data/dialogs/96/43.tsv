@@ -1,0 +1,96 @@
+2008-01-22T08:33:00.000Z	bod_		!pastebin
+2008-01-22T08:34:00.000Z	bod_		hey guys ,.,. in windows u could make a virtual memory swap folder to increase ur ram,.,. can u do this in ubuntu?
+2008-01-22T08:35:00.000Z	nemilar	bod_	that's what the swap partition is for
+2008-01-22T08:35:00.000Z	nemilar	bod_	but swap doesn't increase the amount of RAM you have
+2008-01-22T08:35:00.000Z	bod_	nemilar	but it will speed my computer up a bit yer?
+2008-01-22T08:35:00.000Z	nemilar	bod_	no
+2008-01-22T08:35:00.000Z	bod_	nemilar	so wot does it do?
+2008-01-22T08:36:00.000Z	nemilar	bod_	using swap is slower than using RAM, since swap is on the hard drive, and hard drives are slow
+2008-01-22T08:36:00.000Z	nemilar	bod_	it allows applications to use more memory
+2008-01-27T08:36:00.000Z	bod_	nemilar	thanks
+2008-01-27T08:37:00.000Z	bod_	nemilar	 i use killall,.,. thanks for clearing up what they do
+2008-01-27T08:38:00.000Z	nemilar	bod_	yeah I typically use killall, unless there's more than one instance of a process running, and I only want to kill one (for example, "killall bash" would be a bad idea)
+2008-01-27T08:38:00.000Z	bod_	nemilar	lol,. yer dont do that,.,.lol
+2008-01-27T08:40:00.000Z	nemilar	bod_	better would be /media/My\ Ipod
+2008-01-27T08:42:00.000Z	nemilar	bod_	it's not better, I just like to say it is, because quotes are also the character of the devil.
+2008-01-27T08:42:00.000Z	bod_	nemilar	lol,.,. ok
+2008-01-27T08:42:00.000Z	nemilar	bod_	but /media/"My Ipod" is wrong; it's "/media/My Ipod"
+2008-01-27T08:42:00.000Z	bod_	nemilar	 ok cheers,.,. wasnt to sure
+2008-01-27T08:49:00.000Z	nemilar	bod_	I would imagine so
+2008-01-27T08:50:00.000Z	bod_	nemilar	will that be out from the beginning or will we have to wait longer for a 64?
+2008-01-27T08:50:00.000Z	nemilar	bod_	not sure, but I think they normally release at the same time
+2008-01-27T08:50:00.000Z	bod_	nemilar	cool,.,.cheers
+2008-01-27T09:09:00.000Z	nemilar	bod_	jeremysan I had a similar problem, ALSA got confused when I had two soundcards installed
+2008-01-27T09:10:00.000Z	bod_	nemilar	 did u get a fix?
+2008-01-27T09:10:00.000Z	nemilar	bod_	jeremysan I disabled onboard sound ;)
+2008-01-27T09:11:00.000Z	bod_	nemilar	 how would i disable a pci card, but leave the intergrated one working?
+2008-01-27T09:11:00.000Z	bod_	nemilar	no can dio,.,. needs to be there for windows to use
+2008-01-28T06:45:00.000Z	bod_	nemilar	 im stumped too      ;(
+2008-01-28T07:21:00.000Z	nemilar	bod_	it's a caching server
+2008-01-28T07:22:00.000Z	bod_	nemilar	 thanks,. perhaps you could talk to him for me,. i no nothing!
+2008-01-29T07:24:00.000Z	nemilar	bod_	probably whatever directory the script is located in
+2008-01-29T07:24:00.000Z	bod_	nemilar	ok,. il have a look
+2008-01-29T09:10:00.000Z	bod_	nemilar	you lie
+2008-01-29T09:10:00.000Z	nemilar	bod_	in some clients it works
+2008-01-29T09:10:00.000Z	bod_	nemilar	damn this primitive xchat
+2008-01-30T05:12:00.000Z	bod_	nemilar	what a suprise
+2008-02-02T18:40:00.000Z	nemilar	bod_	whoami
+2008-02-02T18:41:00.000Z	bod_	nemilar	how would i edit that cp command to use that?
+2008-02-02T18:41:00.000Z	nemilar	bod_	`whoami`
+2008-02-02T18:42:00.000Z	bod_	nemilar	sudo cp /home/'whoami'/Desktop/pic?
+2008-02-02T18:42:00.000Z	nemilar	bod_	actually oskude just gave a better solution
+2008-02-06T15:02:00.000Z	bod_	nemilar	wow!! go me
+2008-02-06T15:03:00.000Z	bod_	nemilar	have you heard of that cyber sex world,.,. 2nd life,. i think,.,. were you can actually make real money out oof it
+2008-02-06T15:04:00.000Z	bod_	nemilar	yer,. sorry
+2008-02-06T15:07:00.000Z	bod_	nemilar	actually you get !ot 'd if you do that in ubuntu-offtopic
+2008-02-06T15:07:00.000Z	bod_	nemilar	i got banned from !ot for arguien about something in here,.,.lol
+2008-02-06T15:25:00.000Z	nemilar	bod_	gotta install the DVD libraries
+2008-02-06T15:26:00.000Z	nemilar	bod_	it's restricted because of legal issues, so it's in the multiverse repository
+2008-02-06T15:26:00.000Z	bod_	nemilar	 what would i search for? in synaptic?
+2008-02-06T15:26:00.000Z	nemilar	bod_	libdvdread3  is the package name
+2008-02-06T15:26:00.000Z	nemilar	bod_	but even with that installed, you don't get decss... that you have to run manually ;)
+2008-02-06T15:27:00.000Z	bod_	nemilar	 decss?
+2008-02-06T15:27:00.000Z	nemilar	bod_	the de-content-security-somethingsomething
+2008-02-06T15:27:00.000Z	bod_	nemilar	 but what do decss do?
+2008-02-06T15:28:00.000Z	nemilar	bod_	it's anti-dvd-copy-protection software
+2008-02-06T15:28:00.000Z	bod_	nemilar	what cant i do because of that?
+2008-02-06T15:29:00.000Z	nemilar	bod_	after you install libdvdread3, run 'sudo /usr/share/doc/libdvdread3/install-css.sh' and it will install it
+2008-02-06T15:29:00.000Z	bod_	nemilar	what cant i do because of that?/
+2008-02-06T15:29:00.000Z	bod_	nemilar	 ok ty
+2008-02-06T15:29:00.000Z	nemilar	bod_	some DVDs use CSS to prevent playback on non-authorized devices.
+2008-02-06T15:30:00.000Z	bod_	nemilar	 ok ty
+2008-02-06T15:30:00.000Z	nemilar	bod_	np
+2008-02-06T15:33:00.000Z	bod_	nemilar	 says i need debhelper and fakeroot    ????
+2008-02-06T15:33:00.000Z	nemilar	bod_	for what, libdvdread ?
+2008-02-06T15:34:00.000Z	bod_	nemilar	ive already got that libdev package
+2008-02-06T15:34:00.000Z	nemilar	bod_	oh, for installing decss?
+2008-02-06T15:34:00.000Z	nemilar	bod_	sounds ligit to me :D
+2008-02-06T15:34:00.000Z	bod_	nemilar	ok ty
+2008-02-06T15:38:00.000Z	bod_	nemilar	how can i stop apt from asking for the live cd when im installing some hings/
+2008-02-06T15:42:00.000Z	bod_	nemilar	 something went wrong with that installing script u told me to do,..,. make: *** [build-stamp] Error 77
+2008-02-06T15:45:00.000Z	nemilar	bod_	paste-bin it
+2008-02-06T15:46:00.000Z	bod_	nemilar	http://paste.ubuntu-nl.org/54974/
+2008-02-06T15:46:00.000Z	nemilar	bod_	need to install build-essential
+2008-02-06T15:46:00.000Z	bod_	nemilar	 ok
+2008-02-06T15:49:00.000Z	bod_	nemilar	ok,. i think the script worked this time,.,. it said quite allot of stuff,.,.lol
+2008-02-06T15:49:00.000Z	nemilar	bod_	probably... if no "Error" lines, then it worked
+2008-02-06T15:49:00.000Z	nemilar	bod_	"Warning" lines are okay
+2008-02-06T15:49:00.000Z	bod_	nemilar	is there a ay to grep the output after ts been outpur?,.,. and the film is playing now so is all good
+2008-02-06T15:50:00.000Z	nemilar	bod_	no, but if it's working, then it's probably working
+2008-02-06T15:50:00.000Z	bod_	nemilar	ok, cool heers
+2008-02-07T05:53:00.000Z	bod_	nemilar	how can he get wine without aol?
+2008-02-07T05:55:00.000Z	nemilar	bod_	it depends where you live
+2008-02-07T05:56:00.000Z	bod_	nemilar	really?? wow,.,. strange,. and i suppose it depends whether or not your christian,.,.;~)
+2008-02-07T05:56:00.000Z	nemilar	bod_	in the city your neighbor might be across the hall... in farm-land it might be miles awa
+2008-02-07T05:58:00.000Z	bod_	nemilar	pointlessasoundconf, can set default sound cards
+2008-02-08T14:41:00.000Z	nemilar	bod_	you know that you can just /version him right
+2008-02-08T14:41:00.000Z	bod_	nemilar	aain no i dont,. plz explain your technical mumbo jumbo,.,.,.;~)
+2008-02-08T14:42:00.000Z	nemilar	bod_	what I just did to you; if you're registered/identified with nickserv, you can use CTCP commands... type /version nemilar
+2008-02-08T14:43:00.000Z	bod_	nemilar	it syas,.,. CTCP VERSION
+2008-02-08T14:44:00.000Z	bod_	nemilar	it also says    VERSION xchat 2.8.4 Ubuntu
+2008-02-08T14:45:00.000Z	bod_	nemilar	it doesnt say that your registered?
+2008-02-08T14:47:00.000Z	bod_	nemilar	???
+2008-02-08T14:55:00.000Z	bod_	nemilar	are you there?
+2008-02-08T14:56:00.000Z	nemilar	bod_	yeah sup
+2008-02-08T14:56:00.000Z	bod_	nemilar	i sent u a notice usin the /notice nemilar/#ubuntu   command
+2008-02-08T14:56:00.000Z	bod_	nemilar	did it work?

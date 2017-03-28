@@ -1,0 +1,98 @@
+2011-08-23T09:25:00.000Z	KM0201	gack	explain your problem a little better...
+2011-08-23T09:28:00.000Z	KM0201	gack	what version of ubuntu did you install?
+2011-08-23T09:28:00.000Z	gack	KM0201	the latest one. 11.4 I think it was.
+2011-08-23T09:29:00.000Z	KM0201	gack	lsb_release -a (make sure there's a space after release)
+2011-08-23T09:30:00.000Z	gack	KM0201	ubuntu 11.04 natty
+2011-08-23T09:30:00.000Z	KM0201	gack	ok, if you're using 11.04, you don't have a menu.lst, you're using grub2, which uses grub.conf
+2011-08-23T09:31:00.000Z	KM0201	gack	see above
+2011-08-23T09:57:00.000Z	KM0201	gack	boot recovery mode, cd into /home  and type "ls"   and the name of yoru home folder, is your username
+2011-08-23T09:59:00.000Z	KM0201	gack	boot recovery, then go to the last option "root console" (or something like that)
+2011-08-23T10:01:00.000Z	gack	KM0201	it won't load the recovery mode. it comes up with 'init: plymouth main process (50) killed by SEGV signal"  rumpe1
+2011-08-23T10:02:00.000Z	KM0201	gack	well that doesn't make sense
+2011-08-23T10:02:00.000Z	KM0201	gack	but you can boot to the sign on screen, if you choose the regular console?
+2011-08-23T10:03:00.000Z	gack	KM0201	yes. I can get right up to the sign in screen
+2011-08-23T10:03:00.000Z	KM0201	gack	do you hae a live cd?
+2011-08-23T10:03:00.000Z	gack	KM0201	usb. should i boot using that?
+2011-08-23T10:03:00.000Z	KM0201	gack	usb is fine, boot hte live usb on that machine
+2011-08-23T10:04:00.000Z	gack	KM0201	loading...
+2011-08-23T10:06:00.000Z	gack	KM0201	it's loaded. what now?
+2011-08-23T10:07:00.000Z	KM0201	gack	open nautilus.
+2011-08-23T10:07:00.000Z	gack	KM0201	where is that?
+2011-08-23T10:08:00.000Z	KM0201	gack	just open your home folder (on the live cd)
+2011-08-23T10:08:00.000Z	KM0201	gack	can you not find it?
+2011-08-23T10:08:00.000Z	gack	KM0201	i've opened home. what next?
+2011-08-23T10:08:00.000Z	KM0201	gack	now,, on the left, you should see your drives, right?... (not filesystem, as thats the filesystem for the live usb)
+2011-08-23T10:09:00.000Z	gack	KM0201	yes, there's just the one drive.
+2011-08-23T10:09:00.000Z	KM0201	gack	is ubuntu the only OS on that machine?
+2011-08-23T10:10:00.000Z	gack	KM0201	yeah, I replaced xp to install ubuntu because the computers so old.
+2011-08-23T10:10:00.000Z	KM0201	gack	ok... that explains that
+2011-08-23T10:10:00.000Z	KM0201	gack	click that drive... and let it mount... then when it mounts, look at the folders, find "home" and open it.
+2011-08-23T10:11:00.000Z	gack	KM0201	hmm... there's nothing in there.
+2011-08-23T10:11:00.000Z	KM0201	gack	?... there's nothing in home?
+2011-08-23T10:12:00.000Z	KM0201	gack	hang on
+2011-08-23T10:12:00.000Z	gack	KM0201	nope,
+2011-08-23T10:13:00.000Z	KM0201	gack	http://www.howtogeek.com/howto/linux/reset-your-ubuntu-password-easily-from-the-live-cd/
+2011-08-23T10:13:00.000Z	gack	KM0201	thanks, I'll give it a shot.
+2011-08-23T10:15:00.000Z	KM0201	gack	after you run the chroot command, lemme know.
+2011-08-23T10:20:00.000Z	gack	KM0201	it came up with 'root@ubuntu' after the chroot command.
+2011-08-23T10:21:00.000Z	KM0201	gack	   adduser new_user_name           (obviously, replase new_user_name.. with a new username)... then reset a new password
+2011-08-23T10:22:00.000Z	KM0201	gack	when it starts asking you about phone number, email addy, etc.. you can ignore that junk
+2011-08-23T10:24:00.000Z	gack	KM0201	sweet. its come back to root@ubuntu. what now?
+2011-08-23T10:24:00.000Z	KM0201	gack	well, the only question, is whether that user is gonna have sudo access (not sure)... we'll figure that out in a minute, so reboot, sign in with your new username nad password
+2011-08-23T10:28:00.000Z	KM0201	gack	hopefully it put you in sudoers, if it didn't, we'll figure something out.
+2011-08-23T10:29:00.000Z	gack	KM0201	yeah it loaded again. is there anything else i need to check or is it good to go?
+2011-08-23T10:30:00.000Z	KM0201	gack	well.. first, open Synaptic Package manager.
+2011-08-23T10:31:00.000Z	gack	KM0201	yep, what next?
+2011-08-23T10:31:00.000Z	KM0201	gack	oh it let you into synaptic?
+2011-08-23T10:31:00.000Z	gack	KM0201	it just comes to the logon screen. my password didn't work though.
+2011-08-23T10:31:00.000Z	KM0201	gack	thus the prob.
+2011-08-23T10:32:00.000Z	gack	KM0201	i see. should I boot from live usb again?
+2011-08-23T10:32:00.000Z	KM0201	gack	yes
+2011-08-23T10:32:00.000Z	KM0201	gack	reboot the live usb like i said
+2011-08-23T10:33:00.000Z	KM0201	gack	when you are back on the live USB, chroot your install, like you did last time, let me know when youre at root@ubuntu
+2011-08-23T10:39:00.000Z	KM0201	gack	?
+2011-08-23T10:39:00.000Z	gack	KM0201	sorry, had to deal with something else for a sec. I've loaded and I'm about to put all those commands in again. just a sec.
+2011-08-23T10:42:00.000Z	gack	KM0201	what do I do instead of the 'adduser' command. it says the user already exists
+2011-08-23T10:42:00.000Z	gack	KM0201	when i put the same username in that is
+2011-08-23T10:42:00.000Z	KM0201	gack	right... you need to put... adduser (username) admin
+2011-08-23T10:43:00.000Z	gack	KM0201	done. I put your one in not glebihan 's one. is that ok?
+2011-08-23T10:43:00.000Z	KM0201	gack	should be fine.. just to clarify.. do this.... groups username
+2011-08-23T10:44:00.000Z	KM0201	gack	are you still at root@ubuntu
+2011-08-23T10:44:00.000Z	gack	KM0201	yeah I was, until I put groups username in. now it's blank.
+2011-08-23T10:45:00.000Z	KM0201	gack	honey, put your username in place of username
+2011-08-23T10:46:00.000Z	gack	KM0201	it says admin
+2011-08-23T10:46:00.000Z	KM0201	gack	ok, reboot
+2011-08-23T10:48:00.000Z	KM0201	gack	now, when you log back in, try to do something requiring admin (open synaptic, or a sudo command in terminal)
+2011-08-23T10:50:00.000Z	gack	KM0201	i tried logging into synaptic package manager again and it didn't let me in.
+2011-08-23T10:51:00.000Z	KM0201	gack	open a terminal
+2011-08-23T10:51:00.000Z	gack	KM0201	done,
+2011-08-23T10:53:00.000Z	KM0201	gack	what all groups does it say you're in?
+2011-08-23T10:53:00.000Z	gack	KM0201	it just has admin.
+2011-08-23T10:54:00.000Z	KM0201	gack	one last time... boot back to the live usb.. ithink you need to be in group  "adm"
+2011-08-23T10:56:00.000Z	gack	KM0201	so put that in a terminal once I boot off the live cd and get to the root@ubuntu menu?
+2011-08-23T10:56:00.000Z	KM0201	gack	no... just chroot back .. i'm googling right now (i was brainstorming through my fingers, admin isn't it)
+2011-08-23T10:59:00.000Z	KM0201	gack	well, according to this... if you're in admin, and adm.. you should have root access..  http://www.cyberciti.biz/tips/ubuntu-admin-group-permissions.html
+2011-08-23T11:02:00.000Z	gack	KM0201	so should i enter the commands in from that link?
+2011-08-23T11:03:00.000Z	KM0201	gack	are you chrooted in?
+2011-08-23T11:06:00.000Z	gack	KM0201	yep. back in.
+2011-08-23T11:07:00.000Z	gack	KM0201	it says root@ubuntu at the moment.
+2011-08-23T11:07:00.000Z	KM0201	gack	oh ok..
+2011-08-23T11:08:00.000Z	KM0201	gack	adduser username adm
+2011-08-23T11:09:00.000Z	gack	KM0201	done
+2011-08-23T11:09:00.000Z	KM0201	gack	now, type this... cat /etc/groups
+2011-08-23T11:10:00.000Z	gack	KM0201	it said no such file or directory
+2011-08-23T11:10:00.000Z	KM0201	gack	cat /etc/groups  ?   no such file or directory?
+2011-08-23T11:11:00.000Z	gack	KM0201	yep. ....?
+2011-08-23T11:11:00.000Z	KM0201	gack	try cat /etc/sudoers
+2011-08-23T11:12:00.000Z	gack	KM0201	that's better. came up with a list of stuff.
+2011-08-23T11:12:00.000Z	KM0201	gack	ok
+2011-08-23T11:13:00.000Z	gack	KM0201	yes.
+2011-08-23T11:13:00.000Z	gack	KM0201	yep. and same for %admin
+2011-08-23T11:14:00.000Z	KM0201	gack	you mean group sudo?
+2011-08-23T11:15:00.000Z	gack	KM0201	it says %sudo ALL=(ALL:ALL) ALL and has %admin ALL=(ALL) ALL too
+2011-08-23T11:19:00.000Z	gack	KM0201	ok. i tried to login to the synaptic package manager again and it didn't work
+2011-08-23T11:24:00.000Z	KM0201	gack	try this.
+2011-08-23T11:25:00.000Z	KM0201	gack	not really, unless you wanna open up synaptic via terminal.. all the time
+2011-08-23T11:26:00.000Z	gack	KM0201	that's fine with me, unless I need to use it regularly. I'm just using it for word processing and internet mostly. thanks heaps for all your help!!
+2011-08-23T11:27:00.000Z	KM0201	gack	well, not really, synaptic is really just for installing/removing software...
+2011-08-23T11:27:00.000Z	gack	KM0201	sweet.. thanks again for your help!

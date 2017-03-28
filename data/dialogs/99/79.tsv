@@ -1,0 +1,99 @@
+2006-03-09T10:02:00.000Z	nickrud	LjL	that had to be just a 'test'
+2006-03-09T10:03:00.000Z	LjL	nickrud	no, not really.
+2006-03-09T10:03:00.000Z	LjL	nickrud	it could have been, but it wasn't. he admitted it was "funny"
+2006-03-09T10:04:00.000Z	nickrud	LjL	ah. arrogance, then
+2006-03-11T15:04:00.000Z	LjL	nickrud	tatters: nah. cat /etc/passwd | cut -f1 -d ":"    ;-)
+2006-03-11T15:05:00.000Z	nickrud	LjL	I have to read man pages <again> to do that 
+2006-03-12T17:27:00.000Z	LjL	nickrud	me too, but it's not the first time i see this. i guess USB disks can be formatted unpartitioned
+2006-03-12T17:31:00.000Z	nickrud	LjL	heyjoe2 got to looking at syslog, a move in the right direction. I had to help a bit at that point
+2006-03-12T17:40:00.000Z	LjL	nickrud	a quick summary of how you got that to work please?
+2006-03-12T17:41:00.000Z	nickrud	LjL	he was typing into the same terminal as syslog was being logged, all of his typing was for naught.
+2006-03-12T17:41:00.000Z	LjL	nickrud	...... oh
+2006-03-12T17:42:00.000Z	LjL	nickrud	so next time someone asks "that didn't print anything, is that right?", i suppose we should ask if at least a shell prompt is being printed, in the furure =)
+2006-03-12T17:42:00.000Z	nickrud	LjL	right. I just got lucky, I've done that
+2006-03-12T06:03:00.000Z	LjL	nickrud	i saw him saying he did "gksudo gedit fstab" somewhat earlier. i guess there should have been an /etc there, unless you had him cd to /etc?
+2006-03-12T06:09:00.000Z	LjL	nickrud	... and one would guess *gk*sudo would work with gtk apps.
+2006-03-12T06:09:00.000Z	nickrud	LjL	I still haven't really understood why gksudo is better than sudo, I just take it on faith
+2006-03-12T06:09:00.000Z	LjL	nickrud	me to. actually, i just use sudo :) but then again, i use KDE, but i guess the same could be said for kdesu or whate'er it's caller
+2006-03-12T07:36:00.000Z	LjL	nickrud	yeah, that too
+2006-03-12T07:45:00.000Z	LjL	nickrud	i said TYPE /QUERY UBOTU, you GUI lover >:
+2006-03-12T07:45:00.000Z	nickrud	LjL	at least the topic don't scroll off my screen ;p
+2006-03-12T08:00:00.000Z	LjL	nickrud	then you found it, and now it's public domain. that's good ;)
+2006-03-12T08:00:00.000Z	nickrud	LjL	no, I want COPYWRITE
+2006-03-12T08:01:00.000Z	LjL	nickrud	you can't copyright a procedure ;) you can copyright your own description of it if you like
+2006-03-12T08:02:00.000Z	nickrud	LjL	I knew what I wrote, it was bait. You're it 
+2006-03-12T09:25:00.000Z	LjL	nickrud	well *closing* the ports to the outside may still be a good idea... even if the listening service doesn't accept connections, who knows it really doesn't
+2006-03-12T09:26:00.000Z	nickrud	LjL	I was thinking in terms of drop vs reject
+2006-03-12T09:26:00.000Z	LjL	nickrud	i see
+2006-03-12T09:28:00.000Z	nickrud	LjL	corrections welcome
+2006-03-12T09:28:00.000Z	LjL	nickrud	(or anyone, actually): care to have a quick look at my iptables rule by the way?
+2006-03-12T09:29:00.000Z	nickrud	LjL	sure, I've looked at some beforee.
+2006-03-12T09:30:00.000Z	LjL	nickrud	http://paste.ubuntu-nl.org/9802
+2006-03-12T09:31:00.000Z	nickrud	LjL	I'm gonna love this, it'll be a test about how much I remember
+2006-03-12T09:32:00.000Z	nickrud	LjL	you see my last?
+2006-03-12T09:33:00.000Z	nickrud	LjL	as soon as I saw POSTROUTING -j MASQUERADE , my mind went blank
+2006-03-12T09:33:00.000Z	LjL	nickrud	ahah
+2006-03-12T09:33:00.000Z	LjL	nickrud	that's not really firewalling, that's NAT, or at least it should
+2006-03-12T09:34:00.000Z	LjL	nickrud	you see, that machine has four NICs (yes), eth0 goes to the internet, eth1, 2 and 3 to our computers. those rules simply make it route to them correctly
+2006-03-12T09:34:00.000Z	nickrud	LjL	exactly, and I have never run more than one machine. I know what I don't know, hopefully
+2006-03-12T09:35:00.000Z	LjL	nickrud	doesn't really matter, you could even ignore those lines i suppose... all i care about is that nothing can be listening on eth0 and accepting connections there
+2006-03-12T09:35:00.000Z	LjL	nickrud	inside my local network i can leave anything happening
+2006-03-12T09:36:00.000Z	nickrud	LjL	I help people keep one machine safe; I can read those iptables. I don't pretend to understand admin stuff
+2006-03-12T09:37:00.000Z	LjL	nickrud	ok, but then - by reading those iptables, would you say my machine is refusing anything inbound on eth0? that's what i'd call "safe" =)
+2006-03-12T09:37:00.000Z	LjL	nickrud	as for the other machines, i can just tell you that they aren't allowed to listen to inbound connections from the internet. i know they can't. i'm a little more doubtful about the server itself
+2006-03-12T09:38:00.000Z	nickrud	LjL	if you're in doubt, I am absolutly dam toutly the wrong person to ask, find some one who actually knows
+2006-03-12T09:38:00.000Z	LjL	nickrud	ok... i'm not going to sue you for being wrong anyway ;)
+2006-03-12T09:39:00.000Z	nickrud	LjL	find me, then sue me
+2006-03-12T09:40:00.000Z	LjL	nickrud	if we were on IRCNet, i would have taken your nick in no time. funny as hell, when people do that. but i can't :>
+2006-03-12T09:41:00.000Z	nickrud	LjL	I've only been on freenet for any real time, I guess it's nice working on an ethical system ;)
+2006-03-12T09:42:00.000Z	LjL	nickrud	know what, if i didn't have this stupid ISP NAT, i'd just ask somebody i know to portscan me to death. but i can unless someone i know has my ISP too :\
+2006-03-12T09:43:00.000Z	nickrud	LjL	that's not actually a bad thing, at first blush
+2006-03-12T09:44:00.000Z	LjL	nickrud	reduces the possible attackers i suppose... but there are still quite a few attackers, and fewer people who can check
+2006-03-12T09:45:00.000Z	nickrud	LjL	the isp has taken on the responsibility : name ip's to the isp
+2006-03-12T09:46:00.000Z	LjL	nickrud	hah, once i sent abuse@isp the list of all Samba connections i received during the previous two days... like they care =)
+2006-03-12T09:47:00.000Z	nickrud	LjL	try to find your own dabaR on your isp, you need a knowledgable advocate
+2006-06-26T05:11:00.000Z	nickrud	LjL	if you're looking for the package list, it's in /casper/filesystem.manifest in the desktop cd
+2006-06-26T05:11:00.000Z	LjL	nickrud	right, thanks
+2006-06-26T05:13:00.000Z	nickrud	LjL	if it's like the alternate cd, yes it does
+2006-06-26T05:13:00.000Z	LjL	nickrud	well i don't have an alternate cd handy, but with the desktop cd, apt-cdrom doesn't recognize it as a source
+2006-06-26T05:14:00.000Z	nickrud	LjL	check that, when I reinstalled yesterday, it asked for the cd for some updates; I cancelled & changed the sources
+2006-06-26T06:06:00.000Z	LjL	nickrud	there's always reactos. the original question was about "running windows applications" i think
+2006-06-26T07:05:00.000Z	nickrud	LjL	that is so cruel ;P
+2006-06-26T07:05:00.000Z	LjL	nickrud	err, i don't *actually* have such a thing
+2006-06-26T07:05:00.000Z	nickrud	LjL	the mockery, oh, the mockery
+2006-06-27T16:48:00.000Z	LjL	nickrud	reverse? no...
+2006-06-27T16:48:00.000Z	nickrud	LjL	snoops ok, I'll go with the better info thanks
+2007-10-20T03:02:00.000Z	nickrud	LjL	wins, last but best
+2007-10-20T03:02:00.000Z	LjL	nickrud	otherwise i wouldn't have hit enter ;)
+2007-10-20T03:03:00.000Z	LjL	nickrud	otherwise i wouldn't have hit enter ;)
+2008-01-08T06:17:00.000Z	nickrud	LjL	does init=/bin/sh bypass a root pasword ?
+2008-01-08T06:17:00.000Z	LjL	nickrud	yes
+2008-01-08T06:17:00.000Z	LjL	nickrud	actually it's the reason why i originally suggested it to him -- i didn't know whether recovery mode also did. but it seems to, so
+2008-01-08T06:18:00.000Z	nickrud	LjL	no, recovery won't
+2008-01-08T06:18:00.000Z	LjL	nickrud	ah but you mean that *if* a root password is set, recovery will bypass it, otherwise it'll ask for no password...?
+2008-01-08T06:18:00.000Z	nickrud	LjL	I recently had to go in an muck with /etc/shadow, I set a root password while helping someone with a use case, then forgot the password. Then I set rootpw in /etc/sudoers. FUN!
+2008-01-08T06:19:00.000Z	nickrud	LjL	if root has a password, recovery mode (single user) asks for it
+2008-01-08T06:21:00.000Z	LjL	nickrud	well init=/bin/sh was always the standard way to just boot into a root console without further ado. oh one hand, it's useful if you've been foolish enough to set a root password and forget it ;)  on the other hand, it helps reminding that if one has physical access to a machine, there's nothing stopping them from logging in as root
+2008-01-08T06:22:00.000Z	nickrud	LjL	I do wish I'd known about /bin/sh (well I did, but assumed it would require a password). Mucking with shadow reminded me again why I have a bios password (and a lock on the case)
+2008-01-08T06:24:00.000Z	LjL	nickrud	yeah that's the best one can conceivably do. although i suppose some mechanism that degausses the HD when one tries to force the case open would beat it ;)
+2008-01-08T06:24:00.000Z	nickrud	LjL	:)
+2008-01-12T04:31:00.000Z	nickrud	LjL	do you mean sudo -s , the really scary one
+2008-01-12T04:32:00.000Z	LjL	nickrud	yeah. looked weird that nobody had come up with that.
+2008-01-12T07:53:00.000Z	LjL	nickrud	Pelo: maybe, and maybe not. ubuntu is a collection of gpl and non gpl code
+2008-01-12T07:53:00.000Z	nickrud	LjL	true, aggregated software can be complex
+2008-01-26T20:23:00.000Z	nickrud	LjL	thanks, dpkg -S just told me that :)
+2008-01-26T20:24:00.000Z	LjL	nickrud	your HD is faster than mine
+2008-01-27T06:26:00.000Z	LjL	nickrud	shouldn't that be gconftool-2?
+2008-01-27T06:27:00.000Z	nickrud	LjL	gconftool is a link (thru alternatives) to gconftool-2
+2008-01-28T00:53:00.000Z	nickrud	LjL	then see kestir 's 'lifelong student' :)
+2008-01-28T00:52:00.000Z	LjL	nickrud	what does that mean... as a developer, i still write incredibly braindead unwanted infinite loops
+2008-02-17T05:36:00.000Z	nickrud	LjL	other way, www-data:root is correct, for allowing apache to write to /var/www (like with drupal or others)
+2008-02-17T05:40:00.000Z	LjL	nickrud	well so if he wants to write himself, www-data:www-data should do?
+2008-02-17T05:40:00.000Z	nickrud	LjL	yes, if the dirs get the right perms on them
+2008-02-17T05:40:00.000Z	LjL	nickrud	well a setuid group might help i suppose
+2008-02-22T04:33:00.000Z	LjL	nickrud	and i'm thinking of twisting the other arm now
+2008-02-22T04:33:00.000Z	nickrud	LjL	nothing to be ashamed of, using force on an old man ;P
+2008-02-24T02:11:00.000Z	nickrud	LjL	hm. wonder why I never ran into that.
+2008-03-10T04:35:00.000Z	LjL	nickrud	^
+2008-03-10T04:36:00.000Z	nickrud	LjL	heh. any port in a storm
+2008-04-08T06:47:00.000Z	nickrud	LjL	that'll teach you to always do upgrades a day or so late ;)

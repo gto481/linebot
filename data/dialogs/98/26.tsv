@@ -1,0 +1,98 @@
+2009-01-17T03:33:00.000Z	krazyfingerz47		I cant get sound, i've tried some ways and i cant get it working, someone helps??
+2009-01-17T03:34:00.000Z	DasEI	krazyfingerz47	alsamixer installed ?
+2009-01-17T03:35:00.000Z	krazyfingerz47	DasEI	Yes, its installed
+2009-01-17T03:35:00.000Z	DasEI	krazyfingerz47	does your s-card show up correctly in the gui ?
+2009-01-17T03:36:00.000Z	krazyfingerz47	DasEI	I guess so
+2009-01-17T03:36:00.000Z	DasEI	krazyfingerz47	no guess, if you call it, you can see it
+2009-01-17T03:37:00.000Z	krazyfingerz47	DasEI	How?
+2009-01-17T03:37:00.000Z	DasEI	krazyfingerz47	multimedia > alsamixer
+2009-01-17T03:38:00.000Z	DasEI	krazyfingerz47	or alsamixergui from trml
+2009-01-17T03:38:00.000Z	krazyfingerz47	DasEI	yes but it says its on pulseaudio
+2009-01-17T03:39:00.000Z	DasEI	krazyfingerz47	so switch it to alsa
+2009-01-17T03:40:00.000Z	krazyfingerz47	DasEI	i can see 3 types of alsa
+2009-01-17T03:41:00.000Z	DasEI	krazyfingerz47	as there are ?
+2009-01-17T03:41:00.000Z	krazyfingerz47	DasEI	HDA Intel ALC888 Digital (ALSA) , HDA Intel LAC888 Analog (ALSA), ALSA - Advanced Linux Sound Architecture
+2009-01-17T03:42:00.000Z	DasEI	krazyfingerz47	take the first
+2009-01-17T03:42:00.000Z	krazyfingerz47	DasEI	done
+2009-01-17T03:43:00.000Z	krazyfingerz47	DasEI	nosound still
+2009-01-17T03:43:00.000Z	krazyfingerz47	DasEI	no =s ... the same it says
+2009-01-17T03:44:00.000Z	krazyfingerz47	DasEI	hey, i  got 1 "possible" fix
+2009-01-17T03:44:00.000Z	krazyfingerz47	DasEI	but when i run it it says something wrong with the permissions (when installing)
+2009-01-17T03:44:00.000Z	krazyfingerz47	DasEI	its some kind of update
+2009-01-17T03:45:00.000Z	krazyfingerz47	DasEI	but i get error installing (coz of permission), an alsa update (to latest versio)
+2009-01-17T03:46:00.000Z	krazyfingerz47	DasEI	0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded
+2009-01-17T03:47:00.000Z	krazyfingerz47	DasEI	.. w00ttt.. now i cant get alsamixer cmd working.. "alsamixer: function snd_ctl_open failed for default: No such device"
+2009-01-17T03:49:00.000Z	krazyfingerz47	DasEI	same with analog
+2009-01-17T03:49:00.000Z	krazyfingerz47	DasEI	alsamixer: function snd_ctl_open failed for default: No such device
+2009-01-17T03:50:00.000Z	krazyfingerz47	DasEI	done
+2009-01-17T03:51:00.000Z	krazyfingerz47	DasEI	i dont get the question
+2009-01-17T03:52:00.000Z	krazyfingerz47	DasEI	with  sudo lshw | pastebinit, i get - Error no arguments specified!
+2009-01-17T03:54:00.000Z	krazyfingerz47	DasEI	http://pastebin.com/f520effec
+2009-01-17T03:57:00.000Z	krazyfingerz47	DasEI	i get the no driver error
+2009-01-17T03:57:00.000Z	krazyfingerz47	DasEI	weird...
+2009-01-17T03:58:00.000Z	krazyfingerz47	DasEI	same
+2009-01-17T04:00:00.000Z	krazyfingerz47	DasEI	maybe i must try reinstalling, how?
+2009-01-17T04:02:00.000Z	krazyfingerz47	DasEI	"insmod /lib/modules/2.6.27-9-generic/kernel/sound/oss/sound.ko "
+2009-01-17T04:04:00.000Z	krazyfingerz47	DasEI	now?
+2009-01-17T04:06:00.000Z	DasEI	krazyfingerz47	though it should be already : sudo apt-get install alsa-utils alsa-base alsa-oss
+2009-01-17T04:06:00.000Z	DasEI	krazyfingerz47	sudo reboot
+2009-01-17T04:06:00.000Z	krazyfingerz47	DasEI	0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2009-01-17T04:07:00.000Z	DasEI	krazyfingerz47	sudo reboot
+2009-01-17T04:12:00.000Z	krazyfingerz47	DasEI	yes
+2009-01-17T04:14:00.000Z	krazyfingerz47	DasEI	http://pastebin.com/f7b89b70e
+2009-01-17T04:15:00.000Z	krazyfingerz47	DasEI	why i cant change/move the level of the headset sound?, and its all the way down
+2009-01-17T04:16:00.000Z	krazyfingerz47	DasEI	thanks ^^ lol but im trying with music and still nosound =s
+2009-01-17T04:16:00.000Z	krazyfingerz47	DasEI	the headset level cant edit it
+2009-01-17T04:18:00.000Z	krazyfingerz47	DasEI	nosound at all, yes on the green one, in XP it works fine
+2009-01-17T04:19:00.000Z	krazyfingerz47	DasEI	now im trying with some youtube vids
+2009-01-17T04:22:00.000Z	krazyfingerz47	DasEI	same with mp3 files
+2009-01-17T04:22:00.000Z	krazyfingerz47	DasEI	nosound at all
+2009-01-17T04:24:00.000Z	krazyfingerz47	DasEI	i dont play it with amarok, should i?
+2009-01-17T04:25:00.000Z	krazyfingerz47	DasEI	i tried with alsaplayer, totem and vlc
+2009-01-17T04:28:00.000Z	krazyfingerz47	DasEI	the Headphone volume is all the way down and cant move it how can i fix that?
+2009-01-17T04:30:00.000Z	krazyfingerz47	DasEI	yes
+2009-01-17T04:35:00.000Z	DasEI	krazyfingerz47	it might be you got to re-install alsamixer, as alsa couldn't find the card before an chip is now correctly found
+2009-01-17T04:35:00.000Z	krazyfingerz47	DasEI	maybe.. i've tried so many different things i dont know what to do now
+2009-01-17T04:36:00.000Z	DasEI	krazyfingerz47	have you got sound on the regular output ?
+2009-01-17T04:36:00.000Z	krazyfingerz47	DasEI	no, i've never heard anything on this OS
+2009-01-17T04:38:00.000Z	DasEI	krazyfingerz47	sudo apt-get remove --purge alsamixergui alsa-utils alsa-oss alsa-base
+2009-01-17T04:38:00.000Z	DasEI	krazyfingerz47	sudo apt-get install alsamixergui alsa-utils alsa-oss alsa-base
+2009-01-17T04:39:00.000Z	DasEI	krazyfingerz47	for usual, a desktop has three audio jacks : line, mic and out at the back and maybe a front panel connected to the board
+2009-01-17T04:41:00.000Z	krazyfingerz47	DasEI	yea i know, but i think that the headset is good when its plugged
+2009-01-17T04:41:00.000Z	krazyfingerz47	DasEI	coz it works on Xp
+2009-01-17T04:42:00.000Z	krazyfingerz47	DasEI	done, removes, and installed
+2009-01-17T04:42:00.000Z	krazyfingerz47	DasEI	done, removed*, and installed
+2009-01-17T04:42:00.000Z	DasEI	krazyfingerz47	so is there a separate headphone or do you use the standard out ?
+2009-01-17T04:42:00.000Z	krazyfingerz47	DasEI	i use the standard out
+2009-01-17T04:42:00.000Z	DasEI	krazyfingerz47	so it should work then
+2009-01-17T04:43:00.000Z	krazyfingerz47	DasEI	no it doesnt :S
+2009-01-17T04:43:00.000Z	DasEI	krazyfingerz47	in alsamixer above the volume sliders the speaker icons have to bee green (clickable)
+2009-01-17T04:44:00.000Z	krazyfingerz47	DasEI	yes its green, and all the way up
+2009-01-17T04:45:00.000Z	krazyfingerz47	DasEI	lol ^^
+2009-01-17T04:46:00.000Z	krazyfingerz47	DasEI	no:s, i've tried all the types in the list
+2009-01-17T04:47:00.000Z	DasEI	krazyfingerz47	pastebinit /var/log/syslog
+2009-01-17T04:48:00.000Z	krazyfingerz47	DasEI	it doesnt response to that cmd
+2009-01-17T04:49:00.000Z	DasEI	krazyfingerz47	         pastebinit /var/log/syslog
+2009-01-17T04:50:00.000Z	krazyfingerz47	DasEI	nothing, it seems like its processing the info but i get no response
+2009-01-17T04:51:00.000Z	DasEI	krazyfingerz47	         gedit  /var/log/syslog
+2009-01-17T04:51:00.000Z	DasEI	krazyfingerz47	   file there ?
+2009-01-17T04:51:00.000Z	krazyfingerz47	DasEI	yes, now i realize that its too big, let me try again
+2009-01-17T04:54:00.000Z	krazyfingerz47	DasEI	1 sec
+2009-01-17T04:55:00.000Z	krazyfingerz47	DasEI	http://paste.ubuntu.com/105745/
+2009-01-17T04:59:00.000Z	DasEI	krazyfingerz47	no errors in snd, if playback works correctly, should have sound, try something different :
+2009-01-17T04:59:00.000Z	DasEI	krazyfingerz47	sudo apt-get install beep ubuntu-restricted-extras
+2009-01-17T04:59:00.000Z	DasEI	krazyfingerz47	beep 50
+2009-01-17T05:00:00.000Z	krazyfingerz47	DasEI	72mb of archives
+2009-01-17T05:00:00.000Z	krazyfingerz47	DasEI	ok?
+2009-01-17T05:00:00.000Z	DasEI	krazyfingerz47	go ahead
+2009-01-17T05:01:00.000Z	krazyfingerz47	DasEI	kk arround 20 mins, you will be here?
+2009-01-17T05:01:00.000Z	DasEI	krazyfingerz47	k, slow connection..
+2009-01-17T05:02:00.000Z	krazyfingerz47	DasEI	its coz im in a network (4 pcs downloading)
+2009-01-17T05:03:00.000Z	krazyfingerz47	DasEI	thanks a lot btw ;)
+2009-01-17T05:03:00.000Z	krazyfingerz47	DasEI	ill pm u when ready
+2009-01-17T05:28:00.000Z	krazyfingerz47	DasEI	all done
+2009-01-17T05:28:00.000Z	DasEI	krazyfingerz47	beep 50
+2009-01-17T05:31:00.000Z	DasEI	krazyfingerz47	heard a beep ?
+2009-01-17T05:32:00.000Z	krazyfingerz47	DasEI	no =s
+2009-01-17T05:44:00.000Z	DasEI	krazyfingerz47	so no further idea then, maybe play around with the preferences, you should have sound
+2009-01-17T05:45:00.000Z	krazyfingerz47	DasEI	=[

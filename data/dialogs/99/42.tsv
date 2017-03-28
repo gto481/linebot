@@ -1,0 +1,99 @@
+2007-10-23T07:20:00.000Z	ChrisC36	jtt	i am su, i had uNmount
+2007-10-23T07:03:00.000Z	jtt	ChrisC36	lshw | less  search for  ide
+2007-10-23T07:03:00.000Z	ChrisC36	jtt	what is lshw | less?
+2007-10-23T07:04:00.000Z	jtt	ChrisC36	r u familiar with the command line or r u a gui only person
+2007-10-23T07:04:00.000Z	ChrisC36	jtt	I have done some command line stuff
+2007-10-23T07:07:00.000Z	jtt	ChrisC36	then execute  lshw |less  in a terminal window and search for  ide if you drive type is ide r u familiar with vi editor searching if so less has similar type searching when you find  ide go down a few lines and it will have the  /dev   ie.e    /dev/sdb that is your second drive then you have to manually mount it
+2007-10-23T07:09:00.000Z	ChrisC36	jtt	i am familiar with vi, although i always used nano
+2007-10-23T07:10:00.000Z	jtt	ChrisC36	since i am a long time command line person i would have no idea how to find and mount the second disk via a gui if there is a way to do such if you run into probl let me know
+2007-10-23T07:10:00.000Z	jtt	ChrisC36	then searching in less for ide will find it
+2007-10-23T07:11:00.000Z	ChrisC36	jtt	it looks like its on /dev/hda
+2007-10-23T07:12:00.000Z	jtt	ChrisC36	well, do you know if /dev/hda has more than one slice  i.e..  hda1  hda2 etc.
+2007-10-23T07:13:00.000Z	jtt	ChrisC36	was the ide drive a linux or windows drive
+2007-10-23T07:13:00.000Z	ChrisC36	jtt	its showing the ide drive as /dev/hda, and the dvd drive as /dev/hdb
+2007-10-23T07:13:00.000Z	ChrisC36	jtt	it was a linux drive
+2007-10-23T07:13:00.000Z	jtt	ChrisC36	was the whole drive used for linux
+2007-10-23T07:13:00.000Z	ChrisC36	jtt	i could no longer boot to it, so I ended up buying 2 new satas and installing ubuntu (the old one was centos)
+2007-10-23T07:13:00.000Z	ChrisC36	jtt	- yes
+2007-10-23T07:14:00.000Z	jtt	ChrisC36	then take a guess and  execute this command   mount /dev/hda1  /mnt
+2007-10-23T07:15:00.000Z	jtt	ChrisC36	let me know if the mount command suceeds
+2007-10-23T07:16:00.000Z	ChrisC36	jtt	ok i did that ..
+2007-10-23T07:16:00.000Z	ChrisC36	jtt	- yes it appears to succeed
+2007-10-23T07:16:00.000Z	jtt	ChrisC36	now do   ls  /mnt  and see if your files r there
+2007-10-23T07:18:00.000Z	ChrisC36	jtt	and i dont see it in the gui file browser
+2007-10-23T07:18:00.000Z	jtt	ChrisC36	execute  umount /mnt
+2007-10-23T07:19:00.000Z	jtt	ChrisC36	then  execute    echo 'p' | fdisk /dev/hda and tell me what prints
+2007-10-23T07:20:00.000Z	ChrisC36	jtt	its saying: unmount: command not found
+2007-10-23T07:20:00.000Z	jtt	ChrisC36	sudo umount ...
+2007-10-23T07:20:00.000Z	jtt	ChrisC36	execute  df -h and see if  /mnt is mounter
+2007-10-23T07:21:00.000Z	ChrisC36	jtt	its showing /dev/hda1 and /dev/hda2
+2007-10-23T07:22:00.000Z	ChrisC36	jtt	hda2 is Linux LVM
+2007-10-23T07:22:00.000Z	jtt	ChrisC36	what is mounted  as  /mnt
+2007-10-23T07:23:00.000Z	ChrisC36	jtt	i used umount so there is no mnt anymore
+2007-10-23T07:23:00.000Z	ChrisC36	jtt	i see that /dev/md2 is mounted as /home
+2007-10-23T07:24:00.000Z	ChrisC36	jtt	what I really need to get from this drive is a mysql database
+2007-10-23T07:24:00.000Z	jtt	ChrisC36	execute  echo 'p' | fdisk /dev/hdd
+2007-10-23T07:25:00.000Z	jtt	ChrisC36	md2  is slice 2 of your meta disk  lvm
+2007-10-23T07:25:00.000Z	ChrisC36	jtt	its saying unable to open /dev/hdd
+2007-10-23T07:26:00.000Z	jtt	ChrisC36	hold on let me check something
+2007-10-23T07:27:00.000Z	ChrisC36	jtt	when i mount something, shouldnt i be able to browse from the GUI as well?
+2007-10-23T07:28:00.000Z	jtt	ChrisC36	cant answer that as i am strictly  command line person dont use gui at all
+2007-10-23T07:29:00.000Z	jtt	ChrisC36	execute this command    lshw |grep -i  logical  |less   and see  what  /dev/hNN  devices show up  like  hda, hdb, hdc, hdd, etc.
+2007-10-23T07:34:00.000Z	ChrisC36	jtt	/dev/hda has hda1, hda2, and there's also an /dev/hdb with nothing
+2007-10-23T07:34:00.000Z	jtt	ChrisC36	pastebin  output of   lshw |grep -i logical  and let me look at it
+2007-10-23T07:35:00.000Z	jtt	ChrisC36	as /dev/hdb  is probably it
+2007-10-23T07:35:00.000Z	jtt	ChrisC36	ahh    mount /dev/hdb1 /mnt
+2007-10-23T07:35:00.000Z	jtt	ChrisC36	then  ls /mnt
+2007-10-23T07:37:00.000Z	ChrisC36	jtt	it says /dev/hdb1 doesn't exist
+2007-10-23T07:38:00.000Z	jtt	ChrisC36	 pastebin  echo 'p' | fdisk /dev/hdb   and let me see what is on it
+2007-10-23T07:40:00.000Z	ChrisC36	jtt	ok 1 sec
+2007-10-23T07:41:00.000Z	ChrisC36	jtt	it says unable to open /dev/hdb
+2007-10-23T07:41:00.000Z	jtt	ChrisC36	pastebin  output of  lshw  command
+2007-10-23T07:42:00.000Z	ChrisC36	jtt	sure 1 sec
+2007-10-23T07:44:00.000Z	ChrisC36	jtt	http://pastebin.com/m5be3c931
+2007-10-23T07:45:00.000Z	jtt	ChrisC36	ok hold on
+2007-10-23T07:47:00.000Z	jtt	ChrisC36	 ok here is what you have  2  sata  sda  sdb  one  ide  hda  hda  has two slices  hda1 is probably  linux  hda2  is probably swap
+2007-10-23T07:47:00.000Z	ChrisC36	jtt	i intsalled this system yesterday, with  2 satas which i setup in raid. the ide0 is the old drive i just put in
+2007-10-23T07:47:00.000Z	jtt	ChrisC36	execute  mount /dev/hda1 /mnt
+2007-10-23T07:48:00.000Z	jtt	ChrisC36	then  execute   ls  /mnt
+2007-10-23T07:49:00.000Z	ChrisC36	jtt	refresh the pastegin
+2007-10-23T07:49:00.000Z	ChrisC36	jtt	er wait that didnt work..
+2007-10-23T07:50:00.000Z	ChrisC36	jtt	http://pastebin.com/d1e3f901f
+2007-10-23T07:52:00.000Z	jtt	ChrisC36	strange that is the boot directory
+2007-10-23T07:52:00.000Z	jtt	ChrisC36	pastebin output of   echo 'p' | fdisk /dev/hda
+2007-10-23T07:53:00.000Z	jtt	ChrisC36	i found out how to use the gui to peruse the disk once we get it mounted
+2007-10-23T07:55:00.000Z	ChrisC36	jtt	- cool.... how?
+2007-10-23T07:56:00.000Z	jtt	ChrisC36	sorry how to do what?
+2007-10-23T07:57:00.000Z	jtt	ChrisC36	the last request was to pastebin  echo 'p' | fdisk /dev/hda can you do that
+2007-10-23T07:58:00.000Z	ChrisC36	jtt	http://pastebin.com/d7e17053e
+2007-10-23T07:59:00.000Z	ChrisC36	jtt	<jtt> ChrisC36, i found out how to use the gui to peruse the disk once we get it mounted
+2007-10-23T08:00:00.000Z	ChrisC36	jtt	- oh i guess my 'how' on that was premature
+2007-10-23T08:00:00.000Z	jtt	ChrisC36	got the paste hold on
+2007-10-23T08:02:00.000Z	jtt	ChrisC36	what happens when you  execute  mount /dev/hda1 /mnt
+2007-10-23T08:03:00.000Z	jtt	ChrisC36	never mind
+2007-10-23T08:03:00.000Z	jtt	ChrisC36	execute  mount  /dev/hda1 /mnt
+2007-10-23T08:04:00.000Z	jtt	ChrisC36	looks like the device you want to mount is  /dev/hda2  and it should have the files you want
+2007-10-23T08:06:00.000Z	ChrisC36	jtt	ok - but there are not partitions showing for /dev/hda2 ?
+2007-10-23T08:06:00.000Z	jtt	ChrisC36	there is on the pastebin  you have  hda1  boot   hda2  lvm
+2007-10-23T08:07:00.000Z	ChrisC36	jtt	so I should try to mount hda2?
+2007-10-23T08:07:00.000Z	jtt	ChrisC36	yes   mount   /dev/hda2 /mnt
+2007-10-23T08:09:00.000Z	ChrisC36	jtt	i get: mount: unknown filesystem type 'LVM2_member'
+2007-10-23T08:10:00.000Z	jtt	ChrisC36	yes it is a lvm file type  hold on
+2007-10-23T08:13:00.000Z	jtt	ChrisC36	execute  df -h  and tell me what comes after  /dev on the left of the line
+2007-10-23T08:14:00.000Z	jtt	ChrisC36	pick  the root  /  partition
+2007-10-23T08:14:00.000Z	jtt	ChrisC36	what i am looking for is somethng  like  /dev/vg...
+2007-10-23T08:15:00.000Z	ChrisC36	jtt	-ok 1 sec
+2007-10-23T08:17:00.000Z	jtt	ChrisC36	try this   mount -t reiserfs  /dev/hda2 /mnt
+2007-10-23T08:17:00.000Z	ChrisC36	jtt	http://pastebin.com/d3c1dc1
+2007-10-23T08:20:00.000Z	ChrisC36	jtt	tried that mount -t etc., it says: wront fs type, bad option, bad superblock on /dev/hda2, missing codepage or helper program , or other error . In some cases useful info is found n  syslot - try dmesg | tail or so
+2007-10-23T08:20:00.000Z	jtt	ChrisC36	yeah you are using lvm and is am not familiar with it but root is mounte on /dev/md0  a meta device  since i have not used lvm much i cant help you i will poke around though and see if i can find the anaswer
+2007-10-23T08:21:00.000Z	jtt	ChrisC36	 in the mean time ask here if anyone can help you mount an lvm volume
+2007-10-23T08:21:00.000Z	ChrisC36	jtt	ok cool thanks
+2007-10-23T08:22:00.000Z	ChrisC36	jtt	how do I see a mount in the GUI?
+2007-10-23T08:22:00.000Z	jtt	ChrisC36	open  konqueror  and  in the url  type   /mnt  or what ever the mount point is
+2007-10-23T08:23:00.000Z	jtt	ChrisC36	look here this is the answer   http://www.brandonhutchinson.com/Mounting_a_Linux_LVM_volume.html
+2007-10-23T08:28:00.000Z	jtt	ChrisC36	do you grasp the gist of the article
+2007-10-23T08:30:00.000Z	ChrisC36	jtt	- i'm still going thru it
+2007-10-23T08:30:00.000Z	jtt	ChrisC36	ok take your time
+2007-10-23T08:43:00.000Z	ChrisC36	jtt	i tried it, and its saying the special device /dev/CVolGroup00/LogVol00 does not exist
+2007-10-23T08:59:00.000Z	ChrisC36	jtt	if your around, let me know

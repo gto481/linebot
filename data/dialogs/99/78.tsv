@@ -1,0 +1,99 @@
+2006-01-18T13:25:00.000Z	C-O-L-T		can I run a kind of ubuntu linux on a Pentium I with 800 MB hard drive, 32 mb ram? I basically need open office, mp3 playing????
+2006-01-18T13:26:00.000Z	Kovecses	C-O-L-T	openoffice with 32 megs of ram! .... aint gonna happen
+2006-01-18T13:27:00.000Z	Kovecses	C-O-L-T	plus you dont have enough hd space either
+2006-01-18T13:27:00.000Z	C-O-L-T	Kovecses	or a kind of office that is capable for opening and making doc formats but on the other hand it is not too old
+2006-01-18T13:28:00.000Z	Kovecses	C-O-L-T	well ok try this.... do a ubuntu server install (so it just installs the base system) then apt-get xorg and fluxbox... then use abiword
+2006-01-18T13:29:00.000Z	Kovecses	C-O-L-T	try damn small linux or puppy linux too
+2006-01-18T13:30:00.000Z	Kovecses	C-O-L-T	I think damn small linux is your best bet
+2006-01-18T13:31:00.000Z	Kovecses	C-O-L-T	www.damnsmalllinux.org
+2006-01-18T13:31:00.000Z	Kovecses	C-O-L-T	its a very cool up to date OS that is designed for harware like yours
+2006-01-18T13:33:00.000Z	C-O-L-T	Kovecses	It does not have anything. I need a bigger distro of 400 mb
+2006-01-18T13:33:00.000Z	Kovecses	C-O-L-T	it has a package manager to get what you need
+2006-01-18T13:34:00.000Z	C-O-L-T	Kovecses	Ok I will try it
+2006-01-18T13:34:00.000Z	Kovecses	C-O-L-T	what apps do you nead?
+2006-01-18T13:35:00.000Z	C-O-L-T	Kovecses	I need an office suite, abiword or somthing, mp3 playing and that is enough, maybe a krusader
+2006-01-18T13:35:00.000Z	C-O-L-T	Kovecses	Or a midnight commander
+2006-01-18T13:35:00.000Z	Kovecses	C-O-L-T	all that will be very easy to get with Damn small
+2006-01-18T13:36:00.000Z	C-O-L-T	Kovecses	I hope that I can boot it with floppy disk
+2006-01-18T13:36:00.000Z	Kovecses	C-O-L-T	not sure. ... but probably
+2006-01-18T13:37:00.000Z	C-O-L-T	Kovecses	but this does not uses gnome right?
+2006-01-18T13:37:00.000Z	Kovecses	C-O-L-T	gnome would never run on that hardware
+2006-01-18T13:38:00.000Z	Kovecses	C-O-L-T	it uses fluxbox   which seems weird at first but is very cool... and looks good too
+2006-01-18T13:38:00.000Z	C-O-L-T	Kovecses	ok I understand. Is there other small distros which you know?
+2006-01-18T13:38:00.000Z	Kovecses	C-O-L-T	puppy linux is good...
+2006-01-18T13:39:00.000Z	Kovecses	C-O-L-T	http://www.goosee.com/puppy/
+2006-01-18T13:39:00.000Z	C-O-L-T	Kovecses	puppy or damn small? decide
+2006-01-18T13:40:00.000Z	Kovecses	C-O-L-T	thats up to you... puppy is a little bigger comes with a desktop that resembles windows
+2006-01-18T13:40:00.000Z	Kovecses	C-O-L-T	but damn small has a bigger community and more packages (i think)
+2006-01-18T13:41:00.000Z	C-O-L-T	Kovecses	I decided at damn small cause it has an eye catchy design
+2006-01-18T13:41:00.000Z	Kovecses	C-O-L-T	thats the one I would use
+2006-01-18T13:41:00.000Z	Kovecses	C-O-L-T	are you familiar with apt-get?
+2006-01-18T13:43:00.000Z	C-O-L-T	Kovecses	Anyway I don't use net connection at it. If it is a debian distro than I will transfer my packages to cd. I can install a program in ubuntu with sudo dpkg -i packagename
+2006-01-18T13:43:00.000Z	C-O-L-T	Kovecses	this will work in this small distro?
+2006-01-18T13:44:00.000Z	Kovecses	C-O-L-T	yes... damn small comes with abiword and xmms i think.. so you may not have to do much
+2006-01-18T13:44:00.000Z	C-O-L-T	Kovecses	ok I am downloading it
+2006-01-18T13:45:00.000Z	C-O-L-T	Kovecses	help me I don't know what to download cause there are a lot of things at mirror pages
+2006-01-18T13:45:00.000Z	Kovecses	C-O-L-T	ok hold on
+2006-01-18T13:45:00.000Z	C-O-L-T	Kovecses	I mean a lot of damn small versions
+2006-01-18T13:46:00.000Z	Kovecses	C-O-L-T	you want current.iso
+2006-01-18T13:47:00.000Z	C-O-L-T	Kovecses	I hope that I can format with it my windows 98 drive
+2006-01-18T13:48:00.000Z	Kovecses	C-O-L-T	what do you mean?
+2006-01-18T13:48:00.000Z	C-O-L-T	Kovecses	I have windows 98 installed on this old computer and I want to format my hard drive, it will be possible through the dsl setup?
+2006-01-18T13:49:00.000Z	Kovecses	C-O-L-T	yes very easily
+2006-01-18T13:49:00.000Z	Kovecses	C-O-L-T	wait... you said you didnt have a cdrom drive on that comp?
+2006-01-18T13:49:00.000Z	C-O-L-T	Kovecses	I have cd rom drive
+2006-01-18T13:50:00.000Z	C-O-L-T	Kovecses	I have a 48x cd-rom drive
+2006-01-18T13:50:00.000Z	Kovecses	C-O-L-T	on the old machine?
+2006-01-18T13:50:00.000Z	C-O-L-T	Kovecses	yes
+2006-01-18T13:50:00.000Z	Kovecses	C-O-L-T	but its not bootable?
+2006-01-18T13:51:00.000Z	C-O-L-T	Kovecses	no the bios does not lets to boot, but I can boot dsl with floppy too, there are bootfloppydisks too
+2006-01-18T13:51:00.000Z	Kovecses	C-O-L-T	sweet
+2006-01-18T13:52:00.000Z	C-O-L-T	Kovecses	this old pc is enough for office work and for mp3 listening, and for image viewing
+2006-01-18T13:52:00.000Z	Kovecses	C-O-L-T	should be fine
+2006-01-18T13:52:00.000Z	Kovecses	C-O-L-T	cant put too many mp3's on an 800 meg drive though :)
+2006-01-18T13:52:00.000Z	C-O-L-T	Kovecses	anyway I use an AMD DURON 1.8 with 256 ram, 40 gb hard drive but I am dreaming on a MACHINTOSH
+2006-01-18T13:53:00.000Z	C-O-L-T	Kovecses	no you can not
+2006-01-18T13:53:00.000Z	C-O-L-T	Kovecses	:)))) But now windows uses with office 80 percent of the hard drive
+2006-01-18T13:54:00.000Z	C-O-L-T	Kovecses	yes I have seen :))))
+2006-01-18T13:54:00.000Z	C-O-L-T	Kovecses	now I am in windows and here does not work the tab way
+2006-01-18T13:55:00.000Z	C-O-L-T	Kovecses	What kind of floppy boot disk image should I donwload?
+2006-01-18T13:55:00.000Z	Kovecses	C-O-L-T	what kinds are there?
+2006-01-18T13:56:00.000Z	Kovecses	C-O-L-T	what program?
+2006-01-18T13:56:00.000Z	C-O-L-T	Kovecses	I can not use the nick auto completing, I have to write your name every time manually
+2006-01-18T13:56:00.000Z	Kovecses	C-O-L-T	that sucks
+2006-01-18T13:57:00.000Z	C-O-L-T	Kovecses	A slide show creator, that creates beautifull slideshows from pictures with music and so on that I can write in dvd and especially in vcd or svcd
+2006-01-18T13:58:00.000Z	Kovecses	C-O-L-T	you can do that in linux : )
+2006-01-18T13:59:00.000Z	C-O-L-T	Kovecses	how the hell?. I have been looking for a program for two weeks without success
+2006-01-18T13:59:00.000Z	C-O-L-T	Kovecses	and I need a picture retouching program too
+2006-01-18T14:00:00.000Z	C-O-L-T	Kovecses	is not so professional like corel draw and arcsoft programs
+2006-01-18T14:00:00.000Z	C-O-L-T	Kovecses	anyway it is not easy to use
+2006-01-18T14:01:00.000Z	Kovecses	C-O-L-T	sounds like your stuck in 1998
+2006-01-18T14:02:00.000Z	C-O-L-T	Kovecses	Corel Graphic Suite is a very professional graphic suite
+2006-01-18T14:04:00.000Z	C-O-L-T	Kovecses	so a slideshow creator?
+2006-01-18T14:10:00.000Z	Kovecses	C-O-L-T	what?
+2006-01-18T14:11:00.000Z	C-O-L-T	Kovecses	that slideshow creator programme for linux, and a powerfull picture editing tool
+2006-01-18T14:11:00.000Z	Kovecses	C-O-L-T	gimp and oo2
+2006-01-18T14:13:00.000Z	C-O-L-T	Kovecses	don't say to me that I can make with oo impress dvd and vcd presentations with sounds to watch in tv
+2006-01-18T14:13:00.000Z	Kovecses	C-O-L-T	well you make the movies then encode them to dvd or vcd
+2006-01-18T14:14:00.000Z	C-O-L-T	Kovecses	but they will become low quality presentations
+2006-01-18T14:15:00.000Z	Kovecses	C-O-L-T	why would you think that
+2006-01-18T14:16:00.000Z	C-O-L-T	Kovecses	don't say to me that I can convert those really good presentations to vcd and play in a dvd player and watch on tv
+2006-01-18T14:17:00.000Z	Kovecses	C-O-L-T	ive told you ten times that you can
+2006-01-18T14:17:00.000Z	Kovecses	C-O-L-T	ive done it myself
+2006-01-18T14:17:00.000Z	C-O-L-T	Kovecses	I am happier than ever
+2006-01-18T14:19:00.000Z	C-O-L-T	Kovecses	After downloading dsl I will go to linux and I will try it
+2006-01-18T14:19:00.000Z	C-O-L-T	Kovecses	can I get that converting tool in repos
+2006-01-18T14:20:00.000Z	Kovecses	C-O-L-T	i dont know if it is in the dsl repo... but its out there.. where there is a will there is a way.. I dont have time to go into detail ... but search the web
+2006-01-18T14:20:00.000Z	C-O-L-T	Kovecses	but you have the tool don't you?
+2006-01-18T14:20:00.000Z	Kovecses	C-O-L-T	i do yes
+2006-01-18T14:21:00.000Z	C-O-L-T	Kovecses	than you simply give me it's name
+2006-01-18T14:21:00.000Z	Kovecses	C-O-L-T	its a little more complicated than that
+2006-01-18T14:21:00.000Z	Kovecses	C-O-L-T	read up on vcdimager and tovid
+2006-01-18T14:22:00.000Z	Kovecses	C-O-L-T	alsao dvdauthor
+2006-01-18T14:22:00.000Z	Kovecses	C-O-L-T	oo2 has suppourt to wirte it to a movie file... but im not sure what type the result is
+2006-01-18T14:23:00.000Z	C-O-L-T	Kovecses	I have oo in windows too I will look at it
+2006-01-18T14:25:00.000Z	C-O-L-T	Kovecses	it can not expot or save as into any video format neither avi, nor vcd or anything
+2006-01-18T14:26:00.000Z	Kovecses	C-O-L-T	version 2.0?
+2006-01-18T14:26:00.000Z	C-O-L-T	Kovecses	what kind of floppy boot-image should I download
+2006-01-18T14:26:00.000Z	C-O-L-T	Kovecses	yes oo 2.0.1
+2006-01-18T14:34:00.000Z	C-O-L-T	Kovecses	how should I write the floppy image of the damn small linux

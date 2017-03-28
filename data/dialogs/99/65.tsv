@@ -1,0 +1,99 @@
+2006-06-07T07:21:00.000Z	DBO		configure, make, and checkinstall lzap
+2006-06-07T07:23:00.000Z	DBO		rm -rf is not safe either....
+2006-06-07T07:24:00.000Z	SeanTater	DBO	hey, while you're at it, I can;t get fglrx to work on my computer either -- it still uses MESA.
+2006-06-07T07:25:00.000Z	DBO	SeanTater	how did you install?
+2006-06-07T07:25:00.000Z	SeanTater	DBO	through apt, xorg-fglrx, stuff and the restricted modules
+2006-06-07T07:26:00.000Z	DBO	SeanTater	did you get any errors on install?
+2006-06-07T07:27:00.000Z	SeanTater	DBO	nope -- all fine If I remember correctly, But I don;t get the "make sure it worked" stuff
+2006-06-07T07:27:00.000Z	DBO	SeanTater	does glxgears work?
+2006-06-07T07:27:00.000Z	DBO	SeanTater	does xorg.conf say fglrx for driver?... if the answer to both these questions is yes, then it should be working
+2006-06-07T07:27:00.000Z	SeanTater	DBO	Yes, but they don;t give any info concerning FPS though
+2006-06-07T07:28:00.000Z	SeanTater	DBO	I'll check xorg.conf
+2006-06-07T07:28:00.000Z	DBO	SeanTater	yeah, you need to do glxgears --printfps for that
+2006-06-07T07:29:00.000Z	SeanTater	DBO	glxgears = 800 FPS
+2006-06-07T07:29:00.000Z	DBO	SeanTater	well thats not fantastic but better than what you would get with software rendering
+2006-06-07T07:31:00.000Z	SeanTater	DBO	my xorg: http://kubuntu.pastebin.com/765135
+2006-06-07T07:32:00.000Z	SeanTater	DBO	it says Driver "fglrx" in there
+2006-06-07T07:32:00.000Z	DBO	SeanTater	it might help if you enabled the fglrx driver =P
+2006-06-07T07:32:00.000Z	SeanTater	DBO	how might I do that?
+2006-06-07T07:32:00.000Z	DBO	SeanTater	I do and resubmit the file, and you watch =)
+2006-06-07T07:33:00.000Z	DBO	SeanTater	http://kubuntu.pastebin.com/765140
+2006-06-07T07:33:00.000Z	SeanTater	DBO	aaahhh -- that might do it
+2006-06-07T07:33:00.000Z	SeanTater	DBO	I'll do that
+2006-06-07T07:36:00.000Z	SeanTater	DBO	restarting X now, I'll see if it works
+2006-06-07T07:39:00.000Z	SeanTater	DBO	Kubuntu won;t load -- I think I'll uncomment, see if the restricted mods are on and try again.
+2006-06-07T07:39:00.000Z	DBO	SeanTater	make sure you comment out the other section
+2006-06-07T07:42:00.000Z	SeanTater	DBO	oops -- I did not read what you said until I had finished - I did not comment out the other section, but it booted fine
+2006-06-07T07:42:00.000Z	DBO	SeanTater	hmmm... well that answers a burning question
+2006-06-07T07:42:00.000Z	SeanTater	DBO	what?
+2006-06-07T07:46:00.000Z	SeanTater	DBO	the restricted modules are there
+2006-06-07T07:47:00.000Z	DBO	SeanTater	lemme see the relevant xorg log
+2006-06-07T07:47:00.000Z	SeanTater	DBO	which log would that be
+2006-06-07T07:47:00.000Z	DBO	SeanTater	it will be the one in /var/log/Xorg.1.log most likely
+2006-06-07T07:48:00.000Z	SeanTater	DBO	there's a .0. one for XPRG I'll pasetbin it (there's no .1. one)
+2006-06-07T07:49:00.000Z	SeanTater	DBO	XORG even
+2006-06-07T07:49:00.000Z	DBO	SeanTater	is there a .old?
+2006-06-07T07:50:00.000Z	SeanTater	DBO	yes, one normal, and one .ord -- want both?
+2006-06-07T07:51:00.000Z	SeanTater	DBO	just a sec  -- it's really long
+2006-06-07T07:54:00.000Z	SeanTater	DBO	Here's the XORG log (not .old) http://kubuntu.pastebin.com/765179
+2006-06-07T07:55:00.000Z	SeanTater	DBO	and .old: http://kubuntu.pastebin.com/765183
+2006-06-07T07:55:00.000Z	DBO	SeanTater	ok, I see the issue... i suck
+2006-06-07T07:56:00.000Z	SeanTater	DBO	so what can I do/
+2006-06-07T07:56:00.000Z	DBO	SeanTater	http://kubuntu.pastebin.com/765189
+2006-06-07T07:59:00.000Z	SeanTater	DBO	okay -- restarting
+2006-06-07T08:01:00.000Z	SeanTater	DBO	guess what -- still did not work
+2006-06-07T08:02:00.000Z	DBO	SeanTater	new log please (the .old one if you have already fixed things to back to before)
+2006-06-07T08:04:00.000Z	SeanTater	DBO	log and .old comping up
+2006-06-07T08:05:00.000Z	SeanTater	DBO	it says - kubuntu has been mounted 24 times without being checked - check forces
+2006-06-07T08:05:00.000Z	SeanTater	DBO	it's checking file integrity
+2006-06-07T08:05:00.000Z	DBO	SeanTater	thats normal, after so much mounting you would figure its tired
+2006-06-07T08:06:00.000Z	SeanTater	DBO	it's about 25% done
+2006-06-07T08:06:00.000Z	DBO	SeanTater	yeah, takes a bit
+2006-06-07T08:07:00.000Z	SeanTater	DBO	brb --
+2006-06-07T08:15:00.000Z	SeanTater	DBO	Okay -- I;m back -- I'll get cha the log files
+2006-06-07T08:16:00.000Z	SeanTater	DBO	XORG log: http://kubuntu.pastebin.com/765223
+2006-06-07T08:17:00.000Z	SeanTater	DBO	XORG LOG .old -> http://kubuntu.pastebin.com/765224
+2006-06-07T08:17:00.000Z	SeanTater	DBO	ping
+2006-06-07T08:17:00.000Z	DBO	SeanTater	I see it my friend
+2006-06-07T08:17:00.000Z	SeanTater	DBO	you're still here!
+2006-06-07T08:18:00.000Z	SeanTater	DBO	So what's wrong after all?
+2006-06-07T08:18:00.000Z	DBO	SeanTater	well your fglrx module is loading, but dri is puking, comment out dri now
+2006-06-07T08:20:00.000Z	SeanTater	DBO	restarting
+2006-06-07T08:22:00.000Z	SeanTater	DBO	one guess
+2006-06-07T08:23:00.000Z	SeanTater	DBO	yep -- no boot
+2006-06-07T08:23:00.000Z	SeanTater	DBO	try #3
+2006-06-07T08:24:00.000Z	SeanTater	DBO	actually -- I;m running out of tim
+2006-06-07T08:24:00.000Z	SeanTater	DBO	time even
+2006-06-07T08:25:00.000Z	SeanTater	DBO	I think I'll get back to ya
+2006-06-07T08:25:00.000Z	DBO	SeanTater	ok
+2006-06-07T08:25:00.000Z	SeanTater	DBO	but I'll get ya the logs anyway
+2006-06-07T08:26:00.000Z	DBO	SeanTater	kk
+2006-06-07T08:28:00.000Z	SeanTater	DBO	not good - I can;t get it to boot without fglrx
+2006-06-07T08:28:00.000Z	DBO	SeanTater	did you switch the commenting?
+2006-06-07T08:28:00.000Z	DBO	SeanTater	restart gdm
+2006-06-07T08:31:00.000Z	SeanTater	DBO	yes, switched the comments -- no, I;m using KDM
+2006-06-07T08:31:00.000Z	DBO	SeanTater	restart kdm then
+2006-06-07T08:32:00.000Z	SeanTater	DBO	No effect
+2006-06-07T08:33:00.000Z	DBO	SeanTater	did you remember to enable DRI again?
+2006-06-07T08:33:00.000Z	SeanTater	DBO	yep -- enabled: here's xorg.conf http://kubuntu.pastebin.com/765252
+2006-06-07T08:34:00.000Z	SeanTater	DBO	Xorg.log http://kubuntu.pastebin.com/765256
+2006-06-07T08:35:00.000Z	DBO	SeanTater	http://kubuntu.pastebin.com/765259
+2006-06-07T08:37:00.000Z	SeanTater	DBO	hold on
+2006-06-07T08:37:00.000Z	SeanTater	DBO	I used the old one that worked from the pastebin
+2006-06-07T08:38:00.000Z	DBO	SeanTater	it worked?
+2006-06-07T08:38:00.000Z	SeanTater	DBO	not yet -- it has not finished booting
+2006-06-07T08:38:00.000Z	DBO	SeanTater	you know you dont have to restart the whole PC every time...
+2006-06-07T08:38:00.000Z	SeanTater	DBO	worked now
+2006-06-07T08:38:00.000Z	DBO	SeanTater	you can simply restart kdm
+2006-06-07T08:39:00.000Z	SeanTater	DBO	Yes, but when KDM does not come back up, what do I do?
+2006-06-07T08:39:00.000Z	DBO	SeanTater	you edit the file with vi and restart kdm again
+2006-06-07T08:39:00.000Z	SeanTater	DBO	okay -- well -- I've been editing it with nano over ssh anyway
+2006-06-07T08:40:00.000Z	SeanTater	DBO	so can I start KDM from there too?
+2006-06-07T08:40:00.000Z	SeanTater	DBO	okay -- it's up
+2006-06-07T08:40:00.000Z	SeanTater	DBO	But there's not terminal when X won't start
+2006-06-07T08:41:00.000Z	DBO	SeanTater	just press ctrl+alt+f1
+2006-06-07T08:41:00.000Z	SeanTater	DBO	aaahhh --
+2006-06-07T08:41:00.000Z	SeanTater	DBO	I forgot about that..
+2006-06-07T08:41:00.000Z	SeanTater	DBO	then F7 to try again
+2006-06-07T08:42:00.000Z	DBO	SeanTater	you got it
+2006-06-07T08:42:00.000Z	SeanTater	DBO	anyway -- thanks -- I'll get back to you -- see you later!

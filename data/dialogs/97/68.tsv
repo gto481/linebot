@@ -1,0 +1,97 @@
+2006-05-23T05:39:00.000Z	jonah		hey can anyone help me set up pcmcia wireless with ralink chipset. i followed the instructions on ubuntu site but none of them seem to work. my card isn't listed out of the box
+2006-05-23T05:41:00.000Z	dli	jonah	do you get pcmcia? lspci
+2006-05-23T05:41:00.000Z	jonah	dli	you mean if i type lspci? i don't seem to get anything with that at terminal
+2006-05-23T05:42:00.000Z	jonah	dli	hang on yeah i do, sorry
+2006-05-23T05:42:00.000Z	jonah	dli	i get a lot of entries of things, what should i look for?
+2006-05-23T05:42:00.000Z	dli	jonah	and you see the card in lspci?
+2006-05-23T05:43:00.000Z	jonah	dli	can see a  lot of entries, ethernet, pci, usb, vga, isa, smbus, etc
+2006-05-23T05:44:00.000Z	jonah	dli	i think it might be 0000:02:06.0 CardBus bridge: Texas Instruments PCI1410 PC card Cardbus Controlle r (rev 02)
+2006-05-23T05:44:00.000Z	dli	jonah	read carefully, figure out whether your wireless card is there
+2006-05-23T05:44:00.000Z	dli	jonah	that's the controller, you need to get the driver for it
+2006-05-23T05:45:00.000Z	jonah	dli	well it's listed as ralink chipset on their website, which apparently should just work? but it doesn't! do i need the ralink thing installing?
+2006-05-23T05:47:00.000Z	jonah	dli	it's a sweex LC500070 if that helps...
+2006-05-23T05:47:00.000Z	dli	jonah	get pcmcia first, http://pcmcia-cs.sourceforge.net/ftp/doc/PCMCIA-HOWTO.html
+2006-05-23T05:48:00.000Z	jonah	dli	ok thanks, will you help me out with this? thanks a lot if you can
+2006-05-23T05:49:00.000Z	dli	jonah	read the howto first, "sudo apt-get install pcmcia-cs"
+2006-05-23T05:50:00.000Z	jonah	dli	it says it's already installed - the newest version
+2006-05-23T05:51:00.000Z	dli	jonah	"sudo /etc/init.d/pcmcia restart"
+2006-05-23T05:51:00.000Z	dli	jonah	however, you still have to read the howto yourself
+2006-05-23T05:52:00.000Z	dli	jonah	if pcmcia can be started, do "lspci" again, if it shows your wireless card, pcmcia is up now
+2006-05-23T05:53:00.000Z	jonah	dli	sorry i'm already lost - i'm new to this stuff only installed ubuntu today and i don't really understand the howto
+2006-05-23T05:53:00.000Z	jonah	dli	am i recompiling the kernel, re-installing or somehow changing the settings?
+2006-05-23T05:53:00.000Z	dli	jonah	read it, you will find it's really clear
+2006-05-23T05:54:00.000Z	dli	jonah	recompiling kernel is not needed, unless you want to
+2006-05-23T05:55:00.000Z	jonah	dli	sorry it's not clear to me, can you give me a clue?
+2006-05-23T05:56:00.000Z	dli	jonah	just read it. at the same time, can you " sudo /etc/init.d/pcmcia restart "
+2006-05-23T05:56:00.000Z	jonah	dli	it's saying something about startup scripts but doesn't tell me what to type. i assume i don't have to install it cos it's already installed and i'm totally stuck. i am sorry to be stupid on this
+2006-05-23T05:56:00.000Z	jonah	dli	i already did that restart thing
+2006-05-23T05:57:00.000Z	dli	jonah	now, " lspci ", read the output
+2006-05-23T05:57:00.000Z	jonah	dli	0000:02:06.0 CardBus bridge: Texas Instruments PCI1410 PC card Cardbus Controller (rev 02)
+2006-05-23T05:58:00.000Z	jonah	dli	cardbus is pcmcia right?
+2006-05-23T05:58:00.000Z	dli	jonah	look for the wireless card
+2006-05-23T05:59:00.000Z	jonah	dli	the nearest mention i get to a card is 0000:02:06.0 CardBus bridge: Texas Instruments PCI1410 PC card Cardbus Controller (rev 02)
+2006-05-23T05:59:00.000Z	jonah	dli	but no mention of wireless
+2006-05-23T05:59:00.000Z	dli	jonah	that means your pcmcia is not up
+2006-05-23T06:00:00.000Z	jonah	dli	what's that mean then, can i get it working?
+2006-05-23T06:03:00.000Z	jonah	dli	is there anything else i can do?
+2006-05-23T06:04:00.000Z	dli	jonah	" sudo modprobe yenta_socket "
+2006-05-23T06:04:00.000Z	jonah	dli	phew thanks i though all hope was lost, i'll try it
+2006-05-23T06:05:00.000Z	jonah	dli	that just gave me another prompt
+2006-05-23T06:05:00.000Z	dli	jonah	now, " lspci "
+2006-05-23T06:05:00.000Z	dli	jonah	if still now wireless card, " sudo /etc/init.d/pcmcia restart "
+2006-05-23T06:06:00.000Z	jonah	dli	nothing still
+2006-05-23T06:06:00.000Z	jonah	dli	it's just as it was before when i do lspci
+2006-05-23T06:07:00.000Z	dli	jonah	paste your lspci output at  pastebin.com
+2006-05-23T06:07:00.000Z	jonah	dli	i appreciate the time your giving me btw, thanks
+2006-05-23T06:07:00.000Z	jonah	dli	ok hang on a sec
+2006-05-23T06:08:00.000Z	jonah	dli	http://pastebin.com/723719
+2006-05-23T06:11:00.000Z	dli	jonah	is it a new installation?
+2006-05-23T06:12:00.000Z	dli	jonah	and no critical personal data?
+2006-05-23T06:12:00.000Z	jonah	dli	yeah totally new like an hour ago, and i did all the updates it said were available
+2006-05-23T06:12:00.000Z	dli	jonah	is it on public network?
+2006-05-23T06:12:00.000Z	jonah	dli	not really - copied quite a few things over - no it's not on any network or anything like that
+2006-05-23T06:13:00.000Z	jonah	dli	really want wifi though cos it's laptop and was one of main things i used it for under windows before i decided to go all linux!
+2006-05-23T06:13:00.000Z	dli	jonah	I don't how it goes wrong, but it's easier for me to login and have a look
+2006-05-23T06:14:00.000Z	jonah	dli	wow how can you do that?
+2006-05-23T06:14:00.000Z	jonah	dli	that's amazing!!
+2006-05-23T06:14:00.000Z	dli	jonah	can you connect it in anyway? by the wired card?
+2006-05-23T06:15:00.000Z	jonah	dli	it's connected - i'm talking to you through ethernet connection
+2006-05-23T06:16:00.000Z	dli	jonah	okay, pm me
+2006-05-23T06:16:00.000Z	dli	jonah	looks like you are not registered
+2006-05-23T06:16:00.000Z	dli	jonah	/join #dli
+2006-05-24T14:41:00.000Z	jonah	dli	remember me? you helped me with my wifi connection and i went to bed!! but when i came back and you'd finished it still wasn't working - well i've ended up buying a different pcmcia card which was recommended and that doesn't work either but at least the light comes on!
+2006-05-24T14:46:00.000Z	dli	jonah	yes
+2006-05-24T14:47:00.000Z	jonah	dli	hi again
+2006-05-24T14:47:00.000Z	dli	jonah	you your rt2500 should work
+2006-05-24T14:48:00.000Z	dli	jonah	first, "lspci" shows the card now
+2006-05-24T14:48:00.000Z	jonah	dli	well it still wasn't working so i went on ubuntu forums and people having trouble with wifi said to buy a netgear wg511t cos it works out of the box. but mine doesn't! and it cost me more cash! hehe
+2006-05-24T14:49:00.000Z	dli	jonah	can you return the netgear card? rt2500 is enough
+2006-05-24T14:49:00.000Z	dli	jonah	if you type "lspci" in terminal now, can you see the wireless card?
+2006-05-24T14:49:00.000Z	jonah	dli	but it still didn't work
+2006-05-24T14:50:00.000Z	dli	jonah	yes, a few simple steps
+2006-05-24T14:50:00.000Z	dli	jonah	what's the kernel now? " uname -a "
+2006-05-24T14:50:00.000Z	jonah	dli	i ended up doing a clean install also though becuase people said it worked out of box! so i thought old card must of messed stuff up
+2006-05-24T14:51:00.000Z	dli	jonah	no need
+2006-05-24T14:51:00.000Z	dli	jonah	can you enable ssh for me to login ?
+2006-05-24T14:52:00.000Z	jonah	dli	if i type lspci i get CardBus bridge: Texas Instruments PCI410 PC Cardbus Controller (rev 02)
+2006-05-24T14:52:00.000Z	dli	jonah	you deleted it already? too bad, it took serveral steps
+2006-05-24T14:53:00.000Z	dli	jonah	okay, enable ssh, I have to make some changes, clean installation doesn't work well for you
+2006-05-24T14:53:00.000Z	jonah	dli	sorry i got so frustrated didn't mean to distroy your work, i thought it hadn't work - when i got up in morning i had ubuntu login screen and i logged in and it wasn't working and then i rebooted and still nothing
+2006-05-24T14:53:00.000Z	dli	jonah	you couldn't even see the wireless card in lspci
+2006-05-24T14:54:00.000Z	jonah	dli	ok thanks can we just try it with new card now i've got it? it's supposed to be better anyway?
+2006-05-24T14:54:00.000Z	dli	jonah	I was in the middle of building a new kernel, and by that time, you should notice that "lspci" shows your wireless card
+2006-05-24T14:55:00.000Z	dli	jonah	no, I think rt2500 should work
+2006-05-24T14:56:00.000Z	dli	jonah	/join #dli
+2006-05-24T14:56:00.000Z	jonah	dli	well this other card has twice the range and speed of my other so it'd be an upgrade for me and i can always ebay the other
+2006-05-24T14:57:00.000Z	jonah	dli	i'll just move over to laptop cos talking on other computer - i'll need to plug ethernet in on that machine
+2006-05-24T16:59:00.000Z	jonah	dli	hi again i'm back - just a quick question really
+2006-05-24T05:00:00.000Z	dli	jonah	yes
+2006-05-24T05:00:00.000Z	jonah	dli	i took your advice and went to source-o-matic, generated a sources.list - i didn't bother with sources and just ticked packaged (hope that right) and replaced my sources.list but should i have kept any of the entries in there or was it ok to overwrite the whole list?
+2006-05-24T05:01:00.000Z	dli	jonah	you can use only entries from easysource
+2006-05-24T05:01:00.000Z	jonah	dli	obviously i don't want to lose the official ubuntu security or updates - so i'm ok?
+2006-05-24T05:02:00.000Z	dli	jonah	I think easysource can give you all official entries
+2006-05-24T05:02:00.000Z	jonah	dli	i ticked all source-o-matics except any that said proceed with caution
+2006-05-24T05:02:00.000Z	dli	jonah	yes, read the file generated
+2006-05-24T05:02:00.000Z	jonah	dli	good just wanted to check thanks - for the keys do i have to bring them in one by one for each source location?
+2006-05-24T05:04:00.000Z	dli	jonah	easysource gives you instructions to get the keys
+2006-05-24T05:04:00.000Z	jonah	dli	ok thanks

@@ -1,0 +1,95 @@
+2009-09-11T07:17:00.000Z	shane2peru	sebsebseb	does he want Gubuntu/Gnome ? :)
+2009-09-11T07:18:00.000Z	sebsebseb	shane2peru	I think there is a Gubuntu or something like that hmm
+2009-09-11T07:18:00.000Z	sebsebseb	shane2peru	free software only version
+2009-09-11T07:18:00.000Z	sebsebseb	shane2peru	yeah there's something
+2009-09-11T07:18:00.000Z	shane2peru	sebsebseb	lol, that is too funny
+2009-09-11T07:18:00.000Z	shane2peru	sebsebseb	I guess it fits, after seeing Kubuntu, and Xubuntu
+2009-09-11T07:19:00.000Z	sebsebseb	shane2peru	I think Canonical have a version maybe not,  well there's Gnewsense based on Ubuntu which is free software only
+2009-09-11T07:19:00.000Z	sebsebseb	shane2peru	from The Free Software Foundation
+2009-09-11T07:19:00.000Z	shane2peru	sebsebseb	hmm, interesting.
+2009-09-11T07:19:00.000Z	sebsebseb	shane2peru	ok it's  Goubuntu thanks  Korlis
+2009-09-12T01:07:00.000Z	shane2peru	sebsebseb	out of curiosity, have you ever had a bad download?
+2009-09-12T01:07:00.000Z	sebsebseb	shane2peru	maybe once or twice  with some ISO,  ,but in that case quite a while ago
+2009-09-12T01:08:00.000Z	sebsebseb	shane2peru	99% of the time the download will be good
+2009-09-12T01:08:00.000Z	sebsebseb	shane2peru	or whatever the percentage is
+2009-09-12T01:08:00.000Z	shane2peru	sebsebseb	I mean to really warrant md5sum?
+2009-09-12T01:09:00.000Z	sebsebseb	shane2peru	I think it's more important to do it if you get the ISO from a dodgy source, but  even if you don't,  still a good idea I guess
+2009-09-12T01:09:00.000Z	shane2peru	sebsebseb	right, I perhaps have had one or two, I don't even check md5sum any more. :)
+2009-09-12T01:09:00.000Z	shane2peru	sebsebseb	it is good practice, I just don't do it. :)
+2009-09-15T03:18:00.000Z	shane2peru	sebsebseb	really! about the ATI thing?  I had 9.04 and it was a real pain, I switched to another distro, couldn't handle going back to 8.04
+2009-09-15T03:19:00.000Z	sebsebseb	shane2peru	Another distro and it worked hmm?  By the way what distro was that?
+2009-09-15T03:19:00.000Z	sebsebseb	shane2peru	indeed  I woudn't want to go back to 8.04 now personalley
+2009-09-15T03:20:00.000Z	shane2peru	sebsebseb	I switched to Suse, and no it didn't work, I still installed the proprietary stuff, but works better
+2009-09-15T03:20:00.000Z	sebsebseb	shane2peru	if going back to anything 8.10, but 8.04 no thanks
+2009-09-15T03:20:00.000Z	shane2peru	sebsebseb	there was too many hardware issues for me to go back too, intrepid had real problems, juanty helped, but still was a mess
+2009-09-15T03:21:00.000Z	sebsebseb	shane2peru	yeah  hardware issues :(   and it's also, because of manufactures that don't support Linux properly yet or at all :(
+2009-09-15T03:22:00.000Z	shane2peru	sebsebseb	that was my problem, not taking a livecd with me to buy the laptop
+2009-09-15T03:22:00.000Z	sebsebseb	shane2peru	good idea, if they will let you try it on there
+2009-09-15T03:22:00.000Z	shane2peru	sebsebseb	I will next time, or I won't buy
+2009-09-15T03:23:00.000Z	sebsebseb	shane2peru	  qe2eqe   should zebastian  downgrade to 8.04 to  fix ATI or what?
+2009-09-15T03:26:00.000Z	sebsebseb	shane2peru	he is on 9.04 with issues, also see the message I just sent him
+2009-09-15T03:27:00.000Z	sebsebseb	shane2peru	well the two messages even
+2009-09-15T03:28:00.000Z	sebsebseb	shane2peru	I think he first installed from the repo,  and then  the offical driver
+2009-09-15T03:30:00.000Z	shane2peru	sebsebseb	if he installed the proprietary one it would override the repo driver, and everything should be fine
+2009-09-15T03:31:00.000Z	sebsebseb	shane2peru	yes that's basically what I said before
+2009-09-15T03:31:00.000Z	sebsebseb	shane2peru	,but not the part about it being fine
+2009-09-15T03:31:00.000Z	sebsebseb	shane2peru	normalley it's best to stay with the repo drivers, otherwise problems happen
+2009-09-15T03:31:00.000Z	sebsebseb	shane2peru	well for Nividia anyway
+2009-09-15T03:32:00.000Z	shane2peru	sebsebseb	mine with repo drivers overheats. :)  Many distros
+2009-09-15T03:32:00.000Z	sebsebseb	shane2peru	and I should have said  otherwise problems are likely to happen above
+2009-09-15T03:33:00.000Z	sebsebseb	shane2peru	he is giving up now, hence the putting 8.04 on :D
+2009-09-15T03:47:00.000Z	sebsebseb	shane2peru	the with networking one uhmmm  well the other one has Internet access,  I am not sure what  the networking one is for in fact
+2009-09-15T03:48:00.000Z	sebsebseb	shane2peru	yeah I think the standard recovery mode shelll gets Internet access to
+2009-09-15T03:48:00.000Z	shane2peru	sebsebseb	it would be better if it does, if not he will have to transfer files,
+2009-09-15T03:57:00.000Z	sebsebseb	shane2peru	what does  -frv  stand for?
+2009-09-15T03:57:00.000Z	shane2peru	sebsebseb	-f is force, -r is recursive, and -v is verbal
+2009-09-15T03:57:00.000Z	sebsebseb	shane2peru	ah ok
+2009-09-15T04:03:00.000Z	shane2peru	sebsebseb	I hate ati. :) last computer I will ever by with ati. :)
+2009-09-15T04:09:00.000Z	sebsebseb	shane2peru	yeah Nividia :)
+2009-09-15T06:41:00.000Z	sebsebseb	shane2peru	your back
+2009-09-15T06:41:00.000Z	shane2peru	sebsebseb	yep. :)
+2009-09-15T06:41:00.000Z	sebsebseb	shane2peru	we  spent a while with him,  suggested 8.04, and then  he was going to try your drivers
+2009-09-15T06:41:00.000Z	sebsebseb	shane2peru	it's in the offical logs if your interested  15th and 14th
+2009-09-15T06:42:00.000Z	shane2peru	sebsebseb	yep, the proprietary drivers is the only way to get that ati card working with ubuntu, even then mine still overheated when I tried processing videos
+2009-09-15T06:42:00.000Z	sebsebseb	shane2peru	well our stuff when you weren't here is I guess in the 15th only or whatever
+2009-09-15T06:42:00.000Z	shane2peru	sebsebseb	hmm, I'm not familiar with logs or anything like that, I'm not much of an irc-er
+2009-09-15T06:42:00.000Z	sebsebseb	shane2peru	sure, but the one in hardware drivers should have been the propritary one  from the repo
+2009-09-15T06:43:00.000Z	sebsebseb	shane2peru	yeah I was going to do that
+2009-09-15T06:43:00.000Z	sebsebseb	shane2peru	plus your client has a log I guess
+2009-09-15T06:43:00.000Z	shane2peru	sebsebseb	I monitored my temps, and my computer ran about 10 degrees C lower with the proprietary drivers installed, even at idle.
+2009-09-15T06:44:00.000Z	shane2peru	sebsebseb	wow, that is some serious log keeping. :)
+2009-09-15T06:44:00.000Z	sebsebseb	shane2peru	indeed
+2009-09-15T06:46:00.000Z	shane2peru	sebsebseb	the ati drivers in the repos are old or something, not sure.
+2009-09-15T06:47:00.000Z	sebsebseb	shane2peru	zebastian0 just tried to make you famous :D
+2009-09-15T06:47:00.000Z	shane2peru	sebsebseb	lol, he can try, I'm not sure it will work
+2009-09-15T06:57:00.000Z	shane2peru	sebsebseb	he didn't move his entry did he?
+2009-09-15T06:57:00.000Z	shane2peru	sebsebseb	on grub?
+2009-09-15T06:57:00.000Z	sebsebseb	shane2peru	no it's  at the bottom by default like that or whatever
+2009-09-15T06:57:00.000Z	shane2peru	sebsebseb	ok, I lost mine once doing that. :)
+2009-09-15T06:58:00.000Z	sebsebseb	shane2peru	hmm looks like Gaming4JC  has an issue for you :D
+2009-09-15T06:59:00.000Z	shane2peru	sebsebseb	I hate ATI :)
+2009-09-15T06:59:00.000Z	sebsebseb	shane2peru	they love you :D
+2009-09-15T07:00:00.000Z	shane2peru	sebsebseb	lol
+2009-09-15T07:00:00.000Z	sebsebseb	shane2peru	:)
+2009-09-16T07:24:00.000Z	shane2peru	sebsebseb	I can't believe after all that, I can't get ati working with my ubuntu!
+2009-09-17T08:44:00.000Z	sebsebseb	shane2peru	yes he  went back to Hardy
+2009-10-07T04:27:00.000Z	sebsebseb	shane2peru	OGG Vorbis in browsers that support  the <video> tag and that format such as Firefox 3.5
+2009-10-07T04:28:00.000Z	shane2peru	sebsebseb	do you know if windows boxes can play that?
+2009-10-07T04:28:00.000Z	sebsebseb	shane2peru	If they have Firefox 3.5 installed yes, becasue it has in built support :)
+2009-10-07T04:29:00.000Z	shane2peru	sebsebseb	how about IE?
+2009-10-07T04:29:00.000Z	sebsebseb	shane2peru	sadly not
+2009-10-07T04:30:00.000Z	sebsebseb	shane2peru	Microsoft like propritary stuff
+2009-10-07T04:30:00.000Z	shane2peru	sebsebseb	hmm, too bad for them. :)
+2009-10-07T04:30:00.000Z	shane2peru	sebsebseb	that is the dilema, I want maximum viewability.
+2009-10-07T04:31:00.000Z	shane2peru	sebsebseb	producing in open source cuts out windows, which also unfortuenatley has the largest market share
+2009-10-07T04:31:00.000Z	sebsebseb	shane2peru	that's not true it depends
+2009-10-07T04:31:00.000Z	sebsebseb	shane2peru	remember FIrefox 3.5 runs on Windows as well
+2009-10-07T04:32:00.000Z	sebsebseb	shane2peru	plus there are programs on Windows that play OGG/Vorbis  and ones that do FLAC for music also open format
+2010-01-24T05:57:00.000Z	shane2peru	sebsebseb	what was that other channel?  is it gone?
+2010-05-18T23:31:00.000Z	sebsebseb	shane2peru	about 1GB
+2010-05-18T23:31:00.000Z	sebsebseb	shane2peru	or maybe not
+2010-05-18T23:31:00.000Z	sebsebseb	shane2peru	however a default install of Ubuntu takes up about 1GB
+2010-05-18T23:31:00.000Z	shane2peru	sebsebseb	so, with a default install 2 would be fine?
+2010-05-18T23:31:00.000Z	sebsebseb	shane2peru	also the desktop version can be installed onto only 4GB of space
+2010-05-18T23:31:00.000Z	sebsebseb	shane2peru	since netbooks with hardly any space, can also run it
+2010-05-18T23:32:00.000Z	shane2peru	sebsebseb	right, from there I can start getting rid of stuff, ubuntu i386 normal disk 2GB for / is enough?

@@ -1,0 +1,95 @@
+2005-12-19T17:55:00.000Z	lewix		how can I play streaming video ?
+2005-12-19T17:55:00.000Z	_jason	lewix	have you tried mplayer?
+2005-12-19T17:56:00.000Z	lewix	_jason	nope, totem is the one set by default
+2005-12-19T17:56:00.000Z	_jason	lewix	mplayer works well for me, so you may want to test it out and see
+2006-03-19T08:57:00.000Z	_jason	lewix	mplayer plug-in works well for me
+2006-03-19T08:58:00.000Z	_jason	lewix	install w32codecs (see ubotu's message)
+2006-03-19T08:59:00.000Z	_jason	lewix	try mplayer :)
+2006-03-19T09:15:00.000Z	_jason	lewix	in firefox you mean?
+2006-03-19T09:16:00.000Z	lewix	_jason	that's exactly what i mean
+2006-03-19T09:17:00.000Z	_jason	lewix	hrmm, I don't know what package provides the xine plug-in.  You've installed mplayer and mozilla-mplayer already?
+2006-03-19T09:19:00.000Z	_jason	lewix	try running 'mplayer' in a terminal would be one way.  Put ls /usr/lib/mozilla-firefox/plugins/ on http://paste.ubuntu-nl.org/
+2006-03-19T09:20:00.000Z	_jason	lewix	also, can you prefix your messages with '_jason' please so that I don't miss them
+2006-03-19T09:21:00.000Z	lewix	_jason	thanks again. hmm so I just time ls /usr/lib/mozilla-firefox/plugins/ on http://paste.ubuntu-nl.org/
+2006-03-19T09:21:00.000Z	_jason	lewix	just run the command and copy and paste to that site, then give me a link
+2006-03-19T09:25:00.000Z	lewix	_jason	http://paste.ubuntu-nl.org/10171
+2006-03-19T09:25:00.000Z	_jason	lewix	get rid of kaffeine-mozilla package
+2006-03-19T09:26:00.000Z	_jason	lewix	link?
+2006-03-19T09:26:00.000Z	lewix	_jason	I don't know how to get rid of it
+2006-03-19T09:27:00.000Z	_jason	lewix	use synaptic or just do: sudo aptitude remove kaffeine-mozilla
+2006-03-19T09:27:00.000Z	lewix	_jason	thanks. It's done
+2006-03-19T09:27:00.000Z	_jason	lewix	restart firefox and it should be using mplayer
+2006-03-19T09:28:00.000Z	lewix	_jason	what happened to xine ?
+2006-03-19T09:28:00.000Z	_jason	lewix	you still have xine if you had it before, just not the kaffeine plugin for firefox
+2006-03-19T09:29:00.000Z	lewix	_jason	 I just restarted mozilla but xine is still set as the default player
+2006-03-19T09:29:00.000Z	_jason	lewix	hrmm, pastebin the same ls command from before again
+2006-03-19T09:30:00.000Z	_jason	lewix	wait, when you say mozilla, do you actually mean mozilla or firefox?
+2006-03-19T09:31:00.000Z	lewix	_jason	firefox
+2006-03-19T09:31:00.000Z	lewix	_jason	I forgot the site to paste stuff
+2006-03-19T09:31:00.000Z	_jason	lewix	it's in /topic but it is http://paste.ubuntu-nl.org/
+2006-03-19T09:32:00.000Z	lewix	_jason	isn't mozilla the same as firefox ?
+2006-03-19T09:32:00.000Z	_jason	lewix	there's also a mozilla web browser
+2006-03-19T09:33:00.000Z	lewix	_jason	Im talking about firefox web browser
+2006-03-19T09:33:00.000Z	_jason	lewix	k
+2006-03-19T09:35:00.000Z	lewix	_jason	please don't forget me lol
+2006-03-19T09:36:00.000Z	_jason	lewix	did you pastebin that ls command?
+2006-03-19T09:36:00.000Z	lewix	_jason	http://paste.ubuntu-nl.org/10174
+2006-03-19T09:37:00.000Z	_jason	lewix	you sure you closed all instances of firefox?
+2006-03-19T09:38:00.000Z	lewix	_jason	I'm sure
+2006-03-19T09:39:00.000Z	_jason	lewix	'killall firefox-bin' just to be certain
+2006-03-19T09:40:00.000Z	lewix	_jason	the same result..it doesnt work
+2006-03-19T09:40:00.000Z	_jason	lewix	it still loads xine?
+2006-03-19T09:41:00.000Z	lewix	_jason	yep
+2006-03-19T09:41:00.000Z	lewix	_jason	can't I just uninstall xine ?
+2006-03-19T09:41:00.000Z	_jason	lewix	wel you removed the plugin, do this and pastebin and results: 'locate kaffeineplugin.so'
+2006-03-19T09:43:00.000Z	lewix	_jason	 I installed the mozilla-kaffein package at the same time I installed mozzilla-firefox. Xine was already installed
+2006-03-19T09:43:00.000Z	lewix	_jason	then I installed w32codecs
+2006-03-19T09:44:00.000Z	_jason	lewix	ok check 'about:plugins' in the firefox url bar and see if it is using mplayer or not
+2006-03-19T09:49:00.000Z	lewix	_jason	http://paste.ubuntu-nl.org/10176
+2006-03-19T09:49:00.000Z	_jason	lewix	'locate gxineplugin.so'
+2006-03-19T09:50:00.000Z	lewix	_jason	http://paste.ubuntu-nl.org/10177
+2006-03-19T09:51:00.000Z	_jason	lewix	k, see where gxineplugin.so is with 'locate gxineplugin.so'
+2006-03-19T09:51:00.000Z	lewix	_jason	it's loading
+2006-03-19T09:55:00.000Z	lewix	_jason	http://paste.ubuntu-nl.org/10179
+2006-03-19T09:56:00.000Z	_jason	lewix	thos are errors from your terminal after running locate gxineplugin.so?  did you get a chance to run 'sudo updatedb' before?
+2006-03-19T09:58:00.000Z	lewix	_jason	one moment I'm doing it right now
+2006-03-19T09:58:00.000Z	lewix	_jason	/usr/lib/gxine/gxineplugin.so
+2006-03-19T10:00:00.000Z	_jason	lewix	pastebin 'ls /home/lewix/.mozilla/plugins/ /home/lewix/.firefox/plugins/ && dpkg -S /home/lewix/.firefox/plugins/gxineplugin.so'
+2006-03-19T10:03:00.000Z	lewix	_jason	http://paste.ubuntu-nl.org/10181
+2006-03-19T10:04:00.000Z	_jason	lewix	'rm /home/lewix/.mozilla/plugins/gxineplugin.so /home/lewix/.firefox/plugins/gxineplugin.so', restart firefox
+2006-03-19T10:08:00.000Z	lewix	_jason	 thanks
+2006-03-19T10:08:00.000Z	lewix	_jason	 thanks thanks thanks
+2006-03-19T10:08:00.000Z	_jason	lewix	np
+2006-03-19T10:09:00.000Z	lewix	_jason	no seriously THANKS lol...hmm finally linux isnt bad :)
+2006-03-19T10:10:00.000Z	lewix	_jason	do you code ?
+2006-03-19T10:11:00.000Z	_jason	lewix	here and there, not much
+2006-03-19T10:11:00.000Z	lewix	_jason	ok
+2006-03-19T10:13:00.000Z	lewix	_jason	 how can I delete files in the terminal
+2006-03-19T10:13:00.000Z	_jason	lewix	rm
+2006-03-19T10:14:00.000Z	lewix	_jason	and if it's a folder ?
+2006-03-19T10:15:00.000Z	_jason	lewix	if it is empty 'rmdir', otherwise 'rm -r' will delete recursively
+2006-03-19T10:17:00.000Z	lewix	_jason	 I have an *.exe file I can't erase it
+2006-03-19T10:17:00.000Z	_jason	lewix	where is it and what does it say when you try
+2006-03-19T10:20:00.000Z	lewix	_jason	no such files (the same for some images)
+2006-03-19T10:20:00.000Z	_jason	lewix	read through the tutorials ubotu gave you and come back if you are still stucj
+2006-03-19T10:34:00.000Z	lewix	_jason	I'm watching a video with mplayer. i would like ot put fullscreen. DO you have an any idea ? thanks again
+2006-03-19T10:35:00.000Z	_jason	lewix	press 'f'
+2006-03-19T10:35:00.000Z	_jason	lewix	in preferences, choose 'xv' as your video output
+2006-03-19T10:36:00.000Z	lewix	_jason	how do I do that ?
+2006-03-19T10:36:00.000Z	_jason	lewix	are you using the gui?
+2006-03-19T10:36:00.000Z	lewix	_jason	nope
+2006-03-19T10:37:00.000Z	lewix	_jason	 I just type mplayer in the terminal
+2006-03-19T10:37:00.000Z	_jason	lewix	edit ~/.mplayer/config and add the line 'vo = xv'
+2006-03-19T10:38:00.000Z	lewix	_jason	Error: no "edit" mailcap rules found for type "application/*"
+2006-03-19T10:38:00.000Z	_jason	lewix	sudo nano ~/.mplayer/config, by 'edit' I just meant choose your favorite editor :)
+2006-03-19T10:39:00.000Z	_jason	lewix	you don't need the sudo in that command by the way
+2006-03-19T10:40:00.000Z	lewix	_jason	ok. hmm now im stuck..dunno how to save
+2006-03-19T10:40:00.000Z	_jason	lewix	see the bottom? it's a cheat sheet.  ^X means ctrl-x
+2006-03-19T10:41:00.000Z	_jason	lewix	save is writeout by the way, but you can jsut exit and it will prompt you to save
+2006-03-19T10:42:00.000Z	lewix	_jason	no such file or directory
+2006-03-19T10:43:00.000Z	_jason	lewix	mkdir ~/.mplayer
+2006-03-19T10:44:00.000Z	_jason	lewix	after that, just do 'gedit ~/.mplayer/config', it will be easier than nano
+2006-03-19T10:47:00.000Z	lewix	_jason	vo: X11 running at 1024x768 with depth 24 and 32 bpp (":0.0" => local display)
+2006-03-19T10:48:00.000Z	_jason	lewix	what kind of video card do you have and have you installed the drivers for it?
+2006-03-19T10:48:00.000Z	lewix	_jason	 I don't know..I've just installed ubuntu
+2006-03-19T10:49:00.000Z	_jason	lewix	you have an nvidia or ati?

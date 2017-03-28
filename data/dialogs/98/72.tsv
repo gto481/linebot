@@ -1,0 +1,98 @@
+2005-06-07T10:24:00.000Z	d0z		I'm experiencing some problem with my Inprocomm IPN 2220 wifi card. Everything looks fine when I modprobe ndiswrapper. But I can't change settings with iwconfig.
+2005-06-07T10:26:00.000Z	d0z		Yes danba.
+2005-06-07T10:27:00.000Z	ivoks	d0z	hi
+2005-06-07T10:27:00.000Z	ivoks	d0z	so... your wifi card is?
+2005-06-07T10:29:00.000Z	ivoks	d0z	do you remember what modules you used?
+2005-06-07T10:29:00.000Z	ivoks	d0z	?
+2005-06-07T10:31:00.000Z	d0z	ivoks	Yes, I have downloaded the same windows drivers. Then I fetched ndiswrapper with apt. When I modprobe everything looks fine.
+2005-06-07T10:31:00.000Z	ivoks	d0z	ok, does iwconfig shows you anything?
+2005-06-07T10:32:00.000Z	d0z	ivoks	Yes, I parse you it privatly.
+2005-06-07T10:32:00.000Z	ivoks	d0z	don't :)
+2005-06-07T10:32:00.000Z	ivoks	d0z	it's nice if it shows you anything...
+2005-06-07T10:33:00.000Z	ivoks	d0z	you don't have to paste all that details
+2005-06-07T10:33:00.000Z	d0z	ivoks	Ok, it's not that much.
+2005-06-07T10:33:00.000Z	d0z	ivoks	I can scan and find my ap, but not connect to it.
+2005-06-07T10:33:00.000Z	ivoks	d0z	so.. where is the problem?
+2005-06-07T10:34:00.000Z	ivoks	d0z	http://www.grad.hr/~ivoks/ubuntu
+2005-06-07T10:34:00.000Z	ivoks	d0z	download wifi-radar and install it
+2005-06-07T10:34:00.000Z	d0z	ivoks	I can't connect, thats the problem.
+2005-06-07T10:34:00.000Z	d0z	ivoks	Is there an .deb?
+2005-06-07T10:35:00.000Z	ivoks	d0z	yes
+2005-06-07T10:35:00.000Z	ivoks	d0z	that's a deb
+2005-06-07T10:36:00.000Z	ivoks	d0z	does 'iwlist wlan0 scan' shows you your AP?
+2005-06-07T10:37:00.000Z	d0z	ivoks	Yes.
+2005-06-07T10:37:00.000Z	ivoks	d0z	so... where is problem?! :)
+2005-06-07T10:37:00.000Z	ivoks	d0z	does your AP allows you to connect?
+2005-06-07T10:37:00.000Z	d0z	ivoks	iwlist ath0 peers. Don't show my client. :)
+2005-06-07T10:37:00.000Z	ivoks	d0z	ath0?
+2005-06-07T10:38:00.000Z	ivoks	d0z	wlan0, not ath0
+2005-06-07T10:38:00.000Z	d0z	ivoks	It's an debian system that runs as ap. :)
+2005-06-07T10:38:00.000Z	ivoks	d0z	you have wifi interface on wlan0, not ath0
+2005-06-07T10:39:00.000Z	d0z	ivoks	My clients wifi card is wlan0. My gateway behind the tv that's act ap is ath0.
+2005-06-07T10:39:00.000Z	ivoks	d0z	so what?!
+2005-06-07T10:39:00.000Z	ivoks	d0z	you are scanning on wlan0, not ath0
+2005-06-07T10:39:00.000Z	ivoks	d0z	i don't care what you have for AP
+2005-06-07T10:40:00.000Z	d0z	ivoks	Hheh yes that's very true. But scanning and being connected isn't the same thing.
+2005-06-07T10:40:00.000Z	ivoks	d0z	just run 'iwlist wlan0 scan'
+2005-06-07T10:40:00.000Z	ivoks	d0z	does it show you your AP?
+2005-06-07T10:40:00.000Z	d0z	ivoks	Yes.
+2005-06-07T10:41:00.000Z	d0z	ivoks	But the quality isn't that good.
+2005-06-07T10:41:00.000Z	ivoks	d0z	just download taht wifi-radar and copy it with usbstick or something
+2005-06-07T10:41:00.000Z	ivoks	d0z	run it from menu and connect yo your AP
+2005-06-07T10:42:00.000Z	d0z	ivoks	Yes i've tried disable it but it still doesn't work.
+2005-06-07T10:42:00.000Z	ivoks	d0z	disabling what?
+2005-06-07T10:43:00.000Z	d0z	ivoks	The encryption. Just a moment I'll see what wifi-radar have to say.
+2005-06-07T10:43:00.000Z	d0z	ivoks	You can do wonderfull things with ssh I control both the ap and client.
+2005-06-07T10:50:00.000Z	d0z	ivoks	Ok, got it up and running, couldn't find a .deb though.
+2005-06-07T10:50:00.000Z	ivoks	d0z	lol, there are 4-5 files... one is deb :)
+2005-06-07T10:50:00.000Z	d0z	ivoks	On the homepage?
+2005-06-07T10:51:00.000Z	ivoks	d0z	http://www.grad.hr/~ivoks/ubuntu/wifi-radar_1.9.3-0ubuntu2_i386.deb
+2005-06-07T10:51:00.000Z	d0z	ivoks	Well I downloaded it from http://www.bitbuilder.com/wifi_radar/.
+2005-06-07T10:51:00.000Z	ivoks	d0z	no, man...
+2005-06-07T10:52:00.000Z	d0z	ivoks	?? confused isn't it the same piece of software?
+2005-06-07T10:52:00.000Z	ivoks	d0z	this one is packaged for ubuntu
+2005-06-07T10:53:00.000Z	ivoks	d0z	it autom. recognizes your card, shows in menu, has man page, etc, etc...
+2005-06-07T10:53:00.000Z	ivoks	d0z	upstream version doesn't have all of that
+2005-06-07T10:55:00.000Z	d0z	ivoks	Ok, iv'e changed package now.
+2005-06-07T10:56:00.000Z	ivoks	d0z	start it from menu or sudo wifi-radar
+2005-06-07T10:56:00.000Z	d0z	ivoks	This is what I get. First column a question mark. Then it's locked, good signal, managed, and the incredible performance that 802.11g delivers. :)
+2005-06-07T10:57:00.000Z	ivoks	d0z	click connect
+2005-06-07T10:57:00.000Z	ivoks	d0z	enter your WEP key and you should be good
+2005-06-07T11:08:00.000Z	d0z	ivoks	Wow, that program was simple. But it didn't work.
+2005-06-07T11:08:00.000Z	ivoks	d0z	then your AP is broken
+2005-06-07T11:08:00.000Z	ivoks	d0z	you didn't set it up well
+2005-06-07T11:09:00.000Z	d0z	ivoks	No it's not because my neighbour is using it aswell.
+2005-06-07T11:09:00.000Z	ivoks	d0z	don't use WEP, it's crap...
+2005-06-07T11:09:00.000Z	ivoks	d0z	do you have MAC filter maybe?
+2005-06-07T11:09:00.000Z	d0z	ivoks	Yes I know. But that's the only thing that my neighbours crappy d-link can handle.
+2005-06-07T11:09:00.000Z	ivoks	d0z	?
+2005-06-07T11:10:00.000Z	ivoks	d0z	d-links can filter on MAC address
+2005-06-07T11:10:00.000Z	d0z	ivoks	I do filter pretty hard but not on mac yet. I think. Perhaps I should look into that.
+2005-06-07T11:10:00.000Z	ivoks	d0z	for start, set up your AP as open, without any filtering
+2005-06-07T11:10:00.000Z	d0z	ivoks	Yes I know but MAC filter isn't that safe either.
+2005-06-07T11:10:00.000Z	ivoks	d0z	then try to connect
+2005-06-07T11:11:00.000Z	ivoks	d0z	if that works, then harden your AP
+2005-06-07T11:11:00.000Z	d0z	ivoks	I'll try some more, thanks for all the help both you ivoks and danba.
+2005-06-07T11:11:00.000Z	ivoks	d0z	bottom line: you wifi works
+2005-06-07T11:12:00.000Z	ivoks	d0z	it can connect to you wifi network, but it is closed four you
+2005-06-07T11:12:00.000Z	d0z	ivoks	My wifi works for my my neigbour but not for me yet. Well I have TP so it's not that urgent.
+2005-06-07T11:12:00.000Z	ivoks	d0z	your wifi card WORKS
+2005-06-07T11:12:00.000Z	d0z	ivoks	Yes, that's correct. :)
+2005-06-07T11:13:00.000Z	ivoks	d0z	you don't have to do anything on ubuntu
+2005-06-07T11:13:00.000Z	ivoks	d0z	only on your AP
+2005-06-07T11:14:00.000Z	d0z	ivoks	Well, wifi-radar did manage to change settings I couldn't manually with iwconfig. Everything looks fine but traffic doesn't flow.
+2005-06-07T11:14:00.000Z	ivoks	d0z	does your AP has dhcp server on it?
+2005-06-07T11:15:00.000Z	d0z	ivoks	No. I only have a couple of computers so I don't see any need for it.
+2005-06-07T11:15:00.000Z	ivoks	d0z	lol i have only one, but i have dhcp :)
+2005-06-07T11:16:00.000Z	ivoks	d0z	then, you configured your IP, DNS, routing, etc... corectly?
+2005-06-07T11:16:00.000Z	d0z	ivoks	I used it before, but I don't want it on wireless.
+2005-06-07T11:17:00.000Z	d0z	ivoks	Yes. I'm an network technician so I got it correct. :) I think. hehe
+2005-06-07T11:17:00.000Z	ivoks	d0z	and your /etc/resolv.conf has right DNS namerservers?
+2005-06-07T11:17:00.000Z	d0z	ivoks	Yes, everything is correct.
+2005-06-07T11:18:00.000Z	d0z	ivoks	Otherwise i wouldn't talk to you now. :)
+2005-06-07T11:18:00.000Z	ivoks	d0z	ifconfig | grep inet
+2005-06-07T11:18:00.000Z	ivoks	d0z	?
+2005-06-07T11:18:00.000Z	d0z	ivoks	I'm on TP now.
+2005-06-07T11:18:00.000Z	ivoks	d0z	i'm takling about you computer with wifi card
+2005-06-07T11:18:00.000Z	d0z	ivoks	It's the same computer. :)
+2005-06-07T11:18:00.000Z	ivoks	d0z	then how do you know it isn't working?

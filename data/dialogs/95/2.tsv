@@ -1,0 +1,95 @@
+2012-05-01T20:55:00.000Z	samster34		help! what is happening :/ http://dl.dropbox.com/u/21007284/WP_000093.jpg
+2012-05-01T20:56:00.000Z	ActionParsnip	samster34	have you tested your RAM from Grub?
+2012-05-01T20:56:00.000Z	samster34	ActionParsnip	yes, weeks ago when I tried this the first time. no issues. I took out one, took out the other, switched them around, no difference
+2012-05-01T20:59:00.000Z	samster34	ActionParsnip	what else could it be?
+2012-05-01T20:59:00.000Z	ActionParsnip	samster34	try the boot option:  nomodeset
+2012-05-01T21:00:00.000Z	samster34	ActionParsnip	that's how I'm getting here in the first place. without that, it just freezes earlier
+2012-05-01T21:00:00.000Z	ActionParsnip	samster34	you add the option in Grub, which is waaay before Plymouth is even loaded
+2012-05-01T21:00:00.000Z	samster34	ActionParsnip	I'm already using nomodeset
+2012-05-01T21:01:00.000Z	ActionParsnip	samster34	is this on an installed OS, or the installation?
+2012-05-01T21:02:00.000Z	samster34	ActionParsnip	I can't install
+2012-05-01T21:02:00.000Z	samster34	ActionParsnip	this is what happens when I try to live boot or install
+2012-05-01T21:02:00.000Z	samster34	ActionParsnip	I've also tried the alternate disc already
+2012-05-01T21:03:00.000Z	ActionParsnip	samster34	tried Xubuntu? The default kernel is slightly different
+2012-05-01T21:04:00.000Z	samster34	ActionParsnip	no, but I have tried Mint, debian, gentoo, ubuntu 10.04, I'm sure I'm forgetting some
+2012-05-01T21:04:00.000Z	samster34	ActionParsnip	windows 7 of course runs fine. >_>
+2012-05-01T21:05:00.000Z	ActionParsnip	samster34	not of course really
+2012-05-01T21:05:00.000Z	samster34	ActionParsnip	the thing is, I don't want to run windows on it, but that's all that seems to work so far.
+2012-05-01T21:06:00.000Z	ActionParsnip	samster34	what is the make and model of the syste (if you have one)?
+2012-05-01T21:07:00.000Z	samster34	ActionParsnip	it's a Fujitsu-Siemens prebuilt...something. intel Q8300 LGA775, 2x2 GB DDR2, an nvidia 9800 GT, motherboard seems noname
+2012-05-01T21:07:00.000Z	samster34	ActionParsnip	also, it has an nforce chipset
+2012-05-01T21:08:00.000Z	ActionParsnip	samster34	what model Fujitsu-Siemens ?
+2012-05-01T21:08:00.000Z	samster34	ActionParsnip	Esprimo P1500
+2012-05-01T21:09:00.000Z	samster34	ActionParsnip	Mi4W - D2950
+2012-05-01T21:09:00.000Z	ActionParsnip	samster34	does it have the nvidia GPU?
+2012-05-01T21:09:00.000Z	samster34	ActionParsnip	not the one it shipped with, that was a GT 420 / GT 220
+2012-05-01T21:09:00.000Z	samster34	ActionParsnip	has a 9800 GT currently
+2012-05-01T21:10:00.000Z	ActionParsnip	samster34	tried the boot option:  nouveau.blacklist=1
+2012-05-01T21:42:00.000Z	samster34	ActionParsnip	alright I'm back, first test pass of this memory module went without errors...
+2012-05-01T21:48:00.000Z	samster34	ActionParsnip	how many memory test passes should I run? the first one completeted fine, but this takes forever..
+2012-05-01T21:48:00.000Z	ActionParsnip	samster34	just one will do
+2012-05-01T21:48:00.000Z	samster34	ActionParsnip	alright, then I'll try blacklisting nouveau now
+2012-05-01T21:49:00.000Z	ActionParsnip	samster34	yes without the spaces
+2012-05-01T21:50:00.000Z	samster34	ActionParsnip	any particular place in the boot entry that Is hould put this? before the --, after?
+2012-05-01T21:50:00.000Z	ActionParsnip	samster34	delete:  quiet splash    and put it in it's place
+2012-05-01T21:53:00.000Z	samster34	ActionParsnip	okay, get stuck here now:  http://dl.dropbox.com/u/21007284/WP_000094.jpg
+2012-05-01T21:53:00.000Z	ActionParsnip	samster34	if you disable USB (assuming youaren't booting using USB)
+2012-05-01T21:54:00.000Z	samster34	ActionParsnip	I am booting from usb :/
+2012-05-01T21:55:00.000Z	samster34	ActionParsnip	even then, how would I disable USB? I have no otpion to turn it off completely in the BIOS
+2012-05-01T21:56:00.000Z	ActionParsnip	samster34	looks like you need a boot option or two, you may find how-tos online using the last few lines of your output
+2012-05-01T21:58:00.000Z	samster34	ActionParsnip	what exactly am I looking to do, disable ehci?
+2012-05-01T22:04:00.000Z	samster34	ActionParsnip	I can't find what I need to do :/
+2012-06-22T22:12:00.000Z	samster34	ActionParsnip	he wants win7 though
+2012-06-22T22:13:00.000Z	ActionParsnip	samster34	sorry,, win7 what?
+2012-06-22T22:13:00.000Z	samster34	ActionParsnip	he's asking how to oc it on windows :)
+2012-06-22T22:13:00.000Z	ActionParsnip	samster34	oic
+2012-06-22T22:14:00.000Z	ActionParsnip	samster34	thanks
+2012-07-08T16:10:00.000Z	ActionParsnip	samster34	press CTRL+ALT+F1 and run:  passwd ubuntu   then press CTRL+ALT+F7 and log in as ubuntu with the password you set
+2012-07-08T16:10:00.000Z	samster34	ActionParsnip	ok, will try. thanks
+2012-07-08T16:26:00.000Z	ActionParsnip	samster34	tried: sudo nvidia-xconfig    then  rebooting
+2012-07-08T16:27:00.000Z	samster34	ActionParsnip	I did, no effect
+2012-07-08T16:27:00.000Z	samster34	ActionParsnip	I have the generated xorg.conf somewhere, hold on
+2012-07-08T16:27:00.000Z	ActionParsnip	samster34	if you press CTRL+ALT+F1 can you log in at CLI?
+2012-07-08T16:27:00.000Z	samster34	ActionParsnip	no!
+2012-07-08T16:28:00.000Z	ActionParsnip	samster34	reboot to recovery root mode and you should be able to read /var/log/Xorg.0.log using less
+2012-07-08T16:28:00.000Z	ActionParsnip	samster34	do you use dual video chips (intel + nvidia)
+2012-07-08T16:28:00.000Z	samster34	ActionParsnip	the error is: screens found, but none have a usable configuration
+2012-07-08T16:28:00.000Z	samster34	ActionParsnip	No, I removed the 2nd nvidia card to avoid trouble
+2012-07-08T16:30:00.000Z	samster34	ActionParsnip	from the look of the xorg.conf, it wasn't able to detect any supported modes for any of my screens
+2012-07-08T16:30:00.000Z	ActionParsnip	samster34	do you have resolution and refresh rates defined in xorg.conf?
+2012-07-08T16:30:00.000Z	samster34	ActionParsnip	no!
+2012-07-08T16:30:00.000Z	ActionParsnip	samster34	want to try my xorg.conf?
+2012-07-08T16:31:00.000Z	samster34	ActionParsnip	sure, but..will that work with my screen?
+2012-07-08T16:31:00.000Z	ActionParsnip	samster34	http://paste.ubuntu.com/1081089/   should be ok
+2012-07-08T16:32:00.000Z	samster34	ActionParsnip	thanks, I'll edit that mode to something I know my screen supports
+2012-07-08T16:32:00.000Z	ActionParsnip	samster34	backup the file you have now, then make changes :)
+2012-07-08T16:32:00.000Z	samster34	ActionParsnip	I have no file now, and I can always call nvidia-xconfig again to get the nearly empty one :/
+2012-07-08T16:43:00.000Z	ActionParsnip	samster34	do you use an Intel i7 cpu?
+2012-07-08T16:43:00.000Z	samster34	ActionParsnip	yes, but my mainboard doesn't use the integrated GPU
+2012-07-08T16:43:00.000Z	ActionParsnip	samster34	ok, you can see why I ask :)
+2012-07-08T16:48:00.000Z	ActionParsnip	samster34	what is the output of: lsb_release -sc
+2012-07-08T16:48:00.000Z	samster34	ActionParsnip	: precise
+2012-07-08T16:48:00.000Z	ActionParsnip	samster34	could try the xorg edgers update ppa (less fresh more stable)
+2012-07-08T16:49:00.000Z	samster34	ActionParsnip	already am, I have driver 302.something
+2012-07-08T17:08:00.000Z	samster34	ActionParsnip	I'm going to try a clean install, do the update-pciids first, then install the nvidia driver, and maybe then nvidia-xconfig will be able to properly configure the screens?
+2012-07-08T17:11:00.000Z	ActionParsnip	samster34	possibly
+2012-07-08T17:27:00.000Z	samster34	ActionParsnip	hey, so I did a clean install and the driver works, and it seems only my first screen can't be configured, the other two are now working fine
+2012-07-08T17:28:00.000Z	ActionParsnip	samster34	ahh, did you upgrade from Oneiric before?
+2012-07-08T17:28:00.000Z	samster34	ActionParsnip	no, that was a clean install as well
+2012-07-08T17:29:00.000Z	ActionParsnip	samster34	weird stuff :)
+2012-07-08T17:29:00.000Z	samster34	ActionParsnip	so, how do I go about making my first screen work?
+2012-07-08T17:32:00.000Z	samster34	ActionParsnip	just left :/
+2012-07-08T18:41:00.000Z	ActionParsnip	samster34	is the screen reporting EDID?
+2012-07-08T18:42:00.000Z	samster34	ActionParsnip	I dunno. It doesn't look like it.
+2012-07-08T18:42:00.000Z	ActionParsnip	samster34	you can check in /var/log/Xorg.0.log
+2012-07-08T18:42:00.000Z	ActionParsnip	samster34	good screens do it :)
+2012-07-08T18:42:00.000Z	samster34	ActionParsnip	what am I looking for in the log file
+2012-07-08T18:43:00.000Z	ActionParsnip	samster34	'edid', you can even run:  grep -i edid /var/log/Xorg.0.log   to make the system do it for you
+2012-07-08T18:45:00.000Z	ActionParsnip	samster34	doesn't look great, the screen isn't reporting EDID, you'll need to tell the driver what refreshes to use and so forth
+2012-07-08T18:46:00.000Z	samster34	ActionParsnip	hold on, I saw a thing somewhere about exporting the EDID from win7 and listing the binary file in the xconfig
+2012-07-08T18:46:00.000Z	ActionParsnip	samster34	worth a shot I guess
+2012-07-08T19:19:00.000Z	samster34	ActionParsnip	well, that didn't work. and neither did adding a displaymode manually
+2012-07-08T21:06:00.000Z	ActionParsnip	samster34	have you tried in #imagemagick
+2012-07-08T21:05:00.000Z	ActionParsnip	samster34	maybe the windows version is compiled different
+2012-07-08T21:06:00.000Z	samster34	ActionParsnip	there is such a channel? heh
+2012-07-08T21:07:00.000Z	ActionParsnip	samster34	yes, try it. It's free to try

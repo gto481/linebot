@@ -1,0 +1,95 @@
+2007-06-22T16:07:00.000Z	persica		zfs = awesome file system.  Zetabyte File System
+2007-06-22T16:07:00.000Z	persica		Zetabyte is a quadrillion gigabytes or something like that.
+2007-06-22T16:09:00.000Z	persica		Zeta is up there.  You couldn't get a Zettabyte on earth.
+2007-06-22T16:09:00.000Z	sluimers	persica	why not?
+2007-06-22T16:10:00.000Z	persica	sluimers	it exceeds the entropy available on earth.  There isn't enough information on earth basically.  (I don't have the numbers on me though).
+2007-06-22T16:13:00.000Z	persica	sluimers	actually, ZFS can hold a lot more than a Zettabyte.  A Zettabyte is only 2^70, while ZFS is 2^128, or about 10^18 times larger.
+2007-06-22T16:15:00.000Z	sluimers	persica	I can't seem to ping my windows computer.  don't know why.
+2007-06-22T16:16:00.000Z	persica	sluimers	can you connect to it otherwise?  Say, with 'smbclient -L //<windows ip>/'?
+2007-06-22T16:16:00.000Z	persica	sluimers	I think current versions of windows block pings if they have the firewall enabled.
+2007-06-22T16:17:00.000Z	sluimers	persica	that's probably it, but I can't find anything still enabled
+2007-06-22T16:18:00.000Z	persica	sluimers	what are the IP addresses of the two systems, I assume they're both on the same network and both can connect to the internet?
+2007-06-22T16:18:00.000Z	sluimers	persica	smbclient fails as well
+2007-06-22T16:18:00.000Z	sluimers	persica	yup they're 192.168.0.100 (Ubuntu) and 101 (Win XP)
+2007-06-22T16:19:00.000Z	persica	sluimers	if you don't have a firewall up on your ubuntu box yet, can your windows box ping your ubuntu box?
+2007-06-22T16:19:00.000Z	sluimers	persica	yes
+2007-06-22T16:19:00.000Z	sluimers	persica	why would I have a firewall on a Ubuntu box?
+2007-06-22T16:20:00.000Z	persica	sluimers	to protect it from network threats or limit access to promiscious services.
+2007-06-22T16:21:00.000Z	sluimers	persica	ah, so how do I open these ports?
+2007-06-22T16:22:00.000Z	persica	sluimers	it shouldn't affect your ability to ping out though, unless it is misconfigured and it sounds like you haven't changed anything.
+2007-06-22T16:22:00.000Z	sluimers	persica	so it's a windows blocking it.. most likely?
+2007-06-22T16:23:00.000Z	persica	sluimers	probably.  I assume you can ping your gateway, right?
+2007-06-22T16:23:00.000Z	sluimers	persica	yes
+2007-06-22T16:23:00.000Z	persica	sluimers	then I pronounce this a windows issue! Not our problem. :-P
+2007-06-22T16:23:00.000Z	sluimers	persica	but I caan't find one still working on my winXP. I shut them all down.
+2007-06-22T16:23:00.000Z	persica	sluimers	what are you trying to do though?
+2007-06-22T16:24:00.000Z	sluimers	persica	get access to a printer and look in shared folders
+2007-06-22T16:25:00.000Z	sluimers	persica	windows can see the shared folders on my Ubuntu one
+2007-06-22T16:25:00.000Z	persica	sluimers	hrm.  'smbclient -L //<windows box>/' should at least prompt for a password if you're sharing folders/printers.
+2007-06-22T16:25:00.000Z	sluimers	persica	I get a timeout connecting to 192.168.0.101:445
+2007-06-22T16:25:00.000Z	sluimers	persica	and 139 if I try that
+2007-06-22T16:26:00.000Z	persica	sluimers	you mean with nc/telnet?
+2007-06-22T16:27:00.000Z	persica	sluimers	you might try nmapping your windows box to see if you can find anything open.  'nmap -F 192.168.1.101'
+2007-06-22T16:28:00.000Z	sluimers	persica	?? it's the output on the terminal, installing nmap now
+2007-06-22T16:31:00.000Z	sluimers	persica	it doesn'y do much after typing in:  nmap -F -P0 192.168.0.101
+2007-06-22T16:32:00.000Z	persica	sluimers	it should give you a startup message, spend some time scanning, then print out open ports.
+2007-06-22T16:33:00.000Z	sluimers	persica	it doesn't get any further than: Starting Nmap 4.20 ( http://insecure.org ) at 2007-06-22 00:30 CEST
+2007-06-22T16:33:00.000Z	persica	sluimers	you have to give it time.  It's checking for open ports and such on the IP in question.  It's looking for ANYTHINg that's open.
+2007-06-22T16:35:00.000Z	sluimers	persica	How long could this take?
+2007-06-22T16:36:00.000Z	sluimers	persica	ten minutes?
+2007-06-22T16:36:00.000Z	persica	sluimers	well, if it's taking this long then it sounds like there's nothing on the other end of that IP.   Are you sure you have the IP right?
+2007-06-22T16:36:00.000Z	sluimers	persica	yes, very sure
+2007-06-22T16:37:00.000Z	sluimers	persica	yes
+2007-06-22T16:37:00.000Z	persica	sluimers	hrm.  Sounds like you have a very restrictive firewall between the two then. :)
+2007-06-22T16:38:00.000Z	persica	sluimers	you could try running wireshark/ethereal on both ends and then ping to watch what happens to the traffic.
+2007-06-22T16:38:00.000Z	sluimers	persica	okay
+2007-06-22T16:39:00.000Z	sluimers	persica	I'll have to d/l them first and my connection is slow
+2007-06-22T16:39:00.000Z	persica	sluimers	it sounds really strange that the firewalls are off and you can only send traffic one direction.  My instincts are that the IP you're putting in on the linux end is wrong or there's a firewall.
+2007-06-22T16:40:00.000Z	persica	sluimers	on the linux end you could just run tcpdump.  It's ugly and console based, but will show you the traffic none the less.  (you'd want to do 'tcpdump -I eth0 host 192.168.0.101')
+2007-06-22T16:40:00.000Z	persica	sluimers	or is it '-i'...
+2007-06-22T16:42:00.000Z	persica	sluimers	all those traffic analyzers will do is show you what's going in and out on the wires.  If the ping leaves your linux machines but doesn't go into your windows system, then there is a firewall on the windows system or something in between.  If it gets to the windows system but isn't returned, well that's a windows issue.
+2007-06-22T16:54:00.000Z	persica	sluimers	on a work call, be a sec
+2007-06-22T16:42:00.000Z	persica	sluimers	I'm betting there's just some silly misconfiguration in there somewhere that you didn't notice.  It usually seems to be that way.
+2007-06-22T16:43:00.000Z	sluimers	persica	okay, just  sec, I'll install wireshrak on my xp first
+2007-06-22T16:45:00.000Z	sluimers	persica	looks like that's gonna take while, how do I use tcdump when it's running in my terminal?
+2007-06-22T16:47:00.000Z	sluimers	persica	I type in sudo tcpdump -i eth0 host 192.168.0.101 and it says:
+2007-06-22T16:47:00.000Z	persica	sluimers	actually, I think I can set up a test situation just like yours.
+2007-06-22T16:47:00.000Z	sluimers	persica	okay
+2007-06-22T16:47:00.000Z	sluimers	persica	bbias, loo
+2007-06-22T16:50:00.000Z	sluimers	persica	back
+2007-06-22T05:10:00.000Z	persica	sluimers	no third-party firewalls?
+2007-06-22T16:55:00.000Z	sluimers	persica	I changed eth0 into ath0 in the tcdump thing, it's running wild now
+2007-06-22T16:55:00.000Z	sluimers	persica	okay
+2007-06-22T16:56:00.000Z	persica	sluimers	yeah, that's all the network traffic, packet by packet.  You can change the expression at the end to filter it.  It's a very handy tool for diagnosing network issues.
+2007-06-22T16:57:00.000Z	sluimers	persica	okay, so that info is all my other computer slowly downloading wireshark
+2007-06-22T16:57:00.000Z	sluimers	persica	my connection is uberslow ^_^;;;
+2007-06-22T16:58:00.000Z	persica	sluimers	if you have a switched network then you should only see packets destined for your computer.
+2007-06-22T16:59:00.000Z	sluimers	persica	I have a wireless router if that's what you mean.
+2007-06-22T05:01:00.000Z	persica	sluimers	switches only forward packets to the system for which they're destined.  Hubs just rebroadcast everything they receive to everyone.  Most routers these days are switched.
+2007-06-22T05:02:00.000Z	persica	sluimers	I'm pretty stumped right now.  I don't have a good windows system to test on, but I'm having the same problem with one of my WindowsXP boxes.  My guess is it's windows being restrictive.
+2007-06-22T05:03:00.000Z	persica	sluimers	the timeouts connecting to 445 and 139 seem to imply a firewall is turned on or file sharing is turned off.
+2007-06-22T05:03:00.000Z	sluimers	persica	well it's only 15 minutes until the download is finished so I can test both sides
+2007-06-22T05:04:00.000Z	persica	sluimers	I dont' know if Windows will do this, but can you test that it can connect to it's own shares, e.g. Run.. '\\192.168.0.101\'
+2007-06-22T05:07:00.000Z	sluimers	persica	sorry, I fell asleep a bit, already did and suceeded
+2007-06-22T05:09:00.000Z	persica	sluimers	A little tired?
+2007-06-22T05:09:00.000Z	sluimers	persica	yup
+2007-06-22T05:10:00.000Z	persica	sluimers	Alright, I'm thinking that means that the file sharing is enabled, it is just getting blocked somewhere.
+2007-06-22T05:10:00.000Z	persica	sluimers	you don't have anything like an anti-virus suite which includes "internet protection" or the like, do you?
+2007-06-22T05:11:00.000Z	sluimers	persica	I think I turned those off as well
+2007-06-22T05:13:00.000Z	persica	sluimers	It really sounds like there is a firewall of some sort enable on the Windows system and I'm not a great windows admin.
+2007-06-22T05:15:00.000Z	sluimers	persica	neither am I, I just disabled anything looking like belonging to the anti-virus or firewall in the task manager
+2007-06-22T05:15:00.000Z	persica	sluimers	Did you disable the windows firewall in the control panel?
+2007-06-22T05:15:00.000Z	sluimers	persica	yes
+2007-06-22T05:16:00.000Z	sluimers	persica	whoops, on second guess...
+2007-06-22T05:17:00.000Z	sluimers	persica	okay, I can ping! Whoohoo!
+2007-06-22T05:17:00.000Z	persica	sluimers	what was it?
+2007-06-22T05:18:00.000Z	sluimers	persica	the windows was still on, I haven't used windows in such a long time, I assumed you'd see the firewall working in the tray.
+2007-06-22T05:19:00.000Z	sluimers	persica	It's my mom's computer actually
+2007-06-22T05:19:00.000Z	persica	sluimers	Ah, see told you it would be something silly.  Can you connect to shares now?
+2007-06-22T05:19:00.000Z	sluimers	persica	yes, now I'm trying to print a test page
+2007-06-22T05:20:00.000Z	sluimers	persica	ohhhhh, that sounds good.....:D
+2007-06-22T05:20:00.000Z	persica	sluimers	yay!  Now you can go take a nap or something, eh?
+2007-06-22T05:20:00.000Z	sluimers	persica	sweet sound of a printer working
+2007-06-22T05:20:00.000Z	sluimers	persica	zzzzzz
+2007-06-22T05:20:00.000Z	sluimers	persica	thanks for the help
+2007-06-22T05:21:00.000Z	sluimers	persica	really appreciated it

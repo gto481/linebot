@@ -1,0 +1,98 @@
+2011-07-31T19:05:00.000Z	diverdude		I am trying to configure subversion but when i run configure script i get the error: configure: error: subversion requires zlib. How do i install this?
+2011-07-31T19:07:00.000Z	diverdude		any1+?
+2011-07-31T19:07:00.000Z	ikonia	diverdude	why are you not using the apache install from ubuntu ?
+2011-07-31T19:08:00.000Z	diverdude	ikonia	because the image comes with a preinstalled apache. its an bitnami image
+2011-07-31T19:08:00.000Z	ikonia	diverdude	oh, so this isn't a proper ubuntu install ?
+2011-07-31T19:08:00.000Z	diverdude	ikonia	no it is a bitnami image hosted on amazon, but it is a ubuntu image
+2011-07-31T19:09:00.000Z	ikonia	diverdude	it's modified I suggest using bitnami's support for that
+2011-07-31T19:09:00.000Z	ikonia	diverdude	http://bitnami.org/faq
+2011-07-31T19:10:00.000Z	diverdude	ikonia	they have sucky support
+2011-07-31T19:10:00.000Z	ikonia	diverdude	that's not our fault, we don't pickup the slack for these guys, it's their business
+2011-07-31T19:11:00.000Z	diverdude	ikonia	my question is not even bitnami related. its just "how do i install zlib on ubuntu"
+2011-07-31T19:11:00.000Z	ikonia	diverdude	it is - as it's a modified system,
+2011-07-31T19:11:00.000Z	ikonia	diverdude	we won't support it,
+2011-07-31T19:11:00.000Z	ikonia	diverdude	you chose to use it
+2011-07-31T19:19:00.000Z	diverdude	ikonia	please stop banning people just because you have a personal grudge. that is no way to run a support forum!
+2012-01-11T21:43:00.000Z	ikonia	diverdude	just ignore it it will go away soon
+2012-01-11T23:10:00.000Z	ikonia	diverdude	the guys in ##windows can tell you how to use the windows install cd to put the mbr back
+2012-01-12T15:36:00.000Z	ikonia	diverdude	they are logged
+2012-01-12T15:36:00.000Z	diverdude	ikonia	where?
+2012-01-12T15:37:00.000Z	ikonia	diverdude	depends what sort of thing you are looking for, but the syslog captures most of the startup
+2012-01-12T15:37:00.000Z	diverdude	ikonia	ok... different servers and daemons etc. are initiated at startup, and they fail and send error messages and i need to debug it
+2012-01-12T15:38:00.000Z	ikonia	diverdude	what's failing
+2012-01-12T15:38:00.000Z	diverdude	ikonia	something i have installed. Its not core ubuntu
+2012-01-12T15:38:00.000Z	ikonia	diverdude	ok - so tell me what's failing
+2012-01-12T15:38:00.000Z	diverdude	ikonia	well its gitorious
+2012-01-12T15:39:00.000Z	ikonia	diverdude	that's a gui as far as I know
+2012-01-12T15:39:00.000Z	diverdude	ikonia	and sphinxx server
+2012-01-12T15:39:00.000Z	diverdude	ikonia	yes it is
+2012-01-12T15:39:00.000Z	ikonia	diverdude	ok - so a gui won't start at boot up, so I'm not sure why you are expecting a gui to be lauched as part of the boot sequence
+2012-01-12T15:40:00.000Z	ikonia	diverdude	ok, so first question. 1.) how did you install sphinx
+2012-01-12T15:40:00.000Z	diverdude	ikonia	well its using some scripts at bootup that fails
+2012-01-12T15:40:00.000Z	diverdude	ikonia	sudo apt-get install sphinxserver
+2012-01-12T15:40:00.000Z	ikonia	diverdude	ok, what repo did it come from ?
+2012-01-12T15:40:00.000Z	diverdude	ikonia	the default. i did not add any ppa
+2012-01-12T15:41:00.000Z	diverdude	ikonia	its a v. 10.10
+2012-01-12T15:41:00.000Z	ikonia	diverdude	ok, can you start the sphinxserver manually ?
+2012-01-12T15:42:00.000Z	diverdude	ikonia	hmmm good question. i think i can but i am not sure how
+2012-01-12T15:42:00.000Z	ikonia	diverdude	ok - so this is what you need to check
+2012-01-12T15:42:00.000Z	ikonia	diverdude	that will give you information on any problems/errors
+2012-01-12T15:42:00.000Z	ikonia	diverdude	you should also see the server trying to start in the syslog
+2012-01-12T15:43:00.000Z	ikonia	diverdude	that's not what I said
+2012-01-12T15:43:00.000Z	diverdude	ikonia	no it was just an information
+2012-01-12T15:43:00.000Z	ikonia	diverdude	I said you need to manually start it to test it, and you can also check the syslog to see it start
+2012-01-12T15:44:00.000Z	diverdude	ikonia	where do i see the syslog?
+2012-01-12T15:44:00.000Z	ikonia	diverdude	/var/log
+2012-01-12T15:44:00.000Z	ikonia	diverdude	when you boot the machine, you should also see it try to start it, do you see it then ?
+2012-01-12T15:45:00.000Z	diverdude	ikonia	yeah i do...it squirts out lots of messsages but it goes away again to quick. thats why i waanted to log it
+2012-01-12T15:46:00.000Z	ikonia	diverdude	ok, so try to start it manually is the best way forward
+2012-01-12T15:46:00.000Z	diverdude	ikonia	ahh /var/log/boot.log has the info
+2012-01-12T15:48:00.000Z	diverdude	ikonia	it has the errors i see at startup...at least the ones i can i remember i saw
+2012-01-12T15:49:00.000Z	diverdude	ikonia	git-demon script uses some depricated gems (its a ruby app)
+2012-01-12T15:53:00.000Z	diverdude	ikonia	ok thx. now i can start to try and resolve first that deprecation error which is printed like a million times
+2012-01-12T17:25:00.000Z	ikonia	diverdude	why is your application looking in /usr/local/
+2012-01-12T17:25:00.000Z	diverdude	ikonia	hmm im not sure. where do you see that?
+2012-01-12T17:25:00.000Z	ikonia	diverdude	your error
+2012-01-12T17:25:00.000Z	ikonia	diverdude	/usr/local/lib/site_ruby/1.8/rubygems/source_index.rb:127
+2012-01-12T17:26:00.000Z	diverdude	ikonia	im using repo ruby
+2012-01-16T17:53:00.000Z	ikonia	diverdude	try #debian
+2012-01-17T18:24:00.000Z	diverdude	ikonia	just normal ubuntu
+2012-01-17T18:25:00.000Z	ikonia	diverdude	I'm talking to gulzar
+2012-01-17T18:29:00.000Z	ikonia	diverdude	you need to do somedir/. not somedir/*
+2012-06-01T13:01:00.000Z	ikonia	diverdude	contact the people who run the network
+2012-06-01T13:02:00.000Z	diverdude	ikonia	what will that help?
+2012-06-01T13:02:00.000Z	ikonia	diverdude	they can make an execption for you to transfer the file
+2012-06-01T13:02:00.000Z	ikonia	diverdude	(assuming it's allowed)
+2012-09-10T00:58:00.000Z	ikonia	diverdude	check
+2012-09-10T00:58:00.000Z	diverdude	ikonia	how can i check it?
+2012-09-10T00:58:00.000Z	ikonia	diverdude	look in the package manager
+2012-09-10T01:00:00.000Z	diverdude	ikonia	arrg apt-cache show says Version: 5.3.3-1ubuntu9 :/
+2012-10-09T19:43:00.000Z	diverdude	ikonia	it can be repackaged
+2012-10-09T19:31:00.000Z	ikonia	diverdude	that is not coming from an official ubuntu repo
+2012-10-09T19:32:00.000Z	diverdude	ikonia	thats a ppa. because ubuntu 12.04 does not support php 5.4
+2012-10-09T19:32:00.000Z	ikonia	diverdude	ok, so contact the PPA maintainer
+2012-10-09T19:33:00.000Z	diverdude	ikonia	arg...thats the problem with ubuntu :( its software support is quite small :(
+2012-10-09T19:33:00.000Z	ikonia	diverdude	it's software support is excellent, you're not using ubuntu's software, your using some random persons,
+2012-10-09T19:34:00.000Z	diverdude	ikonia	because ubuntu does not have php 5.4
+2012-10-09T19:34:00.000Z	ikonia	diverdude	why would it ?
+2012-10-09T19:34:00.000Z	diverdude	ikonia	because its the php current version
+2012-10-09T19:34:00.000Z	ikonia	diverdude	what needs it
+2012-10-09T19:34:00.000Z	diverdude	ikonia	its php5
+2012-10-09T19:35:00.000Z	ikonia	diverdude	what package needs 5.4 ?
+2012-10-09T19:36:00.000Z	diverdude	ikonia	php5.4 codes is more efficient and clean, so thats why i use it
+2012-10-09T19:36:00.000Z	ikonia	diverdude	right, well, ubuntu isn't sat on the bleeding edge, it's sat on the stable branch,
+2012-10-09T19:37:00.000Z	ikonia	diverdude	especially on the long term support releases.
+2012-10-09T19:39:00.000Z	diverdude	ikonia	http://serverfault.com/questions/407979/installing-php5-imagick-in-ubuntu-12-04-w-ondrej-packages-results-in-dependency
+2012-10-09T19:39:00.000Z	diverdude	ikonia	im not the only one with those requirements
+2012-10-09T19:40:00.000Z	ikonia	diverdude	that doesn't make them any more compatible with ubuntu's well documented and known "stable branch" policy
+2012-10-09T19:41:00.000Z	diverdude	ikonia	php5.4 was released february and IS stable
+2012-10-09T19:42:00.000Z	ikonia	diverdude	yes, but it was not released before the development cyclet of 12.04
+2012-10-09T19:42:00.000Z	ikonia	diverdude	so it was not a stable candidate
+2012-10-09T19:42:00.000Z	diverdude	ikonia	so it will never be supported in 5.04?
+2012-10-09T19:42:00.000Z	ikonia	diverdude	doubtful
+2012-10-09T19:43:00.000Z	diverdude	ikonia	but why? its stable now
+2012-10-09T19:43:00.000Z	ikonia	diverdude	they don't update the root branch as it would require a lot of work and effort
+2012-10-09T19:44:00.000Z	diverdude	ikonia	yes, which does not work. i have fixed it however
+2012-10-09T19:45:00.000Z	ikonia	diverdude	great, problem solved
+2012-10-09T19:45:00.000Z	diverdude	ikonia	and it works, its just because a package is missing
+2012-10-09T19:45:00.000Z	diverdude	ikonia	so i had to get that from elsewhere

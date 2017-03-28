@@ -1,0 +1,94 @@
+2006-06-29T16:41:00.000Z	smax		How can i change my sound card
+2006-06-29T16:42:00.000Z	crimsun	smax	as in you have a new one, or?
+2006-06-29T16:42:00.000Z	smax	crimsun	change motherboard on this motherboard this sound card worked fine last time
+2006-06-29T16:44:00.000Z	crimsun	smax	ok, is the device detected? pastebin ``cat /proc/asound/cards && amixer''
+2006-06-29T16:47:00.000Z	crimsun	smax	don't touch /etc/modules
+2006-06-29T16:48:00.000Z	crimsun	smax	please pastebin the output from ``amixer''
+2006-06-29T16:48:00.000Z	crimsun	smax	I'll give you further advice once I've read your paste
+2006-06-29T16:48:00.000Z	crimsun	smax	lsmod |grep ^snd_via82xx
+2006-06-29T16:50:00.000Z	crimsun	smax	what's the output from the lsmod command I gave you above?
+2006-06-29T16:51:00.000Z	smax	crimsun	nothing
+2006-06-29T16:51:00.000Z	crimsun	smax	then it's not loaded. ``sudo modprobe snd_via82xx''
+2006-06-29T16:53:00.000Z	crimsun	smax	have you executed the modprobe command yet?
+2006-06-29T16:53:00.000Z	smax	crimsun	yes
+2006-06-29T16:54:00.000Z	crimsun	smax	``cat /proc/asound/cards''
+2006-06-29T16:55:00.000Z	crimsun	smax	ok, next time please use http://pastebin.ca
+2006-06-29T16:55:00.000Z	crimsun	smax	now please pastebin the output from ``amixer''
+2006-06-29T16:56:00.000Z	smax	crimsun	amixer: Mixer attach default error: No such device
+2006-06-29T16:56:00.000Z	crimsun	smax	lsmod |grep ^via82xx_
+2006-06-29T16:57:00.000Z	smax	crimsun	no result
+2006-06-29T16:57:00.000Z	crimsun	smax	pastebin (do NOT paste here) ``dmesg''
+2006-06-29T16:59:00.000Z	smax	crimsun	http://pastebin.ca/74366
+2006-06-29T05:01:00.000Z	crimsun	smax	``uname -r''
+2006-06-29T05:01:00.000Z	crimsun	smax	and I'll need ``cat /proc/interrupts'' pastebinned
+2006-06-29T05:01:00.000Z	smax	crimsun	2.6.12-9-386
+2006-06-29T05:02:00.000Z	crimsun	smax	you're still using Breezy (5.10)?
+2006-06-29T05:02:00.000Z	crimsun	smax	that's Breezy's kernel original kernel. You're out of date.
+2006-06-29T05:02:00.000Z	smax	crimsun	i updated via internet
+2006-06-29T05:03:00.000Z	smax	crimsun	i have usplash and so on like in dapper
+2006-06-29T05:03:00.000Z	crimsun	smax	but you're using an old kernel.
+2006-06-29T05:03:00.000Z	crimsun	smax	so. ``sudo apt-get update && sudo apt-get dist-upgrade''
+2006-06-29T05:04:00.000Z	smax	crimsun	but on this kernel this sound worked fine!
+2006-06-29T05:05:00.000Z	crimsun	smax	and that kernel is incompatible with Dapper's udev!
+2006-06-29T05:06:00.000Z	smax	crimsun	i started dist-upgrade but no kernel upgrade there
+2006-06-29T05:07:00.000Z	crimsun	smax	``sudo apt-get install linux-image-386''
+2006-06-29T05:10:00.000Z	smax	crimsun	after instaling new kernel my sound should be work?
+2006-06-29T05:10:00.000Z	crimsun	smax	is it installing 2.6.15-25-386?
+2006-06-29T05:11:00.000Z	smax	crimsun	it say that my version it good
+2006-06-29T05:11:00.000Z	crimsun	smax	what does that mean?
+2006-06-29T05:12:00.000Z	smax	crimsun	it don't want update kernel
+2006-06-29T05:12:00.000Z	crimsun	smax	pastebin the entire command you're using and the output
+2006-06-29T05:13:00.000Z	smax	crimsun	you don't understand because it's on russian
+2006-06-29T05:13:00.000Z	crimsun	smax	$LANG doesn't matter
+2006-06-29T05:14:00.000Z	smax	crimsun	http://pastebin.ca/74383
+2006-06-29T05:15:00.000Z	smax	crimsun	my dist-upgrade think that i have new kernel
+2006-06-29T05:17:00.000Z	crimsun	smax	ls /boot/vmlinuz*
+2006-06-29T05:17:00.000Z	smax	crimsun	/boot/vmlinuz-2.6.12-9-386  /boot/vmlinuz-2.6.15-25-386
+2006-06-29T05:18:00.000Z	crimsun	smax	reboot into 2.6.15-25-386, and we'll continue troubleshooting
+2006-06-29T05:19:00.000Z	smax	crimsun	What should i change in grup to reboot with another kernel
+2006-06-29T05:19:00.000Z	crimsun	smax	just choose the 2.6.15-25-386 kernel in the grub menu
+2006-06-29T05:19:00.000Z	crimsun	smax	do you also use nvidia/fglrx drivers?
+2006-06-29T05:20:00.000Z	smax	crimsun	there no such kernel in grub menu. No i don't use nvidia
+2006-06-29T05:21:00.000Z	crimsun	smax	you don't have an 2.6.15 entries in /boot/grub/menu.lst ?
+2006-06-29T05:21:00.000Z	smax	crimsun	what should i change in grub
+2006-06-29T05:22:00.000Z	crimsun	smax	you need an entry for the new 2.6.15-25-386 kernel. Installing it should have created it for you. Did it not?
+2006-06-29T05:25:00.000Z	smax	crimsun	i have two ubuntu on hard drive. i don't understand what in grub i used lilo befor ubuntu
+2006-06-29T05:26:00.000Z	crimsun	smax	then you need to tell lilo about the new kernel.
+2006-06-29T05:27:00.000Z	crimsun	smax	does Ubuntu on your install boot using grub or lilo?
+2006-06-29T05:27:00.000Z	smax	crimsun	http://pastebin.ca/74396 my grub
+2006-06-29T05:28:00.000Z	crimsun	smax	right, choose the top one.
+2006-06-29T05:28:00.000Z	crimsun	smax	--->  Ubuntu, kernel 2.6.15-25-386
+2006-06-29T05:29:00.000Z	smax	crimsun	which one booting not from hda1?
+2006-06-29T05:30:00.000Z	crimsun	smax	I don't understand what you just said
+2006-06-29T05:32:00.000Z	smax	crimsun	I have 2 Ubuntu on one hard drive first is not this system
+2006-06-29T05:32:00.000Z	crimsun	smax	do you mean you have two different Ubuntu installations on two different root partitions?
+2006-06-29T05:32:00.000Z	smax	crimsun	yes
+2006-06-29T05:33:00.000Z	smax	crimsun	and newer kernel is on another installation
+2006-06-29T05:34:00.000Z	crimsun	smax	those two kernels, according to the paste you showed me, are in the same /
+2006-06-29T05:35:00.000Z	smax	crimsun	just a moment i reboot and check
+2006-06-29T05:42:00.000Z	smax	crimsun	my boot menu is not in menu.lst it is in menu.lst~
+2006-06-29T05:42:00.000Z	smax	crimsun	it boot's from backup file
+2006-06-29T05:43:00.000Z	crimsun	smax	ok, well, do whatever you need to do to boot 2.6.15-25-286
+2006-06-29T05:44:00.000Z	smax	crimsun	but in menu.lst~ there are no such kernel
+2006-06-29T05:44:00.000Z	crimsun	smax	so cp menu.lst menu.lst~
+2006-06-29T05:45:00.000Z	crimsun	smax	like I said, you know your system better than I do, so just make it boot 2.6.15-25-386
+2006-06-29T05:47:00.000Z	smax	crimsun	Can I boot now from lilo? I don't like grub i don't understand it
+2006-06-29T05:48:00.000Z	crimsun	smax	if you install (re)lilo and remove grub, sure
+2006-06-29T06:09:00.000Z	smax	crimsun	how keep changes in grub ( like command lilo after changes)
+2006-06-29T06:09:00.000Z	crimsun	smax	update-grub
+2006-06-29T06:18:00.000Z	crimsun	smax	same as ...?
+2006-06-29T06:18:00.000Z	smax	crimsun	same as was
+2006-06-29T06:18:00.000Z	smax	crimsun	in root konsole
+2006-06-29T06:19:00.000Z	smax	crimsun	it said that find 2.1.15.x kernel and old kernel to but
+2006-06-29T06:20:00.000Z	smax	crimsun	update-grub said that find 2.6.15.x kernel and old 2.6.12 kernel
+2006-06-29T06:20:00.000Z	smax	crimsun	but but menu is old!
+2006-06-29T06:21:00.000Z	crimsun	smax	as in the boot menu is old?
+2006-06-29T06:21:00.000Z	crimsun	smax	can you take a digital photo of the grub menu at boot?
+2006-06-29T06:22:00.000Z	smax	crimsun	I can gave you my old backup menu( which i see when reboot)
+2006-06-29T06:23:00.000Z	smax	crimsun	it's steel old. grub said that find 2 kernels and in menu i have onlu 1
+2006-06-29T06:25:00.000Z	smax	crimsun	i don't have cable to send you photo
+2006-06-29T06:25:00.000Z	smax	crimsun	but menu doesn't changed
+2006-06-29T06:28:00.000Z	smax	crimsun	what should I do? to change boot menu
+2006-06-29T06:28:00.000Z	crimsun	smax	I'm very busy atm. Keep in mind you can always just edit the kernels and initrds chosen.
+2006-06-29T06:29:00.000Z	crimsun	smax	as in with the 'e' keypress
+2006-06-29T06:30:00.000Z	smax	crimsun	OK thankyou very muck for good advice's

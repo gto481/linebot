@@ -1,0 +1,99 @@
+2008-04-03T01:09:00.000Z	iositd	ChaosTheory	sorry if i barge in, but can you briefly explain the problem?
+2008-04-03T01:09:00.000Z	ChaosTheory	iositd	"sudo make" gives me 225 errors when installing ndiswrapper.
+2008-04-03T01:10:00.000Z	ChaosTheory	iositd	http://pastebin.com/m42f7166
+2008-04-03T01:13:00.000Z	iositd	ChaosTheory	did you install by alternate/have internet now?
+2008-04-03T01:13:00.000Z	ChaosTheory	iositd	I do not have internet on the laptop with the problems.
+2008-04-03T01:13:00.000Z	iositd	ChaosTheory	can you temporary get internet on it? jack a cable in?
+2008-04-03T01:14:00.000Z	ChaosTheory	iositd	billy: I've tried it before and I didn't get any kind of connection.
+2008-04-03T01:14:00.000Z	iositd	ChaosTheory	did what, jack a able in?
+2008-04-03T01:14:00.000Z	ChaosTheory	iositd	Yes.
+2008-04-03T01:14:00.000Z	ChaosTheory	iositd	I just took the ethernet out from the router and put it into my laptop.
+2008-04-03T01:15:00.000Z	iositd	ChaosTheory	don't unjack the router, that's the end where the other cable goes in
+2008-04-03T01:15:00.000Z	ChaosTheory	iositd	The router is hooked up to the modem, though? billy: Yes.
+2008-04-03T01:16:00.000Z	iositd	ChaosTheory	don't unjack the router. Unjack the desktop and use that one. Plug a cable from your laptop to the router.
+2008-04-03T01:16:00.000Z	ChaosTheory	iositd	Let me look at the cables. . .
+2008-04-03T01:17:00.000Z	ChaosTheory	iositd	I'm not sure what I should be looking for. . .
+2008-04-03T01:17:00.000Z	iositd	ChaosTheory	you should be looking for a cable that goes from your laptop to your router, and not use the cable that goes between your router and modem.
+2008-04-03T01:18:00.000Z	ChaosTheory	iositd	There is no cable from my laptop to the router.
+2008-04-03T01:18:00.000Z	iositd	ChaosTheory	i'm asking you to put a cable there.
+2008-04-03T01:18:00.000Z	iositd	ChaosTheory	it's to be able to install the packages needed to compile ndiswrapper
+2008-04-03T01:18:00.000Z	ChaosTheory	iositd	And that cable is originally hooked up to the desktop, correct.
+2008-04-03T01:18:00.000Z	iositd	ChaosTheory	then unjack the desktop and plug it on the router please
+2008-04-03T01:19:00.000Z	ChaosTheory	iositd	Okay, I have found it.
+2008-04-03T01:19:00.000Z	ChaosTheory	iositd	billy: Okay, I'm unplugging now. . .
+2008-04-03T01:19:00.000Z	iositd	ChaosTheory	once your laptop is online, install xchat and come back here please
+2008-04-03T01:28:00.000Z	iositd	ChaosTheory	precede with sudo.
+2008-04-03T01:29:00.000Z	iositd	ChaosTheory	"" sudo aptitude install pastebinit ""
+2008-04-03T01:35:00.000Z	iositd	ChaosTheory	==> cat /etc/apt/sources.list | pastebinit (provide link in channel please)
+2008-04-03T01:37:00.000Z	iositd	ChaosTheory	you have to update it ... system -> administration -> update manager. From there select check and then run the previous command again please.
+2008-04-03T10:06:00.000Z	iositd	ChaosTheory	you fixed the network issue?
+2008-04-03T10:06:00.000Z	ChaosTheory	iositd	Yes.
+2008-04-03T10:06:00.000Z	iositd	ChaosTheory	good to hear
+2008-04-03T10:06:00.000Z	ChaosTheory	iositd	Hi. ^_^
+2008-04-03T10:06:00.000Z	ChaosTheory	iositd	Ubuntu is making me cry. T_T
+2008-04-03T10:06:00.000Z	iositd	ChaosTheory	why :(
+2008-04-03T10:07:00.000Z	ChaosTheory	iositd	Lots of problems. =|
+2008-04-03T10:07:00.000Z	iositd	ChaosTheory	give me an overview then
+2008-04-03T10:07:00.000Z	iositd	ChaosTheory	errors?
+2008-04-03T10:08:00.000Z	ChaosTheory	iositd	My screen resolution isn't fixed yet.
+2008-04-03T10:08:00.000Z	ChaosTheory	iositd	My sound is messed up now (worse than before).
+2008-04-03T10:09:00.000Z	iositd	ChaosTheory	the screen resolution is due to not having restricted drivers.
+2008-04-03T10:09:00.000Z	ChaosTheory	iositd	I enabled the restricted drivers and I restarted for something and now it's back to normal.
+2008-04-03T10:09:00.000Z	ChaosTheory	iositd	After I enabled the restricted drivers, it worked.
+2008-04-03T10:10:00.000Z	iositd	ChaosTheory	good
+2008-04-03T10:10:00.000Z	iositd	ChaosTheory	explain sound screwed up?
+2008-04-03T10:10:00.000Z	ChaosTheory	iositd	No volume control GStreamer plugins and/or devices found.
+2008-04-03T10:11:00.000Z	ChaosTheory	iositd	Okay, I have two things in my Restricted Drivers Manager -- both are enabled but neither are in use.
+2008-04-03T10:11:00.000Z	iositd	ChaosTheory	i c. you might have to compile alsa for that
+2008-04-03T10:11:00.000Z	iositd	ChaosTheory	which are enabled?
+2008-04-03T10:11:00.000Z	ChaosTheory	iositd	How do I do that?
+2008-04-03T10:11:00.000Z	iositd	ChaosTheory	we'll come to that later
+2008-04-03T10:12:00.000Z	iositd	ChaosTheory	first answer bazhang who asked for your sources.list :-)
+2008-04-03T10:12:00.000Z	ChaosTheory	iositd	Lucent/Agere linmodem controller driver and NVIDIA accelerated graphics driver (latest cards).
+2008-04-03T10:12:00.000Z	ChaosTheory	iositd	How do I get my sources.list?
+2008-04-03T10:12:00.000Z	iositd	ChaosTheory	cat /etc/apt/sources.list
+2008-04-03T10:14:00.000Z	ChaosTheory	iositd	bazhang: http://pastebin.com/d6cb07b4
+2008-04-03T10:16:00.000Z	iositd	ChaosTheory	i can see you did follow my suggestion, however you forgot a few. line 6, 8,13,15
+2008-04-03T10:16:00.000Z	iositd	ChaosTheory	so ==> sudo gedit /etc/apt/sources.list and edit those lines =)
+2008-04-03T10:18:00.000Z	ChaosTheory	iositd	Okay, I saved.
+2008-04-03T10:18:00.000Z	iositd	ChaosTheory	then update :-)
+2008-04-03T10:18:00.000Z	ChaosTheory	iositd	Update?
+2008-04-03T10:18:00.000Z	iositd	ChaosTheory	sudo apt-get update
+2008-04-03T10:18:00.000Z	iositd	ChaosTheory	BUT ONLY if you have internet on it now
+2008-04-03T10:18:00.000Z	ChaosTheory	iositd	I'm talking to you from the laptop.
+2008-04-03T10:18:00.000Z	ChaosTheory	iositd	Okay, it updated.
+2008-04-03T10:19:00.000Z	iositd	ChaosTheory	good. a sec
+2008-04-03T10:19:00.000Z	iositd	ChaosTheory	for easy use, i'll write you a script and tell you how to run it
+2008-04-03T10:19:00.000Z	ChaosTheory	iositd	Run what? =D
+2008-04-03T10:20:00.000Z	iositd	ChaosTheory	the script that i'm writing right nwo
+2008-04-03T10:20:00.000Z	ChaosTheory	iositd	That does what?
+2008-04-03T10:20:00.000Z	iositd	ChaosTheory	hopefully fix your sound
+2008-04-03T10:20:00.000Z	ChaosTheory	iositd	Okay, I see.
+2008-04-03T10:20:00.000Z	ChaosTheory	iositd	It says there are 129 updates available. . .
+2008-04-03T10:21:00.000Z	iositd	ChaosTheory	while you update i'll write your script then
+2008-04-03T10:21:00.000Z	ChaosTheory	iositd	Why are there so many updates?
+2008-04-03T10:21:00.000Z	iositd	ChaosTheory	because you haven't updated properly last night. You forgot the 2 sources that had the most updates.
+2008-04-03T10:21:00.000Z	ChaosTheory	iositd	Oh.
+2008-04-03T10:22:00.000Z	ChaosTheory	iositd	Was it last night?
+2008-04-03T10:22:00.000Z	ChaosTheory	iositd	I've lost track of time. o_O
+2008-04-03T10:22:00.000Z	iositd	ChaosTheory	for me it was, i just woke up
+2008-04-03T10:22:00.000Z	ChaosTheory	iositd	Everything has become a continuous blur of Ubuntu. =_=
+2008-04-03T10:22:00.000Z	ChaosTheory	iositd	Oh, it's well past midnight here.
+2008-04-03T10:32:00.000Z	iositd	ChaosTheory	copy this script into an empty file ==> http://paste.ubuntu-nl.org/61987/
+2008-04-03T10:32:00.000Z	ChaosTheory	iositd	How do I get an empty file? =D
+2008-04-03T10:33:00.000Z	iositd	ChaosTheory	alright, in terminal type ==> gedit sound.sh
+2008-04-03T10:34:00.000Z	ChaosTheory	iositd	Yes. Then?
+2008-04-03T10:34:00.000Z	iositd	ChaosTheory	copy the text in, save it, then close it. type this ==> chmod +x sound.sh
+2008-04-03T10:36:00.000Z	ChaosTheory	iositd	Okay, done.
+2008-04-03T10:37:00.000Z	iositd	ChaosTheory	once you're done updating (don't break it off, just let it continue first) run this ==> ./sound.sh
+2008-04-03T10:37:00.000Z	iositd	ChaosTheory	that'll download the latest sources, copy them to the right folder, extract them, compile them, and then remove the unneeded stuff.
+2008-04-03T10:37:00.000Z	ChaosTheory	iositd	Okay, it's about 3/4ths of the way through applying the changes.
+2008-04-03T10:37:00.000Z	ChaosTheory	iositd	Wow, okay. Thanks.
+2008-04-03T10:37:00.000Z	iositd	ChaosTheory	then after that you can execute the script :)
+2008-04-03T10:37:00.000Z	iositd	ChaosTheory	i'm off for breakfast now, we'll talk later k?
+2008-04-03T10:37:00.000Z	ChaosTheory	iositd	Execute the script. . .
+2008-04-03T10:37:00.000Z	ChaosTheory	iositd	Yes, sure.
+2008-04-03T10:38:00.000Z	iositd	ChaosTheory	==> ./sound.sh (ask bazhang if you're lost)
+2008-04-03T10:38:00.000Z	ChaosTheory	iositd	Okay, thanks.
+2008-04-03T18:41:00.000Z	ChaosTheory	iositd	Hi? =D
+2008-04-03T18:54:00.000Z	ChaosTheory	iositd	What?

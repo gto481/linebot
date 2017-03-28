@@ -1,0 +1,96 @@
+2009-06-28T08:00:00.000Z	twig11		And my mouse is frozen as we speak, which is why I'm doing the BIOS upgrade in the first place
+2009-06-28T08:02:00.000Z	DarkMage26	twig11	make sure that the disc gets verified before using.
+2009-06-28T08:02:00.000Z	twig11	DarkMage26	how do I do that?
+2009-06-28T08:02:00.000Z	DarkMage26	twig11	what are you using to burn the disc?
+2009-06-28T08:03:00.000Z	twig11	DarkMage26	Ubuntu 9.04
+2009-06-28T08:04:00.000Z	twig11	DarkMage26	yes i did
+2009-06-28T08:04:00.000Z	DarkMage26	twig11	it was verified?
+2009-06-28T08:05:00.000Z	twig11	DarkMage26	I don't see anything in terminal about it having been verified. How do I know?
+2009-06-28T08:06:00.000Z	DarkMage26	twig11	the file type is iso right?
+2009-06-28T08:06:00.000Z	twig11	DarkMage26	Yes
+2009-06-28T08:07:00.000Z	DarkMage26	twig11	but you used the terminal to start the burn?
+2009-06-28T08:07:00.000Z	twig11	DarkMage26	yes i did
+2009-06-28T08:07:00.000Z	DarkMage26	twig11	why didn't you just double click it to burn it?
+2009-06-28T08:09:00.000Z	twig11	DarkMage26	reason 1: my instructions were for the command line. reason 2: My mouse is unresponsive because I need to update my bios. Look it up. https://wiki.ubuntu.com/HardwareSupportMachinesDesktopsDellDimensionNSeries
+2009-06-28T08:09:00.000Z	DarkMage26	twig11	what are the rest of the instructions to flash the bios?
+2009-06-28T08:11:00.000Z	twig11	DarkMage26	I'm taking it a step at a time. I haven't figured out the rest of the instructions yet.
+2009-06-28T08:11:00.000Z	twig11	DarkMage26	I shouldn't be doing this at all, but I really want to get ubuntu running on here.
+2009-06-28T08:13:00.000Z	DarkMage26	twig11	Flashing a bios is only scary when the disc is not verified and has a problem. I had a copy of the ubuntu live cd I downloaded and burnt without verification.
+2009-06-28T08:15:00.000Z	DarkMage26	twig11	you know how to use md5sum?
+2009-06-28T08:16:00.000Z	twig11	DarkMage26	I just did it and got the md5sum of the iso file. how do I check the cd?
+2009-06-28T08:17:00.000Z	DarkMage26	twig11	md5sum /dev/cdrom.
+2009-06-28T08:19:00.000Z	twig11	DarkMage26	"Input/output error"
+2009-06-28T08:20:00.000Z	DarkMage26	twig11	when you did the md5sum?
+2009-06-28T08:21:00.000Z	twig11	DarkMage26	yes
+2009-06-28T08:23:00.000Z	DarkMage26	twig11	what is the size of the disc files?
+2009-06-28T08:24:00.000Z	DarkMage26	twig11	is it the same size as the iso (within a few bytes)?
+2009-06-28T08:26:00.000Z	DarkMage26	twig11	that is a good idea
+2009-06-28T08:29:00.000Z	DarkMage26	twig11	is that info the same as the iso?
+2009-06-28T08:30:00.000Z	DarkMage26	twig11	rerun the md5sum on the iso now.
+2009-06-28T08:31:00.000Z	twig11	DarkMage26	oh of course. okay here I go
+2009-06-28T08:32:00.000Z	twig11	DarkMage26	kinja-sheep: checksums don't match
+2009-06-28T08:32:00.000Z	DarkMage26	twig11	then you might want to reburn it. What commands did you use to start the burn?
+2009-06-28T08:34:00.000Z	twig11	DarkMage26	I used the ones listed at number 3 on this page: http://www.linuxinsight.com/how-to-flash-motherboard-bios-from-linux-no-dos-windows-no-floppy-drive.html
+2009-06-28T08:37:00.000Z	DarkMage26	twig11	what was the size of the disc after burning?
+2009-06-28T08:38:00.000Z	twig11	DarkMage26	I'm restarting. I'll check when I log in
+2009-06-28T08:41:00.000Z	twig11	DarkMage26	Okay, now how do I know if the file downloaded from the Dell site okay?
+2009-06-28T08:42:00.000Z	twig11	DarkMage26	I can't find a checksum on their site.
+2009-06-28T08:43:00.000Z	DarkMage26	twig11	the file from them is good. When the burner doesn't verify the data you run the risk of failed burn on that disc.
+2009-06-28T08:44:00.000Z	twig11	DarkMage26	I just checked the CD and the iso. the iso is 1.8 M and the CD is 1.4. How can that be?
+2009-06-28T08:44:00.000Z	DarkMage26	twig11	the iso file has that much more info to work like it does.
+2009-06-28T08:45:00.000Z	DarkMage26	twig11	what is wrong with the computer you are on now to burn the disc?
+2009-06-28T08:48:00.000Z	twig11	DarkMage26	I'd have no idea how to create a floppy image and burn it to a cd on this computer. iBook G4 running osx tiger
+2009-06-28T08:49:00.000Z	DarkMage26	twig11	has the computer with the problem had any problems with the cdrom or power or anything else?
+2009-06-28T08:49:00.000Z	twig11	DarkMage26	no. and we're not having a thunderstorm right now.
+2009-06-28T08:50:00.000Z	DarkMage26	twig11	how bad do you need to do this??
+2009-06-28T08:51:00.000Z	twig11	DarkMage26	I have to do it if I want to run linux on this box. I can't use it without a mouse.
+2009-06-28T08:51:00.000Z	DarkMage26	twig11	then go ahead and start the reboot with the disc in it.
+2009-06-28T08:51:00.000Z	twig11	DarkMage26	Here goes.
+2009-06-28T08:52:00.000Z	DarkMage26	twig11	make sure that nothing interrupts the process.
+2009-06-28T08:53:00.000Z	twig11	DarkMage26	yep
+2009-06-28T08:53:00.000Z	DarkMage26	twig11	what is the bios you are using on that machine?
+2009-06-28T08:54:00.000Z	twig11	DarkMage26	1.0.3
+2009-06-28T08:55:00.000Z	DarkMage26	twig11	no the name.
+2009-06-28T08:56:00.000Z	twig11	DarkMage26	the download site for the update is here:http://support.dell.com/support/downloads/download.aspx?c=us&cs=04&l=en&s=bsd&releaseid=R142795&SystemID=DIM_P4_C521&os=WW1&osl=en&deviceid=308&devlib=0&typecnt=1&vercnt=4&formatcnt=1&libid=1&fileid=190570
+2009-06-28T08:56:00.000Z	twig11	DarkMage26	Dell Dimension System Bios?
+2009-06-28T08:57:00.000Z	DarkMage26	twig11	what is the system doing now?
+2009-06-28T08:58:00.000Z	twig11	DarkMage26	I just powered it off and started it up again to check the bios, but I missed the name.
+2009-06-28T08:58:00.000Z	DarkMage26	twig11	did you flash it already?
+2009-06-28T09:00:00.000Z	twig11	DarkMage26	no I didn't
+2009-06-28T09:00:00.000Z	twig11	DarkMage26	I got as far as Welcome to FreeDos and the command prompt.
+2009-06-28T09:01:00.000Z	twig11	DarkMage26	Can you walk me through flashing it?
+2009-06-28T09:01:00.000Z	DarkMage26	twig11	when the system rebooted it should have taken you to a GUI
+2009-06-28T09:02:00.000Z	DarkMage26	twig11	what files are on the disc?
+2009-06-28T09:02:00.000Z	twig11	DarkMage26	boot.cat; fdoem.144
+2009-06-28T09:03:00.000Z	twig11	DarkMage26	Just those two
+2009-06-28T09:03:00.000Z	DarkMage26	twig11	what the model again?
+2009-06-28T09:03:00.000Z	twig11	DarkMage26	Dell Dimension C521
+2009-06-28T09:05:00.000Z	DarkMage26	twig11	one sec
+2009-06-28T09:06:00.000Z	twig11	DarkMage26	I'd feel a lot more confident if the instructions at http://www.linuxinsight.com/how-to-flash-motherboard-bios-from-linux-no-dos-windows-no-floppy-drive.html didn't assume so much and explained what was actually happening in more detail.
+2009-06-28T09:07:00.000Z	DarkMage26	twig11	lol
+2009-06-28T09:12:00.000Z	DarkMage26	twig11	what was the name and type of the file that you got from dell?
+2009-06-28T09:13:00.000Z	twig11	DarkMage26	DMC521-010104.EXE
+2009-06-28T09:14:00.000Z	twig11	DarkMage26	Will it kill my computer?
+2009-06-28T09:17:00.000Z	DarkMage26	twig11	the disc doesn't work due to missing info from the boot sector of the disc. It was not burnt right.
+2009-06-28T09:20:00.000Z	twig11	DarkMage26	Can you walk me through the instructions I'm trying to follow, so I could have feedback at each point?
+2009-06-28T09:22:00.000Z	twig11	DarkMage26	kinja-sheep: you still with me?
+2009-06-28T09:23:00.000Z	DarkMage26	twig11	yes. the mouse doesn't work at all?
+2009-06-28T09:24:00.000Z	twig11	DarkMage26	it works for awhile after login, then freezes.
+2009-06-28T09:27:00.000Z	DarkMage26	twig11	one sec I think I found a different way to do it.
+2009-06-28T09:28:00.000Z	DarkMage26	twig11	the exe needs to be extracted first
+2009-06-28T09:30:00.000Z	twig11	DarkMage26	Why thank you my friend. now how do I do that?
+2009-06-28T09:31:00.000Z	DarkMage26	twig11	you downloaded the exe file from dell right?
+2009-06-28T09:31:00.000Z	twig11	DarkMage26	yep
+2009-06-28T09:31:00.000Z	DarkMage26	twig11	do you have unzip?
+2009-06-28T09:32:00.000Z	twig11	DarkMage26	I don't know
+2009-06-28T09:32:00.000Z	DarkMage26	twig11	can you download it on that system?
+2009-06-28T09:33:00.000Z	DarkMage26	twig11	you can get it from here: http://packages.ubuntu.com
+2009-06-28T09:33:00.000Z	twig11	DarkMage26	no I don't have an internet connection with this system.
+2009-06-28T09:34:00.000Z	DarkMage26	twig11	can you get it onto a flash drive from another computer?
+2009-06-28T09:35:00.000Z	twig11	DarkMage26	yes I can
+2009-06-28T09:35:00.000Z	DarkMage26	twig11	download it from http://packages.ubuntu.com and save it on the flash drive
+2009-06-28T09:42:00.000Z	twig11	DarkMage26	http://packages.ubuntu.com/ is terribly slow for some reason.
+2009-06-28T09:43:00.000Z	DarkMage26	twig11	it keeps timingout on me
+2009-06-28T09:46:00.000Z	DarkMage26	twig11	packages.ubuntu.com for anything is not coming up for me. What about you?
+2009-06-28T09:48:00.000Z	DarkMage26	twig11	you need that package to continue.
+2009-06-28T09:50:00.000Z	DarkMage26	twig11	you might have it on your system already. try and type unzip in terminal

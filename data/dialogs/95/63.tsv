@@ -1,0 +1,95 @@
+2007-05-15T13:46:00.000Z	ori		I installed latest pidgin but I still can't get gtalk to work
+2007-05-15T13:46:00.000Z	ori		getting a can't create socket error
+2007-05-15T13:46:00.000Z	ori		any ideas?
+2007-05-15T13:47:00.000Z	kishan	ori	how did u set up ur gtalk
+2007-05-15T13:49:00.000Z	ori	kishan	I PMed you
+2007-05-15T13:49:00.000Z	kishan	ori	i didget pm
+2007-05-15T13:50:00.000Z	kishan	ori	i didnnot get your pm
+2007-05-15T13:50:00.000Z	kishan	ori	i pmed u
+2007-05-15T13:50:00.000Z	ori	kishan	I didn't get it
+2007-05-15T13:51:00.000Z	kishan	ori	how did u set up the gtalk
+2007-05-15T13:55:00.000Z	kishan	ori	try this http://www.google.com/support/talk/bin/answer.py?answer=24073
+2007-05-15T13:57:00.000Z	ori	kishan	that is where I got my settings from, it still doesn't work
+2007-05-15T13:58:00.000Z	kishan	ori	did u double check it
+2007-05-15T13:59:00.000Z	kishan	ori	lets do it again so what did u tupe in the server seeting
+2007-05-15T14:00:00.000Z	ori	kishan	ok connect port is 5222
+2007-05-15T14:00:00.000Z	ori	kishan	connect server is talk.google.com
+2007-05-15T14:00:00.000Z	ori	kishan	proxy type is use gnome proxy settings
+2007-05-15T14:00:00.000Z	ori	kishan	good so far?
+2007-05-15T14:01:00.000Z	kishan	ori	yes good
+2007-05-15T14:01:00.000Z	ori	kishan	protocol xmpp
+2007-05-15T14:01:00.000Z	ori	kishan	screen name is my username without the @gmail.com
+2007-05-15T14:01:00.000Z	ori	kishan	server is gmail.com
+2007-05-15T14:01:00.000Z	ori	kishan	resource is Home
+2007-05-15T14:01:00.000Z	ori	kishan	anything wrong with that?
+2007-05-15T14:02:00.000Z	kishan	ori	so fat good
+2007-05-15T14:02:00.000Z	kishan	ori	use in proxy seetings default gnome proxy seetings
+2007-05-15T14:02:00.000Z	ori	kishan	Use GNOME Proxy Settings?
+2007-05-15T14:03:00.000Z	kishan	ori	yes
+2007-05-15T14:03:00.000Z	ori	kishan	that's what I'm using
+2007-05-15T14:03:00.000Z	kishan	ori	donnot check any of the xmpp option
+2007-05-15T14:03:00.000Z	ori	kishan	they're unchecked
+2007-05-15T14:03:00.000Z	kishan	ori	fair enouch
+2007-05-15T14:04:00.000Z	kishan	ori	:save them
+2007-05-15T14:04:00.000Z	ori	kishan	any other ideas?
+2007-05-15T14:04:00.000Z	ori	kishan	ok
+2007-05-15T14:05:00.000Z	kishan	ori	now go to pidgin main accounts---add/edit so uncheck the account and check again and see if it works
+2007-05-15T14:05:00.000Z	ori	kishan	mulet139@gmail.com/Home disconnected: Unable to create socket
+2007-05-15T14:07:00.000Z	kishan	ori	are other protocols working
+2007-05-15T14:07:00.000Z	ori	kishan	msn works no problem
+2007-05-15T14:08:00.000Z	kishan	ori	try restaring the pidgin
+2007-05-15T14:09:00.000Z	ori	kishan	didn't work
+2007-05-15T14:09:00.000Z	ori	kishan	maybe I'm missing a library or something?
+2007-05-15T14:09:00.000Z	kishan	ori	yes u might be where did u install pidgin from
+2007-05-15T14:10:00.000Z	ori	kishan	http://getdeb.net
+2007-05-15T14:10:00.000Z	kishan	ori	: let me check where i did it from
+2007-05-15T14:11:00.000Z	ori	kishan	ok
+2007-05-15T14:11:00.000Z	kishan	ori	did u remove ur gaim
+2007-05-15T14:11:00.000Z	ori	kishan	no
+2007-05-15T14:12:00.000Z	kishan	ori	: that might be causing the problem first remove gaim using synaptic
+2007-05-15T14:12:00.000Z	ori	kishan	how do I get into synaptic?
+2007-05-15T14:13:00.000Z	kishan	ori	system---admistrator ---synaptic package ----in search type gaim--- the selct gaim---right click ---remove it
+2007-05-15T14:15:00.000Z	ori	kishan	where do I type that?
+2007-05-15T14:16:00.000Z	kishan	ori	there is a serch option at the top
+2007-05-15T14:16:00.000Z	ori	kishan	sorry, the top of what?
+2007-05-15T14:16:00.000Z	ori	kishan	oh god nevermind I'm being an idiot
+2007-05-15T14:17:00.000Z	kishan	ori	no problem we are here to help did u get it or not
+2007-05-15T14:17:00.000Z	ori	kishan	one sec opening it now
+2007-05-15T14:18:00.000Z	ori	kishan	should I check gaim and gaim-autoprofile?
+2007-05-15T14:18:00.000Z	kishan	ori	check gaim
+2007-05-15T14:18:00.000Z	ori	kishan	and that's it?
+2007-05-15T14:18:00.000Z	kishan	ori	are u using feisty awn right
+2007-05-15T14:19:00.000Z	ori	kishan	yes
+2007-05-15T14:19:00.000Z	kishan	ori	good just check gaim
+2007-05-15T14:19:00.000Z	ori	kishan	ok it's removing it
+2007-05-15T14:20:00.000Z	ori	kishan	done
+2007-05-15T14:20:00.000Z	kishan	ori	now go here http://www.kalpiknigam.com/blog/2007/05/12/install-pidgin-200-on-ubuntu-feisty-with-all-plugins/
+2007-05-15T14:21:00.000Z	ori	kishan	so I should remove pidgin aswell right?
+2007-05-15T14:21:00.000Z	kishan	ori	remove pidgin also using syaptic
+2007-05-15T14:21:00.000Z	kishan	ori	see u are clever lol
+2007-05-15T14:21:00.000Z	ori	kishan	lol what?
+2007-05-15T14:22:00.000Z	ori	kishan	ok one sec I'll remove it
+2007-05-15T14:24:00.000Z	kishan	ori	now install pidgin from the kalpik site
+2007-05-15T14:24:00.000Z	ori	kishan	this is the same link where I originally got pidgin
+2007-05-15T14:24:00.000Z	kishan	ori	yes yes
+2007-05-15T14:24:00.000Z	ori	kishan	it brings this up http://www.getdeb.net/app.php?name=Pidgin
+2007-05-15T14:24:00.000Z	kishan	ori	do it again
+2007-05-15T14:25:00.000Z	ori	kishan	k one sec
+2007-05-15T14:26:00.000Z	ori	kishan	should I bother downloading the plugins too? or just get reguler insall working
+2007-05-15T14:26:00.000Z	kishan	ori	first lets try pidgin then we can install plugins
+2007-05-15T14:27:00.000Z	ori	kishan	ok so it's installed
+2007-05-15T14:27:00.000Z	kishan	ori	now configure the gtalk as earlier
+2007-05-15T14:27:00.000Z	ori	kishan	it remembered my settings, which I take is not good
+2007-05-15T14:27:00.000Z	ori	kishan	even though I did complete removal using synaptic package
+2007-05-15T14:28:00.000Z	kishan	ori	is the server gmail.com
+2007-05-15T14:28:00.000Z	ori	kishan	yes
+2007-05-15T14:28:00.000Z	ori	kishan	kalpik should I try removing all settings and doing it from scratch?
+2007-05-15T14:29:00.000Z	ori	kishan	the server is gmail.com
+2007-05-15T14:29:00.000Z	kishan	ori	are u able to conncect now
+2007-05-15T14:29:00.000Z	ori	kishan	msn works, gtalk still gives same old error
+2007-05-15T14:30:00.000Z	kishan	ori	post the error for kalpik
+2007-05-15T14:48:00.000Z	ori	kishan	we removed the settings and now msn is not working either
+2007-05-15T14:48:00.000Z	ori	kishan	failed to connect to server
+2007-05-15T14:55:00.000Z	ori	kishan	it's wireless that's why I'd rather not conect direct to modem
+2007-05-15T14:55:00.000Z	ori	kishan	cause it was working a minute ago
+2007-05-15T14:58:00.000Z	ori	kishan	I don't have a box for ssl

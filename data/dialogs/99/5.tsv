@@ -1,0 +1,99 @@
+2011-04-28T23:25:00.000Z	jdahm		I already have RAID set up from a previous installation, but it thinks /dev/md0 and /dev/md1 are entire devices, not just partitions
+2011-04-28T23:26:00.000Z	escott	jdahm	that seems normal
+2011-04-28T23:27:00.000Z	jdahm	escott	hmm it seems like if I manually format the device with mkfs.ext4 /dev/md0 it lets me use it as a "partition"
+2011-04-28T23:28:00.000Z	escott	jdahm	yeah they are logical devices so that seems normal
+2011-04-28T23:28:00.000Z	escott	jdahm	the installer may not be familiar with them
+2011-04-28T23:28:00.000Z	jdahm	escott	what if I want it to just use the entire device without repartitioning it?
+2011-04-28T23:29:00.000Z	jdahm	escott	I guess I'll just do it my manual way.  Seems hacky however.  In any case I have to wait for mdadm to sync these drives in /dev/md1
+2011-04-28T23:29:00.000Z	escott	jdahm	you could install in degraded mode and then fix it up after, but thats not the best approach
+2011-04-28T23:29:00.000Z	jdahm	escott	what is degraded mode?
+2011-04-28T23:30:00.000Z	escott	jdahm	ie disable mdadm, install to /dev/sda# and then rebuild afterwards
+2011-04-28T23:30:00.000Z	jdahm	escott	oh, eww, nah I'll do it this way.  Thanks for the tip anyway
+2011-04-28T23:31:00.000Z	escott	jdahm	see if you can mount md0 and md1, maybe once they are mounted the installer will play along
+2011-04-28T23:31:00.000Z	jdahm	escott	ok I will after I get lunch. /dev/md1 is going to take about another hour to sync ;)
+2011-04-28T23:32:00.000Z	jdahm	escott	maybe I'll submit a big report about it
+2011-04-28T23:33:00.000Z	escott	jdahm	you might also try getting the mdadm.conf setup in your install environment see if that helps
+2011-04-28T23:33:00.000Z	jdahm	escott	I know.  I'm goign to need to chroot when I'm done installing and make sure everything is go inside the install
+2011-04-28T23:33:00.000Z	jdahm	escott	it's not goign to be nice
+2011-04-29T00:21:00.000Z	jdahm	escott	ok back
+2011-04-29T01:52:00.000Z	jdahm	escott	so I used raid to install and I'm all done.  I installed mdadm in the chroot.  Do I need to copy over the mdadm.conf file?
+2011-04-29T01:53:00.000Z	escott	jdahm	you will need to have a valid mdadm.conf on the system, you could copy it or rebuild it post install, copying may be easier
+2011-04-29T01:56:00.000Z	jdahm	escott	looks like it already created one for me
+2011-04-29T01:57:00.000Z	jdahm	escott	ok rebooting.  Wish me luck!
+2011-04-29T02:03:00.000Z	jdahm	escott	ok I get a grub error 16
+2011-04-29T02:04:00.000Z	escott	jdahm	grub should be configured to point at sda1 not md1, and should boot degraded then once the kernel is up and md modules loaded it should bring up sdb1
+2011-04-29T02:04:00.000Z	escott	jdahm	you were doing raid1 right?
+2011-04-29T02:05:00.000Z	jdahm	escott	it points to /dev/sda on which /dev/sda1 (/boot) is, which is not part of the raid array
+2011-04-29T02:05:00.000Z	jdahm	escott	I have boot on a separate partition
+2011-04-29T02:05:00.000Z	escott	jdahm	thats the way i've always done it. should be fine
+2011-04-29T02:05:00.000Z	jdahm	escott	ok so I'm mounting stuff here again and I'm going to look around
+2011-04-29T02:06:00.000Z	jdahm	escott	hopefully with your help I can find whats wrong
+2011-04-29T02:08:00.000Z	jdahm	escott	I'm using raid5 for both / and /home (different arrays)
+2011-04-29T02:08:00.000Z	escott	jdahm	that should be fine as long as the md stuff is in the initrd
+2011-04-29T02:08:00.000Z	jdahm	escott	yeah I'm confused to.. It's all mounted now.  Where is the first place to look?
+2011-04-29T02:09:00.000Z	escott	jdahm	ever taken apart an initrd before?
+2011-04-29T02:10:00.000Z	jdahm	escott	no, maybe I need to rebuild one...
+2011-04-29T02:10:00.000Z	jdahm	escott	I come from archlinux, but I haven't ever dealt with initrds,  tried to always build my own kernels without them
+2011-04-29T02:10:00.000Z	escott	jdahm	if you want you could do that. copy the initrd off and gunzip it. then mount it loopback as ext2
+2011-04-29T02:11:00.000Z	escott	jdahm	you will see a base prelim filesystem in it. it needs your mdadm.conf and the mdadm kernel modules
+2011-04-29T02:11:00.000Z	jdahm	escott	it should have at least shown the grub screen and the boot options if it sensed /dev/sda1 the boot partiiton
+2011-04-29T02:11:00.000Z	jdahm	escott	I think ti's something more fundamental than that
+2011-04-29T02:12:00.000Z	escott	jdahm	you think grub-install didn't work?
+2011-04-29T02:12:00.000Z	jdahm	escott	well it HAS grub, and /dev/sda1 is definitely bootable...
+2011-04-29T02:12:00.000Z	jdahm	escott	I'm still thinkin what it could be
+2011-04-29T02:12:00.000Z	escott	jdahm	try rerunning grub-install from a chroot environment
+2011-04-29T02:13:00.000Z	escott	jdahm	you will need to bind mount /dev to your chroot
+2011-04-29T02:13:00.000Z	jdahm	escott	yeah, and sys and proc and so forth
+2011-04-29T02:13:00.000Z	jdahm	escott	I'm used to doing this ;)
+2011-04-29T02:13:00.000Z	escott	jdahm	had the feeling you had done this before
+2011-04-29T02:17:00.000Z	jdahm	escott	you know what I think it might be. I didn't have /dev/sda1 mounted to /mydrive/boot when I chrooted and installed mdadm
+2011-04-29T02:17:00.000Z	jdahm	escott	I'll redo grub anyway as well
+2011-04-29T02:17:00.000Z	escott	jdahm	ok don't know if you saw this: https://help.ubuntu.com/10.04/serverguide/C/advanced-installation.html
+2011-04-29T02:19:00.000Z	jdahm	escott	ok I rebuilt the initrd, reinstalled mdadm, and reinstalled grub with the line: set root='(/dev/sda,msdos1)'
+2011-04-29T02:19:00.000Z	jdahm	escott	anything else you can think of?
+2011-04-29T02:20:00.000Z	escott	jdahm	shouldn't that be sda3 or 5 or something
+2011-04-29T02:20:00.000Z	escott	jdahm	i lied thats right
+2011-04-29T02:20:00.000Z	jdahm	escott	no, as long as /dev/sda1 is bootable, you should ALWAYS install grub to the root of the drive, (at least thats what I've always beentold)
+2011-04-29T02:20:00.000Z	jdahm	escott	just doubled checked and /dev/sda1 is bootable
+2011-04-29T02:21:00.000Z	jdahm	escott	I'm going to triple check the UUIDs in /etc/fstab as well
+2011-04-29T02:24:00.000Z	jdahm	escott	ok those look correct as well
+2011-04-29T02:26:00.000Z	jdahm	escott	ok rebooting
+2011-04-29T02:36:00.000Z	jdahm	escott	ok still the same error
+2011-04-29T02:37:00.000Z	jdahm	escott	now I'm sure that it's with grub
+2011-04-29T02:37:00.000Z	escott	jdahm	unfortunately there are like NO DOCS for grub2 so i dont know what error 16 is
+2011-04-29T02:37:00.000Z	jdahm	escott	it almost looks like grub1 is loading
+2011-04-29T02:38:00.000Z	jdahm	escott	not grub2
+2011-04-29T02:38:00.000Z	escott	jdahm	really how can you tell?
+2011-04-29T02:38:00.000Z	jdahm	escott	thats what makes me kinda confused
+2011-04-29T02:38:00.000Z	jdahm	escott	it has a larger font and no background behind grub
+2011-04-29T02:38:00.000Z	jdahm	escott	at least when I upgraded to grub2 on my arch box I saw that change
+2011-04-29T02:39:00.000Z	escott	jdahm	does it show menu and do the stage 1.0 1.5 nonsense, cause they got right of that with grub2
+2011-04-29T02:39:00.000Z	escott	jdahm	the font size can vary in grub2 depending upon config, but you are actually getting to a menu?
+2011-04-29T02:39:00.000Z	jdahm	escott	it doesn't show anything, just says grub and then error 16"
+2011-04-29T02:40:00.000Z	escott	jdahm	do you think you might have a grub1 install on sdb's mbr?
+2011-04-29T02:40:00.000Z	jdahm	escott	can I clear out the MBR of other drives?
+2011-04-29T02:40:00.000Z	jdahm	escott	do you know the command for that?
+2011-04-29T02:40:00.000Z	escott	jdahm	sure do grub-install on all the mbrs
+2011-04-29T02:44:00.000Z	jdahm	escott	so heres something.  When I do "apt-get install grub2" it wants to remove some grub packages and install "grub2"
+2011-04-29T02:44:00.000Z	jdahm	escott	are you sure it by default has grub2??
+2011-04-29T02:44:00.000Z	escott	jdahm	the old grub is now called grub-pc or grub-legacy
+2011-04-29T02:44:00.000Z	jdahm	escott	ok I have grub-install (GRUB) 1.99~rc1-13ubuntu3
+2011-04-29T02:45:00.000Z	escott	jdahm	ie grub2
+2011-04-29T02:45:00.000Z	jdahm	escott	yep.  Ok back to debugging this.  everything is mounted and I'm chroot'd
+2011-04-29T02:56:00.000Z	jdahm	escott	wait the CURRENT grub seems to be grub-pc, right?
+2011-04-29T02:56:00.000Z	escott	jdahm	no grub 1 is grub-pc
+2011-04-29T02:56:00.000Z	jdahm	escott	what is grub2 then?  I want to reinstall it
+2011-04-29T02:57:00.000Z	escott	jdahm	sorry im wrong
+2011-04-29T02:57:00.000Z	escott	jdahm	grub-pc is grub2 and the old grub1 is grub
+2011-04-29T03:00:00.000Z	jdahm	escott	ok trying again...
+2011-04-29T03:33:00.000Z	jdahm	escott	it works!
+2011-04-29T03:33:00.000Z	jdahm	escott	thanks for all your help!
+2011-04-29T03:33:00.000Z	escott	jdahm	excellent
+2011-04-29T03:33:00.000Z	escott	jdahm	so it was a stray mbr?
+2011-04-29T03:33:00.000Z	jdahm	escott	also: I very much like the new interface.  I don't know why people are complaining
+2011-04-29T03:33:00.000Z	jdahm	escott	I think so
+2011-04-29T03:33:00.000Z	jdahm	escott	you were on the ball with your suggestion
+2011-04-29T03:33:00.000Z	escott	jdahm	well now you have plenty of backup mbrs if sda goes out
+2011-04-29T03:40:00.000Z	jdahm	escott	for fun: http://pastie.org/1845281
+2011-04-29T03:46:00.000Z	escott	jdahm	thats a lot of ram
+2011-04-29T03:52:00.000Z	jdahm	escott	I like it :)  It's for computational physics simulations

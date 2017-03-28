@@ -1,0 +1,99 @@
+2008-03-28T13:55:00.000Z	kelvin911		is there FTP server for ubuntu?
+2008-03-28T13:55:00.000Z	ikonia	kelvin911	many
+2008-03-28T13:55:00.000Z	ikonia	kelvin911	use synaptic to search
+2008-03-28T13:55:00.000Z	ikonia	kelvin911	thats jubjective, try them and se which one suits your needs
+2008-03-28T13:55:00.000Z	ikonia	kelvin911	I'm  fan of vsftp
+2008-03-28T13:56:00.000Z	ikonia	kelvin911	thats not going to give you time to get an opinion then, just pick one and run with it
+2008-03-28T13:57:00.000Z	ikonia	kelvin911	open synaptic and search for ftp
+2008-03-28T13:58:00.000Z	ikonia	kelvin911	client
+2008-03-28T13:58:00.000Z	ikonia	kelvin911	the descrption should tell you
+2008-03-28T14:02:00.000Z	ikonia	kelvin911	what does it say
+2008-03-28T14:02:00.000Z	ikonia	kelvin911	no - what does the apt-get error say
+2008-03-28T14:03:00.000Z	ikonia	kelvin911	then a webserver may be better than ftp
+2008-03-28T14:03:00.000Z	ikonia	kelvin911	that package doesn't exist
+2008-03-28T14:03:00.000Z	ikonia	kelvin911	I told you to search using synaptic
+2008-03-28T14:05:00.000Z	ikonia	kelvin911	either pick an ftp server, or use a webserver
+2008-03-28T14:06:00.000Z	ikonia	kelvin911	a webserver will be the easy way to share stuff to her, or as you've said, use an ftp user
+2008-03-28T14:07:00.000Z	ikonia	kelvin911	because it doesn't exist
+2008-03-28T14:07:00.000Z	ikonia	kelvin911	as I've said 2 times now, use synaptic to server for ftp and install one of the servers it shows up
+2008-03-28T14:07:00.000Z	ikonia	kelvin911	synaptic to search and install an ftp server
+2008-03-28T14:08:00.000Z	ikonia	kelvin911	I told you to search for ftp
+2008-03-28T14:08:00.000Z	ikonia	kelvin911	not ftp server
+2008-03-28T14:08:00.000Z	ikonia	kelvin911	so pick one
+2008-03-28T14:09:00.000Z	ikonia	kelvin911	thats YOUR choice, either try some or pick one at random
+2008-03-28T14:09:00.000Z	ikonia	kelvin911	I like vsftp
+2008-03-28T14:09:00.000Z	ikonia	kelvin911	but whats good for one is poor for another pick one, try some
+2008-03-28T14:11:00.000Z	ikonia	kelvin911	no
+2008-03-28T14:11:00.000Z	ikonia	kelvin911	not gui
+2008-03-28T14:11:00.000Z	ikonia	kelvin911	read the docs
+2008-03-28T14:12:00.000Z	ikonia	kelvin911	there is a good man page on it
+2008-03-28T14:12:00.000Z	ikonia	kelvin911	read the docs
+2008-03-28T14:12:00.000Z	ikonia	kelvin911	then pay someone to set it up
+2008-03-28T14:13:00.000Z	ikonia	kelvin911	no
+2008-03-28T14:15:00.000Z	ikonia	kelvin911	sure
+2008-03-28T14:16:00.000Z	ikonia	kelvin911	read the docs as I've suggested
+2008-03-28T14:16:00.000Z	ikonia	kelvin911	in the time you keep asking "now what" you could have read teh one page setup guide
+2008-03-28T14:17:00.000Z	ikonia	kelvin911	https://help.ubuntu.com
+2008-03-28T14:17:00.000Z	ikonia	kelvin911	the guide will walk you through it
+2008-03-28T14:18:00.000Z	ikonia	kelvin911	sudo allows you to act as root
+2008-03-28T14:18:00.000Z	ikonia	kelvin911	go to the URL I gave you and look for vsftp
+2008-03-28T14:19:00.000Z	ikonia	kelvin911	read the URL I sent you
+2008-03-28T14:19:00.000Z	ikonia	kelvin911	yes
+2008-03-28T14:21:00.000Z	ikonia	kelvin911	http://linux.about.com/od/ubusrv_doc/a/ubusg20t03.htm
+2008-03-28T14:22:00.000Z	ikonia	kelvin911	http://news.softpedia.com/news/How-to-Install-Vsftpd-in-Ubuntu-45753.shtml
+2008-03-28T14:22:00.000Z	ikonia	kelvin911	http://ubuntuforums.org/archive/index.php/t-91887.html
+2008-03-28T14:22:00.000Z	ikonia	kelvin911	http://ubuntuforums.org/archive/index.php/t-1371.html
+2008-03-28T14:24:00.000Z	ikonia	kelvin911	have you looked at ANY of the URL's I've just sent you
+2008-03-28T14:24:00.000Z	ikonia	kelvin911	what's too technical ?
+2008-03-28T14:24:00.000Z	ikonia	kelvin911	your not being sure, read the URL's I went to the time to get for you
+2008-03-28T14:25:00.000Z	ikonia	kelvin911	the guides are in english
+2008-03-28T14:28:00.000Z	ikonia	kelvin911	does it matter ? do you want ftp or not ?
+2008-03-28T14:28:00.000Z	ikonia	kelvin911	nano
+2008-03-28T14:29:00.000Z	ikonia	kelvin911	nano is good for new users
+2008-03-28T14:29:00.000Z	ikonia	kelvin911	why do you want to edit latex, you said you wanted ftp
+2008-03-28T14:30:00.000Z	ikonia	kelvin911	download nano - and use nano
+2008-03-28T14:30:00.000Z	ikonia	kelvin911	yes
+2008-03-28T14:30:00.000Z	ikonia	kelvin911	sorry - no
+2008-03-28T14:30:00.000Z	ikonia	kelvin911	it's just a simple notepad style editor
+2008-03-28T14:36:00.000Z	ikonia	kelvin911	I've sent you guides now
+2008-03-28T14:37:00.000Z	ikonia	kelvin911	please READ the guides
+2008-03-28T14:37:00.000Z	ikonia	kelvin911	I sent you 4 URLS each with a guide on
+2008-03-28T14:40:00.000Z	ikonia	kelvin911	what don't you understnad
+2008-03-28T14:40:00.000Z	ikonia	kelvin911	no
+2008-03-28T14:40:00.000Z	ikonia	kelvin911	and which guide do you not understand
+2008-03-28T14:42:00.000Z	ikonia	kelvin911	READ the guides I've taken the time to send through to you
+2008-03-28T14:42:00.000Z	ikonia	kelvin911	in the 4 urls I sent to you
+2008-03-28T14:43:00.000Z	ikonia	kelvin911	how can you "not understand the guides" if you don't know the URL's I sent you
+2008-03-28T14:43:00.000Z	ikonia	kelvin911	I think your telling me lies and wasting me time and your not reading the guides
+2008-03-28T14:43:00.000Z	ikonia	kelvin911	if you read them, why are you asking me for the URLS ?
+2008-03-28T14:45:00.000Z	ikonia	kelvin911	well dodged teh question
+2008-03-28T14:46:00.000Z	ikonia	kelvin911	yes, we know ftp server
+2008-03-28T14:46:00.000Z	ikonia	kelvin911	how can you tell me you don't understand the guides, yet you keep asking me for the URLS for the guides
+2008-03-28T14:47:00.000Z	ikonia	kelvin911	no, I don't understand it
+2008-03-28T14:47:00.000Z	ikonia	kelvin911	but I'm not in a support channel asking abotu it
+2008-03-28T14:47:00.000Z	ikonia	kelvin911	exaplin how you can have "read the guides" I sent you, but not know the URLS for the guides I sent you
+2008-03-28T14:48:00.000Z	ikonia	kelvin911	how can you not understand the guide when you don't have the URL (you keep asking me for the URL)
+2008-03-28T14:50:00.000Z	ikonia	kelvin911	please show me the guide your using that doesn't make sense and I'll walk you through it
+2008-03-28T14:52:00.000Z	ikonia	kelvin911	ok, what part of that are you not understanding ?
+2008-03-28T14:53:00.000Z	ikonia	kelvin911	you have installed vstpd yes/no ?
+2008-03-28T14:53:00.000Z	ikonia	kelvin911	ok, have you looked at the file /etc/vsftpd.conf as the guide says
+2008-03-28T14:54:00.000Z	ikonia	kelvin911	they are not scripts or code - they are plain text config files
+2008-03-28T14:54:00.000Z	ikonia	kelvin911	then why did you say they are script / code ?
+2008-03-28T15:03:00.000Z	ikonia	kelvin911	I told you earlier gftp is a client only
+2008-04-22T16:36:00.000Z	ikonia	kelvin911	everyone in #winehq does
+2008-04-22T16:36:00.000Z	ikonia	kelvin911	for specialist questions
+2008-04-22T16:37:00.000Z	ikonia	kelvin911	ok, so wait around for them to respond
+2008-04-30T13:48:00.000Z	ikonia	kelvin911	gksu is for X11 apps
+2008-08-05T18:16:00.000Z	ikonia	kelvin911	most people will
+2008-08-05T18:16:00.000Z	ikonia	kelvin911	no thanks
+2008-08-05T18:16:00.000Z	ikonia	kelvin911	send to your existing friends
+2008-08-05T18:16:00.000Z	ikonia	kelvin911	I assume this is over msn ?
+2008-08-05T18:17:00.000Z	ikonia	kelvin911	pidgin should be fine sending to msn
+2008-08-05T18:18:00.000Z	ikonia	kelvin911	possibly your network/router/isp then
+2008-08-05T18:18:00.000Z	ikonia	kelvin911	no sorry,
+2008-08-05T18:19:00.000Z	ikonia	kelvin911	you've confirmed that piding/amsn can send to msn by testing with yourself, so therefore you know they are not the problem
+2008-08-05T18:20:00.000Z	ikonia	kelvin911	I'm pretty sure it does
+2008-08-05T18:20:00.000Z	ikonia	kelvin911	one moment
+2008-08-05T18:23:00.000Z	ikonia	kelvin911	seems to work fine
+2012-05-19T22:19:00.000Z	ikonia	kelvin911	from where ?
+2012-05-19T22:19:00.000Z	ikonia	kelvin911	ask in #freenode

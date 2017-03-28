@@ -1,0 +1,96 @@
+2007-07-04T13:13:00.000Z	bruenig		!info ntfs-install
+2007-07-04T13:15:00.000Z	bruenig		!info ntfs0config
+2007-07-04T13:15:00.000Z	bruenig		!info ntfs-config
+2007-07-04T13:16:00.000Z	bruenig		can't you just do init 3
+2007-07-04T13:17:00.000Z	macogw	bruenig	whats the difference between rmmod and modprobe -r?
+2007-07-04T13:17:00.000Z	bruenig	macogw	not sure perhaps none
+2007-07-06T12:07:00.000Z	bruenig	macogw	you would be able to have an equal amount, but for the cube, you need four yes
+2007-07-10T08:46:00.000Z	macogw	bruenig	dude, i've been using this for a year, compiled a bunch before, read a few howtos on rolling debs, and i did not understand what you just said
+2007-07-10T08:47:00.000Z	bruenig	macogw	you know how to build a deb?
+2007-07-10T08:47:00.000Z	macogw	bruenig	nope! those howtos were wayyyy confusing :p
+2007-07-10T08:47:00.000Z	bruenig	macogw	do you know how to build any other package formats?
+2007-07-10T08:48:00.000Z	macogw	bruenig	nope
+2007-07-10T08:48:00.000Z	macogw	bruenig	closest i get is checkinstall
+2007-07-10T08:48:00.000Z	bruenig	macogw	oh, well basically you take an empty directory, you put all the files in the empty directory as if the empty directory is root, so if you have a file that you want installed to /usr/bin/foo, you put it in emptydirectory/usr/bin/foo
+2007-07-10T11:27:00.000Z	macogw	bruenig	we've got it mounted at /media/drive
+2007-07-10T11:27:00.000Z	macogw	bruenig	the current permissions are 755
+2007-07-10T11:27:00.000Z	macogw	bruenig	root owns it
+2007-07-10T11:27:00.000Z	macogw	bruenig	"sudo chmod -R +w /media/drive" doesnt help and still says read only
+2007-07-10T11:30:00.000Z	bruenig	macogw	how did you mount it though
+2007-07-10T11:30:00.000Z	macogw	bruenig	"sudo mount /dev/sda1 /media/drive"
+2007-07-10T11:31:00.000Z	bruenig	macogw	sudo mount -t ntfs-3g /dev/sda1 /media/drive
+2007-07-10T11:31:00.000Z	macogw	bruenig	ah ok
+2007-07-10T11:32:00.000Z	macogw	bruenig	she said shealready followed that, so i assume ntfs-3g is installed
+2007-07-10T11:32:00.000Z	bruenig	macogw	right I would think so also, but then again if she followed it, it should be working so...
+2007-07-10T11:39:00.000Z	macogw	bruenig	gconf must die.  or at least get a sensible gui
+2007-07-10T12:06:00.000Z	macogw	bruenig	i got mixed up
+2007-07-10T12:10:00.000Z	bruenig	macogw	lies
+2007-07-10T12:10:00.000Z	macogw	bruenig	--purge cleans up the config files
+2007-07-10T12:11:00.000Z	macogw	bruenig	isnt that why aptitude is recommended on the forums all the time?
+2007-07-10T12:11:00.000Z	macogw	bruenig	because it removes the dependencies on uninstall while apt-get doesnt remove them on uninstall
+2007-07-10T12:11:00.000Z	bruenig	macogw	that is incorrect
+2007-07-10T12:11:00.000Z	bruenig	macogw	see apt-get autoremove
+2007-07-10T12:12:00.000Z	macogw	bruenig	i know about autoremove
+2007-07-10T12:12:00.000Z	bruenig	macogw	ok so then what are you talking about
+2007-07-10T12:12:00.000Z	macogw	bruenig	on the forums ive seen it said basically that aptitude makes it so you dont need autoremove
+2007-07-10T12:12:00.000Z	macogw	bruenig	that it pulls in the not-required-but-good-to-have dependencies, and then does the autoremove stuff automagically
+2007-07-10T12:13:00.000Z	bruenig	macogw	that statement makes no sense, I read on the forums that apt-get autoremove makes it so you don't need aptitude remove
+2007-07-10T12:13:00.000Z	macogw	bruenig	the last word was autoremove not aptitude remove
+2007-07-10T12:13:00.000Z	macogw	bruenig	what?
+2007-07-10T12:13:00.000Z	bruenig	macogw	no but you just said, using one program to do X means that you don't have to use another program to do X
+2007-07-10T12:14:00.000Z	macogw	bruenig	on the forums, i read that aptitude install and aptitude uninstall, when used on the same package, make it so that when you remove the packge it automatically does the remove and the autoremove instead of you having to do them as two steps
+2007-07-10T12:14:00.000Z	bruenig	macogw	apt-get autoremove package
+2007-07-10T12:14:00.000Z	bruenig	macogw	one step
+2007-07-10T12:15:00.000Z	macogw	bruenig	didnt know that could go there..ok....so why is aptitude recommended?
+2007-07-10T12:15:00.000Z	bruenig	macogw	because people like you keep echoing it and then the people in here read what you said and they say it and so forth and so on
+2007-07-10T12:16:00.000Z	macogw	bruenig	ok so how about what purpose does aptitude on the command line serve? i know it can be a gui, but why the command part of it?
+2007-07-10T12:16:00.000Z	bruenig	macogw	the only thing that is nice about aptitude is the log from what I can see
+2007-07-10T12:29:00.000Z	macogw	bruenig	yes
+2007-07-10T12:29:00.000Z	bruenig	macogw	how
+2007-07-10T12:29:00.000Z	macogw	bruenig	i dont know, but i did before i learned how to set a root password, so i know it's possible
+2007-07-10T12:30:00.000Z	bruenig	macogw	must have been patched or something because from the man pages and config files it looks like you would need two separate users
+2007-07-10T12:30:00.000Z	macogw	bruenig	i installed it last august and only got a root password in december when my ex was too lazy to sudo su -
+2007-07-10T12:48:00.000Z	macogw	bruenig	is there a way to make the nerdy startup text green when you disable splash?
+2007-07-10T12:49:00.000Z	bruenig	macogw	I could do that in my current distro, not sure how to do it in ubuntu
+2007-07-10T12:49:00.000Z	macogw	bruenig	whats your current?
+2007-07-10T12:50:00.000Z	bruenig	macogw	It was white and I needed to make it gray so that I could see it when I did the stuff from the white terminal when I was logged in
+2007-07-10T12:50:00.000Z	macogw	bruenig	white terminal?
+2007-07-10T12:50:00.000Z	bruenig	macogw	white back ground and black text
+2007-07-10T12:51:00.000Z	macogw	bruenig	whyd it get like that?
+2007-07-10T12:51:00.000Z	bruenig	macogw	the text was white and so you couldn't see it
+2007-07-10T12:51:00.000Z	bruenig	macogw	I set it white because in vim syntax highlight, comments are this really dark blue and I would always not be able to see it
+2007-07-10T12:52:00.000Z	macogw	bruenig	you can :set background=dark
+2007-07-10T12:52:00.000Z	macogw	bruenig	and then the syntax highlighting will be colored for on dark monitors
+2007-07-10T12:52:00.000Z	bruenig	macogw	the blue is technically able to be seen, like right now on white, I have the same problem with light yellow
+2007-07-10T12:53:00.000Z	macogw	bruenig	if you set it to say background=dark it uses all light-colored syntax highlighting
+2007-07-10T12:53:00.000Z	bruenig	macogw	ok I will try that
+2007-07-10T12:53:00.000Z	macogw	bruenig	you can change the syntax colors in your .vimrc too
+2007-07-10T12:54:00.000Z	macogw	bruenig	i fiddle with my vimrc a bunch :p i just wanna find a way to make it highlight the variable names though...make it easier to track them when coding
+2007-07-11T09:31:00.000Z	macogw	bruenig	http://www.garfieldtech.com/blog/your-debian-aptitude
+2007-07-11T09:34:00.000Z	bruenig	macogw	ok so he basically likes the names better, that is it
+2007-07-11T09:34:00.000Z	bruenig	macogw	his dependency claim is flat out wrong
+2007-07-11T09:34:00.000Z	bruenig	macogw	presumably this is the reason: 19 August 2005 - 9:16pm  Larry
+2007-07-11T09:34:00.000Z	macogw	bruenig	yeah i thought the names thing was lame too, what's the date to do with it?
+2007-07-11T09:35:00.000Z	bruenig	macogw	names, the search results are justified and in alpha order, those are his advantages
+2007-07-11T09:36:00.000Z	bruenig	macogw	those are cosmetic at best, they certainly don't justify the kind of aptitude schilling we see in here
+2007-07-11T09:38:00.000Z	macogw	bruenig	well since i just saw the aptitude thing being said on the forums i replied asking if the person had a reliable (with the phrase "no blogs, official documentation only") source for that assertion since i'm being told it's wrong
+2007-07-11T09:39:00.000Z	bruenig	macogw	2 years ago or so, aptitude has dependency removal, apt-get did not, that drives people to say it is better even thought it is no longer the case
+2007-07-11T09:40:00.000Z	macogw	bruenig	i see
+2007-07-11T09:40:00.000Z	macogw	bruenig	so at one point it was true, but not anymore?
+2007-07-11T09:40:00.000Z	bruenig	macogw	that's why all the threads and such you see will be dated 2005 generally
+2007-07-11T09:40:00.000Z	bruenig	macogw	right
+2007-07-21T05:09:00.000Z	macogw	bruenig	wifi-radar saves the passphrases for all the wireless networks without a keyring?
+2007-07-21T05:10:00.000Z	bruenig	macogw	yes it saves them in a text file
+2007-07-21T05:10:00.000Z	bruenig	macogw	you need to be root to use it, so it is a good idea to edit /etc/sudoers to make sure you can bypass having to provide a password for it everytime, but other than that very smooth
+2007-08-09T07:37:00.000Z	macogw	bruenig	the bot's out to lunch
+2007-08-09T08:13:00.000Z	macogw	bruenig	beat
+2007-08-09T08:17:00.000Z	macogw	bruenig	ive used it for a year and tried other distros, but i like apt more than other package managers, so i stick with ubuntu.  for a minimal install on an old box, i used debian though
+2007-08-09T08:18:00.000Z	bruenig	macogw	the discrete releases are just too much
+2007-08-09T08:19:00.000Z	bruenig	macogw	pacman though is the best
+2007-08-09T08:19:00.000Z	macogw	bruenig	what distro uses that?
+2007-08-09T08:19:00.000Z	macogw	bruenig	i hear the rpath (i think?) one is nice
+2007-08-09T08:19:00.000Z	bruenig	macogw	arch
+2007-08-09T08:20:00.000Z	macogw	bruenig	ill try it some time
+2007-08-09T08:20:00.000Z	bruenig	macogw	frugalware also uses it, but frugalware is really poor
+2007-11-25T04:36:00.000Z	macogw	bruenig	launchpad lacks bug voting
+2007-11-25T04:36:00.000Z	bruenig	macogw	oh well can at least leave a comment or something

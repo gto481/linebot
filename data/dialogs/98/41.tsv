@@ -1,0 +1,98 @@
+2007-12-27T10:05:00.000Z	shm613	te_	Yes
+2007-12-27T09:10:00.000Z	te_	shm613	sudo iwconfig essid linksys
+2007-12-27T09:10:00.000Z	te_	shm613	sudo iwconfig eth1 essid linksys
+2007-12-27T09:10:00.000Z	te_	shm613	where eth1 is the nic and linksys is the essid of your wireless router... etc
+2007-12-27T09:11:00.000Z	shm613	te_	i get a unknown command "linksys" message
+2007-12-27T09:12:00.000Z	te_	shm613	First give command: iwconfig    [with no arguments] and see what it says.
+2007-12-27T09:17:00.000Z	shm613	te_	The first line has ESSID:"HOME" Nickname:"Broadcom 4211"
+2007-12-27T09:24:00.000Z	shm613	te_	I also have the Frequency is not the same as my router's frequency and Access Point: Invalid
+2007-12-27T09:40:00.000Z	te_	shm613	RJ-11 ?
+2007-12-27T09:40:00.000Z	te_	shm613	You mean an ethernet port?
+2007-12-27T09:40:00.000Z	te_	shm613	You mean an ethernet port? (as opposed to a wireless nic?
+2007-12-27T09:40:00.000Z	shm613	te_	the ethernet port is RJ-45 RJ-11 would be the phone line port
+2007-12-27T09:41:00.000Z	shm613	te_	I'm getting three labels from iwconfig lo, eth0, and eth1
+2007-12-27T09:42:00.000Z	te_	shm613	A phone line port will not be a network adapter so would not show in ifconfig nor will it show in iwconfig
+2007-12-27T09:42:00.000Z	te_	shm613	You have a modem?  And are trying to use the modem?  Is that correct?
+2007-12-27T09:43:00.000Z	shm613	te_	no I'm trying to use the wireless card
+2007-12-27T09:43:00.000Z	te_	shm613	Do you have more than one wireless nic?
+2007-12-27T09:43:00.000Z	shm613	te_	no I only have one wireless NIC and a wired NIC
+2007-12-27T09:44:00.000Z	te_	shm613	 ethernet NIC will more than likely be eth0
+2007-12-27T09:45:00.000Z	te_	shm613	what wireless nic do you have?
+2007-12-27T09:45:00.000Z	te_	shm613	Is it fully supported?
+2007-12-27T09:45:00.000Z	shm613	te_	Broadcom 4311
+2007-12-27T09:45:00.000Z	te_	shm613	what does iwconfig show for it?  wlan0 or eth1 ?
+2007-12-27T09:46:00.000Z	shm613	te_	eth1
+2007-12-27T09:46:00.000Z	te_	shm613	Ok, is it connecting to your router for you?
+2007-12-27T09:46:00.000Z	shm613	te_	No it is not connecting to my router
+2007-12-27T09:47:00.000Z	te_	shm613	Does your router use some sort of encryption?
+2007-12-27T09:47:00.000Z	te_	shm613	wep or ...?
+2007-12-27T09:47:00.000Z	shm613	te_	No just a MAC filter
+2007-12-27T09:47:00.000Z	te_	shm613	Have you entered the MAC in your router's list of devices?
+2007-12-27T09:47:00.000Z	shm613	te_	and I got the mac address for the wireless NIC and put it in the list
+2007-12-27T09:48:00.000Z	te_	shm613	Look at the output of iwconfig and see if it is acquiring the essid.
+2007-12-27T09:48:00.000Z	shm613	te_	It gets the ESSID but not the mac from the router
+2007-12-27T09:49:00.000Z	shm613	te_	under Access Point it says Invalid
+2007-12-27T09:50:00.000Z	te_	shm613	So the correct essid is seen in the output of iwconfig?
+2007-12-27T09:50:00.000Z	shm613	te_	Yes
+2007-12-27T09:50:00.000Z	te_	shm613	sudo dhclient eth1
+2007-12-27T09:50:00.000Z	te_	shm613	or just:  sudo dhclient
+2007-12-27T09:51:00.000Z	te_	shm613	Did that get you connected?
+2007-12-27T09:52:00.000Z	shm613	te_	it returned No DHCPOFFERS received
+2007-12-27T09:52:00.000Z	shm613	te_	No working leases in persistent database - sleeping
+2007-12-27T09:53:00.000Z	te_	shm613	sudo /etc/init.d/networking stop  and then sudo  /etc/init.d/networking start
+2007-12-27T09:54:00.000Z	te_	shm613	Did that get you connected?
+2007-12-27T09:55:00.000Z	shm613	te_	No
+2007-12-27T09:55:00.000Z	te_	shm613	Show us the output of iwconfig  (via pastebin)
+2007-12-27T09:56:00.000Z	shm613	te_	eth1      IEEE 802.11b/g  ESSID:"Home"  Nickname:"Broadcom 4311"
+2007-12-27T09:56:00.000Z	te_	shm613	Also, the output of ifconfig (via pastebin)
+2007-12-27T09:57:00.000Z	te_	shm613	Show us the output of ifconfig (via pastebin)
+2007-12-27T09:58:00.000Z	shm613	te_	http://paste.ubuntu-nl.org/49661/
+2007-12-27T10:01:00.000Z	te_	shm613	Can you ping your router?  e.g. ping 192.168.1.1
+2007-12-27T10:02:00.000Z	te_	shm613	Do you [still] have an ethernet cable connecting your wired NIC to the router?
+2007-12-27T10:02:00.000Z	shm613	te_	opps how do I stop the ping?
+2007-12-27T10:03:00.000Z	te_	shm613	Ctrl-c
+2007-12-27T10:03:00.000Z	shm613	te_	thanks
+2007-12-27T10:03:00.000Z	te_	shm613	Can you ping your router?  e.g. ping 192.168.1.1
+2007-12-27T10:04:00.000Z	shm613	te_	no I cant ping my router
+2007-12-27T10:04:00.000Z	te_	shm613	Do you [still] have an ethernet cable connecting your wired NIC to the router?
+2007-12-27T10:04:00.000Z	shm613	te_	no I cant ping my router
+2007-12-27T10:05:00.000Z	te_	shm613	Did you do: sudo /etc/init.d/networking stop  and then sudo  /etc/init.d/networking start  ?
+2007-12-27T10:06:00.000Z	shm613	te_	I can ping my router with the patch cable plugged in but not when it isnt and trying to ping over wireless
+2007-12-27T10:06:00.000Z	te_	shm613	Then manually give eth1 an IP address, one that is not in the DHCP pool.  e.g. ifconfig eth1 192.168.1.41
+2007-12-27T10:06:00.000Z	te_	shm613	And then, try to ping the router:  ping 192.168.1.1
+2007-12-27T10:07:00.000Z	te_	shm613	Then manually give eth1 an IP address:  sudo ifconfig eth1 192.168.1.41
+2007-12-27T10:07:00.000Z	te_	shm613	Unplug the cable
+2007-12-27T10:08:00.000Z	te_	shm613	Did you do: sudo /etc/init.d/networking stop  and then sudo  /etc/init.d/networking start  when the cable was unplugged?
+2007-12-27T10:09:00.000Z	shm613	te_	Still cant ping router
+2007-12-27T10:10:00.000Z	te_	shm613	Did you do: sudo /etc/init.d/networking stop  and then sudo  /etc/init.d/networking start  when the cable was unplugged?
+2007-12-27T10:10:00.000Z	shm613	te_	yes
+2007-12-27T10:10:00.000Z	te_	shm613	Did you give it an IP address?
+2007-12-27T10:11:00.000Z	shm613	te_	Yes
+2007-12-27T10:11:00.000Z	te_	shm613	Give command: ifconfig  [with no arguments] and see if it has IP 192.168.1.41.
+2007-12-27T10:11:00.000Z	te_	shm613	ifconfig eth1
+2007-12-27T10:12:00.000Z	te_	shm613	Does the second line of the output of ifconfig eth1 show IP address:  "192.168.1.41" ?
+2007-12-27T10:13:00.000Z	shm613	te_	No
+2007-12-27T10:13:00.000Z	te_	shm613	Did you enter the MAC 00:00:00:1A:73:B2   into your router's list of allowed MACs?
+2007-12-27T10:14:00.000Z	te_	shm613	Then issue command:  sudo ifconfig eth1 192.168.1.41
+2007-12-27T10:14:00.000Z	te_	shm613	And then issue command: ifconfig [with no argument] to confirm that eth1 has IP 192.168.1.41
+2007-12-27T10:15:00.000Z	shm613	te_	Now it had the ip
+2007-12-27T10:15:00.000Z	te_	shm613	ping 192.168.1.1
+2007-12-27T10:16:00.000Z	te_	shm613	Are you now able to ping the router?
+2007-12-27T10:17:00.000Z	shm613	te_	Still doesnt ping
+2007-12-27T10:18:00.000Z	te_	shm613	What is the essid of your router?
+2007-12-27T10:19:00.000Z	shm613	te_	Home
+2007-12-27T10:21:00.000Z	te_	shm613	Then it should work.  That's all there is to wireless networking. You set the ESSID and an IP address that is on the same network and if the router will accept the connection, that should do it.
+2007-12-27T10:22:00.000Z	te_	shm613	Well, there is the possibility that the router does not respond to ping requests, (has port 113 filtered).
+2007-12-27T10:22:00.000Z	shm613	te_	No because I can ping it when I'm wired
+2007-12-27T10:23:00.000Z	te_	shm613	If that is the case, just go on and place a nameserver or 2 in the /etc/resolv.conf file and see if you can surf the net.
+2007-12-27T10:25:00.000Z	te_	shm613	Well, we have covered all there is to cover.  If you have the ESSID right and you have an IP address that is accessable as per the router's config. that should get you in contact with the LAN and you should be able to ping the router. (That is prviding that the wireless NIC on the router is alllowed to answer ping requests, and it IS possible that the router is blocking pings from the wired NIC).
+2007-12-27T10:26:00.000Z	shm613	te_	when i do iwlist scan it returns No scan results
+2007-12-27T10:26:00.000Z	te_	shm613	Look at /etc/resolv.conf  and see if you have nameservers listed.
+2007-12-27T10:26:00.000Z	te_	shm613	cat /etc/resolv.conf
+2007-12-27T10:26:00.000Z	shm613	te_	yes there are two nameservers listed
+2007-12-27T10:27:00.000Z	te_	shm613	Are you using native driver or ndiswrapper?
+2007-12-27T10:27:00.000Z	te_	shm613	host av.com
+2007-12-27T10:27:00.000Z	te_	shm613	 Does that return anything?
+2007-12-27T10:27:00.000Z	shm613	te_	the driver from the restricted drivers manager
+2007-12-27T10:30:00.000Z	shm613	te_	the connection timed out with host av.com
+2007-12-27T10:30:00.000Z	te_	shm613	You might re-boot and see if that does anything.  Reboot with the wired nic unplugged.

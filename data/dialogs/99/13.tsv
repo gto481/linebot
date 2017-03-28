@@ -1,0 +1,99 @@
+2010-06-09T14:14:00.000Z	llutz	Zeu5	"ssh-copy-id [-i [identity_file]] [user@]machine"   "-i" missing?
+2010-06-09T14:14:00.000Z	Zeu5	llutz	let me go try now
+2010-06-09T14:20:00.000Z	llutz	Zeu5	ssh requires a password unless you generate a key without passphrase
+2010-06-09T14:20:00.000Z	Zeu5	llutz	i am quite sure i generated a key without passphrase
+2010-06-09T14:21:00.000Z	Zeu5	llutz	i went to applications > accessories > passwords and encrypted keys > and created a key
+2010-06-09T14:21:00.000Z	llutz	Zeu5	but to copy that key  it needs the password. after key is copied, it shouldn't ask anymore
+2010-06-09T14:21:00.000Z	Zeu5	llutz	so in conclusion, i may not have copied the key successfully yes?
+2010-06-09T14:21:00.000Z	llutz	Zeu5	"ssh user@host" again, it shouldn't ask if the key was copied
+2010-06-09T14:24:00.000Z	Zeu5	llutz	it prompts me for my password again
+2010-06-09T14:24:00.000Z	llutz	Zeu5	"ssh -vvv user@host"  watch the output for errors or messages "why" the key isn't accepted
+2010-06-09T14:25:00.000Z	Zeu5	llutz	 its a very long list
+2010-06-09T14:25:00.000Z	llutz	Zeu5	sure it is
+2010-06-09T14:26:00.000Z	Zeu5	llutz	should i bin paste it ?
+2010-06-09T14:58:00.000Z	Zeu5	llutz	still prompting me for password :(
+2010-06-09T14:28:00.000Z	Zeu5	llutz	http://paste.ubuntu.com/447103/ i replaced the host with example.com everything else remains intact
+2010-06-09T14:30:00.000Z	llutz	Zeu5	ls -la /home/kei/.ssh/identity
+2010-06-09T14:30:00.000Z	llutz	Zeu5	"ls -la /home/kei/.ssh/id*"
+2010-06-09T14:30:00.000Z	Zeu5	llutz	ls: cannot access /home/kei/.ssh/identity: No such file or directory
+2010-06-09T14:31:00.000Z	Zeu5	llutz	http://paste.ubuntu.com/447104/
+2010-06-09T14:32:00.000Z	llutz	Zeu5	you need to create a key using DSA
+2010-06-09T14:32:00.000Z	llutz	Zeu5	your server doesn't accept RSA
+2010-06-09T14:32:00.000Z	Zeu5	llutz	can u teach me how you recognise that?
+2010-06-09T14:33:00.000Z	llutz	Zeu5	lines 125+ of the paste
+2010-06-09T14:33:00.000Z	Zeu5	llutz	i am trying to learn to be expert in such ssh matters like yourself. and in anycase, i can speak to the server admin to make it recognise RSA
+2010-06-09T14:33:00.000Z	llutz	Zeu5	i'm far away from being an expert in anything :(
+2010-06-09T14:34:00.000Z	Zeu5	llutz	u mean which line exactly? there is no obvious statement saying anything about RSA or DSA
+2010-06-09T14:34:00.000Z	Zeu5	llutz	 oh .. u meant the id_dsa
+2010-06-09T14:34:00.000Z	llutz	Zeu5	127/128 it just looks for dsa, not for rsa
+2010-06-09T14:36:00.000Z	llutz	Zeu5	grep RSAAuthentication /etc7ssh/sshd_config            on your server
+2010-06-09T14:36:00.000Z	llutz	Zeu5	the host, you try to ssh to
+2010-06-09T14:36:00.000Z	Zeu5	llutz	i can change to rsa myself right?
+2010-06-09T14:36:00.000Z	llutz	Zeu5	grep RSAAuthentication /etc/ssh/sshd_config            on your server
+2010-06-09T14:36:00.000Z	Zeu5	llutz	i cn change the server to rsa since i have ssh access.. is that correct?
+2010-06-09T14:37:00.000Z	llutz	Zeu5	if you have root-access on the server, yes
+2010-06-09T14:38:00.000Z	Zeu5	llutz	iget this  RSAAuthentication yes RhostsRSAAuthentication no
+2010-06-09T14:38:00.000Z	llutz	Zeu5	and "grep PubkeyAuthentication  /etc/ssh/sshd_config  " ?
+2010-06-09T14:40:00.000Z	Zeu5	llutz	PubkeyAuthentication yes
+2010-06-09T14:40:00.000Z	llutz	Zeu5	thats odd, it should accept rsa-keys
+2010-06-09T14:41:00.000Z	llutz	Zeu5	try it with a dsa-key
+2010-06-09T14:41:00.000Z	Zeu5	llutz	tat makes the 2 of us
+2010-06-09T14:41:00.000Z	Zeu5	llutz	how do i generate a dsa key?
+2010-06-09T14:42:00.000Z	llutz	Zeu5	https://help.ubuntu.com/8.04/serverguide/C/openssh-server.html
+2010-06-09T14:42:00.000Z	Zeu5	llutz	and also is it useful to have sshmenu? i downloaded it after reading a tutorial, but it just left me confused. its the same tutorial that gave me the errorneous ssh-copy-id command which u corrected
+2010-06-09T14:42:00.000Z	llutz	Zeu5	sorry, i don't know sshmenu
+2010-06-09T14:57:00.000Z	Zeu5	llutz	but there is a different username for the server
+2010-06-09T14:57:00.000Z	llutz	Zeu5	it has to be the server username
+2010-06-09T14:42:00.000Z	Zeu5	llutz	np. by the way the link yousent me wat is that for?
+2010-06-09T14:43:00.000Z	llutz	Zeu5	old tutorial about ssh with dsa keys
+2010-06-09T14:43:00.000Z	llutz	Zeu5	just use"ssh-keygen -t dsa"
+2010-06-09T14:43:00.000Z	Zeu5	llutz	okay understood. i ctrl + F it
+2010-06-09T14:44:00.000Z	llutz	Zeu5	"ssh-copy-id -i ~/.ssh/id_dsa.pub user@host"
+2010-06-09T14:44:00.000Z	Zeu5	llutz	generated
+2010-06-09T14:45:00.000Z	Zeu5	llutz	its still requesting me for password :(
+2010-06-09T14:45:00.000Z	Zeu5	llutz	now running the -vvv option
+2010-06-09T14:46:00.000Z	llutz	Zeu5	ssh -i ~/.ssh/id_dsa user@host
+2010-06-09T14:47:00.000Z	Zeu5	llutz	its still requesting me for password :(
+2010-06-09T14:48:00.000Z	Zeu5	llutz	http://paste.ubuntu.com/447121/ really appreciate your help all this time
+2010-06-09T14:50:00.000Z	Zeu5	llutz	i am trying to learn. but it says that no such identity: /home/kei/.ssh/identity i went cd ~/.ssh i dont see anything called identity. so the problem lies with this?
+2010-06-09T14:50:00.000Z	llutz	Zeu5	paste please "ls -la ~/.ssh/authorized*" from  server
+2010-06-09T14:51:00.000Z	Zeu5	llutz	okie. on myway
+2010-06-09T14:52:00.000Z	Zeu5	llutz	http://paste.ubuntu.com/447126/
+2010-06-09T14:53:00.000Z	llutz	Zeu5	 "chown username:username ~/.ssh/authorized*" on  server
+2010-06-09T14:53:00.000Z	llutz	Zeu5	 "chmod 600 ~/.ssh/authorized*" on  server
+2010-06-09T14:54:00.000Z	Zeu5	llutz	but the server does not belong to me. is tat wise?
+2010-06-09T14:54:00.000Z	llutz	Zeu5	its your useraccount?
+2010-06-09T14:54:00.000Z	Zeu5	llutz	true
+2010-06-09T14:55:00.000Z	llutz	Zeu5	those 2 commands just make you owner of that file and permit only the owner to access it. it doesn't change anything else serverside
+2010-06-09T14:55:00.000Z	Zeu5	llutz	invalid group: `username:username'
+2010-06-09T14:56:00.000Z	llutz	Zeu5	replace with your "username"
+2010-06-09T14:56:00.000Z	llutz	Zeu5	i guess "kei"
+2010-06-09T14:56:00.000Z	Zeu5	llutz	done
+2010-06-09T14:57:00.000Z	llutz	Zeu5	ssh -i ~/.ssh/id_dsa user@host               try again please
+2010-06-09T14:57:00.000Z	Zeu5	llutz	whoa hold on a sec. kei is the useraccount i use on my laptop
+2010-06-09T14:57:00.000Z	Zeu5	llutz	in tat case, its okay :)
+2010-06-09T14:58:00.000Z	Zeu5	llutz	i go -vvv again
+2010-06-09T14:59:00.000Z	llutz	Zeu5	maybe i'm too tired this morning but i'm out of ideas then :(
+2010-06-09T14:59:00.000Z	Zeu5	llutz	hey man
+2010-06-09T14:59:00.000Z	Zeu5	llutz	its okay. i really really appreciate all the help you have rendered
+2010-06-09T14:59:00.000Z	Zeu5	llutz	u go rest
+2010-06-09T15:01:00.000Z	Zeu5	llutz	tell you what. i will tell my server admin what happened. but i doubt he would know. similar issue happened when i was on windows earlier..  if you suddenly thought of something, just ping me here. i also need a break myself.
+2010-06-09T15:02:00.000Z	llutz	Zeu5	i'll do. maybe you should startover from beginning. delete the keys from both machines, create new ones, copy them etc.pp.
+2010-06-09T15:07:00.000Z	Zeu5	llutz	thanks. willtry tat later. i go take a break first.
+2010-11-21T14:41:00.000Z	llutz	Zeu5	"which mysql"
+2010-11-21T14:42:00.000Z	Zeu5	llutz	i have a /usr/bun/mysql
+2010-11-21T14:42:00.000Z	llutz	Zeu5	then check "~/my.cnf"
+2010-11-21T14:42:00.000Z	Zeu5	llutz	what can i do to get mysql command to run /usr/bin/mysql instead of the other one i used?
+2010-11-21T14:43:00.000Z	Zeu5	llutz	what file is that? i dun ve it i think
+2010-11-21T14:43:00.000Z	llutz	Zeu5	if "which mysql" gives you /usr/bin/mysql then you already call the right one
+2010-11-21T14:44:00.000Z	llutz	Zeu5	open a new terminal, try again
+2010-11-21T14:45:00.000Z	Zeu5	llutz	now i get this error message ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+2010-11-21T14:46:00.000Z	llutz	Zeu5	your mysqld doesn't run or is misconfigured
+2010-11-21T14:46:00.000Z	Zeu5	llutz	what do i do to correct this?
+2010-11-21T14:47:00.000Z	llutz	Zeu5	check your mysqld-config
+2010-11-21T14:47:00.000Z	Zeu5	llutz	sorry i am not tat familiar with this. where can i  find this file? mysqld-config
+2010-11-21T14:48:00.000Z	llutz	Zeu5	/etc/mysql....   i guess. why do you run a server environment if you don't even know how to configure it?
+2010-11-21T14:49:00.000Z	Zeu5	llutz	 i am trying to learn. so i am making my desktop enviro like my server enviro
+2010-11-21T14:49:00.000Z	llutz	Zeu5	then start reading the documentation of the stuff you use. thats the best way to learn
+2011-05-27T13:23:00.000Z	llutz	Zeu5	skype had trouble yesterday, not fixed the linux-client yet. workaround is to "rm ~/.Skype/shared.xml" and login with password again
+2011-06-11T16:52:00.000Z	Zeu5	llutz	thanks

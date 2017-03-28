@@ -1,0 +1,97 @@
+2005-09-29T05:28:00.000Z	_jason		hi
+2005-09-29T05:29:00.000Z	_jason		I need some help installing java.  The forums have several different answers.  What do you recommend?
+2005-09-29T05:30:00.000Z	nalioth	_jason	hoary or breezy?
+2005-09-29T05:43:00.000Z	nalioth	_jason	type /topic
+2005-10-06T07:50:00.000Z	_jason	nalioth	 what does ctrl+f2 do?
+2005-10-06T07:51:00.000Z	nalioth	_jason	my bad. apologies. it's alt-f2, type xkill in the box (and kill the next thing you click on)
+2005-10-10T08:44:00.000Z	_jason	nalioth	is it preferrable to install breezy from scratch or is there really no difference?
+2005-10-10T08:45:00.000Z	nalioth	_jason	if you have hoary, just upgrade.
+2005-10-10T08:45:00.000Z	_jason	nalioth	 can i upgrade now?  Is there any difference from the preview version now and what will be available on the 13th (that you know of)?
+2005-10-10T08:46:00.000Z	nalioth	_jason	whatever you like, apt-get will keep you up to date
+2005-10-10T08:46:00.000Z	_jason	nalioth	Gwildor: is it relatively stable then?
+2005-10-10T11:03:00.000Z	nalioth	_jason	mirrormax should no longer be used
+2005-10-10T11:03:00.000Z	nalioth	_jason	and breezy isnt finished yet to have backports
+2005-10-10T11:04:00.000Z	_jason	nalioth	 ok so no extras yet then  thanks
+2005-10-12T16:07:00.000Z	_jason	nalioth	 ha too slow
+2005-10-13T15:40:00.000Z	nalioth	_jason	you are out of luck
+2005-10-13T15:40:00.000Z	_jason	nalioth	I see... ok thanks
+2005-10-13T15:42:00.000Z	_jason	nalioth	 I guess that can be my project for today ;)
+2005-10-14T14:02:00.000Z	nalioth	_jason	does gedit start?
+2005-10-14T14:02:00.000Z	_jason	nalioth	 yes runs find
+2005-10-14T14:03:00.000Z	nalioth	_jason	then disregard. we all get that msg
+2005-10-14T14:03:00.000Z	_jason	nalioth	 ok just wanted to make sure nothing was wrong thanks
+2005-10-14T14:03:00.000Z	nalioth	_jason	if you run it from the start menu, you wont see that stuff (when you start things from terminal, you'll see many unusual things)
+2005-10-14T14:04:00.000Z	_jason	nalioth	 gedit 2> /dev/null :D
+2005-10-15T06:08:00.000Z	nalioth	_jason	let's be spedific
+2005-10-15T06:09:00.000Z	_jason	nalioth	 will do
+2005-10-15T06:20:00.000Z	_jason	nalioth	 can we just redefine java on the bot?
+2005-10-15T06:20:00.000Z	nalioth	_jason	good idea
+2005-10-17T09:47:00.000Z	_jason	nalioth	 why does pt get directed to brazil only?
+2005-10-24T13:12:00.000Z	nalioth	_jason	what type of files are you not able to play?
+2005-10-24T13:12:00.000Z	_jason	nalioth	 I can't stream: mms://rdp.oninet.pt/antena1
+2005-10-24T13:13:00.000Z	_jason	nalioth	 it decodes fine b/c I hear pieces of it.. but buffering doesn't work right... hangs for minutes and plays 2 seconds then repeats
+2005-10-24T13:13:00.000Z	nalioth	_jason	perhaps you should use mimms or mmsclient to d/l the file in it's entirety and watch it locally
+2005-10-24T13:13:00.000Z	_jason	nalioth	 if you'd like to give it a try and see if it plays for you, it is a champions league soccer game mms://rdp.oninet.pt/antena1
+2005-10-24T13:14:00.000Z	_jason	nalioth	 but it is a live stream, can I play files with those programs as well?
+2005-10-24T13:15:00.000Z	_jason	nalioth	 it plays fine in windows though
+2005-10-24T13:17:00.000Z	nalioth	_jason	perhaps you should <uggh> use windows to watch your football
+2005-10-24T13:18:00.000Z	_jason	nalioth	 I've been doing that but I was hoping I could avoid it... oh well.  Thanks anyway.  One last question.  What is the simplest free program that will let me stream files... I'd like to look at the source for it.  Know of any?
+2005-10-24T13:19:00.000Z	nalioth	_jason	icecast i believe is one, also look into ogg vorbis and ogg theora streaming
+2005-10-24T13:19:00.000Z	_jason	nalioth	 alright thanks
+2005-10-29T08:17:00.000Z	nalioth	_jason	anything YOU compile should always be installed into /usr/local/ to keep the system from being confused
+2005-10-29T08:15:00.000Z	_jason	nalioth	 so if I want to compile something with make, what should i do?  make in my home directory and then copy to some place like /usr/local/ ?
+2005-10-29T08:16:00.000Z	_jason	nalioth	 yeah maybe I shouldn't start my name with _
+2005-10-29T08:17:00.000Z	_jason	nalioth	 right but I wouldn't want to run sudo make there right?
+2005-10-29T08:17:00.000Z	nalioth	_jason	and using checkinstall is a good way to keep your system maintained (checkinstall is used instead of "make install" and makes debs)
+2005-10-29T08:17:00.000Z	nalioth	_jason	there is no need to run "sudo make"
+2005-10-29T08:18:00.000Z	_jason	nalioth	 ok I don't know about make install, I'm going to google it
+2005-10-29T08:18:00.000Z	_jason	nalioth	 thanks
+2005-10-29T08:19:00.000Z	_jason	nalioth	farruinn, wickedpuppy: I just used make and ran the program (it was scilab)
+2005-10-29T08:20:00.000Z	nalioth	_jason	of course you can do that, but "make install" (and checkinstall) install your made program system wide, along with any compiled libraries
+2005-10-29T08:20:00.000Z	_jason	nalioth	 ok I see
+2005-10-29T08:30:00.000Z	_jason	nalioth	 so it is safe to run "sudo checkinstall" ?
+2005-10-29T08:32:00.000Z	nalioth	_jason	of course it is
+2005-10-29T08:32:00.000Z	_jason	nalioth	 k
+2005-10-29T08:32:00.000Z	nalioth	_jason	the nice thing about checkinstall is: you have a nice custom deb for your system afterwards that you can save
+2005-10-29T08:33:00.000Z	_jason	nalioth	 so it is just like a package from the repos, except stored locally right?
+2005-10-29T08:33:00.000Z	nalioth	_jason	basically, yes
+2005-11-02T15:53:00.000Z	nalioth	_jason	auto-apt depends on you having your sources.list in order
+2005-11-02T15:54:00.000Z	_jason	nalioth	 I have the default breezy sources.list what would I have to change or where can i find out more?
+2005-11-02T15:54:00.000Z	nalioth	_jason	join #kubuntu-offtopic please for more help
+2005-11-03T12:50:00.000Z	_jason	nalioth	 was there tab completion error on that ban or did I miss something?
+2005-11-03T12:50:00.000Z	nalioth	_jason	you missed nothing, and it wasn't a ban
+2005-11-03T12:51:00.000Z	_jason	nalioth	 oops ok
+2005-11-09T15:21:00.000Z	_jason	nalioth	 why is it that I define "forums" for ubotu but he returns something else? (on the ubotu website I verified it was set)
+2005-11-09T15:21:00.000Z	nalioth	_jason	join #kubuntu-offtopic please
+2005-11-26T09:08:00.000Z	nalioth	_jason	getting prepared for a quake-fest? lol
+2005-11-26T09:13:00.000Z	_jason	nalioth	nope not quake, I just want my page to scroll down when I hold a button down on my mouse
+2005-12-20T10:36:00.000Z	nalioth	_jason	may i help you?
+2005-12-20T14:28:00.000Z	_jason	nalioth	he's on hoary, do the extras still exist on mirrormax?
+2005-12-20T14:29:00.000Z	nalioth	_jason	mirrormax is gone for good, use official backports
+2005-12-20T14:29:00.000Z	_jason	nalioth	is there a mirror for hoary-extras?
+2005-12-20T14:42:00.000Z	_jason	nalioth	is gstreamer0.8-plugins-multiverse in hoary multiverse?
+2005-12-20T14:44:00.000Z	nalioth	_jason	no, but gstreamer0.8-mad is available (and the others), just not the -plugins metapkg
+2005-12-20T14:48:00.000Z	_jason	nalioth	oh ok thanks, I didn't realize it was just pulling things in so I figured the list at ubuntuguide would do
+2005-12-25T11:41:00.000Z	nalioth	_jason	enunciation and elocution in #ubuntu-offtopic please
+2006-01-22T08:27:00.000Z	_jason	nalioth	someone removed the !ops thing in ubotu
+2006-01-22T08:27:00.000Z	nalioth	_jason	i wonder who did that
+2006-01-25T10:42:00.000Z	_jason	nalioth	okay I tried checking mail for my two users using mutt, then I used the mail command for every user in /etc/passwd... and no luck finding those 2 mail messages.  The .xsession-errors log is timestamped at about an hour ago saying something had 2.  Any ideas why?
+2006-01-25T10:46:00.000Z	_jason	nalioth	I see, when I type mutt it asks me if I want to create /home/jasonr/Mail (jasonr is my username).  Should it be looking elsewhere for the mail?
+2006-01-25T10:47:00.000Z	_jason	nalioth	alright, thanks for the info
+2006-03-19T09:43:00.000Z	nalioth	_jason	it was not available, iirc
+2006-03-23T10:14:00.000Z	_jason	nalioth	that assumes the bugs are fleas
+2006-03-30T16:30:00.000Z	_jason	nalioth	hangman...
+2006-04-04T09:28:00.000Z	_jason	nalioth	he didn't end it in 0 0, that's my theory as to why Ubugtu didn't act
+2006-04-04T09:28:00.000Z	_jason	nalioth	that appears to be a better theory
+2006-04-04T09:34:00.000Z	_jason	nalioth	expert install with non-working sudo
+2006-04-10T06:46:00.000Z	_jason	nalioth	tuga = portuga ~ portugal
+2006-04-10T06:54:00.000Z	_jason	nalioth	he has plf enabled it seems
+2006-04-16T11:06:00.000Z	_jason	nalioth	ubotu was about 20 minutes late in his response
+2006-04-17T16:36:00.000Z	nalioth	_jason	?
+2006-04-17T16:36:00.000Z	_jason	nalioth	ubugtu just got mwe and roostishaw for innocent d.c.c. send
+2006-04-23T13:08:00.000Z	nalioth	_jason	why not do it the ubuntu way?
+2006-04-23T13:10:00.000Z	_jason	nalioth	I'll try to mention both methods, but I've seen a bug report on using the gui where the user doesn't stay in admin for some reason
+2006-04-24T08:04:00.000Z	_jason	nalioth	he was here earlier
+2006-04-25T06:16:00.000Z	nalioth	_jason	already on it
+2006-05-13T16:29:00.000Z	nalioth	_jason	whatever factoid ubotu sends you, don't read it
+2006-06-08T14:45:00.000Z	nalioth	_jason	?

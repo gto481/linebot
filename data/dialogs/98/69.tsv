@@ -1,0 +1,98 @@
+2005-10-18T05:36:00.000Z	dooglus		which package is /usr/bin/md5sum in?
+2005-10-18T05:37:00.000Z	dooglus		E: Couldn't find package md5sum
+2005-10-18T05:38:00.000Z	intelikey	dooglus	learn apt-cache find <blah>         use  "man apt-cache"  to learn more about it.
+2005-10-18T05:40:00.000Z	dooglus	intelikey	I don't think that helps much.  "apt-cache search md5sum" lists 5 packages which don't seem to contain /usr/bin/md5sum.  and "apt-cache search /usr/bin/md5sum" lists nothing
+2005-11-04T07:19:00.000Z	intelikey	dooglus	this is linux you only need to reboot after installing a new kernel
+2005-11-16T10:56:00.000Z	intelikey	dooglus	yeah probably but i backup /dev    ....
+2005-11-16T11:01:00.000Z	intelikey	dooglus	google.com
+2005-11-16T13:22:00.000Z	intelikey	dooglus	can i ask what mount command yall are working on ?
+2005-11-16T13:22:00.000Z	dooglus	intelikey	mounting a windows share in ubuntu
+2005-11-16T13:22:00.000Z	dooglus	intelikey	through smbfs
+2005-11-16T13:23:00.000Z	dooglus	intelikey	I just do this: "sudo mount -t cifs -o passwd= //server/Dokumenty /tmp/mount" - but it's not working for vbgunz
+2005-11-16T13:26:00.000Z	intelikey	dooglus	i think you still get the error "only root can do that" when the mount point or the fs one doesn't exist.  i'd start there.   in trying to trubble shoot that one.
+2005-11-16T13:27:00.000Z	dooglus	intelikey	that's solved...  I was wondering why I could mount as user, whereas vbgunz needed to 'sudo' - it was because I have aliased 'mount' to 'sudo mount'.
+2005-11-16T13:28:00.000Z	dooglus	intelikey	the question is why does vbgunz see "wrong fs type, bad option, bad superblock on //192.168.0.100/documents, missing codepage or other [...] " when he tries to mount it?
+2005-11-16T15:38:00.000Z	intelikey	dooglus	how much ram do you have ?
+2005-11-16T15:38:00.000Z	dooglus	intelikey	I have 384Mb
+2005-11-16T15:39:00.000Z	dooglus	intelikey	and it says Mem:        total 354224     used 288196      free 66028
+2005-11-16T15:39:00.000Z	dooglus	intelikey	what does free say for you (for total) and what do you really have?
+2005-11-16T15:41:00.000Z	dooglus	intelikey	I have about 20% free though - and lots of swap is used
+2005-11-16T15:41:00.000Z	dooglus	intelikey	I have 75Mb swap used, and 66Mb RAM free...  if only those 2 could get together :)
+2005-11-16T15:45:00.000Z	intelikey	dooglus	i just told you i only have 98m here  and run kde in that with no swap.
+2005-11-16T15:45:00.000Z	dooglus	intelikey	how?
+2005-11-16T15:46:00.000Z	dooglus	intelikey	then programs would start crashing
+2005-11-16T15:48:00.000Z	dooglus	intelikey	I don't have a printer, so cups isn't a problem
+2005-11-16T15:51:00.000Z	dooglus	intelikey	turning off swap will mean that as soon as the programs you're running need more memory than you've got, they'll start failing.
+2005-11-16T15:51:00.000Z	dooglus	intelikey	that's the wrong way to get a more responsive system.
+2005-11-16T15:52:00.000Z	dooglus	intelikey	you're free to f**k up your system like that if you want, but that doesn't stop it being the wrong thing to do
+2005-11-16T15:53:00.000Z	intelikey	dooglus	you are absolutly wrong about the "turning off swap will mean that as soon as the programs you're running need more memory than you've got, they'll start failing"   it doesnt work that way.
+2005-11-16T15:54:00.000Z	dooglus	intelikey	how does it work then?  how do the programs manage to use more memory that you have on-board if there's no swap?
+2005-11-16T16:08:00.000Z	dooglus	intelikey	I guess what was happening was that parts of the cache were being freed to be used for the new apps you ran.
+2005-11-16T16:08:00.000Z	dooglus	intelikey	as for the disk being used, I don't know.  it there's no swap, why would it access the disk?
+2005-11-16T16:09:00.000Z	intelikey	dooglus	that's the point..... after you do use up all free ram it starts writting to disk.....  i don't know why.  but i know it does.
+2005-11-16T16:18:00.000Z	intelikey	dooglus	used up all the ram and now the kernel or the apps one are looking for some place to swap to ?????
+2005-11-16T16:18:00.000Z	dooglus	intelikey	I can see why you might think that, indeed
+2005-11-16T16:19:00.000Z	intelikey	dooglus	you know you can open more apps....  it just does more disk activity and the box gets slower....
+2005-11-16T16:25:00.000Z	intelikey	dooglus	did anything crash ?
+2005-11-16T16:25:00.000Z	dooglus	intelikey	yes: Program terminated with signal SIGKILL, Killed.
+2005-11-16T16:26:00.000Z	dooglus	intelikey	it was a small malloc() loop I wrote
+2005-11-16T16:46:00.000Z	dooglus	intelikey	http://kerneltrap.org/node/3000 is an interesting discussion of swap vs. cache
+2005-11-16T17:23:00.000Z	intelikey	dooglus	like stat does
+2005-11-16T17:23:00.000Z	dooglus	intelikey	stat?
+2005-11-16T17:24:00.000Z	intelikey	dooglus	'stat * '
+2005-11-16T17:36:00.000Z	intelikey	dooglus	there may be an f7 or f8 option for that before boot    if not it is in expert mode.
+2005-11-28T09:13:00.000Z	dooglus	intelikey	I don't think the live cd has enough packages on it, does it?
+2005-11-28T09:14:00.000Z	intelikey	dooglus	all you need is a linux console and the dpkg package manager isn't it.....
+2005-11-28T09:15:00.000Z	dooglus	intelikey	I guess so.
+2005-11-28T09:15:00.000Z	dooglus	intelikey	debbootstrap would be handy though.
+2005-12-23T10:56:00.000Z	dooglus	intelikey	it does
+2005-12-23T10:56:00.000Z	dooglus	intelikey	(assuming you mean k3b)
+2006-01-23T12:56:00.000Z	intelikey	dooglus	where did you hear thos rumours ?
+2006-01-23T13:03:00.000Z	dooglus	intelikey	I heard the rumours in here, I'm pretty sure.
+2006-01-23T13:03:00.000Z	dooglus	intelikey	I'll see if I can dig up the logs if you're interested
+2006-01-23T13:06:00.000Z	dooglus	intelikey	you sure?
+2006-01-23T13:17:00.000Z	dooglus	intelikey	the root account *is* disabled by default in ubuntu.
+2006-01-23T13:17:00.000Z	dooglus	intelikey	what that means is that the root password is locked, so that logins as root are impossible
+2006-01-23T13:17:00.000Z	dooglus	intelikey	the "passwd" man page explains it as follows: -l, --lock :  Lock the named account. This option disables an account by changing the password to a value which matches no possible encrypted value
+2006-01-23T13:58:00.000Z	dooglus	intelikey	you need at least some of those files
+2006-01-23T14:00:00.000Z	dooglus	intelikey	you know you can "sudo apt-get clean" to make a lot of space?
+2006-01-23T14:00:00.000Z	dooglus	intelikey	you're mixing /var and /tmp?
+2006-01-23T14:01:00.000Z	intelikey	dooglus	to make a lot of space you say?  lol   i did and got 200k free.
+2006-01-23T14:02:00.000Z	dooglus	intelikey	oh, fair enough.  I guess you already cleared that stuff out
+2006-03-01T11:08:00.000Z	dooglus	intelikey	"kill -l"
+2006-03-01T11:09:00.000Z	dooglus	intelikey	6 is ABRT
+2006-05-21T11:56:00.000Z	dooglus	intelikey	did you notice that runlevels 2 and 3 have almost, but not quite, the same things in them?  any idea what runlevel 3 is for?
+2006-05-21T11:58:00.000Z	intelikey	dooglus	ubuntu "by default" only uses S 0 1 2 6    thus 3 4 5 are wasted space on the default ub.
+2006-05-21T12:27:00.000Z	dooglus	intelikey	are you sure it's running 'more'?
+2006-05-21T12:27:00.000Z	dooglus	intelikey	check with 'ps' in a separate window
+2006-05-21T12:27:00.000Z	intelikey	dooglus	it acts just like more and says more...
+2006-05-21T12:28:00.000Z	intelikey	dooglus	it has no pid
+2006-05-21T12:28:00.000Z	dooglus	intelikey	in 'more', if you hit 'h' at the 'more' prompt, it shows some help.  does bash's 'more' do that?
+2006-05-21T12:29:00.000Z	intelikey	dooglus	no it doesn't
+2006-05-21T12:30:00.000Z	dooglus	intelikey	so it's not really 'more' then.  it's just part of bash.  notice also that the real 'more' will show you the current line number when you hit '=', whereas bash's fake 'more' doesn't.
+2006-05-21T12:33:00.000Z	dooglus	intelikey	I hate it too.  I wish it would just scroll all that stuff past so I can continue working.  I don't want to have to deal with a fake 'more' prompt.
+2006-05-21T12:34:00.000Z	intelikey	dooglus	prezactly.
+2006-05-21T12:37:00.000Z	dooglus	intelikey	just for you:  add a line saying "set page-completions off" to ~/.inputrc; restart bash; voila
+2006-05-21T12:39:00.000Z	dooglus	intelikey	it won't work in either of those places.  put it in ~/.inputrc
+2006-05-21T12:41:00.000Z	intelikey	dooglus	ah i missread you as .bashrc
+2006-05-21T12:41:00.000Z	dooglus	intelikey	to find that I did "man bash" RET /pager RET
+2006-05-21T12:43:00.000Z	dooglus	intelikey	enter was needed to get the 'man 'command to run
+2006-05-21T12:44:00.000Z	intelikey	dooglus	well it didn't seem to work.....  ;/
+2006-05-21T12:48:00.000Z	intelikey	dooglus	dubble click rhe trash can
+2006-05-21T12:48:00.000Z	dooglus	intelikey	I don't have a trash can - I'm not running GNOME
+2006-05-21T12:50:00.000Z	dooglus	intelikey	it appears that typing "trash://" into the address bar goes to the trash
+2006-05-21T12:50:00.000Z	dooglus	intelikey	(lucky guess :)
+2006-05-21T12:54:00.000Z	intelikey	dooglus	& to0om may i sujest you check the launcher it may be an "alternatives" error or something like that.
+2006-05-21T12:56:00.000Z	dooglus	intelikey	what launcher are you talking about?
+2006-05-21T12:58:00.000Z	dooglus	intelikey	I think you're thinking of rob_, not to0om?
+2006-05-21T12:59:00.000Z	dooglus	intelikey	rob_'s bu**ered off already.
+2006-05-21T13:04:00.000Z	dooglus	intelikey	I like "sudo checkinstall" instead of "make install" - it builds a .deb file, so you can easily uninstall it again after if you want to.
+2006-05-21T13:05:00.000Z	intelikey	dooglus	good point.... just used to  make uninstall
+2006-05-21T13:07:00.000Z	dooglus	intelikey	not all makefiles provide an 'uninstall' target, and anyway they can't be trusted to uninstall everything they installed.  using checkinstall you can be sure that the uninstall is clean, because it uses dpkg
+2006-05-21T13:31:00.000Z	intelikey	dooglus	run the live save to usb key  or cdrw ?
+2006-05-21T13:34:00.000Z	intelikey	dooglus	like an iso maybe ?
+2006-05-21T13:35:00.000Z	dooglus	intelikey	you can just "mkfs" on any file you like I think.  it doesn't have to be a /dev/hda1 or some such.
+2006-05-21T13:37:00.000Z	intelikey	dooglus	yes that's what i was saying.   dd if=/dev/zero of=bigfile.iso count=97654487 && mkisofs bigfile.iso then you can mount ir rw use is when finished if you like burn to disk from either side....
+2006-05-21T13:39:00.000Z	dooglus	intelikey	I'd probably use ext3 instead of isofs
+2006-05-21T13:39:00.000Z	dooglus	intelikey	the machines are on the LAN, so I wouldn't need to burn the files.  heh, in fact why don't I just use a server on the LAN for file storage :)
+2006-05-21T13:42:00.000Z	intelikey	dooglus	that's what i've been saying about linux for years now.   there is your way, my way, and probably a better way.   but not a "right way"  that falls to preferance....

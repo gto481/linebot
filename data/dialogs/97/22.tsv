@@ -1,0 +1,97 @@
+2008-05-02T04:49:00.000Z	satokun		I put in a new hard drive and installed the new heron to that drive, imported my old settings, rebooted, set the new drive for boot, and I got a GRUB 21 error.  I can still boot into the 7.10 install fine.  I've hit a stop point and I'm not sure what to do.
+2008-05-02T04:49:00.000Z	danbhfive	satokun	your menu.lst is setup wrong I believe
+2008-05-02T04:50:00.000Z	satokun	danbhfive	 I suspected as much, but I can't get to the new install's menu.lst
+2008-05-02T04:51:00.000Z	danbhfive	satokun	hmmm, first off, why not?  second, I think that only one menu.lst counts
+2008-05-02T04:52:00.000Z	satokun	danbhfive	 I'm unable to access the drive where I installed the new version (through the old verson that still works fine), it prompts me for a password but then it just removes the drive and doesn't display.  Would I have better luck running a naut through gksudo?
+2008-05-02T04:54:00.000Z	danbhfive	satokun	well, if you can't even access the drive (I assume you don't mean partition), then I would say thats your first problem.  You gota figure out a way to access that drive
+2008-05-02T04:55:00.000Z	satokun	danbhfive	 drive/partition are the same thing except for the older install.  I'm going to go try accessing it working as root.  (I may have just needed to talk it out...)
+2008-05-02T05:05:00.000Z	satokun	danbhfive	 still here?  busy?
+2008-05-02T05:06:00.000Z	danbhfive	satokun	still here
+2008-05-02T05:07:00.000Z	satokun	danbhfive	 excellent.  I managed to tap into the drive working as root and found the menu.lst.  Now I have the whole thing, and I think I may have found the problem.  It points to my old installation twice, on two different partitions of the same drive.
+2008-05-02T05:07:00.000Z	satokun	danbhfive	 problem is I never figured out which one of those partitions boots.
+2008-05-02T05:08:00.000Z	danbhfive	satokun	your new installation should be bootable, just like the old one
+2008-05-02T05:09:00.000Z	satokun	danbhfive	 I know, but when I boot from that disk I'm getting the 21 from grub.
+2008-05-02T05:09:00.000Z	danbhfive	satokun	21 error I believe means that the menu.lst is pointing to the wrong location
+2008-05-02T05:10:00.000Z	danbhfive	satokun	how many harddrives are we working with?
+2008-05-02T05:10:00.000Z	satokun	danbhfive	 I figured that out but I looked over the menu.lst and it looks fine.
+2008-05-02T05:11:00.000Z	satokun	danbhfive	 well, as far as I can tell.
+2008-05-02T05:12:00.000Z	danbhfive	satokun	how about the other menu.lst, not only should that be good too, they should match.  They don't really need to match, but why not.  Im pretty sure your system will only use one of them, for both installations
+2008-05-02T05:13:00.000Z	satokun	danbhfive	 now there's a thought.  I worry though that since one works and one doesn't dead copying the one that doesn't seem to over the one that does (even if it's backed up) will leave me in worse shape.
+2008-05-02T05:13:00.000Z	danbhfive	satokun	no no, dont copy.  fix
+2008-05-02T05:14:00.000Z	satokun	danbhfive	 and even if I remove the old drive, I get the same error.  .Fix?
+2008-05-02T05:14:00.000Z	danbhfive	satokun	if you pastebin menu.lst and tell me the layout of your drive, I can help
+2008-05-02T05:14:00.000Z	satokun	danbhfive	 will do.  but where is pastebin again?
+2008-05-02T05:22:00.000Z	danbhfive	satokun	hows it going?
+2008-05-02T05:23:00.000Z	satokun	danbhfive	 http://paste.ubuntu.com/9333
+2008-05-02T05:24:00.000Z	danbhfive	satokun	so you have 3 harddrives?
+2008-05-02T05:25:00.000Z	satokun	danbhfive	 yes.  plus various little usb drives I disconnected during the install, but those theree are the relevant ones
+2008-05-02T05:25:00.000Z	danbhfive	satokun	well, your fstab doesn't list them all.  How does your other menu.lst look?
+2008-05-02T05:26:00.000Z	satokun	danbhfive	 I'll pastebin it for you.  sorry for the delay, I'm running between my backup laptop and the system itself.
+2008-05-02T05:27:00.000Z	danbhfive	satokun	do you have 2 installs of gutsy?
+2008-05-02T05:31:00.000Z	satokun	danbhfive	 the menu.lst you requested is in the pastebin at 9335
+2008-05-02T05:32:00.000Z	satokun	danbhfive	 the answer is I don't know.
+2008-05-02T05:32:00.000Z	danbhfive	satokun	the answer to what?
+2008-05-02T05:32:00.000Z	satokun	danbhfive	 the first time I installed it that's just how it came out.  accessing either drive gives me root.
+2008-05-02T05:33:00.000Z	satokun	danbhfive	 err, either partition
+2008-05-02T05:33:00.000Z	danbhfive	satokun	can you pastebin sudo fdisk -l ?
+2008-05-02T05:34:00.000Z	satokun	danbhfive	 I'll try.
+2008-05-02T05:34:00.000Z	danbhfive	satokun	also, can you describe your grub menu as it appears?
+2008-05-02T05:36:00.000Z	satokun	danbhfive	 how do I copy that from a terminal window?  it just displays it.  would I be able to access it through a text editor?
+2008-05-02T05:37:00.000Z	danbhfive	satokun	you can try sudo fdisk -l > a_text_file.txt
+2008-05-02T05:37:00.000Z	satokun	danbhfive	 just a space for the output or do I need that greater-than?
+2008-05-02T05:38:00.000Z	danbhfive	satokun	you need the >.  its this: sudo fdisk -l > any_name.txt
+2008-05-02T05:41:00.000Z	satokun	danbhfive	 done.  9338
+2008-05-02T05:42:00.000Z	danbhfive	satokun	well, as a side comment, I don't think you need more than one swap partition
+2008-05-02T05:43:00.000Z	satokun	danbhfive	 main reason I'm clean installing 8.04.  :D
+2008-05-02T05:44:00.000Z	danbhfive	satokun	does the 8.04 install show up in your grub menu?
+2008-05-02T05:44:00.000Z	satokun	danbhfive	 when the 7.10 drive is selected in the BIOS, no.  When the 8.04 is, I error out in GRUB, so I don't know.
+2008-05-02T05:45:00.000Z	danbhfive	satokun	you are selecting the drives via bios?
+2008-05-02T05:45:00.000Z	danbhfive	satokun	wait, I think I get it, you are choosing which drive to boot off of?
+2008-05-02T05:47:00.000Z	satokun	danbhfive	 sorta.  It asks me what drives have boot priority.  I put the old at the top, I can boot the old.  I put the new at the top, I error out.  Oddly enough if the drive that has home is detected it errors out no matter what.  But if I leave it undetected in the bios and run old, it shows up and works just fine.  a headscratcher.
+2008-05-02T05:47:00.000Z	danbhfive	satokun	can you describe the grub menu on the working one?
+2008-05-02T05:48:00.000Z	danbhfive	satokun	do you have 2 possible gutsy installs to boot into on that one?
+2008-05-02T05:48:00.000Z	satokun	danbhfive	 it gives me two sets of options both for 7.10.  I've always just used the first one
+2008-05-02T05:49:00.000Z	danbhfive	satokun	does the second work?
+2008-05-02T05:49:00.000Z	satokun	danbhfive	 I don't know, I've never used it.
+2008-05-02T05:50:00.000Z	satokun	danbhfive	 want me to try booting to it?
+2008-05-02T05:51:00.000Z	danbhfive	satokun	sure
+2008-05-02T05:51:00.000Z	satokun	danbhfive	 okay, back in a few.
+2008-05-02T05:54:00.000Z	satokun	danbhfive	 it's booting now, but jsyk, the second option said it was on dev/hdc1
+2008-05-02T05:54:00.000Z	satokun	danbhfive	 the other option doesn't specify what drive it's on
+2008-05-02T05:55:00.000Z	danbhfive	satokun	looks like you have several installs of linux, eh?  : )
+2008-05-02T05:56:00.000Z	satokun	danbhfive	 I'd agree.  this one looks like ubuntu did the first time I started it from the drive.
+2008-05-02T05:56:00.000Z	satokun	danbhfive	 I believe it may be superfluous.
+2008-05-02T05:58:00.000Z	danbhfive	satokun	on the hardy drive, do you have 3 options for booting, and you are saying that the first one gives you the grub 21 error?
+2008-05-02T05:59:00.000Z	satokun	danbhfive	 the options never come up.  it errors 21 just after starting grub 1.5
+2008-05-02T06:02:00.000Z	satokun	danbhfive	 problem - I don't have a floppy drive anymore.  It actually died earlier today.
+2008-05-02T06:03:00.000Z	danbhfive	satokun	do you have the livecd?
+2008-05-02T06:03:00.000Z	satokun	danbhfive	 yes.  both for 7.10 and 8.04
+2008-05-02T06:06:00.000Z	danbhfive	satokun	use the livecd, and boot with that, and resetup grub using the directions.
+2008-05-02T06:12:00.000Z	danbhfive	satokun	i think this maybe out of my league, if you can't even get to a grub menu.  You gota complicated setup
+2008-05-02T06:26:00.000Z	satokun	danbhfive	 still here/working with someone?
+2008-05-02T06:27:00.000Z	danbhfive	satokun	im still here, but I'm signing off soon
+2008-05-02T06:29:00.000Z	satokun	danbhfive	 well I did the find stage1, and it gave me three options, hd1,0  hd2,0 and hd2,2.  I'm not sure which one is my 8.04 drive to set as root.
+2008-05-02T06:29:00.000Z	danbhfive	satokun	I think its hd1,0
+2008-05-02T06:30:00.000Z	satokun	danbhfive	 thanks for all your help by the way.
+2008-05-02T06:34:00.000Z	danbhfive	satokun	whats on the third harddrive?
+2008-05-02T06:36:00.000Z	satokun	danbhfive	 now it fives me the list and throws code 15
+2008-05-02T06:37:00.000Z	danbhfive	satokun	so you get a grub menu?
+2008-05-02T06:37:00.000Z	satokun	danbhfive	 yes, and it shows all three installs.
+2008-05-02T06:39:00.000Z	danbhfive	satokun	whats on your first harddrive?
+2008-05-02T06:39:00.000Z	satokun	danbhfive	 right now, that's set to the Heron drive in the bios, and based on the grub reinstall, I'd say it agrees.
+2008-05-02T06:40:00.000Z	satokun	danbhfive	 one sec, I think I know where I messed up.
+2008-05-02T06:41:00.000Z	danbhfive	satokun	well, the menu.lst that you showed me disagrees.  It says that hardy is on the SECOND harddrive, but your fdisk says that that harddrive is not bootable.  I'm not sure what that means
+2008-05-02T06:43:00.000Z	satokun	danbhfive	 should I try reinstalling grub to root at 2,0?
+2008-05-02T06:43:00.000Z	danbhfive	satokun	I think you need to find your hardy install, actually
+2008-05-02T06:44:00.000Z	danbhfive	satokun	I'm still unsure if its on the second or first drive
+2008-05-02T06:44:00.000Z	satokun	danbhfive	 well since the grub install setting it for 1,0 throws errors, it must be the 2,0
+2008-05-02T06:45:00.000Z	danbhfive	satokun	if you are getting a grub menu, then I don't think you need to reinstall grub
+2008-05-02T06:45:00.000Z	satokun	danbhfive	 possibly then command line grub to fix it then?  no idea how to go about that though
+2008-05-02T06:46:00.000Z	satokun	danbhfive	 or would the problem be in the menu file?
+2008-05-02T06:47:00.000Z	danbhfive	satokun	it can't hurt to try that though.  I would also suggest to try changing menu.lst so that root for hardy is (hd0,0) instead of hd1,0
+2008-05-02T06:47:00.000Z	satokun	danbhfive	 I'll give that a shot.  Don't let me keep you over though if you need to be off.
+2008-05-02T06:49:00.000Z	danbhfive	satokun	yeah, I need to sign off
+2008-05-02T06:49:00.000Z	danbhfive	satokun	last suggestion: http://users.bigpond.net.au/hermanzone/p15.htm#First_method:_direct_kernel_boot.
+2008-05-02T06:50:00.000Z	danbhfive	satokun	maybe you can try that, and see if you can find the hardy install that way.
+2008-05-02T06:50:00.000Z	danbhfive	satokun	good luck!
+2008-05-02T06:58:00.000Z	satokun	danbhfive	 if you're still here, I edited menu so that my heron install was pointed to 0,0, and it's booted fine.  Thanks much for all your help today.  :D

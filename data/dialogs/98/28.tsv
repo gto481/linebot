@@ -1,0 +1,98 @@
+2009-04-26T11:30:00.000Z	Prabz		Hi, I upgraded to 9.04 and I'm not able to hibernate ( not that i was ever able to do that on ubuntu, since 7.10).. The website says I should be able to . Can anybody tell me how to get hibernate working?
+2009-04-26T11:31:00.000Z	pronoy_	Prabz	what is the amount of your swap memory ?
+2009-04-26T11:31:00.000Z	Prabz	pronoy_	I
+2009-04-26T11:32:00.000Z	pronoy_	Prabz	???
+2009-04-26T11:32:00.000Z	Prabz	pronoy_	I've allocated 2gb to swap and my ram is 1 gb
+2009-04-26T11:32:00.000Z	pronoy_	Prabz	hmm...that seems to be fine...wait
+2009-04-26T11:33:00.000Z	pronoy_	Prabz	are you on a laptob
+2009-04-26T11:33:00.000Z	Prabz	pronoy_	It could be swap too, now that you mention it, I've always had problems with swap not being mounted
+2009-04-26T11:33:00.000Z	pronoy_	Prabz	are you on intrepid ?
+2009-04-26T11:34:00.000Z	Prabz	pronoy_	I'm using a desktop AMD 3600+ Nvidia Geforce 6100
+2009-04-26T11:34:00.000Z	pronoy_	Prabz	oh you mentioned jaunty...
+2009-04-26T11:34:00.000Z	Prabz	pronoy_	I upgraded to jaunty
+2009-04-26T11:35:00.000Z	Prabz	pronoy_	how to check if swap is being mounted or not?
+2009-04-26T11:35:00.000Z	pronoy_	Prabz	check this link http://ubuntuforums.org/showthread.php?t=417964&page=2
+2009-04-26T11:36:00.000Z	pronoy_	Prabz	to check whether swap is being mounted check /etc/fstab
+2009-04-26T11:37:00.000Z	Prabz	pronoy_	just a moment
+2009-04-26T11:39:00.000Z	Prabz	pronoy_	http://pastebin.com/d48312d71
+2009-04-26T11:41:00.000Z	pronoy_	Prabz	no problem with swap i am guessing......check the link i gave you or just go here : http://blog.paulbetts.org/index.php/2007/02/11/fixing-software-suspend-hibernate-with-uswsusp-in-ubuntu-feisty-and-edgy/
+2009-04-26T11:41:00.000Z	Prabz	pronoy_	ok thanks for helping :)
+2009-04-26T11:42:00.000Z	pronoy_	Prabz	np
+2009-04-26T11:43:00.000Z	Prabz	pronoy_	isn't that for feisty fawn?
+2009-04-26T11:43:00.000Z	pronoy_	Prabz	i think it'll work
+2009-04-26T11:44:00.000Z	Prabz	pronoy_	ok i'll try. it says backup all data,does that mean  i back up the entire hard drive?
+2009-04-26T11:46:00.000Z	pronoy_	Prabz	yeah i guess........
+2009-04-26T11:47:00.000Z	pronoy_	Prabz	but i don't think it'll land you into much trouble
+2009-04-26T11:47:00.000Z	Prabz	pronoy_	looks like i'll have to come back to here maybe next month.... ;)
+2009-04-26T11:57:00.000Z	Prabz	pronoy_	the hibernate worked, now how to bind it to the kde menu's hibernate option?
+2009-04-26T11:57:00.000Z	pronoy_	Prabz	wait...
+2009-04-26T11:57:00.000Z	Prabz	pronoy_	ok
+2009-04-26T11:58:00.000Z	pronoy_	Prabz	i am on gnome but i think to bind it to the hibernate option you'll need to right click and edit the command its using ......link it to the command you used to hibernate
+2009-04-26T12:01:00.000Z	Prabz	pronoy_	right clicking doesn't turn up the edit command window
+2009-04-26T12:03:00.000Z	pronoy_	Prabz	i think you need to edit menu first......then while editing right clock
+2009-04-26T12:04:00.000Z	Prabz	pronoy_	hibernate options aren't listed in the menu editor
+2009-04-26T12:05:00.000Z	pronoy_	Prabz	man...i'll have to check it on a kde machine...ask around i'll check on the meantime
+2009-04-26T12:06:00.000Z	Prabz	pronoy_	ok thanks
+2009-04-26T12:07:00.000Z	pronoy_	Prabz	why don't you make a seperate launcher for this ?
+2009-04-26T12:09:00.000Z	Prabz	pronoy_	well thats an option
+2009-04-26T12:10:00.000Z	Prabz	pronoy_	after resume, the system isn't locked, as it should be..
+2009-04-26T12:10:00.000Z	pronoy_	Prabz	after resuming from hibernation ?
+2009-04-26T12:10:00.000Z	Prabz	pronoy_	yes, after resume from hibernation, i think the system should be in locked state
+2009-04-26T12:12:00.000Z	pronoy_	Prabz	man that's unsecure lemme chekc
+2009-04-26T12:13:00.000Z	Prabz	pronoy_	it sure is very unsecure...
+2009-04-26T12:18:00.000Z	pronoy_	Prabz	ok this is dangerous......but i think it might just work
+2009-04-26T12:19:00.000Z	pronoy_	Prabz	check your lock screen command and then add it to rc.login
+2009-04-26T12:19:00.000Z	pronoy_	Prabz	so everytime you login your screen will be locke
+2009-04-26T12:20:00.000Z	Prabz	pronoy_	ok, but won't that lock screen be displayed even when i login manually after a restart?
+2009-04-26T12:21:00.000Z	pronoy_	Prabz	yes but that'll do no harm you know...it has to ask for a login..whether you do it manually or not
+2009-04-26T12:31:00.000Z	Prabz	pronoy_	I don't know how to lock the screen from command line
+2009-04-26T12:32:00.000Z	pronoy_	Prabz	i'll give you the command.....you on kde right ?
+2009-04-26T12:32:00.000Z	Prabz	pronoy_	yes, on kde4
+2009-04-26T12:33:00.000Z	pronoy_	Prabz	qdbus org.freedesktop.ScreenSaver /ScreenSaver Lock
+2009-04-26T12:34:00.000Z	pronoy_	Prabz	again it might be dangerous...i haven't tried it
+2009-04-26T12:35:00.000Z	Prabz	pronoy_	it works
+2009-04-26T12:35:00.000Z	pronoy_	Prabz	eureka :D
+2009-04-26T12:36:00.000Z	Prabz	pronoy_	eu- rokk... :)
+2009-04-26T12:36:00.000Z	pronoy_	Prabz	no bro europian union doesn't
+2009-04-26T12:37:00.000Z	pronoy_	Prabz	ok bad joke
+2009-04-26T12:37:00.000Z	Prabz	pronoy_	lol
+2009-04-26T12:38:00.000Z	Prabz	pronoy_	I meant the homophone... You rock!!! :D
+2009-04-26T12:40:00.000Z	Prabz	pronoy_	ok so what's next? how to set the lock command to run at every logon
+2009-04-26T12:41:00.000Z	pronoy_	Prabz	add the command to rc.login
+2009-04-26T12:42:00.000Z	pronoy_	Prabz	you know..you can ask at #kubuntu-kde4 too....this might not be only option
+2009-04-26T12:43:00.000Z	Prabz	pronoy_	I've asked on #kubuntu and #kde, in vain
+2009-04-26T12:44:00.000Z	pronoy_	Prabz	yeah i guess they are a bit slow...but modifying the rc.login with an unknown command might have some serious consiquences....
+2009-04-26T12:44:00.000Z	pronoy_	Prabz	let me ask someone more well aquainted with this...before persuing it
+2009-04-26T12:45:00.000Z	Prabz	pronoy_	I'm still finding out the location of rc.login... ;)
+2009-04-26T12:45:00.000Z	pronoy_	Prabz	/etc/rc.login
+2009-04-26T12:45:00.000Z	Prabz	pronoy_	ok thanks....
+2009-04-26T12:46:00.000Z	Prabz	pronoy_	there isn't a channel called #kubuntu-kde4
+2009-04-26T12:46:00.000Z	pronoy_	Prabz	there used to be...my bad and
+2009-04-26T12:47:00.000Z	pronoy_	Prabz	again very sorry....its rc.local not rc.login
+2009-04-26T12:48:00.000Z	Prabz	pronoy_	I don't think i should change it after all... as you said it's dangerous
+2009-04-26T12:49:00.000Z	pronoy_	Prabz	you see at every boot the commands in this file run.... for example i added the rmmod pcspkr which removes the ultra irriitating system beep
+2009-04-26T13:01:00.000Z	pronoy_	Prabz	: pastebin your output of /etc/default/acpi-support
+2009-04-26T13:03:00.000Z	Prabz	pronoy_	http://pastebin.com/d421063ef
+2009-04-26T13:04:00.000Z	pronoy_	Prabz	use paste.ubuntu.com next time :)
+2009-04-26T13:05:00.000Z	Prabz	pronoy_	ok i'll keep that in mind
+2009-04-26T13:05:00.000Z	pronoy_	Prabz	well the lockscreen is enabled..but still not working ..,many people have the same issue
+2009-04-26T13:08:00.000Z	Prabz	pronoy_	HIBERNATE_MODE=shutdown at line 115 is that normal?
+2009-04-26T13:09:00.000Z	pronoy_	Prabz	yup
+2009-04-26T13:12:00.000Z	Prabz	pronoy_	couldn't there be a command already defined in ubuntu for hibernate. It does *sort of* shutdown very fast, on clicking the hibernate button, but doesn't resume...
+2009-04-26T13:15:00.000Z	pronoy_	Prabz	yeah there is..i guess but that depends whether ur system is using APM or ACPI
+2009-04-26T13:16:00.000Z	Prabz	pronoy_	ok, how to find that out?
+2009-04-26T13:16:00.000Z	pronoy_	Prabz	otherwise ....this ......../etc/acpi/sleep.sh               /etc/acpi/hibernate.sh
+2009-04-26T13:18:00.000Z	Prabz	pronoy_	contents of hibernate.sh at http://paste.ubuntu.com:80/158414
+2009-04-26T13:20:00.000Z	pronoy_	Prabz	didn't ask for that...u asked me a command to hibernate...just provided you with one :D
+2009-04-26T13:21:00.000Z	Prabz	pronoy_	strange thing is, hibernate.sh also calls s2disk , but it doesn't hibernate. whereas, manually running s2disk from the terminal works
+2009-04-26T13:22:00.000Z	pronoy_	Prabz	i think its the other way round...s2disk is the one that uses hibernate.sh
+2009-04-26T13:23:00.000Z	pronoy_	Prabz	no ur right...suspend2disk is being called by hibernate
+2009-04-26T13:24:00.000Z	Prabz	pronoy_	so what do you suggest?
+2009-04-26T13:25:00.000Z	pronoy_	Prabz	now all we need to do is to lock the screen by using some commands in X or writing a script
+2009-04-26T13:26:00.000Z	Prabz	pronoy_	well using s2disk from the terminal, yes
+2009-04-26T13:26:00.000Z	pronoy_	Prabz	you still haven't created a launcher ??
+2009-04-26T13:27:00.000Z	Prabz	pronoy_	I created one now
+2009-04-26T13:28:00.000Z	Prabz	pronoy_	it's working fine
+2009-04-26T13:29:00.000Z	pronoy_	Prabz	now we need to get it locked ....lemme write a script...i think i might get it
+2009-04-26T13:47:00.000Z	pronoy_	Prabz	i give up...i can't think of anything at the moment
+2009-04-26T14:26:00.000Z	Prabz	pronoy_	hi, sorry i dozed off... What did I miss?

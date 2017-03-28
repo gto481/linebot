@@ -1,0 +1,99 @@
+2008-04-18T05:22:00.000Z	wooting		can someone help me get sound working? i get an error when i try to double click on the sound icon: No volume control GStreamer plugins and/or devices found.
+2008-04-18T05:23:00.000Z	sammyF_	wooting	what chipset?
+2008-04-18T05:23:00.000Z	wooting	sammyF_	im a noob. how do i find it out?
+2008-04-18T05:24:00.000Z	wooting	sammyF_	?
+2008-04-18T05:24:00.000Z	sammyF_	wooting	well ... is it an onboard soundcard? is it one that's in a PCI slot?
+2008-04-18T05:24:00.000Z	wooting	sammyF_	its onboard
+2008-04-18T05:25:00.000Z	sammyF_	wooting	laptop or desktop computer?
+2008-04-18T05:25:00.000Z	wooting	sammyF_	if you mean do i have a sound card... its part of my motherboard
+2008-04-18T05:25:00.000Z	wooting	sammyF_	desk
+2008-04-18T05:26:00.000Z	sammyF_	wooting	hmm ... okay, a wild guess would be you have a nforce onboard soundcard
+2008-04-18T05:26:00.000Z	sammyF_	wooting	... which sadly means it SHOULD work out of the box
+2008-04-18T05:26:00.000Z	sammyF_	wooting	you don't have ANY sound at all?
+2008-04-18T05:26:00.000Z	wooting	sammyF_	it used an AMD chip
+2008-04-18T05:26:00.000Z	wooting	sammyF_	no sound
+2008-04-18T05:28:00.000Z	sammyF_	wooting	 what system is set in the sound preference panel
+2008-04-18T05:28:00.000Z	wooting	sammyF_	 well i cant open sound preferences by left clicking the icon..
+2008-04-18T05:28:00.000Z	wooting	sammyF_	nothing happens
+2008-04-18T05:29:00.000Z	wooting	sammyF_	perhaps it might not located the device
+2008-04-18T05:29:00.000Z	sammyF_	wooting	Sytem->preferences->sound doesn't open anything??
+2008-04-18T05:29:00.000Z	sammyF_	wooting	syStem even ;)
+2008-04-18T05:29:00.000Z	wooting	sammyF_	it does! thanks!
+2008-04-18T05:29:00.000Z	wooting	sammyF_	what am i looking for here?
+2008-04-18T05:30:00.000Z	sammyF_	wooting	what's selected for Sound Playback?
+2008-04-18T05:31:00.000Z	wooting	sammyF_	auto
+2008-04-18T05:31:00.000Z	wooting	sammyF_	but if i click test it say audiotestsrc wave=sine freq=512 ! audioconvert ! audioresample ! gconfaudiosink: Failed to connect stream: Invalid argument
+2008-04-18T05:31:00.000Z	sammyF_	wooting	what options to you have?
+2008-04-18T05:32:00.000Z	wooting	sammyF_	alsa esd open pulse
+2008-04-18T05:32:00.000Z	sammyF_	wooting	okay, try setting it to pulse and do the test again
+2008-04-18T05:32:00.000Z	wooting	sammyF_	audiotestsrc wave=sine freq=512 ! audioconvert ! audioresample ! gconfaudiosink: Failed to connect stream: Invalid argument
+2008-04-18T05:33:00.000Z	sammyF_	wooting	then set it to alsa
+2008-04-18T05:33:00.000Z	wooting	sammyF_	audiotestsrc wave=sine freq=512 ! audioconvert ! audioresample ! gconfaudiosink: Failed to connect stream: Invalid argument
+2008-04-18T05:33:00.000Z	wooting	sammyF_	all have this same errors
+2008-04-18T05:33:00.000Z	sammyF_	wooting	okay ... let's do what moritini said ...
+2008-04-18T05:33:00.000Z	sammyF_	wooting	do you know how to open a console?
+2008-04-18T05:34:00.000Z	wooting	sammyF_	i opened it
+2008-04-18T05:35:00.000Z	sammyF_	wooting	type lscpci -tv and paste the result at rafb.net ,then tell me the link :)
+2008-04-18T05:35:00.000Z	wooting	sammyF_	http://pastebin.ca/988971
+2008-04-18T05:35:00.000Z	sammyF_	wooting	or pastebin ;)
+2008-04-18T05:36:00.000Z	wooting	sammyF_	my friend works pastebin
+2008-04-18T05:36:00.000Z	sammyF_	wooting	one sec ... checking
+2008-04-18T05:38:00.000Z	sammyF_	wooting	aeh ... I don't see any soundcard in there oO
+2008-04-18T05:38:00.000Z	wooting	sammyF_	i know it has 1! i used it in window
+2008-04-18T05:38:00.000Z	wooting	sammyF_	and it has the green port
+2008-04-18T05:38:00.000Z	sammyF_	wooting	pretty sure it has one
+2008-04-18T05:39:00.000Z	sammyF_	wooting	It just looks like Ubuntu didn't recognize it at all somehow
+2008-04-18T05:39:00.000Z	wooting	sammyF_	damnit! any way?
+2008-04-18T05:39:00.000Z	sammyF_	wooting	one sec ... thinking and trying something out
+2008-04-18T05:39:00.000Z	wooting	sammyF_	thanks. your the best guy
+2008-04-18T05:40:00.000Z	sammyF_	wooting	nope ... if I was the best I'd already have solved your problem ;)
+2008-04-18T05:42:00.000Z	sammyF_	wooting	on an off chance, you might try to reinstall the nvidia-kernel in synaptic
+2008-04-18T05:42:00.000Z	wooting	sammyF_	how to do it?
+2008-04-18T05:43:00.000Z	sammyF_	wooting	open synaptic (system->Administration->synaptic) and search for nvidia-kernel
+2008-04-18T05:44:00.000Z	wooting	sammyF_	theres 2
+2008-04-18T05:44:00.000Z	wooting	sammyF_	common and source. common is check
+2008-04-18T05:46:00.000Z	wooting	sammyF_	ok i reinstall common
+2008-04-18T05:46:00.000Z	sammyF_	wooting	sigh ... it's already installed, but well ... can't hurt : rightclick on it, and select "Mark for reinstallation"
+2008-04-18T05:46:00.000Z	sammyF_	wooting	lol ... was going to say that ;)
+2008-04-18T05:46:00.000Z	wooting	sammyF_	ok. nothing left to do?
+2008-04-18T05:46:00.000Z	sammyF_	wooting	check that pulseaudio is installed too
+2008-04-18T05:47:00.000Z	sammyF_	wooting	but if it appears in the list, it is
+2008-04-18T05:47:00.000Z	wooting	sammyF_	GStreamer plugin for PulseAudio
+2008-04-18T05:48:00.000Z	sammyF_	wooting	try the sound panel again
+2008-04-18T05:48:00.000Z	wooting	sammyF_	nothing
+2008-04-18T05:48:00.000Z	sammyF_	wooting	BLEH!
+2008-04-18T05:49:00.000Z	wooting	sammyF_	:(
+2008-04-18T05:49:00.000Z	wooting	sammyF_	maybe someway to find out what mothercard i have? and then install the drivers for audio?
+2008-04-18T05:50:00.000Z	sammyF_	wooting	the nvidia kernel should take care of that ...
+2008-04-18T05:50:00.000Z	sammyF_	wooting	of course, if you're really unlucky, you have a creative labs xfi onboard
+2008-04-18T05:50:00.000Z	sammyF_	wooting	let's try something else
+2008-04-18T05:51:00.000Z	sammyF_	wooting	in a console, type "pulseaudio --check"
+2008-04-18T05:51:00.000Z	sammyF_	wooting	just in caseyou don't know : you can autocomplete lines by pressing TAB once in a console
+2008-04-18T05:51:00.000Z	wooting	sammyF_	i know. ok i did it. nothing output
+2008-04-18T05:52:00.000Z	sammyF_	wooting	so pulseaudio isn't running
+2008-04-18T05:52:00.000Z	wooting	sammyF_	how can i make it
+2008-04-18T05:53:00.000Z	sammyF_	wooting	try "pulseaudio --log-level=4 --check"
+2008-04-18T05:54:00.000Z	wooting	sammyF_	i pasted it above
+2008-04-18T05:54:00.000Z	sammyF_	wooting	ah ... now I think we're in business
+2008-04-18T05:54:00.000Z	wooting	sammyF_	:)
+2008-04-18T05:54:00.000Z	sammyF_	wooting	are you using 8.04 or 7.10 ?
+2008-04-18T05:54:00.000Z	wooting	sammyF_	8.04 because same issue in 7.10
+2008-04-18T05:55:00.000Z	wooting	sammyF_	but also 8.04 fixed video play in youtube. before its broekn
+2008-04-18T05:55:00.000Z	sammyF_	wooting	one sec ... I have the same problem with pulseaudio, so I'll fix it on my comp and then tell you how to do it :)
+2008-04-18T05:55:00.000Z	wooting	sammyF_	1 problem. i need to run
+2008-04-18T05:56:00.000Z	wooting	sammyF_	another way to contact you tonight? at home i have windows. but can you mail me solution?
+2008-04-18T05:56:00.000Z	wooting	sammyF_	my friends waiting outside me in 4 minute
+2008-04-18T05:57:00.000Z	sammyF_	wooting	check the private message I sent you
+2008-04-18T05:58:00.000Z	wooting	sammyF_	no message
+2008-04-18T05:58:00.000Z	sammyF_	wooting	if you're using XChat it's a new channel on the left side
+2008-04-18T05:59:00.000Z	wooting	sammyF_	i sent you private message. can you get?
+2008-04-18T05:59:00.000Z	wooting	sammyF_	nothing
+2008-04-18T05:59:00.000Z	wooting	sammyF_	you have aim?
+2008-04-18T05:59:00.000Z	sammyF_	wooting	sigh .. you're cursed ;)
+2008-04-18T05:59:00.000Z	sammyF_	wooting	yes, but I seriously don't like saying my account name in HERE
+2008-04-18T05:59:00.000Z	wooting	sammyF_	ok. can i give you my email?
+2008-04-18T05:59:00.000Z	sammyF_	wooting	and neither should you
+2008-04-18T06:00:00.000Z	wooting	sammyF_	ok... damn how to get you my info?
+2008-04-18T06:00:00.000Z	sammyF_	wooting	type /sammyF_ YOUREMAIL@address
+2008-04-18T06:00:00.000Z	sammyF_	wooting	bleh .. I meant /msg sammyf_ emailaddress
+2008-04-18T06:01:00.000Z	wooting	sammyF_	im in #sammyF_

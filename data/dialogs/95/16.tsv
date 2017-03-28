@@ -1,0 +1,95 @@
+2009-12-25T03:06:00.000Z	edhel231		I have a question regarding a weird thing happening to my friend, regarding the wired network
+2009-12-25T03:06:00.000Z	Iowan	edhel231	 elaborate
+2009-12-25T03:08:00.000Z	edhel231	Iowan	I really do not know how to begin, and trying the usual things were to no result
+2009-12-25T03:09:00.000Z	Iowan	edhel231	 Unfortunately, that makes it a bit hard to help ;)
+2009-12-25T03:09:00.000Z	edhel231	Iowan	ok, let me think
+2009-12-25T03:10:00.000Z	edhel231	Iowan	so, eth0 does not appear in the interface list (ifconfig)
+2009-12-25T03:10:00.000Z	edhel231	Iowan	interestingly enough, rebooting to winXP then rebooting back to Linux seemed to help
+2009-12-25T03:11:00.000Z	Iowan	edhel231	 check ifconfig -a to list all interfaces - active or not
+2009-12-25T03:11:00.000Z	edhel231	Iowan	she is using linux mint 7 (ubuntu 9.04)
+2009-12-25T03:12:00.000Z	Iowan	edhel231	 I saw similar problem on forum earlier - only via router and switch
+2009-12-25T03:12:00.000Z	edhel231	Iowan	a bit of a problem here, she is not online, I am talking on the phone with her
+2009-12-25T03:12:00.000Z	edhel231	Iowan	she is via PPPoE
+2009-12-25T03:12:00.000Z	edhel231	Iowan	ok, trying ifconfig eth0 up
+2009-12-25T03:14:00.000Z	edhel231	Iowan	ifconfig eth0 up: unknown host
+2009-12-25T03:14:00.000Z	edhel231	Iowan	trying ifconfig eth0 up a few minutes ago yielded no output, but network still not functional
+2009-12-25T03:15:00.000Z	Iowan	edhel231	 Thinking - my brain works even slower than my typing
+2009-12-25T03:15:00.000Z	edhel231	Iowan	wait, misunderstanding
+2009-12-25T03:15:00.000Z	edhel231	Iowan	she typed ifconfig eth0-up or something like this
+2009-12-25T03:16:00.000Z	edhel231	Iowan	I'm thinking too
+2009-12-25T03:17:00.000Z	Iowan	edhel231	 Between the two of us, we should come up with something dangerous
+2009-12-25T03:23:00.000Z	edhel231	Iowan	I am vaguely familiar with /etc/network/interfaces, how should she configure it?
+2009-12-25T03:17:00.000Z	edhel231	Iowan	nm-applet shows 'device not managed' but her kernel driver is loaded.
+2009-12-25T03:18:00.000Z	Iowan	edhel231	 Device may be configured in /etc/network/interfaces
+2009-12-25T03:19:00.000Z	edhel231	Iowan	yes, she added allow-hotplug eth0 and iface eth0 inet dhcp
+2009-12-25T03:19:00.000Z	edhel231	Iowan	should add auto eth0?
+2009-12-25T03:20:00.000Z	Iowan	edhel231	 Dunno - I'm not really familiar w/ hotplut option
+2009-12-25T03:20:00.000Z	Iowan	edhel231	 hotplug*
+2009-12-25T03:24:00.000Z	Iowan	edhel231	 Dunno if it'll help, but try commenting out the hotplug, and add auto eth0... or try commenting out the entire def and let NM handle it
+2009-12-25T03:25:00.000Z	edhel231	Iowan	initially there were no eth0 lines
+2009-12-25T03:25:00.000Z	edhel231	Iowan	so I'll go with the auto eth0
+2009-12-25T03:25:00.000Z	edhel231	Iowan	no internet
+2009-12-25T03:26:00.000Z	edhel231	Iowan	some brainstorming
+2009-12-25T03:27:00.000Z	Iowan	edhel231	 Hmmm... comment out everything except two lines defining "lo"?
+2009-12-25T03:27:00.000Z	edhel231	Iowan	that was the initial not-working setup
+2009-12-25T03:28:00.000Z	edhel231	Iowan	she had the same problem a few months ago, typed a few commands and got it working
+2009-12-25T03:28:00.000Z	Iowan	edhel231	 Which commands? ;)
+2009-12-25T03:28:00.000Z	edhel231	Iowan	she cannot remember
+2009-12-25T03:29:00.000Z	edhel231	Iowan	I just asked and the commands were kind of short and referring only to the interfaces
+2009-12-25T03:29:00.000Z	edhel231	Iowan	but she cannot remember
+2009-12-25T03:30:00.000Z	Iowan	edhel231	 Probably not "sudo dhclient eth0"?
+2009-12-25T03:30:00.000Z	edhel231	Iowan	let's see
+2009-12-25T03:31:00.000Z	edhel231	Iowan	nope
+2009-12-25T03:31:00.000Z	edhel231	Iowan	thanks for the help thus far
+2009-12-25T03:32:00.000Z	Iowan	edhel231	 'fraid not... Hmmm again
+2009-12-25T03:34:00.000Z	Iowan	edhel231	 Probably won't help, "lshw -C network" - verify eth0 is in use
+2009-12-25T03:34:00.000Z	Iowan	edhel231	 check ifconfig -a to list all interfaces - active or not
+2009-12-25T03:34:00.000Z	edhel231	Iowan	tried that, she had eth0, eth1 (wireless), lo
+2009-12-25T03:36:00.000Z	Iowan	edhel231	 I s'pose you tried unplugging and replugging both ends of cable
+2009-12-25T03:37:00.000Z	edhel231	Iowan	she tried that every time we tried something
+2009-12-25T03:37:00.000Z	edhel231	Iowan	she is connected directly to the internet
+2009-12-25T03:37:00.000Z	Iowan	edhel231	 maybe it wore out from all the plugging :)
+2009-12-25T03:37:00.000Z	edhel231	Iowan	maybe :)
+2009-12-25T03:38:00.000Z	Iowan	edhel231	 no router/modem?
+2009-12-25T03:38:00.000Z	edhel231	Iowan	nope
+2009-12-25T03:39:00.000Z	edhel231	Iowan	interestingly enough, seems extremely odd, but
+2009-12-25T03:40:00.000Z	Iowan	edhel231	Hmmm, how to connect w/ no interface? ... nvm topic for another day
+2009-12-25T03:40:00.000Z	edhel231	Iowan	she started linux, no network
+2009-12-25T03:41:00.000Z	edhel231	Iowan	she started windows, then rebooting to linux, it worked
+2009-12-25T03:41:00.000Z	edhel231	Iowan	and I cannot figure out why, it makes no sense
+2009-12-25T03:42:00.000Z	Iowan	edhel231	 Agreed - certainly odd!
+2009-12-25T03:42:00.000Z	edhel231	Iowan	whoa!
+2009-12-25T03:42:00.000Z	Iowan	edhel231	 Whoa-d
+2009-12-25T03:42:00.000Z	edhel231	Iowan	nevermind, I thought it was something else
+2009-12-25T03:42:00.000Z	edhel231	Iowan	she connected fine from windows
+2009-12-25T03:45:00.000Z	edhel231	Iowan	whoa!
+2009-12-25T03:46:00.000Z	edhel231	Iowan	theory:
+2009-12-25T03:46:00.000Z	edhel231	Iowan	she starts windows, connects to the internet
+2009-12-25T03:46:00.000Z	edhel231	Iowan	and the PPPoE ip lease does not expire
+2009-12-25T03:47:00.000Z	edhel231	Iowan	and she switches to linux, so it works
+2009-12-25T03:48:00.000Z	Iowan	edhel231	 Maybe... What version? Karmic had DSL issues early on (PPPOE?)
+2009-12-25T03:48:00.000Z	Iowan	edhel231	 Recent problem, or ongoing?
+2009-12-25T03:49:00.000Z	edhel231	Iowan	she is going now, but I can continue a bit with the details she provided
+2009-12-25T03:49:00.000Z	edhel231	Iowan	problem also happened a few months ago
+2009-12-25T03:50:00.000Z	edhel231	Iowan	she fixed it, and recently it appeared again
+2009-12-25T03:50:00.000Z	Iowan	edhel231	 Good luck - doubt ISP can/will help w/ Linux.
+2009-12-25T03:50:00.000Z	edhel231	Iowan	well, she is off now
+2009-12-25T03:51:00.000Z	edhel231	Iowan	but my question is, how can that happen (the windows/linux thing)
+2009-12-25T03:51:00.000Z	Iowan	edhel231	 off=offlin again?
+2009-12-25T03:51:00.000Z	edhel231	Iowan	off=going to bed ;)
+2009-12-25T03:52:00.000Z	edhel231	Iowan	but she _has_ the reboot from windows thing working
+2009-12-25T03:52:00.000Z	edhel231	Iowan	which is extremely odd
+2009-12-25T03:52:00.000Z	edhel231	Iowan	even the idea is absurd
+2009-12-25T03:53:00.000Z	Iowan	edhel231	 Better'n nothing, but a fix would be better!
+2009-12-25T03:54:00.000Z	edhel231	Iowan	and another thing: rebooting from windows works
+2009-12-25T03:54:00.000Z	edhel231	Iowan	but turning off, then on doesn't
+2009-12-25T03:54:00.000Z	edhel231	Iowan	maybe something hardware-level?
+2009-12-25T03:54:00.000Z	edhel231	Iowan	I mean, cold boot doesn't work
+2009-12-25T03:55:00.000Z	edhel231	Iowan	but reboot from windows, does
+2009-12-25T03:57:00.000Z	Iowan	edhel231	 Certainly odd  that it takes Windows to cause something to reset.
+2009-12-25T03:59:00.000Z	Iowan	edhel231	 You (she) can uncomment the /etc/network/interfaces definitions to see if it works differently that way.
+2009-12-25T04:00:00.000Z	edhel231	Iowan	sorry 'bout that, saw the network cable plugged, and I unplugged it without a second thought
+2009-12-25T04:00:00.000Z	edhel231	Iowan	now that's a genius way to figure things out :))
+2009-12-25T04:01:00.000Z	edhel231	Iowan	apparently at the moment I cannot connect to wireless
+2009-12-25T04:01:00.000Z	edhel231	Iowan	oh well
+2009-12-25T04:01:00.000Z	edhel231	Iowan	thanks for all the help, I appreciate it, and she does, too ;)

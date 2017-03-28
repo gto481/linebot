@@ -1,0 +1,96 @@
+2011-09-25T17:12:00.000Z	ionite		what's causing the lag in my ubuntu? how can i fix it?
+2011-09-25T17:14:00.000Z	ionite		why does ubuntu takes 10 seconds to launch applications at my launcher bar?
+2011-09-25T17:14:00.000Z	domedagen	ionite	What type of application?
+2011-09-25T17:16:00.000Z	ionite	domedagen	simple ones like ubuntu software centre and firefox browser. there's a significant lag.
+2011-09-25T17:18:00.000Z	domedagen	ionite	What does System Monitor say?
+2011-09-25T17:19:00.000Z	ionite	domedagen	it doesnt say anyting? could it be some settings?
+2011-09-25T17:20:00.000Z	domedagen	ionite	What's your CPU level and RAM at?
+2011-09-25T17:21:00.000Z	ionite	domedagen	currently at 40plus percent
+2011-09-25T17:23:00.000Z	domedagen	ionite	So it probably isn't hw related, when was the last time you restarted? Or the frist time you noticed this?
+2011-09-25T17:24:00.000Z	ionite	domedagen	KDE was very prompt. it only happen when i did a clean removal of KDE and installed ubuntu.
+2011-09-25T17:29:00.000Z	domedagen	ionite	I'm unable to solve this. Some people on the internet say it's ATI related, others HDD. But if you say that it only happened in Untity you could try temporarly booting up with Gnome
+2011-09-25T17:31:00.000Z	domedagen	ionite	Lgoin Screen Settings Select ubuntu Classic or Ubuntu classic no effect
+2011-09-25T17:32:00.000Z	domedagen	ionite	And see if its GUI related. Are you using ATI btw?
+2011-09-25T17:39:00.000Z	domedagen	ionite	Did you log into ubuntu Classic?
+2011-09-25T17:39:00.000Z	ionite	domedagen	sorry it was so lag that my browser got srewed
+2011-09-25T17:40:00.000Z	ionite	domedagen	how do i log into ubuntu classic?
+2011-09-25T17:41:00.000Z	domedagen	ionite	Applications>System>Installed>Login Screen
+2011-09-25T17:44:00.000Z	ionite	domedagen	what could be the possible reasons for the delay to launch applications? i was previously using KDE and it was lightning fast.
+2011-09-25T17:45:00.000Z	domedagen	ionite	My theory is that when you installed Ubuntu, you got rid of the drivers that worked better with your GPU and you have some OS alternative now
+2011-09-25T17:46:00.000Z	domedagen	ionite	This could be tested if you logged in to the no effect ubuntu. If you still have delay then its not your GPU
+2011-09-25T17:46:00.000Z	ionite	domedagen	drivers? meaning?
+2011-09-25T17:47:00.000Z	domedagen	ionite	Software needed for your hw to run perfectly.
+2011-09-25T17:48:00.000Z	ionite	domedagen	so what should i do?
+2011-09-25T17:49:00.000Z	domedagen	ionite	I would like you to try log in with ubuntu Classic no effects
+2011-09-25T17:49:00.000Z	domedagen	ionite	k?
+2011-09-25T17:50:00.000Z	ionite	domedagen	even opening a simple calculator takes a 2-3 second delay
+2011-09-25T17:54:00.000Z	domedagen	ionite	lotuspsychje said he had similar problem until he installed correct drivers, try log in to ubuntu classic no effects
+2011-09-25T17:54:00.000Z	ionite	domedagen	ok.
+2011-09-25T17:57:00.000Z	ionite	domedagen	yes it's faster.
+2011-09-25T17:57:00.000Z	domedagen	ionite	I knew it!
+2011-09-25T17:57:00.000Z	domedagen	ionite	Hurray for me
+2011-09-25T17:57:00.000Z	ionite	domedagen	so what should i do?
+2011-09-25T17:57:00.000Z	ionite	domedagen	hurray
+2011-09-25T17:58:00.000Z	domedagen	ionite	There is the easy but stupid way and the smart way
+2011-09-25T17:59:00.000Z	domedagen	ionite	Which one would ypu like to try?
+2011-09-25T18:00:00.000Z	domedagen	ionite	?
+2011-09-25T18:03:00.000Z	domedagen	ionite	?
+2011-09-25T18:09:00.000Z	ionite	domedagen	the best way: fast on my netbook and pretty appearance
+2011-09-25T18:11:00.000Z	domedagen	ionite	Additional drivers
+2011-09-25T18:12:00.000Z	domedagen	ionite	Application>System>Installed>Additional Drivers
+2011-09-25T18:12:00.000Z	domedagen	ionite	What does it say?
+2011-09-25T18:13:00.000Z	ionite	domedagen	lotuspsychje my additional drivers showed nothing
+2011-09-25T18:15:00.000Z	domedagen	ionite	That's unfortunate, can you confirm your using ATI though?
+2011-09-25T18:15:00.000Z	ionite	domedagen	how do i check?
+2011-09-25T18:16:00.000Z	domedagen	ionite	Since its not an PCI, good question
+2011-09-25T18:18:00.000Z	domedagen	ionite	You dont happen to know what laptop you are using
+2011-09-25T18:23:00.000Z	ionite	domedagen	so what should i do next?
+2011-09-25T18:25:00.000Z	domedagen	ionite	hmm Since it's an Intel Atom I suppose you're not using ATI graphics.
+2011-09-25T18:27:00.000Z	domedagen	ionite	How did your last KDE desktop look? Are you sure you can have a lot of desktop effects?
+2011-09-25T18:29:00.000Z	domedagen	ionite	You can use Untiy but you have to disble some effects
+2011-09-25T18:30:00.000Z	domedagen	ionite	Until you found a good balance between apperance and speed
+2011-09-25T18:30:00.000Z	ionite	domedagen	how do i go about?
+2011-09-25T18:30:00.000Z	domedagen	ionite	Or you could go Gnome 3 and disable some effect
+2011-09-25T18:31:00.000Z	ionite	domedagen	what are the other light weighted ubuntu alternatives that are pretty and snappy?
+2011-09-25T18:32:00.000Z	domedagen	ionite	xfce for really old computers but it will look as boring as anying else without effects
+2011-09-25T18:33:00.000Z	domedagen	ionite	Open control center
+2011-09-25T18:36:00.000Z	domedagen	ionite	Did not find any effect setting with Unity but try log in to Ubuntu Classic (with effects) and see if you can find a way to tweak it
+2011-09-25T18:37:00.000Z	domedagen	ionite	Are you lagging with no effects?
+2011-09-25T18:37:00.000Z	ionite	domedagen	slightly.
+2011-09-25T18:37:00.000Z	domedagen	ionite	:( What OS was your LT shipped with?
+2011-09-25T18:38:00.000Z	domedagen	ionite	XP or W7?
+2011-09-25T18:38:00.000Z	ionite	domedagen	was shipped with netbook edition of ubuntu
+2011-09-25T18:40:00.000Z	domedagen	ionite	What if you return to that?
+2011-09-25T18:40:00.000Z	ionite	domedagen	return to?
+2011-09-25T18:41:00.000Z	domedagen	ionite	Ubuntu Remix?
+2011-09-25T18:44:00.000Z	domedagen	ionite	I see your probelm. Netbook Remix is now merged with regualar Ubunt
+2011-09-25T18:44:00.000Z	ionite	domedagen	lotuspsychje MonkeyDust Gentoo64 oCean qtx honestly, how do i know for my system specs if i am suitable for ubuntu or not?
+2011-09-25T18:44:00.000Z	ionite	domedagen	that's right!!! netbook remix has merged. so now i'm stuck.
+2011-09-25T18:45:00.000Z	domedagen	ionite	Or at least xubuntu http://www.xubuntu.org/
+2011-09-25T18:46:00.000Z	ionite	domedagen	can't i disable somethings in compiz?
+2011-09-25T18:46:00.000Z	domedagen	ionite	Not if "no effects" doesnt help Im afraid
+2011-09-25T18:47:00.000Z	domedagen	ionite	Avoid lubuntu though
+2011-09-25T18:48:00.000Z	ionite	domedagen	oh no... i'm so tired or changing so many environment...
+2011-09-25T18:49:00.000Z	domedagen	ionite	xubuntu could probably be the solution
+2011-09-25T18:50:00.000Z	domedagen	ionite	Im not familiar with low spec computers but my intuition tells me that this will work
+2011-09-25T18:51:00.000Z	domedagen	ionite	This is what I think about you switching to lubuntu instead of xubuntu http://nooooooooooooooo.com/
+2011-09-25T19:01:00.000Z	domedagen	ionite	What ahppened to xubuntu?
+2011-09-25T19:02:00.000Z	ionite	domedagen	honestly i really enjoy the support here in ubuntu but the environment is laggy for me.
+2011-09-25T19:02:00.000Z	domedagen	ionite	But xubuntu drains no power
+2011-09-25T19:03:00.000Z	domedagen	ionite	You will likly have the same trouble with Linux Mint KDE/Gnome as you have with ubuntu Unity
+2011-09-25T19:04:00.000Z	ionite	domedagen	oh no... maybe i should just go back to windows? sighs.
+2011-09-25T19:04:00.000Z	domedagen	ionite	NO! Aboslutly not
+2011-09-25T19:05:00.000Z	domedagen	ionite	Actually, that's not fine
+2011-09-25T19:06:00.000Z	domedagen	ionite	But you have only tried the heavy ones because we didn't understood you used Intel Atom
+2011-09-25T19:06:00.000Z	ionite	domedagen	sighs... kde is too buggy. now ubuntu is laggy.
+2011-09-25T19:07:00.000Z	domedagen	ionite	KM0201 ikonia dont know anything about your specs dont listen to them
+2011-09-25T19:13:00.000Z	domedagen	ionite	What link did you send KM0201? You can ask xubuntu questions in here as long as you dont mention your using xubuntu
+2011-09-25T19:14:00.000Z	domedagen	ionite	Because if that link says you have 1GB and you think you have 2GB something is wrong
+2011-09-25T19:15:00.000Z	ionite	domedagen	 i changed it to 2gb
+2011-09-25T19:18:00.000Z	domedagen	ionite	You cant use Blackberry Sync probably but you can use other services that work on linux
+2011-09-25T19:19:00.000Z	domedagen	ionite	What do you need to sync? Files or calander?
+2011-09-25T19:19:00.000Z	ionite	domedagen	yep.
+2011-09-25T19:21:00.000Z	domedagen	ionite	Calender could be Google Calender and files could be dropbox
+2011-09-25T19:22:00.000Z	domedagen	ionite	Zoho could also be an alternative
+2011-09-25T19:24:00.000Z	domedagen	ionite	What is your current status?
+2011-09-25T19:24:00.000Z	ionite	domedagen	i'm looking and reading up on all the myraids of environments. i'm now at jollicloud

@@ -1,0 +1,96 @@
+2007-03-17T13:22:00.000Z	robby		unassociated
+2007-03-17T13:22:00.000Z	aldin	robby	what is sry
+2007-03-17T12:56:00.000Z	aldin	robby	say ur probl
+2007-03-17T13:04:00.000Z	aldin	robby	can u post "lspci" command on pastebin.ubuntu-nl.org
+2007-03-17T13:04:00.000Z	aldin	robby	and "iwconfig" too
+2007-03-17T13:05:00.000Z	aldin	robby	yes
+2007-03-17T13:06:00.000Z	aldin	robby	lspci & iwconfig -> paste it
+2007-03-17T13:06:00.000Z	aldin	robby	ok, just open this site pastebin.ubuntu-nl.org and all ur results copy/paste there and send us link here
+2007-03-17T13:06:00.000Z	aldin	robby	i am aldin, not aladin ok
+2007-03-17T13:11:00.000Z	robby	aldin	did i do it right?
+2007-03-17T13:11:00.000Z	aldin	robby	where is ur pastebin? something like this mine http://pastebin.ubuntu-nl.org/10741/
+2007-03-17T13:13:00.000Z	aldin	robby	good now try this: sudo iwlist eth1 scan
+2007-03-17T13:14:00.000Z	robby	aldin	k then what?
+2007-03-17T13:14:00.000Z	aldin	robby	what it says
+2007-03-17T13:14:00.000Z	robby	aldin	to pastebin
+2007-03-17T13:15:00.000Z	aldin	robby	what says this -> "sudo iwlist eth1 scan" -> paste it on pastebin
+2007-03-17T13:17:00.000Z	aldin	robby	"encryption key:on" hmmm, well i dont know how to do this, i heard that u need some wpasuplicant package,...
+2007-03-17T13:18:00.000Z	aldin	robby	but u can try this
+2007-03-17T13:18:00.000Z	aldin	robby	it works for me on unencrypted networks
+2007-03-17T13:18:00.000Z	robby	aldin	i know what the key is so how do i put it in so i can use the wireless
+2007-03-17T13:18:00.000Z	aldin	robby	sudo iwconfig eth1 essid Terrazas
+2007-03-17T13:19:00.000Z	robby	aldin	then what?
+2007-03-17T13:21:00.000Z	aldin	robby	robby now with iwcongfig see if u got an network
+2007-03-17T13:21:00.000Z	robby	aldin	sudo iwconfig eth1 essid Terrazas
+2007-03-17T13:22:00.000Z	robby	aldin	sry
+2007-03-17T13:22:00.000Z	robby	aldin	unassociated
+2007-03-17T13:23:00.000Z	robby	aldin	is what it says
+2007-03-17T13:23:00.000Z	robby	aldin	i dont know
+2007-03-17T13:24:00.000Z	aldin	robby	can u make ur wireless unencrypted
+2007-03-17T13:24:00.000Z	aldin	robby	ur AP so we connect on it
+2007-03-17T13:25:00.000Z	robby	aldin	what?
+2007-03-17T13:25:00.000Z	robby	aldin	ap?
+2007-03-17T13:25:00.000Z	aldin	robby	acces point
+2007-03-17T13:25:00.000Z	robby	aldin	oh
+2007-03-17T13:25:00.000Z	robby	aldin	k what do i do tho?
+2007-03-17T13:26:00.000Z	aldin	robby	can u make it withtout encryption
+2007-03-17T13:27:00.000Z	robby	aldin	nope sry
+2007-03-17T13:27:00.000Z	robby	aldin	i know the wpa password tho
+2007-03-17T13:27:00.000Z	aldin	robby	ok, wpasupplicant is thing what u need, AFAIK
+2007-03-17T13:28:00.000Z	robby	aldin	afaik?
+2007-03-17T13:28:00.000Z	aldin	robby	i never tried to connect on crypted wireless but i heard it is ok, it is possible
+2007-03-17T13:28:00.000Z	aldin	robby	dpkg -l | grep wpa
+2007-03-17T13:29:00.000Z	aldin	robby	this one is to seee if it is installed
+2007-03-17T13:29:00.000Z	robby	aldin	how do i install it or see if it is?
+2007-03-17T13:30:00.000Z	aldin	robby	to se if it is do dpkg -l | grep wpa
+2007-03-17T13:31:00.000Z	aldin	robby	ok, it is installed
+2007-03-17T13:31:00.000Z	robby	aldin	k then what?
+2007-03-17T13:32:00.000Z	aldin	robby	just sec i will explore a bit, never done this for my own cause i dont use crypted wirelles.. ok, brb, in meantime u can ask here how to connect u crypted wireless
+2007-03-17T13:34:00.000Z	aldin	robby	ubotu is just a bot it automatically answers... u can try this sudo apt-get install wifi-radar
+2007-03-17T13:35:00.000Z	robby	aldin	it didnt work
+2007-03-17T13:35:00.000Z	aldin	robby	is it WPA WEP or third..
+2007-03-17T13:36:00.000Z	aldin	robby	what about ur repositories?
+2007-03-17T13:36:00.000Z	robby	aldin	how do i check?
+2007-03-17T13:37:00.000Z	aldin	robby	hmm cat /etc/apt/sources.list or go to system->administration->synaptic
+2007-03-17T13:37:00.000Z	aldin	robby	the upper line
+2007-03-17T13:39:00.000Z	robby	aldin	k i think i turned them on now do i just try again for wifi radar?
+2007-03-17T13:40:00.000Z	aldin	robby	first reload them
+2007-03-17T13:40:00.000Z	robby	aldin	i think im gettin git i found it online
+2007-03-17T13:40:00.000Z	aldin	robby	u can do this by sudo apt-get update
+2007-03-17T13:41:00.000Z	aldin	robby	i think im gettin git?
+2007-03-17T13:41:00.000Z	aldin	robby	i am not englihman hehe
+2007-03-17T13:41:00.000Z	robby	aldin	it*
+2007-03-17T13:41:00.000Z	aldin	robby	understand some words but some u will have to explain
+2007-03-17T13:42:00.000Z	robby	aldin	i think im getting it i found it online
+2007-03-17T13:42:00.000Z	aldin	robby	i lost connection
+2007-03-17T13:43:00.000Z	aldin	robby	where were we
+2007-03-17T13:43:00.000Z	robby	aldin	i was getting wifi radar
+2007-03-17T13:43:00.000Z	aldin	robby	ok ist it done
+2007-03-17T13:44:00.000Z	robby	aldin	how can i see?
+2007-03-17T13:44:00.000Z	aldin	robby	?
+2007-03-17T13:44:00.000Z	robby	aldin	?
+2007-03-17T13:44:00.000Z	aldin	robby	u can read this http://ubuntuforums.org/showthread.php?t=26623
+2007-03-17T13:45:00.000Z	aldin	robby	did u run wifi-radar
+2007-03-17T13:46:00.000Z	robby	aldin	i still cant see eth1 as a connection
+2007-03-17T13:46:00.000Z	aldin	robby	what wifi-radar finds?
+2007-03-17T13:47:00.000Z	robby	aldin	i just cant connect to it as my internet
+2007-03-17T13:47:00.000Z	aldin	robby	that is why u need to configure ur key, as i said i never did this on my ovn but i am trying to help AFAIK
+2007-03-17T13:47:00.000Z	aldin	robby	http://ubuntuforums.org/search.php?searchid=16382797
+2007-03-17T13:47:00.000Z	robby	aldin	i jsut need to be able to make my eth1 card my connection not my eth0
+2007-03-17T13:48:00.000Z	robby	aldin	i go to system->admin->networking then my eth1 says not configured
+2007-03-17T13:50:00.000Z	aldin	robby	i know eth1 is wireles... nevermind for now, it is important that u can see it with "iwconfig" and "sudo iwlist eth1 scan" take momment and read this article http://www.ubuntuforums.org/showthread.php?t=318539
+2007-03-17T13:51:00.000Z	aldin	robby	i took a read and this was compicatet...
+2007-03-17T13:51:00.000Z	aldin	robby	we should find something better
+2007-03-17T13:53:00.000Z	aldin	robby	http://ubuntuforums.org/showthread.php?t=263136&highlight=wpa
+2007-03-17T13:54:00.000Z	aldin	robby	brb too i think that article should work http://ubuntuforums.org/showthread.php?t=263136&highlight=wpa
+2007-03-17T14:04:00.000Z	aldin	robby	i am in again
+2007-03-17T14:04:00.000Z	aldin	robby	what is situation
+2007-03-17T14:13:00.000Z	aldin	robby	?
+2007-03-17T14:13:00.000Z	robby	aldin	yes?
+2007-03-17T14:14:00.000Z	aldin	robby	what is situation
+2007-03-17T14:14:00.000Z	robby	aldin	i cant figure it out
+2007-03-17T14:15:00.000Z	aldin	robby	didi u red that link http://ubuntuforums.org/showthread.php?t=263136&highlight=wpa
+2007-03-17T14:15:00.000Z	robby	aldin	brb
+2007-03-17T14:15:00.000Z	aldin	robby	sory, i tried to help as i could
+2007-03-17T14:15:00.000Z	robby	aldin	its great thnx
+2007-03-17T14:24:00.000Z	aldin	robby	of course

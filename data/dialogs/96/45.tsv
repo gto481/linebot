@@ -1,0 +1,96 @@
+2008-02-19T08:01:00.000Z	Cosmo		Can anyone help me enable thumbnail previews for my files in Ubuntu 7.10?
+2008-02-19T08:01:00.000Z	Cosmo		Can anyone help me enable thumbnail previews for my files in Ubuntu 7.10?
+2008-02-19T08:02:00.000Z	tanath	Cosmo	in nautilus (file manager), go to Edit > Prefs > Preview tab
+2008-02-19T08:03:00.000Z	Cosmo	tanath	i have done all of that and set everything to always but i still dont get thumbnails just blank white files
+2008-02-19T08:03:00.000Z	tanath	Cosmo	hrm, not sure. i think it did it by default for me
+2008-02-19T08:05:00.000Z	Cosmo	tanath	i had it too and then i lost it
+2008-02-19T08:05:00.000Z	tanath	Cosmo	maybe wrong permissions on your thumnail cache dir?
+2008-02-19T08:05:00.000Z	Cosmo	tanath	you can preview pictures before opening them?
+2008-02-19T08:06:00.000Z	tanath	Cosmo	shows the thumbnail...
+2008-02-19T08:06:00.000Z	Cosmo	tanath	yes like it is not the same thumbnail for every file correct?
+2008-02-19T08:06:00.000Z	tanath	Cosmo	well, for me it shows the image instead of that
+2008-02-19T08:07:00.000Z	Cosmo	tanath	how do i repair the permissions or what you said
+2008-02-19T08:07:00.000Z	tanath	Cosmo	one sec.. gotta find the folder
+2008-02-19T08:10:00.000Z	tanath	Cosmo	ah, did you remove gstreamer?
+2008-02-19T08:10:00.000Z	Cosmo	tanath	how do i reinstall it?
+2008-02-19T08:11:00.000Z	tanath	Cosmo	http://ubuntuforums.org/showthread.php?t=318459
+2008-02-19T08:11:00.000Z	tanath	Cosmo	you can install/reinstall/uninstall apps with synaptic
+2008-02-19T08:11:00.000Z	tanath	Cosmo	or with the add/remove thing
+2008-02-19T08:11:00.000Z	Cosmo	tanath	you think thats the problem?
+2008-02-19T08:11:00.000Z	tanath	Cosmo	pretty sure you need gstreamer
+2008-02-19T08:11:00.000Z	tanath	Cosmo	so make sure you have it
+2008-02-19T08:16:00.000Z	Cosmo	tanath	i have most of the gstreamer packages installed according to synaptics
+2008-02-19T08:17:00.000Z	tanath	Cosmo	just a nitpick, but it's synaptic, not synaptics. synaptics is an app for laptops ;)
+2008-02-19T08:18:00.000Z	Cosmo	tanath	yeah i soon realized that...my touch pad is synaptics :P
+2008-02-19T08:19:00.000Z	tanath	Cosmo	did you check out that thread?
+2008-02-19T08:20:00.000Z	Cosmo	tanath	Yes
+2008-02-19T08:22:00.000Z	Cosmo	tanath	if it helps, sometimes when i view pics, then the thumbnails show up
+2008-02-19T08:23:00.000Z	tanath	Cosmo	ah, yeah i think my system used to do that originally... but some time ago it started doing it automatically for all of them
+2008-02-19T08:25:00.000Z	Cosmo	tanath	I'm desperate please help :[
+2008-02-19T08:25:00.000Z	tanath	Cosmo	desperate for thumbnail icons? doesn't seem all that important to me, lol..
+2008-02-19T08:25:00.000Z	tanath	Cosmo	alright, lemme check for something
+2008-02-19T08:26:00.000Z	tanath	Cosmo	run gconf-editor
+2008-02-19T08:27:00.000Z	tanath	Cosmo	go to 'desktop > gnome > thumbnailers'
+2008-02-19T08:27:00.000Z	tanath	Cosmo	make sure you don't have 'disable_all' checked
+2008-02-19T08:27:00.000Z	Cosmo	tanath	Where is that option?
+2008-02-19T08:28:00.000Z	tanath	Cosmo	click 'thumbnailers' on the left
+2008-02-19T08:28:00.000Z	tanath	Cosmo	it should show on the right
+2008-02-19T08:30:00.000Z	Cosmo	tanath	Nope thats fine.  Another thing is like if i have a .pdf or a .txt it shows the same blank icon for both..thats why i am desperate becuase it gets confusing
+2008-02-19T08:31:00.000Z	tanath	Cosmo	well you can have a column showing the file type, but i see your problem. i'm still looking
+2008-02-19T08:33:00.000Z	tanath	Cosmo	check /apps/nautilus/preferences > thumbnail_limit
+2008-02-19T08:33:00.000Z	tanath	Cosmo	in gconf-editor
+2008-02-19T08:36:00.000Z	tanath	Cosmo	uh, wow
+2008-02-19T08:37:00.000Z	tanath	Cosmo	mine is set to 5242880
+2008-02-19T08:37:00.000Z	tanath	Cosmo	try that. maybe it's too large
+2008-02-19T08:40:00.000Z	tanath	Cosmo	yeah, i understand the problem. i'm just not sure if it's a configuration/preference problem, or if something is missing or what
+2008-02-19T08:40:00.000Z	tanath	Cosmo	i've been looking through settings, but those haven't worked yet
+2008-02-19T08:41:00.000Z	Cosmo	tanath	I know and im so thankful for all of your help
+2008-02-19T08:42:00.000Z	tanath	Cosmo	ok, the thumbnails aren't working for anything, so it's not gstreamer. it doesn't seem to be a preference/setting issue...
+2008-02-19T08:45:00.000Z	tanath	Cosmo	do you have a .thumbnails directory?
+2008-02-19T08:46:00.000Z	Cosmo	tanath	Yes i do have a .thumbnails directory
+2008-02-19T08:46:00.000Z	tanath	Cosmo	you can try renaming it. if that works, then just delete it
+2008-02-19T08:47:00.000Z	tanath	Cosmo	strangely, i don't seem to have one, lol
+2008-02-19T08:47:00.000Z	tanath	Cosmo	er, wait, yes i do
+2008-02-19T08:49:00.000Z	tanath	Cosmo	just rename it, then close nautilus and try again
+2008-02-19T08:51:00.000Z	tanath	Cosmo	you can rename it to .thumbnails-bak or something, and see if it works. if that fixes it, then you can just delete the directory and needn't worry any more
+2008-02-19T08:55:00.000Z	Cosmo	tanath	Renamed it to .thumbnails-bak and nothing happened
+2008-02-19T08:55:00.000Z	tanath	Cosmo	did you close nautilus and start it again?
+2008-02-19T08:57:00.000Z	Cosmo	tanath	start nautilus again?
+2008-02-19T08:57:00.000Z	tanath	Cosmo	close it and reopen it
+2008-02-19T08:57:00.000Z	Cosmo	tanath	Ok i closed and reopened nautilus now what?
+2008-02-19T08:57:00.000Z	tanath	Cosmo	might need to log out and back in, 'cause it draws the desktop too..
+2008-02-19T08:57:00.000Z	tanath	Cosmo	i take it that didn't work? lol
+2008-02-19T08:58:00.000Z	Cosmo	tanath	well the thumbnails that i did have for pictures that were opened are gone
+2008-02-19T08:59:00.000Z	tanath	Cosmo	yeah, as expected. hold on
+2008-02-19T09:03:00.000Z	tanath	Cosmo	google is being surprisingly unhelpful with this
+2008-02-19T09:05:00.000Z	Cosmo	tanath	I know been there done that
+2008-02-19T09:10:00.000Z	Cosmo	tanath	I'm greek so we say do you have family around here..no article "a" lol
+2008-02-19T09:10:00.000Z	tanath	Cosmo	ah
+2008-02-19T09:10:00.000Z	Cosmo	tanath	Any more ideas?
+2008-02-19T09:11:00.000Z	tanath	Cosmo	go to your ~/.thumbnails directory and delete them all. Then go to Applications > System Tools > Configuration Editor > desktop > gnome > thumbnailers, and enable them all
+2008-02-19T09:11:00.000Z	tanath	Cosmo	rename it back if it's wasn't recreated, or you want your old one back
+2008-02-19T09:12:00.000Z	Cosmo	tanath	Frankly, I don't care.
+2008-02-19T09:13:00.000Z	tanath	Cosmo	i assume you mean about the old icons. in which case you can delete the old one
+2008-02-19T09:13:00.000Z	Cosmo	tanath	should i delete it then just make another folder with the name".thumbnails"?
+2008-02-19T09:13:00.000Z	tanath	Cosmo	it didn't recreated it?
+2008-02-19T09:13:00.000Z	tanath	Cosmo	if not, then yeah
+2008-02-19T09:14:00.000Z	tanath	Cosmo	click on the application@pdf one, and tell me if you have the command entry, and the enable entry
+2008-02-19T09:15:00.000Z	tanath	Cosmo	ok, make one, then make sure thumbnails are enabled in the configuration editor
+2008-02-19T09:19:00.000Z	Cosmo	tanath	How do i make sure...as in where do i check?
+2008-02-19T09:19:00.000Z	tanath	Cosmo	go to Applications > System Tools > Configuration Editor > desktop > gnome > thumbnailers, and enable them all
+2008-02-19T09:21:00.000Z	tanath	Cosmo	also, in System > Prefs > File Management > Preview tab, double check your settings
+2008-02-19T09:21:00.000Z	Cosmo	tanath	All of them were already enabled
+2008-02-19T09:21:00.000Z	tanath	Cosmo	only for files smaller than 5Mb, or something reasonable?
+2008-02-19T09:21:00.000Z	tanath	Cosmo	and set it to local files only
+2008-02-19T09:22:00.000Z	Cosmo	tanath	i dont have file management
+2008-02-19T09:22:00.000Z	tanath	Cosmo	could be hanging on something else
+2008-02-19T09:22:00.000Z	tanath	Cosmo	ok, well it's in nautilus preferences in the edit menu
+2008-02-19T09:22:00.000Z	tanath	Cosmo	you can change what shows in the menus with the menu editor
+2008-02-19T09:22:00.000Z	Cosmo	tanath	yeah i know i got it
+2008-02-19T09:23:00.000Z	Cosmo	tanath	5MB and Local Files Only...Done
+2008-02-19T09:23:00.000Z	tanath	Cosmo	and restart nautilus
+2008-02-19T09:24:00.000Z	Cosmo	tanath	Just by closing and then opening?
+2008-02-19T09:24:00.000Z	tanath	Cosmo	should work...
+2008-02-19T09:25:00.000Z	tanath	Cosmo	'cause nautilus handles the desktop too
+2008-02-19T09:25:00.000Z	tanath	Cosmo	if it doesn't, you might try logging out and back in to be sure
+2008-02-19T09:26:00.000Z	Cosmo	tanath	Ok here i go..ill be back

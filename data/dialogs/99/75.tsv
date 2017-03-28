@@ -1,0 +1,99 @@
+2006-06-19T16:09:00.000Z	KrisWood		i mean video drivers as in, in windows I just double click an installer and suddenly my video card works properly
+2006-06-19T16:09:00.000Z	farous	KrisWood	which video card you have
+2006-06-19T16:10:00.000Z	farous	KrisWood	sudo apt-get install xserver-driver-fglrx fglrx-control linux-restricted-modules-$(uname -r)
+2006-06-19T16:12:00.000Z	farous	KrisWood	then just change the driver in the /etc/X11/xorg.conf from ati to fglrx. reboot and everything will be ok
+2006-06-19T16:12:00.000Z	KrisWood	farous	E: Couldn't find package xserver-driver-fglrx
+2006-06-19T16:12:00.000Z	farous	KrisWood	sorry xorg-driver-fglrx
+2006-06-19T16:12:00.000Z	farous	KrisWood	let me check it
+2006-06-19T16:13:00.000Z	KrisWood	farous	ok
+2006-06-19T16:14:00.000Z	farous	KrisWood	it is xorg-driver-fglrx
+2006-06-19T16:14:00.000Z	KrisWood	farous	ok what do I do with that?
+2006-06-19T16:14:00.000Z	farous	KrisWood	after that sudo aticonfig --initial && sudo aticonfig --overlay-type=Xv
+2006-06-19T16:14:00.000Z	farous	KrisWood	you should use synaptic if you do not like the command line
+2006-06-19T16:15:00.000Z	KrisWood	farous	I'm just uncertain what command to put in the the commandline
+2006-06-19T16:15:00.000Z	farous	KrisWood	KrisWood one step at a time did you install the packages
+2006-06-19T16:16:00.000Z	KrisWood	farous	I don't know
+2006-06-19T16:16:00.000Z	farous	KrisWood	ok again what is your problem with your current opensource drivers.
+2006-06-19T16:17:00.000Z	KrisWood	farous	I want to be able to change my screen resolution to something higher than 1024, so I followed the instructions on the wiki, and  then my vid driver stopped loading altogether, and my tablet stopped working
+2006-06-19T16:18:00.000Z	farous	KrisWood	did you back up your xorg.conf file
+2006-06-19T16:19:00.000Z	KrisWood	farous	I think so, I just copied and pasted commands from the wiki without knowing what any of them were doing, I assume one of the steps was backing up
+2006-06-19T16:19:00.000Z	farous	KrisWood	ok restore yoru backup. and next time try to understand what you copy and paste before doing it
+2006-06-19T16:20:00.000Z	farous	KrisWood	then as ompaul suggested dpkg-reconfigure xserver-xorg will just do it
+2006-06-19T16:21:00.000Z	farous	KrisWood	lol where is your backup. try searching in /etc/X11/ for a xorg.conf-orginal or xorg.conf-backup
+2006-06-19T16:22:00.000Z	KrisWood	farous	yes there is a xorg.conf-backup
+2006-06-19T16:22:00.000Z	farous	KrisWood	changing the resolution was easy stuff it does not need a lot of editing in your xorg.conf
+2006-06-19T16:23:00.000Z	farous	KrisWood	ok while you are in /etc/X11/ type sudo cp xorg.conf-backup xorg.conf
+2006-06-19T16:23:00.000Z	farous	KrisWood	that will take you back to your original config
+2006-06-19T16:23:00.000Z	farous	KrisWood	now are we talking about a notebook or a crt. for the wiki might be for one and you configured the other :)
+2006-06-19T16:24:00.000Z	KrisWood	farous	crt
+2006-06-19T16:24:00.000Z	farous	KrisWood	and your card and screen can support your resol at your specified refresh rate
+2006-06-19T16:25:00.000Z	KrisWood	farous	I have no clue what I specified, I don't understand the xorg.conf at all
+2006-06-19T16:26:00.000Z	farous	KrisWood	when you specify a resolution you can do it like this 1280x768@60
+2006-06-19T16:26:00.000Z	KrisWood	farous	where do I do  that?
+2006-06-19T16:27:00.000Z	farous	KrisWood	why you do not try the sudo dpkg-reconfigure xserver-xorg. take all the defaults then in the resolution section just pick up your resolution. it can not be simpler than that
+2006-06-19T16:28:00.000Z	farous	KrisWood	when you are asked for shared mem. do not specify it leave it empty
+2006-06-19T16:33:00.000Z	farous	KrisWood	can you post your xorg.conf file on the pastebin. and tell me what resolution you want
+2006-06-19T16:33:00.000Z	KrisWood	farous	sure
+2006-06-19T16:35:00.000Z	farous	KrisWood	ok what resolution you want to add
+2006-06-19T16:36:00.000Z	farous	KrisWood	read mnishizawa post
+2006-06-19T16:37:00.000Z	farous	KrisWood	add it in the subsection "display" ; Depth 24 section
+2006-06-19T16:38:00.000Z	farous	KrisWood	he is just making sure. mnishizawa if it is not supported it will not be loaded by the way automatically
+2006-06-19T16:39:00.000Z	farous	KrisWood	for gaming though i recommend installing the fglrx driver
+2006-06-19T16:39:00.000Z	KrisWood	farous	ok now how do I do that? :-/
+2006-06-19T16:39:00.000Z	farous	KrisWood	32 ?
+2006-06-19T16:39:00.000Z	farous	KrisWood	does it support that your card
+2006-06-19T16:41:00.000Z	KrisWood	farous	mnishizawa, I have no clue what you guys are talking about now
+2006-06-19T16:42:00.000Z	farous	KrisWood	install the following package. sudo apt-get install xorg-driver-fglrx
+2006-06-19T16:46:00.000Z	farous	KrisWood	now for 3-d acceleration your current setting do not support it
+2006-06-19T16:47:00.000Z	farous	KrisWood	make sure you have the following package. type in a terminal sudo apt-get install linux-restricted-modules-$(uname -r)
+2006-06-19T16:48:00.000Z	farous	KrisWood	great open the xorg.conf file again. got to driver section change "ati" to "fglrx"
+2006-06-19T16:49:00.000Z	farous	KrisWood	reboot and everything will be ok
+2006-06-19T16:49:00.000Z	KrisWood	farous	ok one moment
+2006-06-19T16:56:00.000Z	farous	KrisWood	fglrxinfo
+2006-06-19T16:56:00.000Z	KrisWood	farous	ok and what am I looking for in that
+2006-06-19T16:57:00.000Z	farous	KrisWood	if it gave you the right information of your card and said you are using fglrx you are good
+2006-06-19T16:57:00.000Z	KrisWood	farous	looks right to me :)
+2006-06-19T16:59:00.000Z	farous	KrisWood	book mark this page help.ubnuntu.com
+2006-06-19T10:21:00.000Z	farous	KrisWood	phtoshop you can run through wine no glitchs. i would recommend cxoffice for ease of mind
+2006-06-19T10:21:00.000Z	farous	KrisWood	it is cheam
+2006-06-19T10:24:00.000Z	farous	KrisWood	frankly the way to go is through native linux appl. you can dual boot if you can for glitch free env
+2006-06-19T10:26:00.000Z	farous	KrisWood	life will never be perfect :)
+2006-06-19T10:26:00.000Z	KrisWood	farous	lol too true
+2006-06-19T10:28:00.000Z	farous	KrisWood	is there a prob if you use gimp. or blender. i hear photoshop work flawless with wine too
+2006-06-19T10:28:00.000Z	KrisWood	farous	I need both photoshop and 3dsmax for work
+2006-06-19T10:31:00.000Z	farous	KrisWood	i think you have 30 day trial go to their website
+2006-06-19T10:44:00.000Z	farous	KrisWood	/media/OxfordTD.iso /media/OxfordTD udf,iso9660 user,unhide,loop,auto 0 0
+2006-06-19T10:44:00.000Z	farous	KrisWood	stick something like that in your /etc/fstab file
+2006-06-19T10:46:00.000Z	farous	KrisWood	i do not know of one
+2006-06-19T10:47:00.000Z	farous	KrisWood	if you know the command line it will just be one command and you are there
+2006-06-19T10:47:00.000Z	KrisWood	farous	but ono windows it was only one mouse click and I was there
+2006-08-13T05:23:00.000Z	farous	KrisWood	reinstall it then remove it
+2006-08-13T05:23:00.000Z	KrisWood	farous	it won't install either, I tried that first
+2006-08-13T05:23:00.000Z	farous	KrisWood	you tried sudo aptitude reinstall <foo>
+2006-08-13T05:24:00.000Z	farous	KrisWood	there is a reinstall commmand did you use it
+2006-08-13T05:24:00.000Z	KrisWood	farous	no, didn't know there was one
+2006-08-13T05:25:00.000Z	farous	KrisWood	regluar install will work for new or upgrading packages
+2006-08-13T05:25:00.000Z	KrisWood	farous	there are errors on the install
+2006-08-13T05:25:00.000Z	farous	KrisWood	more inform
+2006-08-13T05:28:00.000Z	KrisWood	farous	more information? basicly I'm trying to install postfix but apt-get says it conflicts with gforge-mta-exim4. I tried to remove that package but got errors saying that some of the files were mising and it couldn't be removed. I tried installing it and got errors that it conflicted with my other packages... I'll try the --reinstall command just a sec
+2006-08-13T05:31:00.000Z	farous	KrisWood	i think other packages depend on it so just look at the list and see if you need them
+2006-08-13T05:31:00.000Z	farous	KrisWood	aptitude will give you alternatives
+2006-08-13T05:32:00.000Z	KrisWood	farous	ok I've decided that 90% of the problem is that I have no clue what the hell I'm doing lol. I managed to get it installed, but can't removing it now (still misting some files so apt and dpkg won't remove it) I'm not sure what you mean by "alternatives"
+2006-08-13T05:33:00.000Z	farous	KrisWood	can you post the error message you got on the pastebin. does the error specify the file names that are missing
+2006-08-13T05:33:00.000Z	KrisWood	farous	yes it does
+2006-08-13T05:33:00.000Z	farous	KrisWood	that is what i ment by more inform
+2006-08-13T05:34:00.000Z	KrisWood	farous	ok sorry, I'll get that for you just a sec
+2006-08-13T05:36:00.000Z	KrisWood	farous	is that what you wanted?
+2006-08-13T05:37:00.000Z	KrisWood	farous	I just tried tricking it by touching that file but it didn't work
+2006-08-13T05:37:00.000Z	farous	KrisWood	when you search for the gforge-mta-exim4 package is it listed as installed
+2006-08-13T05:38:00.000Z	KrisWood	farous	it is now
+2006-08-13T05:38:00.000Z	farous	KrisWood	sorry have no idea.
+2006-08-13T05:39:00.000Z	farous	KrisWood	i had similar prob uninstalling did not work so reinstalling and uninstalling worked. Yet i admin the original problem was my fault at the time
+2006-08-13T05:40:00.000Z	KrisWood	farous	my problem is probably my fault too, here's a list of all the gforge packages I'm trying to remove, I don't know how to tell what depends on what http://rafb.net/paste/results/ufp9df83.html
+2006-08-13T05:41:00.000Z	farous	KrisWood	lol your mixing debian sarge with ubuntu?
+2006-08-13T05:43:00.000Z	KrisWood	farous	yes, there was no prebuilt ubuntu binary that worked with breezy or dapper
+2006-08-13T05:43:00.000Z	KrisWood	farous	I ended up just compiling it myself instead
+2006-08-13T05:43:00.000Z	farous	KrisWood	you can escape with low level packages
+2006-08-13T05:43:00.000Z	farous	KrisWood	not with exim or core packages
+2006-08-13T05:44:00.000Z	farous	KrisWood	that is way beyond me. hope you can solve it though
+2006-08-13T05:48:00.000Z	KrisWood	farous	thanks for the help, sorry I had to go afk, I have no idea what you're talking about though lol
