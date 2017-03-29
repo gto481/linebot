@@ -1,4 +1,3 @@
-corpus
 punkt
-snowball
+snowball_data
 wordnet
