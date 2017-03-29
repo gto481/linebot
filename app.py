@@ -70,8 +70,9 @@ bot = ChatBot('LineBot',
     filters=[
         'chatterbot.filters.RepetitiveResponseFilter'
     ],
-    input_adapter='chatterbot.input.TerminalAdapter',
-    output_adapter='chatterbot.output.TerminalAdapter',
+    input_adapter="chatterbot.input.VariableInputTypeAdapter",
+    output_adapter="chatterbot.output.OutputAdapter",
+    output_format="text",
     database='heroku_h80dpwn6',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
@@ -94,7 +95,8 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            msg = event.message.text
+            msg = str(event.message.text)
+            print msg
             response = bot.get_response(msg)
             #response = event.message.text 
             #print response            

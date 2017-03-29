@@ -1,7 +1,6 @@
 #!/usr/bin/python
 #-*-coding: utf-8 -*-
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
 import json
 import sys
 
@@ -15,16 +14,12 @@ bot = ChatBot('LineBot',
     filters=[
         'chatterbot.filters.RepetitiveResponseFilter'
     ],
-    input_adapter='chatterbot.input.TerminalAdapter',
-    output_adapter='chatterbot.output.TerminalAdapter',
+    input_adapter="chatterbot.input.VariableInputTypeAdapter",
+    output_adapter="chatterbot.output.OutputAdapter",
+    output_format="text",
     database='heroku_h80dpwn6',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-
-if len(sys.argv) < 2:
-  sys.exit(0)
-
-message = sys.argv[1]
-result = bot.get_response(message)
+result = bot.get_response("Hello")
 print ("%s" % result)
