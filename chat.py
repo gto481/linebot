@@ -21,5 +21,9 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-result = bot.get_response("Hello")
-print ("%s" % result)
+input_raw = "เฮโหล"
+input = input_raw.decode("utf-8")
+
+result = bot.get_response(input).text.encode('utf-8')
+f1=open('./output', 'w+')
+print >> f1, result
