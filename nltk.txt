@@ -1,0 +1,4 @@
+corpus
+punkt
+snowball
+wordnet
