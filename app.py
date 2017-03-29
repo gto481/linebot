@@ -98,7 +98,7 @@ def callback():
         if event.type == 'message':
 
             msg = event.message.text            
-            bot.train([msg])
+            bot.train(msg)
             #print msg
             response = bot.get_response(msg).text.encode('utf-8')
             #print response            
