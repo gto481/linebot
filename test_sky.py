@@ -27,6 +27,7 @@ data = flights_service.get_result(
 
 #print json.dumps(result, indent=4, sort_keys=True)
 
+final_output=[]
 for c in data['Itineraries']:
 	for a in data['Agents']:
 		if c['PricingOptions'][0]['Agents'][0] == a['Id']:
@@ -50,4 +51,7 @@ for c in data['Itineraries']:
 																				if (si['OperatingCarrier'] == ci['Id']):
 																					for co in data['Carriers']:
 																						if (so['OperatingCarrier'] == co['Id']):
-																							print(so['DepartureDateTime']),(so['ArrivalDateTime']),(poo['Code']),(pod['Code']),(co['Name']).encode('utf-8'),(so['Duration']),(lo['Stops']),(si['DepartureDateTime']),(si['ArrivalDateTime']),(pio['Code']),(pid['Code']),(ci['Name']).encode('utf-8'),(si['Duration']),(li['Stops']),(c['PricingOptions'][0]['Price']),data['Currencies'][0]['Code'],(a['Name']),(c['PricingOptions'][0]['DeeplinkUrl'])
+																							final_outputs=(so['DepartureDateTime']),(so['ArrivalDateTime']),(poo['Code']),(pod['Code']),(co['Name']).encode('utf-8'),(so['Duration']),(lo['Stops']),(si['DepartureDateTime']),(si['ArrivalDateTime']),(pio['Code']),(pid['Code']),(ci['Name']).encode('utf-8'),(si['Duration']),(li['Stops']),(c['PricingOptions'][0]['Price']),data['Currencies'][0]['Code'],(a['Name']),(c['PricingOptions'][0]['DeeplinkUrl'])
+																							final_output.append(final_outputs)
+for i in range (3):
+        print (final_output[i])
