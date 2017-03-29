@@ -96,7 +96,7 @@ def callback():
         if event.type == 'message':
 
             msg = str(event.message.text)
-            print msg
+            #print msg
             response = str(bot.get_response(msg))
             #response = event.message.text 
             #print response            
