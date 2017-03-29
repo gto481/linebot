@@ -44,7 +44,7 @@ import json
 # import nltk.stem.snowball
 # from nltk.corpus import wordnet
 from chatterbot import ChatBot
-#from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 
@@ -65,7 +65,9 @@ parser = WebhookParser(channel_secret)
 bot = ChatBot('LineBot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
     logic_adapters=[
-        'chatterbot.logic.BestMatch'
+        'chatterbot.logic.BestMatch',
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter'
     ],
     filters=[
         'chatterbot.filters.RepetitiveResponseFilter'
@@ -96,6 +98,7 @@ def callback():
         if event.type == 'message':
 
             msg = event.message.text            
+            chatterbot.train([msg])
             #print msg
             response = bot.get_response(msg).text.encode('utf-8')
             #print response            
