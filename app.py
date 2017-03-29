@@ -79,6 +79,7 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 bot.set_trainer(ListTrainer)
+msglist = []
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -98,8 +99,9 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            msg = event.message.text
-            bot.train(msg)
+            msg = event.message.text            
+            msglist.append(msg)
+            bot.train(msglist)
             #print msg
             response = bot.get_response(msg).text.encode('utf-8')
             #print response            
