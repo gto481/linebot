@@ -39,10 +39,10 @@ from linebot.models import (
 )
 
 import json
-import nltk.corpus
-import nltk.tokenize.punkt
-import nltk.stem.snowball
-from nltk.corpus import wordnet
+# import nltk.corpus
+# import nltk.tokenize.punkt
+# import nltk.stem.snowball
+# from nltk.corpus import wordnet
 from chatterbot import ChatBot
 #from chatterbot.trainers import ListTrainer
 
@@ -97,7 +97,8 @@ def callback():
 
             msg = str(event.message.text)
             #print msg
-            response = str(bot.get_response(msg))
+            response = bot.get_response(msg)
+            print response            
             #response = event.message.text 
             #print response            
 
