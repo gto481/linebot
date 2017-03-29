@@ -95,9 +95,9 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            msg = str(event.message.text)
+            msg = unicode(event.message.text)
             print msg
-            response = str(bot.get_response(msg))
+            response = bot.get_response(msg).text.encode('utf-8')
             print response            
             #response = event.message.text 
             #print response            
