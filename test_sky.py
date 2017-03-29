@@ -51,7 +51,7 @@ for c in data['Itineraries']:
 																				if (si['OperatingCarrier'] == ci['Id']):
 																					for co in data['Carriers']:
 																						if (so['OperatingCarrier'] == co['Id']):
-																							final_outputs=(so['DepartureDateTime']),(so['ArrivalDateTime']),(poo['Code']),(pod['Code']),(co['Name']).encode('utf-8'),(so['Duration']),(lo['Stops']),(si['DepartureDateTime']),(si['ArrivalDateTime']),(pio['Code']),(pid['Code']),(ci['Name']).encode('utf-8'),(si['Duration']),(li['Stops']),(c['PricingOptions'][0]['Price']),data['Currencies'][0]['Code'],(a['Name']),(c['PricingOptions'][0]['DeeplinkUrl'])
+																							final_outputs={"Outbound_Departure_DT":(so['DepartureDateTime']),"Outbound_Arrival_DT":(so['ArrivalDateTime']),"Outbound_Departure_Airport":(poo['Code']),"Outbound_Arrival_Airport":(pod['Code']),"Outbound_Airline":(co['Name']).encode('utf-8'),"Outbound_Duration":(so['Duration']),"Outbound_Stop":(lo['Stops']),"Inbound_Departure_DT":(si['DepartureDateTime']),"Inbound_Arrival_DT":(si['ArrivalDateTime']),"Inbound_Departure_Airport":(pio['Code']),"Inbound_Arrival_Airport":(pid['Code']),"Inbound_Airline":(ci['Name']).encode('utf-8'),"Inbound_Duration":(si['Duration']),"Inbound_Stop":(li['Stops']),"Total_Price":(c['PricingOptions'][0]['Price']),"Currency":data['Currencies'][0]['Code'],"Agency_Name":(a['Name']),"Reservation_Link":(c['PricingOptions'][0]['DeeplinkUrl'])}
 																							final_output.append(final_outputs)
-for i in range (3):
-        print (final_output[i])
+print json.dumps({'results': final_output})
+
