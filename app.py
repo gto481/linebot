@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 
 #  Licensed under the Apache License, Version 2.0 (the "License"); you may
 #  not use this file except in compliance with the License. You may obtain
@@ -95,7 +95,8 @@ def callback():
     for event in events:
         if event.type == 'message':
 
-            msg = event.message.text.decode("utf-8")
+            msg = str(event.message.text)
+            msg = msg.decode('utf-8')
             #print msg
             response = bot.get_response(msg).text.encode('utf-8')
             #print response            
