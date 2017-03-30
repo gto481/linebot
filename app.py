@@ -114,7 +114,7 @@ def googleSearch(text):
     i = 0
     for r in g:
         i += 1
-        if ( i > 2):
+        if ( i > 5):
             break
         #print r.google_link
         cc = CarouselColumn(text=r.name, title=r.name, actions=[
