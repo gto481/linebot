@@ -48,6 +48,7 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import geocoder
 import pprint
+from random import randint
 
 app = Flask(__name__)
 
@@ -147,8 +148,8 @@ def callback():
                     )
 
             elif event.message.type == 'sticker':                
-                line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=1))
-
+                stickerId = randint(1,21)
+                line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
 
     return 'OK'
 
