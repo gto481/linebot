@@ -110,15 +110,16 @@ def location(text):
 
 def googleSearch(text):
     g = google.search(text)
-    return TemplateSendMessage(
-        template=CarouselTemplate(
-            columns=CarouselColumn(
-                text=g.description.encode('utf-8'), 
-                title=g.name.encode('utf-8'),
-                actions=URITemplateAction(label='More Detail', uri=g.link)
-                )
-            )
-        )
+    columns = []
+    for r in g:
+        columns.append(CarouselColumn(
+            text=r.description.encode('utf-8'), 
+            title=r.name.encode('utf-8'),
+            actions=URITemplateAction(label='More Detail', uri=r.link)
+        ))
+
+
+    return TemplateSendMessage(template=CarouselTemplate(columns=columns))
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -174,7 +175,6 @@ def callback():
                 line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
 
     return 'OK'
-
 
 if __name__ == "__main__":
     arg_parser = ArgumentParser(
