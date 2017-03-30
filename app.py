@@ -46,6 +46,7 @@ import re
 # from nltk.corpus import wordnet
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+import geocoder
 
 app = Flask(__name__)
 
