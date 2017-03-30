@@ -109,19 +109,33 @@ def location(text):
     
 
 def googleSearch(text):
-    g = google.search(text)
-    columns = []
-    i = 0
-    for r in g:
-        i += 1
-        if ( i > 2):
-            break
-        actions = [URITemplateAction(label='More Detail', uri=r.link)]
-        carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
-        columns.append(carousel_column)
+    # g = google.search(text)
+    # columns = []
+    # i = 0
+    # for r in g:
+    #     i += 1
+    #     if ( i > 2):
+    #         break
+    #     actions = [URITemplateAction(label='More Detail', uri=r.link)]
+    #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
+    #     columns.append(carousel_column)
     
-    carousel_template = CarouselTemplate(columns=columns)
-    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
+    # carousel_template = CarouselTemplate(columns=columns)
+    carousel_template = CarouselTemplate(columns=[
+            CarouselColumn(text='hoge1', title='fuga1', actions=[
+                URITemplateAction(
+                    label='Go to line.me', uri='https://line.me'),
+                PostbackTemplateAction(label='ping', data='ping')
+            ]),
+            CarouselColumn(text='hoge2', title='fuga2', actions=[
+                PostbackTemplateAction(
+                    label='ping with text', data='ping',
+                    text='ping'),
+                MessageTemplateAction(label='Translate Rice', text='米')
+            ]),
+        ])
+    template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
+    #template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
     return template_message
 
 @app.route("/callback", methods=['POST'])
