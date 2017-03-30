@@ -47,6 +47,7 @@ import re
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import geocoder
+from google import google
 import pprint
 from random import randint
 
@@ -86,15 +87,38 @@ bot.set_trainer(ListTrainer)
 msglist = []
 
 commands = (
-    (re.compile('พิกัด[ ]*(.*)'), lambda x: location(x)),
-    (re.compile('location[ ]*(.*)'), lambda x: location(x)),
-    (re.compile('ที่อยู่[ ]*(.*)'), lambda x: location(x))
+    (re.compile('^พิกัด[ ]*(.*)'), lambda x: location(x)),
+    (re.compile('^location[ ]*(.*)'), lambda x: location(x)),
+    (re.compile('^ที่อยู่[ ]*(.*)'), lambda x: location(x)),
+    (re.compile('^ค้นหา[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^หา[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^google[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^กูเกิ้ล[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
 )
 
 def location(text):
     g = geocoder.google(text)
     #print g.latlng
-    return g
+    return LocationMessage(
+        title=text, 
+        address=g.address, 
+        latitude=g.lat, 
+        longitude=g.lng
+        )
+    
+
+def googleSearch(text):
+    g = google.search(text)
+    return TemplateSendMessage(
+        template=CarouselTemplate(
+            columns=CarouselColumn(
+                text=g.description.encode('utf-8'), 
+                title=g.name.encode('utf-8'),
+                actions=URITemplateAction(label='More Detail', uri=g.link)
+                )
+            )
+        )
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -127,11 +151,9 @@ def callback():
                     m = matcher.search(msg)
                     if m:
                         flag = True
-                        title = m.group(1)
-                        g = action(title)
+                        text = m.group(1)                        
                         line_bot_api.reply_message(
-                            event.reply_token,
-                            LocationMessage(title=title, address=g.address, latitude=g.lat, longitude=g.lng)
+                            event.reply_token, action(text)                            
                         )
                         break
                 
