@@ -141,7 +141,7 @@ def callback():
                     #TextSendMessage(result = bot.get_response(event.message.text))
                     TextSendMessage(text=response)
                 )
-        else if event.type == 'sticker':
+        elif event.type == 'sticker':
             line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=1))
 
     return 'OK'
