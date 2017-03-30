@@ -114,19 +114,15 @@ def googleSearch(text):
     i = 0
     for r in g:
         i += 1
-        if ( i > 5):
+        if ( i > 2):
             break
-        actions = []
-        print r.link
-        uri = URITemplateAction(label='More Detail', uri=r.link)
-        actions.append(uri)
-        print r.description.encode('utf-8'), r.name.encode('utf-8')
-        columns.append(CarouselColumn(
-            text=r.description.encode('utf-8'), 
-            title=r.name.encode('utf-8'),
-            actions=actions
-        ))
-    return TemplateSendMessage(template=CarouselTemplate(columns=columns))
+        actions = [URITemplateAction(label='More Detail', uri=r.link)]
+        carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=action)                        
+        columns.append(carousel_column)
+    
+    carousel_template = CarouselTemplate(columns=columns)
+    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
+    return template_message
 
 @app.route("/callback", methods=['POST'])
 def callback():
