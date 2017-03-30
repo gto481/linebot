@@ -47,6 +47,7 @@ import re
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import geocoder
+import pprint
 
 app = Flask(__name__)
 
@@ -106,11 +107,11 @@ def callback():
     try:
         events = parser.parse(body, signature)
     except InvalidSignatureError:
-        abort(400)
+        abort(400)    
 
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
-        print event.type
+        pprint.pprint(event)        
         if event.type == 'message':
 
             print "Event type is ", event.type
