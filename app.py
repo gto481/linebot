@@ -111,43 +111,43 @@ def callback():
 
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
-        pprint.pprint(event)        
+        pprint.pprint(event)
         if event.type == 'message':
 
-            print "Event type is ", event.type
-            msg = event.message.text            
-            #msglist.append(msg)
-            #bot.train(msglist)
-            #print msg
-            flag = False
+            if event.message.type == 'text':
 
-            for matcher, action in commands:
-                m = matcher.search(msg)
-                if m:
-                    flag = True
-                    title = m.group(1)
-                    g = action(title)
+                msg = event.message.text            
+                # Training bot with incoming message
+                #msglist.append(msg)
+                #bot.train(msglist)                
+                flag = False
+
+                for matcher, action in commands:
+                    m = matcher.search(msg)
+                    if m:
+                        flag = True
+                        title = m.group(1)
+                        g = action(title)
+                        line_bot_api.reply_message(
+                            event.reply_token,
+                            LocationMessage(title=title, address=g.address, latitude=g.lat, longitude=g.lng)
+                        )
+                        break
+                
+                if flag is not True:
+                    response = bot.get_response(msg).text.encode('utf-8')
+                    #print response            
+                    #response = event.message.text 
+                    #print response            
+
                     line_bot_api.reply_message(
                         event.reply_token,
-                        LocationMessage(title=title, address=g.address, latitude=g.lat, longitude=g.lng)
+                        #TextSendMessage(result = bot.get_response(event.message.text))
+                        TextSendMessage(text=response)
                     )
-                    break
-            
-            if flag is not True:
-                response = bot.get_response(msg).text.encode('utf-8')
-                #print response            
-                #response = event.message.text 
-                #print response            
 
-                line_bot_api.reply_message(
-                    event.reply_token,
-                    #TextSendMessage(result = bot.get_response(event.message.text))
-                    TextSendMessage(text=response)
-                )
-
-        elif event.type == 'sticker':
-            print "Event type is ", event.type
-            line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=1))
+            elif event.message.type == 'sticker':                
+                line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=1))
 
 
     return 'OK'
