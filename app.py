@@ -117,7 +117,7 @@ def googleSearch(text):
         if ( i > 2):
             break
         actions = [URITemplateAction(label='More Detail', uri=r.link)]
-        carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=action)                        
+        carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
         columns.append(carousel_column)
     
     carousel_template = CarouselTemplate(columns=columns)
