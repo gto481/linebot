@@ -111,16 +111,21 @@ def location(text):
 def googleSearch(text):
     g = google.search(text)
     columns = []
+    i = 0
     for r in g:
-        actions = []        
+        i += 1
+        if ( i > 5):
+            break
+        actions = []
+        print r.link
         uri = URITemplateAction(label='More Detail', uri=r.link)
         actions.append(uri)
+        print r.description.encode('utf-8'), r.name.encode('utf-8')
         columns.append(CarouselColumn(
             text=r.description.encode('utf-8'), 
             title=r.name.encode('utf-8'),
             actions=actions
         ))
-        
     return TemplateSendMessage(template=CarouselTemplate(columns=columns))
 
 @app.route("/callback", methods=['POST'])
