@@ -113,7 +113,7 @@ def callback():
         print event.type
         if event.type == 'message':
 
-            print "Event type is " event.type
+            print "Event type is ", event.type
             msg = event.message.text            
             #msglist.append(msg)
             #bot.train(msglist)
@@ -143,9 +143,9 @@ def callback():
                     #TextSendMessage(result = bot.get_response(event.message.text))
                     TextSendMessage(text=response)
                 )
-                
+
         elif event.type == 'sticker':
-            print "Event type is " event.type
+            print "Event type is ", event.type
             line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=1))
 
 
