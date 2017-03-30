@@ -112,12 +112,15 @@ def googleSearch(text):
     g = google.search(text)
     columns = []
     for r in g:
+        actions = []        
         uri = URITemplateAction(label='More Detail', uri=r.link)
+        actions.append(uri)
         columns.append(CarouselColumn(
             text=r.description.encode('utf-8'), 
             title=r.name.encode('utf-8'),
-            actions=uri
+            actions=actions
         ))
+        
     return TemplateSendMessage(template=CarouselTemplate(columns=columns))
 
 @app.route("/callback", methods=['POST'])
