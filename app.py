@@ -116,7 +116,7 @@ def googleSearch(text):
         i += 1
         if ( i > 2):
             break
-        print r.link
+        print r.google_link
         #cc = CarouselColumn(text=r.name, title=r.name, actions=[
         #        URITemplateAction(
         #            label='Go to website', uri=r.link)
