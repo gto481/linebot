@@ -148,7 +148,7 @@ def callback():
                     )
 
             elif event.message.type == 'sticker':                
-                stickerId = randint(1,21)
+                stickerId = randint(100,118)
                 line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
 
     return 'OK'
