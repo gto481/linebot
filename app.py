@@ -39,6 +39,7 @@ from linebot.models import (
 )
 
 import json
+import re
 # import nltk.corpus
 # import nltk.tokenize.punkt
 # import nltk.stem.snowball
@@ -81,6 +82,17 @@ bot = ChatBot('LineBot',
 bot.set_trainer(ListTrainer)
 msglist = []
 
+commands = (
+    (re.compile('ต่ำแหน่ง[ ]*(.*)'), lambda x: location(x)),
+    (re.compile('location[ ]*(.*)'), lambda x: location(x)),
+    (re.compile('ที่อยู่[ ]*(.*)'), lambda x: location(x))
+)
+
+def location(text):
+    g = geocoder.google(text)
+    #print g.latlng
+    return g
+
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
@@ -100,19 +112,34 @@ def callback():
         if event.type == 'message':
 
             msg = event.message.text            
-            msglist.append(msg)
-            bot.train(msglist)
+            #msglist.append(msg)
+            #bot.train(msglist)
             #print msg
-            response = bot.get_response(msg).text.encode('utf-8')
-            #print response            
-            #response = event.message.text 
-            #print response            
+            flag = False
 
-            line_bot_api.reply_message(
-                event.reply_token,
-                #TextSendMessage(result = bot.get_response(event.message.text))
-                TextSendMessage(text=response)
-            )
+            for matcher, action in commands:
+                m = matcher.search(msg)
+                if m:
+                    flag = True
+                    title = m.group(1)
+                    g = action(title)
+                    line_bot_api.reply_message(
+                        event.reply_token,
+                        LocationMessage(title=title, address=g.address, latitude=g.lat, longitude=g.lng)
+                    )
+                    break
+            
+            if flag is not True:
+                response = bot.get_response(msg).text.encode('utf-8')
+                #print response            
+                #response = event.message.text 
+                #print response            
+
+                line_bot_api.reply_message(
+                    event.reply_token,
+                    #TextSendMessage(result = bot.get_response(event.message.text))
+                    TextSendMessage(text=response)
+                )
 
     return 'OK'
 
