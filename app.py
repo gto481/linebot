@@ -98,13 +98,21 @@ commands = (
     (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^(ช่วยเหลือ)$'), lambda x: usage()),
     (re.compile('^(help)$'), lambda x: usage()),
+    (re.compile('^train[ ]*(.*)$'), lambda x: tarin(x)),
 )
 
 def usage():
-    response="คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\nหาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\nGoogle search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\nhelp\n  แสดงข้อความนี้"
+    response="คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\nหาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\nGoogle search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\nhelp\n  แสดงข้อความนี้\nTrain Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อมความ>,<ข้อมความ>"
     message = TextSendMessage(text=response)
     return message
 
+def train(x):
+    # Training bot with incoming message
+    msglist = x.split(",")
+    bot.train(msglist)
+    response="สอนกูแต่เรื่องดีๆนะมึง อีดอก"
+    message = TextSendMessage(text=response)
+    return message
 
 def location(text):
     g = geocoder.google(text)
