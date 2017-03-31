@@ -109,7 +109,7 @@ def location(text):
     
 
 def googleSearch(text):
-    g = google.search(text.encode('utf-8'))
+    g = google.search(text)
     columns = []
     i = 0
     for r in g:
