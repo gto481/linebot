@@ -100,7 +100,7 @@ commands = (
 )
 
 def usage():
-    response="คุยเล่น\n  พิมพ์อะไรมาก็ได้กูตอบได้\nหาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\nGoogle search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\nhelp\n  แสดงข้อความนี้"
+    response="คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\nหาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\nGoogle search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\nhelp\n  แสดงข้อความนี้"
     message = TextSendMessage(text=response)
     return message
 
@@ -123,7 +123,7 @@ def googleSearch(text):
     try:
         for r in g:
             i += 1
-            if ( i > 4):
+            if ( i > 3):
                 break
             print r.google_link
             cc = CarouselColumn(text=r.name, title=r.name, actions=[URITemplateAction(label='Go to website', uri=r.google_link)])
@@ -184,14 +184,18 @@ def callback():
                 flag = False
 
                 for matcher, action in commands:
-                    m = matcher.search(msg)
-                    if m:
-                        flag = True
-                        text = m.group(1)                        
-                        line_bot_api.reply_message(
-                            event.reply_token, action(text)                            
-                        )
-                        break
+                    try:
+                        m = matcher.search(msg)
+                        if m:
+                            flag = True
+                            text = m.group(1)
+                            line_bot_api.reply_message(
+                                event.reply_token, action(text)                            
+                            )
+                            break
+                    except:
+                        response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
+                        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
                 
                 if flag is not True:
                     response = bot.get_response(msg).text.encode('utf-8')
