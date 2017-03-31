@@ -40,6 +40,7 @@ from linebot.models import (
 
 import json
 import re
+import urllib
 # import nltk.corpus
 # import nltk.tokenize.punkt
 # import nltk.stem.snowball
@@ -126,7 +127,8 @@ def googleSearch(text):
             if ( i > 3):
                 break
             print r.google_link
-            cc = CarouselColumn(text=r.name, title=r.name, actions=[URITemplateAction(label='Go to website', uri=r.google_link)])
+            url = urllib.quote("'" + r.google_link + "'")            
+            cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
             columns.append(cc)
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
         #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
