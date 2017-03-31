@@ -95,7 +95,15 @@ commands = (
     (re.compile('^google[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิ้ล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^ช่วยเหลือ$'), lambda x: usage()),
+    (re.compile('^help$'), lambda x: usage()),
 )
+
+def usage():
+    response="คุยเล่น\n  พิมพ์อะไรมาก็ได้กูตอบได้\nหาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\nGoogle search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\nhelp\n  แสดงข้อความนี้"
+    message = TextSendMessage(text=response)
+    return message
+
 
 def location(text):
     g = geocoder.google(text)
@@ -112,36 +120,40 @@ def googleSearch(text):
     g = google.search(text)
     columns = []
     i = 0
-    for r in g:
-        i += 1
-        if ( i > 4):
-            break
-        print r.google_link
-        cc = CarouselColumn(text=r.name, title=r.name, actions=[
-                URITemplateAction(label='Go to website', uri=r.google_link)])
-        columns.append(cc)
-    #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
-    #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
-    #     columns.append(carousel_column)
-    
-    carousel_template = CarouselTemplate(columns=columns)
-    #carousel_template = CarouselTemplate(columns=columns)
-    #template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
-    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
-    # carousel_template = CarouselTemplate(columns=[
-    #         CarouselColumn(text='hoge1', title='fuga1', actions=[
-    #             URITemplateAction(
-    #                 label='Go to line.me', uri='https://line.me'),
-    #             PostbackTemplateAction(label='ping', data='ping')
-    #         ]),
-    #         CarouselColumn(text='hoge2', title='fuga2', actions=[
-    #             PostbackTemplateAction(
-    #                 label='ping with text', data='ping',
-    #                 text='ping'),
-    #             MessageTemplateAction(label='Translate Rice', text='米')
-    #         ]),
-    #     ])
-    # template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
+    try:
+        for r in g:
+            i += 1
+            if ( i > 4):
+                break
+            print r.google_link
+            cc = CarouselColumn(text=r.name, title=r.name, actions=[URITemplateAction(label='Go to website', uri=r.google_link)])
+            columns.append(cc)
+        #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
+        #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
+        #     columns.append(carousel_column)
+        
+        carousel_template = CarouselTemplate(columns=columns)
+        #carousel_template = CarouselTemplate(columns=columns)
+        #template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
+        template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
+        # carousel_template = CarouselTemplate(columns=[
+        #         CarouselColumn(text='hoge1', title='fuga1', actions=[
+        #             URITemplateAction(
+        #                 label='Go to line.me', uri='https://line.me'),
+        #             PostbackTemplateAction(label='ping', data='ping')
+        #         ]),
+        #         CarouselColumn(text='hoge2', title='fuga2', actions=[
+        #             PostbackTemplateAction(
+        #                 label='ping with text', data='ping',
+        #                 text='ping'),
+        #             MessageTemplateAction(label='Translate Rice', text='米')
+        #         ]),
+        #     ])
+        # template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
+    except Exception: 
+        response="ค้นหาไม่ได้วะ โทษที กูโง่"
+        template_message = TextSendMessage(text=response)
+
     return template_message
 
 @app.route("/callback", methods=['POST'])
