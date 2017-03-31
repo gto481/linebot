@@ -155,7 +155,6 @@ def googleSearch(text):
     except Exception: 
         response="ค้นหาไม่ได้วะ โทษที กูโง่"
         template_message = TextSendMessage(text=response)
-
     return template_message
 
 @app.route("/callback", methods=['POST'])
@@ -177,6 +176,9 @@ def callback():
         pprint.pprint(event)
         if event.type == 'message':
 
+            response="พิมพ์เหี้ยอะไรมา กูงง แสรด"
+            msg = TextSendMessage(text=response)
+
             if event.message.type == 'text':
 
                 msg = event.message.text            
@@ -191,13 +193,15 @@ def callback():
                         if m:
                             flag = True
                             text = m.group(1)
-                            line_bot_api.reply_message(
-                                event.reply_token, action(text)                            
-                            )
+                            # line_bot_api.reply_message(
+                            #     event.reply_token, action(text)                            
+                            # )
+                            msg = action(text)
                             break
                     except Exception:
                         response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
-                        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+                        #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+                        msg = TextSendMessage(text=response)
                 
                 if flag is not True:
                     response = bot.get_response(msg).text.encode('utf-8')
@@ -205,15 +209,21 @@ def callback():
                     #response = event.message.text 
                     #print response            
 
-                    line_bot_api.reply_message(
-                        event.reply_token,
+                    #line_bot_api.reply_message(
+                    #    event.reply_token,
                         #TextSendMessage(result = bot.get_response(event.message.text))
-                        TextSendMessage(text=response)
-                    )
+                    #    TextSendMessage(text=response)
+                    #)
+                    msg = TextSendMessage(text=response)
 
             elif event.message.type == 'sticker':                
                 stickerId = randint(100,118)
-                line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
+                msg = StickerMessage(package_id=1,sticker_id=stickerId)
+                #line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
+            
+            line_bot_api.reply_message(event.reply_token, msg)
+
+
     return 'OK'
 
 if __name__ == "__main__":
