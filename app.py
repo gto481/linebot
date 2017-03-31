@@ -126,8 +126,8 @@ def googleSearch(text):
             i += 1
             if ( i > 3):
                 break
-            print r.google_link
-            url = urllib.quote("'" + r.google_link + "'")            
+            #print r.google_link
+            url = r.google_link
             cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
             columns.append(cc)
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
@@ -220,8 +220,12 @@ def callback():
                 stickerId = randint(100,118)
                 msg = StickerMessage(package_id=1,sticker_id=stickerId)
                 #line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
-            
-            line_bot_api.reply_message(event.reply_token, msg)
+
+            try:
+                line_bot_api.reply_message(event.reply_token, msg)
+            except Exception:
+                response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))                
 
 
     return 'OK'
