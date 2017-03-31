@@ -109,18 +109,16 @@ def location(text):
     
 
 def googleSearch(text):
-    g = google.search(text)
+    g = google.search(text.encode('utf-8'))
     columns = []
     i = 0
     for r in g:
         i += 1
         if ( i > 4):
             break
-        #print r.google_link
+        print r.google_link
         cc = CarouselColumn(text=r.name, title=r.name, actions=[
-                URITemplateAction(
-                    label='Go to website', uri=r.google_link)
-            ])
+                URITemplateAction(label='Go to website', uri=r.google_link)])
         columns.append(cc)
     #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
     #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
