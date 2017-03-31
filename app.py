@@ -195,7 +195,7 @@ def callback():
                                 event.reply_token, action(text)                            
                             )
                             break
-                    except:
+                    except Exception:
                         response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
                 
