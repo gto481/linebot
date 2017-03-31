@@ -95,8 +95,8 @@ commands = (
     (re.compile('^google[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิ้ล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
-    (re.compile('^ช่วยเหลือ$'), lambda x: usage()),
-    (re.compile('^help$'), lambda x: usage()),
+    (re.compile('^(ช่วยเหลือ)$'), lambda x: usage()),
+    (re.compile('^(help)$'), lambda x: usage()),
 )
 
 def usage():
