@@ -119,12 +119,16 @@ def train(x):
 def location(text):
     g = geocoder.google(text)
     #print g.latlng
-    return LocationMessage(
-        title=text, 
-        address=g.address, 
-        latitude=g.lat, 
-        longitude=g.lng
-        )
+    if g is not None:
+	    return LocationMessage(
+	        title=text, 
+	        address=g.address, 
+	        latitude=g.lat, 
+	        longitude=g.lng
+	        )
+	else:
+		response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
+    	message = TextSendMessage(text=response)
     
 
 def googleSearch(text):
@@ -136,11 +140,13 @@ def googleSearch(text):
             i += 1
             if ( i > 2):
                 break
-            print r.google_link
-            url = r.google_link
-            cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
-            columns.append(cc)
-            print columns
+            if r is not None:
+	            print r.google_link
+	            url = r.google_link
+	            description = r.description.encode('utf-8')[0:100] + "..."
+	            cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
+	            columns.append(cc)
+	            print columns
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
         #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
         #     columns.append(carousel_column)
