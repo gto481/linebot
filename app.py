@@ -183,7 +183,8 @@ def imageSearch(text):
             print r.link
             url = r.link
             thumb = r.thumb
-            images.append(ImageSendMessage(original_content_url=url, preview_image_url=thumb))
+            image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+            images.append(image)
 
     template_message = random.choice(images)
     return template_message
@@ -305,7 +306,7 @@ def callback():
                 response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                 line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
 
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ทดสอบ'))
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ทดสอบ'))
 
     return 'OK'
 
