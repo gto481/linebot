@@ -155,22 +155,21 @@ def ticket(x):
             break
         #title=r['Agency_Name']
         #print title
-        text="""Out {0}
-Dep. {1}@{2}
-In {3}
-Dep. {4}@{5}
-{6}{7}""".format(r['Outbound_Airline'],
+        text="""{0}{1}
+Out {2}
+Dep. {3}@{4}
+In {5}
+Dep. {6}@{7}""".format(r['Total_Price'],r['Currency']
+            r['Outbound_Airline'],
             #r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
             r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],
             r['Inbound_Airline'],
             r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
             #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
-            r['Total_Price'],r['Currency'])
-        #print text
+            )
+        text = text[:100]
         url = r['Reservation_Link']
-        #print url
         cc = CarouselColumn(text=text, actions=[URITemplateAction(label='Book', uri=url)])
-        #print cc
         columns.append(cc)
 
     carousel_template = CarouselTemplate(columns=columns)
@@ -248,14 +247,8 @@ def googleSearch(text):
             text=r.description[:60]
             cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
             columns.append(cc)
-            #print columns
-    #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
-    #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)
-    #     columns.append(carousel_column)
 
     carousel_template = CarouselTemplate(columns=columns)
-    #carousel_template = CarouselTemplate(columns=columns)
-    #template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
     template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
     # carousel_template = CarouselTemplate(columns=[
     #         CarouselColumn(text='hoge1', title='fuga1', actions=[
