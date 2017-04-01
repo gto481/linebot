@@ -155,7 +155,11 @@ def ticket(x):
             break
         #title=r['Agency_Name']
         #print title
-        text="""In {0} Dep. {1}@{2},Out {3} Dep. {4}@{5},{6}{7}""".format(r['Inbound_Airline'],
+        text="""In {0}
+Dep. {1}@{2}
+Out {3}
+Dep. {4}@{5}
+{6}{7}""".format(r['Inbound_Airline'],
             r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
             #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
             r['Outbound_Airline'],
@@ -165,7 +169,7 @@ def ticket(x):
         print text
         url = r['Reservation_Link']
         #print url
-        cc = CarouselColumn(text=text, actions=[URITemplateAction(label='Go to website', uri=url)])
+        cc = CarouselColumn(text=text, actions=[URITemplateAction(label='Book', uri=url)])
         print cc
         columns.append(cc)
 
