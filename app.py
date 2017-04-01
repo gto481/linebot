@@ -160,13 +160,13 @@ def ticket(x):
         title=r['Agency_Name']
         print title
         text="""
-{0}
-{1} @ {2}
-{3} @ {4}
-{5}
-{6} @ {7}
-{8} @ {9}
-Price {10} {11}
+Inbound {0}
+Dep. {1} @ {2}
+Arr. {3} @ {4}
+Outbound {5}
+Dep. {6} @ {7}
+Arr. {8} @ {9}
+Total Price {10} {11}
         """.format(r['Inbound_Airline'],r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
         r['Outbound_Airline'],r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],r['Total_Price'],r['Currency'])
         print text
