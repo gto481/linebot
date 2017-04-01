@@ -51,7 +51,7 @@ import geocoder
 from google import google
 import pprint
 import random
-from search_image import getImage
+import search_image
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -169,29 +169,28 @@ def location(text):
 
     return message
 
-# def imageSearch(text):
+def imageSearch(text):
 
-#     print "doing image search"
-#     #options = images.ImageOptions()
-#     g = search_image.getImage(text)
-#     print "get image"
-#     images = []
-#     i = 0
-#     #try:
-#     for r in g:
-#         i += 1
-#         if ( i > 5):
-#             break
-#         if r is not None:
-#             url = r['link']
-#             print url
-#             thumb = r['thumb']
-#             print thumb
-#             image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-#             images.append(image)
-
-#     template_message = random.choice(images)
-#     return template_message
+    print "doing image search"
+    #options = images.ImageOptions()
+    g = search_image.getImage(text)
+    print "get image"
+    i = 0
+    for r in g:
+        i += 1
+        if ( i > 5):
+            break
+        if r is not None:
+            url = r['link']
+            print url
+            thumb = r['thumb']
+            print thumb
+    #image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+    #images.append(image)
+    #template_message = random.choice(images)
+    #return template_message
+    response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
+    return TextSendMessage(text=response)
 
 def googleSearch(text):
     # Search location
