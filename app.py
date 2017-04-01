@@ -140,9 +140,46 @@ def usage():
     return message
 
 def ticket(x):
-    response="อีหอยใช้กูจังเลยนะ กูขี้เกียจหา"
-    message = TextSendMessage(text=response)
-    return message
+
+    with open('ticketout.json') as data_file:
+    data = json.load(data_file)
+    #pprint(data)
+    i = 0
+    columns = []
+    list_results = list(data['results'])
+    list_records = list(list(list_results))
+    for r in list_records:
+        i += 1
+        if (i > 5):
+            break
+
+        print r.google_link
+        url = r.google_link
+        title=r.name[:40]
+        text=r.description[:60]
+        cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
+        columns.append(cc)
+        print columns
+        #print r
+        #m = eval(r)
+        title=r['Agency_Name']
+        text="""
+        r['Inbound_Airline']
+        r['Inbound_Departure_Airport'] + " @" + r['Inbound_Departure_DT']
+        r['Inbound_Arrival_Airport'] + " @" + r['Inbound_Arrival_DT']
+        r['Outbound_Airline']
+        r['Outbound_Arrival_Airport'] + " @" + r['Outbound_Arrival_DT']
+        r['Outbound_Departure_Airport'] + " @" + r['Outbound_Departure_DT']
+        Price {0} {1}
+        """.format(r['Total_Price'],r['Currency'])
+        url = r['Reservation_Link']
+        cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
+
+    carousel_template = CarouselTemplate(columns=columns)
+    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
+    # response="อีหอยใช้กูจังเลยนะ กูขี้เกียจหา"
+    # message = TextSendMessage(text=response)
+    return template_message
 
 def train(x):
     # Training bot with incoming message

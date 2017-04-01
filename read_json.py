@@ -15,7 +15,24 @@
 import json
 from pprint import pprint
 
-with open('data.json') as data_file:
+with open('ticketout.json') as data_file:
     data = json.load(data_file)
+#pprint(data)
 
-pprint(data)
+i = 0
+list_results = list(data['results'])
+list_records = list(list(list_results))
+for r in list_records:
+    i += 1
+    if (i > 5):
+        break
+    #print r
+    #m = eval(r)
+    print r['Inbound_Airline']
+    print r['Inbound_Departure_Airport'] + " @" + r['Inbound_Departure_DT']
+    print r['Inbound_Arrival_Airport'] + " @" + r['Inbound_Arrival_DT']
+    print r['Outbound_Airline']
+    print r['Outbound_Arrival_Airport'] + " @" + r['Outbound_Arrival_DT']
+    print r['Outbound_Departure_Airport'] + " @" + r['Outbound_Departure_DT']
+    print "Print {0} {1}".format(r['Total_Price'],r['Currency'])
+    print r['Reservation_Link']
