@@ -170,8 +170,10 @@ def location(text):
 
 def imageSearch(text):
 
+    print "doing image search"
     options = images.ImageOptions()
     g = google.search_images(text, options)
+    print "get image"
     images = []
     i = 0
     #try:
