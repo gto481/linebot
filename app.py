@@ -34,7 +34,7 @@ from linebot.models import (
     ButtonsTemplate, URITemplateAction, PostbackTemplateAction,
     CarouselTemplate, CarouselColumn, PostbackEvent,
     StickerMessage, StickerSendMessage, LocationMessage, LocationSendMessage,
-    ImageMessage, VideoMessage, AudioMessage,
+    ImageMessage, ImageSendMessage, VideoMessage, AudioMessage,
     UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent, ImagemapSendMessage, BaseSize, URIImagemapAction, MessageImagemapAction, ImagemapArea
 )
 
