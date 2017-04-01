@@ -119,16 +119,16 @@ def train(x):
 def location(text):
     g = geocoder.google(text)
     #print g.latlng
+    response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
+    message = TextSendMessage(text=response)
     if g is not None:
-	    return LocationMessage(
+	    message = LocationMessage(
 	        title=text, 
 	        address=g.address, 
 	        latitude=g.lat, 
 	        longitude=g.lng
-	        )
-	else:
-		response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
-    	message = TextSendMessage(text=response)
+	        )	
+    return message
     
 
 def googleSearch(text):
