@@ -187,12 +187,13 @@ def imageSearch(text):
             thumb = r['thumb']
             print thumb
             image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-            images.append(image)
+            #images.append(image)
+            print image
 
-    template_message = random.choice(images)
-    return template_message
-    #response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-    #return TextSendMessage(text=response)
+    #template_message = random.choice(images)
+    #return template_message
+    response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
+    return TextSendMessage(text=response)
 
 def googleSearch(text):
     # Search location
