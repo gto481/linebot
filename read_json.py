@@ -28,11 +28,14 @@ for r in list_records:
         break
     #print r
     #m = eval(r)
-    print r['Inbound_Airline']
-    print r['Inbound_Departure_Airport'] + " @" + r['Inbound_Departure_DT']
-    print r['Inbound_Arrival_Airport'] + " @" + r['Inbound_Arrival_DT']
-    print r['Outbound_Airline']
-    print r['Outbound_Arrival_Airport'] + " @" + r['Outbound_Arrival_DT']
-    print r['Outbound_Departure_Airport'] + " @" + r['Outbound_Departure_DT']
-    print "Print {0} {1}".format(r['Total_Price'],r['Currency'])
-    print r['Reservation_Link']
+    text="""
+        {0}
+        {1} @ {2}
+        {3} @ {4}
+        {5}
+        {6} @ {7}
+        {8} @ {9}
+        Price {10} {11}
+        """.format(r['Inbound_Airline'],r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
+        r['Outbound_Airline'],r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],r['Total_Price'],r['Currency'])
+    print text
