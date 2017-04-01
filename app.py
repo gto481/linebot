@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*- 
+    # -*- coding: utf-8 -*-
 
 #  Licensed under the Apache License, Version 2.0 (the "License"); you may
 #  not use this file except in compliance with the License. You may obtain
@@ -126,10 +126,10 @@ def location(text):
     	if g is not None:
 	 	message = LocationMessage(title=text, address=g.address, latitude=g.lat, longitude=g.lng)
     except:
-	pass
-	
+        pass
+
     return message
-    
+
 
 def googleSearch(text):
     g = google.search(text)
@@ -148,9 +148,9 @@ def googleSearch(text):
 	            columns.append(cc)
 	            print columns
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
-        #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
+        #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)
         #     columns.append(carousel_column)
-        
+
         carousel_template = CarouselTemplate(columns=columns)
         #carousel_template = CarouselTemplate(columns=columns)
         #template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
@@ -169,7 +169,7 @@ def googleSearch(text):
         #         ]),
         #     ])
         # template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
-    except Exception: 
+    except Exception:
         response="ค้นหาไม่ได้วะ โทษที กูโง่"
         template_message = TextSendMessage(text=response)
     return template_message
@@ -186,7 +186,7 @@ def callback():
     try:
         events = parser.parse(body, signature)
     except InvalidSignatureError:
-        abort(400)    
+        abort(400)
 
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
@@ -198,10 +198,10 @@ def callback():
 
             if event.message.type == 'text':
 
-                msg = event.message.text            
+                msg = event.message.text
                 # Training bot with incoming message
                 #msglist.append(msg)
-                #bot.train(msglist)                
+                #bot.train(msglist)
                 flag = False
 
                 for matcher, action in commands:
@@ -211,7 +211,7 @@ def callback():
                             flag = True
                             text = m.group(1)
                             # line_bot_api.reply_message(
-                            #     event.reply_token, action(text)                            
+                            #     event.reply_token, action(text)
                             # )
                             msg = action(text)
                             break
@@ -219,12 +219,12 @@ def callback():
                         response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
                         msg = TextSendMessage(text=response)
-                
+
                 if flag is not True:
                     response = bot.get_response(msg).text.encode('utf-8')
-                    #print response            
-                    #response = event.message.text 
-                    #print response            
+                    #print response
+                    #response = event.message.text
+                    #print response
 
                     #line_bot_api.reply_message(
                     #    event.reply_token,
@@ -233,7 +233,7 @@ def callback():
                     #)
                     msg = TextSendMessage(text=response)
 
-            elif event.message.type == 'sticker':                
+            elif event.message.type == 'sticker':
                 stickerId = randint(100,118)
                 msg = StickerMessage(package_id=1,sticker_id=stickerId)
                 #line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
@@ -242,7 +242,7 @@ def callback():
                 line_bot_api.reply_message(event.reply_token, msg)
             except Exception:
                 response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
-                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))                
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
 
 
     return 'OK'
