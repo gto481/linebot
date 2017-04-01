@@ -171,8 +171,8 @@ def location(text):
 def imageSearch(text):
 
     print "doing image search"
-    options = images.ImageOptions()
-    g = google.search_images(text, options)
+    #options = images.ImageOptions()
+    g = google.search_images(text)
     print "get image"
     images = []
     i = 0
