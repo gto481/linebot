@@ -50,11 +50,11 @@ from chatterbot.trainers import ListTrainer
 import geocoder
 from google import google
 import pprint
-from random import randint
+import random
 
-TRAIN_REPLY_MESSAGE=['สอนกูแต่เรื่องดีๆนะมึง อีดอก', 'มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ', 'ขี้เกียจจำแล้ว']
-LOCATION_REPLY_MESSAGE=['มึงจะหนีเที่ยวที่ไหน อีดอก', 'อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว', 'ไปหาผัวหรอ อีดอก']
-SEARCH_REPLY_MESSAGE=['ให้กูหาไมเนี่ย ทำไมไม่หาเอง', '...', 'หาเองไม่เป็นหรือ อีดอก']
+TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
+LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
+SEARCH_REPLY_MESSAGE=["ให้กูหาไมเนี่ย ทำไมไม่หาเอง", "...", "หาเองไม่เป็นหรือ"]
 
 app = Flask(__name__)
 
@@ -110,7 +110,8 @@ commands = (
 )
 
 def usage():
-    response="""1)คุยเล่น
+    response="""
+                1)คุยเล่น
                     พิมพ์ห่าอะไรมาก็ได้กูตอบได้
                 2)หาโลเคชั่น
                     พิกัด <สถานที่>
@@ -150,8 +151,8 @@ def train(x):
 
 def location(text):
     # Search location
-    response=random.choice(LOCATION_REPLY_MESSAGE)
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+    #response=random.choice(LOCATION_REPLY_MESSAGE)
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     g = geocoder.google(text)
     #print g.latlng
     title=text[:100]
@@ -167,8 +168,8 @@ def location(text):
 
 def googleSearch(text):
     # Search location
-    response=random.choice(SEARCH_REPLY_MESSAGE)
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+    #response=random.choice(SEARCH_REPLY_MESSAGE)
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     g = google.search(text)
     columns = []
     i = 0
@@ -272,7 +273,7 @@ def callback():
                     msg = TextSendMessage(text=response)
 
             elif event.message.type == 'sticker':
-                stickerId = randint(100,118)
+                stickerId = random.randint(100,118)
                 msg = StickerMessage(package_id=1,sticker_id=stickerId)
                 #line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
 
