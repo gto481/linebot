@@ -120,8 +120,10 @@ def location(text):
 
     g = geocoder.google(text)
     #print g.latlng
+    title=text[:100]
+    address=g.address[:100]
     if g is not None:
- 	message = LocationMessage(title=text, address=g.address, latitude=g.lat, longitude=g.lng)
+        message = LocationMessage(title=title, address=address, latitude=g.lat, longitude=g.lng)
     else:
         response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
         message = TextSendMessage(text=response)
@@ -139,11 +141,13 @@ def googleSearch(text):
             if ( i > 2):
                 break
             if r is not None:
-	            print r.google_link
-	            url = r.google_link
-	            cc = CarouselColumn(text=r.name, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
-	            columns.append(cc)
-	            print columns
+	        print r.google_link
+	        url = r.google_link
+		title=r.name[:40]
+                text=r.description[:60]
+	        cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
+	        columns.append(cc)
+	        print columns
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
         #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)
         #     columns.append(carousel_column)
