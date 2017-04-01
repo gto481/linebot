@@ -143,8 +143,8 @@ def googleSearch(text):
             if r is not None:
 	            print r.google_link
 	            url = r.google_link
-	            description = r.description.encode('utf-8')[0:100] + "..."
-                print description
+	            description = r.description.encode('utf-8')[0:100]
+                    print description
 	            cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
 	            columns.append(cc)
 	            print columns
