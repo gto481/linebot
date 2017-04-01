@@ -28,7 +28,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage,
+    MessageEvent, TextMessage, TextSendMessage,
     SourceUser, SourceGroup, SourceRoom,
     TemplateSendMessage, ConfirmTemplate, MessageTemplateAction,
     ButtonsTemplate, URITemplateAction, PostbackTemplateAction,
@@ -184,9 +184,9 @@ def imageSearch(text):
             thumb = r['thumb']
             print thumb
             #image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-            image = ImageSendMessage(original_content_url=url)
+            #image = ImageSendMessage(original_content_url=url)
             #images.append(image)
-            print image
+            #print image
 
     #template_message = random.choice(images)
     #return template_message
