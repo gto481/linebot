@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 #  Licensed under the Apache License, Version 2.0 (the "License"); you may
 #  not use this file except in compliance with the License. You may obtain
@@ -48,9 +48,10 @@ import urllib
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import geocoder
-from google import google, images
+from google import google
 import pprint
 import random
+import search_image
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -172,7 +173,7 @@ def imageSearch(text):
 
     print "doing image search"
     #options = images.ImageOptions()
-    g = google.search_images(text)
+    g = search_image.getImage(text)
     print "get image"
     images = []
     i = 0
@@ -182,9 +183,10 @@ def imageSearch(text):
         if ( i > 5):
             break
         if r is not None:
-            print r.link
-            url = r.link
-            thumb = r.thumb
+            url = r['link']
+            print url
+            thumb = r['thumb']
+            print thumb
             image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
             images.append(image)
 
