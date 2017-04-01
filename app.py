@@ -159,18 +159,18 @@ def ticket(x):
 Dep. {1}@{2}
 Out {3}
 Dep. {4}@{5}
-{6}{7}""".format(r['Inbound_Airline'],
-            r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
-            #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
-            r['Outbound_Airline'],
+{6}{7}""".format(r['Outbound_Airline'],
             #r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
             r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],
+            r['Inbound_Airline'],
+            r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
+            #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
             r['Total_Price'],r['Currency'])
-        print text
+        #print text
         url = r['Reservation_Link']
         #print url
         cc = CarouselColumn(text=text, actions=[URITemplateAction(label='Book', uri=url)])
-        print cc
+        #print cc
         columns.append(cc)
 
     carousel_template = CarouselTemplate(columns=columns)
