@@ -171,10 +171,7 @@ def location(text):
 
 def imageSearch(text):
 
-    print "doing image search"
-    #options = images.ImageOptions()
     g = search_image.getImage(text)
-    print "get image"
     i = 0
     images=[]
     for r in g:
@@ -186,7 +183,8 @@ def imageSearch(text):
             print url
             thumb = r['thumb']
             print thumb
-            image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+            #image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+            image = ImageSendMessage(original_content_url=url)
             #images.append(image)
             print image
 
