@@ -51,7 +51,7 @@ import geocoder
 from google import google
 import pprint
 import random
-import search_image
+#import search_image
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -206,27 +206,28 @@ def location(text):
 
 def imageSearch(text):
 
-    g = search_image.getImage(text)
-    i = 0
-    images=[]
-    for r in g:
-        i += 1
-        if ( i > 5):
-            break
-        if r is not None:
-            url = r['link']
-            print url
-            thumb = r['thumb']
-            print thumb
-            image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-            #image = ImageSendMessage(original_content_url=url)
-            images.append(image)
-            #print image
+    #g = search_image.getImage(text)
+    #i = 0
+    #images=[]
+    #for r in g:
+    #    i += 1
+    #    if ( i > 5):
+        #     break
+        # if r is not None:
+        #     url = r['link']
+        #     print url
+        #     thumb = r['thumb']
+        #     print thumb
+        #     image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+        #     #image = ImageSendMessage(original_content_url=url)
+        #     images.append(image)
+        #     #print image
 
-    template_message = random.choice(images)
-    return template_message
+    #template_message = random.choice(images)
+    #return template_message
     #response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-    #return TextSendMessage(text=response)
+    response="ปิดfunctionนี้ก่อนนะ ตังค์เราหมด"
+    return TextSendMessage(text=response)
 
 def googleSearch(text):
     # Search location
@@ -241,13 +242,13 @@ def googleSearch(text):
         if ( i > 5):
             break
         if r is not None:
-            print r.google_link
+            #print r.google_link
             url = r.google_link
             title=r.name[:40]
             text=r.description[:60]
             cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
             columns.append(cc)
-            print columns
+            #print columns
     #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
     #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)
     #     columns.append(carousel_column)
