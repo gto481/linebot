@@ -109,7 +109,8 @@ def usage():
 def train(x):
     # Training bot with incoming message
     msglist = x.split(",")
-    bot.train(msglist)
+    print msglist
+    #bot.train(msglist)
     response="สอนกูแต่เรื่องดีๆนะมึง อีดอก"
     message = TextSendMessage(text=response)
     return message
