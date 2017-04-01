@@ -17,7 +17,7 @@ from pprint import pprint
 
 with open('ticketout.json') as data_file:
     data = json.load(data_file)
-#pprint(data)
+pprint(data)
 
 i = 0
 list_results = list(data['results'])

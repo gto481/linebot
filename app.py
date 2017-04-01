@@ -172,10 +172,12 @@ Dep. {6} @{7}
             r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
             #r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],
             r['Total_Price'],r['Currency'])
-        #print text
+        print text
         url = r['Reservation_Link']
         #print url
         cc = CarouselColumn(text=text, actions=[URITemplateAction(label='Go to website', uri=url)])
+        print cc
+        columns.append(cc)
 
     carousel_template = CarouselTemplate(columns=columns)
     template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
