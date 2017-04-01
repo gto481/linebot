@@ -160,14 +160,15 @@ def ticket(x):
         title=r['Agency_Name']
         print title
         text="""
-        r['Inbound_Airline']
-        r['Inbound_Departure_Airport'] + " @" + r['Inbound_Departure_DT']
-        r['Inbound_Arrival_Airport'] + " @" + r['Inbound_Arrival_DT']
-        r['Outbound_Airline']
-        r['Outbound_Arrival_Airport'] + " @" + r['Outbound_Arrival_DT']
-        r['Outbound_Departure_Airport'] + " @" + r['Outbound_Departure_DT']
-        Price {0} {1}
-        """.format(r['Total_Price'],r['Currency'])
+        {0}
+        {1} @ {2}
+        {3} @ {4}
+        {5}
+        {6} @ {7}
+        {8} @ {9}
+        Price {10} {11}
+        """.format(r['Inbound_Airline'],r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
+        r['Outbound_Airline'],r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],r['Outbound_Departure_Airport'],r['Outbound_Departure_DT']r['Total_Price'],r['Currency'])
         print text
         url = r['Reservation_Link']
         print url
