@@ -111,25 +111,25 @@ commands = (
 
 def usage():
     response="""
-                1)คุยเล่น
-                    พิมพ์ห่าอะไรมาก็ได้กูตอบได้
-                2)หาโลเคชั่น
-                    พิกัด <สถานที่>
-                    location <สถานที่>
-                    ที่อยู่ <สถานที่>
-                3)Google search
-                    ค้นหา <สิ่งที่อยากจะหา>
-                    หา <สิ่งที่อยากจะหา>
-                    google <สิ่งที่อยากจะหา>
-                    กูเกิ้ล <สิ่งที่อยากจะหา>
-                4)Ticket search
-                    หาตั๋ว <สถามที่>
-                    ตั๋ว <สถามที่>
-                    ticket <สถามที่>
-                4)help
-                    แสดงข้อความนี้
-                5)Train Bot สอนกูแต่เรื่องดีๆนะมึง
-                    train <ข้อความ>,<ข้อความ>,<ข้อความ>
+    1)คุยเล่น
+        พิมพ์ห่าอะไรมาก็ได้กูตอบได้
+    2)Location
+        พิกัด <สถานที่>
+        location <สถานที่>
+        ที่อยู่ <สถานที่>
+    3)Google search
+        ค้นหา <สิ่งที่อยากจะหา>
+        หา <สิ่งที่อยากจะหา>
+        google <สิ่งที่อยากจะหา>
+        กูเกิ้ล <สิ่งที่อยากจะหา>
+    4)Ticket search
+        หาตั๋ว <สถามที่>
+        ตั๋ว <สถามที่>
+        ticket <สถามที่>
+    4)Help
+        แสดงข้อความนี้
+    5)Train Bot สอนกูแต่เรื่องดีๆนะมึง
+        train <ข้อความ>,<ข้อความ>,<ข้อความ>
     """
     #response="1)คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\n2)หาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\n3)Google search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\n4)help\n  แสดงข้อความนี้\n5)Train Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อความ>,<ข้อความ>"
     message = TextSendMessage(text=response)
@@ -151,8 +151,8 @@ def train(x):
 
 def location(text):
     # Search location
-    #response=random.choice(LOCATION_REPLY_MESSAGE)
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+    response=random.choice(LOCATION_REPLY_MESSAGE)
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     g = geocoder.google(text)
     #print g.latlng
     title=text[:100]
