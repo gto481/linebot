@@ -159,7 +159,7 @@ def ticket(x):
 Out {2}
 Dep. {3}@{4}
 In {5}
-Dep. {6}@{7}""".format(r['Total_Price'],r['Currency']
+Dep. {6}@{7}""".format(r['Total_Price'],r['Currency'],
             r['Outbound_Airline'],
             #r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
             r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],
