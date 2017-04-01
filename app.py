@@ -155,9 +155,9 @@ def ticket(x):
             break
         #title=r['Agency_Name']
         #print title
-        text="""In {0}
+        text="""Out {0}
 Dep. {1}@{2}
-Out {3}
+In {3}
 Dep. {4}@{5}
 {6}{7}""".format(r['Outbound_Airline'],
             #r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
