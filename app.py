@@ -169,29 +169,29 @@ def location(text):
 
     return message
 
-def imageSearch(text):
+# def imageSearch(text):
 
-    print "doing image search"
-    #options = images.ImageOptions()
-    g = search_image.getImage(text)
-    print "get image"
-    images = []
-    i = 0
-    #try:
-    for r in g:
-        i += 1
-        if ( i > 5):
-            break
-        if r is not None:
-            url = r['link']
-            print url
-            thumb = r['thumb']
-            print thumb
-            image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-            images.append(image)
+#     print "doing image search"
+#     #options = images.ImageOptions()
+#     g = search_image.getImage(text)
+#     print "get image"
+#     images = []
+#     i = 0
+#     #try:
+#     for r in g:
+#         i += 1
+#         if ( i > 5):
+#             break
+#         if r is not None:
+#             url = r['link']
+#             print url
+#             thumb = r['thumb']
+#             print thumb
+#             image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+#             images.append(image)
 
-    template_message = random.choice(images)
-    return template_message
+#     template_message = random.choice(images)
+#     return template_message
 
 def googleSearch(text):
     # Search location
