@@ -99,6 +99,7 @@ commands = (
     (re.compile('^(ช่วยเหลือ)$'), lambda x: usage()),
     (re.compile('^(help)$'), lambda x: usage()),
     (re.compile('^train[ ]*(.*)$'), lambda x: train(x)),
+    (re.compile('^สอน[ ]*(.*)$'), lambda x: train(x)),
 )
 
 def usage():
@@ -109,8 +110,8 @@ def usage():
 def train(x):
     # Training bot with incoming message
     msglist = x.split(",")
-    print msglist
-    #bot.train(msglist)
+    #print msglist
+    bot.train(msglist)
     response="สอนกูแต่เรื่องดีๆนะมึง อีดอก"
     message = TextSendMessage(text=response)
     return message
@@ -133,12 +134,13 @@ def googleSearch(text):
     try:
         for r in g:
             i += 1
-            if ( i > 3):
+            if ( i > 2):
                 break
-            #print r.google_link
+            print r.google_link
             url = r.google_link
             cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
             columns.append(cc)
+            print columns
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
         #     carousel_column = CarouselColumn(text=r.description.encode('utf-8'), title=r.name.encode('utf-8'), actions=actions)                        
         #     columns.append(carousel_column)
@@ -198,7 +200,7 @@ def callback():
 
                 for matcher, action in commands:
                     try:
-                        m = matcher.search(msg)
+                        m = matcher.search(msg, re.IGNORECASE)
                         if m:
                             flag = True
                             text = m.group(1)
