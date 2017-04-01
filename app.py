@@ -120,13 +120,11 @@ def location(text):
 
     g = geocoder.google(text)
     #print g.latlng
-    response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
-    message = TextSendMessage(text=response)
-    try:
-    	if g is not None:
-	 	message = LocationMessage(title=text, address=g.address, latitude=g.lat, longitude=g.lng)
-    except:
-        pass
+    if g is not None:
+ 	message = LocationMessage(title=text, address=g.address, latitude=g.lat, longitude=g.lng)
+    else:
+        response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
+        message = TextSendMessage(text=response)
 
     return message
 
@@ -143,9 +141,7 @@ def googleSearch(text):
             if r is not None:
 	            print r.google_link
 	            url = r.google_link
-	            description = r.description.encode('utf-8')[0:100]
-                    print description
-	            cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
+	            cc = CarouselColumn(text=r.name, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
 	            columns.append(cc)
 	            print columns
         #    actions = [URITemplateAction(label='More Detail', uri=r.link)]
