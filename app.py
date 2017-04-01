@@ -141,28 +141,24 @@ def usage():
 
 def ticket(x):
 
+    print "ticket"
     with open('ticketout.json') as data_file:
         data = json.load(data_file)
     #pprint(data)
     i = 0
     columns = []
+    print "get data"
     list_results = list(data['results'])
     list_records = list(list(list_results))
+    print "get Records"
     for r in list_records:
         i += 1
         if (i > 5):
             break
-
-        print r.google_link
-        url = r.google_link
-        title=r.name[:40]
-        text=r.description[:60]
-        cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
-        columns.append(cc)
-        print columns
         #print r
         #m = eval(r)
         title=r['Agency_Name']
+        print title
         text="""
         r['Inbound_Airline']
         r['Inbound_Departure_Airport'] + " @" + r['Inbound_Departure_DT']
@@ -172,7 +168,9 @@ def ticket(x):
         r['Outbound_Departure_Airport'] + " @" + r['Outbound_Departure_DT']
         Price {0} {1}
         """.format(r['Total_Price'],r['Currency'])
+        print text
         url = r['Reservation_Link']
+        print url
         cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
 
     carousel_template = CarouselTemplate(columns=columns)
@@ -223,12 +221,12 @@ def imageSearch(text):
             image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
             #image = ImageSendMessage(original_content_url=url)
             images.append(image)
-            print image
+            #print image
 
-    #template_message = random.choice(images)
-    #return template_message
-    response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-    return TextSendMessage(text=response)
+    template_message = random.choice(images)
+    return template_message
+    #response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
+    #return TextSendMessage(text=response)
 
 def googleSearch(text):
     # Search location
