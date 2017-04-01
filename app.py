@@ -123,9 +123,9 @@ def usage():
         google <สิ่งที่อยากจะหา>
         กูเกิ้ล <สิ่งที่อยากจะหา>
     4)Ticket search
-        หาตั๋ว <สถามที่>
-        ตั๋ว <สถามที่>
-        ticket <สถามที่>
+        หาตั๋ว <สถานที่>
+        ตั๋ว <สถานที่>
+        ticket <สถานที่>
     4)Help
         แสดงข้อความนี้
     5)Train Bot สอนกูแต่เรื่องดีๆนะมึง
@@ -151,8 +151,8 @@ def train(x):
 
 def location(text):
     # Search location
-    response=random.choice(LOCATION_REPLY_MESSAGE)
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+    #response=random.choice(LOCATION_REPLY_MESSAGE)
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     g = geocoder.google(text)
     #print g.latlng
     title=text[:100]
@@ -160,7 +160,7 @@ def location(text):
     if g is not None:
         message = LocationMessage(title=title, address=address, latitude=g.lat, longitude=g.lng)
     else:
-        response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
+        response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
         message = TextSendMessage(text=response)
 
     return message
