@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+    # -*- coding: utf-8 -*- 
 
 #  Licensed under the Apache License, Version 2.0 (the "License"); you may
 #  not use this file except in compliance with the License. You may obtain
@@ -117,17 +117,17 @@ def train(x):
     return message
 
 def location(text):
+
     g = geocoder.google(text)
     #print g.latlng
     response="ไม่รู้จักอะ โทษทีที่บ้านสอนมาน้อย"
     message = TextSendMessage(text=response)
-    if g is not None:
-	    message = LocationMessage(
-	        title=text, 
-	        address=g.address, 
-	        latitude=g.lat, 
-	        longitude=g.lng
-	        )	
+    try:
+    	if g is not None:
+	 	message = LocationMessage(title=text, address=g.address, latitude=g.lat, longitude=g.lng)
+    except:
+	pass
+	
     return message
     
 
