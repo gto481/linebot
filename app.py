@@ -142,7 +142,7 @@ def usage():
 def ticket(x):
 
     with open('ticketout.json') as data_file:
-    data = json.load(data_file)
+        data = json.load(data_file)
     #pprint(data)
     i = 0
     columns = []
