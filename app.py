@@ -98,7 +98,7 @@ commands = (
     (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^(ช่วยเหลือ)$'), lambda x: usage()),
     (re.compile('^(help)$'), lambda x: usage()),
-    (re.compile('^train[ ]*(.*)$'), lambda x: tarin(x)),
+    (re.compile('^train[ ]*(.*)$'), lambda x: train(x)),
 )
 
 def usage():
