@@ -48,7 +48,7 @@ import urllib
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import geocoder
-from google import google
+from google import google, images
 import pprint
 import random
 
@@ -100,6 +100,9 @@ commands = (
     (re.compile('^[gG]oogle[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิ้ล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^[iI]mage[ ]*(.*)'), lambda x: imageSearch(x)),
+    (re.compile('^หารูป[ ]*(.*)'), lambda x: imageSearch(x)),
+    (re.compile('^รูป[ ]*(.*)'), lambda x: imageSearch(x)),
     (re.compile('^(ช่วยเหลือ)$'), lambda x: usage()),
     (re.compile('^([hH]elp)$'), lambda x: usage()),
     (re.compile('^[tT]rain[ ]*(.*)$'), lambda x: train(x)),
@@ -165,6 +168,25 @@ def location(text):
 
     return message
 
+def imageSearch(text):
+
+    options = images.ImageOptions()
+    g = google.search_images(text, options)
+    images = []
+    i = 0
+    #try:
+    for r in g:
+        i += 1
+        if ( i > 5):
+            break
+        if r is not None:
+            print r.link
+            url = r.link
+            thumb = r.thumb
+            images.append(ImageSendMessage(original_content_url=url, preview_image_url=thumb))
+
+    template_message = random.choice(images)
+    return template_message
 
 def googleSearch(text):
     # Search location
@@ -283,6 +305,7 @@ def callback():
                 response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                 line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
 
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ทดสอบ'))
 
     return 'OK'
 
