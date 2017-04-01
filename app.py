@@ -110,7 +110,7 @@ def usage():
 def train(x):
     # Training bot with incoming message
     msglist = x.split(",")
-    #print msglist
+    print msglist
     bot.train(msglist)
     response="สอนกูแต่เรื่องดีๆนะมึง อีดอก"
     message = TextSendMessage(text=response)
@@ -144,6 +144,7 @@ def googleSearch(text):
 	            print r.google_link
 	            url = r.google_link
 	            description = r.description.encode('utf-8')[0:100] + "..."
+                print description
 	            cc = CarouselColumn(text=r.description, title=r.name, actions=[URITemplateAction(label='Go to website', uri=url)])
 	            columns.append(cc)
 	            print columns
