@@ -89,16 +89,16 @@ msglist = []
 
 commands = (
     (re.compile('^พิกัด[ ]*(.*)'), lambda x: location(x)),
-    (re.compile('^location[ ]*(.*)'), lambda x: location(x)),
+    (re.compile('^[lL]ocation[ ]*(.*)'), lambda x: location(x)),
     (re.compile('^ที่อยู่[ ]*(.*)'), lambda x: location(x)),
     (re.compile('^ค้นหา[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^หา[ ]*(.*)'), lambda x: googleSearch(x)),
-    (re.compile('^google[ ]*(.*)'), lambda x: googleSearch(x)),
+    (re.compile('^[gG]oogle[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิ้ล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^กูเกิล[ ]*(.*)'), lambda x: googleSearch(x)),
     (re.compile('^(ช่วยเหลือ)$'), lambda x: usage()),
-    (re.compile('^(help)$'), lambda x: usage()),
-    (re.compile('^train[ ]*(.*)$'), lambda x: train(x)),
+    (re.compile('^([hH]elp)$'), lambda x: usage()),
+    (re.compile('^[tT]rain[ ]*(.*)$'), lambda x: train(x)),
     (re.compile('^สอน[ ]*(.*)$'), lambda x: train(x)),
 )
 
@@ -200,7 +200,7 @@ def callback():
 
                 for matcher, action in commands:
                     try:
-                        m = matcher.search(msg, re.IGNORECASE)
+                        m = matcher.search(msg)
                         if m:
                             flag = True
                             text = m.group(1)
