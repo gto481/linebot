@@ -52,6 +52,10 @@ from google import google
 import pprint
 from random import randint
 
+TRAIN_REPLY_MESSAGE=['สอนกูแต่เรื่องดีๆนะมึง อีดอก', 'มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ', 'ขี้เกียจจำแล้ว']
+LOCATION_REPLY_MESSAGE=['มึงจะหนีเที่ยวที่ไหน อีดอก', 'อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว', 'ไปหาผัวหรอ อีดอก']
+SEARCH_REPLY_MESSAGE=['ให้กูหาไมเนี่ย ทำไมไม่หาเอง', '...', 'หาเองไม่เป็นหรือ อีดอก']
+
 app = Flask(__name__)
 
 # get channel_secret and channel_access_token from your environment variable
@@ -100,10 +104,38 @@ commands = (
     (re.compile('^([hH]elp)$'), lambda x: usage()),
     (re.compile('^[tT]rain[ ]*(.*)$'), lambda x: train(x)),
     (re.compile('^สอน[ ]*(.*)$'), lambda x: train(x)),
+    (re.compile('^หาตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
+    (re.compile('^ตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
+    (re.compile('^[tT]icket[ ]*(.*)$'), lambda x: ticket(x)),
 )
 
 def usage():
-    response="คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\nหาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\nGoogle search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\nhelp\n  แสดงข้อความนี้\nTrain Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อมความ>,<ข้อมความ>"
+    response="""1)คุยเล่น
+                    พิมพ์ห่าอะไรมาก็ได้กูตอบได้
+                2)หาโลเคชั่น
+                    พิกัด <สถานที่>
+                    location <สถานที่>
+                    ที่อยู่ <สถานที่>
+                3)Google search
+                    ค้นหา <สิ่งที่อยากจะหา>
+                    หา <สิ่งที่อยากจะหา>
+                    google <สิ่งที่อยากจะหา>
+                    กูเกิ้ล <สิ่งที่อยากจะหา>
+                4)Ticket search
+                    หาตั๋ว <สถามที่>
+                    ตั๋ว <สถามที่>
+                    ticket <สถามที่>
+                4)help
+                    แสดงข้อความนี้
+                5)Train Bot สอนกูแต่เรื่องดีๆนะมึง
+                    train <ข้อความ>,<ข้อความ>,<ข้อความ>
+    """
+    #response="1)คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\n2)หาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\n3)Google search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\n4)help\n  แสดงข้อความนี้\n5)Train Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อความ>,<ข้อความ>"
+    message = TextSendMessage(text=response)
+    return message
+
+def ticket(x):
+    response="อีหอยใช้กูจังเลยนะ กูขี้เกียจหา"
     message = TextSendMessage(text=response)
     return message
 
@@ -112,12 +144,14 @@ def train(x):
     msglist = x.split(",")
     print msglist
     bot.train(msglist)
-    response="สอนกูแต่เรื่องดีๆนะมึง อีดอก"
+    response=random.choice(TRAIN_REPLY_MESSAGE)
     message = TextSendMessage(text=response)
     return message
 
 def location(text):
-
+    # Search location
+    response=random.choice(LOCATION_REPLY_MESSAGE)
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     g = geocoder.google(text)
     #print g.latlng
     title=text[:100]
@@ -132,6 +166,9 @@ def location(text):
 
 
 def googleSearch(text):
+    # Search location
+    response=random.choice(SEARCH_REPLY_MESSAGE)
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     g = google.search(text)
     columns = []
     i = 0
