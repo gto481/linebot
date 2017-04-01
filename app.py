@@ -115,25 +115,25 @@ commands = (
 
 def usage():
     response="""
-    1)คุยเล่น
-        พิมพ์ห่าอะไรมาก็ได้กูตอบได้
-    2)Location
-        พิกัด <สถานที่>
-        location <สถานที่>
-        ที่อยู่ <สถานที่>
-    3)Google search
-        ค้นหา <สิ่งที่อยากจะหา>
-        หา <สิ่งที่อยากจะหา>
-        google <สิ่งที่อยากจะหา>
-        กูเกิ้ล <สิ่งที่อยากจะหา>
-    4)Ticket search
-        หาตั๋ว <สถานที่>
-        ตั๋ว <สถานที่>
-        ticket <สถานที่>
-    4)Help
-        แสดงข้อความนี้
-    5)Train Bot สอนกูแต่เรื่องดีๆนะมึง
-        train <ข้อความ>,<ข้อความ>,<ข้อความ>
+1)คุยเล่น
+    พิมพ์ห่าอะไรมาก็ได้กูตอบได้
+2)Location
+    พิกัด <สถานที่>
+    location <สถานที่>
+    ที่อยู่ <สถานที่>
+3)Google search
+    ค้นหา <สิ่งที่อยากจะหา>
+    หา <สิ่งที่อยากจะหา>
+    google <สิ่งที่อยากจะหา>
+    กูเกิ้ล <สิ่งที่อยากจะหา>
+4)Ticket search
+    หาตั๋ว <สถานที่>
+    ตั๋ว <สถานที่>
+    ticket <สถานที่>
+4)Help
+    แสดงข้อความนี้
+5)Train Bot สอนกูแต่เรื่องดีๆนะมึง
+    train <ข้อความ>,<ข้อความ>,<ข้อความ>
     """
     #response="1)คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\n2)หาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\n3)Google search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\n4)help\n  แสดงข้อความนี้\n5)Train Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อความ>,<ข้อความ>"
     message = TextSendMessage(text=response)
@@ -141,30 +141,26 @@ def usage():
 
 def ticket(x):
 
-    print "ticket"
+    # Fix get data from skyr
     with open('ticketout.json') as data_file:
         data = json.load(data_file)
     #pprint(data)
     i = 0
     columns = []
-    print "get data"
     list_results = list(data['results'])
     list_records = list(list(list_results))
-    print "get Records"
     for r in list_records:
         i += 1
         if (i > 5):
             break
-        #print r
-        #m = eval(r)
         #title=r['Agency_Name']
         #print title
         text="""
 In {0}
 Dep. {1} @{2}
-Out {5}
-Dep. {6} @{7}
-{10}{11}
+Out {3}
+Dep. {4} @{5}
+{6}{7}
         """.format(r['Inbound_Airline'],
             r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
             #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
