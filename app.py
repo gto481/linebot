@@ -138,7 +138,7 @@ def googleSearch(text):
     #try:
     for r in g:
         i += 1
-        if ( i > 2):
+        if ( i > 5):
             break
         if r is not None:
             print r.google_link
