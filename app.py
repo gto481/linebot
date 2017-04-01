@@ -183,10 +183,10 @@ def imageSearch(text):
             print url
             thumb = r['thumb']
             print thumb
-            #image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+            image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
             #image = ImageSendMessage(original_content_url=url)
-            #images.append(image)
-            #print image
+            images.append(image)
+            print image
 
     #template_message = random.choice(images)
     #return template_message
