@@ -176,6 +176,7 @@ def imageSearch(text):
     g = search_image.getImage(text)
     print "get image"
     i = 0
+    images=[]
     for r in g:
         i += 1
         if ( i > 5):
@@ -185,12 +186,13 @@ def imageSearch(text):
             print url
             thumb = r['thumb']
             print thumb
-    #image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-    #images.append(image)
-    #template_message = random.choice(images)
-    #return template_message
-    response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-    return TextSendMessage(text=response)
+            image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
+            images.append(image)
+
+    template_message = random.choice(images)
+    return template_message
+    #response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
+    #return TextSendMessage(text=response)
 
 def googleSearch(text):
     # Search location
