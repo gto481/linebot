@@ -33,6 +33,7 @@ def train(bot=bot, x=None):
     # Training bot with incoming message
     response=random.choice(BROKEN_MESSAGE)
     message = TextSendMessage(text=response)
+    print message
 
     if x is not None:
         msglist = x.split(",")
