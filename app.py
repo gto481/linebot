@@ -52,6 +52,7 @@ from google import google
 import pprint
 import random
 #import search_image
+import train_bot
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -180,12 +181,13 @@ Dep. {6}@{7}""".format(r['Total_Price'],r['Currency'],
 
 def train(x):
     # Training bot with incoming message
-    msglist = x.split(",")
-    print msglist
-    bot.train(msglist)
-    response=random.choice(TRAIN_REPLY_MESSAGE)
-    message = TextSendMessage(text=response)
-    return message
+    # msglist = x.split(",")
+    # print msglist
+    # bot.train(msglist)
+    # response=random.choice(TRAIN_REPLY_MESSAGE)
+    # message = TextSendMessage(text=response)
+    # return message
+    return train_bot.train(x)
 
 def location(text):
     # Search location

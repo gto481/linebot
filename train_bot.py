@@ -26,7 +26,7 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-def train(text):
+def trainBot(text):
      # Training bot with incoming message
     msglist = x.split(",")
     print msglist
