@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from chatterbot import ChatBot
 import train_bot
+import location_bot
 
 bot = ChatBot('LineBot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -21,3 +22,10 @@ bot = ChatBot('LineBot',
 
 message = train_bot.train(bot,"hello,what the fuck")
 print message
+
+
+message = train_bot.train(bot,"hello,what the fuck")
+print message
+
+msg = location_bot.location(bot, "whitehouse")
+print msg

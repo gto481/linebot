@@ -203,7 +203,7 @@ def location(text):
     #     response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
     #     message = TextSendMessage(text=response)
     print "get location"
-    message = location.location(bot, text)
+    message = location_bot.location(bot, text)
     return message
 
 def imageSearch(text):
