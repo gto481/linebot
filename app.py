@@ -47,12 +47,13 @@ import urllib
 # from nltk.corpus import wordnet
 from chatterbot import ChatBot
 #import geocoder
-from google import google
+#from google import google
 import pprint
 import random
 #import search_image
 import train_bot
 import location_bot
+import google_search
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -180,28 +181,13 @@ Dep. {6}@{7}""".format(r['Total_Price'],r['Currency'],
 
 def train(x):
     # Training bot with incoming message
-    # msglist = x.split(",")
-    # print msglist
-    # bot.train(msglist)
-    # response=random.choice(TRAIN_REPLY_MESSAGE)
-    # message = TextSendMessage(text=response)
-    # return message
+    # Call file train_bot.py
     message = train_bot.train(bot, x)
     return message
 
 def location(text):
     # Search location
-    # #response=random.choice(LOCATION_REPLY_MESSAGE)
-    # #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-    # g = geocoder.google(text)
-    # #print g.latlng
-    # title=text[:100]
-    # address=g.address[:100]
-    # if g is not None:
-    #     message = LocationMessage(title=title, address=address, latitude=g.lat, longitude=g.lng)
-    # else:
-    #     response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-    #     message = TextSendMessage(text=response)
+    # Call file location_bot.py
     message = location_bot.location(bot, text)
     return message
 
@@ -231,44 +217,9 @@ def imageSearch(text):
     return TextSendMessage(text=response)
 
 def googleSearch(text):
-    # Search location
-    #response=random.choice(SEARCH_REPLY_MESSAGE)
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-    g = google.search(text)
-    columns = []
-    i = 0
-    #try:
-    for r in g:
-        i += 1
-        if ( i > 5):
-            break
-        if r is not None:
-            #print r.google_link
-            url = r.google_link
-            title=r.name[:40]
-            text=r.description[:60]
-            cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
-            columns.append(cc)
-
-    carousel_template = CarouselTemplate(columns=columns)
-    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
-    # carousel_template = CarouselTemplate(columns=[
-    #         CarouselColumn(text='hoge1', title='fuga1', actions=[
-    #             URITemplateAction(
-    #                 label='Go to line.me', uri='https://line.me'),
-    #             PostbackTemplateAction(label='ping', data='ping')
-    #         ]),
-    #         CarouselColumn(text='hoge2', title='fuga2', actions=[
-    #             PostbackTemplateAction(
-    #                 label='ping with text', data='ping',
-    #                 text='ping'),
-    #             MessageTemplateAction(label='Translate Rice', text='米')
-    #         ]),
-    #     ])
-    # template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
-    #except Exception:
-    #    response="ค้นหาไม่ได้วะ โทษที กูโง่"
-    #    template_message = TextSendMessage(text=response)
+    # Search
+    # file google_search.py
+    template_message = google_search(bot, text)
     return template_message
 
 @app.route("/callback", methods=['POST'])
