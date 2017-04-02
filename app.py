@@ -187,7 +187,7 @@ def train(x):
     # message = TextSendMessage(text=response)
     # return message
     print "training mode"
-    message = train_bot.train(x)
+    message = train_bot.train(bot, x)
     print message
     return message
 
