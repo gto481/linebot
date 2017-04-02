@@ -20,7 +20,7 @@ import logging
 import random
 import geocoder
 
-from linebot.models import TextSendMessage, SendMessage, LocationMessage
+from linebot.models import TextSendMessage, LocationMessage
 
 # Uncomment the following line to enable verbose logging
 # logging.basicConfig(level=logging.INFO)
@@ -46,8 +46,8 @@ def location(bot=bot, text=None):
     # Search location
     #response=random.choice(LOCATION_REPLY_MESSAGE)
     #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-    print "start get location"
-    message = SendMessage()
+    print "start get location " + text
+    message = None
     try:
         g = geocoder.google(text)
         #print g.latlng
