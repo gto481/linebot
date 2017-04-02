@@ -46,13 +46,13 @@ import urllib
 # import nltk.stem.snowball
 # from nltk.corpus import wordnet
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
 import geocoder
 from google import google
 import pprint
 import random
 #import search_image
 import train_bot
+import location
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -186,25 +186,23 @@ def train(x):
     # response=random.choice(TRAIN_REPLY_MESSAGE)
     # message = TextSendMessage(text=response)
     # return message
-    print "training mode"
     message = train_bot.train(bot, x)
-    print message
     return message
 
 def location(text):
     # Search location
-    #response=random.choice(LOCATION_REPLY_MESSAGE)
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-    g = geocoder.google(text)
-    #print g.latlng
-    title=text[:100]
-    address=g.address[:100]
-    if g is not None:
-        message = LocationMessage(title=title, address=address, latitude=g.lat, longitude=g.lng)
-    else:
-        response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-        message = TextSendMessage(text=response)
-
+    # #response=random.choice(LOCATION_REPLY_MESSAGE)
+    # #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+    # g = geocoder.google(text)
+    # #print g.latlng
+    # title=text[:100]
+    # address=g.address[:100]
+    # if g is not None:
+    #     message = LocationMessage(title=title, address=address, latitude=g.lat, longitude=g.lng)
+    # else:
+    #     response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
+    #     message = TextSendMessage(text=response)
+    message = location.location(bot, text)
     return message
 
 def imageSearch(text):

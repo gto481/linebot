@@ -32,7 +32,6 @@ bot = ChatBot('LineBot',
 def train(bot=bot, x=None):
     # Training bot with incoming message
     msglist = x.split(",")
-    print msglist
     bot.set_trainer(ListTrainer)
     bot.train(msglist)
     response=random.choice(TRAIN_REPLY_MESSAGE)
