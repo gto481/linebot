@@ -47,6 +47,7 @@ def location(bot=bot, text=None):
     #response=random.choice(LOCATION_REPLY_MESSAGE)
     #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     #print "start get location " + text
+    print "get location"
     message = None
     try:
         g = geocoder.google(text)
@@ -64,5 +65,5 @@ def location(bot=bot, text=None):
 
 if __name__ == "__main__":
 
-    msg = location(bot, "whitehouse")
+    msg = location(bot, "บ้านป๋าเปรม")
     print msg

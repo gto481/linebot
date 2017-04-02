@@ -46,7 +46,7 @@ import urllib
 # import nltk.stem.snowball
 # from nltk.corpus import wordnet
 from chatterbot import ChatBot
-import geocoder
+#import geocoder
 from google import google
 import pprint
 import random
@@ -202,7 +202,6 @@ def location(text):
     # else:
     #     response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
     #     message = TextSendMessage(text=response)
-    print "get location"
     message = location_bot.location(bot, text)
     return message
 

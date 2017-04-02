@@ -20,12 +20,8 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-message = train_bot.train(bot,"hello,what the fuck")
-print message
+#message = train_bot.train(bot,"hello,what the fuck")
+#print message
 
-
-message = train_bot.train(bot,"hello,what the fuck")
-print message
-
-msg = location_bot.location(bot, "whitehouse")
+msg = location_bot.location(bot, "บ้านป๋าเปรม")
 print msg
