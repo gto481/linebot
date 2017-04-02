@@ -54,6 +54,7 @@ import random
 import train_bot
 import location_bot
 import google_search
+import ticket_bot
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -141,43 +142,10 @@ def usage():
     return message
 
 def ticket(x):
-
     # Fix get data from skyr
-    with open('ticketout.json') as data_file:
-        data = json.load(data_file)
-    #pprint(data)
-    i = 0
-    columns = []
-    list_results = list(data['results'])
-    list_records = list(list(list_results))
-    for r in list_records:
-        i += 1
-        if (i > 5):
-            break
-        #title=r['Agency_Name']
-        #print title
-        text="""{0}{1}
-Out {2}
-Dep. {3}@{4}
-In {5}
-Dep. {6}@{7}""".format(r['Total_Price'],r['Currency'],
-            r['Outbound_Airline'],
-            #r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
-            r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],
-            r['Inbound_Airline'],
-            r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
-            #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
-            )
-        text = text[:100]
-        url = r['Reservation_Link']
-        cc = CarouselColumn(text=text, actions=[URITemplateAction(label='Book', uri=url)])
-        columns.append(cc)
-
-    carousel_template = CarouselTemplate(columns=columns)
-    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
-    # response="อีหอยใช้กูจังเลยนะ กูขี้เกียจหา"
-    # message = TextSendMessage(text=response)
-    return template_message
+    # Call file ticket_bot.py
+    message = ticket_bot.getTicket(bot, x)
+    return message
 
 def train(x):
     # Training bot with incoming message
@@ -185,10 +153,10 @@ def train(x):
     message = train_bot.train(bot, x)
     return message
 
-def location(text):
+def location(x):
     # Search location
     # Call file location_bot.py
-    message = location_bot.location(bot, text)
+    message = location_bot.location(bot, x)
     return message
 
 def imageSearch(text):
@@ -219,7 +187,6 @@ def imageSearch(text):
 def googleSearch(text):
     # Search
     # file google_search.py
-    print "Searching"
     template_message = google_search.search(bot, text)
     return template_message
 

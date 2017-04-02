@@ -17,7 +17,7 @@
 
 from chatterbot import ChatBot
 import logging
-from google import google
+import json
 
 from linebot.models import TextSendMessage, LocationMessage
 
@@ -54,48 +54,50 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-def search(bot=bot, text=None):
-    # Search location
-    #response=random.choice(SEARCH_REPLY_MESSAGE)
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-    g = google.search(text)
-    columns = []
-    i = 0
-    #try:
-    for r in g:
-        i += 1
-        if ( i > 5):
-            break
-        if r is not None:
-            #print r.google_link
-            url = r.google_link
-            title=r.name[:40]
-            text=r.description[:60]
-            cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
+def getTicket(bot=bot, input=None):
+
+    # Fix get data from skyr
+    message = None
+    try:
+        with open('ticketout.json') as data_file:
+            data = json.load(data_file)
+        #pprint(data)
+        i = 0
+        columns = []
+        list_results = list(data['results'])
+        list_records = list(list(list_results))
+        for r in list_records:
+            i += 1
+            if (i > 5):
+                break
+            #title=r['Agency_Name']
+            #print title
+            description="""{0}{1}
+Out {2}
+Dep. {3}@{4}
+In {5}
+Dep. {6}@{7}""".format(r['Total_Price'],r['Currency'],
+                r['Outbound_Airline'],
+                #r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],
+                r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],
+                r['Inbound_Airline'],
+                r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],
+                #r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
+                )
+            description = description[:100]
+            url = r['Reservation_Link']
+            cc = CarouselColumn(text=description, actions=[URITemplateAction(label='Book', uri=url)])
             columns.append(cc)
 
-    carousel_template = CarouselTemplate(columns=columns)
-    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
-    # carousel_template = CarouselTemplate(columns=[
-    #         CarouselColumn(text='hoge1', title='fuga1', actions=[
-    #             URITemplateAction(
-    #                 label='Go to line.me', uri='https://line.me'),
-    #             PostbackTemplateAction(label='ping', data='ping')
-    #         ]),
-    #         CarouselColumn(text='hoge2', title='fuga2', actions=[
-    #             PostbackTemplateAction(
-    #                 label='ping with text', data='ping',
-    #                 text='ping'),
-    #             MessageTemplateAction(label='Translate Rice', text='米')
-    #         ]),
-    #     ])
-    # template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
-    #except Exception:
-    #    response="ค้นหาไม่ได้วะ โทษที กูโง่"
-    #    template_message = TextSendMessage(text=response)
-    return template_message
+        carousel_template = CarouselTemplate(columns=columns)
+        message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
+    except:
+        response=random.choice(BROKEN_MESSAGE)
+        message = TextSendMessage(text=response)
+
+    return message
 
 if __name__ == "__main__":
 
-    msg = search(bot, u"บ้านป๋าเปรม")
+    msg = getTicket(bot, u"vietnum")
     print msg
