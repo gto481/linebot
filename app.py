@@ -219,7 +219,8 @@ def imageSearch(text):
 def googleSearch(text):
     # Search
     # file google_search.py
-    template_message = google_search(bot, text)
+    print "Searching"
+    template_message = google_search.search(bot, text)
     return template_message
 
 @app.route("/callback", methods=['POST'])

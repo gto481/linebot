@@ -58,6 +58,7 @@ def search(bot=bot, text=None):
     # Search location
     #response=random.choice(SEARCH_REPLY_MESSAGE)
     #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+    print "start search"
     g = google.search(text)
     columns = []
     i = 0
