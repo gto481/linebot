@@ -1,12 +1,23 @@
 # -*- coding: utf-8 -*-
 from chatterbot import ChatBot
+import train_bot
 
-chatbot = ChatBot(
-    'LineBot',
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
+bot = ChatBot('LineBot',
+    storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
+    logic_adapters=[
+        'chatterbot.logic.BestMatch',
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter'
+    ],
+    filters=[
+        'chatterbot.filters.RepetitiveResponseFilter'
+    ],
+    input_adapter="chatterbot.input.VariableInputTypeAdapter",
+    output_adapter="chatterbot.output.OutputAdapter",
+    output_format="text",
+    database='heroku_h80dpwn6',
+    database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
-chatbot.train("chatterbot.corpus.thai")
 
-text = unicode(u"เฮโหล")
-response = chatbot.get_response(text)
-print response.text.encode('utf-8')
+message = train_bot.train(bot,"hello,what the fuck")
+print message

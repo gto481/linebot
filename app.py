@@ -178,7 +178,7 @@ Dep. {6}@{7}""".format(r['Total_Price'],r['Currency'],
     # message = TextSendMessage(text=response)
     return template_message
 
-def train(x):
+def train(bot, x):
     # Training bot with incoming message
     # msglist = x.split(",")
     # print msglist
@@ -186,7 +186,10 @@ def train(x):
     # response=random.choice(TRAIN_REPLY_MESSAGE)
     # message = TextSendMessage(text=response)
     # return message
-    return train_bot.train(x)
+    print "training mode"
+    message = train_bot.train(x)
+    print message
+    return message
 
 def location(text):
     # Search location

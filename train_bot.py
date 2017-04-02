@@ -12,6 +12,7 @@ from linebot.models import TextSendMessage
 # logging.basicConfig(level=logging.INFO)
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
+BROKEN_MESSAGE=["กูมึนวะไม่รู้เรื่อง","กูเจ๊งแป๊บบ"]
 
 # Create a new ChatBot instance
 bot = ChatBot('LineBot',
@@ -28,14 +29,18 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-def train(text):
-     # Training bot with incoming message
-    msglist = x.split(",")
-    print msglist
-    bot.set_trainer(ListTrainer)
-    bot.train(msglist)
-    response=random.choice(TRAIN_REPLY_MESSAGE)
+def train(bot=bot, x=None):
+    # Training bot with incoming message
+    response=random.choice(BROKEN_MESSAGE)
     message = TextSendMessage(text=response)
+
+    if x is not None:
+        msglist = x.split(",")
+        print msglist
+        bot.set_trainer(ListTrainer)
+        bot.train(msglist)
+        response=random.choice(TRAIN_REPLY_MESSAGE)
+        message = TextSendMessage(text=response)
     return message
 
 if __name__ == "__main__":
