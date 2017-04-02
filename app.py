@@ -90,7 +90,6 @@ bot = ChatBot('LineBot',
     database='heroku_h80dpwn6',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
-bot.set_trainer(ListTrainer)
 msglist = []
 
 commands = (

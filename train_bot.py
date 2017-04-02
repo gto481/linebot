@@ -3,6 +3,8 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import logging
 import sys
+import random
+import json
 
 from linebot.models import TextSendMessage
 
@@ -30,6 +32,7 @@ def train(text):
      # Training bot with incoming message
     msglist = x.split(",")
     print msglist
+    bot.set_trainer(ListTrainer)
     bot.train(msglist)
     response=random.choice(TRAIN_REPLY_MESSAGE)
     message = TextSendMessage(text=response)
