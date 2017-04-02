@@ -46,13 +46,15 @@ def location(bot=bot, text=None):
     # Search location
     #response=random.choice(LOCATION_REPLY_MESSAGE)
     #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-
+    print "start get location"
     message = SendMessage()
     try:
         g = geocoder.google(text)
         #print g.latlng
         title=text[:100]
         address=g.address[:100]
+        print title
+        print address
         message = LocationMessage(title=title, address=address, latitude=g.lat, longitude=g.lng)
     except:
         response=random.choice(BROKEN_MESSAGE)

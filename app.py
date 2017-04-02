@@ -202,6 +202,7 @@ def location(text):
     # else:
     #     response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
     #     message = TextSendMessage(text=response)
+    print "get location"
     message = location.location(bot, text)
     return message
 
