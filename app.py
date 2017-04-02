@@ -41,16 +41,12 @@ from linebot.models import (
 import json
 import re
 import urllib
-# import nltk.corpus
-# import nltk.tokenize.punkt
-# import nltk.stem.snowball
-# from nltk.corpus import wordnet
 from chatterbot import ChatBot
 #import geocoder
 #from google import google
 import pprint
 import random
-#import search_image
+import search_image
 import train_bot
 import location_bot
 import google_search
@@ -141,48 +137,32 @@ def usage():
     message = TextSendMessage(text=response)
     return message
 
-def ticket(x):
+def ticket(text):
     # Fix get data from skyr
     # Call file ticket_bot.py
-    message = ticket_bot.getTicket(bot, x)
+    message = ticket_bot.getTicket(bot, text)
     return message
 
-def train(x):
+def train(text):
     # Training bot with incoming message
     # Call file train_bot.py
-    message = train_bot.train(bot, x)
+    message = train_bot.train(bot, text)
     return message
 
-def location(x):
+def location(text):
     # Search location
     # Call file location_bot.py
-    message = location_bot.location(bot, x)
+    message = location_bot.location(bot, text)
     return message
 
 def imageSearch(text):
-
-    #g = search_image.getImage(text)
-    #i = 0
-    #images=[]
-    #for r in g:
-    #    i += 1
-    #    if ( i > 5):
-        #     break
-        # if r is not None:
-        #     url = r['link']
-        #     print url
-        #     thumb = r['thumb']
-        #     print thumb
-        #     image = ImageSendMessage(original_content_url=url, preview_image_url=thumb)
-        #     #image = ImageSendMessage(original_content_url=url)
-        #     images.append(image)
-        #     #print image
-
-    #template_message = random.choice(images)
-    #return template_message
-    #response="ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"
-    response="ปิดfunctionนี้ก่อนนะ ตังค์เราหมด"
-    return TextSendMessage(text=response)
+    # Search Image,
+    # beware only 100 query per day
+    # call file search_image.py
+    #response="ปิดfunctionนี้ก่อนนะ ตังค์เราหมด"
+    #return TextSendMessage(text=response)
+    message = search_image.getImage(bot, text)
+    return message
 
 def googleSearch(text):
     # Search
