@@ -111,7 +111,7 @@ commands = (
     (re.compile('^ตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^[tT]icket[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^(มุขตลก)[ ]*(.*)$'), lambda x: joke(x)),
-    (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),    
+    (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^([jJ]oke)[ ]*(.*)$'), lambda x: joke(x)),
 )
 
@@ -135,7 +135,7 @@ def usage():
 5)Joke
     มุขตลก
     มุข
-    joke   
+    joke
 6)Help
     แสดงข้อความนี้
 7)Train Bot สอนกูแต่เรื่องดีๆนะมึง
@@ -217,16 +217,14 @@ def callback():
                 flag = False
 
                 for matcher, action in commands:
-                    try:                        
+                    try:
                         m = matcher.search(msg)
                         if (msg == 'userinfo'):
                             flag = True
-                            print "get userinfo"                            
-                            print str(event.source.userId)
-                            msg = TextSendMessage(text="hello")
-                            break                            
+                            msg = TextSendMessage(text=event.source.user_id)
+                            break
 
-                        if m:                            
+                        if m:
                             flag = True
                             text = m.group(1)
                             # line_bot_api.reply_message(
