@@ -151,11 +151,11 @@ def ticket(text):
     message = ticket_bot.getTicket(bot, text)
     return message
 
-def userinfo(event):
+def userinfo(text):
     # Training bot with incoming message
     # Call file train_bot.py
-    userid = event.userid
-    message = TextSendMessage(text=userid)
+    print text    
+    message = TextSendMessage(text=text)
     return message    
 
 def train(text):
@@ -225,8 +225,10 @@ def callback():
                     try:                        
                         m = matcher.search(msg)
                         if (msg == 'userinfo'):
+                            print "get userinfo"
+                            print event.userid
                             flag = True
-                            msg = userinfo(event)
+                            msg = userinfo(event.userid)
                         if m:                            
                             flag = True
                             text = m.group(1)
