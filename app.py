@@ -51,6 +51,7 @@ import train_bot
 import location_bot
 import google_search
 import ticket_bot
+import twitter_bot
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -109,6 +110,9 @@ commands = (
     (re.compile('^หาตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^ตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^[tT]icket[ ]*(.*)$'), lambda x: ticket(x)),
+    (re.compile('^(มุขตลก)$'), lambda x: joke(x)),
+    (re.compile('^(มุข)$'), lambda x: joke(x)),    
+    (re.compile('^([jJ]oke)$'), lambda x: joke(x)),
 )
 
 def usage():
@@ -169,6 +173,12 @@ def googleSearch(text):
     # file google_search.py
     template_message = google_search.search(bot, text)
     return template_message
+
+def joke(text):
+    # call file twitter_bot.py
+    message = twitter_bot.search(bot, text=u"#มุขตลก")
+    return message
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
