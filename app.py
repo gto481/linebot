@@ -218,11 +218,10 @@ def callback():
                     try:                        
                         m = matcher.search(msg)
                         if (msg == 'userinfo'):
-                            print "get userinfo"
-                            text = event.source.userId
-                            print event.source.userId
                             flag = True
-                            msg = TextSendMessage(text=text)
+                            print "get userinfo"                            
+                            print event.source.userId                      
+                            msg = TextSendMessage(text="hello")
                             break                            
 
                         if m:                            
@@ -234,7 +233,7 @@ def callback():
                             msg = action(text)
                             break
 
-                    except Exception:
+                    except:
                         response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
                         msg = TextSendMessage(text=response)
