@@ -110,9 +110,9 @@ commands = (
     (re.compile('^หาตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^ตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^[tT]icket[ ]*(.*)$'), lambda x: ticket(x)),
-    (re.compile('^(มุขตลก)$'), lambda x: joke(x)),
-    (re.compile('^(มุข)$'), lambda x: joke(x)),    
-    (re.compile('^([jJ]oke)$'), lambda x: joke(x)),
+    (re.compile('^(มุขตลก)[ ]*(.*)$'), lambda x: joke(x)),
+    (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),    
+    (re.compile('^([jJ]oke)[ ]*(.*)$'), lambda x: joke(x)),
 )
 
 def usage():
@@ -150,6 +150,13 @@ def ticket(text):
     # Call file ticket_bot.py
     message = ticket_bot.getTicket(bot, text)
     return message
+
+def userinfo(event):
+    # Training bot with incoming message
+    # Call file train_bot.py
+    userid = event.userid
+    message = TextSendMessage(text=userid)
+    return message    
 
 def train(text):
     # Training bot with incoming message
@@ -215,9 +222,12 @@ def callback():
                 flag = False
 
                 for matcher, action in commands:
-                    try:
+                    try:                        
                         m = matcher.search(msg)
-                        if m:
+                        if (msg == 'userinfo'):
+                            flag = True
+                            msg = userinfo(event)
+                        if m:                            
                             flag = True
                             text = m.group(1)
                             # line_bot_api.reply_message(
