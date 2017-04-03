@@ -226,7 +226,7 @@ def callback():
                         m = matcher.search(msg)
                         if (msg == 'userinfo'):
                             print "get userinfo"
-                            text = event.source.userid
+                            text = event.source.userId
                             print text
                             flag = True
                             msg = userinfo(text)
