@@ -226,9 +226,10 @@ def callback():
                         m = matcher.search(msg)
                         if (msg == 'userinfo'):
                             print "get userinfo"
-                            print event.userid
+                            text = event.source.userid
+                            print text
                             flag = True
-                            msg = userinfo(event.userid)
+                            msg = userinfo(text)
                         if m:                            
                             flag = True
                             text = m.group(1)
