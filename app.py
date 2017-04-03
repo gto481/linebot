@@ -145,10 +145,10 @@ def usage():
     message = TextSendMessage(text=response)
     return message
 
-def ticket(text):
+def ticket(text, user_id=None):
     # Fix get data from skyr
     # Call file ticket_bot.py
-    message = ticket_bot.getTicket(bot, text)
+    message = ticket_bot.getTicket(bot, user_id, text)
     return message
 
 def train(text):
@@ -201,8 +201,7 @@ def callback():
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
         pprint.pprint(event)
-        source = event.source
-        print source.user_id
+        user_id = event.source.user_id
         if event.type == 'message':
 
             response="พิมพ์เหี้ยอะไรมา กูงง แสรด"

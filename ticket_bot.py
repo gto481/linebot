@@ -18,8 +18,10 @@
 from chatterbot import ChatBot
 import logging
 import json
+from datetime import datetime
 
-from linebot.models import TextSendMessage, LocationMessage
+from pymongo import MongoClient
+from linebot.models import TextSendMessage
 
 #from linebot.models import (
 #    MessageEvent, TextMessage, TextSendMessage,
@@ -39,6 +41,10 @@ from linebot.models import (TextSendMessage, TemplateSendMessage, URITemplateAct
 
 BROKEN_MESSAGE=["กูมึนวะไม่รู้เรื่อง","กูเจ๊งแป๊บบ", "ไม่รู้จักอะ โทษทีที่เรียนมาน้อย"]
 
+# Create a Mongo client
+client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
+db = client.heroku_h80dpwn6
+
 # Create a new ChatBot instance
 bot = ChatBot('LineBot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -57,6 +63,10 @@ bot = ChatBot('LineBot',
 def getTicket(bot=bot, input=None):
 
     # Fix get data from skyr
+
+    # 1) Search database check that user already ask for it or not
+
+
     message = None
     try:
         with open('ticketout.json') as data_file:
