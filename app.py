@@ -222,7 +222,9 @@ def callback():
                             text = event.source.userId
                             print event.source.userId
                             flag = True
-                            message = TextSendMessage(text=text)
+                            msg = TextSendMessage(text=text)
+                            break                            
+
                         if m:                            
                             flag = True
                             text = m.group(1)
@@ -231,6 +233,7 @@ def callback():
                             # )
                             msg = action(text)
                             break
+
                     except Exception:
                         response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                         #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
