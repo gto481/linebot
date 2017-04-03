@@ -71,7 +71,8 @@ def search(bot=bot, text=None):
             url = r.google_link
             title=r.name[:40]
             text=r.description[:60]
-            cc = CarouselColumn(text=text, title=title, thumbnail_image_url='/img/google.png', actions=[URITemplateAction(label='Go to website', uri=url)])
+            #cc = CarouselColumn(text=text, title=title, thumbnail_image_url='/img/google.png', actions=[URITemplateAction(label='Go to website', uri=url)])
+            cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
             columns.append(cc)
 
     carousel_template = CarouselTemplate(columns=columns)
