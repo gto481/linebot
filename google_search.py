@@ -57,26 +57,30 @@ bot = ChatBot('LineBot',
 def search(bot=bot, text=None):
     # Search location
     #response=random.choice(SEARCH_REPLY_MESSAGE)
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
-    g = google.search(text)
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))    
     columns = []
     i = 0
-    #try:
-    for r in g:
-        i += 1
-        if ( i > 5):
-            break
-        if r is not None:
-            #print r.google_link
-            url = r.google_link
-            title=r.name[:40]
-            text=r.description[:60]
-            #cc = CarouselColumn(text=text, title=title, thumbnail_image_url='/img/google.png', actions=[URITemplateAction(label='Go to website', uri=url)])
-            cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
-            columns.append(cc)
+    message = None
+    try:
+        g = google.search(text)
+        for r in g:
+            i += 1
+            if ( i > 5):
+                break
+            if r is not None:
+                #print r.google_link
+                url = r.google_link
+                title=r.name[:40]
+                text=r.description[:60]
+                #cc = CarouselColumn(text=text, title=title, thumbnail_image_url='/img/google.png', actions=[URITemplateAction(label='Go to website', uri=url)])
+                cc = CarouselColumn(text=text, title=title, actions=[URITemplateAction(label='Go to website', uri=url)])
+                columns.append(cc)
+        carousel_template = CarouselTemplate(columns=columns)
+        message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
 
-    carousel_template = CarouselTemplate(columns=columns)
-    template_message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
+    except:
+        message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
+    
     # carousel_template = CarouselTemplate(columns=[
     #         CarouselColumn(text='hoge1', title='fuga1', actions=[
     #             URITemplateAction(
@@ -91,10 +95,8 @@ def search(bot=bot, text=None):
     #         ]),
     #     ])
     # template_message = TemplateSendMessage(alt_text='Buttons alt text', template=carousel_template)
-    #except Exception:
-    #    response="ค้นหาไม่ได้วะ โทษที กูโง่"
-    #    template_message = TextSendMessage(text=response)
-    return template_message
+
+    return message
 
 if __name__ == "__main__":
 
