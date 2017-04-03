@@ -202,7 +202,7 @@ def callback():
     for event in events:
         pprint.pprint(event)
         source = event.source
-        print source
+        print source.user_id
         if event.type == 'message':
 
             response="พิมพ์เหี้ยอะไรมา กูงง แสรด"
