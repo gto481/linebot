@@ -201,8 +201,8 @@ def callback():
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
         pprint.pprint(event)
-        userid = event.source.userId
-        print userid
+        source = event.source
+        print source
         if event.type == 'message':
 
             response="พิมพ์เหี้ยอะไรมา กูงง แสรด"
