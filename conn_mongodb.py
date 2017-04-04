@@ -25,30 +25,34 @@ tickets = db.tickets
 
 #datetime.fromtimestamp(1462629479859/1000.0)
 
-result = db.tickets.insert_one(
-	{
-        "userid": "U206d25c2ea6bd87c17655609a1c37cb8",
-        "created_at" : datetime.now(),
-        "itinerary": [
-            {
-                "from" : "Thailand",
-                "to" : "Vietnum",
-                "depart_date": datetime.strptime("2017-04-10", "%Y-%m-%d"),
-                "arrive_date": datetime.strptime("2017-04-13", "%Y-%m-%d")
-            },
-        ]
-    }
-)
+# result = db.tickets.insert_one(
+# 	{
+#         "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
+#         "createdAt" : datetime.now(),
+#         "itinerary": [
+#             {
+#                 "from" : "Thailand",
+#                 "to" : "Vietnum",
+#                 "departDate": datetime.strptime("2017-04-10", "%Y-%m-%d"),
+#                 "arriveDate": datetime.strptime("2017-04-13", "%Y-%m-%d")
+#             },
+#         ],
+#         "isDeleted" : 0,
+#         "lastModified" : None,
+#     }
+# )
 
 lasthours = datetime.today() - timedelta(hours = 1)
 #yesterday = datetime.combine(yesterday, datetime.time.min)
 #print yesterday
 #tickets = db.tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8'})
-ticket = tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'created_at' : {'$gte' : lasthours}})
+ticket = tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$gte' : lasthours}})
 if ticket:
     pprint(ticket)
 else:
     print "empty result"
-    result = tickets.delete_many({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'created_at' : {'$lt' : lasthours}})
+    #result = tickets.delete_many({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'created_at' : {'$lt' : lasthours}})
+    result = tickets.update_many({'userId' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$lt' : lasthours}},
+        {"$set" : { "isDeleted" : "1" }, "$currentDate": {"lastModified": True} })
     print result
 

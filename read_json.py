@@ -14,28 +14,50 @@
 
 import json
 from pprint import pprint
+from operator import itemgetter
 
-with open('ticketout.json') as data_file:
+#with open('ticketout.json') as data_file:
+with open('ltf.txt') as data_file:
     data = json.load(data_file)
-pprint(data)
+#pprint(data)
 
 i = 0
 list_results = list(data['results'])
-list_records = list(list(list_results))
-for r in list_records:
-    i += 1
-    if (i > 5):
-        break
+new_list = []
+for r in list_results:
     #print r
-    #m = eval(r)
-    text="""
-        {0}
-        {1} @ {2}
-        {3} @ {4}
-        {5}
-        {6} @ {7}
-        {8} @ {9}
-        Price {10} {11}
-        """.format(r['Inbound_Airline'],r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
-        r['Outbound_Airline'],r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],r['Total_Price'],r['Currency'])
-    print text
+    new_dict = {}
+    for item in r:
+        d = dict(item)
+        for name in d:
+            #print name, d[name]
+            new_dict[name] = d[name]
+    new_list.append(new_dict)
+
+
+#list_records = list(list(list_results))
+#results = [ x for x in list_records if 'Total_Price' in x ]
+#for r in list_results:
+#    pprint(r)
+x = sorted(new_list, key=itemgetter('field12'))
+
+for r in x:
+    pprint(r)
+
+# for r in list_records:
+#     i += 1
+    # if (i > 5):
+    #     break
+    # #print r
+    # #m = eval(r)
+    # text="""
+    #     {0}
+    #     {1} @ {2}
+    #     {3} @ {4}
+    #     {5}
+    #     {6} @ {7}
+    #     {8} @ {9}
+    #     Price {10} {11}
+    #     """.format(r['Inbound_Airline'],r['Inbound_Departure_Airport'],r['Inbound_Departure_DT'],r['Inbound_Arrival_Airport'],r['Inbound_Arrival_DT'],
+    #     r['Outbound_Airline'],r['Outbound_Arrival_Airport'],r['Outbound_Arrival_DT'],r['Outbound_Departure_Airport'],r['Outbound_Departure_DT'],r['Total_Price'],r['Currency'])
+    # print text
