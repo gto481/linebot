@@ -8,6 +8,8 @@ skyscanner
 selenium
 google-api-python-client
 tweepy
+BeautifulSoup
+bs4
 
 ./pipsw/ChatterBot-0.6.0-py2.py3-none-any.whl
 ./pipsw/chatterbot_corpus-0.0.1-py2.py3-none-any.whl
