@@ -32,12 +32,13 @@ for r in list_results:
         d = dict(item)
         for name in d:
             #print name, d[name]
-            value = str(d[name])
-            new_name = str(name)
-            if re.match("^[+-]\d+?\.\d+?$", value):
+            value = str(d[name].strip())
+            new_name = str(name.strip())
+            if re.match("^[+-]*\d+?\.\d+?$", value):
                 new_dict[new_name] = float(value)
             else:
                 new_dict[new_name] = value
+
     new_list.append(new_dict)
 
 #for x in new_list:
