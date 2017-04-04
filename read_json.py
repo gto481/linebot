@@ -15,6 +15,7 @@
 import json
 from pprint import pprint
 from operator import itemgetter
+import re
 
 #with open('ticketout.json') as data_file:
 with open('ltf.txt') as data_file:
@@ -31,15 +32,22 @@ for r in list_results:
         d = dict(item)
         for name in d:
             #print name, d[name]
-            new_dict[name] = d[name]
+            value = str(d[name])
+            new_name = str(name)
+            if re.match("^[+-]\d+?\.\d+?$", value):
+                new_dict[new_name] = float(value)
+            else:
+                new_dict[new_name] = value
     new_list.append(new_dict)
 
+#for x in new_list:
+#    pprint(x)
 
 #list_records = list(list(list_results))
 #results = [ x for x in list_records if 'Total_Price' in x ]
 #for r in list_results:
 #    pprint(r)
-x = sorted(new_list, key=itemgetter('field12'))
+x = sorted(new_list, key=itemgetter('field12'), reverse=True)
 
 for r in x:
     pprint(r)
