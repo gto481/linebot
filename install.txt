@@ -1,0 +1,11 @@
+flask
+gunicorn
+geocoder
+pprint
+Google-Search-API
+skyscanner
+selenium
+google-api-python-client
+tweepy
+BeautifulSoup
+ChatterBot

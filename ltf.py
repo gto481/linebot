@@ -2,6 +2,8 @@
 import requests
 import json
 import re
+from pprint import pprint
+from operator import itemgetter
 from bs4 import BeautifulSoup
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE,SIG_DFL)
@@ -23,23 +25,32 @@ table = soup.find("table", id="fundsTable")
 table_body=table.find('tbody')
 rows = table_body.find_all('tr')
 for row in rows:
-	cols=row.find_all('td')
-	num_field=1
+    cols=row.find_all('td')
+    num_field=1
 #	cols=[{(num_field):x.text.strip()} for x in cols]
-	for x in cols:
-		value="field"+str(num_field)
-		y=re.sub('[%]','',x.text)
-		value_str =y.strip()
+    for col in cols:
+        value="field"+str(num_field)
+        y=re.sub('[%]','',col.text)
+        value_str = str(y).replace('\nD','').replace('\nT','').strip().rstrip().lstrip()
+        #print "value_str = {}".format(value_str)
         if re.match("^[+-]*\d+?\.\d+?$", value_str):
-            value = float(value_str)
+            value1 = float(value_str)
         else:
-            value = v
-		#new_cols.append({(value):y.strip()})
-		if (num_field==1):
-			new_cols.append({(value):value})
-		else:
-			new_cols[(list_no)][(value)]=value
-		num_field=num_field+1
-	list_no=list_no+1
+	       value1 = value_str
+        #new_cols.append({(value):y.strip()})
 
-print json.dumps({'results': new_cols})
+        #print "value = {}".format(value1)
+        if (num_field==1):
+            new_cols.append({(value):value1})
+        else:
+            new_cols[(list_no)][(value)]=value1
+
+        num_field=num_field+1
+
+    #print "new_cols = {}".format(new_cols)
+    list_no=list_no+1
+
+#data = json.dumps({'results': new_cols})
+x = sorted(new_cols, key=itemgetter('field12'), reverse=True)
+for r in x:
+    pprint(r)
