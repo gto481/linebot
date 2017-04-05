@@ -27,6 +27,7 @@ from chatterbot import ChatBot
 from linebot.models import (TextSendMessage)
 from pymongo import MongoClient
 from datetime import datetime, date, timedelta
+import random
 
 signal(SIGPIPE,SIG_DFL)
 
@@ -127,6 +128,7 @@ def getLTF():
         #data = json.dumps({'results': new_cols})
         result = sorted(new_cols, key=itemgetter('perf_5year'), reverse=True)
         ltf.insert_many(result)
+        ltf.create_index([("perf_5year", pymongo.DESCENDING)])
         #for r in x[:5]:
         #    pprint(r)
     #else:
@@ -140,11 +142,11 @@ def getLTFMessage(bot):
     try:
         result = getLTF()
         if result is not None and result.count() > 0:
-            text = "แม่งกากและยังโง่อีก\n"
+            text = "แม่งกากและยังโง่อีก\n\n"
             i = 0
             for r in result:
                 i += 1
-                text = text + "{0}: {1}, {2}, 5year {3}, 3year {4}, NAV {5}\n".format(i, r['mutual_fund'], r['institution'], r['perf_5year'], r['perf_3year'], r['NAV'])
+                text = text + "{0}) {1}, {2}, 5year {3}, 3year {4}, NAV {5}\n".format(i, r['mutual_fund'], r['institution'], r['perf_5year'], r['perf_3year'], r['NAV'])
             message = TextSendMessage(text=text)
     except:
         message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
