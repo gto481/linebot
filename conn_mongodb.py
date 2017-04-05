@@ -20,6 +20,7 @@ from datetime import datetime, date, timedelta
 client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
 db = client.heroku_h80dpwn6
 tickets = db.tickets
+xxx = db.xxx
 #statements = db.statements
 #pprint(statements.find_one({"text": "What's your name"}))
 
@@ -55,4 +56,3 @@ else:
     result = tickets.update_many({'userId' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$lt' : lasthours}},
         {"$set" : { "isDeleted" : "1" }, "$currentDate": {"lastModified": True} })
     print result
-

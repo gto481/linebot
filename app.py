@@ -52,6 +52,7 @@ import location_bot
 import google_search
 import ticket_bot
 import twitter_bot
+import ltf
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -113,6 +114,7 @@ commands = (
     (re.compile('^(มุขตลก)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^([jJ]oke)[ ]*(.*)$'), lambda x: joke(x)),
+    (re.compile('^([lL]tf)[ ]*(.*)$'), lambda x: ltfSearch(x)),
 )
 
 def usage():
@@ -136,9 +138,11 @@ def usage():
     มุขตลก
     มุข
     joke
-6)Help
+6)LTF
+    ltf
+7)Help
     แสดงข้อความนี้
-7)Train Bot สอนกูแต่เรื่องดีๆนะมึง
+8)Train Bot สอนกูแต่เรื่องดีๆนะมึง
     train <ข้อความ>,<ข้อความ>,<ข้อความ>
     """
     #response="1)คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\n2)หาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\n3)Google search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\n4)help\n  แสดงข้อความนี้\n5)Train Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อความ>,<ข้อความ>"
@@ -181,6 +185,10 @@ def googleSearch(text):
 def joke(text):
     # call file twitter_bot.py
     message = twitter_bot.search(bot, text=u"#มุขตลก")
+    return message
+
+def ltfSearch(text):
+    message = ltf.getLTFMessage(bot)
     return message
 
 

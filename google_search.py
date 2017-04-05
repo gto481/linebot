@@ -19,7 +19,7 @@ from chatterbot import ChatBot
 import logging
 from google import google
 
-from linebot.models import TextSendMessage, LocationMessage
+#from linebot.models import TextSendMessage, LocationMessage
 
 #from linebot.models import (
 #    MessageEvent, TextMessage, TextSendMessage,
@@ -57,7 +57,7 @@ bot = ChatBot('LineBot',
 def search(bot=bot, text=None):
     # Search location
     #response=random.choice(SEARCH_REPLY_MESSAGE)
-    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))    
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
     columns = []
     i = 0
     message = None
@@ -80,7 +80,7 @@ def search(bot=bot, text=None):
 
     except:
         message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
-    
+
     # carousel_template = CarouselTemplate(columns=[
     #         CarouselColumn(text='hoge1', title='fuga1', actions=[
     #             URITemplateAction(
