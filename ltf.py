@@ -4,7 +4,7 @@ import json
 import re
 from bs4 import BeautifulSoup
 from signal import signal, SIGPIPE, SIG_DFL
-signal(SIGPIPE,SIG_DFL) 
+signal(SIGPIPE,SIG_DFL)
 
 r = requests.get('http://www.thaifundstoday.com/en/funds?Fund+Type=ltf&tab=long&unit=p&sortcol=11')
 r.encoding = 'utf-8'
@@ -29,12 +29,16 @@ for row in rows:
 	for x in cols:
 		value="field"+str(num_field)
 		y=re.sub('[%]','',x.text)
-		y1=y.strip()
+		value_str =y.strip()
+        if re.match("^[+-]*\d+?\.\d+?$", value_str):
+            value = float(value_str)
+        else:
+            value = v
 		#new_cols.append({(value):y.strip()})
 		if (num_field==1):
-			new_cols.append({(value):y1})
-		else: 
-			new_cols[(list_no)][(value)]=y1
+			new_cols.append({(value):value})
+		else:
+			new_cols[(list_no)][(value)]=value
 		num_field=num_field+1
 	list_no=list_no+1
 

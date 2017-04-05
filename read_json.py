@@ -24,22 +24,22 @@ with open('ltf.txt') as data_file:
 
 i = 0
 list_results = list(data['results'])
-new_list = []
-for r in list_results:
-    #print r
-    new_dict = {}
-    for item in r:
-        d = dict(item)
-        for name in d:
-            #print name, d[name]
-            value = str(d[name].strip())
-            new_name = str(name.strip())
-            if re.match("^[+-]*\d+?\.\d+?$", value):
-                new_dict[new_name] = float(value)
-            else:
-                new_dict[new_name] = value
+# new_list = []
+# for r in list_results:
+#     #print r
+#     new_dict = {}
+#     for item in r:
+#         d = dict(item)
+#         for name in d:
+#             #print name, d[name]
+#             value = str(d[name].strip())
+#             new_name = str(name.strip())
+#             if re.match("^[+-]*\d+?\.\d+?$", value):
+#                 new_dict[new_name] = float(value)
+#             else:
+#                 new_dict[new_name] = value
 
-    new_list.append(new_dict)
+#     new_list.append(new_dict)
 
 #for x in new_list:
 #    pprint(x)
@@ -48,7 +48,7 @@ for r in list_results:
 #results = [ x for x in list_records if 'Total_Price' in x ]
 #for r in list_results:
 #    pprint(r)
-x = sorted(new_list, key=itemgetter('field12'), reverse=True)
+x = sorted(list_results, key=itemgetter('field12'), reverse=True)
 
 for r in x:
     pprint(r)
