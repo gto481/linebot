@@ -25,7 +25,7 @@ from signal import signal, SIGPIPE, SIG_DFL
 
 from chatterbot import ChatBot
 from linebot.models import (TextSendMessage)
-from pymongo import MongoClient
+from pymongo import MongoClient, DESCENDING, ASCENDING
 from datetime import datetime, date, timedelta
 import random
 
@@ -54,7 +54,7 @@ bot = ChatBot('LineBot',
 
 def checkDb():
     last10hours = datetime.today() - timedelta(hours = 10)
-    result = ltf.find({'created_at' : {'$gte' : last10hours}})
+    result = ltf.find({'created_at' : {'$gte' : last10hours}}).sort("perf_5year", DESCENDING)
     execute = ltf.delete_many({'created_at' : {'$lt' : last10hours}})
     return result
 
@@ -127,24 +127,31 @@ def getLTF():
 
         #data = json.dumps({'results': new_cols})
         result = sorted(new_cols, key=itemgetter('perf_5year'), reverse=True)
-        ltf.insert_many(result)
-        ltf.create_index([("perf_5year", pymongo.DESCENDING)])
+        try:
+            ltf.insert_many(result)
+            ltf.create_index([("perf_5year", DESCENDING)])
+        except:
+            pass
         #for r in x[:5]:
         #    pprint(r)
     #else:
+        #pprint(result)
+        # for r in result:
+        #     pprint(r)
+        #sorted(result, key=itemgetter('perf_5year'), reverse=True)
+        #pprint(result)
         #print "found record {}".format(result.count())
 
     return result[:5]
 
 def getLTFMessage(bot):
-    result = None
     message = None
     try:
-        result = getLTF()
-        if result is not None and result.count() > 0:
+        x = getLTF()
+        if x is not None and x.count() > 0:
             text = "แม่งกากและยังโง่อีก\n\n"
             i = 0
-            for r in result:
+            for r in x:
                 i += 1
                 text = text + "{0}) {1}, {2}, 5year {3}, 3year {4}, NAV {5}\n".format(i, r['mutual_fund'], r['institution'], r['perf_5year'], r['perf_3year'], r['NAV'])
             message = TextSendMessage(text=text)
@@ -163,6 +170,6 @@ if __name__ == "__main__":
 
     # result = checkDb()
     # if result.count() > 0:
-    #     print "found"
+    #     #print "found"
     #     for r in result[:5]:
     #         pprint(r)
