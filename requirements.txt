@@ -23,3 +23,4 @@ lxml
 ./pipsw/requests-2.13.0-py2.py3-none-any.whl
 ./pipsw/requests_oauthlib-0.8.0-py2.py3-none-any.whl
 ./pipsw/six-1.10.0-py2.py3-none-any.whl
+./pipsw/PyICU-1.9.5-cp27-cp27mu-linux_x86_64.whl
