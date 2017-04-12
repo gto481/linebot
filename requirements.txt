@@ -11,6 +11,7 @@ tweepy
 BeautifulSoup
 bs4
 lxml
+pythai
 
 ./pipsw/ChatterBot-0.6.0-py2.py3-none-any.whl
 ./pipsw/chatterbot_corpus-0.0.1-py2.py3-none-any.whl
