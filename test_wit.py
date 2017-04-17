@@ -71,7 +71,7 @@ def parse(bot=bot,text=None):
     try:
         print "Start parsing"
         print text
-        dateMessage = re.compile(ur'.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*'.encode('utf-8'))
+        dateMessage = re.compile(ur'.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*'.encode('utf-8'), re.UNICODE)
         dateFound = dateMessage.search(text)
         dateStr=None
         if dateFound:
@@ -81,7 +81,7 @@ def parse(bot=bot,text=None):
         else:
             print "found no date"
 
-        matcher = re.compile(ur'.*(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)'.encode('utf-8'))
+        matcher = re.compile(ur'.*(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)'.encode('utf-8'), , re.UNICODE)
         found = matcher.search(text)
         if found:
             print "found String"
