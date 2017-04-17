@@ -29,6 +29,6 @@ bot = ChatBot('LineBot',
 # print msg
 
 
-text = u"วันนี้อยากได้ตั๋วกทมไปเชียงใหม่".encode('utf-8')
+text = u"วันนี้อยากได้ตั๋วกทมไปเชียงใหม่"
 message = test_wit.parse(bot,text)
 pprint(message)
