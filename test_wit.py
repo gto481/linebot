@@ -67,6 +67,7 @@ access_token='RSM2P46QTNCZWHPHCUA55UAJNI7LIP73'
 #print('Yay, got Wit.ai response: ' + str(resp))
 
 def parse(bot=bot,text=None):
+    print text
     print "Start parsing"
     message=None
     dateMessage = re.compile('.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*')
