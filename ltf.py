@@ -144,7 +144,7 @@ def getLTF():
 
     return result[:5]
 
-def getLTFMessage(bot):
+def getLTFMessage(bot=bot):
     message = None
     try:
         x = getLTF()

@@ -115,6 +115,7 @@ commands = (
     (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^([jJ]oke)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^([lL]tf)[ ]*(.*)$'), lambda x: ltfSearch(x)),
+    (re.compile('^(test)[ ]*(.*)$'), lambda x: parsingText(x)),
 )
 
 def usage():
@@ -191,6 +192,9 @@ def ltfSearch(text):
     message = ltf.getLTFMessage(bot)
     return message
 
+def parsing(text):
+    message = test_wit.parse(bot,text)
+    return message
 
 @app.route("/callback", methods=['POST'])
 def callback():

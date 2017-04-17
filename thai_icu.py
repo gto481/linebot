@@ -11,7 +11,7 @@ def isThai(chr):
 def wrap(txt):
   txt = PyICU.UnicodeString(txt)
   bd = PyICU.BreakIterator.createWordInstance(PyICU.Locale("th"))
-  bd.setText(txt)   
+  bd.setText(txt)
   lastPos = bd.first()
   retTxt = PyICU.UnicodeString("")
   txt_list = []
@@ -25,7 +25,7 @@ def wrap(txt):
       if(isThai(txt[currentPos-1])):
         if(currentPos < len(txt)):
           if(isThai(txt[currentPos])):
-            #This is dummy word seperator   
+            #This is dummy word seperator
             #retTxt += PyICU.UnicodeString("|||")
             #
             pass
@@ -43,8 +43,10 @@ def fullwrap(txt):
     for i in txt_list:
         #new_list.extend(wrap(i).split('|||'))
         new_list.extend(wrap(i))
-        
+
     return new_list
 
-word='สวัสดีครับ ไปไหนมา'
-print (wrap(word))
+
+if __name__ == '__main__':
+    word='สวัสดีครับ ไปไหนมา'
+    print (wrap(word))
