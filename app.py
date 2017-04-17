@@ -115,7 +115,7 @@ commands = (
     (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^([jJ]oke)[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^([lL]tf)[ ]*(.*)$'), lambda x: ltfSearch(x)),
-    (re.compile('^(test)[ ]*(.*)$'), lambda x: parsingText(x)),
+    (re.compile('^([tT]est)[ ]*(.*)$'), lambda x: parsingText(x)),
 )
 
 def usage():
@@ -193,6 +193,7 @@ def ltfSearch(text):
     return message
 
 def parsing(text):
+    print "going to test parsing"
     message = test_wit.parse(bot,text)
     return message
 

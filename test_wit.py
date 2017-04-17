@@ -67,6 +67,7 @@ access_token='RSM2P46QTNCZWHPHCUA55UAJNI7LIP73'
 #print('Yay, got Wit.ai response: ' + str(resp))
 
 def parse(bot=bot,text=None):
+    print "Start parsing"
     message=None
     dateMessage = re.compile('.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*')
     dateFound = dateMessage.search(text)
@@ -75,6 +76,7 @@ def parse(bot=bot,text=None):
         dateStr=dateFound.group(1)
         text.replace(dateStr,'')
 
+    print dateStr
     matcher = re.compile('(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)')
     found = matcher.search(text)
     if found:
@@ -83,7 +85,7 @@ def parse(bot=bot,text=None):
         message = TextSendMessage(text=reply)
     else:
         message = TextSendMessage(text='What!!!')
-
+    print message
     return message
 
 if __name__ == "__main__":
