@@ -69,15 +69,16 @@ access_token='RSM2P46QTNCZWHPHCUA55UAJNI7LIP73'
 def parse(bot=bot,text=None):
     print "Start parsing"
     message=None
-    dateMessage = re.compile('.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*')
+    dateMessage = re.compile(ur'.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*')
     dateFound = dateMessage.search(text)
     dateStr=None
     if dateFound:
         dateStr=dateFound.group(1)
         text=text.replace(dateStr,'')
 
-    print dateStr
-    matcher = re.compile("(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)")
+    #print dateStr
+    print text
+    matcher = re.compile(ur'(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)')
     found = matcher.search(text)
     if found:
         print "found String"
@@ -91,5 +92,6 @@ def parse(bot=bot,text=None):
 
 if __name__ == "__main__":
 
-    msg = parse(bot,"วันนี้กูอยากได้ตั๋วกทมไปเชียงใหม่")
+    str = u"วันนี้กูอยากได้ตั๋วกทมไปเชียงใหม่".encode('utf-8')
+    msg = parse(bot,str)
     pprint(msg)
