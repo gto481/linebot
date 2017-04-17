@@ -2,6 +2,8 @@
 from chatterbot import ChatBot
 import train_bot
 import location_bot
+import test_wit
+from pprint import pprint
 
 bot = ChatBot('LineBot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -23,5 +25,10 @@ bot = ChatBot('LineBot',
 #message = train_bot.train(bot,"hello,what the fuck")
 #print message
 
-msg = location_bot.location(bot, "บ้านป๋าเปรม")
-print msg
+# msg = location_bot.location(bot, "บ้านป๋าเปรม")
+# print msg
+
+
+text = u"วันนี้อยากได้ตั๋วกทมไปเชียงใหม่".encode('utf-8')
+message = test_wit.parse(bot,text)
+pprint(message)
