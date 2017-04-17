@@ -74,12 +74,13 @@ def parse(bot=bot,text=None):
     dateStr=None
     if dateFound:
         dateStr=dateFound.group(1)
-        text.replace(dateStr,'')
+        text=text.replace(dateStr,'')
 
     print dateStr
-    matcher = re.compile('(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)')
+    matcher = re.compile("(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)")
     found = matcher.search(text)
     if found:
+        print "found String"
         reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(dateStr,found.group(1),found.group(2),
             found.group(3),found.group(4),found.group(5),found.group(6),found.group(7))
         message = TextSendMessage(text=reply)
