@@ -67,28 +67,31 @@ access_token='RSM2P46QTNCZWHPHCUA55UAJNI7LIP73'
 #print('Yay, got Wit.ai response: ' + str(resp))
 
 def parse(bot=bot,text=None):
-    print "Start parsing"
-    print text
     message=None
-    dateMessage = re.compile(ur'.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*'.encode('utf-8'))
-    dateFound = dateMessage.search(text)
-    dateStr=None
-    if dateFound:
-        dateStr=dateFound.group(1)
-        text=text.replace(dateStr,'')
+    try:
+        print "Start parsing"
+        print text
+        dateMessage = re.compile(ur'.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*'.encode('utf-8'))
+        dateFound = dateMessage.search(text)
+        dateStr=None
+        if dateFound:
+            dateStr=dateFound.group(1)
+            text=text.replace(dateStr,'')
 
-    print dateStr
-    print text
-    matcher = re.compile(ur'(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)'.encode('utf-8'))
-    found = matcher.search(text)
-    if found:
-        print "found String"
-        reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(dateStr,found.group(1),found.group(2),
-            found.group(3),found.group(4),found.group(5),found.group(6),found.group(7))
-        message = TextSendMessage(text=reply)
-    else:
+        print dateStr
+        print text
+        matcher = re.compile(ur'(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)'.encode('utf-8'))
+        found = matcher.search(text)
+        if found:
+            print "found String"
+            reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(dateStr,found.group(1),found.group(2),
+                found.group(3),found.group(4),found.group(5),found.group(6),found.group(7))
+            message = TextSendMessage(text=reply)
+        else:
+            message = TextSendMessage(text='What!!!')
+        print message
+    except:
         message = TextSendMessage(text='What!!!')
-    print message
     return message
 
 if __name__ == "__main__":
