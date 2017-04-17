@@ -195,7 +195,6 @@ def ltfSearch(text):
 
 def parsingText(text):
     print "going to test parsing"
-    print text
     message = test_wit.parse(bot,text)
     return message
 
