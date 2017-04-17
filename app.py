@@ -112,11 +112,11 @@ commands = (
     (re.compile('^หาตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^ตั๋ว[ ]*(.*)$'), lambda x: ticket(x)),
     (re.compile('^[tT]icket[ ]*(.*)$'), lambda x: ticket(x)),
-    (re.compile('^(มุขตลก)[ ]*(.*)$'), lambda x: joke(x)),
-    (re.compile('^(มุข)[ ]*(.*)$'), lambda x: joke(x)),
-    (re.compile('^([jJ]oke)[ ]*(.*)$'), lambda x: joke(x)),
-    (re.compile('^([lL]tf)[ ]*(.*)$'), lambda x: ltfSearch(x)),
-    (re.compile('^([tT]est)[ ]*(.*)$'), lambda x: parsingText(x)),
+    (re.compile('^มุขตลก[ ]*(.*)$'), lambda x: joke(x)),
+    (re.compile('^มุข[ ]*(.*)$'), lambda x: joke(x)),
+    (re.compile('^[jJ]oke[ ]*(.*)$'), lambda x: joke(x)),
+    (re.compile('^[lL]tf[ ]*(.*)$'), lambda x: ltfSearch(x)),
+    (re.compile('^[tT]est[ ]*(.*)$'), lambda x: parsingText(x)),
 )
 
 def usage():
