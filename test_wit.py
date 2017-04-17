@@ -74,10 +74,11 @@ def parse(bot=bot,text=None):
         dateFound = dateMessage.search(text)
         dateStr=None
         if dateFound:
+            print "Parsing date"
             dateStr=dateFound.group(1)
             text=text.replace(dateStr,'')
 
-        matcher = re.compile(ur'(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)'.encode('utf-8'))
+        matcher = re.compile(ur'.*(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)(ไป)*(เชียงใหม่)'.encode('utf-8'))
         found = matcher.search(text)
         if found:
             print "found String"
@@ -85,6 +86,7 @@ def parse(bot=bot,text=None):
                 found.group(3),found.group(4),found.group(5),found.group(6),found.group(7))
             message = TextSendMessage(text=reply)
         else:
+            print "found nothing"
             message = TextSendMessage(text='What!!!')
         print message
     except:
