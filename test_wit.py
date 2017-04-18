@@ -25,6 +25,7 @@ import re
 from chatterbot import ChatBot
 from linebot.models import (TextSendMessage)
 from pprint import pprint
+import dateparser
 
 bot = ChatBot('LineBot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -66,18 +67,24 @@ access_token='RSM2P46QTNCZWHPHCUA55UAJNI7LIP73'
 #resp = client.message(icu_str)
 #print('Yay, got Wit.ai response: ' + str(resp))
 
+keyword = (
+    (re.compile('^check|list[ ]*(.*)', re.IGNORECASE), lambda x: checkTicket(x)),
+    (re.compile('^book|buy[ ]*(.*)', re.IGNORECASE), lambda x: bookTicket(x)),
+    (re.compile('^boarding[ ]*pass|pass[ ]*(.*)', re.IGNORECASE), lambda x: boardingPass(x)),
+    (re.compile('^itinerary|ticket[ ]*information[ ]*(.*)', re.IGNORECASE), lambda x: itinerary(x)),
+)
+
 def parse(bot=bot,text=None):
     message=None
     try:
-        print "Start parsing"
         print text
         dateMessage = re.compile(ur'.*(วันนี้|พรุ่งนี้|มรืนนี้|เสาร์ทิตย์|สุดสัปดาห์|วันหยุด|สัปดาห์หน้า|สัปดาห์ถัดไป|วันก่อน|เดือนหน้า).*'.encode('utf-8'), re.UNICODE)
         dateFound = dateMessage.search(text)
         dateStr=None
         if dateFound:
-            print "Parsing date"
             dateStr=dateFound.group(1)
             text=text.replace(dateStr,'')
+            date=dateparser.parse(dateStr)
         else:
             print "found no date"
 
@@ -85,7 +92,7 @@ def parse(bot=bot,text=None):
         found = matcher.search(text)
         if found:
             print "found String"
-            reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(dateStr,found.group(1),found.group(2),
+            reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(date,found.group(1),found.group(2),
                 found.group(3),found.group(4),found.group(5),found.group(6),found.group(7))
             message = TextSendMessage(text=reply)
         else:

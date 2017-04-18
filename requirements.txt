@@ -25,3 +25,5 @@ Wit
 ./pipsw/requests_oauthlib-0.8.0-py2.py3-none-any.whl
 ./pipsw/six-1.10.0-py2.py3-none-any.whl
 ./pipsw/PyICU-1.9.6-cp27-none-linux_x86_64.whl
+
+-e git://github.com/gto481/dateparser.git
