@@ -31,11 +31,11 @@ bot=None
 # msg = location_bot.location(bot, "บ้านป๋าเปรม")
 # print msg
 
-text = u"วันนี้อยากได้ตั๋วไปเชียงใหม่".encode('utf-8')
-message = test_wit.parse(bot,text)
-pprint(message)
+# text = u"วันนี้อยากได้ตั๋วไปเชียงใหม่".encode('utf-8')
+# message = test_wit.parse(bot,text)
+# pprint(message)
 
-# print dateparser.parse(u'พรุ่งนี้')
+print dateparser.parse(u'พรุ่งนี้ ไปเที่ยวกัน')
 # print dateparser.parse(u'มรืนนี้')
 # print dateparser.parse(u'อาทิตย์หน้า')
 # print dateparser.parse(u'เมื่อวาน')

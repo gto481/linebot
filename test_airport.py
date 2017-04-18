@@ -58,12 +58,16 @@ def getAirport(bot=bot,text=None):
 
         if result and result.count() > 0:
             #print "fetch new data"
+            i = 0
             for r in result:
+                #print r['City']
                 i += 1
                 text = text + "{0}) เมือง {1}, ประเทศ {2}, สนามบิน {3}, code {4}\n".format(i, r['City'], r['Country'], r['Airport'], r['Code'])
+            #print text
             message = TextSendMessage(text=text)
 
-    except:
+    except Exception as e:
+        print e
         message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
 
     return message
@@ -73,7 +77,7 @@ if __name__ == "__main__":
     # msg = getLTF()
     # for r in msg[:5]:
     #    pprint(r)
-    msg = getAirport(bot,'เชียงใหม่')
+    msg = getAirport(bot,u'เชียงใหม่'.encode('utf-8'))
     pprint(msg)
 
     # result = checkDb()
