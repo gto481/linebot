@@ -73,15 +73,5 @@ def getAirport(bot=bot,text=None):
     return message
 
 if __name__ == "__main__":
-
-    # msg = getLTF()
-    # for r in msg[:5]:
-    #    pprint(r)
-    msg = getAirport(bot,u'เชียงใหม่'.encode('utf-8'))
+    msg = getAirport(bot, u'เชียงใหม่'.encode('utf-8'))
     pprint(msg)
-
-    # result = checkDb()
-    # if result.count() > 0:
-    #     #print "found"
-    #     for r in result[:5]:
-    #         pprint(r)
