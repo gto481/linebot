@@ -57,7 +57,6 @@ def getAirport(bot=bot,text=None):
         result = checkAirport(text)
 
         if result and result.count() > 0:
-            #print "fetch new data"
             i = 0
             for r in result:
                 #print r['City']
@@ -75,3 +74,4 @@ def getAirport(bot=bot,text=None):
 if __name__ == "__main__":
     msg = getAirport(bot, u'เชียงใหม่'.encode('utf-8'))
     pprint(msg)
+
