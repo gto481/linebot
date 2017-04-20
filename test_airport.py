@@ -46,7 +46,10 @@ bot = ChatBot('LineBot',
 )
 
 def checkAirport(text=None):
-    result = airports.find({"$or": [{'City' : text}, {'Country' : text}]})
+    try:
+        result = airports.find({"$or": [{'City' : text}, {'Country' : text}]})
+    except Exception as e:
+        print e
     return result
 
 def getAirport(bot=bot,text=None):
@@ -55,13 +58,15 @@ def getAirport(bot=bot,text=None):
     message = None
     try:
         result = checkAirport(text)
+        print "Get Result {}".format(result.count())
 
         if result and result.count() > 0:
             i = 0
             for r in result:
-                #print r['City']
+                print "In loop"
+                #print r['City'].encode('utf-8')
                 i += 1
-                text = text + "{0}) เมือง {1}, ประเทศ {2}, สนามบิน {3}, code {4}\n".format(i, r['City'], r['Country'], r['Airport'], r['Code'])
+                text = text + "{0}) เมือง {1}, ประเทศ {2}, สนามบิน {3}, code {4}\n".format(i, r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'), r['Code'])
             #print text
             message = TextSendMessage(text=text)
 
