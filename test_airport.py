@@ -65,10 +65,11 @@ def getAirport(bot=bot,text=None):
         if result and result.count() > 0:
             i = 0
             for r in result:
-                print "In loop"
                 #print r['City'].encode('utf-8')
                 i += 1
                 temp = temp + "{0}) เมือง {1}, ประเทศ {2}, สนามบิน {3}, code {4}\n".format(i, r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'), r['Code'])
+                if i > 3:
+                    break
             #print text
             message = TextSendMessage(text=temp)
         else:
