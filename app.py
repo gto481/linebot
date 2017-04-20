@@ -54,6 +54,7 @@ import ticket_bot
 import twitter_bot
 import ltf
 import test_wit
+import test_airport
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -117,6 +118,7 @@ commands = (
     (re.compile('^[jJ]oke[ ]*(.*)$'), lambda x: joke(x)),
     (re.compile('^[lL]tf[ ]*(.*)$'), lambda x: ltfSearch(x)),
     (re.compile('^[tT]est[ ]*(.*)$'), lambda x: parsingText(x)),
+    (re.compile('^[aA]irport[ ]*(.*)$'), lambda x: findAirport(x)),
 )
 
 def usage():
@@ -155,6 +157,11 @@ def ticket(text, user_id=None):
     # Fix get data from skyr
     # Call file ticket_bot.py
     message = ticket_bot.getTicket(bot, user_id, text)
+    return message
+
+def findAirport(text):
+    # Call file test_airport.py
+    message = test_airport.getAirport(bot, text)
     return message
 
 def train(text):

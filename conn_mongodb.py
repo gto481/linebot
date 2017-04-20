@@ -13,19 +13,22 @@
 #  under the daddy License.
 #
 
-from pymongo import MongoClient
+from pymongo import MongoClient, ASCENDING
 from pprint import pprint
 from datetime import datetime, date, timedelta
+import json
 
+# Mongo connection
 client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
 db = client.heroku_h80dpwn6
-tickets = db.tickets
-xxx = db.xxx
+airports = db.airports
+
 #statements = db.statements
 #pprint(statements.find_one({"text": "What's your name"}))
 
 #datetime.fromtimestamp(1462629479859/1000.0)
 
+# Insert
 # result = db.tickets.insert_one(
 # 	{
 #         "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
@@ -43,16 +46,34 @@ xxx = db.xxx
 #     }
 # )
 
-lasthours = datetime.today() - timedelta(hours = 1)
-#yesterday = datetime.combine(yesterday, datetime.time.min)
-#print yesterday
-#tickets = db.tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8'})
-ticket = tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$gte' : lasthours}})
-if ticket:
-    pprint(ticket)
-else:
-    print "empty result"
-    #result = tickets.delete_many({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'created_at' : {'$lt' : lasthours}})
-    result = tickets.update_many({'userId' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$lt' : lasthours}},
-        {"$set" : { "isDeleted" : "1" }, "$currentDate": {"lastModified": True} })
-    print result
+# Query
+# lasthours = datetime.today() - timedelta(hours = 1)
+# #yesterday = datetime.combine(yesterday, datetime.time.min)
+# #print yesterday
+# #tickets = db.tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8'})
+# ticket = tickets.find_one({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$gte' : lasthours}})
+# if ticket:
+#     pprint(ticket)
+# else:
+#     print "empty result"
+#     #result = tickets.delete_many({'userid' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'created_at' : {'$lt' : lasthours}})
+#     result = tickets.update_many({'userId' : 'U206d25c2ea6bd87c17655609a1c37cb8', 'createdAt' : {'$lt' : lasthours}},
+#         {"$set" : { "isDeleted" : "1" }, "$currentDate": {"lastModified": True} })
+#     print result
+
+# airport = airports.find_one({ 'City' : "Bangkok"})
+# pprint(airport)
+
+
+# Insert
+
+# with open('json/eng_airport.json') as json_data:
+#     airport_obj = json.load(json_data)
+#     for i in airport_obj:
+#         results = airports.insert(airport_obj[i])
+
+        #for k, v in i.items():
+        #    print k, v
+
+airports.create_index([("Country", ASCENDING)])
+airports.create_index([("City", ASCENDING)])
