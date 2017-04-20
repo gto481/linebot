@@ -47,7 +47,8 @@ bot = ChatBot('LineBot',
 
 def checkAirport(text=None):
     try:
-        result = airports.find({"$or": [{'City' : text}, {'Country' : text}]})
+        regx = re.compile("^" + text, re.IGNORECASE)
+        result = airports.find({"$or": [{'City' : regx }, {'Country' :regx }]})
     except Exception as e:
         print e
     return result
@@ -81,5 +82,7 @@ def getAirport(bot=bot,text=None):
 
 if __name__ == "__main__":
     msg = getAirport(bot, u'เชียงใหม่'.encode('utf-8'))
+    pprint(msg)
+    msg = getAirport(bot, 'bangkok')
     pprint(msg)
 
