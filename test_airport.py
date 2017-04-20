@@ -56,6 +56,7 @@ def getAirport(bot=bot,text=None):
 
     result = None
     message = None
+    temp = ""
     try:
         result = checkAirport(text)
         print "Get Result {}".format(result.count())
@@ -66,9 +67,11 @@ def getAirport(bot=bot,text=None):
                 print "In loop"
                 #print r['City'].encode('utf-8')
                 i += 1
-                text = text + "{0}) เมือง {1}, ประเทศ {2}, สนามบิน {3}, code {4}\n".format(i, r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'), r['Code'])
+                temp = temp + "{0}) เมือง {1}, ประเทศ {2}, สนามบิน {3}, code {4}\n".format(i, r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'), r['Code'])
             #print text
-            message = TextSendMessage(text=text)
+            message = TextSendMessage(text=temp)
+        else:
+            message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
 
     except Exception as e:
         print e
