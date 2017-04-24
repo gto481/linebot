@@ -13,19 +13,19 @@
 #  under the daddy License.
 
 
-from __future__ import unicode_literals
+# from __future__ import unicode_literals
 
-from abc import ABCMeta
+# from abc import ABCMeta
 
-class BotMessage():
-    """Abstract Base Classs of BotMessage"""
+# class BotMessage():
+#     """Abstract Base Classs of BotMessage"""
 
-    def __init__(self, id=None, **kwargs):
-        """__init__ method.
+#     def __init__(self, id=None, **kwargs):
+#         """__init__ method.
 
-        :param str id: Message ID
-        :param kwargs:
-        """
-        super(Message, self).__init__(**kwargs)
-        self.type = None
-        self.id = id
+#         :param str id: Message ID
+#         :param kwargs:
+#         """
+#         super(Message, self).__init__(**kwargs)
+#         self.type = None
+#         self.id = id
