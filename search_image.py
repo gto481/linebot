@@ -21,7 +21,7 @@ Command-line application that does a search.
 
 import pprint
 import random
-from googleapiclient.discovery import build
+from apiclient.discovery import build
 from linebot.models import (TextSendMessage, ImageSendMessage)
 from chatterbot import ChatBot
 import logging
