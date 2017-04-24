@@ -113,7 +113,7 @@ def parse(bot=bot,text=None):
             message = TextMessage(text='What!!!')
 
 
-        for matcher, action in keyword:
+        # for matcher, action in keyword:
 
         print message
     except Exception,e:
