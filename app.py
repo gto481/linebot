@@ -210,7 +210,7 @@ def parsingText(text):
     message = test_wit.parse(bot,text)
     return message
 
-@app.route("/callback", methods=['POST'])
+@app.route("/line", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
 
