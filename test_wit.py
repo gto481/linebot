@@ -26,6 +26,7 @@ from chatterbot import ChatBot
 from linebot.models import (TextSendMessage)
 from pprint import pprint
 import dateparser
+import test_airport
 
 bot = ChatBot('LineBot',
     storage_adapter='chatterbot.storage.MongoDatabaseAdapter',
@@ -88,16 +89,32 @@ def parse(bot=bot,text=None):
         else:
             print "found no date"
 
-        matcher = re.compile(ur'.*(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)*(ไป)*(เชียงใหม่)'.encode('utf-8'), re.UNICODE)
-        found = matcher.search(text)
-        if found:
-            print "found String"
-            reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(date,found.group(1),found.group(2),
-                found.group(3),found.group(4),found.group(5),found.group(6),found.group(7))
-            message = TextSendMessage(text=reply)
+        matcher1 = re.compile(ur'.*(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(ต้องการ|อยากได้|อยากให้|ทำให้|ช่วย|ช่วยเหลือ|จอง|จองตั๋ว|ออกตั๋ว|ค้นหา|หา|ดู)[ ]*(ตั๋ว|ตั๋วเครื่องบิน|เครื่องบิน)[ ]*(จาก)*(กรุงเทพ|กทม)*(ไป)*(เชียงใหม่)'.encode('utf-8'), re.UNICODE)
+        matcher2 = re.compile(ur'.*(ฉัน|กู|มึง|นาย|เธอ|เรา|คุณ|ผม)*[ ]*(อยากไป|ไป)*[ ]*([^ ]+)'.encode('utf-8'), re.UNICODE)
+        found1 = matcher1.search(text)
+        if found1:
+            print "found1 String"
+            reply="Time is {}, Subject is {}, verb is {}, object1 is {}, conjunction1 is {}, object2 is {}, conjunction2 is {}, object3 is {}".format(date,found1.group(1),found1.group(2),
+                found1.group(3),found1.group(4),found1.group(5),found1.group(6),found1.group(7))
+            message = TextMessage(text=reply)
+        elif found2:
+            print "found2 String"
+            if found2.group(3):
+                result = test_airport.checkOneAirport(found2.group(3))
+
+            reply="Time is {}, verb is {}, object1 is {}".format(date,found2.group(1),found2.group(2),found2.group(3))
+            if result:
+                msg = " เมือง {1}, ประเทศ {2}, สนามบิน {3}\n".format(r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'))
+                reply = reply + msg
+
+            message = TextMessage(text=reply)
         else:
             print "found nothing"
-            message = TextSendMessage(text='What!!!')
+            message = TextMessage(text='What!!!')
+
+
+        for matcher, action in keyword:
+
         print message
     except Exception,e:
         print str(e)

@@ -45,7 +45,15 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-def checkAirport(text=None):
+def checkManyAirport(text=None):
+    try:
+        regx = re.compile("^" + text, re.IGNORECASE)
+        result = airports.find({"$or": [{'City' : regx }, {'Country' :regx }]})
+    except Exception as e:
+        print e
+    return result
+
+def checkOneAirport(text=None):
     try:
         regx = re.compile("^" + text, re.IGNORECASE)
         result = airports.find({"$or": [{'City' : regx }, {'Country' :regx }]})
@@ -59,7 +67,7 @@ def getAirport(bot=bot,text=None):
     message = None
     temp = ""
     try:
-        result = checkAirport(text)
+        result = checkManyAirport(text)
         print "Get Result {}".format(result.count())
 
         if result and result.count() > 0:
@@ -71,13 +79,13 @@ def getAirport(bot=bot,text=None):
                 if i > 3:
                     break
             #print text
-            message = TextSendMessage(text=temp)
+            message = TextMessage(text=temp)
         else:
-            message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
+            message = TextMessage(text=random.choice(BROKEN_MESSAGE))
 
     except Exception as e:
         print e
-        message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
+        message = TextMessage(text=random.choice(BROKEN_MESSAGE))
 
     return message
 

@@ -119,6 +119,7 @@ commands = (
     (re.compile('^[lL]tf[ ]*(.*)$'), lambda x: ltfSearch(x)),
     (re.compile('^[tT]est[ ]*(.*)$'), lambda x: parsingText(x)),
     (re.compile('^[aA]irport[ ]*(.*)$'), lambda x: findAirport(x)),
+    (re.compile('^สนามบิน[ ]*(.*)$'), lambda x: findAirport(x)),
 )
 
 def log(message):  # simple wrapper for logging to stdout on heroku
