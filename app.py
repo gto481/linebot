@@ -121,6 +121,10 @@ commands = (
     (re.compile('^[aA]irport[ ]*(.*)$'), lambda x: findAirport(x)),
 )
 
+def log(message):  # simple wrapper for logging to stdout on heroku
+    print str(message)
+    sys.stdout.flush()
+
 def usage():
     response="""
 1)คุยเล่น
