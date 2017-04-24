@@ -105,7 +105,7 @@ def parse(bot=bot,text=None):
 
             reply="Time is {}, verb is {}, object1 is {}".format(date,found2.group(1),found2.group(2),found2.group(3))
             if result:
-                msg = " เมือง {1}, ประเทศ {2}, สนามบิน {3}\n".format(r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'))
+                msg = " เมือง {1}, ประเทศ {2}, สนามบิน {3}\n".format(result['City'].encode('utf-8'), result['Countresulty'].encode('utf-8'), result['Airport'].encode('utf-8'))
                 reply = reply + msg
 
             message = TextMessage(text=reply)
