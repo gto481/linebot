@@ -56,7 +56,7 @@ def checkManyAirport(text=None):
 def checkOneAirport(text=None):
     try:
         regx = re.compile("^" + text, re.IGNORECASE)
-        result = airports.find({"$or": [{'City' : regx }, {'Country' :regx }]})
+        result = airports.find_one({"$or": [{'City' : regx }, {'Country' :regx }]})
     except Exception as e:
         print e
     return result

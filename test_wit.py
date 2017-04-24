@@ -102,6 +102,7 @@ def parse(bot=bot,text=None):
             print "found2 String"
             if found2.group(3):
                 result = test_airport.checkOneAirport(found2.group(3))
+                print result
 
             reply="Time is {}, verb is {}, object1 is {}".format(date,found2.group(1),found2.group(2),found2.group(3))
             if result:
