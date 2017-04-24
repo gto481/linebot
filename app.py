@@ -154,7 +154,8 @@ def usage():
     train <ข้อความ>,<ข้อความ>,<ข้อความ>
     """
     #response="1)คุยเล่น\n  พิมพ์ห่าอะไรมาก็ได้กูตอบได้\n2)หาโลเคชั่น\n  พิกัด <สถาที่>\n  location <สถาที่>\n  ที่อยู่ <สถาที่>\n3)Google search\n  ค้นหา <สิ่งที่อยากจะหา>\n  หา <สิ่งที่อยากจะหา>\n  google <สิ่งที่อยากจะหา>\n  กูเกิ้ล <สิ่งที่อยากจะหา>\n4)help\n  แสดงข้อความนี้\n5)Train Bot สอนกูแต่เรื่องดีๆนะมึง\n  train <ข้อความ>,<ข้อความ>,<ข้อความ>"
-    message = TextSendMessage(text=response)
+    #message = TextSendMessage(text=response)
+    message = TextMessage(text=response)
     return message
 
 def ticket(text, user_id=None):
@@ -256,6 +257,8 @@ def callback():
                             #     event.reply_token, action(text)
                             # )
                             msg = action(text)
+                            if type(msg).__name__ == "TextMessage":
+                                msg = TextSendMessage(text=msg.text)
                             break
 
                     except:
@@ -308,7 +311,8 @@ def webhook():
     # endpoint for processing incoming messaging events
 
     data = request.get_json()
-    log(data)  # you may not want to log every incoming message in production, but it's good for testing
+    #log(data)  # you may not want to log every incoming message in production, but it's good for testing
+    app.logger.info("Request body: " + data)
 
     if data["object"] == "page":
 
