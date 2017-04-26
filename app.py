@@ -94,11 +94,6 @@ bot = ChatBot('LineBot',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
 
-# Mongo connection
-client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
-db = client.heroku_h80dpwn6
-conversation = db.conversation
-
 msglist = []
 
 commands = (
