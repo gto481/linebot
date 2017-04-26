@@ -36,19 +36,21 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "receive": {
                     "userId": userid,
                     "timestamp" : timestamp,
-                    "message" : inmsg
+                    "message" : dict(inmsg)
                 },
                 "reply": {
                     "userId": userid,
                     "timestamp" : current_milli_time(),
-                    "message" :  outmsg
+                    "message" :  dict(outmsg)
                 }
             }
             print dict(msg)
-            result = conversation.insert_one(dict(msg))
+            print dict(inmsg)
+            print dict(outmsg)
+            #result = conversation.insert_one(dict(msg))
         except Exception as e:
             print e
-    return result
+    return None
 
 if __name__ == "__main__":
     insert("line","U206d25c2ea6bd87c17655609a1c37cb8",1493198938675,{"id": "5994924103238", "text": "\u0e42\u0e22\u0e48\u0e46", "type": "text"},{"text": "\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01", "type": "text"})
