@@ -45,9 +45,9 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 }
             }
             print dict(msg)
-            print dict(inmsg)
-            print dict(outmsg)
-            #result = conversation.insert_one(dict(msg))
+            # print dict(inmsg)
+            # print dict(outmsg)
+            result = conversation.insert_one(dict(msg))
         except Exception as e:
             print e
     return None
