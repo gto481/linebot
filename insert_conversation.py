@@ -44,11 +44,10 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                     "message" :  outmsg
                 }
             }
-            print msg
-            result = conversation.insert_one(msg)
+            print dict(msg)
+            result = conversation.insert_one(dict(msg))
         except Exception as e:
             print e
-
     return result
 
 if __name__ == "__main__":
