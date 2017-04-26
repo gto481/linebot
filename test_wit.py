@@ -23,7 +23,7 @@ import thai_icu
 import re
 
 from chatterbot import ChatBot
-from linebot.models import (TextSendMessage)
+from linebot.models import (TextMessage)
 from pprint import pprint
 import dateparser
 import test_airport
@@ -101,12 +101,12 @@ def parse(bot=bot,text=None):
         elif found2:
             print "found2 String"
             if found2.group(3):
-                result = test_airport.checkOneAirport(found2.group(3))
-                print result
+                r = test_airport.checkOneAirport(found2.group(3))
+                print r
 
             reply="Time is {}, verb is {}, object1 is {}".format(date,found2.group(1),found2.group(2),found2.group(3))
-            if result:
-                msg = " เมือง {1}, ประเทศ {2}, สนามบิน {3}\n".format(result['City'].encode('utf-8'), result['Countresulty'].encode('utf-8'), result['Airport'].encode('utf-8'))
+            if r:
+                msg = " เมือง {1}, ประเทศ {2}, สนามบิน {3}\n".format(r['City'].encode('utf-8'), r['Country'].encode('utf-8'), r['Airport'].encode('utf-8'))
                 reply = reply + msg
 
             message = TextMessage(text=reply)

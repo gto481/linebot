@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 from signal import signal, SIGPIPE, SIG_DFL
 
 from chatterbot import ChatBot
-from linebot.models import (TextSendMessage)
+from linebot.models import (TextMessage)
 from pymongo import MongoClient, DESCENDING, ASCENDING
 from datetime import datetime, date, timedelta
 import random
@@ -154,9 +154,9 @@ def getLTFMessage(bot=bot):
             for r in x:
                 i += 1
                 text = text + "{0}) {1}, {2}, 5year {3}, 3year {4}, NAV {5}\n".format(i, r['mutual_fund'], r['institution'], r['perf_5year'], r['perf_3year'], r['NAV'])
-            message = TextSendMessage(text=text)
+            message = TextMessage(text=text)
     except:
-        message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
+        message = TextMessage(text=random.choice(BROKEN_MESSAGE))
 
     return message
 

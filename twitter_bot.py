@@ -20,7 +20,7 @@ Command-line application that does a search.
 """
 
 import tweepy
-from linebot.models import (TextSendMessage)
+from linebot.models import (TextMessage)
 from chatterbot import ChatBot
 import logging
 import random
@@ -53,18 +53,18 @@ bot = ChatBot('LineBot',
 def search(bot=bot, text=u"#มุขตลก"):
 
 	message = None
-	try:		
+	try:
 		search_result = api.search(text, rpp=NUM_RESULTS)
 		texts = []
 		for i in search_result:
 			texts.append(i.text)
 
 		text = random.choice(texts)
-		message = TextSendMessage(text=text)
+		message = TextMessage(text=text)
 
 	except:
-		message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
-	
+		message = TextMessage(text=random.choice(BROKEN_MESSAGE))
+
 	return message
 
 if __name__ == '__main__':

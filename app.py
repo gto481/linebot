@@ -286,6 +286,7 @@ def callback():
                 #line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
 
             try:
+                pprint.pprint(msg)
                 line_bot_api.reply_message(event.reply_token, msg)
             except Exception:
                 response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"

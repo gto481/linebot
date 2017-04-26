@@ -32,7 +32,7 @@ from google import google
 #    UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent, ImagemapSendMessage, BaseSize, URIImagemapAction, MessageImagemapAction, ImagemapArea
 #)
 
-from linebot.models import (TextSendMessage, TemplateSendMessage, URITemplateAction, CarouselTemplate, CarouselColumn)
+from linebot.models import (TextMessage, TemplateSendMessage, URITemplateAction, CarouselTemplate, CarouselColumn)
 
 # Uncomment the following line to enable verbose logging
 # logging.basicConfig(level=logging.INFO)
@@ -79,7 +79,7 @@ def search(bot=bot, text=None):
         message = TemplateSendMessage(alt_text='Search result', template=carousel_template)
 
     except:
-        message = TextSendMessage(text=random.choice(BROKEN_MESSAGE))
+        message = TextMessage(text=random.choice(BROKEN_MESSAGE))
 
     # carousel_template = CarouselTemplate(columns=[
     #         CarouselColumn(text='hoge1', title='fuga1', actions=[

@@ -68,7 +68,7 @@ def getImage(bot=bot, query=query, num_results=NUM_RESULTS):
         message = random.choice(images)
     except:
         response=random.choice(BROKEN_MESSAGE)
-        message = TextSendMessage(text=response)
+        message = TextMessage(text=response)
 
     return message
 

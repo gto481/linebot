@@ -17,11 +17,18 @@ from pymongo import MongoClient, ASCENDING
 from pprint import pprint
 from datetime import datetime, date, timedelta
 import json
+import time
+
+current_milli_time = lambda: int(round(time.time() * 1000))
 
 # Mongo connection
 client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
 db = client.heroku_h80dpwn6
-airports = db.airports
+conversation = db.conversation
+
+
+
+#airports = db.airports
 
 #statements = db.statements
 #pprint(statements.find_one({"text": "What's your name"}))
@@ -75,5 +82,28 @@ airports = db.airports
         #for k, v in i.items():
         #    print k, v
 
-airports.create_index([("Country", ASCENDING)])
-airports.create_index([("City", ASCENDING)])
+#airports.create_index([("Country", ASCENDING)])
+#airports.create_index([("City", ASCENDING)])
+
+
+result = conversation.insert_one(
+  {
+        "timestamp" : current_milli_time(),
+        "application" : "line",
+        "receive": [
+            {
+                "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
+                "timestamp" : current_milli_time(),
+                "message" : {"id": "5994896050706", "text": "\u0e42\u0e22\u0e48", "type": "text"}
+            },
+        ],
+        "reply": [
+            {
+                "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
+                "timestamp" : current_milli_time(),
+                "message" : {}
+            }
+        ]
+
+    }
+)
