@@ -55,6 +55,7 @@ import twitter_bot
 import ltf
 import test_wit
 import test_airport
+import insert_conversation
 
 TRAIN_REPLY_MESSAGE=["สอนกูแต่เรื่องดีๆนะมึง อีดอก", "มึงคิดกว่ากูฉลาดนักหรอ สอนกูอยู่นั่นแหละ", "ขี้เกียจจำแล้ว"]
 LOCATION_REPLY_MESSAGE=["มึงจะหนีเที่ยวที่ไหน อีดอก", "อย่าให้เมียมึงรู้นะว่ามึงหนีเที่ยว", "หาพิกัดผัวมึงหรอ อีดอก"]
@@ -92,6 +93,12 @@ bot = ChatBot('LineBot',
     database='heroku_h80dpwn6',
     database_uri='mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6'
 )
+
+# Mongo connection
+client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
+db = client.heroku_h80dpwn6
+conversation = db.conversation
+
 msglist = []
 
 commands = (
@@ -228,7 +235,7 @@ def callback():
 
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
-        pprint.pprint(event)
+        pprint.pprint(event.message)
         user_id = event.source.user_id
         if event.type == 'message':
 
@@ -288,9 +295,12 @@ def callback():
             try:
                 pprint.pprint(msg)
                 line_bot_api.reply_message(event.reply_token, msg)
+                insert_conversation.insert(app="line",userid=event.source.user_id,timestamp=event.timestamp,inmsg=event.message,outmsg=msg)
+
             except Exception:
                 response="พิมพ์เหี้ยอะไรมา กูเจ๊งเลย แสรด"
                 line_bot_api.reply_message(event.reply_token,TextSendMessage(text=response))
+                insert_conversation.insert(app="line",userid=event.source.user_id,timestamp=event.timestamp,inmsg=event.message,outmsg=response)
 
     #line_bot_api.reply_message(event.reply_token,TextSendMessage(text='ทดสอบ'))
 

@@ -90,20 +90,18 @@ result = conversation.insert_one(
   {
         "timestamp" : current_milli_time(),
         "application" : "line",
-        "receive": [
+        "receive":
             {
                 "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
                 "timestamp" : current_milli_time(),
                 "message" : {"id": "5994896050706", "text": "\u0e42\u0e22\u0e48", "type": "text"}
             },
-        ],
-        "reply": [
+        "reply":
             {
                 "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
                 "timestamp" : current_milli_time(),
-                "message" : {}
+                "message" :  {"text": "\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01", "type": "text"}
             }
-        ]
 
     }
 )
