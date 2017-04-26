@@ -27,8 +27,8 @@ db = client.heroku_h80dpwn6
 conversation = db.conversation
 
 def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
+    print "App {}, userid {}, timestamp {}, inmsg {}, outmsg {}".format(app,userid,timestamp,inmsg,outmsg)
     if userid and app:
-
         result = conversation.insert_one({
             "timestamp" : current_milli_time(),
             "application" : app,
@@ -45,5 +45,4 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
         })
 
 if __name__ == "__main__":
-
     insert("line","U206d25c2ea6bd87c17655609a1c37cb8",1493198938675,{"id": "5994924103238", "text": "\u0e42\u0e22\u0e48\u0e46", "type": "text"},{"text": "\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01", "type": "text"})
