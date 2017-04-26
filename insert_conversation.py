@@ -30,7 +30,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
     print "App {}, userid {}, timestamp {}, inmsg {}, outmsg {}".format(app,userid,timestamp,inmsg,outmsg)
     if userid and app:
         try:
-            result = conversation.insert_one({
+            msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
                 "receive": {
@@ -43,7 +43,9 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                     "timestamp" : current_milli_time(),
                     "message" :  outmsg
                 }
-            })
+            }
+            print msg
+            result = conversation.insert_one(msg)
         except Exception as e:
             print e
 
