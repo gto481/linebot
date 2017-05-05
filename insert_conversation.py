@@ -55,7 +55,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "reply": {
                     "userId": userid,
                     "timestamp" : current_milli_time(),
-                    "message" :  outmsg
+                    "message" :  outtmp
                 }
             }
             print "Before insert"
