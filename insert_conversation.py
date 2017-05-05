@@ -40,9 +40,10 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "type" : outmsg.type
             }
             if inmsg.type == "text":
-                intmp["text"] = str(inmsg.text).encode('utf-8')
+                intmp["text"] = inmsg.text
             if outmsg.type == "text":
-                outtmp["text"] = str(outmsg.text).encode('utf-8')
+                outtmp["text"] = outmsg.text
+            print "finish setup message"
             msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
@@ -59,8 +60,8 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
             }
             print "Before insert"
             #print "Insert msg is {}".format(dict(msg))
-            # print dict(inmsg)
-            # print dict(outmsg)
+            print dict(intmp)
+            print dict(outtmp)
             result = conversation.insert_one(dict(msg))
         except Exception as e:
             print e
