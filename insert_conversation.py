@@ -31,6 +31,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
     #print "App {}, userid {}, timestamp {}, inmsg {}, imsg id {}, outmsg {}".format(app,userid,timestamp,inmsg,inmsg.id,outmsg)
     if userid and app:
         try:
+            print "setup message"
             intmp = {
                 "id" : inmsg.id,
                 "type" : inmsg.type
@@ -39,9 +40,9 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "type" : outmsg.type
             }
             if inmsg.type == "text":
-                intmp["text"] = inmsg.text.encode('utf-8')
+                intmp["text"] = str(inmsg.text).encode('utf-8')
             if outmsg.type == "text":
-                outtmp["text"] = outmsg.text.encode('utf-8')
+                outtmp["text"] = str(outmsg.text).encode('utf-8')
             msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
@@ -56,6 +57,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                     "message" :  outmsg
                 }
             }
+            print "Before insert"
             #print "Insert msg is {}".format(dict(msg))
             # print dict(inmsg)
             # print dict(outmsg)
