@@ -31,7 +31,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
     #print "App {}, userid {}, timestamp {}, inmsg {}, imsg id {}, outmsg {}".format(app,userid,timestamp,inmsg,inmsg.id,outmsg)
     if userid and app:
         try:
-            print "setup message"
+            #print "setup message"
             intmp = {
                 "id" : inmsg.id,
                 "type" : inmsg.type
@@ -39,11 +39,19 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
             outtmp = {
                 "type" : outmsg.type
             }
+            # Incoming Message
             if inmsg.type == "text":
                 intmp["text"] = inmsg.text
+            elif inmsg.type == "sticker":
+                intmp["packageId"] = inmsg.packageId
+                intmp["stickerId"] = inmsg.stickerId
+            # Outgoing Message
             if outmsg.type == "text":
                 outtmp["text"] = outmsg.text.decode('utf-8')
-            print "finish setup message"
+            elif outmsg.type == "sticker":
+                outtmp["packageId"] = outmsg.packageId
+                outtmp["stickerId"] = outmsg.stickerId
+            #print "finish setup message"
             msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
@@ -58,12 +66,12 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                     "message" :  outtmp
                 }
             }
-            print "Before insert"
+            #print "Before insert"
             #print "Insert msg is {}".format(dict(msg))
             print dict(intmp)
             print dict(outtmp)
             result = conversation.insert_one(dict(msg))
-            print "after insert"
+            #print "after insert"
         except Exception as e:
             print e
     return None

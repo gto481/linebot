@@ -286,6 +286,9 @@ def callback():
                 stickerId = random.randint(100,118)
                 msg = StickerMessage(package_id=1,sticker_id=stickerId)
                 #line_bot_api.reply_message(event.reply_token, StickerMessage(package_id=1,sticker_id=stickerId))
+            elif event.message.type == 'image':
+                response="ส่งรูปน่ารักๆหน่อยสิวะ"
+                msg = TextSendMessage(text=response)
 
             try:
                 pprint.pprint(msg)
