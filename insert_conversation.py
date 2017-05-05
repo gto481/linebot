@@ -60,9 +60,10 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
             }
             print "Before insert"
             #print "Insert msg is {}".format(dict(msg))
-            print dict(intmp)
-            print dict(outtmp)
+            #print dict(intmp)
+            #print dict(outtmp)
             result = conversation.insert_one(dict(msg))
+            print "after insert"
         except Exception as e:
             print e
     return None
