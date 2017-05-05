@@ -28,22 +28,20 @@ db = client.heroku_h80dpwn6
 conversation = db.conversation
 
 def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
-    print "App {}, userid {}, timestamp {}, inmsg {}, imsg id {}, outmsg {}".format(app,userid,timestamp,inmsg,inmsg.id,outmsg)
+    #print "App {}, userid {}, timestamp {}, inmsg {}, imsg id {}, outmsg {}".format(app,userid,timestamp,inmsg,inmsg.id,outmsg)
     if userid and app:
         try:
             intmp = {
                 "id" : inmsg.id,
                 "type" : inmsg.type
             }
-            if inmsg.type == "text":
-                intmp["text"] = inmsg.text.decode('utf-8', 'ignore')
             outtmp = {
                 "type" : outmsg.type
             }
             if inmsg.type == "text":
                 intmp["text"] = inmsg.text
             if outmsg.type == "text":
-                outtmp["text"] = outmsg.text.decode('utf-8', 'ignore')
+                outtmp["text"] = outmsg.text
             msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
@@ -58,7 +56,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                     "message" :  outmsg
                 }
             }
-            print "Insert msg is {}".format(dict(msg))
+            #print "Insert msg is {}".format(dict(msg))
             # print dict(inmsg)
             # print dict(outmsg)
             result = conversation.insert_one(dict(msg))
