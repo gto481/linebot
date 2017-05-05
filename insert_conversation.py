@@ -42,7 +42,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
             if inmsg.type == "text":
                 intmp["text"] = inmsg.text
             if outmsg.type == "text":
-                outtmp["text"] = outmsg.text
+                outtmp["text"] = outmsg.text.encode('utf-8')
             print "finish setup message"
             msg = {
                 "timestamp" : current_milli_time(),
