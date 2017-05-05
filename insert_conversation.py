@@ -41,10 +41,10 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "reply": {
                     "userId": userid,
                     "timestamp" : current_milli_time(),
-                    "message" :  dict(outmsg)
+                    "message" :  outmsg
                 }
             }
-            print dict(msg)
+            print "Insert msg is {}".format(dict(msg))
             # print dict(inmsg)
             # print dict(outmsg)
             result = conversation.insert_one(dict(msg))
