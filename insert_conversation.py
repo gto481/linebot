@@ -42,7 +42,7 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
             if inmsg.type == "text":
                 intmp["text"] = inmsg.text
             if outmsg.type == "text":
-                outtmp["text"] = outmsg.text.encode('utf-8')
+                outtmp["text"] = outmsg.text.decode('utf-8')
             print "finish setup message"
             msg = {
                 "timestamp" : current_milli_time(),
@@ -60,8 +60,8 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
             }
             print "Before insert"
             #print "Insert msg is {}".format(dict(msg))
-            #print dict(intmp)
-            #print dict(outtmp)
+            print dict(intmp)
+            print dict(outtmp)
             result = conversation.insert_one(dict(msg))
             print "after insert"
         except Exception as e:
