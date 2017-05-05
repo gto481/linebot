@@ -39,9 +39,9 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "type" : outmsg.type
             }
             if inmsg.type == "text":
-                intmp["text"] = inmsg.text
+                intmp["text"] = inmsg.text.encode('utf-8')
             if outmsg.type == "text":
-                outtmp["text"] = outmsg.text
+                outtmp["text"] = outmsg.text.encode('utf-8')
             msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
