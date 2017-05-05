@@ -18,6 +18,7 @@ from pprint import pprint
 from datetime import datetime, date, timedelta
 import json
 import time
+from linebot.models import TextMessage
 
 current_milli_time = lambda: int(round(time.time() * 1000))
 
@@ -35,14 +36,14 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
                 "type" : inmsg.type
             }
             if inmsg.type == "text":
-                intmp["text"] = inmsg.text
+                intmp["text"] = inmsg.text.decode('utf-8', 'ignore')
             outtmp = {
                 "type" : outmsg.type
             }
             if inmsg.type == "text":
                 intmp["text"] = inmsg.text
             if outmsg.type == "text":
-                outtmp["text"] = outmsg.text
+                outtmp["text"] = outmsg.text.decode('utf-8', 'ignore')
             msg = {
                 "timestamp" : current_milli_time(),
                 "application" : app,
@@ -66,4 +67,6 @@ def insert(app=None,userid=None,timestamp=None,inmsg=None,outmsg=None):
     return None
 
 if __name__ == "__main__":
-    insert("line","U206d25c2ea6bd87c17655609a1c37cb8",1493198938675,{"id": "5994924103238", "text": "\u0e42\u0e22\u0e48\u0e46", "type": "text"},{"text": "\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01", "type": "text"})
+    inmsg = TextMessage(text="\u0e42\u0e22\u0e48\u0e46")
+    outmsg = TextMessage(text="\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01")
+    insert("line","U206d25c2ea6bd87c17655609a1c37cb8",1493198938675, inmsg ,outmsg)
