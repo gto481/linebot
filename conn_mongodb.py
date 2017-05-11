@@ -24,7 +24,9 @@ current_milli_time = lambda: int(round(time.time() * 1000))
 # Mongo connection
 client = MongoClient('mongodb://bot:bot123@ds027425.mlab.com:27425/heroku_h80dpwn6')
 db = client.heroku_h80dpwn6
-conversation = db.conversation
+#conversation = db.conversation
+
+doctors = db.doctors
 
 
 
@@ -86,22 +88,122 @@ conversation = db.conversation
 #airports.create_index([("City", ASCENDING)])
 
 
-result = conversation.insert_one(
-  {
-        "timestamp" : current_milli_time(),
-        "application" : "line",
-        "receive":
-            {
-                "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
-                "timestamp" : current_milli_time(),
-                "message" : {"id": "5994896050706", "text": "\u0e42\u0e22\u0e48", "type": "text"}
-            },
-        "reply":
-            {
-                "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
-                "timestamp" : current_milli_time(),
-                "message" :  {"text": "\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01", "type": "text"}
-            }
+# result = conversation.insert_one(
+#   {
+#         "timestamp" : current_milli_time(),
+#         "application" : "line",
+#         "receive":
+#             {
+#                 "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
+#                 "timestamp" : current_milli_time(),
+#                 "message" : {"id": "5994896050706", "text": "\u0e42\u0e22\u0e48", "type": "text"}
+#             },
+#         "reply":
+#             {
+#                 "userId": "U206d25c2ea6bd87c17655609a1c37cb8",
+#                 "timestamp" : current_milli_time(),
+#                 "message" :  {"text": "\u0e2b\u0e48\u0e32\u0e25\u0e32\u0e01", "type": "text"}
+#             }
 
-    }
-)
+#     }
+# )
+
+# result = doctors.insert_one(
+#     {
+#         "created_date" : current_milli_time(),
+#         "updated_date" : current_milli_time(),
+#         "name"  : "John Smith",
+#         "hospital" : "Chicago Hospital",
+#         "occupy" : "Dentist"
+#     }
+# )
+
+# schedules = db.doctor_schedules
+
+# schedules.insert_one(
+#     {
+#         "name" : "John Smith",
+#         "calendar" : [
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 12:00", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 13:30", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 14:00", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 1,
+#                 "patient" : "Antonio Aflonso"
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 14:30", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 15:00", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 1,
+#                 "patient" : "John Appleseed"
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 15:30", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 16:00", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-09 16:30", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#         ]
+#     }
+# )
+
+doctos = db.doctors
+doctor_schedules = db.doctor_schedules
+# doctor_schedules.insert_one(
+#     {
+#         "name" : "John Smith",
+#         "calendar" : [
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-08 15:30", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#             {
+#                 "working_hour" : datetime.strptime("2017-05-08 16:00", "%Y-%m-%d %H:%M"),
+#                 "period" : 30,
+#                 "book" : 0,
+#             },
+#         ]
+#     }
+# )
+
+# schedules.create_index([("working_hour", ASCENDING)])
+# schedules.create_index([("book", ASCENDING)])
+# schedules.create_index([("name", ASCENDING)])
+
+tomorrow = datetime.strptime("2017-05-09", "%Y-%m-%d")
+#print(tomorrow)
+doctor = doctos.find_one({'occupy' : 'Dentist'})
+#print(doctor['name'])
+#bookings = schedules.find({'name' : doctor['name'] , 'working_hour' : {'$gte' : tomorrow}, 'book' : 0} )
+#schedules = doctor_schedules.find({'calendar' : { 'working_hour' : {'$gte' : tomorrow}}} )
+#schedules = doctor_schedules.find({'calendar.working_hour' : {'$gte' : tomorrow}, 'calendar.book' : 0} )
+
+#schedules = doctor_schedules.find({'name' : doctor['name'], 'calendar.working_hour' : {'$gte' : tomorrow}})
+schedules = doctor_schedules.find({'calendar' : { '$elemMatch' : {'book' : 0}}})
+
+for schedule in schedules:
+    pprint(schedule)
