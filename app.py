@@ -122,6 +122,7 @@ commands = (
     (re.compile('^[tT]est[ ]*(.*)$'), lambda x: parsingText(x)),
     (re.compile('^[aA]irport[ ]*(.*)$'), lambda x: findAirport(x)),
     (re.compile('^สนามบิน[ ]*(.*)$'), lambda x: findAirport(x)),
+    (re.compile('^recipe[ ]*(.*)$'), lambda x: findRecipe(x)),
 )
 
 def log(message):  # simple wrapper for logging to stdout on heroku
@@ -182,6 +183,12 @@ def location(text):
     # Search location
     # Call file location_bot.py
     message = location_bot.location(bot, text)
+    return message
+
+def recipe(text):
+    # Search recipe
+    # Call file recipe_bot.py
+    message = recipe_bot.getRecipe(bot, text)
     return message
 
 def imageSearch(text):

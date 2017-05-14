@@ -20,7 +20,7 @@ import logging
 from pprint import pprint
 
 from chatterbot import ChatBot
-from linebot.models import (TextSendMessage)
+from linebot.models import TextMessage
 from pymongo import MongoClient, DESCENDING, ASCENDING
 import random
 
