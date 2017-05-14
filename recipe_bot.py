@@ -57,6 +57,7 @@ bot = ChatBot('LineBot',
 def getRecipe(bot=bot,text=None,resultFrom=0,resultTo=3,calories=None,health=None):
 
     result = None
+    print text
 
     print "Search edamam"
 
