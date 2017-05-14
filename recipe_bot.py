@@ -93,7 +93,7 @@ def getRecipe(bot=bot,text=None,resultFrom=0,resultTo=3,calories=None,health=Non
             message = message + "\n"
 
         result = TextMessage(text=message)
-        print result
+        #print result
 
     except:
         result = TextMessage(text=random.choice(BROKEN_MESSAGE))

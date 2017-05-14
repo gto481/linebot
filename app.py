@@ -188,6 +188,7 @@ def location(text):
 def findRecipe(text):
     # Search recipe
     # Call file recipe_bot.py
+    print "Print get recipe"
     message = recipe_bot.getRecipe(bot, text)
     return message
 
