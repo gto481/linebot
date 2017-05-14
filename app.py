@@ -185,7 +185,7 @@ def location(text):
     message = location_bot.location(bot, text)
     return message
 
-def recipe(text):
+def findRecipe(text):
     # Search recipe
     # Call file recipe_bot.py
     message = recipe_bot.getRecipe(bot, text)
